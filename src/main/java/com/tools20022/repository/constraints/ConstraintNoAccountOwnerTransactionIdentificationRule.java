@@ -61,12 +61,16 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionCancellationRequestV05> forSecuritiesTransactionCancellationRequestV05 = new MMConstraint<SecuritiesTransactionCancellationRequestV05>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkSecuritiesTransactionCancellationRequestV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, then the AccountOwnerTransactionIdentification must be NONREF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forSecuritiesTransactionCancellationRequestV04;
 			owner_lazy = () -> SecuritiesTransactionCancellationRequestV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionCancellationRequestV05 obj) throws Exception {
+			checkSecuritiesTransactionCancellationRequestV05(obj);
 		}
 	};
 	/**
@@ -92,11 +96,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionCancellationRequest002V05> forSecuritiesTransactionCancellationRequest002V05 = new MMConstraint<SecuritiesTransactionCancellationRequest002V05>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkSecuritiesTransactionCancellationRequest002V05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> SecuritiesTransactionCancellationRequest002V05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionCancellationRequest002V05 obj) throws Exception {
+			checkSecuritiesTransactionCancellationRequest002V05(obj);
 		}
 	};
 	/**
@@ -131,12 +139,16 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionCancellationRequestV04> forSecuritiesTransactionCancellationRequestV04 = new MMConstraint<SecuritiesTransactionCancellationRequestV04>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkSecuritiesTransactionCancellationRequestV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, then the AccountOwnerTransactionIdentification must be NONREF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forSecuritiesTransactionCancellationRequestV05);
 			owner_lazy = () -> SecuritiesTransactionCancellationRequestV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionCancellationRequestV04 obj) throws Exception {
+			checkSecuritiesTransactionCancellationRequestV04(obj);
 		}
 	};
 	/**
@@ -162,11 +174,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications3> forTransactionIdentifications3 = new MMConstraint<TransactionIdentifications3>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> TransactionIdentifications3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications3 obj) throws Exception {
+			checkTransactionIdentifications3(obj);
 		}
 	};
 	/**
@@ -192,11 +208,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications10> forTransactionIdentifications10 = new MMConstraint<TransactionIdentifications10>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> TransactionIdentifications10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications10 obj) throws Exception {
+			checkTransactionIdentifications10(obj);
 		}
 	};
 	/**
@@ -231,12 +251,16 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications15> forTransactionIdentifications15 = new MMConstraint<TransactionIdentifications15>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransactionIdentifications29);
 			owner_lazy = () -> TransactionIdentifications15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications15 obj) throws Exception {
+			checkTransactionIdentifications15(obj);
 		}
 	};
 	/**
@@ -262,11 +286,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications19> forTransactionIdentifications19 = new MMConstraint<TransactionIdentifications19>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> TransactionIdentifications19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications19 obj) throws Exception {
+			checkTransactionIdentifications19(obj);
 		}
 	};
 	/**
@@ -292,11 +320,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<SettlementTypeAndIdentification1> forSettlementTypeAndIdentification1 = new MMConstraint<SettlementTypeAndIdentification1>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkSettlementTypeAndIdentification1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> SettlementTypeAndIdentification1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementTypeAndIdentification1 obj) throws Exception {
+			checkSettlementTypeAndIdentification1(obj);
 		}
 	};
 	/**
@@ -322,11 +354,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<SettlementTypeAndIdentification8> forSettlementTypeAndIdentification8 = new MMConstraint<SettlementTypeAndIdentification8>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkSettlementTypeAndIdentification8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> SettlementTypeAndIdentification8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementTypeAndIdentification8 obj) throws Exception {
+			checkSettlementTypeAndIdentification8(obj);
 		}
 	};
 	/**
@@ -352,11 +388,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<SettlementTypeAndIdentification9> forSettlementTypeAndIdentification9 = new MMConstraint<SettlementTypeAndIdentification9>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkSettlementTypeAndIdentification9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> SettlementTypeAndIdentification9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementTypeAndIdentification9 obj) throws Exception {
+			checkSettlementTypeAndIdentification9(obj);
 		}
 	};
 	/**
@@ -382,11 +422,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<SettlementTypeAndIdentification11> forSettlementTypeAndIdentification11 = new MMConstraint<SettlementTypeAndIdentification11>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkSettlementTypeAndIdentification11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> SettlementTypeAndIdentification11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementTypeAndIdentification11 obj) throws Exception {
+			checkSettlementTypeAndIdentification11(obj);
 		}
 	};
 	/**
@@ -421,12 +465,16 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<SettlementTypeAndIdentification15> forSettlementTypeAndIdentification15 = new MMConstraint<SettlementTypeAndIdentification15>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkSettlementTypeAndIdentification15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forSettlementTypeAndIdentification19);
 			owner_lazy = () -> SettlementTypeAndIdentification15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementTypeAndIdentification15 obj) throws Exception {
+			checkSettlementTypeAndIdentification15(obj);
 		}
 	};
 	/**
@@ -452,11 +500,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<SettlementTypeAndIdentification17> forSettlementTypeAndIdentification17 = new MMConstraint<SettlementTypeAndIdentification17>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkSettlementTypeAndIdentification17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> SettlementTypeAndIdentification17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementTypeAndIdentification17 obj) throws Exception {
+			checkSettlementTypeAndIdentification17(obj);
 		}
 	};
 	/**
@@ -482,11 +534,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<SettlementTypeAndIdentification10> forSettlementTypeAndIdentification10 = new MMConstraint<SettlementTypeAndIdentification10>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkSettlementTypeAndIdentification10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> SettlementTypeAndIdentification10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementTypeAndIdentification10 obj) throws Exception {
+			checkSettlementTypeAndIdentification10(obj);
 		}
 	};
 	/**
@@ -512,11 +568,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<SettlementTypeAndIdentification12> forSettlementTypeAndIdentification12 = new MMConstraint<SettlementTypeAndIdentification12>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkSettlementTypeAndIdentification12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> SettlementTypeAndIdentification12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementTypeAndIdentification12 obj) throws Exception {
+			checkSettlementTypeAndIdentification12(obj);
 		}
 	};
 	/**
@@ -542,11 +602,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications2> forTransactionIdentifications2 = new MMConstraint<TransactionIdentifications2>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> TransactionIdentifications2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications2 obj) throws Exception {
+			checkTransactionIdentifications2(obj);
 		}
 	};
 	/**
@@ -572,11 +636,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications7> forTransactionIdentifications7 = new MMConstraint<TransactionIdentifications7>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> TransactionIdentifications7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications7 obj) throws Exception {
+			checkTransactionIdentifications7(obj);
 		}
 	};
 	/**
@@ -602,11 +670,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications9> forTransactionIdentifications9 = new MMConstraint<TransactionIdentifications9>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> TransactionIdentifications9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications9 obj) throws Exception {
+			checkTransactionIdentifications9(obj);
 		}
 	};
 	/**
@@ -632,11 +704,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications13> forTransactionIdentifications13 = new MMConstraint<TransactionIdentifications13>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> TransactionIdentifications13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications13 obj) throws Exception {
+			checkTransactionIdentifications13(obj);
 		}
 	};
 	/**
@@ -671,12 +747,16 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications16> forTransactionIdentifications16 = new MMConstraint<TransactionIdentifications16>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransactionIdentifications31);
 			owner_lazy = () -> TransactionIdentifications16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications16 obj) throws Exception {
+			checkTransactionIdentifications16(obj);
 		}
 	};
 	/**
@@ -702,11 +782,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications22> forTransactionIdentifications22 = new MMConstraint<TransactionIdentifications22>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> TransactionIdentifications22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications22 obj) throws Exception {
+			checkTransactionIdentifications22(obj);
 		}
 	};
 	/**
@@ -731,11 +815,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction7> forTransaction7 = new MMConstraint<Transaction7>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> Transaction7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction7 obj) throws Exception {
+			checkTransaction7(obj);
 		}
 	};
 	/**
@@ -760,11 +848,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction8> forTransaction8 = new MMConstraint<Transaction8>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> Transaction8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction8 obj) throws Exception {
+			checkTransaction8(obj);
 		}
 	};
 	/**
@@ -789,11 +881,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction9> forTransaction9 = new MMConstraint<Transaction9>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> Transaction9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction9 obj) throws Exception {
+			checkTransaction9(obj);
 		}
 	};
 	/**
@@ -818,11 +914,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction10> forTransaction10 = new MMConstraint<Transaction10>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> Transaction10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction10 obj) throws Exception {
+			checkTransaction10(obj);
 		}
 	};
 	/**
@@ -847,11 +947,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction14> forTransaction14 = new MMConstraint<Transaction14>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> Transaction14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction14 obj) throws Exception {
+			checkTransaction14(obj);
 		}
 	};
 	/**
@@ -876,11 +980,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction12> forTransaction12 = new MMConstraint<Transaction12>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> Transaction12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction12 obj) throws Exception {
+			checkTransaction12(obj);
 		}
 	};
 	/**
@@ -905,11 +1013,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction15> forTransaction15 = new MMConstraint<Transaction15>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> Transaction15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction15 obj) throws Exception {
+			checkTransaction15(obj);
 		}
 	};
 	/**
@@ -934,11 +1046,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction16> forTransaction16 = new MMConstraint<Transaction16>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> Transaction16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction16 obj) throws Exception {
+			checkTransaction16(obj);
 		}
 	};
 	/**
@@ -963,11 +1079,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction20> forTransaction20 = new MMConstraint<Transaction20>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> Transaction20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction20 obj) throws Exception {
+			checkTransaction20(obj);
 		}
 	};
 	/**
@@ -992,11 +1112,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction19> forTransaction19 = new MMConstraint<Transaction19>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> Transaction19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction19 obj) throws Exception {
+			checkTransaction19(obj);
 		}
 	};
 	/**
@@ -1021,11 +1145,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction23> forTransaction23 = new MMConstraint<Transaction23>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> Transaction23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction23 obj) throws Exception {
+			checkTransaction23(obj);
 		}
 	};
 	/**
@@ -1050,11 +1178,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction22> forTransaction22 = new MMConstraint<Transaction22>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> Transaction22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction22 obj) throws Exception {
+			checkTransaction22(obj);
 		}
 	};
 	/**
@@ -1087,12 +1219,16 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction28> forTransaction28 = new MMConstraint<Transaction28>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction35);
 			owner_lazy = () -> Transaction28.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction28 obj) throws Exception {
+			checkTransaction28(obj);
 		}
 	};
 	/**
@@ -1125,12 +1261,16 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction27> forTransaction27 = new MMConstraint<Transaction27>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction34);
 			owner_lazy = () -> Transaction27.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction27 obj) throws Exception {
+			checkTransaction27(obj);
 		}
 	};
 	/**
@@ -1155,11 +1295,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction30> forTransaction30 = new MMConstraint<Transaction30>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> Transaction30.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction30 obj) throws Exception {
+			checkTransaction30(obj);
 		}
 	};
 	/**
@@ -1184,11 +1328,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction31> forTransaction31 = new MMConstraint<Transaction31>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction31;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> Transaction31.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction31 obj) throws Exception {
+			checkTransaction31(obj);
 		}
 	};
 	/**
@@ -1213,11 +1361,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction6> forTransaction6 = new MMConstraint<Transaction6>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> Transaction6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction6 obj) throws Exception {
+			checkTransaction6(obj);
 		}
 	};
 	/**
@@ -1242,11 +1394,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction11> forTransaction11 = new MMConstraint<Transaction11>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> Transaction11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction11 obj) throws Exception {
+			checkTransaction11(obj);
 		}
 	};
 	/**
@@ -1271,11 +1427,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction13> forTransaction13 = new MMConstraint<Transaction13>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> Transaction13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction13 obj) throws Exception {
+			checkTransaction13(obj);
 		}
 	};
 	/**
@@ -1300,11 +1460,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction17> forTransaction17 = new MMConstraint<Transaction17>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> Transaction17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction17 obj) throws Exception {
+			checkTransaction17(obj);
 		}
 	};
 	/**
@@ -1329,11 +1493,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction18> forTransaction18 = new MMConstraint<Transaction18>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> Transaction18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction18 obj) throws Exception {
+			checkTransaction18(obj);
 		}
 	};
 	/**
@@ -1358,11 +1526,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction21> forTransaction21 = new MMConstraint<Transaction21>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> Transaction21.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction21 obj) throws Exception {
+			checkTransaction21(obj);
 		}
 	};
 	/**
@@ -1395,12 +1567,16 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction29> forTransaction29 = new MMConstraint<Transaction29>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction29;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction36);
 			owner_lazy = () -> Transaction29.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction29 obj) throws Exception {
+			checkTransaction29(obj);
 		}
 	};
 	/**
@@ -1425,11 +1601,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction32> forTransaction32 = new MMConstraint<Transaction32>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction32;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> Transaction32.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction32 obj) throws Exception {
+			checkTransaction32(obj);
 		}
 	};
 	/**
@@ -1464,12 +1644,16 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications1> forTransactionIdentifications1 = new MMConstraint<TransactionIdentifications1>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransactionIdentifications32);
 			owner_lazy = () -> TransactionIdentifications1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications1 obj) throws Exception {
+			checkTransactionIdentifications1(obj);
 		}
 	};
 	/**
@@ -1495,11 +1679,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications4> forTransactionIdentifications4 = new MMConstraint<TransactionIdentifications4>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> TransactionIdentifications4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications4 obj) throws Exception {
+			checkTransactionIdentifications4(obj);
 		}
 	};
 	/**
@@ -1525,11 +1713,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications11> forTransactionIdentifications11 = new MMConstraint<TransactionIdentifications11>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> TransactionIdentifications11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications11 obj) throws Exception {
+			checkTransactionIdentifications11(obj);
 		}
 	};
 	/**
@@ -1555,11 +1747,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications6> forTransactionIdentifications6 = new MMConstraint<TransactionIdentifications6>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> TransactionIdentifications6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications6 obj) throws Exception {
+			checkTransactionIdentifications6(obj);
 		}
 	};
 	/**
@@ -1594,12 +1790,16 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications18> forTransactionIdentifications18 = new MMConstraint<TransactionIdentifications18>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransactionIdentifications25);
 			owner_lazy = () -> TransactionIdentifications18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications18 obj) throws Exception {
+			checkTransactionIdentifications18(obj);
 		}
 	};
 	/**
@@ -1625,11 +1825,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications20> forTransactionIdentifications20 = new MMConstraint<TransactionIdentifications20>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> TransactionIdentifications20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications20 obj) throws Exception {
+			checkTransactionIdentifications20(obj);
 		}
 	};
 	/**
@@ -1655,11 +1859,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications8> forTransactionIdentifications8 = new MMConstraint<TransactionIdentifications8>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> TransactionIdentifications8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications8 obj) throws Exception {
+			checkTransactionIdentifications8(obj);
 		}
 	};
 	/**
@@ -1685,11 +1893,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications14> forTransactionIdentifications14 = new MMConstraint<TransactionIdentifications14>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> TransactionIdentifications14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications14 obj) throws Exception {
+			checkTransactionIdentifications14(obj);
 		}
 	};
 	/**
@@ -1724,12 +1936,16 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications17> forTransactionIdentifications17 = new MMConstraint<TransactionIdentifications17>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransactionIdentifications30);
 			owner_lazy = () -> TransactionIdentifications17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications17 obj) throws Exception {
+			checkTransactionIdentifications17(obj);
 		}
 	};
 	/**
@@ -1755,11 +1971,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications23> forTransactionIdentifications23 = new MMConstraint<TransactionIdentifications23>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> TransactionIdentifications23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications23 obj) throws Exception {
+			checkTransactionIdentifications23(obj);
 		}
 	};
 	/**
@@ -1785,11 +2005,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications5> forTransactionIdentifications5 = new MMConstraint<TransactionIdentifications5>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> TransactionIdentifications5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications5 obj) throws Exception {
+			checkTransactionIdentifications5(obj);
 		}
 	};
 	/**
@@ -1815,11 +2039,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications12> forTransactionIdentifications12 = new MMConstraint<TransactionIdentifications12>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> TransactionIdentifications12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications12 obj) throws Exception {
+			checkTransactionIdentifications12(obj);
 		}
 	};
 	/**
@@ -1854,12 +2082,16 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<IntraPositionPending2> forIntraPositionPending2 = new MMConstraint<IntraPositionPending2>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkIntraPositionPending2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forIntraPositionPending4);
 			owner_lazy = () -> IntraPositionPending2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionPending2 obj) throws Exception {
+			checkIntraPositionPending2(obj);
 		}
 	};
 	/**
@@ -1894,12 +2126,16 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<IntraBalanceMovement1> forIntraBalanceMovement1 = new MMConstraint<IntraBalanceMovement1>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkIntraBalanceMovement1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forIntraBalanceMovement3);
 			owner_lazy = () -> IntraBalanceMovement1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraBalanceMovement1 obj) throws Exception {
+			checkIntraBalanceMovement1(obj);
 		}
 	};
 	/**
@@ -1934,12 +2170,16 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<IntraPositionMovement1> forIntraPositionMovement1 = new MMConstraint<IntraPositionMovement1>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkIntraPositionMovement1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forIntraPositionMovement3);
 			owner_lazy = () -> IntraPositionMovement1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovement1 obj) throws Exception {
+			checkIntraPositionMovement1(obj);
 		}
 	};
 	/**
@@ -1974,12 +2214,16 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<IntraBalancePending2> forIntraBalancePending2 = new MMConstraint<IntraBalancePending2>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkIntraBalancePending2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forIntraBalancePending4);
 			owner_lazy = () -> IntraBalancePending2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraBalancePending2 obj) throws Exception {
+			checkIntraBalancePending2(obj);
 		}
 	};
 	/**
@@ -2014,12 +2258,16 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<IntraBalancePosting2> forIntraBalancePosting2 = new MMConstraint<IntraBalancePosting2>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkIntraBalancePosting2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forIntraBalancePosting4);
 			owner_lazy = () -> IntraBalancePosting2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraBalancePosting2 obj) throws Exception {
+			checkIntraBalancePosting2(obj);
 		}
 	};
 	/**
@@ -2052,12 +2300,16 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction25> forTransaction25 = new MMConstraint<Transaction25>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction51);
 			owner_lazy = () -> Transaction25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction25 obj) throws Exception {
+			checkTransaction25(obj);
 		}
 	};
 	/**
@@ -2083,11 +2335,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications24> forTransactionIdentifications24 = new MMConstraint<TransactionIdentifications24>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> TransactionIdentifications24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications24 obj) throws Exception {
+			checkTransactionIdentifications24(obj);
 		}
 	};
 	/**
@@ -2125,13 +2381,17 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction34> forTransaction34 = new MMConstraint<Transaction34>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction34;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction41);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction27;
 			owner_lazy = () -> Transaction34.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction34 obj) throws Exception {
+			checkTransaction34(obj);
 		}
 	};
 	/**
@@ -2172,13 +2432,17 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications25> forTransactionIdentifications25 = new MMConstraint<TransactionIdentifications25>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, then the AccountOwnerTransactionIdentification must be NONREF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransactionIdentifications33);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransactionIdentifications18;
 			owner_lazy = () -> TransactionIdentifications25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications25 obj) throws Exception {
+			checkTransactionIdentifications25(obj);
 		}
 	};
 	/**
@@ -2213,12 +2477,16 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionDetails64> forTransactionDetails64 = new MMConstraint<TransactionDetails64>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionDetails64;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, then the AccountOwnerTransactionIdentification must be NONREF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransactionDetails76);
 			owner_lazy = () -> TransactionDetails64.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails64 obj) throws Exception {
+			checkTransactionDetails64(obj);
 		}
 	};
 	/**
@@ -2256,13 +2524,17 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction35> forTransaction35 = new MMConstraint<Transaction35>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction35;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction40);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction28;
 			owner_lazy = () -> Transaction35.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction35 obj) throws Exception {
+			checkTransaction35(obj);
 		}
 	};
 	/**
@@ -2300,13 +2572,17 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction36> forTransaction36 = new MMConstraint<Transaction36>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction36;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction46);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction29;
 			owner_lazy = () -> Transaction36.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction36 obj) throws Exception {
+			checkTransaction36(obj);
 		}
 	};
 	/**
@@ -2332,11 +2608,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications26> forTransactionIdentifications26 = new MMConstraint<TransactionIdentifications26>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> TransactionIdentifications26.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications26 obj) throws Exception {
+			checkTransactionIdentifications26(obj);
 		}
 	};
 	/**
@@ -2361,11 +2641,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction38> forTransaction38 = new MMConstraint<Transaction38>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction38;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> Transaction38.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction38 obj) throws Exception {
+			checkTransaction38(obj);
 		}
 	};
 	/**
@@ -2391,11 +2675,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionDetails65> forTransactionDetails65 = new MMConstraint<TransactionDetails65>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionDetails65;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> TransactionDetails65.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails65 obj) throws Exception {
+			checkTransactionDetails65(obj);
 		}
 	};
 	/**
@@ -2420,11 +2708,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction39> forTransaction39 = new MMConstraint<Transaction39>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction39;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> Transaction39.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction39 obj) throws Exception {
+			checkTransaction39(obj);
 		}
 	};
 	/**
@@ -2449,11 +2741,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction37> forTransaction37 = new MMConstraint<Transaction37>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction37;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> Transaction37.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction37 obj) throws Exception {
+			checkTransaction37(obj);
 		}
 	};
 	/**
@@ -2491,13 +2787,17 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction41> forTransaction41 = new MMConstraint<Transaction41>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction41;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction47);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction34;
 			owner_lazy = () -> Transaction41.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction41 obj) throws Exception {
+			checkTransaction41(obj);
 		}
 	};
 	/**
@@ -2535,13 +2835,17 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction40> forTransaction40 = new MMConstraint<Transaction40>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction40;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction45);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction35;
 			owner_lazy = () -> Transaction40.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction40 obj) throws Exception {
+			checkTransaction40(obj);
 		}
 	};
 	/**
@@ -2566,11 +2870,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction43> forTransaction43 = new MMConstraint<Transaction43>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction43;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> Transaction43.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction43 obj) throws Exception {
+			checkTransaction43(obj);
 		}
 	};
 	/**
@@ -2595,11 +2903,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction42> forTransaction42 = new MMConstraint<Transaction42>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction42;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> Transaction42.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction42 obj) throws Exception {
+			checkTransaction42(obj);
 		}
 	};
 	/**
@@ -2637,13 +2949,17 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction47> forTransaction47 = new MMConstraint<Transaction47>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction47;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction53);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction41;
 			owner_lazy = () -> Transaction47.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction47 obj) throws Exception {
+			checkTransaction47(obj);
 		}
 	};
 	/**
@@ -2684,13 +3000,17 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionDetails76> forTransactionDetails76 = new MMConstraint<TransactionDetails76>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionDetails76;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, then the AccountOwnerTransactionIdentification must be NONREF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransactionDetails106);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransactionDetails64;
 			owner_lazy = () -> TransactionDetails76.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails76 obj) throws Exception {
+			checkTransactionDetails76(obj);
 		}
 	};
 	/**
@@ -2728,13 +3048,17 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction45> forTransaction45 = new MMConstraint<Transaction45>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction45;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction54);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction40;
 			owner_lazy = () -> Transaction45.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction45 obj) throws Exception {
+			checkTransaction45(obj);
 		}
 	};
 	/**
@@ -2772,13 +3096,17 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction46> forTransaction46 = new MMConstraint<Transaction46>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction46;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction52);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction36;
 			owner_lazy = () -> Transaction46.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction46 obj) throws Exception {
+			checkTransaction46(obj);
 		}
 	};
 	/**
@@ -2810,12 +3138,16 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications29> forTransactionIdentifications29 = new MMConstraint<TransactionIdentifications29>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications29;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransactionIdentifications15;
 			owner_lazy = () -> TransactionIdentifications29.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications29 obj) throws Exception {
+			checkTransactionIdentifications29(obj);
 		}
 	};
 	/**
@@ -2847,12 +3179,16 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<SettlementTypeAndIdentification19> forSettlementTypeAndIdentification19 = new MMConstraint<SettlementTypeAndIdentification19>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkSettlementTypeAndIdentification19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forSettlementTypeAndIdentification15;
 			owner_lazy = () -> SettlementTypeAndIdentification19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementTypeAndIdentification19 obj) throws Exception {
+			checkSettlementTypeAndIdentification19(obj);
 		}
 	};
 	/**
@@ -2884,12 +3220,16 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications31> forTransactionIdentifications31 = new MMConstraint<TransactionIdentifications31>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications31;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransactionIdentifications16;
 			owner_lazy = () -> TransactionIdentifications31.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications31 obj) throws Exception {
+			checkTransactionIdentifications31(obj);
 		}
 	};
 	/**
@@ -2921,12 +3261,16 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications33> forTransactionIdentifications33 = new MMConstraint<TransactionIdentifications33>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications33;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, then the AccountOwnerTransactionIdentification must be NONREF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransactionIdentifications25;
 			owner_lazy = () -> TransactionIdentifications33.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications33 obj) throws Exception {
+			checkTransactionIdentifications33(obj);
 		}
 	};
 	/**
@@ -2958,12 +3302,16 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications30> forTransactionIdentifications30 = new MMConstraint<TransactionIdentifications30>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransactionIdentifications17;
 			owner_lazy = () -> TransactionIdentifications30.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications30 obj) throws Exception {
+			checkTransactionIdentifications30(obj);
 		}
 	};
 	/**
@@ -2995,12 +3343,16 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications32> forTransactionIdentifications32 = new MMConstraint<TransactionIdentifications32>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications32;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransactionIdentifications1;
 			owner_lazy = () -> TransactionIdentifications32.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications32 obj) throws Exception {
+			checkTransactionIdentifications32(obj);
 		}
 	};
 	/**
@@ -3026,11 +3378,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications35> forTransactionIdentifications35 = new MMConstraint<TransactionIdentifications35>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications35;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> TransactionIdentifications35.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications35 obj) throws Exception {
+			checkTransactionIdentifications35(obj);
 		}
 	};
 	/**
@@ -3055,11 +3411,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction49> forTransaction49 = new MMConstraint<Transaction49>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction49;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> Transaction49.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction49 obj) throws Exception {
+			checkTransaction49(obj);
 		}
 	};
 	/**
@@ -3085,11 +3445,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications39> forTransactionIdentifications39 = new MMConstraint<TransactionIdentifications39>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications39;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> TransactionIdentifications39.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications39 obj) throws Exception {
+			checkTransactionIdentifications39(obj);
 		}
 	};
 	/**
@@ -3115,11 +3479,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications37> forTransactionIdentifications37 = new MMConstraint<TransactionIdentifications37>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications37;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> TransactionIdentifications37.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications37 obj) throws Exception {
+			checkTransactionIdentifications37(obj);
 		}
 	};
 	/**
@@ -3145,11 +3513,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications34> forTransactionIdentifications34 = new MMConstraint<TransactionIdentifications34>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications34;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> TransactionIdentifications34.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications34 obj) throws Exception {
+			checkTransactionIdentifications34(obj);
 		}
 	};
 	/**
@@ -3175,11 +3547,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<SettlementTypeAndIdentification24> forSettlementTypeAndIdentification24 = new MMConstraint<SettlementTypeAndIdentification24>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkSettlementTypeAndIdentification24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> SettlementTypeAndIdentification24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementTypeAndIdentification24 obj) throws Exception {
+			checkSettlementTypeAndIdentification24(obj);
 		}
 	};
 	/**
@@ -3214,12 +3590,16 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionDetails85> forTransactionDetails85 = new MMConstraint<TransactionDetails85>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionDetails85;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, then the AccountOwnerTransactionIdentification must be NONREF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransactionDetails101);
 			owner_lazy = () -> TransactionDetails85.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails85 obj) throws Exception {
+			checkTransactionDetails85(obj);
 		}
 	};
 	/**
@@ -3245,11 +3625,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications38> forTransactionIdentifications38 = new MMConstraint<TransactionIdentifications38>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications38;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> TransactionIdentifications38.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications38 obj) throws Exception {
+			checkTransactionIdentifications38(obj);
 		}
 	};
 	/**
@@ -3274,11 +3658,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction50> forTransaction50 = new MMConstraint<Transaction50>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction50;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> Transaction50.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction50 obj) throws Exception {
+			checkTransaction50(obj);
 		}
 	};
 	/**
@@ -3303,11 +3691,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction48> forTransaction48 = new MMConstraint<Transaction48>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction48;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> Transaction48.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction48 obj) throws Exception {
+			checkTransaction48(obj);
 		}
 	};
 	/**
@@ -3339,12 +3731,16 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<IntraBalanceMovement3> forIntraBalanceMovement3 = new MMConstraint<IntraBalanceMovement3>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkIntraBalanceMovement3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forIntraBalanceMovement1;
 			owner_lazy = () -> IntraBalanceMovement3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraBalanceMovement3 obj) throws Exception {
+			checkIntraBalanceMovement3(obj);
 		}
 	};
 	/**
@@ -3385,13 +3781,17 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<IntraPositionPending4> forIntraPositionPending4 = new MMConstraint<IntraPositionPending4>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkIntraPositionPending4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forIntraPositionPending6);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forIntraPositionPending2;
 			owner_lazy = () -> IntraPositionPending4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionPending4 obj) throws Exception {
+			checkIntraPositionPending4(obj);
 		}
 	};
 	/**
@@ -3429,13 +3829,17 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction51> forTransaction51 = new MMConstraint<Transaction51>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction51;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction58);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction25;
 			owner_lazy = () -> Transaction51.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction51 obj) throws Exception {
+			checkTransaction51(obj);
 		}
 	};
 	/**
@@ -3467,12 +3871,16 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<IntraBalancePending4> forIntraBalancePending4 = new MMConstraint<IntraBalancePending4>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkIntraBalancePending4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forIntraBalancePending2;
 			owner_lazy = () -> IntraBalancePending4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraBalancePending4 obj) throws Exception {
+			checkIntraBalancePending4(obj);
 		}
 	};
 	/**
@@ -3504,12 +3912,16 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<IntraBalancePosting4> forIntraBalancePosting4 = new MMConstraint<IntraBalancePosting4>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkIntraBalancePosting4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forIntraBalancePosting2;
 			owner_lazy = () -> IntraBalancePosting4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraBalancePosting4 obj) throws Exception {
+			checkIntraBalancePosting4(obj);
 		}
 	};
 	/**
@@ -3550,13 +3962,17 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<IntraPositionMovement3> forIntraPositionMovement3 = new MMConstraint<IntraPositionMovement3>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkIntraPositionMovement3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forIntraPositionMovement5);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forIntraPositionMovement1;
 			owner_lazy = () -> IntraPositionMovement3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovement3 obj) throws Exception {
+			checkIntraPositionMovement3(obj);
 		}
 	};
 	/**
@@ -3594,13 +4010,17 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction53> forTransaction53 = new MMConstraint<Transaction53>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction53;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction60);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction47;
 			owner_lazy = () -> Transaction53.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction53 obj) throws Exception {
+			checkTransaction53(obj);
 		}
 	};
 	/**
@@ -3638,13 +4058,17 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction54> forTransaction54 = new MMConstraint<Transaction54>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction54;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction61);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction45;
 			owner_lazy = () -> Transaction54.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction54 obj) throws Exception {
+			checkTransaction54(obj);
 		}
 	};
 	/**
@@ -3682,13 +4106,17 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction52> forTransaction52 = new MMConstraint<Transaction52>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction52;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction62);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction46;
 			owner_lazy = () -> Transaction52.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction52 obj) throws Exception {
+			checkTransaction52(obj);
 		}
 	};
 	/**
@@ -3713,11 +4141,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction57> forTransaction57 = new MMConstraint<Transaction57>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction57;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> Transaction57.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction57 obj) throws Exception {
+			checkTransaction57(obj);
 		}
 	};
 	/**
@@ -3742,11 +4174,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction56> forTransaction56 = new MMConstraint<Transaction56>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction56;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> Transaction56.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction56 obj) throws Exception {
+			checkTransaction56(obj);
 		}
 	};
 	/**
@@ -3771,11 +4207,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction55> forTransaction55 = new MMConstraint<Transaction55>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction55;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> Transaction55.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction55 obj) throws Exception {
+			checkTransaction55(obj);
 		}
 	};
 	/**
@@ -3807,12 +4247,16 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionDetails101> forTransactionDetails101 = new MMConstraint<TransactionDetails101>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionDetails101;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, then the AccountOwnerTransactionIdentification must be NONREF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransactionDetails85;
 			owner_lazy = () -> TransactionDetails101.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails101 obj) throws Exception {
+			checkTransactionDetails101(obj);
 		}
 	};
 	/**
@@ -3844,12 +4288,16 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<IntraPositionMovement5> forIntraPositionMovement5 = new MMConstraint<IntraPositionMovement5>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkIntraPositionMovement5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forIntraPositionMovement3;
 			owner_lazy = () -> IntraPositionMovement5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovement5 obj) throws Exception {
+			checkIntraPositionMovement5(obj);
 		}
 	};
 	/**
@@ -3879,12 +4327,16 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction58> forTransaction58 = new MMConstraint<Transaction58>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction58;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction51;
 			owner_lazy = () -> Transaction58.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction58 obj) throws Exception {
+			checkTransaction58(obj);
 		}
 	};
 	/**
@@ -3916,12 +4368,16 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<IntraPositionPending6> forIntraPositionPending6 = new MMConstraint<IntraPositionPending6>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkIntraPositionPending6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forIntraPositionPending4;
 			owner_lazy = () -> IntraPositionPending6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionPending6 obj) throws Exception {
+			checkIntraPositionPending6(obj);
 		}
 	};
 	/**
@@ -3951,12 +4407,16 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction60> forTransaction60 = new MMConstraint<Transaction60>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction60;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction53;
 			owner_lazy = () -> Transaction60.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction60 obj) throws Exception {
+			checkTransaction60(obj);
 		}
 	};
 	/**
@@ -3986,12 +4446,16 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction61> forTransaction61 = new MMConstraint<Transaction61>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction61;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction54;
 			owner_lazy = () -> Transaction61.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction61 obj) throws Exception {
+			checkTransaction61(obj);
 		}
 	};
 	/**
@@ -4021,12 +4485,16 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction62> forTransaction62 = new MMConstraint<Transaction62>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction62;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction52;
 			owner_lazy = () -> Transaction62.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction62 obj) throws Exception {
+			checkTransaction62(obj);
 		}
 	};
 	/**
@@ -4058,12 +4526,16 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionDetails106> forTransactionDetails106 = new MMConstraint<TransactionDetails106>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionDetails106;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, then the AccountOwnerTransactionIdentification must be NONREF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransactionDetails76;
 			owner_lazy = () -> TransactionDetails106.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails106 obj) throws Exception {
+			checkTransactionDetails106(obj);
 		}
 	};
 	/**
@@ -4089,11 +4561,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionDetails108> forTransactionDetails108 = new MMConstraint<TransactionDetails108>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionDetails108;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> TransactionDetails108.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails108 obj) throws Exception {
+			checkTransactionDetails108(obj);
 		}
 	};
 	/**
@@ -4118,11 +4594,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction63> forTransaction63 = new MMConstraint<Transaction63>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction63;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> Transaction63.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction63 obj) throws Exception {
+			checkTransaction63(obj);
 		}
 	};
 	/**
@@ -4147,11 +4627,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction64> forTransaction64 = new MMConstraint<Transaction64>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction64;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> Transaction64.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction64 obj) throws Exception {
+			checkTransaction64(obj);
 		}
 	};
 	/**
@@ -4176,11 +4660,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction65> forTransaction65 = new MMConstraint<Transaction65>() {
 		{
-			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction65;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
 			owner_lazy = () -> Transaction65.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction65 obj) throws Exception {
+			checkTransaction65(obj);
 		}
 	};
 

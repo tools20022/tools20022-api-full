@@ -25,6 +25,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.FinancialInstrumentQuantityChoice;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -123,7 +124,7 @@ public class MassQuote1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDefaultBidSize = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MassQuote1, Optional<FinancialInstrumentQuantityChoice>> mmDefaultBidSize = new MMMessageAttribute<MassQuote1, Optional<FinancialInstrumentQuantityChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Quote.mmQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MassQuote1.mmObject();
@@ -136,6 +137,16 @@ public class MassQuote1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantityChoice> getValue(MassQuote1 obj) {
+			return obj.getDefaultBidSize();
+		}
+
+		@Override
+		public void setValue(MassQuote1 obj, Optional<FinancialInstrumentQuantityChoice> value) {
+			obj.setDefaultBidSize(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DfltOfferSz")
@@ -177,7 +188,7 @@ public class MassQuote1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDefaultOfferSize = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MassQuote1, Optional<FinancialInstrumentQuantityChoice>> mmDefaultOfferSize = new MMMessageAttribute<MassQuote1, Optional<FinancialInstrumentQuantityChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Quote.mmQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MassQuote1.mmObject();
@@ -191,9 +202,19 @@ public class MassQuote1 {
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
 		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantityChoice> getValue(MassQuote1 obj) {
+			return obj.getDefaultOfferSize();
+		}
+
+		@Override
+		public void setValue(MassQuote1 obj, Optional<FinancialInstrumentQuantityChoice> value) {
+			obj.setDefaultOfferSize(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "QtSetDtls", required = true)
-	protected List<com.tools20022.repository.msg.QuoteSet1> quoteSetDetails;
+	protected List<QuoteSet1> quoteSetDetails;
 	/**
 	 * 
 	 <p>
@@ -223,7 +244,7 @@ public class MassQuote1 {
 	 * definition} = "Provides details about a group of related quotes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuoteSetDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MassQuote1, List<QuoteSet1>> mmQuoteSetDetails = new MMMessageAssociationEnd<MassQuote1, List<QuoteSet1>>() {
 		{
 			businessElementTrace_lazy = () -> Quote.mmSecurityQuoteVariable;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MassQuote1.mmObject();
@@ -234,11 +255,21 @@ public class MassQuote1 {
 			definition = "Provides details about a group of related quotes.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.QuoteSet1.mmObject();
+			type_lazy = () -> QuoteSet1.mmObject();
+		}
+
+		@Override
+		public List<QuoteSet1> getValue(MassQuote1 obj) {
+			return obj.getQuoteSetDetails();
+		}
+
+		@Override
+		public void setValue(MassQuote1 obj, List<QuoteSet1> value) {
+			obj.setQuoteSetDetails(value);
 		}
 	};
 	@XmlElement(name = "TradgPties")
-	protected List<com.tools20022.repository.msg.Intermediary14> tradingParties;
+	protected List<Intermediary14> tradingParties;
 	/**
 	 * 
 	 <p>
@@ -271,7 +302,7 @@ public class MassQuote1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradingParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MassQuote1, List<Intermediary14>> mmTradingParties = new MMMessageAssociationEnd<MassQuote1, List<Intermediary14>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradePartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MassQuote1.mmObject();
@@ -282,7 +313,17 @@ public class MassQuote1 {
 			definition = "Parties used for acting parties that applies either to the whole message or to individual sides.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Intermediary14.mmObject();
+			type_lazy = () -> Intermediary14.mmObject();
+		}
+
+		@Override
+		public List<Intermediary14> getValue(MassQuote1 obj) {
+			return obj.getTradingParties();
+		}
+
+		@Override
+		public void setValue(MassQuote1 obj, List<Intermediary14> value) {
+			obj.setTradingParties(value);
 		}
 	};
 	@XmlElement(name = "CshPties")
@@ -319,7 +360,7 @@ public class MassQuote1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MassQuote1, Optional<CashParties1>> mmCashParties = new MMMessageAssociationEnd<MassQuote1, Optional<CashParties1>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MassQuote1.mmObject();
@@ -331,7 +372,17 @@ public class MassQuote1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashParties1.mmObject();
+			type_lazy = () -> CashParties1.mmObject();
+		}
+
+		@Override
+		public Optional<CashParties1> getValue(MassQuote1 obj) {
+			return obj.getCashParties();
+		}
+
+		@Override
+		public void setValue(MassQuote1 obj, Optional<CashParties1> value) {
+			obj.setCashParties(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcvgSttlmPties")
@@ -368,7 +419,7 @@ public class MassQuote1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReceivingSettlementParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MassQuote1, Optional<SettlementParties3>> mmReceivingSettlementParties = new MMMessageAssociationEnd<MassQuote1, Optional<SettlementParties3>>() {
 		{
 			businessComponentTrace_lazy = () -> ReceivingSettlementParty.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MassQuote1.mmObject();
@@ -380,7 +431,17 @@ public class MassQuote1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SettlementParties3.mmObject();
+			type_lazy = () -> SettlementParties3.mmObject();
+		}
+
+		@Override
+		public Optional<SettlementParties3> getValue(MassQuote1 obj) {
+			return obj.getReceivingSettlementParties();
+		}
+
+		@Override
+		public void setValue(MassQuote1 obj, Optional<SettlementParties3> value) {
+			obj.setReceivingSettlementParties(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DlvrgSttlmPties")
@@ -417,7 +478,7 @@ public class MassQuote1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDeliveringSettlementParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MassQuote1, Optional<SettlementParties3>> mmDeliveringSettlementParties = new MMMessageAssociationEnd<MassQuote1, Optional<SettlementParties3>>() {
 		{
 			businessComponentTrace_lazy = () -> DeliveringSettlementParty.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MassQuote1.mmObject();
@@ -429,7 +490,17 @@ public class MassQuote1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SettlementParties3.mmObject();
+			type_lazy = () -> SettlementParties3.mmObject();
+		}
+
+		@Override
+		public Optional<SettlementParties3> getValue(MassQuote1 obj) {
+			return obj.getDeliveringSettlementParties();
+		}
+
+		@Override
+		public void setValue(MassQuote1 obj, Optional<SettlementParties3> value) {
+			obj.setDeliveringSettlementParties(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OthrBizPties")
@@ -461,7 +532,7 @@ public class MassQuote1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherBusinessParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MassQuote1, Optional<OtherParties1>> mmOtherBusinessParties = new MMMessageAssociationEnd<MassQuote1, Optional<OtherParties1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MassQuote1.mmObject();
 			isDerived = false;
@@ -472,7 +543,17 @@ public class MassQuote1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OtherParties1.mmObject();
+			type_lazy = () -> OtherParties1.mmObject();
+		}
+
+		@Override
+		public Optional<OtherParties1> getValue(MassQuote1 obj) {
+			return obj.getOtherBusinessParties();
+		}
+
+		@Override
+		public void setValue(MassQuote1 obj, Optional<OtherParties1> value) {
+			obj.setOtherBusinessParties(value.orElse(null));
 		}
 	};
 
@@ -514,7 +595,7 @@ public class MassQuote1 {
 		return quoteSetDetails == null ? quoteSetDetails = new ArrayList<>() : quoteSetDetails;
 	}
 
-	public MassQuote1 setQuoteSetDetails(List<com.tools20022.repository.msg.QuoteSet1> quoteSetDetails) {
+	public MassQuote1 setQuoteSetDetails(List<QuoteSet1> quoteSetDetails) {
 		this.quoteSetDetails = Objects.requireNonNull(quoteSetDetails);
 		return this;
 	}
@@ -523,7 +604,7 @@ public class MassQuote1 {
 		return tradingParties == null ? tradingParties = new ArrayList<>() : tradingParties;
 	}
 
-	public MassQuote1 setTradingParties(List<com.tools20022.repository.msg.Intermediary14> tradingParties) {
+	public MassQuote1 setTradingParties(List<Intermediary14> tradingParties) {
 		this.tradingParties = Objects.requireNonNull(tradingParties);
 		return this;
 	}
@@ -532,7 +613,7 @@ public class MassQuote1 {
 		return cashParties == null ? Optional.empty() : Optional.of(cashParties);
 	}
 
-	public MassQuote1 setCashParties(com.tools20022.repository.msg.CashParties1 cashParties) {
+	public MassQuote1 setCashParties(CashParties1 cashParties) {
 		this.cashParties = cashParties;
 		return this;
 	}
@@ -541,7 +622,7 @@ public class MassQuote1 {
 		return receivingSettlementParties == null ? Optional.empty() : Optional.of(receivingSettlementParties);
 	}
 
-	public MassQuote1 setReceivingSettlementParties(com.tools20022.repository.msg.SettlementParties3 receivingSettlementParties) {
+	public MassQuote1 setReceivingSettlementParties(SettlementParties3 receivingSettlementParties) {
 		this.receivingSettlementParties = receivingSettlementParties;
 		return this;
 	}
@@ -550,7 +631,7 @@ public class MassQuote1 {
 		return deliveringSettlementParties == null ? Optional.empty() : Optional.of(deliveringSettlementParties);
 	}
 
-	public MassQuote1 setDeliveringSettlementParties(com.tools20022.repository.msg.SettlementParties3 deliveringSettlementParties) {
+	public MassQuote1 setDeliveringSettlementParties(SettlementParties3 deliveringSettlementParties) {
 		this.deliveringSettlementParties = deliveringSettlementParties;
 		return this;
 	}
@@ -559,7 +640,7 @@ public class MassQuote1 {
 		return otherBusinessParties == null ? Optional.empty() : Optional.of(otherBusinessParties);
 	}
 
-	public MassQuote1 setOtherBusinessParties(com.tools20022.repository.msg.OtherParties1 otherBusinessParties) {
+	public MassQuote1 setOtherBusinessParties(OtherParties1 otherBusinessParties) {
 		this.otherBusinessParties = otherBusinessParties;
 		return this;
 	}

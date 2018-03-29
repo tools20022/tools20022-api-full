@@ -115,7 +115,7 @@ public class VoteDetails3 {
 	 * VoteDetails2.mmVoteInstructionForAgendaResolution}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmVoteInstructionForAgendaResolution = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<VoteDetails3, Vote3Choice> mmVoteInstructionForAgendaResolution = new MMMessageAssociationEnd<VoteDetails3, Vote3Choice>() {
 		{
 			businessElementTrace_lazy = () -> VoteInstructionRequest.mmVotePerResolution;
 			componentContext_lazy = () -> com.tools20022.repository.msg.VoteDetails3.mmObject();
@@ -129,6 +129,16 @@ public class VoteDetails3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Vote3Choice.mmObject();
+		}
+
+		@Override
+		public Vote3Choice getValue(VoteDetails3 obj) {
+			return obj.getVoteInstructionForAgendaResolution();
+		}
+
+		@Override
+		public void setValue(VoteDetails3 obj, Vote3Choice value) {
+			obj.setVoteInstructionForAgendaResolution(value);
 		}
 	};
 	@XmlElement(name = "VoteInstrForMtgRsltn")
@@ -171,7 +181,7 @@ public class VoteDetails3 {
 	 * VoteDetails2.mmVoteInstructionForMeetingResolution}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmVoteInstructionForMeetingResolution = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<VoteDetails3, Optional<VoteInstructionForMeetingResolution2Choice>> mmVoteInstructionForMeetingResolution = new MMMessageAssociationEnd<VoteDetails3, Optional<VoteInstructionForMeetingResolution2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> VoteInstructionRequest.mmVoteForMeetingResolution;
 			componentContext_lazy = () -> com.tools20022.repository.msg.VoteDetails3.mmObject();
@@ -185,6 +195,16 @@ public class VoteDetails3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> VoteInstructionForMeetingResolution2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<VoteInstructionForMeetingResolution2Choice> getValue(VoteDetails3 obj) {
+			return obj.getVoteInstructionForMeetingResolution();
+		}
+
+		@Override
+		public void setValue(VoteDetails3 obj, Optional<VoteInstructionForMeetingResolution2Choice> value) {
+			obj.setVoteInstructionForMeetingResolution(value.orElse(null));
 		}
 	};
 

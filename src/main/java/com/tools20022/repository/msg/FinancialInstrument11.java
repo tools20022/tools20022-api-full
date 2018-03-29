@@ -139,7 +139,7 @@ public class FinancialInstrument11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument11, SecurityIdentification3Choice> mmIdentification = new MMMessageAttribute<FinancialInstrument11, SecurityIdentification3Choice>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument11.mmObject();
@@ -151,6 +151,16 @@ public class FinancialInstrument11 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SecurityIdentification3Choice.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification3Choice getValue(FinancialInstrument11 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument11 obj, SecurityIdentification3Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Nm")
@@ -187,7 +197,7 @@ public class FinancialInstrument11 {
 	 * definition} = "Name of the financial instrument in free format text."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument11, Optional<Max350Text>> mmName = new MMMessageAttribute<FinancialInstrument11, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> LocalName.mmFullName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument11.mmObject();
@@ -199,6 +209,16 @@ public class FinancialInstrument11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(FinancialInstrument11 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument11 obj, Optional<Max350Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrfTp", required = true)
@@ -238,7 +258,7 @@ public class FinancialInstrument11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransferType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument11, TransferType1Code> mmTransferType = new MMMessageAttribute<FinancialInstrument11, TransferType1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument11.mmObject();
@@ -250,6 +270,16 @@ public class FinancialInstrument11 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TransferType1Code.mmObject();
+		}
+
+		@Override
+		public TransferType1Code getValue(FinancialInstrument11 obj) {
+			return obj.getTransferType();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument11 obj, TransferType1Code value) {
+			obj.setTransferType(value);
 		}
 	};
 

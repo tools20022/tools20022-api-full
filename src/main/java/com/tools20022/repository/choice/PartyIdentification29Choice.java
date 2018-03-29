@@ -115,7 +115,7 @@ public class PartyIdentification29Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification29Choice, BICIdentifier> mmBIC = new MMMessageAttribute<PartyIdentification29Choice, BICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification29Choice.mmObject();
@@ -127,6 +127,16 @@ public class PartyIdentification29Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
+		}
+
+		@Override
+		public BICIdentifier getValue(PartyIdentification29Choice obj) {
+			return obj.getBIC();
+		}
+
+		@Override
+		public void setValue(PartyIdentification29Choice obj, BICIdentifier value) {
+			obj.setBIC(value);
 		}
 	};
 	@XmlElement(name = "NmAndAdr", required = true)
@@ -165,7 +175,7 @@ public class PartyIdentification29Choice {
 	 * "Identifies the name and address of a non-financial institution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNameAndAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification29Choice, PartyIdentification26> mmNameAndAddress = new MMMessageAttribute<PartyIdentification29Choice, PartyIdentification26>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification29Choice.mmObject();
@@ -177,6 +187,16 @@ public class PartyIdentification29Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification26.mmObject();
+		}
+
+		@Override
+		public PartyIdentification26 getValue(PartyIdentification29Choice obj) {
+			return obj.getNameAndAddress();
+		}
+
+		@Override
+		public void setValue(PartyIdentification29Choice obj, PartyIdentification26 value) {
+			obj.setNameAndAddress(value);
 		}
 	};
 

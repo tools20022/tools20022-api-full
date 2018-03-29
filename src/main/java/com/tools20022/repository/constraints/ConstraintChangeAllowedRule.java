@@ -51,11 +51,15 @@ public class ConstraintChangeAllowedRule {
 	 */
 	public static final MMConstraint<CorporateActionOption1> forCorporateActionOption1 = new MMConstraint<CorporateActionOption1>() {
 		{
-			validator = ConstraintChangeAllowedRule::checkCorporateActionOption1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChangeAllowedRule";
 			definition = "If the value of ChangeAllowedIndicator is true, then PerdioDetails/RevocabilityPeriod is Mandatory.";
 			owner_lazy = () -> CorporateActionOption1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption1 obj) throws Exception {
+			checkCorporateActionOption1(obj);
 		}
 	};
 

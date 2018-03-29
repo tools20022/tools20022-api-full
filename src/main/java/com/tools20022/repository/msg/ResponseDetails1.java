@@ -96,21 +96,31 @@ public class ResponseDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Code for account servicer warnings, rejections, pay no/pay responses and technical rejections."
+	 * "Code for account servicer warnings, rejections, pay no/pay responses and technical rejections. "
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResponseCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ResponseDetails1, Max35Text> mmResponseCode = new MMMessageAttribute<ResponseDetails1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ResponseDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "RspnCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseCode";
-			definition = "Code for account servicer warnings, rejections, pay no/pay responses and technical rejections.";
+			definition = "Code for account servicer warnings, rejections, pay no/pay responses and technical rejections. ";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ResponseDetails1 obj) {
+			return obj.getResponseCode();
+		}
+
+		@Override
+		public void setValue(ResponseDetails1 obj, Max35Text value) {
+			obj.setResponseCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlDtls")
@@ -142,7 +152,7 @@ public class ResponseDetails1 {
 	 * definition} = "Additional information to elaborate upon response codes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ResponseDetails1, Optional<Max350Text>> mmAdditionalDetails = new MMMessageAttribute<ResponseDetails1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ResponseDetails1.mmObject();
 			isDerived = false;
@@ -153,6 +163,16 @@ public class ResponseDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(ResponseDetails1 obj) {
+			return obj.getAdditionalDetails();
+		}
+
+		@Override
+		public void setValue(ResponseDetails1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalDetails(value.orElse(null));
 		}
 	};
 

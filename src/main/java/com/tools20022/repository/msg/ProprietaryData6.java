@@ -102,7 +102,7 @@ public class ProprietaryData6 {
 	 * ProprietaryData3.mmAny}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAny = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProprietaryData6, SkipPayload> mmAny = new MMMessageAssociationEnd<ProprietaryData6, SkipPayload>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryData6.mmObject();
 			isDerived = false;
@@ -115,6 +115,16 @@ public class ProprietaryData6 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SkipPayload.mmObject();
+		}
+
+		@Override
+		public SkipPayload getValue(ProprietaryData6 obj) {
+			return obj.getAny();
+		}
+
+		@Override
+		public void setValue(ProprietaryData6 obj, SkipPayload value) {
+			obj.setAny(value);
 		}
 	};
 

@@ -120,7 +120,7 @@ public class Reservation3 {
 	 * Reservation1.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reservation3, Amount2Choice> mmAmount = new MMMessageAttribute<Reservation3, Amount2Choice>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reservation3.mmObject();
@@ -133,6 +133,16 @@ public class Reservation3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Amount2Choice.mmObject();
+		}
+
+		@Override
+		public Amount2Choice getValue(Reservation3 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Reservation3 obj, Amount2Choice value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "Sts")
@@ -174,7 +184,7 @@ public class Reservation3 {
 	 * Reservation1.mmStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reservation3, Optional<ReservationStatus1Choice>> mmStatus = new MMMessageAttribute<Reservation3, Optional<ReservationStatus1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmLimitStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reservation3.mmObject();
@@ -187,6 +197,16 @@ public class Reservation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ReservationStatus1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ReservationStatus1Choice> getValue(Reservation3 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(Reservation3 obj, Optional<ReservationStatus1Choice> value) {
+			obj.setStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StartDtTm")
@@ -229,7 +249,7 @@ public class Reservation3 {
 	 * Reservation1.mmStartDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStartDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reservation3, Optional<DateAndDateTime2Choice>> mmStartDateTime = new MMMessageAttribute<Reservation3, Optional<DateAndDateTime2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reservation3.mmObject();
@@ -242,6 +262,16 @@ public class Reservation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTime2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTime2Choice> getValue(Reservation3 obj) {
+			return obj.getStartDateTime();
+		}
+
+		@Override
+		public void setValue(Reservation3 obj, Optional<DateAndDateTime2Choice> value) {
+			obj.setStartDateTime(value.orElse(null));
 		}
 	};
 

@@ -121,7 +121,7 @@ public class InRepairStatus4Choice {
 	 * InRepairStatus3.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InRepairStatus4Choice, Max350Text> mmReason = new MMMessageAttribute<InRepairStatus4Choice, Max350Text>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InRepairStatus4Choice.mmObject();
@@ -134,6 +134,16 @@ public class InRepairStatus4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(InRepairStatus4Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(InRepairStatus4Choice obj, Max350Text value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "DataSrcSchme", required = true)
@@ -175,7 +185,7 @@ public class InRepairStatus4Choice {
 	 * InRepairStatus3.mmDataSourceScheme}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InRepairStatus4Choice, GenericIdentification1> mmDataSourceScheme = new MMMessageAssociationEnd<InRepairStatus4Choice, GenericIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InRepairStatus4Choice.mmObject();
@@ -189,6 +199,16 @@ public class InRepairStatus4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(InRepairStatus4Choice obj) {
+			return obj.getDataSourceScheme();
+		}
+
+		@Override
+		public void setValue(InRepairStatus4Choice obj, GenericIdentification1 value) {
+			obj.setDataSourceScheme(value);
 		}
 	};
 	@XmlElement(name = "NoSpcfdRsn", required = true)
@@ -231,7 +251,7 @@ public class InRepairStatus4Choice {
 	 * InRepairStatus3.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InRepairStatus4Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<InRepairStatus4Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InRepairStatus4Choice.mmObject();
@@ -244,6 +264,16 @@ public class InRepairStatus4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(InRepairStatus4Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(InRepairStatus4Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 

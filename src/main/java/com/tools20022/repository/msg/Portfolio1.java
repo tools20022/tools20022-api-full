@@ -101,7 +101,7 @@ public class Portfolio1 {
 	 * definition} = "Additional information related to the portfolio."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPortfolioInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Portfolio1, List<Max350Text>> mmPortfolioInformation = new MMMessageAttribute<Portfolio1, List<Max350Text>>() {
 		{
 			businessComponentTrace_lazy = () -> Portfolio.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Portfolio1.mmObject();
@@ -113,6 +113,16 @@ public class Portfolio1 {
 			maxOccurs = 5;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public List<Max350Text> getValue(Portfolio1 obj) {
+			return obj.getPortfolioInformation();
+		}
+
+		@Override
+		public void setValue(Portfolio1 obj, List<Max350Text> value) {
+			obj.setPortfolioInformation(value);
 		}
 	};
 

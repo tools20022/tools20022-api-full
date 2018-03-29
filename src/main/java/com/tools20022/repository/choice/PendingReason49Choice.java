@@ -118,7 +118,7 @@ public class PendingReason49Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingReason49Choice, PendingReason14Code> mmCode = new MMMessageAttribute<PendingReason49Choice, PendingReason14Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingReason49Choice.mmObject();
@@ -131,6 +131,16 @@ public class PendingReason49Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PendingReason14Code.mmObject();
+		}
+
+		@Override
+		public PendingReason14Code getValue(PendingReason49Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(PendingReason49Choice obj, PendingReason14Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -173,7 +183,7 @@ public class PendingReason49Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingReason49Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<PendingReason49Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingReason49Choice.mmObject();
@@ -186,6 +196,16 @@ public class PendingReason49Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(PendingReason49Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(PendingReason49Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

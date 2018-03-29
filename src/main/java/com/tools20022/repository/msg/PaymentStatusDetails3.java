@@ -108,7 +108,7 @@ public class PaymentStatusDetails3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentInstructionStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentStatusDetails3, Optional<PaymentStatusCode3Choice>> mmPaymentInstructionStatus = new MMMessageAssociationEnd<PaymentStatusDetails3, Optional<PaymentStatusCode3Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentStatusDetails3.mmObject();
 			isDerived = false;
@@ -120,6 +120,16 @@ public class PaymentStatusDetails3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PaymentStatusCode3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentStatusCode3Choice> getValue(PaymentStatusDetails3 obj) {
+			return obj.getPaymentInstructionStatus();
+		}
+
+		@Override
+		public void setValue(PaymentStatusDetails3 obj, Optional<PaymentStatusCode3Choice> value) {
+			obj.setPaymentInstructionStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtInstrStsDtTm")
@@ -158,7 +168,7 @@ public class PaymentStatusDetails3 {
 	 * "Date and time at which the status was assigned to the transfer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentInstructionStatusDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentStatusDetails3, Optional<DateAndDateTimeChoice>> mmPaymentInstructionStatusDateTime = new MMMessageAttribute<PaymentStatusDetails3, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentStatusDetails3.mmObject();
@@ -170,6 +180,16 @@ public class PaymentStatusDetails3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(PaymentStatusDetails3 obj) {
+			return obj.getPaymentInstructionStatusDateTime();
+		}
+
+		@Override
+		public void setValue(PaymentStatusDetails3 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setPaymentInstructionStatusDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtInstrStsRsn")
@@ -202,7 +222,7 @@ public class PaymentStatusDetails3 {
 	 * definition} = "Reason provided for the status of a transfer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentInstructionStatusReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentStatusDetails3, List<PaymentStatusReasonCode3Choice>> mmPaymentInstructionStatusReason = new MMMessageAttribute<PaymentStatusDetails3, List<PaymentStatusReasonCode3Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentStatusDetails3.mmObject();
 			isDerived = false;
@@ -212,6 +232,16 @@ public class PaymentStatusDetails3 {
 			definition = "Reason provided for the status of a transfer.";
 			minOccurs = 0;
 			complexType_lazy = () -> PaymentStatusReasonCode3Choice.mmObject();
+		}
+
+		@Override
+		public List<PaymentStatusReasonCode3Choice> getValue(PaymentStatusDetails3 obj) {
+			return obj.getPaymentInstructionStatusReason();
+		}
+
+		@Override
+		public void setValue(PaymentStatusDetails3 obj, List<PaymentStatusReasonCode3Choice> value) {
+			obj.setPaymentInstructionStatusReason(value);
 		}
 	};
 

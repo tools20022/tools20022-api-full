@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.entity.TaxPayer;
 import com.tools20022.repository.entity.TaxRecipient;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccount32;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -133,7 +134,7 @@ public class TaxReporting1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxationCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxReporting1, CountryCode> mmTaxationCountry = new MMMessageAttribute<TaxReporting1, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmCountry;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxReporting1.mmObject();
@@ -146,6 +147,16 @@ public class TaxReporting1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(TaxReporting1 obj) {
+			return obj.getTaxationCountry();
+		}
+
+		@Override
+		public void setValue(TaxReporting1 obj, CountryCode value) {
+			obj.setTaxationCountry(value);
 		}
 	};
 	@XmlElement(name = "TaxRate")
@@ -188,7 +199,7 @@ public class TaxReporting1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxReporting1, Optional<PercentageRate>> mmTaxRate = new MMMessageAttribute<TaxReporting1, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxReporting1.mmObject();
@@ -201,6 +212,16 @@ public class TaxReporting1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(TaxReporting1 obj) {
+			return obj.getTaxRate();
+		}
+
+		@Override
+		public void setValue(TaxReporting1 obj, Optional<PercentageRate> value) {
+			obj.setTaxRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxPyer")
@@ -242,7 +263,7 @@ public class TaxReporting1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTaxPayer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TaxReporting1, Optional<PartyIdentification70Choice>> mmTaxPayer = new MMMessageAssociationEnd<TaxReporting1, Optional<PartyIdentification70Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> TaxPayer.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxReporting1.mmObject();
@@ -256,6 +277,16 @@ public class TaxReporting1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification70Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification70Choice> getValue(TaxReporting1 obj) {
+			return obj.getTaxPayer();
+		}
+
+		@Override
+		public void setValue(TaxReporting1 obj, Optional<PartyIdentification70Choice> value) {
+			obj.setTaxPayer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxRcpt")
@@ -298,7 +329,7 @@ public class TaxReporting1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTaxRecipient = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TaxReporting1, Optional<PartyIdentification70Choice>> mmTaxRecipient = new MMMessageAssociationEnd<TaxReporting1, Optional<PartyIdentification70Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> TaxRecipient.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxReporting1.mmObject();
@@ -312,6 +343,16 @@ public class TaxReporting1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification70Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification70Choice> getValue(TaxReporting1 obj) {
+			return obj.getTaxRecipient();
+		}
+
+		@Override
+		public void setValue(TaxReporting1 obj, Optional<PartyIdentification70Choice> value) {
+			obj.setTaxRecipient(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CshAcctDtls")
@@ -354,7 +395,7 @@ public class TaxReporting1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TaxReporting1, Optional<CashAccount32>> mmCashAccountDetails = new MMMessageAssociationEnd<TaxReporting1, Optional<CashAccount32>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmTaxAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxReporting1.mmObject();
@@ -367,7 +408,17 @@ public class TaxReporting1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount32.mmObject();
+			type_lazy = () -> CashAccount32.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount32> getValue(TaxReporting1 obj) {
+			return obj.getCashAccountDetails();
+		}
+
+		@Override
+		public void setValue(TaxReporting1 obj, Optional<CashAccount32> value) {
+			obj.setCashAccountDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Desc")
@@ -406,7 +457,7 @@ public class TaxReporting1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxReporting1, Optional<Max350Text>> mmDescription = new MMMessageAttribute<TaxReporting1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxReporting1.mmObject();
 			isDerived = false;
@@ -418,6 +469,16 @@ public class TaxReporting1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(TaxReporting1 obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(TaxReporting1 obj, Optional<Max350Text> value) {
+			obj.setDescription(value.orElse(null));
 		}
 	};
 
@@ -477,7 +538,7 @@ public class TaxReporting1 {
 		return cashAccountDetails == null ? Optional.empty() : Optional.of(cashAccountDetails);
 	}
 
-	public TaxReporting1 setCashAccountDetails(com.tools20022.repository.msg.CashAccount32 cashAccountDetails) {
+	public TaxReporting1 setCashAccountDetails(CashAccount32 cashAccountDetails) {
 		this.cashAccountDetails = cashAccountDetails;
 		return this;
 	}

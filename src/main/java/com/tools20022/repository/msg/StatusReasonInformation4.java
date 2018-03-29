@@ -24,6 +24,7 @@ import com.tools20022.repository.choice.StatusReason3Choice;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PaymentStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification14;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -105,7 +106,7 @@ public class StatusReasonInformation4 {
 	 * definition} = "Party issuing the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusOriginator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusReasonInformation4, PartyIdentification14> mmStatusOriginator = new MMMessageAssociationEnd<StatusReasonInformation4, PartyIdentification14>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation4.mmObject();
@@ -117,7 +118,17 @@ public class StatusReasonInformation4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification14.mmObject();
+			type_lazy = () -> PartyIdentification14.mmObject();
+		}
+
+		@Override
+		public PartyIdentification14 getValue(StatusReasonInformation4 obj) {
+			return obj.getStatusOriginator();
+		}
+
+		@Override
+		public void setValue(StatusReasonInformation4 obj, PartyIdentification14 value) {
+			obj.setStatusOriginator(value);
 		}
 	};
 	@XmlElement(name = "StsRsn", required = true)
@@ -153,7 +164,7 @@ public class StatusReasonInformation4 {
 	 * definition} = "Specifies the reason for the status report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusReasonInformation4, StatusReason3Choice> mmStatusReason = new MMMessageAssociationEnd<StatusReasonInformation4, StatusReason3Choice>() {
 		{
 			businessComponentTrace_lazy = () -> PaymentStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation4.mmObject();
@@ -166,6 +177,16 @@ public class StatusReasonInformation4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> StatusReason3Choice.mmObject();
+		}
+
+		@Override
+		public StatusReason3Choice getValue(StatusReasonInformation4 obj) {
+			return obj.getStatusReason();
+		}
+
+		@Override
+		public void setValue(StatusReasonInformation4 obj, StatusReason3Choice value) {
+			obj.setStatusReason(value);
 		}
 	};
 
@@ -187,7 +208,7 @@ public class StatusReasonInformation4 {
 		return statusOriginator;
 	}
 
-	public StatusReasonInformation4 setStatusOriginator(com.tools20022.repository.msg.PartyIdentification14 statusOriginator) {
+	public StatusReasonInformation4 setStatusOriginator(PartyIdentification14 statusOriginator) {
 		this.statusOriginator = Objects.requireNonNull(statusOriginator);
 		return this;
 	}

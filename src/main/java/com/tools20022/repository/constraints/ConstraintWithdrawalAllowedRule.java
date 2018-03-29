@@ -51,11 +51,15 @@ public class ConstraintWithdrawalAllowedRule {
 	 */
 	public static final MMConstraint<CorporateActionOption1> forCorporateActionOption1 = new MMConstraint<CorporateActionOption1>() {
 		{
-			validator = ConstraintWithdrawalAllowedRule::checkCorporateActionOption1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithdrawalAllowedRule";
 			definition = "If the value of WithdrawalAllowedIndicator is true, then PeriodDetails/RevocabilityPeriod is Mandatory.";
 			owner_lazy = () -> CorporateActionOption1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption1 obj) throws Exception {
+			checkCorporateActionOption1(obj);
 		}
 	};
 

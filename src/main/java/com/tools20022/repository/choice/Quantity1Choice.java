@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.FinancialInstrumentQuantityChoice;
 import com.tools20022.repository.codeset.RelativeSize1Code;
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
@@ -109,7 +110,7 @@ public class Quantity1Choice {
 	 * "Quantity is expressed in units, face amount or amortised amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Quantity1Choice, FinancialInstrumentQuantityChoice> mmQuantity = new MMMessageAttribute<Quantity1Choice, FinancialInstrumentQuantityChoice>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesQuantity.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity1Choice.mmObject();
@@ -120,7 +121,17 @@ public class Quantity1Choice {
 			definition = "Quantity is expressed in units, face amount or amortised amount.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantityChoice.mmObject();
+			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantityChoice getValue(Quantity1Choice obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(Quantity1Choice obj, FinancialInstrumentQuantityChoice value) {
+			obj.setQuantity(value);
 		}
 	};
 	@XmlElement(name = "RltvSz", required = true)
@@ -159,7 +170,7 @@ public class Quantity1Choice {
 	 * "Quantity expressed in relative size (small, medium or large)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRelativeSize = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Quantity1Choice, RelativeSize1Code> mmRelativeSize = new MMMessageAttribute<Quantity1Choice, RelativeSize1Code>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesQuantity.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity1Choice.mmObject();
@@ -171,6 +182,16 @@ public class Quantity1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RelativeSize1Code.mmObject();
+		}
+
+		@Override
+		public RelativeSize1Code getValue(Quantity1Choice obj) {
+			return obj.getRelativeSize();
+		}
+
+		@Override
+		public void setValue(Quantity1Choice obj, RelativeSize1Code value) {
+			obj.setRelativeSize(value);
 		}
 	};
 
@@ -192,7 +213,7 @@ public class Quantity1Choice {
 		return quantity;
 	}
 
-	public Quantity1Choice setQuantity(com.tools20022.repository.choice.FinancialInstrumentQuantityChoice quantity) {
+	public Quantity1Choice setQuantity(FinancialInstrumentQuantityChoice quantity) {
 		this.quantity = Objects.requireNonNull(quantity);
 		return this;
 	}

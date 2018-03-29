@@ -101,7 +101,7 @@ public class IsabelEbanking1Choice {
 	 * "Identification of the e-banking through a user identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUserIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelEbanking1Choice, Max13AlphaNumericText> mmUserIdentification = new MMMessageAttribute<IsabelEbanking1Choice, Max13AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.IsabelEbanking1Choice.mmObject();
 			isDerived = false;
@@ -112,6 +112,16 @@ public class IsabelEbanking1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max13AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max13AlphaNumericText getValue(IsabelEbanking1Choice obj) {
+			return obj.getUserIdentification();
+		}
+
+		@Override
+		public void setValue(IsabelEbanking1Choice obj, Max13AlphaNumericText value) {
+			obj.setUserIdentification(value);
 		}
 	};
 	@XmlElement(name = "CtrctId", required = true)
@@ -145,7 +155,7 @@ public class IsabelEbanking1Choice {
 	 * "Identification of the e-banking through a contract identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContractIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelEbanking1Choice, Max13AlphaNumericText> mmContractIdentification = new MMMessageAttribute<IsabelEbanking1Choice, Max13AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.IsabelEbanking1Choice.mmObject();
 			isDerived = false;
@@ -156,6 +166,16 @@ public class IsabelEbanking1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max13AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max13AlphaNumericText getValue(IsabelEbanking1Choice obj) {
+			return obj.getContractIdentification();
+		}
+
+		@Override
+		public void setValue(IsabelEbanking1Choice obj, Max13AlphaNumericText value) {
+			obj.setContractIdentification(value);
 		}
 	};
 

@@ -110,7 +110,7 @@ public class InvestmentAccountInformationType {
 	 * "Indicates if the core investment account information must be selected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInvestmentAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccountInformationType, YesNoIndicator> mmInvestmentAccount = new MMMessageAttribute<InvestmentAccountInformationType, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountInformationType.mmObject();
 			isDerived = false;
@@ -121,6 +121,16 @@ public class InvestmentAccountInformationType {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(InvestmentAccountInformationType obj) {
+			return obj.getInvestmentAccount();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountInformationType obj, YesNoIndicator value) {
+			obj.setInvestmentAccount(value);
 		}
 	};
 	@XmlElement(name = "AcctPties", required = true)
@@ -154,7 +164,7 @@ public class InvestmentAccountInformationType {
 	 * "Indicates if the information about account parties must be selected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountParties = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccountInformationType, YesNoIndicator> mmAccountParties = new MMMessageAttribute<InvestmentAccountInformationType, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountInformationType.mmObject();
 			isDerived = false;
@@ -165,6 +175,16 @@ public class InvestmentAccountInformationType {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(InvestmentAccountInformationType obj) {
+			return obj.getAccountParties();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountInformationType obj, YesNoIndicator value) {
+			obj.setAccountParties(value);
 		}
 	};
 	@XmlElement(name = "Intrmies", required = true)
@@ -199,7 +219,7 @@ public class InvestmentAccountInformationType {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIntermediaries = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccountInformationType, YesNoIndicator> mmIntermediaries = new MMMessageAttribute<InvestmentAccountInformationType, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountInformationType.mmObject();
 			isDerived = false;
@@ -210,6 +230,16 @@ public class InvestmentAccountInformationType {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(InvestmentAccountInformationType obj) {
+			return obj.getIntermediaries();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountInformationType obj, YesNoIndicator value) {
+			obj.setIntermediaries(value);
 		}
 	};
 	@XmlElement(name = "InvstmtPlan", required = true)
@@ -244,7 +274,7 @@ public class InvestmentAccountInformationType {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInvestmentPlan = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccountInformationType, YesNoIndicator> mmInvestmentPlan = new MMMessageAttribute<InvestmentAccountInformationType, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountInformationType.mmObject();
 			isDerived = false;
@@ -255,6 +285,16 @@ public class InvestmentAccountInformationType {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(InvestmentAccountInformationType obj) {
+			return obj.getInvestmentPlan();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountInformationType obj, YesNoIndicator value) {
+			obj.setInvestmentPlan(value);
 		}
 	};
 	@XmlElement(name = "CshSttlm", required = true)
@@ -288,7 +328,7 @@ public class InvestmentAccountInformationType {
 	 * "Indicates if the cash settlement information must be selected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashSettlement = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccountInformationType, YesNoIndicator> mmCashSettlement = new MMMessageAttribute<InvestmentAccountInformationType, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountInformationType.mmObject();
 			isDerived = false;
@@ -299,6 +339,16 @@ public class InvestmentAccountInformationType {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(InvestmentAccountInformationType obj) {
+			return obj.getCashSettlement();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountInformationType obj, YesNoIndicator value) {
+			obj.setCashSettlement(value);
 		}
 	};
 

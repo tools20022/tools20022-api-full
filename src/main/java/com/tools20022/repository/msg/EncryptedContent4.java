@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ContentType2Code;
 import com.tools20022.repository.datatype.Max100KBinary;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AlgorithmIdentification24;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -61,7 +62,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "EncryptedContent4"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -112,7 +113,7 @@ public class EncryptedContent4 {
 	 * EncryptedContent3.mmContentType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EncryptedContent4, ContentType2Code> mmContentType = new MMMessageAttribute<EncryptedContent4, ContentType2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EncryptedContent4.mmObject();
 			isDerived = false;
@@ -124,6 +125,16 @@ public class EncryptedContent4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ContentType2Code.mmObject();
+		}
+
+		@Override
+		public ContentType2Code getValue(EncryptedContent4 obj) {
+			return obj.getContentType();
+		}
+
+		@Override
+		public void setValue(EncryptedContent4 obj, ContentType2Code value) {
+			obj.setContentType(value);
 		}
 	};
 	@XmlElement(name = "CnttNcrptnAlgo")
@@ -160,7 +171,7 @@ public class EncryptedContent4 {
 	 * EncryptedContent3.mmContentEncryptionAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContentEncryptionAlgorithm = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EncryptedContent4, Optional<AlgorithmIdentification24>> mmContentEncryptionAlgorithm = new MMMessageAssociationEnd<EncryptedContent4, Optional<AlgorithmIdentification24>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EncryptedContent4.mmObject();
 			isDerived = false;
@@ -172,7 +183,17 @@ public class EncryptedContent4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification24.mmObject();
+			type_lazy = () -> AlgorithmIdentification24.mmObject();
+		}
+
+		@Override
+		public Optional<AlgorithmIdentification24> getValue(EncryptedContent4 obj) {
+			return obj.getContentEncryptionAlgorithm();
+		}
+
+		@Override
+		public void setValue(EncryptedContent4 obj, Optional<AlgorithmIdentification24> value) {
+			obj.setContentEncryptionAlgorithm(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NcrptdData", required = true)
@@ -210,7 +231,7 @@ public class EncryptedContent4 {
 	 * EncryptedContent3.mmEncryptedData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEncryptedData = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EncryptedContent4, Max100KBinary> mmEncryptedData = new MMMessageAttribute<EncryptedContent4, Max100KBinary>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EncryptedContent4.mmObject();
 			isDerived = false;
@@ -223,6 +244,16 @@ public class EncryptedContent4 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max100KBinary.mmObject();
 		}
+
+		@Override
+		public Max100KBinary getValue(EncryptedContent4 obj) {
+			return obj.getEncryptedData();
+		}
+
+		@Override
+		public void setValue(EncryptedContent4 obj, Max100KBinary value) {
+			obj.setEncryptedData(value);
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -231,7 +262,7 @@ public class EncryptedContent4 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EncryptedContent4.mmContentType, com.tools20022.repository.msg.EncryptedContent4.mmContentEncryptionAlgorithm,
 						com.tools20022.repository.msg.EncryptedContent4.mmEncryptedData);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EncryptedContent4";
 				definition = "Encrypted data with an encryption key.";
 				previousVersion_lazy = () -> EncryptedContent3.mmObject();
@@ -253,7 +284,7 @@ public class EncryptedContent4 {
 		return contentEncryptionAlgorithm == null ? Optional.empty() : Optional.of(contentEncryptionAlgorithm);
 	}
 
-	public EncryptedContent4 setContentEncryptionAlgorithm(com.tools20022.repository.msg.AlgorithmIdentification24 contentEncryptionAlgorithm) {
+	public EncryptedContent4 setContentEncryptionAlgorithm(AlgorithmIdentification24 contentEncryptionAlgorithm) {
 		this.contentEncryptionAlgorithm = contentEncryptionAlgorithm;
 		return this;
 	}

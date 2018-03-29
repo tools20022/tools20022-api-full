@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.AccountIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SimpleIdentificationInformation;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -105,7 +106,7 @@ public class CashAccountIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDomesticAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountIdentification1, SimpleIdentificationInformation> mmDomesticAccount = new MMMessageAttribute<CashAccountIdentification1, SimpleIdentificationInformation>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmProprietaryIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountIdentification1.mmObject();
@@ -116,7 +117,17 @@ public class CashAccountIdentification1 {
 			definition = "Account number used by financial institutions in individual countries to identify an account of a customer, but not necessarily the bank and branch of the financial institution in which the account is held.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.SimpleIdentificationInformation.mmObject();
+			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
+		}
+
+		@Override
+		public SimpleIdentificationInformation getValue(CashAccountIdentification1 obj) {
+			return obj.getDomesticAccount();
+		}
+
+		@Override
+		public void setValue(CashAccountIdentification1 obj, SimpleIdentificationInformation value) {
+			obj.setDomesticAccount(value);
 		}
 	};
 
@@ -138,7 +149,7 @@ public class CashAccountIdentification1 {
 		return domesticAccount;
 	}
 
-	public CashAccountIdentification1 setDomesticAccount(com.tools20022.repository.msg.SimpleIdentificationInformation domesticAccount) {
+	public CashAccountIdentification1 setDomesticAccount(SimpleIdentificationInformation domesticAccount) {
 		this.domesticAccount = Objects.requireNonNull(domesticAccount);
 		return this;
 	}

@@ -30,6 +30,7 @@ import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.entity.Role;
 import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.UpdatedAdditionalInformation8;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -170,7 +171,7 @@ public class CorporateActionNarrative27 {
 	 * CorporateActionNarrative11.mmAdditionalText}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdditionalText = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionNarrative27, Optional<UpdatedAdditionalInformation8>> mmAdditionalText = new MMMessageAssociationEnd<CorporateActionNarrative27, Optional<UpdatedAdditionalInformation8>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative27.mmObject();
 			isDerived = false;
@@ -183,7 +184,17 @@ public class CorporateActionNarrative27 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation8.mmObject();
+			type_lazy = () -> UpdatedAdditionalInformation8.mmObject();
+		}
+
+		@Override
+		public Optional<UpdatedAdditionalInformation8> getValue(CorporateActionNarrative27 obj) {
+			return obj.getAdditionalText();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative27 obj, Optional<UpdatedAdditionalInformation8> value) {
+			obj.setAdditionalText(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NrrtvVrsn")
@@ -225,7 +236,7 @@ public class CorporateActionNarrative27 {
 	 * CorporateActionNarrative11.mmNarrativeVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNarrativeVersion = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionNarrative27, Optional<UpdatedAdditionalInformation8>> mmNarrativeVersion = new MMMessageAssociationEnd<CorporateActionNarrative27, Optional<UpdatedAdditionalInformation8>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative27.mmObject();
 			isDerived = false;
@@ -238,7 +249,17 @@ public class CorporateActionNarrative27 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation8.mmObject();
+			type_lazy = () -> UpdatedAdditionalInformation8.mmObject();
+		}
+
+		@Override
+		public Optional<UpdatedAdditionalInformation8> getValue(CorporateActionNarrative27 obj) {
+			return obj.getNarrativeVersion();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative27 obj, Optional<UpdatedAdditionalInformation8> value) {
+			obj.setNarrativeVersion(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InfConds")
@@ -285,7 +306,7 @@ public class CorporateActionNarrative27 {
 	 * CorporateActionNarrative11.mmInformationConditions}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInformationConditions = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionNarrative27, Optional<UpdatedAdditionalInformation8>> mmInformationConditions = new MMMessageAssociationEnd<CorporateActionNarrative27, Optional<UpdatedAdditionalInformation8>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmInformationConditions;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative27.mmObject();
@@ -299,7 +320,17 @@ public class CorporateActionNarrative27 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation8.mmObject();
+			type_lazy = () -> UpdatedAdditionalInformation8.mmObject();
+		}
+
+		@Override
+		public Optional<UpdatedAdditionalInformation8> getValue(CorporateActionNarrative27 obj) {
+			return obj.getInformationConditions();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative27 obj, Optional<UpdatedAdditionalInformation8> value) {
+			obj.setInformationConditions(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InfToCmplyWth")
@@ -346,7 +377,7 @@ public class CorporateActionNarrative27 {
 	 * CorporateActionNarrative11.mmInformationToComplyWith}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInformationToComplyWith = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionNarrative27, Optional<UpdatedAdditionalInformation8>> mmInformationToComplyWith = new MMMessageAssociationEnd<CorporateActionNarrative27, Optional<UpdatedAdditionalInformation8>>() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmInformationToComplyWith;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative27.mmObject();
@@ -360,7 +391,17 @@ public class CorporateActionNarrative27 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation8.mmObject();
+			type_lazy = () -> UpdatedAdditionalInformation8.mmObject();
+		}
+
+		@Override
+		public Optional<UpdatedAdditionalInformation8> getValue(CorporateActionNarrative27 obj) {
+			return obj.getInformationToComplyWith();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative27 obj, Optional<UpdatedAdditionalInformation8> value) {
+			obj.setInformationToComplyWith(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxtnConds")
@@ -407,7 +448,7 @@ public class CorporateActionNarrative27 {
 	 * CorporateActionNarrative11.mmTaxationConditions}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTaxationConditions = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionNarrative27, Optional<UpdatedAdditionalInformation8>> mmTaxationConditions = new MMMessageAssociationEnd<CorporateActionNarrative27, Optional<UpdatedAdditionalInformation8>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmTaxationConditions;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative27.mmObject();
@@ -421,7 +462,17 @@ public class CorporateActionNarrative27 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation8.mmObject();
+			type_lazy = () -> UpdatedAdditionalInformation8.mmObject();
+		}
+
+		@Override
+		public Optional<UpdatedAdditionalInformation8> getValue(CorporateActionNarrative27 obj) {
+			return obj.getTaxationConditions();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative27 obj, Optional<UpdatedAdditionalInformation8> value) {
+			obj.setTaxationConditions(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Dsclmr")
@@ -463,7 +514,7 @@ public class CorporateActionNarrative27 {
 	 * CorporateActionNarrative11.mmDisclaimer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDisclaimer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionNarrative27, Optional<UpdatedAdditionalInformation8>> mmDisclaimer = new MMMessageAssociationEnd<CorporateActionNarrative27, Optional<UpdatedAdditionalInformation8>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative27.mmObject();
 			isDerived = false;
@@ -476,7 +527,17 @@ public class CorporateActionNarrative27 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation8.mmObject();
+			type_lazy = () -> UpdatedAdditionalInformation8.mmObject();
+		}
+
+		@Override
+		public Optional<UpdatedAdditionalInformation8> getValue(CorporateActionNarrative27 obj) {
+			return obj.getDisclaimer();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative27 obj, Optional<UpdatedAdditionalInformation8> value) {
+			obj.setDisclaimer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PtyCtctNrrtv")
@@ -523,7 +584,7 @@ public class CorporateActionNarrative27 {
 	 * CorporateActionNarrative11.mmPartyContactNarrative}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPartyContactNarrative = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionNarrative27, Optional<UpdatedAdditionalInformation8>> mmPartyContactNarrative = new MMMessageAssociationEnd<CorporateActionNarrative27, Optional<UpdatedAdditionalInformation8>>() {
 		{
 			businessElementTrace_lazy = () -> Role.mmContactPersonRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative27.mmObject();
@@ -537,7 +598,17 @@ public class CorporateActionNarrative27 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation8.mmObject();
+			type_lazy = () -> UpdatedAdditionalInformation8.mmObject();
+		}
+
+		@Override
+		public Optional<UpdatedAdditionalInformation8> getValue(CorporateActionNarrative27 obj) {
+			return obj.getPartyContactNarrative();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative27 obj, Optional<UpdatedAdditionalInformation8> value) {
+			obj.setPartyContactNarrative(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RegnDtls")
@@ -582,7 +653,7 @@ public class CorporateActionNarrative27 {
 	 * CorporateActionNarrative11.mmRegistrationDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRegistrationDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionNarrative27, Optional<UpdatedAdditionalInformation8>> mmRegistrationDetails = new MMMessageAssociationEnd<CorporateActionNarrative27, Optional<UpdatedAdditionalInformation8>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmRegistrationDetails;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative27.mmObject();
@@ -596,7 +667,17 @@ public class CorporateActionNarrative27 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation8.mmObject();
+			type_lazy = () -> UpdatedAdditionalInformation8.mmObject();
+		}
+
+		@Override
+		public Optional<UpdatedAdditionalInformation8> getValue(CorporateActionNarrative27 obj) {
+			return obj.getRegistrationDetails();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative27 obj, Optional<UpdatedAdditionalInformation8> value) {
+			obj.setRegistrationDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BsktOrIndxInf")
@@ -643,7 +724,7 @@ public class CorporateActionNarrative27 {
 	 * CorporateActionNarrative11.mmBasketOrIndexInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBasketOrIndexInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionNarrative27, Optional<UpdatedAdditionalInformation8>> mmBasketOrIndexInformation = new MMMessageAssociationEnd<CorporateActionNarrative27, Optional<UpdatedAdditionalInformation8>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmBasketOrIndexInformation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative27.mmObject();
@@ -657,7 +738,17 @@ public class CorporateActionNarrative27 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation8.mmObject();
+			type_lazy = () -> UpdatedAdditionalInformation8.mmObject();
+		}
+
+		@Override
+		public Optional<UpdatedAdditionalInformation8> getValue(CorporateActionNarrative27 obj) {
+			return obj.getBasketOrIndexInformation();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative27 obj, Optional<UpdatedAdditionalInformation8> value) {
+			obj.setBasketOrIndexInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CertfctnBrkdwn")
@@ -692,7 +783,7 @@ public class CorporateActionNarrative27 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCertificationBreakdown = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative27, Optional<UpdatedAdditionalInformation8>> mmCertificationBreakdown = new MMMessageAttribute<CorporateActionNarrative27, Optional<UpdatedAdditionalInformation8>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative27.mmObject();
 			isDerived = false;
@@ -702,7 +793,17 @@ public class CorporateActionNarrative27 {
 			definition = "Provides additional information about the type of certification/breakdown required.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation8.mmObject();
+			complexType_lazy = () -> UpdatedAdditionalInformation8.mmObject();
+		}
+
+		@Override
+		public Optional<UpdatedAdditionalInformation8> getValue(CorporateActionNarrative27 obj) {
+			return obj.getCertificationBreakdown();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative27 obj, Optional<UpdatedAdditionalInformation8> value) {
+			obj.setCertificationBreakdown(value.orElse(null));
 		}
 	};
 
@@ -731,7 +832,7 @@ public class CorporateActionNarrative27 {
 		return additionalText == null ? Optional.empty() : Optional.of(additionalText);
 	}
 
-	public CorporateActionNarrative27 setAdditionalText(com.tools20022.repository.msg.UpdatedAdditionalInformation8 additionalText) {
+	public CorporateActionNarrative27 setAdditionalText(UpdatedAdditionalInformation8 additionalText) {
 		this.additionalText = additionalText;
 		return this;
 	}
@@ -740,7 +841,7 @@ public class CorporateActionNarrative27 {
 		return narrativeVersion == null ? Optional.empty() : Optional.of(narrativeVersion);
 	}
 
-	public CorporateActionNarrative27 setNarrativeVersion(com.tools20022.repository.msg.UpdatedAdditionalInformation8 narrativeVersion) {
+	public CorporateActionNarrative27 setNarrativeVersion(UpdatedAdditionalInformation8 narrativeVersion) {
 		this.narrativeVersion = narrativeVersion;
 		return this;
 	}
@@ -749,7 +850,7 @@ public class CorporateActionNarrative27 {
 		return informationConditions == null ? Optional.empty() : Optional.of(informationConditions);
 	}
 
-	public CorporateActionNarrative27 setInformationConditions(com.tools20022.repository.msg.UpdatedAdditionalInformation8 informationConditions) {
+	public CorporateActionNarrative27 setInformationConditions(UpdatedAdditionalInformation8 informationConditions) {
 		this.informationConditions = informationConditions;
 		return this;
 	}
@@ -758,7 +859,7 @@ public class CorporateActionNarrative27 {
 		return informationToComplyWith == null ? Optional.empty() : Optional.of(informationToComplyWith);
 	}
 
-	public CorporateActionNarrative27 setInformationToComplyWith(com.tools20022.repository.msg.UpdatedAdditionalInformation8 informationToComplyWith) {
+	public CorporateActionNarrative27 setInformationToComplyWith(UpdatedAdditionalInformation8 informationToComplyWith) {
 		this.informationToComplyWith = informationToComplyWith;
 		return this;
 	}
@@ -767,7 +868,7 @@ public class CorporateActionNarrative27 {
 		return taxationConditions == null ? Optional.empty() : Optional.of(taxationConditions);
 	}
 
-	public CorporateActionNarrative27 setTaxationConditions(com.tools20022.repository.msg.UpdatedAdditionalInformation8 taxationConditions) {
+	public CorporateActionNarrative27 setTaxationConditions(UpdatedAdditionalInformation8 taxationConditions) {
 		this.taxationConditions = taxationConditions;
 		return this;
 	}
@@ -776,7 +877,7 @@ public class CorporateActionNarrative27 {
 		return disclaimer == null ? Optional.empty() : Optional.of(disclaimer);
 	}
 
-	public CorporateActionNarrative27 setDisclaimer(com.tools20022.repository.msg.UpdatedAdditionalInformation8 disclaimer) {
+	public CorporateActionNarrative27 setDisclaimer(UpdatedAdditionalInformation8 disclaimer) {
 		this.disclaimer = disclaimer;
 		return this;
 	}
@@ -785,7 +886,7 @@ public class CorporateActionNarrative27 {
 		return partyContactNarrative == null ? Optional.empty() : Optional.of(partyContactNarrative);
 	}
 
-	public CorporateActionNarrative27 setPartyContactNarrative(com.tools20022.repository.msg.UpdatedAdditionalInformation8 partyContactNarrative) {
+	public CorporateActionNarrative27 setPartyContactNarrative(UpdatedAdditionalInformation8 partyContactNarrative) {
 		this.partyContactNarrative = partyContactNarrative;
 		return this;
 	}
@@ -794,7 +895,7 @@ public class CorporateActionNarrative27 {
 		return registrationDetails == null ? Optional.empty() : Optional.of(registrationDetails);
 	}
 
-	public CorporateActionNarrative27 setRegistrationDetails(com.tools20022.repository.msg.UpdatedAdditionalInformation8 registrationDetails) {
+	public CorporateActionNarrative27 setRegistrationDetails(UpdatedAdditionalInformation8 registrationDetails) {
 		this.registrationDetails = registrationDetails;
 		return this;
 	}
@@ -803,7 +904,7 @@ public class CorporateActionNarrative27 {
 		return basketOrIndexInformation == null ? Optional.empty() : Optional.of(basketOrIndexInformation);
 	}
 
-	public CorporateActionNarrative27 setBasketOrIndexInformation(com.tools20022.repository.msg.UpdatedAdditionalInformation8 basketOrIndexInformation) {
+	public CorporateActionNarrative27 setBasketOrIndexInformation(UpdatedAdditionalInformation8 basketOrIndexInformation) {
 		this.basketOrIndexInformation = basketOrIndexInformation;
 		return this;
 	}
@@ -812,7 +913,7 @@ public class CorporateActionNarrative27 {
 		return certificationBreakdown == null ? Optional.empty() : Optional.of(certificationBreakdown);
 	}
 
-	public CorporateActionNarrative27 setCertificationBreakdown(com.tools20022.repository.msg.UpdatedAdditionalInformation8 certificationBreakdown) {
+	public CorporateActionNarrative27 setCertificationBreakdown(UpdatedAdditionalInformation8 certificationBreakdown) {
 		this.certificationBreakdown = certificationBreakdown;
 		return this;
 	}

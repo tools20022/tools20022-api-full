@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericPersonIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -115,7 +116,7 @@ public class PersonIdentification10 {
 	 * definition} = "First name of a person (also known as given name)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFirstName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PersonIdentification10, Max140Text> mmFirstName = new MMMessageAttribute<PersonIdentification10, Max140Text>() {
 		{
 			businessElementTrace_lazy = () -> PersonName.mmGivenName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PersonIdentification10.mmObject();
@@ -127,6 +128,16 @@ public class PersonIdentification10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Max140Text getValue(PersonIdentification10 obj) {
+			return obj.getFirstName();
+		}
+
+		@Override
+		public void setValue(PersonIdentification10 obj, Max140Text value) {
+			obj.setFirstName(value);
 		}
 	};
 	@XmlElement(name = "Nm", required = true)
@@ -165,7 +176,7 @@ public class PersonIdentification10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PersonIdentification10, Max140Text> mmName = new MMMessageAttribute<PersonIdentification10, Max140Text>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PersonIdentification10.mmObject();
@@ -177,6 +188,16 @@ public class PersonIdentification10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Max140Text getValue(PersonIdentification10 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(PersonIdentification10 obj, Max140Text value) {
+			obj.setName(value);
 		}
 	};
 	@XmlElement(name = "BirthDt", required = true)
@@ -213,7 +234,7 @@ public class PersonIdentification10 {
 	 * definition} = "Date on which a person is born."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBirthDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PersonIdentification10, ISODate> mmBirthDate = new MMMessageAttribute<PersonIdentification10, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Person.mmBirthDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PersonIdentification10.mmObject();
@@ -225,6 +246,16 @@ public class PersonIdentification10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(PersonIdentification10 obj) {
+			return obj.getBirthDate();
+		}
+
+		@Override
+		public void setValue(PersonIdentification10 obj, ISODate value) {
+			obj.setBirthDate(value);
 		}
 	};
 	@XmlElement(name = "Othr", required = true)
@@ -268,7 +299,7 @@ public class PersonIdentification10 {
 	 * PersonIdentification5.mmOther}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOther = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PersonIdentification10, GenericPersonIdentification1> mmOther = new MMMessageAssociationEnd<PersonIdentification10, GenericPersonIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PersonIdentification10.mmObject();
@@ -281,7 +312,17 @@ public class PersonIdentification10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericPersonIdentification1.mmObject();
+			type_lazy = () -> GenericPersonIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericPersonIdentification1 getValue(PersonIdentification10 obj) {
+			return obj.getOther();
+		}
+
+		@Override
+		public void setValue(PersonIdentification10 obj, GenericPersonIdentification1 value) {
+			obj.setOther(value);
 		}
 	};
 
@@ -332,7 +373,7 @@ public class PersonIdentification10 {
 		return other;
 	}
 
-	public PersonIdentification10 setOther(com.tools20022.repository.msg.GenericPersonIdentification1 other) {
+	public PersonIdentification10 setOther(GenericPersonIdentification1 other) {
 		this.other = Objects.requireNonNull(other);
 		return this;
 	}

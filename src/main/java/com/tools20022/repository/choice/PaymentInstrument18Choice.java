@@ -124,7 +124,7 @@ public class PaymentInstrument18Choice {
 	 * PaymentInstrument17Choice.mmPaymentCardDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentCardDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstrument18Choice, PaymentCard18> mmPaymentCardDetails = new MMMessageAssociationEnd<PaymentInstrument18Choice, PaymentCard18>() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmPaymentCard;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument18Choice.mmObject();
@@ -138,6 +138,16 @@ public class PaymentInstrument18Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PaymentCard18.mmObject();
+		}
+
+		@Override
+		public PaymentCard18 getValue(PaymentInstrument18Choice obj) {
+			return obj.getPaymentCardDetails();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument18Choice obj, PaymentCard18 value) {
+			obj.setPaymentCardDetails(value);
 		}
 	};
 	@XmlElement(name = "DrctDbtDtls", required = true)
@@ -177,7 +187,7 @@ public class PaymentInstrument18Choice {
 	 * PaymentInstrument17Choice.mmDirectDebitDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDirectDebitDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstrument18Choice, DirectDebitMandate5> mmDirectDebitDetails = new MMMessageAssociationEnd<PaymentInstrument18Choice, DirectDebitMandate5>() {
 		{
 			businessComponentTrace_lazy = () -> DirectDebit.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument18Choice.mmObject();
@@ -191,6 +201,16 @@ public class PaymentInstrument18Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DirectDebitMandate5.mmObject();
+		}
+
+		@Override
+		public DirectDebitMandate5 getValue(PaymentInstrument18Choice obj) {
+			return obj.getDirectDebitDetails();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument18Choice obj, DirectDebitMandate5 value) {
+			obj.setDirectDebitDetails(value);
 		}
 	};
 	@XmlElement(name = "Chq", required = true)
@@ -233,7 +253,7 @@ public class PaymentInstrument18Choice {
 	 * PaymentInstrument17Choice.mmCheque}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCheque = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstrument18Choice, YesNoIndicator> mmCheque = new MMMessageAttribute<PaymentInstrument18Choice, YesNoIndicator>() {
 		{
 			businessComponentTrace_lazy = () -> ChequePayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument18Choice.mmObject();
@@ -246,6 +266,16 @@ public class PaymentInstrument18Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(PaymentInstrument18Choice obj) {
+			return obj.getCheque();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument18Choice obj, YesNoIndicator value) {
+			obj.setCheque(value);
 		}
 	};
 	@XmlElement(name = "BkrsDrft", required = true)
@@ -288,7 +318,7 @@ public class PaymentInstrument18Choice {
 	 * PaymentInstrument17Choice.mmBankersDraft}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBankersDraft = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstrument18Choice, YesNoIndicator> mmBankersDraft = new MMMessageAttribute<PaymentInstrument18Choice, YesNoIndicator>() {
 		{
 			businessComponentTrace_lazy = () -> ChequePayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument18Choice.mmObject();
@@ -301,6 +331,16 @@ public class PaymentInstrument18Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(PaymentInstrument18Choice obj) {
+			return obj.getBankersDraft();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument18Choice obj, YesNoIndicator value) {
+			obj.setBankersDraft(value);
 		}
 	};
 

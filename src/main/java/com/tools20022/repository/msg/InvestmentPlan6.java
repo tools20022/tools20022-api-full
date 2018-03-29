@@ -34,6 +34,8 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5;
+import com.tools20022.repository.msg.Repartition2;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -202,7 +204,7 @@ public class InvestmentPlan6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentPlan6, Frequency19Choice> mmFrequency = new MMMessageAttribute<InvestmentPlan6, Frequency19Choice>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentPlan.mmFrequency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentPlan6.mmObject();
@@ -215,6 +217,16 @@ public class InvestmentPlan6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Frequency19Choice.mmObject();
+		}
+
+		@Override
+		public Frequency19Choice getValue(InvestmentPlan6 obj) {
+			return obj.getFrequency();
+		}
+
+		@Override
+		public void setValue(InvestmentPlan6 obj, Frequency19Choice value) {
+			obj.setFrequency(value);
 		}
 	};
 	@XmlElement(name = "StartDt")
@@ -259,7 +271,7 @@ public class InvestmentPlan6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentPlan6, Optional<ISODate>> mmStartDate = new MMMessageAttribute<InvestmentPlan6, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentPlan6.mmObject();
@@ -272,6 +284,16 @@ public class InvestmentPlan6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(InvestmentPlan6 obj) {
+			return obj.getStartDate();
+		}
+
+		@Override
+		public void setValue(InvestmentPlan6 obj, Optional<ISODate> value) {
+			obj.setStartDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EndDt")
@@ -315,7 +337,7 @@ public class InvestmentPlan6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEndDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentPlan6, Optional<ISODate>> mmEndDate = new MMMessageAttribute<InvestmentPlan6, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmToDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentPlan6.mmObject();
@@ -328,6 +350,16 @@ public class InvestmentPlan6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(InvestmentPlan6 obj) {
+			return obj.getEndDate();
+		}
+
+		@Override
+		public void setValue(InvestmentPlan6 obj, Optional<ISODate> value) {
+			obj.setEndDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Qty", required = true)
@@ -372,7 +404,7 @@ public class InvestmentPlan6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentPlan6, UnitsOrAmount1Choice> mmQuantity = new MMMessageAttribute<InvestmentPlan6, UnitsOrAmount1Choice>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentPlan.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentPlan6.mmObject();
@@ -385,6 +417,16 @@ public class InvestmentPlan6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> UnitsOrAmount1Choice.mmObject();
+		}
+
+		@Override
+		public UnitsOrAmount1Choice getValue(InvestmentPlan6 obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(InvestmentPlan6 obj, UnitsOrAmount1Choice value) {
+			obj.setQuantity(value);
 		}
 	};
 	@XmlElement(name = "GrssAmtInd")
@@ -432,7 +474,7 @@ public class InvestmentPlan6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGrossAmountIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentPlan6, Optional<YesNoIndicator>> mmGrossAmountIndicator = new MMMessageAttribute<InvestmentPlan6, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmGrossAmountIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentPlan6.mmObject();
@@ -445,6 +487,16 @@ public class InvestmentPlan6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(InvestmentPlan6 obj) {
+			return obj.getGrossAmountIndicator();
+		}
+
+		@Override
+		public void setValue(InvestmentPlan6 obj, Optional<YesNoIndicator> value) {
+			obj.setGrossAmountIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IncmPref")
@@ -492,7 +544,7 @@ public class InvestmentPlan6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIncomePreference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentPlan6, Optional<IncomePreference1Code>> mmIncomePreference = new MMMessageAttribute<InvestmentPlan6, Optional<IncomePreference1Code>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccountService.mmIncomePreference;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentPlan6.mmObject();
@@ -505,6 +557,16 @@ public class InvestmentPlan6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> IncomePreference1Code.mmObject();
+		}
+
+		@Override
+		public Optional<IncomePreference1Code> getValue(InvestmentPlan6 obj) {
+			return obj.getIncomePreference();
+		}
+
+		@Override
+		public void setValue(InvestmentPlan6 obj, Optional<IncomePreference1Code> value) {
+			obj.setIncomePreference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InitlNbOfInstlmt")
@@ -551,7 +613,7 @@ public class InvestmentPlan6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInitialNumberOfInstalment = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentPlan6, Optional<Number>> mmInitialNumberOfInstalment = new MMMessageAttribute<InvestmentPlan6, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> Instalment.mmInitialNumberOfInstalment;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentPlan6.mmObject();
@@ -564,6 +626,16 @@ public class InvestmentPlan6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(InvestmentPlan6 obj) {
+			return obj.getInitialNumberOfInstalment();
+		}
+
+		@Override
+		public void setValue(InvestmentPlan6 obj, Optional<Number> value) {
+			obj.setInitialNumberOfInstalment(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlNbOfInstlmt")
@@ -610,7 +682,7 @@ public class InvestmentPlan6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalNumberOfInstalment = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentPlan6, Optional<Number>> mmTotalNumberOfInstalment = new MMMessageAttribute<InvestmentPlan6, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> Instalment.mmTotalNumberOfInstalment;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentPlan6.mmObject();
@@ -623,6 +695,16 @@ public class InvestmentPlan6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(InvestmentPlan6 obj) {
+			return obj.getTotalNumberOfInstalment();
+		}
+
+		@Override
+		public void setValue(InvestmentPlan6 obj, Optional<Number> value) {
+			obj.setTotalNumberOfInstalment(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RndgDrctn")
@@ -670,7 +752,7 @@ public class InvestmentPlan6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRoundingDirection = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentPlan6, Optional<RoundingDirection1Code>> mmRoundingDirection = new MMMessageAttribute<InvestmentPlan6, Optional<RoundingDirection1Code>>() {
 		{
 			businessElementTrace_lazy = () -> RoundingParameters.mmRoundingDirection;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentPlan6.mmObject();
@@ -684,9 +766,19 @@ public class InvestmentPlan6 {
 			minOccurs = 0;
 			simpleType_lazy = () -> RoundingDirection1Code.mmObject();
 		}
+
+		@Override
+		public Optional<RoundingDirection1Code> getValue(InvestmentPlan6 obj) {
+			return obj.getRoundingDirection();
+		}
+
+		@Override
+		public void setValue(InvestmentPlan6 obj, Optional<RoundingDirection1Code> value) {
+			obj.setRoundingDirection(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "SctyDtls", required = true)
-	protected List<com.tools20022.repository.msg.Repartition2> securityDetails;
+	protected List<Repartition2> securityDetails;
 	/**
 	 * 
 	 <p>
@@ -728,7 +820,7 @@ public class InvestmentPlan6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecurityDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentPlan6, List<Repartition2>> mmSecurityDetails = new MMMessageAssociationEnd<InvestmentPlan6, List<Repartition2>>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundClass.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentPlan6.mmObject();
@@ -741,11 +833,21 @@ public class InvestmentPlan6 {
 			maxOccurs = 50;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Repartition2.mmObject();
+			type_lazy = () -> Repartition2.mmObject();
+		}
+
+		@Override
+		public List<Repartition2> getValue(InvestmentPlan6 obj) {
+			return obj.getSecurityDetails();
+		}
+
+		@Override
+		public void setValue(InvestmentPlan6 obj, List<Repartition2> value) {
+			obj.setSecurityDetails(value);
 		}
 	};
 	@XmlElement(name = "CshSttlm")
-	protected List<com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5> cashSettlement;
+	protected List<InvestmentFundCashSettlementInformation5> cashSettlement;
 	/**
 	 * 
 	 <p>
@@ -788,7 +890,7 @@ public class InvestmentPlan6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashSettlement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentPlan6, List<InvestmentFundCashSettlementInformation5>> mmCashSettlement = new MMMessageAssociationEnd<InvestmentPlan6, List<InvestmentFundCashSettlementInformation5>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmPaymentOffset;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentPlan6.mmObject();
@@ -801,7 +903,17 @@ public class InvestmentPlan6 {
 			maxOccurs = 8;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5.mmObject();
+			type_lazy = () -> InvestmentFundCashSettlementInformation5.mmObject();
+		}
+
+		@Override
+		public List<InvestmentFundCashSettlementInformation5> getValue(InvestmentPlan6 obj) {
+			return obj.getCashSettlement();
+		}
+
+		@Override
+		public void setValue(InvestmentPlan6 obj, List<InvestmentFundCashSettlementInformation5> value) {
+			obj.setCashSettlement(value);
 		}
 	};
 	@XmlElement(name = "CtrctRef")
@@ -843,7 +955,7 @@ public class InvestmentPlan6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContractReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentPlan6, Optional<Max35Text>> mmContractReference = new MMMessageAttribute<InvestmentPlan6, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentPlan6.mmObject();
 			isDerived = false;
@@ -855,6 +967,16 @@ public class InvestmentPlan6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(InvestmentPlan6 obj) {
+			return obj.getContractReference();
+		}
+
+		@Override
+		public void setValue(InvestmentPlan6 obj, Optional<Max35Text> value) {
+			obj.setContractReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RltdCtrctRef")
@@ -896,7 +1018,7 @@ public class InvestmentPlan6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRelatedContractReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentPlan6, Optional<Max35Text>> mmRelatedContractReference = new MMMessageAttribute<InvestmentPlan6, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentPlan6.mmObject();
 			isDerived = false;
@@ -908,6 +1030,16 @@ public class InvestmentPlan6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(InvestmentPlan6 obj) {
+			return obj.getRelatedContractReference();
+		}
+
+		@Override
+		public void setValue(InvestmentPlan6 obj, Optional<Max35Text> value) {
+			obj.setRelatedContractReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PdctId")
@@ -949,7 +1081,7 @@ public class InvestmentPlan6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProductIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentPlan6, Optional<Max35Text>> mmProductIdentification = new MMMessageAttribute<InvestmentPlan6, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentPlan6.mmObject();
 			isDerived = false;
@@ -961,6 +1093,16 @@ public class InvestmentPlan6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(InvestmentPlan6 obj) {
+			return obj.getProductIdentification();
+		}
+
+		@Override
+		public void setValue(InvestmentPlan6 obj, Optional<Max35Text> value) {
+			obj.setProductIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SLAChrgAndComssnRef")
@@ -1002,7 +1144,7 @@ public class InvestmentPlan6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSLAChargeAndCommissionReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentPlan6, Optional<Max35Text>> mmSLAChargeAndCommissionReference = new MMMessageAttribute<InvestmentPlan6, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentPlan6.mmObject();
 			isDerived = false;
@@ -1014,6 +1156,16 @@ public class InvestmentPlan6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(InvestmentPlan6 obj) {
+			return obj.getSLAChargeAndCommissionReference();
+		}
+
+		@Override
+		public void setValue(InvestmentPlan6 obj, Optional<Max35Text> value) {
+			obj.setSLAChargeAndCommissionReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InsrncCover")
@@ -1056,7 +1208,7 @@ public class InvestmentPlan6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInsuranceCover = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentPlan6, Optional<InsuranceType1Choice>> mmInsuranceCover = new MMMessageAttribute<InvestmentPlan6, Optional<InsuranceType1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentPlan6.mmObject();
 			isDerived = false;
@@ -1068,6 +1220,16 @@ public class InvestmentPlan6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> InsuranceType1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<InsuranceType1Choice> getValue(InvestmentPlan6 obj) {
+			return obj.getInsuranceCover();
+		}
+
+		@Override
+		public void setValue(InvestmentPlan6 obj, Optional<InsuranceType1Choice> value) {
+			obj.setInsuranceCover(value.orElse(null));
 		}
 	};
 
@@ -1180,7 +1342,7 @@ public class InvestmentPlan6 {
 		return securityDetails == null ? securityDetails = new ArrayList<>() : securityDetails;
 	}
 
-	public InvestmentPlan6 setSecurityDetails(List<com.tools20022.repository.msg.Repartition2> securityDetails) {
+	public InvestmentPlan6 setSecurityDetails(List<Repartition2> securityDetails) {
 		this.securityDetails = Objects.requireNonNull(securityDetails);
 		return this;
 	}
@@ -1189,7 +1351,7 @@ public class InvestmentPlan6 {
 		return cashSettlement == null ? cashSettlement = new ArrayList<>() : cashSettlement;
 	}
 
-	public InvestmentPlan6 setCashSettlement(List<com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5> cashSettlement) {
+	public InvestmentPlan6 setCashSettlement(List<InvestmentFundCashSettlementInformation5> cashSettlement) {
 		this.cashSettlement = Objects.requireNonNull(cashSettlement);
 		return this;
 	}

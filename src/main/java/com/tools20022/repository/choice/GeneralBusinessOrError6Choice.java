@@ -113,7 +113,7 @@ public class GeneralBusinessOrError6Choice {
 	 * GeneralBusinessOrError4Choice.mmBusinessError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GeneralBusinessOrError6Choice, List<ErrorHandling4>> mmBusinessError = new MMMessageAssociationEnd<GeneralBusinessOrError6Choice, List<ErrorHandling4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.GeneralBusinessOrError6Choice.mmObject();
 			isDerived = false;
@@ -125,6 +125,16 @@ public class GeneralBusinessOrError6Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling4.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling4> getValue(GeneralBusinessOrError6Choice obj) {
+			return obj.getBusinessError();
+		}
+
+		@Override
+		public void setValue(GeneralBusinessOrError6Choice obj, List<ErrorHandling4> value) {
+			obj.setBusinessError(value);
 		}
 	};
 	@XmlElement(name = "GnlBiz", required = true)
@@ -161,7 +171,7 @@ public class GeneralBusinessOrError6Choice {
 	 * GeneralBusinessOrError4Choice.mmGeneralBusiness}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGeneralBusiness = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GeneralBusinessOrError6Choice, GeneralBusinessInformation1> mmGeneralBusiness = new MMMessageAssociationEnd<GeneralBusinessOrError6Choice, GeneralBusinessInformation1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.GeneralBusinessOrError6Choice.mmObject();
 			isDerived = false;
@@ -174,6 +184,16 @@ public class GeneralBusinessOrError6Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GeneralBusinessInformation1.mmObject();
+		}
+
+		@Override
+		public GeneralBusinessInformation1 getValue(GeneralBusinessOrError6Choice obj) {
+			return obj.getGeneralBusiness();
+		}
+
+		@Override
+		public void setValue(GeneralBusinessOrError6Choice obj, GeneralBusinessInformation1 value) {
+			obj.setGeneralBusiness(value);
 		}
 	};
 

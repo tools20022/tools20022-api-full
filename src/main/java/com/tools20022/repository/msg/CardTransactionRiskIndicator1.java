@@ -106,7 +106,7 @@ public class CardTransactionRiskIndicator1 {
 	 * "Reason to indicate a certain level of risk for the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardTransactionRiskIndicator1, List<CardTransactionRiskReason1Code>> mmReason = new MMMessageAttribute<CardTransactionRiskIndicator1, List<CardTransactionRiskReason1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionRiskIndicator1.mmObject();
 			isDerived = false;
@@ -116,6 +116,16 @@ public class CardTransactionRiskIndicator1 {
 			definition = "Reason to indicate a certain level of risk for the transaction.";
 			minOccurs = 0;
 			simpleType_lazy = () -> CardTransactionRiskReason1Code.mmObject();
+		}
+
+		@Override
+		public List<CardTransactionRiskReason1Code> getValue(CardTransactionRiskIndicator1 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(CardTransactionRiskIndicator1 obj, List<CardTransactionRiskReason1Code> value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "Lvl", required = true)
@@ -147,7 +157,7 @@ public class CardTransactionRiskIndicator1 {
 	 * definition} = "Level of risk, from 1 to 99."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLevel = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardTransactionRiskIndicator1, Number> mmLevel = new MMMessageAttribute<CardTransactionRiskIndicator1, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionRiskIndicator1.mmObject();
 			isDerived = false;
@@ -158,6 +168,16 @@ public class CardTransactionRiskIndicator1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(CardTransactionRiskIndicator1 obj) {
+			return obj.getLevel();
+		}
+
+		@Override
+		public void setValue(CardTransactionRiskIndicator1 obj, Number value) {
+			obj.setLevel(value);
 		}
 	};
 	@XmlElement(name = "RcmmnddActn")
@@ -190,7 +210,7 @@ public class CardTransactionRiskIndicator1 {
 	 * definition} = "Recommended action for the issuer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRecommendedAction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardTransactionRiskIndicator1, List<ActionType4Code>> mmRecommendedAction = new MMMessageAttribute<CardTransactionRiskIndicator1, List<ActionType4Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionRiskIndicator1.mmObject();
 			isDerived = false;
@@ -200,6 +220,16 @@ public class CardTransactionRiskIndicator1 {
 			definition = "Recommended action for the issuer.";
 			minOccurs = 0;
 			simpleType_lazy = () -> ActionType4Code.mmObject();
+		}
+
+		@Override
+		public List<ActionType4Code> getValue(CardTransactionRiskIndicator1 obj) {
+			return obj.getRecommendedAction();
+		}
+
+		@Override
+		public void setValue(CardTransactionRiskIndicator1 obj, List<ActionType4Code> value) {
+			obj.setRecommendedAction(value);
 		}
 	};
 

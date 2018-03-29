@@ -108,7 +108,7 @@ public class Price6 {
 	 * "Value of the price expressed as a currency and value or as a rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateOrAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Price6, PriceRateOrAmountChoice> mmRateOrAmount = new MMMessageAssociationEnd<Price6, PriceRateOrAmountChoice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Price6.mmObject();
@@ -121,6 +121,16 @@ public class Price6 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PriceRateOrAmountChoice.mmObject();
+		}
+
+		@Override
+		public PriceRateOrAmountChoice getValue(Price6 obj) {
+			return obj.getRateOrAmount();
+		}
+
+		@Override
+		public void setValue(Price6 obj, PriceRateOrAmountChoice value) {
+			obj.setRateOrAmount(value);
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -157,7 +167,7 @@ public class Price6 {
 	 * definition} = "Specification of the price type."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Price6, TypeOfPrice13Code> mmType = new MMMessageAttribute<Price6, TypeOfPrice13Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Price6.mmObject();
@@ -169,6 +179,16 @@ public class Price6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TypeOfPrice13Code.mmObject();
+		}
+
+		@Override
+		public TypeOfPrice13Code getValue(Price6 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Price6 obj, TypeOfPrice13Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Src", required = true)
@@ -205,7 +225,7 @@ public class Price6 {
 	 * definition} = "Source for the price valuation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSource = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Price6, PriceSource2Code> mmSource = new MMMessageAttribute<Price6, PriceSource2Code>() {
 		{
 			businessComponentTrace_lazy = () -> SourceOfPrice.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Price6.mmObject();
@@ -217,6 +237,16 @@ public class Price6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PriceSource2Code.mmObject();
+		}
+
+		@Override
+		public PriceSource2Code getValue(Price6 obj) {
+			return obj.getSource();
+		}
+
+		@Override
+		public void setValue(Price6 obj, PriceSource2Code value) {
+			obj.setSource(value);
 		}
 	};
 

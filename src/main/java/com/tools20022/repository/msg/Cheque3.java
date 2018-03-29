@@ -130,7 +130,7 @@ public class Cheque3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Cheque3, Optional<Max35Text>> mmNumber = new MMMessageAttribute<Cheque3, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> CreditInstrument.mmCreditInstrumentIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Cheque3.mmObject();
@@ -143,6 +143,16 @@ public class Cheque3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Cheque3 obj) {
+			return obj.getNumber();
+		}
+
+		@Override
+		public void setValue(Cheque3 obj, Optional<Max35Text> value) {
+			obj.setNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PyeeId", required = true)
@@ -187,7 +197,7 @@ public class Cheque3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPayeeIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Cheque3, PartyIdentification2Choice> mmPayeeIdentification = new MMMessageAttribute<Cheque3, PartyIdentification2Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Cheque3.mmObject();
@@ -200,6 +210,16 @@ public class Cheque3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification2Choice getValue(Cheque3 obj) {
+			return obj.getPayeeIdentification();
+		}
+
+		@Override
+		public void setValue(Cheque3 obj, PartyIdentification2Choice value) {
+			obj.setPayeeIdentification(value);
 		}
 	};
 	@XmlElement(name = "DrweeId")
@@ -246,7 +266,7 @@ public class Cheque3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDraweeIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Cheque3, Optional<FinancialInstitutionIdentification3Choice>> mmDraweeIdentification = new MMMessageAttribute<Cheque3, Optional<FinancialInstitutionIdentification3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Cheque3.mmObject();
@@ -259,6 +279,16 @@ public class Cheque3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstitutionIdentification3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstitutionIdentification3Choice> getValue(Cheque3 obj) {
+			return obj.getDraweeIdentification();
+		}
+
+		@Override
+		public void setValue(Cheque3 obj, Optional<FinancialInstitutionIdentification3Choice> value) {
+			obj.setDraweeIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DrwrId")
@@ -305,7 +335,7 @@ public class Cheque3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDrawerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Cheque3, Optional<PartyIdentification2Choice>> mmDrawerIdentification = new MMMessageAttribute<Cheque3, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Cheque3.mmObject();
@@ -318,6 +348,16 @@ public class Cheque3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(Cheque3 obj) {
+			return obj.getDrawerIdentification();
+		}
+
+		@Override
+		public void setValue(Cheque3 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setDrawerIdentification(value.orElse(null));
 		}
 	};
 

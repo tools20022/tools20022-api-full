@@ -124,7 +124,7 @@ public class PartyIdentification100Choice {
 	 * PartyIdentification33Choice.mmAnyBIC}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAnyBIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification100Choice, AnyBICIdentifier> mmAnyBIC = new MMMessageAttribute<PartyIdentification100Choice, AnyBICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification100Choice.mmObject();
@@ -137,6 +137,16 @@ public class PartyIdentification100Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public AnyBICIdentifier getValue(PartyIdentification100Choice obj) {
+			return obj.getAnyBIC();
+		}
+
+		@Override
+		public void setValue(PartyIdentification100Choice obj, AnyBICIdentifier value) {
+			obj.setAnyBIC(value);
 		}
 	};
 	@XmlElement(name = "PrtryId", required = true)
@@ -181,7 +191,7 @@ public class PartyIdentification100Choice {
 	 * PartyIdentification33Choice.mmProprietaryIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification100Choice, GenericIdentification36> mmProprietaryIdentification = new MMMessageAttribute<PartyIdentification100Choice, GenericIdentification36>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification100Choice.mmObject();
@@ -194,6 +204,16 @@ public class PartyIdentification100Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification36.mmObject();
+		}
+
+		@Override
+		public GenericIdentification36 getValue(PartyIdentification100Choice obj) {
+			return obj.getProprietaryIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification100Choice obj, GenericIdentification36 value) {
+			obj.setProprietaryIdentification(value);
 		}
 	};
 	@XmlElement(name = "NmAndAdr", required = true)
@@ -237,7 +257,7 @@ public class PartyIdentification100Choice {
 	 * PartyIdentification33Choice.mmNameAndAddress}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNameAndAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification100Choice, NameAndAddress6> mmNameAndAddress = new MMMessageAttribute<PartyIdentification100Choice, NameAndAddress6>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification100Choice.mmObject();
@@ -250,6 +270,16 @@ public class PartyIdentification100Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> NameAndAddress6.mmObject();
+		}
+
+		@Override
+		public NameAndAddress6 getValue(PartyIdentification100Choice obj) {
+			return obj.getNameAndAddress();
+		}
+
+		@Override
+		public void setValue(PartyIdentification100Choice obj, NameAndAddress6 value) {
+			obj.setNameAndAddress(value);
 		}
 	};
 

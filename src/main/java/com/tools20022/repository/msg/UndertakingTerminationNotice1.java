@@ -26,6 +26,9 @@ import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.entity.Undertaking;
 import com.tools20022.repository.entity.UndertakingStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Document9;
+import com.tools20022.repository.msg.Undertaking9;
+import com.tools20022.repository.msg.UndertakingTermination3;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -127,7 +130,7 @@ public class UndertakingTerminationNotice1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUndertakingIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UndertakingTerminationNotice1, Undertaking9> mmUndertakingIdentification = new MMMessageAssociationEnd<UndertakingTerminationNotice1, Undertaking9>() {
 		{
 			businessElementTrace_lazy = () -> UndertakingStatus.mmUndertaking;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingTerminationNotice1.mmObject();
@@ -139,7 +142,17 @@ public class UndertakingTerminationNotice1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Undertaking9.mmObject();
+			type_lazy = () -> Undertaking9.mmObject();
+		}
+
+		@Override
+		public Undertaking9 getValue(UndertakingTerminationNotice1 obj) {
+			return obj.getUndertakingIdentification();
+		}
+
+		@Override
+		public void setValue(UndertakingTerminationNotice1 obj, Undertaking9 value) {
+			obj.setUndertakingIdentification(value);
 		}
 	};
 	@XmlElement(name = "TermntnDtls", required = true)
@@ -176,7 +189,7 @@ public class UndertakingTerminationNotice1 {
 	 * definition} = "Details related to the termination of the undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTerminationDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UndertakingTerminationNotice1, UndertakingTermination3> mmTerminationDetails = new MMMessageAssociationEnd<UndertakingTerminationNotice1, UndertakingTermination3>() {
 		{
 			businessComponentTrace_lazy = () -> UndertakingStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingTerminationNotice1.mmObject();
@@ -188,11 +201,21 @@ public class UndertakingTerminationNotice1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UndertakingTermination3.mmObject();
+			type_lazy = () -> UndertakingTermination3.mmObject();
+		}
+
+		@Override
+		public UndertakingTermination3 getValue(UndertakingTerminationNotice1 obj) {
+			return obj.getTerminationDetails();
+		}
+
+		@Override
+		public void setValue(UndertakingTerminationNotice1 obj, UndertakingTermination3 value) {
+			obj.setTerminationDetails(value);
 		}
 	};
 	@XmlElement(name = "NclsdFile")
-	protected List<com.tools20022.repository.msg.Document9> enclosedFile;
+	protected List<Document9> enclosedFile;
 	/**
 	 * 
 	 <p>
@@ -224,7 +247,7 @@ public class UndertakingTerminationNotice1 {
 	 * "Document or template enclosed in the termination notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnclosedFile = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UndertakingTerminationNotice1, List<Document9>> mmEnclosedFile = new MMMessageAssociationEnd<UndertakingTerminationNotice1, List<Document9>>() {
 		{
 			businessElementTrace_lazy = () -> Undertaking.mmSpecifiedDocument;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingTerminationNotice1.mmObject();
@@ -235,7 +258,17 @@ public class UndertakingTerminationNotice1 {
 			definition = "Document or template enclosed in the termination notification.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Document9.mmObject();
+			type_lazy = () -> Document9.mmObject();
+		}
+
+		@Override
+		public List<Document9> getValue(UndertakingTerminationNotice1 obj) {
+			return obj.getEnclosedFile();
+		}
+
+		@Override
+		public void setValue(UndertakingTerminationNotice1 obj, List<Document9> value) {
+			obj.setEnclosedFile(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -267,7 +300,7 @@ public class UndertakingTerminationNotice1 {
 	 * definition} = "Additional information related to the notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UndertakingTerminationNotice1, List<Max2000Text>> mmAdditionalInformation = new MMMessageAttribute<UndertakingTerminationNotice1, List<Max2000Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingTerminationNotice1.mmObject();
 			isDerived = false;
@@ -278,6 +311,16 @@ public class UndertakingTerminationNotice1 {
 			maxOccurs = 5;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
+		}
+
+		@Override
+		public List<Max2000Text> getValue(UndertakingTerminationNotice1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(UndertakingTerminationNotice1 obj, List<Max2000Text> value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 
@@ -301,7 +344,7 @@ public class UndertakingTerminationNotice1 {
 		return undertakingIdentification;
 	}
 
-	public UndertakingTerminationNotice1 setUndertakingIdentification(com.tools20022.repository.msg.Undertaking9 undertakingIdentification) {
+	public UndertakingTerminationNotice1 setUndertakingIdentification(Undertaking9 undertakingIdentification) {
 		this.undertakingIdentification = Objects.requireNonNull(undertakingIdentification);
 		return this;
 	}
@@ -310,7 +353,7 @@ public class UndertakingTerminationNotice1 {
 		return terminationDetails;
 	}
 
-	public UndertakingTerminationNotice1 setTerminationDetails(com.tools20022.repository.msg.UndertakingTermination3 terminationDetails) {
+	public UndertakingTerminationNotice1 setTerminationDetails(UndertakingTermination3 terminationDetails) {
 		this.terminationDetails = Objects.requireNonNull(terminationDetails);
 		return this;
 	}
@@ -319,7 +362,7 @@ public class UndertakingTerminationNotice1 {
 		return enclosedFile == null ? enclosedFile = new ArrayList<>() : enclosedFile;
 	}
 
-	public UndertakingTerminationNotice1 setEnclosedFile(List<com.tools20022.repository.msg.Document9> enclosedFile) {
+	public UndertakingTerminationNotice1 setEnclosedFile(List<Document9> enclosedFile) {
 		this.enclosedFile = Objects.requireNonNull(enclosedFile);
 		return this;
 	}

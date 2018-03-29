@@ -132,7 +132,7 @@ public class CashEntry2 {
 	 * CashEntry1.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashEntry2, Optional<ActiveCurrencyAndAmount>> mmAmount = new MMMessageAttribute<CashEntry2, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashEntry2.mmObject();
@@ -145,6 +145,16 @@ public class CashEntry2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CashEntry2 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(CashEntry2 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Dt")
@@ -188,7 +198,7 @@ public class CashEntry2 {
 	 * CashEntry1.mmDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashEntry2, Optional<DateAndDateTime2Choice>> mmDate = new MMMessageAttribute<CashEntry2, Optional<DateAndDateTime2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmEntryDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashEntry2.mmObject();
@@ -201,6 +211,16 @@ public class CashEntry2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTime2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTime2Choice> getValue(CashEntry2 obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(CashEntry2 obj, Optional<DateAndDateTime2Choice> value) {
+			obj.setDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sts")
@@ -242,7 +262,7 @@ public class CashEntry2 {
 	 * CashEntry1.mmStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashEntry2, Optional<EntryStatus1Code>> mmStatus = new MMMessageAttribute<CashEntry2, Optional<EntryStatus1Code>>() {
 		{
 			businessElementTrace_lazy = () -> AccountStatus.mmEntryStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashEntry2.mmObject();
@@ -255,6 +275,16 @@ public class CashEntry2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> EntryStatus1Code.mmObject();
+		}
+
+		@Override
+		public Optional<EntryStatus1Code> getValue(CashEntry2 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(CashEntry2 obj, Optional<EntryStatus1Code> value) {
+			obj.setStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Id")
@@ -297,7 +327,7 @@ public class CashEntry2 {
 	 * CashEntry1.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashEntry2, Optional<Max35Text>> mmIdentification = new MMMessageAttribute<CashEntry2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashEntry2.mmObject();
@@ -310,6 +340,16 @@ public class CashEntry2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CashEntry2 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(CashEntry2 obj, Optional<Max35Text> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StmtId")
@@ -347,7 +387,7 @@ public class CashEntry2 {
 	 * CashEntry1.mmStatementIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashEntry2, Optional<Max35Text>> mmStatementIdentification = new MMMessageAttribute<CashEntry2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashEntry2.mmObject();
 			isDerived = false;
@@ -359,6 +399,16 @@ public class CashEntry2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CashEntry2 obj) {
+			return obj.getStatementIdentification();
+		}
+
+		@Override
+		public void setValue(CashEntry2 obj, Optional<Max35Text> value) {
+			obj.setStatementIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctSvcrRef")
@@ -396,7 +446,7 @@ public class CashEntry2 {
 	 * CashEntry1.mmAccountServicerReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicerReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashEntry2, Optional<Number>> mmAccountServicerReference = new MMMessageAttribute<CashEntry2, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashEntry2.mmObject();
 			isDerived = false;
@@ -408,6 +458,16 @@ public class CashEntry2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(CashEntry2 obj) {
+			return obj.getAccountServicerReference();
+		}
+
+		@Override
+		public void setValue(CashEntry2 obj, Optional<Number> value) {
+			obj.setAccountServicerReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlNtryInf")
@@ -443,7 +503,7 @@ public class CashEntry2 {
 	 * CashEntry1.mmAdditionalEntryInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalEntryInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashEntry2, List<Max140Text>> mmAdditionalEntryInformation = new MMMessageAttribute<CashEntry2, List<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashEntry2.mmObject();
 			isDerived = false;
@@ -454,6 +514,16 @@ public class CashEntry2 {
 			previousVersion_lazy = () -> CashEntry1.mmAdditionalEntryInformation;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public List<Max140Text> getValue(CashEntry2 obj) {
+			return obj.getAdditionalEntryInformation();
+		}
+
+		@Override
+		public void setValue(CashEntry2 obj, List<Max140Text> value) {
+			obj.setAdditionalEntryInformation(value);
 		}
 	};
 

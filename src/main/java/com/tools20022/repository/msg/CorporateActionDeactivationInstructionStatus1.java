@@ -24,6 +24,8 @@ import com.tools20022.repository.datatype.Exact3NumericText;
 import com.tools20022.repository.entity.CorporateActionOption;
 import com.tools20022.repository.entity.CorporateActionStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CorporateActionDeactivationInstructionProcessingStatus1;
+import com.tools20022.repository.msg.CorporateActionDeactivationInstructionRejectionStatus1;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -136,7 +138,7 @@ public class CorporateActionDeactivationInstructionStatus1 {
 	 * "Specifies the corporate action options available to the account owner."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOptionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDeactivationInstructionStatus1, Optional<CorporateActionOption1FormatChoice>> mmOptionType = new MMMessageAttribute<CorporateActionDeactivationInstructionStatus1, Optional<CorporateActionOption1FormatChoice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDeactivationInstructionStatus1.mmObject();
@@ -148,6 +150,16 @@ public class CorporateActionDeactivationInstructionStatus1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CorporateActionOption1FormatChoice.mmObject();
+		}
+
+		@Override
+		public Optional<CorporateActionOption1FormatChoice> getValue(CorporateActionDeactivationInstructionStatus1 obj) {
+			return obj.getOptionType();
+		}
+
+		@Override
+		public void setValue(CorporateActionDeactivationInstructionStatus1 obj, Optional<CorporateActionOption1FormatChoice> value) {
+			obj.setOptionType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OptnNb")
@@ -186,7 +198,7 @@ public class CorporateActionDeactivationInstructionStatus1 {
 	 * "Number identifying the available corporate action options."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOptionNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDeactivationInstructionStatus1, Optional<Exact3NumericText>> mmOptionNumber = new MMMessageAttribute<CorporateActionDeactivationInstructionStatus1, Optional<Exact3NumericText>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDeactivationInstructionStatus1.mmObject();
@@ -198,6 +210,16 @@ public class CorporateActionDeactivationInstructionStatus1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Exact3NumericText> getValue(CorporateActionDeactivationInstructionStatus1 obj) {
+			return obj.getOptionNumber();
+		}
+
+		@Override
+		public void setValue(CorporateActionDeactivationInstructionStatus1 obj, Optional<Exact3NumericText> value) {
+			obj.setOptionNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcdSts", required = true)
@@ -235,7 +257,7 @@ public class CorporateActionDeactivationInstructionStatus1 {
 	 * "Provides information about the processing status of the instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionDeactivationInstructionStatus1, CorporateActionDeactivationInstructionProcessingStatus1> mmProcessedStatus = new MMMessageAssociationEnd<CorporateActionDeactivationInstructionStatus1, CorporateActionDeactivationInstructionProcessingStatus1>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDeactivationInstructionStatus1.mmObject();
@@ -247,7 +269,17 @@ public class CorporateActionDeactivationInstructionStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CorporateActionDeactivationInstructionProcessingStatus1.mmObject();
+			type_lazy = () -> CorporateActionDeactivationInstructionProcessingStatus1.mmObject();
+		}
+
+		@Override
+		public CorporateActionDeactivationInstructionProcessingStatus1 getValue(CorporateActionDeactivationInstructionStatus1 obj) {
+			return obj.getProcessedStatus();
+		}
+
+		@Override
+		public void setValue(CorporateActionDeactivationInstructionStatus1 obj, CorporateActionDeactivationInstructionProcessingStatus1 value) {
+			obj.setProcessedStatus(value);
 		}
 	};
 	@XmlElement(name = "RjctdSts", required = true)
@@ -284,7 +316,7 @@ public class CorporateActionDeactivationInstructionStatus1 {
 	 * definition} = "Provides information about the rejection status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejectedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionDeactivationInstructionStatus1, CorporateActionDeactivationInstructionRejectionStatus1> mmRejectedStatus = new MMMessageAssociationEnd<CorporateActionDeactivationInstructionStatus1, CorporateActionDeactivationInstructionRejectionStatus1>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDeactivationInstructionStatus1.mmObject();
@@ -296,7 +328,17 @@ public class CorporateActionDeactivationInstructionStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CorporateActionDeactivationInstructionRejectionStatus1.mmObject();
+			type_lazy = () -> CorporateActionDeactivationInstructionRejectionStatus1.mmObject();
+		}
+
+		@Override
+		public CorporateActionDeactivationInstructionRejectionStatus1 getValue(CorporateActionDeactivationInstructionStatus1 obj) {
+			return obj.getRejectedStatus();
+		}
+
+		@Override
+		public void setValue(CorporateActionDeactivationInstructionStatus1 obj, CorporateActionDeactivationInstructionRejectionStatus1 value) {
+			obj.setRejectedStatus(value);
 		}
 	};
 	/**
@@ -388,7 +430,7 @@ public class CorporateActionDeactivationInstructionStatus1 {
 		return processedStatus;
 	}
 
-	public CorporateActionDeactivationInstructionStatus1 setProcessedStatus(com.tools20022.repository.msg.CorporateActionDeactivationInstructionProcessingStatus1 processedStatus) {
+	public CorporateActionDeactivationInstructionStatus1 setProcessedStatus(CorporateActionDeactivationInstructionProcessingStatus1 processedStatus) {
 		this.processedStatus = Objects.requireNonNull(processedStatus);
 		return this;
 	}
@@ -397,7 +439,7 @@ public class CorporateActionDeactivationInstructionStatus1 {
 		return rejectedStatus;
 	}
 
-	public CorporateActionDeactivationInstructionStatus1 setRejectedStatus(com.tools20022.repository.msg.CorporateActionDeactivationInstructionRejectionStatus1 rejectedStatus) {
+	public CorporateActionDeactivationInstructionStatus1 setRejectedStatus(CorporateActionDeactivationInstructionRejectionStatus1 rejectedStatus) {
 		this.rejectedStatus = Objects.requireNonNull(rejectedStatus);
 		return this;
 	}

@@ -26,8 +26,11 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification1;
 import com.tools20022.repository.msg.TransferUnmatchedStatusReason1;
+import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Date;
+import java.util.function.Supplier;
 import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -64,8 +67,9 @@ import javax.xml.bind.annotation.XmlType;
  * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRemovalDate
+ * removalDate} = March 3, 2019</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "TransferUnmatchedStatus"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -110,7 +114,7 @@ public class TransferUnmatchedStatus {
 	 * definition} = "Reason for an unmatched status in the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferUnmatchedStatus, TransferUnmatchedStatusReason1> mmReason = new MMMessageAssociationEnd<TransferUnmatchedStatus, TransferUnmatchedStatusReason1>() {
 		{
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransferUnmatchedStatus.mmObject();
@@ -123,6 +127,16 @@ public class TransferUnmatchedStatus {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TransferUnmatchedStatusReason1.mmObject();
+		}
+
+		@Override
+		public TransferUnmatchedStatusReason1 getValue(TransferUnmatchedStatus obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(TransferUnmatchedStatus obj, TransferUnmatchedStatusReason1 value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "DataSrcSchme", required = true)
@@ -160,7 +174,7 @@ public class TransferUnmatchedStatus {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferUnmatchedStatus, GenericIdentification1> mmDataSourceScheme = new MMMessageAssociationEnd<TransferUnmatchedStatus, GenericIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransferUnmatchedStatus.mmObject();
@@ -173,6 +187,16 @@ public class TransferUnmatchedStatus {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(TransferUnmatchedStatus obj) {
+			return obj.getDataSourceScheme();
+		}
+
+		@Override
+		public void setValue(TransferUnmatchedStatus obj, GenericIdentification1 value) {
+			obj.setDataSourceScheme(value);
 		}
 	};
 	@XmlElement(name = "NoRsn", required = true)
@@ -210,7 +234,7 @@ public class TransferUnmatchedStatus {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferUnmatchedStatus, NoReasonCode> mmNoReason = new MMMessageAttribute<TransferUnmatchedStatus, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransferUnmatchedStatus.mmObject();
@@ -223,6 +247,16 @@ public class TransferUnmatchedStatus {
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
 		}
+
+		@Override
+		public NoReasonCode getValue(TransferUnmatchedStatus obj) {
+			return obj.getNoReason();
+		}
+
+		@Override
+		public void setValue(TransferUnmatchedStatus obj, NoReasonCode value) {
+			obj.setNoReason(value);
+		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
@@ -232,7 +266,14 @@ public class TransferUnmatchedStatus {
 						com.tools20022.repository.choice.TransferUnmatchedStatus.mmNoReason);
 				trace_lazy = () -> StatusReason.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
+				removalDate = ((Supplier<Date>) (() -> {
+					try {
+						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("March 3, 2019");
+					} catch (Exception e) {
+						throw new RuntimeException(e);
+					}
+				})).get();
 				name = "TransferUnmatchedStatus";
 				definition = "Status is unmatched.";
 			}

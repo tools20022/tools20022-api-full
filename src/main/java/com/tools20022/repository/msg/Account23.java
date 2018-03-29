@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -111,7 +112,7 @@ public class Account23 {
 	 * definition} = "Identification of the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Account23, Max35Text> mmAccountIdentification = new MMMessageAttribute<Account23, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Account23.mmObject();
@@ -123,6 +124,16 @@ public class Account23 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Account23 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(Account23 obj, Max35Text value) {
+			obj.setAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "RltdAcctDtls")
@@ -158,7 +169,7 @@ public class Account23 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRelatedAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Account23, Optional<GenericIdentification1>> mmRelatedAccountDetails = new MMMessageAssociationEnd<Account23, Optional<GenericIdentification1>>() {
 		{
 			businessComponentTrace_lazy = () -> Account.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Account23.mmObject();
@@ -170,7 +181,17 @@ public class Account23 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
+			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification1> getValue(Account23 obj) {
+			return obj.getRelatedAccountDetails();
+		}
+
+		@Override
+		public void setValue(Account23 obj, Optional<GenericIdentification1> value) {
+			obj.setRelatedAccountDetails(value.orElse(null));
 		}
 	};
 
@@ -202,7 +223,7 @@ public class Account23 {
 		return relatedAccountDetails == null ? Optional.empty() : Optional.of(relatedAccountDetails);
 	}
 
-	public Account23 setRelatedAccountDetails(com.tools20022.repository.msg.GenericIdentification1 relatedAccountDetails) {
+	public Account23 setRelatedAccountDetails(GenericIdentification1 relatedAccountDetails) {
 		this.relatedAccountDetails = relatedAccountDetails;
 		return this;
 	}

@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Period1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -115,7 +116,7 @@ public class CorporateActionPeriod1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActionPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPeriod1, Optional<Period1>> mmActionPeriod = new MMMessageAttribute<CorporateActionPeriod1, Optional<Period1>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmActionPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod1.mmObject();
@@ -126,7 +127,17 @@ public class CorporateActionPeriod1 {
 			definition = "Period during which the specified option, or all options of the event, remains valid, eg, offer period.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Period1.mmObject();
+			complexType_lazy = () -> Period1.mmObject();
+		}
+
+		@Override
+		public Optional<Period1> getValue(CorporateActionPeriod1 obj) {
+			return obj.getActionPeriod();
+		}
+
+		@Override
+		public void setValue(CorporateActionPeriod1 obj, Optional<Period1> value) {
+			obj.setActionPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CmplsryPurchsPrd")
@@ -165,7 +176,7 @@ public class CorporateActionPeriod1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCompulsoryPurchasePeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPeriod1, Optional<Period1>> mmCompulsoryPurchasePeriod = new MMMessageAttribute<CorporateActionPeriod1, Optional<Period1>>() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmCompulsoryPurchasePeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod1.mmObject();
@@ -176,7 +187,17 @@ public class CorporateActionPeriod1 {
 			definition = "Period during a take-over where any outstanding equity must be purchased by the take-over company.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Period1.mmObject();
+			complexType_lazy = () -> Period1.mmObject();
+		}
+
+		@Override
+		public Optional<Period1> getValue(CorporateActionPeriod1 obj) {
+			return obj.getCompulsoryPurchasePeriod();
+		}
+
+		@Override
+		public void setValue(CorporateActionPeriod1 obj, Optional<Period1> value) {
+			obj.setCompulsoryPurchasePeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrstPrd")
@@ -213,7 +234,7 @@ public class CorporateActionPeriod1 {
 	 * definition} = "Period during which the interest rate has been applied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterestPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPeriod1, Optional<Period1>> mmInterestPeriod = new MMMessageAttribute<CorporateActionPeriod1, Optional<Period1>>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmInterestPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod1.mmObject();
@@ -224,7 +245,17 @@ public class CorporateActionPeriod1 {
 			definition = "Period during which the interest rate has been applied.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Period1.mmObject();
+			complexType_lazy = () -> Period1.mmObject();
+		}
+
+		@Override
+		public Optional<Period1> getValue(CorporateActionPeriod1 obj) {
+			return obj.getInterestPeriod();
+		}
+
+		@Override
+		public void setValue(CorporateActionPeriod1 obj, Optional<Period1> value) {
+			obj.setInterestPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BlckgPrd")
@@ -261,7 +292,7 @@ public class CorporateActionPeriod1 {
 	 * definition} = "Period during which the security is blocked."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBlockingPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPeriod1, Optional<Period1>> mmBlockingPeriod = new MMMessageAttribute<CorporateActionPeriod1, Optional<Period1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBlockingDeadline.mmBlockingPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod1.mmObject();
@@ -272,7 +303,17 @@ public class CorporateActionPeriod1 {
 			definition = "Period during which the security is blocked.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Period1.mmObject();
+			complexType_lazy = () -> Period1.mmObject();
+		}
+
+		@Override
+		public Optional<Period1> getValue(CorporateActionPeriod1 obj) {
+			return obj.getBlockingPeriod();
+		}
+
+		@Override
+		public void setValue(CorporateActionPeriod1 obj, Optional<Period1> value) {
+			obj.setBlockingPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PricClctnPrd")
@@ -310,7 +351,7 @@ public class CorporateActionPeriod1 {
 	 * "Period during which the price of a security is determined."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriceCalculationPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPeriod1, Optional<Period1>> mmPriceCalculationPeriod = new MMMessageAttribute<CorporateActionPeriod1, Optional<Period1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceCalculationPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod1.mmObject();
@@ -321,7 +362,17 @@ public class CorporateActionPeriod1 {
 			definition = "Period during which the price of a security is determined.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Period1.mmObject();
+			complexType_lazy = () -> Period1.mmObject();
+		}
+
+		@Override
+		public Optional<Period1> getValue(CorporateActionPeriod1 obj) {
+			return obj.getPriceCalculationPeriod();
+		}
+
+		@Override
+		public void setValue(CorporateActionPeriod1 obj, Optional<Period1> value) {
+			obj.setPriceCalculationPeriod(value.orElse(null));
 		}
 	};
 
@@ -345,7 +396,7 @@ public class CorporateActionPeriod1 {
 		return actionPeriod == null ? Optional.empty() : Optional.of(actionPeriod);
 	}
 
-	public CorporateActionPeriod1 setActionPeriod(com.tools20022.repository.msg.Period1 actionPeriod) {
+	public CorporateActionPeriod1 setActionPeriod(Period1 actionPeriod) {
 		this.actionPeriod = actionPeriod;
 		return this;
 	}
@@ -354,7 +405,7 @@ public class CorporateActionPeriod1 {
 		return compulsoryPurchasePeriod == null ? Optional.empty() : Optional.of(compulsoryPurchasePeriod);
 	}
 
-	public CorporateActionPeriod1 setCompulsoryPurchasePeriod(com.tools20022.repository.msg.Period1 compulsoryPurchasePeriod) {
+	public CorporateActionPeriod1 setCompulsoryPurchasePeriod(Period1 compulsoryPurchasePeriod) {
 		this.compulsoryPurchasePeriod = compulsoryPurchasePeriod;
 		return this;
 	}
@@ -363,7 +414,7 @@ public class CorporateActionPeriod1 {
 		return interestPeriod == null ? Optional.empty() : Optional.of(interestPeriod);
 	}
 
-	public CorporateActionPeriod1 setInterestPeriod(com.tools20022.repository.msg.Period1 interestPeriod) {
+	public CorporateActionPeriod1 setInterestPeriod(Period1 interestPeriod) {
 		this.interestPeriod = interestPeriod;
 		return this;
 	}
@@ -372,7 +423,7 @@ public class CorporateActionPeriod1 {
 		return blockingPeriod == null ? Optional.empty() : Optional.of(blockingPeriod);
 	}
 
-	public CorporateActionPeriod1 setBlockingPeriod(com.tools20022.repository.msg.Period1 blockingPeriod) {
+	public CorporateActionPeriod1 setBlockingPeriod(Period1 blockingPeriod) {
 		this.blockingPeriod = blockingPeriod;
 		return this;
 	}
@@ -381,7 +432,7 @@ public class CorporateActionPeriod1 {
 		return priceCalculationPeriod == null ? Optional.empty() : Optional.of(priceCalculationPeriod);
 	}
 
-	public CorporateActionPeriod1 setPriceCalculationPeriod(com.tools20022.repository.msg.Period1 priceCalculationPeriod) {
+	public CorporateActionPeriod1 setPriceCalculationPeriod(Period1 priceCalculationPeriod) {
 		this.priceCalculationPeriod = priceCalculationPeriod;
 		return this;
 	}

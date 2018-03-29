@@ -102,7 +102,7 @@ public class NetworkParameters4 {
 	 * definition} = "Type of communication network."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNetworkType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetworkParameters4, NetworkType1Code> mmNetworkType = new MMMessageAttribute<NetworkParameters4, NetworkType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetworkParameters4.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class NetworkParameters4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NetworkType1Code.mmObject();
+		}
+
+		@Override
+		public NetworkType1Code getValue(NetworkParameters4 obj) {
+			return obj.getNetworkType();
+		}
+
+		@Override
+		public void setValue(NetworkParameters4 obj, NetworkType1Code value) {
+			obj.setNetworkType(value);
 		}
 	};
 	@XmlElement(name = "AdrVal", required = true)
@@ -146,7 +156,7 @@ public class NetworkParameters4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAddressValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetworkParameters4, Max70Text> mmAddressValue = new MMMessageAttribute<NetworkParameters4, Max70Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetworkParameters4.mmObject();
 			isDerived = false;
@@ -157,6 +167,16 @@ public class NetworkParameters4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Max70Text getValue(NetworkParameters4 obj) {
+			return obj.getAddressValue();
+		}
+
+		@Override
+		public void setValue(NetworkParameters4 obj, Max70Text value) {
+			obj.setAddressValue(value);
 		}
 	};
 

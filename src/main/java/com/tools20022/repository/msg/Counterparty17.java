@@ -115,7 +115,7 @@ public class Counterparty17 {
 	 * "Unique code identifying the reporting counterparty of the contract."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Counterparty17, OrganisationIdentification5Choice> mmIdentification = new MMMessageAssociationEnd<Counterparty17, OrganisationIdentification5Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Counterparty17.mmObject();
@@ -128,6 +128,16 @@ public class Counterparty17 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OrganisationIdentification5Choice.mmObject();
+		}
+
+		@Override
+		public OrganisationIdentification5Choice getValue(Counterparty17 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Counterparty17 obj, OrganisationIdentification5Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Ntr")
@@ -165,7 +175,7 @@ public class Counterparty17 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNature = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Counterparty17, Optional<CounterpartyTradeNature5Choice>> mmNature = new MMMessageAssociationEnd<Counterparty17, Optional<CounterpartyTradeNature5Choice>>() {
 		{
 			businessElementTrace_lazy = () -> RolePlayer.mmRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Counterparty17.mmObject();
@@ -178,6 +188,16 @@ public class Counterparty17 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CounterpartyTradeNature5Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CounterpartyTradeNature5Choice> getValue(Counterparty17 obj) {
+			return obj.getNature();
+		}
+
+		@Override
+		public void setValue(Counterparty17 obj, Optional<CounterpartyTradeNature5Choice> value) {
+			obj.setNature(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradgCpcty")
@@ -214,7 +234,7 @@ public class Counterparty17 {
 	 * definition} = "Identifies the trading capacity of the seller."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradingCapacity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Counterparty17, Optional<TradingCapacity7Code>> mmTradingCapacity = new MMMessageAttribute<Counterparty17, Optional<TradingCapacity7Code>>() {
 		{
 			businessElementTrace_lazy = () -> TradePartyRole.mmTradingPartyCapacity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Counterparty17.mmObject();
@@ -226,6 +246,16 @@ public class Counterparty17 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TradingCapacity7Code.mmObject();
+		}
+
+		@Override
+		public Optional<TradingCapacity7Code> getValue(Counterparty17 obj) {
+			return obj.getTradingCapacity();
+		}
+
+		@Override
+		public void setValue(Counterparty17 obj, Optional<TradingCapacity7Code> value) {
+			obj.setTradingCapacity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtrPtySd")
@@ -263,7 +293,7 @@ public class Counterparty17 {
 	 * "Identifies whether the reporting counterparty is a buyer or a seller."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCounterpartySide = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Counterparty17, Optional<OptionParty1Code>> mmCounterpartySide = new MMMessageAttribute<Counterparty17, Optional<OptionParty1Code>>() {
 		{
 			businessElementTrace_lazy = () -> ClearingMemberRole.mmSide;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Counterparty17.mmObject();
@@ -275,6 +305,16 @@ public class Counterparty17 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> OptionParty1Code.mmObject();
+		}
+
+		@Override
+		public Optional<OptionParty1Code> getValue(Counterparty17 obj) {
+			return obj.getCounterpartySide();
+		}
+
+		@Override
+		public void setValue(Counterparty17 obj, Optional<OptionParty1Code> value) {
+			obj.setCounterpartySide(value.orElse(null));
 		}
 	};
 

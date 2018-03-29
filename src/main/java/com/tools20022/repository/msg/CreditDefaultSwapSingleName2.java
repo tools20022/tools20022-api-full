@@ -121,7 +121,7 @@ public class CreditDefaultSwapSingleName2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSovereignIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CreditDefaultSwapSingleName2, TrueFalseIndicator> mmSovereignIssuer = new MMMessageAttribute<CreditDefaultSwapSingleName2, TrueFalseIndicator>() {
 		{
 			businessElementTrace_lazy = () -> Swaps.mmSovereignIssuer;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditDefaultSwapSingleName2.mmObject();
@@ -133,6 +133,16 @@ public class CreditDefaultSwapSingleName2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public TrueFalseIndicator getValue(CreditDefaultSwapSingleName2 obj) {
+			return obj.getSovereignIssuer();
+		}
+
+		@Override
+		public void setValue(CreditDefaultSwapSingleName2 obj, TrueFalseIndicator value) {
+			obj.setSovereignIssuer(value);
 		}
 	};
 	@XmlElement(name = "RefPty")
@@ -171,7 +181,7 @@ public class CreditDefaultSwapSingleName2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReferenceParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditDefaultSwapSingleName2, Optional<DerivativePartyIdentification1Choice>> mmReferenceParty = new MMMessageAssociationEnd<CreditDefaultSwapSingleName2, Optional<DerivativePartyIdentification1Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> RegistrarRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditDefaultSwapSingleName2.mmObject();
@@ -184,6 +194,16 @@ public class CreditDefaultSwapSingleName2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DerivativePartyIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DerivativePartyIdentification1Choice> getValue(CreditDefaultSwapSingleName2 obj) {
+			return obj.getReferenceParty();
+		}
+
+		@Override
+		public void setValue(CreditDefaultSwapSingleName2 obj, Optional<DerivativePartyIdentification1Choice> value) {
+			obj.setReferenceParty(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NtnlCcy", required = true)
@@ -221,7 +241,7 @@ public class CreditDefaultSwapSingleName2 {
 	 * definition} = "Currency in which the notional is denominated.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotionalCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CreditDefaultSwapSingleName2, ActiveOrHistoricCurrencyCode> mmNotionalCurrency = new MMMessageAttribute<CreditDefaultSwapSingleName2, ActiveOrHistoricCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmNotionalCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditDefaultSwapSingleName2.mmObject();
@@ -233,6 +253,16 @@ public class CreditDefaultSwapSingleName2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyCode getValue(CreditDefaultSwapSingleName2 obj) {
+			return obj.getNotionalCurrency();
+		}
+
+		@Override
+		public void setValue(CreditDefaultSwapSingleName2 obj, ActiveOrHistoricCurrencyCode value) {
+			obj.setNotionalCurrency(value);
 		}
 	};
 

@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CurrencyExchangeSearchCriteria;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -118,7 +119,7 @@ public class CurrencyExchangeCriteria {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewQueryName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyExchangeCriteria, Optional<Max35Text>> mmNewQueryName = new MMMessageAttribute<CurrencyExchangeCriteria, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyExchangeCriteria.mmObject();
 			isDerived = false;
@@ -131,9 +132,19 @@ public class CurrencyExchangeCriteria {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max35Text> getValue(CurrencyExchangeCriteria obj) {
+			return obj.getNewQueryName();
+		}
+
+		@Override
+		public void setValue(CurrencyExchangeCriteria obj, Optional<Max35Text> value) {
+			obj.setNewQueryName(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "SchCrit", required = true)
-	protected List<com.tools20022.repository.msg.CurrencyExchangeSearchCriteria> searchCriteria;
+	protected List<CurrencyExchangeSearchCriteria> searchCriteria;
 	/**
 	 * 
 	 <p>
@@ -170,7 +181,7 @@ public class CurrencyExchangeCriteria {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSearchCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CurrencyExchangeCriteria, List<CurrencyExchangeSearchCriteria>> mmSearchCriteria = new MMMessageAssociationEnd<CurrencyExchangeCriteria, List<CurrencyExchangeSearchCriteria>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyExchangeCriteria.mmObject();
 			isDerived = false;
@@ -181,7 +192,17 @@ public class CurrencyExchangeCriteria {
 			nextVersions_lazy = () -> Arrays.asList(CurrencyExchangeCriteria2.mmSearchCriteria);
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CurrencyExchangeSearchCriteria.mmObject();
+			type_lazy = () -> CurrencyExchangeSearchCriteria.mmObject();
+		}
+
+		@Override
+		public List<CurrencyExchangeSearchCriteria> getValue(CurrencyExchangeCriteria obj) {
+			return obj.getSearchCriteria();
+		}
+
+		@Override
+		public void setValue(CurrencyExchangeCriteria obj, List<CurrencyExchangeSearchCriteria> value) {
+			obj.setSearchCriteria(value);
 		}
 	};
 
@@ -219,7 +240,7 @@ public class CurrencyExchangeCriteria {
 		return searchCriteria == null ? searchCriteria = new ArrayList<>() : searchCriteria;
 	}
 
-	public CurrencyExchangeCriteria setSearchCriteria(List<com.tools20022.repository.msg.CurrencyExchangeSearchCriteria> searchCriteria) {
+	public CurrencyExchangeCriteria setSearchCriteria(List<CurrencyExchangeSearchCriteria> searchCriteria) {
 		this.searchCriteria = Objects.requireNonNull(searchCriteria);
 		return this;
 	}

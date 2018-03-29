@@ -34,21 +34,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageDefinition} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV05
- * FinancialInstitutionCreditTransferV05}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV05
- * FIToFICustomerCreditTransferV05}</li>
- * <li>
  * {@linkplain com.tools20022.repository.area.pacs.FIToFICustomerDirectDebitV06
  * FIToFICustomerDirectDebitV06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV07
- * FIToFIPaymentStatusReportV07}</li>
- * <li>{@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentReversalV06
- * FIToFIPaymentReversalV06}</li>
- * <li>{@linkplain com.tools20022.repository.area.pacs.PaymentReturnV06
- * PaymentReturnV06}</li>
+ * {@linkplain com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV06
+ * FinancialInstitutionCreditTransferV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV06
+ * FIToFICustomerCreditTransferV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusRequestV01
+ * FIToFIPaymentStatusRequestV01}</li>
+ * <li>{@linkplain com.tools20022.repository.area.pacs.PaymentReturnV07
+ * PaymentReturnV07}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV08
+ * FIToFIPaymentStatusReportV08}</li>
+ * <li>{@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentReversalV07
+ * FIToFIPaymentReversalV07}</li>
  * </ul>
  * </li>
  * <li>
@@ -79,8 +82,8 @@ public class PaymentsClearingandSettlementISOPreviousversion {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Payments Clearing and Settlement - ISO - Previous version";
 				definition = "Set of messages used between financial institutions for the clearing and settlement of payment transactions.\r\n";
-				messageDefinition_lazy = () -> Arrays.asList(FinancialInstitutionCreditTransferV05.mmObject(), FIToFICustomerCreditTransferV05.mmObject(), FIToFICustomerDirectDebitV06.mmObject(), FIToFIPaymentStatusReportV07.mmObject(),
-						FIToFIPaymentReversalV06.mmObject(), PaymentReturnV06.mmObject());
+				messageDefinition_lazy = () -> Arrays.asList(FIToFICustomerDirectDebitV06.mmObject(), FinancialInstitutionCreditTransferV06.mmObject(), FIToFICustomerCreditTransferV06.mmObject(), FIToFIPaymentStatusRequestV01.mmObject(),
+						PaymentReturnV07.mmObject(), FIToFIPaymentStatusReportV08.mmObject(), FIToFIPaymentReversalV07.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -107,7 +107,7 @@ public class InterestRate12Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFixed = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InterestRate12Choice, FixedRate5> mmFixed = new MMMessageAssociationEnd<InterestRate12Choice, FixedRate5>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.InterestRate12Choice.mmObject();
 			isDerived = false;
@@ -119,6 +119,16 @@ public class InterestRate12Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FixedRate5.mmObject();
+		}
+
+		@Override
+		public FixedRate5 getValue(InterestRate12Choice obj) {
+			return obj.getFixed();
+		}
+
+		@Override
+		public void setValue(InterestRate12Choice obj, FixedRate5 value) {
+			obj.setFixed(value);
 		}
 	};
 	@XmlElement(name = "Fltg", required = true)
@@ -151,7 +161,7 @@ public class InterestRate12Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFloating = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InterestRate12Choice, FloatingRate3> mmFloating = new MMMessageAssociationEnd<InterestRate12Choice, FloatingRate3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.InterestRate12Choice.mmObject();
 			isDerived = false;
@@ -163,6 +173,16 @@ public class InterestRate12Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FloatingRate3.mmObject();
+		}
+
+		@Override
+		public FloatingRate3 getValue(InterestRate12Choice obj) {
+			return obj.getFloating();
+		}
+
+		@Override
+		public void setValue(InterestRate12Choice obj, FloatingRate3 value) {
+			obj.setFloating(value);
 		}
 	};
 

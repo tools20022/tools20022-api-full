@@ -117,7 +117,7 @@ public class SuspendedStatusReason4 {
 	 * ConditionallyAcceptedStatusReason3.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SuspendedStatusReason4, SuspendedStatusReason5Choice> mmReason = new MMMessageAssociationEnd<SuspendedStatusReason4, SuspendedStatusReason5Choice>() {
 		{
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SuspendedStatusReason4.mmObject();
@@ -131,6 +131,16 @@ public class SuspendedStatusReason4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SuspendedStatusReason5Choice.mmObject();
+		}
+
+		@Override
+		public SuspendedStatusReason5Choice getValue(SuspendedStatusReason4 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(SuspendedStatusReason4 obj, SuspendedStatusReason5Choice value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -167,7 +177,7 @@ public class SuspendedStatusReason4 {
 	 * ConditionallyAcceptedStatusReason3.mmAdditionalInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SuspendedStatusReason4, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<SuspendedStatusReason4, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SuspendedStatusReason4.mmObject();
 			isDerived = false;
@@ -179,6 +189,16 @@ public class SuspendedStatusReason4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(SuspendedStatusReason4 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(SuspendedStatusReason4 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

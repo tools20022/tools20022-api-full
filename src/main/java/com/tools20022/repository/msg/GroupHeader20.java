@@ -24,6 +24,9 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstitution2;
+import com.tools20022.repository.msg.PaymentTypeInformation8;
+import com.tools20022.repository.msg.SettlementInformation12;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -132,7 +135,7 @@ public class GroupHeader20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader20, Max35Text> mmMessageIdentification = new MMMessageAttribute<GroupHeader20, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader20.mmObject();
@@ -144,6 +147,16 @@ public class GroupHeader20 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(GroupHeader20 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(GroupHeader20 obj, Max35Text value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "CreDtTm", required = true)
@@ -181,7 +194,7 @@ public class GroupHeader20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader20, ISODateTime> mmCreationDateTime = new MMMessageAttribute<GroupHeader20, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmCreationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader20.mmObject();
@@ -193,6 +206,16 @@ public class GroupHeader20 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(GroupHeader20 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(GroupHeader20 obj, ISODateTime value) {
+			obj.setCreationDateTime(value);
 		}
 	};
 	@XmlElement(name = "NbOfTxs", required = true)
@@ -225,7 +248,7 @@ public class GroupHeader20 {
 	 * "Number of individual transactions contained in the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfTransactions = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader20, Max15NumericText> mmNumberOfTransactions = new MMMessageAttribute<GroupHeader20, Max15NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader20.mmObject();
 			isDerived = false;
@@ -236,6 +259,16 @@ public class GroupHeader20 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
+		}
+
+		@Override
+		public Max15NumericText getValue(GroupHeader20 obj) {
+			return obj.getNumberOfTransactions();
+		}
+
+		@Override
+		public void setValue(GroupHeader20 obj, Max15NumericText value) {
+			obj.setNumberOfTransactions(value);
 		}
 	};
 	@XmlElement(name = "TtlIntrBkSttlmAmt", required = true)
@@ -274,7 +307,7 @@ public class GroupHeader20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalInterbankSettlementAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader20, EuroMax15Amount> mmTotalInterbankSettlementAmount = new MMMessageAttribute<GroupHeader20, EuroMax15Amount>() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader20.mmObject();
@@ -286,6 +319,16 @@ public class GroupHeader20 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EuroMax15Amount.mmObject();
+		}
+
+		@Override
+		public EuroMax15Amount getValue(GroupHeader20 obj) {
+			return obj.getTotalInterbankSettlementAmount();
+		}
+
+		@Override
+		public void setValue(GroupHeader20 obj, EuroMax15Amount value) {
+			obj.setTotalInterbankSettlementAmount(value);
 		}
 	};
 	@XmlElement(name = "IntrBkSttlmDt", required = true)
@@ -323,7 +366,7 @@ public class GroupHeader20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterbankSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader20, ISODate> mmInterbankSettlementDate = new MMMessageAttribute<GroupHeader20, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader20.mmObject();
@@ -335,6 +378,16 @@ public class GroupHeader20 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(GroupHeader20 obj) {
+			return obj.getInterbankSettlementDate();
+		}
+
+		@Override
+		public void setValue(GroupHeader20 obj, ISODate value) {
+			obj.setInterbankSettlementDate(value);
 		}
 	};
 	@XmlElement(name = "SttlmInf", required = true)
@@ -372,7 +425,7 @@ public class GroupHeader20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GroupHeader20, SettlementInformation12> mmSettlementInformation = new MMMessageAssociationEnd<GroupHeader20, SettlementInformation12>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInstruction.mmSettlementInstruction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader20.mmObject();
@@ -384,7 +437,17 @@ public class GroupHeader20 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SettlementInformation12.mmObject();
+			type_lazy = () -> SettlementInformation12.mmObject();
+		}
+
+		@Override
+		public SettlementInformation12 getValue(GroupHeader20 obj) {
+			return obj.getSettlementInformation();
+		}
+
+		@Override
+		public void setValue(GroupHeader20 obj, SettlementInformation12 value) {
+			obj.setSettlementInformation(value);
 		}
 	};
 	@XmlElement(name = "PmtTpInf")
@@ -421,7 +484,7 @@ public class GroupHeader20 {
 	 * "Set of elements used to further specify the type of transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentTypeInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GroupHeader20, Optional<PaymentTypeInformation8>> mmPaymentTypeInformation = new MMMessageAssociationEnd<GroupHeader20, Optional<PaymentTypeInformation8>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmProcessingInstructions;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader20.mmObject();
@@ -433,7 +496,17 @@ public class GroupHeader20 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation8.mmObject();
+			type_lazy = () -> PaymentTypeInformation8.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentTypeInformation8> getValue(GroupHeader20 obj) {
+			return obj.getPaymentTypeInformation();
+		}
+
+		@Override
+		public void setValue(GroupHeader20 obj, Optional<PaymentTypeInformation8> value) {
+			obj.setPaymentTypeInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstgAgt")
@@ -470,7 +543,7 @@ public class GroupHeader20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstructingAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GroupHeader20, Optional<FinancialInstitution2>> mmInstructingAgent = new MMMessageAssociationEnd<GroupHeader20, Optional<FinancialInstitution2>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader20.mmObject();
@@ -482,7 +555,17 @@ public class GroupHeader20 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitution2.mmObject();
+			type_lazy = () -> FinancialInstitution2.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstitution2> getValue(GroupHeader20 obj) {
+			return obj.getInstructingAgent();
+		}
+
+		@Override
+		public void setValue(GroupHeader20 obj, Optional<FinancialInstitution2> value) {
+			obj.setInstructingAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstdAgt")
@@ -519,7 +602,7 @@ public class GroupHeader20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstructedAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GroupHeader20, Optional<FinancialInstitution2>> mmInstructedAgent = new MMMessageAssociationEnd<GroupHeader20, Optional<FinancialInstitution2>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader20.mmObject();
@@ -531,7 +614,17 @@ public class GroupHeader20 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitution2.mmObject();
+			type_lazy = () -> FinancialInstitution2.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstitution2> getValue(GroupHeader20 obj) {
+			return obj.getInstructedAgent();
+		}
+
+		@Override
+		public void setValue(GroupHeader20 obj, Optional<FinancialInstitution2> value) {
+			obj.setInstructedAgent(value.orElse(null));
 		}
 	};
 
@@ -601,7 +694,7 @@ public class GroupHeader20 {
 		return settlementInformation;
 	}
 
-	public GroupHeader20 setSettlementInformation(com.tools20022.repository.msg.SettlementInformation12 settlementInformation) {
+	public GroupHeader20 setSettlementInformation(SettlementInformation12 settlementInformation) {
 		this.settlementInformation = Objects.requireNonNull(settlementInformation);
 		return this;
 	}
@@ -610,7 +703,7 @@ public class GroupHeader20 {
 		return paymentTypeInformation == null ? Optional.empty() : Optional.of(paymentTypeInformation);
 	}
 
-	public GroupHeader20 setPaymentTypeInformation(com.tools20022.repository.msg.PaymentTypeInformation8 paymentTypeInformation) {
+	public GroupHeader20 setPaymentTypeInformation(PaymentTypeInformation8 paymentTypeInformation) {
 		this.paymentTypeInformation = paymentTypeInformation;
 		return this;
 	}
@@ -619,7 +712,7 @@ public class GroupHeader20 {
 		return instructingAgent == null ? Optional.empty() : Optional.of(instructingAgent);
 	}
 
-	public GroupHeader20 setInstructingAgent(com.tools20022.repository.msg.FinancialInstitution2 instructingAgent) {
+	public GroupHeader20 setInstructingAgent(FinancialInstitution2 instructingAgent) {
 		this.instructingAgent = instructingAgent;
 		return this;
 	}
@@ -628,7 +721,7 @@ public class GroupHeader20 {
 		return instructedAgent == null ? Optional.empty() : Optional.of(instructedAgent);
 	}
 
-	public GroupHeader20 setInstructedAgent(com.tools20022.repository.msg.FinancialInstitution2 instructedAgent) {
+	public GroupHeader20 setInstructedAgent(FinancialInstitution2 instructedAgent) {
 		this.instructedAgent = instructedAgent;
 		return this;
 	}

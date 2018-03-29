@@ -107,7 +107,7 @@ public class OptionStyle2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionStyle2Choice, OptionStyle3Code> mmCode = new MMMessageAttribute<OptionStyle2Choice, OptionStyle3Code>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmOptionStyle;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OptionStyle2Choice.mmObject();
@@ -119,6 +119,16 @@ public class OptionStyle2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OptionStyle3Code.mmObject();
+		}
+
+		@Override
+		public OptionStyle3Code getValue(OptionStyle2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(OptionStyle2Choice obj, OptionStyle3Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -158,7 +168,7 @@ public class OptionStyle2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionStyle2Choice, GenericIdentification13> mmProprietary = new MMMessageAttribute<OptionStyle2Choice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmOptionStyle;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OptionStyle2Choice.mmObject();
@@ -170,6 +180,16 @@ public class OptionStyle2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(OptionStyle2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(OptionStyle2Choice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

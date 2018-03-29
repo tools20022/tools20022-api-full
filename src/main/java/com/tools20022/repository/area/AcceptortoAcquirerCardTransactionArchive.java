@@ -175,6 +175,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.area.caaa.AcceptorCompletionAdviceV04
  * AcceptorCompletionAdviceV04}</li>
  * <li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorDiagnosticResponseV04
+ * AcceptorDiagnosticResponseV04}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorReconciliationResponseV04
+ * AcceptorReconciliationResponseV04}</li>
+ * <li>
  * {@linkplain com.tools20022.repository.area.caaa.AcceptorCurrencyConversionRequestV02
  * AcceptorCurrencyConversionRequestV02}</li>
  * <li>
@@ -212,6 +218,47 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.area.caaa.AcceptorAuthorisationRequestV04
  * AcceptorAuthorisationRequestV04}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV05
+ * AcceptorReconciliationRequestV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCurrencyConversionResponseV03
+ * AcceptorCurrencyConversionResponseV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationResponseV05
+ * AcceptorCancellationResponseV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationRequestV05
+ * AcceptorCancellationRequestV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV05
+ * AcceptorBatchTransferResponseV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorAuthorisationRequestV05
+ * AcceptorAuthorisationRequestV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCurrencyConversionRequestV03
+ * AcceptorCurrencyConversionRequestV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCompletionAdviceV05
+ * AcceptorCompletionAdviceV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCompletionAdviceResponseV05
+ * AcceptorCompletionAdviceResponseV05}</li>
+ * <li>{@linkplain com.tools20022.repository.area.caaa.AcceptorBatchTransferV05
+ * AcceptorBatchTransferV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV05
+ * AcceptorDiagnosticRequestV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationAdviceResponseV05
+ * AcceptorCancellationAdviceResponseV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV05
+ * AcceptorCancellationAdviceV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV05
+ * AcceptorAuthorisationResponseV05}</li>
  * </ul>
  * </li>
  * <li>
@@ -253,9 +300,13 @@ public class AcceptortoAcquirerCardTransactionArchive {
 						AcceptorCancellationRequestV03.mmObject(), AcceptorCurrencyConversionRequestV01.mmObject(), AcceptorReconciliationResponseV03.mmObject(), AcceptorBatchTransferResponseV03.mmObject(),
 						AcceptorCompletionAdviceResponseV03.mmObject(), AcceptorRejectionV03.mmObject(), AcceptorDiagnosticRequestV03.mmObject(), AcceptorAuthorisationRequestV03.mmObject(), AcceptorBatchTransferV03.mmObject(),
 						AcceptorCompletionAdviceV03.mmObject(), AcceptorCancellationAdviceV03.mmObject(), AcceptorReconciliationRequestV03.mmObject(), AcceptorAuthorisationResponseV03.mmObject(), AcceptorCompletionAdviceV04.mmObject(),
-						AcceptorCurrencyConversionRequestV02.mmObject(), AcceptorCancellationAdviceResponseV04.mmObject(), AcceptorDiagnosticRequestV04.mmObject(), AcceptorCancellationResponseV04.mmObject(),
-						AcceptorCurrencyConversionResponseV02.mmObject(), AcceptorCompletionAdviceResponseV04.mmObject(), AcceptorAuthorisationResponseV04.mmObject(), AcceptorBatchTransferResponseV04.mmObject(),
-						AcceptorCancellationAdviceV04.mmObject(), AcceptorCancellationRequestV04.mmObject(), AcceptorReconciliationRequestV04.mmObject(), AcceptorBatchTransferV04.mmObject(), AcceptorAuthorisationRequestV04.mmObject());
+						AcceptorDiagnosticResponseV04.mmObject(), AcceptorReconciliationResponseV04.mmObject(), AcceptorCurrencyConversionRequestV02.mmObject(), AcceptorCancellationAdviceResponseV04.mmObject(),
+						AcceptorDiagnosticRequestV04.mmObject(), AcceptorCancellationResponseV04.mmObject(), AcceptorCurrencyConversionResponseV02.mmObject(), AcceptorCompletionAdviceResponseV04.mmObject(),
+						AcceptorAuthorisationResponseV04.mmObject(), AcceptorBatchTransferResponseV04.mmObject(), AcceptorCancellationAdviceV04.mmObject(), AcceptorCancellationRequestV04.mmObject(),
+						AcceptorReconciliationRequestV04.mmObject(), AcceptorBatchTransferV04.mmObject(), AcceptorAuthorisationRequestV04.mmObject(), AcceptorReconciliationRequestV05.mmObject(),
+						AcceptorCurrencyConversionResponseV03.mmObject(), AcceptorCancellationResponseV05.mmObject(), AcceptorCancellationRequestV05.mmObject(), AcceptorBatchTransferResponseV05.mmObject(),
+						AcceptorAuthorisationRequestV05.mmObject(), AcceptorCurrencyConversionRequestV03.mmObject(), AcceptorCompletionAdviceV05.mmObject(), AcceptorCompletionAdviceResponseV05.mmObject(),
+						AcceptorBatchTransferV05.mmObject(), AcceptorDiagnosticRequestV05.mmObject(), AcceptorCancellationAdviceResponseV05.mmObject(), AcceptorCancellationAdviceV05.mmObject(), AcceptorAuthorisationResponseV05.mmObject());
 				code = "caaa";
 			}
 		});

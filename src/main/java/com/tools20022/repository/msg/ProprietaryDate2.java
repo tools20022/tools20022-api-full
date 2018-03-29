@@ -109,7 +109,7 @@ public class ProprietaryDate2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryDate2, Max35Text> mmType = new MMMessageAttribute<ProprietaryDate2, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryDate2.mmObject();
 			isDerived = false;
@@ -121,6 +121,16 @@ public class ProprietaryDate2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ProprietaryDate2 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(ProprietaryDate2 obj, Max35Text value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Dt", required = true)
@@ -160,7 +170,7 @@ public class ProprietaryDate2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryDate2, DateAndDateTimeChoice> mmDate = new MMMessageAttribute<ProprietaryDate2, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryDate2.mmObject();
 			isDerived = false;
@@ -172,6 +182,16 @@ public class ProprietaryDate2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(ProprietaryDate2 obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(ProprietaryDate2 obj, DateAndDateTimeChoice value) {
+			obj.setDate(value);
 		}
 	};
 

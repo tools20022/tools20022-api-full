@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.entity.FinancialInstitution;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BICIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -122,7 +123,7 @@ public class RequiredSubmission1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLatestMatchDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequiredSubmission1, Optional<ISODate>> mmLatestMatchDate = new MMMessageAttribute<RequiredSubmission1, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequiredSubmission1.mmObject();
 			isDerived = false;
@@ -133,6 +134,16 @@ public class RequiredSubmission1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(RequiredSubmission1 obj) {
+			return obj.getLatestMatchDate();
+		}
+
+		@Override
+		public void setValue(RequiredSubmission1 obj, Optional<ISODate> value) {
+			obj.setLatestMatchDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReqrdComrclDataSet", required = true)
@@ -167,7 +178,7 @@ public class RequiredSubmission1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequiredCommercialDataSet = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequiredSubmission1, YesNoIndicator> mmRequiredCommercialDataSet = new MMMessageAttribute<RequiredSubmission1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequiredSubmission1.mmObject();
 			isDerived = false;
@@ -178,6 +189,16 @@ public class RequiredSubmission1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(RequiredSubmission1 obj) {
+			return obj.getRequiredCommercialDataSet();
+		}
+
+		@Override
+		public void setValue(RequiredSubmission1 obj, YesNoIndicator value) {
+			obj.setRequiredCommercialDataSet(value);
 		}
 	};
 	@XmlElement(name = "ReqrdTrnsprtDataSet", required = true)
@@ -212,7 +233,7 @@ public class RequiredSubmission1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequiredTransportDataSet = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequiredSubmission1, YesNoIndicator> mmRequiredTransportDataSet = new MMMessageAttribute<RequiredSubmission1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequiredSubmission1.mmObject();
 			isDerived = false;
@@ -223,6 +244,16 @@ public class RequiredSubmission1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(RequiredSubmission1 obj) {
+			return obj.getRequiredTransportDataSet();
+		}
+
+		@Override
+		public void setValue(RequiredSubmission1 obj, YesNoIndicator value) {
+			obj.setRequiredTransportDataSet(value);
 		}
 	};
 	@XmlElement(name = "Submitr", required = true)
@@ -258,7 +289,7 @@ public class RequiredSubmission1 {
 	 * definition} = "Specifies the party that must submit the data sets."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSubmitter = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RequiredSubmission1, BICIdentification1> mmSubmitter = new MMMessageAssociationEnd<RequiredSubmission1, BICIdentification1>() {
 		{
 			businessComponentTrace_lazy = () -> FinancialInstitution.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequiredSubmission1.mmObject();
@@ -270,7 +301,17 @@ public class RequiredSubmission1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
+			type_lazy = () -> BICIdentification1.mmObject();
+		}
+
+		@Override
+		public BICIdentification1 getValue(RequiredSubmission1 obj) {
+			return obj.getSubmitter();
+		}
+
+		@Override
+		public void setValue(RequiredSubmission1 obj, BICIdentification1 value) {
+			obj.setSubmitter(value);
 		}
 	};
 
@@ -321,7 +362,7 @@ public class RequiredSubmission1 {
 		return submitter;
 	}
 
-	public RequiredSubmission1 setSubmitter(com.tools20022.repository.msg.BICIdentification1 submitter) {
+	public RequiredSubmission1 setSubmitter(BICIdentification1 submitter) {
 		this.submitter = Objects.requireNonNull(submitter);
 		return this;
 	}

@@ -111,7 +111,7 @@ public class SubBalanceBreakdown1 {
 	 * definition} = "Reason for the sub-balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubBalanceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubBalanceBreakdown1, SubBalanceType9Choice> mmSubBalanceType = new MMMessageAttribute<SubBalanceBreakdown1, SubBalanceType9Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubBalanceBreakdown1.mmObject();
@@ -123,6 +123,16 @@ public class SubBalanceBreakdown1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SubBalanceType9Choice.mmObject();
+		}
+
+		@Override
+		public SubBalanceType9Choice getValue(SubBalanceBreakdown1 obj) {
+			return obj.getSubBalanceType();
+		}
+
+		@Override
+		public void setValue(SubBalanceBreakdown1 obj, SubBalanceType9Choice value) {
+			obj.setSubBalanceType(value);
 		}
 	};
 	@XmlElement(name = "Qty", required = true)
@@ -160,7 +170,7 @@ public class SubBalanceBreakdown1 {
 	 * definition} = "Quantity of financial instrument in the sub-balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubBalanceBreakdown1, SubBalanceQuantity5Choice> mmQuantity = new MMMessageAttribute<SubBalanceBreakdown1, SubBalanceQuantity5Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSubBalanceQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubBalanceBreakdown1.mmObject();
@@ -172,6 +182,16 @@ public class SubBalanceBreakdown1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SubBalanceQuantity5Choice.mmObject();
+		}
+
+		@Override
+		public SubBalanceQuantity5Choice getValue(SubBalanceBreakdown1 obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(SubBalanceBreakdown1 obj, SubBalanceQuantity5Choice value) {
+			obj.setQuantity(value);
 		}
 	};
 

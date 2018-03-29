@@ -21,9 +21,7 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdvice002V06;
-import com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdvice002V07;
-import com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdvice002V08;
+import com.tools20022.repository.area.seev.*;
 import com.tools20022.repository.datatype.RestrictedFINXMax350Text;
 import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.entity.Role;
@@ -63,15 +61,22 @@ import javax.xml.bind.annotation.XmlType;
  * messageBuildingBlock} =
  * <ul>
  * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdvice002V07#mmAdditionalInformation
+ * CorporateActionInstructionStatusAdvice002V07.mmAdditionalInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdvice002V06#mmAdditionalInformation
+ * CorporateActionInstructionCancellationRequestStatusAdvice002V06.
+ * mmAdditionalInformation}</li>
+ * <li>
  * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdvice002V06#mmAdditionalInformation
  * CorporateActionEventProcessingStatusAdvice002V06.mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdvice002V07#mmAdditionalInformation
- * CorporateActionInstructionCancellationRequestStatusAdvice002V07.
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdvice002V08#mmAdditionalInformation
+ * CorporateActionInstructionCancellationRequestStatusAdvice002V08.
  * mmAdditionalInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdvice002V08#mmAdditionalInformation
- * CorporateActionInstructionStatusAdvice002V08.mmAdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdvice002V09#mmAdditionalInformation
+ * CorporateActionInstructionStatusAdvice002V09.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>
@@ -130,7 +135,7 @@ public class CorporateActionNarrative19 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalText = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative19, List<RestrictedFINXMax350Text>> mmAdditionalText = new MMMessageAttribute<CorporateActionNarrative19, List<RestrictedFINXMax350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative19.mmObject();
 			isDerived = false;
@@ -141,6 +146,16 @@ public class CorporateActionNarrative19 {
 			definition = "Provides additional information or specifies in more detail the content of a message. This field may only be used when the information to be transmitted, cannot be coded.";
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax350Text.mmObject();
+		}
+
+		@Override
+		public List<RestrictedFINXMax350Text> getValue(CorporateActionNarrative19 obj) {
+			return obj.getAdditionalText();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative19 obj, List<RestrictedFINXMax350Text> value) {
+			obj.setAdditionalText(value);
 		}
 	};
 	@XmlElement(name = "PtyCtctNrrtv")
@@ -183,7 +198,7 @@ public class CorporateActionNarrative19 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartyContactNarrative = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative19, List<RestrictedFINXMax350Text>> mmPartyContactNarrative = new MMMessageAttribute<CorporateActionNarrative19, List<RestrictedFINXMax350Text>>() {
 		{
 			businessElementTrace_lazy = () -> Role.mmContactPersonRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative19.mmObject();
@@ -196,14 +211,25 @@ public class CorporateActionNarrative19 {
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax350Text.mmObject();
 		}
+
+		@Override
+		public List<RestrictedFINXMax350Text> getValue(CorporateActionNarrative19 obj) {
+			return obj.getPartyContactNarrative();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative19 obj, List<RestrictedFINXMax350Text> value) {
+			obj.setPartyContactNarrative(value);
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative19.mmAdditionalText, com.tools20022.repository.msg.CorporateActionNarrative19.mmPartyContactNarrative);
-				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionEventProcessingStatusAdvice002V06.mmAdditionalInformation, CorporateActionInstructionCancellationRequestStatusAdvice002V07.mmAdditionalInformation,
-						CorporateActionInstructionStatusAdvice002V08.mmAdditionalInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionInstructionStatusAdvice002V07.mmAdditionalInformation, CorporateActionInstructionCancellationRequestStatusAdvice002V06.mmAdditionalInformation,
+						CorporateActionEventProcessingStatusAdvice002V06.mmAdditionalInformation, CorporateActionInstructionCancellationRequestStatusAdvice002V08.mmAdditionalInformation,
+						CorporateActionInstructionStatusAdvice002V09.mmAdditionalInformation);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

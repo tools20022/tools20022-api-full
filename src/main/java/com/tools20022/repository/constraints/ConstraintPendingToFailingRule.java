@@ -54,11 +54,15 @@ public class ConstraintPendingToFailingRule {
 	 */
 	public static final MMConstraint<SettlementStatus2Choice> forSettlementStatus2Choice = new MMConstraint<SettlementStatus2Choice>() {
 		{
-			validator = ConstraintPendingToFailingRule::checkSettlementStatus2Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingToFailingRule";
 			definition = "A pending transaction (PEND) becomes a failing transaction (PENF) on the settlement date instructed in the message, during the end of day reporting.";
 			owner_lazy = () -> SettlementStatus2Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementStatus2Choice obj) throws Exception {
+			checkSettlementStatus2Choice(obj);
 		}
 	};
 	/**
@@ -92,12 +96,16 @@ public class ConstraintPendingToFailingRule {
 	 */
 	public static final MMConstraint<SettlementStatus7Choice> forSettlementStatus7Choice = new MMConstraint<SettlementStatus7Choice>() {
 		{
-			validator = ConstraintPendingToFailingRule::checkSettlementStatus7Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingToFailingRule";
 			definition = "A pending transaction (PEND) becomes a failing transaction (PENF) on the settlement date instructed in the message, during the end of day reporting.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPendingToFailingRule.forSettlementStatus17Choice);
 			owner_lazy = () -> SettlementStatus7Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementStatus7Choice obj) throws Exception {
+			checkSettlementStatus7Choice(obj);
 		}
 	};
 	/**
@@ -123,11 +131,15 @@ public class ConstraintPendingToFailingRule {
 	 */
 	public static final MMConstraint<SettlementStatus13Choice> forSettlementStatus13Choice = new MMConstraint<SettlementStatus13Choice>() {
 		{
-			validator = ConstraintPendingToFailingRule::checkSettlementStatus13Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingToFailingRule";
 			definition = "A pending transaction (PEND) becomes a failing transaction (PENF) on the settlement date instructed in the message, during the end of day reporting.";
 			owner_lazy = () -> SettlementStatus13Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementStatus13Choice obj) throws Exception {
+			checkSettlementStatus13Choice(obj);
 		}
 	};
 	/**
@@ -153,11 +165,15 @@ public class ConstraintPendingToFailingRule {
 	 */
 	public static final MMConstraint<SettlementStatus4Choice> forSettlementStatus4Choice = new MMConstraint<SettlementStatus4Choice>() {
 		{
-			validator = ConstraintPendingToFailingRule::checkSettlementStatus4Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingToFailingRule";
 			definition = "A pending transaction (PEND) becomes a failing transaction (PENF) on the settlement date instructed in the message, during the end of day reporting.";
 			owner_lazy = () -> SettlementStatus4Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementStatus4Choice obj) throws Exception {
+			checkSettlementStatus4Choice(obj);
 		}
 	};
 	/**
@@ -183,11 +199,15 @@ public class ConstraintPendingToFailingRule {
 	 */
 	public static final MMConstraint<Status2Choice> forStatus2Choice = new MMConstraint<Status2Choice>() {
 		{
-			validator = ConstraintPendingToFailingRule::checkStatus2Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingToFailingRule";
 			definition = "A pending transaction (PEND) becomes a failing transaction (PENF) on the settlement date instructed in the message, during the end of day reporting.";
 			owner_lazy = () -> Status2Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Status2Choice obj) throws Exception {
+			checkStatus2Choice(obj);
 		}
 	};
 	/**
@@ -213,11 +233,15 @@ public class ConstraintPendingToFailingRule {
 	 */
 	public static final MMConstraint<Status4Choice> forStatus4Choice = new MMConstraint<Status4Choice>() {
 		{
-			validator = ConstraintPendingToFailingRule::checkStatus4Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingToFailingRule";
 			definition = "A pending transaction (PEND) becomes a failing transaction (PENF) on the settlement date instructed in the message, during the end of day reporting.";
 			owner_lazy = () -> Status4Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Status4Choice obj) throws Exception {
+			checkStatus4Choice(obj);
 		}
 	};
 	/**
@@ -251,12 +275,16 @@ public class ConstraintPendingToFailingRule {
 	 */
 	public static final MMConstraint<Status9Choice> forStatus9Choice = new MMConstraint<Status9Choice>() {
 		{
-			validator = ConstraintPendingToFailingRule::checkStatus9Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingToFailingRule";
 			definition = "A pending transaction (PEND) becomes a failing transaction (PENF) on the settlement date instructed in the message, during the end of day reporting.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPendingToFailingRule.forStatus15Choice);
 			owner_lazy = () -> Status9Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Status9Choice obj) throws Exception {
+			checkStatus9Choice(obj);
 		}
 	};
 	/**
@@ -282,11 +310,15 @@ public class ConstraintPendingToFailingRule {
 	 */
 	public static final MMConstraint<Status11Choice> forStatus11Choice = new MMConstraint<Status11Choice>() {
 		{
-			validator = ConstraintPendingToFailingRule::checkStatus11Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingToFailingRule";
 			definition = "A pending transaction (PEND) becomes a failing transaction (PENF) on the settlement date instructed in the message, during the end of day reporting.";
 			owner_lazy = () -> Status11Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Status11Choice obj) throws Exception {
+			checkStatus11Choice(obj);
 		}
 	};
 	/**
@@ -320,12 +352,16 @@ public class ConstraintPendingToFailingRule {
 	 */
 	public static final MMConstraint<SettlementStatus10Choice> forSettlementStatus10Choice = new MMConstraint<SettlementStatus10Choice>() {
 		{
-			validator = ConstraintPendingToFailingRule::checkSettlementStatus10Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingToFailingRule";
 			definition = "A pending transaction (PEND) becomes a failing transaction (PENF) on the settlement date instructed in the message, during the end of day reporting.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPendingToFailingRule.forSettlementStatus18Choice);
 			owner_lazy = () -> SettlementStatus10Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementStatus10Choice obj) throws Exception {
+			checkSettlementStatus10Choice(obj);
 		}
 	};
 	/**
@@ -351,11 +387,15 @@ public class ConstraintPendingToFailingRule {
 	 */
 	public static final MMConstraint<SettlementStatus12Choice> forSettlementStatus12Choice = new MMConstraint<SettlementStatus12Choice>() {
 		{
-			validator = ConstraintPendingToFailingRule::checkSettlementStatus12Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingToFailingRule";
 			definition = "A pending transaction (PEND) becomes a failing transaction (PENF) on the settlement date instructed in the message, during the end of day reporting.";
 			owner_lazy = () -> SettlementStatus12Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementStatus12Choice obj) throws Exception {
+			checkSettlementStatus12Choice(obj);
 		}
 	};
 	/**
@@ -389,12 +429,16 @@ public class ConstraintPendingToFailingRule {
 	 */
 	public static final MMConstraint<SettlementStatus9Choice> forSettlementStatus9Choice = new MMConstraint<SettlementStatus9Choice>() {
 		{
-			validator = ConstraintPendingToFailingRule::checkSettlementStatus9Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingToFailingRule";
 			definition = "A pending transaction (PEND) becomes a failing transaction (PENF) on the settlement date instructed in the message, during the end of day reporting.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPendingToFailingRule.forSettlementStatus16Choice);
 			owner_lazy = () -> SettlementStatus9Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementStatus9Choice obj) throws Exception {
+			checkSettlementStatus9Choice(obj);
 		}
 	};
 	/**
@@ -420,11 +464,15 @@ public class ConstraintPendingToFailingRule {
 	 */
 	public static final MMConstraint<SettlementStatus15Choice> forSettlementStatus15Choice = new MMConstraint<SettlementStatus15Choice>() {
 		{
-			validator = ConstraintPendingToFailingRule::checkSettlementStatus15Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingToFailingRule";
 			definition = "A pending transaction (PEND) becomes a failing transaction (PENF) on the settlement date instructed in the message, during the end of day reporting.";
 			owner_lazy = () -> SettlementStatus15Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementStatus15Choice obj) throws Exception {
+			checkSettlementStatus15Choice(obj);
 		}
 	};
 	/**
@@ -458,12 +506,16 @@ public class ConstraintPendingToFailingRule {
 	 */
 	public static final MMConstraint<StatusAndReason15> forStatusAndReason15 = new MMConstraint<StatusAndReason15>() {
 		{
-			validator = ConstraintPendingToFailingRule::checkStatusAndReason15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingToFailingRule";
 			definition = "A pending transaction (PEND) becomes a failing transaction (PENF) on the settlement date instructed in the message, during the end of day reporting.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPendingToFailingRule.forStatusAndReason31);
 			owner_lazy = () -> StatusAndReason15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(StatusAndReason15 obj) throws Exception {
+			checkStatusAndReason15(obj);
 		}
 	};
 	/**
@@ -502,13 +554,17 @@ public class ConstraintPendingToFailingRule {
 	 */
 	public static final MMConstraint<Status15Choice> forStatus15Choice = new MMConstraint<Status15Choice>() {
 		{
-			validator = ConstraintPendingToFailingRule::checkStatus15Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingToFailingRule";
 			definition = "A pending transaction (PEND) becomes a failing transaction (PENF) on the settlement date instructed in the message, during the end of day reporting.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPendingToFailingRule.forStatus18Choice);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPendingToFailingRule.forStatus9Choice;
 			owner_lazy = () -> Status15Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Status15Choice obj) throws Exception {
+			checkStatus15Choice(obj);
 		}
 	};
 	/**
@@ -534,11 +590,15 @@ public class ConstraintPendingToFailingRule {
 	 */
 	public static final MMConstraint<Status16Choice> forStatus16Choice = new MMConstraint<Status16Choice>() {
 		{
-			validator = ConstraintPendingToFailingRule::checkStatus16Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingToFailingRule";
 			definition = "A pending transaction (PEND) becomes a failing transaction (PENF) on the settlement date instructed in the message, during the end of day reporting.";
 			owner_lazy = () -> Status16Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Status16Choice obj) throws Exception {
+			checkStatus16Choice(obj);
 		}
 	};
 	/**
@@ -569,12 +629,16 @@ public class ConstraintPendingToFailingRule {
 	 */
 	public static final MMConstraint<SettlementStatus16Choice> forSettlementStatus16Choice = new MMConstraint<SettlementStatus16Choice>() {
 		{
-			validator = ConstraintPendingToFailingRule::checkSettlementStatus16Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingToFailingRule";
 			definition = "A pending transaction (PEND) becomes a failing transaction (PENF) on the settlement date instructed in the message, during the end of day reporting.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPendingToFailingRule.forSettlementStatus9Choice;
 			owner_lazy = () -> SettlementStatus16Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementStatus16Choice obj) throws Exception {
+			checkSettlementStatus16Choice(obj);
 		}
 	};
 	/**
@@ -605,12 +669,16 @@ public class ConstraintPendingToFailingRule {
 	 */
 	public static final MMConstraint<SettlementStatus17Choice> forSettlementStatus17Choice = new MMConstraint<SettlementStatus17Choice>() {
 		{
-			validator = ConstraintPendingToFailingRule::checkSettlementStatus17Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingToFailingRule";
 			definition = "A pending transaction (PEND) becomes a failing transaction (PENF) on the settlement date instructed in the message, during the end of day reporting.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPendingToFailingRule.forSettlementStatus7Choice;
 			owner_lazy = () -> SettlementStatus17Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementStatus17Choice obj) throws Exception {
+			checkSettlementStatus17Choice(obj);
 		}
 	};
 	/**
@@ -641,12 +709,16 @@ public class ConstraintPendingToFailingRule {
 	 */
 	public static final MMConstraint<SettlementStatus18Choice> forSettlementStatus18Choice = new MMConstraint<SettlementStatus18Choice>() {
 		{
-			validator = ConstraintPendingToFailingRule::checkSettlementStatus18Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingToFailingRule";
 			definition = "A pending transaction (PEND) becomes a failing transaction (PENF) on the settlement date instructed in the message, during the end of day reporting.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPendingToFailingRule.forSettlementStatus10Choice;
 			owner_lazy = () -> SettlementStatus18Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementStatus18Choice obj) throws Exception {
+			checkSettlementStatus18Choice(obj);
 		}
 	};
 	/**
@@ -677,12 +749,16 @@ public class ConstraintPendingToFailingRule {
 	 */
 	public static final MMConstraint<Status18Choice> forStatus18Choice = new MMConstraint<Status18Choice>() {
 		{
-			validator = ConstraintPendingToFailingRule::checkStatus18Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingToFailingRule";
 			definition = "A pending transaction (PEND) becomes a failing transaction (PENF) on the settlement date instructed in the message, during the end of day reporting.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPendingToFailingRule.forStatus15Choice;
 			owner_lazy = () -> Status18Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Status18Choice obj) throws Exception {
+			checkStatus18Choice(obj);
 		}
 	};
 	/**
@@ -708,11 +784,15 @@ public class ConstraintPendingToFailingRule {
 	 */
 	public static final MMConstraint<SettlementStatus21Choice> forSettlementStatus21Choice = new MMConstraint<SettlementStatus21Choice>() {
 		{
-			validator = ConstraintPendingToFailingRule::checkSettlementStatus21Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingToFailingRule";
 			definition = "A pending transaction (PEND) becomes a failing transaction (PENF) on the settlement date instructed in the message, during the end of day reporting.";
 			owner_lazy = () -> SettlementStatus21Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementStatus21Choice obj) throws Exception {
+			checkSettlementStatus21Choice(obj);
 		}
 	};
 	/**
@@ -738,11 +818,15 @@ public class ConstraintPendingToFailingRule {
 	 */
 	public static final MMConstraint<SettlementStatus20Choice> forSettlementStatus20Choice = new MMConstraint<SettlementStatus20Choice>() {
 		{
-			validator = ConstraintPendingToFailingRule::checkSettlementStatus20Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingToFailingRule";
 			definition = "A pending transaction (PEND) becomes a failing transaction (PENF) on the settlement date instructed in the message, during the end of day reporting.";
 			owner_lazy = () -> SettlementStatus20Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementStatus20Choice obj) throws Exception {
+			checkSettlementStatus20Choice(obj);
 		}
 	};
 	/**
@@ -768,11 +852,15 @@ public class ConstraintPendingToFailingRule {
 	 */
 	public static final MMConstraint<Status23Choice> forStatus23Choice = new MMConstraint<Status23Choice>() {
 		{
-			validator = ConstraintPendingToFailingRule::checkStatus23Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingToFailingRule";
 			definition = "A pending transaction (PEND) becomes a failing transaction (PENF) on the settlement date instructed in the message, during the end of day reporting.";
 			owner_lazy = () -> Status23Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Status23Choice obj) throws Exception {
+			checkStatus23Choice(obj);
 		}
 	};
 	/**
@@ -798,11 +886,15 @@ public class ConstraintPendingToFailingRule {
 	 */
 	public static final MMConstraint<SettlementStatus22Choice> forSettlementStatus22Choice = new MMConstraint<SettlementStatus22Choice>() {
 		{
-			validator = ConstraintPendingToFailingRule::checkSettlementStatus22Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingToFailingRule";
 			definition = "A pending transaction (PEND) becomes a failing transaction (PENF) on the settlement date instructed in the message, during the end of day reporting.";
 			owner_lazy = () -> SettlementStatus22Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementStatus22Choice obj) throws Exception {
+			checkSettlementStatus22Choice(obj);
 		}
 	};
 	/**
@@ -833,12 +925,16 @@ public class ConstraintPendingToFailingRule {
 	 */
 	public static final MMConstraint<StatusAndReason31> forStatusAndReason31 = new MMConstraint<StatusAndReason31>() {
 		{
-			validator = ConstraintPendingToFailingRule::checkStatusAndReason31;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingToFailingRule";
 			definition = "A pending transaction (PEND) becomes a failing transaction (PENF) on the settlement date instructed in the message, during the end of day reporting.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPendingToFailingRule.forStatusAndReason15;
 			owner_lazy = () -> StatusAndReason31.mmObject();
+		}
+
+		@Override
+		public void executeValidator(StatusAndReason31 obj) throws Exception {
+			checkStatusAndReason31(obj);
 		}
 	};
 

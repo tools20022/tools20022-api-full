@@ -101,7 +101,7 @@ public class LimitQueryDefinition2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitQueryDefinition2, Optional<QueryType1Code>> mmQueryType = new MMMessageAttribute<LimitQueryDefinition2, Optional<QueryType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitQueryDefinition2.mmObject();
 			isDerived = false;
@@ -112,6 +112,16 @@ public class LimitQueryDefinition2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> QueryType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<QueryType1Code> getValue(LimitQueryDefinition2 obj) {
+			return obj.getQueryType();
+		}
+
+		@Override
+		public void setValue(LimitQueryDefinition2 obj, Optional<QueryType1Code> value) {
+			obj.setQueryType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LmtCrit")
@@ -143,7 +153,7 @@ public class LimitQueryDefinition2 {
 	 * definition} = "Defines the limit query criteria."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLimitCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitQueryDefinition2, Optional<LimitCriteriaDefinition2Choice>> mmLimitCriteria = new MMMessageAssociationEnd<LimitQueryDefinition2, Optional<LimitCriteriaDefinition2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitQueryDefinition2.mmObject();
 			isDerived = false;
@@ -155,6 +165,16 @@ public class LimitQueryDefinition2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> LimitCriteriaDefinition2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<LimitCriteriaDefinition2Choice> getValue(LimitQueryDefinition2 obj) {
+			return obj.getLimitCriteria();
+		}
+
+		@Override
+		public void setValue(LimitQueryDefinition2 obj, Optional<LimitCriteriaDefinition2Choice> value) {
+			obj.setLimitCriteria(value.orElse(null));
 		}
 	};
 

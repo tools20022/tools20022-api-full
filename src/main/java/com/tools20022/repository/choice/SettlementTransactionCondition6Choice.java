@@ -124,7 +124,7 @@ public class SettlementTransactionCondition6Choice {
 	 * definition} = "Settlement conditions expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementTransactionCondition6Choice, SettlementTransactionCondition6Code> mmCode = new MMMessageAttribute<SettlementTransactionCondition6Choice, SettlementTransactionCondition6Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementTransactionCondition;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementTransactionCondition6Choice.mmObject();
@@ -137,6 +137,16 @@ public class SettlementTransactionCondition6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SettlementTransactionCondition6Code.mmObject();
+		}
+
+		@Override
+		public SettlementTransactionCondition6Code getValue(SettlementTransactionCondition6Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(SettlementTransactionCondition6Choice obj, SettlementTransactionCondition6Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -176,7 +186,7 @@ public class SettlementTransactionCondition6Choice {
 	 * definition} = "Settlement conditions expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementTransactionCondition6Choice, GenericIdentification20> mmProprietary = new MMMessageAssociationEnd<SettlementTransactionCondition6Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementTransactionCondition;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementTransactionCondition6Choice.mmObject();
@@ -190,6 +200,16 @@ public class SettlementTransactionCondition6Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(SettlementTransactionCondition6Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SettlementTransactionCondition6Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

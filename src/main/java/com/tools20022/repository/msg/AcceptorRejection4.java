@@ -26,6 +26,7 @@ import com.tools20022.repository.codeset.RejectReason1Code;
 import com.tools20022.repository.datatype.Max100KBinary;
 import com.tools20022.repository.entity.CardPaymentStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ErrorReporting1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -129,7 +130,7 @@ public class AcceptorRejection4 {
 	 * AcceptorRejection2.mmRejectReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRejectReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcceptorRejection4, RejectReason1Code> mmRejectReason = new MMMessageAttribute<AcceptorRejection4, RejectReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentStatus.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorRejection4.mmObject();
@@ -143,9 +144,19 @@ public class AcceptorRejection4 {
 			minOccurs = 1;
 			simpleType_lazy = () -> RejectReason1Code.mmObject();
 		}
+
+		@Override
+		public RejectReason1Code getValue(AcceptorRejection4 obj) {
+			return obj.getRejectReason();
+		}
+
+		@Override
+		public void setValue(AcceptorRejection4 obj, RejectReason1Code value) {
+			obj.setRejectReason(value);
+		}
 	};
 	@XmlElement(name = "ErrRptg")
-	protected List<com.tools20022.repository.msg.ErrorReporting1> errorReporting;
+	protected List<ErrorReporting1> errorReporting;
 	/**
 	 * 
 	 <p>
@@ -174,7 +185,7 @@ public class AcceptorRejection4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmErrorReporting = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorRejection4, List<ErrorReporting1>> mmErrorReporting = new MMMessageAssociationEnd<AcceptorRejection4, List<ErrorReporting1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorRejection4.mmObject();
 			isDerived = false;
@@ -184,7 +195,17 @@ public class AcceptorRejection4 {
 			definition = "Detailed description of an error that caused the rejection for further analysis.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ErrorReporting1.mmObject();
+			type_lazy = () -> ErrorReporting1.mmObject();
+		}
+
+		@Override
+		public List<ErrorReporting1> getValue(AcceptorRejection4 obj) {
+			return obj.getErrorReporting();
+		}
+
+		@Override
+		public void setValue(AcceptorRejection4 obj, List<ErrorReporting1> value) {
+			obj.setErrorReporting(value);
 		}
 	};
 	@XmlElement(name = "MsgInErr")
@@ -222,7 +243,7 @@ public class AcceptorRejection4 {
 	 * AcceptorRejection2.mmMessageInError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageInError = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcceptorRejection4, Optional<Max100KBinary>> mmMessageInError = new MMMessageAttribute<AcceptorRejection4, Optional<Max100KBinary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorRejection4.mmObject();
 			isDerived = false;
@@ -234,6 +255,16 @@ public class AcceptorRejection4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max100KBinary.mmObject();
+		}
+
+		@Override
+		public Optional<Max100KBinary> getValue(AcceptorRejection4 obj) {
+			return obj.getMessageInError();
+		}
+
+		@Override
+		public void setValue(AcceptorRejection4 obj, Optional<Max100KBinary> value) {
+			obj.setMessageInError(value.orElse(null));
 		}
 	};
 
@@ -267,7 +298,7 @@ public class AcceptorRejection4 {
 		return errorReporting == null ? errorReporting = new ArrayList<>() : errorReporting;
 	}
 
-	public AcceptorRejection4 setErrorReporting(List<com.tools20022.repository.msg.ErrorReporting1> errorReporting) {
+	public AcceptorRejection4 setErrorReporting(List<ErrorReporting1> errorReporting) {
 		this.errorReporting = Objects.requireNonNull(errorReporting);
 		return this;
 	}

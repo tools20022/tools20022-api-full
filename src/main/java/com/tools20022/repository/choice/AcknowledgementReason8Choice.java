@@ -119,7 +119,7 @@ public class AcknowledgementReason8Choice {
 	 * "Specifies additional information about the processed instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcknowledgementReason8Choice, AcknowledgementReason5Code> mmCode = new MMMessageAttribute<AcknowledgementReason8Choice, AcknowledgementReason5Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AcknowledgementReason8Choice.mmObject();
@@ -132,6 +132,16 @@ public class AcknowledgementReason8Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AcknowledgementReason5Code.mmObject();
+		}
+
+		@Override
+		public AcknowledgementReason5Code getValue(AcknowledgementReason8Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(AcknowledgementReason8Choice obj, AcknowledgementReason5Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -172,7 +182,7 @@ public class AcknowledgementReason8Choice {
 	 * "Specifies additional information about the processed instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcknowledgementReason8Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<AcknowledgementReason8Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AcknowledgementReason8Choice.mmObject();
@@ -186,6 +196,16 @@ public class AcknowledgementReason8Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(AcknowledgementReason8Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(AcknowledgementReason8Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

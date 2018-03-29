@@ -71,7 +71,7 @@ SecuritiesTradeExecution -[hidden]-> PaymentObligationPartyRole
 class CashAccountContract [[../CashAccountContract.html{Account contract established between the organisation or the group to which the organisation belongs, and the account servicer.}]] #EEEEEE {
 }
 CashAccountContract -[hidden]-> SecuritiesTradeExecution
-class PortfolioTransfer [[../PortfolioTransfer.html{Transfer by the delivering account servicer to the receiving account servicer of a retail or institutional client portfolio. A portfolio can be any grouping of investments, for example stocks, bonds, options, warrants. held by an institution or an individual.}]] #EEEEEE {
+class PortfolioTransfer [[../PortfolioTransfer.html{Transfer by the delivering account servicer to the receiving account servicer of a retail or institutional client portfolio. A portfolio can be any grouping of  investments, for example  stocks, bonds, options, warrants. held by an institution or an individual.}]] #EEEEEE {
 }
 PortfolioTransfer -[hidden]-> CashAccountContract
 class CurrencyOption [[../CurrencyOption.html{Right to buy (call) or sell (put) an underlying amount in one currency against another amount in another currency at a predetermined exchange rate, within a specified period of time or at a specified date and time.}]] #EEEEEE {
@@ -85,7 +85,7 @@ class Dividend [[../Dividend.html{Distribution of earnings to shareholders, paid
 Dividend -[hidden]-> ForeignExchangeTrade
 class RepurchaseAgreement [[../RepurchaseAgreement.html{Sale of securities together with an agreement for the seller to buy back the securities at a later date.
 A repo is equivalent to a spot sale combined with a forward contract.
-For the seller of the security it is a repo; for the buyer of the security it is a reverse repurchase agreement.}]] #EEEEEE {
+For the seller of the security it is a repo; for the buyer of the security it is a reverse repurchase agreement. }]] #EEEEEE {
 }
 RepurchaseAgreement -[hidden]-> Dividend
 class Assignment [[../Assignment.html{Transfer by one party to a third party of its receivables.}]] #EEEEEE {

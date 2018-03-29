@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max9NumericText;
 import com.tools20022.repository.entity.AcceptorConfiguration;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AcceptorConfigurationContent4;
+import com.tools20022.repository.msg.DataSetIdentification4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -130,7 +132,7 @@ public class TerminalManagementDataSet14 {
 	 * TerminalManagementDataSet11.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TerminalManagementDataSet14, DataSetIdentification4> mmIdentification = new MMMessageAssociationEnd<TerminalManagementDataSet14, DataSetIdentification4>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet14.mmObject();
 			isDerived = false;
@@ -143,7 +145,17 @@ public class TerminalManagementDataSet14 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DataSetIdentification4.mmObject();
+			type_lazy = () -> DataSetIdentification4.mmObject();
+		}
+
+		@Override
+		public DataSetIdentification4 getValue(TerminalManagementDataSet14 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(TerminalManagementDataSet14 obj, DataSetIdentification4 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "SeqCntr")
@@ -190,7 +202,7 @@ public class TerminalManagementDataSet14 {
 	 * TerminalManagementDataSet11.mmSequenceCounter}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSequenceCounter = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TerminalManagementDataSet14, Optional<Max9NumericText>> mmSequenceCounter = new MMMessageAttribute<TerminalManagementDataSet14, Optional<Max9NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet14.mmObject();
 			isDerived = false;
@@ -203,6 +215,16 @@ public class TerminalManagementDataSet14 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max9NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max9NumericText> getValue(TerminalManagementDataSet14 obj) {
+			return obj.getSequenceCounter();
+		}
+
+		@Override
+		public void setValue(TerminalManagementDataSet14 obj, Optional<Max9NumericText> value) {
+			obj.setSequenceCounter(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Cntt", required = true)
@@ -247,7 +269,7 @@ public class TerminalManagementDataSet14 {
 	 * TerminalManagementDataSet11.mmContent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TerminalManagementDataSet14, AcceptorConfigurationContent4> mmContent = new MMMessageAssociationEnd<TerminalManagementDataSet14, AcceptorConfigurationContent4>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet14.mmObject();
 			isDerived = false;
@@ -260,7 +282,17 @@ public class TerminalManagementDataSet14 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AcceptorConfigurationContent4.mmObject();
+			type_lazy = () -> AcceptorConfigurationContent4.mmObject();
+		}
+
+		@Override
+		public AcceptorConfigurationContent4 getValue(TerminalManagementDataSet14 obj) {
+			return obj.getContent();
+		}
+
+		@Override
+		public void setValue(TerminalManagementDataSet14 obj, AcceptorConfigurationContent4 value) {
+			obj.setContent(value);
 		}
 	};
 
@@ -285,7 +317,7 @@ public class TerminalManagementDataSet14 {
 		return identification;
 	}
 
-	public TerminalManagementDataSet14 setIdentification(com.tools20022.repository.msg.DataSetIdentification4 identification) {
+	public TerminalManagementDataSet14 setIdentification(DataSetIdentification4 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}
@@ -303,7 +335,7 @@ public class TerminalManagementDataSet14 {
 		return content;
 	}
 
-	public TerminalManagementDataSet14 setContent(com.tools20022.repository.msg.AcceptorConfigurationContent4 content) {
+	public TerminalManagementDataSet14 setContent(AcceptorConfigurationContent4 content) {
 		this.content = Objects.requireNonNull(content);
 		return this;
 	}

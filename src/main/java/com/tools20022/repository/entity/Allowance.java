@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.LineItemMonetarySummation1;
 import com.tools20022.repository.msg.SettlementAllowanceCharge1;
 import com.tools20022.repository.msg.SettlementMonetarySummation1;
 import com.tools20022.repository.msg.TradeSettlement1;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -126,7 +125,7 @@ public class Allowance extends Adjustment {
 	 * definition} = "Algebraical sum of allowances related to the invoice."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmTotalAllowance = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Allowance, CurrencyAndAmount> mmTotalAllowance = new MMBusinessAttribute<Allowance, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementMonetarySummation1.mmAllowanceTotalAmount, LineItemMonetarySummation1.mmAllowanceTotalAmount);
 			isDerived = false;
@@ -139,12 +138,14 @@ public class Allowance extends Adjustment {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Allowance.class.getMethod("getTotalAllowance", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(Allowance obj) {
+			return obj.getTotalAllowance();
+		}
+
+		@Override
+		public void setValue(Allowance obj, CurrencyAndAmount value) {
+			obj.setTotalAllowance(value);
 		}
 	};
 	protected CurrencyAndAmount netPriceAllowance;
@@ -173,7 +174,7 @@ public class Allowance extends Adjustment {
 	 * definition} = "Allowance applied to the net price."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmNetPriceAllowance = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Allowance, CurrencyAndAmount> mmNetPriceAllowance = new MMBusinessAttribute<Allowance, CurrencyAndAmount>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Allowance.mmObject();
@@ -185,12 +186,14 @@ public class Allowance extends Adjustment {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Allowance.class.getMethod("getNetPriceAllowance", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(Allowance obj) {
+			return obj.getNetPriceAllowance();
+		}
+
+		@Override
+		public void setValue(Allowance obj, CurrencyAndAmount value) {
+			obj.setNetPriceAllowance(value);
 		}
 	};
 

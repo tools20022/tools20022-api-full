@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BusinessDayInformationReturnCriteria;
+import com.tools20022.repository.msg.BusinessDayInformationSearchCriteria;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -115,7 +117,7 @@ public class BusinessDayInformationCriteria {
 	 * "Name of the query defined by the search criteria and return criteria."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewQueryName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BusinessDayInformationCriteria, Optional<Max35Text>> mmNewQueryName = new MMMessageAttribute<BusinessDayInformationCriteria, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDayInformationCriteria.mmObject();
 			isDerived = false;
@@ -127,9 +129,19 @@ public class BusinessDayInformationCriteria {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max35Text> getValue(BusinessDayInformationCriteria obj) {
+			return obj.getNewQueryName();
+		}
+
+		@Override
+		public void setValue(BusinessDayInformationCriteria obj, Optional<Max35Text> value) {
+			obj.setNewQueryName(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "SchCrit")
-	protected List<com.tools20022.repository.msg.BusinessDayInformationSearchCriteria> searchCriteria;
+	protected List<BusinessDayInformationSearchCriteria> searchCriteria;
 	/**
 	 * 
 	 <p>
@@ -158,7 +170,7 @@ public class BusinessDayInformationCriteria {
 	 * "Defines the criteria based on which the information is extracted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSearchCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BusinessDayInformationCriteria, List<BusinessDayInformationSearchCriteria>> mmSearchCriteria = new MMMessageAssociationEnd<BusinessDayInformationCriteria, List<BusinessDayInformationSearchCriteria>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDayInformationCriteria.mmObject();
 			isDerived = false;
@@ -168,7 +180,17 @@ public class BusinessDayInformationCriteria {
 			definition = "Defines the criteria based on which the information is extracted.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BusinessDayInformationSearchCriteria.mmObject();
+			type_lazy = () -> BusinessDayInformationSearchCriteria.mmObject();
+		}
+
+		@Override
+		public List<BusinessDayInformationSearchCriteria> getValue(BusinessDayInformationCriteria obj) {
+			return obj.getSearchCriteria();
+		}
+
+		@Override
+		public void setValue(BusinessDayInformationCriteria obj, List<BusinessDayInformationSearchCriteria> value) {
+			obj.setSearchCriteria(value);
 		}
 	};
 	@XmlElement(name = "RtrCrit")
@@ -200,7 +222,7 @@ public class BusinessDayInformationCriteria {
 	 * definition} = "Defines the expected report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReturnCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BusinessDayInformationCriteria, Optional<BusinessDayInformationReturnCriteria>> mmReturnCriteria = new MMMessageAssociationEnd<BusinessDayInformationCriteria, Optional<BusinessDayInformationReturnCriteria>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDayInformationCriteria.mmObject();
 			isDerived = false;
@@ -211,7 +233,17 @@ public class BusinessDayInformationCriteria {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BusinessDayInformationReturnCriteria.mmObject();
+			type_lazy = () -> BusinessDayInformationReturnCriteria.mmObject();
+		}
+
+		@Override
+		public Optional<BusinessDayInformationReturnCriteria> getValue(BusinessDayInformationCriteria obj) {
+			return obj.getReturnCriteria();
+		}
+
+		@Override
+		public void setValue(BusinessDayInformationCriteria obj, Optional<BusinessDayInformationReturnCriteria> value) {
+			obj.setReturnCriteria(value.orElse(null));
 		}
 	};
 
@@ -250,7 +282,7 @@ public class BusinessDayInformationCriteria {
 		return searchCriteria == null ? searchCriteria = new ArrayList<>() : searchCriteria;
 	}
 
-	public BusinessDayInformationCriteria setSearchCriteria(List<com.tools20022.repository.msg.BusinessDayInformationSearchCriteria> searchCriteria) {
+	public BusinessDayInformationCriteria setSearchCriteria(List<BusinessDayInformationSearchCriteria> searchCriteria) {
 		this.searchCriteria = Objects.requireNonNull(searchCriteria);
 		return this;
 	}
@@ -259,7 +291,7 @@ public class BusinessDayInformationCriteria {
 		return returnCriteria == null ? Optional.empty() : Optional.of(returnCriteria);
 	}
 
-	public BusinessDayInformationCriteria setReturnCriteria(com.tools20022.repository.msg.BusinessDayInformationReturnCriteria returnCriteria) {
+	public BusinessDayInformationCriteria setReturnCriteria(BusinessDayInformationReturnCriteria returnCriteria) {
 		this.returnCriteria = returnCriteria;
 		return this;
 	}

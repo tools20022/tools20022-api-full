@@ -25,7 +25,6 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.AccountManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.AccountSwitching;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -36,8 +35,10 @@ import javax.xml.bind.annotation.*;
 /**
  * The AccountSwitchCancelExistingPayment message is sent by the new account
  * servicer to the previous account servicer to identify which payment
- * arrangements are to be cancelled on the account owner's account in a partial
- * switch of the account.
+ * arrangements are to be cancelled on the account owner's account and when they
+ * are to be cancelled. This message is used during a partial switch of the
+ * account and may be sent multiple times to allow for the account parties to
+ * transfer different payment arrangements at different times during the switch.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -94,7 +95,7 @@ import javax.xml.bind.annotation.*;
  * "AccountSwitchCancelExistingPaymentV01"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "The AccountSwitchCancelExistingPayment message is sent by the new account servicer to the previous account servicer to identify which payment arrangements are to be cancelled on the account owner's account in a partial switch of the account."
+ * "The AccountSwitchCancelExistingPayment message is sent by the new account servicer to the previous account servicer to identify which payment arrangements are to be cancelled on the account owner's account and when they are to be cancelled. This message is used during a partial switch of the account and may be sent multiple times to allow for the account parties to transfer different payment arrangements at different times during the switch. "
  * </li>
  * </ul>
  */
@@ -128,7 +129,7 @@ public class AccountSwitchCancelExistingPaymentV01 {
 	 * definition} = "Unique identification for the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountSwitchCancelExistingPaymentV01, MessageIdentification1> mmMessageIdentification = new MMMessageBuildingBlock<AccountSwitchCancelExistingPaymentV01, MessageIdentification1>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -139,12 +140,14 @@ public class AccountSwitchCancelExistingPaymentV01 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountSwitchCancelExistingPaymentV01.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(AccountSwitchCancelExistingPaymentV01 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(AccountSwitchCancelExistingPaymentV01 obj, MessageIdentification1 value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctSwtchDtls", required = true)
@@ -173,7 +176,7 @@ public class AccountSwitchCancelExistingPaymentV01 {
 	 * "Contains information about the details of the account switch."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAccountSwitchDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountSwitchCancelExistingPaymentV01, AccountSwitchDetails1> mmAccountSwitchDetails = new MMMessageBuildingBlock<AccountSwitchCancelExistingPaymentV01, AccountSwitchDetails1>() {
 		{
 			xmlTag = "AcctSwtchDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,12 +187,14 @@ public class AccountSwitchCancelExistingPaymentV01 {
 			complexType_lazy = () -> AccountSwitchDetails1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountSwitchCancelExistingPaymentV01.class.getMethod("getAccountSwitchDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AccountSwitchDetails1 getValue(AccountSwitchCancelExistingPaymentV01 obj) {
+			return obj.getAccountSwitchDetails();
+		}
+
+		@Override
+		public void setValue(AccountSwitchCancelExistingPaymentV01 obj, AccountSwitchDetails1 value) {
+			obj.setAccountSwitchDetails(value);
 		}
 	};
 	@XmlElement(name = "OdAcct", required = true)
@@ -216,7 +221,7 @@ public class AccountSwitchCancelExistingPaymentV01 {
 	 * definition} = "Details of the old account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOldAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountSwitchCancelExistingPaymentV01, CashAccount36> mmOldAccount = new MMMessageBuildingBlock<AccountSwitchCancelExistingPaymentV01, CashAccount36>() {
 		{
 			xmlTag = "OdAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -227,12 +232,14 @@ public class AccountSwitchCancelExistingPaymentV01 {
 			complexType_lazy = () -> CashAccount36.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountSwitchCancelExistingPaymentV01.class.getMethod("getOldAccount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CashAccount36 getValue(AccountSwitchCancelExistingPaymentV01 obj) {
+			return obj.getOldAccount();
+		}
+
+		@Override
+		public void setValue(AccountSwitchCancelExistingPaymentV01 obj, CashAccount36 value) {
+			obj.setOldAccount(value);
 		}
 	};
 	@XmlElement(name = "PmtInstr")
@@ -262,7 +269,7 @@ public class AccountSwitchCancelExistingPaymentV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPaymentInstruction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountSwitchCancelExistingPaymentV01, List<PaymentInstruction24>> mmPaymentInstruction = new MMMessageBuildingBlock<AccountSwitchCancelExistingPaymentV01, List<PaymentInstruction24>>() {
 		{
 			xmlTag = "PmtInstr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -272,12 +279,14 @@ public class AccountSwitchCancelExistingPaymentV01 {
 			complexType_lazy = () -> PaymentInstruction24.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountSwitchCancelExistingPaymentV01.class.getMethod("getPaymentInstruction", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<PaymentInstruction24> getValue(AccountSwitchCancelExistingPaymentV01 obj) {
+			return obj.getPaymentInstruction();
+		}
+
+		@Override
+		public void setValue(AccountSwitchCancelExistingPaymentV01 obj, List<PaymentInstruction24> value) {
+			obj.setPaymentInstruction(value);
 		}
 	};
 	@XmlElement(name = "DrctDbtInstr")
@@ -306,7 +315,7 @@ public class AccountSwitchCancelExistingPaymentV01 {
 	 * "Details of a direct debit Instruction associated with the old account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmDirectDebitInstruction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountSwitchCancelExistingPaymentV01, List<DirectDebitInstructionDetails1>> mmDirectDebitInstruction = new MMMessageBuildingBlock<AccountSwitchCancelExistingPaymentV01, List<DirectDebitInstructionDetails1>>() {
 		{
 			xmlTag = "DrctDbtInstr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -316,12 +325,14 @@ public class AccountSwitchCancelExistingPaymentV01 {
 			complexType_lazy = () -> DirectDebitInstructionDetails1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountSwitchCancelExistingPaymentV01.class.getMethod("getDirectDebitInstruction", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<DirectDebitInstructionDetails1> getValue(AccountSwitchCancelExistingPaymentV01 obj) {
+			return obj.getDirectDebitInstruction();
+		}
+
+		@Override
+		public void setValue(AccountSwitchCancelExistingPaymentV01 obj, List<DirectDebitInstructionDetails1> value) {
+			obj.setDirectDebitInstruction(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -351,7 +362,7 @@ public class AccountSwitchCancelExistingPaymentV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountSwitchCancelExistingPaymentV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<AccountSwitchCancelExistingPaymentV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -361,12 +372,14 @@ public class AccountSwitchCancelExistingPaymentV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountSwitchCancelExistingPaymentV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(AccountSwitchCancelExistingPaymentV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(AccountSwitchCancelExistingPaymentV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -376,7 +389,7 @@ public class AccountSwitchCancelExistingPaymentV01 {
 				semanticMarkup_lazy = () -> Arrays.asList(new OtherSemanticMarkup(this, "prefix", new String[]{"prefix", "DRAFT3"}));
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountSwitchCancelExistingPaymentV01";
-				definition = "The AccountSwitchCancelExistingPayment message is sent by the new account servicer to the previous account servicer to identify which payment arrangements are to be cancelled on the account owner's account in a partial switch of the account.";
+				definition = "The AccountSwitchCancelExistingPayment message is sent by the new account servicer to the previous account servicer to identify which payment arrangements are to be cancelled on the account owner's account and when they are to be cancelled. This message is used during a partial switch of the account and may be sent multiple times to allow for the account parties to transfer different payment arrangements at different times during the switch. ";
 				messageSet_lazy = () -> Arrays.asList(AccountSwitching.mmObject());
 				rootElement = "Document";
 				xmlTag = "AcctSwtchCclExstgPmt";

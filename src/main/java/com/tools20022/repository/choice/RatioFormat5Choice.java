@@ -128,7 +128,7 @@ public class RatioFormat5Choice {
 	 * definition} = "Ratio expressed as a quotient of quantities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuantityToQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RatioFormat5Choice, QuantityToQuantityRatio1> mmQuantityToQuantity = new MMMessageAssociationEnd<RatioFormat5Choice, QuantityToQuantityRatio1>() {
 		{
 			businessComponentTrace_lazy = () -> QuantityRatio.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.RatioFormat5Choice.mmObject();
@@ -142,6 +142,16 @@ public class RatioFormat5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> QuantityToQuantityRatio1.mmObject();
+		}
+
+		@Override
+		public QuantityToQuantityRatio1 getValue(RatioFormat5Choice obj) {
+			return obj.getQuantityToQuantity();
+		}
+
+		@Override
+		public void setValue(RatioFormat5Choice obj, QuantityToQuantityRatio1 value) {
+			obj.setQuantityToQuantity(value);
 		}
 	};
 	@XmlElement(name = "NotSpcfdRate", required = true)
@@ -177,7 +187,7 @@ public class RatioFormat5Choice {
 	 * definition} = "Value of the ratio not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RatioFormat5Choice, RateValueType6Code> mmNotSpecifiedRate = new MMMessageAttribute<RatioFormat5Choice, RateValueType6Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RatioFormat5Choice.mmObject();
 			isDerived = false;
@@ -189,6 +199,16 @@ public class RatioFormat5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RateValueType6Code.mmObject();
+		}
+
+		@Override
+		public RateValueType6Code getValue(RatioFormat5Choice obj) {
+			return obj.getNotSpecifiedRate();
+		}
+
+		@Override
+		public void setValue(RatioFormat5Choice obj, RateValueType6Code value) {
+			obj.setNotSpecifiedRate(value);
 		}
 	};
 	@XmlElement(name = "AmtToAmt", required = true)
@@ -226,7 +246,7 @@ public class RatioFormat5Choice {
 	 * definition} = "Ratio expressed as a quotient of amounts."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountToAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RatioFormat5Choice, AmountToAmountRatio2> mmAmountToAmount = new MMMessageAssociationEnd<RatioFormat5Choice, AmountToAmountRatio2>() {
 		{
 			businessComponentTrace_lazy = () -> AmountRatio.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.RatioFormat5Choice.mmObject();
@@ -240,6 +260,16 @@ public class RatioFormat5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountToAmountRatio2.mmObject();
+		}
+
+		@Override
+		public AmountToAmountRatio2 getValue(RatioFormat5Choice obj) {
+			return obj.getAmountToAmount();
+		}
+
+		@Override
+		public void setValue(RatioFormat5Choice obj, AmountToAmountRatio2 value) {
+			obj.setAmountToAmount(value);
 		}
 	};
 

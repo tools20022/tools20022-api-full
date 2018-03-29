@@ -42,44 +42,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.area.seev.IntraPositionMovementConfirmation002V06
  * IntraPositionMovementConfirmation002V06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstruction002V07
- * CorporateActionInstruction002V07}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdvice002V08
- * CorporateActionMovementPreliminaryAdvice002V08}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdvice002V07
- * CorporateActionCancellationAdvice002V07}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdvice002V08
- * CorporateActionMovementReversalAdvice002V08}</li>
- * <li>
  * {@linkplain com.tools20022.repository.area.seev.IntraPositionMovementPostingReport002V06
  * IntraPositionMovementPostingReport002V06}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdvice002V07
- * CorporateActionInstructionCancellationRequestStatusAdvice002V07}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdvice002V07
- * CorporateActionMovementPreliminaryAdviceCancellationAdvice002V07}</li>
  * <li>
  * {@linkplain com.tools20022.repository.area.seev.SecuritiesSettlementTransactionAllegementReport002V06
  * SecuritiesSettlementTransactionAllegementReport002V06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotification002V07
- * CorporateActionNotification002V07}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V06
- * CorporateActionInstructionStatementReport002V06}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdvice002V08
- * CorporateActionInstructionStatusAdvice002V08}</li>
- * <li>
  * {@linkplain com.tools20022.repository.area.seev.SecuritiesTransactionPostingReport002V07
  * SecuritiesTransactionPostingReport002V07}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08
- * CorporateActionMovementConfirmation002V08}</li>
  * </ul>
  * </li>
  * <li>
@@ -110,11 +80,8 @@ public class SecuritiesEventsPreviousversionsubsetvariant {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Securities Events - Previous version - subset / variant";
 				definition = "Messages that support asset servicing, including proxy voting, income and corporate actions.";
-				messageDefinition_lazy = () -> Arrays.asList(SecuritiesTransactionPendingReport002V08.mmObject(), IntraPositionMovementConfirmation002V06.mmObject(), CorporateActionInstruction002V07.mmObject(),
-						CorporateActionMovementPreliminaryAdvice002V08.mmObject(), CorporateActionCancellationAdvice002V07.mmObject(), CorporateActionMovementReversalAdvice002V08.mmObject(),
-						IntraPositionMovementPostingReport002V06.mmObject(), CorporateActionInstructionCancellationRequestStatusAdvice002V07.mmObject(), CorporateActionMovementPreliminaryAdviceCancellationAdvice002V07.mmObject(),
-						SecuritiesSettlementTransactionAllegementReport002V06.mmObject(), CorporateActionNotification002V07.mmObject(), CorporateActionInstructionStatementReport002V06.mmObject(),
-						CorporateActionInstructionStatusAdvice002V08.mmObject(), SecuritiesTransactionPostingReport002V07.mmObject(), CorporateActionMovementConfirmation002V08.mmObject());
+				messageDefinition_lazy = () -> Arrays.asList(SecuritiesTransactionPendingReport002V08.mmObject(), IntraPositionMovementConfirmation002V06.mmObject(), IntraPositionMovementPostingReport002V06.mmObject(),
+						SecuritiesSettlementTransactionAllegementReport002V06.mmObject(), SecuritiesTransactionPostingReport002V07.mmObject());
 				code = "seev";
 			}
 		});

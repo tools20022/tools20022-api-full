@@ -62,13 +62,17 @@ public class ConstraintOriginalGroupInformationSinglePresenceRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentStatusReportV09> forFIToFIPaymentStatusReportV09 = new MMConstraint<FIToFIPaymentStatusReportV09>() {
 		{
-			validator = ConstraintOriginalGroupInformationSinglePresenceRule::checkFIToFIPaymentStatusReportV09;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformationSinglePresenceRule";
 			definition = "If OriginalGroupInformationAndStatus is present and only once, then TransactionInformationAndStatus[*]/OriginalGroupInformation must be absent.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOriginalGroupInformationSinglePresenceRule.forFIToFIPaymentStatusReportV08;
 			owner_lazy = () -> FIToFIPaymentStatusReportV09.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionInformationAndStatus[*]/OriginalGroupInformation</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalGroupInformationAndStatus[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/OriginalGroupInformationAndStatus[2]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentStatusReportV09 obj) throws Exception {
+			checkFIToFIPaymentStatusReportV09(obj);
 		}
 	};
 	/**
@@ -104,13 +108,17 @@ public class ConstraintOriginalGroupInformationSinglePresenceRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentStatusRequestV02> forFIToFIPaymentStatusRequestV02 = new MMConstraint<FIToFIPaymentStatusRequestV02>() {
 		{
-			validator = ConstraintOriginalGroupInformationSinglePresenceRule::checkFIToFIPaymentStatusRequestV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformationSinglePresenceRule";
 			definition = "If OriginalGroupInformationAndStatus is present and only once, then TransactionInformationAndStatus[*]/OriginalGroupInformation must be absent.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOriginalGroupInformationSinglePresenceRule.forFIToFIPaymentStatusRequestV01;
 			owner_lazy = () -> FIToFIPaymentStatusRequestV02.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionInformation[*]/OriginalGroupInformation</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalGroupInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/OriginalGroupInformation[2]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentStatusRequestV02 obj) throws Exception {
+			checkFIToFIPaymentStatusRequestV02(obj);
 		}
 	};
 	/**
@@ -149,13 +157,17 @@ public class ConstraintOriginalGroupInformationSinglePresenceRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentStatusRequestV01> forFIToFIPaymentStatusRequestV01 = new MMConstraint<FIToFIPaymentStatusRequestV01>() {
 		{
-			validator = ConstraintOriginalGroupInformationSinglePresenceRule::checkFIToFIPaymentStatusRequestV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformationSinglePresenceRule";
 			definition = "If OriginalGroupInformationAndStatus is present and only once, then TransactionInformationAndStatus[*]/OriginalGroupInformation must be absent.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOriginalGroupInformationSinglePresenceRule.forFIToFIPaymentStatusRequestV02);
 			owner_lazy = () -> FIToFIPaymentStatusRequestV01.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionInformation[*]/OriginalGroupInformation</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalGroupInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/OriginalGroupInformation[2]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentStatusRequestV01 obj) throws Exception {
+			checkFIToFIPaymentStatusRequestV01(obj);
 		}
 	};
 	/**
@@ -200,7 +212,6 @@ public class ConstraintOriginalGroupInformationSinglePresenceRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentStatusReportV08> forFIToFIPaymentStatusReportV08 = new MMConstraint<FIToFIPaymentStatusReportV08>() {
 		{
-			validator = ConstraintOriginalGroupInformationSinglePresenceRule::checkFIToFIPaymentStatusReportV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformationSinglePresenceRule";
 			definition = "If OriginalGroupInformationAndStatus is present and only once, then TransactionInformationAndStatus[*]/OriginalGroupInformation must be absent.";
@@ -208,6 +219,11 @@ public class ConstraintOriginalGroupInformationSinglePresenceRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOriginalGroupInformationSinglePresenceRule.forFIToFIPaymentStatusReportV07;
 			owner_lazy = () -> FIToFIPaymentStatusReportV08.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionInformationAndStatus[*]/OriginalGroupInformation</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalGroupInformationAndStatus[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/OriginalGroupInformationAndStatus[2]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentStatusReportV08 obj) throws Exception {
+			checkFIToFIPaymentStatusReportV08(obj);
 		}
 	};
 	/**
@@ -246,13 +262,17 @@ public class ConstraintOriginalGroupInformationSinglePresenceRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentStatusReportV06> forFIToFIPaymentStatusReportV06 = new MMConstraint<FIToFIPaymentStatusReportV06>() {
 		{
-			validator = ConstraintOriginalGroupInformationSinglePresenceRule::checkFIToFIPaymentStatusReportV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformationSinglePresenceRule";
 			definition = "If OriginalGroupInformationAndStatus is present and only once, then TransactionInformationAndStatus[*]/OriginalGroupInformation must be absent.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOriginalGroupInformationSinglePresenceRule.forFIToFIPaymentStatusReportV07);
 			owner_lazy = () -> FIToFIPaymentStatusReportV06.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionInformationAndStatus[*]/OriginalGroupInformation</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalGroupInformationAndStatus[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/OriginalGroupInformationAndStatus[2]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentStatusReportV06 obj) throws Exception {
+			checkFIToFIPaymentStatusReportV06(obj);
 		}
 	};
 	/**
@@ -297,7 +317,6 @@ public class ConstraintOriginalGroupInformationSinglePresenceRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentStatusReportV07> forFIToFIPaymentStatusReportV07 = new MMConstraint<FIToFIPaymentStatusReportV07>() {
 		{
-			validator = ConstraintOriginalGroupInformationSinglePresenceRule::checkFIToFIPaymentStatusReportV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformationSinglePresenceRule";
 			definition = "If OriginalGroupInformationAndStatus is present and only once, then TransactionInformationAndStatus[*]/OriginalGroupInformation must be absent.";
@@ -305,6 +324,11 @@ public class ConstraintOriginalGroupInformationSinglePresenceRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOriginalGroupInformationSinglePresenceRule.forFIToFIPaymentStatusReportV06;
 			owner_lazy = () -> FIToFIPaymentStatusReportV07.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionInformationAndStatus[*]/OriginalGroupInformation</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalGroupInformationAndStatus[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/OriginalGroupInformationAndStatus[2]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentStatusReportV07 obj) throws Exception {
+			checkFIToFIPaymentStatusReportV07(obj);
 		}
 	};
 

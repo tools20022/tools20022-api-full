@@ -53,11 +53,15 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 */
 	public static final MMConstraint<RedemptionBulkOrderConfirmationAmendmentV01> forRedemptionBulkOrderConfirmationAmendmentV01 = new MMConstraint<RedemptionBulkOrderConfirmationAmendmentV01>() {
 		{
-			validator = ConstraintRelatedPartiesDetailsRule::checkRedemptionBulkOrderConfirmationAmendmentV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPartiesDetailsRule";
 			definition = "Either RelatedPartiesDetails or BulkExecutionDetails/IndividualExecutionDetails/RelatedPartiesDetails may be present, but not both.";
 			owner_lazy = () -> RedemptionBulkOrderConfirmationAmendmentV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionBulkOrderConfirmationAmendmentV01 obj) throws Exception {
+			checkRedemptionBulkOrderConfirmationAmendmentV01(obj);
 		}
 	};
 	/**
@@ -83,11 +87,15 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 */
 	public static final MMConstraint<RedemptionOrderConfirmationAmendmentV01> forRedemptionOrderConfirmationAmendmentV01 = new MMConstraint<RedemptionOrderConfirmationAmendmentV01>() {
 		{
-			validator = ConstraintRelatedPartiesDetailsRule::checkRedemptionOrderConfirmationAmendmentV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPartiesDetailsRule";
 			definition = "Either RelatedPartiesDetails or MultipleExecutionDetails/IndividualExecutionDetails/RelatedPartiesDetails may be present, but not both.";
 			owner_lazy = () -> RedemptionOrderConfirmationAmendmentV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionOrderConfirmationAmendmentV01 obj) throws Exception {
+			checkRedemptionOrderConfirmationAmendmentV01(obj);
 		}
 	};
 	/**
@@ -113,11 +121,15 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 */
 	public static final MMConstraint<SubscriptionBulkOrderConfirmationAmendmentV01> forSubscriptionBulkOrderConfirmationAmendmentV01 = new MMConstraint<SubscriptionBulkOrderConfirmationAmendmentV01>() {
 		{
-			validator = ConstraintRelatedPartiesDetailsRule::checkSubscriptionBulkOrderConfirmationAmendmentV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPartiesDetailsRule";
 			definition = "Either RelatedPartiesDetails or BulkExecutionDetails/IndividualExecutionDetails/RelatedPartiesDetails may be present, but not both.";
 			owner_lazy = () -> SubscriptionBulkOrderConfirmationAmendmentV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionBulkOrderConfirmationAmendmentV01 obj) throws Exception {
+			checkSubscriptionBulkOrderConfirmationAmendmentV01(obj);
 		}
 	};
 	/**
@@ -143,11 +155,15 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 */
 	public static final MMConstraint<SubscriptionOrderConfirmationAmendmentV01> forSubscriptionOrderConfirmationAmendmentV01 = new MMConstraint<SubscriptionOrderConfirmationAmendmentV01>() {
 		{
-			validator = ConstraintRelatedPartiesDetailsRule::checkSubscriptionOrderConfirmationAmendmentV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPartiesDetailsRule";
 			definition = "Either RelatedPartiesDetails or MultipleExecutionDetails/IndividualExecutionDetails/RelatedPartiesDetails may be present, but not both.";
 			owner_lazy = () -> SubscriptionOrderConfirmationAmendmentV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionOrderConfirmationAmendmentV01 obj) throws Exception {
+			checkSubscriptionOrderConfirmationAmendmentV01(obj);
 		}
 	};
 	/**
@@ -173,11 +189,15 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 */
 	public static final MMConstraint<RedemptionBulkOrderConfirmationV03> forRedemptionBulkOrderConfirmationV03 = new MMConstraint<RedemptionBulkOrderConfirmationV03>() {
 		{
-			validator = ConstraintRelatedPartiesDetailsRule::checkRedemptionBulkOrderConfirmationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPartiesDetailsRule";
 			definition = "Either RelatedPartiesDetails or BulkExecutionDetails/IndividualExecutionDetails/RelatedPartiesDetails may be present, but not both.";
 			owner_lazy = () -> RedemptionBulkOrderConfirmationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionBulkOrderConfirmationV03 obj) throws Exception {
+			checkRedemptionBulkOrderConfirmationV03(obj);
 		}
 	};
 	/**
@@ -203,11 +223,15 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 */
 	public static final MMConstraint<RedemptionBulkOrderV03> forRedemptionBulkOrderV03 = new MMConstraint<RedemptionBulkOrderV03>() {
 		{
-			validator = ConstraintRelatedPartiesDetailsRule::checkRedemptionBulkOrderV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPartiesDetailsRule";
 			definition = "Either RelatedPartiesDetails or BulkOrderDetails/IndividualOrderDetails/RelatedPartiesDetails may be present, but not both.";
 			owner_lazy = () -> RedemptionBulkOrderV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionBulkOrderV03 obj) throws Exception {
+			checkRedemptionBulkOrderV03(obj);
 		}
 	};
 	/**
@@ -233,11 +257,15 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 */
 	public static final MMConstraint<RedemptionOrderConfirmationV03> forRedemptionOrderConfirmationV03 = new MMConstraint<RedemptionOrderConfirmationV03>() {
 		{
-			validator = ConstraintRelatedPartiesDetailsRule::checkRedemptionOrderConfirmationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPartiesDetailsRule";
 			definition = "Either RelatedPartiesDetails or MultipleExecutionDetails/IndividualExecutionDetails/RelatedPartiesDetails may be present, but not both.";
 			owner_lazy = () -> RedemptionOrderConfirmationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionOrderConfirmationV03 obj) throws Exception {
+			checkRedemptionOrderConfirmationV03(obj);
 		}
 	};
 	/**
@@ -263,11 +291,15 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 */
 	public static final MMConstraint<RedemptionOrderV03> forRedemptionOrderV03 = new MMConstraint<RedemptionOrderV03>() {
 		{
-			validator = ConstraintRelatedPartiesDetailsRule::checkRedemptionOrderV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPartiesDetailsRule";
 			definition = "Either RelatedPartiesDetails or MultipleOrderDetails/IndividualOrderDetails/RelatedPartiesDetails may be present, but not both.";
 			owner_lazy = () -> RedemptionOrderV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionOrderV03 obj) throws Exception {
+			checkRedemptionOrderV03(obj);
 		}
 	};
 	/**
@@ -293,11 +325,15 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 */
 	public static final MMConstraint<SubscriptionBulkOrderConfirmationV03> forSubscriptionBulkOrderConfirmationV03 = new MMConstraint<SubscriptionBulkOrderConfirmationV03>() {
 		{
-			validator = ConstraintRelatedPartiesDetailsRule::checkSubscriptionBulkOrderConfirmationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPartiesDetailsRule";
 			definition = "Either RelatedPartiesDetails or BulkExecutionDetails/IndividualExecutionDetails/RelatedPartiesDetails may be present, but not both.";
 			owner_lazy = () -> SubscriptionBulkOrderConfirmationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionBulkOrderConfirmationV03 obj) throws Exception {
+			checkSubscriptionBulkOrderConfirmationV03(obj);
 		}
 	};
 	/**
@@ -323,11 +359,15 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 */
 	public static final MMConstraint<SubscriptionBulkOrderV03> forSubscriptionBulkOrderV03 = new MMConstraint<SubscriptionBulkOrderV03>() {
 		{
-			validator = ConstraintRelatedPartiesDetailsRule::checkSubscriptionBulkOrderV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPartiesDetailsRule";
 			definition = "Either RelatedPartiesDetails or BulkOrderDetails/IndividualOrderDetails/RelatedPartiesDetails may be present, but not both.";
 			owner_lazy = () -> SubscriptionBulkOrderV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionBulkOrderV03 obj) throws Exception {
+			checkSubscriptionBulkOrderV03(obj);
 		}
 	};
 	/**
@@ -353,11 +393,15 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 */
 	public static final MMConstraint<SubscriptionOrderConfirmationV03> forSubscriptionOrderConfirmationV03 = new MMConstraint<SubscriptionOrderConfirmationV03>() {
 		{
-			validator = ConstraintRelatedPartiesDetailsRule::checkSubscriptionOrderConfirmationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPartiesDetailsRule";
 			definition = "Either RelatedPartiesDetails or MultipleExecutionDetails/IndividualExecutionDetails/RelatedPartiesDetails may be present, but not both.";
 			owner_lazy = () -> SubscriptionOrderConfirmationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionOrderConfirmationV03 obj) throws Exception {
+			checkSubscriptionOrderConfirmationV03(obj);
 		}
 	};
 	/**
@@ -383,11 +427,15 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 */
 	public static final MMConstraint<SubscriptionOrderV03> forSubscriptionOrderV03 = new MMConstraint<SubscriptionOrderV03>() {
 		{
-			validator = ConstraintRelatedPartiesDetailsRule::checkSubscriptionOrderV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPartiesDetailsRule";
 			definition = "Either RelatedPartiesDetails or MultipleOrderDetails/IndividualOrderDetails/RelatedPartiesDetails may be present, but not both.";
 			owner_lazy = () -> SubscriptionOrderV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionOrderV03 obj) throws Exception {
+			checkSubscriptionOrderV03(obj);
 		}
 	};
 	/**
@@ -413,11 +461,15 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 */
 	public static final MMConstraint<RedemptionBulkOrderInstruction2> forRedemptionBulkOrderInstruction2 = new MMConstraint<RedemptionBulkOrderInstruction2>() {
 		{
-			validator = ConstraintRelatedPartiesDetailsRule::checkRedemptionBulkOrderInstruction2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPartiesDetailsRule";
 			definition = "Either RelatedPartiesDetails or BulkOrderDetails/IndividualOrderDetails/RelatedPartiesDetails may be present, but not both.";
 			owner_lazy = () -> RedemptionBulkOrderInstruction2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionBulkOrderInstruction2 obj) throws Exception {
+			checkRedemptionBulkOrderInstruction2(obj);
 		}
 	};
 	/**
@@ -443,11 +495,15 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 */
 	public static final MMConstraint<OrderConfirmationDetails1> forOrderConfirmationDetails1 = new MMConstraint<OrderConfirmationDetails1>() {
 		{
-			validator = ConstraintRelatedPartiesDetailsRule::checkOrderConfirmationDetails1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPartiesDetailsRule";
 			definition = "Either RelatedPartiesDetails or BulkExecutionDetails/IndividualExecutionDetails/RelatedPartiesDetails may be present, but not both.";
 			owner_lazy = () -> OrderConfirmationDetails1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OrderConfirmationDetails1 obj) throws Exception {
+			checkOrderConfirmationDetails1(obj);
 		}
 	};
 	/**
@@ -473,11 +529,15 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 */
 	public static final MMConstraint<RedemptionMultipleOrderInstruction2> forRedemptionMultipleOrderInstruction2 = new MMConstraint<RedemptionMultipleOrderInstruction2>() {
 		{
-			validator = ConstraintRelatedPartiesDetailsRule::checkRedemptionMultipleOrderInstruction2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPartiesDetailsRule";
 			definition = "Either RelatedPartiesDetails or MultipleOrderDetails/IndividualOrderDetails/RelatedPartiesDetails may be present, but not both.";
 			owner_lazy = () -> RedemptionMultipleOrderInstruction2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionMultipleOrderInstruction2 obj) throws Exception {
+			checkRedemptionMultipleOrderInstruction2(obj);
 		}
 	};
 	/**
@@ -503,11 +563,15 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 */
 	public static final MMConstraint<RedemptionOrderConfirmation1> forRedemptionOrderConfirmation1 = new MMConstraint<RedemptionOrderConfirmation1>() {
 		{
-			validator = ConstraintRelatedPartiesDetailsRule::checkRedemptionOrderConfirmation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPartiesDetailsRule";
 			definition = "Either RelatedPartiesDetails or MultipleExecutionDetails/IndividualExecutionDetails/RelatedPartiesDetails may be present, but not both.";
 			owner_lazy = () -> RedemptionOrderConfirmation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionOrderConfirmation1 obj) throws Exception {
+			checkRedemptionOrderConfirmation1(obj);
 		}
 	};
 	/**
@@ -533,11 +597,15 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 */
 	public static final MMConstraint<SubscriptionBulkOrderInstruction2> forSubscriptionBulkOrderInstruction2 = new MMConstraint<SubscriptionBulkOrderInstruction2>() {
 		{
-			validator = ConstraintRelatedPartiesDetailsRule::checkSubscriptionBulkOrderInstruction2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPartiesDetailsRule";
 			definition = "Either RelatedPartiesDetails or BulkOrderDetails/IndividualOrderDetails/RelatedPartiesDetails may be present, but not both.";
 			owner_lazy = () -> SubscriptionBulkOrderInstruction2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionBulkOrderInstruction2 obj) throws Exception {
+			checkSubscriptionBulkOrderInstruction2(obj);
 		}
 	};
 	/**
@@ -563,11 +631,15 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 */
 	public static final MMConstraint<SubscriptionBulkOrderConfirmation1> forSubscriptionBulkOrderConfirmation1 = new MMConstraint<SubscriptionBulkOrderConfirmation1>() {
 		{
-			validator = ConstraintRelatedPartiesDetailsRule::checkSubscriptionBulkOrderConfirmation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPartiesDetailsRule";
 			definition = "Either RelatedPartiesDetails or BulkExecutionDetails/IndividualExecutionDetails/RelatedPartiesDetails may be present, but not both.";
 			owner_lazy = () -> SubscriptionBulkOrderConfirmation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionBulkOrderConfirmation1 obj) throws Exception {
+			checkSubscriptionBulkOrderConfirmation1(obj);
 		}
 	};
 	/**
@@ -593,11 +665,15 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 */
 	public static final MMConstraint<SubscriptionMultipleOrderInstruction2> forSubscriptionMultipleOrderInstruction2 = new MMConstraint<SubscriptionMultipleOrderInstruction2>() {
 		{
-			validator = ConstraintRelatedPartiesDetailsRule::checkSubscriptionMultipleOrderInstruction2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPartiesDetailsRule";
 			definition = "Either RelatedPartiesDetails or MultipleOrderDetails/IndividualOrderDetails/RelatedPartiesDetails may be present, but not both.";
 			owner_lazy = () -> SubscriptionMultipleOrderInstruction2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionMultipleOrderInstruction2 obj) throws Exception {
+			checkSubscriptionMultipleOrderInstruction2(obj);
 		}
 	};
 	/**
@@ -623,11 +699,15 @@ public class ConstraintRelatedPartiesDetailsRule {
 	 */
 	public static final MMConstraint<SubscriptionOrderConfirmation1> forSubscriptionOrderConfirmation1 = new MMConstraint<SubscriptionOrderConfirmation1>() {
 		{
-			validator = ConstraintRelatedPartiesDetailsRule::checkSubscriptionOrderConfirmation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPartiesDetailsRule";
 			definition = "Either RelatedPartiesDetails or MultipleExecutionDetails/IndividualExecutionDetails/RelatedPartiesDetails may be present, but not both.";
 			owner_lazy = () -> SubscriptionOrderConfirmation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionOrderConfirmation1 obj) throws Exception {
+			checkSubscriptionOrderConfirmation1(obj);
 		}
 	};
 

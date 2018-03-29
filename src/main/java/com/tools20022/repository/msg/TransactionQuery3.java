@@ -124,7 +124,7 @@ public class TransactionQuery3 {
 	 * TransactionQuery2.mmQueryType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionQuery3, Optional<QueryType2Code>> mmQueryType = new MMMessageAttribute<TransactionQuery3, Optional<QueryType2Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionQuery3.mmObject();
 			isDerived = false;
@@ -137,6 +137,16 @@ public class TransactionQuery3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> QueryType2Code.mmObject();
+		}
+
+		@Override
+		public Optional<QueryType2Code> getValue(TransactionQuery3 obj) {
+			return obj.getQueryType();
+		}
+
+		@Override
+		public void setValue(TransactionQuery3 obj, Optional<QueryType2Code> value) {
+			obj.setQueryType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxCrit")
@@ -181,7 +191,7 @@ public class TransactionQuery3 {
 	 * TransactionQuery2.mmTransactionCriteria}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionQuery3, Optional<TransactionCriteria3Choice>> mmTransactionCriteria = new MMMessageAssociationEnd<TransactionQuery3, Optional<TransactionCriteria3Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionQuery3.mmObject();
 			isDerived = false;
@@ -195,6 +205,16 @@ public class TransactionQuery3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> TransactionCriteria3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<TransactionCriteria3Choice> getValue(TransactionQuery3 obj) {
+			return obj.getTransactionCriteria();
+		}
+
+		@Override
+		public void setValue(TransactionQuery3 obj, Optional<TransactionCriteria3Choice> value) {
+			obj.setTransactionCriteria(value.orElse(null));
 		}
 	};
 

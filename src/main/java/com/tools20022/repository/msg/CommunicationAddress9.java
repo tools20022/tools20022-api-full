@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.ElectronicAddress;
 import com.tools20022.repository.entity.PhoneAddress;
 import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PostalAddress22;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -74,7 +75,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CommunicationAddress9"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -128,7 +129,7 @@ public class CommunicationAddress9 {
 	 * CommunicationAddress5.mmPostalAddress}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPostalAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CommunicationAddress9, Optional<PostalAddress22>> mmPostalAddress = new MMMessageAssociationEnd<CommunicationAddress9, Optional<PostalAddress22>>() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommunicationAddress9.mmObject();
@@ -141,7 +142,17 @@ public class CommunicationAddress9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PostalAddress22.mmObject();
+			type_lazy = () -> PostalAddress22.mmObject();
+		}
+
+		@Override
+		public Optional<PostalAddress22> getValue(CommunicationAddress9 obj) {
+			return obj.getPostalAddress();
+		}
+
+		@Override
+		public void setValue(CommunicationAddress9 obj, Optional<PostalAddress22> value) {
+			obj.setPostalAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Email")
@@ -183,7 +194,7 @@ public class CommunicationAddress9 {
 	 * CommunicationAddress5.mmEmail}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEmail = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommunicationAddress9, Optional<Max256Text>> mmEmail = new MMMessageAttribute<CommunicationAddress9, Optional<Max256Text>>() {
 		{
 			businessElementTrace_lazy = () -> ElectronicAddress.mmEmailAddress;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommunicationAddress9.mmObject();
@@ -196,6 +207,16 @@ public class CommunicationAddress9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max256Text> getValue(CommunicationAddress9 obj) {
+			return obj.getEmail();
+		}
+
+		@Override
+		public void setValue(CommunicationAddress9 obj, Optional<Max256Text> value) {
+			obj.setEmail(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "URLAdr")
@@ -239,7 +260,7 @@ public class CommunicationAddress9 {
 	 * CommunicationAddress5.mmURLAddress}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmURLAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommunicationAddress9, Optional<Max256Text>> mmURLAddress = new MMMessageAttribute<CommunicationAddress9, Optional<Max256Text>>() {
 		{
 			businessElementTrace_lazy = () -> ElectronicAddress.mmURLAddress;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommunicationAddress9.mmObject();
@@ -252,6 +273,16 @@ public class CommunicationAddress9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max256Text> getValue(CommunicationAddress9 obj) {
+			return obj.getURLAddress();
+		}
+
+		@Override
+		public void setValue(CommunicationAddress9 obj, Optional<Max256Text> value) {
+			obj.setURLAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Phne")
@@ -295,7 +326,7 @@ public class CommunicationAddress9 {
 	 * CommunicationAddress5.mmPhone}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPhone = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommunicationAddress9, Optional<PhoneNumber>> mmPhone = new MMMessageAttribute<CommunicationAddress9, Optional<PhoneNumber>>() {
 		{
 			businessElementTrace_lazy = () -> PhoneAddress.mmPhoneNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommunicationAddress9.mmObject();
@@ -308,6 +339,16 @@ public class CommunicationAddress9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PhoneNumber.mmObject();
+		}
+
+		@Override
+		public Optional<PhoneNumber> getValue(CommunicationAddress9 obj) {
+			return obj.getPhone();
+		}
+
+		@Override
+		public void setValue(CommunicationAddress9 obj, Optional<PhoneNumber> value) {
+			obj.setPhone(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CstmrSvc")
@@ -349,7 +390,7 @@ public class CommunicationAddress9 {
 	 * CommunicationAddress5.mmCustomerService}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCustomerService = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommunicationAddress9, Optional<PhoneNumber>> mmCustomerService = new MMMessageAttribute<CommunicationAddress9, Optional<PhoneNumber>>() {
 		{
 			businessElementTrace_lazy = () -> PhoneAddress.mmPhoneNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommunicationAddress9.mmObject();
@@ -362,6 +403,16 @@ public class CommunicationAddress9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PhoneNumber.mmObject();
+		}
+
+		@Override
+		public Optional<PhoneNumber> getValue(CommunicationAddress9 obj) {
+			return obj.getCustomerService();
+		}
+
+		@Override
+		public void setValue(CommunicationAddress9 obj, Optional<PhoneNumber> value) {
+			obj.setCustomerService(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlCtctInf")
@@ -400,7 +451,7 @@ public class CommunicationAddress9 {
 	 * CommunicationAddress5.mmAdditionalContactInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalContactInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommunicationAddress9, Optional<Max256Text>> mmAdditionalContactInformation = new MMMessageAttribute<CommunicationAddress9, Optional<Max256Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommunicationAddress9.mmObject();
 			isDerived = false;
@@ -413,6 +464,16 @@ public class CommunicationAddress9 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max256Text> getValue(CommunicationAddress9 obj) {
+			return obj.getAdditionalContactInformation();
+		}
+
+		@Override
+		public void setValue(CommunicationAddress9 obj, Optional<Max256Text> value) {
+			obj.setAdditionalContactInformation(value.orElse(null));
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -423,7 +484,7 @@ public class CommunicationAddress9 {
 						com.tools20022.repository.msg.CommunicationAddress9.mmAdditionalContactInformation);
 				trace_lazy = () -> ContactPoint.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CommunicationAddress9";
 				definition = "Communication information.";
 				previousVersion_lazy = () -> CommunicationAddress5.mmObject();
@@ -436,7 +497,7 @@ public class CommunicationAddress9 {
 		return postalAddress == null ? Optional.empty() : Optional.of(postalAddress);
 	}
 
-	public CommunicationAddress9 setPostalAddress(com.tools20022.repository.msg.PostalAddress22 postalAddress) {
+	public CommunicationAddress9 setPostalAddress(PostalAddress22 postalAddress) {
 		this.postalAddress = postalAddress;
 		return this;
 	}

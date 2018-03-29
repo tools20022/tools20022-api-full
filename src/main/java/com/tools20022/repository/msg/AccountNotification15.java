@@ -33,6 +33,7 @@ import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.CashBalance;
 import com.tools20022.repository.entity.Interest;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -159,7 +160,7 @@ public class AccountNotification15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountNotification15, Max35Text> mmIdentification = new MMMessageAttribute<AccountNotification15, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountNotification15.mmObject();
 			isDerived = false;
@@ -170,6 +171,16 @@ public class AccountNotification15 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AccountNotification15 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(AccountNotification15 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "NtfctnPgntn")
@@ -203,7 +214,7 @@ public class AccountNotification15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotificationPagination = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountNotification15, Optional<Pagination1>> mmNotificationPagination = new MMMessageAttribute<AccountNotification15, Optional<Pagination1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountNotification15.mmObject();
 			isDerived = false;
@@ -213,7 +224,17 @@ public class AccountNotification15 {
 			definition = "Provides details on the page number of the notification.\r\n\r\nUsage: The pagination of the notification is only allowed when agreed between the parties.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Pagination1.mmObject();
+			complexType_lazy = () -> Pagination1.mmObject();
+		}
+
+		@Override
+		public Optional<Pagination1> getValue(AccountNotification15 obj) {
+			return obj.getNotificationPagination();
+		}
+
+		@Override
+		public void setValue(AccountNotification15 obj, Optional<Pagination1> value) {
+			obj.setNotificationPagination(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ElctrncSeqNb")
@@ -247,7 +268,7 @@ public class AccountNotification15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmElectronicSequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountNotification15, Optional<Number>> mmElectronicSequenceNumber = new MMMessageAttribute<AccountNotification15, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountNotification15.mmObject();
 			isDerived = false;
@@ -258,6 +279,16 @@ public class AccountNotification15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(AccountNotification15 obj) {
+			return obj.getElectronicSequenceNumber();
+		}
+
+		@Override
+		public void setValue(AccountNotification15 obj, Optional<Number> value) {
+			obj.setElectronicSequenceNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RptgSeq")
@@ -291,7 +322,7 @@ public class AccountNotification15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReportingSequence = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountNotification15, Optional<SequenceRange1Choice>> mmReportingSequence = new MMMessageAssociationEnd<AccountNotification15, Optional<SequenceRange1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountNotification15.mmObject();
 			isDerived = false;
@@ -303,6 +334,16 @@ public class AccountNotification15 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SequenceRange1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SequenceRange1Choice> getValue(AccountNotification15 obj) {
+			return obj.getReportingSequence();
+		}
+
+		@Override
+		public void setValue(AccountNotification15 obj, Optional<SequenceRange1Choice> value) {
+			obj.setReportingSequence(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LglSeqNb")
@@ -336,7 +377,7 @@ public class AccountNotification15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLegalSequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountNotification15, Optional<Number>> mmLegalSequenceNumber = new MMMessageAttribute<AccountNotification15, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountNotification15.mmObject();
 			isDerived = false;
@@ -347,6 +388,16 @@ public class AccountNotification15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(AccountNotification15 obj) {
+			return obj.getLegalSequenceNumber();
+		}
+
+		@Override
+		public void setValue(AccountNotification15 obj, Optional<Number> value) {
+			obj.setLegalSequenceNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CreDtTm")
@@ -378,7 +429,7 @@ public class AccountNotification15 {
 	 * definition} = "Date and time at which the notification was created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountNotification15, Optional<ISODateTime>> mmCreationDateTime = new MMMessageAttribute<AccountNotification15, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountNotification15.mmObject();
 			isDerived = false;
@@ -389,6 +440,16 @@ public class AccountNotification15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(AccountNotification15 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(AccountNotification15 obj, Optional<ISODateTime> value) {
+			obj.setCreationDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FrToDt")
@@ -426,7 +487,7 @@ public class AccountNotification15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFromToDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountNotification15, Optional<DateTimePeriod1>> mmFromToDate = new MMMessageAssociationEnd<AccountNotification15, Optional<DateTimePeriod1>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmReportedPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountNotification15.mmObject();
@@ -438,7 +499,17 @@ public class AccountNotification15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DateTimePeriod1.mmObject();
+			type_lazy = () -> DateTimePeriod1.mmObject();
+		}
+
+		@Override
+		public Optional<DateTimePeriod1> getValue(AccountNotification15 obj) {
+			return obj.getFromToDate();
+		}
+
+		@Override
+		public void setValue(AccountNotification15 obj, Optional<DateTimePeriod1> value) {
+			obj.setFromToDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CpyDplctInd")
@@ -473,7 +544,7 @@ public class AccountNotification15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCopyDuplicateIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountNotification15, Optional<CopyDuplicate1Code>> mmCopyDuplicateIndicator = new MMMessageAttribute<AccountNotification15, Optional<CopyDuplicate1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountNotification15.mmObject();
 			isDerived = false;
@@ -484,6 +555,16 @@ public class AccountNotification15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CopyDuplicate1Code.mmObject();
+		}
+
+		@Override
+		public Optional<CopyDuplicate1Code> getValue(AccountNotification15 obj) {
+			return obj.getCopyDuplicateIndicator();
+		}
+
+		@Override
+		public void setValue(AccountNotification15 obj, Optional<CopyDuplicate1Code> value) {
+			obj.setCopyDuplicateIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RptgSrc")
@@ -516,7 +597,7 @@ public class AccountNotification15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReportingSource = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountNotification15, Optional<ReportingSource1Choice>> mmReportingSource = new MMMessageAssociationEnd<AccountNotification15, Optional<ReportingSource1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountNotification15.mmObject();
 			isDerived = false;
@@ -528,6 +609,16 @@ public class AccountNotification15 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ReportingSource1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ReportingSource1Choice> getValue(AccountNotification15 obj) {
+			return obj.getReportingSource();
+		}
+
+		@Override
+		public void setValue(AccountNotification15 obj, Optional<ReportingSource1Choice> value) {
+			obj.setReportingSource(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Acct", required = true)
@@ -565,7 +656,7 @@ public class AccountNotification15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountNotification15, CashAccount36> mmAccount = new MMMessageAssociationEnd<AccountNotification15, CashAccount36>() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountNotification15.mmObject();
@@ -577,7 +668,17 @@ public class AccountNotification15 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount36.mmObject();
+			type_lazy = () -> CashAccount36.mmObject();
+		}
+
+		@Override
+		public CashAccount36 getValue(AccountNotification15 obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(AccountNotification15 obj, CashAccount36 value) {
+			obj.setAccount(value);
 		}
 	};
 	@XmlElement(name = "RltdAcct")
@@ -615,7 +716,7 @@ public class AccountNotification15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRelatedAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountNotification15, Optional<CashAccount24>> mmRelatedAccount = new MMMessageAssociationEnd<AccountNotification15, Optional<CashAccount24>>() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountNotification15.mmObject();
@@ -627,11 +728,21 @@ public class AccountNotification15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
+			type_lazy = () -> CashAccount24.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount24> getValue(AccountNotification15 obj) {
+			return obj.getRelatedAccount();
+		}
+
+		@Override
+		public void setValue(AccountNotification15 obj, Optional<CashAccount24> value) {
+			obj.setRelatedAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Intrst")
-	protected List<com.tools20022.repository.msg.AccountInterest4> interest;
+	protected List<AccountInterest4> interest;
 	/**
 	 * 
 	 <p>
@@ -665,7 +776,7 @@ public class AccountNotification15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInterest = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountNotification15, List<AccountInterest4>> mmInterest = new MMMessageAssociationEnd<AccountNotification15, List<AccountInterest4>>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmInterestCalculation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountNotification15.mmObject();
@@ -676,7 +787,17 @@ public class AccountNotification15 {
 			definition = "Provides general interest information that applies to the account at a particular moment in time.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AccountInterest4.mmObject();
+			type_lazy = () -> AccountInterest4.mmObject();
+		}
+
+		@Override
+		public List<AccountInterest4> getValue(AccountNotification15 obj) {
+			return obj.getInterest();
+		}
+
+		@Override
+		public void setValue(AccountNotification15 obj, List<AccountInterest4> value) {
+			obj.setInterest(value);
 		}
 	};
 	@XmlElement(name = "TxsSummry")
@@ -707,7 +828,7 @@ public class AccountNotification15 {
 	 * definition} = "Provides summary information on entries."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionsSummary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountNotification15, Optional<TotalTransactions6>> mmTransactionsSummary = new MMMessageAssociationEnd<AccountNotification15, Optional<TotalTransactions6>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountNotification15.mmObject();
 			isDerived = false;
@@ -718,11 +839,21 @@ public class AccountNotification15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TotalTransactions6.mmObject();
+			type_lazy = () -> TotalTransactions6.mmObject();
+		}
+
+		@Override
+		public Optional<TotalTransactions6> getValue(AccountNotification15 obj) {
+			return obj.getTransactionsSummary();
+		}
+
+		@Override
+		public void setValue(AccountNotification15 obj, Optional<TotalTransactions6> value) {
+			obj.setTransactionsSummary(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ntry")
-	protected List<com.tools20022.repository.msg.ReportEntry9> entry;
+	protected List<ReportEntry9> entry;
 	/**
 	 * 
 	 <p>
@@ -756,7 +887,7 @@ public class AccountNotification15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEntry = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountNotification15, List<ReportEntry9>> mmEntry = new MMMessageAssociationEnd<AccountNotification15, List<ReportEntry9>>() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmCashBalanceEntry;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountNotification15.mmObject();
@@ -767,7 +898,17 @@ public class AccountNotification15 {
 			definition = "Specifies an entry in the debit credit notification.\r\nUsage: At least one reference must be provided to identify the entry and its underlying transaction(s).\r\n\r\nUsage Rule: In case of a Payments R-transaction the creditor / debtor referenced of the original payment initiation messages is also used for reporting of the R-transaction. The original debtor/creditor in the reporting of R-Transactions is not inverted. \r\nFollowing elements all defined in the TransactionDetails in RelatedParties or RelatedAgents are impacted by this usage rule:\r\nCreditor, UltimateCreditor, CreditorAccount, CreditorAgent, Debtor, UltimateDebtor, DebtorAccount and DebtorAgent.\r\n";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ReportEntry9.mmObject();
+			type_lazy = () -> ReportEntry9.mmObject();
+		}
+
+		@Override
+		public List<ReportEntry9> getValue(AccountNotification15 obj) {
+			return obj.getEntry();
+		}
+
+		@Override
+		public void setValue(AccountNotification15 obj, List<ReportEntry9> value) {
+			obj.setEntry(value);
 		}
 	};
 	@XmlElement(name = "AddtlNtfctnInf")
@@ -799,7 +940,7 @@ public class AccountNotification15 {
 	 * definition} = "Further details of the account notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalNotificationInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountNotification15, Optional<Max500Text>> mmAdditionalNotificationInformation = new MMMessageAttribute<AccountNotification15, Optional<Max500Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountNotification15.mmObject();
 			isDerived = false;
@@ -810,6 +951,16 @@ public class AccountNotification15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max500Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max500Text> getValue(AccountNotification15 obj) {
+			return obj.getAdditionalNotificationInformation();
+		}
+
+		@Override
+		public void setValue(AccountNotification15 obj, Optional<Max500Text> value) {
+			obj.setAdditionalNotificationInformation(value.orElse(null));
 		}
 	};
 
@@ -846,7 +997,7 @@ public class AccountNotification15 {
 		return notificationPagination == null ? Optional.empty() : Optional.of(notificationPagination);
 	}
 
-	public AccountNotification15 setNotificationPagination(com.tools20022.repository.msg.Pagination1 notificationPagination) {
+	public AccountNotification15 setNotificationPagination(Pagination1 notificationPagination) {
 		this.notificationPagination = notificationPagination;
 		return this;
 	}
@@ -891,7 +1042,7 @@ public class AccountNotification15 {
 		return fromToDate == null ? Optional.empty() : Optional.of(fromToDate);
 	}
 
-	public AccountNotification15 setFromToDate(com.tools20022.repository.msg.DateTimePeriod1 fromToDate) {
+	public AccountNotification15 setFromToDate(DateTimePeriod1 fromToDate) {
 		this.fromToDate = fromToDate;
 		return this;
 	}
@@ -918,7 +1069,7 @@ public class AccountNotification15 {
 		return account;
 	}
 
-	public AccountNotification15 setAccount(com.tools20022.repository.msg.CashAccount36 account) {
+	public AccountNotification15 setAccount(CashAccount36 account) {
 		this.account = Objects.requireNonNull(account);
 		return this;
 	}
@@ -927,7 +1078,7 @@ public class AccountNotification15 {
 		return relatedAccount == null ? Optional.empty() : Optional.of(relatedAccount);
 	}
 
-	public AccountNotification15 setRelatedAccount(com.tools20022.repository.msg.CashAccount24 relatedAccount) {
+	public AccountNotification15 setRelatedAccount(CashAccount24 relatedAccount) {
 		this.relatedAccount = relatedAccount;
 		return this;
 	}
@@ -936,7 +1087,7 @@ public class AccountNotification15 {
 		return interest == null ? interest = new ArrayList<>() : interest;
 	}
 
-	public AccountNotification15 setInterest(List<com.tools20022.repository.msg.AccountInterest4> interest) {
+	public AccountNotification15 setInterest(List<AccountInterest4> interest) {
 		this.interest = Objects.requireNonNull(interest);
 		return this;
 	}
@@ -945,7 +1096,7 @@ public class AccountNotification15 {
 		return transactionsSummary == null ? Optional.empty() : Optional.of(transactionsSummary);
 	}
 
-	public AccountNotification15 setTransactionsSummary(com.tools20022.repository.msg.TotalTransactions6 transactionsSummary) {
+	public AccountNotification15 setTransactionsSummary(TotalTransactions6 transactionsSummary) {
 		this.transactionsSummary = transactionsSummary;
 		return this;
 	}
@@ -954,7 +1105,7 @@ public class AccountNotification15 {
 		return entry == null ? entry = new ArrayList<>() : entry;
 	}
 
-	public AccountNotification15 setEntry(List<com.tools20022.repository.msg.ReportEntry9> entry) {
+	public AccountNotification15 setEntry(List<ReportEntry9> entry) {
 		this.entry = Objects.requireNonNull(entry);
 		return this;
 	}

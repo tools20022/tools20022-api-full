@@ -133,7 +133,7 @@ public class DisplayCapabilities4 {
 	 * DisplayCapabilities3.mmDestination}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDestination = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DisplayCapabilities4, List<UserInterface4Code>> mmDestination = new MMMessageAttribute<DisplayCapabilities4, List<UserInterface4Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DisplayCapabilities4.mmObject();
 			isDerived = false;
@@ -145,6 +145,16 @@ public class DisplayCapabilities4 {
 			previousVersion_lazy = () -> DisplayCapabilities3.mmDestination;
 			minOccurs = 1;
 			simpleType_lazy = () -> UserInterface4Code.mmObject();
+		}
+
+		@Override
+		public List<UserInterface4Code> getValue(DisplayCapabilities4 obj) {
+			return obj.getDestination();
+		}
+
+		@Override
+		public void setValue(DisplayCapabilities4 obj, List<UserInterface4Code> value) {
+			obj.setDestination(value);
 		}
 	};
 	@XmlElement(name = "AvlblFrmt")
@@ -190,7 +200,7 @@ public class DisplayCapabilities4 {
 	 * DisplayCapabilities3.mmAvailableFormat}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAvailableFormat = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DisplayCapabilities4, List<OutputFormat1Code>> mmAvailableFormat = new MMMessageAttribute<DisplayCapabilities4, List<OutputFormat1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DisplayCapabilities4.mmObject();
 			isDerived = false;
@@ -202,6 +212,16 @@ public class DisplayCapabilities4 {
 			previousVersion_lazy = () -> DisplayCapabilities3.mmAvailableFormat;
 			minOccurs = 0;
 			simpleType_lazy = () -> OutputFormat1Code.mmObject();
+		}
+
+		@Override
+		public List<OutputFormat1Code> getValue(DisplayCapabilities4 obj) {
+			return obj.getAvailableFormat();
+		}
+
+		@Override
+		public void setValue(DisplayCapabilities4 obj, List<OutputFormat1Code> value) {
+			obj.setAvailableFormat(value);
 		}
 	};
 	@XmlElement(name = "NbOfLines")
@@ -246,7 +266,7 @@ public class DisplayCapabilities4 {
 	 * DisplayCapabilities3.mmNumberOfLines}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfLines = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DisplayCapabilities4, Optional<Number>> mmNumberOfLines = new MMMessageAttribute<DisplayCapabilities4, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DisplayCapabilities4.mmObject();
 			isDerived = false;
@@ -259,6 +279,16 @@ public class DisplayCapabilities4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(DisplayCapabilities4 obj) {
+			return obj.getNumberOfLines();
+		}
+
+		@Override
+		public void setValue(DisplayCapabilities4 obj, Optional<Number> value) {
+			obj.setNumberOfLines(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LineWidth")
@@ -303,7 +333,7 @@ public class DisplayCapabilities4 {
 	 * DisplayCapabilities3.mmLineWidth}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLineWidth = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DisplayCapabilities4, Optional<Number>> mmLineWidth = new MMMessageAttribute<DisplayCapabilities4, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DisplayCapabilities4.mmObject();
 			isDerived = false;
@@ -316,6 +346,16 @@ public class DisplayCapabilities4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(DisplayCapabilities4 obj) {
+			return obj.getLineWidth();
+		}
+
+		@Override
+		public void setValue(DisplayCapabilities4 obj, Optional<Number> value) {
+			obj.setLineWidth(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AvlblLang")
@@ -362,7 +402,7 @@ public class DisplayCapabilities4 {
 	 * DisplayCapabilities3.mmAvailableLanguage}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAvailableLanguage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DisplayCapabilities4, List<LanguageCode>> mmAvailableLanguage = new MMMessageAttribute<DisplayCapabilities4, List<LanguageCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DisplayCapabilities4.mmObject();
 			isDerived = false;
@@ -374,6 +414,16 @@ public class DisplayCapabilities4 {
 			previousVersion_lazy = () -> DisplayCapabilities3.mmAvailableLanguage;
 			minOccurs = 0;
 			simpleType_lazy = () -> LanguageCode.mmObject();
+		}
+
+		@Override
+		public List<LanguageCode> getValue(DisplayCapabilities4 obj) {
+			return obj.getAvailableLanguage();
+		}
+
+		@Override
+		public void setValue(DisplayCapabilities4 obj, List<LanguageCode> value) {
+			obj.setAvailableLanguage(value);
 		}
 	};
 

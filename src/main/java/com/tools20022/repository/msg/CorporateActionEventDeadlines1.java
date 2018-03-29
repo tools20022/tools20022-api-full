@@ -131,7 +131,7 @@ public class CorporateActionEventDeadlines1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEarlyResponseDeadline = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionEventDeadlines1, Optional<DateFormat43Choice>> mmEarlyResponseDeadline = new MMMessageAssociationEnd<CorporateActionEventDeadlines1, Optional<DateFormat43Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDeadline.mmEarlyResponseDeadline;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionEventDeadlines1.mmObject();
@@ -146,6 +146,16 @@ public class CorporateActionEventDeadlines1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat43Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat43Choice> getValue(CorporateActionEventDeadlines1 obj) {
+			return obj.getEarlyResponseDeadline();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventDeadlines1 obj, Optional<DateFormat43Choice> value) {
+			obj.setEarlyResponseDeadline(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RspnDdln")
@@ -194,7 +204,7 @@ public class CorporateActionEventDeadlines1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmResponseDeadline = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionEventDeadlines1, Optional<DateFormat44Choice>> mmResponseDeadline = new MMMessageAssociationEnd<CorporateActionEventDeadlines1, Optional<DateFormat44Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDeadline.mmResponseDeadline;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionEventDeadlines1.mmObject();
@@ -209,6 +219,16 @@ public class CorporateActionEventDeadlines1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat44Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat44Choice> getValue(CorporateActionEventDeadlines1 obj) {
+			return obj.getResponseDeadline();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventDeadlines1 obj, Optional<DateFormat44Choice> value) {
+			obj.setResponseDeadline(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MktDdln")
@@ -257,7 +277,7 @@ public class CorporateActionEventDeadlines1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMarketDeadline = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionEventDeadlines1, Optional<DateFormat43Choice>> mmMarketDeadline = new MMMessageAssociationEnd<CorporateActionEventDeadlines1, Optional<DateFormat43Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmMarketDeadline;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionEventDeadlines1.mmObject();
@@ -272,6 +292,16 @@ public class CorporateActionEventDeadlines1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat43Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat43Choice> getValue(CorporateActionEventDeadlines1 obj) {
+			return obj.getMarketDeadline();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventDeadlines1 obj, Optional<DateFormat43Choice> value) {
+			obj.setMarketDeadline(value.orElse(null));
 		}
 	};
 

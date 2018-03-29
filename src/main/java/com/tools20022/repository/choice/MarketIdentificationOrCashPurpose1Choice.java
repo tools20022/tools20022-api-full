@@ -124,7 +124,7 @@ public class MarketIdentificationOrCashPurpose1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementInstructionMarketIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarketIdentificationOrCashPurpose1Choice, MarketIdentification87> mmSettlementInstructionMarketIdentification = new MMMessageAssociationEnd<MarketIdentificationOrCashPurpose1Choice, MarketIdentification87>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.MarketIdentificationOrCashPurpose1Choice.mmObject();
 			isDerived = false;
@@ -136,6 +136,16 @@ public class MarketIdentificationOrCashPurpose1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> MarketIdentification87.mmObject();
+		}
+
+		@Override
+		public MarketIdentification87 getValue(MarketIdentificationOrCashPurpose1Choice obj) {
+			return obj.getSettlementInstructionMarketIdentification();
+		}
+
+		@Override
+		public void setValue(MarketIdentificationOrCashPurpose1Choice obj, MarketIdentification87 value) {
+			obj.setSettlementInstructionMarketIdentification(value);
 		}
 	};
 	@XmlElement(name = "CshSSIPurp", required = true)
@@ -170,7 +180,7 @@ public class MarketIdentificationOrCashPurpose1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashSSIPurpose = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketIdentificationOrCashPurpose1Choice, List<ExternalMarketArea1Code>> mmCashSSIPurpose = new MMMessageAttribute<MarketIdentificationOrCashPurpose1Choice, List<ExternalMarketArea1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.MarketIdentificationOrCashPurpose1Choice.mmObject();
 			isDerived = false;
@@ -180,6 +190,16 @@ public class MarketIdentificationOrCashPurpose1Choice {
 			definition = "Underlying reason for the payment SSI instruction, expressed as a code.";
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalMarketArea1Code.mmObject();
+		}
+
+		@Override
+		public List<ExternalMarketArea1Code> getValue(MarketIdentificationOrCashPurpose1Choice obj) {
+			return obj.getCashSSIPurpose();
+		}
+
+		@Override
+		public void setValue(MarketIdentificationOrCashPurpose1Choice obj, List<ExternalMarketArea1Code> value) {
+			obj.setCashSSIPurpose(value);
 		}
 	};
 

@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.NameAndAddress5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -99,7 +100,7 @@ public class PartyIdentificationSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNameAndAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentificationSD3, NameAndAddress5> mmNameAndAddress = new MMMessageAttribute<PartyIdentificationSD3, NameAndAddress5>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationSD3.mmObject();
 			isDerived = false;
@@ -109,7 +110,17 @@ public class PartyIdentificationSD3 {
 			definition = "Name and address by which a party is known and which is usually used to identify that party.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.NameAndAddress5.mmObject();
+			complexType_lazy = () -> NameAndAddress5.mmObject();
+		}
+
+		@Override
+		public NameAndAddress5 getValue(PartyIdentificationSD3 obj) {
+			return obj.getNameAndAddress();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationSD3 obj, NameAndAddress5 value) {
+			obj.setNameAndAddress(value);
 		}
 	};
 
@@ -131,7 +142,7 @@ public class PartyIdentificationSD3 {
 		return nameAndAddress;
 	}
 
-	public PartyIdentificationSD3 setNameAndAddress(com.tools20022.repository.msg.NameAndAddress5 nameAndAddress) {
+	public PartyIdentificationSD3 setNameAndAddress(NameAndAddress5 nameAndAddress) {
 		this.nameAndAddress = Objects.requireNonNull(nameAndAddress);
 		return this;
 	}

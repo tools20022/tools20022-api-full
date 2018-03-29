@@ -101,7 +101,7 @@ public class BPOApplicableRules1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmURBPOVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BPOApplicableRules1Choice, DecimalNumber> mmURBPOVersion = new MMMessageAttribute<BPOApplicableRules1Choice, DecimalNumber>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.BPOApplicableRules1Choice.mmObject();
 			isDerived = false;
@@ -112,6 +112,16 @@ public class BPOApplicableRules1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(BPOApplicableRules1Choice obj) {
+			return obj.getURBPOVersion();
+		}
+
+		@Override
+		public void setValue(BPOApplicableRules1Choice obj, DecimalNumber value) {
+			obj.setURBPOVersion(value);
 		}
 	};
 	@XmlElement(name = "OthrRulesAndVrsn", required = true)
@@ -149,7 +159,7 @@ public class BPOApplicableRules1Choice {
 	 * "Applicable rules are not URBPO and are specified here with version."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherRulesAndVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BPOApplicableRules1Choice, Max35Text> mmOtherRulesAndVersion = new MMMessageAttribute<BPOApplicableRules1Choice, Max35Text>() {
 		{
 			businessComponentTrace_lazy = () -> MasterAgreement.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.BPOApplicableRules1Choice.mmObject();
@@ -161,6 +171,16 @@ public class BPOApplicableRules1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(BPOApplicableRules1Choice obj) {
+			return obj.getOtherRulesAndVersion();
+		}
+
+		@Override
+		public void setValue(BPOApplicableRules1Choice obj, Max35Text value) {
+			obj.setOtherRulesAndVersion(value);
 		}
 	};
 

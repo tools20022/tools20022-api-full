@@ -110,7 +110,7 @@ public class Account4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Account4, Optional<Max35Text>> mmIdentification = new MMMessageAttribute<Account4, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Account4.mmObject();
@@ -122,6 +122,16 @@ public class Account4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Account4 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Account4 obj, Optional<Max35Text> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Svcr", required = true)
@@ -159,7 +169,7 @@ public class Account4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmServicer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Account4, PartyIdentification2Choice> mmServicer = new MMMessageAssociationEnd<Account4, PartyIdentification2Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Account4.mmObject();
@@ -172,6 +182,16 @@ public class Account4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification2Choice getValue(Account4 obj) {
+			return obj.getServicer();
+		}
+
+		@Override
+		public void setValue(Account4 obj, PartyIdentification2Choice value) {
+			obj.setServicer(value);
 		}
 	};
 

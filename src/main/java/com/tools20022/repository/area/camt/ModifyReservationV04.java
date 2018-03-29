@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.MessageHeader1;
 import com.tools20022.repository.msg.Reservation4;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset._SR2018_MX_CashManagement_Maintenance;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -95,7 +94,7 @@ import javax.xml.bind.annotation.*;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ModifyReservationV04"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -133,7 +132,7 @@ public class ModifyReservationV04 {
 	 * definition} = "Common business identification for the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ModifyReservationV04, MessageHeader1> mmMessageHeader = new MMMessageBuildingBlock<ModifyReservationV04, MessageHeader1>() {
 		{
 			xmlTag = "MsgHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -144,12 +143,14 @@ public class ModifyReservationV04 {
 			complexType_lazy = () -> MessageHeader1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ModifyReservationV04.class.getMethod("getMessageHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageHeader1 getValue(ModifyReservationV04 obj) {
+			return obj.getMessageHeader();
+		}
+
+		@Override
+		public void setValue(ModifyReservationV04 obj, MessageHeader1 value) {
+			obj.setMessageHeader(value);
 		}
 	};
 	@XmlElement(name = "RsvatnId", required = true)
@@ -177,7 +178,7 @@ public class ModifyReservationV04 {
 	 * definition} = "Identification of the default reservation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReservationIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ModifyReservationV04, CurrentOrDefaultReservation1Choice> mmReservationIdentification = new MMMessageBuildingBlock<ModifyReservationV04, CurrentOrDefaultReservation1Choice>() {
 		{
 			xmlTag = "RsvatnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -188,12 +189,14 @@ public class ModifyReservationV04 {
 			complexType_lazy = () -> CurrentOrDefaultReservation1Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ModifyReservationV04.class.getMethod("getReservationIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrentOrDefaultReservation1Choice getValue(ModifyReservationV04 obj) {
+			return obj.getReservationIdentification();
+		}
+
+		@Override
+		public void setValue(ModifyReservationV04 obj, CurrentOrDefaultReservation1Choice value) {
+			obj.setReservationIdentification(value);
 		}
 	};
 	@XmlElement(name = "NewRsvatnValSet", required = true)
@@ -220,7 +223,7 @@ public class ModifyReservationV04 {
 	 * definition} = "New reservation values."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmNewReservationValueSet = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ModifyReservationV04, Reservation4> mmNewReservationValueSet = new MMMessageBuildingBlock<ModifyReservationV04, Reservation4>() {
 		{
 			xmlTag = "NewRsvatnValSet";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -231,12 +234,14 @@ public class ModifyReservationV04 {
 			complexType_lazy = () -> Reservation4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ModifyReservationV04.class.getMethod("getNewReservationValueSet", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Reservation4 getValue(ModifyReservationV04 obj) {
+			return obj.getNewReservationValueSet();
+		}
+
+		@Override
+		public void setValue(ModifyReservationV04 obj, Reservation4 value) {
+			obj.setNewReservationValueSet(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -266,7 +271,7 @@ public class ModifyReservationV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ModifyReservationV04, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<ModifyReservationV04, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -276,19 +281,21 @@ public class ModifyReservationV04 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ModifyReservationV04.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(ModifyReservationV04 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(ModifyReservationV04 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ModifyReservationV04";
 				definition = "Scope\nThe ModifyReservation message is used to request modifications in the details of one particular reservation set by the member and managed by the transaction administrator.\nUsage\nAfter the receipt of a ModifyReservation message the transaction administrator checks whether the amount of liquidity on the member account is sufficient to set the reservation.\nIf there is enough liquidity available, the requested amount will be reserved. In case the requested amount exceeds the available liquidity, only the available liquidity will be reserved. The difference will not be blocked at a later point, even if the account balance of the member reaches the level of the initial reservation request.\nThe reservation can be effected directly by the member, who has the possibility to: \n- reset the reserved liquidity to zero\n- change the reservation amount during the day with immediate effect\n- input a default reservation amount for the following day(s); valid until a new reservation amount is requested\nAfter the receipt of a ModifyReservation message the transaction administrator checks whether the amount of liquidity on the member account is sufficient to set the reservation.";
 				messageSet_lazy = () -> Arrays.asList(_SR2018_MX_CashManagement_Maintenance.mmObject());

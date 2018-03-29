@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Period3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -104,7 +105,7 @@ public class CorporateActionPeriodSD1 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPeriodSD1, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionPeriodSD1, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriodSD1.mmObject();
 			isDerived = false;
@@ -115,6 +116,16 @@ public class CorporateActionPeriodSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionPeriodSD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionPeriodSD1 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "DTCReorgDpstPrd")
@@ -152,7 +163,7 @@ public class CorporateActionPeriodSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCReorganisationDepositPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPeriodSD1, Optional<Period3>> mmDTCReorganisationDepositPeriod = new MMMessageAttribute<CorporateActionPeriodSD1, Optional<Period3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriodSD1.mmObject();
 			isDerived = false;
@@ -163,7 +174,17 @@ public class CorporateActionPeriodSD1 {
 			definition = "Period during which the securities can be submitted to Reorganisation deposit service at DTC (The Depository Trust Corporation). DTC First Day for Reorg Deposit (start date) is the day on which security is eligible for reorganisation deposit service at DTC. DTC Last Day for Reorg Deposit is the last day on which securities are eligible to be submitted for reorganisation deposit service at DTC.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Period3.mmObject();
+			complexType_lazy = () -> Period3.mmObject();
+		}
+
+		@Override
+		public Optional<Period3> getValue(CorporateActionPeriodSD1 obj) {
+			return obj.getDTCReorganisationDepositPeriod();
+		}
+
+		@Override
+		public void setValue(CorporateActionPeriodSD1 obj, Optional<Period3> value) {
+			obj.setDTCReorganisationDepositPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCChillPrdForDpstryDlvry")
@@ -201,7 +222,7 @@ public class CorporateActionPeriodSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCChillPeriodForDepositoryDelivery = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPeriodSD1, Optional<Period3>> mmDTCChillPeriodForDepositoryDelivery = new MMMessageAttribute<CorporateActionPeriodSD1, Optional<Period3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriodSD1.mmObject();
 			isDerived = false;
@@ -212,7 +233,17 @@ public class CorporateActionPeriodSD1 {
 			definition = "Period during which the co-depositories deliveries are suspended at DTC (The Depository Trust Corporation). DTC Last Day for Depository Delivery (start date) - the last day on which depository deliveries will be accepted. DTC Chill Release Day for Depository Delivery (end date) - day when chill is released and depositories can resume delivery activities.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Period3.mmObject();
+			complexType_lazy = () -> Period3.mmObject();
+		}
+
+		@Override
+		public Optional<Period3> getValue(CorporateActionPeriodSD1 obj) {
+			return obj.getDTCChillPeriodForDepositoryDelivery();
+		}
+
+		@Override
+		public void setValue(CorporateActionPeriodSD1 obj, Optional<Period3> value) {
+			obj.setDTCChillPeriodForDepositoryDelivery(value.orElse(null));
 		}
 	};
 
@@ -243,7 +274,7 @@ public class CorporateActionPeriodSD1 {
 		return dTCReorganisationDepositPeriod == null ? Optional.empty() : Optional.of(dTCReorganisationDepositPeriod);
 	}
 
-	public CorporateActionPeriodSD1 setDTCReorganisationDepositPeriod(com.tools20022.repository.msg.Period3 dTCReorganisationDepositPeriod) {
+	public CorporateActionPeriodSD1 setDTCReorganisationDepositPeriod(Period3 dTCReorganisationDepositPeriod) {
 		this.dTCReorganisationDepositPeriod = dTCReorganisationDepositPeriod;
 		return this;
 	}
@@ -252,7 +283,7 @@ public class CorporateActionPeriodSD1 {
 		return dTCChillPeriodForDepositoryDelivery == null ? Optional.empty() : Optional.of(dTCChillPeriodForDepositoryDelivery);
 	}
 
-	public CorporateActionPeriodSD1 setDTCChillPeriodForDepositoryDelivery(com.tools20022.repository.msg.Period3 dTCChillPeriodForDepositoryDelivery) {
+	public CorporateActionPeriodSD1 setDTCChillPeriodForDepositoryDelivery(Period3 dTCChillPeriodForDepositoryDelivery) {
 		this.dTCChillPeriodForDepositoryDelivery = dTCChillPeriodForDepositoryDelivery;
 		return this;
 	}

@@ -109,7 +109,7 @@ public class AuditTrail1 {
 	 * definition} = "Name of the field whose value has been changed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFieldName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AuditTrail1, Max35Text> mmFieldName = new MMMessageAttribute<AuditTrail1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AuditTrail1.mmObject();
 			isDerived = false;
@@ -120,6 +120,16 @@ public class AuditTrail1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AuditTrail1 obj) {
+			return obj.getFieldName();
+		}
+
+		@Override
+		public void setValue(AuditTrail1 obj, Max35Text value) {
+			obj.setFieldName(value);
 		}
 	};
 	@XmlElement(name = "OdFldVal", required = true)
@@ -150,7 +160,7 @@ public class AuditTrail1 {
 	 * definition} = "Value of the field before the change."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOldFieldValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AuditTrail1, Max350Text> mmOldFieldValue = new MMMessageAttribute<AuditTrail1, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AuditTrail1.mmObject();
 			isDerived = false;
@@ -161,6 +171,16 @@ public class AuditTrail1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(AuditTrail1 obj) {
+			return obj.getOldFieldValue();
+		}
+
+		@Override
+		public void setValue(AuditTrail1 obj, Max350Text value) {
+			obj.setOldFieldValue(value);
 		}
 	};
 	@XmlElement(name = "NewFldVal", required = true)
@@ -191,7 +211,7 @@ public class AuditTrail1 {
 	 * definition} = "Value of the field after the change."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewFieldValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AuditTrail1, Max350Text> mmNewFieldValue = new MMMessageAttribute<AuditTrail1, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AuditTrail1.mmObject();
 			isDerived = false;
@@ -202,6 +222,16 @@ public class AuditTrail1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(AuditTrail1 obj) {
+			return obj.getNewFieldValue();
+		}
+
+		@Override
+		public void setValue(AuditTrail1 obj, Max350Text value) {
+			obj.setNewFieldValue(value);
 		}
 	};
 	@XmlElement(name = "OprTmStmp", required = true)
@@ -232,7 +262,7 @@ public class AuditTrail1 {
 	 * definition} = "Timestamp of the change."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOperationTimeStamp = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AuditTrail1, ISODateTime> mmOperationTimeStamp = new MMMessageAttribute<AuditTrail1, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AuditTrail1.mmObject();
 			isDerived = false;
@@ -243,6 +273,16 @@ public class AuditTrail1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(AuditTrail1 obj) {
+			return obj.getOperationTimeStamp();
+		}
+
+		@Override
+		public void setValue(AuditTrail1 obj, ISODateTime value) {
+			obj.setOperationTimeStamp(value);
 		}
 	};
 	@XmlElement(name = "InstgUsr", required = true)
@@ -273,7 +313,7 @@ public class AuditTrail1 {
 	 * definition} = "User who instructed the change."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructingUser = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AuditTrail1, Max256Text> mmInstructingUser = new MMMessageAttribute<AuditTrail1, Max256Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AuditTrail1.mmObject();
 			isDerived = false;
@@ -284,6 +324,16 @@ public class AuditTrail1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Max256Text getValue(AuditTrail1 obj) {
+			return obj.getInstructingUser();
+		}
+
+		@Override
+		public void setValue(AuditTrail1 obj, Max256Text value) {
+			obj.setInstructingUser(value);
 		}
 	};
 	@XmlElement(name = "ApprvgUsr")
@@ -315,7 +365,7 @@ public class AuditTrail1 {
 	 * "User who approved the change instructed by the instructing user."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmApprovingUser = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AuditTrail1, Optional<Max256Text>> mmApprovingUser = new MMMessageAttribute<AuditTrail1, Optional<Max256Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AuditTrail1.mmObject();
 			isDerived = false;
@@ -326,6 +376,16 @@ public class AuditTrail1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max256Text> getValue(AuditTrail1 obj) {
+			return obj.getApprovingUser();
+		}
+
+		@Override
+		public void setValue(AuditTrail1 obj, Optional<Max256Text> value) {
+			obj.setApprovingUser(value.orElse(null));
 		}
 	};
 

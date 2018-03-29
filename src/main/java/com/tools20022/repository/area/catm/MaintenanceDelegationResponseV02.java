@@ -21,12 +21,11 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.TerminalManagementLatestVersion;
+import com.tools20022.repository.area.TerminalManagementPreviousVersion;
 import com.tools20022.repository.msg.ContentInformationType12;
 import com.tools20022.repository.msg.Header29;
 import com.tools20022.repository.msg.MaintenanceDelegationResponse2;
-import com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOLatestversion;
-import java.lang.reflect.Method;
+import com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOPreviousversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -58,8 +57,8 @@ import javax.xml.bind.annotation.*;
  * messageSet} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOLatestversion
- * CardPaymentsExchangesTerminalManagementISOLatestversion}</li>
+ * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOPreviousversion
+ * CardPaymentsExchangesTerminalManagementISOPreviousversion}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
@@ -68,8 +67,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "MntncDlgtnRspn"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.TerminalManagementLatestVersion
- * TerminalManagementLatestVersion}</li>
+ * {@linkplain com.tools20022.repository.area.TerminalManagementPreviousVersion
+ * TerminalManagementPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code catm.006.001.02}</li>
@@ -140,7 +139,7 @@ public class MaintenanceDelegationResponseV02 {
 	 * MaintenanceDelegationResponseV01.mmHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MaintenanceDelegationResponseV02, Header29> mmHeader = new MMMessageBuildingBlock<MaintenanceDelegationResponseV02, Header29>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,12 +152,14 @@ public class MaintenanceDelegationResponseV02 {
 			complexType_lazy = () -> Header29.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MaintenanceDelegationResponseV02.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header29 getValue(MaintenanceDelegationResponseV02 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(MaintenanceDelegationResponseV02 obj, Header29 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "MntncDlgtnRspn", required = true)
@@ -200,7 +201,7 @@ public class MaintenanceDelegationResponseV02 {
 	 * MaintenanceDelegationResponseV01.mmMaintenanceDelegationResponse}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMaintenanceDelegationResponse = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MaintenanceDelegationResponseV02, MaintenanceDelegationResponse2> mmMaintenanceDelegationResponse = new MMMessageBuildingBlock<MaintenanceDelegationResponseV02, MaintenanceDelegationResponse2>() {
 		{
 			xmlTag = "MntncDlgtnRspn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -213,12 +214,14 @@ public class MaintenanceDelegationResponseV02 {
 			complexType_lazy = () -> MaintenanceDelegationResponse2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MaintenanceDelegationResponseV02.class.getMethod("getMaintenanceDelegationResponse", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MaintenanceDelegationResponse2 getValue(MaintenanceDelegationResponseV02 obj) {
+			return obj.getMaintenanceDelegationResponse();
+		}
+
+		@Override
+		public void setValue(MaintenanceDelegationResponseV02 obj, MaintenanceDelegationResponse2 value) {
+			obj.setMaintenanceDelegationResponse(value);
 		}
 	};
 	@XmlElement(name = "SctyTrlr")
@@ -260,7 +263,7 @@ public class MaintenanceDelegationResponseV02 {
 	 * MaintenanceDelegationResponseV01.mmSecurityTrailer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MaintenanceDelegationResponseV02, Optional<ContentInformationType12>> mmSecurityTrailer = new MMMessageBuildingBlock<MaintenanceDelegationResponseV02, Optional<ContentInformationType12>>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -273,12 +276,14 @@ public class MaintenanceDelegationResponseV02 {
 			complexType_lazy = () -> ContentInformationType12.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MaintenanceDelegationResponseV02.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ContentInformationType12> getValue(MaintenanceDelegationResponseV02 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(MaintenanceDelegationResponseV02 obj, Optional<ContentInformationType12> value) {
+			obj.setSecurityTrailer(value.orElse(null));
 		}
 	};
 
@@ -290,10 +295,10 @@ public class MaintenanceDelegationResponseV02 {
 				definition = "The master terminal manager provides the outcome of a maintenance delegation request to a terminal manager.";
 				nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegationResponseV03.mmObject());
 				previousVersion_lazy = () -> MaintenanceDelegationResponseV01.mmObject();
-				messageSet_lazy = () -> Arrays.asList(CardPaymentsExchangesTerminalManagementISOLatestversion.mmObject());
+				messageSet_lazy = () -> Arrays.asList(CardPaymentsExchangesTerminalManagementISOPreviousversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "MntncDlgtnRspn";
-				businessArea_lazy = () -> TerminalManagementLatestVersion.mmObject();
+				businessArea_lazy = () -> TerminalManagementPreviousVersion.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.MaintenanceDelegationResponseV02.mmHeader,
 						com.tools20022.repository.area.catm.MaintenanceDelegationResponseV02.mmMaintenanceDelegationResponse, com.tools20022.repository.area.catm.MaintenanceDelegationResponseV02.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {

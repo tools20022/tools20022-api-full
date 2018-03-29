@@ -123,7 +123,7 @@ public class SecuritiesInstrumentClassification2 {
 	 * "Identifier of the financial instrument classification type code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesInstrumentClassification2, CFIOct2015Identifier> mmIdentifier = new MMMessageAttribute<SecuritiesInstrumentClassification2, CFIOct2015Identifier>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesInstrumentClassification2.mmObject();
 			isDerived = false;
@@ -134,6 +134,16 @@ public class SecuritiesInstrumentClassification2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CFIOct2015Identifier.mmObject();
+		}
+
+		@Override
+		public CFIOct2015Identifier getValue(SecuritiesInstrumentClassification2 obj) {
+			return obj.getIdentifier();
+		}
+
+		@Override
+		public void setValue(SecuritiesInstrumentClassification2 obj, CFIOct2015Identifier value) {
+			obj.setIdentifier(value);
 		}
 	};
 	@XmlElement(name = "Mod")
@@ -167,7 +177,7 @@ public class SecuritiesInstrumentClassification2 {
 	 * "Modification status for the record compared to the previous report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmModification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesInstrumentClassification2, Optional<Modification1Code>> mmModification = new MMMessageAttribute<SecuritiesInstrumentClassification2, Optional<Modification1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesInstrumentClassification2.mmObject();
 			isDerived = false;
@@ -178,6 +188,16 @@ public class SecuritiesInstrumentClassification2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Modification1Code.mmObject();
+		}
+
+		@Override
+		public Optional<Modification1Code> getValue(SecuritiesInstrumentClassification2 obj) {
+			return obj.getModification();
+		}
+
+		@Override
+		public void setValue(SecuritiesInstrumentClassification2 obj, Optional<Modification1Code> value) {
+			obj.setModification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "VldtyPrd", required = true)
@@ -210,7 +230,7 @@ public class SecuritiesInstrumentClassification2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmValidityPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesInstrumentClassification2, Period4Choice> mmValidityPeriod = new MMMessageAssociationEnd<SecuritiesInstrumentClassification2, Period4Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesInstrumentClassification2.mmObject();
 			isDerived = false;
@@ -222,6 +242,16 @@ public class SecuritiesInstrumentClassification2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Period4Choice.mmObject();
+		}
+
+		@Override
+		public Period4Choice getValue(SecuritiesInstrumentClassification2 obj) {
+			return obj.getValidityPeriod();
+		}
+
+		@Override
+		public void setValue(SecuritiesInstrumentClassification2 obj, Period4Choice value) {
+			obj.setValidityPeriod(value);
 		}
 	};
 	@XmlElement(name = "LastUpdtd")
@@ -253,7 +283,7 @@ public class SecuritiesInstrumentClassification2 {
 	 * definition} = "Date when this record was last modified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLastUpdated = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesInstrumentClassification2, Optional<ISODate>> mmLastUpdated = new MMMessageAttribute<SecuritiesInstrumentClassification2, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesInstrumentClassification2.mmObject();
 			isDerived = false;
@@ -264,6 +294,16 @@ public class SecuritiesInstrumentClassification2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(SecuritiesInstrumentClassification2 obj) {
+			return obj.getLastUpdated();
+		}
+
+		@Override
+		public void setValue(SecuritiesInstrumentClassification2 obj, Optional<ISODate> value) {
+			obj.setLastUpdated(value.orElse(null));
 		}
 	};
 

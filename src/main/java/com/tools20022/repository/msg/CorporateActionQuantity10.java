@@ -122,7 +122,7 @@ public class CorporateActionQuantity10 {
 	 * CorporateActionQuantity9.mmBaseDenomination}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBaseDenomination = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionQuantity10, Optional<FinancialInstrumentQuantity22Choice>> mmBaseDenomination = new MMMessageAssociationEnd<CorporateActionQuantity10, Optional<FinancialInstrumentQuantity22Choice>>() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmBaseDenomination;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionQuantity10.mmObject();
@@ -137,6 +137,16 @@ public class CorporateActionQuantity10 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity22Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity22Choice> getValue(CorporateActionQuantity10 obj) {
+			return obj.getBaseDenomination();
+		}
+
+		@Override
+		public void setValue(CorporateActionQuantity10 obj, Optional<FinancialInstrumentQuantity22Choice> value) {
+			obj.setBaseDenomination(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IncrmtlDnmtn")
@@ -183,7 +193,7 @@ public class CorporateActionQuantity10 {
 	 * CorporateActionQuantity9.mmIncrementalDenomination}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIncrementalDenomination = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionQuantity10, Optional<FinancialInstrumentQuantity22Choice>> mmIncrementalDenomination = new MMMessageAssociationEnd<CorporateActionQuantity10, Optional<FinancialInstrumentQuantity22Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Lottery.mmIncrementalDenomination;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionQuantity10.mmObject();
@@ -198,6 +208,16 @@ public class CorporateActionQuantity10 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity22Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity22Choice> getValue(CorporateActionQuantity10 obj) {
+			return obj.getIncrementalDenomination();
+		}
+
+		@Override
+		public void setValue(CorporateActionQuantity10 obj, Optional<FinancialInstrumentQuantity22Choice> value) {
+			obj.setIncrementalDenomination(value.orElse(null));
 		}
 	};
 

@@ -30,6 +30,8 @@ import com.tools20022.repository.entity.Curve;
 import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.entity.Spread;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Price1;
+import com.tools20022.repository.msg.SecurityIdentification14;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -134,7 +136,7 @@ public class BenchmarkCurve2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSpread = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BenchmarkCurve2, Optional<DecimalNumber>> mmSpread = new MMMessageAttribute<BenchmarkCurve2, Optional<DecimalNumber>>() {
 		{
 			businessElementTrace_lazy = () -> Curve.mmSpread;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BenchmarkCurve2.mmObject();
@@ -147,6 +149,16 @@ public class BenchmarkCurve2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(BenchmarkCurve2 obj) {
+			return obj.getSpread();
+		}
+
+		@Override
+		public void setValue(BenchmarkCurve2 obj, Optional<DecimalNumber> value) {
+			obj.setSpread(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BchmkId")
@@ -183,7 +195,7 @@ public class BenchmarkCurve2 {
 	 * definition} = "Identification of a security by an ISIN."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBenchmarkIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BenchmarkCurve2, Optional<SecurityIdentification14>> mmBenchmarkIdentification = new MMMessageAssociationEnd<BenchmarkCurve2, Optional<SecurityIdentification14>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BenchmarkCurve2.mmObject();
@@ -195,7 +207,17 @@ public class BenchmarkCurve2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
+			type_lazy = () -> SecurityIdentification14.mmObject();
+		}
+
+		@Override
+		public Optional<SecurityIdentification14> getValue(BenchmarkCurve2 obj) {
+			return obj.getBenchmarkIdentification();
+		}
+
+		@Override
+		public void setValue(BenchmarkCurve2 obj, Optional<SecurityIdentification14> value) {
+			obj.setBenchmarkIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BchmkPric")
@@ -234,7 +256,7 @@ public class BenchmarkCurve2 {
 	 * definition} = "Identifies the price of the benchmark security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBenchmarkPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BenchmarkCurve2, Optional<Price1>> mmBenchmarkPrice = new MMMessageAttribute<BenchmarkCurve2, Optional<Price1>>() {
 		{
 			businessElementTrace_lazy = () -> Spread.mmBenchmarkPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BenchmarkCurve2.mmObject();
@@ -246,7 +268,17 @@ public class BenchmarkCurve2 {
 			definition = "Identifies the price of the benchmark security.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
+			complexType_lazy = () -> Price1.mmObject();
+		}
+
+		@Override
+		public Optional<Price1> getValue(BenchmarkCurve2 obj) {
+			return obj.getBenchmarkPrice();
+		}
+
+		@Override
+		public void setValue(BenchmarkCurve2 obj, Optional<Price1> value) {
+			obj.setBenchmarkPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BchmkCrvCcy")
@@ -286,7 +318,7 @@ public class BenchmarkCurve2 {
 	 * definition} = "Identifies the currency used for the benchmark curve."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBenchmarkCurveCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BenchmarkCurve2, Optional<CurrencyCode>> mmBenchmarkCurveCurrency = new MMMessageAttribute<BenchmarkCurve2, Optional<CurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> Curve.mmCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BenchmarkCurve2.mmObject();
@@ -299,6 +331,16 @@ public class BenchmarkCurve2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyCode> getValue(BenchmarkCurve2 obj) {
+			return obj.getBenchmarkCurveCurrency();
+		}
+
+		@Override
+		public void setValue(BenchmarkCurve2 obj, Optional<CurrencyCode> value) {
+			obj.setBenchmarkCurveCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BchmkCrvNm")
@@ -338,7 +380,7 @@ public class BenchmarkCurve2 {
 	 * definition} = "Identifies the name of the benchmark curve."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBenchmarkCurveName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BenchmarkCurve2, Optional<BenchmarkCurveName2Choice>> mmBenchmarkCurveName = new MMMessageAttribute<BenchmarkCurve2, Optional<BenchmarkCurveName2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Curve.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BenchmarkCurve2.mmObject();
@@ -351,6 +393,16 @@ public class BenchmarkCurve2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> BenchmarkCurveName2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<BenchmarkCurveName2Choice> getValue(BenchmarkCurve2 obj) {
+			return obj.getBenchmarkCurveName();
+		}
+
+		@Override
+		public void setValue(BenchmarkCurve2 obj, Optional<BenchmarkCurveName2Choice> value) {
+			obj.setBenchmarkCurveName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BchmkCrvPt")
@@ -392,7 +444,7 @@ public class BenchmarkCurve2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBenchmarkCurvePoint = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BenchmarkCurve2, Optional<Max256Text>> mmBenchmarkCurvePoint = new MMMessageAttribute<BenchmarkCurve2, Optional<Max256Text>>() {
 		{
 			businessElementTrace_lazy = () -> Curve.mmPoint;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BenchmarkCurve2.mmObject();
@@ -405,6 +457,16 @@ public class BenchmarkCurve2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max256Text> getValue(BenchmarkCurve2 obj) {
+			return obj.getBenchmarkCurvePoint();
+		}
+
+		@Override
+		public void setValue(BenchmarkCurve2 obj, Optional<Max256Text> value) {
+			obj.setBenchmarkCurvePoint(value.orElse(null));
 		}
 	};
 
@@ -444,7 +506,7 @@ public class BenchmarkCurve2 {
 		return benchmarkIdentification == null ? Optional.empty() : Optional.of(benchmarkIdentification);
 	}
 
-	public BenchmarkCurve2 setBenchmarkIdentification(com.tools20022.repository.msg.SecurityIdentification14 benchmarkIdentification) {
+	public BenchmarkCurve2 setBenchmarkIdentification(SecurityIdentification14 benchmarkIdentification) {
 		this.benchmarkIdentification = benchmarkIdentification;
 		return this;
 	}
@@ -453,7 +515,7 @@ public class BenchmarkCurve2 {
 		return benchmarkPrice == null ? Optional.empty() : Optional.of(benchmarkPrice);
 	}
 
-	public BenchmarkCurve2 setBenchmarkPrice(com.tools20022.repository.msg.Price1 benchmarkPrice) {
+	public BenchmarkCurve2 setBenchmarkPrice(Price1 benchmarkPrice) {
 		this.benchmarkPrice = benchmarkPrice;
 		return this;
 	}

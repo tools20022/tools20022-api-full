@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Extended350Code;
 import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.InvestmentAccount;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountIdentification1;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -143,7 +144,7 @@ public class InvestmentAccount20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount20, Optional<AccountIdentification1>> mmAccountIdentification = new MMMessageAttribute<InvestmentAccount20, Optional<AccountIdentification1>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount20.mmObject();
@@ -155,7 +156,17 @@ public class InvestmentAccount20 {
 			nextVersions_lazy = () -> Arrays.asList(InvestmentAccount60.mmAccountIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentification1.mmObject();
+			complexType_lazy = () -> AccountIdentification1.mmObject();
+		}
+
+		@Override
+		public Optional<AccountIdentification1> getValue(InvestmentAccount20 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount20 obj, Optional<AccountIdentification1> value) {
+			obj.setAccountIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -200,7 +211,7 @@ public class InvestmentAccount20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount20, Optional<FundCashAccount2Code>> mmType = new MMMessageAttribute<InvestmentAccount20, Optional<FundCashAccount2Code>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmInvestmentAccountType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount20.mmObject();
@@ -213,6 +224,16 @@ public class InvestmentAccount20 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> FundCashAccount2Code.mmObject();
+		}
+
+		@Override
+		public Optional<FundCashAccount2Code> getValue(InvestmentAccount20 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount20 obj, Optional<FundCashAccount2Code> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XtndedTp")
@@ -252,7 +273,7 @@ public class InvestmentAccount20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount20, Optional<Extended350Code>> mmExtendedType = new MMMessageAttribute<InvestmentAccount20, Optional<Extended350Code>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmInvestmentAccountType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount20.mmObject();
@@ -264,6 +285,16 @@ public class InvestmentAccount20 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Optional<Extended350Code> getValue(InvestmentAccount20 obj) {
+			return obj.getExtendedType();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount20 obj, Optional<Extended350Code> value) {
+			obj.setExtendedType(value.orElse(null));
 		}
 	};
 	/**
@@ -334,7 +365,7 @@ public class InvestmentAccount20 {
 		return accountIdentification == null ? Optional.empty() : Optional.of(accountIdentification);
 	}
 
-	public InvestmentAccount20 setAccountIdentification(com.tools20022.repository.msg.AccountIdentification1 accountIdentification) {
+	public InvestmentAccount20 setAccountIdentification(AccountIdentification1 accountIdentification) {
 		this.accountIdentification = accountIdentification;
 		return this;
 	}

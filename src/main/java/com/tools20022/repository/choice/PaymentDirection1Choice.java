@@ -109,7 +109,7 @@ public class PaymentDirection1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentDirection1Choice, PaymentDirectionIndicator> mmIndicator = new MMMessageAttribute<PaymentDirection1Choice, PaymentDirectionIndicator>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmPaymentDirectionIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentDirection1Choice.mmObject();
@@ -121,6 +121,16 @@ public class PaymentDirection1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PaymentDirectionIndicator.mmObject();
+		}
+
+		@Override
+		public PaymentDirectionIndicator getValue(PaymentDirection1Choice obj) {
+			return obj.getIndicator();
+		}
+
+		@Override
+		public void setValue(PaymentDirection1Choice obj, PaymentDirectionIndicator value) {
+			obj.setIndicator(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -160,7 +170,7 @@ public class PaymentDirection1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentDirection1Choice, GenericIdentification13> mmProprietary = new MMMessageAttribute<PaymentDirection1Choice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmPaymentDirectionIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentDirection1Choice.mmObject();
@@ -172,6 +182,16 @@ public class PaymentDirection1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(PaymentDirection1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(PaymentDirection1Choice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

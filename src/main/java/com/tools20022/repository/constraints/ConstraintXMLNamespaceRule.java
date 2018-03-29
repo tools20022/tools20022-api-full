@@ -48,11 +48,15 @@ public class ConstraintXMLNamespaceRule {
 	 */
 	public static final MMConstraint<QualifiedDocumentInformation1> forQualifiedDocumentInformation1 = new MMConstraint<QualifiedDocumentInformation1>() {
 		{
-			validator = ConstraintXMLNamespaceRule::checkQualifiedDocumentInformation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "XMLNamespaceRule";
 			definition = "Documents in XML format MUST contain a known name space.";
 			owner_lazy = () -> QualifiedDocumentInformation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QualifiedDocumentInformation1 obj) throws Exception {
+			checkQualifiedDocumentInformation1(obj);
 		}
 	};
 

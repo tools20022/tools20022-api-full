@@ -114,7 +114,7 @@ public class ClearingBrokerIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSideIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClearingBrokerIdentification1, SideIndicator1Code> mmSideIndicator = new MMMessageAttribute<ClearingBrokerIdentification1, SideIndicator1Code>() {
 		{
 			businessElementTrace_lazy = () -> ClearingBrokerIdentification.mmSideIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ClearingBrokerIdentification1.mmObject();
@@ -126,6 +126,16 @@ public class ClearingBrokerIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SideIndicator1Code.mmObject();
+		}
+
+		@Override
+		public SideIndicator1Code getValue(ClearingBrokerIdentification1 obj) {
+			return obj.getSideIndicator();
+		}
+
+		@Override
+		public void setValue(ClearingBrokerIdentification1 obj, SideIndicator1Code value) {
+			obj.setSideIndicator(value);
 		}
 	};
 	@XmlElement(name = "ClrBrkrId", required = true)
@@ -163,7 +173,7 @@ public class ClearingBrokerIdentification1 {
 	 * "Specifies the identification assigned to the clearing broker."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClearingBrokerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClearingBrokerIdentification1, Max35Text> mmClearingBrokerIdentification = new MMMessageAttribute<ClearingBrokerIdentification1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> ClearingBrokerIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ClearingBrokerIdentification1.mmObject();
@@ -175,6 +185,16 @@ public class ClearingBrokerIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ClearingBrokerIdentification1 obj) {
+			return obj.getClearingBrokerIdentification();
+		}
+
+		@Override
+		public void setValue(ClearingBrokerIdentification1 obj, Max35Text value) {
+			obj.setClearingBrokerIdentification(value);
 		}
 	};
 

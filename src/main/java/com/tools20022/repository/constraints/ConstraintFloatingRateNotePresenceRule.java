@@ -67,13 +67,17 @@ public class ConstraintFloatingRateNotePresenceRule {
 	 */
 	public static final MMConstraint<UnsecuredMarketTransaction1> forUnsecuredMarketTransaction1 = new MMConstraint<UnsecuredMarketTransaction1>() {
 		{
-			validator = ConstraintFloatingRateNotePresenceRule::checkUnsecuredMarketTransaction1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FloatingRateNotePresenceRule";
 			definition = "When InstrumentType is equal to FloatingRateNote (FRNT) then FloatingRateNote must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFloatingRateNotePresenceRule.forUnsecuredMarketTransaction2);
 			owner_lazy = () -> UnsecuredMarketTransaction1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/FloatingRateNote</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/InstrumentType</leftOperand><rightOperand>FloatingRateNote</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(UnsecuredMarketTransaction1 obj) throws Exception {
+			checkUnsecuredMarketTransaction1(obj);
 		}
 	};
 	/**
@@ -116,7 +120,6 @@ public class ConstraintFloatingRateNotePresenceRule {
 	 */
 	public static final MMConstraint<UnsecuredMarketTransaction2> forUnsecuredMarketTransaction2 = new MMConstraint<UnsecuredMarketTransaction2>() {
 		{
-			validator = ConstraintFloatingRateNotePresenceRule::checkUnsecuredMarketTransaction2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FloatingRateNotePresenceRule";
 			definition = "When InstrumentType is equal to FloatingRateNote (FRNT) then FloatingRateNote must be present.";
@@ -124,6 +127,11 @@ public class ConstraintFloatingRateNotePresenceRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFloatingRateNotePresenceRule.forUnsecuredMarketTransaction1;
 			owner_lazy = () -> UnsecuredMarketTransaction2.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/FloatingRateNote</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/InstrumentType</leftOperand><rightOperand>FloatingRateNote</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(UnsecuredMarketTransaction2 obj) throws Exception {
+			checkUnsecuredMarketTransaction2(obj);
 		}
 	};
 	/**
@@ -166,7 +174,6 @@ public class ConstraintFloatingRateNotePresenceRule {
 	 */
 	public static final MMConstraint<UnsecuredMarketTransaction3> forUnsecuredMarketTransaction3 = new MMConstraint<UnsecuredMarketTransaction3>() {
 		{
-			validator = ConstraintFloatingRateNotePresenceRule::checkUnsecuredMarketTransaction3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FloatingRateNotePresenceRule";
 			definition = "When InstrumentType is equal to FloatingRateNote (FRNT) then FloatingRateNote must be present.";
@@ -174,6 +181,11 @@ public class ConstraintFloatingRateNotePresenceRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFloatingRateNotePresenceRule.forUnsecuredMarketTransaction2;
 			owner_lazy = () -> UnsecuredMarketTransaction3.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/FloatingRateNote</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/InstrumentType</leftOperand><rightOperand>FloatingRateNote</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(UnsecuredMarketTransaction3 obj) throws Exception {
+			checkUnsecuredMarketTransaction3(obj);
 		}
 	};
 	/**
@@ -208,13 +220,17 @@ public class ConstraintFloatingRateNotePresenceRule {
 	 */
 	public static final MMConstraint<UnsecuredMarketTransaction4> forUnsecuredMarketTransaction4 = new MMConstraint<UnsecuredMarketTransaction4>() {
 		{
-			validator = ConstraintFloatingRateNotePresenceRule::checkUnsecuredMarketTransaction4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FloatingRateNotePresenceRule";
 			definition = "When InstrumentType is equal to FloatingRateNote (FRNT) then FloatingRateNote must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFloatingRateNotePresenceRule.forUnsecuredMarketTransaction3;
 			owner_lazy = () -> UnsecuredMarketTransaction4.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/FloatingRateNote</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/InstrumentType</leftOperand><rightOperand>FloatingRateNote</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(UnsecuredMarketTransaction4 obj) throws Exception {
+			checkUnsecuredMarketTransaction4(obj);
 		}
 	};
 

@@ -102,7 +102,7 @@ public class UTMCoordinates1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUTMZone = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UTMCoordinates1, Max16Text> mmUTMZone = new MMMessageAttribute<UTMCoordinates1, Max16Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UTMCoordinates1.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class UTMCoordinates1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
+		}
+
+		@Override
+		public Max16Text getValue(UTMCoordinates1 obj) {
+			return obj.getUTMZone();
+		}
+
+		@Override
+		public void setValue(UTMCoordinates1 obj, Max16Text value) {
+			obj.setUTMZone(value);
 		}
 	};
 	@XmlElement(name = "UTMEstwrd", required = true)
@@ -146,7 +156,7 @@ public class UTMCoordinates1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUTMEastward = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UTMCoordinates1, Number> mmUTMEastward = new MMMessageAttribute<UTMCoordinates1, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UTMCoordinates1.mmObject();
 			isDerived = false;
@@ -157,6 +167,16 @@ public class UTMCoordinates1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(UTMCoordinates1 obj) {
+			return obj.getUTMEastward();
+		}
+
+		@Override
+		public void setValue(UTMCoordinates1 obj, Number value) {
+			obj.setUTMEastward(value);
 		}
 	};
 	@XmlElement(name = "UTMNrthwrd", required = true)
@@ -190,7 +210,7 @@ public class UTMCoordinates1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUTMNorthward = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UTMCoordinates1, Number> mmUTMNorthward = new MMMessageAttribute<UTMCoordinates1, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UTMCoordinates1.mmObject();
 			isDerived = false;
@@ -201,6 +221,16 @@ public class UTMCoordinates1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(UTMCoordinates1 obj) {
+			return obj.getUTMNorthward();
+		}
+
+		@Override
+		public void setValue(UTMCoordinates1 obj, Number value) {
+			obj.setUTMNorthward(value);
 		}
 	};
 

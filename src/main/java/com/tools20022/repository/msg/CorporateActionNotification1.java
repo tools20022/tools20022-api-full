@@ -129,7 +129,7 @@ public class CorporateActionNotification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAnnouncementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotification1, Optional<DateFormat4Choice>> mmAnnouncementDate = new MMMessageAttribute<CorporateActionNotification1, Optional<DateFormat4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmAnnouncementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotification1.mmObject();
@@ -141,6 +141,16 @@ public class CorporateActionNotification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat4Choice> getValue(CorporateActionNotification1 obj) {
+			return obj.getAnnouncementDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotification1 obj, Optional<DateFormat4Choice> value) {
+			obj.setAnnouncementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FrthrDtldAnncmntDt")
@@ -180,7 +190,7 @@ public class CorporateActionNotification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFurtherDetailedAnnouncementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotification1, Optional<DateFormat4Choice>> mmFurtherDetailedAnnouncementDate = new MMMessageAttribute<CorporateActionNotification1, Optional<DateFormat4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmFurtherDetailsAnnouncementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotification1.mmObject();
@@ -192,6 +202,16 @@ public class CorporateActionNotification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat4Choice> getValue(CorporateActionNotification1 obj) {
+			return obj.getFurtherDetailedAnnouncementDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotification1 obj, Optional<DateFormat4Choice> value) {
+			obj.setFurtherDetailedAnnouncementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OffclAnncmntPblctnDt")
@@ -231,7 +251,7 @@ public class CorporateActionNotification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOfficialAnnouncementPublicationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotification1, Optional<DateFormat4Choice>> mmOfficialAnnouncementPublicationDate = new MMMessageAttribute<CorporateActionNotification1, Optional<DateFormat4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmOfficialAnnouncementPublicationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotification1.mmObject();
@@ -243,6 +263,16 @@ public class CorporateActionNotification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat4Choice> getValue(CorporateActionNotification1 obj) {
+			return obj.getOfficialAnnouncementPublicationDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotification1 obj, Optional<DateFormat4Choice> value) {
+			obj.setOfficialAnnouncementPublicationDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcgSts", required = true)
@@ -280,7 +310,7 @@ public class CorporateActionNotification1 {
 	 * definition} = "Specifies the status of the details of the event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessingStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotification1, ProcessingStatus1FormatChoice> mmProcessingStatus = new MMMessageAttribute<CorporateActionNotification1, ProcessingStatus1FormatChoice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmCorporateActionStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotification1.mmObject();
@@ -292,6 +322,16 @@ public class CorporateActionNotification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ProcessingStatus1FormatChoice.mmObject();
+		}
+
+		@Override
+		public ProcessingStatus1FormatChoice getValue(CorporateActionNotification1 obj) {
+			return obj.getProcessingStatus();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotification1 obj, ProcessingStatus1FormatChoice value) {
+			obj.setProcessingStatus(value);
 		}
 	};
 

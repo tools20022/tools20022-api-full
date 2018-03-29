@@ -115,7 +115,7 @@ public class ReservationOrError7Choice {
 	 * ReservationOrError5Choice.mmReservation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReservation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReservationOrError7Choice, Reservation3> mmReservation = new MMMessageAssociationEnd<ReservationOrError7Choice, Reservation3>() {
 		{
 			businessComponentTrace_lazy = () -> Reservation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReservationOrError7Choice.mmObject();
@@ -129,6 +129,16 @@ public class ReservationOrError7Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Reservation3.mmObject();
+		}
+
+		@Override
+		public Reservation3 getValue(ReservationOrError7Choice obj) {
+			return obj.getReservation();
+		}
+
+		@Override
+		public void setValue(ReservationOrError7Choice obj, Reservation3 value) {
+			obj.setReservation(value);
 		}
 	};
 	@XmlElement(name = "BizErr", required = true)
@@ -164,7 +174,7 @@ public class ReservationOrError7Choice {
 	 * ReservationOrError5Choice.mmBusinessError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReservationOrError7Choice, List<ErrorHandling4>> mmBusinessError = new MMMessageAssociationEnd<ReservationOrError7Choice, List<ErrorHandling4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReservationOrError7Choice.mmObject();
 			isDerived = false;
@@ -176,6 +186,16 @@ public class ReservationOrError7Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling4.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling4> getValue(ReservationOrError7Choice obj) {
+			return obj.getBusinessError();
+		}
+
+		@Override
+		public void setValue(ReservationOrError7Choice obj, List<ErrorHandling4> value) {
+			obj.setBusinessError(value);
 		}
 	};
 

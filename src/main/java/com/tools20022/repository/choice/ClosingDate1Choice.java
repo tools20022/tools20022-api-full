@@ -20,6 +20,8 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.Date2Choice;
+import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.entity.SecuritiesFinancing;
 import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
@@ -106,7 +108,7 @@ public class ClosingDate1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClosingDate1Choice, DateAndDateTimeChoice> mmDate = new MMMessageAttribute<ClosingDate1Choice, DateAndDateTimeChoice>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmEndDate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClosingDate1Choice.mmObject();
@@ -117,7 +119,17 @@ public class ClosingDate1Choice {
 			definition = "Closing date is defined as a choice between a date or a date and time format.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
+			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(ClosingDate1Choice obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(ClosingDate1Choice obj, DateAndDateTimeChoice value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "Cd", required = true)
@@ -155,7 +167,7 @@ public class ClosingDate1Choice {
 	 * "Closing date is defined using a code or data source scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClosingDate1Choice, Date2Choice> mmCode = new MMMessageAttribute<ClosingDate1Choice, Date2Choice>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmEndDate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClosingDate1Choice.mmObject();
@@ -166,7 +178,17 @@ public class ClosingDate1Choice {
 			definition = "Closing date is defined using a code or data source scheme.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.Date2Choice.mmObject();
+			complexType_lazy = () -> Date2Choice.mmObject();
+		}
+
+		@Override
+		public Date2Choice getValue(ClosingDate1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ClosingDate1Choice obj, Date2Choice value) {
+			obj.setCode(value);
 		}
 	};
 
@@ -188,7 +210,7 @@ public class ClosingDate1Choice {
 		return date;
 	}
 
-	public ClosingDate1Choice setDate(com.tools20022.repository.choice.DateAndDateTimeChoice date) {
+	public ClosingDate1Choice setDate(DateAndDateTimeChoice date) {
 		this.date = Objects.requireNonNull(date);
 		return this;
 	}
@@ -197,7 +219,7 @@ public class ClosingDate1Choice {
 		return code;
 	}
 
-	public ClosingDate1Choice setCode(com.tools20022.repository.choice.Date2Choice code) {
+	public ClosingDate1Choice setCode(Date2Choice code) {
 		this.code = Objects.requireNonNull(code);
 		return this;
 	}

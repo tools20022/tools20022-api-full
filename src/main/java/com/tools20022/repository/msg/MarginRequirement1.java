@@ -112,7 +112,7 @@ public class MarginRequirement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeliverMarginAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarginRequirement1, Optional<ActiveCurrencyAndAmount>> mmDeliverMarginAmount = new MMMessageAttribute<MarginRequirement1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> MarginAmountRequirement.mmDeliverMarginAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarginRequirement1.mmObject();
@@ -124,6 +124,16 @@ public class MarginRequirement1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(MarginRequirement1 obj) {
+			return obj.getDeliverMarginAmount();
+		}
+
+		@Override
+		public void setValue(MarginRequirement1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setDeliverMarginAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RtrMrgnAmt")
@@ -163,7 +173,7 @@ public class MarginRequirement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReturnMarginAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarginRequirement1, Optional<ActiveCurrencyAndAmount>> mmReturnMarginAmount = new MMMessageAttribute<MarginRequirement1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> MarginAmountRequirement.mmReturnMarginAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarginRequirement1.mmObject();
@@ -175,6 +185,16 @@ public class MarginRequirement1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(MarginRequirement1 obj) {
+			return obj.getReturnMarginAmount();
+		}
+
+		@Override
+		public void setValue(MarginRequirement1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setReturnMarginAmount(value.orElse(null));
 		}
 	};
 

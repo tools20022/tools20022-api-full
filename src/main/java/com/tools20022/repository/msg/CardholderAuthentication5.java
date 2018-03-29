@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max40Text;
 import com.tools20022.repository.entity.Authentication;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.OnLinePIN3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -144,7 +145,7 @@ public class CardholderAuthentication5 {
 	 * CardholderAuthentication3.mmAuthenticationMethod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAuthenticationMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardholderAuthentication5, AuthenticationMethod2Code> mmAuthenticationMethod = new MMMessageAttribute<CardholderAuthentication5, AuthenticationMethod2Code>() {
 		{
 			businessElementTrace_lazy = () -> Authentication.mmAuthenticationMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardholderAuthentication5.mmObject();
@@ -158,6 +159,16 @@ public class CardholderAuthentication5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AuthenticationMethod2Code.mmObject();
+		}
+
+		@Override
+		public AuthenticationMethod2Code getValue(CardholderAuthentication5 obj) {
+			return obj.getAuthenticationMethod();
+		}
+
+		@Override
+		public void setValue(CardholderAuthentication5 obj, AuthenticationMethod2Code value) {
+			obj.setAuthenticationMethod(value);
 		}
 	};
 	@XmlElement(name = "AuthntcnNtty")
@@ -201,7 +212,7 @@ public class CardholderAuthentication5 {
 	 * CardholderAuthentication3.mmAuthenticationEntity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAuthenticationEntity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardholderAuthentication5, Optional<AuthenticationEntity1Code>> mmAuthenticationEntity = new MMMessageAttribute<CardholderAuthentication5, Optional<AuthenticationEntity1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Authentication.mmAuthenticationEntity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardholderAuthentication5.mmObject();
@@ -214,6 +225,16 @@ public class CardholderAuthentication5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AuthenticationEntity1Code.mmObject();
+		}
+
+		@Override
+		public Optional<AuthenticationEntity1Code> getValue(CardholderAuthentication5 obj) {
+			return obj.getAuthenticationEntity();
+		}
+
+		@Override
+		public void setValue(CardholderAuthentication5 obj, Optional<AuthenticationEntity1Code> value) {
+			obj.setAuthenticationEntity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AuthntcnVal")
@@ -263,7 +284,7 @@ public class CardholderAuthentication5 {
 	 * CardholderAuthentication3.mmAuthenticationValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAuthenticationValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardholderAuthentication5, Optional<Max40Text>> mmAuthenticationValue = new MMMessageAttribute<CardholderAuthentication5, Optional<Max40Text>>() {
 		{
 			businessElementTrace_lazy = () -> Authentication.mmAuthenticationValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardholderAuthentication5.mmObject();
@@ -277,6 +298,16 @@ public class CardholderAuthentication5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max40Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max40Text> getValue(CardholderAuthentication5 obj) {
+			return obj.getAuthenticationValue();
+		}
+
+		@Override
+		public void setValue(CardholderAuthentication5 obj, Optional<Max40Text> value) {
+			obj.setAuthenticationValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CrdhldrOnLinePIN")
@@ -326,7 +357,7 @@ public class CardholderAuthentication5 {
 	 * CardholderAuthentication3.mmCardholderOnLinePIN}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCardholderOnLinePIN = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardholderAuthentication5, Optional<OnLinePIN3>> mmCardholderOnLinePIN = new MMMessageAssociationEnd<CardholderAuthentication5, Optional<OnLinePIN3>>() {
 		{
 			businessComponentTrace_lazy = () -> Authentication.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardholderAuthentication5.mmObject();
@@ -340,7 +371,17 @@ public class CardholderAuthentication5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OnLinePIN3.mmObject();
+			type_lazy = () -> OnLinePIN3.mmObject();
+		}
+
+		@Override
+		public Optional<OnLinePIN3> getValue(CardholderAuthentication5 obj) {
+			return obj.getCardholderOnLinePIN();
+		}
+
+		@Override
+		public void setValue(CardholderAuthentication5 obj, Optional<OnLinePIN3> value) {
+			obj.setCardholderOnLinePIN(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AuthntcnColltnInd")
@@ -379,7 +420,7 @@ public class CardholderAuthentication5 {
 	 * CardholderAuthentication3.mmAuthenticationCollectionIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAuthenticationCollectionIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardholderAuthentication5, Optional<Max35Text>> mmAuthenticationCollectionIndicator = new MMMessageAttribute<CardholderAuthentication5, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardholderAuthentication5.mmObject();
 			isDerived = false;
@@ -391,6 +432,16 @@ public class CardholderAuthentication5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CardholderAuthentication5 obj) {
+			return obj.getAuthenticationCollectionIndicator();
+		}
+
+		@Override
+		public void setValue(CardholderAuthentication5 obj, Optional<Max35Text> value) {
+			obj.setAuthenticationCollectionIndicator(value.orElse(null));
 		}
 	};
 
@@ -443,7 +494,7 @@ public class CardholderAuthentication5 {
 		return cardholderOnLinePIN == null ? Optional.empty() : Optional.of(cardholderOnLinePIN);
 	}
 
-	public CardholderAuthentication5 setCardholderOnLinePIN(com.tools20022.repository.msg.OnLinePIN3 cardholderOnLinePIN) {
+	public CardholderAuthentication5 setCardholderOnLinePIN(OnLinePIN3 cardholderOnLinePIN) {
 		this.cardholderOnLinePIN = cardholderOnLinePIN;
 		return this;
 	}

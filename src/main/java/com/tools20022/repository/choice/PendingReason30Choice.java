@@ -123,7 +123,7 @@ public class PendingReason30Choice {
 	 * PendingReason15Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingReason30Choice, PendingReason9Code> mmCode = new MMMessageAttribute<PendingReason30Choice, PendingReason9Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingReason30Choice.mmObject();
@@ -137,6 +137,16 @@ public class PendingReason30Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PendingReason9Code.mmObject();
+		}
+
+		@Override
+		public PendingReason9Code getValue(PendingReason30Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(PendingReason30Choice obj, PendingReason9Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -183,7 +193,7 @@ public class PendingReason30Choice {
 	 * PendingReason15Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingReason30Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<PendingReason30Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingReason30Choice.mmObject();
@@ -197,6 +207,16 @@ public class PendingReason30Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(PendingReason30Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(PendingReason30Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

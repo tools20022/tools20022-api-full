@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.PendingProcessingReason8Choice;
 import com.tools20022.repository.codeset.NoReasonCode;
 import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
 import com.tools20022.repository.entity.StatusReason;
@@ -111,7 +112,7 @@ public class PendingProcessingReason9Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingProcessingReason9Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<PendingProcessingReason9Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingProcessingReason9Choice.mmObject();
@@ -124,9 +125,19 @@ public class PendingProcessingReason9Choice {
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
 		}
+
+		@Override
+		public NoReasonCode getValue(PendingProcessingReason9Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(PendingProcessingReason9Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
+		}
 	};
 	@XmlElement(name = "Rsn", required = true)
-	protected List<com.tools20022.repository.choice.PendingProcessingReason8Choice> reason;
+	protected List<PendingProcessingReason8Choice> reason;
 	/**
 	 * 
 	 <p>
@@ -159,7 +170,7 @@ public class PendingProcessingReason9Choice {
 	 * definition} = "Reason for the pending status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PendingProcessingReason9Choice, List<PendingProcessingReason8Choice>> mmReason = new MMMessageAssociationEnd<PendingProcessingReason9Choice, List<PendingProcessingReason8Choice>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingProcessingReason9Choice.mmObject();
@@ -170,7 +181,17 @@ public class PendingProcessingReason9Choice {
 			definition = "Reason for the pending status.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.PendingProcessingReason8Choice.mmObject();
+			type_lazy = () -> PendingProcessingReason8Choice.mmObject();
+		}
+
+		@Override
+		public List<PendingProcessingReason8Choice> getValue(PendingProcessingReason9Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(PendingProcessingReason9Choice obj, List<PendingProcessingReason8Choice> value) {
+			obj.setReason(value);
 		}
 	};
 
@@ -201,7 +222,7 @@ public class PendingProcessingReason9Choice {
 		return reason == null ? reason = new ArrayList<>() : reason;
 	}
 
-	public PendingProcessingReason9Choice setReason(List<com.tools20022.repository.choice.PendingProcessingReason8Choice> reason) {
+	public PendingProcessingReason9Choice setReason(List<PendingProcessingReason8Choice> reason) {
 		this.reason = Objects.requireNonNull(reason);
 		return this;
 	}

@@ -125,7 +125,7 @@ public class AcknowledgedAcceptedStatus3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcknowledgedAcceptedStatus3Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<AcknowledgedAcceptedStatus3Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AcknowledgedAcceptedStatus3Choice.mmObject();
@@ -138,6 +138,16 @@ public class AcknowledgedAcceptedStatus3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(AcknowledgedAcceptedStatus3Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(AcknowledgedAcceptedStatus3Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn")
@@ -176,7 +186,7 @@ public class AcknowledgedAcceptedStatus3Choice {
 	 * definition} = "Specifies the reason of the AcknowledgedAcceptedStatus."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcknowledgedAcceptedStatus3Choice, List<AcknowledgementReason3>> mmReason = new MMMessageAssociationEnd<AcknowledgedAcceptedStatus3Choice, List<AcknowledgementReason3>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AcknowledgedAcceptedStatus3Choice.mmObject();
@@ -189,6 +199,16 @@ public class AcknowledgedAcceptedStatus3Choice {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AcknowledgementReason3.mmObject();
+		}
+
+		@Override
+		public List<AcknowledgementReason3> getValue(AcknowledgedAcceptedStatus3Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(AcknowledgedAcceptedStatus3Choice obj, List<AcknowledgementReason3> value) {
+			obj.setReason(value);
 		}
 	};
 

@@ -26,6 +26,8 @@ import com.tools20022.repository.choice.PlaceOfTradeIdentification3Choice;
 import com.tools20022.repository.datatype.RestrictedFINMax16Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.InvestmentAccount33;
+import com.tools20022.repository.msg.RedemptionOrder11;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -123,7 +125,7 @@ public class RedemptionMultipleOrder5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RedemptionMultipleOrder5, Optional<RestrictedFINMax16Text>> mmMasterReference = new MMMessageAttribute<RedemptionMultipleOrder5, Optional<RestrictedFINMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleOrder5.mmObject();
@@ -135,6 +137,16 @@ public class RedemptionMultipleOrder5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINMax16Text> getValue(RedemptionMultipleOrder5 obj) {
+			return obj.getMasterReference();
+		}
+
+		@Override
+		public void setValue(RedemptionMultipleOrder5 obj, Optional<RestrictedFINMax16Text> value) {
+			obj.setMasterReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PlcOfTrad")
@@ -173,7 +185,7 @@ public class RedemptionMultipleOrder5 {
 	 * "Market in which the advised trade transaction was executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceOfTrade = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RedemptionMultipleOrder5, Optional<PlaceOfTradeIdentification3Choice>> mmPlaceOfTrade = new MMMessageAttribute<RedemptionMultipleOrder5, Optional<PlaceOfTradeIdentification3Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> TradingMarket.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleOrder5.mmObject();
@@ -185,6 +197,16 @@ public class RedemptionMultipleOrder5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PlaceOfTradeIdentification3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PlaceOfTradeIdentification3Choice> getValue(RedemptionMultipleOrder5 obj) {
+			return obj.getPlaceOfTrade();
+		}
+
+		@Override
+		public void setValue(RedemptionMultipleOrder5 obj, Optional<PlaceOfTradeIdentification3Choice> value) {
+			obj.setPlaceOfTrade(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XpryDtTm")
@@ -222,7 +244,7 @@ public class RedemptionMultipleOrder5 {
 	 * definition} = "Date on which the order expires."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpiryDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RedemptionMultipleOrder5, Optional<DateAndDateTimeChoice>> mmExpiryDateTime = new MMMessageAttribute<RedemptionMultipleOrder5, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmExpiryDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleOrder5.mmObject();
@@ -234,6 +256,16 @@ public class RedemptionMultipleOrder5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(RedemptionMultipleOrder5 obj) {
+			return obj.getExpiryDateTime();
+		}
+
+		@Override
+		public void setValue(RedemptionMultipleOrder5 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setExpiryDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InvstmtAcctDtls", required = true)
@@ -270,7 +302,7 @@ public class RedemptionMultipleOrder5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RedemptionMultipleOrder5, InvestmentAccount33> mmInvestmentAccountDetails = new MMMessageAssociationEnd<RedemptionMultipleOrder5, InvestmentAccount33>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleOrder5.mmObject();
@@ -282,7 +314,17 @@ public class RedemptionMultipleOrder5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount33.mmObject();
+			type_lazy = () -> InvestmentAccount33.mmObject();
+		}
+
+		@Override
+		public InvestmentAccount33 getValue(RedemptionMultipleOrder5 obj) {
+			return obj.getInvestmentAccountDetails();
+		}
+
+		@Override
+		public void setValue(RedemptionMultipleOrder5 obj, InvestmentAccount33 value) {
+			obj.setInvestmentAccountDetails(value);
 		}
 	};
 	@XmlElement(name = "IndvOrdrDtls", required = true)
@@ -320,7 +362,7 @@ public class RedemptionMultipleOrder5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIndividualOrderDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RedemptionMultipleOrder5, RedemptionOrder11> mmIndividualOrderDetails = new MMMessageAssociationEnd<RedemptionMultipleOrder5, RedemptionOrder11>() {
 		{
 			businessComponentTrace_lazy = () -> RedemptionOrder.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleOrder5.mmObject();
@@ -332,7 +374,17 @@ public class RedemptionMultipleOrder5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RedemptionOrder11.mmObject();
+			type_lazy = () -> RedemptionOrder11.mmObject();
+		}
+
+		@Override
+		public RedemptionOrder11 getValue(RedemptionMultipleOrder5 obj) {
+			return obj.getIndividualOrderDetails();
+		}
+
+		@Override
+		public void setValue(RedemptionMultipleOrder5 obj, RedemptionOrder11 value) {
+			obj.setIndividualOrderDetails(value);
 		}
 	};
 
@@ -383,7 +435,7 @@ public class RedemptionMultipleOrder5 {
 		return investmentAccountDetails;
 	}
 
-	public RedemptionMultipleOrder5 setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount33 investmentAccountDetails) {
+	public RedemptionMultipleOrder5 setInvestmentAccountDetails(InvestmentAccount33 investmentAccountDetails) {
 		this.investmentAccountDetails = Objects.requireNonNull(investmentAccountDetails);
 		return this;
 	}
@@ -392,7 +444,7 @@ public class RedemptionMultipleOrder5 {
 		return individualOrderDetails;
 	}
 
-	public RedemptionMultipleOrder5 setIndividualOrderDetails(com.tools20022.repository.msg.RedemptionOrder11 individualOrderDetails) {
+	public RedemptionMultipleOrder5 setIndividualOrderDetails(RedemptionOrder11 individualOrderDetails) {
 		this.individualOrderDetails = Objects.requireNonNull(individualOrderDetails);
 		return this;
 	}

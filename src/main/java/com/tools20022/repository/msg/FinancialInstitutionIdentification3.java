@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.PartyName;
 import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification3;
+import com.tools20022.repository.msg.PostalAddress1;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -131,7 +133,7 @@ public class FinancialInstitutionIdentification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstitutionIdentification3, Optional<BICIdentifier>> mmBIC = new MMMessageAttribute<FinancialInstitutionIdentification3, Optional<BICIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification3.mmObject();
@@ -143,6 +145,16 @@ public class FinancialInstitutionIdentification3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<BICIdentifier> getValue(FinancialInstitutionIdentification3 obj) {
+			return obj.getBIC();
+		}
+
+		@Override
+		public void setValue(FinancialInstitutionIdentification3 obj, Optional<BICIdentifier> value) {
+			obj.setBIC(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClrSysMmbId")
@@ -182,7 +194,7 @@ public class FinancialInstitutionIdentification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClearingSystemMemberIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstitutionIdentification3, Optional<ClearingSystemMemberIdentification3Choice>> mmClearingSystemMemberIdentification = new MMMessageAttribute<FinancialInstitutionIdentification3, Optional<ClearingSystemMemberIdentification3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmClearingSystemMemberIdentificationType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification3.mmObject();
@@ -194,6 +206,16 @@ public class FinancialInstitutionIdentification3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ClearingSystemMemberIdentification3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ClearingSystemMemberIdentification3Choice> getValue(FinancialInstitutionIdentification3 obj) {
+			return obj.getClearingSystemMemberIdentification();
+		}
+
+		@Override
+		public void setValue(FinancialInstitutionIdentification3 obj, Optional<ClearingSystemMemberIdentification3Choice> value) {
+			obj.setClearingSystemMemberIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Nm")
@@ -232,7 +254,7 @@ public class FinancialInstitutionIdentification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstitutionIdentification3, Optional<Max70Text>> mmName = new MMMessageAttribute<FinancialInstitutionIdentification3, Optional<Max70Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification3.mmObject();
@@ -244,6 +266,16 @@ public class FinancialInstitutionIdentification3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(FinancialInstitutionIdentification3 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(FinancialInstitutionIdentification3 obj, Optional<Max70Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PstlAdr")
@@ -281,7 +313,7 @@ public class FinancialInstitutionIdentification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPostalAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstitutionIdentification3, Optional<PostalAddress1>> mmPostalAddress = new MMMessageAssociationEnd<FinancialInstitutionIdentification3, Optional<PostalAddress1>>() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification3.mmObject();
@@ -293,7 +325,17 @@ public class FinancialInstitutionIdentification3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PostalAddress1.mmObject();
+			type_lazy = () -> PostalAddress1.mmObject();
+		}
+
+		@Override
+		public Optional<PostalAddress1> getValue(FinancialInstitutionIdentification3 obj) {
+			return obj.getPostalAddress();
+		}
+
+		@Override
+		public void setValue(FinancialInstitutionIdentification3 obj, Optional<PostalAddress1> value) {
+			obj.setPostalAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrtryId")
@@ -331,7 +373,7 @@ public class FinancialInstitutionIdentification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietaryIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstitutionIdentification3, Optional<GenericIdentification3>> mmProprietaryIdentification = new MMMessageAssociationEnd<FinancialInstitutionIdentification3, Optional<GenericIdentification3>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification3.mmObject();
@@ -343,7 +385,17 @@ public class FinancialInstitutionIdentification3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification3.mmObject();
+			type_lazy = () -> GenericIdentification3.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification3> getValue(FinancialInstitutionIdentification3 obj) {
+			return obj.getProprietaryIdentification();
+		}
+
+		@Override
+		public void setValue(FinancialInstitutionIdentification3 obj, Optional<GenericIdentification3> value) {
+			obj.setProprietaryIdentification(value.orElse(null));
 		}
 	};
 
@@ -401,7 +453,7 @@ public class FinancialInstitutionIdentification3 {
 		return postalAddress == null ? Optional.empty() : Optional.of(postalAddress);
 	}
 
-	public FinancialInstitutionIdentification3 setPostalAddress(com.tools20022.repository.msg.PostalAddress1 postalAddress) {
+	public FinancialInstitutionIdentification3 setPostalAddress(PostalAddress1 postalAddress) {
 		this.postalAddress = postalAddress;
 		return this;
 	}
@@ -410,7 +462,7 @@ public class FinancialInstitutionIdentification3 {
 		return proprietaryIdentification == null ? Optional.empty() : Optional.of(proprietaryIdentification);
 	}
 
-	public FinancialInstitutionIdentification3 setProprietaryIdentification(com.tools20022.repository.msg.GenericIdentification3 proprietaryIdentification) {
+	public FinancialInstitutionIdentification3 setProprietaryIdentification(GenericIdentification3 proprietaryIdentification) {
 		this.proprietaryIdentification = proprietaryIdentification;
 		return this;
 	}

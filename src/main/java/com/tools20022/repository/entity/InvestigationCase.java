@@ -21,15 +21,15 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.ClaimNonReceipt1Choice;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
  * Set of activities performed to handle an exception to a normal transaction
- * flow.
+ * flow..
  * <p>
  * <strong>Class diagram</strong>
  * <p>
@@ -139,7 +139,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * "InvestigationCase"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Set of activities performed to handle an exception to a normal transaction flow."
+ * "Set of activities performed to handle an exception to a normal transaction flow.."
  * </li>
  * </ul>
  */
@@ -189,11 +189,11 @@ public class InvestigationCase {
 	 * definition} = "Uniquely identifies the case assignment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmAssignmentIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<InvestigationCase, Max35Text> mmAssignmentIdentification = new MMBusinessAttribute<InvestigationCase, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CaseAssignment.mmIdentification, CaseAssignment2.mmIdentification, CaseAssignment3.mmIdentification, CaseAssignment4.mmIdentification);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmObject();
+			elementContext_lazy = () -> InvestigationCase.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AssignmentIdentification";
 			definition = "Uniquely identifies the case assignment.";
@@ -202,12 +202,14 @@ public class InvestigationCase {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InvestigationCase.class.getMethod("getAssignmentIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(InvestigationCase obj) {
+			return obj.getAssignmentIdentification();
+		}
+
+		@Override
+		public void setValue(InvestigationCase obj, Max35Text value) {
+			obj.setAssignmentIdentification(value);
 		}
 	};
 	protected ISODateTime creationDateTime;
@@ -253,11 +255,11 @@ public class InvestigationCase {
 	 * definition} = "Creation date and time of the case."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCreationDateTime = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<InvestigationCase, ISODateTime> mmCreationDateTime = new MMBusinessAttribute<InvestigationCase, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CaseAssignment.mmCreationDateTime, CaseAssignment2.mmCreationDateTime, CaseAssignment3.mmCreationDateTime, CaseAssignment4.mmCreationDateTime);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmObject();
+			elementContext_lazy = () -> InvestigationCase.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreationDateTime";
 			definition = "Creation date and time of the case.";
@@ -266,12 +268,14 @@ public class InvestigationCase {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InvestigationCase.class.getMethod("getCreationDateTime", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(InvestigationCase obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(InvestigationCase obj, ISODateTime value) {
+			obj.setCreationDateTime(value);
 		}
 	};
 	protected Max35Text identification;
@@ -313,11 +317,11 @@ public class InvestigationCase {
 	 * definition} = "Uniquely identifies the case."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<InvestigationCase, Max35Text> mmIdentification = new MMBusinessAttribute<InvestigationCase, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Case.mmIdentification, Case2.mmIdentification, Case3.mmIdentification, Case4.mmIdentification);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmObject();
+			elementContext_lazy = () -> InvestigationCase.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Uniquely identifies the case.";
@@ -326,15 +330,17 @@ public class InvestigationCase {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InvestigationCase.class.getMethod("getIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(InvestigationCase obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(InvestigationCase obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.InvestigationCaseStatus> status;
+	protected List<InvestigationCaseStatus> status;
 	/**
 	 * 
 	 <p>
@@ -448,7 +454,7 @@ public class InvestigationCase {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmStatus = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<InvestigationCase, List<InvestigationCaseStatus>> mmStatus = new MMBusinessAssociationEnd<InvestigationCase, List<InvestigationCaseStatus>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(OriginalPaymentInstruction4.mmCase, OriginalPaymentInstruction8.mmCase, OriginalGroupHeader5.mmCancellationStatusReasonInformation,
 					PaymentTransaction39.mmCancellationStatusReasonInformation, OriginalPaymentInstruction3.mmCancellationStatusReasonInformation, PaymentTransaction40.mmCancellationStatusReasonInformation,
@@ -459,17 +465,27 @@ public class InvestigationCase {
 					OriginalPaymentInstruction26.mmCancellationStatusReasonInformation, PaymentTransaction84.mmCancellationStatusReasonInformation, OriginalGroupHeader9.mmCancellationStatusReasonInformation,
 					OriginalPaymentInstruction29.mmCase);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmObject();
+			elementContext_lazy = () -> InvestigationCase.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Status";
 			definition = "Specifies the status of the case together with the reason and the date and time.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.InvestigationCaseStatus.mmInvestigationCase;
+			opposite_lazy = () -> InvestigationCaseStatus.mmInvestigationCase;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.InvestigationCaseStatus.mmObject();
+			type_lazy = () -> InvestigationCaseStatus.mmObject();
+		}
+
+		@Override
+		public List<InvestigationCaseStatus> getValue(InvestigationCase obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(InvestigationCase obj, List<InvestigationCaseStatus> value) {
+			obj.setStatus(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.InvestigationPartyRole> investigationPartyRole;
+	protected List<InvestigationPartyRole> investigationPartyRole;
 	/**
 	 * 
 	 <p>
@@ -505,17 +521,27 @@ public class InvestigationCase {
 	 * "Role played by a party in the context of an investigation process."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmInvestigationPartyRole = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<InvestigationCase, List<InvestigationPartyRole>> mmInvestigationPartyRole = new MMBusinessAssociationEnd<InvestigationCase, List<InvestigationPartyRole>>() {
 		{
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmObject();
+			elementContext_lazy = () -> InvestigationCase.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestigationPartyRole";
 			definition = "Role played by a party in the context of an investigation process.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.InvestigationPartyRole.mmInvestigationCase;
+			opposite_lazy = () -> InvestigationPartyRole.mmInvestigationCase;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.InvestigationPartyRole.mmObject();
+			type_lazy = () -> InvestigationPartyRole.mmObject();
+		}
+
+		@Override
+		public List<InvestigationPartyRole> getValue(InvestigationCase obj) {
+			return obj.getInvestigationPartyRole();
+		}
+
+		@Override
+		public void setValue(InvestigationCase obj, List<InvestigationPartyRole> value) {
+			obj.setInvestigationPartyRole(value);
 		}
 	};
 	protected DuplicateCase duplicateCaseResolution;
@@ -554,21 +580,31 @@ public class InvestigationCase {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmDuplicateCaseResolution = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<InvestigationCase, Optional<DuplicateCase>> mmDuplicateCaseResolution = new MMBusinessAssociationEnd<InvestigationCase, Optional<DuplicateCase>>() {
 		{
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmObject();
+			elementContext_lazy = () -> InvestigationCase.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DuplicateCaseResolution";
 			definition = "Solution which consists in closing the case as it is a duplicate of an original one.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.DuplicateCase.mmDuplicatedCase;
+			opposite_lazy = () -> DuplicateCase.mmDuplicatedCase;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.DuplicateCase.mmObject();
+			type_lazy = () -> DuplicateCase.mmObject();
+		}
+
+		@Override
+		public Optional<DuplicateCase> getValue(InvestigationCase obj) {
+			return obj.getDuplicateCaseResolution();
+		}
+
+		@Override
+		public void setValue(InvestigationCase obj, Optional<DuplicateCase> value) {
+			obj.setDuplicateCaseResolution(value.orElse(null));
 		}
 	};
-	protected List<com.tools20022.repository.entity.InvestigationResolution> investigationResolution;
+	protected List<InvestigationResolution> investigationResolution;
 	/**
 	 * 
 	 <p>
@@ -618,21 +654,31 @@ public class InvestigationCase {
 	 * "Specifies the actions taken as a result of an investigation."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmInvestigationResolution = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<InvestigationCase, List<InvestigationResolution>> mmInvestigationResolution = new MMBusinessAssociationEnd<InvestigationCase, List<InvestigationResolution>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CancellationStatusReason2.mmReason, CancellationStatusReason3.mmReason, ModificationStatusReason1.mmReason);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmObject();
+			elementContext_lazy = () -> InvestigationCase.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestigationResolution";
 			definition = "Specifies the actions taken as a result of an investigation.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.InvestigationResolution.mmInvestigationCase;
+			opposite_lazy = () -> InvestigationResolution.mmInvestigationCase;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.InvestigationResolution.mmObject();
+			type_lazy = () -> InvestigationResolution.mmObject();
+		}
+
+		@Override
+		public List<InvestigationResolution> getValue(InvestigationCase obj) {
+			return obj.getInvestigationResolution();
+		}
+
+		@Override
+		public void setValue(InvestigationCase obj, List<InvestigationResolution> value) {
+			obj.setInvestigationResolution(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.InvestigationCase> originalInvestigationCase;
+	protected List<InvestigationCase> originalInvestigationCase;
 	/**
 	 * 
 	 <p>
@@ -666,20 +712,30 @@ public class InvestigationCase {
 	 * definition} = "Original case to which another one is linked."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmOriginalInvestigationCase = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<InvestigationCase, List<InvestigationCase>> mmOriginalInvestigationCase = new MMBusinessAssociationEnd<InvestigationCase, List<InvestigationCase>>() {
 		{
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmObject();
+			elementContext_lazy = () -> InvestigationCase.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OriginalInvestigationCase";
 			definition = "Original case to which another one is linked.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmLinkedCase;
+			opposite_lazy = () -> InvestigationCase.mmLinkedCase;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmObject();
+			type_lazy = () -> InvestigationCase.mmObject();
+		}
+
+		@Override
+		public List<InvestigationCase> getValue(InvestigationCase obj) {
+			return obj.getOriginalInvestigationCase();
+		}
+
+		@Override
+		public void setValue(InvestigationCase obj, List<InvestigationCase> value) {
+			obj.setOriginalInvestigationCase(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.InvestigationCase> linkedCase;
+	protected List<InvestigationCase> linkedCase;
 	/**
 	 * 
 	 <p>
@@ -715,17 +771,27 @@ public class InvestigationCase {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmLinkedCase = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<InvestigationCase, List<InvestigationCase>> mmLinkedCase = new MMBusinessAssociationEnd<InvestigationCase, List<InvestigationCase>>() {
 		{
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmObject();
+			elementContext_lazy = () -> InvestigationCase.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LinkedCase";
 			definition = "Step in the resolution process of an investigation case. The assigned case is linked to the investigation case in the previous step.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmOriginalInvestigationCase;
+			opposite_lazy = () -> InvestigationCase.mmOriginalInvestigationCase;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmObject();
+			type_lazy = () -> InvestigationCase.mmObject();
+		}
+
+		@Override
+		public List<InvestigationCase> getValue(InvestigationCase obj) {
+			return obj.getLinkedCase();
+		}
+
+		@Override
+		public void setValue(InvestigationCase obj, List<InvestigationCase> value) {
+			obj.setLinkedCase(value);
 		}
 	};
 	protected Reassignment reassignment;
@@ -763,18 +829,28 @@ public class InvestigationCase {
 	 * "Action which is taken to forward the case to another party."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmReassignment = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<InvestigationCase, Optional<Reassignment>> mmReassignment = new MMBusinessAssociationEnd<InvestigationCase, Optional<Reassignment>>() {
 		{
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmObject();
+			elementContext_lazy = () -> InvestigationCase.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Reassignment";
 			definition = "Action which is taken to forward the case to another party.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Reassignment.mmReassignedCase;
+			opposite_lazy = () -> Reassignment.mmReassignedCase;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Reassignment.mmObject();
+			type_lazy = () -> Reassignment.mmObject();
+		}
+
+		@Override
+		public Optional<Reassignment> getValue(InvestigationCase obj) {
+			return obj.getReassignment();
+		}
+
+		@Override
+		public void setValue(InvestigationCase obj, Optional<Reassignment> value) {
+			obj.setReassignment(value.orElse(null));
 		}
 	};
 
@@ -784,15 +860,13 @@ public class InvestigationCase {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestigationCase";
-				definition = "Set of activities performed to handle an exception to a normal transaction flow.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestigationPartyRole.mmInvestigationCase, com.tools20022.repository.entity.InvestigationCase.mmOriginalInvestigationCase,
-						com.tools20022.repository.entity.InvestigationCase.mmLinkedCase, com.tools20022.repository.entity.InvestigationResolution.mmInvestigationCase, com.tools20022.repository.entity.Reassignment.mmReassignedCase,
-						com.tools20022.repository.entity.InvestigationCaseStatus.mmInvestigationCase, com.tools20022.repository.entity.DuplicateCase.mmDuplicatedCase);
+				definition = "Set of activities performed to handle an exception to a normal transaction flow..";
+				associationDomain_lazy = () -> Arrays.asList(InvestigationPartyRole.mmInvestigationCase, InvestigationCase.mmOriginalInvestigationCase, InvestigationCase.mmLinkedCase, InvestigationResolution.mmInvestigationCase,
+						Reassignment.mmReassignedCase, InvestigationCaseStatus.mmInvestigationCase, DuplicateCase.mmDuplicatedCase);
 				subType_lazy = () -> Arrays.asList(PaymentInvestigationCase.mmObject());
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestigationCase.mmAssignmentIdentification, com.tools20022.repository.entity.InvestigationCase.mmCreationDateTime,
-						com.tools20022.repository.entity.InvestigationCase.mmIdentification, com.tools20022.repository.entity.InvestigationCase.mmStatus, com.tools20022.repository.entity.InvestigationCase.mmInvestigationPartyRole,
-						com.tools20022.repository.entity.InvestigationCase.mmDuplicateCaseResolution, com.tools20022.repository.entity.InvestigationCase.mmInvestigationResolution,
-						com.tools20022.repository.entity.InvestigationCase.mmOriginalInvestigationCase, com.tools20022.repository.entity.InvestigationCase.mmLinkedCase, com.tools20022.repository.entity.InvestigationCase.mmReassignment);
+				element_lazy = () -> Arrays.asList(InvestigationCase.mmAssignmentIdentification, InvestigationCase.mmCreationDateTime, InvestigationCase.mmIdentification, InvestigationCase.mmStatus,
+						InvestigationCase.mmInvestigationPartyRole, InvestigationCase.mmDuplicateCaseResolution, InvestigationCase.mmInvestigationResolution, InvestigationCase.mmOriginalInvestigationCase, InvestigationCase.mmLinkedCase,
+						InvestigationCase.mmReassignment);
 				derivationComponent_lazy = () -> Arrays.asList(CaseAssignment.mmObject(), CaseAssignment2.mmObject(), Case.mmObject(), Case2.mmObject(), CaseAssignment3.mmObject(), Case3.mmObject(), ClaimNonReceipt1Choice.mmObject(),
 						ClaimNonReceipt1.mmObject(), Case4.mmObject(), CaseAssignment4.mmObject());
 			}
@@ -836,7 +910,7 @@ public class InvestigationCase {
 		return status == null ? status = new ArrayList<>() : status;
 	}
 
-	public InvestigationCase setStatus(List<com.tools20022.repository.entity.InvestigationCaseStatus> status) {
+	public InvestigationCase setStatus(List<InvestigationCaseStatus> status) {
 		this.status = Objects.requireNonNull(status);
 		return this;
 	}
@@ -845,7 +919,7 @@ public class InvestigationCase {
 		return investigationPartyRole == null ? investigationPartyRole = new ArrayList<>() : investigationPartyRole;
 	}
 
-	public InvestigationCase setInvestigationPartyRole(List<com.tools20022.repository.entity.InvestigationPartyRole> investigationPartyRole) {
+	public InvestigationCase setInvestigationPartyRole(List<InvestigationPartyRole> investigationPartyRole) {
 		this.investigationPartyRole = Objects.requireNonNull(investigationPartyRole);
 		return this;
 	}
@@ -854,7 +928,7 @@ public class InvestigationCase {
 		return duplicateCaseResolution == null ? Optional.empty() : Optional.of(duplicateCaseResolution);
 	}
 
-	public InvestigationCase setDuplicateCaseResolution(com.tools20022.repository.entity.DuplicateCase duplicateCaseResolution) {
+	public InvestigationCase setDuplicateCaseResolution(DuplicateCase duplicateCaseResolution) {
 		this.duplicateCaseResolution = duplicateCaseResolution;
 		return this;
 	}
@@ -863,7 +937,7 @@ public class InvestigationCase {
 		return investigationResolution == null ? investigationResolution = new ArrayList<>() : investigationResolution;
 	}
 
-	public InvestigationCase setInvestigationResolution(List<com.tools20022.repository.entity.InvestigationResolution> investigationResolution) {
+	public InvestigationCase setInvestigationResolution(List<InvestigationResolution> investigationResolution) {
 		this.investigationResolution = Objects.requireNonNull(investigationResolution);
 		return this;
 	}
@@ -872,7 +946,7 @@ public class InvestigationCase {
 		return originalInvestigationCase == null ? originalInvestigationCase = new ArrayList<>() : originalInvestigationCase;
 	}
 
-	public InvestigationCase setOriginalInvestigationCase(List<com.tools20022.repository.entity.InvestigationCase> originalInvestigationCase) {
+	public InvestigationCase setOriginalInvestigationCase(List<InvestigationCase> originalInvestigationCase) {
 		this.originalInvestigationCase = Objects.requireNonNull(originalInvestigationCase);
 		return this;
 	}
@@ -881,7 +955,7 @@ public class InvestigationCase {
 		return linkedCase == null ? linkedCase = new ArrayList<>() : linkedCase;
 	}
 
-	public InvestigationCase setLinkedCase(List<com.tools20022.repository.entity.InvestigationCase> linkedCase) {
+	public InvestigationCase setLinkedCase(List<InvestigationCase> linkedCase) {
 		this.linkedCase = Objects.requireNonNull(linkedCase);
 		return this;
 	}
@@ -890,7 +964,7 @@ public class InvestigationCase {
 		return reassignment == null ? Optional.empty() : Optional.of(reassignment);
 	}
 
-	public InvestigationCase setReassignment(com.tools20022.repository.entity.Reassignment reassignment) {
+	public InvestigationCase setReassignment(Reassignment reassignment) {
 		this.reassignment = reassignment;
 		return this;
 	}

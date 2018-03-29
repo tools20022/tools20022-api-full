@@ -115,7 +115,7 @@ public class Appearance3Choice {
 	 * Appearance2Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Appearance3Choice, Appearance1Code> mmCode = new MMMessageAttribute<Appearance3Choice, Appearance1Code>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmAppearance;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Appearance3Choice.mmObject();
@@ -128,6 +128,16 @@ public class Appearance3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Appearance1Code.mmObject();
+		}
+
+		@Override
+		public Appearance1Code getValue(Appearance3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(Appearance3Choice obj, Appearance1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -169,7 +179,7 @@ public class Appearance3Choice {
 	 * Appearance2Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Appearance3Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<Appearance3Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmAppearance;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Appearance3Choice.mmObject();
@@ -183,6 +193,16 @@ public class Appearance3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(Appearance3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(Appearance3Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

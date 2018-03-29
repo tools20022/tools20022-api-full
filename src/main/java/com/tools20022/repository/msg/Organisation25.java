@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.PartyName;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CommunicationAddress5;
+import com.tools20022.repository.msg.GenericIdentification32;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -139,7 +141,7 @@ public class Organisation25 {
 	 * Organisation8.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Organisation25, Optional<GenericIdentification32>> mmIdentification = new MMMessageAssociationEnd<Organisation25, Optional<GenericIdentification32>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation25.mmObject();
@@ -153,7 +155,17 @@ public class Organisation25 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
+			type_lazy = () -> GenericIdentification32.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification32> getValue(Organisation25 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Organisation25 obj, Optional<GenericIdentification32> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CmonNm")
@@ -205,7 +217,7 @@ public class Organisation25 {
 	 * Organisation8.mmCommonName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommonName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Organisation25, Optional<Max70Text>> mmCommonName = new MMMessageAttribute<Organisation25, Optional<Max70Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation25.mmObject();
@@ -219,6 +231,16 @@ public class Organisation25 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(Organisation25 obj) {
+			return obj.getCommonName();
+		}
+
+		@Override
+		public void setValue(Organisation25 obj, Optional<Max70Text> value) {
+			obj.setCommonName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LctnCtgy")
@@ -265,7 +287,7 @@ public class Organisation25 {
 	 * Organisation8.mmLocationCategory}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLocationCategory = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Organisation25, Optional<LocationCategory1Code>> mmLocationCategory = new MMMessageAttribute<Organisation25, Optional<LocationCategory1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation25.mmObject();
 			isDerived = false;
@@ -278,6 +300,16 @@ public class Organisation25 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LocationCategory1Code.mmObject();
+		}
+
+		@Override
+		public Optional<LocationCategory1Code> getValue(Organisation25 obj) {
+			return obj.getLocationCategory();
+		}
+
+		@Override
+		public void setValue(Organisation25 obj, Optional<LocationCategory1Code> value) {
+			obj.setLocationCategory(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LctnAndCtct")
@@ -317,7 +349,7 @@ public class Organisation25 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLocationAndContact = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Organisation25, Optional<CommunicationAddress5>> mmLocationAndContact = new MMMessageAssociationEnd<Organisation25, Optional<CommunicationAddress5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation25.mmObject();
 			isDerived = false;
@@ -329,7 +361,17 @@ public class Organisation25 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CommunicationAddress5.mmObject();
+			type_lazy = () -> CommunicationAddress5.mmObject();
+		}
+
+		@Override
+		public Optional<CommunicationAddress5> getValue(Organisation25 obj) {
+			return obj.getLocationAndContact();
+		}
+
+		@Override
+		public void setValue(Organisation25 obj, Optional<CommunicationAddress5> value) {
+			obj.setLocationAndContact(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SchmeData")
@@ -373,7 +415,7 @@ public class Organisation25 {
 	 * Organisation8.mmSchemeData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSchemeData = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Organisation25, Optional<Max140Text>> mmSchemeData = new MMMessageAttribute<Organisation25, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation25.mmObject();
 			isDerived = false;
@@ -386,6 +428,16 @@ public class Organisation25 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(Organisation25 obj) {
+			return obj.getSchemeData();
+		}
+
+		@Override
+		public void setValue(Organisation25 obj, Optional<Max140Text> value) {
+			obj.setSchemeData(value.orElse(null));
 		}
 	};
 
@@ -410,7 +462,7 @@ public class Organisation25 {
 		return identification == null ? Optional.empty() : Optional.of(identification);
 	}
 
-	public Organisation25 setIdentification(com.tools20022.repository.msg.GenericIdentification32 identification) {
+	public Organisation25 setIdentification(GenericIdentification32 identification) {
 		this.identification = identification;
 		return this;
 	}
@@ -437,7 +489,7 @@ public class Organisation25 {
 		return locationAndContact == null ? Optional.empty() : Optional.of(locationAndContact);
 	}
 
-	public Organisation25 setLocationAndContact(com.tools20022.repository.msg.CommunicationAddress5 locationAndContact) {
+	public Organisation25 setLocationAndContact(CommunicationAddress5 locationAndContact) {
 		this.locationAndContact = locationAndContact;
 		return this;
 	}

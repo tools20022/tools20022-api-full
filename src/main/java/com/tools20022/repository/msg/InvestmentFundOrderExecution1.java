@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.InvestmentFundOrderExecution;
 import com.tools20022.repository.entity.Order;
 import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.InvestmentFundOrderExecution2;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -142,7 +143,7 @@ public class InvestmentFundOrderExecution1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundOrderExecution1, Optional<Max35Text>> mmMasterReference = new MMMessageAttribute<InvestmentFundOrderExecution1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundOrderExecution1.mmObject();
@@ -154,6 +155,16 @@ public class InvestmentFundOrderExecution1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(InvestmentFundOrderExecution1 obj) {
+			return obj.getMasterReference();
+		}
+
+		@Override
+		public void setValue(InvestmentFundOrderExecution1 obj, Optional<Max35Text> value) {
+			obj.setMasterReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AmdmntInd", required = true)
@@ -188,7 +199,7 @@ public class InvestmentFundOrderExecution1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmendmentIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundOrderExecution1, YesNoIndicator> mmAmendmentIndicator = new MMMessageAttribute<InvestmentFundOrderExecution1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundOrderExecution1.mmObject();
 			isDerived = false;
@@ -200,9 +211,19 @@ public class InvestmentFundOrderExecution1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
+
+		@Override
+		public YesNoIndicator getValue(InvestmentFundOrderExecution1 obj) {
+			return obj.getAmendmentIndicator();
+		}
+
+		@Override
+		public void setValue(InvestmentFundOrderExecution1 obj, YesNoIndicator value) {
+			obj.setAmendmentIndicator(value);
+		}
 	};
 	@XmlElement(name = "OrdrRefs", required = true)
-	protected List<com.tools20022.repository.msg.InvestmentFundOrderExecution2> orderReferences;
+	protected List<InvestmentFundOrderExecution2> orderReferences;
 	/**
 	 * 
 	 <p>
@@ -235,7 +256,7 @@ public class InvestmentFundOrderExecution1 {
 	 * definition} = "Reference of an order, client or deal reference."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOrderReferences = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentFundOrderExecution1, List<InvestmentFundOrderExecution2>> mmOrderReferences = new MMMessageAssociationEnd<InvestmentFundOrderExecution1, List<InvestmentFundOrderExecution2>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundOrderExecution1.mmObject();
@@ -246,7 +267,17 @@ public class InvestmentFundOrderExecution1 {
 			definition = "Reference of an order, client or deal reference.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvestmentFundOrderExecution2.mmObject();
+			type_lazy = () -> InvestmentFundOrderExecution2.mmObject();
+		}
+
+		@Override
+		public List<InvestmentFundOrderExecution2> getValue(InvestmentFundOrderExecution1 obj) {
+			return obj.getOrderReferences();
+		}
+
+		@Override
+		public void setValue(InvestmentFundOrderExecution1 obj, List<InvestmentFundOrderExecution2> value) {
+			obj.setOrderReferences(value);
 		}
 	};
 
@@ -290,7 +321,7 @@ public class InvestmentFundOrderExecution1 {
 		return orderReferences == null ? orderReferences = new ArrayList<>() : orderReferences;
 	}
 
-	public InvestmentFundOrderExecution1 setOrderReferences(List<com.tools20022.repository.msg.InvestmentFundOrderExecution2> orderReferences) {
+	public InvestmentFundOrderExecution1 setOrderReferences(List<InvestmentFundOrderExecution2> orderReferences) {
 		this.orderReferences = Objects.requireNonNull(orderReferences);
 		return this;
 	}

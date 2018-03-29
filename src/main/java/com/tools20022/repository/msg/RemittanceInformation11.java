@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.StructuredRemittanceInformation13;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -136,7 +137,7 @@ public class RemittanceInformation11 {
 	 * RemittanceInformation10.mmUnstructured}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnstructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RemittanceInformation11, List<Max140Text>> mmUnstructured = new MMMessageAttribute<RemittanceInformation11, List<Max140Text>>() {
 		{
 			businessComponentTrace_lazy = () -> Document.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.RemittanceInformation11.mmObject();
@@ -150,9 +151,19 @@ public class RemittanceInformation11 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
+
+		@Override
+		public List<Max140Text> getValue(RemittanceInformation11 obj) {
+			return obj.getUnstructured();
+		}
+
+		@Override
+		public void setValue(RemittanceInformation11 obj, List<Max140Text> value) {
+			obj.setUnstructured(value);
+		}
 	};
 	@XmlElement(name = "Strd")
-	protected List<com.tools20022.repository.msg.StructuredRemittanceInformation13> structured;
+	protected List<StructuredRemittanceInformation13> structured;
 	/**
 	 * 
 	 <p>
@@ -199,7 +210,7 @@ public class RemittanceInformation11 {
 	 * RemittanceInformation10.mmStructured}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStructured = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RemittanceInformation11, List<StructuredRemittanceInformation13>> mmStructured = new MMMessageAssociationEnd<RemittanceInformation11, List<StructuredRemittanceInformation13>>() {
 		{
 			businessComponentTrace_lazy = () -> Document.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.RemittanceInformation11.mmObject();
@@ -212,7 +223,17 @@ public class RemittanceInformation11 {
 			previousVersion_lazy = () -> RemittanceInformation10.mmStructured;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.StructuredRemittanceInformation13.mmObject();
+			type_lazy = () -> StructuredRemittanceInformation13.mmObject();
+		}
+
+		@Override
+		public List<StructuredRemittanceInformation13> getValue(RemittanceInformation11 obj) {
+			return obj.getStructured();
+		}
+
+		@Override
+		public void setValue(RemittanceInformation11 obj, List<StructuredRemittanceInformation13> value) {
+			obj.setStructured(value);
 		}
 	};
 
@@ -245,7 +266,7 @@ public class RemittanceInformation11 {
 		return structured == null ? structured = new ArrayList<>() : structured;
 	}
 
-	public RemittanceInformation11 setStructured(List<com.tools20022.repository.msg.StructuredRemittanceInformation13> structured) {
+	public RemittanceInformation11 setStructured(List<StructuredRemittanceInformation13> structured) {
 		this.structured = Objects.requireNonNull(structured);
 		return this;
 	}

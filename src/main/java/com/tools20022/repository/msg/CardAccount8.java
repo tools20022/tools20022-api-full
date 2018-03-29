@@ -31,6 +31,8 @@ import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountAndDirection43;
+import com.tools20022.repository.msg.NameAndAddress3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -131,7 +133,7 @@ public class CardAccount8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSelectionMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardAccount8, Optional<AccountChoiceMethod1Code>> mmSelectionMethod = new MMMessageAttribute<CardAccount8, Optional<AccountChoiceMethod1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardAccount8.mmObject();
 			isDerived = false;
@@ -142,6 +144,16 @@ public class CardAccount8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AccountChoiceMethod1Code.mmObject();
+		}
+
+		@Override
+		public Optional<AccountChoiceMethod1Code> getValue(CardAccount8 obj) {
+			return obj.getSelectionMethod();
+		}
+
+		@Override
+		public void setValue(CardAccount8 obj, Optional<AccountChoiceMethod1Code> value) {
+			obj.setSelectionMethod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SelctdAcctTp")
@@ -178,7 +190,7 @@ public class CardAccount8 {
 	 * definition} = "Type of cardholder account used for the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSelectedAccountType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardAccount8, Optional<CardAccountType3Code>> mmSelectedAccountType = new MMMessageAttribute<CardAccount8, Optional<CardAccountType3Code>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardAccount8.mmObject();
@@ -190,6 +202,16 @@ public class CardAccount8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CardAccountType3Code.mmObject();
+		}
+
+		@Override
+		public Optional<CardAccountType3Code> getValue(CardAccount8 obj) {
+			return obj.getSelectedAccountType();
+		}
+
+		@Override
+		public void setValue(CardAccount8 obj, Optional<CardAccountType3Code> value) {
+			obj.setSelectedAccountType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctNm")
@@ -227,7 +249,7 @@ public class CardAccount8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardAccount8, Optional<Max70Text>> mmAccountName = new MMMessageAttribute<CardAccount8, Optional<Max70Text>>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardAccount8.mmObject();
@@ -239,6 +261,16 @@ public class CardAccount8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(CardAccount8 obj) {
+			return obj.getAccountName();
+		}
+
+		@Override
+		public void setValue(CardAccount8 obj, Optional<Max70Text> value) {
+			obj.setAccountName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -273,7 +305,7 @@ public class CardAccount8 {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardAccount8, Optional<NameAndAddress3>> mmAccountOwner = new MMMessageAssociationEnd<CardAccount8, Optional<NameAndAddress3>>() {
 		{
 			businessComponentTrace_lazy = () -> AccountOwnerRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardAccount8.mmObject();
@@ -285,7 +317,17 @@ public class CardAccount8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NameAndAddress3.mmObject();
+			type_lazy = () -> NameAndAddress3.mmObject();
+		}
+
+		@Override
+		public Optional<NameAndAddress3> getValue(CardAccount8 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(CardAccount8 obj, Optional<NameAndAddress3> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ccy")
@@ -323,7 +365,7 @@ public class CardAccount8 {
 	 * "Identification of the currency in which the account is held."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardAccount8, Optional<ActiveCurrencyCode>> mmCurrency = new MMMessageAttribute<CardAccount8, Optional<ActiveCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmBaseCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardAccount8.mmObject();
@@ -335,6 +377,16 @@ public class CardAccount8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyCode> getValue(CardAccount8 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(CardAccount8 obj, Optional<ActiveCurrencyCode> value) {
+			obj.setCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctIdr")
@@ -371,7 +423,7 @@ public class CardAccount8 {
 	 * "Unique identifier of the account, as assigned by the account servicer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountIdentifier = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardAccount8, Optional<AccountIdentification31Choice>> mmAccountIdentifier = new MMMessageAssociationEnd<CardAccount8, Optional<AccountIdentification31Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardAccount8.mmObject();
@@ -384,6 +436,16 @@ public class CardAccount8 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AccountIdentification31Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AccountIdentification31Choice> getValue(CardAccount8 obj) {
+			return obj.getAccountIdentifier();
+		}
+
+		@Override
+		public void setValue(CardAccount8 obj, Optional<AccountIdentification31Choice> value) {
+			obj.setAccountIdentifier(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtRef")
@@ -414,7 +476,7 @@ public class CardAccount8 {
 	 * definition} = "Internal account reference in case of credit account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardAccount8, Optional<Max35Text>> mmCreditReference = new MMMessageAttribute<CardAccount8, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardAccount8.mmObject();
 			isDerived = false;
@@ -425,6 +487,16 @@ public class CardAccount8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CardAccount8 obj) {
+			return obj.getCreditReference();
+		}
+
+		@Override
+		public void setValue(CardAccount8 obj, Optional<Max35Text> value) {
+			obj.setCreditReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Svcr")
@@ -462,7 +534,7 @@ public class CardAccount8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmServicer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardAccount8, Optional<PartyIdentification72Choice>> mmServicer = new MMMessageAssociationEnd<CardAccount8, Optional<PartyIdentification72Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> AccountServicerRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardAccount8.mmObject();
@@ -475,6 +547,16 @@ public class CardAccount8 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification72Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification72Choice> getValue(CardAccount8 obj) {
+			return obj.getServicer();
+		}
+
+		@Override
+		public void setValue(CardAccount8 obj, Optional<PartyIdentification72Choice> value) {
+			obj.setServicer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Bal")
@@ -509,7 +591,7 @@ public class CardAccount8 {
 	 * definition} = "Balance of the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardAccount8, Optional<AmountAndDirection43>> mmBalance = new MMMessageAssociationEnd<CardAccount8, Optional<AmountAndDirection43>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardAccount8.mmObject();
@@ -521,7 +603,17 @@ public class CardAccount8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection43.mmObject();
+			type_lazy = () -> AmountAndDirection43.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection43> getValue(CardAccount8 obj) {
+			return obj.getBalance();
+		}
+
+		@Override
+		public void setValue(CardAccount8 obj, Optional<AmountAndDirection43> value) {
+			obj.setBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BalDispFlg")
@@ -554,7 +646,7 @@ public class CardAccount8 {
 	 * "Indicates if the balance must be displayed to the customer on the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBalanceDisplayFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardAccount8, Optional<TrueFalseIndicator>> mmBalanceDisplayFlag = new MMMessageAttribute<CardAccount8, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardAccount8.mmObject();
 			isDerived = false;
@@ -565,6 +657,16 @@ public class CardAccount8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(CardAccount8 obj) {
+			return obj.getBalanceDisplayFlag();
+		}
+
+		@Override
+		public void setValue(CardAccount8 obj, Optional<TrueFalseIndicator> value) {
+			obj.setBalanceDisplayFlag(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DfltAcctInd")
@@ -596,7 +698,7 @@ public class CardAccount8 {
 	 * definition} = "Indicates if this is the default account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDefaultAccountIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardAccount8, Optional<TrueFalseIndicator>> mmDefaultAccountIndicator = new MMMessageAttribute<CardAccount8, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardAccount8.mmObject();
 			isDerived = false;
@@ -607,6 +709,16 @@ public class CardAccount8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(CardAccount8 obj) {
+			return obj.getDefaultAccountIndicator();
+		}
+
+		@Override
+		public void setValue(CardAccount8 obj, Optional<TrueFalseIndicator> value) {
+			obj.setDefaultAccountIndicator(value.orElse(null));
 		}
 	};
 
@@ -658,7 +770,7 @@ public class CardAccount8 {
 		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public CardAccount8 setAccountOwner(com.tools20022.repository.msg.NameAndAddress3 accountOwner) {
+	public CardAccount8 setAccountOwner(NameAndAddress3 accountOwner) {
 		this.accountOwner = accountOwner;
 		return this;
 	}
@@ -703,7 +815,7 @@ public class CardAccount8 {
 		return balance == null ? Optional.empty() : Optional.of(balance);
 	}
 
-	public CardAccount8 setBalance(com.tools20022.repository.msg.AmountAndDirection43 balance) {
+	public CardAccount8 setBalance(AmountAndDirection43 balance) {
 		this.balance = balance;
 		return this;
 	}

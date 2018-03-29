@@ -98,7 +98,7 @@ public class StatementUpdateTypeCodeAndDSSCodeChoice {
 	 * definition} = "Update type expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementUpdateTypeAsCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementUpdateTypeCodeAndDSSCodeChoice, StatementUpdateTypeCode> mmStatementUpdateTypeAsCode = new MMMessageAttribute<StatementUpdateTypeCodeAndDSSCodeChoice, StatementUpdateTypeCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.StatementUpdateTypeCodeAndDSSCodeChoice.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class StatementUpdateTypeCodeAndDSSCodeChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> StatementUpdateTypeCode.mmObject();
+		}
+
+		@Override
+		public StatementUpdateTypeCode getValue(StatementUpdateTypeCodeAndDSSCodeChoice obj) {
+			return obj.getStatementUpdateTypeAsCode();
+		}
+
+		@Override
+		public void setValue(StatementUpdateTypeCodeAndDSSCodeChoice obj, StatementUpdateTypeCode value) {
+			obj.setStatementUpdateTypeAsCode(value);
 		}
 	};
 	@XmlElement(name = "StmtUpdTpAsDSS", required = true)
@@ -143,7 +153,7 @@ public class StatementUpdateTypeCodeAndDSSCodeChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementUpdateTypeAsDSS = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementUpdateTypeCodeAndDSSCodeChoice, GenericIdentification7> mmStatementUpdateTypeAsDSS = new MMMessageAttribute<StatementUpdateTypeCodeAndDSSCodeChoice, GenericIdentification7>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.StatementUpdateTypeCodeAndDSSCodeChoice.mmObject();
 			isDerived = false;
@@ -154,6 +164,16 @@ public class StatementUpdateTypeCodeAndDSSCodeChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification7.mmObject();
+		}
+
+		@Override
+		public GenericIdentification7 getValue(StatementUpdateTypeCodeAndDSSCodeChoice obj) {
+			return obj.getStatementUpdateTypeAsDSS();
+		}
+
+		@Override
+		public void setValue(StatementUpdateTypeCodeAndDSSCodeChoice obj, GenericIdentification7 value) {
+			obj.setStatementUpdateTypeAsDSS(value);
 		}
 	};
 

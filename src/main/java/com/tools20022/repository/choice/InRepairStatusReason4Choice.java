@@ -120,7 +120,7 @@ public class InRepairStatusReason4Choice {
 	 * ConditionallyAcceptedStatus3Choice.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InRepairStatusReason4Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<InRepairStatusReason4Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InRepairStatusReason4Choice.mmObject();
@@ -133,6 +133,16 @@ public class InRepairStatusReason4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(InRepairStatusReason4Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(InRepairStatusReason4Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "RsnDtls", required = true)
@@ -173,7 +183,7 @@ public class InRepairStatusReason4Choice {
 	 * ConditionallyAcceptedStatus3Choice.mmReasonDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReasonDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InRepairStatusReason4Choice, List<InRepairStatusReason4>> mmReasonDetails = new MMMessageAssociationEnd<InRepairStatusReason4Choice, List<InRepairStatusReason4>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmConditionallyAcceptedStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InRepairStatusReason4Choice.mmObject();
@@ -187,6 +197,16 @@ public class InRepairStatusReason4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> InRepairStatusReason4.mmObject();
+		}
+
+		@Override
+		public List<InRepairStatusReason4> getValue(InRepairStatusReason4Choice obj) {
+			return obj.getReasonDetails();
+		}
+
+		@Override
+		public void setValue(InRepairStatusReason4Choice obj, List<InRepairStatusReason4> value) {
+			obj.setReasonDetails(value);
 		}
 	};
 

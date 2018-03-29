@@ -100,7 +100,7 @@ public class Vehicle2 {
 	 * definition} = "Type of information related to the vehicle."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Vehicle2, Optional<Max35Text>> mmType = new MMMessageAttribute<Vehicle2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Vehicle2.mmObject();
 			isDerived = false;
@@ -111,6 +111,16 @@ public class Vehicle2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Vehicle2 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Vehicle2 obj, Optional<Max35Text> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NtryMd")
@@ -147,7 +157,7 @@ public class Vehicle2 {
 	 * Vehicle1.mmVehicleTagEntryMode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEntryMode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Vehicle2, Optional<CardDataReading5Code>> mmEntryMode = new MMMessageAttribute<Vehicle2, Optional<CardDataReading5Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Vehicle2.mmObject();
 			isDerived = false;
@@ -159,6 +169,16 @@ public class Vehicle2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CardDataReading5Code.mmObject();
+		}
+
+		@Override
+		public Optional<CardDataReading5Code> getValue(Vehicle2 obj) {
+			return obj.getEntryMode();
+		}
+
+		@Override
+		public void setValue(Vehicle2 obj, Optional<CardDataReading5Code> value) {
+			obj.setEntryMode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Data", required = true)
@@ -194,7 +214,7 @@ public class Vehicle2 {
 	 * Vehicle1.mmAdditionalVehicleData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmData = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Vehicle2, Max35Text> mmData = new MMMessageAttribute<Vehicle2, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Vehicle2.mmObject();
 			isDerived = false;
@@ -206,6 +226,16 @@ public class Vehicle2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Vehicle2 obj) {
+			return obj.getData();
+		}
+
+		@Override
+		public void setValue(Vehicle2 obj, Max35Text value) {
+			obj.setData(value);
 		}
 	};
 

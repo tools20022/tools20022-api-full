@@ -23,6 +23,8 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Investor;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DeMinimusApplicable1;
+import com.tools20022.repository.msg.DeMinimusNotApplicable1;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -167,7 +169,7 @@ public class NewIssueAllocation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRestricted = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NewIssueAllocation1, YesNoIndicator> mmRestricted = new MMMessageAttribute<NewIssueAllocation1, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> Investor.mmRestricted;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NewIssueAllocation1.mmObject();
@@ -180,6 +182,16 @@ public class NewIssueAllocation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(NewIssueAllocation1 obj) {
+			return obj.getRestricted();
+		}
+
+		@Override
+		public void setValue(NewIssueAllocation1 obj, YesNoIndicator value) {
+			obj.setRestricted(value);
 		}
 	};
 	@XmlElement(name = "XmptPrsnRsn")
@@ -219,7 +231,7 @@ public class NewIssueAllocation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExemptPersonReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NewIssueAllocation1, Optional<Max350Text>> mmExemptPersonReason = new MMMessageAttribute<NewIssueAllocation1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NewIssueAllocation1.mmObject();
 			isDerived = false;
@@ -231,6 +243,16 @@ public class NewIssueAllocation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(NewIssueAllocation1 obj) {
+			return obj.getExemptPersonReason();
+		}
+
+		@Override
+		public void setValue(NewIssueAllocation1 obj, Optional<Max350Text> value) {
+			obj.setExemptPersonReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DeMnmsAplbl")
@@ -268,7 +290,7 @@ public class NewIssueAllocation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDeMinimusApplicable = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NewIssueAllocation1, Optional<DeMinimusApplicable1>> mmDeMinimusApplicable = new MMMessageAssociationEnd<NewIssueAllocation1, Optional<DeMinimusApplicable1>>() {
 		{
 			businessElementTrace_lazy = () -> Investor.mmDeMinimusApplicable;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NewIssueAllocation1.mmObject();
@@ -280,7 +302,17 @@ public class NewIssueAllocation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DeMinimusApplicable1.mmObject();
+			type_lazy = () -> DeMinimusApplicable1.mmObject();
+		}
+
+		@Override
+		public Optional<DeMinimusApplicable1> getValue(NewIssueAllocation1 obj) {
+			return obj.getDeMinimusApplicable();
+		}
+
+		@Override
+		public void setValue(NewIssueAllocation1 obj, Optional<DeMinimusApplicable1> value) {
+			obj.setDeMinimusApplicable(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DeMnmsNotAplbl")
@@ -318,7 +350,7 @@ public class NewIssueAllocation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDeMinimusNotApplicable = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NewIssueAllocation1, Optional<DeMinimusNotApplicable1>> mmDeMinimusNotApplicable = new MMMessageAssociationEnd<NewIssueAllocation1, Optional<DeMinimusNotApplicable1>>() {
 		{
 			businessComponentTrace_lazy = () -> Investor.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.NewIssueAllocation1.mmObject();
@@ -330,7 +362,17 @@ public class NewIssueAllocation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DeMinimusNotApplicable1.mmObject();
+			type_lazy = () -> DeMinimusNotApplicable1.mmObject();
+		}
+
+		@Override
+		public Optional<DeMinimusNotApplicable1> getValue(NewIssueAllocation1 obj) {
+			return obj.getDeMinimusNotApplicable();
+		}
+
+		@Override
+		public void setValue(NewIssueAllocation1 obj, Optional<DeMinimusNotApplicable1> value) {
+			obj.setDeMinimusNotApplicable(value.orElse(null));
 		}
 	};
 	/**
@@ -425,7 +467,7 @@ public class NewIssueAllocation1 {
 		return deMinimusApplicable == null ? Optional.empty() : Optional.of(deMinimusApplicable);
 	}
 
-	public NewIssueAllocation1 setDeMinimusApplicable(com.tools20022.repository.msg.DeMinimusApplicable1 deMinimusApplicable) {
+	public NewIssueAllocation1 setDeMinimusApplicable(DeMinimusApplicable1 deMinimusApplicable) {
 		this.deMinimusApplicable = deMinimusApplicable;
 		return this;
 	}
@@ -434,7 +476,7 @@ public class NewIssueAllocation1 {
 		return deMinimusNotApplicable == null ? Optional.empty() : Optional.of(deMinimusNotApplicable);
 	}
 
-	public NewIssueAllocation1 setDeMinimusNotApplicable(com.tools20022.repository.msg.DeMinimusNotApplicable1 deMinimusNotApplicable) {
+	public NewIssueAllocation1 setDeMinimusNotApplicable(DeMinimusNotApplicable1 deMinimusNotApplicable) {
 		this.deMinimusNotApplicable = deMinimusNotApplicable;
 		return this;
 	}

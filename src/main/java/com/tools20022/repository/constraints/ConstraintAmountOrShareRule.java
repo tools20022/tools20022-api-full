@@ -52,12 +52,16 @@ public class ConstraintAmountOrShareRule {
 	 */
 	public static final MMConstraint<SyndicatedLoan1> forSyndicatedLoan1 = new MMConstraint<SyndicatedLoan1>() {
 		{
-			validator = ConstraintAmountOrShareRule::checkSyndicatedLoan1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountOrShareRule";
 			definition = "Amount must be present or Share must be present.";
 			owner_lazy = () -> SyndicatedLoan1.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Share</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Amount</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SyndicatedLoan1 obj) throws Exception {
+			checkSyndicatedLoan1(obj);
 		}
 	};
 

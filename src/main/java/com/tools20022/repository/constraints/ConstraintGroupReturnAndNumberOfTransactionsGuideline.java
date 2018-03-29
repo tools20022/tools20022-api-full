@@ -51,11 +51,15 @@ public class ConstraintGroupReturnAndNumberOfTransactionsGuideline {
 	 */
 	public static final MMConstraint<GroupHeader6> forGroupHeader6 = new MMConstraint<GroupHeader6>() {
 		{
-			validator = ConstraintGroupReturnAndNumberOfTransactionsGuideline::checkGroupHeader6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReturnAndNumberOfTransactionsGuideline";
 			definition = "If GroupReturn is true, then NumberOfTransactions equals the number of transactions in the original message.";
 			owner_lazy = () -> GroupHeader6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GroupHeader6 obj) throws Exception {
+			checkGroupHeader6(obj);
 		}
 	};
 	/**
@@ -80,11 +84,15 @@ public class ConstraintGroupReturnAndNumberOfTransactionsGuideline {
 	 */
 	public static final MMConstraint<GroupHeader38> forGroupHeader38 = new MMConstraint<GroupHeader38>() {
 		{
-			validator = ConstraintGroupReturnAndNumberOfTransactionsGuideline::checkGroupHeader38;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReturnAndNumberOfTransactionsGuideline";
 			definition = "If GroupReturn is true, then NumberOfTransactions equals the number of transactions in the original message.";
 			owner_lazy = () -> GroupHeader38.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GroupHeader38 obj) throws Exception {
+			checkGroupHeader38(obj);
 		}
 	};
 	/**
@@ -117,12 +125,16 @@ public class ConstraintGroupReturnAndNumberOfTransactionsGuideline {
 	 */
 	public static final MMConstraint<GroupHeader54> forGroupHeader54 = new MMConstraint<GroupHeader54>() {
 		{
-			validator = ConstraintGroupReturnAndNumberOfTransactionsGuideline::checkGroupHeader54;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReturnAndNumberOfTransactionsGuideline";
 			definition = "If GroupReturn is true, then NumberOfTransactions equals the number of transactions in the original message.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupReturnAndNumberOfTransactionsGuideline.forGroupHeader72);
 			owner_lazy = () -> GroupHeader54.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GroupHeader54 obj) throws Exception {
+			checkGroupHeader54(obj);
 		}
 	};
 	/**
@@ -147,11 +159,15 @@ public class ConstraintGroupReturnAndNumberOfTransactionsGuideline {
 	 */
 	public static final MMConstraint<GroupHeader17> forGroupHeader17 = new MMConstraint<GroupHeader17>() {
 		{
-			validator = ConstraintGroupReturnAndNumberOfTransactionsGuideline::checkGroupHeader17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReturnAndNumberOfTransactionsGuideline";
 			definition = "ISO20022 Guideline: \nIf GroupReturn is true, then NumberOfTransactions equals the number of transactions in the original message.";
 			owner_lazy = () -> GroupHeader17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GroupHeader17 obj) throws Exception {
+			checkGroupHeader17(obj);
 		}
 	};
 	/**
@@ -176,11 +192,15 @@ public class ConstraintGroupReturnAndNumberOfTransactionsGuideline {
 	 */
 	public static final MMConstraint<GroupHeader27> forGroupHeader27 = new MMConstraint<GroupHeader27>() {
 		{
-			validator = ConstraintGroupReturnAndNumberOfTransactionsGuideline::checkGroupHeader27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReturnAndNumberOfTransactionsGuideline";
 			definition = "ISO20022 Guideline: \nIf GroupReturn is true, then NumberOfTransactions equals the number of transactions in the original message.";
 			owner_lazy = () -> GroupHeader27.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GroupHeader27 obj) throws Exception {
+			checkGroupHeader27(obj);
 		}
 	};
 	/**
@@ -210,12 +230,16 @@ public class ConstraintGroupReturnAndNumberOfTransactionsGuideline {
 	 */
 	public static final MMConstraint<GroupHeader72> forGroupHeader72 = new MMConstraint<GroupHeader72>() {
 		{
-			validator = ConstraintGroupReturnAndNumberOfTransactionsGuideline::checkGroupHeader72;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReturnAndNumberOfTransactionsGuideline";
 			definition = "If GroupReturn is true, then NumberOfTransactions equals the number of transactions in the original message.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupReturnAndNumberOfTransactionsGuideline.forGroupHeader54;
 			owner_lazy = () -> GroupHeader72.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GroupHeader72 obj) throws Exception {
+			checkGroupHeader72(obj);
 		}
 	};
 

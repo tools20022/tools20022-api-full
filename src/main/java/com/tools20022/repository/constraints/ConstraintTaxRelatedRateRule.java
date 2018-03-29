@@ -54,11 +54,15 @@ public class ConstraintTaxRelatedRateRule {
 	 */
 	public static final MMConstraint<CorporateActionRate4> forCorporateActionRate4 = new MMConstraint<CorporateActionRate4>() {
 		{
-			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
 			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C3 and C4).";
 			owner_lazy = () -> CorporateActionRate4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate4 obj) throws Exception {
+			checkCorporateActionRate4(obj);
 		}
 	};
 	/**
@@ -84,11 +88,15 @@ public class ConstraintTaxRelatedRateRule {
 	 */
 	public static final MMConstraint<CorporateActionRate10> forCorporateActionRate10 = new MMConstraint<CorporateActionRate10>() {
 		{
-			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
 			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C3 and C4).";
 			owner_lazy = () -> CorporateActionRate10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate10 obj) throws Exception {
+			checkCorporateActionRate10(obj);
 		}
 	};
 	/**
@@ -114,11 +122,15 @@ public class ConstraintTaxRelatedRateRule {
 	 */
 	public static final MMConstraint<CorporateActionRate20> forCorporateActionRate20 = new MMConstraint<CorporateActionRate20>() {
 		{
-			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
 			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 ).";
 			owner_lazy = () -> CorporateActionRate20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate20 obj) throws Exception {
+			checkCorporateActionRate20(obj);
 		}
 	};
 	/**
@@ -143,11 +155,15 @@ public class ConstraintTaxRelatedRateRule {
 	 */
 	public static final MMConstraint<RateDetails2> forRateDetails2 = new MMConstraint<RateDetails2>() {
 		{
-			validator = ConstraintTaxRelatedRateRule::checkRateDetails2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
 			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 ).";
 			owner_lazy = () -> RateDetails2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateDetails2 obj) throws Exception {
+			checkRateDetails2(obj);
 		}
 	};
 	/**
@@ -173,11 +189,15 @@ public class ConstraintTaxRelatedRateRule {
 	 */
 	public static final MMConstraint<CorporateActionRate22> forCorporateActionRate22 = new MMConstraint<CorporateActionRate22>() {
 		{
-			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
 			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 ).";
 			owner_lazy = () -> CorporateActionRate22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate22 obj) throws Exception {
+			checkCorporateActionRate22(obj);
 		}
 	};
 	/**
@@ -202,11 +222,15 @@ public class ConstraintTaxRelatedRateRule {
 	 */
 	public static final MMConstraint<RateDetails4> forRateDetails4 = new MMConstraint<RateDetails4>() {
 		{
-			validator = ConstraintTaxRelatedRateRule::checkRateDetails4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
 			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 ).";
 			owner_lazy = () -> RateDetails4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateDetails4 obj) throws Exception {
+			checkRateDetails4(obj);
 		}
 	};
 	/**
@@ -232,11 +256,15 @@ public class ConstraintTaxRelatedRateRule {
 	 */
 	public static final MMConstraint<CorporateActionRate26> forCorporateActionRate26 = new MMConstraint<CorporateActionRate26>() {
 		{
-			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
 			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 ).";
 			owner_lazy = () -> CorporateActionRate26.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate26 obj) throws Exception {
+			checkCorporateActionRate26(obj);
 		}
 	};
 	/**
@@ -261,11 +289,15 @@ public class ConstraintTaxRelatedRateRule {
 	 */
 	public static final MMConstraint<RateDetails7> forRateDetails7 = new MMConstraint<RateDetails7>() {
 		{
-			validator = ConstraintTaxRelatedRateRule::checkRateDetails7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
 			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 ).";
 			owner_lazy = () -> RateDetails7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateDetails7 obj) throws Exception {
+			checkRateDetails7(obj);
 		}
 	};
 	/**
@@ -291,11 +323,15 @@ public class ConstraintTaxRelatedRateRule {
 	 */
 	public static final MMConstraint<CorporateActionRate31> forCorporateActionRate31 = new MMConstraint<CorporateActionRate31>() {
 		{
-			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate31;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
 			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 ).";
 			owner_lazy = () -> CorporateActionRate31.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate31 obj) throws Exception {
+			checkCorporateActionRate31(obj);
 		}
 	};
 	/**
@@ -320,11 +356,15 @@ public class ConstraintTaxRelatedRateRule {
 	 */
 	public static final MMConstraint<RateDetails9> forRateDetails9 = new MMConstraint<RateDetails9>() {
 		{
-			validator = ConstraintTaxRelatedRateRule::checkRateDetails9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
 			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 ).";
 			owner_lazy = () -> RateDetails9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateDetails9 obj) throws Exception {
+			checkRateDetails9(obj);
 		}
 	};
 	/**
@@ -358,12 +398,16 @@ public class ConstraintTaxRelatedRateRule {
 	 */
 	public static final MMConstraint<CorporateActionRate38> forCorporateActionRate38 = new MMConstraint<CorporateActionRate38>() {
 		{
-			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate38;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
 			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 ).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTaxRelatedRateRule.forCorporateActionRate46);
 			owner_lazy = () -> CorporateActionRate38.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate38 obj) throws Exception {
+			checkCorporateActionRate38(obj);
 		}
 	};
 	/**
@@ -396,12 +440,16 @@ public class ConstraintTaxRelatedRateRule {
 	 */
 	public static final MMConstraint<RateDetails11> forRateDetails11 = new MMConstraint<RateDetails11>() {
 		{
-			validator = ConstraintTaxRelatedRateRule::checkRateDetails11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
 			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 ).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTaxRelatedRateRule.forRateDetails15);
 			owner_lazy = () -> RateDetails11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateDetails11 obj) throws Exception {
+			checkRateDetails11(obj);
 		}
 	};
 	/**
@@ -427,11 +475,15 @@ public class ConstraintTaxRelatedRateRule {
 	 */
 	public static final MMConstraint<CorporateActionRate39> forCorporateActionRate39 = new MMConstraint<CorporateActionRate39>() {
 		{
-			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate39;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
 			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 ).";
 			owner_lazy = () -> CorporateActionRate39.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate39 obj) throws Exception {
+			checkCorporateActionRate39(obj);
 		}
 	};
 	/**
@@ -456,11 +508,15 @@ public class ConstraintTaxRelatedRateRule {
 	 */
 	public static final MMConstraint<RateDetails12> forRateDetails12 = new MMConstraint<RateDetails12>() {
 		{
-			validator = ConstraintTaxRelatedRateRule::checkRateDetails12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
 			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 ).";
 			owner_lazy = () -> RateDetails12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateDetails12 obj) throws Exception {
+			checkRateDetails12(obj);
 		}
 	};
 	/**
@@ -486,11 +542,15 @@ public class ConstraintTaxRelatedRateRule {
 	 */
 	public static final MMConstraint<CorporateActionRate5> forCorporateActionRate5 = new MMConstraint<CorporateActionRate5>() {
 		{
-			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
 			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			owner_lazy = () -> CorporateActionRate5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate5 obj) throws Exception {
+			checkCorporateActionRate5(obj);
 		}
 	};
 	/**
@@ -516,11 +576,15 @@ public class ConstraintTaxRelatedRateRule {
 	 */
 	public static final MMConstraint<CorporateActionRate12> forCorporateActionRate12 = new MMConstraint<CorporateActionRate12>() {
 		{
-			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
 			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			owner_lazy = () -> CorporateActionRate12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate12 obj) throws Exception {
+			checkCorporateActionRate12(obj);
 		}
 	};
 	/**
@@ -546,11 +610,15 @@ public class ConstraintTaxRelatedRateRule {
 	 */
 	public static final MMConstraint<CorporateActionRate15> forCorporateActionRate15 = new MMConstraint<CorporateActionRate15>() {
 		{
-			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
 			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			owner_lazy = () -> CorporateActionRate15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate15 obj) throws Exception {
+			checkCorporateActionRate15(obj);
 		}
 	};
 	/**
@@ -575,11 +643,15 @@ public class ConstraintTaxRelatedRateRule {
 	 */
 	public static final MMConstraint<RateDetails3> forRateDetails3 = new MMConstraint<RateDetails3>() {
 		{
-			validator = ConstraintTaxRelatedRateRule::checkRateDetails3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
 			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			owner_lazy = () -> RateDetails3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateDetails3 obj) throws Exception {
+			checkRateDetails3(obj);
 		}
 	};
 	/**
@@ -605,11 +677,15 @@ public class ConstraintTaxRelatedRateRule {
 	 */
 	public static final MMConstraint<CorporateActionRate18> forCorporateActionRate18 = new MMConstraint<CorporateActionRate18>() {
 		{
-			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
 			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			owner_lazy = () -> CorporateActionRate18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate18 obj) throws Exception {
+			checkCorporateActionRate18(obj);
 		}
 	};
 	/**
@@ -634,11 +710,15 @@ public class ConstraintTaxRelatedRateRule {
 	 */
 	public static final MMConstraint<RateDetails5> forRateDetails5 = new MMConstraint<RateDetails5>() {
 		{
-			validator = ConstraintTaxRelatedRateRule::checkRateDetails5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
 			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			owner_lazy = () -> RateDetails5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateDetails5 obj) throws Exception {
+			checkRateDetails5(obj);
 		}
 	};
 	/**
@@ -664,11 +744,15 @@ public class ConstraintTaxRelatedRateRule {
 	 */
 	public static final MMConstraint<CorporateActionRate25> forCorporateActionRate25 = new MMConstraint<CorporateActionRate25>() {
 		{
-			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
 			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			owner_lazy = () -> CorporateActionRate25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate25 obj) throws Exception {
+			checkCorporateActionRate25(obj);
 		}
 	};
 	/**
@@ -694,11 +778,15 @@ public class ConstraintTaxRelatedRateRule {
 	 */
 	public static final MMConstraint<CorporateActionRate30> forCorporateActionRate30 = new MMConstraint<CorporateActionRate30>() {
 		{
-			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
 			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			owner_lazy = () -> CorporateActionRate30.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate30 obj) throws Exception {
+			checkCorporateActionRate30(obj);
 		}
 	};
 	/**
@@ -732,12 +820,16 @@ public class ConstraintTaxRelatedRateRule {
 	 */
 	public static final MMConstraint<CorporateActionRate37> forCorporateActionRate37 = new MMConstraint<CorporateActionRate37>() {
 		{
-			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate37;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
 			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTaxRelatedRateRule.forCorporateActionRate45);
 			owner_lazy = () -> CorporateActionRate37.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate37 obj) throws Exception {
+			checkCorporateActionRate37(obj);
 		}
 	};
 	/**
@@ -770,12 +862,16 @@ public class ConstraintTaxRelatedRateRule {
 	 */
 	public static final MMConstraint<RateDetails10> forRateDetails10 = new MMConstraint<RateDetails10>() {
 		{
-			validator = ConstraintTaxRelatedRateRule::checkRateDetails10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
 			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTaxRelatedRateRule.forRateDetails14);
 			owner_lazy = () -> RateDetails10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateDetails10 obj) throws Exception {
+			checkRateDetails10(obj);
 		}
 	};
 	/**
@@ -801,11 +897,15 @@ public class ConstraintTaxRelatedRateRule {
 	 */
 	public static final MMConstraint<CorporateActionRate40> forCorporateActionRate40 = new MMConstraint<CorporateActionRate40>() {
 		{
-			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate40;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
 			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			owner_lazy = () -> CorporateActionRate40.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate40 obj) throws Exception {
+			checkCorporateActionRate40(obj);
 		}
 	};
 	/**
@@ -830,11 +930,15 @@ public class ConstraintTaxRelatedRateRule {
 	 */
 	public static final MMConstraint<RateDetails13> forRateDetails13 = new MMConstraint<RateDetails13>() {
 		{
-			validator = ConstraintTaxRelatedRateRule::checkRateDetails13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
 			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			owner_lazy = () -> RateDetails13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateDetails13 obj) throws Exception {
+			checkRateDetails13(obj);
 		}
 	};
 	/**
@@ -868,12 +972,16 @@ public class ConstraintTaxRelatedRateRule {
 	 */
 	public static final MMConstraint<CorporateActionRate36> forCorporateActionRate36 = new MMConstraint<CorporateActionRate36>() {
 		{
-			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate36;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
 			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTaxRelatedRateRule.forCorporateActionRate44);
 			owner_lazy = () -> CorporateActionRate36.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate36 obj) throws Exception {
+			checkCorporateActionRate36(obj);
 		}
 	};
 	/**
@@ -899,11 +1007,15 @@ public class ConstraintTaxRelatedRateRule {
 	 */
 	public static final MMConstraint<CorporateActionRate42> forCorporateActionRate42 = new MMConstraint<CorporateActionRate42>() {
 		{
-			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate42;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
 			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			owner_lazy = () -> CorporateActionRate42.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate42 obj) throws Exception {
+			checkCorporateActionRate42(obj);
 		}
 	};
 	/**
@@ -933,12 +1045,16 @@ public class ConstraintTaxRelatedRateRule {
 	 */
 	public static final MMConstraint<RateDetails15> forRateDetails15 = new MMConstraint<RateDetails15>() {
 		{
-			validator = ConstraintTaxRelatedRateRule::checkRateDetails15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
 			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 ).";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTaxRelatedRateRule.forRateDetails11;
 			owner_lazy = () -> RateDetails15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateDetails15 obj) throws Exception {
+			checkRateDetails15(obj);
 		}
 	};
 	/**
@@ -969,12 +1085,16 @@ public class ConstraintTaxRelatedRateRule {
 	 */
 	public static final MMConstraint<CorporateActionRate46> forCorporateActionRate46 = new MMConstraint<CorporateActionRate46>() {
 		{
-			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate46;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
 			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 ).";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTaxRelatedRateRule.forCorporateActionRate38;
 			owner_lazy = () -> CorporateActionRate46.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate46 obj) throws Exception {
+			checkCorporateActionRate46(obj);
 		}
 	};
 	/**
@@ -1005,12 +1125,16 @@ public class ConstraintTaxRelatedRateRule {
 	 */
 	public static final MMConstraint<CorporateActionRate45> forCorporateActionRate45 = new MMConstraint<CorporateActionRate45>() {
 		{
-			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate45;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
 			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTaxRelatedRateRule.forCorporateActionRate37;
 			owner_lazy = () -> CorporateActionRate45.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate45 obj) throws Exception {
+			checkCorporateActionRate45(obj);
 		}
 	};
 	/**
@@ -1041,12 +1165,16 @@ public class ConstraintTaxRelatedRateRule {
 	 */
 	public static final MMConstraint<CorporateActionRate44> forCorporateActionRate44 = new MMConstraint<CorporateActionRate44>() {
 		{
-			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate44;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
 			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTaxRelatedRateRule.forCorporateActionRate36;
 			owner_lazy = () -> CorporateActionRate44.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate44 obj) throws Exception {
+			checkCorporateActionRate44(obj);
 		}
 	};
 	/**
@@ -1076,12 +1204,16 @@ public class ConstraintTaxRelatedRateRule {
 	 */
 	public static final MMConstraint<RateDetails14> forRateDetails14 = new MMConstraint<RateDetails14>() {
 		{
-			validator = ConstraintTaxRelatedRateRule::checkRateDetails14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
 			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTaxRelatedRateRule.forRateDetails10;
 			owner_lazy = () -> RateDetails14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateDetails14 obj) throws Exception {
+			checkRateDetails14(obj);
 		}
 	};
 	/**
@@ -1107,11 +1239,15 @@ public class ConstraintTaxRelatedRateRule {
 	 */
 	public static final MMConstraint<CorporateActionRate60> forCorporateActionRate60 = new MMConstraint<CorporateActionRate60>() {
 		{
-			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate60;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
 			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			owner_lazy = () -> CorporateActionRate60.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate60 obj) throws Exception {
+			checkCorporateActionRate60(obj);
 		}
 	};
 	/**
@@ -1136,11 +1272,15 @@ public class ConstraintTaxRelatedRateRule {
 	 */
 	public static final MMConstraint<RateDetails18> forRateDetails18 = new MMConstraint<RateDetails18>() {
 		{
-			validator = ConstraintTaxRelatedRateRule::checkRateDetails18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
 			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			owner_lazy = () -> RateDetails18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateDetails18 obj) throws Exception {
+			checkRateDetails18(obj);
 		}
 	};
 	/**
@@ -1166,11 +1306,15 @@ public class ConstraintTaxRelatedRateRule {
 	 */
 	public static final MMConstraint<CorporateActionRate64> forCorporateActionRate64 = new MMConstraint<CorporateActionRate64>() {
 		{
-			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate64;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
 			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 ).";
 			owner_lazy = () -> CorporateActionRate64.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate64 obj) throws Exception {
+			checkCorporateActionRate64(obj);
 		}
 	};
 	/**
@@ -1195,11 +1339,15 @@ public class ConstraintTaxRelatedRateRule {
 	 */
 	public static final MMConstraint<RateDetails21> forRateDetails21 = new MMConstraint<RateDetails21>() {
 		{
-			validator = ConstraintTaxRelatedRateRule::checkRateDetails21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
 			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 ).";
 			owner_lazy = () -> RateDetails21.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateDetails21 obj) throws Exception {
+			checkRateDetails21(obj);
 		}
 	};
 	/**
@@ -1225,11 +1373,15 @@ public class ConstraintTaxRelatedRateRule {
 	 */
 	public static final MMConstraint<CorporateActionRate57> forCorporateActionRate57 = new MMConstraint<CorporateActionRate57>() {
 		{
-			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate57;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
 			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			owner_lazy = () -> CorporateActionRate57.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate57 obj) throws Exception {
+			checkCorporateActionRate57(obj);
 		}
 	};
 

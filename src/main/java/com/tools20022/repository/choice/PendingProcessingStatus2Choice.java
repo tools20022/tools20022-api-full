@@ -117,7 +117,7 @@ public class PendingProcessingStatus2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingProcessingStatus2Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<PendingProcessingStatus2Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingProcessingStatus2Choice.mmObject();
@@ -130,6 +130,16 @@ public class PendingProcessingStatus2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(PendingProcessingStatus2Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(PendingProcessingStatus2Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn")
@@ -169,7 +179,7 @@ public class PendingProcessingStatus2Choice {
 	 * definition} = "Specifies the reason of the PendingProcessingStatus."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PendingProcessingStatus2Choice, List<PendingProcessingReason2>> mmReason = new MMMessageAssociationEnd<PendingProcessingStatus2Choice, List<PendingProcessingReason2>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingProcessingStatus2Choice.mmObject();
@@ -182,6 +192,16 @@ public class PendingProcessingStatus2Choice {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PendingProcessingReason2.mmObject();
+		}
+
+		@Override
+		public List<PendingProcessingReason2> getValue(PendingProcessingStatus2Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(PendingProcessingStatus2Choice obj, List<PendingProcessingReason2> value) {
+			obj.setReason(value);
 		}
 	};
 

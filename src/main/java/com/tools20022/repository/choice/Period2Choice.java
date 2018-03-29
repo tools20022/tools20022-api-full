@@ -126,7 +126,7 @@ public class Period2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFromDateTimeToDateTime = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Period2Choice, DateTimePeriodDetails> mmFromDateTimeToDateTime = new MMMessageAssociationEnd<Period2Choice, DateTimePeriodDetails>() {
 		{
 			businessComponentTrace_lazy = () -> DateTimePeriod.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Period2Choice.mmObject();
@@ -141,6 +141,16 @@ public class Period2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DateTimePeriodDetails.mmObject();
+		}
+
+		@Override
+		public DateTimePeriodDetails getValue(Period2Choice obj) {
+			return obj.getFromDateTimeToDateTime();
+		}
+
+		@Override
+		public void setValue(Period2Choice obj, DateTimePeriodDetails value) {
+			obj.setFromDateTimeToDateTime(value);
 		}
 	};
 	@XmlElement(name = "FrDtToDt", required = true)
@@ -187,7 +197,7 @@ public class Period2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFromDateToDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Period2Choice, Period2> mmFromDateToDate = new MMMessageAssociationEnd<Period2Choice, Period2>() {
 		{
 			businessComponentTrace_lazy = () -> DateTimePeriod.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Period2Choice.mmObject();
@@ -202,6 +212,16 @@ public class Period2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Period2.mmObject();
+		}
+
+		@Override
+		public Period2 getValue(Period2Choice obj) {
+			return obj.getFromDateToDate();
+		}
+
+		@Override
+		public void setValue(Period2Choice obj, Period2 value) {
+			obj.setFromDateToDate(value);
 		}
 	};
 

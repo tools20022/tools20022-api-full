@@ -158,7 +158,7 @@ public class CorporateActionMovementCashMovementDetailsSD3 {
 	 * CorporateActionMovementCashMovementDetailsSD2.mmPlaceAndName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMovementCashMovementDetailsSD3, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionMovementCashMovementDetailsSD3, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD3.mmObject();
 			isDerived = false;
@@ -171,6 +171,16 @@ public class CorporateActionMovementCashMovementDetailsSD3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionMovementCashMovementDetailsSD3 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementCashMovementDetailsSD3 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "CdtDbtInd", required = true)
@@ -219,7 +229,7 @@ public class CorporateActionMovementCashMovementDetailsSD3 {
 	 * CorporateActionMovementCashMovementDetailsSD2.mmCreditDebitIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMovementCashMovementDetailsSD3, CreditDebitCode> mmCreditDebitIndicator = new MMMessageAttribute<CorporateActionMovementCashMovementDetailsSD3, CreditDebitCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD3.mmObject();
 			isDerived = false;
@@ -233,6 +243,16 @@ public class CorporateActionMovementCashMovementDetailsSD3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public CreditDebitCode getValue(CorporateActionMovementCashMovementDetailsSD3 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementCashMovementDetailsSD3 obj, CreditDebitCode value) {
+			obj.setCreditDebitIndicator(value);
 		}
 	};
 	@XmlElement(name = "PyoutTp", required = true)
@@ -275,7 +295,7 @@ public class CorporateActionMovementCashMovementDetailsSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPayoutType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMovementCashMovementDetailsSD3, DTCCPayoutType3Code> mmPayoutType = new MMMessageAttribute<CorporateActionMovementCashMovementDetailsSD3, DTCCPayoutType3Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD3.mmObject();
 			isDerived = false;
@@ -287,6 +307,16 @@ public class CorporateActionMovementCashMovementDetailsSD3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DTCCPayoutType3Code.mmObject();
+		}
+
+		@Override
+		public DTCCPayoutType3Code getValue(CorporateActionMovementCashMovementDetailsSD3 obj) {
+			return obj.getPayoutType();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementCashMovementDetailsSD3 obj, DTCCPayoutType3Code value) {
+			obj.setPayoutType(value);
 		}
 	};
 	@XmlElement(name = "TxAmt")
@@ -335,7 +365,7 @@ public class CorporateActionMovementCashMovementDetailsSD3 {
 	 * CorporateActionMovementCashMovementDetailsSD2.mmTransactionAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMovementCashMovementDetailsSD3, Optional<RestrictedFINActiveCurrencyAndAmount>> mmTransactionAmount = new MMMessageAttribute<CorporateActionMovementCashMovementDetailsSD3, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD3.mmObject();
 			isDerived = false;
@@ -349,6 +379,16 @@ public class CorporateActionMovementCashMovementDetailsSD3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionMovementCashMovementDetailsSD3 obj) {
+			return obj.getTransactionAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementCashMovementDetailsSD3 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setTransactionAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RsnCd")
@@ -397,7 +437,7 @@ public class CorporateActionMovementCashMovementDetailsSD3 {
 	 * CorporateActionMovementCashMovementDetailsSD2.mmReasonCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReasonCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMovementCashMovementDetailsSD3, Optional<DTCAdjustmentPaymentType2Code>> mmReasonCode = new MMMessageAttribute<CorporateActionMovementCashMovementDetailsSD3, Optional<DTCAdjustmentPaymentType2Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD3.mmObject();
 			isDerived = false;
@@ -411,6 +451,16 @@ public class CorporateActionMovementCashMovementDetailsSD3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
+		}
+
+		@Override
+		public Optional<DTCAdjustmentPaymentType2Code> getValue(CorporateActionMovementCashMovementDetailsSD3 obj) {
+			return obj.getReasonCode();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementCashMovementDetailsSD3 obj, Optional<DTCAdjustmentPaymentType2Code> value) {
+			obj.setReasonCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SubRsnCd")
@@ -456,7 +506,7 @@ public class CorporateActionMovementCashMovementDetailsSD3 {
 	 * CorporateActionMovementCashMovementDetailsSD2.mmSubReasonCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubReasonCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMovementCashMovementDetailsSD3, Optional<DTCAdjustmentPaymentSubReason1Code>> mmSubReasonCode = new MMMessageAttribute<CorporateActionMovementCashMovementDetailsSD3, Optional<DTCAdjustmentPaymentSubReason1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD3.mmObject();
 			isDerived = false;
@@ -469,6 +519,16 @@ public class CorporateActionMovementCashMovementDetailsSD3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
+		}
+
+		@Override
+		public Optional<DTCAdjustmentPaymentSubReason1Code> getValue(CorporateActionMovementCashMovementDetailsSD3 obj) {
+			return obj.getSubReasonCode();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementCashMovementDetailsSD3 obj, Optional<DTCAdjustmentPaymentSubReason1Code> value) {
+			obj.setSubReasonCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ContraPtcptNb")
@@ -518,7 +578,7 @@ public class CorporateActionMovementCashMovementDetailsSD3 {
 	 * CorporateActionMovementCashMovementDetailsSD2.mmContraParticipantNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContraParticipantNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMovementCashMovementDetailsSD3, Optional<Max8Text>> mmContraParticipantNumber = new MMMessageAttribute<CorporateActionMovementCashMovementDetailsSD3, Optional<Max8Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD3.mmObject();
 			isDerived = false;
@@ -532,6 +592,16 @@ public class CorporateActionMovementCashMovementDetailsSD3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max8Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max8Text> getValue(CorporateActionMovementCashMovementDetailsSD3 obj) {
+			return obj.getContraParticipantNumber();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementCashMovementDetailsSD3 obj, Optional<Max8Text> value) {
+			obj.setContraParticipantNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EarlstPmtDt")
@@ -582,7 +652,7 @@ public class CorporateActionMovementCashMovementDetailsSD3 {
 	 * CorporateActionMovementCashMovementDetailsSD2.mmEarliestPaymentDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEarliestPaymentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMovementCashMovementDetailsSD3, Optional<DateFormat28Choice>> mmEarliestPaymentDate = new MMMessageAttribute<CorporateActionMovementCashMovementDetailsSD3, Optional<DateFormat28Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD3.mmObject();
 			isDerived = false;
@@ -596,6 +666,16 @@ public class CorporateActionMovementCashMovementDetailsSD3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat28Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat28Choice> getValue(CorporateActionMovementCashMovementDetailsSD3 obj) {
+			return obj.getEarliestPaymentDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementCashMovementDetailsSD3 obj, Optional<DateFormat28Choice> value) {
+			obj.setEarliestPaymentDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RDPRefNb")
@@ -638,7 +718,7 @@ public class CorporateActionMovementCashMovementDetailsSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRDPReferenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMovementCashMovementDetailsSD3, Optional<Exact32AlphaNumericText>> mmRDPReferenceNumber = new MMMessageAttribute<CorporateActionMovementCashMovementDetailsSD3, Optional<Exact32AlphaNumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD3.mmObject();
 			isDerived = false;
@@ -650,6 +730,16 @@ public class CorporateActionMovementCashMovementDetailsSD3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact32AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Exact32AlphaNumericText> getValue(CorporateActionMovementCashMovementDetailsSD3 obj) {
+			return obj.getRDPReferenceNumber();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementCashMovementDetailsSD3 obj, Optional<Exact32AlphaNumericText> value) {
+			obj.setRDPReferenceNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxAdjstmntRate")
@@ -697,7 +787,7 @@ public class CorporateActionMovementCashMovementDetailsSD3 {
 	 * CorporateActionMovementCashMovementDetailsSD2.mmTaxAdjustmentRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxAdjustmentRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMovementCashMovementDetailsSD3, Optional<PercentageRate>> mmTaxAdjustmentRate = new MMMessageAttribute<CorporateActionMovementCashMovementDetailsSD3, Optional<PercentageRate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementCashMovementDetailsSD3.mmObject();
 			isDerived = false;
@@ -710,6 +800,16 @@ public class CorporateActionMovementCashMovementDetailsSD3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(CorporateActionMovementCashMovementDetailsSD3 obj) {
+			return obj.getTaxAdjustmentRate();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementCashMovementDetailsSD3 obj, Optional<PercentageRate> value) {
+			obj.setTaxAdjustmentRate(value.orElse(null));
 		}
 	};
 

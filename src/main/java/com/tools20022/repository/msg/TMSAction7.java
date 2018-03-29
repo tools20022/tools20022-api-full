@@ -28,6 +28,7 @@ import com.tools20022.repository.codeset.TerminalManagementAdditionalProcess1Cod
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.TerminalManagementAction;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -109,7 +110,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "TMSAction7"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -168,7 +169,7 @@ public class TMSAction7 {
 	 * TMSAction6.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSAction7, TerminalManagementAction4Code> mmType = new MMMessageAttribute<TMSAction7, TerminalManagementAction4Code>() {
 		{
 			businessElementTrace_lazy = () -> TerminalManagementAction.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction7.mmObject();
@@ -181,6 +182,16 @@ public class TMSAction7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementAction4Code.mmObject();
+		}
+
+		@Override
+		public TerminalManagementAction4Code getValue(TMSAction7 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(TMSAction7 obj, TerminalManagementAction4Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "RmotAccs")
@@ -215,7 +226,7 @@ public class TMSAction7 {
 	 * TMSAction6.mmRemoteAccess}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRemoteAccess = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TMSAction7, Optional<NetworkParameters5>> mmRemoteAccess = new MMMessageAssociationEnd<TMSAction7, Optional<NetworkParameters5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction7.mmObject();
 			isDerived = false;
@@ -227,11 +238,21 @@ public class TMSAction7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NetworkParameters5.mmObject();
+			type_lazy = () -> NetworkParameters5.mmObject();
+		}
+
+		@Override
+		public Optional<NetworkParameters5> getValue(TMSAction7 obj) {
+			return obj.getRemoteAccess();
+		}
+
+		@Override
+		public void setValue(TMSAction7 obj, Optional<NetworkParameters5> value) {
+			obj.setRemoteAccess(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Key")
-	protected List<com.tools20022.repository.msg.KEKIdentifier5> key;
+	protected List<KEKIdentifier5> key;
 	/**
 	 * 
 	 <p>
@@ -257,7 +278,7 @@ public class TMSAction7 {
 	 * definition} = "Cryptographic key used to communicate with the host."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmKey = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TMSAction7, List<KEKIdentifier5>> mmKey = new MMMessageAssociationEnd<TMSAction7, List<KEKIdentifier5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction7.mmObject();
 			isDerived = false;
@@ -267,7 +288,17 @@ public class TMSAction7 {
 			definition = "Cryptographic key used to communicate with the host.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.KEKIdentifier5.mmObject();
+			type_lazy = () -> KEKIdentifier5.mmObject();
+		}
+
+		@Override
+		public List<KEKIdentifier5> getValue(TMSAction7 obj) {
+			return obj.getKey();
+		}
+
+		@Override
+		public void setValue(TMSAction7 obj, List<KEKIdentifier5> value) {
+			obj.setKey(value);
 		}
 	};
 	@XmlElement(name = "TermnlMgrId")
@@ -305,7 +336,7 @@ public class TMSAction7 {
 	 * TMSAction6.mmTerminalManagerIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTerminalManagerIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TMSAction7, Optional<GenericIdentification71>> mmTerminalManagerIdentification = new MMMessageAssociationEnd<TMSAction7, Optional<GenericIdentification71>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction7.mmObject();
 			isDerived = false;
@@ -317,7 +348,17 @@ public class TMSAction7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification71.mmObject();
+			type_lazy = () -> GenericIdentification71.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification71> getValue(TMSAction7 obj) {
+			return obj.getTerminalManagerIdentification();
+		}
+
+		@Override
+		public void setValue(TMSAction7 obj, Optional<GenericIdentification71> value) {
+			obj.setTerminalManagerIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TMSPrtcol")
@@ -354,7 +395,7 @@ public class TMSAction7 {
 	 * TMSAction6.mmTMSProtocol}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTMSProtocol = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSAction7, Optional<Max35Text>> mmTMSProtocol = new MMMessageAttribute<TMSAction7, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction7.mmObject();
 			isDerived = false;
@@ -366,6 +407,16 @@ public class TMSAction7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TMSAction7 obj) {
+			return obj.getTMSProtocol();
+		}
+
+		@Override
+		public void setValue(TMSAction7 obj, Optional<Max35Text> value) {
+			obj.setTMSProtocol(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TMSPrtcolVrsn")
@@ -402,7 +453,7 @@ public class TMSAction7 {
 	 * TMSAction6.mmTMSProtocolVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTMSProtocolVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSAction7, Optional<Max35Text>> mmTMSProtocolVersion = new MMMessageAttribute<TMSAction7, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction7.mmObject();
 			isDerived = false;
@@ -414,6 +465,16 @@ public class TMSAction7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TMSAction7 obj) {
+			return obj.getTMSProtocolVersion();
+		}
+
+		@Override
+		public void setValue(TMSAction7 obj, Optional<Max35Text> value) {
+			obj.setTMSProtocolVersion(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DataSetId")
@@ -448,7 +509,7 @@ public class TMSAction7 {
 	 * TMSAction6.mmDataSetIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSetIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TMSAction7, Optional<DataSetIdentification7>> mmDataSetIdentification = new MMMessageAssociationEnd<TMSAction7, Optional<DataSetIdentification7>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction7.mmObject();
 			isDerived = false;
@@ -460,7 +521,17 @@ public class TMSAction7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DataSetIdentification7.mmObject();
+			type_lazy = () -> DataSetIdentification7.mmObject();
+		}
+
+		@Override
+		public Optional<DataSetIdentification7> getValue(TMSAction7 obj) {
+			return obj.getDataSetIdentification();
+		}
+
+		@Override
+		public void setValue(TMSAction7 obj, Optional<DataSetIdentification7> value) {
+			obj.setDataSetIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CmpntTp")
@@ -497,7 +568,7 @@ public class TMSAction7 {
 	 * TMSAction6.mmComponentType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmComponentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSAction7, List<DataSetCategory12Code>> mmComponentType = new MMMessageAttribute<TMSAction7, List<DataSetCategory12Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction7.mmObject();
 			isDerived = false;
@@ -508,6 +579,16 @@ public class TMSAction7 {
 			previousVersion_lazy = () -> TMSAction6.mmComponentType;
 			minOccurs = 0;
 			simpleType_lazy = () -> DataSetCategory12Code.mmObject();
+		}
+
+		@Override
+		public List<DataSetCategory12Code> getValue(TMSAction7 obj) {
+			return obj.getComponentType();
+		}
+
+		@Override
+		public void setValue(TMSAction7 obj, List<DataSetCategory12Code> value) {
+			obj.setComponentType(value);
 		}
 	};
 	@XmlElement(name = "DlgtnScpId")
@@ -544,7 +625,7 @@ public class TMSAction7 {
 	 * TMSAction6.mmDelegationScopeIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDelegationScopeIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSAction7, Optional<Max35Text>> mmDelegationScopeIdentification = new MMMessageAttribute<TMSAction7, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction7.mmObject();
 			isDerived = false;
@@ -556,6 +637,16 @@ public class TMSAction7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TMSAction7 obj) {
+			return obj.getDelegationScopeIdentification();
+		}
+
+		@Override
+		public void setValue(TMSAction7 obj, Optional<Max35Text> value) {
+			obj.setDelegationScopeIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DlgtnScpDef")
@@ -594,7 +685,7 @@ public class TMSAction7 {
 	 * TMSAction6.mmDelegationScopeDefinition}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDelegationScopeDefinition = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSAction7, Optional<Max3000Binary>> mmDelegationScopeDefinition = new MMMessageAttribute<TMSAction7, Optional<Max3000Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction7.mmObject();
 			isDerived = false;
@@ -606,6 +697,16 @@ public class TMSAction7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3000Binary.mmObject();
+		}
+
+		@Override
+		public Optional<Max3000Binary> getValue(TMSAction7 obj) {
+			return obj.getDelegationScopeDefinition();
+		}
+
+		@Override
+		public void setValue(TMSAction7 obj, Optional<Max3000Binary> value) {
+			obj.setDelegationScopeDefinition(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DlgtnProof")
@@ -644,7 +745,7 @@ public class TMSAction7 {
 	 * TMSAction6.mmDelegationProof}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDelegationProof = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSAction7, Optional<Max5000Binary>> mmDelegationProof = new MMMessageAttribute<TMSAction7, Optional<Max5000Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction7.mmObject();
 			isDerived = false;
@@ -656,6 +757,16 @@ public class TMSAction7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max5000Binary.mmObject();
+		}
+
+		@Override
+		public Optional<Max5000Binary> getValue(TMSAction7 obj) {
+			return obj.getDelegationProof();
+		}
+
+		@Override
+		public void setValue(TMSAction7 obj, Optional<Max5000Binary> value) {
+			obj.setDelegationProof(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrtctdDlgtnProof")
@@ -691,7 +802,7 @@ public class TMSAction7 {
 	 * TMSAction6.mmProtectedDelegationProof}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProtectedDelegationProof = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TMSAction7, Optional<ContentInformationType19>> mmProtectedDelegationProof = new MMMessageAssociationEnd<TMSAction7, Optional<ContentInformationType19>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction7.mmObject();
 			isDerived = false;
@@ -703,7 +814,17 @@ public class TMSAction7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContentInformationType19.mmObject();
+			type_lazy = () -> ContentInformationType19.mmObject();
+		}
+
+		@Override
+		public Optional<ContentInformationType19> getValue(TMSAction7 obj) {
+			return obj.getProtectedDelegationProof();
+		}
+
+		@Override
+		public void setValue(TMSAction7 obj, Optional<ContentInformationType19> value) {
+			obj.setProtectedDelegationProof(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Trggr", required = true)
@@ -747,7 +868,7 @@ public class TMSAction7 {
 	 * TMSAction6.mmTrigger}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTrigger = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSAction7, TerminalManagementActionTrigger1Code> mmTrigger = new MMMessageAttribute<TMSAction7, TerminalManagementActionTrigger1Code>() {
 		{
 			businessElementTrace_lazy = () -> TerminalManagementAction.mmTrigger;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction7.mmObject();
@@ -760,6 +881,16 @@ public class TMSAction7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementActionTrigger1Code.mmObject();
+		}
+
+		@Override
+		public TerminalManagementActionTrigger1Code getValue(TMSAction7 obj) {
+			return obj.getTrigger();
+		}
+
+		@Override
+		public void setValue(TMSAction7 obj, TerminalManagementActionTrigger1Code value) {
+			obj.setTrigger(value);
 		}
 	};
 	@XmlElement(name = "AddtlPrc")
@@ -803,7 +934,7 @@ public class TMSAction7 {
 	 * TMSAction6.mmAdditionalProcess}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalProcess = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSAction7, List<TerminalManagementAdditionalProcess1Code>> mmAdditionalProcess = new MMMessageAttribute<TMSAction7, List<TerminalManagementAdditionalProcess1Code>>() {
 		{
 			businessElementTrace_lazy = () -> TerminalManagementAction.mmAdditionalProcess;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction7.mmObject();
@@ -815,6 +946,16 @@ public class TMSAction7 {
 			previousVersion_lazy = () -> TMSAction6.mmAdditionalProcess;
 			minOccurs = 0;
 			simpleType_lazy = () -> TerminalManagementAdditionalProcess1Code.mmObject();
+		}
+
+		@Override
+		public List<TerminalManagementAdditionalProcess1Code> getValue(TMSAction7 obj) {
+			return obj.getAdditionalProcess();
+		}
+
+		@Override
+		public void setValue(TMSAction7 obj, List<TerminalManagementAdditionalProcess1Code> value) {
+			obj.setAdditionalProcess(value);
 		}
 	};
 	@XmlElement(name = "ReTry")
@@ -850,7 +991,7 @@ public class TMSAction7 {
 	 * TMSAction6.mmReTry}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReTry = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TMSAction7, Optional<ProcessRetry2>> mmReTry = new MMMessageAssociationEnd<TMSAction7, Optional<ProcessRetry2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction7.mmObject();
 			isDerived = false;
@@ -862,7 +1003,17 @@ public class TMSAction7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ProcessRetry2.mmObject();
+			type_lazy = () -> ProcessRetry2.mmObject();
+		}
+
+		@Override
+		public Optional<ProcessRetry2> getValue(TMSAction7 obj) {
+			return obj.getReTry();
+		}
+
+		@Override
+		public void setValue(TMSAction7 obj, Optional<ProcessRetry2> value) {
+			obj.setReTry(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TmCond")
@@ -897,7 +1048,7 @@ public class TMSAction7 {
 	 * TMSAction6.mmTimeCondition}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTimeCondition = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TMSAction7, Optional<ProcessTiming3>> mmTimeCondition = new MMMessageAssociationEnd<TMSAction7, Optional<ProcessTiming3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction7.mmObject();
 			isDerived = false;
@@ -909,7 +1060,17 @@ public class TMSAction7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ProcessTiming3.mmObject();
+			type_lazy = () -> ProcessTiming3.mmObject();
+		}
+
+		@Override
+		public Optional<ProcessTiming3> getValue(TMSAction7 obj) {
+			return obj.getTimeCondition();
+		}
+
+		@Override
+		public void setValue(TMSAction7 obj, Optional<ProcessTiming3> value) {
+			obj.setTimeCondition(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TMChllng")
@@ -947,7 +1108,7 @@ public class TMSAction7 {
 	 * TMSAction6.mmTMChallenge}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTMChallenge = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSAction7, Optional<Max140Binary>> mmTMChallenge = new MMMessageAttribute<TMSAction7, Optional<Max140Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction7.mmObject();
 			isDerived = false;
@@ -959,6 +1120,16 @@ public class TMSAction7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Binary.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Binary> getValue(TMSAction7 obj) {
+			return obj.getTMChallenge();
+		}
+
+		@Override
+		public void setValue(TMSAction7 obj, Optional<Max140Binary> value) {
+			obj.setTMChallenge(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "KeyNcphrmntCert")
@@ -997,7 +1168,7 @@ public class TMSAction7 {
 	 * TMSAction6.mmKeyEnciphermentCertificate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmKeyEnciphermentCertificate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSAction7, List<Max10KBinary>> mmKeyEnciphermentCertificate = new MMMessageAttribute<TMSAction7, List<Max10KBinary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction7.mmObject();
 			isDerived = false;
@@ -1009,9 +1180,19 @@ public class TMSAction7 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10KBinary.mmObject();
 		}
+
+		@Override
+		public List<Max10KBinary> getValue(TMSAction7 obj) {
+			return obj.getKeyEnciphermentCertificate();
+		}
+
+		@Override
+		public void setValue(TMSAction7 obj, List<Max10KBinary> value) {
+			obj.setKeyEnciphermentCertificate(value);
+		}
 	};
 	@XmlElement(name = "ErrActn")
-	protected List<com.tools20022.repository.msg.ErrorAction4> errorAction;
+	protected List<ErrorAction4> errorAction;
 	/**
 	 * 
 	 <p>
@@ -1043,7 +1224,7 @@ public class TMSAction7 {
 	 * TMSAction6.mmErrorAction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmErrorAction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TMSAction7, List<ErrorAction4>> mmErrorAction = new MMMessageAssociationEnd<TMSAction7, List<ErrorAction4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction7.mmObject();
 			isDerived = false;
@@ -1054,7 +1235,17 @@ public class TMSAction7 {
 			previousVersion_lazy = () -> TMSAction6.mmErrorAction;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ErrorAction4.mmObject();
+			type_lazy = () -> ErrorAction4.mmObject();
+		}
+
+		@Override
+		public List<ErrorAction4> getValue(TMSAction7 obj) {
+			return obj.getErrorAction();
+		}
+
+		@Override
+		public void setValue(TMSAction7 obj, List<ErrorAction4> value) {
+			obj.setErrorAction(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -1091,7 +1282,7 @@ public class TMSAction7 {
 	 * TMSAction6.mmAdditionalInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSAction7, List<Max3000Binary>> mmAdditionalInformation = new MMMessageAttribute<TMSAction7, List<Max3000Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction7.mmObject();
 			isDerived = false;
@@ -1103,9 +1294,19 @@ public class TMSAction7 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3000Binary.mmObject();
 		}
+
+		@Override
+		public List<Max3000Binary> getValue(TMSAction7 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(TMSAction7 obj, List<Max3000Binary> value) {
+			obj.setAdditionalInformation(value);
+		}
 	};
 	@XmlElement(name = "MsgItm")
-	protected List<com.tools20022.repository.msg.MessageItemCondition1> messageItem;
+	protected List<MessageItemCondition1> messageItem;
 	/**
 	 * 
 	 <p>
@@ -1131,7 +1332,7 @@ public class TMSAction7 {
 	 * definition} = "Configuration of a message item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMessageItem = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TMSAction7, List<MessageItemCondition1>> mmMessageItem = new MMMessageAssociationEnd<TMSAction7, List<MessageItemCondition1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction7.mmObject();
 			isDerived = false;
@@ -1141,7 +1342,17 @@ public class TMSAction7 {
 			definition = "Configuration of a message item.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MessageItemCondition1.mmObject();
+			type_lazy = () -> MessageItemCondition1.mmObject();
+		}
+
+		@Override
+		public List<MessageItemCondition1> getValue(TMSAction7 obj) {
+			return obj.getMessageItem();
+		}
+
+		@Override
+		public void setValue(TMSAction7 obj, List<MessageItemCondition1> value) {
+			obj.setMessageItem(value);
 		}
 	};
 
@@ -1157,7 +1368,7 @@ public class TMSAction7 {
 						com.tools20022.repository.msg.TMSAction7.mmErrorAction, com.tools20022.repository.msg.TMSAction7.mmAdditionalInformation, com.tools20022.repository.msg.TMSAction7.mmMessageItem);
 				trace_lazy = () -> TerminalManagementAction.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TMSAction7";
 				definition = "Single terminal management action to be performed by the point of interaction.";
 				previousVersion_lazy = () -> TMSAction6.mmObject();
@@ -1179,7 +1390,7 @@ public class TMSAction7 {
 		return remoteAccess == null ? Optional.empty() : Optional.of(remoteAccess);
 	}
 
-	public TMSAction7 setRemoteAccess(com.tools20022.repository.msg.NetworkParameters5 remoteAccess) {
+	public TMSAction7 setRemoteAccess(NetworkParameters5 remoteAccess) {
 		this.remoteAccess = remoteAccess;
 		return this;
 	}
@@ -1188,7 +1399,7 @@ public class TMSAction7 {
 		return key == null ? key = new ArrayList<>() : key;
 	}
 
-	public TMSAction7 setKey(List<com.tools20022.repository.msg.KEKIdentifier5> key) {
+	public TMSAction7 setKey(List<KEKIdentifier5> key) {
 		this.key = Objects.requireNonNull(key);
 		return this;
 	}
@@ -1197,7 +1408,7 @@ public class TMSAction7 {
 		return terminalManagerIdentification == null ? Optional.empty() : Optional.of(terminalManagerIdentification);
 	}
 
-	public TMSAction7 setTerminalManagerIdentification(com.tools20022.repository.msg.GenericIdentification71 terminalManagerIdentification) {
+	public TMSAction7 setTerminalManagerIdentification(GenericIdentification71 terminalManagerIdentification) {
 		this.terminalManagerIdentification = terminalManagerIdentification;
 		return this;
 	}
@@ -1224,7 +1435,7 @@ public class TMSAction7 {
 		return dataSetIdentification == null ? Optional.empty() : Optional.of(dataSetIdentification);
 	}
 
-	public TMSAction7 setDataSetIdentification(com.tools20022.repository.msg.DataSetIdentification7 dataSetIdentification) {
+	public TMSAction7 setDataSetIdentification(DataSetIdentification7 dataSetIdentification) {
 		this.dataSetIdentification = dataSetIdentification;
 		return this;
 	}
@@ -1269,7 +1480,7 @@ public class TMSAction7 {
 		return protectedDelegationProof == null ? Optional.empty() : Optional.of(protectedDelegationProof);
 	}
 
-	public TMSAction7 setProtectedDelegationProof(com.tools20022.repository.msg.ContentInformationType19 protectedDelegationProof) {
+	public TMSAction7 setProtectedDelegationProof(ContentInformationType19 protectedDelegationProof) {
 		this.protectedDelegationProof = protectedDelegationProof;
 		return this;
 	}
@@ -1296,7 +1507,7 @@ public class TMSAction7 {
 		return reTry == null ? Optional.empty() : Optional.of(reTry);
 	}
 
-	public TMSAction7 setReTry(com.tools20022.repository.msg.ProcessRetry2 reTry) {
+	public TMSAction7 setReTry(ProcessRetry2 reTry) {
 		this.reTry = reTry;
 		return this;
 	}
@@ -1305,7 +1516,7 @@ public class TMSAction7 {
 		return timeCondition == null ? Optional.empty() : Optional.of(timeCondition);
 	}
 
-	public TMSAction7 setTimeCondition(com.tools20022.repository.msg.ProcessTiming3 timeCondition) {
+	public TMSAction7 setTimeCondition(ProcessTiming3 timeCondition) {
 		this.timeCondition = timeCondition;
 		return this;
 	}
@@ -1332,7 +1543,7 @@ public class TMSAction7 {
 		return errorAction == null ? errorAction = new ArrayList<>() : errorAction;
 	}
 
-	public TMSAction7 setErrorAction(List<com.tools20022.repository.msg.ErrorAction4> errorAction) {
+	public TMSAction7 setErrorAction(List<ErrorAction4> errorAction) {
 		this.errorAction = Objects.requireNonNull(errorAction);
 		return this;
 	}
@@ -1350,7 +1561,7 @@ public class TMSAction7 {
 		return messageItem == null ? messageItem = new ArrayList<>() : messageItem;
 	}
 
-	public TMSAction7 setMessageItem(List<com.tools20022.repository.msg.MessageItemCondition1> messageItem) {
+	public TMSAction7 setMessageItem(List<MessageItemCondition1> messageItem) {
 		this.messageItem = Objects.requireNonNull(messageItem);
 		return this;
 	}

@@ -33,6 +33,7 @@ import com.tools20022.repository.entity.Interest;
 import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.entity.SecuritiesTax;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PriceValue1;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -152,7 +153,7 @@ public class UnitPrice12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice12, TypeOfPrice12Code> mmType = new MMMessageAttribute<UnitPrice12, TypeOfPrice12Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice12.mmObject();
@@ -165,6 +166,16 @@ public class UnitPrice12 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TypeOfPrice12Code.mmObject();
+		}
+
+		@Override
+		public TypeOfPrice12Code getValue(UnitPrice12 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(UnitPrice12 obj, TypeOfPrice12Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "XtndedTp", required = true)
@@ -201,7 +212,7 @@ public class UnitPrice12 {
 	 * definition} = "Type and information about a price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice12, Extended350Code> mmExtendedType = new MMMessageAttribute<UnitPrice12, Extended350Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice12.mmObject();
@@ -213,6 +224,16 @@ public class UnitPrice12 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Extended350Code getValue(UnitPrice12 obj) {
+			return obj.getExtendedType();
+		}
+
+		@Override
+		public void setValue(UnitPrice12 obj, Extended350Code value) {
+			obj.setExtendedType(value);
 		}
 	};
 	@XmlElement(name = "Val", required = true)
@@ -255,7 +276,7 @@ public class UnitPrice12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice12, PriceValue1> mmValue = new MMMessageAttribute<UnitPrice12, PriceValue1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice12.mmObject();
@@ -267,7 +288,17 @@ public class UnitPrice12 {
 			nextVersions_lazy = () -> Arrays.asList(UnitPrice21.mmValue);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.PriceValue1.mmObject();
+			complexType_lazy = () -> PriceValue1.mmObject();
+		}
+
+		@Override
+		public PriceValue1 getValue(UnitPrice12 obj) {
+			return obj.getValue();
+		}
+
+		@Override
+		public void setValue(UnitPrice12 obj, PriceValue1 value) {
+			obj.setValue(value);
 		}
 	};
 	@XmlElement(name = "PricMtd")
@@ -311,7 +342,7 @@ public class UnitPrice12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriceMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice12, Optional<PriceMethod1Code>> mmPriceMethod = new MMMessageAttribute<UnitPrice12, Optional<PriceMethod1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice12.mmObject();
@@ -324,6 +355,16 @@ public class UnitPrice12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PriceMethod1Code.mmObject();
+		}
+
+		@Override
+		public Optional<PriceMethod1Code> getValue(UnitPrice12 obj) {
+			return obj.getPriceMethod();
+		}
+
+		@Override
+		public void setValue(UnitPrice12 obj, Optional<PriceMethod1Code> value) {
+			obj.setPriceMethod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcrdIntrstNAV")
@@ -370,7 +411,7 @@ public class UnitPrice12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccruedInterestNAV = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice12, Optional<ActiveOrHistoricCurrencyAndAmount>> mmAccruedInterestNAV = new MMMessageAttribute<UnitPrice12, Optional<ActiveOrHistoricCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmAccruedInterestAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice12.mmObject();
@@ -383,6 +424,16 @@ public class UnitPrice12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAndAmount> getValue(UnitPrice12 obj) {
+			return obj.getAccruedInterestNAV();
+		}
+
+		@Override
+		public void setValue(UnitPrice12 obj, Optional<ActiveOrHistoricCurrencyAndAmount> value) {
+			obj.setAccruedInterestNAV(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NbOfDaysAcrd")
@@ -431,7 +482,7 @@ public class UnitPrice12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfDaysAccrued = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice12, Optional<Number>> mmNumberOfDaysAccrued = new MMMessageAttribute<UnitPrice12, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmNumberOfDays;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice12.mmObject();
@@ -445,6 +496,16 @@ public class UnitPrice12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(UnitPrice12 obj) {
+			return obj.getNumberOfDaysAccrued();
+		}
+
+		@Override
+		public void setValue(UnitPrice12 obj, Optional<Number> value) {
+			obj.setNumberOfDaysAccrued(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxblIncmPerShr")
@@ -491,7 +552,7 @@ public class UnitPrice12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxableIncomePerShare = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice12, Optional<ActiveCurrencyAnd13DecimalAmount>> mmTaxableIncomePerShare = new MMMessageAttribute<UnitPrice12, Optional<ActiveCurrencyAnd13DecimalAmount>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmTaxableIncomePerShare;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice12.mmObject();
@@ -504,6 +565,16 @@ public class UnitPrice12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAnd13DecimalAmount> getValue(UnitPrice12 obj) {
+			return obj.getTaxableIncomePerShare();
+		}
+
+		@Override
+		public void setValue(UnitPrice12 obj, Optional<ActiveCurrencyAnd13DecimalAmount> value) {
+			obj.setTaxableIncomePerShare(value.orElse(null));
 		}
 	};
 	/**
@@ -592,7 +663,7 @@ public class UnitPrice12 {
 		return value;
 	}
 
-	public UnitPrice12 setValue(com.tools20022.repository.msg.PriceValue1 value) {
+	public UnitPrice12 setValue(PriceValue1 value) {
 		this.value = Objects.requireNonNull(value);
 		return this;
 	}

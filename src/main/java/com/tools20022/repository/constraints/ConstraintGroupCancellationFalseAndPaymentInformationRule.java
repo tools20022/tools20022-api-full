@@ -56,12 +56,16 @@ public class ConstraintGroupCancellationFalseAndPaymentInformationRule {
 	 */
 	public static final MMConstraint<UnderlyingTransaction1> forUnderlyingTransaction1 = new MMConstraint<UnderlyingTransaction1>() {
 		{
-			validator = ConstraintGroupCancellationFalseAndPaymentInformationRule::checkUnderlyingTransaction1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupCancellationFalseAndPaymentInformationRule";
 			definition = "If OriginalGroupInformationAndCancellation/GroupCancellation is false, then OriginalPaymentInformationAndCancellation must be present.";
 			owner_lazy = () -> UnderlyingTransaction1.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalPaymentInformationAndCancellation[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalGroupInformationAndCancellation/GroupCancellation</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/OriginalGroupInformationAndCancellation/GroupCancellation</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(UnderlyingTransaction1 obj) throws Exception {
+			checkUnderlyingTransaction1(obj);
 		}
 	};
 	/**
@@ -91,12 +95,16 @@ public class ConstraintGroupCancellationFalseAndPaymentInformationRule {
 	 */
 	public static final MMConstraint<UnderlyingTransaction6> forUnderlyingTransaction6 = new MMConstraint<UnderlyingTransaction6>() {
 		{
-			validator = ConstraintGroupCancellationFalseAndPaymentInformationRule::checkUnderlyingTransaction6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupCancellationFalseAndPaymentInformationRule";
 			definition = "If OriginalGroupInformationAndCancellation/GroupCancellation is false, then OriginalPaymentInformationAndCancellation must be present.";
 			owner_lazy = () -> UnderlyingTransaction6.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalPaymentInformationAndCancellation[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalGroupInformationAndCancellation/GroupCancellation</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/OriginalGroupInformationAndCancellation/GroupCancellation</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(UnderlyingTransaction6 obj) throws Exception {
+			checkUnderlyingTransaction6(obj);
 		}
 	};
 	/**
@@ -135,13 +143,17 @@ public class ConstraintGroupCancellationFalseAndPaymentInformationRule {
 	 */
 	public static final MMConstraint<UnderlyingTransaction7> forUnderlyingTransaction7 = new MMConstraint<UnderlyingTransaction7>() {
 		{
-			validator = ConstraintGroupCancellationFalseAndPaymentInformationRule::checkUnderlyingTransaction7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupCancellationFalseAndPaymentInformationRule";
 			definition = "If OriginalGroupInformationAndCancellation/GroupCancellation is false, then OriginalPaymentInformationAndCancellation must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupCancellationFalseAndPaymentInformationRule.forUnderlyingTransaction11);
 			owner_lazy = () -> UnderlyingTransaction7.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalPaymentInformationAndCancellation[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalGroupInformationAndCancellation/GroupCancellation</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/OriginalGroupInformationAndCancellation/GroupCancellation</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(UnderlyingTransaction7 obj) throws Exception {
+			checkUnderlyingTransaction7(obj);
 		}
 	};
 	/**
@@ -186,7 +198,6 @@ public class ConstraintGroupCancellationFalseAndPaymentInformationRule {
 	 */
 	public static final MMConstraint<UnderlyingTransaction11> forUnderlyingTransaction11 = new MMConstraint<UnderlyingTransaction11>() {
 		{
-			validator = ConstraintGroupCancellationFalseAndPaymentInformationRule::checkUnderlyingTransaction11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupCancellationFalseAndPaymentInformationRule";
 			definition = "If OriginalGroupInformationAndCancellation/GroupCancellation is false, then OriginalPaymentInformationAndCancellation must be present.";
@@ -194,6 +205,11 @@ public class ConstraintGroupCancellationFalseAndPaymentInformationRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupCancellationFalseAndPaymentInformationRule.forUnderlyingTransaction7;
 			owner_lazy = () -> UnderlyingTransaction11.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalPaymentInformationAndCancellation[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalGroupInformationAndCancellation/GroupCancellation</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/OriginalGroupInformationAndCancellation/GroupCancellation</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(UnderlyingTransaction11 obj) throws Exception {
+			checkUnderlyingTransaction11(obj);
 		}
 	};
 	/**
@@ -238,7 +254,6 @@ public class ConstraintGroupCancellationFalseAndPaymentInformationRule {
 	 */
 	public static final MMConstraint<UnderlyingTransaction12> forUnderlyingTransaction12 = new MMConstraint<UnderlyingTransaction12>() {
 		{
-			validator = ConstraintGroupCancellationFalseAndPaymentInformationRule::checkUnderlyingTransaction12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupCancellationFalseAndPaymentInformationRule";
 			definition = "If OriginalGroupInformationAndCancellation/GroupCancellation is false, then OriginalPaymentInformationAndCancellation must be present.";
@@ -246,6 +261,11 @@ public class ConstraintGroupCancellationFalseAndPaymentInformationRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupCancellationFalseAndPaymentInformationRule.forUnderlyingTransaction11;
 			owner_lazy = () -> UnderlyingTransaction12.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalPaymentInformationAndCancellation[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalGroupInformationAndCancellation/GroupCancellation</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/OriginalGroupInformationAndCancellation/GroupCancellation</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(UnderlyingTransaction12 obj) throws Exception {
+			checkUnderlyingTransaction12(obj);
 		}
 	};
 	/**
@@ -290,7 +310,6 @@ public class ConstraintGroupCancellationFalseAndPaymentInformationRule {
 	 */
 	public static final MMConstraint<UnderlyingTransaction15> forUnderlyingTransaction15 = new MMConstraint<UnderlyingTransaction15>() {
 		{
-			validator = ConstraintGroupCancellationFalseAndPaymentInformationRule::checkUnderlyingTransaction15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupCancellationFalseAndPaymentInformationRule";
 			definition = "If OriginalGroupInformationAndCancellation/GroupCancellation is false, then OriginalPaymentInformationAndCancellation must be present.";
@@ -298,6 +317,11 @@ public class ConstraintGroupCancellationFalseAndPaymentInformationRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupCancellationFalseAndPaymentInformationRule.forUnderlyingTransaction12;
 			owner_lazy = () -> UnderlyingTransaction15.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalPaymentInformationAndCancellation[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalGroupInformationAndCancellation/GroupCancellation</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/OriginalGroupInformationAndCancellation/GroupCancellation</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(UnderlyingTransaction15 obj) throws Exception {
+			checkUnderlyingTransaction15(obj);
 		}
 	};
 	/**
@@ -333,13 +357,17 @@ public class ConstraintGroupCancellationFalseAndPaymentInformationRule {
 	 */
 	public static final MMConstraint<UnderlyingTransaction21> forUnderlyingTransaction21 = new MMConstraint<UnderlyingTransaction21>() {
 		{
-			validator = ConstraintGroupCancellationFalseAndPaymentInformationRule::checkUnderlyingTransaction21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupCancellationFalseAndPaymentInformationRule";
 			definition = "If OriginalGroupInformationAndCancellation/GroupCancellation is false, then OriginalPaymentInformationAndCancellation must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupCancellationFalseAndPaymentInformationRule.forUnderlyingTransaction15;
 			owner_lazy = () -> UnderlyingTransaction21.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalPaymentInformationAndCancellation[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalGroupInformationAndCancellation/GroupCancellation</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/OriginalGroupInformationAndCancellation/GroupCancellation</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(UnderlyingTransaction21 obj) throws Exception {
+			checkUnderlyingTransaction21(obj);
 		}
 	};
 

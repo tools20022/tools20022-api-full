@@ -110,7 +110,7 @@ public class MoneyLaunderingCheck1Choice {
 	 * definition} = "Money laundering status expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MoneyLaunderingCheck1Choice, MoneyLaunderingCheck1Code> mmCode = new MMMessageAttribute<MoneyLaunderingCheck1Choice, MoneyLaunderingCheck1Code>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmMoneyLaunderingCheck;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MoneyLaunderingCheck1Choice.mmObject();
@@ -122,6 +122,16 @@ public class MoneyLaunderingCheck1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MoneyLaunderingCheck1Code.mmObject();
+		}
+
+		@Override
+		public MoneyLaunderingCheck1Code getValue(MoneyLaunderingCheck1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(MoneyLaunderingCheck1Choice obj, MoneyLaunderingCheck1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -159,7 +169,7 @@ public class MoneyLaunderingCheck1Choice {
 	 * definition} = "Money laundering status expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MoneyLaunderingCheck1Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<MoneyLaunderingCheck1Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmMoneyLaunderingCheck;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MoneyLaunderingCheck1Choice.mmObject();
@@ -171,6 +181,16 @@ public class MoneyLaunderingCheck1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(MoneyLaunderingCheck1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(MoneyLaunderingCheck1Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

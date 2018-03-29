@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.entity.Collateral;
 import com.tools20022.repository.entity.CollateralValuation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountAndDirection54;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -110,7 +111,7 @@ public class ContractValuationData5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmValue = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ContractValuationData5, AmountAndDirection54> mmValue = new MMMessageAssociationEnd<ContractValuationData5, AmountAndDirection54>() {
 		{
 			businessElementTrace_lazy = () -> Collateral.mmValuation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContractValuationData5.mmObject();
@@ -122,7 +123,17 @@ public class ContractValuationData5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection54.mmObject();
+			type_lazy = () -> AmountAndDirection54.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection54 getValue(ContractValuationData5 obj) {
+			return obj.getValue();
+		}
+
+		@Override
+		public void setValue(ContractValuationData5 obj, AmountAndDirection54 value) {
+			obj.setValue(value);
 		}
 	};
 	@XmlElement(name = "TmStmp", required = true)
@@ -161,7 +172,7 @@ public class ContractValuationData5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTimeStamp = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContractValuationData5, ISODateTime> mmTimeStamp = new MMMessageAttribute<ContractValuationData5, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> CollateralValuation.mmCollateralValuationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContractValuationData5.mmObject();
@@ -173,6 +184,16 @@ public class ContractValuationData5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(ContractValuationData5 obj) {
+			return obj.getTimeStamp();
+		}
+
+		@Override
+		public void setValue(ContractValuationData5 obj, ISODateTime value) {
+			obj.setTimeStamp(value);
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -207,7 +228,7 @@ public class ContractValuationData5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContractValuationData5, ValuationType1Code> mmType = new MMMessageAttribute<ContractValuationData5, ValuationType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContractValuationData5.mmObject();
 			isDerived = false;
@@ -218,6 +239,16 @@ public class ContractValuationData5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ValuationType1Code.mmObject();
+		}
+
+		@Override
+		public ValuationType1Code getValue(ContractValuationData5 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(ContractValuationData5 obj, ValuationType1Code value) {
+			obj.setType(value);
 		}
 	};
 
@@ -240,7 +271,7 @@ public class ContractValuationData5 {
 		return value;
 	}
 
-	public ContractValuationData5 setValue(com.tools20022.repository.msg.AmountAndDirection54 value) {
+	public ContractValuationData5 setValue(AmountAndDirection54 value) {
 		this.value = Objects.requireNonNull(value);
 		return this;
 	}

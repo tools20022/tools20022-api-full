@@ -22,9 +22,11 @@ import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.FATCAFormTypeCode;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.AccountPartyRole;
+import com.tools20022.repository.entity.CRSStatus;
+import com.tools20022.repository.entity.FATCAStatus;
+import com.tools20022.repository.entity.InvestmentAccount;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -455,7 +457,7 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmOwnershipBeneficiaryRate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<InvestmentAccountPartyRole, PercentageRate> mmOwnershipBeneficiaryRate = new MMBusinessAttribute<InvestmentAccountPartyRole, PercentageRate>() {
 		{
 			derivation_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation5.mmOwnershipBeneficiaryRate, InvestmentAccountOwnershipInformation2.mmOwnershipBeneficiaryRate,
 					InvestmentAccountOwnershipInformation6.mmOwnershipBeneficiaryRate, InvestmentAccountOwnershipInformation3.mmOwnershipBeneficiaryRate, InvestmentAccountOwnershipInformation4.mmOwnershipBeneficiaryRate,
@@ -472,12 +474,14 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InvestmentAccountPartyRole.class.getMethod("getOwnershipBeneficiaryRate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PercentageRate getValue(InvestmentAccountPartyRole obj) {
+			return obj.getOwnershipBeneficiaryRate();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountPartyRole obj, PercentageRate value) {
+			obj.setOwnershipBeneficiaryRate(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.InvestmentAccount> investmentAccount;
@@ -524,7 +528,7 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmInvestmentAccount = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<InvestmentAccountPartyRole, List<InvestmentAccount>> mmInvestmentAccount = new MMBusinessAssociationEnd<InvestmentAccountPartyRole, List<InvestmentAccount>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TransferOut3.mmNomineeAccount);
 			isDerived = false;
@@ -536,6 +540,16 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmInvestmentAccountPartyRole;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmObject();
+		}
+
+		@Override
+		public List<InvestmentAccount> getValue(InvestmentAccountPartyRole obj) {
+			return obj.getInvestmentAccount();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountPartyRole obj, List<InvestmentAccount> value) {
+			obj.setInvestmentAccount(value);
 		}
 	};
 	protected FATCAFormTypeCode fATCAFormType;
@@ -600,7 +614,7 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmFATCAFormType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<InvestmentAccountPartyRole, FATCAFormTypeCode> mmFATCAFormType = new MMBusinessAttribute<InvestmentAccountPartyRole, FATCAFormTypeCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation10.mmFATCAFormType, InvestmentAccountOwnershipInformation11.mmFATCAFormType, FATCAForm1Choice.mmCode,
 					InvestmentAccountOwnershipInformation12.mmFATCAFormType, InvestmentAccountOwnershipInformation13.mmFATCAFormType, InvestmentAccountOwnershipInformation15.mmFATCAFormType,
@@ -615,12 +629,14 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 			simpleType_lazy = () -> FATCAFormTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InvestmentAccountPartyRole.class.getMethod("getFATCAFormType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public FATCAFormTypeCode getValue(InvestmentAccountPartyRole obj) {
+			return obj.getFATCAFormType();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountPartyRole obj, FATCAFormTypeCode value) {
+			obj.setFATCAFormType(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.FATCAStatus> fATCAStatus;
@@ -681,7 +697,7 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 	 * "Foreign Account Tax Compliance Act (FATCA) status of the investor."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmFATCAStatus = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<InvestmentAccountPartyRole, List<FATCAStatus>> mmFATCAStatus = new MMBusinessAssociationEnd<InvestmentAccountPartyRole, List<FATCAStatus>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation10.mmFATCAStatus, InvestmentAccountOwnershipInformation11.mmFATCAStatus, InvestmentAccountOwnershipInformation12.mmFATCAStatus,
 					InvestmentAccountOwnershipInformation13.mmFATCAStatus, InvestmentAccountOwnershipInformation15.mmFATCAStatus, InvestmentAccountOwnershipInformation14.mmFATCAStatus);
@@ -694,6 +710,16 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 			opposite_lazy = () -> com.tools20022.repository.entity.FATCAStatus.mmInvestmentAccountParty;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.FATCAStatus.mmObject();
+		}
+
+		@Override
+		public List<FATCAStatus> getValue(InvestmentAccountPartyRole obj) {
+			return obj.getFATCAStatus();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountPartyRole obj, List<FATCAStatus> value) {
+			obj.setFATCAStatus(value);
 		}
 	};
 	protected CRSStatus cRSStatus;
@@ -741,7 +767,7 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 	 * definition} = "Common Reporting Standard (CRS) status of the investor."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCRSStatus = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<InvestmentAccountPartyRole, com.tools20022.repository.entity.CRSStatus> mmCRSStatus = new MMBusinessAssociationEnd<InvestmentAccountPartyRole, com.tools20022.repository.entity.CRSStatus>() {
 		{
 			derivation_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation15.mmCRSStatus, InvestmentAccountOwnershipInformation14.mmCRSStatus);
 			isDerived = false;
@@ -754,6 +780,16 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 			opposite_lazy = () -> com.tools20022.repository.entity.CRSStatus.mmInvestmentAccountParty;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CRSStatus.mmObject();
+		}
+
+		@Override
+		public com.tools20022.repository.entity.CRSStatus getValue(InvestmentAccountPartyRole obj) {
+			return obj.getCRSStatus();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountPartyRole obj, com.tools20022.repository.entity.CRSStatus value) {
+			obj.setCRSStatus(value);
 		}
 	};
 

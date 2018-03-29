@@ -21,6 +21,7 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.*;
 import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
@@ -126,7 +127,7 @@ public class ProcessingStatus61Choice {
 	 * definition} = "The cancellation is pending processing."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPendingCancellation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProcessingStatus61Choice, PendingStatus51Choice> mmPendingCancellation = new MMMessageAssociationEnd<ProcessingStatus61Choice, PendingStatus51Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessingStatus61Choice.mmObject();
@@ -139,7 +140,17 @@ public class ProcessingStatus61Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.PendingStatus51Choice.mmObject();
+			type_lazy = () -> PendingStatus51Choice.mmObject();
+		}
+
+		@Override
+		public PendingStatus51Choice getValue(ProcessingStatus61Choice obj) {
+			return obj.getPendingCancellation();
+		}
+
+		@Override
+		public void setValue(ProcessingStatus61Choice obj, PendingStatus51Choice value) {
+			obj.setPendingCancellation(value);
 		}
 	};
 	@XmlElement(name = "Rjctd", required = true)
@@ -180,7 +191,7 @@ public class ProcessingStatus61Choice {
 	 * "Instruction/Request has been rejected for further processing."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProcessingStatus61Choice, RejectionOrRepairStatus35Choice> mmRejected = new MMMessageAssociationEnd<ProcessingStatus61Choice, RejectionOrRepairStatus35Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessingStatus61Choice.mmObject();
@@ -193,7 +204,17 @@ public class ProcessingStatus61Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.RejectionOrRepairStatus35Choice.mmObject();
+			type_lazy = () -> RejectionOrRepairStatus35Choice.mmObject();
+		}
+
+		@Override
+		public RejectionOrRepairStatus35Choice getValue(ProcessingStatus61Choice obj) {
+			return obj.getRejected();
+		}
+
+		@Override
+		public void setValue(ProcessingStatus61Choice obj, RejectionOrRepairStatus35Choice value) {
+			obj.setRejected(value);
 		}
 	};
 	@XmlElement(name = "Rpr", required = true)
@@ -233,7 +254,7 @@ public class ProcessingStatus61Choice {
 	 * definition} = "Instruction/Request is accepted but in repair."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRepair = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProcessingStatus61Choice, RejectionOrRepairStatus34Choice> mmRepair = new MMMessageAssociationEnd<ProcessingStatus61Choice, RejectionOrRepairStatus34Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmRepairReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessingStatus61Choice.mmObject();
@@ -246,7 +267,17 @@ public class ProcessingStatus61Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.RejectionOrRepairStatus34Choice.mmObject();
+			type_lazy = () -> RejectionOrRepairStatus34Choice.mmObject();
+		}
+
+		@Override
+		public RejectionOrRepairStatus34Choice getValue(ProcessingStatus61Choice obj) {
+			return obj.getRepair();
+		}
+
+		@Override
+		public void setValue(ProcessingStatus61Choice obj, RejectionOrRepairStatus34Choice value) {
+			obj.setRepair(value);
 		}
 	};
 	@XmlElement(name = "AckdAccptd", required = true)
@@ -287,7 +318,7 @@ public class ProcessingStatus61Choice {
 	 * "Instruction has been acknowledged by the account servicer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAcknowledgedAccepted = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProcessingStatus61Choice, AcknowledgedAcceptedStatus31Choice> mmAcknowledgedAccepted = new MMMessageAssociationEnd<ProcessingStatus61Choice, AcknowledgedAcceptedStatus31Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessingStatus61Choice.mmObject();
@@ -300,7 +331,17 @@ public class ProcessingStatus61Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.AcknowledgedAcceptedStatus31Choice.mmObject();
+			type_lazy = () -> AcknowledgedAcceptedStatus31Choice.mmObject();
+		}
+
+		@Override
+		public AcknowledgedAcceptedStatus31Choice getValue(ProcessingStatus61Choice obj) {
+			return obj.getAcknowledgedAccepted();
+		}
+
+		@Override
+		public void setValue(ProcessingStatus61Choice obj, AcknowledgedAcceptedStatus31Choice value) {
+			obj.setAcknowledgedAccepted(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -342,7 +383,7 @@ public class ProcessingStatus61Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProcessingStatus61Choice, ProprietaryStatusAndReason7> mmProprietary = new MMMessageAssociationEnd<ProcessingStatus61Choice, ProprietaryStatusAndReason7>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessingStatus61Choice.mmObject();
@@ -356,6 +397,16 @@ public class ProcessingStatus61Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryStatusAndReason7.mmObject();
+		}
+
+		@Override
+		public ProprietaryStatusAndReason7 getValue(ProcessingStatus61Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ProcessingStatus61Choice obj, ProprietaryStatusAndReason7 value) {
+			obj.setProprietary(value);
 		}
 	};
 	@XmlElement(name = "Dnd", required = true)
@@ -395,7 +446,7 @@ public class ProcessingStatus61Choice {
 	 * definition} = "Instruction/Request will not be executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDenied = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProcessingStatus61Choice, DeniedStatus21Choice> mmDenied = new MMMessageAssociationEnd<ProcessingStatus61Choice, DeniedStatus21Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmDeniedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessingStatus61Choice.mmObject();
@@ -408,7 +459,17 @@ public class ProcessingStatus61Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.DeniedStatus21Choice.mmObject();
+			type_lazy = () -> DeniedStatus21Choice.mmObject();
+		}
+
+		@Override
+		public DeniedStatus21Choice getValue(ProcessingStatus61Choice obj) {
+			return obj.getDenied();
+		}
+
+		@Override
+		public void setValue(ProcessingStatus61Choice obj, DeniedStatus21Choice value) {
+			obj.setDenied(value);
 		}
 	};
 	@XmlElement(name = "Canc", required = true)
@@ -448,7 +509,7 @@ public class ProcessingStatus61Choice {
 	 * definition} = "Cancellation requested executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCancelled = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProcessingStatus61Choice, CancellationStatus20Choice> mmCancelled = new MMMessageAssociationEnd<ProcessingStatus61Choice, CancellationStatus20Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessingStatus61Choice.mmObject();
@@ -461,7 +522,17 @@ public class ProcessingStatus61Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.CancellationStatus20Choice.mmObject();
+			type_lazy = () -> CancellationStatus20Choice.mmObject();
+		}
+
+		@Override
+		public CancellationStatus20Choice getValue(ProcessingStatus61Choice obj) {
+			return obj.getCancelled();
+		}
+
+		@Override
+		public void setValue(ProcessingStatus61Choice obj, CancellationStatus20Choice value) {
+			obj.setCancelled(value);
 		}
 	};
 
@@ -485,7 +556,7 @@ public class ProcessingStatus61Choice {
 		return pendingCancellation;
 	}
 
-	public ProcessingStatus61Choice setPendingCancellation(com.tools20022.repository.choice.PendingStatus51Choice pendingCancellation) {
+	public ProcessingStatus61Choice setPendingCancellation(PendingStatus51Choice pendingCancellation) {
 		this.pendingCancellation = Objects.requireNonNull(pendingCancellation);
 		return this;
 	}
@@ -494,7 +565,7 @@ public class ProcessingStatus61Choice {
 		return rejected;
 	}
 
-	public ProcessingStatus61Choice setRejected(com.tools20022.repository.choice.RejectionOrRepairStatus35Choice rejected) {
+	public ProcessingStatus61Choice setRejected(RejectionOrRepairStatus35Choice rejected) {
 		this.rejected = Objects.requireNonNull(rejected);
 		return this;
 	}
@@ -503,7 +574,7 @@ public class ProcessingStatus61Choice {
 		return repair;
 	}
 
-	public ProcessingStatus61Choice setRepair(com.tools20022.repository.choice.RejectionOrRepairStatus34Choice repair) {
+	public ProcessingStatus61Choice setRepair(RejectionOrRepairStatus34Choice repair) {
 		this.repair = Objects.requireNonNull(repair);
 		return this;
 	}
@@ -512,7 +583,7 @@ public class ProcessingStatus61Choice {
 		return acknowledgedAccepted;
 	}
 
-	public ProcessingStatus61Choice setAcknowledgedAccepted(com.tools20022.repository.choice.AcknowledgedAcceptedStatus31Choice acknowledgedAccepted) {
+	public ProcessingStatus61Choice setAcknowledgedAccepted(AcknowledgedAcceptedStatus31Choice acknowledgedAccepted) {
 		this.acknowledgedAccepted = Objects.requireNonNull(acknowledgedAccepted);
 		return this;
 	}
@@ -530,7 +601,7 @@ public class ProcessingStatus61Choice {
 		return denied;
 	}
 
-	public ProcessingStatus61Choice setDenied(com.tools20022.repository.choice.DeniedStatus21Choice denied) {
+	public ProcessingStatus61Choice setDenied(DeniedStatus21Choice denied) {
 		this.denied = Objects.requireNonNull(denied);
 		return this;
 	}
@@ -539,7 +610,7 @@ public class ProcessingStatus61Choice {
 		return cancelled;
 	}
 
-	public ProcessingStatus61Choice setCancelled(com.tools20022.repository.choice.CancellationStatus20Choice cancelled) {
+	public ProcessingStatus61Choice setCancelled(CancellationStatus20Choice cancelled) {
 		this.cancelled = Objects.requireNonNull(cancelled);
 		return this;
 	}

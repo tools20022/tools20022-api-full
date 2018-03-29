@@ -117,7 +117,7 @@ public class CashAccount18 {
 	 * definition} = "Specifies whether the value is a debit or credit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount18, CreditDebitCode> mmCreditDebitIndicator = new MMMessageAttribute<CashAccount18, CreditDebitCode>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount18.mmObject();
@@ -129,6 +129,16 @@ public class CashAccount18 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public CreditDebitCode getValue(CashAccount18 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(CashAccount18 obj, CreditDebitCode value) {
+			obj.setCreditDebitIndicator(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnrId")
@@ -165,7 +175,7 @@ public class CashAccount18 {
 	 * definition} = "Identification of the party that owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwnerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount18, Optional<PartyIdentification2Choice>> mmAccountOwnerIdentification = new MMMessageAttribute<CashAccount18, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount18.mmObject();
@@ -177,6 +187,16 @@ public class CashAccount18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(CashAccount18 obj) {
+			return obj.getAccountOwnerIdentification();
+		}
+
+		@Override
+		public void setValue(CashAccount18 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setAccountOwnerIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctId", required = true)
@@ -215,7 +235,7 @@ public class CashAccount18 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount18, AccountIdentification2Choice> mmAccountIdentification = new MMMessageAttribute<CashAccount18, AccountIdentification2Choice>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount18.mmObject();
@@ -227,6 +247,16 @@ public class CashAccount18 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AccountIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public AccountIdentification2Choice getValue(CashAccount18 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(CashAccount18 obj, AccountIdentification2Choice value) {
+			obj.setAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "BalTp")
@@ -263,7 +293,7 @@ public class CashAccount18 {
 	 * definition} = "The cash balance type."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBalanceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount18, Optional<CashBalanceType1FormatType>> mmBalanceType = new MMMessageAttribute<CashAccount18, Optional<CashBalanceType1FormatType>>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount18.mmObject();
@@ -275,6 +305,16 @@ public class CashAccount18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CashBalanceType1FormatType.mmObject();
+		}
+
+		@Override
+		public Optional<CashBalanceType1FormatType> getValue(CashAccount18 obj) {
+			return obj.getBalanceType();
+		}
+
+		@Override
+		public void setValue(CashAccount18 obj, Optional<CashBalanceType1FormatType> value) {
+			obj.setBalanceType(value.orElse(null));
 		}
 	};
 

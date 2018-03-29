@@ -24,9 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesSettlementArchive;
 import com.tools20022.repository.choice.PartyIdentification2Choice;
 import com.tools20022.repository.msg.*;
-import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -115,9 +113,6 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
  * messageSet} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion
- * InvestmentFundsISOPreviousversion}</li>
  * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
  * </ul>
  * </li>
@@ -223,7 +218,7 @@ public class PortfolioTransferInstructionV06 {
 	 * PortfolioTransferInstructionV05.mmMessageReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferInstructionV06, MessageIdentification1> mmMessageReference = new MMMessageBuildingBlock<PortfolioTransferInstructionV06, MessageIdentification1>() {
 		{
 			xmlTag = "MsgRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -236,12 +231,14 @@ public class PortfolioTransferInstructionV06 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferInstructionV06.class.getMethod("getMessageReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(PortfolioTransferInstructionV06 obj) {
+			return obj.getMessageReference();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferInstructionV06 obj, MessageIdentification1 value) {
+			obj.setMessageReference(value);
 		}
 	};
 	@XmlElement(name = "PoolRef")
@@ -282,7 +279,7 @@ public class PortfolioTransferInstructionV06 {
 	 * PortfolioTransferInstructionV05.mmPoolReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferInstructionV06, Optional<AdditionalReference3>> mmPoolReference = new MMMessageBuildingBlock<PortfolioTransferInstructionV06, Optional<AdditionalReference3>>() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -295,12 +292,14 @@ public class PortfolioTransferInstructionV06 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferInstructionV06.class.getMethod("getPoolReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference3> getValue(PortfolioTransferInstructionV06 obj) {
+			return obj.getPoolReference();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferInstructionV06 obj, Optional<AdditionalReference3> value) {
+			obj.setPoolReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsRef")
@@ -341,7 +340,7 @@ public class PortfolioTransferInstructionV06 {
 	 * PortfolioTransferInstructionV05.mmPreviousReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferInstructionV06, Optional<AdditionalReference3>> mmPreviousReference = new MMMessageBuildingBlock<PortfolioTransferInstructionV06, Optional<AdditionalReference3>>() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -354,12 +353,14 @@ public class PortfolioTransferInstructionV06 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferInstructionV06.class.getMethod("getPreviousReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference3> getValue(PortfolioTransferInstructionV06 obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferInstructionV06 obj, Optional<AdditionalReference3> value) {
+			obj.setPreviousReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RltdRef")
@@ -401,7 +402,7 @@ public class PortfolioTransferInstructionV06 {
 	 * PortfolioTransferInstructionV05.mmRelatedReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferInstructionV06, Optional<AdditionalReference3>> mmRelatedReference = new MMMessageBuildingBlock<PortfolioTransferInstructionV06, Optional<AdditionalReference3>>() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -414,12 +415,14 @@ public class PortfolioTransferInstructionV06 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferInstructionV06.class.getMethod("getRelatedReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference3> getValue(PortfolioTransferInstructionV06 obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferInstructionV06 obj, Optional<AdditionalReference3> value) {
+			obj.setRelatedReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmryIndvInvstr")
@@ -462,7 +465,7 @@ public class PortfolioTransferInstructionV06 {
 	 * PortfolioTransferInstructionV05.mmPrimaryIndividualInvestor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPrimaryIndividualInvestor = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferInstructionV06, Optional<IndividualPerson8>> mmPrimaryIndividualInvestor = new MMMessageBuildingBlock<PortfolioTransferInstructionV06, Optional<IndividualPerson8>>() {
 		{
 			xmlTag = "PmryIndvInvstr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -475,12 +478,14 @@ public class PortfolioTransferInstructionV06 {
 			complexType_lazy = () -> IndividualPerson8.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferInstructionV06.class.getMethod("getPrimaryIndividualInvestor", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<IndividualPerson8> getValue(PortfolioTransferInstructionV06 obj) {
+			return obj.getPrimaryIndividualInvestor();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferInstructionV06 obj, Optional<IndividualPerson8> value) {
+			obj.setPrimaryIndividualInvestor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ScndryIndvInvstr")
@@ -523,7 +528,7 @@ public class PortfolioTransferInstructionV06 {
 	 * PortfolioTransferInstructionV05.mmSecondaryIndividualInvestor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecondaryIndividualInvestor = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferInstructionV06, Optional<IndividualPerson8>> mmSecondaryIndividualInvestor = new MMMessageBuildingBlock<PortfolioTransferInstructionV06, Optional<IndividualPerson8>>() {
 		{
 			xmlTag = "ScndryIndvInvstr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -536,12 +541,14 @@ public class PortfolioTransferInstructionV06 {
 			complexType_lazy = () -> IndividualPerson8.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferInstructionV06.class.getMethod("getSecondaryIndividualInvestor", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<IndividualPerson8> getValue(PortfolioTransferInstructionV06 obj) {
+			return obj.getSecondaryIndividualInvestor();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferInstructionV06 obj, Optional<IndividualPerson8> value) {
+			obj.setSecondaryIndividualInvestor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OthrIndvInvstr")
@@ -584,7 +591,7 @@ public class PortfolioTransferInstructionV06 {
 	 * PortfolioTransferInstructionV05.mmOtherIndividualInvestor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOtherIndividualInvestor = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferInstructionV06, List<IndividualPerson8>> mmOtherIndividualInvestor = new MMMessageBuildingBlock<PortfolioTransferInstructionV06, List<IndividualPerson8>>() {
 		{
 			xmlTag = "OthrIndvInvstr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -596,12 +603,14 @@ public class PortfolioTransferInstructionV06 {
 			complexType_lazy = () -> IndividualPerson8.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferInstructionV06.class.getMethod("getOtherIndividualInvestor", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<IndividualPerson8> getValue(PortfolioTransferInstructionV06 obj) {
+			return obj.getOtherIndividualInvestor();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferInstructionV06 obj, List<IndividualPerson8> value) {
+			obj.setOtherIndividualInvestor(value);
 		}
 	};
 	@XmlElement(name = "PmryCorpInvstr")
@@ -643,7 +652,7 @@ public class PortfolioTransferInstructionV06 {
 	 * PortfolioTransferInstructionV05.mmPrimaryCorporateInvestor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPrimaryCorporateInvestor = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferInstructionV06, Optional<Organisation4>> mmPrimaryCorporateInvestor = new MMMessageBuildingBlock<PortfolioTransferInstructionV06, Optional<Organisation4>>() {
 		{
 			xmlTag = "PmryCorpInvstr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -656,12 +665,14 @@ public class PortfolioTransferInstructionV06 {
 			complexType_lazy = () -> Organisation4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferInstructionV06.class.getMethod("getPrimaryCorporateInvestor", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Organisation4> getValue(PortfolioTransferInstructionV06 obj) {
+			return obj.getPrimaryCorporateInvestor();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferInstructionV06 obj, Optional<Organisation4> value) {
+			obj.setPrimaryCorporateInvestor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ScndryCorpInvstr")
@@ -703,7 +714,7 @@ public class PortfolioTransferInstructionV06 {
 	 * PortfolioTransferInstructionV05.mmSecondaryCorporateInvestor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecondaryCorporateInvestor = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferInstructionV06, Optional<Organisation4>> mmSecondaryCorporateInvestor = new MMMessageBuildingBlock<PortfolioTransferInstructionV06, Optional<Organisation4>>() {
 		{
 			xmlTag = "ScndryCorpInvstr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -716,12 +727,14 @@ public class PortfolioTransferInstructionV06 {
 			complexType_lazy = () -> Organisation4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferInstructionV06.class.getMethod("getSecondaryCorporateInvestor", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Organisation4> getValue(PortfolioTransferInstructionV06 obj) {
+			return obj.getSecondaryCorporateInvestor();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferInstructionV06 obj, Optional<Organisation4> value) {
+			obj.setSecondaryCorporateInvestor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OthrCorpInvstr")
@@ -763,7 +776,7 @@ public class PortfolioTransferInstructionV06 {
 	 * PortfolioTransferInstructionV05.mmOtherCorporateInvestor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOtherCorporateInvestor = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferInstructionV06, List<Organisation4>> mmOtherCorporateInvestor = new MMMessageBuildingBlock<PortfolioTransferInstructionV06, List<Organisation4>>() {
 		{
 			xmlTag = "OthrCorpInvstr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -775,12 +788,14 @@ public class PortfolioTransferInstructionV06 {
 			complexType_lazy = () -> Organisation4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferInstructionV06.class.getMethod("getOtherCorporateInvestor", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Organisation4> getValue(PortfolioTransferInstructionV06 obj) {
+			return obj.getOtherCorporateInvestor();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferInstructionV06 obj, List<Organisation4> value) {
+			obj.setOtherCorporateInvestor(value);
 		}
 	};
 	@XmlElement(name = "TrfrAcct", required = true)
@@ -822,7 +837,7 @@ public class PortfolioTransferInstructionV06 {
 	 * PortfolioTransferInstructionV05.mmTransferorAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransferorAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferInstructionV06, Account15> mmTransferorAccount = new MMMessageBuildingBlock<PortfolioTransferInstructionV06, Account15>() {
 		{
 			xmlTag = "TrfrAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -835,12 +850,14 @@ public class PortfolioTransferInstructionV06 {
 			complexType_lazy = () -> Account15.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferInstructionV06.class.getMethod("getTransferorAccount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Account15 getValue(PortfolioTransferInstructionV06 obj) {
+			return obj.getTransferorAccount();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferInstructionV06 obj, Account15 value) {
+			obj.setTransferorAccount(value);
 		}
 	};
 	@XmlElement(name = "NmneeAcct")
@@ -882,7 +899,7 @@ public class PortfolioTransferInstructionV06 {
 	 * PortfolioTransferInstructionV05.mmNomineeAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmNomineeAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferInstructionV06, Optional<Account16>> mmNomineeAccount = new MMMessageBuildingBlock<PortfolioTransferInstructionV06, Optional<Account16>>() {
 		{
 			xmlTag = "NmneeAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -895,12 +912,14 @@ public class PortfolioTransferInstructionV06 {
 			complexType_lazy = () -> Account16.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferInstructionV06.class.getMethod("getNomineeAccount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Account16> getValue(PortfolioTransferInstructionV06 obj) {
+			return obj.getNomineeAccount();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferInstructionV06 obj, Optional<Account16> value) {
+			obj.setNomineeAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Trfee", required = true)
@@ -943,7 +962,7 @@ public class PortfolioTransferInstructionV06 {
 	 * PortfolioTransferInstructionV05.mmTransferee}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransferee = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferInstructionV06, PartyIdentification2Choice> mmTransferee = new MMMessageBuildingBlock<PortfolioTransferInstructionV06, PartyIdentification2Choice>() {
 		{
 			xmlTag = "Trfee";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -956,12 +975,14 @@ public class PortfolioTransferInstructionV06 {
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferInstructionV06.class.getMethod("getTransferee", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PartyIdentification2Choice getValue(PortfolioTransferInstructionV06 obj) {
+			return obj.getTransferee();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferInstructionV06 obj, PartyIdentification2Choice value) {
+			obj.setTransferee(value);
 		}
 	};
 	@XmlElement(name = "CshAcct")
@@ -1003,7 +1024,7 @@ public class PortfolioTransferInstructionV06 {
 	 * PortfolioTransferInstructionV05.mmCashAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCashAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferInstructionV06, Optional<CashAccount29>> mmCashAccount = new MMMessageBuildingBlock<PortfolioTransferInstructionV06, Optional<CashAccount29>>() {
 		{
 			xmlTag = "CshAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1016,12 +1037,14 @@ public class PortfolioTransferInstructionV06 {
 			complexType_lazy = () -> CashAccount29.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferInstructionV06.class.getMethod("getCashAccount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<CashAccount29> getValue(PortfolioTransferInstructionV06 obj) {
+			return obj.getCashAccount();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferInstructionV06 obj, Optional<CashAccount29> value) {
+			obj.setCashAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PdctTrf", required = true)
@@ -1062,7 +1085,7 @@ public class PortfolioTransferInstructionV06 {
 	 * PortfolioTransferInstructionV05.mmProductTransfer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmProductTransfer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferInstructionV06, List<ISATransfer18>> mmProductTransfer = new MMMessageBuildingBlock<PortfolioTransferInstructionV06, List<ISATransfer18>>() {
 		{
 			xmlTag = "PdctTrf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1074,12 +1097,14 @@ public class PortfolioTransferInstructionV06 {
 			complexType_lazy = () -> ISATransfer18.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferInstructionV06.class.getMethod("getProductTransfer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<ISATransfer18> getValue(PortfolioTransferInstructionV06 obj) {
+			return obj.getProductTransfer();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferInstructionV06 obj, List<ISATransfer18> value) {
+			obj.setProductTransfer(value);
 		}
 	};
 	@XmlElement(name = "MktPrctcVrsn")
@@ -1121,7 +1146,7 @@ public class PortfolioTransferInstructionV06 {
 	 * PortfolioTransferInstructionV05.mmMarketPracticeVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMarketPracticeVersion = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferInstructionV06, Optional<MarketPracticeVersion1>> mmMarketPracticeVersion = new MMMessageBuildingBlock<PortfolioTransferInstructionV06, Optional<MarketPracticeVersion1>>() {
 		{
 			xmlTag = "MktPrctcVrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1134,12 +1159,14 @@ public class PortfolioTransferInstructionV06 {
 			complexType_lazy = () -> MarketPracticeVersion1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferInstructionV06.class.getMethod("getMarketPracticeVersion", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<MarketPracticeVersion1> getValue(PortfolioTransferInstructionV06 obj) {
+			return obj.getMarketPracticeVersion();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferInstructionV06 obj, Optional<MarketPracticeVersion1> value) {
+			obj.setMarketPracticeVersion(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Xtnsn")
@@ -1181,7 +1208,7 @@ public class PortfolioTransferInstructionV06 {
 	 * PortfolioTransferInstructionV05.mmExtension}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferInstructionV06, List<Extension1>> mmExtension = new MMMessageBuildingBlock<PortfolioTransferInstructionV06, List<Extension1>>() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1193,12 +1220,14 @@ public class PortfolioTransferInstructionV06 {
 			complexType_lazy = () -> Extension1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferInstructionV06.class.getMethod("getExtension", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Extension1> getValue(PortfolioTransferInstructionV06 obj) {
+			return obj.getExtension();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferInstructionV06 obj, List<Extension1> value) {
+			obj.setExtension(value);
 		}
 	};
 
@@ -1214,7 +1243,7 @@ public class PortfolioTransferInstructionV06 {
 				definition = "Scope\r\nAn instructing party, for example, a (new) plan manager (Transferee), sends the PortfolioTransferInstruction message to the executing party, for example, a (old) plan manager (Transferor), on behalf of the initiating party, for example, an investor (client), to instruct the transfer of financial instruments from the clients account at the old plan manager (Transferor) to the clients account at the new plan manager (Transferee) through a nominee account.\r\nUsage\r\nThe PortfolioTransferInstruction message is used to instruct the withdrawal of one or more ISA or portfolio products from one account and deliver them to another account.\r\nThe PortfolioTransferInstruction message is used to instruct one or more transfers for one client. Each transfer is for delivery to the same account. The account may be owned by one or more individual investors or one or more corporate investors. Each transfer is identified in TransferIdentification.\r\nIf the instructing party does not have enough information to instruct the transfer, then it must first send a AccountHoldingInformationRequest message to the executing party in order to receive a AccountHoldingInformation message.";
 				nextVersions_lazy = () -> Arrays.asList(PortfolioTransferInstructionV07.mmObject());
 				previousVersion_lazy = () -> PortfolioTransferInstructionV05.mmObject();
-				messageSet_lazy = () -> Arrays.asList(InvestmentFundsISOPreviousversion.mmObject(), ISOArchive.mmObject());
+				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "PrtflTrfInstr";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();

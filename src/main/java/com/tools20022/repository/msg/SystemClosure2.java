@@ -114,7 +114,7 @@ public class SystemClosure2 {
 	 * SystemClosure1.mmPeriod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemClosure2, Optional<DateTimePeriod1Choice>> mmPeriod = new MMMessageAttribute<SystemClosure2, Optional<DateTimePeriod1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SystemClosureInformation.mmPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemClosure2.mmObject();
@@ -127,6 +127,16 @@ public class SystemClosure2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateTimePeriod1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateTimePeriod1Choice> getValue(SystemClosure2 obj) {
+			return obj.getPeriod();
+		}
+
+		@Override
+		public void setValue(SystemClosure2 obj, Optional<DateTimePeriod1Choice> value) {
+			obj.setPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -168,7 +178,7 @@ public class SystemClosure2 {
 	 * SystemClosure1.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemClosure2, ClosureReason2Choice> mmReason = new MMMessageAttribute<SystemClosure2, ClosureReason2Choice>() {
 		{
 			businessElementTrace_lazy = () -> SystemClosureInformation.mmClosureReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemClosure2.mmObject();
@@ -181,6 +191,16 @@ public class SystemClosure2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ClosureReason2Choice.mmObject();
+		}
+
+		@Override
+		public ClosureReason2Choice getValue(SystemClosure2 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(SystemClosure2 obj, ClosureReason2Choice value) {
+			obj.setReason(value);
 		}
 	};
 

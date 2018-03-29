@@ -54,11 +54,15 @@ public class ConstraintTotalInterbankSettlementAmount2Rule {
 	 */
 	public static final MMConstraint<FIToFICustomerCreditTransferV01> forFIToFICustomerCreditTransferV01 = new MMConstraint<FIToFICustomerCreditTransferV01>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmount2Rule::checkFIToFICustomerCreditTransferV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmount2Rule";
 			definition = "If GroupHeader/TotalInterbankSettlementAmount is present, then it must equal to the sum of all occurrences of CreditTransferTransactionInformation/InterbankSettlementAmount.";
 			owner_lazy = () -> FIToFICustomerCreditTransferV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerCreditTransferV01 obj) throws Exception {
+			checkFIToFICustomerCreditTransferV01(obj);
 		}
 	};
 	/**
@@ -84,11 +88,15 @@ public class ConstraintTotalInterbankSettlementAmount2Rule {
 	 */
 	public static final MMConstraint<FIToFICustomerDirectDebitV01> forFIToFICustomerDirectDebitV01 = new MMConstraint<FIToFICustomerDirectDebitV01>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmount2Rule::checkFIToFICustomerDirectDebitV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmount2Rule";
 			definition = "If GroupHeader/TotalInterbankSettlementAmount is present, then it must be equal to the sum of all occurrences of DirectDebitTransactionInformation/InterbankSettlementAmount.";
 			owner_lazy = () -> FIToFICustomerDirectDebitV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerDirectDebitV01 obj) throws Exception {
+			checkFIToFICustomerDirectDebitV01(obj);
 		}
 	};
 	/**
@@ -114,11 +122,15 @@ public class ConstraintTotalInterbankSettlementAmount2Rule {
 	 */
 	public static final MMConstraint<FinancialInstitutionCreditTransferV01> forFinancialInstitutionCreditTransferV01 = new MMConstraint<FinancialInstitutionCreditTransferV01>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmount2Rule::checkFinancialInstitutionCreditTransferV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmount2Rule";
 			definition = "If GroupHeader/TotalInterbankSettlementAmount is present, then it must equal to the sum of all occurrences of CreditTransferTransactionInformation/InterbankSettlementAmount.";
 			owner_lazy = () -> FinancialInstitutionCreditTransferV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstitutionCreditTransferV01 obj) throws Exception {
+			checkFinancialInstitutionCreditTransferV01(obj);
 		}
 	};
 

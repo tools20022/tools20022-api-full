@@ -106,7 +106,7 @@ public class OrganisationIdentification26 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAnyBIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrganisationIdentification26, Optional<AnyBICIdentifier>> mmAnyBIC = new MMMessageAttribute<OrganisationIdentification26, Optional<AnyBICIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrganisationIdentification26.mmObject();
@@ -118,6 +118,16 @@ public class OrganisationIdentification26 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<AnyBICIdentifier> getValue(OrganisationIdentification26 obj) {
+			return obj.getAnyBIC();
+		}
+
+		@Override
+		public void setValue(OrganisationIdentification26 obj, Optional<AnyBICIdentifier> value) {
+			obj.setAnyBIC(value.orElse(null));
 		}
 	};
 

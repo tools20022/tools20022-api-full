@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.Country;
 import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -113,7 +114,7 @@ public class SystemSearch3 {
 	 * definition} = "Identification of a particular cash clearing system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSystemIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SystemSearch3, List<ClearingSystemIdentification3Choice>> mmSystemIdentification = new MMMessageAssociationEnd<SystemSearch3, List<ClearingSystemIdentification3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> System.mmSystemIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemSearch3.mmObject();
@@ -126,9 +127,19 @@ public class SystemSearch3 {
 			isComposite = true;
 			type_lazy = () -> ClearingSystemIdentification3Choice.mmObject();
 		}
+
+		@Override
+		public List<ClearingSystemIdentification3Choice> getValue(SystemSearch3 obj) {
+			return obj.getSystemIdentification();
+		}
+
+		@Override
+		public void setValue(SystemSearch3 obj, List<ClearingSystemIdentification3Choice> value) {
+			obj.setSystemIdentification(value);
+		}
 	};
 	@XmlElement(name = "MmbId")
-	protected List<com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5> memberIdentification;
+	protected List<BranchAndFinancialInstitutionIdentification5> memberIdentification;
 	/**
 	 * 
 	 <p>
@@ -162,7 +173,7 @@ public class SystemSearch3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMemberIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SystemSearch3, List<BranchAndFinancialInstitutionIdentification5>> mmMemberIdentification = new MMMessageAssociationEnd<SystemSearch3, List<BranchAndFinancialInstitutionIdentification5>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemSearch3.mmObject();
@@ -173,7 +184,17 @@ public class SystemSearch3 {
 			definition = "Unique and unambiguous identification of a member within a system, assigned using the member identification scheme of the system.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+
+		@Override
+		public List<BranchAndFinancialInstitutionIdentification5> getValue(SystemSearch3 obj) {
+			return obj.getMemberIdentification();
+		}
+
+		@Override
+		public void setValue(SystemSearch3 obj, List<BranchAndFinancialInstitutionIdentification5> value) {
+			obj.setMemberIdentification(value);
 		}
 	};
 	@XmlElement(name = "Ctry")
@@ -209,7 +230,7 @@ public class SystemSearch3 {
 	 * definition} = "Country in which the system is located."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemSearch3, Optional<CountryCode>> mmCountry = new MMMessageAttribute<SystemSearch3, Optional<CountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemSearch3.mmObject();
@@ -221,6 +242,16 @@ public class SystemSearch3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(SystemSearch3 obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(SystemSearch3 obj, Optional<CountryCode> value) {
+			obj.setCountry(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctId")
@@ -258,7 +289,7 @@ public class SystemSearch3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SystemSearch3, Optional<AccountIdentification4Choice>> mmAccountIdentification = new MMMessageAssociationEnd<SystemSearch3, Optional<AccountIdentification4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemSearch3.mmObject();
@@ -271,6 +302,16 @@ public class SystemSearch3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AccountIdentification4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AccountIdentification4Choice> getValue(SystemSearch3 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(SystemSearch3 obj, Optional<AccountIdentification4Choice> value) {
+			obj.setAccountIdentification(value.orElse(null));
 		}
 	};
 
@@ -302,7 +343,7 @@ public class SystemSearch3 {
 		return memberIdentification == null ? memberIdentification = new ArrayList<>() : memberIdentification;
 	}
 
-	public SystemSearch3 setMemberIdentification(List<com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5> memberIdentification) {
+	public SystemSearch3 setMemberIdentification(List<BranchAndFinancialInstitutionIdentification5> memberIdentification) {
 		this.memberIdentification = Objects.requireNonNull(memberIdentification);
 		return this;
 	}

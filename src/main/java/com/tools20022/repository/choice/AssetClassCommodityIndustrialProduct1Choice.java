@@ -109,7 +109,7 @@ public class AssetClassCommodityIndustrialProduct1Choice {
 	 * "Construction related industrial product commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmConstruction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodityIndustrialProduct1Choice, IndustrialProductCommodityConstruction1> mmConstruction = new MMMessageAssociationEnd<AssetClassCommodityIndustrialProduct1Choice, IndustrialProductCommodityConstruction1>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityIndustrialProduct1Choice.mmObject();
@@ -122,6 +122,16 @@ public class AssetClassCommodityIndustrialProduct1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> IndustrialProductCommodityConstruction1.mmObject();
+		}
+
+		@Override
+		public IndustrialProductCommodityConstruction1 getValue(AssetClassCommodityIndustrialProduct1Choice obj) {
+			return obj.getConstruction();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodityIndustrialProduct1Choice obj, IndustrialProductCommodityConstruction1 value) {
+			obj.setConstruction(value);
 		}
 	};
 	@XmlElement(name = "Manfctg", required = true)
@@ -159,7 +169,7 @@ public class AssetClassCommodityIndustrialProduct1Choice {
 	 * "Manufacturing related industrial product commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmManufacturing = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodityIndustrialProduct1Choice, IndustrialProductCommodityManufacturing1> mmManufacturing = new MMMessageAssociationEnd<AssetClassCommodityIndustrialProduct1Choice, IndustrialProductCommodityManufacturing1>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityIndustrialProduct1Choice.mmObject();
@@ -172,6 +182,16 @@ public class AssetClassCommodityIndustrialProduct1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> IndustrialProductCommodityManufacturing1.mmObject();
+		}
+
+		@Override
+		public IndustrialProductCommodityManufacturing1 getValue(AssetClassCommodityIndustrialProduct1Choice obj) {
+			return obj.getManufacturing();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodityIndustrialProduct1Choice obj, IndustrialProductCommodityManufacturing1 value) {
+			obj.setManufacturing(value);
 		}
 	};
 

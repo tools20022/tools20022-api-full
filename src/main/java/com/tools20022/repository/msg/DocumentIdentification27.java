@@ -121,7 +121,7 @@ public class DocumentIdentification27 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentIdentification27, Max35Text> mmIdentification = new MMMessageAttribute<DocumentIdentification27, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification27.mmObject();
@@ -133,6 +133,16 @@ public class DocumentIdentification27 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(DocumentIdentification27 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification27 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "CreDtTm")
@@ -172,7 +182,7 @@ public class DocumentIdentification27 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentIdentification27, Optional<DateAndDateTimeChoice>> mmCreationDateTime = new MMMessageAttribute<DocumentIdentification27, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification27.mmObject();
@@ -184,6 +194,16 @@ public class DocumentIdentification27 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(DocumentIdentification27 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification27 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setCreationDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CpyDplct")
@@ -223,7 +243,7 @@ public class DocumentIdentification27 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCopyDuplicate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentIdentification27, Optional<CopyDuplicate1Code>> mmCopyDuplicate = new MMMessageAttribute<DocumentIdentification27, Optional<CopyDuplicate1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmCopyDuplicate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification27.mmObject();
@@ -235,6 +255,16 @@ public class DocumentIdentification27 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CopyDuplicate1Code.mmObject();
+		}
+
+		@Override
+		public Optional<CopyDuplicate1Code> getValue(DocumentIdentification27 obj) {
+			return obj.getCopyDuplicate();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification27 obj, Optional<CopyDuplicate1Code> value) {
+			obj.setCopyDuplicate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MsgOrgtr")
@@ -267,7 +297,7 @@ public class DocumentIdentification27 {
 	 * "Party that originated the message, if other than the sender."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMessageOriginator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DocumentIdentification27, Optional<PartyIdentification71Choice>> mmMessageOriginator = new MMMessageAssociationEnd<DocumentIdentification27, Optional<PartyIdentification71Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification27.mmObject();
 			isDerived = false;
@@ -279,6 +309,16 @@ public class DocumentIdentification27 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification71Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification71Choice> getValue(DocumentIdentification27 obj) {
+			return obj.getMessageOriginator();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification27 obj, Optional<PartyIdentification71Choice> value) {
+			obj.setMessageOriginator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MsgRcpt")
@@ -312,7 +352,7 @@ public class DocumentIdentification27 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMessageRecipient = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DocumentIdentification27, Optional<PartyIdentification71Choice>> mmMessageRecipient = new MMMessageAssociationEnd<DocumentIdentification27, Optional<PartyIdentification71Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification27.mmObject();
 			isDerived = false;
@@ -324,6 +364,16 @@ public class DocumentIdentification27 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification71Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification71Choice> getValue(DocumentIdentification27 obj) {
+			return obj.getMessageRecipient();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification27 obj, Optional<PartyIdentification71Choice> value) {
+			obj.setMessageRecipient(value.orElse(null));
 		}
 	};
 

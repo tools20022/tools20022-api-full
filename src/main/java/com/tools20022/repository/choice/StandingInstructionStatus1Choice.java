@@ -118,7 +118,7 @@ public class StandingInstructionStatus1Choice {
 	 * "Provides information about the processing status of the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StandingInstructionStatus1Choice, CorporateActionStandingInstructionProcessingStatus1> mmProcessedStatus = new MMMessageAssociationEnd<StandingInstructionStatus1Choice, CorporateActionStandingInstructionProcessingStatus1>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.StandingInstructionStatus1Choice.mmObject();
@@ -131,6 +131,16 @@ public class StandingInstructionStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CorporateActionStandingInstructionProcessingStatus1.mmObject();
+		}
+
+		@Override
+		public CorporateActionStandingInstructionProcessingStatus1 getValue(StandingInstructionStatus1Choice obj) {
+			return obj.getProcessedStatus();
+		}
+
+		@Override
+		public void setValue(StandingInstructionStatus1Choice obj, CorporateActionStandingInstructionProcessingStatus1 value) {
+			obj.setProcessedStatus(value);
 		}
 	};
 	@XmlElement(name = "RjctdSts", required = true)
@@ -167,7 +177,7 @@ public class StandingInstructionStatus1Choice {
 	 * definition} = "Provides information about the rejection status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejectedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StandingInstructionStatus1Choice, CorporateActionStandingInstructionRejectionStatus1> mmRejectedStatus = new MMMessageAssociationEnd<StandingInstructionStatus1Choice, CorporateActionStandingInstructionRejectionStatus1>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.StandingInstructionStatus1Choice.mmObject();
@@ -180,6 +190,16 @@ public class StandingInstructionStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CorporateActionStandingInstructionRejectionStatus1.mmObject();
+		}
+
+		@Override
+		public CorporateActionStandingInstructionRejectionStatus1 getValue(StandingInstructionStatus1Choice obj) {
+			return obj.getRejectedStatus();
+		}
+
+		@Override
+		public void setValue(StandingInstructionStatus1Choice obj, CorporateActionStandingInstructionRejectionStatus1 value) {
+			obj.setRejectedStatus(value);
 		}
 	};
 

@@ -68,7 +68,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CashAccountIdentification7Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -127,7 +127,7 @@ public class CashAccountIdentification7Choice {
 	 * CashAccountIdentification1Choice.mmIBAN}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIBAN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountIdentification7Choice, IBAN2007Identifier> mmIBAN = new MMMessageAttribute<CashAccountIdentification7Choice, IBAN2007Identifier>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmIBAN;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CashAccountIdentification7Choice.mmObject();
@@ -140,6 +140,16 @@ public class CashAccountIdentification7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> IBAN2007Identifier.mmObject();
+		}
+
+		@Override
+		public IBAN2007Identifier getValue(CashAccountIdentification7Choice obj) {
+			return obj.getIBAN();
+		}
+
+		@Override
+		public void setValue(CashAccountIdentification7Choice obj, IBAN2007Identifier value) {
+			obj.setIBAN(value);
 		}
 	};
 	@XmlElement(name = "BBAN", required = true)
@@ -184,7 +194,7 @@ public class CashAccountIdentification7Choice {
 	 * CashAccountIdentification1Choice.mmBBAN}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBBAN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountIdentification7Choice, BBANIdentifier> mmBBAN = new MMMessageAttribute<CashAccountIdentification7Choice, BBANIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmBBAN;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CashAccountIdentification7Choice.mmObject();
@@ -197,6 +207,16 @@ public class CashAccountIdentification7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BBANIdentifier.mmObject();
+		}
+
+		@Override
+		public BBANIdentifier getValue(CashAccountIdentification7Choice obj) {
+			return obj.getBBAN();
+		}
+
+		@Override
+		public void setValue(CashAccountIdentification7Choice obj, BBANIdentifier value) {
+			obj.setBBAN(value);
 		}
 	};
 	@XmlElement(name = "UPIC", required = true)
@@ -241,7 +261,7 @@ public class CashAccountIdentification7Choice {
 	 * CashAccountIdentification1Choice.mmUPIC}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUPIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountIdentification7Choice, UPICIdentifier> mmUPIC = new MMMessageAttribute<CashAccountIdentification7Choice, UPICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmUPIC;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CashAccountIdentification7Choice.mmObject();
@@ -254,6 +274,16 @@ public class CashAccountIdentification7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UPICIdentifier.mmObject();
+		}
+
+		@Override
+		public UPICIdentifier getValue(CashAccountIdentification7Choice obj) {
+			return obj.getUPIC();
+		}
+
+		@Override
+		public void setValue(CashAccountIdentification7Choice obj, UPICIdentifier value) {
+			obj.setUPIC(value);
 		}
 	};
 	@XmlElement(name = "DmstAcct", required = true)
@@ -298,7 +328,7 @@ public class CashAccountIdentification7Choice {
 	 * CashAccountIdentification1Choice.mmDomesticAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDomesticAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountIdentification7Choice, SimpleIdentificationInformation4> mmDomesticAccount = new MMMessageAttribute<CashAccountIdentification7Choice, SimpleIdentificationInformation4>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmProprietaryIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CashAccountIdentification7Choice.mmObject();
@@ -312,6 +342,16 @@ public class CashAccountIdentification7Choice {
 			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation4.mmObject();
 		}
+
+		@Override
+		public SimpleIdentificationInformation4 getValue(CashAccountIdentification7Choice obj) {
+			return obj.getDomesticAccount();
+		}
+
+		@Override
+		public void setValue(CashAccountIdentification7Choice obj, SimpleIdentificationInformation4 value) {
+			obj.setDomesticAccount(value);
+		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
@@ -321,7 +361,7 @@ public class CashAccountIdentification7Choice {
 						com.tools20022.repository.choice.CashAccountIdentification7Choice.mmUPIC, com.tools20022.repository.choice.CashAccountIdentification7Choice.mmDomesticAccount);
 				trace_lazy = () -> AccountIdentification.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashAccountIdentification7Choice";
 				definition = "Choice between formats for the identification of a cash account.";
 				previousVersion_lazy = () -> CashAccountIdentification1Choice.mmObject();

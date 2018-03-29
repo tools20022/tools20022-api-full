@@ -119,7 +119,7 @@ public class PaymentTypeInformation23 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructionPriority = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTypeInformation23, Optional<Priority2Code>> mmInstructionPriority = new MMMessageAttribute<PaymentTypeInformation23, Optional<Priority2Code>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmPriority;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation23.mmObject();
@@ -131,6 +131,16 @@ public class PaymentTypeInformation23 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Priority2Code.mmObject();
+		}
+
+		@Override
+		public Optional<Priority2Code> getValue(PaymentTypeInformation23 obj) {
+			return obj.getInstructionPriority();
+		}
+
+		@Override
+		public void setValue(PaymentTypeInformation23 obj, Optional<Priority2Code> value) {
+			obj.setInstructionPriority(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClrChanl")
@@ -170,7 +180,7 @@ public class PaymentTypeInformation23 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClearingChannel = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTypeInformation23, Optional<ClearingChannel2Code>> mmClearingChannel = new MMMessageAttribute<PaymentTypeInformation23, Optional<ClearingChannel2Code>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmClearingChannel;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation23.mmObject();
@@ -182,6 +192,16 @@ public class PaymentTypeInformation23 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ClearingChannel2Code.mmObject();
+		}
+
+		@Override
+		public Optional<ClearingChannel2Code> getValue(PaymentTypeInformation23 obj) {
+			return obj.getClearingChannel();
+		}
+
+		@Override
+		public void setValue(PaymentTypeInformation23 obj, Optional<ClearingChannel2Code> value) {
+			obj.setClearingChannel(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SvcLvl")
@@ -219,7 +239,7 @@ public class PaymentTypeInformation23 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmServiceLevel = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentTypeInformation23, Optional<ServiceLevel8Choice>> mmServiceLevel = new MMMessageAssociationEnd<PaymentTypeInformation23, Optional<ServiceLevel8Choice>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmServiceLevel;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation23.mmObject();
@@ -232,6 +252,16 @@ public class PaymentTypeInformation23 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ServiceLevel8Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ServiceLevel8Choice> getValue(PaymentTypeInformation23 obj) {
+			return obj.getServiceLevel();
+		}
+
+		@Override
+		public void setValue(PaymentTypeInformation23 obj, Optional<ServiceLevel8Choice> value) {
+			obj.setServiceLevel(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LclInstrm")
@@ -270,7 +300,7 @@ public class PaymentTypeInformation23 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLocalInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentTypeInformation23, Optional<LocalInstrument2Choice>> mmLocalInstrument = new MMMessageAssociationEnd<PaymentTypeInformation23, Optional<LocalInstrument2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmLocalInstrument;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation23.mmObject();
@@ -283,6 +313,16 @@ public class PaymentTypeInformation23 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> LocalInstrument2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<LocalInstrument2Choice> getValue(PaymentTypeInformation23 obj) {
+			return obj.getLocalInstrument();
+		}
+
+		@Override
+		public void setValue(PaymentTypeInformation23 obj, Optional<LocalInstrument2Choice> value) {
+			obj.setLocalInstrument(value.orElse(null));
 		}
 	};
 

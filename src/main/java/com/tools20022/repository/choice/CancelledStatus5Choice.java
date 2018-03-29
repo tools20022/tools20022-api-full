@@ -126,7 +126,7 @@ public class CancelledStatus5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancelledStatus5Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<CancelledStatus5Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancelledStatus5Choice.mmObject();
@@ -139,6 +139,16 @@ public class CancelledStatus5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(CancelledStatus5Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(CancelledStatus5Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -182,7 +192,7 @@ public class CancelledStatus5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CancelledStatus5Choice, CancellationReason7> mmReason = new MMMessageAssociationEnd<CancelledStatus5Choice, CancellationReason7>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancelledStatus5Choice.mmObject();
@@ -196,6 +206,16 @@ public class CancelledStatus5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CancellationReason7.mmObject();
+		}
+
+		@Override
+		public CancellationReason7 getValue(CancelledStatus5Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(CancelledStatus5Choice obj, CancellationReason7 value) {
+			obj.setReason(value);
 		}
 	};
 

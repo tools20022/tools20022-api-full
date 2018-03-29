@@ -24,6 +24,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.PortfolioTransfer;
 import com.tools20022.repository.entity.SubscriptionExecution;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PreviousYear1;
+import com.tools20022.repository.msg.SubscriptionInformation1;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -135,7 +137,7 @@ public class ISAYearsOfIssue3 {
 	 * definition} = "ISA that was issued during the current fiscal year."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrentYearType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ISAYearsOfIssue3, Optional<ISAType1Code>> mmCurrentYearType = new MMMessageAttribute<ISAYearsOfIssue3, Optional<ISAType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> PortfolioTransfer.mmCurrentYearISAType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ISAYearsOfIssue3.mmObject();
@@ -147,6 +149,16 @@ public class ISAYearsOfIssue3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISAType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ISAType1Code> getValue(ISAYearsOfIssue3 obj) {
+			return obj.getCurrentYearType();
+		}
+
+		@Override
+		public void setValue(ISAYearsOfIssue3 obj, Optional<ISAType1Code> value) {
+			obj.setCurrentYearType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XtndedCurYrTp")
@@ -186,7 +198,7 @@ public class ISAYearsOfIssue3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedCurrentYearType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ISAYearsOfIssue3, Optional<Extended350Code>> mmExtendedCurrentYearType = new MMMessageAttribute<ISAYearsOfIssue3, Optional<Extended350Code>>() {
 		{
 			businessElementTrace_lazy = () -> PortfolioTransfer.mmCurrentYearISAType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ISAYearsOfIssue3.mmObject();
@@ -198,6 +210,16 @@ public class ISAYearsOfIssue3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Optional<Extended350Code> getValue(ISAYearsOfIssue3 obj) {
+			return obj.getExtendedCurrentYearType();
+		}
+
+		@Override
+		public void setValue(ISAYearsOfIssue3 obj, Optional<Extended350Code> value) {
+			obj.setExtendedCurrentYearType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CshCmpntInd", required = true)
@@ -237,7 +259,7 @@ public class ISAYearsOfIssue3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashComponentIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ISAYearsOfIssue3, YesNoIndicator> mmCashComponentIndicator = new MMMessageAttribute<ISAYearsOfIssue3, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> PortfolioTransfer.mmCashComponentIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ISAYearsOfIssue3.mmObject();
@@ -249,6 +271,16 @@ public class ISAYearsOfIssue3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(ISAYearsOfIssue3 obj) {
+			return obj.getCashComponentIndicator();
+		}
+
+		@Override
+		public void setValue(ISAYearsOfIssue3 obj, YesNoIndicator value) {
+			obj.setCashComponentIndicator(value);
 		}
 	};
 	@XmlElement(name = "CurYrSbcptDtls", required = true)
@@ -286,7 +318,7 @@ public class ISAYearsOfIssue3 {
 	 * "Specifies the amounts already subscribed for the current year."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCurrentYearSubscriptionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ISAYearsOfIssue3, SubscriptionInformation1> mmCurrentYearSubscriptionDetails = new MMMessageAssociationEnd<ISAYearsOfIssue3, SubscriptionInformation1>() {
 		{
 			businessComponentTrace_lazy = () -> SubscriptionExecution.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ISAYearsOfIssue3.mmObject();
@@ -298,7 +330,17 @@ public class ISAYearsOfIssue3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SubscriptionInformation1.mmObject();
+			type_lazy = () -> SubscriptionInformation1.mmObject();
+		}
+
+		@Override
+		public SubscriptionInformation1 getValue(ISAYearsOfIssue3 obj) {
+			return obj.getCurrentYearSubscriptionDetails();
+		}
+
+		@Override
+		public void setValue(ISAYearsOfIssue3 obj, SubscriptionInformation1 value) {
+			obj.setCurrentYearSubscriptionDetails(value);
 		}
 	};
 	@XmlElement(name = "PrvsYrs")
@@ -335,7 +377,7 @@ public class ISAYearsOfIssue3 {
 	 * "Selection of investment plans issued during previous years."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPreviousYears = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ISAYearsOfIssue3, Optional<PreviousYear1>> mmPreviousYears = new MMMessageAssociationEnd<ISAYearsOfIssue3, Optional<PreviousYear1>>() {
 		{
 			businessComponentTrace_lazy = () -> PortfolioTransfer.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ISAYearsOfIssue3.mmObject();
@@ -347,7 +389,17 @@ public class ISAYearsOfIssue3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PreviousYear1.mmObject();
+			type_lazy = () -> PreviousYear1.mmObject();
+		}
+
+		@Override
+		public Optional<PreviousYear1> getValue(ISAYearsOfIssue3 obj) {
+			return obj.getPreviousYears();
+		}
+
+		@Override
+		public void setValue(ISAYearsOfIssue3 obj, Optional<PreviousYear1> value) {
+			obj.setPreviousYears(value.orElse(null));
 		}
 	};
 	/**
@@ -450,7 +502,7 @@ public class ISAYearsOfIssue3 {
 		return currentYearSubscriptionDetails;
 	}
 
-	public ISAYearsOfIssue3 setCurrentYearSubscriptionDetails(com.tools20022.repository.msg.SubscriptionInformation1 currentYearSubscriptionDetails) {
+	public ISAYearsOfIssue3 setCurrentYearSubscriptionDetails(SubscriptionInformation1 currentYearSubscriptionDetails) {
 		this.currentYearSubscriptionDetails = Objects.requireNonNull(currentYearSubscriptionDetails);
 		return this;
 	}
@@ -459,7 +511,7 @@ public class ISAYearsOfIssue3 {
 		return previousYears == null ? Optional.empty() : Optional.of(previousYears);
 	}
 
-	public ISAYearsOfIssue3 setPreviousYears(com.tools20022.repository.msg.PreviousYear1 previousYears) {
+	public ISAYearsOfIssue3 setPreviousYears(PreviousYear1 previousYears) {
 		this.previousYears = previousYears;
 		return this;
 	}

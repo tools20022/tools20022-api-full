@@ -19,9 +19,12 @@ package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
+import com.tools20022.repository.entity.SecuritiesPricing;
+import com.tools20022.repository.entity.SecuritiesQuantity;
+import com.tools20022.repository.entity.SecuritiesSettlement;
+import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -154,7 +157,7 @@ public class Position {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmNetQuantity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Position, SecuritiesQuantity> mmNetQuantity = new MMBusinessAssociationEnd<Position, SecuritiesQuantity>() {
 		{
 			derivation_lazy = () -> Arrays.asList(NetPosition1.mmNetQuantity, NetPosition2.mmNetQuantity, NetPosition3.mmNetQuantity);
 			isDerived = false;
@@ -164,9 +167,19 @@ public class Position {
 			definition = "Specifies the net quantity position of the trade legs of one member within the system.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmPosition;
+			opposite_lazy = () -> SecuritiesQuantity.mmPosition;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
+			type_lazy = () -> SecuritiesQuantity.mmObject();
+		}
+
+		@Override
+		public SecuritiesQuantity getValue(Position obj) {
+			return obj.getNetQuantity();
+		}
+
+		@Override
+		public void setValue(Position obj, SecuritiesQuantity value) {
+			obj.setNetQuantity(value);
 		}
 	};
 	protected CurrencyAndAmount netPositionAmount;
@@ -211,7 +224,7 @@ public class Position {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmNetPositionAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Position, CurrencyAndAmount> mmNetPositionAmount = new MMBusinessAttribute<Position, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(NetPosition1.mmNetPositionAmount, NetPosition2.mmNetPositionAmount, NetPosition3.mmNetPositionAmount);
 			isDerived = false;
@@ -224,12 +237,14 @@ public class Position {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Position.class.getMethod("getNetPositionAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(Position obj) {
+			return obj.getNetPositionAmount();
+		}
+
+		@Override
+		public void setValue(Position obj, CurrencyAndAmount value) {
+			obj.setNetPositionAmount(value);
 		}
 	};
 	protected System system;
@@ -264,7 +279,7 @@ public class Position {
 	 * definition} = "System for which trades position is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSystem = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Position, System> mmSystem = new MMBusinessAssociationEnd<Position, System>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Position.mmObject();
@@ -273,9 +288,19 @@ public class Position {
 			definition = "System for which trades position is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.System.mmTradesPosition;
+			opposite_lazy = () -> System.mmTradesPosition;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.System.mmObject();
+			type_lazy = () -> System.mmObject();
+		}
+
+		@Override
+		public System getValue(Position obj) {
+			return obj.getSystem();
+		}
+
+		@Override
+		public void setValue(Position obj, System value) {
+			obj.setSystem(value);
 		}
 	};
 	protected SecuritiesPricing price;
@@ -322,7 +347,7 @@ public class Position {
 	 * definition} = "Price applied to the position."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPrice = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Position, SecuritiesPricing> mmPrice = new MMBusinessAssociationEnd<Position, SecuritiesPricing>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementObligation3.mmNetPositionPrice, SettlementObligation5.mmNetPositionPrice);
 			isDerived = false;
@@ -332,9 +357,19 @@ public class Position {
 			definition = "Price applied to the position.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmRelatedPosition;
+			opposite_lazy = () -> SecuritiesPricing.mmRelatedPosition;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
+			type_lazy = () -> SecuritiesPricing.mmObject();
+		}
+
+		@Override
+		public SecuritiesPricing getValue(Position obj) {
+			return obj.getPrice();
+		}
+
+		@Override
+		public void setValue(Position obj, SecuritiesPricing value) {
+			obj.setPrice(value);
 		}
 	};
 	protected SecuritiesSettlement securitiesSettlement;
@@ -371,7 +406,7 @@ public class Position {
 	 * definition} = "Information related to the settlement of the position."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSecuritiesSettlement = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Position, SecuritiesSettlement> mmSecuritiesSettlement = new MMBusinessAssociationEnd<Position, SecuritiesSettlement>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Position.mmObject();
@@ -380,9 +415,19 @@ public class Position {
 			definition = "Information related to the settlement of the position.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmPosition;
+			opposite_lazy = () -> SecuritiesSettlement.mmPosition;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
+			type_lazy = () -> SecuritiesSettlement.mmObject();
+		}
+
+		@Override
+		public SecuritiesSettlement getValue(Position obj) {
+			return obj.getSecuritiesSettlement();
+		}
+
+		@Override
+		public void setValue(Position obj, SecuritiesSettlement value) {
+			obj.setSecuritiesSettlement(value);
 		}
 	};
 	protected CurrencyAndAmount initialPositionAmount;
@@ -426,7 +471,7 @@ public class Position {
 	 * "Specifies the position at the beginning of a reporting period."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmInitialPositionAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Position, CurrencyAndAmount> mmInitialPositionAmount = new MMBusinessAttribute<Position, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(NetPosition1.mmInitialPositionAmount, NetPosition2.mmInitialPositionAmount, NetPosition3.mmInitialPositionAmount);
 			isDerived = false;
@@ -439,12 +484,14 @@ public class Position {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Position.class.getMethod("getInitialPositionAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(Position obj) {
+			return obj.getInitialPositionAmount();
+		}
+
+		@Override
+		public void setValue(Position obj, CurrencyAndAmount value) {
+			obj.setInitialPositionAmount(value);
 		}
 	};
 
@@ -455,8 +502,7 @@ public class Position {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Position";
 				definition = "Specifies the status of trades and their value inside a system.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.mmRelatedPosition, com.tools20022.repository.entity.SecuritiesQuantity.mmPosition,
-						com.tools20022.repository.entity.System.mmTradesPosition, com.tools20022.repository.entity.SecuritiesSettlement.mmPosition);
+				associationDomain_lazy = () -> Arrays.asList(SecuritiesPricing.mmRelatedPosition, SecuritiesQuantity.mmPosition, System.mmTradesPosition, SecuritiesSettlement.mmPosition);
 				derivationElement_lazy = () -> Arrays.asList(PositionAccount2.mmPosition);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Position.mmNetQuantity, com.tools20022.repository.entity.Position.mmNetPositionAmount, com.tools20022.repository.entity.Position.mmSystem,
 						com.tools20022.repository.entity.Position.mmPrice, com.tools20022.repository.entity.Position.mmSecuritiesSettlement, com.tools20022.repository.entity.Position.mmInitialPositionAmount);
@@ -475,7 +521,7 @@ public class Position {
 		return netQuantity;
 	}
 
-	public Position setNetQuantity(com.tools20022.repository.entity.SecuritiesQuantity netQuantity) {
+	public Position setNetQuantity(SecuritiesQuantity netQuantity) {
 		this.netQuantity = Objects.requireNonNull(netQuantity);
 		return this;
 	}
@@ -493,7 +539,7 @@ public class Position {
 		return system;
 	}
 
-	public Position setSystem(com.tools20022.repository.entity.System system) {
+	public Position setSystem(System system) {
 		this.system = Objects.requireNonNull(system);
 		return this;
 	}
@@ -502,7 +548,7 @@ public class Position {
 		return price;
 	}
 
-	public Position setPrice(com.tools20022.repository.entity.SecuritiesPricing price) {
+	public Position setPrice(SecuritiesPricing price) {
 		this.price = Objects.requireNonNull(price);
 		return this;
 	}
@@ -511,7 +557,7 @@ public class Position {
 		return securitiesSettlement;
 	}
 
-	public Position setSecuritiesSettlement(com.tools20022.repository.entity.SecuritiesSettlement securitiesSettlement) {
+	public Position setSecuritiesSettlement(SecuritiesSettlement securitiesSettlement) {
 		this.securitiesSettlement = Objects.requireNonNull(securitiesSettlement);
 		return this;
 	}

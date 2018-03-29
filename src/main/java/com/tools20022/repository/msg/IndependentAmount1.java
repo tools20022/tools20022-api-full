@@ -109,7 +109,7 @@ public class IndependentAmount1 {
 	 * definition} = "Provides the independant amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndependentAmount1, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<IndependentAmount1, ActiveCurrencyAndAmount>() {
 		{
 			businessComponentTrace_lazy = () -> IndependentAmount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndependentAmount1.mmObject();
@@ -121,6 +121,16 @@ public class IndependentAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(IndependentAmount1 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(IndependentAmount1 obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "Cnvntn", required = true)
@@ -160,7 +170,7 @@ public class IndependentAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmConvention = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndependentAmount1, IndependentAmountConventionType1Code> mmConvention = new MMMessageAttribute<IndependentAmount1, IndependentAmountConventionType1Code>() {
 		{
 			businessElementTrace_lazy = () -> IndependentAmountTerm.mmConvention;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndependentAmount1.mmObject();
@@ -172,6 +182,16 @@ public class IndependentAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> IndependentAmountConventionType1Code.mmObject();
+		}
+
+		@Override
+		public IndependentAmountConventionType1Code getValue(IndependentAmount1 obj) {
+			return obj.getConvention();
+		}
+
+		@Override
+		public void setValue(IndependentAmount1 obj, IndependentAmountConventionType1Code value) {
+			obj.setConvention(value);
 		}
 	};
 

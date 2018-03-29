@@ -126,7 +126,7 @@ public class CorporateActionCancellationSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionCancellationSD1, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionCancellationSD1, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionCancellationSD1.mmObject();
 			isDerived = false;
@@ -138,6 +138,16 @@ public class CorporateActionCancellationSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionCancellationSD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionCancellationSD1 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "LkdCorpActnId", required = true)
@@ -183,7 +193,7 @@ public class CorporateActionCancellationSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLinkedCorporateActionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionCancellationSD1, Max35Text> mmLinkedCorporateActionIdentification = new MMMessageAttribute<CorporateActionCancellationSD1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionCancellationSD1.mmObject();
 			isDerived = false;
@@ -196,6 +206,16 @@ public class CorporateActionCancellationSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CorporateActionCancellationSD1 obj) {
+			return obj.getLinkedCorporateActionIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionCancellationSD1 obj, Max35Text value) {
+			obj.setLinkedCorporateActionIdentification(value);
 		}
 	};
 	@XmlElement(name = "LkgTp", required = true)
@@ -239,7 +259,7 @@ public class CorporateActionCancellationSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLinkageType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionCancellationSD1, DTCCLinkType1Code> mmLinkageType = new MMMessageAttribute<CorporateActionCancellationSD1, DTCCLinkType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionCancellationSD1.mmObject();
 			isDerived = false;
@@ -252,6 +272,16 @@ public class CorporateActionCancellationSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DTCCLinkType1Code.mmObject();
+		}
+
+		@Override
+		public DTCCLinkType1Code getValue(CorporateActionCancellationSD1 obj) {
+			return obj.getLinkageType();
+		}
+
+		@Override
+		public void setValue(CorporateActionCancellationSD1 obj, DTCCLinkType1Code value) {
+			obj.setLinkageType(value);
 		}
 	};
 	@XmlElement(name = "LkAddedDt", required = true)
@@ -296,7 +326,7 @@ public class CorporateActionCancellationSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLinkAddedDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionCancellationSD1, ISODate> mmLinkAddedDate = new MMMessageAttribute<CorporateActionCancellationSD1, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionCancellationSD1.mmObject();
 			isDerived = false;
@@ -309,6 +339,16 @@ public class CorporateActionCancellationSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(CorporateActionCancellationSD1 obj) {
+			return obj.getLinkAddedDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionCancellationSD1 obj, ISODate value) {
+			obj.setLinkAddedDate(value);
 		}
 	};
 	@XmlElement(name = "LkModfdDt")
@@ -353,7 +393,7 @@ public class CorporateActionCancellationSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLinkModifiedDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionCancellationSD1, Optional<ISODate>> mmLinkModifiedDate = new MMMessageAttribute<CorporateActionCancellationSD1, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionCancellationSD1.mmObject();
 			isDerived = false;
@@ -366,6 +406,16 @@ public class CorporateActionCancellationSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CorporateActionCancellationSD1 obj) {
+			return obj.getLinkModifiedDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionCancellationSD1 obj, Optional<ISODate> value) {
+			obj.setLinkModifiedDate(value.orElse(null));
 		}
 	};
 

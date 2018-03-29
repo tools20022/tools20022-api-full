@@ -27,6 +27,9 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.OtherAmount1;
+import com.tools20022.repository.msg.TotalFeesAndTaxes40;
+import com.tools20022.repository.msg.UnitPrice23;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -120,7 +123,7 @@ public class Unit8 {
 	 * definition} = "Quantity of units."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Unit8, DecimalNumber> mmUnitsNumber = new MMMessageAttribute<Unit8, DecimalNumber>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Unit8.mmObject();
@@ -132,6 +135,16 @@ public class Unit8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(Unit8 obj) {
+			return obj.getUnitsNumber();
+		}
+
+		@Override
+		public void setValue(Unit8 obj, DecimalNumber value) {
+			obj.setUnitsNumber(value);
 		}
 	};
 	@XmlElement(name = "OrdrDt")
@@ -168,7 +181,7 @@ public class Unit8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Unit8, Optional<ISODate>> mmOrderDate = new MMMessageAttribute<Unit8, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Unit8.mmObject();
@@ -180,6 +193,16 @@ public class Unit8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(Unit8 obj) {
+			return obj.getOrderDate();
+		}
+
+		@Override
+		public void setValue(Unit8 obj, Optional<ISODate> value) {
+			obj.setOrderDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcqstnDt")
@@ -215,7 +238,7 @@ public class Unit8 {
 	 * definition} = "Date the investor purchased the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAcquisitionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Unit8, Optional<ISODate>> mmAcquisitionDate = new MMMessageAttribute<Unit8, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesEntry.mmAcquisitionDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Unit8.mmObject();
@@ -227,6 +250,16 @@ public class Unit8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(Unit8 obj) {
+			return obj.getAcquisitionDate();
+		}
+
+		@Override
+		public void setValue(Unit8 obj, Optional<ISODate> value) {
+			obj.setAcquisitionDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CertNb")
@@ -262,7 +295,7 @@ public class Unit8 {
 	 * definition} = "Certificate representing the security that is delivered."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCertificateNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Unit8, List<Max35Text>> mmCertificateNumber = new MMMessageAttribute<Unit8, List<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesCertificate.mmNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Unit8.mmObject();
@@ -273,6 +306,16 @@ public class Unit8 {
 			definition = "Certificate representing the security that is delivered.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(Unit8 obj) {
+			return obj.getCertificateNumber();
+		}
+
+		@Override
+		public void setValue(Unit8 obj, List<Max35Text> value) {
+			obj.setCertificateNumber(value);
 		}
 	};
 	@XmlElement(name = "Grp1Or2Units")
@@ -311,7 +354,7 @@ public class Unit8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGroup1Or2Units = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Unit8, Optional<UKTaxGroupUnit1Code>> mmGroup1Or2Units = new MMMessageAttribute<Unit8, Optional<UKTaxGroupUnit1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmGroup1Or2Units;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Unit8.mmObject();
@@ -323,6 +366,16 @@ public class Unit8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> UKTaxGroupUnit1Code.mmObject();
+		}
+
+		@Override
+		public Optional<UKTaxGroupUnit1Code> getValue(Unit8 obj) {
+			return obj.getGroup1Or2Units();
+		}
+
+		@Override
+		public void setValue(Unit8 obj, Optional<UKTaxGroupUnit1Code> value) {
+			obj.setGroup1Or2Units(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ref")
@@ -360,7 +413,7 @@ public class Unit8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Unit8, Optional<Max35Text>> mmReference = new MMMessageAttribute<Unit8, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Unit8.mmObject();
@@ -372,6 +425,16 @@ public class Unit8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Unit8 obj) {
+			return obj.getReference();
+		}
+
+		@Override
+		public void setValue(Unit8 obj, Optional<Max35Text> value) {
+			obj.setReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PricDtls")
@@ -408,7 +471,7 @@ public class Unit8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPriceDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Unit8, Optional<UnitPrice23>> mmPriceDetails = new MMMessageAssociationEnd<Unit8, Optional<UnitPrice23>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmPricing;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Unit8.mmObject();
@@ -420,7 +483,17 @@ public class Unit8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UnitPrice23.mmObject();
+			type_lazy = () -> UnitPrice23.mmObject();
+		}
+
+		@Override
+		public Optional<UnitPrice23> getValue(Unit8 obj) {
+			return obj.getPriceDetails();
+		}
+
+		@Override
+		public void setValue(Unit8 obj, Optional<UnitPrice23> value) {
+			obj.setPriceDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxOvrhd")
@@ -457,7 +530,7 @@ public class Unit8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionOverhead = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Unit8, Optional<TotalFeesAndTaxes40>> mmTransactionOverhead = new MMMessageAssociationEnd<Unit8, Optional<TotalFeesAndTaxes40>>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundTax.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Unit8.mmObject();
@@ -469,11 +542,21 @@ public class Unit8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TotalFeesAndTaxes40.mmObject();
+			type_lazy = () -> TotalFeesAndTaxes40.mmObject();
+		}
+
+		@Override
+		public Optional<TotalFeesAndTaxes40> getValue(Unit8 obj) {
+			return obj.getTransactionOverhead();
+		}
+
+		@Override
+		public void setValue(Unit8 obj, Optional<TotalFeesAndTaxes40> value) {
+			obj.setTransactionOverhead(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OthrAmt")
-	protected List<com.tools20022.repository.msg.OtherAmount1> otherAmount;
+	protected List<OtherAmount1> otherAmount;
 	/**
 	 * 
 	 <p>
@@ -504,7 +587,7 @@ public class Unit8 {
 	 * definition} = "Amounts not covered in price, fee or tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Unit8, List<OtherAmount1>> mmOtherAmount = new MMMessageAssociationEnd<Unit8, List<OtherAmount1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Unit8.mmObject();
@@ -515,7 +598,17 @@ public class Unit8 {
 			definition = "Amounts not covered in price, fee or tax.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OtherAmount1.mmObject();
+			type_lazy = () -> OtherAmount1.mmObject();
+		}
+
+		@Override
+		public List<OtherAmount1> getValue(Unit8 obj) {
+			return obj.getOtherAmount();
+		}
+
+		@Override
+		public void setValue(Unit8 obj, List<OtherAmount1> value) {
+			obj.setOtherAmount(value);
 		}
 	};
 
@@ -593,7 +686,7 @@ public class Unit8 {
 		return priceDetails == null ? Optional.empty() : Optional.of(priceDetails);
 	}
 
-	public Unit8 setPriceDetails(com.tools20022.repository.msg.UnitPrice23 priceDetails) {
+	public Unit8 setPriceDetails(UnitPrice23 priceDetails) {
 		this.priceDetails = priceDetails;
 		return this;
 	}
@@ -602,7 +695,7 @@ public class Unit8 {
 		return transactionOverhead == null ? Optional.empty() : Optional.of(transactionOverhead);
 	}
 
-	public Unit8 setTransactionOverhead(com.tools20022.repository.msg.TotalFeesAndTaxes40 transactionOverhead) {
+	public Unit8 setTransactionOverhead(TotalFeesAndTaxes40 transactionOverhead) {
 		this.transactionOverhead = transactionOverhead;
 		return this;
 	}
@@ -611,7 +704,7 @@ public class Unit8 {
 		return otherAmount == null ? otherAmount = new ArrayList<>() : otherAmount;
 	}
 
-	public Unit8 setOtherAmount(List<com.tools20022.repository.msg.OtherAmount1> otherAmount) {
+	public Unit8 setOtherAmount(List<OtherAmount1> otherAmount) {
 		this.otherAmount = Objects.requireNonNull(otherAmount);
 		return this;
 	}

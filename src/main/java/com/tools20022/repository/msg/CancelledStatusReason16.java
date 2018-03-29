@@ -127,7 +127,7 @@ public class CancelledStatusReason16 {
 	 * definition} = "Reason for the cancelled status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CancelledStatusReason16, Optional<CancelledReason12Choice>> mmReason = new MMMessageAssociationEnd<CancelledStatusReason16, Optional<CancelledReason12Choice>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancelledStatusReason16.mmObject();
@@ -141,6 +141,16 @@ public class CancelledStatusReason16 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CancelledReason12Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CancelledReason12Choice> getValue(CancelledStatusReason16 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(CancelledStatusReason16 obj, Optional<CancelledReason12Choice> value) {
+			obj.setReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -180,7 +190,7 @@ public class CancelledStatusReason16 {
 	 * definition} = "Additional information about the cancelled status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancelledStatusReason16, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<CancelledStatusReason16, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancelledStatusReason16.mmObject();
@@ -193,6 +203,16 @@ public class CancelledStatusReason16 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CancelledStatusReason16 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(CancelledStatusReason16 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

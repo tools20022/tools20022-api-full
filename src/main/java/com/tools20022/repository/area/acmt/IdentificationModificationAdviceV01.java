@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.IdentificationModification1;
 import com.tools20022.repository.msg.OriginalTransactionReference14;
 import com.tools20022.repository.msgset.ChangeorVerifyAccountIdentificationISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -139,7 +138,7 @@ public class IdentificationModificationAdviceV01 {
 	 * definition} = "Identifies the identification assignment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<IdentificationModificationAdviceV01, IdentificationAssignment1> mmAssignment = new MMMessageBuildingBlock<IdentificationModificationAdviceV01, IdentificationAssignment1>() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -150,12 +149,14 @@ public class IdentificationModificationAdviceV01 {
 			complexType_lazy = () -> IdentificationAssignment1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IdentificationModificationAdviceV01.class.getMethod("getAssignment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public IdentificationAssignment1 getValue(IdentificationModificationAdviceV01 obj) {
+			return obj.getAssignment();
+		}
+
+		@Override
+		public void setValue(IdentificationModificationAdviceV01 obj, IdentificationAssignment1 value) {
+			obj.setAssignment(value);
 		}
 	};
 	@XmlElement(name = "OrgnlTxRef")
@@ -183,7 +184,7 @@ public class IdentificationModificationAdviceV01 {
 	 * definition} = "Provides reference information on the original message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOriginalTransactionReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<IdentificationModificationAdviceV01, Optional<OriginalTransactionReference14>> mmOriginalTransactionReference = new MMMessageBuildingBlock<IdentificationModificationAdviceV01, Optional<OriginalTransactionReference14>>() {
 		{
 			xmlTag = "OrgnlTxRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -194,12 +195,14 @@ public class IdentificationModificationAdviceV01 {
 			complexType_lazy = () -> OriginalTransactionReference14.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IdentificationModificationAdviceV01.class.getMethod("getOriginalTransactionReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<OriginalTransactionReference14> getValue(IdentificationModificationAdviceV01 obj) {
+			return obj.getOriginalTransactionReference();
+		}
+
+		@Override
+		public void setValue(IdentificationModificationAdviceV01 obj, Optional<OriginalTransactionReference14> value) {
+			obj.setOriginalTransactionReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Mod", required = true)
@@ -229,7 +232,7 @@ public class IdentificationModificationAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmModification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<IdentificationModificationAdviceV01, List<IdentificationModification1>> mmModification = new MMMessageBuildingBlock<IdentificationModificationAdviceV01, List<IdentificationModification1>>() {
 		{
 			xmlTag = "Mod";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -239,12 +242,14 @@ public class IdentificationModificationAdviceV01 {
 			complexType_lazy = () -> IdentificationModification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IdentificationModificationAdviceV01.class.getMethod("getModification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<IdentificationModification1> getValue(IdentificationModificationAdviceV01 obj) {
+			return obj.getModification();
+		}
+
+		@Override
+		public void setValue(IdentificationModificationAdviceV01 obj, List<IdentificationModification1> value) {
+			obj.setModification(value);
 		}
 	};
 

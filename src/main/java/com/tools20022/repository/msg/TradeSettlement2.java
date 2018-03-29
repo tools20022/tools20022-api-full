@@ -30,6 +30,7 @@ import com.tools20022.repository.entity.PaymentObligation;
 import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -139,7 +140,7 @@ public class TradeSettlement2 {
 	 * definition} = "Payment or creditor reference."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeSettlement2, Optional<CreditorReferenceInformation2>> mmPaymentReference = new MMMessageAssociationEnd<TradeSettlement2, Optional<CreditorReferenceInformation2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeSettlement2.mmObject();
 			isDerived = false;
@@ -150,7 +151,17 @@ public class TradeSettlement2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CreditorReferenceInformation2.mmObject();
+			type_lazy = () -> CreditorReferenceInformation2.mmObject();
+		}
+
+		@Override
+		public Optional<CreditorReferenceInformation2> getValue(TradeSettlement2 obj) {
+			return obj.getPaymentReference();
+		}
+
+		@Override
+		public void setValue(TradeSettlement2 obj, Optional<CreditorReferenceInformation2> value) {
+			obj.setPaymentReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DueDt")
@@ -182,7 +193,7 @@ public class TradeSettlement2 {
 	 * definition} = "Date when invoice should be paid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeSettlement2, Optional<ISODate>> mmDueDate = new MMMessageAttribute<TradeSettlement2, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeSettlement2.mmObject();
 			isDerived = false;
@@ -193,6 +204,16 @@ public class TradeSettlement2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(TradeSettlement2 obj) {
+			return obj.getDueDate();
+		}
+
+		@Override
+		public void setValue(TradeSettlement2 obj, Optional<ISODate> value) {
+			obj.setDueDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DuePyblAmt", required = true)
@@ -235,7 +256,7 @@ public class TradeSettlement2 {
 	 * TradeSettlement1.mmDuePayableAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDuePayableAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeSettlement2, CurrencyAndAmount> mmDuePayableAmount = new MMMessageAttribute<TradeSettlement2, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeSettlement2.mmObject();
@@ -248,6 +269,16 @@ public class TradeSettlement2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(TradeSettlement2 obj) {
+			return obj.getDuePayableAmount();
+		}
+
+		@Override
+		public void setValue(TradeSettlement2 obj, CurrencyAndAmount value) {
+			obj.setDuePayableAmount(value);
 		}
 	};
 	@XmlElement(name = "InvcCcyXchg")
@@ -280,7 +311,7 @@ public class TradeSettlement2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvoiceCurrencyExchange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeSettlement2, Optional<CurrencyReference3>> mmInvoiceCurrencyExchange = new MMMessageAssociationEnd<TradeSettlement2, Optional<CurrencyReference3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeSettlement2.mmObject();
 			isDerived = false;
@@ -291,7 +322,17 @@ public class TradeSettlement2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CurrencyReference3.mmObject();
+			type_lazy = () -> CurrencyReference3.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyReference3> getValue(TradeSettlement2 obj) {
+			return obj.getInvoiceCurrencyExchange();
+		}
+
+		@Override
+		public void setValue(TradeSettlement2 obj, Optional<CurrencyReference3> value) {
+			obj.setInvoiceCurrencyExchange(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DlvryDt")
@@ -323,7 +364,7 @@ public class TradeSettlement2 {
 	 * definition} = "Date when goods/services are delivered to buyer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeliveryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeSettlement2, Optional<ISODate>> mmDeliveryDate = new MMMessageAttribute<TradeSettlement2, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeSettlement2.mmObject();
 			isDerived = false;
@@ -334,6 +375,16 @@ public class TradeSettlement2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(TradeSettlement2 obj) {
+			return obj.getDeliveryDate();
+		}
+
+		@Override
+		public void setValue(TradeSettlement2 obj, Optional<ISODate> value) {
+			obj.setDeliveryDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BllgPrd")
@@ -369,7 +420,7 @@ public class TradeSettlement2 {
 	 * "Period during which delivery executed or agreed invoicing period."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBillingPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeSettlement2, Optional<Period2>> mmBillingPeriod = new MMMessageAssociationEnd<TradeSettlement2, Optional<Period2>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmStartDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeSettlement2.mmObject();
@@ -381,7 +432,17 @@ public class TradeSettlement2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Period2.mmObject();
+			type_lazy = () -> Period2.mmObject();
+		}
+
+		@Override
+		public Optional<Period2> getValue(TradeSettlement2 obj) {
+			return obj.getBillingPeriod();
+		}
+
+		@Override
+		public void setValue(TradeSettlement2 obj, Optional<Period2> value) {
+			obj.setBillingPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxTtlAmt", required = true)
@@ -419,7 +480,7 @@ public class TradeSettlement2 {
 	 * definition} = "Tax total amount with currency code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeSettlement2, CurrencyAndAmount> mmTaxTotalAmount = new MMMessageAttribute<TradeSettlement2, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> CommercialTrade.mmTotalAcceptedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeSettlement2.mmObject();
@@ -431,6 +492,16 @@ public class TradeSettlement2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(TradeSettlement2 obj) {
+			return obj.getTaxTotalAmount();
+		}
+
+		@Override
+		public void setValue(TradeSettlement2 obj, CurrencyAndAmount value) {
+			obj.setTaxTotalAmount(value);
 		}
 	};
 	@XmlElement(name = "XmptnRsnCd")
@@ -473,7 +544,7 @@ public class TradeSettlement2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExemptionReasonCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeSettlement2, Optional<Max4Text>> mmExemptionReasonCode = new MMMessageAttribute<TradeSettlement2, Optional<Max4Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeSettlement2.mmObject();
 			isDerived = false;
@@ -485,6 +556,16 @@ public class TradeSettlement2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max4Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max4Text> getValue(TradeSettlement2 obj) {
+			return obj.getExemptionReasonCode();
+		}
+
+		@Override
+		public void setValue(TradeSettlement2 obj, Optional<Max4Text> value) {
+			obj.setExemptionReasonCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XmptnRsn")
@@ -518,7 +599,7 @@ public class TradeSettlement2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExemptionReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeSettlement2, Optional<Max500Text>> mmExemptionReason = new MMMessageAttribute<TradeSettlement2, Optional<Max500Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeSettlement2.mmObject();
 			isDerived = false;
@@ -530,9 +611,19 @@ public class TradeSettlement2 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max500Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max500Text> getValue(TradeSettlement2 obj) {
+			return obj.getExemptionReason();
+		}
+
+		@Override
+		public void setValue(TradeSettlement2 obj, Optional<Max500Text> value) {
+			obj.setExemptionReason(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "SubTtlClctdTax")
-	protected List<com.tools20022.repository.msg.SettlementSubTotalCalculatedTax2> subTotalCalculatedTax;
+	protected List<SettlementSubTotalCalculatedTax2> subTotalCalculatedTax;
 	/**
 	 * 
 	 <p>
@@ -569,7 +660,7 @@ public class TradeSettlement2 {
 	 * TradeSettlement1.mmSubTotalCalculatedTax}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSubTotalCalculatedTax = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeSettlement2, List<SettlementSubTotalCalculatedTax2>> mmSubTotalCalculatedTax = new MMMessageAssociationEnd<TradeSettlement2, List<SettlementSubTotalCalculatedTax2>>() {
 		{
 			businessComponentTrace_lazy = () -> Tax.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeSettlement2.mmObject();
@@ -581,11 +672,21 @@ public class TradeSettlement2 {
 			previousVersion_lazy = () -> TradeSettlement1.mmSubTotalCalculatedTax;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SettlementSubTotalCalculatedTax2.mmObject();
+			type_lazy = () -> SettlementSubTotalCalculatedTax2.mmObject();
+		}
+
+		@Override
+		public List<SettlementSubTotalCalculatedTax2> getValue(TradeSettlement2 obj) {
+			return obj.getSubTotalCalculatedTax();
+		}
+
+		@Override
+		public void setValue(TradeSettlement2 obj, List<SettlementSubTotalCalculatedTax2> value) {
+			obj.setSubTotalCalculatedTax(value);
 		}
 	};
 	@XmlElement(name = "EarlyPmts")
-	protected List<com.tools20022.repository.msg.EarlyPayment1> earlyPayments;
+	protected List<EarlyPayment1> earlyPayments;
 	/**
 	 * 
 	 <p>
@@ -612,7 +713,7 @@ public class TradeSettlement2 {
 	 * definition} = "Details of each early payment discount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEarlyPayments = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeSettlement2, List<EarlyPayment1>> mmEarlyPayments = new MMMessageAssociationEnd<TradeSettlement2, List<EarlyPayment1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeSettlement2.mmObject();
 			isDerived = false;
@@ -622,7 +723,17 @@ public class TradeSettlement2 {
 			definition = "Details of each early payment discount.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.EarlyPayment1.mmObject();
+			type_lazy = () -> EarlyPayment1.mmObject();
+		}
+
+		@Override
+		public List<EarlyPayment1> getValue(TradeSettlement2 obj) {
+			return obj.getEarlyPayments();
+		}
+
+		@Override
+		public void setValue(TradeSettlement2 obj, List<EarlyPayment1> value) {
+			obj.setEarlyPayments(value);
 		}
 	};
 
@@ -648,7 +759,7 @@ public class TradeSettlement2 {
 		return paymentReference == null ? Optional.empty() : Optional.of(paymentReference);
 	}
 
-	public TradeSettlement2 setPaymentReference(com.tools20022.repository.msg.CreditorReferenceInformation2 paymentReference) {
+	public TradeSettlement2 setPaymentReference(CreditorReferenceInformation2 paymentReference) {
 		this.paymentReference = paymentReference;
 		return this;
 	}
@@ -675,7 +786,7 @@ public class TradeSettlement2 {
 		return invoiceCurrencyExchange == null ? Optional.empty() : Optional.of(invoiceCurrencyExchange);
 	}
 
-	public TradeSettlement2 setInvoiceCurrencyExchange(com.tools20022.repository.msg.CurrencyReference3 invoiceCurrencyExchange) {
+	public TradeSettlement2 setInvoiceCurrencyExchange(CurrencyReference3 invoiceCurrencyExchange) {
 		this.invoiceCurrencyExchange = invoiceCurrencyExchange;
 		return this;
 	}
@@ -693,7 +804,7 @@ public class TradeSettlement2 {
 		return billingPeriod == null ? Optional.empty() : Optional.of(billingPeriod);
 	}
 
-	public TradeSettlement2 setBillingPeriod(com.tools20022.repository.msg.Period2 billingPeriod) {
+	public TradeSettlement2 setBillingPeriod(Period2 billingPeriod) {
 		this.billingPeriod = billingPeriod;
 		return this;
 	}
@@ -729,7 +840,7 @@ public class TradeSettlement2 {
 		return subTotalCalculatedTax == null ? subTotalCalculatedTax = new ArrayList<>() : subTotalCalculatedTax;
 	}
 
-	public TradeSettlement2 setSubTotalCalculatedTax(List<com.tools20022.repository.msg.SettlementSubTotalCalculatedTax2> subTotalCalculatedTax) {
+	public TradeSettlement2 setSubTotalCalculatedTax(List<SettlementSubTotalCalculatedTax2> subTotalCalculatedTax) {
 		this.subTotalCalculatedTax = Objects.requireNonNull(subTotalCalculatedTax);
 		return this;
 	}
@@ -738,7 +849,7 @@ public class TradeSettlement2 {
 		return earlyPayments == null ? earlyPayments = new ArrayList<>() : earlyPayments;
 	}
 
-	public TradeSettlement2 setEarlyPayments(List<com.tools20022.repository.msg.EarlyPayment1> earlyPayments) {
+	public TradeSettlement2 setEarlyPayments(List<EarlyPayment1> earlyPayments) {
 		this.earlyPayments = Objects.requireNonNull(earlyPayments);
 		return this;
 	}

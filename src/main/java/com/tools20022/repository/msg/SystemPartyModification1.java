@@ -111,7 +111,7 @@ public class SystemPartyModification1 {
 	 * definition} = "Specifies the type of requested modification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmScopeIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemPartyModification1, DataModification1Code> mmScopeIndication = new MMMessageAttribute<SystemPartyModification1, DataModification1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemPartyModification1.mmObject();
 			isDerived = false;
@@ -122,6 +122,16 @@ public class SystemPartyModification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DataModification1Code.mmObject();
+		}
+
+		@Override
+		public DataModification1Code getValue(SystemPartyModification1 obj) {
+			return obj.getScopeIndication();
+		}
+
+		@Override
+		public void setValue(SystemPartyModification1 obj, DataModification1Code value) {
+			obj.setScopeIndication(value);
 		}
 	};
 	@XmlElement(name = "ReqdMod", required = true)
@@ -155,7 +165,7 @@ public class SystemPartyModification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRequestedModification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SystemPartyModification1, SystemPartyModification1Choice> mmRequestedModification = new MMMessageAssociationEnd<SystemPartyModification1, SystemPartyModification1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemPartyModification1.mmObject();
 			isDerived = false;
@@ -167,6 +177,16 @@ public class SystemPartyModification1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SystemPartyModification1Choice.mmObject();
+		}
+
+		@Override
+		public SystemPartyModification1Choice getValue(SystemPartyModification1 obj) {
+			return obj.getRequestedModification();
+		}
+
+		@Override
+		public void setValue(SystemPartyModification1 obj, SystemPartyModification1Choice value) {
+			obj.setRequestedModification(value);
 		}
 	};
 

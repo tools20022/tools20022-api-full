@@ -132,7 +132,7 @@ public class BalanceDetails2 {
 	 * definition} = "Specifies the nature of a balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBalanceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BalanceDetails2, List<BalanceType4Code>> mmBalanceType = new MMMessageAttribute<BalanceDetails2, List<BalanceType4Code>>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceDetails2.mmObject();
@@ -143,6 +143,16 @@ public class BalanceDetails2 {
 			definition = "Specifies the nature of a balance.";
 			minOccurs = 0;
 			simpleType_lazy = () -> BalanceType4Code.mmObject();
+		}
+
+		@Override
+		public List<BalanceType4Code> getValue(BalanceDetails2 obj) {
+			return obj.getBalanceType();
+		}
+
+		@Override
+		public void setValue(BalanceDetails2 obj, List<BalanceType4Code> value) {
+			obj.setBalanceType(value);
 		}
 	};
 	@XmlElement(name = "CtrPtyTp", required = true)
@@ -182,7 +192,7 @@ public class BalanceDetails2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCounterpartyType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BalanceDetails2, BalanceCounterparty1Code> mmCounterpartyType = new MMMessageAttribute<BalanceDetails2, BalanceCounterparty1Code>() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmCalculationType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceDetails2.mmObject();
@@ -194,6 +204,16 @@ public class BalanceDetails2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BalanceCounterparty1Code.mmObject();
+		}
+
+		@Override
+		public BalanceCounterparty1Code getValue(BalanceDetails2 obj) {
+			return obj.getCounterpartyType();
+		}
+
+		@Override
+		public void setValue(BalanceDetails2 obj, BalanceCounterparty1Code value) {
+			obj.setCounterpartyType(value);
 		}
 	};
 	@XmlElement(name = "CtrPtyId")
@@ -232,7 +252,7 @@ public class BalanceDetails2 {
 	 * "Identifies the counterparty for which the balance is calculated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCounterpartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BalanceDetails2, List<MemberIdentificationChoice>> mmCounterpartyIdentification = new MMMessageAttribute<BalanceDetails2, List<MemberIdentificationChoice>>() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmCounterparty;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceDetails2.mmObject();
@@ -243,6 +263,16 @@ public class BalanceDetails2 {
 			definition = "Identifies the counterparty for which the balance is calculated.";
 			minOccurs = 0;
 			complexType_lazy = () -> MemberIdentificationChoice.mmObject();
+		}
+
+		@Override
+		public List<MemberIdentificationChoice> getValue(BalanceDetails2 obj) {
+			return obj.getCounterpartyIdentification();
+		}
+
+		@Override
+		public void setValue(BalanceDetails2 obj, List<MemberIdentificationChoice> value) {
+			obj.setCounterpartyIdentification(value);
 		}
 	};
 	@XmlElement(name = "BalValDt")
@@ -281,7 +311,7 @@ public class BalanceDetails2 {
 	 * "Date and time at which the balance is or will be available."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBalanceValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BalanceDetails2, List<DateAndDateTimeSearchChoice>> mmBalanceValueDate = new MMMessageAttribute<BalanceDetails2, List<DateAndDateTimeSearchChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmValueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceDetails2.mmObject();
@@ -292,6 +322,16 @@ public class BalanceDetails2 {
 			definition = "Date and time at which the balance is or will be available.";
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeSearchChoice.mmObject();
+		}
+
+		@Override
+		public List<DateAndDateTimeSearchChoice> getValue(BalanceDetails2 obj) {
+			return obj.getBalanceValueDate();
+		}
+
+		@Override
+		public void setValue(BalanceDetails2 obj, List<DateAndDateTimeSearchChoice> value) {
+			obj.setBalanceValueDate(value);
 		}
 	};
 

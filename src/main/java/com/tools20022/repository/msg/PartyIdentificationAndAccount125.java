@@ -136,7 +136,7 @@ public class PartyIdentificationAndAccount125 {
 	 * PartyIdentificationAndAccount93.mmPartyIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentificationAndAccount125, Optional<PartyIdentification70Choice>> mmPartyIdentification = new MMMessageAttribute<PartyIdentificationAndAccount125, Optional<PartyIdentification70Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount125.mmObject();
@@ -150,6 +150,16 @@ public class PartyIdentificationAndAccount125 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification70Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification70Choice> getValue(PartyIdentificationAndAccount125 obj) {
+			return obj.getPartyIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount125 obj, Optional<PartyIdentification70Choice> value) {
+			obj.setPartyIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctId")
@@ -199,7 +209,7 @@ public class PartyIdentificationAndAccount125 {
 	 * PartyIdentificationAndAccount93.mmAccountIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentificationAndAccount125, Optional<Max35Text>> mmAccountIdentification = new MMMessageAttribute<PartyIdentificationAndAccount125, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount125.mmObject();
@@ -213,6 +223,16 @@ public class PartyIdentificationAndAccount125 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PartyIdentificationAndAccount125 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount125 obj, Optional<Max35Text> value) {
+			obj.setAccountIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PlcOfSttlm", required = true)
@@ -263,7 +283,7 @@ public class PartyIdentificationAndAccount125 {
 	 * PartyIdentificationAndAccount93.mmPlaceOfSettlement}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceOfSettlement = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentificationAndAccount125, PartyIdentification70Choice> mmPlaceOfSettlement = new MMMessageAttribute<PartyIdentificationAndAccount125, PartyIdentification70Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount125.mmObject();
@@ -277,6 +297,16 @@ public class PartyIdentificationAndAccount125 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification70Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification70Choice getValue(PartyIdentificationAndAccount125 obj) {
+			return obj.getPlaceOfSettlement();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount125 obj, PartyIdentification70Choice value) {
+			obj.setPlaceOfSettlement(value);
 		}
 	};
 

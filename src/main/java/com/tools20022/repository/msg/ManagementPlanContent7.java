@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max10KBinary;
 import com.tools20022.repository.datatype.Max140Binary;
 import com.tools20022.repository.entity.TerminalManagementAction;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TMSAction7;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -64,7 +65,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ManagementPlanContent7"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -116,7 +117,7 @@ public class ManagementPlanContent7 {
 	 * ManagementPlanContent6.mmTMChallenge}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTMChallenge = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ManagementPlanContent7, Optional<Max140Binary>> mmTMChallenge = new MMMessageAttribute<ManagementPlanContent7, Optional<Max140Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ManagementPlanContent7.mmObject();
 			isDerived = false;
@@ -128,6 +129,16 @@ public class ManagementPlanContent7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Binary.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Binary> getValue(ManagementPlanContent7 obj) {
+			return obj.getTMChallenge();
+		}
+
+		@Override
+		public void setValue(ManagementPlanContent7 obj, Optional<Max140Binary> value) {
+			obj.setTMChallenge(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "KeyNcphrmntCert")
@@ -167,7 +178,7 @@ public class ManagementPlanContent7 {
 	 * ManagementPlanContent6.mmKeyEnciphermentCertificate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmKeyEnciphermentCertificate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ManagementPlanContent7, List<Max10KBinary>> mmKeyEnciphermentCertificate = new MMMessageAttribute<ManagementPlanContent7, List<Max10KBinary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ManagementPlanContent7.mmObject();
 			isDerived = false;
@@ -179,9 +190,19 @@ public class ManagementPlanContent7 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10KBinary.mmObject();
 		}
+
+		@Override
+		public List<Max10KBinary> getValue(ManagementPlanContent7 obj) {
+			return obj.getKeyEnciphermentCertificate();
+		}
+
+		@Override
+		public void setValue(ManagementPlanContent7 obj, List<Max10KBinary> value) {
+			obj.setKeyEnciphermentCertificate(value);
+		}
 	};
 	@XmlElement(name = "Actn", required = true)
-	protected List<com.tools20022.repository.msg.TMSAction7> action;
+	protected List<TMSAction7> action;
 	/**
 	 * 
 	 <p>
@@ -214,7 +235,7 @@ public class ManagementPlanContent7 {
 	 * ManagementPlanContent6.mmAction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ManagementPlanContent7, List<TMSAction7>> mmAction = new MMMessageAssociationEnd<ManagementPlanContent7, List<TMSAction7>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ManagementPlanContent7.mmObject();
 			isDerived = false;
@@ -225,7 +246,17 @@ public class ManagementPlanContent7 {
 			previousVersion_lazy = () -> ManagementPlanContent6.mmAction;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TMSAction7.mmObject();
+			type_lazy = () -> TMSAction7.mmObject();
+		}
+
+		@Override
+		public List<TMSAction7> getValue(ManagementPlanContent7 obj) {
+			return obj.getAction();
+		}
+
+		@Override
+		public void setValue(ManagementPlanContent7 obj, List<TMSAction7> value) {
+			obj.setAction(value);
 		}
 	};
 
@@ -236,7 +267,7 @@ public class ManagementPlanContent7 {
 						com.tools20022.repository.msg.ManagementPlanContent7.mmAction);
 				trace_lazy = () -> TerminalManagementAction.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ManagementPlanContent7";
 				definition = "Content of the management plan.";
 				previousVersion_lazy = () -> ManagementPlanContent6.mmObject();
@@ -267,7 +298,7 @@ public class ManagementPlanContent7 {
 		return action == null ? action = new ArrayList<>() : action;
 	}
 
-	public ManagementPlanContent7 setAction(List<com.tools20022.repository.msg.TMSAction7> action) {
+	public ManagementPlanContent7 setAction(List<TMSAction7> action) {
 		this.action = Objects.requireNonNull(action);
 		return this;
 	}

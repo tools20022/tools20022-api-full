@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification40;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -132,7 +133,7 @@ public class GenericIdentification58 {
 	 * GenericIdentification21.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification58, Optional<Max35Text>> mmIdentification = new MMMessageAttribute<GenericIdentification58, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification58.mmObject();
@@ -146,6 +147,16 @@ public class GenericIdentification58 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(GenericIdentification58 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(GenericIdentification58 obj, Optional<Max35Text> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -198,7 +209,7 @@ public class GenericIdentification58 {
 	 * GenericIdentification21.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification58, GenericIdentification40> mmType = new MMMessageAttribute<GenericIdentification58, GenericIdentification40>() {
 		{
 			businessComponentTrace_lazy = () -> GenericIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification58.mmObject();
@@ -211,7 +222,17 @@ public class GenericIdentification58 {
 			previousVersion_lazy = () -> GenericIdentification21.mmType;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification40.mmObject();
+			complexType_lazy = () -> GenericIdentification40.mmObject();
+		}
+
+		@Override
+		public GenericIdentification40 getValue(GenericIdentification58 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(GenericIdentification58 obj, GenericIdentification40 value) {
+			obj.setType(value);
 		}
 	};
 
@@ -244,7 +265,7 @@ public class GenericIdentification58 {
 		return type;
 	}
 
-	public GenericIdentification58 setType(com.tools20022.repository.msg.GenericIdentification40 type) {
+	public GenericIdentification58 setType(GenericIdentification40 type) {
 		this.type = Objects.requireNonNull(type);
 		return this;
 	}

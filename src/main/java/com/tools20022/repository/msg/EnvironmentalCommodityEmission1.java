@@ -108,7 +108,7 @@ public class EnvironmentalCommodityEmission1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBaseProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EnvironmentalCommodityEmission1, AssetClassProductType3Code> mmBaseProduct = new MMMessageAttribute<EnvironmentalCommodityEmission1, AssetClassProductType3Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EnvironmentalCommodityEmission1.mmObject();
 			isDerived = false;
@@ -119,6 +119,16 @@ public class EnvironmentalCommodityEmission1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassProductType3Code.mmObject();
+		}
+
+		@Override
+		public AssetClassProductType3Code getValue(EnvironmentalCommodityEmission1 obj) {
+			return obj.getBaseProduct();
+		}
+
+		@Override
+		public void setValue(EnvironmentalCommodityEmission1 obj, AssetClassProductType3Code value) {
+			obj.setBaseProduct(value);
 		}
 	};
 	@XmlElement(name = "SubPdct", required = true)
@@ -151,7 +161,7 @@ public class EnvironmentalCommodityEmission1 {
 	 * definition} = "Sub-product for the underlying asset class."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EnvironmentalCommodityEmission1, AssetClassSubProductType10Code> mmSubProduct = new MMMessageAttribute<EnvironmentalCommodityEmission1, AssetClassSubProductType10Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EnvironmentalCommodityEmission1.mmObject();
 			isDerived = false;
@@ -162,6 +172,16 @@ public class EnvironmentalCommodityEmission1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassSubProductType10Code.mmObject();
+		}
+
+		@Override
+		public AssetClassSubProductType10Code getValue(EnvironmentalCommodityEmission1 obj) {
+			return obj.getSubProduct();
+		}
+
+		@Override
+		public void setValue(EnvironmentalCommodityEmission1 obj, AssetClassSubProductType10Code value) {
+			obj.setSubProduct(value);
 		}
 	};
 	@XmlElement(name = "AddtlSubPdct")
@@ -196,7 +216,7 @@ public class EnvironmentalCommodityEmission1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalSubProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EnvironmentalCommodityEmission1, Optional<AssetClassDetailedSubProductType8Code>> mmAdditionalSubProduct = new MMMessageAttribute<EnvironmentalCommodityEmission1, Optional<AssetClassDetailedSubProductType8Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EnvironmentalCommodityEmission1.mmObject();
 			isDerived = false;
@@ -207,6 +227,16 @@ public class EnvironmentalCommodityEmission1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AssetClassDetailedSubProductType8Code.mmObject();
+		}
+
+		@Override
+		public Optional<AssetClassDetailedSubProductType8Code> getValue(EnvironmentalCommodityEmission1 obj) {
+			return obj.getAdditionalSubProduct();
+		}
+
+		@Override
+		public void setValue(EnvironmentalCommodityEmission1 obj, Optional<AssetClassDetailedSubProductType8Code> value) {
+			obj.setAdditionalSubProduct(value.orElse(null));
 		}
 	};
 

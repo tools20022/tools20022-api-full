@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.Instalment;
 import com.tools20022.repository.entity.PaymentObligation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PaymentMeans1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -119,7 +120,7 @@ public class Instalment2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSequenceIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Instalment2, Max70Text> mmSequenceIdentification = new MMMessageAttribute<Instalment2, Max70Text>() {
 		{
 			businessElementTrace_lazy = () -> Instalment.mmSequenceIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Instalment2.mmObject();
@@ -131,6 +132,16 @@ public class Instalment2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Max70Text getValue(Instalment2 obj) {
+			return obj.getSequenceIdentification();
+		}
+
+		@Override
+		public void setValue(Instalment2 obj, Max70Text value) {
+			obj.setSequenceIdentification(value);
 		}
 	};
 	@XmlElement(name = "PmtDueDt", required = true)
@@ -167,7 +178,7 @@ public class Instalment2 {
 	 * "Due date for the payment of the financing item instalment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentDueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Instalment2, ISODate> mmPaymentDueDate = new MMMessageAttribute<Instalment2, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmPaymentDueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Instalment2.mmObject();
@@ -179,6 +190,16 @@ public class Instalment2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(Instalment2 obj) {
+			return obj.getPaymentDueDate();
+		}
+
+		@Override
+		public void setValue(Instalment2 obj, ISODate value) {
+			obj.setPaymentDueDate(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -215,7 +236,7 @@ public class Instalment2 {
 	 * definition} = "Amount of a single instalment related to an invoice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Instalment2, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<Instalment2, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Instalment2.mmObject();
@@ -227,6 +248,16 @@ public class Instalment2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(Instalment2 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Instalment2 obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "PmtInstrm")
@@ -262,7 +293,7 @@ public class Instalment2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Instalment2, Optional<PaymentMeans1>> mmPaymentInstrument = new MMMessageAssociationEnd<Instalment2, Optional<PaymentMeans1>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmPaymentOffset;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Instalment2.mmObject();
@@ -274,7 +305,17 @@ public class Instalment2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentMeans1.mmObject();
+			type_lazy = () -> PaymentMeans1.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentMeans1> getValue(Instalment2 obj) {
+			return obj.getPaymentInstrument();
+		}
+
+		@Override
+		public void setValue(Instalment2 obj, Optional<PaymentMeans1> value) {
+			obj.setPaymentInstrument(value.orElse(null));
 		}
 	};
 
@@ -324,7 +365,7 @@ public class Instalment2 {
 		return paymentInstrument == null ? Optional.empty() : Optional.of(paymentInstrument);
 	}
 
-	public Instalment2 setPaymentInstrument(com.tools20022.repository.msg.PaymentMeans1 paymentInstrument) {
+	public Instalment2 setPaymentInstrument(PaymentMeans1 paymentInstrument) {
 		this.paymentInstrument = paymentInstrument;
 		return this;
 	}

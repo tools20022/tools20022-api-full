@@ -26,6 +26,7 @@ import com.tools20022.repository.area.tsmt.InvoicePaymentReconciliationStatusV01
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -159,7 +160,7 @@ public class ReconciliationList1 {
 	 * definition} = "Date of creation of this document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReconciliationList1, ISODate> mmDate = new MMMessageAttribute<ReconciliationList1, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReconciliationList1.mmObject();
@@ -172,9 +173,19 @@ public class ReconciliationList1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
+
+		@Override
+		public ISODate getValue(ReconciliationList1 obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(ReconciliationList1 obj, ISODate value) {
+			obj.setDate(value);
+		}
 	};
 	@XmlElement(name = "RltdDoc")
-	protected List<com.tools20022.repository.msg.QualifiedDocumentInformation1> relatedDocument;
+	protected List<QualifiedDocumentInformation1> relatedDocument;
 	/**
 	 * 
 	 <p>
@@ -208,7 +219,7 @@ public class ReconciliationList1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRelatedDocument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReconciliationList1, List<QualifiedDocumentInformation1>> mmRelatedDocument = new MMMessageAssociationEnd<ReconciliationList1, List<QualifiedDocumentInformation1>>() {
 		{
 			businessComponentTrace_lazy = () -> Document.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReconciliationList1.mmObject();
@@ -219,7 +230,17 @@ public class ReconciliationList1 {
 			definition = "Reference to related documents for example to original assignment in a status response or retry.";
 			minOccurs = 0;
 			isComposite = false;
-			type_lazy = () -> com.tools20022.repository.msg.QualifiedDocumentInformation1.mmObject();
+			type_lazy = () -> QualifiedDocumentInformation1.mmObject();
+		}
+
+		@Override
+		public List<QualifiedDocumentInformation1> getValue(ReconciliationList1 obj) {
+			return obj.getRelatedDocument();
+		}
+
+		@Override
+		public void setValue(ReconciliationList1 obj, List<QualifiedDocumentInformation1> value) {
+			obj.setRelatedDocument(value);
 		}
 	};
 	@XmlElement(name = "Rcpt", required = true)
@@ -256,7 +277,7 @@ public class ReconciliationList1 {
 	 * definition} = "Party to be advised."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRecipient = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReconciliationList1, QualifiedPartyIdentification1> mmRecipient = new MMMessageAssociationEnd<ReconciliationList1, QualifiedPartyIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReconciliationList1.mmObject();
@@ -268,7 +289,17 @@ public class ReconciliationList1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = false;
-			type_lazy = () -> com.tools20022.repository.msg.QualifiedPartyIdentification1.mmObject();
+			type_lazy = () -> QualifiedPartyIdentification1.mmObject();
+		}
+
+		@Override
+		public QualifiedPartyIdentification1 getValue(ReconciliationList1 obj) {
+			return obj.getRecipient();
+		}
+
+		@Override
+		public void setValue(ReconciliationList1 obj, QualifiedPartyIdentification1 value) {
+			obj.setRecipient(value);
 		}
 	};
 	@XmlElement(name = "Advsr", required = true)
@@ -305,7 +336,7 @@ public class ReconciliationList1 {
 	 * definition} = "Informing party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdvisor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReconciliationList1, QualifiedPartyIdentification1> mmAdvisor = new MMMessageAssociationEnd<ReconciliationList1, QualifiedPartyIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReconciliationList1.mmObject();
@@ -317,7 +348,17 @@ public class ReconciliationList1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = false;
-			type_lazy = () -> com.tools20022.repository.msg.QualifiedPartyIdentification1.mmObject();
+			type_lazy = () -> QualifiedPartyIdentification1.mmObject();
+		}
+
+		@Override
+		public QualifiedPartyIdentification1 getValue(ReconciliationList1 obj) {
+			return obj.getAdvisor();
+		}
+
+		@Override
+		public void setValue(ReconciliationList1 obj, QualifiedPartyIdentification1 value) {
+			obj.setAdvisor(value);
 		}
 	};
 	@XmlElement(name = "Params", required = true)
@@ -353,7 +394,7 @@ public class ReconciliationList1 {
 	 * definition} = "Identification parameters."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParameters = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReconciliationList1, FinancialItemParameters1> mmParameters = new MMMessageAssociationEnd<ReconciliationList1, FinancialItemParameters1>() {
 		{
 			businessComponentTrace_lazy = () -> Invoice.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReconciliationList1.mmObject();
@@ -365,7 +406,17 @@ public class ReconciliationList1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialItemParameters1.mmObject();
+			type_lazy = () -> FinancialItemParameters1.mmObject();
+		}
+
+		@Override
+		public FinancialItemParameters1 getValue(ReconciliationList1 obj) {
+			return obj.getParameters();
+		}
+
+		@Override
+		public void setValue(ReconciliationList1 obj, FinancialItemParameters1 value) {
+			obj.setParameters(value);
 		}
 	};
 	@XmlElement(name = "PmtRef", required = true)
@@ -401,7 +452,7 @@ public class ReconciliationList1 {
 	 * definition} = "Reference to a payment instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReconciliationList1, PaymentIdentification1> mmPaymentReference = new MMMessageAssociationEnd<ReconciliationList1, PaymentIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPaymentRelatedIdentifications;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReconciliationList1.mmObject();
@@ -413,7 +464,17 @@ public class ReconciliationList1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentIdentification1.mmObject();
+			type_lazy = () -> PaymentIdentification1.mmObject();
+		}
+
+		@Override
+		public PaymentIdentification1 getValue(ReconciliationList1 obj) {
+			return obj.getPaymentReference();
+		}
+
+		@Override
+		public void setValue(ReconciliationList1 obj, PaymentIdentification1 value) {
+			obj.setPaymentReference(value);
 		}
 	};
 	@XmlElement(name = "PmtMeans", required = true)
@@ -450,7 +511,7 @@ public class ReconciliationList1 {
 	 * "Set of elements used to further specify the type of transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentMeans = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReconciliationList1, PaymentMeans1> mmPaymentMeans = new MMMessageAssociationEnd<ReconciliationList1, PaymentMeans1>() {
 		{
 			businessElementTrace_lazy = () -> Invoice.mmPayment;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReconciliationList1.mmObject();
@@ -462,7 +523,17 @@ public class ReconciliationList1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentMeans1.mmObject();
+			type_lazy = () -> PaymentMeans1.mmObject();
+		}
+
+		@Override
+		public PaymentMeans1 getValue(ReconciliationList1 obj) {
+			return obj.getPaymentMeans();
+		}
+
+		@Override
+		public void setValue(ReconciliationList1 obj, PaymentMeans1 value) {
+			obj.setPaymentMeans(value);
 		}
 	};
 	@XmlElement(name = "PmtDt", required = true)
@@ -499,7 +570,7 @@ public class ReconciliationList1 {
 	 * definition} = "Effective date of payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReconciliationList1, ISODate> mmPaymentDate = new MMMessageAttribute<ReconciliationList1, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> ObligationFulfilment.mmDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReconciliationList1.mmObject();
@@ -511,6 +582,16 @@ public class ReconciliationList1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(ReconciliationList1 obj) {
+			return obj.getPaymentDate();
+		}
+
+		@Override
+		public void setValue(ReconciliationList1 obj, ISODate value) {
+			obj.setPaymentDate(value);
 		}
 	};
 	@XmlElement(name = "PmtTerms", required = true)
@@ -546,7 +627,7 @@ public class ReconciliationList1 {
 	 * definition} = "Terms of the payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentTerms = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReconciliationList1, PaymentTerms6> mmPaymentTerms = new MMMessageAssociationEnd<ReconciliationList1, PaymentTerms6>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmPaymentObligation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReconciliationList1.mmObject();
@@ -558,7 +639,17 @@ public class ReconciliationList1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentTerms6.mmObject();
+			type_lazy = () -> PaymentTerms6.mmObject();
+		}
+
+		@Override
+		public PaymentTerms6 getValue(ReconciliationList1 obj) {
+			return obj.getPaymentTerms();
+		}
+
+		@Override
+		public void setValue(ReconciliationList1 obj, PaymentTerms6 value) {
+			obj.setPaymentTerms(value);
 		}
 	};
 	@XmlElement(name = "PmtAmt", required = true)
@@ -596,7 +687,7 @@ public class ReconciliationList1 {
 	 * definition} = "Amount of the referenced payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReconciliationList1, CurrencyAndAmount> mmPaymentAmount = new MMMessageAttribute<ReconciliationList1, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReconciliationList1.mmObject();
@@ -609,9 +700,19 @@ public class ReconciliationList1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
+
+		@Override
+		public CurrencyAndAmount getValue(ReconciliationList1 obj) {
+			return obj.getPaymentAmount();
+		}
+
+		@Override
+		public void setValue(ReconciliationList1 obj, CurrencyAndAmount value) {
+			obj.setPaymentAmount(value);
+		}
 	};
 	@XmlElement(name = "Itm", required = true)
-	protected List<com.tools20022.repository.msg.FinancialItem1> item;
+	protected List<FinancialItem1> item;
 	/**
 	 * 
 	 <p>
@@ -642,7 +743,7 @@ public class ReconciliationList1 {
 	 * definition} = "Financial item impacted by the payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmItem = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReconciliationList1, List<FinancialItem1>> mmItem = new MMMessageAssociationEnd<ReconciliationList1, List<FinancialItem1>>() {
 		{
 			businessComponentTrace_lazy = () -> Invoice.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReconciliationList1.mmObject();
@@ -653,7 +754,17 @@ public class ReconciliationList1 {
 			definition = "Financial item impacted by the payment.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialItem1.mmObject();
+			type_lazy = () -> FinancialItem1.mmObject();
+		}
+
+		@Override
+		public List<FinancialItem1> getValue(ReconciliationList1 obj) {
+			return obj.getItem();
+		}
+
+		@Override
+		public void setValue(ReconciliationList1 obj, List<FinancialItem1> value) {
+			obj.setItem(value);
 		}
 	};
 	@XmlElement(name = "ItmCnt", required = true)
@@ -686,7 +797,7 @@ public class ReconciliationList1 {
 	 * definition} = "Number of individual items contained in the list."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmItemCount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReconciliationList1, Max15NumericText> mmItemCount = new MMMessageAttribute<ReconciliationList1, Max15NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReconciliationList1.mmObject();
 			isDerived = false;
@@ -697,6 +808,16 @@ public class ReconciliationList1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
+		}
+
+		@Override
+		public Max15NumericText getValue(ReconciliationList1 obj) {
+			return obj.getItemCount();
+		}
+
+		@Override
+		public void setValue(ReconciliationList1 obj, Max15NumericText value) {
+			obj.setItemCount(value);
 		}
 	};
 	@XmlElement(name = "CtrlSum")
@@ -731,7 +852,7 @@ public class ReconciliationList1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmControlSum = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReconciliationList1, Optional<DecimalNumber>> mmControlSum = new MMMessageAttribute<ReconciliationList1, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReconciliationList1.mmObject();
 			isDerived = false;
@@ -743,9 +864,19 @@ public class ReconciliationList1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(ReconciliationList1 obj) {
+			return obj.getControlSum();
+		}
+
+		@Override
+		public void setValue(ReconciliationList1 obj, Optional<DecimalNumber> value) {
+			obj.setControlSum(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "AssoctdDoc")
-	protected List<com.tools20022.repository.msg.QualifiedDocumentInformation1> associatedDocument;
+	protected List<QualifiedDocumentInformation1> associatedDocument;
 	/**
 	 * 
 	 <p>
@@ -777,7 +908,7 @@ public class ReconciliationList1 {
 	 * definition} = "Associated free form document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAssociatedDocument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReconciliationList1, List<QualifiedDocumentInformation1>> mmAssociatedDocument = new MMMessageAssociationEnd<ReconciliationList1, List<QualifiedDocumentInformation1>>() {
 		{
 			businessComponentTrace_lazy = () -> Document.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReconciliationList1.mmObject();
@@ -788,7 +919,17 @@ public class ReconciliationList1 {
 			definition = "Associated free form document.";
 			minOccurs = 0;
 			isComposite = false;
-			type_lazy = () -> com.tools20022.repository.msg.QualifiedDocumentInformation1.mmObject();
+			type_lazy = () -> QualifiedDocumentInformation1.mmObject();
+		}
+
+		@Override
+		public List<QualifiedDocumentInformation1> getValue(ReconciliationList1 obj) {
+			return obj.getAssociatedDocument();
+		}
+
+		@Override
+		public void setValue(ReconciliationList1 obj, List<QualifiedDocumentInformation1> value) {
+			obj.setAssociatedDocument(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -821,7 +962,7 @@ public class ReconciliationList1 {
 	 * "Additional proprietary formal information concerning the list."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReconciliationList1, Optional<Max2000Text>> mmAdditionalInformation = new MMMessageAttribute<ReconciliationList1, Optional<Max2000Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReconciliationList1.mmObject();
 			isDerived = false;
@@ -832,6 +973,16 @@ public class ReconciliationList1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max2000Text> getValue(ReconciliationList1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(ReconciliationList1 obj, Optional<Max2000Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "VldtnStsInf")
@@ -868,7 +1019,7 @@ public class ReconciliationList1 {
 	 * definition} = "Validation status of the list."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmValidationStatusInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReconciliationList1, Optional<ValidationStatusInformation1>> mmValidationStatusInformation = new MMMessageAssociationEnd<ReconciliationList1, Optional<ValidationStatusInformation1>>() {
 		{
 			businessElementTrace_lazy = () -> InvoiceFinancingAgreement.mmInvoiceFinancingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReconciliationList1.mmObject();
@@ -880,7 +1031,17 @@ public class ReconciliationList1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ValidationStatusInformation1.mmObject();
+			type_lazy = () -> ValidationStatusInformation1.mmObject();
+		}
+
+		@Override
+		public Optional<ValidationStatusInformation1> getValue(ReconciliationList1 obj) {
+			return obj.getValidationStatusInformation();
+		}
+
+		@Override
+		public void setValue(ReconciliationList1 obj, Optional<ValidationStatusInformation1> value) {
+			obj.setValidationStatusInformation(value.orElse(null));
 		}
 	};
 
@@ -917,7 +1078,7 @@ public class ReconciliationList1 {
 		return relatedDocument == null ? relatedDocument = new ArrayList<>() : relatedDocument;
 	}
 
-	public ReconciliationList1 setRelatedDocument(List<com.tools20022.repository.msg.QualifiedDocumentInformation1> relatedDocument) {
+	public ReconciliationList1 setRelatedDocument(List<QualifiedDocumentInformation1> relatedDocument) {
 		this.relatedDocument = Objects.requireNonNull(relatedDocument);
 		return this;
 	}
@@ -926,7 +1087,7 @@ public class ReconciliationList1 {
 		return recipient;
 	}
 
-	public ReconciliationList1 setRecipient(com.tools20022.repository.msg.QualifiedPartyIdentification1 recipient) {
+	public ReconciliationList1 setRecipient(QualifiedPartyIdentification1 recipient) {
 		this.recipient = Objects.requireNonNull(recipient);
 		return this;
 	}
@@ -935,7 +1096,7 @@ public class ReconciliationList1 {
 		return advisor;
 	}
 
-	public ReconciliationList1 setAdvisor(com.tools20022.repository.msg.QualifiedPartyIdentification1 advisor) {
+	public ReconciliationList1 setAdvisor(QualifiedPartyIdentification1 advisor) {
 		this.advisor = Objects.requireNonNull(advisor);
 		return this;
 	}
@@ -944,7 +1105,7 @@ public class ReconciliationList1 {
 		return parameters;
 	}
 
-	public ReconciliationList1 setParameters(com.tools20022.repository.msg.FinancialItemParameters1 parameters) {
+	public ReconciliationList1 setParameters(FinancialItemParameters1 parameters) {
 		this.parameters = Objects.requireNonNull(parameters);
 		return this;
 	}
@@ -953,7 +1114,7 @@ public class ReconciliationList1 {
 		return paymentReference;
 	}
 
-	public ReconciliationList1 setPaymentReference(com.tools20022.repository.msg.PaymentIdentification1 paymentReference) {
+	public ReconciliationList1 setPaymentReference(PaymentIdentification1 paymentReference) {
 		this.paymentReference = Objects.requireNonNull(paymentReference);
 		return this;
 	}
@@ -962,7 +1123,7 @@ public class ReconciliationList1 {
 		return paymentMeans;
 	}
 
-	public ReconciliationList1 setPaymentMeans(com.tools20022.repository.msg.PaymentMeans1 paymentMeans) {
+	public ReconciliationList1 setPaymentMeans(PaymentMeans1 paymentMeans) {
 		this.paymentMeans = Objects.requireNonNull(paymentMeans);
 		return this;
 	}
@@ -980,7 +1141,7 @@ public class ReconciliationList1 {
 		return paymentTerms;
 	}
 
-	public ReconciliationList1 setPaymentTerms(com.tools20022.repository.msg.PaymentTerms6 paymentTerms) {
+	public ReconciliationList1 setPaymentTerms(PaymentTerms6 paymentTerms) {
 		this.paymentTerms = Objects.requireNonNull(paymentTerms);
 		return this;
 	}
@@ -998,7 +1159,7 @@ public class ReconciliationList1 {
 		return item == null ? item = new ArrayList<>() : item;
 	}
 
-	public ReconciliationList1 setItem(List<com.tools20022.repository.msg.FinancialItem1> item) {
+	public ReconciliationList1 setItem(List<FinancialItem1> item) {
 		this.item = Objects.requireNonNull(item);
 		return this;
 	}
@@ -1025,7 +1186,7 @@ public class ReconciliationList1 {
 		return associatedDocument == null ? associatedDocument = new ArrayList<>() : associatedDocument;
 	}
 
-	public ReconciliationList1 setAssociatedDocument(List<com.tools20022.repository.msg.QualifiedDocumentInformation1> associatedDocument) {
+	public ReconciliationList1 setAssociatedDocument(List<QualifiedDocumentInformation1> associatedDocument) {
 		this.associatedDocument = Objects.requireNonNull(associatedDocument);
 		return this;
 	}
@@ -1043,7 +1204,7 @@ public class ReconciliationList1 {
 		return validationStatusInformation == null ? Optional.empty() : Optional.of(validationStatusInformation);
 	}
 
-	public ReconciliationList1 setValidationStatusInformation(com.tools20022.repository.msg.ValidationStatusInformation1 validationStatusInformation) {
+	public ReconciliationList1 setValidationStatusInformation(ValidationStatusInformation1 validationStatusInformation) {
 		this.validationStatusInformation = validationStatusInformation;
 		return this;
 	}

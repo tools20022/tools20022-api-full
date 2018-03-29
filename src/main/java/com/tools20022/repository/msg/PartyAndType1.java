@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyType1Choice;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification43;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -101,7 +102,7 @@ public class PartyAndType1 {
 	 * definition} = "Type of additional party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyAndType1, PartyType1Choice> mmType = new MMMessageAssociationEnd<PartyAndType1, PartyType1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyAndType1.mmObject();
@@ -114,6 +115,16 @@ public class PartyAndType1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyType1Choice.mmObject();
+		}
+
+		@Override
+		public PartyType1Choice getValue(PartyAndType1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(PartyAndType1 obj, PartyType1Choice value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Pty")
@@ -148,7 +159,7 @@ public class PartyAndType1 {
 	 * definition} = "Details related to the additional party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyAndType1, Optional<PartyIdentification43>> mmParty = new MMMessageAssociationEnd<PartyAndType1, Optional<PartyIdentification43>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyAndType1.mmObject();
@@ -160,7 +171,17 @@ public class PartyAndType1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
+			type_lazy = () -> PartyIdentification43.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification43> getValue(PartyAndType1 obj) {
+			return obj.getParty();
+		}
+
+		@Override
+		public void setValue(PartyAndType1 obj, Optional<PartyIdentification43> value) {
+			obj.setParty(value.orElse(null));
 		}
 	};
 
@@ -191,7 +212,7 @@ public class PartyAndType1 {
 		return party == null ? Optional.empty() : Optional.of(party);
 	}
 
-	public PartyAndType1 setParty(com.tools20022.repository.msg.PartyIdentification43 party) {
+	public PartyAndType1 setParty(PartyIdentification43 party) {
 		this.party = party;
 		return this;
 	}

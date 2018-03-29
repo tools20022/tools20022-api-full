@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.PartyIdentification73Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
@@ -99,7 +100,7 @@ public class NettingIdentification1Choice {
 	 * definition} = "Describes the individual trading party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradeParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NettingIdentification1Choice, PartyIdentification73Choice> mmTradeParty = new MMMessageAssociationEnd<NettingIdentification1Choice, PartyIdentification73Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.NettingIdentification1Choice.mmObject();
 			isDerived = false;
@@ -110,7 +111,17 @@ public class NettingIdentification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.PartyIdentification73Choice.mmObject();
+			type_lazy = () -> PartyIdentification73Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification73Choice getValue(NettingIdentification1Choice obj) {
+			return obj.getTradeParty();
+		}
+
+		@Override
+		public void setValue(NettingIdentification1Choice obj, PartyIdentification73Choice value) {
+			obj.setTradeParty(value);
 		}
 	};
 	@XmlElement(name = "NetgGrpId", required = true)
@@ -142,7 +153,7 @@ public class NettingIdentification1Choice {
 	 * definition} = "Describes the netting group."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNettingGroupIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NettingIdentification1Choice, Max35Text> mmNettingGroupIdentification = new MMMessageAttribute<NettingIdentification1Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.NettingIdentification1Choice.mmObject();
 			isDerived = false;
@@ -153,6 +164,16 @@ public class NettingIdentification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(NettingIdentification1Choice obj) {
+			return obj.getNettingGroupIdentification();
+		}
+
+		@Override
+		public void setValue(NettingIdentification1Choice obj, Max35Text value) {
+			obj.setNettingGroupIdentification(value);
 		}
 	};
 
@@ -173,7 +194,7 @@ public class NettingIdentification1Choice {
 		return tradeParty;
 	}
 
-	public NettingIdentification1Choice setTradeParty(com.tools20022.repository.choice.PartyIdentification73Choice tradeParty) {
+	public NettingIdentification1Choice setTradeParty(PartyIdentification73Choice tradeParty) {
 		this.tradeParty = Objects.requireNonNull(tradeParty);
 		return this;
 	}

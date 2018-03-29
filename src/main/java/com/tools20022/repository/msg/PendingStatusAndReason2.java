@@ -119,7 +119,7 @@ public class PendingStatusAndReason2 {
 	 * PendingStatusAndReason1.mmProcessingStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PendingStatusAndReason2, List<ProcessingStatus66Choice>> mmProcessingStatus = new MMMessageAssociationEnd<PendingStatusAndReason2, List<ProcessingStatus66Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PendingStatusAndReason2.mmObject();
@@ -132,6 +132,16 @@ public class PendingStatusAndReason2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ProcessingStatus66Choice.mmObject();
+		}
+
+		@Override
+		public List<ProcessingStatus66Choice> getValue(PendingStatusAndReason2 obj) {
+			return obj.getProcessingStatus();
+		}
+
+		@Override
+		public void setValue(PendingStatusAndReason2 obj, List<ProcessingStatus66Choice> value) {
+			obj.setProcessingStatus(value);
 		}
 	};
 	@XmlElement(name = "SttlmSts")
@@ -173,7 +183,7 @@ public class PendingStatusAndReason2 {
 	 * PendingStatusAndReason1.mmSettlementStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PendingStatusAndReason2, List<SettlementStatus16Choice>> mmSettlementStatus = new MMMessageAssociationEnd<PendingStatusAndReason2, List<SettlementStatus16Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmSettlementStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PendingStatusAndReason2.mmObject();
@@ -186,6 +196,16 @@ public class PendingStatusAndReason2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SettlementStatus16Choice.mmObject();
+		}
+
+		@Override
+		public List<SettlementStatus16Choice> getValue(PendingStatusAndReason2 obj) {
+			return obj.getSettlementStatus();
+		}
+
+		@Override
+		public void setValue(PendingStatusAndReason2 obj, List<SettlementStatus16Choice> value) {
+			obj.setSettlementStatus(value);
 		}
 	};
 

@@ -102,7 +102,7 @@ public class DeliveryInterconnectionPoint1Choice {
 	 * "Identification of delivery/interconnection point or zone as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DeliveryInterconnectionPoint1Choice, EICIdentifier> mmCode = new MMMessageAttribute<DeliveryInterconnectionPoint1Choice, EICIdentifier>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DeliveryInterconnectionPoint1Choice.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class DeliveryInterconnectionPoint1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EICIdentifier.mmObject();
+		}
+
+		@Override
+		public EICIdentifier getValue(DeliveryInterconnectionPoint1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(DeliveryInterconnectionPoint1Choice obj, EICIdentifier value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -146,7 +156,7 @@ public class DeliveryInterconnectionPoint1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DeliveryInterconnectionPoint1Choice, Max52Text> mmProprietary = new MMMessageAttribute<DeliveryInterconnectionPoint1Choice, Max52Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DeliveryInterconnectionPoint1Choice.mmObject();
 			isDerived = false;
@@ -157,6 +167,16 @@ public class DeliveryInterconnectionPoint1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max52Text.mmObject();
+		}
+
+		@Override
+		public Max52Text getValue(DeliveryInterconnectionPoint1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(DeliveryInterconnectionPoint1Choice obj, Max52Text value) {
+			obj.setProprietary(value);
 		}
 	};
 

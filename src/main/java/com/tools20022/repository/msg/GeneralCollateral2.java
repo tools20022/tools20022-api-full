@@ -125,7 +125,7 @@ public class GeneralCollateral2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEligibleFinancialInstrumentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GeneralCollateral2, List<Max35Text>> mmEligibleFinancialInstrumentIdentification = new MMMessageAttribute<GeneralCollateral2, List<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmGenericIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralCollateral2.mmObject();
@@ -137,6 +137,16 @@ public class GeneralCollateral2 {
 			nextVersions_lazy = () -> Arrays.asList(GeneralCollateral3.mmEligibleFinancialInstrumentIdentification);
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(GeneralCollateral2 obj) {
+			return obj.getEligibleFinancialInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(GeneralCollateral2 obj, List<Max35Text> value) {
+			obj.setEligibleFinancialInstrumentIdentification(value);
 		}
 	};
 

@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.reda.PriceReportCancellationV03;
 import com.tools20022.repository.entity.NetAssetValueCalculation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Extension1;
+import com.tools20022.repository.msg.PriceValuation3;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -85,7 +87,7 @@ public class PriceReport2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "PricValtnDtls", required = true)
-	protected List<com.tools20022.repository.msg.PriceValuation3> priceValuationDetails;
+	protected List<PriceValuation3> priceValuationDetails;
 	/**
 	 * 
 	 <p>
@@ -117,7 +119,7 @@ public class PriceReport2 {
 	 * "Information related to the price valuation of a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPriceValuationDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceReport2, List<PriceValuation3>> mmPriceValuationDetails = new MMMessageAssociationEnd<PriceReport2, List<PriceValuation3>>() {
 		{
 			businessComponentTrace_lazy = () -> NetAssetValueCalculation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceReport2.mmObject();
@@ -128,11 +130,21 @@ public class PriceReport2 {
 			definition = "Information related to the price valuation of a financial instrument.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PriceValuation3.mmObject();
+			type_lazy = () -> PriceValuation3.mmObject();
+		}
+
+		@Override
+		public List<PriceValuation3> getValue(PriceReport2 obj) {
+			return obj.getPriceValuationDetails();
+		}
+
+		@Override
+		public void setValue(PriceReport2 obj, List<PriceValuation3> value) {
+			obj.setPriceValuationDetails(value);
 		}
 	};
 	@XmlElement(name = "Xtnsn")
-	protected List<com.tools20022.repository.msg.Extension1> extension;
+	protected List<Extension1> extension;
 	/**
 	 * 
 	 <p>
@@ -159,7 +171,7 @@ public class PriceReport2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceReport2, List<Extension1>> mmExtension = new MMMessageAssociationEnd<PriceReport2, List<Extension1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceReport2.mmObject();
 			isDerived = false;
@@ -169,7 +181,17 @@ public class PriceReport2 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Extension1.mmObject();
+			type_lazy = () -> Extension1.mmObject();
+		}
+
+		@Override
+		public List<Extension1> getValue(PriceReport2 obj) {
+			return obj.getExtension();
+		}
+
+		@Override
+		public void setValue(PriceReport2 obj, List<Extension1> value) {
+			obj.setExtension(value);
 		}
 	};
 
@@ -192,7 +214,7 @@ public class PriceReport2 {
 		return priceValuationDetails == null ? priceValuationDetails = new ArrayList<>() : priceValuationDetails;
 	}
 
-	public PriceReport2 setPriceValuationDetails(List<com.tools20022.repository.msg.PriceValuation3> priceValuationDetails) {
+	public PriceReport2 setPriceValuationDetails(List<PriceValuation3> priceValuationDetails) {
 		this.priceValuationDetails = Objects.requireNonNull(priceValuationDetails);
 		return this;
 	}
@@ -201,7 +223,7 @@ public class PriceReport2 {
 		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public PriceReport2 setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+	public PriceReport2 setExtension(List<Extension1> extension) {
 		this.extension = Objects.requireNonNull(extension);
 		return this;
 	}

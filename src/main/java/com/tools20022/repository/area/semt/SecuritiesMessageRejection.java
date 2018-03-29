@@ -25,7 +25,6 @@ import com.tools20022.repository.area.SecuritiesManagementArchive;
 import com.tools20022.repository.msg.AdditionalReference2;
 import com.tools20022.repository.msg.RejectionReason1;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -134,7 +133,7 @@ public class SecuritiesMessageRejection {
 	 * "Reference to a linked message that was previously received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesMessageRejection, AdditionalReference2> mmRelatedReference = new MMMessageBuildingBlock<SecuritiesMessageRejection, AdditionalReference2>() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -145,12 +144,14 @@ public class SecuritiesMessageRejection {
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesMessageRejection.class.getMethod("getRelatedReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AdditionalReference2 getValue(SecuritiesMessageRejection obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(SecuritiesMessageRejection obj, AdditionalReference2 value) {
+			obj.setRelatedReference(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -178,7 +179,7 @@ public class SecuritiesMessageRejection {
 	 * definition} = "Reason to reject the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReason = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesMessageRejection, RejectionReason1> mmReason = new MMMessageBuildingBlock<SecuritiesMessageRejection, RejectionReason1>() {
 		{
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -189,12 +190,14 @@ public class SecuritiesMessageRejection {
 			complexType_lazy = () -> RejectionReason1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesMessageRejection.class.getMethod("getReason", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public RejectionReason1 getValue(SecuritiesMessageRejection obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(SecuritiesMessageRejection obj, RejectionReason1 value) {
+			obj.setReason(value);
 		}
 	};
 

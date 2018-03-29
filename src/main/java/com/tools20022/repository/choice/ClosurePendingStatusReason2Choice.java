@@ -109,7 +109,7 @@ public class ClosurePendingStatusReason2Choice {
 	 * ClosedStatusReason2Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClosurePendingStatusReason2Choice, ClosurePendingStatusReason1Code> mmCode = new MMMessageAttribute<ClosurePendingStatusReason2Choice, ClosurePendingStatusReason1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClosurePendingStatusReason2Choice.mmObject();
 			isDerived = false;
@@ -121,6 +121,16 @@ public class ClosurePendingStatusReason2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ClosurePendingStatusReason1Code.mmObject();
+		}
+
+		@Override
+		public ClosurePendingStatusReason1Code getValue(ClosurePendingStatusReason2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ClosurePendingStatusReason2Choice obj, ClosurePendingStatusReason1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -158,7 +168,7 @@ public class ClosurePendingStatusReason2Choice {
 	 * ClosedStatusReason2Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ClosurePendingStatusReason2Choice, GenericIdentification36> mmProprietary = new MMMessageAssociationEnd<ClosurePendingStatusReason2Choice, GenericIdentification36>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClosurePendingStatusReason2Choice.mmObject();
 			isDerived = false;
@@ -171,6 +181,16 @@ public class ClosurePendingStatusReason2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification36.mmObject();
+		}
+
+		@Override
+		public GenericIdentification36 getValue(ClosurePendingStatusReason2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ClosurePendingStatusReason2Choice obj, GenericIdentification36 value) {
+			obj.setProprietary(value);
 		}
 	};
 

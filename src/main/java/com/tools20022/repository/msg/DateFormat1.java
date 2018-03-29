@@ -95,7 +95,7 @@ public class DateFormat1 {
 	 * definition} = "Date at which the event occurs."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DateFormat1, DateFormat3Choice> mmDate = new MMMessageAssociationEnd<DateFormat1, DateFormat3Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateFormat1.mmObject();
 			isDerived = false;
@@ -107,6 +107,16 @@ public class DateFormat1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DateFormat3Choice.mmObject();
+		}
+
+		@Override
+		public DateFormat3Choice getValue(DateFormat1 obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(DateFormat1 obj, DateFormat3Choice value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "DtMd")
@@ -140,7 +150,7 @@ public class DateFormat1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateMode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateFormat1, Optional<DateMode1Code>> mmDateMode = new MMMessageAttribute<DateFormat1, Optional<DateMode1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateFormat1.mmObject();
 			isDerived = false;
@@ -151,6 +161,16 @@ public class DateFormat1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DateMode1Code.mmObject();
+		}
+
+		@Override
+		public Optional<DateMode1Code> getValue(DateFormat1 obj) {
+			return obj.getDateMode();
+		}
+
+		@Override
+		public void setValue(DateFormat1 obj, Optional<DateMode1Code> value) {
+			obj.setDateMode(value.orElse(null));
 		}
 	};
 

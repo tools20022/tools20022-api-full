@@ -52,11 +52,15 @@ public class ConstraintCancellation1Rule {
 	 */
 	public static final MMConstraint<InvoiceFinancingRequestStatusV01> forInvoiceFinancingRequestStatusV01 = new MMConstraint<InvoiceFinancingRequestStatusV01>() {
 		{
-			validator = ConstraintCancellation1Rule::checkInvoiceFinancingRequestStatusV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation1Rule";
 			definition = "If the status message refers to the business status of cancellation request, then only Status Identification and Original Request Information must be present.";
 			owner_lazy = () -> InvoiceFinancingRequestStatusV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvoiceFinancingRequestStatusV01 obj) throws Exception {
+			checkInvoiceFinancingRequestStatusV01(obj);
 		}
 	};
 

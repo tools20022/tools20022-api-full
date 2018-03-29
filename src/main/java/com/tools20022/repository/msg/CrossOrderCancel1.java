@@ -105,7 +105,7 @@ public class CrossOrderCancel1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalClientOrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CrossOrderCancel1, Max35Text> mmOriginalClientOrderIdentification = new MMMessageAttribute<CrossOrderCancel1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CrossOrderCancel1.mmObject();
 			isDerived = false;
@@ -117,6 +117,16 @@ public class CrossOrderCancel1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CrossOrderCancel1 obj) {
+			return obj.getOriginalClientOrderIdentification();
+		}
+
+		@Override
+		public void setValue(CrossOrderCancel1 obj, Max35Text value) {
+			obj.setOriginalClientOrderIdentification(value);
 		}
 	};
 	@XmlElement(name = "OrgnlOrdrModTm")
@@ -153,7 +163,7 @@ public class CrossOrderCancel1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalOrderModificationTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CrossOrderCancel1, Optional<ISODateTime>> mmOriginalOrderModificationTime = new MMMessageAttribute<CrossOrderCancel1, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CrossOrderCancel1.mmObject();
 			isDerived = false;
@@ -165,6 +175,16 @@ public class CrossOrderCancel1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(CrossOrderCancel1 obj) {
+			return obj.getOriginalOrderModificationTime();
+		}
+
+		@Override
+		public void setValue(CrossOrderCancel1 obj, Optional<ISODateTime> value) {
+			obj.setOriginalOrderModificationTime(value.orElse(null));
 		}
 	};
 

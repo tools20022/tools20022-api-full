@@ -99,7 +99,7 @@ public class Discrepancy1 {
 	 * definition} = "Identification of the discrepancy."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Discrepancy1, Max35Text> mmIdentification = new MMMessageAttribute<Discrepancy1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Discrepancy1.mmObject();
 			isDerived = false;
@@ -110,6 +110,16 @@ public class Discrepancy1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Discrepancy1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Discrepancy1 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Nrrtv", required = true)
@@ -146,7 +156,7 @@ public class Discrepancy1 {
 	 * definition} = "Description of the discrepancy."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNarrative = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Discrepancy1, Max20000Text> mmNarrative = new MMMessageAttribute<Discrepancy1, Max20000Text>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Discrepancy1.mmObject();
@@ -158,6 +168,16 @@ public class Discrepancy1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max20000Text.mmObject();
+		}
+
+		@Override
+		public Max20000Text getValue(Discrepancy1 obj) {
+			return obj.getNarrative();
+		}
+
+		@Override
+		public void setValue(Discrepancy1 obj, Max20000Text value) {
+			obj.setNarrative(value);
 		}
 	};
 

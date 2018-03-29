@@ -60,12 +60,16 @@ public class ConstraintMultipleSwitchOrderRule {
 	 */
 	public static final MMConstraint<SwitchOrderV04> forSwitchOrderV04 = new MMConstraint<SwitchOrderV04>() {
 		{
-			validator = ConstraintMultipleSwitchOrderRule::checkSwitchOrderV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleSwitchOrderRule";
 			definition = "If SwitchOrderDetails is present more than once, then SwitchOrderDetails/RedemptionLegDetails and SwitchOrderDetails/SubscriptionLegDetails must only be present once.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMultipleSwitchOrderRule.forSwitchOrderV03;
 			owner_lazy = () -> SwitchOrderV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrderV04 obj) throws Exception {
+			checkSwitchOrderV04(obj);
 		}
 	};
 	/**
@@ -99,12 +103,16 @@ public class ConstraintMultipleSwitchOrderRule {
 	 */
 	public static final MMConstraint<SwitchOrderV03> forSwitchOrderV03 = new MMConstraint<SwitchOrderV03>() {
 		{
-			validator = ConstraintMultipleSwitchOrderRule::checkSwitchOrderV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleSwitchOrderRule";
 			definition = "If SwitchOrderDetails is present more than once, then SwitchOrderDetails/RedemptionLegDetails and SwitchOrderDetails/SubscriptionLegDetails may only be present once.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMultipleSwitchOrderRule.forSwitchOrderV04);
 			owner_lazy = () -> SwitchOrderV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrderV03 obj) throws Exception {
+			checkSwitchOrderV03(obj);
 		}
 	};
 	/**
@@ -130,11 +138,15 @@ public class ConstraintMultipleSwitchOrderRule {
 	 */
 	public static final MMConstraint<SwitchOrderInstruction2> forSwitchOrderInstruction2 = new MMConstraint<SwitchOrderInstruction2>() {
 		{
-			validator = ConstraintMultipleSwitchOrderRule::checkSwitchOrderInstruction2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleSwitchOrderRule";
 			definition = "If SwitchOrderDetails is present more than once, then SwitchOrderDetails/RedemptionLegDetails and SwitchOrderDetails/SubscriptionLegDetails may only be present once.";
 			owner_lazy = () -> SwitchOrderInstruction2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrderInstruction2 obj) throws Exception {
+			checkSwitchOrderInstruction2(obj);
 		}
 	};
 

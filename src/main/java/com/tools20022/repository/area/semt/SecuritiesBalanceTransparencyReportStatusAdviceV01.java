@@ -25,7 +25,6 @@ import com.tools20022.repository.area.SecuritiesManagementLatestVersion;
 import com.tools20022.repository.choice.ReportItemStatus1Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.TransparencyOfHoldingsMaintenance20162017;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -135,7 +134,7 @@ public class SecuritiesBalanceTransparencyReportStatusAdviceV01 {
 	 * "Unique and unambiguous identification of the status advice message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesBalanceTransparencyReportStatusAdviceV01, MessageIdentification1> mmMessageIdentification = new MMMessageBuildingBlock<SecuritiesBalanceTransparencyReportStatusAdviceV01, MessageIdentification1>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -146,12 +145,14 @@ public class SecuritiesBalanceTransparencyReportStatusAdviceV01 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesBalanceTransparencyReportStatusAdviceV01.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(SecuritiesBalanceTransparencyReportStatusAdviceV01 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesBalanceTransparencyReportStatusAdviceV01 obj, MessageIdentification1 value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "SndrId", required = true)
@@ -181,7 +182,7 @@ public class SecuritiesBalanceTransparencyReportStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSenderIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesBalanceTransparencyReportStatusAdviceV01, PartyIdentification100> mmSenderIdentification = new MMMessageBuildingBlock<SecuritiesBalanceTransparencyReportStatusAdviceV01, PartyIdentification100>() {
 		{
 			xmlTag = "SndrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -192,12 +193,14 @@ public class SecuritiesBalanceTransparencyReportStatusAdviceV01 {
 			complexType_lazy = () -> PartyIdentification100.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesBalanceTransparencyReportStatusAdviceV01.class.getMethod("getSenderIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PartyIdentification100 getValue(SecuritiesBalanceTransparencyReportStatusAdviceV01 obj) {
+			return obj.getSenderIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesBalanceTransparencyReportStatusAdviceV01 obj, PartyIdentification100 value) {
+			obj.setSenderIdentification(value);
 		}
 	};
 	@XmlElement(name = "RcvrId")
@@ -227,7 +230,7 @@ public class SecuritiesBalanceTransparencyReportStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReceiverIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesBalanceTransparencyReportStatusAdviceV01, Optional<PartyIdentification100>> mmReceiverIdentification = new MMMessageBuildingBlock<SecuritiesBalanceTransparencyReportStatusAdviceV01, Optional<PartyIdentification100>>() {
 		{
 			xmlTag = "RcvrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -238,12 +241,14 @@ public class SecuritiesBalanceTransparencyReportStatusAdviceV01 {
 			complexType_lazy = () -> PartyIdentification100.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesBalanceTransparencyReportStatusAdviceV01.class.getMethod("getReceiverIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification100> getValue(SecuritiesBalanceTransparencyReportStatusAdviceV01 obj) {
+			return obj.getReceiverIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesBalanceTransparencyReportStatusAdviceV01 obj, Optional<PartyIdentification100> value) {
+			obj.setReceiverIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RltdStmt", required = true)
@@ -273,7 +278,7 @@ public class SecuritiesBalanceTransparencyReportStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRelatedStatement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesBalanceTransparencyReportStatusAdviceV01, StatementReference1> mmRelatedStatement = new MMMessageBuildingBlock<SecuritiesBalanceTransparencyReportStatusAdviceV01, StatementReference1>() {
 		{
 			xmlTag = "RltdStmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -284,12 +289,14 @@ public class SecuritiesBalanceTransparencyReportStatusAdviceV01 {
 			complexType_lazy = () -> StatementReference1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesBalanceTransparencyReportStatusAdviceV01.class.getMethod("getRelatedStatement", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public StatementReference1 getValue(SecuritiesBalanceTransparencyReportStatusAdviceV01 obj) {
+			return obj.getRelatedStatement();
+		}
+
+		@Override
+		public void setValue(SecuritiesBalanceTransparencyReportStatusAdviceV01 obj, StatementReference1 value) {
+			obj.setRelatedStatement(value);
 		}
 	};
 	@XmlElement(name = "Sts", required = true)
@@ -317,7 +324,7 @@ public class SecuritiesBalanceTransparencyReportStatusAdviceV01 {
 	 * definition} = "Status of the referenced statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesBalanceTransparencyReportStatusAdviceV01, ReportItemStatus1Choice> mmStatus = new MMMessageBuildingBlock<SecuritiesBalanceTransparencyReportStatusAdviceV01, ReportItemStatus1Choice>() {
 		{
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -328,12 +335,14 @@ public class SecuritiesBalanceTransparencyReportStatusAdviceV01 {
 			complexType_lazy = () -> ReportItemStatus1Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesBalanceTransparencyReportStatusAdviceV01.class.getMethod("getStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ReportItemStatus1Choice getValue(SecuritiesBalanceTransparencyReportStatusAdviceV01 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(SecuritiesBalanceTransparencyReportStatusAdviceV01 obj, ReportItemStatus1Choice value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "NbOfItmsPerSts")
@@ -361,7 +370,7 @@ public class SecuritiesBalanceTransparencyReportStatusAdviceV01 {
 	 * definition} = "Number of items for each identical transaction status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmNumberOfItemsPerStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesBalanceTransparencyReportStatusAdviceV01, List<NumberOfItemsPerStatus1>> mmNumberOfItemsPerStatus = new MMMessageBuildingBlock<SecuritiesBalanceTransparencyReportStatusAdviceV01, List<NumberOfItemsPerStatus1>>() {
 		{
 			xmlTag = "NbOfItmsPerSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -372,12 +381,14 @@ public class SecuritiesBalanceTransparencyReportStatusAdviceV01 {
 			complexType_lazy = () -> NumberOfItemsPerStatus1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesBalanceTransparencyReportStatusAdviceV01.class.getMethod("getNumberOfItemsPerStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<NumberOfItemsPerStatus1> getValue(SecuritiesBalanceTransparencyReportStatusAdviceV01 obj) {
+			return obj.getNumberOfItemsPerStatus();
+		}
+
+		@Override
+		public void setValue(SecuritiesBalanceTransparencyReportStatusAdviceV01 obj, List<NumberOfItemsPerStatus1> value) {
+			obj.setNumberOfItemsPerStatus(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -407,7 +418,7 @@ public class SecuritiesBalanceTransparencyReportStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesBalanceTransparencyReportStatusAdviceV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<SecuritiesBalanceTransparencyReportStatusAdviceV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -417,12 +428,14 @@ public class SecuritiesBalanceTransparencyReportStatusAdviceV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesBalanceTransparencyReportStatusAdviceV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(SecuritiesBalanceTransparencyReportStatusAdviceV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(SecuritiesBalanceTransparencyReportStatusAdviceV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

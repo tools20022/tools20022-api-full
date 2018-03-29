@@ -102,7 +102,7 @@ public class Restriction2Choice {
 	 * definition} = "Restrictions expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Restriction2Choice, OwnershipLegalRestrictions1Code> mmCode = new MMMessageAttribute<Restriction2Choice, OwnershipLegalRestrictions1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Restriction2Choice.mmObject();
 			isDerived = false;
@@ -114,6 +114,16 @@ public class Restriction2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OwnershipLegalRestrictions1Code.mmObject();
+		}
+
+		@Override
+		public OwnershipLegalRestrictions1Code getValue(Restriction2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(Restriction2Choice obj, OwnershipLegalRestrictions1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -148,7 +158,7 @@ public class Restriction2Choice {
 	 * definition} = "Restrictions expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Restriction2Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<Restriction2Choice, GenericIdentification25>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Restriction2Choice.mmObject();
 			isDerived = false;
@@ -161,6 +171,16 @@ public class Restriction2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(Restriction2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(Restriction2Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

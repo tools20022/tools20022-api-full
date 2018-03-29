@@ -114,7 +114,7 @@ public class AmountPricePerAmount1 {
 	 * definition} = "Type of amount price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmountPriceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountPricePerAmount1, AmountPriceType1FormatChoice> mmAmountPriceType = new MMMessageAttribute<AmountPricePerAmount1, AmountPriceType1FormatChoice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmTypeOfAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountPricePerAmount1.mmObject();
@@ -126,6 +126,16 @@ public class AmountPricePerAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AmountPriceType1FormatChoice.mmObject();
+		}
+
+		@Override
+		public AmountPriceType1FormatChoice getValue(AmountPricePerAmount1 obj) {
+			return obj.getAmountPriceType();
+		}
+
+		@Override
+		public void setValue(AmountPricePerAmount1 obj, AmountPriceType1FormatChoice value) {
+			obj.setAmountPriceType(value);
 		}
 	};
 	@XmlElement(name = "PricVal", required = true)
@@ -163,7 +173,7 @@ public class AmountPricePerAmount1 {
 	 * definition} = "Value of the price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriceValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountPricePerAmount1, ActiveCurrencyAnd13DecimalAmount> mmPriceValue = new MMMessageAttribute<AmountPricePerAmount1, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountPricePerAmount1.mmObject();
@@ -175,6 +185,16 @@ public class AmountPricePerAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(AmountPricePerAmount1 obj) {
+			return obj.getPriceValue();
+		}
+
+		@Override
+		public void setValue(AmountPricePerAmount1 obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setPriceValue(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -212,7 +232,7 @@ public class AmountPricePerAmount1 {
 	 * definition} = "The amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountPricePerAmount1, ActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<AmountPricePerAmount1, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmAmountPricePerAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountPricePerAmount1.mmObject();
@@ -224,6 +244,16 @@ public class AmountPricePerAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(AmountPricePerAmount1 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(AmountPricePerAmount1 obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 

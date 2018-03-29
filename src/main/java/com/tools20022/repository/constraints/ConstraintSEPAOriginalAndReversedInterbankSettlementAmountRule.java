@@ -56,12 +56,16 @@ public class ConstraintSEPAOriginalAndReversedInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<PaymentTransactionInformation20> forPaymentTransactionInformation20 = new MMConstraint<PaymentTransactionInformation20>() {
 		{
-			validator = ConstraintSEPAOriginalAndReversedInterbankSettlementAmountRule::checkPaymentTransactionInformation20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SEPAOriginalAndReversedInterbankSettlementAmountRule";
 			definition = "SEA TVS 3.x Rule: \nReversed Interbank Settlement Amount must be the same as the Amount of the Collection (AT-06) (i.e OriginalInterbankSettlementAmount).";
 			owner_lazy = () -> PaymentTransactionInformation20.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/OriginalInterbankSettlementAmount</leftOperand><rightOperand>/ReversedInterbankSettlementAmount</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentTransactionInformation20 obj) throws Exception {
+			checkPaymentTransactionInformation20(obj);
 		}
 	};
 	/**
@@ -91,12 +95,16 @@ public class ConstraintSEPAOriginalAndReversedInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<PaymentTransactionInformation24> forPaymentTransactionInformation24 = new MMConstraint<PaymentTransactionInformation24>() {
 		{
-			validator = ConstraintSEPAOriginalAndReversedInterbankSettlementAmountRule::checkPaymentTransactionInformation24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SEPAOriginalAndReversedInterbankSettlementAmountRule";
 			definition = "SEA TVS 3.x Rule: \nReversed Interbank Settlement Amount must be the same as the Amount of the Collection (AT-06) (i.e OriginalInterbankSettlementAmount).";
 			owner_lazy = () -> PaymentTransactionInformation24.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/OriginalInterbankSettlementAmount</leftOperand><rightOperand>/ReversedInterbankSettlementAmount</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentTransactionInformation24 obj) throws Exception {
+			checkPaymentTransactionInformation24(obj);
 		}
 	};
 

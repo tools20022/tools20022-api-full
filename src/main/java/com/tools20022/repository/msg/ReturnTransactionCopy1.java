@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.TransactionReportOrError2Choice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.MessageHeader5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -112,7 +113,7 @@ public class ReturnTransactionCopy1 {
 	 * definition} = "Common business identification for the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMessageHeader = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReturnTransactionCopy1, MessageHeader5> mmMessageHeader = new MMMessageAssociationEnd<ReturnTransactionCopy1, MessageHeader5>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReturnTransactionCopy1.mmObject();
 			isDerived = false;
@@ -123,7 +124,17 @@ public class ReturnTransactionCopy1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MessageHeader5.mmObject();
+			type_lazy = () -> MessageHeader5.mmObject();
+		}
+
+		@Override
+		public MessageHeader5 getValue(ReturnTransactionCopy1 obj) {
+			return obj.getMessageHeader();
+		}
+
+		@Override
+		public void setValue(ReturnTransactionCopy1 obj, MessageHeader5 value) {
+			obj.setMessageHeader(value);
 		}
 	};
 	@XmlElement(name = "RptOrErr", required = true)
@@ -155,7 +166,7 @@ public class ReturnTransactionCopy1 {
 	 * definition} = "Reports on transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReportOrError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReturnTransactionCopy1, TransactionReportOrError2Choice> mmReportOrError = new MMMessageAssociationEnd<ReturnTransactionCopy1, TransactionReportOrError2Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReturnTransactionCopy1.mmObject();
 			isDerived = false;
@@ -167,6 +178,16 @@ public class ReturnTransactionCopy1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TransactionReportOrError2Choice.mmObject();
+		}
+
+		@Override
+		public TransactionReportOrError2Choice getValue(ReturnTransactionCopy1 obj) {
+			return obj.getReportOrError();
+		}
+
+		@Override
+		public void setValue(ReturnTransactionCopy1 obj, TransactionReportOrError2Choice value) {
+			obj.setReportOrError(value);
 		}
 	};
 
@@ -188,7 +209,7 @@ public class ReturnTransactionCopy1 {
 		return messageHeader;
 	}
 
-	public ReturnTransactionCopy1 setMessageHeader(com.tools20022.repository.msg.MessageHeader5 messageHeader) {
+	public ReturnTransactionCopy1 setMessageHeader(MessageHeader5 messageHeader) {
 		this.messageHeader = Objects.requireNonNull(messageHeader);
 		return this;
 	}

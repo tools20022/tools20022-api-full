@@ -98,7 +98,7 @@ public class ClosingBalance3Choice {
 	 * "Closing balance of the financial instrument in the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinalClosingBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClosingBalance3Choice, Optional<FinancialInstrumentQuantity1>> mmFinalClosingBalance = new MMMessageAttribute<ClosingBalance3Choice, Optional<FinancialInstrumentQuantity1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClosingBalance3Choice.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class ClosingBalance3Choice {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1> getValue(ClosingBalance3Choice obj) {
+			return obj.getFinalClosingBalance();
+		}
+
+		@Override
+		public void setValue(ClosingBalance3Choice obj, Optional<FinancialInstrumentQuantity1> value) {
+			obj.setFinalClosingBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrmyClsgBal")
@@ -143,7 +153,7 @@ public class ClosingBalance3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIntermediaryClosingBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClosingBalance3Choice, Optional<FinancialInstrumentQuantity1>> mmIntermediaryClosingBalance = new MMMessageAttribute<ClosingBalance3Choice, Optional<FinancialInstrumentQuantity1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClosingBalance3Choice.mmObject();
 			isDerived = false;
@@ -154,6 +164,16 @@ public class ClosingBalance3Choice {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1> getValue(ClosingBalance3Choice obj) {
+			return obj.getIntermediaryClosingBalance();
+		}
+
+		@Override
+		public void setValue(ClosingBalance3Choice obj, Optional<FinancialInstrumentQuantity1> value) {
+			obj.setIntermediaryClosingBalance(value.orElse(null));
 		}
 	};
 

@@ -52,11 +52,15 @@ public class ConstraintDateAndDateCodeRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlement1> forSecuritiesSettlement1 = new MMConstraint<SecuritiesSettlement1>() {
 		{
-			validator = ConstraintDateAndDateCodeRule::checkSecuritiesSettlement1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateAndDateCodeRule";
 			definition = "Date must only be present if DateCode is not present or if DateCode contains the value FUTU (Future) or WHIF (WhenAndIfIssued) or SELL (SellersOption).";
 			owner_lazy = () -> SecuritiesSettlement1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlement1 obj) throws Exception {
+			checkSecuritiesSettlement1(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintDateAndDateCodeRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlement2> forSecuritiesSettlement2 = new MMConstraint<SecuritiesSettlement2>() {
 		{
-			validator = ConstraintDateAndDateCodeRule::checkSecuritiesSettlement2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateAndDateCodeRule";
 			definition = "Date must only be present if DateCode is not present or if DateCode contains the value FUTU (Future) or WHIF (WhenAndIfIssued) or SELL (SellersOption).";
 			owner_lazy = () -> SecuritiesSettlement2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlement2 obj) throws Exception {
+			checkSecuritiesSettlement2(obj);
 		}
 	};
 

@@ -99,7 +99,7 @@ public class CancelledStatusReason1 {
 	 * definition} = "Reason for a cancelled status in free format text."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancelledStatusReason1, Max350Text> mmAdditionalInformation = new MMMessageAttribute<CancelledStatusReason1, Max350Text>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancelledStatusReason1.mmObject();
@@ -111,6 +111,16 @@ public class CancelledStatusReason1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CancelledStatusReason1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(CancelledStatusReason1 obj, Max350Text value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 

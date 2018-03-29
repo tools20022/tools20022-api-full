@@ -93,6 +93,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V06#mmConfirmationReference
  * SecuritiesSettlementTransactionReversalAdvice002V06.mmConfirmationReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V07#mmMarketInfrastructureTransactionIdentification
+ * SecuritiesSettlementTransactionAllegementNotification002V07.
+ * mmMarketInfrastructureTransactionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V07#mmConfirmationReference
+ * SecuritiesSettlementTransactionReversalAdvice002V07.mmConfirmationReference}</li>
  * </ul>
  * </li>
  * <li>
@@ -153,7 +160,7 @@ public class Identification16 {
 	 * definition} = "Unique identifier of a document, message or transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Identification16, RestrictedFINXMax16Text> mmIdentification = new MMMessageAttribute<Identification16, RestrictedFINXMax16Text>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Identification16.mmObject();
@@ -167,6 +174,16 @@ public class Identification16 {
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(Identification16 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Identification16 obj, RestrictedFINXMax16Text value) {
+			obj.setIdentification(value);
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -178,7 +195,8 @@ public class Identification16 {
 						SecuritiesSettlementTransactionAuditTrailReport002V03.mmQueryReference, SecuritiesSettlementAllegementRemovalAdvice002V04.mmMarketInfrastructureTransactionIdentification,
 						SecuritiesTransactionCancellationRequestStatusAdvice002V05.mmCancellationRequestReference, IntraPositionMovementInstruction002V04.mmCorporateActionEventIdentification,
 						SecuritiesSettlementConditionModificationStatusAdvice002V07.mmRequestReference, SecuritiesSettlementTransactionAllegementNotification002V06.mmMarketInfrastructureTransactionIdentification,
-						SecuritiesSettlementTransactionReversalAdvice002V06.mmConfirmationReference);
+						SecuritiesSettlementTransactionReversalAdvice002V06.mmConfirmationReference, SecuritiesSettlementTransactionAllegementNotification002V07.mmMarketInfrastructureTransactionIdentification,
+						SecuritiesSettlementTransactionReversalAdvice002V07.mmConfirmationReference);
 				trace_lazy = () -> SecuritiesTradeIdentification.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

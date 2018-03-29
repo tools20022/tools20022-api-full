@@ -50,11 +50,15 @@ public class ConstraintQuoteResponseTypeRule {
 	 */
 	public static final MMConstraint<Quote4> forQuote4 = new MMConstraint<Quote4>() {
 		{
-			validator = ConstraintQuoteResponseTypeRule::checkQuote4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteResponseTypeRule";
 			definition = "If the Quote Response is related to a singleQuote, then QuoteResponse type is required.";
 			owner_lazy = () -> Quote4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Quote4 obj) throws Exception {
+			checkQuote4(obj);
 		}
 	};
 

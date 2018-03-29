@@ -112,7 +112,7 @@ public class DerivativeBasicAttributes2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotionalCurrencyAndAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DerivativeBasicAttributes2, RestrictedFINActiveOrHistoricCurrencyAndAmount> mmNotionalCurrencyAndAmount = new MMMessageAttribute<DerivativeBasicAttributes2, RestrictedFINActiveOrHistoricCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmNotionalCurrencyAndAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeBasicAttributes2.mmObject();
@@ -124,6 +124,16 @@ public class DerivativeBasicAttributes2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public RestrictedFINActiveOrHistoricCurrencyAndAmount getValue(DerivativeBasicAttributes2 obj) {
+			return obj.getNotionalCurrencyAndAmount();
+		}
+
+		@Override
+		public void setValue(DerivativeBasicAttributes2 obj, RestrictedFINActiveOrHistoricCurrencyAndAmount value) {
+			obj.setNotionalCurrencyAndAmount(value);
 		}
 	};
 	@XmlElement(name = "IntrstInclInPric")
@@ -158,7 +168,7 @@ public class DerivativeBasicAttributes2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterestIncludedInPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DerivativeBasicAttributes2, Optional<YesNoIndicator>> mmInterestIncludedInPrice = new MMMessageAttribute<DerivativeBasicAttributes2, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeBasicAttributes2.mmObject();
 			isDerived = false;
@@ -169,6 +179,16 @@ public class DerivativeBasicAttributes2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(DerivativeBasicAttributes2 obj) {
+			return obj.getInterestIncludedInPrice();
+		}
+
+		@Override
+		public void setValue(DerivativeBasicAttributes2 obj, Optional<YesNoIndicator> value) {
+			obj.setInterestIncludedInPrice(value.orElse(null));
 		}
 	};
 

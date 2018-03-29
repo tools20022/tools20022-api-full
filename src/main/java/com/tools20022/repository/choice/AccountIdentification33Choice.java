@@ -135,7 +135,7 @@ public class AccountIdentification33Choice {
 	 * AccountIdentification14Choice.mmForAllAccounts}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmForAllAccounts = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountIdentification33Choice, AccountIdentification10> mmForAllAccounts = new MMMessageAssociationEnd<AccountIdentification33Choice, AccountIdentification10>() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification33Choice.mmObject();
@@ -150,6 +150,16 @@ public class AccountIdentification33Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AccountIdentification10.mmObject();
+		}
+
+		@Override
+		public AccountIdentification10 getValue(AccountIdentification33Choice obj) {
+			return obj.getForAllAccounts();
+		}
+
+		@Override
+		public void setValue(AccountIdentification33Choice obj, AccountIdentification10 value) {
+			obj.setForAllAccounts(value);
 		}
 	};
 	@XmlElement(name = "AcctsListAndBalDtls", required = true)
@@ -193,7 +203,7 @@ public class AccountIdentification33Choice {
 	 * AccountIdentification14Choice.mmAccountsListAndBalanceDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountsListAndBalanceDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountIdentification33Choice, List<AccountIdentification32>> mmAccountsListAndBalanceDetails = new MMMessageAssociationEnd<AccountIdentification33Choice, List<AccountIdentification32>>() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification33Choice.mmObject();
@@ -206,6 +216,16 @@ public class AccountIdentification33Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AccountIdentification32.mmObject();
+		}
+
+		@Override
+		public List<AccountIdentification32> getValue(AccountIdentification33Choice obj) {
+			return obj.getAccountsListAndBalanceDetails();
+		}
+
+		@Override
+		public void setValue(AccountIdentification33Choice obj, List<AccountIdentification32> value) {
+			obj.setAccountsListAndBalanceDetails(value);
 		}
 	};
 

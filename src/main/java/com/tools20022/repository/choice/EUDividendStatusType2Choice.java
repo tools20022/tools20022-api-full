@@ -116,7 +116,7 @@ public class EUDividendStatusType2Choice {
 	 * EUDividendStatusType1Choice.mmEUDividendStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EUDividendStatusType2Choice, EUDividendStatus1Code> mmCode = new MMMessageAttribute<EUDividendStatusType2Choice, EUDividendStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmEUDividendStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.EUDividendStatusType2Choice.mmObject();
@@ -129,6 +129,16 @@ public class EUDividendStatusType2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EUDividendStatus1Code.mmObject();
+		}
+
+		@Override
+		public EUDividendStatus1Code getValue(EUDividendStatusType2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(EUDividendStatusType2Choice obj, EUDividendStatus1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -171,7 +181,7 @@ public class EUDividendStatusType2Choice {
 	 * EUDividendStatusType1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EUDividendStatusType2Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<EUDividendStatusType2Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmEUDividendStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.EUDividendStatusType2Choice.mmObject();
@@ -184,6 +194,16 @@ public class EUDividendStatusType2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(EUDividendStatusType2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(EUDividendStatusType2Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

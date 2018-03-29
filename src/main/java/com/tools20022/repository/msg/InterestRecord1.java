@@ -29,6 +29,9 @@ import com.tools20022.repository.entity.AmountRange;
 import com.tools20022.repository.entity.Interest;
 import com.tools20022.repository.entity.InterestCalculation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DateTimePeriodDetails;
+import com.tools20022.repository.msg.Rate3;
+import com.tools20022.repository.msg.TaxCharges2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -138,7 +141,7 @@ public class InterestRecord1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestRecord1, ActiveOrHistoricCurrencyAndAmount> mmAmount = new MMMessageAttribute<InterestRecord1, ActiveOrHistoricCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestRecord1.mmObject();
@@ -151,6 +154,16 @@ public class InterestRecord1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAndAmount getValue(InterestRecord1 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(InterestRecord1 obj, ActiveOrHistoricCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "CdtDbtInd", required = true)
@@ -198,7 +211,7 @@ public class InterestRecord1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestRecord1, CreditDebitCode> mmCreditDebitIndicator = new MMMessageAttribute<InterestRecord1, CreditDebitCode>() {
 		{
 			businessElementTrace_lazy = () -> AmountRange.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestRecord1.mmObject();
@@ -211,6 +224,16 @@ public class InterestRecord1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public CreditDebitCode getValue(InterestRecord1 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(InterestRecord1 obj, CreditDebitCode value) {
+			obj.setCreditDebitIndicator(value);
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -253,7 +276,7 @@ public class InterestRecord1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InterestRecord1, Optional<InterestType1Choice>> mmType = new MMMessageAssociationEnd<InterestRecord1, Optional<InterestType1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmInterestCalculation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestRecord1.mmObject();
@@ -267,6 +290,16 @@ public class InterestRecord1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> InterestType1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<InterestType1Choice> getValue(InterestRecord1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(InterestRecord1 obj, Optional<InterestType1Choice> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rate")
@@ -308,7 +341,7 @@ public class InterestRecord1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InterestRecord1, Optional<Rate3>> mmRate = new MMMessageAssociationEnd<InterestRecord1, Optional<Rate3>>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmInterestCalculation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestRecord1.mmObject();
@@ -321,7 +354,17 @@ public class InterestRecord1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Rate3.mmObject();
+			type_lazy = () -> Rate3.mmObject();
+		}
+
+		@Override
+		public Optional<Rate3> getValue(InterestRecord1 obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(InterestRecord1 obj, Optional<Rate3> value) {
+			obj.setRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FrToDt")
@@ -367,7 +410,7 @@ public class InterestRecord1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFromToDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InterestRecord1, Optional<DateTimePeriodDetails>> mmFromToDate = new MMMessageAssociationEnd<InterestRecord1, Optional<DateTimePeriodDetails>>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmInterestPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestRecord1.mmObject();
@@ -380,7 +423,17 @@ public class InterestRecord1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DateTimePeriodDetails.mmObject();
+			type_lazy = () -> DateTimePeriodDetails.mmObject();
+		}
+
+		@Override
+		public Optional<DateTimePeriodDetails> getValue(InterestRecord1 obj) {
+			return obj.getFromToDate();
+		}
+
+		@Override
+		public void setValue(InterestRecord1 obj, Optional<DateTimePeriodDetails> value) {
+			obj.setFromToDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rsn")
@@ -419,7 +472,7 @@ public class InterestRecord1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestRecord1, Optional<Max35Text>> mmReason = new MMMessageAttribute<InterestRecord1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestRecord1.mmObject();
 			isDerived = false;
@@ -431,6 +484,16 @@ public class InterestRecord1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(InterestRecord1 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(InterestRecord1 obj, Optional<Max35Text> value) {
+			obj.setReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tax")
@@ -474,7 +537,7 @@ public class InterestRecord1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTax = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestRecord1, Optional<TaxCharges2>> mmTax = new MMMessageAttribute<InterestRecord1, Optional<TaxCharges2>>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmInterestTax;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestRecord1.mmObject();
@@ -486,7 +549,17 @@ public class InterestRecord1 {
 			nextVersions_lazy = () -> Arrays.asList(InterestRecord2.mmTax);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.TaxCharges2.mmObject();
+			complexType_lazy = () -> TaxCharges2.mmObject();
+		}
+
+		@Override
+		public Optional<TaxCharges2> getValue(InterestRecord1 obj) {
+			return obj.getTax();
+		}
+
+		@Override
+		public void setValue(InterestRecord1 obj, Optional<TaxCharges2> value) {
+			obj.setTax(value.orElse(null));
 		}
 	};
 
@@ -538,7 +611,7 @@ public class InterestRecord1 {
 		return rate == null ? Optional.empty() : Optional.of(rate);
 	}
 
-	public InterestRecord1 setRate(com.tools20022.repository.msg.Rate3 rate) {
+	public InterestRecord1 setRate(Rate3 rate) {
 		this.rate = rate;
 		return this;
 	}
@@ -547,7 +620,7 @@ public class InterestRecord1 {
 		return fromToDate == null ? Optional.empty() : Optional.of(fromToDate);
 	}
 
-	public InterestRecord1 setFromToDate(com.tools20022.repository.msg.DateTimePeriodDetails fromToDate) {
+	public InterestRecord1 setFromToDate(DateTimePeriodDetails fromToDate) {
 		this.fromToDate = fromToDate;
 		return this;
 	}
@@ -565,7 +638,7 @@ public class InterestRecord1 {
 		return tax == null ? Optional.empty() : Optional.of(tax);
 	}
 
-	public InterestRecord1 setTax(com.tools20022.repository.msg.TaxCharges2 tax) {
+	public InterestRecord1 setTax(TaxCharges2 tax) {
 		this.tax = tax;
 		return this;
 	}

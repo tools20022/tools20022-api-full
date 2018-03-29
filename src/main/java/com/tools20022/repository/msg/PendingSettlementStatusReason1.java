@@ -119,7 +119,7 @@ public class PendingSettlementStatusReason1 {
 	 * "Reason for a settlement pending status in structured form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingSettlementStatusReason1, PendingSettlementStatusReason1Code> mmStructured = new MMMessageAttribute<PendingSettlementStatusReason1, PendingSettlementStatusReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmPendingSettlementReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PendingSettlementStatusReason1.mmObject();
@@ -131,6 +131,16 @@ public class PendingSettlementStatusReason1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PendingSettlementStatusReason1Code.mmObject();
+		}
+
+		@Override
+		public PendingSettlementStatusReason1Code getValue(PendingSettlementStatusReason1 obj) {
+			return obj.getStructured();
+		}
+
+		@Override
+		public void setValue(PendingSettlementStatusReason1 obj, PendingSettlementStatusReason1Code value) {
+			obj.setStructured(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -169,7 +179,7 @@ public class PendingSettlementStatusReason1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingSettlementStatusReason1, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<PendingSettlementStatusReason1, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PendingSettlementStatusReason1.mmObject();
@@ -181,6 +191,16 @@ public class PendingSettlementStatusReason1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(PendingSettlementStatusReason1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(PendingSettlementStatusReason1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

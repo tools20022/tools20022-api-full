@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.caam.ATMDeviceReportV01;
 import com.tools20022.repository.area.caam.ATMDeviceReportV02;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -130,7 +131,7 @@ public class ATMDeviceReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMDeviceReport1, ATMEnvironment6> mmEnvironment = new MMMessageAssociationEnd<ATMDeviceReport1, ATMEnvironment6>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDeviceReport1.mmObject();
 			isDerived = false;
@@ -142,7 +143,17 @@ public class ATMDeviceReport1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMEnvironment6.mmObject();
+			type_lazy = () -> ATMEnvironment6.mmObject();
+		}
+
+		@Override
+		public ATMEnvironment6 getValue(ATMDeviceReport1 obj) {
+			return obj.getEnvironment();
+		}
+
+		@Override
+		public void setValue(ATMDeviceReport1 obj, ATMEnvironment6 value) {
+			obj.setEnvironment(value);
 		}
 	};
 	@XmlElement(name = "ATMGblSts", required = true)
@@ -180,7 +191,7 @@ public class ATMDeviceReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmATMGlobalStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMDeviceReport1, ATMStatus1> mmATMGlobalStatus = new MMMessageAssociationEnd<ATMDeviceReport1, ATMStatus1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDeviceReport1.mmObject();
 			isDerived = false;
@@ -192,11 +203,21 @@ public class ATMDeviceReport1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMStatus1.mmObject();
+			type_lazy = () -> ATMStatus1.mmObject();
+		}
+
+		@Override
+		public ATMStatus1 getValue(ATMDeviceReport1 obj) {
+			return obj.getATMGlobalStatus();
+		}
+
+		@Override
+		public void setValue(ATMDeviceReport1 obj, ATMStatus1 value) {
+			obj.setATMGlobalStatus(value);
 		}
 	};
 	@XmlElement(name = "CmdRslt")
-	protected List<com.tools20022.repository.msg.ATMCommand2> commandResult;
+	protected List<ATMCommand2> commandResult;
 	/**
 	 * 
 	 <p>
@@ -231,7 +252,7 @@ public class ATMDeviceReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCommandResult = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMDeviceReport1, List<ATMCommand2>> mmCommandResult = new MMMessageAssociationEnd<ATMDeviceReport1, List<ATMCommand2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDeviceReport1.mmObject();
 			isDerived = false;
@@ -242,7 +263,17 @@ public class ATMDeviceReport1 {
 			nextVersions_lazy = () -> Arrays.asList(ATMDeviceReport2.mmCommandResult);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMCommand2.mmObject();
+			type_lazy = () -> ATMCommand2.mmObject();
+		}
+
+		@Override
+		public List<ATMCommand2> getValue(ATMDeviceReport1 obj) {
+			return obj.getCommandResult();
+		}
+
+		@Override
+		public void setValue(ATMDeviceReport1 obj, List<ATMCommand2> value) {
+			obj.setCommandResult(value);
 		}
 	};
 	@XmlElement(name = "CmdCntxt")
@@ -282,7 +313,7 @@ public class ATMDeviceReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCommandContext = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMDeviceReport1, Optional<ATMCommand3>> mmCommandContext = new MMMessageAssociationEnd<ATMDeviceReport1, Optional<ATMCommand3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDeviceReport1.mmObject();
 			isDerived = false;
@@ -294,7 +325,17 @@ public class ATMDeviceReport1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMCommand3.mmObject();
+			type_lazy = () -> ATMCommand3.mmObject();
+		}
+
+		@Override
+		public Optional<ATMCommand3> getValue(ATMDeviceReport1 obj) {
+			return obj.getCommandContext();
+		}
+
+		@Override
+		public void setValue(ATMDeviceReport1 obj, Optional<ATMCommand3> value) {
+			obj.setCommandContext(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ATMSctyCntxt")
@@ -333,7 +374,7 @@ public class ATMDeviceReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmATMSecurityContext = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMDeviceReport1, Optional<ATMSecurityContext1>> mmATMSecurityContext = new MMMessageAssociationEnd<ATMDeviceReport1, Optional<ATMSecurityContext1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDeviceReport1.mmObject();
 			isDerived = false;
@@ -345,7 +386,17 @@ public class ATMDeviceReport1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMSecurityContext1.mmObject();
+			type_lazy = () -> ATMSecurityContext1.mmObject();
+		}
+
+		@Override
+		public Optional<ATMSecurityContext1> getValue(ATMDeviceReport1 obj) {
+			return obj.getATMSecurityContext();
+		}
+
+		@Override
+		public void setValue(ATMDeviceReport1 obj, Optional<ATMSecurityContext1> value) {
+			obj.setATMSecurityContext(value.orElse(null));
 		}
 	};
 
@@ -369,7 +420,7 @@ public class ATMDeviceReport1 {
 		return environment;
 	}
 
-	public ATMDeviceReport1 setEnvironment(com.tools20022.repository.msg.ATMEnvironment6 environment) {
+	public ATMDeviceReport1 setEnvironment(ATMEnvironment6 environment) {
 		this.environment = Objects.requireNonNull(environment);
 		return this;
 	}
@@ -378,7 +429,7 @@ public class ATMDeviceReport1 {
 		return aTMGlobalStatus;
 	}
 
-	public ATMDeviceReport1 setATMGlobalStatus(com.tools20022.repository.msg.ATMStatus1 aTMGlobalStatus) {
+	public ATMDeviceReport1 setATMGlobalStatus(ATMStatus1 aTMGlobalStatus) {
 		this.aTMGlobalStatus = Objects.requireNonNull(aTMGlobalStatus);
 		return this;
 	}
@@ -387,7 +438,7 @@ public class ATMDeviceReport1 {
 		return commandResult == null ? commandResult = new ArrayList<>() : commandResult;
 	}
 
-	public ATMDeviceReport1 setCommandResult(List<com.tools20022.repository.msg.ATMCommand2> commandResult) {
+	public ATMDeviceReport1 setCommandResult(List<ATMCommand2> commandResult) {
 		this.commandResult = Objects.requireNonNull(commandResult);
 		return this;
 	}
@@ -396,7 +447,7 @@ public class ATMDeviceReport1 {
 		return commandContext == null ? Optional.empty() : Optional.of(commandContext);
 	}
 
-	public ATMDeviceReport1 setCommandContext(com.tools20022.repository.msg.ATMCommand3 commandContext) {
+	public ATMDeviceReport1 setCommandContext(ATMCommand3 commandContext) {
 		this.commandContext = commandContext;
 		return this;
 	}
@@ -405,7 +456,7 @@ public class ATMDeviceReport1 {
 		return aTMSecurityContext == null ? Optional.empty() : Optional.of(aTMSecurityContext);
 	}
 
-	public ATMDeviceReport1 setATMSecurityContext(com.tools20022.repository.msg.ATMSecurityContext1 aTMSecurityContext) {
+	public ATMDeviceReport1 setATMSecurityContext(ATMSecurityContext1 aTMSecurityContext) {
 		this.aTMSecurityContext = aTMSecurityContext;
 		return this;
 	}

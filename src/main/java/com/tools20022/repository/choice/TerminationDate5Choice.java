@@ -21,6 +21,8 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.DateAndDateTimeChoice;
+import com.tools20022.repository.choice.DateCode32Choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -101,7 +103,7 @@ public class TerminationDate5Choice {
 	 * definition} = "Date in ISO format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TerminationDate5Choice, DateAndDateTimeChoice> mmDate = new MMMessageAttribute<TerminationDate5Choice, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TerminationDate5Choice.mmObject();
 			isDerived = false;
@@ -112,7 +114,17 @@ public class TerminationDate5Choice {
 			definition = "Date in ISO format.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
+			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(TerminationDate5Choice obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(TerminationDate5Choice obj, DateAndDateTimeChoice value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "Cd", required = true)
@@ -150,7 +162,7 @@ public class TerminationDate5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TerminationDate5Choice, DateCode32Choice> mmCode = new MMMessageAttribute<TerminationDate5Choice, DateCode32Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TerminationDate5Choice.mmObject();
 			isDerived = false;
@@ -161,7 +173,17 @@ public class TerminationDate5Choice {
 			definition = "Closing date/time or maturity date/time of the transaction expressed as an ISO 20022 code.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.DateCode32Choice.mmObject();
+			complexType_lazy = () -> DateCode32Choice.mmObject();
+		}
+
+		@Override
+		public DateCode32Choice getValue(TerminationDate5Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(TerminationDate5Choice obj, DateCode32Choice value) {
+			obj.setCode(value);
 		}
 	};
 
@@ -182,7 +204,7 @@ public class TerminationDate5Choice {
 		return date;
 	}
 
-	public TerminationDate5Choice setDate(com.tools20022.repository.choice.DateAndDateTimeChoice date) {
+	public TerminationDate5Choice setDate(DateAndDateTimeChoice date) {
 		this.date = Objects.requireNonNull(date);
 		return this;
 	}
@@ -191,7 +213,7 @@ public class TerminationDate5Choice {
 		return code;
 	}
 
-	public TerminationDate5Choice setCode(com.tools20022.repository.choice.DateCode32Choice code) {
+	public TerminationDate5Choice setCode(DateCode32Choice code) {
 		this.code = Objects.requireNonNull(code);
 		return this;
 	}

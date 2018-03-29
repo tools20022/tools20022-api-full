@@ -74,7 +74,6 @@ public class ConstraintAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications25> forTransactionIdentifications25 = new MMConstraint<TransactionIdentifications25>() {
 		{
-			validator = ConstraintAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerTransactionIdentificationRule";
 			definition = "If AccountOwnerTransactionIdentification is NONREF then at least one of the other references must be present.";
@@ -82,6 +81,11 @@ public class ConstraintAccountOwnerTransactionIdentificationRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAccountOwnerTransactionIdentificationComplexRule.forTransactionIdentifications18;
 			owner_lazy = () -> TransactionIdentifications25.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AccountServicerTransactionIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/MarketInfrastructureTransactionIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/ProcessorTransactionIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/OtherIdentification</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/AccountOwnerTransactionIdentification</leftOperand><rightOperand>NONREF</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications25 obj) throws Exception {
+			checkTransactionIdentifications25(obj);
 		}
 	};
 	/**
@@ -111,12 +115,16 @@ public class ConstraintAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications26> forTransactionIdentifications26 = new MMConstraint<TransactionIdentifications26>() {
 		{
-			validator = ConstraintAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerTransactionIdentificationRule";
 			definition = "If AccountOwnerTransactionIdentification is NONREF then at least one of the other references must be present.";
 			owner_lazy = () -> TransactionIdentifications26.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AccountServicerTransactionIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/MarketInfrastructureTransactionIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/ProcessorTransactionIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/OtherIdentification</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/AccountOwnerTransactionIdentification</leftOperand><rightOperand>NONREF</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications26 obj) throws Exception {
+			checkTransactionIdentifications26(obj);
 		}
 	};
 	/**
@@ -152,13 +160,17 @@ public class ConstraintAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications33> forTransactionIdentifications33 = new MMConstraint<TransactionIdentifications33>() {
 		{
-			validator = ConstraintAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications33;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerTransactionIdentificationRule";
 			definition = "If AccountOwnerTransactionIdentification is NONREF then at least one of the other references must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAccountOwnerTransactionIdentificationRule.forTransactionIdentifications25;
 			owner_lazy = () -> TransactionIdentifications33.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AccountServicerTransactionIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/MarketInfrastructureTransactionIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/ProcessorTransactionIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/OtherIdentification</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/AccountOwnerTransactionIdentification</leftOperand><rightOperand>NONREF</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications33 obj) throws Exception {
+			checkTransactionIdentifications33(obj);
 		}
 	};
 	/**
@@ -188,12 +200,16 @@ public class ConstraintAccountOwnerTransactionIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications37> forTransactionIdentifications37 = new MMConstraint<TransactionIdentifications37>() {
 		{
-			validator = ConstraintAccountOwnerTransactionIdentificationRule::checkTransactionIdentifications37;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerTransactionIdentificationRule";
 			definition = "If AccountOwnerTransactionIdentification is NONREF then at least one of the other references must be present.";
 			owner_lazy = () -> TransactionIdentifications37.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AccountServicerTransactionIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/MarketInfrastructureTransactionIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/ProcessorTransactionIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/OtherIdentification</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/AccountOwnerTransactionIdentification</leftOperand><rightOperand>NONREF</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications37 obj) throws Exception {
+			checkTransactionIdentifications37(obj);
 		}
 	};
 

@@ -98,7 +98,7 @@ public class InformationType1Choice {
 	 * definition} = "Type of additional information in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InformationType1Choice, InformationType1Code> mmCode = new MMMessageAttribute<InformationType1Choice, InformationType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.InformationType1Choice.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class InformationType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InformationType1Code.mmObject();
+		}
+
+		@Override
+		public InformationType1Code getValue(InformationType1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(InformationType1Choice obj, InformationType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -141,7 +151,7 @@ public class InformationType1Choice {
 	 * "Type of additional information not catered for by the available codes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InformationType1Choice, Max140Text> mmProprietary = new MMMessageAttribute<InformationType1Choice, Max140Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.InformationType1Choice.mmObject();
 			isDerived = false;
@@ -152,6 +162,16 @@ public class InformationType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Max140Text getValue(InformationType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(InformationType1Choice obj, Max140Text value) {
+			obj.setProprietary(value);
 		}
 	};
 

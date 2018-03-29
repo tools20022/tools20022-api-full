@@ -135,7 +135,7 @@ public class Reversal4Choice {
 	 * Reversal2Choice.mmReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reversal4Choice, TransferReference6> mmReference = new MMMessageAttribute<Reversal4Choice, TransferReference6>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Reversal4Choice.mmObject();
 			isDerived = false;
@@ -148,6 +148,16 @@ public class Reversal4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TransferReference6.mmObject();
+		}
+
+		@Override
+		public TransferReference6 getValue(Reversal4Choice obj) {
+			return obj.getReference();
+		}
+
+		@Override
+		public void setValue(Reversal4Choice obj, TransferReference6 value) {
+			obj.setReference(value);
 		}
 	};
 	@XmlElement(name = "TrfInConfDtls", required = true)
@@ -197,7 +207,7 @@ public class Reversal4Choice {
 	 * Reversal2Choice.mmTransferInConfirmationDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransferInConfirmationDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reversal4Choice, TransferIn9> mmTransferInConfirmationDetails = new MMMessageAttribute<Reversal4Choice, TransferIn9>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmRelatedSettlement;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Reversal4Choice.mmObject();
@@ -211,6 +221,16 @@ public class Reversal4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TransferIn9.mmObject();
+		}
+
+		@Override
+		public TransferIn9 getValue(Reversal4Choice obj) {
+			return obj.getTransferInConfirmationDetails();
+		}
+
+		@Override
+		public void setValue(Reversal4Choice obj, TransferIn9 value) {
+			obj.setTransferInConfirmationDetails(value);
 		}
 	};
 

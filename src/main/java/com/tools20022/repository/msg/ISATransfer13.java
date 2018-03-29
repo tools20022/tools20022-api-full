@@ -31,6 +31,7 @@ import com.tools20022.repository.entity.InvestmentFundClass;
 import com.tools20022.repository.entity.Order;
 import com.tools20022.repository.entity.PortfolioTransfer;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrument35;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -160,7 +161,7 @@ public class ISATransfer13 {
 	 * ISATransfer10.mmMasterReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ISATransfer13, Optional<Max35Text>> mmMasterReference = new MMMessageAttribute<ISATransfer13, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer13.mmObject();
@@ -174,6 +175,16 @@ public class ISATransfer13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ISATransfer13 obj) {
+			return obj.getMasterReference();
+		}
+
+		@Override
+		public void setValue(ISATransfer13 obj, Optional<Max35Text> value) {
+			obj.setMasterReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrfConfId", required = true)
@@ -219,7 +230,7 @@ public class ISATransfer13 {
 	 * ISATransfer10.mmTransferConfirmationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransferConfirmationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ISATransfer13, Max35Text> mmTransferConfirmationIdentification = new MMMessageAttribute<ISATransfer13, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer13.mmObject();
 			isDerived = false;
@@ -232,6 +243,16 @@ public class ISATransfer13 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ISATransfer13 obj) {
+			return obj.getTransferConfirmationIdentification();
+		}
+
+		@Override
+		public void setValue(ISATransfer13 obj, Max35Text value) {
+			obj.setTransferConfirmationIdentification(value);
 		}
 	};
 	@XmlElement(name = "TrfInstrRef", required = true)
@@ -277,7 +298,7 @@ public class ISATransfer13 {
 	 * ISATransfer10.mmTransferInstructionReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransferInstructionReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ISATransfer13, Max35Text> mmTransferInstructionReference = new MMMessageAttribute<ISATransfer13, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer13.mmObject();
 			isDerived = false;
@@ -290,6 +311,16 @@ public class ISATransfer13 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ISATransfer13 obj) {
+			return obj.getTransferInstructionReference();
+		}
+
+		@Override
+		public void setValue(ISATransfer13 obj, Max35Text value) {
+			obj.setTransferInstructionReference(value);
 		}
 	};
 	@XmlElement(name = "ActlTrfDt")
@@ -338,7 +369,7 @@ public class ISATransfer13 {
 	 * ISATransfer10.mmActualTransferDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActualTransferDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ISATransfer13, Optional<ISODate>> mmActualTransferDate = new MMMessageAttribute<ISATransfer13, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> PortfolioTransfer.mmTransferDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer13.mmObject();
@@ -352,6 +383,16 @@ public class ISATransfer13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(ISATransfer13 obj) {
+			return obj.getActualTransferDate();
+		}
+
+		@Override
+		public void setValue(ISATransfer13 obj, Optional<ISODate> value) {
+			obj.setActualTransferDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RsdlCsh")
@@ -398,7 +439,7 @@ public class ISATransfer13 {
 	 * ISATransfer10.mmResidualCash}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResidualCash = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ISATransfer13, Optional<ResidualCash1Code>> mmResidualCash = new MMMessageAttribute<ISATransfer13, Optional<ResidualCash1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer13.mmObject();
 			isDerived = false;
@@ -411,6 +452,16 @@ public class ISATransfer13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ResidualCash1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ResidualCash1Code> getValue(ISATransfer13 obj) {
+			return obj.getResidualCash();
+		}
+
+		@Override
+		public void setValue(ISATransfer13 obj, Optional<ResidualCash1Code> value) {
+			obj.setResidualCash(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Prtfl")
@@ -459,7 +510,7 @@ public class ISATransfer13 {
 	 * ISATransfer10.mmPortfolio}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPortfolio = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ISATransfer13, Optional<ISAPortfolio2Choice>> mmPortfolio = new MMMessageAssociationEnd<ISATransfer13, Optional<ISAPortfolio2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> PortfolioTransfer.mmTransferredPortfolio;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer13.mmObject();
@@ -474,6 +525,16 @@ public class ISATransfer13 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ISAPortfolio2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ISAPortfolio2Choice> getValue(ISATransfer13 obj) {
+			return obj.getPortfolio();
+		}
+
+		@Override
+		public void setValue(ISATransfer13 obj, Optional<ISAPortfolio2Choice> value) {
+			obj.setPortfolio(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AllOthrCsh", required = true)
@@ -520,7 +581,7 @@ public class ISATransfer13 {
 	 * ISATransfer10.mmAllOtherCash}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAllOtherCash = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ISATransfer13, YesNoIndicator> mmAllOtherCash = new MMMessageAttribute<ISATransfer13, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer13.mmObject();
 			isDerived = false;
@@ -534,9 +595,19 @@ public class ISATransfer13 {
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
+
+		@Override
+		public YesNoIndicator getValue(ISATransfer13 obj) {
+			return obj.getAllOtherCash();
+		}
+
+		@Override
+		public void setValue(ISATransfer13 obj, YesNoIndicator value) {
+			obj.setAllOtherCash(value);
+		}
 	};
 	@XmlElement(name = "FinInstrmAsstForTrf")
-	protected List<com.tools20022.repository.msg.FinancialInstrument35> financialInstrumentAssetForTransfer;
+	protected List<FinancialInstrument35> financialInstrumentAssetForTransfer;
 	/**
 	 * 
 	 <p>
@@ -581,7 +652,7 @@ public class ISATransfer13 {
 	 * ISATransfer10.mmFinancialInstrumentAssetForTransfer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentAssetForTransfer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ISATransfer13, List<FinancialInstrument35>> mmFinancialInstrumentAssetForTransfer = new MMMessageAssociationEnd<ISATransfer13, List<FinancialInstrument35>>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundClass.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer13.mmObject();
@@ -594,7 +665,17 @@ public class ISATransfer13 {
 			previousVersion_lazy = () -> ISATransfer10.mmFinancialInstrumentAssetForTransfer;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument35.mmObject();
+			type_lazy = () -> FinancialInstrument35.mmObject();
+		}
+
+		@Override
+		public List<FinancialInstrument35> getValue(ISATransfer13 obj) {
+			return obj.getFinancialInstrumentAssetForTransfer();
+		}
+
+		@Override
+		public void setValue(ISATransfer13 obj, List<FinancialInstrument35> value) {
+			obj.setFinancialInstrumentAssetForTransfer(value);
 		}
 	};
 
@@ -684,7 +765,7 @@ public class ISATransfer13 {
 		return financialInstrumentAssetForTransfer == null ? financialInstrumentAssetForTransfer = new ArrayList<>() : financialInstrumentAssetForTransfer;
 	}
 
-	public ISATransfer13 setFinancialInstrumentAssetForTransfer(List<com.tools20022.repository.msg.FinancialInstrument35> financialInstrumentAssetForTransfer) {
+	public ISATransfer13 setFinancialInstrumentAssetForTransfer(List<FinancialInstrument35> financialInstrumentAssetForTransfer) {
 		this.financialInstrumentAssetForTransfer = Objects.requireNonNull(financialInstrumentAssetForTransfer);
 		return this;
 	}

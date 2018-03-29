@@ -121,7 +121,7 @@ public class Charges5 {
 	 * definition} = "Bank which will pay the charges."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmChargesPayer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Charges5, BankRole1Code> mmChargesPayer = new MMMessageAttribute<Charges5, BankRole1Code>() {
 		{
 			businessComponentTrace_lazy = () -> ChargeBearer.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Charges5.mmObject();
@@ -133,6 +133,16 @@ public class Charges5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BankRole1Code.mmObject();
+		}
+
+		@Override
+		public BankRole1Code getValue(Charges5 obj) {
+			return obj.getChargesPayer();
+		}
+
+		@Override
+		public void setValue(Charges5 obj, BankRole1Code value) {
+			obj.setChargesPayer(value);
 		}
 	};
 	@XmlElement(name = "ChrgsPyee", required = true)
@@ -169,7 +179,7 @@ public class Charges5 {
 	 * definition} = "Bank which will receive the charges."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmChargesPayee = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Charges5, BankRole1Code> mmChargesPayee = new MMMessageAttribute<Charges5, BankRole1Code>() {
 		{
 			businessComponentTrace_lazy = () -> ChargeRecipient.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Charges5.mmObject();
@@ -181,6 +191,16 @@ public class Charges5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BankRole1Code.mmObject();
+		}
+
+		@Override
+		public BankRole1Code getValue(Charges5 obj) {
+			return obj.getChargesPayee();
+		}
+
+		@Override
+		public void setValue(Charges5 obj, BankRole1Code value) {
+			obj.setChargesPayee(value);
 		}
 	};
 	@XmlElement(name = "Amt")
@@ -217,7 +237,7 @@ public class Charges5 {
 	 * definition} = "Amount of the charges taken by the payer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Charges5, Optional<CurrencyAndAmount>> mmAmount = new MMMessageAttribute<Charges5, Optional<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Charges5.mmObject();
@@ -229,6 +249,16 @@ public class Charges5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyAndAmount> getValue(Charges5 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Charges5 obj, Optional<CurrencyAndAmount> value) {
+			obj.setAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Pctg")
@@ -267,7 +297,7 @@ public class Charges5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPercentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Charges5, Optional<PercentageRate>> mmPercentage = new MMMessageAttribute<Charges5, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmChargeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Charges5.mmObject();
@@ -279,6 +309,16 @@ public class Charges5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(Charges5 obj) {
+			return obj.getPercentage();
+		}
+
+		@Override
+		public void setValue(Charges5 obj, Optional<PercentageRate> value) {
+			obj.setPercentage(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -316,7 +356,7 @@ public class Charges5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Charges5, Optional<Max35Text>> mmType = new MMMessageAttribute<Charges5, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Charges5.mmObject();
@@ -328,6 +368,16 @@ public class Charges5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Charges5 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Charges5 obj, Optional<Max35Text> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 

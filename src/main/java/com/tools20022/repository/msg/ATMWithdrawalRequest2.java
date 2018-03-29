@@ -22,6 +22,9 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.catp.ATMWithdrawalRequestV02;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMContext8;
+import com.tools20022.repository.msg.ATMEnvironment11;
+import com.tools20022.repository.msg.ATMTransaction13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -108,7 +111,7 @@ public class ATMWithdrawalRequest2 {
 	 * definition} = "Environment of the withdrawal transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMWithdrawalRequest2, ATMEnvironment11> mmEnvironment = new MMMessageAssociationEnd<ATMWithdrawalRequest2, ATMEnvironment11>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMWithdrawalRequest2.mmObject();
 			isDerived = false;
@@ -119,7 +122,17 @@ public class ATMWithdrawalRequest2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMEnvironment11.mmObject();
+			type_lazy = () -> ATMEnvironment11.mmObject();
+		}
+
+		@Override
+		public ATMEnvironment11 getValue(ATMWithdrawalRequest2 obj) {
+			return obj.getEnvironment();
+		}
+
+		@Override
+		public void setValue(ATMWithdrawalRequest2 obj, ATMEnvironment11 value) {
+			obj.setEnvironment(value);
 		}
 	};
 	@XmlElement(name = "Cntxt", required = true)
@@ -150,7 +163,7 @@ public class ATMWithdrawalRequest2 {
 	 * definition} = "Context in which the transaction is performed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContext = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMWithdrawalRequest2, ATMContext8> mmContext = new MMMessageAssociationEnd<ATMWithdrawalRequest2, ATMContext8>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMWithdrawalRequest2.mmObject();
 			isDerived = false;
@@ -161,7 +174,17 @@ public class ATMWithdrawalRequest2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMContext8.mmObject();
+			type_lazy = () -> ATMContext8.mmObject();
+		}
+
+		@Override
+		public ATMContext8 getValue(ATMWithdrawalRequest2 obj) {
+			return obj.getContext();
+		}
+
+		@Override
+		public void setValue(ATMWithdrawalRequest2 obj, ATMContext8 value) {
+			obj.setContext(value);
 		}
 	};
 	@XmlElement(name = "Tx", required = true)
@@ -193,7 +216,7 @@ public class ATMWithdrawalRequest2 {
 	 * "Withdrawal transaction for which the authorisation is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMWithdrawalRequest2, ATMTransaction13> mmTransaction = new MMMessageAssociationEnd<ATMWithdrawalRequest2, ATMTransaction13>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMWithdrawalRequest2.mmObject();
 			isDerived = false;
@@ -204,7 +227,17 @@ public class ATMWithdrawalRequest2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMTransaction13.mmObject();
+			type_lazy = () -> ATMTransaction13.mmObject();
+		}
+
+		@Override
+		public ATMTransaction13 getValue(ATMWithdrawalRequest2 obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(ATMWithdrawalRequest2 obj, ATMTransaction13 value) {
+			obj.setTransaction(value);
 		}
 	};
 
@@ -227,7 +260,7 @@ public class ATMWithdrawalRequest2 {
 		return environment;
 	}
 
-	public ATMWithdrawalRequest2 setEnvironment(com.tools20022.repository.msg.ATMEnvironment11 environment) {
+	public ATMWithdrawalRequest2 setEnvironment(ATMEnvironment11 environment) {
 		this.environment = Objects.requireNonNull(environment);
 		return this;
 	}
@@ -236,7 +269,7 @@ public class ATMWithdrawalRequest2 {
 		return context;
 	}
 
-	public ATMWithdrawalRequest2 setContext(com.tools20022.repository.msg.ATMContext8 context) {
+	public ATMWithdrawalRequest2 setContext(ATMContext8 context) {
 		this.context = Objects.requireNonNull(context);
 		return this;
 	}
@@ -245,7 +278,7 @@ public class ATMWithdrawalRequest2 {
 		return transaction;
 	}
 
-	public ATMWithdrawalRequest2 setTransaction(com.tools20022.repository.msg.ATMTransaction13 transaction) {
+	public ATMWithdrawalRequest2 setTransaction(ATMTransaction13 transaction) {
 		this.transaction = Objects.requireNonNull(transaction);
 		return this;
 	}

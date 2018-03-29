@@ -29,6 +29,7 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -147,7 +148,7 @@ public class UnitPrice6 {
 	 * definition} = "Type and information about a price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice6, PriceType2> mmType = new MMMessageAttribute<UnitPrice6, PriceType2>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice6.mmObject();
@@ -158,7 +159,17 @@ public class UnitPrice6 {
 			definition = "Type and information about a price.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.PriceType2.mmObject();
+			complexType_lazy = () -> PriceType2.mmObject();
+		}
+
+		@Override
+		public PriceType2 getValue(UnitPrice6 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(UnitPrice6 obj, PriceType2 value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "PricMtd")
@@ -195,7 +206,7 @@ public class UnitPrice6 {
 	 * definition} = "Type of pricing calculation method."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriceMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice6, Optional<PriceMethod1Code>> mmPriceMethod = new MMMessageAttribute<UnitPrice6, Optional<PriceMethod1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice6.mmObject();
@@ -208,9 +219,19 @@ public class UnitPrice6 {
 			minOccurs = 0;
 			simpleType_lazy = () -> PriceMethod1Code.mmObject();
 		}
+
+		@Override
+		public Optional<PriceMethod1Code> getValue(UnitPrice6 obj) {
+			return obj.getPriceMethod();
+		}
+
+		@Override
+		public void setValue(UnitPrice6 obj, Optional<PriceMethod1Code> value) {
+			obj.setPriceMethod(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "ValInInvstmtCcy", required = true)
-	protected List<com.tools20022.repository.msg.PriceValue1> valueInInvestmentCurrency;
+	protected List<PriceValue1> valueInInvestmentCurrency;
 	/**
 	 * 
 	 <p>
@@ -242,7 +263,7 @@ public class UnitPrice6 {
 	 * definition} = "Value of the price, eg, as a currency and value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValueInInvestmentCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice6, List<PriceValue1>> mmValueInInvestmentCurrency = new MMMessageAttribute<UnitPrice6, List<PriceValue1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice6.mmObject();
@@ -252,11 +273,21 @@ public class UnitPrice6 {
 			name = "ValueInInvestmentCurrency";
 			definition = "Value of the price, eg, as a currency and value.";
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.PriceValue1.mmObject();
+			complexType_lazy = () -> PriceValue1.mmObject();
+		}
+
+		@Override
+		public List<PriceValue1> getValue(UnitPrice6 obj) {
+			return obj.getValueInInvestmentCurrency();
+		}
+
+		@Override
+		public void setValue(UnitPrice6 obj, List<PriceValue1> value) {
+			obj.setValueInInvestmentCurrency(value);
 		}
 	};
 	@XmlElement(name = "ValInAltrntvCcy")
-	protected List<com.tools20022.repository.msg.PriceValue1> valueInAlternativeCurrency;
+	protected List<PriceValue1> valueInAlternativeCurrency;
 	/**
 	 * 
 	 <p>
@@ -288,7 +319,7 @@ public class UnitPrice6 {
 	 * definition} = "Value of the price, eg, as a currency and value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValueInAlternativeCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice6, List<PriceValue1>> mmValueInAlternativeCurrency = new MMMessageAttribute<UnitPrice6, List<PriceValue1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice6.mmObject();
@@ -298,7 +329,17 @@ public class UnitPrice6 {
 			name = "ValueInAlternativeCurrency";
 			definition = "Value of the price, eg, as a currency and value.";
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PriceValue1.mmObject();
+			complexType_lazy = () -> PriceValue1.mmObject();
+		}
+
+		@Override
+		public List<PriceValue1> getValue(UnitPrice6 obj) {
+			return obj.getValueInAlternativeCurrency();
+		}
+
+		@Override
+		public void setValue(UnitPrice6 obj, List<PriceValue1> value) {
+			obj.setValueInAlternativeCurrency(value);
 		}
 	};
 	@XmlElement(name = "ForExctnInd", required = true)
@@ -337,7 +378,7 @@ public class UnitPrice6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmForExecutionIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice6, YesNoIndicator> mmForExecutionIndicator = new MMMessageAttribute<UnitPrice6, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmForExecutionIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice6.mmObject();
@@ -349,6 +390,16 @@ public class UnitPrice6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(UnitPrice6 obj) {
+			return obj.getForExecutionIndicator();
+		}
+
+		@Override
+		public void setValue(UnitPrice6 obj, YesNoIndicator value) {
+			obj.setForExecutionIndicator(value);
 		}
 	};
 	@XmlElement(name = "CumDvddInd", required = true)
@@ -387,7 +438,7 @@ public class UnitPrice6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCumDividendIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice6, YesNoIndicator> mmCumDividendIndicator = new MMMessageAttribute<UnitPrice6, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmCumDividendIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice6.mmObject();
@@ -399,6 +450,16 @@ public class UnitPrice6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(UnitPrice6 obj) {
+			return obj.getCumDividendIndicator();
+		}
+
+		@Override
+		public void setValue(UnitPrice6 obj, YesNoIndicator value) {
+			obj.setCumDividendIndicator(value);
 		}
 	};
 	@XmlElement(name = "ClctnBsis")
@@ -435,7 +496,7 @@ public class UnitPrice6 {
 	 * definition} = "Ratio applied on the non-adjusted price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCalculationBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice6, Optional<PercentageRate>> mmCalculationBasis = new MMMessageAttribute<UnitPrice6, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmCalculationBasis;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice6.mmObject();
@@ -447,6 +508,16 @@ public class UnitPrice6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(UnitPrice6 obj) {
+			return obj.getCalculationBasis();
+		}
+
+		@Override
+		public void setValue(UnitPrice6 obj, Optional<PercentageRate> value) {
+			obj.setCalculationBasis(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NbOfDaysAcrd")
@@ -487,7 +558,7 @@ public class UnitPrice6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfDaysAccrued = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice6, Optional<Number>> mmNumberOfDaysAccrued = new MMMessageAttribute<UnitPrice6, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmNumberOfDays;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice6.mmObject();
@@ -500,6 +571,16 @@ public class UnitPrice6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(UnitPrice6 obj) {
+			return obj.getNumberOfDaysAccrued();
+		}
+
+		@Override
+		public void setValue(UnitPrice6 obj, Optional<Number> value) {
+			obj.setNumberOfDaysAccrued(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxblIncmPerShr")
@@ -538,7 +619,7 @@ public class UnitPrice6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxableIncomePerShare = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice6, Optional<AmountPrice1Choice>> mmTaxableIncomePerShare = new MMMessageAttribute<UnitPrice6, Optional<AmountPrice1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmTaxableIncomePerShare;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice6.mmObject();
@@ -550,6 +631,16 @@ public class UnitPrice6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AmountPrice1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AmountPrice1Choice> getValue(UnitPrice6 obj) {
+			return obj.getTaxableIncomePerShare();
+		}
+
+		@Override
+		public void setValue(UnitPrice6 obj, Optional<AmountPrice1Choice> value) {
+			obj.setTaxableIncomePerShare(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxblIncmPerShrClctd")
@@ -588,7 +679,7 @@ public class UnitPrice6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxableIncomePerShareCalculated = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice6, Optional<TaxableIncomePerShareCalculated1>> mmTaxableIncomePerShareCalculated = new MMMessageAttribute<UnitPrice6, Optional<TaxableIncomePerShareCalculated1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmTaxableIncomePerShareCalculated;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice6.mmObject();
@@ -599,11 +690,21 @@ public class UnitPrice6 {
 			definition = "Specifies whether the fund calculates a taxable interest per share (TIS).";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.TaxableIncomePerShareCalculated1.mmObject();
+			complexType_lazy = () -> TaxableIncomePerShareCalculated1.mmObject();
+		}
+
+		@Override
+		public Optional<TaxableIncomePerShareCalculated1> getValue(UnitPrice6 obj) {
+			return obj.getTaxableIncomePerShareCalculated();
+		}
+
+		@Override
+		public void setValue(UnitPrice6 obj, Optional<TaxableIncomePerShareCalculated1> value) {
+			obj.setTaxableIncomePerShareCalculated(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ChrgDtls")
-	protected List<com.tools20022.repository.msg.Charge9> chargeDetails;
+	protected List<Charge9> chargeDetails;
 	/**
 	 * 
 	 <p>
@@ -633,7 +734,7 @@ public class UnitPrice6 {
 	 * definition} = "Amount of money associated with a service."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmChargeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnitPrice6, List<Charge9>> mmChargeDetails = new MMMessageAssociationEnd<UnitPrice6, List<Charge9>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmFees;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice6.mmObject();
@@ -644,11 +745,21 @@ public class UnitPrice6 {
 			definition = "Amount of money associated with a service.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Charge9.mmObject();
+			type_lazy = () -> Charge9.mmObject();
+		}
+
+		@Override
+		public List<Charge9> getValue(UnitPrice6 obj) {
+			return obj.getChargeDetails();
+		}
+
+		@Override
+		public void setValue(UnitPrice6 obj, List<Charge9> value) {
+			obj.setChargeDetails(value);
 		}
 	};
 	@XmlElement(name = "TaxLbltyDtls")
-	protected List<com.tools20022.repository.msg.Tax8> taxLiabilityDetails;
+	protected List<Tax8> taxLiabilityDetails;
 	/**
 	 * 
 	 <p>
@@ -678,7 +789,7 @@ public class UnitPrice6 {
 	 * definition} = "Information related to taxes that are due."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTaxLiabilityDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnitPrice6, List<Tax8>> mmTaxLiabilityDetails = new MMMessageAssociationEnd<UnitPrice6, List<Tax8>>() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmTaxLiability;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice6.mmObject();
@@ -689,11 +800,21 @@ public class UnitPrice6 {
 			definition = "Information related to taxes that are due.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Tax8.mmObject();
+			type_lazy = () -> Tax8.mmObject();
+		}
+
+		@Override
+		public List<Tax8> getValue(UnitPrice6 obj) {
+			return obj.getTaxLiabilityDetails();
+		}
+
+		@Override
+		public void setValue(UnitPrice6 obj, List<Tax8> value) {
+			obj.setTaxLiabilityDetails(value);
 		}
 	};
 	@XmlElement(name = "TaxRfndDtls")
-	protected List<com.tools20022.repository.msg.Tax8> taxRefundDetails;
+	protected List<Tax8> taxRefundDetails;
 	/**
 	 * 
 	 <p>
@@ -723,7 +844,7 @@ public class UnitPrice6 {
 	 * definition} = "Information related to taxes that are paid back."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTaxRefundDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnitPrice6, List<Tax8>> mmTaxRefundDetails = new MMMessageAssociationEnd<UnitPrice6, List<Tax8>>() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmTaxRefund;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice6.mmObject();
@@ -734,7 +855,17 @@ public class UnitPrice6 {
 			definition = "Information related to taxes that are paid back.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Tax8.mmObject();
+			type_lazy = () -> Tax8.mmObject();
+		}
+
+		@Override
+		public List<Tax8> getValue(UnitPrice6 obj) {
+			return obj.getTaxRefundDetails();
+		}
+
+		@Override
+		public void setValue(UnitPrice6 obj, List<Tax8> value) {
+			obj.setTaxRefundDetails(value);
 		}
 	};
 
@@ -761,7 +892,7 @@ public class UnitPrice6 {
 		return type;
 	}
 
-	public UnitPrice6 setType(com.tools20022.repository.msg.PriceType2 type) {
+	public UnitPrice6 setType(PriceType2 type) {
 		this.type = Objects.requireNonNull(type);
 		return this;
 	}
@@ -779,7 +910,7 @@ public class UnitPrice6 {
 		return valueInInvestmentCurrency == null ? valueInInvestmentCurrency = new ArrayList<>() : valueInInvestmentCurrency;
 	}
 
-	public UnitPrice6 setValueInInvestmentCurrency(List<com.tools20022.repository.msg.PriceValue1> valueInInvestmentCurrency) {
+	public UnitPrice6 setValueInInvestmentCurrency(List<PriceValue1> valueInInvestmentCurrency) {
 		this.valueInInvestmentCurrency = Objects.requireNonNull(valueInInvestmentCurrency);
 		return this;
 	}
@@ -788,7 +919,7 @@ public class UnitPrice6 {
 		return valueInAlternativeCurrency == null ? valueInAlternativeCurrency = new ArrayList<>() : valueInAlternativeCurrency;
 	}
 
-	public UnitPrice6 setValueInAlternativeCurrency(List<com.tools20022.repository.msg.PriceValue1> valueInAlternativeCurrency) {
+	public UnitPrice6 setValueInAlternativeCurrency(List<PriceValue1> valueInAlternativeCurrency) {
 		this.valueInAlternativeCurrency = Objects.requireNonNull(valueInAlternativeCurrency);
 		return this;
 	}
@@ -842,7 +973,7 @@ public class UnitPrice6 {
 		return taxableIncomePerShareCalculated == null ? Optional.empty() : Optional.of(taxableIncomePerShareCalculated);
 	}
 
-	public UnitPrice6 setTaxableIncomePerShareCalculated(com.tools20022.repository.msg.TaxableIncomePerShareCalculated1 taxableIncomePerShareCalculated) {
+	public UnitPrice6 setTaxableIncomePerShareCalculated(TaxableIncomePerShareCalculated1 taxableIncomePerShareCalculated) {
 		this.taxableIncomePerShareCalculated = taxableIncomePerShareCalculated;
 		return this;
 	}
@@ -851,7 +982,7 @@ public class UnitPrice6 {
 		return chargeDetails == null ? chargeDetails = new ArrayList<>() : chargeDetails;
 	}
 
-	public UnitPrice6 setChargeDetails(List<com.tools20022.repository.msg.Charge9> chargeDetails) {
+	public UnitPrice6 setChargeDetails(List<Charge9> chargeDetails) {
 		this.chargeDetails = Objects.requireNonNull(chargeDetails);
 		return this;
 	}
@@ -860,7 +991,7 @@ public class UnitPrice6 {
 		return taxLiabilityDetails == null ? taxLiabilityDetails = new ArrayList<>() : taxLiabilityDetails;
 	}
 
-	public UnitPrice6 setTaxLiabilityDetails(List<com.tools20022.repository.msg.Tax8> taxLiabilityDetails) {
+	public UnitPrice6 setTaxLiabilityDetails(List<Tax8> taxLiabilityDetails) {
 		this.taxLiabilityDetails = Objects.requireNonNull(taxLiabilityDetails);
 		return this;
 	}
@@ -869,7 +1000,7 @@ public class UnitPrice6 {
 		return taxRefundDetails == null ? taxRefundDetails = new ArrayList<>() : taxRefundDetails;
 	}
 
-	public UnitPrice6 setTaxRefundDetails(List<com.tools20022.repository.msg.Tax8> taxRefundDetails) {
+	public UnitPrice6 setTaxRefundDetails(List<Tax8> taxRefundDetails) {
 		this.taxRefundDetails = Objects.requireNonNull(taxRefundDetails);
 		return this;
 	}

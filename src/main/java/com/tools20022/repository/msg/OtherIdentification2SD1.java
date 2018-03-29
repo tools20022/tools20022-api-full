@@ -112,7 +112,7 @@ public class OtherIdentification2SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherIdentification2SD1, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<OtherIdentification2SD1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherIdentification2SD1.mmObject();
 			isDerived = false;
@@ -123,6 +123,16 @@ public class OtherIdentification2SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(OtherIdentification2SD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(OtherIdentification2SD1 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LclLangSctyNm")
@@ -160,7 +170,7 @@ public class OtherIdentification2SD1 {
 	 * "Full and formal name of underlying securities in the local language."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLocalLanguageSecurityName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherIdentification2SD1, Optional<Max240Text>> mmLocalLanguageSecurityName = new MMMessageAttribute<OtherIdentification2SD1, Optional<Max240Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherIdentification2SD1.mmObject();
@@ -172,6 +182,16 @@ public class OtherIdentification2SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max240Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max240Text> getValue(OtherIdentification2SD1 obj) {
+			return obj.getLocalLanguageSecurityName();
+		}
+
+		@Override
+		public void setValue(OtherIdentification2SD1 obj, Optional<Max240Text> value) {
+			obj.setLocalLanguageSecurityName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AbbrvtdLclLangSctyNm", required = true)
@@ -205,7 +225,7 @@ public class OtherIdentification2SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAbbreviatedLocalLanguageSecurityName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherIdentification2SD1, Max240Text> mmAbbreviatedLocalLanguageSecurityName = new MMMessageAttribute<OtherIdentification2SD1, Max240Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherIdentification2SD1.mmObject();
 			isDerived = false;
@@ -216,6 +236,16 @@ public class OtherIdentification2SD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max240Text.mmObject();
+		}
+
+		@Override
+		public Max240Text getValue(OtherIdentification2SD1 obj) {
+			return obj.getAbbreviatedLocalLanguageSecurityName();
+		}
+
+		@Override
+		public void setValue(OtherIdentification2SD1 obj, Max240Text value) {
+			obj.setAbbreviatedLocalLanguageSecurityName(value);
 		}
 	};
 

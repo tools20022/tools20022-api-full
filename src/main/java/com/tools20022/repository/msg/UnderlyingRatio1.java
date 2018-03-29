@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice;
 import com.tools20022.repository.entity.UnderlyingRatio;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecurityIdentification14;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -111,7 +112,7 @@ public class UnderlyingRatio1 {
 	 * definition} = "Number of held securities for the exercise."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnderlyingQuantityDenominator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnderlyingRatio1, FinancialInstrumentQuantity1Choice> mmUnderlyingQuantityDenominator = new MMMessageAssociationEnd<UnderlyingRatio1, FinancialInstrumentQuantity1Choice>() {
 		{
 			businessElementTrace_lazy = () -> UnderlyingRatio.mmUnderlyingQuantityDenominator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingRatio1.mmObject();
@@ -124,6 +125,16 @@ public class UnderlyingRatio1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity1Choice getValue(UnderlyingRatio1 obj) {
+			return obj.getUnderlyingQuantityDenominator();
+		}
+
+		@Override
+		public void setValue(UnderlyingRatio1 obj, FinancialInstrumentQuantity1Choice value) {
+			obj.setUnderlyingQuantityDenominator(value);
 		}
 	};
 	@XmlElement(name = "UndrlygQtyNmrtr", required = true)
@@ -160,7 +171,7 @@ public class UnderlyingRatio1 {
 	 * definition} = "Number of related securities for the exercise."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnderlyingQuantityNumerator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnderlyingRatio1, FinancialInstrumentQuantity1Choice> mmUnderlyingQuantityNumerator = new MMMessageAssociationEnd<UnderlyingRatio1, FinancialInstrumentQuantity1Choice>() {
 		{
 			businessElementTrace_lazy = () -> UnderlyingRatio.mmUnderlyingQuantityNumerator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingRatio1.mmObject();
@@ -174,9 +185,19 @@ public class UnderlyingRatio1 {
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
+
+		@Override
+		public FinancialInstrumentQuantity1Choice getValue(UnderlyingRatio1 obj) {
+			return obj.getUnderlyingQuantityNumerator();
+		}
+
+		@Override
+		public void setValue(UnderlyingRatio1 obj, FinancialInstrumentQuantity1Choice value) {
+			obj.setUnderlyingQuantityNumerator(value);
+		}
 	};
 	@XmlElement(name = "RltdFinInstrmId")
-	protected List<com.tools20022.repository.msg.SecurityIdentification14> relatedFinancialInstrumentIdentification;
+	protected List<SecurityIdentification14> relatedFinancialInstrumentIdentification;
 	/**
 	 * 
 	 <p>
@@ -210,7 +231,7 @@ public class UnderlyingRatio1 {
 	 * "Related security into which the security can be converted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRelatedFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnderlyingRatio1, List<SecurityIdentification14>> mmRelatedFinancialInstrumentIdentification = new MMMessageAssociationEnd<UnderlyingRatio1, List<SecurityIdentification14>>() {
 		{
 			businessElementTrace_lazy = () -> UnderlyingRatio.mmSecuritiesConversion;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingRatio1.mmObject();
@@ -221,7 +242,17 @@ public class UnderlyingRatio1 {
 			definition = "Related security into which the security can be converted.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
+			type_lazy = () -> SecurityIdentification14.mmObject();
+		}
+
+		@Override
+		public List<SecurityIdentification14> getValue(UnderlyingRatio1 obj) {
+			return obj.getRelatedFinancialInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(UnderlyingRatio1 obj, List<SecurityIdentification14> value) {
+			obj.setRelatedFinancialInstrumentIdentification(value);
 		}
 	};
 
@@ -262,7 +293,7 @@ public class UnderlyingRatio1 {
 		return relatedFinancialInstrumentIdentification == null ? relatedFinancialInstrumentIdentification = new ArrayList<>() : relatedFinancialInstrumentIdentification;
 	}
 
-	public UnderlyingRatio1 setRelatedFinancialInstrumentIdentification(List<com.tools20022.repository.msg.SecurityIdentification14> relatedFinancialInstrumentIdentification) {
+	public UnderlyingRatio1 setRelatedFinancialInstrumentIdentification(List<SecurityIdentification14> relatedFinancialInstrumentIdentification) {
 		this.relatedFinancialInstrumentIdentification = Objects.requireNonNull(relatedFinancialInstrumentIdentification);
 		return this;
 	}

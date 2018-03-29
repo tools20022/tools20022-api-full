@@ -132,7 +132,7 @@ public class DirectDebitMandate2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDebtorAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DirectDebitMandate2, CashAccountIdentification1Choice> mmDebtorAccountIdentification = new MMMessageAttribute<DirectDebitMandate2, CashAccountIdentification1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectDebitMandate2.mmObject();
@@ -144,6 +144,16 @@ public class DirectDebitMandate2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CashAccountIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public CashAccountIdentification1Choice getValue(DirectDebitMandate2 obj) {
+			return obj.getDebtorAccountIdentification();
+		}
+
+		@Override
+		public void setValue(DirectDebitMandate2 obj, CashAccountIdentification1Choice value) {
+			obj.setDebtorAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "DbtrId")
@@ -183,7 +193,7 @@ public class DirectDebitMandate2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDebtorIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DirectDebitMandate2, Optional<PartyIdentification2Choice>> mmDebtorIdentification = new MMMessageAttribute<DirectDebitMandate2, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectDebitMandate2.mmObject();
@@ -195,6 +205,16 @@ public class DirectDebitMandate2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(DirectDebitMandate2 obj) {
+			return obj.getDebtorIdentification();
+		}
+
+		@Override
+		public void setValue(DirectDebitMandate2 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setDebtorIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtrId")
@@ -234,7 +254,7 @@ public class DirectDebitMandate2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditorIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DirectDebitMandate2, Optional<PartyIdentification2Choice>> mmCreditorIdentification = new MMMessageAttribute<DirectDebitMandate2, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectDebitMandate2.mmObject();
@@ -246,6 +266,16 @@ public class DirectDebitMandate2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(DirectDebitMandate2 obj) {
+			return obj.getCreditorIdentification();
+		}
+
+		@Override
+		public void setValue(DirectDebitMandate2 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setCreditorIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FrstAgt", required = true)
@@ -285,7 +315,7 @@ public class DirectDebitMandate2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFirstAgent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DirectDebitMandate2, FinancialInstitutionIdentification3Choice> mmFirstAgent = new MMMessageAttribute<DirectDebitMandate2, FinancialInstitutionIdentification3Choice>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectDebitMandate2.mmObject();
@@ -297,6 +327,16 @@ public class DirectDebitMandate2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstitutionIdentification3Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstitutionIdentification3Choice getValue(DirectDebitMandate2 obj) {
+			return obj.getFirstAgent();
+		}
+
+		@Override
+		public void setValue(DirectDebitMandate2 obj, FinancialInstitutionIdentification3Choice value) {
+			obj.setFirstAgent(value);
 		}
 	};
 	@XmlElement(name = "FnlAgt")
@@ -336,7 +376,7 @@ public class DirectDebitMandate2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinalAgent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DirectDebitMandate2, Optional<FinancialInstitutionIdentification3Choice>> mmFinalAgent = new MMMessageAttribute<DirectDebitMandate2, Optional<FinancialInstitutionIdentification3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectDebitMandate2.mmObject();
@@ -348,6 +388,16 @@ public class DirectDebitMandate2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstitutionIdentification3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstitutionIdentification3Choice> getValue(DirectDebitMandate2 obj) {
+			return obj.getFinalAgent();
+		}
+
+		@Override
+		public void setValue(DirectDebitMandate2 obj, Optional<FinancialInstitutionIdentification3Choice> value) {
+			obj.setFinalAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RegnId")
@@ -386,7 +436,7 @@ public class DirectDebitMandate2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegistrationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DirectDebitMandate2, Optional<Max35Text>> mmRegistrationIdentification = new MMMessageAttribute<DirectDebitMandate2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> DirectDebit.mmRegistrationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectDebitMandate2.mmObject();
@@ -398,6 +448,16 @@ public class DirectDebitMandate2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(DirectDebitMandate2 obj) {
+			return obj.getRegistrationIdentification();
+		}
+
+		@Override
+		public void setValue(DirectDebitMandate2 obj, Optional<Max35Text> value) {
+			obj.setRegistrationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MndtId")
@@ -436,7 +496,7 @@ public class DirectDebitMandate2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMandateIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DirectDebitMandate2, Optional<Max35Text>> mmMandateIdentification = new MMMessageAttribute<DirectDebitMandate2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectDebitMandate2.mmObject();
@@ -448,6 +508,16 @@ public class DirectDebitMandate2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(DirectDebitMandate2 obj) {
+			return obj.getMandateIdentification();
+		}
+
+		@Override
+		public void setValue(DirectDebitMandate2 obj, Optional<Max35Text> value) {
+			obj.setMandateIdentification(value.orElse(null));
 		}
 	};
 

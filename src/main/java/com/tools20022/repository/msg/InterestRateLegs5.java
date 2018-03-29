@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.InterestRate1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -109,7 +110,7 @@ public class InterestRateLegs5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFirstLeg = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InterestRateLegs5, Optional<InterestRate1>> mmFirstLeg = new MMMessageAssociationEnd<InterestRateLegs5, Optional<InterestRate1>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmLeg;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestRateLegs5.mmObject();
@@ -121,7 +122,17 @@ public class InterestRateLegs5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InterestRate1.mmObject();
+			type_lazy = () -> InterestRate1.mmObject();
+		}
+
+		@Override
+		public Optional<InterestRate1> getValue(InterestRateLegs5 obj) {
+			return obj.getFirstLeg();
+		}
+
+		@Override
+		public void setValue(InterestRateLegs5 obj, Optional<InterestRate1> value) {
+			obj.setFirstLeg(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ScndLeg")
@@ -158,7 +169,7 @@ public class InterestRateLegs5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecondLeg = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InterestRateLegs5, Optional<InterestRate1>> mmSecondLeg = new MMMessageAssociationEnd<InterestRateLegs5, Optional<InterestRate1>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmLeg;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestRateLegs5.mmObject();
@@ -170,7 +181,17 @@ public class InterestRateLegs5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InterestRate1.mmObject();
+			type_lazy = () -> InterestRate1.mmObject();
+		}
+
+		@Override
+		public Optional<InterestRate1> getValue(InterestRateLegs5 obj) {
+			return obj.getSecondLeg();
+		}
+
+		@Override
+		public void setValue(InterestRateLegs5 obj, Optional<InterestRate1> value) {
+			obj.setSecondLeg(value.orElse(null));
 		}
 	};
 
@@ -193,7 +214,7 @@ public class InterestRateLegs5 {
 		return firstLeg == null ? Optional.empty() : Optional.of(firstLeg);
 	}
 
-	public InterestRateLegs5 setFirstLeg(com.tools20022.repository.msg.InterestRate1 firstLeg) {
+	public InterestRateLegs5 setFirstLeg(InterestRate1 firstLeg) {
 		this.firstLeg = firstLeg;
 		return this;
 	}
@@ -202,7 +223,7 @@ public class InterestRateLegs5 {
 		return secondLeg == null ? Optional.empty() : Optional.of(secondLeg);
 	}
 
-	public InterestRateLegs5 setSecondLeg(com.tools20022.repository.msg.InterestRate1 secondLeg) {
+	public InterestRateLegs5 setSecondLeg(InterestRate1 secondLeg) {
 		this.secondLeg = secondLeg;
 		return this;
 	}

@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max9NumericText;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ProcessRetry1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -114,7 +115,7 @@ public class ProcessTiming1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmWaitingTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProcessTiming1, Optional<Max9NumericText>> mmWaitingTime = new MMMessageAttribute<ProcessTiming1, Optional<Max9NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProcessTiming1.mmObject();
 			isDerived = false;
@@ -125,6 +126,16 @@ public class ProcessTiming1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max9NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max9NumericText> getValue(ProcessTiming1 obj) {
+			return obj.getWaitingTime();
+		}
+
+		@Override
+		public void setValue(ProcessTiming1 obj, Optional<Max9NumericText> value) {
+			obj.setWaitingTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StartTm")
@@ -155,7 +166,7 @@ public class ProcessTiming1 {
 	 * definition} = "Date and time to start the action."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStartTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProcessTiming1, Optional<ISODateTime>> mmStartTime = new MMMessageAttribute<ProcessTiming1, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProcessTiming1.mmObject();
 			isDerived = false;
@@ -166,6 +177,16 @@ public class ProcessTiming1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(ProcessTiming1 obj) {
+			return obj.getStartTime();
+		}
+
+		@Override
+		public void setValue(ProcessTiming1 obj, Optional<ISODateTime> value) {
+			obj.setStartTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EndTm")
@@ -197,7 +218,7 @@ public class ProcessTiming1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEndTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProcessTiming1, Optional<ISODateTime>> mmEndTime = new MMMessageAttribute<ProcessTiming1, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProcessTiming1.mmObject();
 			isDerived = false;
@@ -208,6 +229,16 @@ public class ProcessTiming1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(ProcessTiming1 obj) {
+			return obj.getEndTime();
+		}
+
+		@Override
+		public void setValue(ProcessTiming1 obj, Optional<ISODateTime> value) {
+			obj.setEndTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Prd")
@@ -241,7 +272,7 @@ public class ProcessTiming1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProcessTiming1, Optional<Max9NumericText>> mmPeriod = new MMMessageAttribute<ProcessTiming1, Optional<Max9NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProcessTiming1.mmObject();
 			isDerived = false;
@@ -252,6 +283,16 @@ public class ProcessTiming1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max9NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max9NumericText> getValue(ProcessTiming1 obj) {
+			return obj.getPeriod();
+		}
+
+		@Override
+		public void setValue(ProcessTiming1 obj, Optional<Max9NumericText> value) {
+			obj.setPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MaxNb")
@@ -282,7 +323,7 @@ public class ProcessTiming1 {
 	 * definition} = "Maximum number of cyclic calls."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProcessTiming1, Optional<Number>> mmMaximumNumber = new MMMessageAttribute<ProcessTiming1, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProcessTiming1.mmObject();
 			isDerived = false;
@@ -293,6 +334,16 @@ public class ProcessTiming1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(ProcessTiming1 obj) {
+			return obj.getMaximumNumber();
+		}
+
+		@Override
+		public void setValue(ProcessTiming1 obj, Optional<Number> value) {
+			obj.setMaximumNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReTry")
@@ -323,7 +374,7 @@ public class ProcessTiming1 {
 	 * "Definition of retry process if activation of the action fails."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReTry = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProcessTiming1, Optional<ProcessRetry1>> mmReTry = new MMMessageAssociationEnd<ProcessTiming1, Optional<ProcessRetry1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProcessTiming1.mmObject();
 			isDerived = false;
@@ -334,7 +385,17 @@ public class ProcessTiming1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ProcessRetry1.mmObject();
+			type_lazy = () -> ProcessRetry1.mmObject();
+		}
+
+		@Override
+		public Optional<ProcessRetry1> getValue(ProcessTiming1 obj) {
+			return obj.getReTry();
+		}
+
+		@Override
+		public void setValue(ProcessTiming1 obj, Optional<ProcessRetry1> value) {
+			obj.setReTry(value.orElse(null));
 		}
 	};
 
@@ -402,7 +463,7 @@ public class ProcessTiming1 {
 		return reTry == null ? Optional.empty() : Optional.of(reTry);
 	}
 
-	public ProcessTiming1 setReTry(com.tools20022.repository.msg.ProcessRetry1 reTry) {
+	public ProcessTiming1 setReTry(ProcessRetry1 reTry) {
 		this.reTry = reTry;
 		return this;
 	}

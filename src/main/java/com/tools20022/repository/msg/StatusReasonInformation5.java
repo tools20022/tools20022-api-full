@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PaymentStatus;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification14;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -121,7 +122,7 @@ public class StatusReasonInformation5 {
 	 * definition} = "Party issuing the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusOriginator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusReasonInformation5, PartyIdentification14> mmStatusOriginator = new MMMessageAssociationEnd<StatusReasonInformation5, PartyIdentification14>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation5.mmObject();
@@ -133,7 +134,17 @@ public class StatusReasonInformation5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification14.mmObject();
+			type_lazy = () -> PartyIdentification14.mmObject();
+		}
+
+		@Override
+		public PartyIdentification14 getValue(StatusReasonInformation5 obj) {
+			return obj.getStatusOriginator();
+		}
+
+		@Override
+		public void setValue(StatusReasonInformation5 obj, PartyIdentification14 value) {
+			obj.setStatusOriginator(value);
 		}
 	};
 	@XmlElement(name = "StsRsn", required = true)
@@ -169,7 +180,7 @@ public class StatusReasonInformation5 {
 	 * definition} = "Specifies the reason for the status report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusReasonInformation5, StatusReason1Choice> mmStatusReason = new MMMessageAssociationEnd<StatusReasonInformation5, StatusReason1Choice>() {
 		{
 			businessComponentTrace_lazy = () -> PaymentStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation5.mmObject();
@@ -182,6 +193,16 @@ public class StatusReasonInformation5 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> StatusReason1Choice.mmObject();
+		}
+
+		@Override
+		public StatusReason1Choice getValue(StatusReasonInformation5 obj) {
+			return obj.getStatusReason();
+		}
+
+		@Override
+		public void setValue(StatusReasonInformation5 obj, StatusReason1Choice value) {
+			obj.setStatusReason(value);
 		}
 	};
 	@XmlElement(name = "AddtlStsRsnInf")
@@ -220,7 +241,7 @@ public class StatusReasonInformation5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalStatusReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatusReasonInformation5, List<Max105Text>> mmAdditionalStatusReasonInformation = new MMMessageAttribute<StatusReasonInformation5, List<Max105Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation5.mmObject();
@@ -231,6 +252,16 @@ public class StatusReasonInformation5 {
 			definition = "Further details on the status reason.\n\nUsage: Additional information can be used for several purposes, e.g. to report repaired information, or to further detail the status reason.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public List<Max105Text> getValue(StatusReasonInformation5 obj) {
+			return obj.getAdditionalStatusReasonInformation();
+		}
+
+		@Override
+		public void setValue(StatusReasonInformation5 obj, List<Max105Text> value) {
+			obj.setAdditionalStatusReasonInformation(value);
 		}
 	};
 
@@ -254,7 +285,7 @@ public class StatusReasonInformation5 {
 		return statusOriginator;
 	}
 
-	public StatusReasonInformation5 setStatusOriginator(com.tools20022.repository.msg.PartyIdentification14 statusOriginator) {
+	public StatusReasonInformation5 setStatusOriginator(PartyIdentification14 statusOriginator) {
 		this.statusOriginator = Objects.requireNonNull(statusOriginator);
 		return this;
 	}

@@ -112,7 +112,7 @@ public class InterestComputationMethod1Choice {
 	 * "Code is used to determine the interest computation method."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestComputationMethod1Choice, InterestComputationMethod1Code> mmCode = new MMMessageAttribute<InterestComputationMethod1Choice, InterestComputationMethod1Code>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmDayCountBasis;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InterestComputationMethod1Choice.mmObject();
@@ -124,6 +124,16 @@ public class InterestComputationMethod1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InterestComputationMethod1Code.mmObject();
+		}
+
+		@Override
+		public InterestComputationMethod1Code getValue(InterestComputationMethod1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(InterestComputationMethod1Choice obj, InterestComputationMethod1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -161,7 +171,7 @@ public class InterestComputationMethod1Choice {
 	 * "Interest computation method is determined using a data source scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InterestComputationMethod1Choice, GenericIdentification13> mmProprietary = new MMMessageAssociationEnd<InterestComputationMethod1Choice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmDayCountBasis;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InterestComputationMethod1Choice.mmObject();
@@ -174,6 +184,16 @@ public class InterestComputationMethod1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(InterestComputationMethod1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(InterestComputationMethod1Choice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

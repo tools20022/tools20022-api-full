@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.entity.MarginCall;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountAndDirection6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -118,7 +119,7 @@ public class EndOfDayRequirement1 {
 	 * "Specifies the initial margin requirement for position.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInitialMarginRequirement = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EndOfDayRequirement1, Optional<ActiveCurrencyAndAmount>> mmInitialMarginRequirement = new MMMessageAttribute<EndOfDayRequirement1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> MarginCall.mmInitialMargin;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EndOfDayRequirement1.mmObject();
@@ -130,6 +131,16 @@ public class EndOfDayRequirement1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(EndOfDayRequirement1 obj) {
+			return obj.getInitialMarginRequirement();
+		}
+
+		@Override
+		public void setValue(EndOfDayRequirement1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setInitialMarginRequirement(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "VartnMrgnRqrmnt")
@@ -167,7 +178,7 @@ public class EndOfDayRequirement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmVariationMarginRequirement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EndOfDayRequirement1, Optional<AmountAndDirection6>> mmVariationMarginRequirement = new MMMessageAssociationEnd<EndOfDayRequirement1, Optional<AmountAndDirection6>>() {
 		{
 			businessElementTrace_lazy = () -> MarginCall.mmVariationMargin;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EndOfDayRequirement1.mmObject();
@@ -179,7 +190,17 @@ public class EndOfDayRequirement1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
+			type_lazy = () -> AmountAndDirection6.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection6> getValue(EndOfDayRequirement1 obj) {
+			return obj.getVariationMarginRequirement();
+		}
+
+		@Override
+		public void setValue(EndOfDayRequirement1 obj, Optional<AmountAndDirection6> value) {
+			obj.setVariationMarginRequirement(value.orElse(null));
 		}
 	};
 
@@ -211,7 +232,7 @@ public class EndOfDayRequirement1 {
 		return variationMarginRequirement == null ? Optional.empty() : Optional.of(variationMarginRequirement);
 	}
 
-	public EndOfDayRequirement1 setVariationMarginRequirement(com.tools20022.repository.msg.AmountAndDirection6 variationMarginRequirement) {
+	public EndOfDayRequirement1 setVariationMarginRequirement(AmountAndDirection6 variationMarginRequirement) {
 		this.variationMarginRequirement = variationMarginRequirement;
 		return this;
 	}

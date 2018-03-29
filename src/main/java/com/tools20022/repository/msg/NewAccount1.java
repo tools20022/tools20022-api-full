@@ -25,6 +25,9 @@ import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.entity.ContactPersonRole;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccount36;
+import com.tools20022.repository.msg.IndividualPerson19;
+import com.tools20022.repository.msg.Organisation20;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -111,7 +114,7 @@ public class NewAccount1 {
 	 * definition} = "Details of the new account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NewAccount1, CashAccount36> mmAccount = new MMMessageAssociationEnd<NewAccount1, CashAccount36>() {
 		{
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.NewAccount1.mmObject();
@@ -123,11 +126,21 @@ public class NewAccount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount36.mmObject();
+			type_lazy = () -> CashAccount36.mmObject();
+		}
+
+		@Override
+		public CashAccount36 getValue(NewAccount1 obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(NewAccount1 obj, CashAccount36 value) {
+			obj.setAccount(value);
 		}
 	};
 	@XmlElement(name = "AcctPty", required = true)
-	protected List<com.tools20022.repository.msg.IndividualPerson19> accountParty;
+	protected List<IndividualPerson19> accountParty;
 	/**
 	 * 
 	 <p>
@@ -155,10 +168,12 @@ public class NewAccount1 {
 	 * name} = "AccountParty"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Party in the context of account operations."</li>
+	 * definition} =
+	 * "Party or parties to be identified in the context of account operations."
+	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NewAccount1, List<IndividualPerson19>> mmAccountParty = new MMMessageAssociationEnd<NewAccount1, List<IndividualPerson19>>() {
 		{
 			businessElementTrace_lazy = () -> ContactPersonRole.mmPerson;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NewAccount1.mmObject();
@@ -166,10 +181,20 @@ public class NewAccount1 {
 			xmlTag = "AcctPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountParty";
-			definition = "Party in the context of account operations.";
+			definition = "Party or parties to be identified in the context of account operations.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IndividualPerson19.mmObject();
+			type_lazy = () -> IndividualPerson19.mmObject();
+		}
+
+		@Override
+		public List<IndividualPerson19> getValue(NewAccount1 obj) {
+			return obj.getAccountParty();
+		}
+
+		@Override
+		public void setValue(NewAccount1 obj, List<IndividualPerson19> value) {
+			obj.setAccountParty(value);
 		}
 	};
 	@XmlElement(name = "Org")
@@ -206,7 +231,7 @@ public class NewAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOrganisation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NewAccount1, Optional<Organisation20>> mmOrganisation = new MMMessageAssociationEnd<NewAccount1, Optional<Organisation20>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NewAccount1.mmObject();
@@ -218,7 +243,17 @@ public class NewAccount1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Organisation20.mmObject();
+			type_lazy = () -> Organisation20.mmObject();
+		}
+
+		@Override
+		public Optional<Organisation20> getValue(NewAccount1 obj) {
+			return obj.getOrganisation();
+		}
+
+		@Override
+		public void setValue(NewAccount1 obj, Optional<Organisation20> value) {
+			obj.setOrganisation(value.orElse(null));
 		}
 	};
 
@@ -241,7 +276,7 @@ public class NewAccount1 {
 		return account;
 	}
 
-	public NewAccount1 setAccount(com.tools20022.repository.msg.CashAccount36 account) {
+	public NewAccount1 setAccount(CashAccount36 account) {
 		this.account = Objects.requireNonNull(account);
 		return this;
 	}
@@ -250,7 +285,7 @@ public class NewAccount1 {
 		return accountParty == null ? accountParty = new ArrayList<>() : accountParty;
 	}
 
-	public NewAccount1 setAccountParty(List<com.tools20022.repository.msg.IndividualPerson19> accountParty) {
+	public NewAccount1 setAccountParty(List<IndividualPerson19> accountParty) {
 		this.accountParty = Objects.requireNonNull(accountParty);
 		return this;
 	}
@@ -259,7 +294,7 @@ public class NewAccount1 {
 		return organisation == null ? Optional.empty() : Optional.of(organisation);
 	}
 
-	public NewAccount1 setOrganisation(com.tools20022.repository.msg.Organisation20 organisation) {
+	public NewAccount1 setOrganisation(Organisation20 organisation) {
 		this.organisation = organisation;
 		return this;
 	}

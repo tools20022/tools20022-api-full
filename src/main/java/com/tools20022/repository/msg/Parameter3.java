@@ -110,7 +110,7 @@ public class Parameter3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDigestAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Parameter3, Optional<Algorithm5Code>> mmDigestAlgorithm = new MMMessageAttribute<Parameter3, Optional<Algorithm5Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Parameter3.mmObject();
 			isDerived = false;
@@ -122,6 +122,16 @@ public class Parameter3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Algorithm5Code.mmObject();
+		}
+
+		@Override
+		public Optional<Algorithm5Code> getValue(Parameter3 obj) {
+			return obj.getDigestAlgorithm();
+		}
+
+		@Override
+		public void setValue(Parameter3 obj, Optional<Algorithm5Code> value) {
+			obj.setDigestAlgorithm(value.orElse(null));
 		}
 	};
 

@@ -28,7 +28,6 @@ import com.tools20022.repository.msg.CorporateActionAgent1;
 import com.tools20022.repository.msg.CorporateActionOption1;
 import com.tools20022.repository.msg.IssuerAgent1;
 import com.tools20022.repository.msg.IssuerAgent2;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -144,7 +143,7 @@ public class CorporateActionAgent extends CorporateActionPartyRole {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmAgentRole = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CorporateActionAgent, AgentRoleCode> mmAgentRole = new MMBusinessAttribute<CorporateActionAgent, AgentRoleCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(IssuerAgent1.mmRole, AgentRole1FormatChoice.mmCode, AgentRole1FormatChoice.mmProprietary, CorporateActionAgent1.mmAgentRole, IssuerAgent2.mmRole);
 			isDerived = false;
@@ -157,12 +156,14 @@ public class CorporateActionAgent extends CorporateActionPartyRole {
 			simpleType_lazy = () -> AgentRoleCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionAgent.class.getMethod("getAgentRole", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AgentRoleCode getValue(CorporateActionAgent obj) {
+			return obj.getAgentRole();
+		}
+
+		@Override
+		public void setValue(CorporateActionAgent obj, AgentRoleCode value) {
+			obj.setAgentRole(value);
 		}
 	};
 

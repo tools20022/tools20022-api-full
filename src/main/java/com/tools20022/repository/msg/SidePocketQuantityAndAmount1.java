@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.InvestmentFundOrder;
 import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrumentQuantity1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -114,7 +115,7 @@ public class SidePocketQuantityAndAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SidePocketQuantityAndAmount1, Optional<FinancialInstrumentQuantity1>> mmUnitsNumber = new MMMessageAttribute<SidePocketQuantityAndAmount1, Optional<FinancialInstrumentQuantity1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SidePocketQuantityAndAmount1.mmObject();
@@ -125,7 +126,17 @@ public class SidePocketQuantityAndAmount1 {
 			definition = "Total of quantity of units subscribed or redeemed in the lot or side pocket.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
+			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1> getValue(SidePocketQuantityAndAmount1 obj) {
+			return obj.getUnitsNumber();
+		}
+
+		@Override
+		public void setValue(SidePocketQuantityAndAmount1 obj, Optional<FinancialInstrumentQuantity1> value) {
+			obj.setUnitsNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrdrdAmt")
@@ -164,7 +175,7 @@ public class SidePocketQuantityAndAmount1 {
 	 * "Amount of money invested or redeemed into the lot or side pocket."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SidePocketQuantityAndAmount1, Optional<ActiveCurrencyAndAmount>> mmOrderedAmount = new MMMessageAttribute<SidePocketQuantityAndAmount1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SidePocketQuantityAndAmount1.mmObject();
@@ -176,6 +187,16 @@ public class SidePocketQuantityAndAmount1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(SidePocketQuantityAndAmount1 obj) {
+			return obj.getOrderedAmount();
+		}
+
+		@Override
+		public void setValue(SidePocketQuantityAndAmount1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setOrderedAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "HldgsRate")
@@ -215,7 +236,7 @@ public class SidePocketQuantityAndAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHoldingsRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SidePocketQuantityAndAmount1, Optional<PercentageRate>> mmHoldingsRate = new MMMessageAttribute<SidePocketQuantityAndAmount1, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmHoldingsRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SidePocketQuantityAndAmount1.mmObject();
@@ -227,6 +248,16 @@ public class SidePocketQuantityAndAmount1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(SidePocketQuantityAndAmount1 obj) {
+			return obj.getHoldingsRate();
+		}
+
+		@Override
+		public void setValue(SidePocketQuantityAndAmount1 obj, Optional<PercentageRate> value) {
+			obj.setHoldingsRate(value.orElse(null));
 		}
 	};
 
@@ -249,7 +280,7 @@ public class SidePocketQuantityAndAmount1 {
 		return unitsNumber == null ? Optional.empty() : Optional.of(unitsNumber);
 	}
 
-	public SidePocketQuantityAndAmount1 setUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 unitsNumber) {
+	public SidePocketQuantityAndAmount1 setUnitsNumber(FinancialInstrumentQuantity1 unitsNumber) {
 		this.unitsNumber = unitsNumber;
 		return this;
 	}

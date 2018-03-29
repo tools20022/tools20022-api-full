@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.BusinessInformationQueryDefinition3;
 import com.tools20022.repository.msg.MessageHeader1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset._SR2018_MX_CashManagement_Maintenance;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -108,7 +107,7 @@ import javax.xml.bind.annotation.*;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "GetGeneralBusinessInformationV03"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -146,7 +145,7 @@ public class GetGeneralBusinessInformationV03 {
 	 * definition} = "Common business identification for the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<GetGeneralBusinessInformationV03, MessageHeader1> mmMessageHeader = new MMMessageBuildingBlock<GetGeneralBusinessInformationV03, MessageHeader1>() {
 		{
 			xmlTag = "MsgHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,12 +156,14 @@ public class GetGeneralBusinessInformationV03 {
 			complexType_lazy = () -> MessageHeader1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return GetGeneralBusinessInformationV03.class.getMethod("getMessageHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageHeader1 getValue(GetGeneralBusinessInformationV03 obj) {
+			return obj.getMessageHeader();
+		}
+
+		@Override
+		public void setValue(GetGeneralBusinessInformationV03 obj, MessageHeader1 value) {
+			obj.setMessageHeader(value);
 		}
 	};
 	@XmlElement(name = "GnlBizInfQryDef")
@@ -190,7 +191,7 @@ public class GetGeneralBusinessInformationV03 {
 	 * definition} = "Definition of the general business information query."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGeneralBusinessInformationQueryDefinition = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<GetGeneralBusinessInformationV03, Optional<BusinessInformationQueryDefinition3>> mmGeneralBusinessInformationQueryDefinition = new MMMessageBuildingBlock<GetGeneralBusinessInformationV03, Optional<BusinessInformationQueryDefinition3>>() {
 		{
 			xmlTag = "GnlBizInfQryDef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -201,12 +202,14 @@ public class GetGeneralBusinessInformationV03 {
 			complexType_lazy = () -> BusinessInformationQueryDefinition3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return GetGeneralBusinessInformationV03.class.getMethod("getGeneralBusinessInformationQueryDefinition", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<BusinessInformationQueryDefinition3> getValue(GetGeneralBusinessInformationV03 obj) {
+			return obj.getGeneralBusinessInformationQueryDefinition();
+		}
+
+		@Override
+		public void setValue(GetGeneralBusinessInformationV03 obj, Optional<BusinessInformationQueryDefinition3> value) {
+			obj.setGeneralBusinessInformationQueryDefinition(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -236,7 +239,7 @@ public class GetGeneralBusinessInformationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<GetGeneralBusinessInformationV03, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<GetGeneralBusinessInformationV03, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -246,19 +249,21 @@ public class GetGeneralBusinessInformationV03 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return GetGeneralBusinessInformationV03.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(GetGeneralBusinessInformationV03 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(GetGeneralBusinessInformationV03 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "GetGeneralBusinessInformationV03";
 				definition = "Scope\r\nThe GetGeneralBusinessInformation message is sent by a member to the transaction administrator.\r\nIt is used to request information on a broadcast-type message previously sent by the transaction administrator to all or some of the members, giving information related to the processing business.\r\nUsage\r\nThe transaction administrator can send general business information messages to the members, which may request further action from them. General business information can contain either static data announcing foreseen events affecting the system operations, or dynamic data warning or notifying about unexpected events.\r\nThis type of information can be transmitted in either of the two following ways:\r\n- non-solicited reports are pushed by the transaction administrator to the (selected) members together with a reference, a qualifier and a subject line\r\n- upon request from the members (pull mode), the transaction administrator delivers the full text/content of the message back to the user\r\nThe Get General Business Information message is used in this second context. At any time during the operating hours of the system, the member can query the transaction administrator to get information about a report of general business information previously sent.\r\nThe member can request information based on the following elements:\r\n- reference of the report previously delivered\r\n- subject of the report previously delivered, detailing the purpose and content of the message\r\n- priority of the report previously sent, and indication of its format. (Note that if the format is indicated, the subject refers to a set of pre-agreed texts. This enumeration has to be agreed upon by the transaction administrator and the members of the system.)\r\n- details of the previously sent message\r\nThis message will be replied to by a ReturnGeneralBusinessInformation message.\r\nAdditional information on the generic design of the Get/Return messages can be found in the section How to Use the Cash Management Messages.";
 				messageSet_lazy = () -> Arrays.asList(_SR2018_MX_CashManagement_Maintenance.mmObject());

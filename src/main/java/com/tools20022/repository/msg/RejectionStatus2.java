@@ -109,7 +109,7 @@ public class RejectionStatus2 {
 	 * definition} = "Provides the rejection reason using a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRejectedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionStatus2, RejectionReasonV021Code> mmRejectedReason = new MMMessageAttribute<RejectionStatus2, RejectionReasonV021Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectionStatus2.mmObject();
@@ -121,6 +121,16 @@ public class RejectionStatus2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RejectionReasonV021Code.mmObject();
+		}
+
+		@Override
+		public RejectionReasonV021Code getValue(RejectionStatus2 obj) {
+			return obj.getRejectedReason();
+		}
+
+		@Override
+		public void setValue(RejectionStatus2 obj, RejectionReasonV021Code value) {
+			obj.setRejectedReason(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -159,7 +169,7 @@ public class RejectionStatus2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionStatus2, Optional<Max35Text>> mmAdditionalInformation = new MMMessageAttribute<RejectionStatus2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectionStatus2.mmObject();
@@ -171,6 +181,16 @@ public class RejectionStatus2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(RejectionStatus2 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(RejectionStatus2 obj, Optional<Max35Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

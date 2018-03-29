@@ -120,7 +120,7 @@ public class ClassificationType32Choice {
 	 * ClassificationType30Choice.mmClassificationFinancialInstrument}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClassificationFinancialInstrument = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClassificationType32Choice, CFIOct2015Identifier> mmClassificationFinancialInstrument = new MMMessageAttribute<ClassificationType32Choice, CFIOct2015Identifier>() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClassificationType32Choice.mmObject();
@@ -134,6 +134,16 @@ public class ClassificationType32Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CFIOct2015Identifier.mmObject();
+		}
+
+		@Override
+		public CFIOct2015Identifier getValue(ClassificationType32Choice obj) {
+			return obj.getClassificationFinancialInstrument();
+		}
+
+		@Override
+		public void setValue(ClassificationType32Choice obj, CFIOct2015Identifier value) {
+			obj.setClassificationFinancialInstrument(value);
 		}
 	};
 	@XmlElement(name = "AltrnClssfctn", required = true)
@@ -179,7 +189,7 @@ public class ClassificationType32Choice {
 	 * ClassificationType30Choice.mmAlternateClassification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAlternateClassification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClassificationType32Choice, GenericIdentification36> mmAlternateClassification = new MMMessageAttribute<ClassificationType32Choice, GenericIdentification36>() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClassificationType32Choice.mmObject();
@@ -193,6 +203,16 @@ public class ClassificationType32Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification36.mmObject();
+		}
+
+		@Override
+		public GenericIdentification36 getValue(ClassificationType32Choice obj) {
+			return obj.getAlternateClassification();
+		}
+
+		@Override
+		public void setValue(ClassificationType32Choice obj, GenericIdentification36 value) {
+			obj.setAlternateClassification(value);
 		}
 	};
 

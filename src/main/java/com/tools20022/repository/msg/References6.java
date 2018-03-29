@@ -27,6 +27,7 @@ import com.tools20022.repository.codeset.UseCases1Code;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.MessageIdentification1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -128,7 +129,7 @@ public class References6 {
 	 * definition} = "Identify the type of rejected request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRejectedRequestType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References6, UseCases1Code> mmRejectedRequestType = new MMMessageAttribute<References6, UseCases1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.References6.mmObject();
 			isDerived = false;
@@ -139,6 +140,16 @@ public class References6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UseCases1Code.mmObject();
+		}
+
+		@Override
+		public UseCases1Code getValue(References6 obj) {
+			return obj.getRejectedRequestType();
+		}
+
+		@Override
+		public void setValue(References6 obj, UseCases1Code value) {
+			obj.setRejectedRequestType(value);
 		}
 	};
 	@XmlElement(name = "RjctnRsn", required = true)
@@ -169,7 +180,7 @@ public class References6 {
 	 * definition} = "Reason of the message rejection."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRejectionReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References6, List<Max350Text>> mmRejectionReason = new MMMessageAttribute<References6, List<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.References6.mmObject();
 			isDerived = false;
@@ -179,6 +190,16 @@ public class References6 {
 			definition = "Reason of the message rejection.";
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public List<Max350Text> getValue(References6 obj) {
+			return obj.getRejectionReason();
+		}
+
+		@Override
+		public void setValue(References6 obj, List<Max350Text> value) {
+			obj.setRejectionReason(value);
 		}
 	};
 	@XmlElement(name = "RjctdReqId", required = true)
@@ -208,7 +229,7 @@ public class References6 {
 	 * definition} = "Identification of the rejected request message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejectedRequestIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<References6, MessageIdentification1> mmRejectedRequestIdentification = new MMMessageAssociationEnd<References6, MessageIdentification1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.References6.mmObject();
 			isDerived = false;
@@ -219,7 +240,17 @@ public class References6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MessageIdentification1.mmObject();
+			type_lazy = () -> MessageIdentification1.mmObject();
+		}
+
+		@Override
+		public MessageIdentification1 getValue(References6 obj) {
+			return obj.getRejectedRequestIdentification();
+		}
+
+		@Override
+		public void setValue(References6 obj, MessageIdentification1 value) {
+			obj.setRejectedRequestIdentification(value);
 		}
 	};
 	@XmlElement(name = "MsgId", required = true)
@@ -251,7 +282,7 @@ public class References6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMessageIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<References6, MessageIdentification1> mmMessageIdentification = new MMMessageAssociationEnd<References6, MessageIdentification1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.References6.mmObject();
 			isDerived = false;
@@ -262,7 +293,17 @@ public class References6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MessageIdentification1.mmObject();
+			type_lazy = () -> MessageIdentification1.mmObject();
+		}
+
+		@Override
+		public MessageIdentification1 getValue(References6 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(References6 obj, MessageIdentification1 value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "PrcId", required = true)
@@ -294,7 +335,7 @@ public class References6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<References6, MessageIdentification1> mmProcessIdentification = new MMMessageAssociationEnd<References6, MessageIdentification1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.References6.mmObject();
 			isDerived = false;
@@ -305,7 +346,17 @@ public class References6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MessageIdentification1.mmObject();
+			type_lazy = () -> MessageIdentification1.mmObject();
+		}
+
+		@Override
+		public MessageIdentification1 getValue(References6 obj) {
+			return obj.getProcessIdentification();
+		}
+
+		@Override
+		public void setValue(References6 obj, MessageIdentification1 value) {
+			obj.setProcessIdentification(value);
 		}
 	};
 	@XmlElement(name = "AttchdDocNm")
@@ -337,7 +388,7 @@ public class References6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAttachedDocumentName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References6, List<Max70Text>> mmAttachedDocumentName = new MMMessageAttribute<References6, List<Max70Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.References6.mmObject();
 			isDerived = false;
@@ -347,6 +398,16 @@ public class References6 {
 			definition = "File name of a document logically related to the request.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public List<Max70Text> getValue(References6 obj) {
+			return obj.getAttachedDocumentName();
+		}
+
+		@Override
+		public void setValue(References6 obj, List<Max70Text> value) {
+			obj.setAttachedDocumentName(value);
 		}
 	};
 
@@ -388,7 +449,7 @@ public class References6 {
 		return rejectedRequestIdentification;
 	}
 
-	public References6 setRejectedRequestIdentification(com.tools20022.repository.msg.MessageIdentification1 rejectedRequestIdentification) {
+	public References6 setRejectedRequestIdentification(MessageIdentification1 rejectedRequestIdentification) {
 		this.rejectedRequestIdentification = Objects.requireNonNull(rejectedRequestIdentification);
 		return this;
 	}
@@ -397,7 +458,7 @@ public class References6 {
 		return messageIdentification;
 	}
 
-	public References6 setMessageIdentification(com.tools20022.repository.msg.MessageIdentification1 messageIdentification) {
+	public References6 setMessageIdentification(MessageIdentification1 messageIdentification) {
 		this.messageIdentification = Objects.requireNonNull(messageIdentification);
 		return this;
 	}
@@ -406,7 +467,7 @@ public class References6 {
 		return processIdentification;
 	}
 
-	public References6 setProcessIdentification(com.tools20022.repository.msg.MessageIdentification1 processIdentification) {
+	public References6 setProcessIdentification(MessageIdentification1 processIdentification) {
 		this.processIdentification = Objects.requireNonNull(processIdentification);
 		return this;
 	}

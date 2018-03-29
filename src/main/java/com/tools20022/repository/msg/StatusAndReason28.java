@@ -147,7 +147,7 @@ public class StatusAndReason28 {
 	 * StatusAndReason19.mmProcessingStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusAndReason28, Optional<ProcessingStatus52Choice>> mmProcessingStatus = new MMMessageAssociationEnd<StatusAndReason28, Optional<ProcessingStatus52Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> Status.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason28.mmObject();
@@ -161,6 +161,16 @@ public class StatusAndReason28 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ProcessingStatus52Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ProcessingStatus52Choice> getValue(StatusAndReason28 obj) {
+			return obj.getProcessingStatus();
+		}
+
+		@Override
+		public void setValue(StatusAndReason28 obj, Optional<ProcessingStatus52Choice> value) {
+			obj.setProcessingStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IfrrdMtchgSts")
@@ -204,7 +214,7 @@ public class StatusAndReason28 {
 	 * StatusAndReason19.mmInferredMatchingStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInferredMatchingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusAndReason28, Optional<MatchingStatus24Choice>> mmInferredMatchingStatus = new MMMessageAssociationEnd<StatusAndReason28, Optional<MatchingStatus24Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason28.mmObject();
@@ -218,6 +228,16 @@ public class StatusAndReason28 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> MatchingStatus24Choice.mmObject();
+		}
+
+		@Override
+		public Optional<MatchingStatus24Choice> getValue(StatusAndReason28 obj) {
+			return obj.getInferredMatchingStatus();
+		}
+
+		@Override
+		public void setValue(StatusAndReason28 obj, Optional<MatchingStatus24Choice> value) {
+			obj.setInferredMatchingStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MtchgSts")
@@ -259,7 +279,7 @@ public class StatusAndReason28 {
 	 * StatusAndReason19.mmMatchingStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMatchingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusAndReason28, Optional<MatchingStatus24Choice>> mmMatchingStatus = new MMMessageAssociationEnd<StatusAndReason28, Optional<MatchingStatus24Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason28.mmObject();
@@ -273,6 +293,16 @@ public class StatusAndReason28 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> MatchingStatus24Choice.mmObject();
+		}
+
+		@Override
+		public Optional<MatchingStatus24Choice> getValue(StatusAndReason28 obj) {
+			return obj.getMatchingStatus();
+		}
+
+		@Override
+		public void setValue(StatusAndReason28 obj, Optional<MatchingStatus24Choice> value) {
+			obj.setMatchingStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmSts")
@@ -314,7 +344,7 @@ public class StatusAndReason28 {
 	 * StatusAndReason19.mmSettlementStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusAndReason28, Optional<SettlementStatus17Choice>> mmSettlementStatus = new MMMessageAssociationEnd<StatusAndReason28, Optional<SettlementStatus17Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmSettlementStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason28.mmObject();
@@ -328,6 +358,16 @@ public class StatusAndReason28 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SettlementStatus17Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SettlementStatus17Choice> getValue(StatusAndReason28 obj) {
+			return obj.getSettlementStatus();
+		}
+
+		@Override
+		public void setValue(StatusAndReason28 obj, Optional<SettlementStatus17Choice> value) {
+			obj.setSettlementStatus(value.orElse(null));
 		}
 	};
 

@@ -125,7 +125,7 @@ public class BuyIn4 {
 	 * BuyIn1.mmWarningIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmWarningIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BuyIn4, Optional<YesNoIndicator>> mmWarningIndicator = new MMMessageAttribute<BuyIn4, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BuyIn4.mmObject();
 			isDerived = false;
@@ -137,6 +137,16 @@ public class BuyIn4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(BuyIn4 obj) {
+			return obj.getWarningIndicator();
+		}
+
+		@Override
+		public void setValue(BuyIn4 obj, Optional<YesNoIndicator> value) {
+			obj.setWarningIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XpctdBuyInDt", required = true)
@@ -178,7 +188,7 @@ public class BuyIn4 {
 	 * BuyIn1.mmExpectedBuyInDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpectedBuyInDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BuyIn4, DateFormat15Choice> mmExpectedBuyInDate = new MMMessageAttribute<BuyIn4, DateFormat15Choice>() {
 		{
 			businessElementTrace_lazy = () -> BuyIn.mmBuyinDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BuyIn4.mmObject();
@@ -191,6 +201,16 @@ public class BuyIn4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateFormat15Choice.mmObject();
+		}
+
+		@Override
+		public DateFormat15Choice getValue(BuyIn4 obj) {
+			return obj.getExpectedBuyInDate();
+		}
+
+		@Override
+		public void setValue(BuyIn4 obj, DateFormat15Choice value) {
+			obj.setExpectedBuyInDate(value);
 		}
 	};
 	@XmlElement(name = "CxlLmtDt")
@@ -223,7 +243,7 @@ public class BuyIn4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancellationLimitDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BuyIn4, Optional<ISODate>> mmCancellationLimitDate = new MMMessageAttribute<BuyIn4, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BuyIn4.mmObject();
 			isDerived = false;
@@ -234,6 +254,16 @@ public class BuyIn4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(BuyIn4 obj) {
+			return obj.getCancellationLimitDate();
+		}
+
+		@Override
+		public void setValue(BuyIn4 obj, Optional<ISODate> value) {
+			obj.setCancellationLimitDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BuyInRvrsnDt")
@@ -266,7 +296,7 @@ public class BuyIn4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBuyInReversionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BuyIn4, Optional<ISODate>> mmBuyInReversionDate = new MMMessageAttribute<BuyIn4, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BuyIn4.mmObject();
 			isDerived = false;
@@ -277,6 +307,16 @@ public class BuyIn4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(BuyIn4 obj) {
+			return obj.getBuyInReversionDate();
+		}
+
+		@Override
+		public void setValue(BuyIn4 obj, Optional<ISODate> value) {
+			obj.setBuyInReversionDate(value.orElse(null));
 		}
 	};
 

@@ -60,11 +60,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType3Choice> forCorporateActionEventType3Choice = new MMConstraint<CorporateActionEventType3Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType3Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionEventType3Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType3Choice obj) throws Exception {
+			checkCorporateActionEventType3Choice(obj);
 		}
 	};
 	/**
@@ -90,11 +94,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType4Choice> forCorporateActionEventType4Choice = new MMConstraint<CorporateActionEventType4Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType4Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionEventType4Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType4Choice obj) throws Exception {
+			checkCorporateActionEventType4Choice(obj);
 		}
 	};
 	/**
@@ -120,11 +128,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType7Choice> forCorporateActionEventType7Choice = new MMConstraint<CorporateActionEventType7Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType7Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionEventType7Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType7Choice obj) throws Exception {
+			checkCorporateActionEventType7Choice(obj);
 		}
 	};
 	/**
@@ -150,11 +162,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType9Choice> forCorporateActionEventType9Choice = new MMConstraint<CorporateActionEventType9Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType9Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionEventType9Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType9Choice obj) throws Exception {
+			checkCorporateActionEventType9Choice(obj);
 		}
 	};
 	/**
@@ -188,12 +204,16 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType11Choice> forCorporateActionEventType11Choice = new MMConstraint<CorporateActionEventType11Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType11Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType32Choice);
 			owner_lazy = () -> CorporateActionEventType11Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType11Choice obj) throws Exception {
+			checkCorporateActionEventType11Choice(obj);
 		}
 	};
 	/**
@@ -227,12 +247,16 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType14Choice> forCorporateActionEventType14Choice = new MMConstraint<CorporateActionEventType14Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType14Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType34Choice);
 			owner_lazy = () -> CorporateActionEventType14Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType14Choice obj) throws Exception {
+			checkCorporateActionEventType14Choice(obj);
 		}
 	};
 	/**
@@ -266,12 +290,16 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType13Choice> forCorporateActionEventType13Choice = new MMConstraint<CorporateActionEventType13Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType13Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType33Choice);
 			owner_lazy = () -> CorporateActionEventType13Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType13Choice obj) throws Exception {
+			checkCorporateActionEventType13Choice(obj);
 		}
 	};
 	/**
@@ -297,11 +325,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType21Choice> forCorporateActionEventType21Choice = new MMConstraint<CorporateActionEventType21Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType21Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionEventType21Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType21Choice obj) throws Exception {
+			checkCorporateActionEventType21Choice(obj);
 		}
 	};
 	/**
@@ -327,11 +359,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation9> forCorporateActionGeneralInformation9 = new MMConstraint<CorporateActionGeneralInformation9>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation9 obj) throws Exception {
+			checkCorporateActionGeneralInformation9(obj);
 		}
 	};
 	/**
@@ -357,11 +393,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation13> forCorporateActionGeneralInformation13 = new MMConstraint<CorporateActionGeneralInformation13>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation13 obj) throws Exception {
+			checkCorporateActionGeneralInformation13(obj);
 		}
 	};
 	/**
@@ -387,11 +427,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation34> forCorporateActionGeneralInformation34 = new MMConstraint<CorporateActionGeneralInformation34>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation34;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation34.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation34 obj) throws Exception {
+			checkCorporateActionGeneralInformation34(obj);
 		}
 	};
 	/**
@@ -417,11 +461,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation42> forCorporateActionGeneralInformation42 = new MMConstraint<CorporateActionGeneralInformation42>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation42;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation42.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation42 obj) throws Exception {
+			checkCorporateActionGeneralInformation42(obj);
 		}
 	};
 	/**
@@ -455,12 +503,16 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation52> forCorporateActionGeneralInformation52 = new MMConstraint<CorporateActionGeneralInformation52>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation52;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionGeneralInformation91);
 			owner_lazy = () -> CorporateActionGeneralInformation52.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation52 obj) throws Exception {
+			checkCorporateActionGeneralInformation52(obj);
 		}
 	};
 	/**
@@ -486,11 +538,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType22Choice> forCorporateActionEventType22Choice = new MMConstraint<CorporateActionEventType22Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType22Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionEventType22Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType22Choice obj) throws Exception {
+			checkCorporateActionEventType22Choice(obj);
 		}
 	};
 	/**
@@ -516,11 +572,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation58> forCorporateActionGeneralInformation58 = new MMConstraint<CorporateActionGeneralInformation58>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation58;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation58.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation58 obj) throws Exception {
+			checkCorporateActionGeneralInformation58(obj);
 		}
 	};
 	/**
@@ -546,11 +606,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation6> forCorporateActionGeneralInformation6 = new MMConstraint<CorporateActionGeneralInformation6>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation6 obj) throws Exception {
+			checkCorporateActionGeneralInformation6(obj);
 		}
 	};
 	/**
@@ -576,11 +640,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation15> forCorporateActionGeneralInformation15 = new MMConstraint<CorporateActionGeneralInformation15>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation15 obj) throws Exception {
+			checkCorporateActionGeneralInformation15(obj);
 		}
 	};
 	/**
@@ -606,11 +674,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation21> forCorporateActionGeneralInformation21 = new MMConstraint<CorporateActionGeneralInformation21>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation21.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation21 obj) throws Exception {
+			checkCorporateActionGeneralInformation21(obj);
 		}
 	};
 	/**
@@ -636,11 +708,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation28> forCorporateActionGeneralInformation28 = new MMConstraint<CorporateActionGeneralInformation28>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation28.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation28 obj) throws Exception {
+			checkCorporateActionGeneralInformation28(obj);
 		}
 	};
 	/**
@@ -666,11 +742,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation36> forCorporateActionGeneralInformation36 = new MMConstraint<CorporateActionGeneralInformation36>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation36;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation36.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation36 obj) throws Exception {
+			checkCorporateActionGeneralInformation36(obj);
 		}
 	};
 	/**
@@ -696,11 +776,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation44> forCorporateActionGeneralInformation44 = new MMConstraint<CorporateActionGeneralInformation44>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation44;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation44.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation44 obj) throws Exception {
+			checkCorporateActionGeneralInformation44(obj);
 		}
 	};
 	/**
@@ -734,12 +818,16 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation55> forCorporateActionGeneralInformation55 = new MMConstraint<CorporateActionGeneralInformation55>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation55;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionGeneralInformation71);
 			owner_lazy = () -> CorporateActionGeneralInformation55.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation55 obj) throws Exception {
+			checkCorporateActionGeneralInformation55(obj);
 		}
 	};
 	/**
@@ -765,11 +853,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation61> forCorporateActionGeneralInformation61 = new MMConstraint<CorporateActionGeneralInformation61>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation61;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation61.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation61 obj) throws Exception {
+			checkCorporateActionGeneralInformation61(obj);
 		}
 	};
 	/**
@@ -795,11 +887,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation7> forCorporateActionGeneralInformation7 = new MMConstraint<CorporateActionGeneralInformation7>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation7 obj) throws Exception {
+			checkCorporateActionGeneralInformation7(obj);
 		}
 	};
 	/**
@@ -825,11 +921,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation26> forCorporateActionGeneralInformation26 = new MMConstraint<CorporateActionGeneralInformation26>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation26.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation26 obj) throws Exception {
+			checkCorporateActionGeneralInformation26(obj);
 		}
 	};
 	/**
@@ -855,11 +955,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation33> forCorporateActionGeneralInformation33 = new MMConstraint<CorporateActionGeneralInformation33>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation33;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation33.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation33 obj) throws Exception {
+			checkCorporateActionGeneralInformation33(obj);
 		}
 	};
 	/**
@@ -885,11 +989,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation27> forCorporateActionGeneralInformation27 = new MMConstraint<CorporateActionGeneralInformation27>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation27.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation27 obj) throws Exception {
+			checkCorporateActionGeneralInformation27(obj);
 		}
 	};
 	/**
@@ -915,11 +1023,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation41> forCorporateActionGeneralInformation41 = new MMConstraint<CorporateActionGeneralInformation41>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation41;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation41.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation41 obj) throws Exception {
+			checkCorporateActionGeneralInformation41(obj);
 		}
 	};
 	/**
@@ -953,12 +1065,16 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation49> forCorporateActionGeneralInformation49 = new MMConstraint<CorporateActionGeneralInformation49>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation49;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionGeneralInformation90);
 			owner_lazy = () -> CorporateActionGeneralInformation49.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation49 obj) throws Exception {
+			checkCorporateActionGeneralInformation49(obj);
 		}
 	};
 	/**
@@ -984,11 +1100,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation68> forCorporateActionGeneralInformation68 = new MMConstraint<CorporateActionGeneralInformation68>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation68;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation68.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation68 obj) throws Exception {
+			checkCorporateActionGeneralInformation68(obj);
 		}
 	};
 	/**
@@ -1014,11 +1134,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation4> forCorporateActionGeneralInformation4 = new MMConstraint<CorporateActionGeneralInformation4>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation4 obj) throws Exception {
+			checkCorporateActionGeneralInformation4(obj);
 		}
 	};
 	/**
@@ -1044,11 +1168,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation16> forCorporateActionGeneralInformation16 = new MMConstraint<CorporateActionGeneralInformation16>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation16 obj) throws Exception {
+			checkCorporateActionGeneralInformation16(obj);
 		}
 	};
 	/**
@@ -1074,11 +1202,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType5Choice> forCorporateActionEventType5Choice = new MMConstraint<CorporateActionEventType5Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType5Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionEventType5Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType5Choice obj) throws Exception {
+			checkCorporateActionEventType5Choice(obj);
 		}
 	};
 	/**
@@ -1104,11 +1236,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation24> forCorporateActionGeneralInformation24 = new MMConstraint<CorporateActionGeneralInformation24>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation24 obj) throws Exception {
+			checkCorporateActionGeneralInformation24(obj);
 		}
 	};
 	/**
@@ -1134,11 +1270,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType6Choice> forCorporateActionEventType6Choice = new MMConstraint<CorporateActionEventType6Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType6Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionEventType6Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType6Choice obj) throws Exception {
+			checkCorporateActionEventType6Choice(obj);
 		}
 	};
 	/**
@@ -1164,11 +1304,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation29> forCorporateActionGeneralInformation29 = new MMConstraint<CorporateActionGeneralInformation29>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation29;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation29.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation29 obj) throws Exception {
+			checkCorporateActionGeneralInformation29(obj);
 		}
 	};
 	/**
@@ -1194,11 +1338,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType8Choice> forCorporateActionEventType8Choice = new MMConstraint<CorporateActionEventType8Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType8Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionEventType8Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType8Choice obj) throws Exception {
+			checkCorporateActionEventType8Choice(obj);
 		}
 	};
 	/**
@@ -1224,11 +1372,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation39> forCorporateActionGeneralInformation39 = new MMConstraint<CorporateActionGeneralInformation39>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation39;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation39.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation39 obj) throws Exception {
+			checkCorporateActionGeneralInformation39(obj);
 		}
 	};
 	/**
@@ -1254,11 +1406,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType10Choice> forCorporateActionEventType10Choice = new MMConstraint<CorporateActionEventType10Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType10Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionEventType10Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType10Choice obj) throws Exception {
+			checkCorporateActionEventType10Choice(obj);
 		}
 	};
 	/**
@@ -1284,11 +1440,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation47> forCorporateActionGeneralInformation47 = new MMConstraint<CorporateActionGeneralInformation47>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation47;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation47.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation47 obj) throws Exception {
+			checkCorporateActionGeneralInformation47(obj);
 		}
 	};
 	/**
@@ -1322,12 +1482,16 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType12Choice> forCorporateActionEventType12Choice = new MMConstraint<CorporateActionEventType12Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType12Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType31Choice);
 			owner_lazy = () -> CorporateActionEventType12Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType12Choice obj) throws Exception {
+			checkCorporateActionEventType12Choice(obj);
 		}
 	};
 	/**
@@ -1361,12 +1525,16 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation50> forCorporateActionGeneralInformation50 = new MMConstraint<CorporateActionGeneralInformation50>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation50;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionGeneralInformation79);
 			owner_lazy = () -> CorporateActionGeneralInformation50.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation50 obj) throws Exception {
+			checkCorporateActionGeneralInformation50(obj);
 		}
 	};
 	/**
@@ -1392,11 +1560,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType27Choice> forCorporateActionEventType27Choice = new MMConstraint<CorporateActionEventType27Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType27Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionEventType27Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType27Choice obj) throws Exception {
+			checkCorporateActionEventType27Choice(obj);
 		}
 	};
 	/**
@@ -1422,11 +1594,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation62> forCorporateActionGeneralInformation62 = new MMConstraint<CorporateActionGeneralInformation62>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation62;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation62.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation62 obj) throws Exception {
+			checkCorporateActionGeneralInformation62(obj);
 		}
 	};
 	/**
@@ -1452,11 +1628,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType28Choice> forCorporateActionEventType28Choice = new MMConstraint<CorporateActionEventType28Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType28Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionEventType28Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType28Choice obj) throws Exception {
+			checkCorporateActionEventType28Choice(obj);
 		}
 	};
 	/**
@@ -1482,11 +1662,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation11> forCorporateActionGeneralInformation11 = new MMConstraint<CorporateActionGeneralInformation11>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation11 obj) throws Exception {
+			checkCorporateActionGeneralInformation11(obj);
 		}
 	};
 	/**
@@ -1512,11 +1696,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation19> forCorporateActionGeneralInformation19 = new MMConstraint<CorporateActionGeneralInformation19>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation19 obj) throws Exception {
+			checkCorporateActionGeneralInformation19(obj);
 		}
 	};
 	/**
@@ -1542,11 +1730,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation22> forCorporateActionGeneralInformation22 = new MMConstraint<CorporateActionGeneralInformation22>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation22 obj) throws Exception {
+			checkCorporateActionGeneralInformation22(obj);
 		}
 	};
 	/**
@@ -1572,11 +1764,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation31> forCorporateActionGeneralInformation31 = new MMConstraint<CorporateActionGeneralInformation31>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation31;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation31.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation31 obj) throws Exception {
+			checkCorporateActionGeneralInformation31(obj);
 		}
 	};
 	/**
@@ -1602,11 +1798,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation37> forCorporateActionGeneralInformation37 = new MMConstraint<CorporateActionGeneralInformation37>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation37;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation37.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation37 obj) throws Exception {
+			checkCorporateActionGeneralInformation37(obj);
 		}
 	};
 	/**
@@ -1632,11 +1832,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation45> forCorporateActionGeneralInformation45 = new MMConstraint<CorporateActionGeneralInformation45>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation45;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation45.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation45 obj) throws Exception {
+			checkCorporateActionGeneralInformation45(obj);
 		}
 	};
 	/**
@@ -1670,12 +1874,16 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation51> forCorporateActionGeneralInformation51 = new MMConstraint<CorporateActionGeneralInformation51>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation51;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionGeneralInformation70);
 			owner_lazy = () -> CorporateActionGeneralInformation51.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation51 obj) throws Exception {
+			checkCorporateActionGeneralInformation51(obj);
 		}
 	};
 	/**
@@ -1701,11 +1909,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation67> forCorporateActionGeneralInformation67 = new MMConstraint<CorporateActionGeneralInformation67>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation67;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation67.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation67 obj) throws Exception {
+			checkCorporateActionGeneralInformation67(obj);
 		}
 	};
 	/**
@@ -1739,12 +1951,16 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType16Choice> forCorporateActionEventType16Choice = new MMConstraint<CorporateActionEventType16Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType16Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType29Choice);
 			owner_lazy = () -> CorporateActionEventType16Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType16Choice obj) throws Exception {
+			checkCorporateActionEventType16Choice(obj);
 		}
 	};
 	/**
@@ -1770,11 +1986,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType17Choice> forCorporateActionEventType17Choice = new MMConstraint<CorporateActionEventType17Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType17Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionEventType17Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType17Choice obj) throws Exception {
+			checkCorporateActionEventType17Choice(obj);
 		}
 	};
 	/**
@@ -1808,12 +2028,16 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType15Choice> forCorporateActionEventType15Choice = new MMConstraint<CorporateActionEventType15Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType15Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "The use of a specific corporate action event type code is allowed only if this specific event triggers a securities movement as per the Event Interpretation Grid published by the Securities Market Practice Group (SMPG).\r\nThe corporate action event indicator code OTHR must only be used in case no other corporate action event code is appropriate.\r\nThe corporate action event indicator code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change.\r\nThe corporate action event indicator code REDM must only be used when the redemption is decided by the issuer and not by the holders.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType30Choice);
 			owner_lazy = () -> CorporateActionEventType15Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType15Choice obj) throws Exception {
+			checkCorporateActionEventType15Choice(obj);
 		}
 	};
 	/**
@@ -1839,11 +2063,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType19Choice> forCorporateActionEventType19Choice = new MMConstraint<CorporateActionEventType19Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType19Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "The use of a specific corporate action event type code is allowed only if this specific event triggers a securities movement as per the Event Interpretation Grid published by the Securities Market Practice Group (SMPG).\r\nThe corporate action event indicator code OTHR must only be used in case no other corporate action event code is appropriate.\r\nThe corporate action event indicator code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change.\r\nThe corporate action event indicator code REDM must only be used when the redemption is decided by the issuer and not by the holders.";
 			owner_lazy = () -> CorporateActionEventType19Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType19Choice obj) throws Exception {
+			checkCorporateActionEventType19Choice(obj);
 		}
 	};
 	/**
@@ -1869,11 +2097,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation14> forCorporateActionGeneralInformation14 = new MMConstraint<CorporateActionGeneralInformation14>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation14 obj) throws Exception {
+			checkCorporateActionGeneralInformation14(obj);
 		}
 	};
 	/**
@@ -1899,11 +2131,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation12> forCorporateActionGeneralInformation12 = new MMConstraint<CorporateActionGeneralInformation12>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation12 obj) throws Exception {
+			checkCorporateActionGeneralInformation12(obj);
 		}
 	};
 	/**
@@ -1942,13 +2178,17 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation71> forCorporateActionGeneralInformation71 = new MMConstraint<CorporateActionGeneralInformation71>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation71;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionGeneralInformation88);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionGeneralInformation55;
 			owner_lazy = () -> CorporateActionGeneralInformation71.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation71 obj) throws Exception {
+			checkCorporateActionGeneralInformation71(obj);
 		}
 	};
 	/**
@@ -1987,13 +2227,17 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation70> forCorporateActionGeneralInformation70 = new MMConstraint<CorporateActionGeneralInformation70>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation70;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionGeneralInformation85);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionGeneralInformation51;
 			owner_lazy = () -> CorporateActionGeneralInformation70.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation70 obj) throws Exception {
+			checkCorporateActionGeneralInformation70(obj);
 		}
 	};
 	/**
@@ -2019,11 +2263,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation77> forCorporateActionGeneralInformation77 = new MMConstraint<CorporateActionGeneralInformation77>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation77;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation77.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation77 obj) throws Exception {
+			checkCorporateActionGeneralInformation77(obj);
 		}
 	};
 	/**
@@ -2049,11 +2297,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation76> forCorporateActionGeneralInformation76 = new MMConstraint<CorporateActionGeneralInformation76>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation76;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation76.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation76 obj) throws Exception {
+			checkCorporateActionGeneralInformation76(obj);
 		}
 	};
 	/**
@@ -2092,13 +2344,17 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation79> forCorporateActionGeneralInformation79 = new MMConstraint<CorporateActionGeneralInformation79>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation79;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionGeneralInformation89);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionGeneralInformation50;
 			owner_lazy = () -> CorporateActionGeneralInformation79.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation79 obj) throws Exception {
+			checkCorporateActionGeneralInformation79(obj);
 		}
 	};
 	/**
@@ -2124,11 +2380,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation83> forCorporateActionGeneralInformation83 = new MMConstraint<CorporateActionGeneralInformation83>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation83;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation83.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation83 obj) throws Exception {
+			checkCorporateActionGeneralInformation83(obj);
 		}
 	};
 	/**
@@ -2154,11 +2414,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation82> forCorporateActionGeneralInformation82 = new MMConstraint<CorporateActionGeneralInformation82>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation82;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation82.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation82 obj) throws Exception {
+			checkCorporateActionGeneralInformation82(obj);
 		}
 	};
 	/**
@@ -2197,13 +2461,17 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType30Choice> forCorporateActionEventType30Choice = new MMConstraint<CorporateActionEventType30Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType30Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "The use of a specific corporate action event type code is allowed only if this specific event triggers a securities movement as per the Event Interpretation Grid published by the Securities Market Practice Group (SMPG).\r\nThe corporate action event indicator code OTHR must only be used in case no other corporate action event code is appropriate.\r\nThe corporate action event indicator code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change.\r\nThe corporate action event indicator code REDM must only be used when the redemption is decided by the issuer and not by the holders.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType56Choice);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType15Choice;
 			owner_lazy = () -> CorporateActionEventType30Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType30Choice obj) throws Exception {
+			checkCorporateActionEventType30Choice(obj);
 		}
 	};
 	/**
@@ -2234,12 +2502,16 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType29Choice> forCorporateActionEventType29Choice = new MMConstraint<CorporateActionEventType29Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType29Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType16Choice;
 			owner_lazy = () -> CorporateActionEventType29Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType29Choice obj) throws Exception {
+			checkCorporateActionEventType29Choice(obj);
 		}
 	};
 	/**
@@ -2278,13 +2550,17 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation89> forCorporateActionGeneralInformation89 = new MMConstraint<CorporateActionGeneralInformation89>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation89;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionGeneralInformation111);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionGeneralInformation79;
 			owner_lazy = () -> CorporateActionGeneralInformation89.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation89 obj) throws Exception {
+			checkCorporateActionGeneralInformation89(obj);
 		}
 	};
 	/**
@@ -2323,13 +2599,17 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation88> forCorporateActionGeneralInformation88 = new MMConstraint<CorporateActionGeneralInformation88>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation88;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionGeneralInformation107);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionGeneralInformation71;
 			owner_lazy = () -> CorporateActionGeneralInformation88.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation88 obj) throws Exception {
+			checkCorporateActionGeneralInformation88(obj);
 		}
 	};
 	/**
@@ -2368,13 +2648,17 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation91> forCorporateActionGeneralInformation91 = new MMConstraint<CorporateActionGeneralInformation91>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation91;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionGeneralInformation109);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionGeneralInformation52;
 			owner_lazy = () -> CorporateActionGeneralInformation91.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation91 obj) throws Exception {
+			checkCorporateActionGeneralInformation91(obj);
 		}
 	};
 	/**
@@ -2413,13 +2697,17 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation85> forCorporateActionGeneralInformation85 = new MMConstraint<CorporateActionGeneralInformation85>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation85;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionGeneralInformation105);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionGeneralInformation70;
 			owner_lazy = () -> CorporateActionGeneralInformation85.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation85 obj) throws Exception {
+			checkCorporateActionGeneralInformation85(obj);
 		}
 	};
 	/**
@@ -2458,13 +2746,17 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation90> forCorporateActionGeneralInformation90 = new MMConstraint<CorporateActionGeneralInformation90>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation90;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionGeneralInformation110);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionGeneralInformation49;
 			owner_lazy = () -> CorporateActionGeneralInformation90.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation90 obj) throws Exception {
+			checkCorporateActionGeneralInformation90(obj);
 		}
 	};
 	/**
@@ -2503,13 +2795,17 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType33Choice> forCorporateActionEventType33Choice = new MMConstraint<CorporateActionEventType33Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType33Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType51Choice);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType13Choice;
 			owner_lazy = () -> CorporateActionEventType33Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType33Choice obj) throws Exception {
+			checkCorporateActionEventType33Choice(obj);
 		}
 	};
 	/**
@@ -2548,13 +2844,17 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType32Choice> forCorporateActionEventType32Choice = new MMConstraint<CorporateActionEventType32Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType32Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType52Choice);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType11Choice;
 			owner_lazy = () -> CorporateActionEventType32Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType32Choice obj) throws Exception {
+			checkCorporateActionEventType32Choice(obj);
 		}
 	};
 	/**
@@ -2593,13 +2893,17 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType34Choice> forCorporateActionEventType34Choice = new MMConstraint<CorporateActionEventType34Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType34Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType54Choice);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType14Choice;
 			owner_lazy = () -> CorporateActionEventType34Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType34Choice obj) throws Exception {
+			checkCorporateActionEventType34Choice(obj);
 		}
 	};
 	/**
@@ -2638,13 +2942,17 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType31Choice> forCorporateActionEventType31Choice = new MMConstraint<CorporateActionEventType31Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType31Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType53Choice);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType12Choice;
 			owner_lazy = () -> CorporateActionEventType31Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType31Choice obj) throws Exception {
+			checkCorporateActionEventType31Choice(obj);
 		}
 	};
 	/**
@@ -2670,11 +2978,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation98> forCorporateActionGeneralInformation98 = new MMConstraint<CorporateActionGeneralInformation98>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation98;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation98.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation98 obj) throws Exception {
+			checkCorporateActionGeneralInformation98(obj);
 		}
 	};
 	/**
@@ -2700,11 +3012,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation97> forCorporateActionGeneralInformation97 = new MMConstraint<CorporateActionGeneralInformation97>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation97;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation97.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation97 obj) throws Exception {
+			checkCorporateActionGeneralInformation97(obj);
 		}
 	};
 	/**
@@ -2730,11 +3046,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation94> forCorporateActionGeneralInformation94 = new MMConstraint<CorporateActionGeneralInformation94>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation94;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation94.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation94 obj) throws Exception {
+			checkCorporateActionGeneralInformation94(obj);
 		}
 	};
 	/**
@@ -2760,11 +3080,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation103> forCorporateActionGeneralInformation103 = new MMConstraint<CorporateActionGeneralInformation103>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation103;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation103.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation103 obj) throws Exception {
+			checkCorporateActionGeneralInformation103(obj);
 		}
 	};
 	/**
@@ -2790,11 +3114,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType42Choice> forCorporateActionEventType42Choice = new MMConstraint<CorporateActionEventType42Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType42Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionEventType42Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType42Choice obj) throws Exception {
+			checkCorporateActionEventType42Choice(obj);
 		}
 	};
 	/**
@@ -2820,11 +3148,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType35Choice> forCorporateActionEventType35Choice = new MMConstraint<CorporateActionEventType35Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType35Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionEventType35Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType35Choice obj) throws Exception {
+			checkCorporateActionEventType35Choice(obj);
 		}
 	};
 	/**
@@ -2850,11 +3182,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType41Choice> forCorporateActionEventType41Choice = new MMConstraint<CorporateActionEventType41Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType41Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionEventType41Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType41Choice obj) throws Exception {
+			checkCorporateActionEventType41Choice(obj);
 		}
 	};
 	/**
@@ -2880,11 +3216,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType36Choice> forCorporateActionEventType36Choice = new MMConstraint<CorporateActionEventType36Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType36Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionEventType36Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType36Choice obj) throws Exception {
+			checkCorporateActionEventType36Choice(obj);
 		}
 	};
 	/**
@@ -2910,11 +3250,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType46Choice> forCorporateActionEventType46Choice = new MMConstraint<CorporateActionEventType46Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType46Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionEventType46Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType46Choice obj) throws Exception {
+			checkCorporateActionEventType46Choice(obj);
 		}
 	};
 	/**
@@ -2940,11 +3284,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType48Choice> forCorporateActionEventType48Choice = new MMConstraint<CorporateActionEventType48Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType48Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "The use of a specific corporate action event type code is allowed only if this specific event triggers a securities movement as per the Event Interpretation Grid published by the Securities Market Practice Group (SMPG).\r\nThe corporate action event indicator code OTHR must only be used in case no other corporate action event code is appropriate.\r\nThe corporate action event indicator code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change.\r\nThe corporate action event indicator code REDM must only be used when the redemption is decided by the issuer and not by the holders.";
 			owner_lazy = () -> CorporateActionEventType48Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType48Choice obj) throws Exception {
+			checkCorporateActionEventType48Choice(obj);
 		}
 	};
 	/**
@@ -2970,11 +3318,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation104> forCorporateActionGeneralInformation104 = new MMConstraint<CorporateActionGeneralInformation104>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation104;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation104.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation104 obj) throws Exception {
+			checkCorporateActionGeneralInformation104(obj);
 		}
 	};
 	/**
@@ -3000,11 +3352,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType50Choice> forCorporateActionEventType50Choice = new MMConstraint<CorporateActionEventType50Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType50Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionEventType50Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType50Choice obj) throws Exception {
+			checkCorporateActionEventType50Choice(obj);
 		}
 	};
 	/**
@@ -3035,12 +3391,16 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation109> forCorporateActionGeneralInformation109 = new MMConstraint<CorporateActionGeneralInformation109>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation109;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionGeneralInformation91;
 			owner_lazy = () -> CorporateActionGeneralInformation109.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation109 obj) throws Exception {
+			checkCorporateActionGeneralInformation109(obj);
 		}
 	};
 	/**
@@ -3071,12 +3431,16 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation111> forCorporateActionGeneralInformation111 = new MMConstraint<CorporateActionGeneralInformation111>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation111;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionGeneralInformation89;
 			owner_lazy = () -> CorporateActionGeneralInformation111.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation111 obj) throws Exception {
+			checkCorporateActionGeneralInformation111(obj);
 		}
 	};
 	/**
@@ -3107,12 +3471,16 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation110> forCorporateActionGeneralInformation110 = new MMConstraint<CorporateActionGeneralInformation110>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation110;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionGeneralInformation90;
 			owner_lazy = () -> CorporateActionGeneralInformation110.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation110 obj) throws Exception {
+			checkCorporateActionGeneralInformation110(obj);
 		}
 	};
 	/**
@@ -3143,12 +3511,16 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation105> forCorporateActionGeneralInformation105 = new MMConstraint<CorporateActionGeneralInformation105>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation105;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionGeneralInformation85;
 			owner_lazy = () -> CorporateActionGeneralInformation105.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation105 obj) throws Exception {
+			checkCorporateActionGeneralInformation105(obj);
 		}
 	};
 	/**
@@ -3179,12 +3551,16 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation107> forCorporateActionGeneralInformation107 = new MMConstraint<CorporateActionGeneralInformation107>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation107;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionGeneralInformation88;
 			owner_lazy = () -> CorporateActionGeneralInformation107.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation107 obj) throws Exception {
+			checkCorporateActionGeneralInformation107(obj);
 		}
 	};
 	/**
@@ -3223,13 +3599,17 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType51Choice> forCorporateActionEventType51Choice = new MMConstraint<CorporateActionEventType51Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType51Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType76Choice);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType33Choice;
 			owner_lazy = () -> CorporateActionEventType51Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType51Choice obj) throws Exception {
+			checkCorporateActionEventType51Choice(obj);
 		}
 	};
 	/**
@@ -3260,12 +3640,16 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType52Choice> forCorporateActionEventType52Choice = new MMConstraint<CorporateActionEventType52Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType52Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType32Choice;
 			owner_lazy = () -> CorporateActionEventType52Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType52Choice obj) throws Exception {
+			checkCorporateActionEventType52Choice(obj);
 		}
 	};
 	/**
@@ -3304,13 +3688,17 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType54Choice> forCorporateActionEventType54Choice = new MMConstraint<CorporateActionEventType54Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType54Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType75Choice);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType34Choice;
 			owner_lazy = () -> CorporateActionEventType54Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType54Choice obj) throws Exception {
+			checkCorporateActionEventType54Choice(obj);
 		}
 	};
 	/**
@@ -3349,13 +3737,17 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType53Choice> forCorporateActionEventType53Choice = new MMConstraint<CorporateActionEventType53Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType53Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType74Choice);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType31Choice;
 			owner_lazy = () -> CorporateActionEventType53Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType53Choice obj) throws Exception {
+			checkCorporateActionEventType53Choice(obj);
 		}
 	};
 	/**
@@ -3394,13 +3786,17 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType56Choice> forCorporateActionEventType56Choice = new MMConstraint<CorporateActionEventType56Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType56Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "The use of a specific corporate action event type code is allowed only if this specific event triggers a securities movement as per the Event Interpretation Grid published by the Securities Market Practice Group (SMPG).\r\nThe corporate action event indicator code OTHR must only be used in case no other corporate action event code is appropriate.\r\nThe corporate action event indicator code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change.\r\nThe corporate action event indicator code REDM must only be used when the redemption is decided by the issuer and not by the holders.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType73Choice);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType30Choice;
 			owner_lazy = () -> CorporateActionEventType56Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType56Choice obj) throws Exception {
+			checkCorporateActionEventType56Choice(obj);
 		}
 	};
 	/**
@@ -3426,11 +3822,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation114> forCorporateActionGeneralInformation114 = new MMConstraint<CorporateActionGeneralInformation114>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation114;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation114.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation114 obj) throws Exception {
+			checkCorporateActionGeneralInformation114(obj);
 		}
 	};
 	/**
@@ -3456,11 +3856,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation115> forCorporateActionGeneralInformation115 = new MMConstraint<CorporateActionGeneralInformation115>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation115;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation115.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation115 obj) throws Exception {
+			checkCorporateActionGeneralInformation115(obj);
 		}
 	};
 	/**
@@ -3486,11 +3890,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation118> forCorporateActionGeneralInformation118 = new MMConstraint<CorporateActionGeneralInformation118>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation118;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation118.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation118 obj) throws Exception {
+			checkCorporateActionGeneralInformation118(obj);
 		}
 	};
 	/**
@@ -3516,11 +3924,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation121> forCorporateActionGeneralInformation121 = new MMConstraint<CorporateActionGeneralInformation121>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation121;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation121.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation121 obj) throws Exception {
+			checkCorporateActionGeneralInformation121(obj);
 		}
 	};
 	/**
@@ -3546,11 +3958,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation113> forCorporateActionGeneralInformation113 = new MMConstraint<CorporateActionGeneralInformation113>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionGeneralInformation113;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "EventType/Code OTHR must only be used in case no other corporate action event code is appropriate. \nEventType/Code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \nEventType/Code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionGeneralInformation113.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation113 obj) throws Exception {
+			checkCorporateActionGeneralInformation113(obj);
 		}
 	};
 	/**
@@ -3576,11 +3992,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType62Choice> forCorporateActionEventType62Choice = new MMConstraint<CorporateActionEventType62Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType62Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionEventType62Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType62Choice obj) throws Exception {
+			checkCorporateActionEventType62Choice(obj);
 		}
 	};
 	/**
@@ -3606,11 +4026,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType61Choice> forCorporateActionEventType61Choice = new MMConstraint<CorporateActionEventType61Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType61Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionEventType61Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType61Choice obj) throws Exception {
+			checkCorporateActionEventType61Choice(obj);
 		}
 	};
 	/**
@@ -3636,11 +4060,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType71Choice> forCorporateActionEventType71Choice = new MMConstraint<CorporateActionEventType71Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType71Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "The use of a specific corporate action event type code is allowed only if this specific event triggers a securities movement as per the Event Interpretation Grid published by the Securities Market Practice Group (SMPG).\r\nThe corporate action event indicator code OTHR must only be used in case no other corporate action event code is appropriate.\r\nThe corporate action event indicator code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change.\r\nThe corporate action event indicator code REDM must only be used when the redemption is decided by the issuer and not by the holders.";
 			owner_lazy = () -> CorporateActionEventType71Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType71Choice obj) throws Exception {
+			checkCorporateActionEventType71Choice(obj);
 		}
 	};
 	/**
@@ -3666,11 +4094,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType69Choice> forCorporateActionEventType69Choice = new MMConstraint<CorporateActionEventType69Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType69Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \n\nIf code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \n\nIf code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionEventType69Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType69Choice obj) throws Exception {
+			checkCorporateActionEventType69Choice(obj);
 		}
 	};
 	/**
@@ -3696,11 +4128,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType57Choice> forCorporateActionEventType57Choice = new MMConstraint<CorporateActionEventType57Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType57Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionEventType57Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType57Choice obj) throws Exception {
+			checkCorporateActionEventType57Choice(obj);
 		}
 	};
 	/**
@@ -3726,11 +4162,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType58Choice> forCorporateActionEventType58Choice = new MMConstraint<CorporateActionEventType58Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType58Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionEventType58Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType58Choice obj) throws Exception {
+			checkCorporateActionEventType58Choice(obj);
 		}
 	};
 	/**
@@ -3761,12 +4201,16 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType73Choice> forCorporateActionEventType73Choice = new MMConstraint<CorporateActionEventType73Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType73Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "The use of a specific corporate action event type code is allowed only if this specific event triggers a securities movement as per the Event Interpretation Grid published by the Securities Market Practice Group (SMPG).\r\nThe corporate action event indicator code OTHR must only be used in case no other corporate action event code is appropriate.\r\nThe corporate action event indicator code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change.\r\nThe corporate action event indicator code REDM must only be used when the redemption is decided by the issuer and not by the holders.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType56Choice;
 			owner_lazy = () -> CorporateActionEventType73Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType73Choice obj) throws Exception {
+			checkCorporateActionEventType73Choice(obj);
 		}
 	};
 	/**
@@ -3797,12 +4241,16 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType74Choice> forCorporateActionEventType74Choice = new MMConstraint<CorporateActionEventType74Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType74Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If Code is present, the code OTHR (Other) must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN (Change) must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM (Final Maturity) must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType53Choice;
 			owner_lazy = () -> CorporateActionEventType74Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType74Choice obj) throws Exception {
+			checkCorporateActionEventType74Choice(obj);
 		}
 	};
 	/**
@@ -3833,12 +4281,16 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType75Choice> forCorporateActionEventType75Choice = new MMConstraint<CorporateActionEventType75Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType75Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If Code is present, the code OTHR (Other) must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN (Change) must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM (Final Maturity) must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType54Choice;
 			owner_lazy = () -> CorporateActionEventType75Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType75Choice obj) throws Exception {
+			checkCorporateActionEventType75Choice(obj);
 		}
 	};
 	/**
@@ -3869,12 +4321,16 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType76Choice> forCorporateActionEventType76Choice = new MMConstraint<CorporateActionEventType76Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType76Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If Code is present, the code OTHR (Other) must only be used if no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN (Change) must only be used if no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM (Final Maturity) must only be used if the redemption is decided by the issuer and not by the securities holders.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType51Choice;
 			owner_lazy = () -> CorporateActionEventType76Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType76Choice obj) throws Exception {
+			checkCorporateActionEventType76Choice(obj);
 		}
 	};
 	/**
@@ -3900,11 +4356,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType77Choice> forCorporateActionEventType77Choice = new MMConstraint<CorporateActionEventType77Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType77Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If Code is present, the code OTHR (Other) must only be used if no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN (Change) must only be used if no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM (Final Maturity) must only be used if the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionEventType77Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType77Choice obj) throws Exception {
+			checkCorporateActionEventType77Choice(obj);
 		}
 	};
 	/**
@@ -3930,11 +4390,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType78Choice> forCorporateActionEventType78Choice = new MMConstraint<CorporateActionEventType78Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType78Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If Code is present, the code OTHR (Other) must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN (Change) must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM (Final Maturity) must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionEventType78Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType78Choice obj) throws Exception {
+			checkCorporateActionEventType78Choice(obj);
 		}
 	};
 	/**
@@ -3960,11 +4424,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType79Choice> forCorporateActionEventType79Choice = new MMConstraint<CorporateActionEventType79Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType79Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If Code is present, the code OTHR (Other) must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN (Change) must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM (Final Maturity) must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionEventType79Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType79Choice obj) throws Exception {
+			checkCorporateActionEventType79Choice(obj);
 		}
 	};
 	/**
@@ -3990,11 +4458,15 @@ public class ConstraintEventTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionEventType83Choice> forCorporateActionEventType83Choice = new MMConstraint<CorporateActionEventType83Choice>() {
 		{
-			validator = ConstraintEventTypeRule::checkCorporateActionEventType83Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "The use of a specific corporate action event type code is allowed only if this specific event triggers a securities movement as per the Event Interpretation Grid published by the Securities Market Practice Group (SMPG).\r\n\r\nThe corporate action event indicator code OTHR must only be used in case no other corporate action event code is appropriate.\r\n\r\nThe corporate action event indicator code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change.\r\n\r\nThe corporate action event indicator code REDM must only be used when the redemption is decided by the issuer and not by the holders.";
 			owner_lazy = () -> CorporateActionEventType83Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventType83Choice obj) throws Exception {
+			checkCorporateActionEventType83Choice(obj);
 		}
 	};
 

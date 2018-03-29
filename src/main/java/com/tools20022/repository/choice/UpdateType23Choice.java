@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.UpdateType24Choice;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SecurityAttributes5;
 import java.util.ArrayList;
@@ -74,7 +75,7 @@ public class UpdateType23Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "UpdTp", required = true)
-	protected List<com.tools20022.repository.choice.UpdateType24Choice> updateType;
+	protected List<UpdateType24Choice> updateType;
 	/**
 	 * 
 	 <p>
@@ -98,7 +99,7 @@ public class UpdateType23Choice {
 	 * name} = "UpdateType"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Request to add, modify or delete datas of a security."</li>
+	 * definition} = "Request to add, modify or delete data's of a security."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -106,19 +107,29 @@ public class UpdateType23Choice {
 	 * UpdateType8Choice.mmUpdateType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUpdateType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UpdateType23Choice, List<UpdateType24Choice>> mmUpdateType = new MMMessageAssociationEnd<UpdateType23Choice, List<UpdateType24Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UpdateType23Choice.mmObject();
 			isDerived = false;
 			xmlTag = "UpdTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateType";
-			definition = "Request to add, modify or delete datas of a security.";
+			definition = "Request to add, modify or delete data's of a security.";
 			previousVersion_lazy = () -> UpdateType8Choice.mmUpdateType;
 			maxOccurs = 3;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.UpdateType24Choice.mmObject();
+			type_lazy = () -> UpdateType24Choice.mmObject();
+		}
+
+		@Override
+		public List<UpdateType24Choice> getValue(UpdateType23Choice obj) {
+			return obj.getUpdateType();
+		}
+
+		@Override
+		public void setValue(UpdateType23Choice obj, List<UpdateType24Choice> value) {
+			obj.setUpdateType(value);
 		}
 	};
 	@XmlElement(name = "Rplc", required = true)
@@ -154,7 +165,7 @@ public class UpdateType23Choice {
 	 * UpdateType8Choice.mmReplace}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReplace = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UpdateType23Choice, SecurityAttributes5> mmReplace = new MMMessageAssociationEnd<UpdateType23Choice, SecurityAttributes5>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UpdateType23Choice.mmObject();
 			isDerived = false;
@@ -167,6 +178,16 @@ public class UpdateType23Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecurityAttributes5.mmObject();
+		}
+
+		@Override
+		public SecurityAttributes5 getValue(UpdateType23Choice obj) {
+			return obj.getReplace();
+		}
+
+		@Override
+		public void setValue(UpdateType23Choice obj, SecurityAttributes5 value) {
+			obj.setReplace(value);
 		}
 	};
 
@@ -188,7 +209,7 @@ public class UpdateType23Choice {
 		return updateType == null ? updateType = new ArrayList<>() : updateType;
 	}
 
-	public UpdateType23Choice setUpdateType(List<com.tools20022.repository.choice.UpdateType24Choice> updateType) {
+	public UpdateType23Choice setUpdateType(List<UpdateType24Choice> updateType) {
 		this.updateType = Objects.requireNonNull(updateType);
 		return this;
 	}

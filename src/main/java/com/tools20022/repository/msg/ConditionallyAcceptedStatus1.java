@@ -22,6 +22,8 @@ import com.tools20022.repository.codeset.NoReasonCode;
 import com.tools20022.repository.entity.SecuritiesOrderStatus;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ConditionallyAcceptedStatusReason1;
+import com.tools20022.repository.msg.GenericIdentification1;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -119,7 +121,7 @@ public class ConditionallyAcceptedStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConditionallyAcceptedStatus1, NoReasonCode> mmNoReason = new MMMessageAttribute<ConditionallyAcceptedStatus1, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConditionallyAcceptedStatus1.mmObject();
@@ -131,6 +133,16 @@ public class ConditionallyAcceptedStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(ConditionallyAcceptedStatus1 obj) {
+			return obj.getNoReason();
+		}
+
+		@Override
+		public void setValue(ConditionallyAcceptedStatus1 obj, NoReasonCode value) {
+			obj.setNoReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -168,7 +180,7 @@ public class ConditionallyAcceptedStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ConditionallyAcceptedStatus1, ConditionallyAcceptedStatusReason1> mmReason = new MMMessageAssociationEnd<ConditionallyAcceptedStatus1, ConditionallyAcceptedStatusReason1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmConditionallyAcceptedStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConditionallyAcceptedStatus1.mmObject();
@@ -180,7 +192,17 @@ public class ConditionallyAcceptedStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ConditionallyAcceptedStatusReason1.mmObject();
+			type_lazy = () -> ConditionallyAcceptedStatusReason1.mmObject();
+		}
+
+		@Override
+		public ConditionallyAcceptedStatusReason1 getValue(ConditionallyAcceptedStatus1 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(ConditionallyAcceptedStatus1 obj, ConditionallyAcceptedStatusReason1 value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "DataSrcSchme", required = true)
@@ -218,7 +240,7 @@ public class ConditionallyAcceptedStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ConditionallyAcceptedStatus1, GenericIdentification1> mmDataSourceScheme = new MMMessageAssociationEnd<ConditionallyAcceptedStatus1, GenericIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConditionallyAcceptedStatus1.mmObject();
@@ -230,7 +252,17 @@ public class ConditionallyAcceptedStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
+			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(ConditionallyAcceptedStatus1 obj) {
+			return obj.getDataSourceScheme();
+		}
+
+		@Override
+		public void setValue(ConditionallyAcceptedStatus1 obj, GenericIdentification1 value) {
+			obj.setDataSourceScheme(value);
 		}
 	};
 	/**
@@ -317,7 +349,7 @@ public class ConditionallyAcceptedStatus1 {
 		return reason;
 	}
 
-	public ConditionallyAcceptedStatus1 setReason(com.tools20022.repository.msg.ConditionallyAcceptedStatusReason1 reason) {
+	public ConditionallyAcceptedStatus1 setReason(ConditionallyAcceptedStatusReason1 reason) {
 		this.reason = Objects.requireNonNull(reason);
 		return this;
 	}
@@ -326,7 +358,7 @@ public class ConditionallyAcceptedStatus1 {
 		return dataSourceScheme;
 	}
 
-	public ConditionallyAcceptedStatus1 setDataSourceScheme(com.tools20022.repository.msg.GenericIdentification1 dataSourceScheme) {
+	public ConditionallyAcceptedStatus1 setDataSourceScheme(GenericIdentification1 dataSourceScheme) {
 		this.dataSourceScheme = Objects.requireNonNull(dataSourceScheme);
 		return this;
 	}

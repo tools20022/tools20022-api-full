@@ -166,7 +166,7 @@ public class UnderlyingTransaction2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInitiation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnderlyingTransaction2Choice, UnderlyingPaymentInstruction2> mmInitiation = new MMMessageAssociationEnd<UnderlyingTransaction2Choice, UnderlyingPaymentInstruction2>() {
 		{
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnderlyingTransaction2Choice.mmObject();
@@ -180,6 +180,16 @@ public class UnderlyingTransaction2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> UnderlyingPaymentInstruction2.mmObject();
+		}
+
+		@Override
+		public UnderlyingPaymentInstruction2 getValue(UnderlyingTransaction2Choice obj) {
+			return obj.getInitiation();
+		}
+
+		@Override
+		public void setValue(UnderlyingTransaction2Choice obj, UnderlyingPaymentInstruction2 value) {
+			obj.setInitiation(value);
 		}
 	};
 	@XmlElement(name = "IntrBk", required = true)
@@ -225,7 +235,7 @@ public class UnderlyingTransaction2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInterbank = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnderlyingTransaction2Choice, UnderlyingPaymentTransaction2> mmInterbank = new MMMessageAssociationEnd<UnderlyingTransaction2Choice, UnderlyingPaymentTransaction2>() {
 		{
 			businessComponentTrace_lazy = () -> Payment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnderlyingTransaction2Choice.mmObject();
@@ -239,6 +249,16 @@ public class UnderlyingTransaction2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> UnderlyingPaymentTransaction2.mmObject();
+		}
+
+		@Override
+		public UnderlyingPaymentTransaction2 getValue(UnderlyingTransaction2Choice obj) {
+			return obj.getInterbank();
+		}
+
+		@Override
+		public void setValue(UnderlyingTransaction2Choice obj, UnderlyingPaymentTransaction2 value) {
+			obj.setInterbank(value);
 		}
 	};
 	@XmlElement(name = "StmtNtry", required = true)
@@ -283,7 +303,7 @@ public class UnderlyingTransaction2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatementEntry = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnderlyingTransaction2Choice, UnderlyingStatementEntry1> mmStatementEntry = new MMMessageAssociationEnd<UnderlyingTransaction2Choice, UnderlyingStatementEntry1>() {
 		{
 			businessComponentTrace_lazy = () -> CashEntry.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnderlyingTransaction2Choice.mmObject();
@@ -297,6 +317,16 @@ public class UnderlyingTransaction2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> UnderlyingStatementEntry1.mmObject();
+		}
+
+		@Override
+		public UnderlyingStatementEntry1 getValue(UnderlyingTransaction2Choice obj) {
+			return obj.getStatementEntry();
+		}
+
+		@Override
+		public void setValue(UnderlyingTransaction2Choice obj, UnderlyingStatementEntry1 value) {
+			obj.setStatementEntry(value);
 		}
 	};
 

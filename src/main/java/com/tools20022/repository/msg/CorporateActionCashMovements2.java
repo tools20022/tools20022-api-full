@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.CashEntry;
 import com.tools20022.repository.entity.Entry;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccount19;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -111,7 +112,7 @@ public class CorporateActionCashMovements2 {
 	 * definition} = "Posting identification of the cash movement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPostingIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionCashMovements2, Optional<Max35Text>> mmPostingIdentification = new MMMessageAttribute<CorporateActionCashMovements2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionCashMovements2.mmObject();
 			isDerived = false;
@@ -122,6 +123,16 @@ public class CorporateActionCashMovements2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CorporateActionCashMovements2 obj) {
+			return obj.getPostingIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionCashMovements2 obj, Optional<Max35Text> value) {
+			obj.setPostingIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PstngDtTm")
@@ -159,7 +170,7 @@ public class CorporateActionCashMovements2 {
 	 * definition} = "Posting date of the cash movement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPostingDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionCashMovements2, Optional<DateAndDateTimeChoice>> mmPostingDateTime = new MMMessageAttribute<CorporateActionCashMovements2, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmEntryDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionCashMovements2.mmObject();
@@ -171,6 +182,16 @@ public class CorporateActionCashMovements2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(CorporateActionCashMovements2 obj) {
+			return obj.getPostingDateTime();
+		}
+
+		@Override
+		public void setValue(CorporateActionCashMovements2 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setPostingDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PstngAmt", required = true)
@@ -208,7 +229,7 @@ public class CorporateActionCashMovements2 {
 	 * definition} = "Amount posted as a result of the cash movement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPostingAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionCashMovements2, ActiveCurrencyAndAmount> mmPostingAmount = new MMMessageAttribute<CorporateActionCashMovements2, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionCashMovements2.mmObject();
@@ -221,9 +242,19 @@ public class CorporateActionCashMovements2 {
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(CorporateActionCashMovements2 obj) {
+			return obj.getPostingAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionCashMovements2 obj, ActiveCurrencyAndAmount value) {
+			obj.setPostingAmount(value);
+		}
 	};
 	@XmlElement(name = "AcctDtls", required = true)
-	protected List<com.tools20022.repository.msg.CashAccount19> accountDetails;
+	protected List<CashAccount19> accountDetails;
 	/**
 	 * 
 	 <p>
@@ -257,7 +288,7 @@ public class CorporateActionCashMovements2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionCashMovements2, List<CashAccount19>> mmAccountDetails = new MMMessageAssociationEnd<CorporateActionCashMovements2, List<CashAccount19>>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionCashMovements2.mmObject();
@@ -269,7 +300,17 @@ public class CorporateActionCashMovements2 {
 			maxOccurs = 2;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount19.mmObject();
+			type_lazy = () -> CashAccount19.mmObject();
+		}
+
+		@Override
+		public List<CashAccount19> getValue(CorporateActionCashMovements2 obj) {
+			return obj.getAccountDetails();
+		}
+
+		@Override
+		public void setValue(CorporateActionCashMovements2 obj, List<CashAccount19> value) {
+			obj.setAccountDetails(value);
 		}
 	};
 
@@ -319,7 +360,7 @@ public class CorporateActionCashMovements2 {
 		return accountDetails == null ? accountDetails = new ArrayList<>() : accountDetails;
 	}
 
-	public CorporateActionCashMovements2 setAccountDetails(List<com.tools20022.repository.msg.CashAccount19> accountDetails) {
+	public CorporateActionCashMovements2 setAccountDetails(List<CashAccount19> accountDetails) {
 		this.accountDetails = Objects.requireNonNull(accountDetails);
 		return this;
 	}

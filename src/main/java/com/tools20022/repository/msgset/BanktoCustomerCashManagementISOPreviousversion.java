@@ -20,9 +20,9 @@ package com.tools20022.repository.msgset;
 import com.tools20022.metamodel.MMMessageSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.camt.AccountReportingRequestV03;
-import com.tools20022.repository.area.camt.BankToCustomerAccountReportV05;
-import com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV05;
-import com.tools20022.repository.area.camt.BankToCustomerStatementV05;
+import com.tools20022.repository.area.camt.BankToCustomerAccountReportV06;
+import com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV06;
+import com.tools20022.repository.area.camt.BankToCustomerStatementV06;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -41,14 +41,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.area.camt.AccountReportingRequestV03
  * AccountReportingRequestV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.BankToCustomerStatementV05
- * BankToCustomerStatementV05}</li>
+ * {@linkplain com.tools20022.repository.area.camt.BankToCustomerAccountReportV06
+ * BankToCustomerAccountReportV06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.BankToCustomerAccountReportV05
- * BankToCustomerAccountReportV05}</li>
+ * {@linkplain com.tools20022.repository.area.camt.BankToCustomerStatementV06
+ * BankToCustomerStatementV06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV05
- * BankToCustomerDebitCreditNotificationV05}</li>
+ * {@linkplain com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV06
+ * BankToCustomerDebitCreditNotificationV06}</li>
  * </ul>
  * </li>
  * <li>
@@ -79,7 +79,7 @@ public class BanktoCustomerCashManagementISOPreviousversion {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Bank-to-Customer Cash Management - ISO - Previous version";
 				definition = "Set of messages used to request and provide account information for reconciliation and cash positioning between an account servicer and its customer.\r\n";
-				messageDefinition_lazy = () -> Arrays.asList(AccountReportingRequestV03.mmObject(), BankToCustomerStatementV05.mmObject(), BankToCustomerAccountReportV05.mmObject(), BankToCustomerDebitCreditNotificationV05.mmObject());
+				messageDefinition_lazy = () -> Arrays.asList(AccountReportingRequestV03.mmObject(), BankToCustomerAccountReportV06.mmObject(), BankToCustomerStatementV06.mmObject(), BankToCustomerDebitCreditNotificationV06.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

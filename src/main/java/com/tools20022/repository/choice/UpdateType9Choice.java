@@ -133,7 +133,7 @@ public class UpdateType9Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAddition = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UpdateType9Choice, SecuritiesSettlementTransactionDetails8> mmAddition = new MMMessageAssociationEnd<UpdateType9Choice, SecuritiesSettlementTransactionDetails8>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UpdateType9Choice.mmObject();
 			isDerived = false;
@@ -146,6 +146,16 @@ public class UpdateType9Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecuritiesSettlementTransactionDetails8.mmObject();
+		}
+
+		@Override
+		public SecuritiesSettlementTransactionDetails8 getValue(UpdateType9Choice obj) {
+			return obj.getAddition();
+		}
+
+		@Override
+		public void setValue(UpdateType9Choice obj, SecuritiesSettlementTransactionDetails8 value) {
+			obj.setAddition(value);
 		}
 	};
 	@XmlElement(name = "Deltn", required = true)
@@ -185,7 +195,7 @@ public class UpdateType9Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDeletion = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UpdateType9Choice, SecuritiesSettlementTransactionDetails9> mmDeletion = new MMMessageAssociationEnd<UpdateType9Choice, SecuritiesSettlementTransactionDetails9>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UpdateType9Choice.mmObject();
 			isDerived = false;
@@ -198,6 +208,16 @@ public class UpdateType9Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecuritiesSettlementTransactionDetails9.mmObject();
+		}
+
+		@Override
+		public SecuritiesSettlementTransactionDetails9 getValue(UpdateType9Choice obj) {
+			return obj.getDeletion();
+		}
+
+		@Override
+		public void setValue(UpdateType9Choice obj, SecuritiesSettlementTransactionDetails9 value) {
+			obj.setDeletion(value);
 		}
 	};
 	@XmlElement(name = "Mod", required = true)
@@ -238,7 +258,7 @@ public class UpdateType9Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmModification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UpdateType9Choice, SecuritiesSettlementTransactionDetails10> mmModification = new MMMessageAssociationEnd<UpdateType9Choice, SecuritiesSettlementTransactionDetails10>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UpdateType9Choice.mmObject();
 			isDerived = false;
@@ -251,6 +271,16 @@ public class UpdateType9Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecuritiesSettlementTransactionDetails10.mmObject();
+		}
+
+		@Override
+		public SecuritiesSettlementTransactionDetails10 getValue(UpdateType9Choice obj) {
+			return obj.getModification();
+		}
+
+		@Override
+		public void setValue(UpdateType9Choice obj, SecuritiesSettlementTransactionDetails10 value) {
+			obj.setModification(value);
 		}
 	};
 

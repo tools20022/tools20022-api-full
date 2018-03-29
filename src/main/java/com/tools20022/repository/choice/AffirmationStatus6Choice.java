@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01;
 import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02;
+import com.tools20022.repository.choice.AffirmationReason1Choice;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryReason1;
@@ -123,7 +124,7 @@ public class AffirmationStatus6Choice {
 	 * definition} = "Status of affirmation of a trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAffirmed = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AffirmationStatus6Choice, ProprietaryReason1> mmAffirmed = new MMMessageAssociationEnd<AffirmationStatus6Choice, ProprietaryReason1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmAffirmationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AffirmationStatus6Choice.mmObject();
@@ -136,6 +137,16 @@ public class AffirmationStatus6Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryReason1.mmObject();
+		}
+
+		@Override
+		public ProprietaryReason1 getValue(AffirmationStatus6Choice obj) {
+			return obj.getAffirmed();
+		}
+
+		@Override
+		public void setValue(AffirmationStatus6Choice obj, ProprietaryReason1 value) {
+			obj.setAffirmed(value);
 		}
 	};
 	@XmlElement(name = "Uaffrmd", required = true)
@@ -172,7 +183,7 @@ public class AffirmationStatus6Choice {
 	 * definition} = "Trade has been unaffirmed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnaffirmed = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AffirmationStatus6Choice, AffirmationReason1Choice> mmUnaffirmed = new MMMessageAssociationEnd<AffirmationStatus6Choice, AffirmationReason1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmAffirmationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AffirmationStatus6Choice.mmObject();
@@ -184,7 +195,17 @@ public class AffirmationStatus6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.AffirmationReason1Choice.mmObject();
+			type_lazy = () -> AffirmationReason1Choice.mmObject();
+		}
+
+		@Override
+		public AffirmationReason1Choice getValue(AffirmationStatus6Choice obj) {
+			return obj.getUnaffirmed();
+		}
+
+		@Override
+		public void setValue(AffirmationStatus6Choice obj, AffirmationReason1Choice value) {
+			obj.setUnaffirmed(value);
 		}
 	};
 	@XmlElement(name = "PrtrySts")
@@ -223,7 +244,7 @@ public class AffirmationStatus6Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietaryStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AffirmationStatus6Choice, Optional<ProprietaryStatusAndReason1>> mmProprietaryStatus = new MMMessageAssociationEnd<AffirmationStatus6Choice, Optional<ProprietaryStatusAndReason1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmAffirmationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AffirmationStatus6Choice.mmObject();
@@ -236,6 +257,16 @@ public class AffirmationStatus6Choice {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ProprietaryStatusAndReason1.mmObject();
+		}
+
+		@Override
+		public Optional<ProprietaryStatusAndReason1> getValue(AffirmationStatus6Choice obj) {
+			return obj.getProprietaryStatus();
+		}
+
+		@Override
+		public void setValue(AffirmationStatus6Choice obj, Optional<ProprietaryStatusAndReason1> value) {
+			obj.setProprietaryStatus(value.orElse(null));
 		}
 	};
 
@@ -268,7 +299,7 @@ public class AffirmationStatus6Choice {
 		return unaffirmed;
 	}
 
-	public AffirmationStatus6Choice setUnaffirmed(com.tools20022.repository.choice.AffirmationReason1Choice unaffirmed) {
+	public AffirmationStatus6Choice setUnaffirmed(AffirmationReason1Choice unaffirmed) {
 		this.unaffirmed = Objects.requireNonNull(unaffirmed);
 		return this;
 	}

@@ -113,7 +113,7 @@ public class SecurityIdentification18Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification18Choice, ISINOct2015Identifier> mmISIN = new MMMessageAttribute<SecurityIdentification18Choice, ISINOct2015Identifier>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification18Choice.mmObject();
@@ -125,6 +125,16 @@ public class SecurityIdentification18Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
+		}
+
+		@Override
+		public ISINOct2015Identifier getValue(SecurityIdentification18Choice obj) {
+			return obj.getISIN();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification18Choice obj, ISINOct2015Identifier value) {
+			obj.setISIN(value);
 		}
 	};
 	@XmlElement(name = "AltrntvInstrmId", required = true)
@@ -163,7 +173,7 @@ public class SecurityIdentification18Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAlternativeInstrumentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification18Choice, Max52Text> mmAlternativeInstrumentIdentification = new MMMessageAttribute<SecurityIdentification18Choice, Max52Text>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification18Choice.mmObject();
@@ -175,6 +185,16 @@ public class SecurityIdentification18Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max52Text.mmObject();
+		}
+
+		@Override
+		public Max52Text getValue(SecurityIdentification18Choice obj) {
+			return obj.getAlternativeInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification18Choice obj, Max52Text value) {
+			obj.setAlternativeInstrumentIdentification(value);
 		}
 	};
 

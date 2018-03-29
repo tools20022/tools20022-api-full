@@ -138,7 +138,7 @@ public class UpdateType11Choice {
 	 * UpdateType9Choice.mmAddition}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAddition = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UpdateType11Choice, SecuritiesSettlementTransactionDetails15> mmAddition = new MMMessageAssociationEnd<UpdateType11Choice, SecuritiesSettlementTransactionDetails15>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UpdateType11Choice.mmObject();
 			isDerived = false;
@@ -152,6 +152,16 @@ public class UpdateType11Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecuritiesSettlementTransactionDetails15.mmObject();
+		}
+
+		@Override
+		public SecuritiesSettlementTransactionDetails15 getValue(UpdateType11Choice obj) {
+			return obj.getAddition();
+		}
+
+		@Override
+		public void setValue(UpdateType11Choice obj, SecuritiesSettlementTransactionDetails15 value) {
+			obj.setAddition(value);
 		}
 	};
 	@XmlElement(name = "Deltn", required = true)
@@ -196,7 +206,7 @@ public class UpdateType11Choice {
 	 * UpdateType9Choice.mmDeletion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDeletion = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UpdateType11Choice, SecuritiesSettlementTransactionDetails16> mmDeletion = new MMMessageAssociationEnd<UpdateType11Choice, SecuritiesSettlementTransactionDetails16>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UpdateType11Choice.mmObject();
 			isDerived = false;
@@ -210,6 +220,16 @@ public class UpdateType11Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecuritiesSettlementTransactionDetails16.mmObject();
+		}
+
+		@Override
+		public SecuritiesSettlementTransactionDetails16 getValue(UpdateType11Choice obj) {
+			return obj.getDeletion();
+		}
+
+		@Override
+		public void setValue(UpdateType11Choice obj, SecuritiesSettlementTransactionDetails16 value) {
+			obj.setDeletion(value);
 		}
 	};
 	@XmlElement(name = "Mod", required = true)
@@ -255,7 +275,7 @@ public class UpdateType11Choice {
 	 * UpdateType9Choice.mmModification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmModification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UpdateType11Choice, SecuritiesSettlementTransactionDetails14> mmModification = new MMMessageAssociationEnd<UpdateType11Choice, SecuritiesSettlementTransactionDetails14>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UpdateType11Choice.mmObject();
 			isDerived = false;
@@ -269,6 +289,16 @@ public class UpdateType11Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecuritiesSettlementTransactionDetails14.mmObject();
+		}
+
+		@Override
+		public SecuritiesSettlementTransactionDetails14 getValue(UpdateType11Choice obj) {
+			return obj.getModification();
+		}
+
+		@Override
+		public void setValue(UpdateType11Choice obj, SecuritiesSettlementTransactionDetails14 value) {
+			obj.setModification(value);
 		}
 	};
 

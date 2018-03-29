@@ -25,6 +25,8 @@ import com.tools20022.repository.codeset.ATMStatus2Code;
 import com.tools20022.repository.codeset.FailureReason5Code;
 import com.tools20022.repository.codeset.TR34Status1Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMEquipment2;
+import com.tools20022.repository.msg.ATMSecurityConfiguration1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -121,7 +123,7 @@ public class ATMSecurityDevice2 {
 	 * ATMSecurityDevice1.mmDeviceProperty}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDeviceProperty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMSecurityDevice2, Optional<ATMEquipment2>> mmDeviceProperty = new MMMessageAssociationEnd<ATMSecurityDevice2, Optional<ATMEquipment2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityDevice2.mmObject();
 			isDerived = false;
@@ -133,7 +135,17 @@ public class ATMSecurityDevice2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMEquipment2.mmObject();
+			type_lazy = () -> ATMEquipment2.mmObject();
+		}
+
+		@Override
+		public Optional<ATMEquipment2> getValue(ATMSecurityDevice2 obj) {
+			return obj.getDeviceProperty();
+		}
+
+		@Override
+		public void setValue(ATMSecurityDevice2 obj, Optional<ATMEquipment2> value) {
+			obj.setDeviceProperty(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CurCfgtn", required = true)
@@ -170,7 +182,7 @@ public class ATMSecurityDevice2 {
 	 * ATMSecurityDevice1.mmCurrentConfiguration}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCurrentConfiguration = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMSecurityDevice2, ATMSecurityConfiguration1> mmCurrentConfiguration = new MMMessageAssociationEnd<ATMSecurityDevice2, ATMSecurityConfiguration1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityDevice2.mmObject();
 			isDerived = false;
@@ -182,7 +194,17 @@ public class ATMSecurityDevice2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration1.mmObject();
+			type_lazy = () -> ATMSecurityConfiguration1.mmObject();
+		}
+
+		@Override
+		public ATMSecurityConfiguration1 getValue(ATMSecurityDevice2 obj) {
+			return obj.getCurrentConfiguration();
+		}
+
+		@Override
+		public void setValue(ATMSecurityDevice2 obj, ATMSecurityConfiguration1 value) {
+			obj.setCurrentConfiguration(value);
 		}
 	};
 	@XmlElement(name = "SpprtdCfgtn")
@@ -220,7 +242,7 @@ public class ATMSecurityDevice2 {
 	 * ATMSecurityDevice1.mmSupportedConfiguration}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSupportedConfiguration = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMSecurityDevice2, Optional<ATMSecurityConfiguration1>> mmSupportedConfiguration = new MMMessageAssociationEnd<ATMSecurityDevice2, Optional<ATMSecurityConfiguration1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityDevice2.mmObject();
 			isDerived = false;
@@ -232,7 +254,17 @@ public class ATMSecurityDevice2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration1.mmObject();
+			type_lazy = () -> ATMSecurityConfiguration1.mmObject();
+		}
+
+		@Override
+		public Optional<ATMSecurityConfiguration1> getValue(ATMSecurityDevice2 obj) {
+			return obj.getSupportedConfiguration();
+		}
+
+		@Override
+		public void setValue(ATMSecurityDevice2 obj, Optional<ATMSecurityConfiguration1> value) {
+			obj.setSupportedConfiguration(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CurSts", required = true)
@@ -270,7 +302,7 @@ public class ATMSecurityDevice2 {
 	 * ATMSecurityDevice1.mmCurrentStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrentStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMSecurityDevice2, ATMStatus2Code> mmCurrentStatus = new MMMessageAttribute<ATMSecurityDevice2, ATMStatus2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityDevice2.mmObject();
 			isDerived = false;
@@ -282,6 +314,16 @@ public class ATMSecurityDevice2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ATMStatus2Code.mmObject();
+		}
+
+		@Override
+		public ATMStatus2Code getValue(ATMSecurityDevice2 obj) {
+			return obj.getCurrentStatus();
+		}
+
+		@Override
+		public void setValue(ATMSecurityDevice2 obj, ATMStatus2Code value) {
+			obj.setCurrentStatus(value);
 		}
 	};
 	@XmlElement(name = "Incdnt")
@@ -319,7 +361,7 @@ public class ATMSecurityDevice2 {
 	 * ATMSecurityDevice1.mmIncident}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIncident = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMSecurityDevice2, Optional<FailureReason5Code>> mmIncident = new MMMessageAttribute<ATMSecurityDevice2, Optional<FailureReason5Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityDevice2.mmObject();
 			isDerived = false;
@@ -331,6 +373,16 @@ public class ATMSecurityDevice2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> FailureReason5Code.mmObject();
+		}
+
+		@Override
+		public Optional<FailureReason5Code> getValue(ATMSecurityDevice2 obj) {
+			return obj.getIncident();
+		}
+
+		@Override
+		public void setValue(ATMSecurityDevice2 obj, Optional<FailureReason5Code> value) {
+			obj.setIncident(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BndgStat")
@@ -363,7 +415,7 @@ public class ATMSecurityDevice2 {
 	 * definition} = "Binding state of the security device."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBindingState = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMSecurityDevice2, Optional<TR34Status1Code>> mmBindingState = new MMMessageAttribute<ATMSecurityDevice2, Optional<TR34Status1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityDevice2.mmObject();
 			isDerived = false;
@@ -374,6 +426,16 @@ public class ATMSecurityDevice2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TR34Status1Code.mmObject();
+		}
+
+		@Override
+		public Optional<TR34Status1Code> getValue(ATMSecurityDevice2 obj) {
+			return obj.getBindingState();
+		}
+
+		@Override
+		public void setValue(ATMSecurityDevice2 obj, Optional<TR34Status1Code> value) {
+			obj.setBindingState(value.orElse(null));
 		}
 	};
 
@@ -397,7 +459,7 @@ public class ATMSecurityDevice2 {
 		return deviceProperty == null ? Optional.empty() : Optional.of(deviceProperty);
 	}
 
-	public ATMSecurityDevice2 setDeviceProperty(com.tools20022.repository.msg.ATMEquipment2 deviceProperty) {
+	public ATMSecurityDevice2 setDeviceProperty(ATMEquipment2 deviceProperty) {
 		this.deviceProperty = deviceProperty;
 		return this;
 	}
@@ -406,7 +468,7 @@ public class ATMSecurityDevice2 {
 		return currentConfiguration;
 	}
 
-	public ATMSecurityDevice2 setCurrentConfiguration(com.tools20022.repository.msg.ATMSecurityConfiguration1 currentConfiguration) {
+	public ATMSecurityDevice2 setCurrentConfiguration(ATMSecurityConfiguration1 currentConfiguration) {
 		this.currentConfiguration = Objects.requireNonNull(currentConfiguration);
 		return this;
 	}
@@ -415,7 +477,7 @@ public class ATMSecurityDevice2 {
 		return supportedConfiguration == null ? Optional.empty() : Optional.of(supportedConfiguration);
 	}
 
-	public ATMSecurityDevice2 setSupportedConfiguration(com.tools20022.repository.msg.ATMSecurityConfiguration1 supportedConfiguration) {
+	public ATMSecurityDevice2 setSupportedConfiguration(ATMSecurityConfiguration1 supportedConfiguration) {
 		this.supportedConfiguration = supportedConfiguration;
 		return this;
 	}

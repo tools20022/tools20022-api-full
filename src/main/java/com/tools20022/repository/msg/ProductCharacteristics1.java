@@ -107,7 +107,7 @@ public class ProductCharacteristics1 {
 	 * "Specifies the type of product characteristic by means of a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProductCharacteristics1, ProductCharacteristics1Code> mmType = new MMMessageAttribute<ProductCharacteristics1, ProductCharacteristics1Code>() {
 		{
 			businessElementTrace_lazy = () -> ProductCharacteristics.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProductCharacteristics1.mmObject();
@@ -119,6 +119,16 @@ public class ProductCharacteristics1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ProductCharacteristics1Code.mmObject();
+		}
+
+		@Override
+		public ProductCharacteristics1Code getValue(ProductCharacteristics1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(ProductCharacteristics1 obj, ProductCharacteristics1Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Chrtcs", required = true)
@@ -155,7 +165,7 @@ public class ProductCharacteristics1 {
 	 * definition} = "Specifies the characteristic of a product."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCharacteristics = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProductCharacteristics1, Max35Text> mmCharacteristics = new MMMessageAttribute<ProductCharacteristics1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> ProductCharacteristics.mmCharacteristics;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProductCharacteristics1.mmObject();
@@ -167,6 +177,16 @@ public class ProductCharacteristics1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ProductCharacteristics1 obj) {
+			return obj.getCharacteristics();
+		}
+
+		@Override
+		public void setValue(ProductCharacteristics1 obj, Max35Text value) {
+			obj.setCharacteristics(value);
 		}
 	};
 

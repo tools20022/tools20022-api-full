@@ -59,12 +59,16 @@ public class ConstraintEffectiveSettlementDateRule {
 	 */
 	public static final MMConstraint<TransferInConfirmationV08> forTransferInConfirmationV08 = new MMConstraint<TransferInConfirmationV08>() {
 		{
-			validator = ConstraintEffectiveSettlementDateRule::checkTransferInConfirmationV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveSettlementDateRule";
 			definition = "Either TransferDetails/EffectiveSettlementDate may be present in one or more occurrences of TransferDetails or SettlementDetails/Effective Settlement Date may be present, but not both.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferInConfirmationV07;
 			owner_lazy = () -> TransferInConfirmationV08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferInConfirmationV08 obj) throws Exception {
+			checkTransferInConfirmationV08(obj);
 		}
 	};
 	/**
@@ -95,12 +99,16 @@ public class ConstraintEffectiveSettlementDateRule {
 	 */
 	public static final MMConstraint<TransferOutConfirmationV08> forTransferOutConfirmationV08 = new MMConstraint<TransferOutConfirmationV08>() {
 		{
-			validator = ConstraintEffectiveSettlementDateRule::checkTransferOutConfirmationV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveSettlementDateRule";
 			definition = "Either TransferDetails/EffectiveSettlementDate may be present in one or more occurrences of TransferDetails or SettlementDetails/EffectiveSettlementDate may be present, but not both.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferOutConfirmationV07;
 			owner_lazy = () -> TransferOutConfirmationV08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferOutConfirmationV08 obj) throws Exception {
+			checkTransferOutConfirmationV08(obj);
 		}
 	};
 	/**
@@ -139,13 +147,17 @@ public class ConstraintEffectiveSettlementDateRule {
 	 */
 	public static final MMConstraint<TransferInConfirmationV07> forTransferInConfirmationV07 = new MMConstraint<TransferInConfirmationV07>() {
 		{
-			validator = ConstraintEffectiveSettlementDateRule::checkTransferInConfirmationV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveSettlementDateRule";
 			definition = "Either TransferDetails/EffectiveSettlementDate may be present in one or more occurrences of TransferDetails or SettlementDetails/Effective Settlement Date may be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferInConfirmationV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferInConfirmationV06;
 			owner_lazy = () -> TransferInConfirmationV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferInConfirmationV07 obj) throws Exception {
+			checkTransferInConfirmationV07(obj);
 		}
 	};
 	/**
@@ -184,13 +196,17 @@ public class ConstraintEffectiveSettlementDateRule {
 	 */
 	public static final MMConstraint<TransferOutConfirmationV07> forTransferOutConfirmationV07 = new MMConstraint<TransferOutConfirmationV07>() {
 		{
-			validator = ConstraintEffectiveSettlementDateRule::checkTransferOutConfirmationV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveSettlementDateRule";
 			definition = "Either TransferDetails/EffectiveSettlementDate may be present in one or more occurrences of TransferDetails or SettlementDetails/EffectiveSettlementDate may be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferOutConfirmationV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferOutConfirmationV06;
 			owner_lazy = () -> TransferOutConfirmationV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferOutConfirmationV07 obj) throws Exception {
+			checkTransferOutConfirmationV07(obj);
 		}
 	};
 	/**
@@ -224,12 +240,16 @@ public class ConstraintEffectiveSettlementDateRule {
 	 */
 	public static final MMConstraint<TransferInConfirmationV04> forTransferInConfirmationV04 = new MMConstraint<TransferInConfirmationV04>() {
 		{
-			validator = ConstraintEffectiveSettlementDateRule::checkTransferInConfirmationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveSettlementDateRule";
 			definition = "Either TransferDetails\\EffectiveSettlementDate or SettlementDetails\\Effective Settlement Date may be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferInConfirmationV05);
 			owner_lazy = () -> TransferInConfirmationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferInConfirmationV04 obj) throws Exception {
+			checkTransferInConfirmationV04(obj);
 		}
 	};
 	/**
@@ -263,12 +283,16 @@ public class ConstraintEffectiveSettlementDateRule {
 	 */
 	public static final MMConstraint<TransferOutConfirmationV04> forTransferOutConfirmationV04 = new MMConstraint<TransferOutConfirmationV04>() {
 		{
-			validator = ConstraintEffectiveSettlementDateRule::checkTransferOutConfirmationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveSettlementDateRule";
 			definition = "Either TransferDetails\\EffectiveSettlementDate or SettlementDetails\\Effective Settlement Date may be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferOutConfirmationV05);
 			owner_lazy = () -> TransferOutConfirmationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferOutConfirmationV04 obj) throws Exception {
+			checkTransferOutConfirmationV04(obj);
 		}
 	};
 	/**
@@ -307,13 +331,17 @@ public class ConstraintEffectiveSettlementDateRule {
 	 */
 	public static final MMConstraint<TransferInConfirmationV05> forTransferInConfirmationV05 = new MMConstraint<TransferInConfirmationV05>() {
 		{
-			validator = ConstraintEffectiveSettlementDateRule::checkTransferInConfirmationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveSettlementDateRule";
 			definition = "Either TransferDetails\\EffectiveSettlementDate or SettlementDetails\\Effective Settlement Date may be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferInConfirmationV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferInConfirmationV04;
 			owner_lazy = () -> TransferInConfirmationV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferInConfirmationV05 obj) throws Exception {
+			checkTransferInConfirmationV05(obj);
 		}
 	};
 	/**
@@ -352,13 +380,17 @@ public class ConstraintEffectiveSettlementDateRule {
 	 */
 	public static final MMConstraint<TransferOutConfirmationV05> forTransferOutConfirmationV05 = new MMConstraint<TransferOutConfirmationV05>() {
 		{
-			validator = ConstraintEffectiveSettlementDateRule::checkTransferOutConfirmationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveSettlementDateRule";
 			definition = "Either TransferDetails/EffectiveSettlementDate or SettlementDetails/EffectiveSettlementDate may be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferOutConfirmationV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferOutConfirmationV04;
 			owner_lazy = () -> TransferOutConfirmationV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferOutConfirmationV05 obj) throws Exception {
+			checkTransferOutConfirmationV05(obj);
 		}
 	};
 	/**
@@ -397,13 +429,17 @@ public class ConstraintEffectiveSettlementDateRule {
 	 */
 	public static final MMConstraint<TransferOutConfirmationV06> forTransferOutConfirmationV06 = new MMConstraint<TransferOutConfirmationV06>() {
 		{
-			validator = ConstraintEffectiveSettlementDateRule::checkTransferOutConfirmationV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveSettlementDateRule";
 			definition = "Either TransferDetails/EffectiveSettlementDate may be present in one or more occurrences of TransferDetails or SettlementDetails/EffectiveSettlementDate may be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferOutConfirmationV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferOutConfirmationV05;
 			owner_lazy = () -> TransferOutConfirmationV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferOutConfirmationV06 obj) throws Exception {
+			checkTransferOutConfirmationV06(obj);
 		}
 	};
 	/**
@@ -442,13 +478,17 @@ public class ConstraintEffectiveSettlementDateRule {
 	 */
 	public static final MMConstraint<TransferInConfirmationV06> forTransferInConfirmationV06 = new MMConstraint<TransferInConfirmationV06>() {
 		{
-			validator = ConstraintEffectiveSettlementDateRule::checkTransferInConfirmationV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveSettlementDateRule";
 			definition = "Either TransferDetails/EffectiveSettlementDate may be present in one or more occurrences of TransferDetails or SettlementDetails/Effective Settlement Date may be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferInConfirmationV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferInConfirmationV05;
 			owner_lazy = () -> TransferInConfirmationV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferInConfirmationV06 obj) throws Exception {
+			checkTransferInConfirmationV06(obj);
 		}
 	};
 	/**
@@ -481,12 +521,16 @@ public class ConstraintEffectiveSettlementDateRule {
 	 */
 	public static final MMConstraint<TransferOut10> forTransferOut10 = new MMConstraint<TransferOut10>() {
 		{
-			validator = ConstraintEffectiveSettlementDateRule::checkTransferOut10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveSettlementDateRule";
 			definition = "Either TransferDetails\\EffectiveSettlementDate or SettlementDetails\\EffectiveSettlementDate may be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferOut12);
 			owner_lazy = () -> TransferOut10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferOut10 obj) throws Exception {
+			checkTransferOut10(obj);
 		}
 	};
 	/**
@@ -519,12 +563,16 @@ public class ConstraintEffectiveSettlementDateRule {
 	 */
 	public static final MMConstraint<TransferIn8> forTransferIn8 = new MMConstraint<TransferIn8>() {
 		{
-			validator = ConstraintEffectiveSettlementDateRule::checkTransferIn8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveSettlementDateRule";
 			definition = "Either TransferDetails\\EffectiveSettlementDate or SettlementDetails\\EffectiveSettlementDate may be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferIn9);
 			owner_lazy = () -> TransferIn8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferIn8 obj) throws Exception {
+			checkTransferIn8(obj);
 		}
 	};
 	/**
@@ -562,13 +610,17 @@ public class ConstraintEffectiveSettlementDateRule {
 	 */
 	public static final MMConstraint<TransferIn9> forTransferIn9 = new MMConstraint<TransferIn9>() {
 		{
-			validator = ConstraintEffectiveSettlementDateRule::checkTransferIn9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveSettlementDateRule";
 			definition = "Either TransferDetails/EffectiveSettlementDate or SettlementDetails/EffectiveSettlementDate may be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferIn12);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferIn8;
 			owner_lazy = () -> TransferIn9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferIn9 obj) throws Exception {
+			checkTransferIn9(obj);
 		}
 	};
 	/**
@@ -606,13 +658,17 @@ public class ConstraintEffectiveSettlementDateRule {
 	 */
 	public static final MMConstraint<TransferOut12> forTransferOut12 = new MMConstraint<TransferOut12>() {
 		{
-			validator = ConstraintEffectiveSettlementDateRule::checkTransferOut12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveSettlementDateRule";
 			definition = "Either TransferDetails/EffectiveSettlementDate or SettlementDetails/EffectiveSettlementDate may be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferOut14);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferOut10;
 			owner_lazy = () -> TransferOut12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferOut12 obj) throws Exception {
+			checkTransferOut12(obj);
 		}
 	};
 	/**
@@ -650,13 +706,17 @@ public class ConstraintEffectiveSettlementDateRule {
 	 */
 	public static final MMConstraint<TransferOut14> forTransferOut14 = new MMConstraint<TransferOut14>() {
 		{
-			validator = ConstraintEffectiveSettlementDateRule::checkTransferOut14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveSettlementDateRule";
 			definition = "Either TransferDetails/EffectiveSettlementDate may be present in one or more occurrences of TransferDetails or SettlementDetails/EffectiveSettlementDate may be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferOut16);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferOut12;
 			owner_lazy = () -> TransferOut14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferOut14 obj) throws Exception {
+			checkTransferOut14(obj);
 		}
 	};
 	/**
@@ -694,13 +754,17 @@ public class ConstraintEffectiveSettlementDateRule {
 	 */
 	public static final MMConstraint<TransferIn12> forTransferIn12 = new MMConstraint<TransferIn12>() {
 		{
-			validator = ConstraintEffectiveSettlementDateRule::checkTransferIn12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveSettlementDateRule";
 			definition = "Either TransferDetails/EffectiveSettlementDate may be present in one or more occurrences of TransferDetails or SettlementDetails/EffectiveSettlementDate may be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferIn14);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferIn9;
 			owner_lazy = () -> TransferIn12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferIn12 obj) throws Exception {
+			checkTransferIn12(obj);
 		}
 	};
 	/**
@@ -730,12 +794,16 @@ public class ConstraintEffectiveSettlementDateRule {
 	 */
 	public static final MMConstraint<TransferIn14> forTransferIn14 = new MMConstraint<TransferIn14>() {
 		{
-			validator = ConstraintEffectiveSettlementDateRule::checkTransferIn14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveSettlementDateRule";
 			definition = "Either TransferDetails/EffectiveSettlementDate may be present in one or more occurrences of TransferDetails or SettlementDetails/EffectiveSettlementDate may be present, but not both.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferIn12;
 			owner_lazy = () -> TransferIn14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferIn14 obj) throws Exception {
+			checkTransferIn14(obj);
 		}
 	};
 	/**
@@ -765,12 +833,16 @@ public class ConstraintEffectiveSettlementDateRule {
 	 */
 	public static final MMConstraint<TransferOut16> forTransferOut16 = new MMConstraint<TransferOut16>() {
 		{
-			validator = ConstraintEffectiveSettlementDateRule::checkTransferOut16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveSettlementDateRule";
 			definition = "Either TransferDetails/EffectiveSettlementDate may be present in one or more occurrences of TransferDetails or SettlementDetails/EffectiveSettlementDate may be present, but not both.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEffectiveSettlementDateRule.forTransferOut14;
 			owner_lazy = () -> TransferOut16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferOut16 obj) throws Exception {
+			checkTransferOut16(obj);
 		}
 	};
 

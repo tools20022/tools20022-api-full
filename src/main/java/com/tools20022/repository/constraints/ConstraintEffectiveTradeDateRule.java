@@ -52,11 +52,15 @@ public class ConstraintEffectiveTradeDateRule {
 	 */
 	public static final MMConstraint<ReversalOfTransferInConfirmationV07> forReversalOfTransferInConfirmationV07 = new MMConstraint<ReversalOfTransferInConfirmationV07>() {
 		{
-			validator = ConstraintEffectiveTradeDateRule::checkReversalOfTransferInConfirmationV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveTradeDateRule";
 			definition = "If Function is ADVI (Advice) or Function is not present, and Reversal/TransferInConfirmationDetails is present, then EffectiveTransferDate must be present.";
 			owner_lazy = () -> ReversalOfTransferInConfirmationV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReversalOfTransferInConfirmationV07 obj) throws Exception {
+			checkReversalOfTransferInConfirmationV07(obj);
 		}
 	};
 

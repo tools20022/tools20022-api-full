@@ -115,7 +115,7 @@ public class Statement10 {
 	 * definition} = "Reference of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement10, Max35Text> mmIdentifier = new MMMessageAttribute<Statement10, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement10.mmObject();
 			isDerived = false;
@@ -126,6 +126,16 @@ public class Statement10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Statement10 obj) {
+			return obj.getIdentifier();
+		}
+
+		@Override
+		public void setValue(Statement10 obj, Max35Text value) {
+			obj.setIdentifier(value);
 		}
 	};
 	@XmlElement(name = "StmtDtTm", required = true)
@@ -157,7 +167,7 @@ public class Statement10 {
 	 * definition} = "Date of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement10, DateAndDateTimeChoice> mmStatementDateTime = new MMMessageAttribute<Statement10, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement10.mmObject();
 			isDerived = false;
@@ -168,6 +178,16 @@ public class Statement10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(Statement10 obj) {
+			return obj.getStatementDateTime();
+		}
+
+		@Override
+		public void setValue(Statement10 obj, DateAndDateTimeChoice value) {
+			obj.setStatementDateTime(value);
 		}
 	};
 	@XmlElement(name = "Frqcy", required = true)
@@ -199,7 +219,7 @@ public class Statement10 {
 	 * definition} = "Frequency of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement10, FrequencyCodeAndDSSCode1Choice> mmFrequency = new MMMessageAttribute<Statement10, FrequencyCodeAndDSSCode1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement10.mmObject();
 			isDerived = false;
@@ -210,6 +230,16 @@ public class Statement10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> FrequencyCodeAndDSSCode1Choice.mmObject();
+		}
+
+		@Override
+		public FrequencyCodeAndDSSCode1Choice getValue(Statement10 obj) {
+			return obj.getFrequency();
+		}
+
+		@Override
+		public void setValue(Statement10 obj, FrequencyCodeAndDSSCode1Choice value) {
+			obj.setFrequency(value);
 		}
 	};
 	@XmlElement(name = "UpdTp", required = true)
@@ -242,7 +272,7 @@ public class Statement10 {
 	 * "Indicates whether the report is complete or contains changes only."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUpdateType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement10, StatementUpdateTypeCodeAndDSSCodeChoice> mmUpdateType = new MMMessageAttribute<Statement10, StatementUpdateTypeCodeAndDSSCodeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement10.mmObject();
 			isDerived = false;
@@ -253,6 +283,16 @@ public class Statement10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> StatementUpdateTypeCodeAndDSSCodeChoice.mmObject();
+		}
+
+		@Override
+		public StatementUpdateTypeCodeAndDSSCodeChoice getValue(Statement10 obj) {
+			return obj.getUpdateType();
+		}
+
+		@Override
+		public void setValue(Statement10 obj, StatementUpdateTypeCodeAndDSSCodeChoice value) {
+			obj.setUpdateType(value);
 		}
 	};
 	@XmlElement(name = "ActvtyInd", required = true)
@@ -286,7 +326,7 @@ public class Statement10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActivityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement10, YesNoIndicator> mmActivityIndicator = new MMMessageAttribute<Statement10, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement10.mmObject();
 			isDerived = false;
@@ -297,6 +337,16 @@ public class Statement10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(Statement10 obj) {
+			return obj.getActivityIndicator();
+		}
+
+		@Override
+		public void setValue(Statement10 obj, YesNoIndicator value) {
+			obj.setActivityIndicator(value);
 		}
 	};
 	@XmlElement(name = "StmtBsis", required = true)
@@ -328,7 +378,7 @@ public class Statement10 {
 	 * definition} = "Type of balance on which the statement is prepared."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement10, StatementBasisCodeAndDSSCodeChoice> mmStatementBasis = new MMMessageAttribute<Statement10, StatementBasisCodeAndDSSCodeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement10.mmObject();
 			isDerived = false;
@@ -339,6 +389,16 @@ public class Statement10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> StatementBasisCodeAndDSSCodeChoice.mmObject();
+		}
+
+		@Override
+		public StatementBasisCodeAndDSSCodeChoice getValue(Statement10 obj) {
+			return obj.getStatementBasis();
+		}
+
+		@Override
+		public void setValue(Statement10 obj, StatementBasisCodeAndDSSCodeChoice value) {
+			obj.setStatementBasis(value);
 		}
 	};
 	@XmlElement(name = "RptNb")
@@ -370,7 +430,7 @@ public class Statement10 {
 	 * definition} = "Sequential number of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement10, Optional<Max5NumericText>> mmReportNumber = new MMMessageAttribute<Statement10, Optional<Max5NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement10.mmObject();
 			isDerived = false;
@@ -381,6 +441,16 @@ public class Statement10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max5NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max5NumericText> getValue(Statement10 obj) {
+			return obj.getReportNumber();
+		}
+
+		@Override
+		public void setValue(Statement10 obj, Optional<Max5NumericText> value) {
+			obj.setReportNumber(value.orElse(null));
 		}
 	};
 

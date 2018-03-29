@@ -120,7 +120,7 @@ public class NumberAndSumOfTransactions3 {
 	 * definition} = "Number of individual entries included in the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfEntries = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NumberAndSumOfTransactions3, Optional<Max15NumericText>> mmNumberOfEntries = new MMMessageAttribute<NumberAndSumOfTransactions3, Optional<Max15NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NumberAndSumOfTransactions3.mmObject();
 			isDerived = false;
@@ -131,6 +131,16 @@ public class NumberAndSumOfTransactions3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max15NumericText> getValue(NumberAndSumOfTransactions3 obj) {
+			return obj.getNumberOfEntries();
+		}
+
+		@Override
+		public void setValue(NumberAndSumOfTransactions3 obj, Optional<Max15NumericText> value) {
+			obj.setNumberOfEntries(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sum")
@@ -163,7 +173,7 @@ public class NumberAndSumOfTransactions3 {
 	 * definition} = "Total of all individual entries included in the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSum = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NumberAndSumOfTransactions3, Optional<DecimalNumber>> mmSum = new MMMessageAttribute<NumberAndSumOfTransactions3, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NumberAndSumOfTransactions3.mmObject();
 			isDerived = false;
@@ -174,6 +184,16 @@ public class NumberAndSumOfTransactions3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(NumberAndSumOfTransactions3 obj) {
+			return obj.getSum();
+		}
+
+		@Override
+		public void setValue(NumberAndSumOfTransactions3 obj, Optional<DecimalNumber> value) {
+			obj.setSum(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlNetNtryAmt")
@@ -208,7 +228,7 @@ public class NumberAndSumOfTransactions3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalNetEntryAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NumberAndSumOfTransactions3, Optional<DecimalNumber>> mmTotalNetEntryAmount = new MMMessageAttribute<NumberAndSumOfTransactions3, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NumberAndSumOfTransactions3.mmObject();
 			isDerived = false;
@@ -219,6 +239,16 @@ public class NumberAndSumOfTransactions3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(NumberAndSumOfTransactions3 obj) {
+			return obj.getTotalNetEntryAmount();
+		}
+
+		@Override
+		public void setValue(NumberAndSumOfTransactions3 obj, Optional<DecimalNumber> value) {
+			obj.setTotalNetEntryAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtDbtInd")
@@ -253,7 +283,7 @@ public class NumberAndSumOfTransactions3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NumberAndSumOfTransactions3, Optional<CreditDebitCode>> mmCreditDebitIndicator = new MMMessageAttribute<NumberAndSumOfTransactions3, Optional<CreditDebitCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NumberAndSumOfTransactions3.mmObject();
 			isDerived = false;
@@ -264,6 +294,16 @@ public class NumberAndSumOfTransactions3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public Optional<CreditDebitCode> getValue(NumberAndSumOfTransactions3 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(NumberAndSumOfTransactions3 obj, Optional<CreditDebitCode> value) {
+			obj.setCreditDebitIndicator(value.orElse(null));
 		}
 	};
 

@@ -120,7 +120,7 @@ public class StandingOrderQuery2 {
 	 * StandingOrderQuery1.mmQueryType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrderQuery2, Optional<QueryType2Code>> mmQueryType = new MMMessageAttribute<StandingOrderQuery2, Optional<QueryType2Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderQuery2.mmObject();
 			isDerived = false;
@@ -132,6 +132,16 @@ public class StandingOrderQuery2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> QueryType2Code.mmObject();
+		}
+
+		@Override
+		public Optional<QueryType2Code> getValue(StandingOrderQuery2 obj) {
+			return obj.getQueryType();
+		}
+
+		@Override
+		public void setValue(StandingOrderQuery2 obj, Optional<QueryType2Code> value) {
+			obj.setQueryType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StgOrdrCrit")
@@ -168,7 +178,7 @@ public class StandingOrderQuery2 {
 	 * StandingOrderQuery1.mmStandingOrderCriteria}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStandingOrderCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StandingOrderQuery2, Optional<StandingOrderCriteria2Choice>> mmStandingOrderCriteria = new MMMessageAssociationEnd<StandingOrderQuery2, Optional<StandingOrderCriteria2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderQuery2.mmObject();
 			isDerived = false;
@@ -181,6 +191,16 @@ public class StandingOrderQuery2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> StandingOrderCriteria2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<StandingOrderCriteria2Choice> getValue(StandingOrderQuery2 obj) {
+			return obj.getStandingOrderCriteria();
+		}
+
+		@Override
+		public void setValue(StandingOrderQuery2 obj, Optional<StandingOrderCriteria2Choice> value) {
+			obj.setStandingOrderCriteria(value.orElse(null));
 		}
 	};
 

@@ -133,7 +133,7 @@ public class ExpectedCollateral2Choice {
 	 * ExpectedCollateral1Choice.mmExpectedCollateralDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExpectedCollateralDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ExpectedCollateral2Choice, ExpectedCollateral2> mmExpectedCollateralDetails = new MMMessageAssociationEnd<ExpectedCollateral2Choice, ExpectedCollateral2>() {
 		{
 			businessComponentTrace_lazy = () -> ExpectedCollateralType.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ExpectedCollateral2Choice.mmObject();
@@ -147,6 +147,16 @@ public class ExpectedCollateral2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ExpectedCollateral2.mmObject();
+		}
+
+		@Override
+		public ExpectedCollateral2 getValue(ExpectedCollateral2Choice obj) {
+			return obj.getExpectedCollateralDetails();
+		}
+
+		@Override
+		public void setValue(ExpectedCollateral2Choice obj, ExpectedCollateral2 value) {
+			obj.setExpectedCollateralDetails(value);
 		}
 	};
 	@XmlElement(name = "SgrtdIndpdntAmt", required = true)
@@ -190,7 +200,7 @@ public class ExpectedCollateral2Choice {
 	 * ExpectedCollateral1Choice.mmSegregatedIndependentAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSegregatedIndependentAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ExpectedCollateral2Choice, ExpectedCollateralMovement2> mmSegregatedIndependentAmount = new MMMessageAssociationEnd<ExpectedCollateral2Choice, ExpectedCollateralMovement2>() {
 		{
 			businessComponentTrace_lazy = () -> ExpectedCollateralType.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ExpectedCollateral2Choice.mmObject();
@@ -204,6 +214,16 @@ public class ExpectedCollateral2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ExpectedCollateralMovement2.mmObject();
+		}
+
+		@Override
+		public ExpectedCollateralMovement2 getValue(ExpectedCollateral2Choice obj) {
+			return obj.getSegregatedIndependentAmount();
+		}
+
+		@Override
+		public void setValue(ExpectedCollateral2Choice obj, ExpectedCollateralMovement2 value) {
+			obj.setSegregatedIndependentAmount(value);
 		}
 	};
 

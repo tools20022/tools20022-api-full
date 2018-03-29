@@ -124,7 +124,7 @@ public class UnmatchedStatus2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnmatchedStatus2Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<UnmatchedStatus2Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnmatchedStatus2Choice.mmObject();
@@ -137,6 +137,16 @@ public class UnmatchedStatus2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(UnmatchedStatus2Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(UnmatchedStatus2Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn")
@@ -175,7 +185,7 @@ public class UnmatchedStatus2Choice {
 	 * definition} = "Specifies the reason of the UnmatchedStatus."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnmatchedStatus2Choice, List<UnmatchedReason2>> mmReason = new MMMessageAssociationEnd<UnmatchedStatus2Choice, List<UnmatchedReason2>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnmatchedStatus2Choice.mmObject();
@@ -188,6 +198,16 @@ public class UnmatchedStatus2Choice {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> UnmatchedReason2.mmObject();
+		}
+
+		@Override
+		public List<UnmatchedReason2> getValue(UnmatchedStatus2Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(UnmatchedStatus2Choice obj, List<UnmatchedReason2> value) {
+			obj.setReason(value);
 		}
 	};
 

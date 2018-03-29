@@ -109,7 +109,7 @@ public class CreditLineType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CreditLineType1Choice, ExternalCreditLineType1Code> mmCode = new MMMessageAttribute<CreditLineType1Choice, ExternalCreditLineType1Code>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmPurpose;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CreditLineType1Choice.mmObject();
@@ -121,6 +121,16 @@ public class CreditLineType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalCreditLineType1Code.mmObject();
+		}
+
+		@Override
+		public ExternalCreditLineType1Code getValue(CreditLineType1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CreditLineType1Choice obj, ExternalCreditLineType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -157,7 +167,7 @@ public class CreditLineType1Choice {
 	 * definition} = "Type of the credit line, in a proprietary form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CreditLineType1Choice, Max35Text> mmProprietary = new MMMessageAttribute<CreditLineType1Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmPurpose;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CreditLineType1Choice.mmObject();
@@ -169,6 +179,16 @@ public class CreditLineType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CreditLineType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CreditLineType1Choice obj, Max35Text value) {
+			obj.setProprietary(value);
 		}
 	};
 

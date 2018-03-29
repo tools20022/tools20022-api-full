@@ -129,7 +129,7 @@ public class ProformaStatusReason1 {
 	 * EnabledStatusReason1.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProformaStatusReason1, ProformaStatusReason2Choice> mmCode = new MMMessageAssociationEnd<ProformaStatusReason1, ProformaStatusReason2Choice>() {
 		{
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProformaStatusReason1.mmObject();
@@ -144,6 +144,16 @@ public class ProformaStatusReason1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProformaStatusReason2Choice.mmObject();
+		}
+
+		@Override
+		public ProformaStatusReason2Choice getValue(ProformaStatusReason1 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ProformaStatusReason1 obj, ProformaStatusReason2Choice value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -190,7 +200,7 @@ public class ProformaStatusReason1 {
 	 * EnabledStatusReason1.mmAdditionalInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProformaStatusReason1, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<ProformaStatusReason1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProformaStatusReason1.mmObject();
 			isDerived = false;
@@ -203,6 +213,16 @@ public class ProformaStatusReason1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(ProformaStatusReason1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(ProformaStatusReason1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

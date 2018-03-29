@@ -113,7 +113,7 @@ public class CashAccount6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount6, Max35Text> mmIdentification = new MMMessageAttribute<CashAccount6, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount6.mmObject();
@@ -125,6 +125,16 @@ public class CashAccount6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CashAccount6 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(CashAccount6 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "GBBkSortCd", required = true)
@@ -163,7 +173,7 @@ public class CashAccount6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGBBankSortCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount6, UKDomesticSortCodeIdentifier> mmGBBankSortCode = new MMMessageAttribute<CashAccount6, UKDomesticSortCodeIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> CashClearingSystemMember.mmUKSortCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount6.mmObject();
@@ -175,6 +185,16 @@ public class CashAccount6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UKDomesticSortCodeIdentifier.mmObject();
+		}
+
+		@Override
+		public UKDomesticSortCodeIdentifier getValue(CashAccount6 obj) {
+			return obj.getGBBankSortCode();
+		}
+
+		@Override
+		public void setValue(CashAccount6 obj, UKDomesticSortCodeIdentifier value) {
+			obj.setGBBankSortCode(value);
 		}
 	};
 	@XmlElement(name = "Svcr")
@@ -212,7 +232,7 @@ public class CashAccount6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmServicer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccount6, Optional<PartyIdentification2Choice>> mmServicer = new MMMessageAssociationEnd<CashAccount6, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount6.mmObject();
@@ -225,6 +245,16 @@ public class CashAccount6 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(CashAccount6 obj) {
+			return obj.getServicer();
+		}
+
+		@Override
+		public void setValue(CashAccount6 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setServicer(value.orElse(null));
 		}
 	};
 

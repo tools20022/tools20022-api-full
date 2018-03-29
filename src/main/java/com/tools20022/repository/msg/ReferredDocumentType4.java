@@ -116,7 +116,7 @@ public class ReferredDocumentType4 {
 	 * ReferredDocumentType2.mmCodeOrProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCodeOrProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReferredDocumentType4, ReferredDocumentType3Choice> mmCodeOrProprietary = new MMMessageAssociationEnd<ReferredDocumentType4, ReferredDocumentType3Choice>() {
 		{
 			businessComponentTrace_lazy = () -> Document.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReferredDocumentType4.mmObject();
@@ -130,6 +130,16 @@ public class ReferredDocumentType4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ReferredDocumentType3Choice.mmObject();
+		}
+
+		@Override
+		public ReferredDocumentType3Choice getValue(ReferredDocumentType4 obj) {
+			return obj.getCodeOrProprietary();
+		}
+
+		@Override
+		public void setValue(ReferredDocumentType4 obj, ReferredDocumentType3Choice value) {
+			obj.setCodeOrProprietary(value);
 		}
 	};
 	@XmlElement(name = "Issr")
@@ -172,7 +182,7 @@ public class ReferredDocumentType4 {
 	 * ReferredDocumentType2.mmIssuer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReferredDocumentType4, Optional<Max35Text>> mmIssuer = new MMMessageAttribute<ReferredDocumentType4, Optional<Max35Text>>() {
 		{
 			businessComponentTrace_lazy = () -> DocumentIssuer.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReferredDocumentType4.mmObject();
@@ -185,6 +195,16 @@ public class ReferredDocumentType4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ReferredDocumentType4 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(ReferredDocumentType4 obj, Optional<Max35Text> value) {
+			obj.setIssuer(value.orElse(null));
 		}
 	};
 

@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.AcceptorConfiguration;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -80,7 +81,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "AcceptorConfigurationContent7"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -134,7 +135,7 @@ public class AcceptorConfigurationContent7 {
 	 * AcceptorConfigurationContent6.mmReplaceConfiguration}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReplaceConfiguration = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcceptorConfigurationContent7, Optional<TrueFalseIndicator>> mmReplaceConfiguration = new MMMessageAttribute<AcceptorConfigurationContent7, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorConfigurationContent7.mmObject();
 			isDerived = false;
@@ -147,9 +148,19 @@ public class AcceptorConfigurationContent7 {
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(AcceptorConfigurationContent7 obj) {
+			return obj.getReplaceConfiguration();
+		}
+
+		@Override
+		public void setValue(AcceptorConfigurationContent7 obj, Optional<TrueFalseIndicator> value) {
+			obj.setReplaceConfiguration(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "TMSPrtcolParams")
-	protected List<com.tools20022.repository.msg.TMSProtocolParameters3> tMSProtocolParameters;
+	protected List<TMSProtocolParameters3> tMSProtocolParameters;
 	/**
 	 * 
 	 <p>
@@ -183,7 +194,7 @@ public class AcceptorConfigurationContent7 {
 	 * AcceptorConfigurationContent6.mmTMSProtocolParameters}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTMSProtocolParameters = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorConfigurationContent7, List<TMSProtocolParameters3>> mmTMSProtocolParameters = new MMMessageAssociationEnd<AcceptorConfigurationContent7, List<TMSProtocolParameters3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorConfigurationContent7.mmObject();
 			isDerived = false;
@@ -194,11 +205,21 @@ public class AcceptorConfigurationContent7 {
 			previousVersion_lazy = () -> AcceptorConfigurationContent6.mmTMSProtocolParameters;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters3.mmObject();
+			type_lazy = () -> TMSProtocolParameters3.mmObject();
+		}
+
+		@Override
+		public List<TMSProtocolParameters3> getValue(AcceptorConfigurationContent7 obj) {
+			return obj.getTMSProtocolParameters();
+		}
+
+		@Override
+		public void setValue(AcceptorConfigurationContent7 obj, List<TMSProtocolParameters3> value) {
+			obj.setTMSProtocolParameters(value);
 		}
 	};
 	@XmlElement(name = "AcqrrPrtcolParams")
-	protected List<com.tools20022.repository.msg.AcquirerProtocolParameters11> acquirerProtocolParameters;
+	protected List<AcquirerProtocolParameters11> acquirerProtocolParameters;
 	/**
 	 * 
 	 <p>
@@ -236,7 +257,7 @@ public class AcceptorConfigurationContent7 {
 	 * AcceptorConfigurationContent6.mmAcquirerProtocolParameters}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAcquirerProtocolParameters = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorConfigurationContent7, List<AcquirerProtocolParameters11>> mmAcquirerProtocolParameters = new MMMessageAssociationEnd<AcceptorConfigurationContent7, List<AcquirerProtocolParameters11>>() {
 		{
 			businessComponentTrace_lazy = () -> AcceptorConfiguration.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorConfigurationContent7.mmObject();
@@ -248,11 +269,21 @@ public class AcceptorConfigurationContent7 {
 			previousVersion_lazy = () -> AcceptorConfigurationContent6.mmAcquirerProtocolParameters;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters11.mmObject();
+			type_lazy = () -> AcquirerProtocolParameters11.mmObject();
+		}
+
+		@Override
+		public List<AcquirerProtocolParameters11> getValue(AcceptorConfigurationContent7 obj) {
+			return obj.getAcquirerProtocolParameters();
+		}
+
+		@Override
+		public void setValue(AcceptorConfigurationContent7 obj, List<AcquirerProtocolParameters11> value) {
+			obj.setAcquirerProtocolParameters(value);
 		}
 	};
 	@XmlElement(name = "MrchntParams")
-	protected List<com.tools20022.repository.msg.MerchantConfigurationParameters3> merchantParameters;
+	protected List<MerchantConfigurationParameters3> merchantParameters;
 	/**
 	 * 
 	 <p>
@@ -286,7 +317,7 @@ public class AcceptorConfigurationContent7 {
 	 * AcceptorConfigurationContent6.mmMerchantParameters}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMerchantParameters = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcceptorConfigurationContent7, List<MerchantConfigurationParameters3>> mmMerchantParameters = new MMMessageAttribute<AcceptorConfigurationContent7, List<MerchantConfigurationParameters3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorConfigurationContent7.mmObject();
 			isDerived = false;
@@ -296,11 +327,21 @@ public class AcceptorConfigurationContent7 {
 			definition = "Acceptor parameters dedicated to the merchant.";
 			previousVersion_lazy = () -> AcceptorConfigurationContent6.mmMerchantParameters;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.MerchantConfigurationParameters3.mmObject();
+			complexType_lazy = () -> MerchantConfigurationParameters3.mmObject();
+		}
+
+		@Override
+		public List<MerchantConfigurationParameters3> getValue(AcceptorConfigurationContent7 obj) {
+			return obj.getMerchantParameters();
+		}
+
+		@Override
+		public void setValue(AcceptorConfigurationContent7 obj, List<MerchantConfigurationParameters3> value) {
+			obj.setMerchantParameters(value);
 		}
 	};
 	@XmlElement(name = "TermnlParams")
-	protected List<com.tools20022.repository.msg.PaymentTerminalParameters5> terminalParameters;
+	protected List<PaymentTerminalParameters5> terminalParameters;
 	/**
 	 * 
 	 <p>
@@ -335,7 +376,7 @@ public class AcceptorConfigurationContent7 {
 	 * AcceptorConfigurationContent6.mmTerminalParameters}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTerminalParameters = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcceptorConfigurationContent7, List<PaymentTerminalParameters5>> mmTerminalParameters = new MMMessageAttribute<AcceptorConfigurationContent7, List<PaymentTerminalParameters5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorConfigurationContent7.mmObject();
 			isDerived = false;
@@ -345,11 +386,21 @@ public class AcceptorConfigurationContent7 {
 			definition = "Manufacturer configuration parameters of the point of interaction.";
 			previousVersion_lazy = () -> AcceptorConfigurationContent6.mmTerminalParameters;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PaymentTerminalParameters5.mmObject();
+			complexType_lazy = () -> PaymentTerminalParameters5.mmObject();
+		}
+
+		@Override
+		public List<PaymentTerminalParameters5> getValue(AcceptorConfigurationContent7 obj) {
+			return obj.getTerminalParameters();
+		}
+
+		@Override
+		public void setValue(AcceptorConfigurationContent7 obj, List<PaymentTerminalParameters5> value) {
+			obj.setTerminalParameters(value);
 		}
 	};
 	@XmlElement(name = "ApplParams")
-	protected List<com.tools20022.repository.msg.ApplicationParameters7> applicationParameters;
+	protected List<ApplicationParameters7> applicationParameters;
 	/**
 	 * 
 	 <p>
@@ -388,7 +439,7 @@ public class AcceptorConfigurationContent7 {
 	 * AcceptorConfigurationContent6.mmApplicationParameters}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmApplicationParameters = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorConfigurationContent7, List<ApplicationParameters7>> mmApplicationParameters = new MMMessageAssociationEnd<AcceptorConfigurationContent7, List<ApplicationParameters7>>() {
 		{
 			businessElementTrace_lazy = () -> AcceptorConfiguration.mmApplicationParameters;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorConfigurationContent7.mmObject();
@@ -400,11 +451,21 @@ public class AcceptorConfigurationContent7 {
 			previousVersion_lazy = () -> AcceptorConfigurationContent6.mmApplicationParameters;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ApplicationParameters7.mmObject();
+			type_lazy = () -> ApplicationParameters7.mmObject();
+		}
+
+		@Override
+		public List<ApplicationParameters7> getValue(AcceptorConfigurationContent7 obj) {
+			return obj.getApplicationParameters();
+		}
+
+		@Override
+		public void setValue(AcceptorConfigurationContent7 obj, List<ApplicationParameters7> value) {
+			obj.setApplicationParameters(value);
 		}
 	};
 	@XmlElement(name = "HstComParams")
-	protected List<com.tools20022.repository.msg.HostCommunicationParameter5> hostCommunicationParameters;
+	protected List<HostCommunicationParameter5> hostCommunicationParameters;
 	/**
 	 * 
 	 <p>
@@ -444,7 +505,7 @@ public class AcceptorConfigurationContent7 {
 	 * AcceptorConfigurationContent6.mmHostCommunicationParameters}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmHostCommunicationParameters = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorConfigurationContent7, List<HostCommunicationParameter5>> mmHostCommunicationParameters = new MMMessageAssociationEnd<AcceptorConfigurationContent7, List<HostCommunicationParameter5>>() {
 		{
 			businessElementTrace_lazy = () -> AcceptorConfiguration.mmTerminalManagementSystem;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorConfigurationContent7.mmObject();
@@ -456,11 +517,21 @@ public class AcceptorConfigurationContent7 {
 			previousVersion_lazy = () -> AcceptorConfigurationContent6.mmHostCommunicationParameters;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.HostCommunicationParameter5.mmObject();
+			type_lazy = () -> HostCommunicationParameter5.mmObject();
+		}
+
+		@Override
+		public List<HostCommunicationParameter5> getValue(AcceptorConfigurationContent7 obj) {
+			return obj.getHostCommunicationParameters();
+		}
+
+		@Override
+		public void setValue(AcceptorConfigurationContent7 obj, List<HostCommunicationParameter5> value) {
+			obj.setHostCommunicationParameters(value);
 		}
 	};
 	@XmlElement(name = "SctyParams")
-	protected List<com.tools20022.repository.msg.SecurityParameters11> securityParameters;
+	protected List<SecurityParameters11> securityParameters;
 	/**
 	 * 
 	 <p>
@@ -496,7 +567,7 @@ public class AcceptorConfigurationContent7 {
 	 * AcceptorConfigurationContent6.mmSecurityParameters}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecurityParameters = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcceptorConfigurationContent7, List<SecurityParameters11>> mmSecurityParameters = new MMMessageAttribute<AcceptorConfigurationContent7, List<SecurityParameters11>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorConfigurationContent7.mmObject();
 			isDerived = false;
@@ -506,11 +577,21 @@ public class AcceptorConfigurationContent7 {
 			definition = "Point of interaction parameters related to the security of software application and application protocol.";
 			previousVersion_lazy = () -> AcceptorConfigurationContent6.mmSecurityParameters;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.SecurityParameters11.mmObject();
+			complexType_lazy = () -> SecurityParameters11.mmObject();
+		}
+
+		@Override
+		public List<SecurityParameters11> getValue(AcceptorConfigurationContent7 obj) {
+			return obj.getSecurityParameters();
+		}
+
+		@Override
+		public void setValue(AcceptorConfigurationContent7 obj, List<SecurityParameters11> value) {
+			obj.setSecurityParameters(value);
 		}
 	};
 	@XmlElement(name = "SaleToPOIParams")
-	protected List<com.tools20022.repository.msg.SaleToPOIProtocolParameter1> saleToPOIParameters;
+	protected List<SaleToPOIProtocolParameter1> saleToPOIParameters;
 	/**
 	 * 
 	 <p>
@@ -539,7 +620,7 @@ public class AcceptorConfigurationContent7 {
 	 * "Parameters dedicated to protocols between a sale system and the POI."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSaleToPOIParameters = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorConfigurationContent7, List<SaleToPOIProtocolParameter1>> mmSaleToPOIParameters = new MMMessageAssociationEnd<AcceptorConfigurationContent7, List<SaleToPOIProtocolParameter1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorConfigurationContent7.mmObject();
 			isDerived = false;
@@ -549,7 +630,17 @@ public class AcceptorConfigurationContent7 {
 			definition = "Parameters dedicated to protocols between a sale system and the POI.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SaleToPOIProtocolParameter1.mmObject();
+			type_lazy = () -> SaleToPOIProtocolParameter1.mmObject();
+		}
+
+		@Override
+		public List<SaleToPOIProtocolParameter1> getValue(AcceptorConfigurationContent7 obj) {
+			return obj.getSaleToPOIParameters();
+		}
+
+		@Override
+		public void setValue(AcceptorConfigurationContent7 obj, List<SaleToPOIProtocolParameter1> value) {
+			obj.setSaleToPOIParameters(value);
 		}
 	};
 
@@ -563,7 +654,7 @@ public class AcceptorConfigurationContent7 {
 						com.tools20022.repository.msg.AcceptorConfigurationContent7.mmSaleToPOIParameters);
 				trace_lazy = () -> AcceptorConfiguration.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorConfigurationContent7";
 				definition = "Content of the acceptor configuration.";
 				previousVersion_lazy = () -> AcceptorConfigurationContent6.mmObject();
@@ -585,7 +676,7 @@ public class AcceptorConfigurationContent7 {
 		return tMSProtocolParameters == null ? tMSProtocolParameters = new ArrayList<>() : tMSProtocolParameters;
 	}
 
-	public AcceptorConfigurationContent7 setTMSProtocolParameters(List<com.tools20022.repository.msg.TMSProtocolParameters3> tMSProtocolParameters) {
+	public AcceptorConfigurationContent7 setTMSProtocolParameters(List<TMSProtocolParameters3> tMSProtocolParameters) {
 		this.tMSProtocolParameters = Objects.requireNonNull(tMSProtocolParameters);
 		return this;
 	}
@@ -594,7 +685,7 @@ public class AcceptorConfigurationContent7 {
 		return acquirerProtocolParameters == null ? acquirerProtocolParameters = new ArrayList<>() : acquirerProtocolParameters;
 	}
 
-	public AcceptorConfigurationContent7 setAcquirerProtocolParameters(List<com.tools20022.repository.msg.AcquirerProtocolParameters11> acquirerProtocolParameters) {
+	public AcceptorConfigurationContent7 setAcquirerProtocolParameters(List<AcquirerProtocolParameters11> acquirerProtocolParameters) {
 		this.acquirerProtocolParameters = Objects.requireNonNull(acquirerProtocolParameters);
 		return this;
 	}
@@ -603,7 +694,7 @@ public class AcceptorConfigurationContent7 {
 		return merchantParameters == null ? merchantParameters = new ArrayList<>() : merchantParameters;
 	}
 
-	public AcceptorConfigurationContent7 setMerchantParameters(List<com.tools20022.repository.msg.MerchantConfigurationParameters3> merchantParameters) {
+	public AcceptorConfigurationContent7 setMerchantParameters(List<MerchantConfigurationParameters3> merchantParameters) {
 		this.merchantParameters = Objects.requireNonNull(merchantParameters);
 		return this;
 	}
@@ -612,7 +703,7 @@ public class AcceptorConfigurationContent7 {
 		return terminalParameters == null ? terminalParameters = new ArrayList<>() : terminalParameters;
 	}
 
-	public AcceptorConfigurationContent7 setTerminalParameters(List<com.tools20022.repository.msg.PaymentTerminalParameters5> terminalParameters) {
+	public AcceptorConfigurationContent7 setTerminalParameters(List<PaymentTerminalParameters5> terminalParameters) {
 		this.terminalParameters = Objects.requireNonNull(terminalParameters);
 		return this;
 	}
@@ -621,7 +712,7 @@ public class AcceptorConfigurationContent7 {
 		return applicationParameters == null ? applicationParameters = new ArrayList<>() : applicationParameters;
 	}
 
-	public AcceptorConfigurationContent7 setApplicationParameters(List<com.tools20022.repository.msg.ApplicationParameters7> applicationParameters) {
+	public AcceptorConfigurationContent7 setApplicationParameters(List<ApplicationParameters7> applicationParameters) {
 		this.applicationParameters = Objects.requireNonNull(applicationParameters);
 		return this;
 	}
@@ -630,7 +721,7 @@ public class AcceptorConfigurationContent7 {
 		return hostCommunicationParameters == null ? hostCommunicationParameters = new ArrayList<>() : hostCommunicationParameters;
 	}
 
-	public AcceptorConfigurationContent7 setHostCommunicationParameters(List<com.tools20022.repository.msg.HostCommunicationParameter5> hostCommunicationParameters) {
+	public AcceptorConfigurationContent7 setHostCommunicationParameters(List<HostCommunicationParameter5> hostCommunicationParameters) {
 		this.hostCommunicationParameters = Objects.requireNonNull(hostCommunicationParameters);
 		return this;
 	}
@@ -639,7 +730,7 @@ public class AcceptorConfigurationContent7 {
 		return securityParameters == null ? securityParameters = new ArrayList<>() : securityParameters;
 	}
 
-	public AcceptorConfigurationContent7 setSecurityParameters(List<com.tools20022.repository.msg.SecurityParameters11> securityParameters) {
+	public AcceptorConfigurationContent7 setSecurityParameters(List<SecurityParameters11> securityParameters) {
 		this.securityParameters = Objects.requireNonNull(securityParameters);
 		return this;
 	}
@@ -648,7 +739,7 @@ public class AcceptorConfigurationContent7 {
 		return saleToPOIParameters == null ? saleToPOIParameters = new ArrayList<>() : saleToPOIParameters;
 	}
 
-	public AcceptorConfigurationContent7 setSaleToPOIParameters(List<com.tools20022.repository.msg.SaleToPOIProtocolParameter1> saleToPOIParameters) {
+	public AcceptorConfigurationContent7 setSaleToPOIParameters(List<SaleToPOIProtocolParameter1> saleToPOIParameters) {
 		this.saleToPOIParameters = Objects.requireNonNull(saleToPOIParameters);
 		return this;
 	}

@@ -117,7 +117,7 @@ public class CorporateActionMandatoryVoluntary4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMandatoryVoluntary4Choice, CorporateActionMandatoryVoluntary1Code> mmCode = new MMMessageAttribute<CorporateActionMandatoryVoluntary4Choice, CorporateActionMandatoryVoluntary1Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmMandatoryVoluntaryEventType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionMandatoryVoluntary4Choice.mmObject();
@@ -130,6 +130,16 @@ public class CorporateActionMandatoryVoluntary4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionMandatoryVoluntary1Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionMandatoryVoluntary1Code getValue(CorporateActionMandatoryVoluntary4Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CorporateActionMandatoryVoluntary4Choice obj, CorporateActionMandatoryVoluntary1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -169,7 +179,7 @@ public class CorporateActionMandatoryVoluntary4Choice {
 	 * definition} = "Proprietary identification of an event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionMandatoryVoluntary4Choice, GenericIdentification47> mmProprietary = new MMMessageAssociationEnd<CorporateActionMandatoryVoluntary4Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmMandatoryVoluntaryEventType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionMandatoryVoluntary4Choice.mmObject();
@@ -183,6 +193,16 @@ public class CorporateActionMandatoryVoluntary4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(CorporateActionMandatoryVoluntary4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CorporateActionMandatoryVoluntary4Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

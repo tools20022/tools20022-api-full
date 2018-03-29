@@ -120,7 +120,7 @@ public class TradeOriginator3Choice {
 	 * TradeOriginator1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeOriginator3Choice, OriginatorRole2Code> mmCode = new MMMessageAttribute<TradeOriginator3Choice, OriginatorRole2Code>() {
 		{
 			businessElementTrace_lazy = () -> TradeOriginatorRole.mmOriginatorRole;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradeOriginator3Choice.mmObject();
@@ -134,6 +134,16 @@ public class TradeOriginator3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OriginatorRole2Code.mmObject();
+		}
+
+		@Override
+		public OriginatorRole2Code getValue(TradeOriginator3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(TradeOriginator3Choice obj, OriginatorRole2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -179,7 +189,7 @@ public class TradeOriginator3Choice {
 	 * TradeOriginator1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeOriginator3Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<TradeOriginator3Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> TradeOriginatorRole.mmOriginatorRole;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradeOriginator3Choice.mmObject();
@@ -193,6 +203,16 @@ public class TradeOriginator3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(TradeOriginator3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(TradeOriginator3Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

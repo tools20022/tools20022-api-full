@@ -29,7 +29,6 @@ import com.tools20022.repository.msg.HypotheticalCapitalMeasure1;
 import com.tools20022.repository.msg.IncomeStatement1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CentralCounterPartyCCPDataReporting;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -133,7 +132,7 @@ public class CCPIncomeStatementAndCapitalAdequacyReportV01 {
 	 * definition} = "Income statement of the CCP."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmIncomeStatement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CCPIncomeStatementAndCapitalAdequacyReportV01, IncomeStatement1> mmIncomeStatement = new MMMessageBuildingBlock<CCPIncomeStatementAndCapitalAdequacyReportV01, IncomeStatement1>() {
 		{
 			xmlTag = "IncmStmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -144,12 +143,14 @@ public class CCPIncomeStatementAndCapitalAdequacyReportV01 {
 			complexType_lazy = () -> IncomeStatement1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CCPIncomeStatementAndCapitalAdequacyReportV01.class.getMethod("getIncomeStatement", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public IncomeStatement1 getValue(CCPIncomeStatementAndCapitalAdequacyReportV01 obj) {
+			return obj.getIncomeStatement();
+		}
+
+		@Override
+		public void setValue(CCPIncomeStatementAndCapitalAdequacyReportV01 obj, IncomeStatement1 value) {
+			obj.setIncomeStatement(value);
 		}
 	};
 	@XmlElement(name = "CptlRqrmnts", required = true)
@@ -179,7 +180,7 @@ public class CCPIncomeStatementAndCapitalAdequacyReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCapitalRequirements = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CCPIncomeStatementAndCapitalAdequacyReportV01, CapitalRequirement1> mmCapitalRequirements = new MMMessageBuildingBlock<CCPIncomeStatementAndCapitalAdequacyReportV01, CapitalRequirement1>() {
 		{
 			xmlTag = "CptlRqrmnts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -190,12 +191,14 @@ public class CCPIncomeStatementAndCapitalAdequacyReportV01 {
 			complexType_lazy = () -> CapitalRequirement1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CCPIncomeStatementAndCapitalAdequacyReportV01.class.getMethod("getCapitalRequirements", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CapitalRequirement1 getValue(CCPIncomeStatementAndCapitalAdequacyReportV01 obj) {
+			return obj.getCapitalRequirements();
+		}
+
+		@Override
+		public void setValue(CCPIncomeStatementAndCapitalAdequacyReportV01 obj, CapitalRequirement1 value) {
+			obj.setCapitalRequirements(value);
 		}
 	};
 	@XmlElement(name = "TtlCptl", required = true)
@@ -225,7 +228,7 @@ public class CCPIncomeStatementAndCapitalAdequacyReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTotalCapital = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CCPIncomeStatementAndCapitalAdequacyReportV01, ActiveCurrencyAndAmount> mmTotalCapital = new MMMessageBuildingBlock<CCPIncomeStatementAndCapitalAdequacyReportV01, ActiveCurrencyAndAmount>() {
 		{
 			xmlTag = "TtlCptl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -236,12 +239,14 @@ public class CCPIncomeStatementAndCapitalAdequacyReportV01 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CCPIncomeStatementAndCapitalAdequacyReportV01.class.getMethod("getTotalCapital", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ActiveCurrencyAndAmount getValue(CCPIncomeStatementAndCapitalAdequacyReportV01 obj) {
+			return obj.getTotalCapital();
+		}
+
+		@Override
+		public void setValue(CCPIncomeStatementAndCapitalAdequacyReportV01 obj, ActiveCurrencyAndAmount value) {
+			obj.setTotalCapital(value);
 		}
 	};
 	@XmlElement(name = "LqdFinRsrcs", required = true)
@@ -270,7 +275,7 @@ public class CCPIncomeStatementAndCapitalAdequacyReportV01 {
 	 * "Total capital resources invested in liquid financial resources.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmLiquidFinancialResources = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CCPIncomeStatementAndCapitalAdequacyReportV01, ActiveCurrencyAndAmount> mmLiquidFinancialResources = new MMMessageBuildingBlock<CCPIncomeStatementAndCapitalAdequacyReportV01, ActiveCurrencyAndAmount>() {
 		{
 			xmlTag = "LqdFinRsrcs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -281,12 +286,14 @@ public class CCPIncomeStatementAndCapitalAdequacyReportV01 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CCPIncomeStatementAndCapitalAdequacyReportV01.class.getMethod("getLiquidFinancialResources", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ActiveCurrencyAndAmount getValue(CCPIncomeStatementAndCapitalAdequacyReportV01 obj) {
+			return obj.getLiquidFinancialResources();
+		}
+
+		@Override
+		public void setValue(CCPIncomeStatementAndCapitalAdequacyReportV01 obj, ActiveCurrencyAndAmount value) {
+			obj.setLiquidFinancialResources(value);
 		}
 	};
 	@XmlElement(name = "HpthtclCptlMeasr", required = true)
@@ -316,7 +323,7 @@ public class CCPIncomeStatementAndCapitalAdequacyReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHypotheticalCapitalMeasure = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CCPIncomeStatementAndCapitalAdequacyReportV01, List<HypotheticalCapitalMeasure1>> mmHypotheticalCapitalMeasure = new MMMessageBuildingBlock<CCPIncomeStatementAndCapitalAdequacyReportV01, List<HypotheticalCapitalMeasure1>>() {
 		{
 			xmlTag = "HpthtclCptlMeasr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -326,12 +333,14 @@ public class CCPIncomeStatementAndCapitalAdequacyReportV01 {
 			complexType_lazy = () -> HypotheticalCapitalMeasure1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CCPIncomeStatementAndCapitalAdequacyReportV01.class.getMethod("getHypotheticalCapitalMeasure", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<HypotheticalCapitalMeasure1> getValue(CCPIncomeStatementAndCapitalAdequacyReportV01 obj) {
+			return obj.getHypotheticalCapitalMeasure();
+		}
+
+		@Override
+		public void setValue(CCPIncomeStatementAndCapitalAdequacyReportV01 obj, List<HypotheticalCapitalMeasure1> value) {
+			obj.setHypotheticalCapitalMeasure(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -361,7 +370,7 @@ public class CCPIncomeStatementAndCapitalAdequacyReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CCPIncomeStatementAndCapitalAdequacyReportV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<CCPIncomeStatementAndCapitalAdequacyReportV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -371,12 +380,14 @@ public class CCPIncomeStatementAndCapitalAdequacyReportV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CCPIncomeStatementAndCapitalAdequacyReportV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(CCPIncomeStatementAndCapitalAdequacyReportV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(CCPIncomeStatementAndCapitalAdequacyReportV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

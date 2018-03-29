@@ -53,11 +53,15 @@ public class ConstraintMeetingIdentificationAndPreviousReference1Guideline {
 	 */
 	public static final MMConstraint<MeetingCancellationV04> forMeetingCancellationV04 = new MMConstraint<MeetingCancellationV04>() {
 		{
-			validator = ConstraintMeetingIdentificationAndPreviousReference1Guideline::checkMeetingCancellationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeetingIdentificationAndPreviousReference1Guideline";
 			definition = "If MessageCancellation is not present, then the meeting has been cancelled by the issuer.";
 			owner_lazy = () -> MeetingCancellationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MeetingCancellationV04 obj) throws Exception {
+			checkMeetingCancellationV04(obj);
 		}
 	};
 	/**
@@ -83,11 +87,15 @@ public class ConstraintMeetingIdentificationAndPreviousReference1Guideline {
 	 */
 	public static final MMConstraint<MeetingCancellationV02> forMeetingCancellationV02 = new MMConstraint<MeetingCancellationV02>() {
 		{
-			validator = ConstraintMeetingIdentificationAndPreviousReference1Guideline::checkMeetingCancellationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeetingIdentificationAndPreviousReference1Guideline";
 			definition = "If MessageCancellation is not present, then the meeting has been cancelled by the issuer.";
 			owner_lazy = () -> MeetingCancellationV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MeetingCancellationV02 obj) throws Exception {
+			checkMeetingCancellationV02(obj);
 		}
 	};
 	/**
@@ -113,11 +121,15 @@ public class ConstraintMeetingIdentificationAndPreviousReference1Guideline {
 	 */
 	public static final MMConstraint<MeetingCancellationV03> forMeetingCancellationV03 = new MMConstraint<MeetingCancellationV03>() {
 		{
-			validator = ConstraintMeetingIdentificationAndPreviousReference1Guideline::checkMeetingCancellationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeetingIdentificationAndPreviousReference1Guideline";
 			definition = "If MessageCancellation is not present, then the meeting has been cancelled by the issuer.";
 			owner_lazy = () -> MeetingCancellationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MeetingCancellationV03 obj) throws Exception {
+			checkMeetingCancellationV03(obj);
 		}
 	};
 

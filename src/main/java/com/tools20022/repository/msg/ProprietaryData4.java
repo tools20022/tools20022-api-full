@@ -27,6 +27,7 @@ import com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV02;
 import com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV03;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ProprietaryData3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -132,7 +133,7 @@ public class ProprietaryData4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryData4, Max35Text> mmType = new MMMessageAttribute<ProprietaryData4, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryData4.mmObject();
 			isDerived = false;
@@ -144,6 +145,16 @@ public class ProprietaryData4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ProprietaryData4 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(ProprietaryData4 obj, Max35Text value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Data", required = true)
@@ -181,7 +192,7 @@ public class ProprietaryData4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProprietaryData4, ProprietaryData3> mmData = new MMMessageAssociationEnd<ProprietaryData4, ProprietaryData3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryData4.mmObject();
 			isDerived = false;
@@ -193,7 +204,17 @@ public class ProprietaryData4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ProprietaryData3.mmObject();
+			type_lazy = () -> ProprietaryData3.mmObject();
+		}
+
+		@Override
+		public ProprietaryData3 getValue(ProprietaryData4 obj) {
+			return obj.getData();
+		}
+
+		@Override
+		public void setValue(ProprietaryData4 obj, ProprietaryData3 value) {
+			obj.setData(value);
 		}
 	};
 
@@ -225,7 +246,7 @@ public class ProprietaryData4 {
 		return data;
 	}
 
-	public ProprietaryData4 setData(com.tools20022.repository.msg.ProprietaryData3 data) {
+	public ProprietaryData4 setData(ProprietaryData3 data) {
 		this.data = Objects.requireNonNull(data);
 		return this;
 	}

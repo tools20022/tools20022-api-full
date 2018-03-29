@@ -69,7 +69,6 @@ public class ConstraintDividendPercentage3Rule {
 	 */
 	public static final MMConstraint<AccountDetailsConfirmationV04> forAccountDetailsConfirmationV04 = new MMConstraint<AccountDetailsConfirmationV04>() {
 		{
-			validator = ConstraintDividendPercentage3Rule::checkAccountDetailsConfirmationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendPercentage3Rule";
 			definition = "WithdrawalInvestmentPlan/CashSettlement/RedemptionPaymentInstrument/DividendPercentage is not allowed.";
@@ -77,6 +76,11 @@ public class ConstraintDividendPercentage3Rule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDividendPercentageRule3.forAccountDetailsConfirmationV03;
 			owner_lazy = () -> AccountDetailsConfirmationV04.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/WithdrawalInvestmentPlan[*]/CashSettlement[*]/RedemptionPaymentInstrument/DividendPercentage</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(AccountDetailsConfirmationV04 obj) throws Exception {
+			checkAccountDetailsConfirmationV04(obj);
 		}
 	};
 	/**
@@ -119,7 +123,6 @@ public class ConstraintDividendPercentage3Rule {
 	 */
 	public static final MMConstraint<AccountModificationInstructionV04> forAccountModificationInstructionV04 = new MMConstraint<AccountModificationInstructionV04>() {
 		{
-			validator = ConstraintDividendPercentage3Rule::checkAccountModificationInstructionV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendPercentage3Rule";
 			definition = "ModifiedWithdrawalInvestmentPlan/InvestmentPlan/ModifiedCashSettlement/RedemptionPaymentInstrument/DividendPercentage is not allowed.";
@@ -127,6 +130,11 @@ public class ConstraintDividendPercentage3Rule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDividendPercentageRule3.forAccountModificationInstructionV03;
 			owner_lazy = () -> AccountModificationInstructionV04.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ModifiedWithdrawalInvestmentPlan[*]/InvestmentPlan/ModifiedCashSettlement[*]/RedemptionPaymentInstrument/DividendPercentage</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(AccountModificationInstructionV04 obj) throws Exception {
+			checkAccountModificationInstructionV04(obj);
 		}
 	};
 	/**
@@ -169,7 +177,6 @@ public class ConstraintDividendPercentage3Rule {
 	 */
 	public static final MMConstraint<AccountOpeningInstructionV04> forAccountOpeningInstructionV04 = new MMConstraint<AccountOpeningInstructionV04>() {
 		{
-			validator = ConstraintDividendPercentage3Rule::checkAccountOpeningInstructionV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendPercentage3Rule";
 			definition = "WithdrawalInvestmentPlan/CashSettlement/RedemptionPaymentInstrument/DividendPercentage is not allowed.";
@@ -177,6 +184,11 @@ public class ConstraintDividendPercentage3Rule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDividendPercentageRule3.forAccountOpeningInstructionV03;
 			owner_lazy = () -> AccountOpeningInstructionV04.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/WithdrawalInvestmentPlan[*]/CashSettlement[*]/RedemptionPaymentInstrument/DividendPercentage</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(AccountOpeningInstructionV04 obj) throws Exception {
+			checkAccountOpeningInstructionV04(obj);
 		}
 	};
 	/**
@@ -211,13 +223,17 @@ public class ConstraintDividendPercentage3Rule {
 	 */
 	public static final MMConstraint<AccountOpeningInstructionV05> forAccountOpeningInstructionV05 = new MMConstraint<AccountOpeningInstructionV05>() {
 		{
-			validator = ConstraintDividendPercentage3Rule::checkAccountOpeningInstructionV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendPercentage3Rule";
 			definition = "WithdrawalInvestmentPlan/CashSettlement/RedemptionPaymentInstrument/DividendPercentage is not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDividendPercentage3Rule.forAccountOpeningInstructionV04;
 			owner_lazy = () -> AccountOpeningInstructionV05.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/WithdrawalInvestmentPlan[*]/CashSettlement[*]/RedemptionPaymentInstrument/DividendPercentage</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(AccountOpeningInstructionV05 obj) throws Exception {
+			checkAccountOpeningInstructionV05(obj);
 		}
 	};
 	/**
@@ -252,13 +268,17 @@ public class ConstraintDividendPercentage3Rule {
 	 */
 	public static final MMConstraint<AccountModificationInstructionV05> forAccountModificationInstructionV05 = new MMConstraint<AccountModificationInstructionV05>() {
 		{
-			validator = ConstraintDividendPercentage3Rule::checkAccountModificationInstructionV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendPercentage3Rule";
 			definition = "ModifiedWithdrawalInvestmentPlan/InvestmentPlan/ModifiedCashSettlement/RedemptionPaymentInstrument/DividendPercentage is not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDividendPercentage3Rule.forAccountModificationInstructionV04;
 			owner_lazy = () -> AccountModificationInstructionV05.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ModifiedWithdrawalInvestmentPlan[*]/InvestmentPlan/ModifiedCashSettlement[*]/RedemptionPaymentInstrument/DividendPercentage</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(AccountModificationInstructionV05 obj) throws Exception {
+			checkAccountModificationInstructionV05(obj);
 		}
 	};
 	/**
@@ -293,13 +313,17 @@ public class ConstraintDividendPercentage3Rule {
 	 */
 	public static final MMConstraint<AccountDetailsConfirmationV05> forAccountDetailsConfirmationV05 = new MMConstraint<AccountDetailsConfirmationV05>() {
 		{
-			validator = ConstraintDividendPercentage3Rule::checkAccountDetailsConfirmationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendPercentage3Rule";
 			definition = "WithdrawalInvestmentPlan/CashSettlement/RedemptionPaymentInstrument/DividendPercentage is not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDividendPercentage3Rule.forAccountDetailsConfirmationV04;
 			owner_lazy = () -> AccountDetailsConfirmationV05.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/WithdrawalInvestmentPlan[*]/CashSettlement[*]/RedemptionPaymentInstrument/DividendPercentage</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(AccountDetailsConfirmationV05 obj) throws Exception {
+			checkAccountDetailsConfirmationV05(obj);
 		}
 	};
 

@@ -21,6 +21,8 @@ import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.seev.MeetingInstructionStatusV05;
+import com.tools20022.repository.choice.CancellationStatus2Choice;
+import com.tools20022.repository.choice.InstructionStatus5Choice;
 import com.tools20022.repository.entity.MeetingStatus;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
@@ -126,7 +128,7 @@ public class InstructionTypeStatus2Choice {
 	 * InstructionTypeStatus1Choice.mmInstructionStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstructionStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InstructionTypeStatus2Choice, InstructionStatus5Choice> mmInstructionStatus = new MMMessageAssociationEnd<InstructionTypeStatus2Choice, InstructionStatus5Choice>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmInstructionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InstructionTypeStatus2Choice.mmObject();
@@ -139,7 +141,17 @@ public class InstructionTypeStatus2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.InstructionStatus5Choice.mmObject();
+			type_lazy = () -> InstructionStatus5Choice.mmObject();
+		}
+
+		@Override
+		public InstructionStatus5Choice getValue(InstructionTypeStatus2Choice obj) {
+			return obj.getInstructionStatus();
+		}
+
+		@Override
+		public void setValue(InstructionTypeStatus2Choice obj, InstructionStatus5Choice value) {
+			obj.setInstructionStatus(value);
 		}
 	};
 	@XmlElement(name = "CxlSts", required = true)
@@ -183,7 +195,7 @@ public class InstructionTypeStatus2Choice {
 	 * InstructionTypeStatus1Choice.mmCancellationStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCancellationStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InstructionTypeStatus2Choice, CancellationStatus2Choice> mmCancellationStatus = new MMMessageAssociationEnd<InstructionTypeStatus2Choice, CancellationStatus2Choice>() {
 		{
 			businessElementTrace_lazy = () -> MeetingStatus.mmInstructionCancellationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InstructionTypeStatus2Choice.mmObject();
@@ -196,7 +208,17 @@ public class InstructionTypeStatus2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.CancellationStatus2Choice.mmObject();
+			type_lazy = () -> CancellationStatus2Choice.mmObject();
+		}
+
+		@Override
+		public CancellationStatus2Choice getValue(InstructionTypeStatus2Choice obj) {
+			return obj.getCancellationStatus();
+		}
+
+		@Override
+		public void setValue(InstructionTypeStatus2Choice obj, CancellationStatus2Choice value) {
+			obj.setCancellationStatus(value);
 		}
 	};
 
@@ -220,7 +242,7 @@ public class InstructionTypeStatus2Choice {
 		return instructionStatus;
 	}
 
-	public InstructionTypeStatus2Choice setInstructionStatus(com.tools20022.repository.choice.InstructionStatus5Choice instructionStatus) {
+	public InstructionTypeStatus2Choice setInstructionStatus(InstructionStatus5Choice instructionStatus) {
 		this.instructionStatus = Objects.requireNonNull(instructionStatus);
 		return this;
 	}
@@ -229,7 +251,7 @@ public class InstructionTypeStatus2Choice {
 		return cancellationStatus;
 	}
 
-	public InstructionTypeStatus2Choice setCancellationStatus(com.tools20022.repository.choice.CancellationStatus2Choice cancellationStatus) {
+	public InstructionTypeStatus2Choice setCancellationStatus(CancellationStatus2Choice cancellationStatus) {
 		this.cancellationStatus = Objects.requireNonNull(cancellationStatus);
 		return this;
 	}

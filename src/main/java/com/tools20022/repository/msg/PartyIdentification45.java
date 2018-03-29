@@ -26,6 +26,8 @@ import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Contacts3;
+import com.tools20022.repository.msg.PostalAddress6;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -134,7 +136,7 @@ public class PartyIdentification45 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification45, Optional<Party8Choice>> mmIdentification = new MMMessageAttribute<PartyIdentification45, Optional<Party8Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification45.mmObject();
@@ -147,6 +149,16 @@ public class PartyIdentification45 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Party8Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Party8Choice> getValue(PartyIdentification45 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification45 obj, Optional<Party8Choice> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Nm")
@@ -193,7 +205,7 @@ public class PartyIdentification45 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification45, Optional<Max35Text>> mmName = new MMMessageAttribute<PartyIdentification45, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification45.mmObject();
@@ -206,6 +218,16 @@ public class PartyIdentification45 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PartyIdentification45 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(PartyIdentification45 obj, Optional<Max35Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PstlAdr")
@@ -251,7 +273,7 @@ public class PartyIdentification45 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPostalAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification45, Optional<PostalAddress6>> mmPostalAddress = new MMMessageAttribute<PartyIdentification45, Optional<PostalAddress6>>() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification45.mmObject();
@@ -263,7 +285,17 @@ public class PartyIdentification45 {
 			nextVersions_lazy = () -> Arrays.asList(PartyIdentification112.mmPostalAddress);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PostalAddress6.mmObject();
+			complexType_lazy = () -> PostalAddress6.mmObject();
+		}
+
+		@Override
+		public Optional<PostalAddress6> getValue(PartyIdentification45 obj) {
+			return obj.getPostalAddress();
+		}
+
+		@Override
+		public void setValue(PartyIdentification45 obj, Optional<PostalAddress6> value) {
+			obj.setPostalAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtryOfRes")
@@ -310,7 +342,7 @@ public class PartyIdentification45 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountryOfResidence = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification45, Optional<CountryCode>> mmCountryOfResidence = new MMMessageAttribute<PartyIdentification45, Optional<CountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification45.mmObject();
@@ -324,9 +356,19 @@ public class PartyIdentification45 {
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
+
+		@Override
+		public Optional<CountryCode> getValue(PartyIdentification45 obj) {
+			return obj.getCountryOfResidence();
+		}
+
+		@Override
+		public void setValue(PartyIdentification45 obj, Optional<CountryCode> value) {
+			obj.setCountryOfResidence(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "CtctDtls")
-	protected List<com.tools20022.repository.msg.Contacts3> contactDetails;
+	protected List<Contacts3> contactDetails;
 	/**
 	 * 
 	 <p>
@@ -365,7 +407,7 @@ public class PartyIdentification45 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContactDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification45, List<Contacts3>> mmContactDetails = new MMMessageAssociationEnd<PartyIdentification45, List<Contacts3>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmContactPoint;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification45.mmObject();
@@ -377,7 +419,17 @@ public class PartyIdentification45 {
 			nextVersions_lazy = () -> Arrays.asList(PartyIdentification112.mmContactDetails);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Contacts3.mmObject();
+			type_lazy = () -> Contacts3.mmObject();
+		}
+
+		@Override
+		public List<Contacts3> getValue(PartyIdentification45 obj) {
+			return obj.getContactDetails();
+		}
+
+		@Override
+		public void setValue(PartyIdentification45 obj, List<Contacts3> value) {
+			obj.setContactDetails(value);
 		}
 	};
 
@@ -419,7 +471,7 @@ public class PartyIdentification45 {
 		return postalAddress == null ? Optional.empty() : Optional.of(postalAddress);
 	}
 
-	public PartyIdentification45 setPostalAddress(com.tools20022.repository.msg.PostalAddress6 postalAddress) {
+	public PartyIdentification45 setPostalAddress(PostalAddress6 postalAddress) {
 		this.postalAddress = postalAddress;
 		return this;
 	}
@@ -437,7 +489,7 @@ public class PartyIdentification45 {
 		return contactDetails == null ? contactDetails = new ArrayList<>() : contactDetails;
 	}
 
-	public PartyIdentification45 setContactDetails(List<com.tools20022.repository.msg.Contacts3> contactDetails) {
+	public PartyIdentification45 setContactDetails(List<Contacts3> contactDetails) {
 		this.contactDetails = Objects.requireNonNull(contactDetails);
 		return this;
 	}

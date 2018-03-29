@@ -143,7 +143,7 @@ public class CertifiedCharacteristics1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrigin = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CertifiedCharacteristics1Choice, CountryCode> mmOrigin = new MMMessageAttribute<CertifiedCharacteristics1Choice, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> Product.mmOrigin;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmObject();
@@ -156,6 +156,16 @@ public class CertifiedCharacteristics1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(CertifiedCharacteristics1Choice obj) {
+			return obj.getOrigin();
+		}
+
+		@Override
+		public void setValue(CertifiedCharacteristics1Choice obj, CountryCode value) {
+			obj.setOrigin(value);
 		}
 	};
 	@XmlElement(name = "Qlty", required = true)
@@ -200,7 +210,7 @@ public class CertifiedCharacteristics1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuality = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CertifiedCharacteristics1Choice, Max70Text> mmQuality = new MMMessageAttribute<CertifiedCharacteristics1Choice, Max70Text>() {
 		{
 			businessElementTrace_lazy = () -> Product.mmQuality;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmObject();
@@ -213,6 +223,16 @@ public class CertifiedCharacteristics1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Max70Text getValue(CertifiedCharacteristics1Choice obj) {
+			return obj.getQuality();
+		}
+
+		@Override
+		public void setValue(CertifiedCharacteristics1Choice obj, Max70Text value) {
+			obj.setQuality(value);
 		}
 	};
 	@XmlElement(name = "Anlys", required = true)
@@ -257,7 +277,7 @@ public class CertifiedCharacteristics1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAnalysis = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CertifiedCharacteristics1Choice, Max70Text> mmAnalysis = new MMMessageAttribute<CertifiedCharacteristics1Choice, Max70Text>() {
 		{
 			businessElementTrace_lazy = () -> Goods.mmAnalysis;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmObject();
@@ -270,6 +290,16 @@ public class CertifiedCharacteristics1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Max70Text getValue(CertifiedCharacteristics1Choice obj) {
+			return obj.getAnalysis();
+		}
+
+		@Override
+		public void setValue(CertifiedCharacteristics1Choice obj, Max70Text value) {
+			obj.setAnalysis(value);
 		}
 	};
 	@XmlElement(name = "Wght", required = true)
@@ -314,7 +344,7 @@ public class CertifiedCharacteristics1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmWeight = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CertifiedCharacteristics1Choice, Quantity4> mmWeight = new MMMessageAttribute<CertifiedCharacteristics1Choice, Quantity4>() {
 		{
 			businessElementTrace_lazy = () -> Product.mmQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmObject();
@@ -327,6 +357,16 @@ public class CertifiedCharacteristics1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Quantity4.mmObject();
+		}
+
+		@Override
+		public Quantity4 getValue(CertifiedCharacteristics1Choice obj) {
+			return obj.getWeight();
+		}
+
+		@Override
+		public void setValue(CertifiedCharacteristics1Choice obj, Quantity4 value) {
+			obj.setWeight(value);
 		}
 	};
 	@XmlElement(name = "Qty", required = true)
@@ -371,7 +411,7 @@ public class CertifiedCharacteristics1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CertifiedCharacteristics1Choice, Quantity4> mmQuantity = new MMMessageAttribute<CertifiedCharacteristics1Choice, Quantity4>() {
 		{
 			businessElementTrace_lazy = () -> Product.mmQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmObject();
@@ -384,6 +424,16 @@ public class CertifiedCharacteristics1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Quantity4.mmObject();
+		}
+
+		@Override
+		public Quantity4 getValue(CertifiedCharacteristics1Choice obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(CertifiedCharacteristics1Choice obj, Quantity4 value) {
+			obj.setQuantity(value);
 		}
 	};
 	@XmlElement(name = "HlthIndctn", required = true)
@@ -429,7 +479,7 @@ public class CertifiedCharacteristics1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHealthIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CertifiedCharacteristics1Choice, YesNoIndicator> mmHealthIndication = new MMMessageAttribute<CertifiedCharacteristics1Choice, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> Goods.mmHealthCheck;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmObject();
@@ -442,6 +492,16 @@ public class CertifiedCharacteristics1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(CertifiedCharacteristics1Choice obj) {
+			return obj.getHealthIndication();
+		}
+
+		@Override
+		public void setValue(CertifiedCharacteristics1Choice obj, YesNoIndicator value) {
+			obj.setHealthIndication(value);
 		}
 	};
 	@XmlElement(name = "PhytosntryIndctn", required = true)
@@ -488,7 +548,7 @@ public class CertifiedCharacteristics1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPhytosanitaryIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CertifiedCharacteristics1Choice, YesNoIndicator> mmPhytosanitaryIndication = new MMMessageAttribute<CertifiedCharacteristics1Choice, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> Goods.mmPhytosanitaryInspection;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CertifiedCharacteristics1Choice.mmObject();
@@ -501,6 +561,16 @@ public class CertifiedCharacteristics1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(CertifiedCharacteristics1Choice obj) {
+			return obj.getPhytosanitaryIndication();
+		}
+
+		@Override
+		public void setValue(CertifiedCharacteristics1Choice obj, YesNoIndicator value) {
+			obj.setPhytosanitaryIndication(value);
 		}
 	};
 

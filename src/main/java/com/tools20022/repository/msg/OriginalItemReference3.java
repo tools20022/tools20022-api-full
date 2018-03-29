@@ -24,6 +24,10 @@ import com.tools20022.repository.choice.Party12Choice;
 import com.tools20022.repository.choice.Purpose2Choice;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5;
+import com.tools20022.repository.msg.CashAccount24;
+import com.tools20022.repository.msg.RemittanceInformation10;
+import com.tools20022.repository.msg.RemittanceLocation4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -154,7 +158,7 @@ public class OriginalItemReference3 {
 	 * OriginalItemReference2.mmAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OriginalItemReference3, Optional<CashAccount24>> mmAccount = new MMMessageAssociationEnd<OriginalItemReference3, Optional<CashAccount24>>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalItemReference3.mmObject();
@@ -168,7 +172,17 @@ public class OriginalItemReference3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
+			type_lazy = () -> CashAccount24.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount24> getValue(OriginalItemReference3 obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(OriginalItemReference3 obj, Optional<CashAccount24> value) {
+			obj.setAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -217,7 +231,7 @@ public class OriginalItemReference3 {
 	 * OriginalItemReference2.mmAccountOwner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OriginalItemReference3, Optional<Party12Choice>> mmAccountOwner = new MMMessageAssociationEnd<OriginalItemReference3, Optional<Party12Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalItemReference3.mmObject();
@@ -232,6 +246,16 @@ public class OriginalItemReference3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Party12Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Party12Choice> getValue(OriginalItemReference3 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(OriginalItemReference3 obj, Optional<Party12Choice> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctSvcr")
@@ -283,7 +307,7 @@ public class OriginalItemReference3 {
 	 * OriginalItemReference2.mmAccountServicer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountServicer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OriginalItemReference3, Optional<BranchAndFinancialInstitutionIdentification5>> mmAccountServicer = new MMMessageAssociationEnd<OriginalItemReference3, Optional<BranchAndFinancialInstitutionIdentification5>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalItemReference3.mmObject();
@@ -297,7 +321,17 @@ public class OriginalItemReference3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+
+		@Override
+		public Optional<BranchAndFinancialInstitutionIdentification5> getValue(OriginalItemReference3 obj) {
+			return obj.getAccountServicer();
+		}
+
+		@Override
+		public void setValue(OriginalItemReference3 obj, Optional<BranchAndFinancialInstitutionIdentification5> value) {
+			obj.setAccountServicer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RltdAcct")
@@ -347,7 +381,7 @@ public class OriginalItemReference3 {
 	 * OriginalItemReference2.mmRelatedAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRelatedAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OriginalItemReference3, Optional<CashAccount24>> mmRelatedAccount = new MMMessageAssociationEnd<OriginalItemReference3, Optional<CashAccount24>>() {
 		{
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalItemReference3.mmObject();
@@ -361,7 +395,17 @@ public class OriginalItemReference3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
+			type_lazy = () -> CashAccount24.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount24> getValue(OriginalItemReference3 obj) {
+			return obj.getRelatedAccount();
+		}
+
+		@Override
+		public void setValue(OriginalItemReference3 obj, Optional<CashAccount24> value) {
+			obj.setRelatedAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Dbtr")
@@ -411,7 +455,7 @@ public class OriginalItemReference3 {
 	 * OriginalItemReference2.mmDebtor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDebtor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OriginalItemReference3, Optional<Party12Choice>> mmDebtor = new MMMessageAssociationEnd<OriginalItemReference3, Optional<Party12Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalItemReference3.mmObject();
@@ -426,6 +470,16 @@ public class OriginalItemReference3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Party12Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Party12Choice> getValue(OriginalItemReference3 obj) {
+			return obj.getDebtor();
+		}
+
+		@Override
+		public void setValue(OriginalItemReference3 obj, Optional<Party12Choice> value) {
+			obj.setDebtor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DbtrAgt")
@@ -475,7 +529,7 @@ public class OriginalItemReference3 {
 	 * OriginalItemReference2.mmDebtorAgent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDebtorAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OriginalItemReference3, Optional<BranchAndFinancialInstitutionIdentification5>> mmDebtorAgent = new MMMessageAssociationEnd<OriginalItemReference3, Optional<BranchAndFinancialInstitutionIdentification5>>() {
 		{
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalItemReference3.mmObject();
@@ -489,7 +543,17 @@ public class OriginalItemReference3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+
+		@Override
+		public Optional<BranchAndFinancialInstitutionIdentification5> getValue(OriginalItemReference3 obj) {
+			return obj.getDebtorAgent();
+		}
+
+		@Override
+		public void setValue(OriginalItemReference3 obj, Optional<BranchAndFinancialInstitutionIdentification5> value) {
+			obj.setDebtorAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrmyAgt")
@@ -540,7 +604,7 @@ public class OriginalItemReference3 {
 	 * OriginalItemReference2.mmIntermediaryAgent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIntermediaryAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OriginalItemReference3, Optional<BranchAndFinancialInstitutionIdentification5>> mmIntermediaryAgent = new MMMessageAssociationEnd<OriginalItemReference3, Optional<BranchAndFinancialInstitutionIdentification5>>() {
 		{
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalItemReference3.mmObject();
@@ -554,7 +618,17 @@ public class OriginalItemReference3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+
+		@Override
+		public Optional<BranchAndFinancialInstitutionIdentification5> getValue(OriginalItemReference3 obj) {
+			return obj.getIntermediaryAgent();
+		}
+
+		@Override
+		public void setValue(OriginalItemReference3 obj, Optional<BranchAndFinancialInstitutionIdentification5> value) {
+			obj.setIntermediaryAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Purp")
@@ -603,7 +677,7 @@ public class OriginalItemReference3 {
 	 * OriginalItemReference2.mmPurpose}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPurpose = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OriginalItemReference3, Optional<Purpose2Choice>> mmPurpose = new MMMessageAssociationEnd<OriginalItemReference3, Optional<Purpose2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmPurpose;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalItemReference3.mmObject();
@@ -618,6 +692,16 @@ public class OriginalItemReference3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Purpose2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Purpose2Choice> getValue(OriginalItemReference3 obj) {
+			return obj.getPurpose();
+		}
+
+		@Override
+		public void setValue(OriginalItemReference3 obj, Optional<Purpose2Choice> value) {
+			obj.setPurpose(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RltdRmtInf")
@@ -668,7 +752,7 @@ public class OriginalItemReference3 {
 	 * OriginalItemReference2.mmRelatedRemittanceInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRelatedRemittanceInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OriginalItemReference3, Optional<RemittanceLocation4>> mmRelatedRemittanceInformation = new MMMessageAssociationEnd<OriginalItemReference3, Optional<RemittanceLocation4>>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmPlaceOfStorage;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalItemReference3.mmObject();
@@ -682,7 +766,17 @@ public class OriginalItemReference3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RemittanceLocation4.mmObject();
+			type_lazy = () -> RemittanceLocation4.mmObject();
+		}
+
+		@Override
+		public Optional<RemittanceLocation4> getValue(OriginalItemReference3 obj) {
+			return obj.getRelatedRemittanceInformation();
+		}
+
+		@Override
+		public void setValue(OriginalItemReference3 obj, Optional<RemittanceLocation4> value) {
+			obj.setRelatedRemittanceInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RmtInf")
@@ -734,7 +828,7 @@ public class OriginalItemReference3 {
 	 * OriginalItemReference2.mmRemittanceInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRemittanceInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OriginalItemReference3, Optional<RemittanceInformation10>> mmRemittanceInformation = new MMMessageAssociationEnd<OriginalItemReference3, Optional<RemittanceInformation10>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmAssociatedDocument;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalItemReference3.mmObject();
@@ -748,7 +842,17 @@ public class OriginalItemReference3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RemittanceInformation10.mmObject();
+			type_lazy = () -> RemittanceInformation10.mmObject();
+		}
+
+		@Override
+		public Optional<RemittanceInformation10> getValue(OriginalItemReference3 obj) {
+			return obj.getRemittanceInformation();
+		}
+
+		@Override
+		public void setValue(OriginalItemReference3 obj, Optional<RemittanceInformation10> value) {
+			obj.setRemittanceInformation(value.orElse(null));
 		}
 	};
 
@@ -775,7 +879,7 @@ public class OriginalItemReference3 {
 		return account == null ? Optional.empty() : Optional.of(account);
 	}
 
-	public OriginalItemReference3 setAccount(com.tools20022.repository.msg.CashAccount24 account) {
+	public OriginalItemReference3 setAccount(CashAccount24 account) {
 		this.account = account;
 		return this;
 	}
@@ -793,7 +897,7 @@ public class OriginalItemReference3 {
 		return accountServicer == null ? Optional.empty() : Optional.of(accountServicer);
 	}
 
-	public OriginalItemReference3 setAccountServicer(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 accountServicer) {
+	public OriginalItemReference3 setAccountServicer(BranchAndFinancialInstitutionIdentification5 accountServicer) {
 		this.accountServicer = accountServicer;
 		return this;
 	}
@@ -802,7 +906,7 @@ public class OriginalItemReference3 {
 		return relatedAccount == null ? Optional.empty() : Optional.of(relatedAccount);
 	}
 
-	public OriginalItemReference3 setRelatedAccount(com.tools20022.repository.msg.CashAccount24 relatedAccount) {
+	public OriginalItemReference3 setRelatedAccount(CashAccount24 relatedAccount) {
 		this.relatedAccount = relatedAccount;
 		return this;
 	}
@@ -820,7 +924,7 @@ public class OriginalItemReference3 {
 		return debtorAgent == null ? Optional.empty() : Optional.of(debtorAgent);
 	}
 
-	public OriginalItemReference3 setDebtorAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 debtorAgent) {
+	public OriginalItemReference3 setDebtorAgent(BranchAndFinancialInstitutionIdentification5 debtorAgent) {
 		this.debtorAgent = debtorAgent;
 		return this;
 	}
@@ -829,7 +933,7 @@ public class OriginalItemReference3 {
 		return intermediaryAgent == null ? Optional.empty() : Optional.of(intermediaryAgent);
 	}
 
-	public OriginalItemReference3 setIntermediaryAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 intermediaryAgent) {
+	public OriginalItemReference3 setIntermediaryAgent(BranchAndFinancialInstitutionIdentification5 intermediaryAgent) {
 		this.intermediaryAgent = intermediaryAgent;
 		return this;
 	}
@@ -847,7 +951,7 @@ public class OriginalItemReference3 {
 		return relatedRemittanceInformation == null ? Optional.empty() : Optional.of(relatedRemittanceInformation);
 	}
 
-	public OriginalItemReference3 setRelatedRemittanceInformation(com.tools20022.repository.msg.RemittanceLocation4 relatedRemittanceInformation) {
+	public OriginalItemReference3 setRelatedRemittanceInformation(RemittanceLocation4 relatedRemittanceInformation) {
 		this.relatedRemittanceInformation = relatedRemittanceInformation;
 		return this;
 	}
@@ -856,7 +960,7 @@ public class OriginalItemReference3 {
 		return remittanceInformation == null ? Optional.empty() : Optional.of(remittanceInformation);
 	}
 
-	public OriginalItemReference3 setRemittanceInformation(com.tools20022.repository.msg.RemittanceInformation10 remittanceInformation) {
+	public OriginalItemReference3 setRemittanceInformation(RemittanceInformation10 remittanceInformation) {
 		this.remittanceInformation = remittanceInformation;
 		return this;
 	}

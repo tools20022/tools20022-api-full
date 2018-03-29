@@ -122,7 +122,7 @@ public class PaymentStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentStatus1, Optional<PaymentStatusCode5Choice>> mmCode = new MMMessageAssociationEnd<PaymentStatus1, Optional<PaymentStatusCode5Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> PaymentStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentStatus1.mmObject();
@@ -136,6 +136,16 @@ public class PaymentStatus1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PaymentStatusCode5Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentStatusCode5Choice> getValue(PaymentStatus1 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(PaymentStatus1 obj, Optional<PaymentStatusCode5Choice> value) {
+			obj.setCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DtTm")
@@ -180,7 +190,7 @@ public class PaymentStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentStatus1, Optional<DateAndDateTimeChoice>> mmDateTime = new MMMessageAttribute<PaymentStatus1, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentStatus1.mmObject();
@@ -193,6 +203,16 @@ public class PaymentStatus1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(PaymentStatus1 obj) {
+			return obj.getDateTime();
+		}
+
+		@Override
+		public void setValue(PaymentStatus1 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rsn")
@@ -235,7 +255,7 @@ public class PaymentStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentStatus1, List<PaymentStatusReasonCode5Choice>> mmReason = new MMMessageAssociationEnd<PaymentStatus1, List<PaymentStatusReasonCode5Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentStatus1.mmObject();
@@ -248,6 +268,16 @@ public class PaymentStatus1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PaymentStatusReasonCode5Choice.mmObject();
+		}
+
+		@Override
+		public List<PaymentStatusReasonCode5Choice> getValue(PaymentStatus1 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(PaymentStatus1 obj, List<PaymentStatusReasonCode5Choice> value) {
+			obj.setReason(value);
 		}
 	};
 

@@ -146,7 +146,7 @@ public class RateTypeAndAmountAndStatus14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RateTypeAndAmountAndStatus14, RateType21Choice> mmRateType = new MMMessageAssociationEnd<RateTypeAndAmountAndStatus14, RateType21Choice>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmInterestCalculation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RateTypeAndAmountAndStatus14.mmObject();
@@ -161,6 +161,16 @@ public class RateTypeAndAmountAndStatus14 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RateType21Choice.mmObject();
+		}
+
+		@Override
+		public RateType21Choice getValue(RateTypeAndAmountAndStatus14 obj) {
+			return obj.getRateType();
+		}
+
+		@Override
+		public void setValue(RateTypeAndAmountAndStatus14 obj, RateType21Choice value) {
+			obj.setRateType(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -206,7 +216,7 @@ public class RateTypeAndAmountAndStatus14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateTypeAndAmountAndStatus14, ActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<RateTypeAndAmountAndStatus14, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RateTypeAndAmountAndStatus14.mmObject();
@@ -219,6 +229,16 @@ public class RateTypeAndAmountAndStatus14 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(RateTypeAndAmountAndStatus14 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(RateTypeAndAmountAndStatus14 obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "RateSts")
@@ -262,7 +282,7 @@ public class RateTypeAndAmountAndStatus14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RateTypeAndAmountAndStatus14, Optional<RateStatus1Choice>> mmRateStatus = new MMMessageAssociationEnd<RateTypeAndAmountAndStatus14, Optional<RateStatus1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatus.mmRateStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RateTypeAndAmountAndStatus14.mmObject();
@@ -276,6 +296,16 @@ public class RateTypeAndAmountAndStatus14 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> RateStatus1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateStatus1Choice> getValue(RateTypeAndAmountAndStatus14 obj) {
+			return obj.getRateStatus();
+		}
+
+		@Override
+		public void setValue(RateTypeAndAmountAndStatus14 obj, Optional<RateStatus1Choice> value) {
+			obj.setRateStatus(value.orElse(null));
 		}
 	};
 

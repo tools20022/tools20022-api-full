@@ -124,7 +124,7 @@ public class RateTypeAndAmountAndStatus27 {
 	 * RateTypeAndAmountAndStatus5.mmRateType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RateTypeAndAmountAndStatus27, RateType37Choice> mmRateType = new MMMessageAssociationEnd<RateTypeAndAmountAndStatus27, RateType37Choice>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmInterestCalculation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RateTypeAndAmountAndStatus27.mmObject();
@@ -139,6 +139,16 @@ public class RateTypeAndAmountAndStatus27 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RateType37Choice.mmObject();
+		}
+
+		@Override
+		public RateType37Choice getValue(RateTypeAndAmountAndStatus27 obj) {
+			return obj.getRateType();
+		}
+
+		@Override
+		public void setValue(RateTypeAndAmountAndStatus27 obj, RateType37Choice value) {
+			obj.setRateType(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -181,7 +191,7 @@ public class RateTypeAndAmountAndStatus27 {
 	 * RateTypeAndAmountAndStatus5.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateTypeAndAmountAndStatus27, ActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<RateTypeAndAmountAndStatus27, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RateTypeAndAmountAndStatus27.mmObject();
@@ -194,6 +204,16 @@ public class RateTypeAndAmountAndStatus27 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(RateTypeAndAmountAndStatus27 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(RateTypeAndAmountAndStatus27 obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "RateSts")
@@ -234,7 +254,7 @@ public class RateTypeAndAmountAndStatus27 {
 	 * RateTypeAndAmountAndStatus5.mmRateStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RateTypeAndAmountAndStatus27, Optional<RateStatus3Choice>> mmRateStatus = new MMMessageAssociationEnd<RateTypeAndAmountAndStatus27, Optional<RateStatus3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatus.mmRateStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RateTypeAndAmountAndStatus27.mmObject();
@@ -248,6 +268,16 @@ public class RateTypeAndAmountAndStatus27 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> RateStatus3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateStatus3Choice> getValue(RateTypeAndAmountAndStatus27 obj) {
+			return obj.getRateStatus();
+		}
+
+		@Override
+		public void setValue(RateTypeAndAmountAndStatus27 obj, Optional<RateStatus3Choice> value) {
+			obj.setRateStatus(value.orElse(null));
 		}
 	};
 

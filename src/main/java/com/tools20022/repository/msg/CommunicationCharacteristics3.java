@@ -116,7 +116,7 @@ public class CommunicationCharacteristics3 {
 	 * CommunicationCharacteristics2.mmCommunicationType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommunicationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommunicationCharacteristics3, POICommunicationType2Code> mmCommunicationType = new MMMessageAttribute<CommunicationCharacteristics3, POICommunicationType2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommunicationCharacteristics3.mmObject();
 			isDerived = false;
@@ -128,6 +128,16 @@ public class CommunicationCharacteristics3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> POICommunicationType2Code.mmObject();
+		}
+
+		@Override
+		public POICommunicationType2Code getValue(CommunicationCharacteristics3 obj) {
+			return obj.getCommunicationType();
+		}
+
+		@Override
+		public void setValue(CommunicationCharacteristics3 obj, POICommunicationType2Code value) {
+			obj.setCommunicationType(value);
 		}
 	};
 	@XmlElement(name = "RmotPty", required = true)
@@ -167,7 +177,7 @@ public class CommunicationCharacteristics3 {
 	 * CommunicationCharacteristics2.mmRemoteParty}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRemoteParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommunicationCharacteristics3, List<PartyType7Code>> mmRemoteParty = new MMMessageAttribute<CommunicationCharacteristics3, List<PartyType7Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommunicationCharacteristics3.mmObject();
 			isDerived = false;
@@ -178,6 +188,16 @@ public class CommunicationCharacteristics3 {
 			previousVersion_lazy = () -> CommunicationCharacteristics2.mmRemoteParty;
 			minOccurs = 1;
 			simpleType_lazy = () -> PartyType7Code.mmObject();
+		}
+
+		@Override
+		public List<PartyType7Code> getValue(CommunicationCharacteristics3 obj) {
+			return obj.getRemoteParty();
+		}
+
+		@Override
+		public void setValue(CommunicationCharacteristics3 obj, List<PartyType7Code> value) {
+			obj.setRemoteParty(value);
 		}
 	};
 	@XmlElement(name = "Actv", required = true)
@@ -215,7 +235,7 @@ public class CommunicationCharacteristics3 {
 	 * CommunicationCharacteristics2.mmActive}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActive = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommunicationCharacteristics3, TrueFalseIndicator> mmActive = new MMMessageAttribute<CommunicationCharacteristics3, TrueFalseIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommunicationCharacteristics3.mmObject();
 			isDerived = false;
@@ -227,6 +247,16 @@ public class CommunicationCharacteristics3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public TrueFalseIndicator getValue(CommunicationCharacteristics3 obj) {
+			return obj.getActive();
+		}
+
+		@Override
+		public void setValue(CommunicationCharacteristics3 obj, TrueFalseIndicator value) {
+			obj.setActive(value);
 		}
 	};
 

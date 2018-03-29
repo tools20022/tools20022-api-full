@@ -101,7 +101,7 @@ public class AccountQueryDefinition4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountQueryDefinition4, Optional<QueryType2Code>> mmQueryType = new MMMessageAttribute<AccountQueryDefinition4, Optional<QueryType2Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountQueryDefinition4.mmObject();
 			isDerived = false;
@@ -112,6 +112,16 @@ public class AccountQueryDefinition4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> QueryType2Code.mmObject();
+		}
+
+		@Override
+		public Optional<QueryType2Code> getValue(AccountQueryDefinition4 obj) {
+			return obj.getQueryType();
+		}
+
+		@Override
+		public void setValue(AccountQueryDefinition4 obj, Optional<QueryType2Code> value) {
+			obj.setQueryType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctCrit")
@@ -143,7 +153,7 @@ public class AccountQueryDefinition4 {
 	 * definition} = "Definition of the account query criteria."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountQueryDefinition4, Optional<AccountCriteriaDefinition4Choice>> mmAccountCriteria = new MMMessageAssociationEnd<AccountQueryDefinition4, Optional<AccountCriteriaDefinition4Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountQueryDefinition4.mmObject();
 			isDerived = false;
@@ -155,6 +165,16 @@ public class AccountQueryDefinition4 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AccountCriteriaDefinition4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AccountCriteriaDefinition4Choice> getValue(AccountQueryDefinition4 obj) {
+			return obj.getAccountCriteria();
+		}
+
+		@Override
+		public void setValue(AccountQueryDefinition4 obj, Optional<AccountCriteriaDefinition4Choice> value) {
+			obj.setAccountCriteria(value.orElse(null));
 		}
 	};
 

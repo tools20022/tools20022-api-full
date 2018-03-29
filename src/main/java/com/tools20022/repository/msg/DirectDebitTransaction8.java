@@ -26,6 +26,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.DirectDebit;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.MandateRelatedInformation10;
+import com.tools20022.repository.msg.PartyIdentification43;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -143,7 +145,7 @@ public class DirectDebitTransaction8 {
 	 * DirectDebitTransaction7.mmMandateRelatedInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMandateRelatedInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DirectDebitTransaction8, Optional<MandateRelatedInformation10>> mmMandateRelatedInformation = new MMMessageAssociationEnd<DirectDebitTransaction8, Optional<MandateRelatedInformation10>>() {
 		{
 			businessElementTrace_lazy = () -> DirectDebit.mmDirectDebitMandate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectDebitTransaction8.mmObject();
@@ -157,7 +159,17 @@ public class DirectDebitTransaction8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MandateRelatedInformation10.mmObject();
+			type_lazy = () -> MandateRelatedInformation10.mmObject();
+		}
+
+		@Override
+		public Optional<MandateRelatedInformation10> getValue(DirectDebitTransaction8 obj) {
+			return obj.getMandateRelatedInformation();
+		}
+
+		@Override
+		public void setValue(DirectDebitTransaction8 obj, Optional<MandateRelatedInformation10> value) {
+			obj.setMandateRelatedInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtrSchmeId")
@@ -206,7 +218,7 @@ public class DirectDebitTransaction8 {
 	 * DirectDebitTransaction7.mmCreditorSchemeIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditorSchemeIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DirectDebitTransaction8, Optional<PartyIdentification43>> mmCreditorSchemeIdentification = new MMMessageAssociationEnd<DirectDebitTransaction8, Optional<PartyIdentification43>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectDebitTransaction8.mmObject();
@@ -220,7 +232,17 @@ public class DirectDebitTransaction8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
+			type_lazy = () -> PartyIdentification43.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification43> getValue(DirectDebitTransaction8 obj) {
+			return obj.getCreditorSchemeIdentification();
+		}
+
+		@Override
+		public void setValue(DirectDebitTransaction8 obj, Optional<PartyIdentification43> value) {
+			obj.setCreditorSchemeIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PreNtfctnId")
@@ -272,7 +294,7 @@ public class DirectDebitTransaction8 {
 	 * DirectDebitTransaction7.mmPreNotificationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreNotificationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DirectDebitTransaction8, Optional<Max35Text>> mmPreNotificationIdentification = new MMMessageAttribute<DirectDebitTransaction8, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> DirectDebit.mmPreNotificationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectDebitTransaction8.mmObject();
@@ -286,6 +308,16 @@ public class DirectDebitTransaction8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(DirectDebitTransaction8 obj) {
+			return obj.getPreNotificationIdentification();
+		}
+
+		@Override
+		public void setValue(DirectDebitTransaction8 obj, Optional<Max35Text> value) {
+			obj.setPreNotificationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PreNtfctnDt")
@@ -337,7 +369,7 @@ public class DirectDebitTransaction8 {
 	 * DirectDebitTransaction7.mmPreNotificationDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreNotificationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DirectDebitTransaction8, Optional<ISODate>> mmPreNotificationDate = new MMMessageAttribute<DirectDebitTransaction8, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> DirectDebit.mmPreNotificationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectDebitTransaction8.mmObject();
@@ -351,6 +383,16 @@ public class DirectDebitTransaction8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(DirectDebitTransaction8 obj) {
+			return obj.getPreNotificationDate();
+		}
+
+		@Override
+		public void setValue(DirectDebitTransaction8 obj, Optional<ISODate> value) {
+			obj.setPreNotificationDate(value.orElse(null));
 		}
 	};
 
@@ -375,7 +417,7 @@ public class DirectDebitTransaction8 {
 		return mandateRelatedInformation == null ? Optional.empty() : Optional.of(mandateRelatedInformation);
 	}
 
-	public DirectDebitTransaction8 setMandateRelatedInformation(com.tools20022.repository.msg.MandateRelatedInformation10 mandateRelatedInformation) {
+	public DirectDebitTransaction8 setMandateRelatedInformation(MandateRelatedInformation10 mandateRelatedInformation) {
 		this.mandateRelatedInformation = mandateRelatedInformation;
 		return this;
 	}
@@ -384,7 +426,7 @@ public class DirectDebitTransaction8 {
 		return creditorSchemeIdentification == null ? Optional.empty() : Optional.of(creditorSchemeIdentification);
 	}
 
-	public DirectDebitTransaction8 setCreditorSchemeIdentification(com.tools20022.repository.msg.PartyIdentification43 creditorSchemeIdentification) {
+	public DirectDebitTransaction8 setCreditorSchemeIdentification(PartyIdentification43 creditorSchemeIdentification) {
 		this.creditorSchemeIdentification = creditorSchemeIdentification;
 		return this;
 	}

@@ -27,6 +27,7 @@ import com.tools20022.repository.choice.LotteryTypeFormat1Choice;
 import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.entity.Lottery;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CorporateActionDate30;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -122,7 +123,7 @@ public class CorporateAction14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDateDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateAction14, Optional<CorporateActionDate30>> mmDateDetails = new MMMessageAssociationEnd<CorporateAction14, Optional<CorporateActionDate30>>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionEvent.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateAction14.mmObject();
@@ -134,7 +135,17 @@ public class CorporateAction14 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CorporateActionDate30.mmObject();
+			type_lazy = () -> CorporateActionDate30.mmObject();
+		}
+
+		@Override
+		public Optional<CorporateActionDate30> getValue(CorporateAction14 obj) {
+			return obj.getDateDetails();
+		}
+
+		@Override
+		public void setValue(CorporateAction14 obj, Optional<CorporateActionDate30> value) {
+			obj.setDateDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LtryTp")
@@ -174,7 +185,7 @@ public class CorporateAction14 {
 	 * definition} = "Specifies the type of lottery announced."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLotteryType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateAction14, Optional<LotteryTypeFormat1Choice>> mmLotteryType = new MMMessageAssociationEnd<CorporateAction14, Optional<LotteryTypeFormat1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Lottery.mmLotteryType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateAction14.mmObject();
@@ -188,6 +199,16 @@ public class CorporateAction14 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> LotteryTypeFormat1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<LotteryTypeFormat1Choice> getValue(CorporateAction14 obj) {
+			return obj.getLotteryType();
+		}
+
+		@Override
+		public void setValue(CorporateAction14 obj, Optional<LotteryTypeFormat1Choice> value) {
+			obj.setLotteryType(value.orElse(null));
 		}
 	};
 
@@ -210,7 +231,7 @@ public class CorporateAction14 {
 		return dateDetails == null ? Optional.empty() : Optional.of(dateDetails);
 	}
 
-	public CorporateAction14 setDateDetails(com.tools20022.repository.msg.CorporateActionDate30 dateDetails) {
+	public CorporateAction14 setDateDetails(CorporateActionDate30 dateDetails) {
 		this.dateDetails = dateDetails;
 		return this;
 	}

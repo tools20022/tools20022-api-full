@@ -21,6 +21,9 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountCashEntrySearch2;
+import com.tools20022.repository.msg.PaymentSearch2;
+import com.tools20022.repository.msg.SystemSearch2;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -73,7 +76,7 @@ public class TransactionSearchCriteria2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "PmtTo")
-	protected List<com.tools20022.repository.msg.SystemSearch2> paymentTo;
+	protected List<SystemSearch2> paymentTo;
 	/**
 	 * 
 	 <p>
@@ -102,7 +105,7 @@ public class TransactionSearchCriteria2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentTo = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionSearchCriteria2, List<SystemSearch2>> mmPaymentTo = new MMMessageAssociationEnd<TransactionSearchCriteria2, List<SystemSearch2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionSearchCriteria2.mmObject();
 			isDerived = false;
@@ -112,11 +115,21 @@ public class TransactionSearchCriteria2 {
 			definition = "Defines the criteria which are used to search for the destination of the payment.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemSearch2.mmObject();
+			type_lazy = () -> SystemSearch2.mmObject();
+		}
+
+		@Override
+		public List<SystemSearch2> getValue(TransactionSearchCriteria2 obj) {
+			return obj.getPaymentTo();
+		}
+
+		@Override
+		public void setValue(TransactionSearchCriteria2 obj, List<SystemSearch2> value) {
+			obj.setPaymentTo(value);
 		}
 	};
 	@XmlElement(name = "PmtFr")
-	protected List<com.tools20022.repository.msg.SystemSearch2> paymentFrom;
+	protected List<SystemSearch2> paymentFrom;
 	/**
 	 * 
 	 <p>
@@ -145,7 +158,7 @@ public class TransactionSearchCriteria2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentFrom = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionSearchCriteria2, List<SystemSearch2>> mmPaymentFrom = new MMMessageAssociationEnd<TransactionSearchCriteria2, List<SystemSearch2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionSearchCriteria2.mmObject();
 			isDerived = false;
@@ -155,7 +168,17 @@ public class TransactionSearchCriteria2 {
 			definition = "Defines the criteria which are used to search for the origin of the payment.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemSearch2.mmObject();
+			type_lazy = () -> SystemSearch2.mmObject();
+		}
+
+		@Override
+		public List<SystemSearch2> getValue(TransactionSearchCriteria2 obj) {
+			return obj.getPaymentFrom();
+		}
+
+		@Override
+		public void setValue(TransactionSearchCriteria2 obj, List<SystemSearch2> value) {
+			obj.setPaymentFrom(value);
 		}
 	};
 	@XmlElement(name = "PmtSch")
@@ -187,7 +210,7 @@ public class TransactionSearchCriteria2 {
 	 * "Defines the criteria which are used to search for a payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentSearch = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionSearchCriteria2, Optional<PaymentSearch2>> mmPaymentSearch = new MMMessageAssociationEnd<TransactionSearchCriteria2, Optional<PaymentSearch2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionSearchCriteria2.mmObject();
 			isDerived = false;
@@ -198,7 +221,17 @@ public class TransactionSearchCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentSearch2.mmObject();
+			type_lazy = () -> PaymentSearch2.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentSearch2> getValue(TransactionSearchCriteria2 obj) {
+			return obj.getPaymentSearch();
+		}
+
+		@Override
+		public void setValue(TransactionSearchCriteria2 obj, Optional<PaymentSearch2> value) {
+			obj.setPaymentSearch(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctNtrySch")
@@ -231,7 +264,7 @@ public class TransactionSearchCriteria2 {
 	 * "Defines the criteria which are used to search for a cash entry."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountEntrySearch = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionSearchCriteria2, Optional<AccountCashEntrySearch2>> mmAccountEntrySearch = new MMMessageAssociationEnd<TransactionSearchCriteria2, Optional<AccountCashEntrySearch2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionSearchCriteria2.mmObject();
 			isDerived = false;
@@ -242,7 +275,17 @@ public class TransactionSearchCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AccountCashEntrySearch2.mmObject();
+			type_lazy = () -> AccountCashEntrySearch2.mmObject();
+		}
+
+		@Override
+		public Optional<AccountCashEntrySearch2> getValue(TransactionSearchCriteria2 obj) {
+			return obj.getAccountEntrySearch();
+		}
+
+		@Override
+		public void setValue(TransactionSearchCriteria2 obj, Optional<AccountCashEntrySearch2> value) {
+			obj.setAccountEntrySearch(value.orElse(null));
 		}
 	};
 
@@ -264,7 +307,7 @@ public class TransactionSearchCriteria2 {
 		return paymentTo == null ? paymentTo = new ArrayList<>() : paymentTo;
 	}
 
-	public TransactionSearchCriteria2 setPaymentTo(List<com.tools20022.repository.msg.SystemSearch2> paymentTo) {
+	public TransactionSearchCriteria2 setPaymentTo(List<SystemSearch2> paymentTo) {
 		this.paymentTo = Objects.requireNonNull(paymentTo);
 		return this;
 	}
@@ -273,7 +316,7 @@ public class TransactionSearchCriteria2 {
 		return paymentFrom == null ? paymentFrom = new ArrayList<>() : paymentFrom;
 	}
 
-	public TransactionSearchCriteria2 setPaymentFrom(List<com.tools20022.repository.msg.SystemSearch2> paymentFrom) {
+	public TransactionSearchCriteria2 setPaymentFrom(List<SystemSearch2> paymentFrom) {
 		this.paymentFrom = Objects.requireNonNull(paymentFrom);
 		return this;
 	}
@@ -282,7 +325,7 @@ public class TransactionSearchCriteria2 {
 		return paymentSearch == null ? Optional.empty() : Optional.of(paymentSearch);
 	}
 
-	public TransactionSearchCriteria2 setPaymentSearch(com.tools20022.repository.msg.PaymentSearch2 paymentSearch) {
+	public TransactionSearchCriteria2 setPaymentSearch(PaymentSearch2 paymentSearch) {
 		this.paymentSearch = paymentSearch;
 		return this;
 	}
@@ -291,7 +334,7 @@ public class TransactionSearchCriteria2 {
 		return accountEntrySearch == null ? Optional.empty() : Optional.of(accountEntrySearch);
 	}
 
-	public TransactionSearchCriteria2 setAccountEntrySearch(com.tools20022.repository.msg.AccountCashEntrySearch2 accountEntrySearch) {
+	public TransactionSearchCriteria2 setAccountEntrySearch(AccountCashEntrySearch2 accountEntrySearch) {
 		this.accountEntrySearch = accountEntrySearch;
 		return this;
 	}

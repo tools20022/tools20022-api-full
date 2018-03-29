@@ -108,7 +108,7 @@ public class DateTimeSearch1Choice {
 	 * definition} = "Start date of the range."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFromDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateTimeSearch1Choice, ISODateTime> mmFromDateTime = new MMMessageAttribute<DateTimeSearch1Choice, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateTimeSearch1Choice.mmObject();
 			isDerived = false;
@@ -119,6 +119,16 @@ public class DateTimeSearch1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(DateTimeSearch1Choice obj) {
+			return obj.getFromDateTime();
+		}
+
+		@Override
+		public void setValue(DateTimeSearch1Choice obj, ISODateTime value) {
+			obj.setFromDateTime(value);
 		}
 	};
 	@XmlElement(name = "ToDtTm", required = true)
@@ -150,7 +160,7 @@ public class DateTimeSearch1Choice {
 	 * definition} = "End date of the range."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmToDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateTimeSearch1Choice, ISODateTime> mmToDateTime = new MMMessageAttribute<DateTimeSearch1Choice, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateTimeSearch1Choice.mmObject();
 			isDerived = false;
@@ -161,6 +171,16 @@ public class DateTimeSearch1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(DateTimeSearch1Choice obj) {
+			return obj.getToDateTime();
+		}
+
+		@Override
+		public void setValue(DateTimeSearch1Choice obj, ISODateTime value) {
+			obj.setToDateTime(value);
 		}
 	};
 	@XmlElement(name = "FrToDtTm", required = true)
@@ -192,7 +212,7 @@ public class DateTimeSearch1Choice {
 	 * "Particular time span specified between a start date and an end date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFromToDateTime = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DateTimeSearch1Choice, DateTimePeriodDetails> mmFromToDateTime = new MMMessageAssociationEnd<DateTimeSearch1Choice, DateTimePeriodDetails>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateTimeSearch1Choice.mmObject();
 			isDerived = false;
@@ -204,6 +224,16 @@ public class DateTimeSearch1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DateTimePeriodDetails.mmObject();
+		}
+
+		@Override
+		public DateTimePeriodDetails getValue(DateTimeSearch1Choice obj) {
+			return obj.getFromToDateTime();
+		}
+
+		@Override
+		public void setValue(DateTimeSearch1Choice obj, DateTimePeriodDetails value) {
+			obj.setFromToDateTime(value);
 		}
 	};
 	@XmlElement(name = "EQDtTm", required = true)
@@ -235,7 +265,7 @@ public class DateTimeSearch1Choice {
 	 * definition} = "Specified date to match."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEqualDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateTimeSearch1Choice, ISODateTime> mmEqualDateTime = new MMMessageAttribute<DateTimeSearch1Choice, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateTimeSearch1Choice.mmObject();
 			isDerived = false;
@@ -246,6 +276,16 @@ public class DateTimeSearch1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(DateTimeSearch1Choice obj) {
+			return obj.getEqualDateTime();
+		}
+
+		@Override
+		public void setValue(DateTimeSearch1Choice obj, ISODateTime value) {
+			obj.setEqualDateTime(value);
 		}
 	};
 	@XmlElement(name = "NEQDtTm", required = true)
@@ -277,7 +317,7 @@ public class DateTimeSearch1Choice {
 	 * definition} = "Specified date to be excluded from the search."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotEqualDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateTimeSearch1Choice, ISODateTime> mmNotEqualDateTime = new MMMessageAttribute<DateTimeSearch1Choice, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateTimeSearch1Choice.mmObject();
 			isDerived = false;
@@ -288,6 +328,16 @@ public class DateTimeSearch1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(DateTimeSearch1Choice obj) {
+			return obj.getNotEqualDateTime();
+		}
+
+		@Override
+		public void setValue(DateTimeSearch1Choice obj, ISODateTime value) {
+			obj.setNotEqualDateTime(value);
 		}
 	};
 

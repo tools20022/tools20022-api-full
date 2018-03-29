@@ -109,7 +109,7 @@ public class PreferenceToIncome3Choice {
 	 * definition} = "Preference to income expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PreferenceToIncome3Choice, PreferenceToIncome1Code> mmCode = new MMMessageAttribute<PreferenceToIncome3Choice, PreferenceToIncome1Code>() {
 		{
 			businessElementTrace_lazy = () -> Equity.mmPreferenceToIncome;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PreferenceToIncome3Choice.mmObject();
@@ -122,6 +122,16 @@ public class PreferenceToIncome3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PreferenceToIncome1Code.mmObject();
+		}
+
+		@Override
+		public PreferenceToIncome1Code getValue(PreferenceToIncome3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(PreferenceToIncome3Choice obj, PreferenceToIncome1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -161,7 +171,7 @@ public class PreferenceToIncome3Choice {
 	 * definition} = "Preference to income expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PreferenceToIncome3Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<PreferenceToIncome3Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> Equity.mmPreferenceToIncome;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PreferenceToIncome3Choice.mmObject();
@@ -175,6 +185,16 @@ public class PreferenceToIncome3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(PreferenceToIncome3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(PreferenceToIncome3Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

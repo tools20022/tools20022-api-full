@@ -21,6 +21,8 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.DateAndDateTimeChoice;
+import com.tools20022.repository.choice.TradeDateCode2Choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -98,7 +100,7 @@ public class TradeDate2Choice {
 	 * definition} = "Date expressed as a ISO date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeDate2Choice, DateAndDateTimeChoice> mmDate = new MMMessageAssociationEnd<TradeDate2Choice, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradeDate2Choice.mmObject();
 			isDerived = false;
@@ -110,7 +112,17 @@ public class TradeDate2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
+			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(TradeDate2Choice obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(TradeDate2Choice obj, DateAndDateTimeChoice value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "DtCd", required = true)
@@ -145,7 +157,7 @@ public class TradeDate2Choice {
 	 * definition} = "Date expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDateCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeDate2Choice, TradeDateCode2Choice> mmDateCode = new MMMessageAssociationEnd<TradeDate2Choice, TradeDateCode2Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradeDate2Choice.mmObject();
 			isDerived = false;
@@ -157,7 +169,17 @@ public class TradeDate2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.TradeDateCode2Choice.mmObject();
+			type_lazy = () -> TradeDateCode2Choice.mmObject();
+		}
+
+		@Override
+		public TradeDateCode2Choice getValue(TradeDate2Choice obj) {
+			return obj.getDateCode();
+		}
+
+		@Override
+		public void setValue(TradeDate2Choice obj, TradeDateCode2Choice value) {
+			obj.setDateCode(value);
 		}
 	};
 
@@ -178,7 +200,7 @@ public class TradeDate2Choice {
 		return date;
 	}
 
-	public TradeDate2Choice setDate(com.tools20022.repository.choice.DateAndDateTimeChoice date) {
+	public TradeDate2Choice setDate(DateAndDateTimeChoice date) {
 		this.date = Objects.requireNonNull(date);
 		return this;
 	}
@@ -187,7 +209,7 @@ public class TradeDate2Choice {
 		return dateCode;
 	}
 
-	public TradeDate2Choice setDateCode(com.tools20022.repository.choice.TradeDateCode2Choice dateCode) {
+	public TradeDate2Choice setDateCode(TradeDateCode2Choice dateCode) {
 		this.dateCode = Objects.requireNonNull(dateCode);
 		return this;
 	}

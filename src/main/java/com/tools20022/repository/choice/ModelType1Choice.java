@@ -100,7 +100,7 @@ public class ModelType1Choice {
 	 * "Specifies the type of margin models used by a central counterparty."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ModelType1Choice, ModelType1Code> mmCode = new MMMessageAttribute<ModelType1Choice, ModelType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ModelType1Choice.mmObject();
 			isDerived = false;
@@ -111,6 +111,16 @@ public class ModelType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ModelType1Code.mmObject();
+		}
+
+		@Override
+		public ModelType1Code getValue(ModelType1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ModelType1Choice obj, ModelType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -144,7 +154,7 @@ public class ModelType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ModelType1Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<ModelType1Choice, GenericIdentification30>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ModelType1Choice.mmObject();
 			isDerived = false;
@@ -156,6 +166,16 @@ public class ModelType1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(ModelType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ModelType1Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

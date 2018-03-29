@@ -51,11 +51,15 @@ public class ConstraintElectionAmendmentRequestStatusRule {
 	 */
 	public static final MMConstraint<AgentCAElectionStatusAdviceV01> forAgentCAElectionStatusAdviceV01 = new MMConstraint<AgentCAElectionStatusAdviceV01>() {
 		{
-			validator = ConstraintElectionAmendmentRequestStatusRule::checkAgentCAElectionStatusAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectionAmendmentRequestStatusRule";
 			definition = "If AgentCAElectionAmendmentRequestIdentification is present, then ElectionAmendmentRequestStatus must be present.";
 			owner_lazy = () -> AgentCAElectionStatusAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AgentCAElectionStatusAdviceV01 obj) throws Exception {
+			checkAgentCAElectionStatusAdviceV01(obj);
 		}
 	};
 

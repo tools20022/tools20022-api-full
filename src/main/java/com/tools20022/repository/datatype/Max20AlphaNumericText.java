@@ -19,12 +19,12 @@ package com.tools20022.repository.datatype;
 
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMText;
-import com.tools20022.repository.datatype.Max20AlphaNumericText.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
-import java.lang.String;
 import java.util.concurrent.atomic.AtomicReference;
-import javax.xml.bind.annotation.adapters.XmlAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.XmlValue;
 
 /**
  * Specifies an alphanumeric string with a maximum length of 20 characters.
@@ -49,10 +49,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "Specifies an alphanumeric string with a maximum length of 20 characters."</li>
  * </ul>
  */
-@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType
 public class Max20AlphaNumericText {
 
 	final static private AtomicReference<MMText> mmObject_lazy = new AtomicReference<>();
+	@XmlValue
 	protected String value;
 
 	final static public MMText mmObject() {
@@ -70,24 +72,23 @@ public class Max20AlphaNumericText {
 		return mmObject_lazy.get();
 	}
 
+	public Max20AlphaNumericText() {
+	}
+
 	public Max20AlphaNumericText(String value) {
+		this.value = value;
+	}
+
+	public String getValue() {
+		return value;
+	}
+
+	public void setValue(String value) {
 		this.value = value;
 	}
 
 	@Override
 	public String toString() {
-		return value;
-	}
-
-	protected static class InternalXmlAdapter extends XmlAdapter<String, Max20AlphaNumericText> {
-		@Override
-		public Max20AlphaNumericText unmarshal(String value) {
-			return new Max20AlphaNumericText(value);
-		}
-
-		@Override
-		public String marshal(Max20AlphaNumericText typedData) {
-			return typedData.value;
-		}
+		return value == null ? null : value.toString();
 	}
 }

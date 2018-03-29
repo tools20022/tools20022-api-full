@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.Undertaking;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification43;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -118,7 +119,7 @@ public class UndertakingConfirmation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmConfirmer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UndertakingConfirmation1, PartyIdentification43> mmConfirmer = new MMMessageAssociationEnd<UndertakingConfirmation1, PartyIdentification43>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingConfirmation1.mmObject();
@@ -130,7 +131,17 @@ public class UndertakingConfirmation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
+			type_lazy = () -> PartyIdentification43.mmObject();
+		}
+
+		@Override
+		public PartyIdentification43 getValue(UndertakingConfirmation1 obj) {
+			return obj.getConfirmer();
+		}
+
+		@Override
+		public void setValue(UndertakingConfirmation1 obj, PartyIdentification43 value) {
+			obj.setConfirmer(value);
 		}
 	};
 	@XmlElement(name = "RefNb", required = true)
@@ -164,7 +175,7 @@ public class UndertakingConfirmation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReferenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UndertakingConfirmation1, Max35Text> mmReferenceNumber = new MMMessageAttribute<UndertakingConfirmation1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingConfirmation1.mmObject();
 			isDerived = false;
@@ -175,6 +186,16 @@ public class UndertakingConfirmation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(UndertakingConfirmation1 obj) {
+			return obj.getReferenceNumber();
+		}
+
+		@Override
+		public void setValue(UndertakingConfirmation1 obj, Max35Text value) {
+			obj.setReferenceNumber(value);
 		}
 	};
 	@XmlElement(name = "Dt", required = true)
@@ -214,7 +235,7 @@ public class UndertakingConfirmation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UndertakingConfirmation1, DateAndDateTimeChoice> mmDate = new MMMessageAttribute<UndertakingConfirmation1, DateAndDateTimeChoice>() {
 		{
 			businessElementTrace_lazy = () -> Undertaking.mmDateOfAdvice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingConfirmation1.mmObject();
@@ -226,6 +247,16 @@ public class UndertakingConfirmation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(UndertakingConfirmation1 obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(UndertakingConfirmation1 obj, DateAndDateTimeChoice value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "Conf")
@@ -259,7 +290,7 @@ public class UndertakingConfirmation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmConfirmation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UndertakingConfirmation1, List<Max2000Text>> mmConfirmation = new MMMessageAttribute<UndertakingConfirmation1, List<Max2000Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingConfirmation1.mmObject();
 			isDerived = false;
@@ -270,6 +301,16 @@ public class UndertakingConfirmation1 {
 			maxOccurs = 5;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
+		}
+
+		@Override
+		public List<Max2000Text> getValue(UndertakingConfirmation1 obj) {
+			return obj.getConfirmation();
+		}
+
+		@Override
+		public void setValue(UndertakingConfirmation1 obj, List<Max2000Text> value) {
+			obj.setConfirmation(value);
 		}
 	};
 
@@ -292,7 +333,7 @@ public class UndertakingConfirmation1 {
 		return confirmer;
 	}
 
-	public UndertakingConfirmation1 setConfirmer(com.tools20022.repository.msg.PartyIdentification43 confirmer) {
+	public UndertakingConfirmation1 setConfirmer(PartyIdentification43 confirmer) {
 		this.confirmer = Objects.requireNonNull(confirmer);
 		return this;
 	}

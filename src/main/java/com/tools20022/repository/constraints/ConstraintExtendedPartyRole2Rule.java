@@ -54,11 +54,15 @@ public class ConstraintExtendedPartyRole2Rule {
 	 */
 	public static final MMConstraint<AccountParties2> forAccountParties2 = new MMConstraint<AccountParties2>() {
 		{
-			validator = ConstraintExtendedPartyRole2Rule::checkAccountParties2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedPartyRole2Rule";
 			definition = "In any occurrence of one or more of the message elements in the list (Administrator, PrimaryOwner, Trustee, CustodianForMinor,Nominee, SecondaryOwner, Beneficiary, PowerOfAttorney, LegalGuardian, SuccessorOnDeath), the ExtendedPartyRole may not be present.";
 			owner_lazy = () -> AccountParties2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountParties2 obj) throws Exception {
+			checkAccountParties2(obj);
 		}
 	};
 	/**
@@ -84,11 +88,15 @@ public class ConstraintExtendedPartyRole2Rule {
 	 */
 	public static final MMConstraint<AccountParties3> forAccountParties3 = new MMConstraint<AccountParties3>() {
 		{
-			validator = ConstraintExtendedPartyRole2Rule::checkAccountParties3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedPartyRole2Rule";
 			definition = "In any occurrence of one or more of the message elements in the list (Administrator, PrimaryOwner, Trustee, CustodianForMinor,Nominee, SecondaryOwner, Beneficiary, PowerOfAttorney, LegalGuardian, SuccessorOnDeath), the ExtendedPartyRole may not be present.";
 			owner_lazy = () -> AccountParties3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountParties3 obj) throws Exception {
+			checkAccountParties3(obj);
 		}
 	};
 

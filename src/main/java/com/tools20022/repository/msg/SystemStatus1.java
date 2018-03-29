@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.DateTimePeriodChoice;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.entity.SystemStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SystemStatus1Choice;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -119,7 +120,7 @@ public class SystemStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SystemStatus1, SystemStatus1Choice> mmStatus = new MMMessageAssociationEnd<SystemStatus1, SystemStatus1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SystemStatus.mmStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemStatus1.mmObject();
@@ -132,7 +133,17 @@ public class SystemStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemStatus1Choice.mmObject();
+			type_lazy = () -> SystemStatus1Choice.mmObject();
+		}
+
+		@Override
+		public SystemStatus1Choice getValue(SystemStatus1 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(SystemStatus1 obj, SystemStatus1Choice value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "VldtyTm")
@@ -178,7 +189,7 @@ public class SystemStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValidityTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemStatus1, Optional<DateTimePeriodChoice>> mmValidityTime = new MMMessageAttribute<SystemStatus1, Optional<DateTimePeriodChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmValidityTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemStatus1.mmObject();
@@ -191,6 +202,16 @@ public class SystemStatus1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateTimePeriodChoice> getValue(SystemStatus1 obj) {
+			return obj.getValidityTime();
+		}
+
+		@Override
+		public void setValue(SystemStatus1 obj, Optional<DateTimePeriodChoice> value) {
+			obj.setValidityTime(value.orElse(null));
 		}
 	};
 
@@ -213,7 +234,7 @@ public class SystemStatus1 {
 		return status;
 	}
 
-	public SystemStatus1 setStatus(com.tools20022.repository.msg.SystemStatus1Choice status) {
+	public SystemStatus1 setStatus(SystemStatus1Choice status) {
 		this.status = Objects.requireNonNull(status);
 		return this;
 	}

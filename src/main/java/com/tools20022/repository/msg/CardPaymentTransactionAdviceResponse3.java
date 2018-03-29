@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.CardPaymentValidation;
 import com.tools20022.repository.entity.Response;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TransactionIdentifier1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -130,7 +131,7 @@ public class CardPaymentTransactionAdviceResponse3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentTransactionAdviceResponse3, TransactionIdentifier1> mmTransactionIdentification = new MMMessageAssociationEnd<CardPaymentTransactionAdviceResponse3, TransactionIdentifier1>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentValidation.mmCardPayment;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionAdviceResponse3.mmObject();
@@ -143,7 +144,17 @@ public class CardPaymentTransactionAdviceResponse3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransactionIdentifier1.mmObject();
+			type_lazy = () -> TransactionIdentifier1.mmObject();
+		}
+
+		@Override
+		public TransactionIdentifier1 getValue(CardPaymentTransactionAdviceResponse3 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransactionAdviceResponse3 obj, TransactionIdentifier1 value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "RcncltnId")
@@ -185,7 +196,7 @@ public class CardPaymentTransactionAdviceResponse3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReconciliationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentTransactionAdviceResponse3, Optional<Max35Text>> mmReconciliationIdentification = new MMMessageAttribute<CardPaymentTransactionAdviceResponse3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionAdviceResponse3.mmObject();
 			isDerived = false;
@@ -197,6 +208,16 @@ public class CardPaymentTransactionAdviceResponse3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CardPaymentTransactionAdviceResponse3 obj) {
+			return obj.getReconciliationIdentification();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransactionAdviceResponse3 obj, Optional<Max35Text> value) {
+			obj.setReconciliationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rspn", required = true)
@@ -242,7 +263,7 @@ public class CardPaymentTransactionAdviceResponse3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResponse = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentTransactionAdviceResponse3, Response1Code> mmResponse = new MMMessageAttribute<CardPaymentTransactionAdviceResponse3, Response1Code>() {
 		{
 			businessElementTrace_lazy = () -> Response.mmResponseToAuthorisation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionAdviceResponse3.mmObject();
@@ -255,6 +276,16 @@ public class CardPaymentTransactionAdviceResponse3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Response1Code.mmObject();
+		}
+
+		@Override
+		public Response1Code getValue(CardPaymentTransactionAdviceResponse3 obj) {
+			return obj.getResponse();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransactionAdviceResponse3 obj, Response1Code value) {
+			obj.setResponse(value);
 		}
 	};
 
@@ -279,7 +310,7 @@ public class CardPaymentTransactionAdviceResponse3 {
 		return transactionIdentification;
 	}
 
-	public CardPaymentTransactionAdviceResponse3 setTransactionIdentification(com.tools20022.repository.msg.TransactionIdentifier1 transactionIdentification) {
+	public CardPaymentTransactionAdviceResponse3 setTransactionIdentification(TransactionIdentifier1 transactionIdentification) {
 		this.transactionIdentification = Objects.requireNonNull(transactionIdentification);
 		return this;
 	}

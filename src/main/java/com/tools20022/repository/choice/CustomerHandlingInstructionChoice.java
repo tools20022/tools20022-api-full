@@ -108,7 +108,7 @@ public class CustomerHandlingInstructionChoice {
 	 * definition} = "Customer handling instruction is defined using a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerHandlingInstructionChoice, CustomerHandlingInstructions1Code> mmCode = new MMMessageAttribute<CustomerHandlingInstructionChoice, CustomerHandlingInstructions1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderParameters.mmCustomerHandlingInstruction;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CustomerHandlingInstructionChoice.mmObject();
@@ -120,6 +120,16 @@ public class CustomerHandlingInstructionChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CustomerHandlingInstructions1Code.mmObject();
+		}
+
+		@Override
+		public CustomerHandlingInstructions1Code getValue(CustomerHandlingInstructionChoice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CustomerHandlingInstructionChoice obj, CustomerHandlingInstructions1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -157,7 +167,7 @@ public class CustomerHandlingInstructionChoice {
 	 * "Customer handling instruction is defined using a data source scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CustomerHandlingInstructionChoice, GenericIdentification13> mmProprietary = new MMMessageAssociationEnd<CustomerHandlingInstructionChoice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderParameters.mmCustomerHandlingInstruction;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CustomerHandlingInstructionChoice.mmObject();
@@ -170,6 +180,16 @@ public class CustomerHandlingInstructionChoice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(CustomerHandlingInstructionChoice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CustomerHandlingInstructionChoice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

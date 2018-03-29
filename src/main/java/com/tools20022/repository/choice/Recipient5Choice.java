@@ -101,7 +101,7 @@ public class Recipient5Choice {
 	 * "Certificate issuer name and serial number (see ITU X.509)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIssuerAndSerialNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Recipient5Choice, IssuerAndSerialNumber1> mmIssuerAndSerialNumber = new MMMessageAssociationEnd<Recipient5Choice, IssuerAndSerialNumber1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Recipient5Choice.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class Recipient5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> IssuerAndSerialNumber1.mmObject();
+		}
+
+		@Override
+		public IssuerAndSerialNumber1 getValue(Recipient5Choice obj) {
+			return obj.getIssuerAndSerialNumber();
+		}
+
+		@Override
+		public void setValue(Recipient5Choice obj, IssuerAndSerialNumber1 value) {
+			obj.setIssuerAndSerialNumber(value);
 		}
 	};
 	@XmlElement(name = "KeyIdr", required = true)
@@ -150,7 +160,7 @@ public class Recipient5Choice {
 	 * Recipient4Choice.mmKeyIdentifier}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmKeyIdentifier = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Recipient5Choice, KEKIdentifier2> mmKeyIdentifier = new MMMessageAssociationEnd<Recipient5Choice, KEKIdentifier2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Recipient5Choice.mmObject();
 			isDerived = false;
@@ -163,6 +173,16 @@ public class Recipient5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> KEKIdentifier2.mmObject();
+		}
+
+		@Override
+		public KEKIdentifier2 getValue(Recipient5Choice obj) {
+			return obj.getKeyIdentifier();
+		}
+
+		@Override
+		public void setValue(Recipient5Choice obj, KEKIdentifier2 value) {
+			obj.setKeyIdentifier(value);
 		}
 	};
 

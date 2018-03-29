@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.auth.FinancialInstrumentReportingNonWorkingDayReportV01;
 import com.tools20022.repository.choice.TradingVenueIdentification1Choice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecuritiesNonTradingDay1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -110,7 +111,7 @@ public class SecuritiesNonTradingDayReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesNonTradingDayReport1, TradingVenueIdentification1Choice> mmIdentification = new MMMessageAssociationEnd<SecuritiesNonTradingDayReport1, TradingVenueIdentification1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesNonTradingDayReport1.mmObject();
 			isDerived = false;
@@ -123,9 +124,19 @@ public class SecuritiesNonTradingDayReport1 {
 			isComposite = true;
 			type_lazy = () -> TradingVenueIdentification1Choice.mmObject();
 		}
+
+		@Override
+		public TradingVenueIdentification1Choice getValue(SecuritiesNonTradingDayReport1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesNonTradingDayReport1 obj, TradingVenueIdentification1Choice value) {
+			obj.setIdentification(value);
+		}
 	};
 	@XmlElement(name = "NonWorkgDay", required = true)
-	protected List<com.tools20022.repository.msg.SecuritiesNonTradingDay1> nonWorkingDay;
+	protected List<SecuritiesNonTradingDay1> nonWorkingDay;
 	/**
 	 * 
 	 <p>
@@ -155,7 +166,7 @@ public class SecuritiesNonTradingDayReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNonWorkingDay = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesNonTradingDayReport1, List<SecuritiesNonTradingDay1>> mmNonWorkingDay = new MMMessageAssociationEnd<SecuritiesNonTradingDayReport1, List<SecuritiesNonTradingDay1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesNonTradingDayReport1.mmObject();
 			isDerived = false;
@@ -165,7 +176,17 @@ public class SecuritiesNonTradingDayReport1 {
 			definition = "Provides the non working days of the identified venue. Details on why it is a non working day are also captured.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesNonTradingDay1.mmObject();
+			type_lazy = () -> SecuritiesNonTradingDay1.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesNonTradingDay1> getValue(SecuritiesNonTradingDayReport1 obj) {
+			return obj.getNonWorkingDay();
+		}
+
+		@Override
+		public void setValue(SecuritiesNonTradingDayReport1 obj, List<SecuritiesNonTradingDay1> value) {
+			obj.setNonWorkingDay(value);
 		}
 	};
 
@@ -196,7 +217,7 @@ public class SecuritiesNonTradingDayReport1 {
 		return nonWorkingDay == null ? nonWorkingDay = new ArrayList<>() : nonWorkingDay;
 	}
 
-	public SecuritiesNonTradingDayReport1 setNonWorkingDay(List<com.tools20022.repository.msg.SecuritiesNonTradingDay1> nonWorkingDay) {
+	public SecuritiesNonTradingDayReport1 setNonWorkingDay(List<SecuritiesNonTradingDay1> nonWorkingDay) {
 		this.nonWorkingDay = Objects.requireNonNull(nonWorkingDay);
 		return this;
 	}

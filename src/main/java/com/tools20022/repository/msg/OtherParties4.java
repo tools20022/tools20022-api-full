@@ -120,7 +120,7 @@ public class OtherParties4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInvestor = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherParties4, Optional<PartyIdentification14Choice>> mmInvestor = new MMMessageAttribute<OtherParties4, Optional<PartyIdentification14Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherParties4.mmObject();
@@ -133,6 +133,16 @@ public class OtherParties4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification14Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification14Choice> getValue(OtherParties4 obj) {
+			return obj.getInvestor();
+		}
+
+		@Override
+		public void setValue(OtherParties4 obj, Optional<PartyIdentification14Choice> value) {
+			obj.setInvestor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StockXchg")
@@ -174,7 +184,7 @@ public class OtherParties4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStockExchange = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherParties4, Optional<PartyIdentification10Choice>> mmStockExchange = new MMMessageAttribute<OtherParties4, Optional<PartyIdentification10Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherParties4.mmObject();
@@ -187,6 +197,16 @@ public class OtherParties4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification10Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification10Choice> getValue(OtherParties4 obj) {
+			return obj.getStockExchange();
+		}
+
+		@Override
+		public void setValue(OtherParties4 obj, Optional<PartyIdentification10Choice> value) {
+			obj.setStockExchange(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradRgltr")
@@ -226,7 +246,7 @@ public class OtherParties4 {
 	 * definition} = "Institution to which a trade must be reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeRegulator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherParties4, Optional<PartyIdentification10Choice>> mmTradeRegulator = new MMMessageAttribute<OtherParties4, Optional<PartyIdentification10Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherParties4.mmObject();
@@ -239,6 +259,16 @@ public class OtherParties4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification10Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification10Choice> getValue(OtherParties4 obj) {
+			return obj.getTradeRegulator();
+		}
+
+		@Override
+		public void setValue(OtherParties4 obj, Optional<PartyIdentification10Choice> value) {
+			obj.setTradeRegulator(value.orElse(null));
 		}
 	};
 

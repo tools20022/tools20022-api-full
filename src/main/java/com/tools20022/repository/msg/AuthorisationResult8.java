@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.entity.CardPaymentValidation;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Action4;
+import com.tools20022.repository.msg.ActionMessage3;
+import com.tools20022.repository.msg.GenericIdentification75;
+import com.tools20022.repository.msg.ResponseType2;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -141,7 +145,7 @@ public class AuthorisationResult8 {
 	 * AuthorisationResult7.mmAuthorisationEntity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAuthorisationEntity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AuthorisationResult8, Optional<GenericIdentification75>> mmAuthorisationEntity = new MMMessageAssociationEnd<AuthorisationResult8, Optional<GenericIdentification75>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AuthorisationResult8.mmObject();
@@ -155,7 +159,17 @@ public class AuthorisationResult8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification75.mmObject();
+			type_lazy = () -> GenericIdentification75.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification75> getValue(AuthorisationResult8 obj) {
+			return obj.getAuthorisationEntity();
+		}
+
+		@Override
+		public void setValue(AuthorisationResult8 obj, Optional<GenericIdentification75> value) {
+			obj.setAuthorisationEntity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxRspn", required = true)
@@ -196,7 +210,7 @@ public class AuthorisationResult8 {
 	 * AuthorisationResult7.mmTransactionResponse}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionResponse = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AuthorisationResult8, ResponseType2> mmTransactionResponse = new MMMessageAssociationEnd<AuthorisationResult8, ResponseType2>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentValidation.mmResponse;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AuthorisationResult8.mmObject();
@@ -209,11 +223,21 @@ public class AuthorisationResult8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ResponseType2.mmObject();
+			type_lazy = () -> ResponseType2.mmObject();
+		}
+
+		@Override
+		public ResponseType2 getValue(AuthorisationResult8 obj) {
+			return obj.getTransactionResponse();
+		}
+
+		@Override
+		public void setValue(AuthorisationResult8 obj, ResponseType2 value) {
+			obj.setTransactionResponse(value);
 		}
 	};
 	@XmlElement(name = "Actn")
-	protected List<com.tools20022.repository.msg.Action4> action;
+	protected List<Action4> action;
 	/**
 	 * 
 	 <p>
@@ -252,7 +276,7 @@ public class AuthorisationResult8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AuthorisationResult8, List<Action4>> mmAction = new MMMessageAssociationEnd<AuthorisationResult8, List<Action4>>() {
 		{
 			businessComponentTrace_lazy = () -> CardPaymentAcquiring.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AuthorisationResult8.mmObject();
@@ -264,7 +288,17 @@ public class AuthorisationResult8 {
 			nextVersions_lazy = () -> Arrays.asList(AuthorisationResult9.mmAction);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Action4.mmObject();
+			type_lazy = () -> Action4.mmObject();
+		}
+
+		@Override
+		public List<Action4> getValue(AuthorisationResult8 obj) {
+			return obj.getAction();
+		}
+
+		@Override
+		public void setValue(AuthorisationResult8 obj, List<Action4> value) {
+			obj.setAction(value);
 		}
 	};
 	@XmlElement(name = "AuthstnCd")
@@ -315,7 +349,7 @@ public class AuthorisationResult8 {
 	 * AuthorisationResult7.mmAuthorisationCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAuthorisationCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AuthorisationResult8, Optional<Min6Max8Text>> mmAuthorisationCode = new MMMessageAttribute<AuthorisationResult8, Optional<Min6Max8Text>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentValidation.mmAuthorisationCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AuthorisationResult8.mmObject();
@@ -330,9 +364,19 @@ public class AuthorisationResult8 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Min6Max8Text.mmObject();
 		}
+
+		@Override
+		public Optional<Min6Max8Text> getValue(AuthorisationResult8 obj) {
+			return obj.getAuthorisationCode();
+		}
+
+		@Override
+		public void setValue(AuthorisationResult8 obj, Optional<Min6Max8Text> value) {
+			obj.setAuthorisationCode(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "AddtlInf")
-	protected List<com.tools20022.repository.msg.ActionMessage3> additionalInformation;
+	protected List<ActionMessage3> additionalInformation;
 	/**
 	 * 
 	 <p>
@@ -359,7 +403,7 @@ public class AuthorisationResult8 {
 	 * definition} = "Additional information relevant for the destination."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdditionalInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AuthorisationResult8, List<ActionMessage3>> mmAdditionalInformation = new MMMessageAssociationEnd<AuthorisationResult8, List<ActionMessage3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AuthorisationResult8.mmObject();
 			isDerived = false;
@@ -369,7 +413,17 @@ public class AuthorisationResult8 {
 			definition = "Additional information relevant for the destination.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ActionMessage3.mmObject();
+			type_lazy = () -> ActionMessage3.mmObject();
+		}
+
+		@Override
+		public List<ActionMessage3> getValue(AuthorisationResult8 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(AuthorisationResult8 obj, List<ActionMessage3> value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 
@@ -394,7 +448,7 @@ public class AuthorisationResult8 {
 		return authorisationEntity == null ? Optional.empty() : Optional.of(authorisationEntity);
 	}
 
-	public AuthorisationResult8 setAuthorisationEntity(com.tools20022.repository.msg.GenericIdentification75 authorisationEntity) {
+	public AuthorisationResult8 setAuthorisationEntity(GenericIdentification75 authorisationEntity) {
 		this.authorisationEntity = authorisationEntity;
 		return this;
 	}
@@ -403,7 +457,7 @@ public class AuthorisationResult8 {
 		return transactionResponse;
 	}
 
-	public AuthorisationResult8 setTransactionResponse(com.tools20022.repository.msg.ResponseType2 transactionResponse) {
+	public AuthorisationResult8 setTransactionResponse(ResponseType2 transactionResponse) {
 		this.transactionResponse = Objects.requireNonNull(transactionResponse);
 		return this;
 	}
@@ -412,7 +466,7 @@ public class AuthorisationResult8 {
 		return action == null ? action = new ArrayList<>() : action;
 	}
 
-	public AuthorisationResult8 setAction(List<com.tools20022.repository.msg.Action4> action) {
+	public AuthorisationResult8 setAction(List<Action4> action) {
 		this.action = Objects.requireNonNull(action);
 		return this;
 	}
@@ -430,7 +484,7 @@ public class AuthorisationResult8 {
 		return additionalInformation == null ? additionalInformation = new ArrayList<>() : additionalInformation;
 	}
 
-	public AuthorisationResult8 setAdditionalInformation(List<com.tools20022.repository.msg.ActionMessage3> additionalInformation) {
+	public AuthorisationResult8 setAdditionalInformation(List<ActionMessage3> additionalInformation) {
 		this.additionalInformation = Objects.requireNonNull(additionalInformation);
 		return this;
 	}

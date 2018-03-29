@@ -115,7 +115,7 @@ public class TransactionPrice1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDealPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionPrice1Choice, CurrencyAndAmount> mmDealPrice = new MMMessageAttribute<TransactionPrice1Choice, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransactionPrice1Choice.mmObject();
@@ -127,6 +127,16 @@ public class TransactionPrice1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(TransactionPrice1Choice obj) {
+			return obj.getDealPrice();
+		}
+
+		@Override
+		public void setValue(TransactionPrice1Choice obj, CurrencyAndAmount value) {
+			obj.setDealPrice(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -163,7 +173,7 @@ public class TransactionPrice1Choice {
 	 * "Proprietary price specification of the underlying transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionPrice1Choice, List<ProprietaryPrice1>> mmProprietary = new MMMessageAssociationEnd<TransactionPrice1Choice, List<ProprietaryPrice1>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesPricing.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransactionPrice1Choice.mmObject();
@@ -175,6 +185,16 @@ public class TransactionPrice1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryPrice1.mmObject();
+		}
+
+		@Override
+		public List<ProprietaryPrice1> getValue(TransactionPrice1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(TransactionPrice1Choice obj, List<ProprietaryPrice1> value) {
+			obj.setProprietary(value);
 		}
 	};
 

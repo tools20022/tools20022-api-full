@@ -119,7 +119,7 @@ public class Parameter6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEncryptionFormat = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Parameter6, Optional<EncryptionFormat1Code>> mmEncryptionFormat = new MMMessageAttribute<Parameter6, Optional<EncryptionFormat1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Parameter6.mmObject();
 			isDerived = false;
@@ -131,6 +131,16 @@ public class Parameter6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> EncryptionFormat1Code.mmObject();
+		}
+
+		@Override
+		public Optional<EncryptionFormat1Code> getValue(Parameter6 obj) {
+			return obj.getEncryptionFormat();
+		}
+
+		@Override
+		public void setValue(Parameter6 obj, Optional<EncryptionFormat1Code> value) {
+			obj.setEncryptionFormat(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InitlstnVctr")
@@ -177,7 +187,7 @@ public class Parameter6 {
 	 * Parameter1.mmInitialisationVector}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInitialisationVector = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Parameter6, Optional<Max500Binary>> mmInitialisationVector = new MMMessageAttribute<Parameter6, Optional<Max500Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Parameter6.mmObject();
 			isDerived = false;
@@ -190,6 +200,16 @@ public class Parameter6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max500Binary.mmObject();
+		}
+
+		@Override
+		public Optional<Max500Binary> getValue(Parameter6 obj) {
+			return obj.getInitialisationVector();
+		}
+
+		@Override
+		public void setValue(Parameter6 obj, Optional<Max500Binary> value) {
+			obj.setInitialisationVector(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BPddg")
@@ -230,7 +250,7 @@ public class Parameter6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBytePadding = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Parameter6, Optional<BytePadding1Code>> mmBytePadding = new MMMessageAttribute<Parameter6, Optional<BytePadding1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Parameter6.mmObject();
 			isDerived = false;
@@ -242,6 +262,16 @@ public class Parameter6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BytePadding1Code.mmObject();
+		}
+
+		@Override
+		public Optional<BytePadding1Code> getValue(Parameter6 obj) {
+			return obj.getBytePadding();
+		}
+
+		@Override
+		public void setValue(Parameter6 obj, Optional<BytePadding1Code> value) {
+			obj.setBytePadding(value.orElse(null));
 		}
 	};
 

@@ -53,11 +53,15 @@ public class ConstraintNettDividendRate1Rule {
 	 */
 	public static final MMConstraint<CorporateActionRate26> forCorporateActionRate26 = new MMConstraint<CorporateActionRate26>() {
 		{
-			validator = ConstraintNettDividendRate1Rule::checkCorporateActionRate26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NettDividendRate1Rule";
 			definition = "NettDividendRate is repeated, then RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate. (MT 566 NVR C4 ).";
 			owner_lazy = () -> CorporateActionRate26.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate26 obj) throws Exception {
+			checkCorporateActionRate26(obj);
 		}
 	};
 	/**
@@ -83,11 +87,15 @@ public class ConstraintNettDividendRate1Rule {
 	 */
 	public static final MMConstraint<CorporateActionRate31> forCorporateActionRate31 = new MMConstraint<CorporateActionRate31>() {
 		{
-			validator = ConstraintNettDividendRate1Rule::checkCorporateActionRate31;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NettDividendRate1Rule";
 			definition = "NettDividendRate is repeated, then RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate. (MT 566 NVR C4 ).";
 			owner_lazy = () -> CorporateActionRate31.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate31 obj) throws Exception {
+			checkCorporateActionRate31(obj);
 		}
 	};
 	/**
@@ -121,12 +129,16 @@ public class ConstraintNettDividendRate1Rule {
 	 */
 	public static final MMConstraint<CorporateActionRate38> forCorporateActionRate38 = new MMConstraint<CorporateActionRate38>() {
 		{
-			validator = ConstraintNettDividendRate1Rule::checkCorporateActionRate38;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NettDividendRate1Rule";
 			definition = "NettDividendRate is repeated, then RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate. (MT 566 NVR C4 ).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNettDividendRate1Rule.forCorporateActionRate46);
 			owner_lazy = () -> CorporateActionRate38.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate38 obj) throws Exception {
+			checkCorporateActionRate38(obj);
 		}
 	};
 	/**
@@ -152,11 +164,15 @@ public class ConstraintNettDividendRate1Rule {
 	 */
 	public static final MMConstraint<CorporateActionRate39> forCorporateActionRate39 = new MMConstraint<CorporateActionRate39>() {
 		{
-			validator = ConstraintNettDividendRate1Rule::checkCorporateActionRate39;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NettDividendRate1Rule";
 			definition = "NettDividendRate is repeated, then RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate. (MT 566 NVR C4 ).";
 			owner_lazy = () -> CorporateActionRate39.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate39 obj) throws Exception {
+			checkCorporateActionRate39(obj);
 		}
 	};
 	/**
@@ -195,13 +211,17 @@ public class ConstraintNettDividendRate1Rule {
 	 */
 	public static final MMConstraint<CorporateActionRate46> forCorporateActionRate46 = new MMConstraint<CorporateActionRate46>() {
 		{
-			validator = ConstraintNettDividendRate1Rule::checkCorporateActionRate46;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NettDividendRate1Rule";
 			definition = "NettDividendRate is repeated, then RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate. (MT 566 NVR C4 ).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNettDividendRate1Rule.forCorporateActionRate70);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNettDividendRate1Rule.forCorporateActionRate38;
 			owner_lazy = () -> CorporateActionRate46.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate46 obj) throws Exception {
+			checkCorporateActionRate46(obj);
 		}
 	};
 	/**
@@ -227,11 +247,15 @@ public class ConstraintNettDividendRate1Rule {
 	 */
 	public static final MMConstraint<CorporateActionRate64> forCorporateActionRate64 = new MMConstraint<CorporateActionRate64>() {
 		{
-			validator = ConstraintNettDividendRate1Rule::checkCorporateActionRate64;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NettDividendRate1Rule";
 			definition = "NettDividendRate is repeated, then RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate. (MT 566 NVR C4 ).";
 			owner_lazy = () -> CorporateActionRate64.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate64 obj) throws Exception {
+			checkCorporateActionRate64(obj);
 		}
 	};
 	/**
@@ -270,13 +294,17 @@ public class ConstraintNettDividendRate1Rule {
 	 */
 	public static final MMConstraint<CorporateActionRate70> forCorporateActionRate70 = new MMConstraint<CorporateActionRate70>() {
 		{
-			validator = ConstraintNettDividendRate1Rule::checkCorporateActionRate70;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NettDividendRate1Rule";
 			definition = "NetDividendRate is repeated, then RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NetDividendRate. (MT 566 NVR C4 ).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNettDividendRate1Rule.forCorporateActionRate82);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNettDividendRate1Rule.forCorporateActionRate46;
 			owner_lazy = () -> CorporateActionRate70.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate70 obj) throws Exception {
+			checkCorporateActionRate70(obj);
 		}
 	};
 	/**
@@ -302,11 +330,15 @@ public class ConstraintNettDividendRate1Rule {
 	 */
 	public static final MMConstraint<CorporateActionRate74> forCorporateActionRate74 = new MMConstraint<CorporateActionRate74>() {
 		{
-			validator = ConstraintNettDividendRate1Rule::checkCorporateActionRate74;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NettDividendRate1Rule";
 			definition = "NetDividendRate is repeated, then RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NetDividendRate. (MT 566 NVR C4 ).";
 			owner_lazy = () -> CorporateActionRate74.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate74 obj) throws Exception {
+			checkCorporateActionRate74(obj);
 		}
 	};
 	/**
@@ -345,13 +377,17 @@ public class ConstraintNettDividendRate1Rule {
 	 */
 	public static final MMConstraint<CorporateActionRate82> forCorporateActionRate82 = new MMConstraint<CorporateActionRate82>() {
 		{
-			validator = ConstraintNettDividendRate1Rule::checkCorporateActionRate82;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NettDividendRate1Rule";
 			definition = "NetDividendRate is repeated, then RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NetDividendRate. (MT 566 NVR C4 ).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNettDividendRate1Rule.forCorporateActionRate88);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNettDividendRate1Rule.forCorporateActionRate70;
 			owner_lazy = () -> CorporateActionRate82.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate82 obj) throws Exception {
+			checkCorporateActionRate82(obj);
 		}
 	};
 	/**
@@ -377,11 +413,15 @@ public class ConstraintNettDividendRate1Rule {
 	 */
 	public static final MMConstraint<CorporateActionRate85> forCorporateActionRate85 = new MMConstraint<CorporateActionRate85>() {
 		{
-			validator = ConstraintNettDividendRate1Rule::checkCorporateActionRate85;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NettDividendRate1Rule";
 			definition = "NetDividendRate is repeated, then RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NetDividendRate. (MT 566 NVR C4 ).";
 			owner_lazy = () -> CorporateActionRate85.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate85 obj) throws Exception {
+			checkCorporateActionRate85(obj);
 		}
 	};
 	/**
@@ -412,12 +452,16 @@ public class ConstraintNettDividendRate1Rule {
 	 */
 	public static final MMConstraint<CorporateActionRate88> forCorporateActionRate88 = new MMConstraint<CorporateActionRate88>() {
 		{
-			validator = ConstraintNettDividendRate1Rule::checkCorporateActionRate88;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NettDividendRate1Rule";
 			definition = "If NetDividendRate is repeated, then RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NetDividendRate. (MT 566 NVR C4 ).";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNettDividendRate1Rule.forCorporateActionRate82;
 			owner_lazy = () -> CorporateActionRate88.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate88 obj) throws Exception {
+			checkCorporateActionRate88(obj);
 		}
 	};
 	/**
@@ -443,11 +487,15 @@ public class ConstraintNettDividendRate1Rule {
 	 */
 	public static final MMConstraint<CorporateActionRate92> forCorporateActionRate92 = new MMConstraint<CorporateActionRate92>() {
 		{
-			validator = ConstraintNettDividendRate1Rule::checkCorporateActionRate92;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NettDividendRate1Rule";
 			definition = "If NetDividendRate is repeated, then RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NetDividendRate. (MT 566 NVR C4 ).";
 			owner_lazy = () -> CorporateActionRate92.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate92 obj) throws Exception {
+			checkCorporateActionRate92(obj);
 		}
 	};
 

@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.Vote2Choice;
 import com.tools20022.repository.codeset.ProxyType2Code;
 import com.tools20022.repository.entity.ProxyAppointment;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.IndividualPerson17;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -133,7 +134,7 @@ public class Proxy4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProxyType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Proxy4, ProxyType2Code> mmProxyType = new MMMessageAttribute<Proxy4, ProxyType2Code>() {
 		{
 			businessElementTrace_lazy = () -> ProxyAppointment.mmProxyType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Proxy4.mmObject();
@@ -146,6 +147,16 @@ public class Proxy4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ProxyType2Code.mmObject();
+		}
+
+		@Override
+		public ProxyType2Code getValue(Proxy4 obj) {
+			return obj.getProxyType();
+		}
+
+		@Override
+		public void setValue(Proxy4 obj, ProxyType2Code value) {
+			obj.setProxyType(value);
 		}
 	};
 	@XmlElement(name = "PrsnDtls")
@@ -184,7 +195,7 @@ public class Proxy4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPersonDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Proxy4, Optional<IndividualPerson17>> mmPersonDetails = new MMMessageAssociationEnd<Proxy4, Optional<IndividualPerson17>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Proxy4.mmObject();
 			isDerived = false;
@@ -196,7 +207,17 @@ public class Proxy4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IndividualPerson17.mmObject();
+			type_lazy = () -> IndividualPerson17.mmObject();
+		}
+
+		@Override
+		public Optional<IndividualPerson17> getValue(Proxy4 obj) {
+			return obj.getPersonDetails();
+		}
+
+		@Override
+		public void setValue(Proxy4 obj, Optional<IndividualPerson17> value) {
+			obj.setPersonDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "VoteInstrForAgndRsltn")
@@ -236,7 +257,7 @@ public class Proxy4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmVoteInstructionForAgendaResolution = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Proxy4, Optional<Vote2Choice>> mmVoteInstructionForAgendaResolution = new MMMessageAssociationEnd<Proxy4, Optional<Vote2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Proxy4.mmObject();
 			isDerived = false;
@@ -249,6 +270,16 @@ public class Proxy4 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Vote2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Vote2Choice> getValue(Proxy4 obj) {
+			return obj.getVoteInstructionForAgendaResolution();
+		}
+
+		@Override
+		public void setValue(Proxy4 obj, Optional<Vote2Choice> value) {
+			obj.setVoteInstructionForAgendaResolution(value.orElse(null));
 		}
 	};
 
@@ -281,7 +312,7 @@ public class Proxy4 {
 		return personDetails == null ? Optional.empty() : Optional.of(personDetails);
 	}
 
-	public Proxy4 setPersonDetails(com.tools20022.repository.msg.IndividualPerson17 personDetails) {
+	public Proxy4 setPersonDetails(IndividualPerson17 personDetails) {
 		this.personDetails = personDetails;
 		return this;
 	}

@@ -52,11 +52,15 @@ public class ConstraintAccountOwnerOrServicerIdentificationRule {
 	 */
 	public static final MMConstraint<GenericIdentificationSD1> forGenericIdentificationSD1 = new MMConstraint<GenericIdentificationSD1>() {
 		{
-			validator = ConstraintAccountOwnerOrServicerIdentificationRule::checkGenericIdentificationSD1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerOrServicerIdentificationRule";
 			definition = "At least one of the elements amongst AccountOwnerIdentification and AccountServicerIdentification must be present, both may be present.";
 			owner_lazy = () -> GenericIdentificationSD1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GenericIdentificationSD1 obj) throws Exception {
+			checkGenericIdentificationSD1(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintAccountOwnerOrServicerIdentificationRule {
 	 */
 	public static final MMConstraint<MarketClaimDetailsSD1> forMarketClaimDetailsSD1 = new MMConstraint<MarketClaimDetailsSD1>() {
 		{
-			validator = ConstraintAccountOwnerOrServicerIdentificationRule::checkMarketClaimDetailsSD1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerOrServicerIdentificationRule";
 			definition = "At least one of the elements amongst AccountOwnerIdentification and AccountServicerIdentification must be present, both may be present.";
 			owner_lazy = () -> MarketClaimDetailsSD1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MarketClaimDetailsSD1 obj) throws Exception {
+			checkMarketClaimDetailsSD1(obj);
 		}
 	};
 

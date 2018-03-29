@@ -125,7 +125,7 @@ public class ErrorAction2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActionResult = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ErrorAction2, List<TerminalManagementActionResult1Code>> mmActionResult = new MMMessageAttribute<ErrorAction2, List<TerminalManagementActionResult1Code>>() {
 		{
 			businessElementTrace_lazy = () -> TerminalManagementAction.mmActionResult;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ErrorAction2.mmObject();
@@ -137,6 +137,16 @@ public class ErrorAction2 {
 			nextVersions_lazy = () -> Arrays.asList(ErrorAction3.mmActionResult);
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementActionResult1Code.mmObject();
+		}
+
+		@Override
+		public List<TerminalManagementActionResult1Code> getValue(ErrorAction2 obj) {
+			return obj.getActionResult();
+		}
+
+		@Override
+		public void setValue(ErrorAction2 obj, List<TerminalManagementActionResult1Code> value) {
+			obj.setActionResult(value);
 		}
 	};
 	@XmlElement(name = "ActnToPrc", required = true)
@@ -181,7 +191,7 @@ public class ErrorAction2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActionToProcess = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ErrorAction2, TerminalManagementErrorAction2Code> mmActionToProcess = new MMMessageAttribute<ErrorAction2, TerminalManagementErrorAction2Code>() {
 		{
 			businessElementTrace_lazy = () -> TerminalManagementAction.mmActionToProcess;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ErrorAction2.mmObject();
@@ -194,6 +204,16 @@ public class ErrorAction2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementErrorAction2Code.mmObject();
+		}
+
+		@Override
+		public TerminalManagementErrorAction2Code getValue(ErrorAction2 obj) {
+			return obj.getActionToProcess();
+		}
+
+		@Override
+		public void setValue(ErrorAction2 obj, TerminalManagementErrorAction2Code value) {
+			obj.setActionToProcess(value);
 		}
 	};
 

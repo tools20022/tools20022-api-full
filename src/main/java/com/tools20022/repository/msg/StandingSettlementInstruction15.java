@@ -21,10 +21,13 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.*;
 import com.tools20022.repository.choice.Counterparty12Choice;
 import com.tools20022.repository.choice.SettlementStandingInstructionDatabase5Choice;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification111;
+import com.tools20022.repository.msg.SettlementParties64;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -64,6 +67,31 @@ import javax.xml.bind.annotation.XmlType;
  * trace} =
  * {@linkplain com.tools20022.repository.entity.StandingSettlementInstruction
  * StandingSettlementInstruction}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
+ * messageBuildingBlock} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmation002V08#mmStandingSettlementInstructionDetails
+ * SecuritiesFinancingConfirmation002V08.mmStandingSettlementInstructionDetails}
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstruction002V08#mmStandingSettlementInstructionDetails
+ * SecuritiesFinancingInstruction002V08.mmStandingSettlementInstructionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V08#mmStandingSettlementInstructionDetails
+ * SecuritiesSettlementTransactionConfirmation002V08.
+ * mmStandingSettlementInstructionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V08#mmStandingSettlementInstructionDetails
+ * SecuritiesSettlementTransactionInstruction002V08.
+ * mmStandingSettlementInstructionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V07#mmStandingSettlementInstructionDetails
+ * SecuritiesSettlementTransactionReversalAdvice002V07.
+ * mmStandingSettlementInstructionDetails}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -132,7 +160,7 @@ public class StandingSettlementInstruction15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementStandingInstructionDatabase = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StandingSettlementInstruction15, SettlementStandingInstructionDatabase5Choice> mmSettlementStandingInstructionDatabase = new MMMessageAssociationEnd<StandingSettlementInstruction15, SettlementStandingInstructionDatabase5Choice>() {
 		{
 			businessComponentTrace_lazy = () -> StandingSettlementInstruction.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingSettlementInstruction15.mmObject();
@@ -146,6 +174,16 @@ public class StandingSettlementInstruction15 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SettlementStandingInstructionDatabase5Choice.mmObject();
+		}
+
+		@Override
+		public SettlementStandingInstructionDatabase5Choice getValue(StandingSettlementInstruction15 obj) {
+			return obj.getSettlementStandingInstructionDatabase();
+		}
+
+		@Override
+		public void setValue(StandingSettlementInstruction15 obj, SettlementStandingInstructionDatabase5Choice value) {
+			obj.setSettlementStandingInstructionDatabase(value);
 		}
 	};
 	@XmlElement(name = "CtrPty", required = true)
@@ -187,7 +225,7 @@ public class StandingSettlementInstruction15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCounterparty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StandingSettlementInstruction15, Counterparty12Choice> mmCounterparty = new MMMessageAssociationEnd<StandingSettlementInstruction15, Counterparty12Choice>() {
 		{
 			businessComponentTrace_lazy = () -> TradePartyRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingSettlementInstruction15.mmObject();
@@ -201,6 +239,16 @@ public class StandingSettlementInstruction15 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Counterparty12Choice.mmObject();
+		}
+
+		@Override
+		public Counterparty12Choice getValue(StandingSettlementInstruction15 obj) {
+			return obj.getCounterparty();
+		}
+
+		@Override
+		public void setValue(StandingSettlementInstruction15 obj, Counterparty12Choice value) {
+			obj.setCounterparty(value);
 		}
 	};
 	@XmlElement(name = "Vndr")
@@ -241,7 +289,7 @@ public class StandingSettlementInstruction15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmVendor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StandingSettlementInstruction15, Optional<PartyIdentification111>> mmVendor = new MMMessageAssociationEnd<StandingSettlementInstruction15, Optional<PartyIdentification111>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingSettlementInstruction15.mmObject();
@@ -254,7 +302,17 @@ public class StandingSettlementInstruction15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification111.mmObject();
+			type_lazy = () -> PartyIdentification111.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification111> getValue(StandingSettlementInstruction15 obj) {
+			return obj.getVendor();
+		}
+
+		@Override
+		public void setValue(StandingSettlementInstruction15 obj, Optional<PartyIdentification111> value) {
+			obj.setVendor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OthrDlvrgSttlmPties")
@@ -295,7 +353,7 @@ public class StandingSettlementInstruction15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherDeliveringSettlementParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StandingSettlementInstruction15, Optional<SettlementParties64>> mmOtherDeliveringSettlementParties = new MMMessageAssociationEnd<StandingSettlementInstruction15, Optional<SettlementParties64>>() {
 		{
 			businessComponentTrace_lazy = () -> DeliveringSettlementParty.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingSettlementInstruction15.mmObject();
@@ -308,7 +366,17 @@ public class StandingSettlementInstruction15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SettlementParties64.mmObject();
+			type_lazy = () -> SettlementParties64.mmObject();
+		}
+
+		@Override
+		public Optional<SettlementParties64> getValue(StandingSettlementInstruction15 obj) {
+			return obj.getOtherDeliveringSettlementParties();
+		}
+
+		@Override
+		public void setValue(StandingSettlementInstruction15 obj, Optional<SettlementParties64> value) {
+			obj.setOtherDeliveringSettlementParties(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OthrRcvgSttlmPties")
@@ -349,7 +417,7 @@ public class StandingSettlementInstruction15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherReceivingSettlementParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StandingSettlementInstruction15, Optional<SettlementParties64>> mmOtherReceivingSettlementParties = new MMMessageAssociationEnd<StandingSettlementInstruction15, Optional<SettlementParties64>>() {
 		{
 			businessComponentTrace_lazy = () -> ReceivingSettlementParty.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingSettlementInstruction15.mmObject();
@@ -362,7 +430,17 @@ public class StandingSettlementInstruction15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SettlementParties64.mmObject();
+			type_lazy = () -> SettlementParties64.mmObject();
+		}
+
+		@Override
+		public Optional<SettlementParties64> getValue(StandingSettlementInstruction15 obj) {
+			return obj.getOtherReceivingSettlementParties();
+		}
+
+		@Override
+		public void setValue(StandingSettlementInstruction15 obj, Optional<SettlementParties64> value) {
+			obj.setOtherReceivingSettlementParties(value.orElse(null));
 		}
 	};
 
@@ -372,6 +450,9 @@ public class StandingSettlementInstruction15 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingSettlementInstruction15.mmSettlementStandingInstructionDatabase, com.tools20022.repository.msg.StandingSettlementInstruction15.mmCounterparty,
 						com.tools20022.repository.msg.StandingSettlementInstruction15.mmVendor, com.tools20022.repository.msg.StandingSettlementInstruction15.mmOtherDeliveringSettlementParties,
 						com.tools20022.repository.msg.StandingSettlementInstruction15.mmOtherReceivingSettlementParties);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesFinancingConfirmation002V08.mmStandingSettlementInstructionDetails, SecuritiesFinancingInstruction002V08.mmStandingSettlementInstructionDetails,
+						SecuritiesSettlementTransactionConfirmation002V08.mmStandingSettlementInstructionDetails, SecuritiesSettlementTransactionInstruction002V08.mmStandingSettlementInstructionDetails,
+						SecuritiesSettlementTransactionReversalAdvice002V07.mmStandingSettlementInstructionDetails);
 				trace_lazy = () -> StandingSettlementInstruction.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintVendorPresenceRule.forStandingSettlementInstruction15);
@@ -405,7 +486,7 @@ public class StandingSettlementInstruction15 {
 		return vendor == null ? Optional.empty() : Optional.of(vendor);
 	}
 
-	public StandingSettlementInstruction15 setVendor(com.tools20022.repository.msg.PartyIdentification111 vendor) {
+	public StandingSettlementInstruction15 setVendor(PartyIdentification111 vendor) {
 		this.vendor = vendor;
 		return this;
 	}
@@ -414,7 +495,7 @@ public class StandingSettlementInstruction15 {
 		return otherDeliveringSettlementParties == null ? Optional.empty() : Optional.of(otherDeliveringSettlementParties);
 	}
 
-	public StandingSettlementInstruction15 setOtherDeliveringSettlementParties(com.tools20022.repository.msg.SettlementParties64 otherDeliveringSettlementParties) {
+	public StandingSettlementInstruction15 setOtherDeliveringSettlementParties(SettlementParties64 otherDeliveringSettlementParties) {
 		this.otherDeliveringSettlementParties = otherDeliveringSettlementParties;
 		return this;
 	}
@@ -423,7 +504,7 @@ public class StandingSettlementInstruction15 {
 		return otherReceivingSettlementParties == null ? Optional.empty() : Optional.of(otherReceivingSettlementParties);
 	}
 
-	public StandingSettlementInstruction15 setOtherReceivingSettlementParties(com.tools20022.repository.msg.SettlementParties64 otherReceivingSettlementParties) {
+	public StandingSettlementInstruction15 setOtherReceivingSettlementParties(SettlementParties64 otherReceivingSettlementParties) {
 		this.otherReceivingSettlementParties = otherReceivingSettlementParties;
 		return this;
 	}

@@ -24,6 +24,10 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max9NumericText;
 import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CardPaymentContext18;
+import com.tools20022.repository.msg.CardPaymentEnvironment53;
+import com.tools20022.repository.msg.CardPaymentTransaction62;
+import com.tools20022.repository.msg.Traceability5;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -135,7 +139,7 @@ public class CardPaymentDataSetTransaction16 {
 	 * CardPaymentDataSetTransaction12.mmTransactionSequenceCounter}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionSequenceCounter = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentDataSetTransaction16, Max9NumericText> mmTransactionSequenceCounter = new MMMessageAttribute<CardPaymentDataSetTransaction16, Max9NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSetTransaction16.mmObject();
 			isDerived = false;
@@ -149,9 +153,19 @@ public class CardPaymentDataSetTransaction16 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max9NumericText.mmObject();
 		}
+
+		@Override
+		public Max9NumericText getValue(CardPaymentDataSetTransaction16 obj) {
+			return obj.getTransactionSequenceCounter();
+		}
+
+		@Override
+		public void setValue(CardPaymentDataSetTransaction16 obj, Max9NumericText value) {
+			obj.setTransactionSequenceCounter(value);
+		}
 	};
 	@XmlElement(name = "Tracblt")
-	protected List<com.tools20022.repository.msg.Traceability5> traceability;
+	protected List<Traceability5> traceability;
 	/**
 	 * 
 	 <p>
@@ -193,7 +207,7 @@ public class CardPaymentDataSetTransaction16 {
 	 * CardPaymentDataSetTransaction12.mmTraceability}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTraceability = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentDataSetTransaction16, List<Traceability5>> mmTraceability = new MMMessageAssociationEnd<CardPaymentDataSetTransaction16, List<Traceability5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSetTransaction16.mmObject();
 			isDerived = false;
@@ -205,7 +219,17 @@ public class CardPaymentDataSetTransaction16 {
 			previousVersion_lazy = () -> CardPaymentDataSetTransaction12.mmTraceability;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Traceability5.mmObject();
+			type_lazy = () -> Traceability5.mmObject();
+		}
+
+		@Override
+		public List<Traceability5> getValue(CardPaymentDataSetTransaction16 obj) {
+			return obj.getTraceability();
+		}
+
+		@Override
+		public void setValue(CardPaymentDataSetTransaction16 obj, List<Traceability5> value) {
+			obj.setTraceability(value);
 		}
 	};
 	@XmlElement(name = "Envt", required = true)
@@ -256,7 +280,7 @@ public class CardPaymentDataSetTransaction16 {
 	 * CardPaymentDataSetTransaction12.mmEnvironment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentDataSetTransaction16, CardPaymentEnvironment53> mmEnvironment = new MMMessageAssociationEnd<CardPaymentDataSetTransaction16, CardPaymentEnvironment53>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSetTransaction16.mmObject();
@@ -270,7 +294,17 @@ public class CardPaymentDataSetTransaction16 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment53.mmObject();
+			type_lazy = () -> CardPaymentEnvironment53.mmObject();
+		}
+
+		@Override
+		public CardPaymentEnvironment53 getValue(CardPaymentDataSetTransaction16 obj) {
+			return obj.getEnvironment();
+		}
+
+		@Override
+		public void setValue(CardPaymentDataSetTransaction16 obj, CardPaymentEnvironment53 value) {
+			obj.setEnvironment(value);
 		}
 	};
 	@XmlElement(name = "Cntxt")
@@ -322,7 +356,7 @@ public class CardPaymentDataSetTransaction16 {
 	 * CardPaymentDataSetTransaction12.mmContext}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContext = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentDataSetTransaction16, Optional<CardPaymentContext18>> mmContext = new MMMessageAttribute<CardPaymentDataSetTransaction16, Optional<CardPaymentContext18>>() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmCardPaymentAcquiring;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSetTransaction16.mmObject();
@@ -335,7 +369,17 @@ public class CardPaymentDataSetTransaction16 {
 			previousVersion_lazy = () -> CardPaymentDataSetTransaction12.mmContext;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.CardPaymentContext18.mmObject();
+			complexType_lazy = () -> CardPaymentContext18.mmObject();
+		}
+
+		@Override
+		public Optional<CardPaymentContext18> getValue(CardPaymentDataSetTransaction16 obj) {
+			return obj.getContext();
+		}
+
+		@Override
+		public void setValue(CardPaymentDataSetTransaction16 obj, Optional<CardPaymentContext18> value) {
+			obj.setContext(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tx", required = true)
@@ -384,7 +428,7 @@ public class CardPaymentDataSetTransaction16 {
 	 * CardPaymentDataSetTransaction12.mmTransaction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentDataSetTransaction16, CardPaymentTransaction62> mmTransaction = new MMMessageAssociationEnd<CardPaymentDataSetTransaction16, CardPaymentTransaction62>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSetTransaction16.mmObject();
@@ -398,7 +442,17 @@ public class CardPaymentDataSetTransaction16 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction62.mmObject();
+			type_lazy = () -> CardPaymentTransaction62.mmObject();
+		}
+
+		@Override
+		public CardPaymentTransaction62 getValue(CardPaymentDataSetTransaction16 obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(CardPaymentDataSetTransaction16 obj, CardPaymentTransaction62 value) {
+			obj.setTransaction(value);
 		}
 	};
 
@@ -433,7 +487,7 @@ public class CardPaymentDataSetTransaction16 {
 		return traceability == null ? traceability = new ArrayList<>() : traceability;
 	}
 
-	public CardPaymentDataSetTransaction16 setTraceability(List<com.tools20022.repository.msg.Traceability5> traceability) {
+	public CardPaymentDataSetTransaction16 setTraceability(List<Traceability5> traceability) {
 		this.traceability = Objects.requireNonNull(traceability);
 		return this;
 	}
@@ -442,7 +496,7 @@ public class CardPaymentDataSetTransaction16 {
 		return environment;
 	}
 
-	public CardPaymentDataSetTransaction16 setEnvironment(com.tools20022.repository.msg.CardPaymentEnvironment53 environment) {
+	public CardPaymentDataSetTransaction16 setEnvironment(CardPaymentEnvironment53 environment) {
 		this.environment = Objects.requireNonNull(environment);
 		return this;
 	}
@@ -451,7 +505,7 @@ public class CardPaymentDataSetTransaction16 {
 		return context == null ? Optional.empty() : Optional.of(context);
 	}
 
-	public CardPaymentDataSetTransaction16 setContext(com.tools20022.repository.msg.CardPaymentContext18 context) {
+	public CardPaymentDataSetTransaction16 setContext(CardPaymentContext18 context) {
 		this.context = context;
 		return this;
 	}
@@ -460,7 +514,7 @@ public class CardPaymentDataSetTransaction16 {
 		return transaction;
 	}
 
-	public CardPaymentDataSetTransaction16 setTransaction(com.tools20022.repository.msg.CardPaymentTransaction62 transaction) {
+	public CardPaymentDataSetTransaction16 setTransaction(CardPaymentTransaction62 transaction) {
 		this.transaction = Objects.requireNonNull(transaction);
 		return this;
 	}

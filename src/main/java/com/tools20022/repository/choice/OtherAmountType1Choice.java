@@ -99,7 +99,7 @@ public class OtherAmountType1Choice {
 	 * definition} = "Type of amount expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmountType1Choice, OtherAmountType1Code> mmCode = new MMMessageAttribute<OtherAmountType1Choice, OtherAmountType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.OtherAmountType1Choice.mmObject();
 			isDerived = false;
@@ -110,6 +110,16 @@ public class OtherAmountType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OtherAmountType1Code.mmObject();
+		}
+
+		@Override
+		public OtherAmountType1Code getValue(OtherAmountType1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(OtherAmountType1Choice obj, OtherAmountType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "PrtryCd", required = true)
@@ -140,7 +150,7 @@ public class OtherAmountType1Choice {
 	 * definition} = "Type of amount expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietaryCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OtherAmountType1Choice, GenericIdentification1> mmProprietaryCode = new MMMessageAssociationEnd<OtherAmountType1Choice, GenericIdentification1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.OtherAmountType1Choice.mmObject();
 			isDerived = false;
@@ -152,6 +162,16 @@ public class OtherAmountType1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(OtherAmountType1Choice obj) {
+			return obj.getProprietaryCode();
+		}
+
+		@Override
+		public void setValue(OtherAmountType1Choice obj, GenericIdentification1 value) {
+			obj.setProprietaryCode(value);
 		}
 	};
 

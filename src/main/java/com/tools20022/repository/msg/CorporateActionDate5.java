@@ -116,7 +116,7 @@ public class CorporateActionDate5 {
 	 * "Date/time at which a foreign exchange rate will be determined."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmForeignExchangeRateFixingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDate5, Optional<DateFormat4Choice>> mmForeignExchangeRateFixingDate = new MMMessageAttribute<CorporateActionDate5, Optional<DateFormat4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> FixingCondition.mmFixingDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate5.mmObject();
@@ -128,6 +128,16 @@ public class CorporateActionDate5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat4Choice> getValue(CorporateActionDate5 obj) {
+			return obj.getForeignExchangeRateFixingDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate5 obj, Optional<DateFormat4Choice> value) {
+			obj.setForeignExchangeRateFixingDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ValDt")
@@ -167,7 +177,7 @@ public class CorporateActionDate5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDate5, Optional<DateFormat4Choice>> mmValueDate = new MMMessageAttribute<CorporateActionDate5, Optional<DateFormat4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> ProceedsDefinition.mmValueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate5.mmObject();
@@ -179,6 +189,16 @@ public class CorporateActionDate5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat4Choice> getValue(CorporateActionDate5 obj) {
+			return obj.getValueDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate5 obj, Optional<DateFormat4Choice> value) {
+			obj.setValueDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtDt")
@@ -218,7 +238,7 @@ public class CorporateActionDate5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDate5, Optional<DateFormat4Choice>> mmPaymentDate = new MMMessageAttribute<CorporateActionDate5, Optional<DateFormat4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmMovementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate5.mmObject();
@@ -230,6 +250,16 @@ public class CorporateActionDate5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat4Choice> getValue(CorporateActionDate5 obj) {
+			return obj.getPaymentDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate5 obj, Optional<DateFormat4Choice> value) {
+			obj.setPaymentDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EarlstPmtDt")
@@ -269,7 +299,7 @@ public class CorporateActionDate5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEarliestPaymentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDate5, Optional<DateFormat4Choice>> mmEarliestPaymentDate = new MMMessageAttribute<CorporateActionDate5, Optional<DateFormat4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> ProceedsDefinition.mmEarliestPaymentDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate5.mmObject();
@@ -281,6 +311,16 @@ public class CorporateActionDate5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat4Choice> getValue(CorporateActionDate5 obj) {
+			return obj.getEarliestPaymentDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate5 obj, Optional<DateFormat4Choice> value) {
+			obj.setEarliestPaymentDate(value.orElse(null));
 		}
 	};
 

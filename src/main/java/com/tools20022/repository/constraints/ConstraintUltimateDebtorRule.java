@@ -60,12 +60,16 @@ public class ConstraintUltimateDebtorRule {
 	 */
 	public static final MMConstraint<PaymentInstructionInformation3> forPaymentInstructionInformation3 = new MMConstraint<PaymentInstructionInformation3>() {
 		{
-			validator = ConstraintUltimateDebtorRule::checkPaymentInstructionInformation3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UltimateDebtorRule";
 			definition = "If UltimateDebtor is present, then CreditTransferTransactionInformation/UltimateDebtor is not allowed.\nIf CreditTransferTransactionInformation/UltimateDebtor is present, then UltimateDebtor is not allowed.\nCreditTransferTransactionInformation/UltimateDebtor and UltimateDebtor may both be absent.";
 			owner_lazy = () -> PaymentInstructionInformation3.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><SimpleRule xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/UltimateDebtor</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditTransferTransactionInformation[*]/UltimateDebtor</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentInstructionInformation3 obj) throws Exception {
+			checkPaymentInstructionInformation3(obj);
 		}
 	};
 	/**
@@ -95,12 +99,16 @@ public class ConstraintUltimateDebtorRule {
 	 */
 	public static final MMConstraint<PaymentInstruction6> forPaymentInstruction6 = new MMConstraint<PaymentInstruction6>() {
 		{
-			validator = ConstraintUltimateDebtorRule::checkPaymentInstruction6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UltimateDebtorRule";
 			definition = "If UltimateDebtor is present, then CreditTransferTransactionInformation/UltimateDebtor is not allowed.\nIf CreditTransferTransactionInformation/UltimateDebtor is present, then UltimateDebtor is not allowed.\nCreditTransferTransactionInformation/UltimateDebtor and UltimateDebtor may both be absent.";
 			owner_lazy = () -> PaymentInstruction6.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><SimpleRule xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/UltimateDebtor</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditTransferTransactionInformation[*]/UltimateDebtor</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction6 obj) throws Exception {
+			checkPaymentInstruction6(obj);
 		}
 	};
 	/**
@@ -138,13 +146,17 @@ public class ConstraintUltimateDebtorRule {
 	 */
 	public static final MMConstraint<PaymentInstruction9> forPaymentInstruction9 = new MMConstraint<PaymentInstruction9>() {
 		{
-			validator = ConstraintUltimateDebtorRule::checkPaymentInstruction9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UltimateDebtorRule";
 			definition = "If UltimateDebtor is present, then CreditTransferTransactionInformation/UltimateDebtor is not allowed.\nIf CreditTransferTransactionInformation/UltimateDebtor is present, then UltimateDebtor is not allowed.\nCreditTransferTransactionInformation/UltimateDebtor and UltimateDebtor may both be absent.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintUltimateDebtorRule.forPaymentInstruction16);
 			owner_lazy = () -> PaymentInstruction9.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><SimpleRule xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/UltimateDebtor</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditTransferTransactionInformation[*]/UltimateDebtor</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction9 obj) throws Exception {
+			checkPaymentInstruction9(obj);
 		}
 	};
 	/**
@@ -187,7 +199,6 @@ public class ConstraintUltimateDebtorRule {
 	 */
 	public static final MMConstraint<PaymentInstruction16> forPaymentInstruction16 = new MMConstraint<PaymentInstruction16>() {
 		{
-			validator = ConstraintUltimateDebtorRule::checkPaymentInstruction16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UltimateDebtorRule";
 			definition = "If UltimateDebtor is present, then CreditTransferTransactionInformation/UltimateDebtor is not allowed.\nIf CreditTransferTransactionInformation/UltimateDebtor is present, then UltimateDebtor is not allowed.\nCreditTransferTransactionInformation/UltimateDebtor and UltimateDebtor may both be absent.";
@@ -195,6 +206,11 @@ public class ConstraintUltimateDebtorRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintUltimateDebtorRule.forPaymentInstruction9;
 			owner_lazy = () -> PaymentInstruction16.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><SimpleRule xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/UltimateDebtor</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditTransferTransactionInformation[*]/UltimateDebtor</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction16 obj) throws Exception {
+			checkPaymentInstruction16(obj);
 		}
 	};
 	/**
@@ -240,7 +256,6 @@ public class ConstraintUltimateDebtorRule {
 	 */
 	public static final MMConstraint<PaymentInstruction20> forPaymentInstruction20 = new MMConstraint<PaymentInstruction20>() {
 		{
-			validator = ConstraintUltimateDebtorRule::checkPaymentInstruction20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UltimateDebtorRule";
 			definition = "If UltimateDebtor is present, then CreditTransferTransactionInformation/UltimateDebtor is not allowed.\nIf CreditTransferTransactionInformation/UltimateDebtor is present, then UltimateDebtor is not allowed.\nCreditTransferTransactionInformation/UltimateDebtor and UltimateDebtor may both be absent.";
@@ -248,6 +263,11 @@ public class ConstraintUltimateDebtorRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintUltimateDebtorRule.forPaymentInstruction16;
 			owner_lazy = () -> PaymentInstruction20.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><SimpleRule xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/UltimateDebtor</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditTransferTransactionInformation[*]/UltimateDebtor</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction20 obj) throws Exception {
+			checkPaymentInstruction20(obj);
 		}
 	};
 	/**
@@ -282,13 +302,17 @@ public class ConstraintUltimateDebtorRule {
 	 */
 	public static final MMConstraint<PaymentInstruction22> forPaymentInstruction22 = new MMConstraint<PaymentInstruction22>() {
 		{
-			validator = ConstraintUltimateDebtorRule::checkPaymentInstruction22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UltimateDebtorRule";
 			definition = "If UltimateDebtor is present, then CreditTransferTransactionInformation/UltimateDebtor is not allowed.\nIf CreditTransferTransactionInformation/UltimateDebtor is present, then UltimateDebtor is not allowed.\nCreditTransferTransactionInformation/UltimateDebtor and UltimateDebtor may both be absent.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintUltimateDebtorRule.forPaymentInstruction20;
 			owner_lazy = () -> PaymentInstruction22.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><SimpleRule xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/UltimateDebtor</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditTransferTransactionInformation[*]/UltimateDebtor</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction22 obj) throws Exception {
+			checkPaymentInstruction22(obj);
 		}
 	};
 	/**
@@ -323,13 +347,17 @@ public class ConstraintUltimateDebtorRule {
 	 */
 	public static final MMConstraint<PaymentInstruction24> forPaymentInstruction24 = new MMConstraint<PaymentInstruction24>() {
 		{
-			validator = ConstraintUltimateDebtorRule::checkPaymentInstruction24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UltimateDebtorRule";
 			definition = "If UltimateDebtor is present, then CreditTransferTransactionInformation/UltimateDebtor is not allowed.\nIf CreditTransferTransactionInformation/UltimateDebtor is present, then UltimateDebtor is not allowed.\nCreditTransferTransactionInformation/UltimateDebtor and UltimateDebtor may both be absent.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintUltimateDebtorRule.forPaymentInstruction20;
 			owner_lazy = () -> PaymentInstruction24.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><SimpleRule xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/UltimateDebtor</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditTransferTransactionInformation[*]/UltimateDebtor</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction24 obj) throws Exception {
+			checkPaymentInstruction24(obj);
 		}
 	};
 

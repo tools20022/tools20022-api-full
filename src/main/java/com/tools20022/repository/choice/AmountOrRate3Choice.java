@@ -103,7 +103,7 @@ public class AmountOrRate3Choice {
 	 * definition} = "Amount of money."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountOrRate3Choice, ActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<AmountOrRate3Choice, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AmountOrRate3Choice.mmObject();
@@ -115,6 +115,16 @@ public class AmountOrRate3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(AmountOrRate3Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(AmountOrRate3Choice obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "Rate", required = true)
@@ -152,7 +162,7 @@ public class AmountOrRate3Choice {
 	 * definition} = "Rate used to calculate the amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountOrRate3Choice, PercentageRate> mmRate = new MMMessageAttribute<AmountOrRate3Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmChargeRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AmountOrRate3Choice.mmObject();
@@ -164,6 +174,16 @@ public class AmountOrRate3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(AmountOrRate3Choice obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(AmountOrRate3Choice obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 

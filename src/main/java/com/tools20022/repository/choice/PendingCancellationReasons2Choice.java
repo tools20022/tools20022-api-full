@@ -130,7 +130,7 @@ public class PendingCancellationReasons2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingCancellationReasons2Choice, PendingReason7Code> mmCode = new MMMessageAttribute<PendingCancellationReasons2Choice, PendingReason7Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingCancellationReasons2Choice.mmObject();
@@ -144,6 +144,16 @@ public class PendingCancellationReasons2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PendingReason7Code.mmObject();
+		}
+
+		@Override
+		public PendingReason7Code getValue(PendingCancellationReasons2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(PendingCancellationReasons2Choice obj, PendingReason7Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -193,7 +203,7 @@ public class PendingCancellationReasons2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingCancellationReasons2Choice, GenericIdentification20> mmProprietary = new MMMessageAttribute<PendingCancellationReasons2Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingCancellationReasons2Choice.mmObject();
@@ -207,6 +217,16 @@ public class PendingCancellationReasons2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(PendingCancellationReasons2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(PendingCancellationReasons2Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

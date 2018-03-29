@@ -129,7 +129,7 @@ public class StatementAttributes1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementAttributes1, AccountIdentificationFormatChoice> mmAccountIdentification = new MMMessageAttribute<StatementAttributes1, AccountIdentificationFormatChoice>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatementAttributes1.mmObject();
@@ -141,6 +141,16 @@ public class StatementAttributes1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AccountIdentificationFormatChoice.mmObject();
+		}
+
+		@Override
+		public AccountIdentificationFormatChoice getValue(StatementAttributes1 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(StatementAttributes1 obj, AccountIdentificationFormatChoice value) {
+			obj.setAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "SubAcctId")
@@ -180,7 +190,7 @@ public class StatementAttributes1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementAttributes1, Optional<AccountIdentificationFormatChoice>> mmSubAccountIdentification = new MMMessageAttribute<StatementAttributes1, Optional<AccountIdentificationFormatChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatementAttributes1.mmObject();
@@ -192,6 +202,16 @@ public class StatementAttributes1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AccountIdentificationFormatChoice.mmObject();
+		}
+
+		@Override
+		public Optional<AccountIdentificationFormatChoice> getValue(StatementAttributes1 obj) {
+			return obj.getSubAccountIdentification();
+		}
+
+		@Override
+		public void setValue(StatementAttributes1 obj, Optional<AccountIdentificationFormatChoice> value) {
+			obj.setSubAccountIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -229,7 +249,7 @@ public class StatementAttributes1 {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementAttributes1, Optional<PartyIdentification2Choice>> mmAccountOwner = new MMMessageAttribute<StatementAttributes1, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatementAttributes1.mmObject();
@@ -241,6 +261,16 @@ public class StatementAttributes1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(StatementAttributes1 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(StatementAttributes1 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StmtTp", required = true)
@@ -273,7 +303,7 @@ public class StatementAttributes1 {
 	 * definition} = "Specifes the statement message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementAttributes1, StatementType1Choice> mmStatementType = new MMMessageAttribute<StatementAttributes1, StatementType1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatementAttributes1.mmObject();
 			isDerived = false;
@@ -284,6 +314,16 @@ public class StatementAttributes1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> StatementType1Choice.mmObject();
+		}
+
+		@Override
+		public StatementType1Choice getValue(StatementAttributes1 obj) {
+			return obj.getStatementType();
+		}
+
+		@Override
+		public void setValue(StatementAttributes1 obj, StatementType1Choice value) {
+			obj.setStatementType(value);
 		}
 	};
 	@XmlElement(name = "StmtTerm")
@@ -320,7 +360,7 @@ public class StatementAttributes1 {
 	 * definition} = "Date of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementTerm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementAttributes1, Optional<StatementTerm1Choice>> mmStatementTerm = new MMMessageAttribute<StatementAttributes1, Optional<StatementTerm1Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> Account.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatementAttributes1.mmObject();
@@ -332,6 +372,16 @@ public class StatementAttributes1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> StatementTerm1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<StatementTerm1Choice> getValue(StatementAttributes1 obj) {
+			return obj.getStatementTerm();
+		}
+
+		@Override
+		public void setValue(StatementAttributes1 obj, Optional<StatementTerm1Choice> value) {
+			obj.setStatementTerm(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Frqcy")
@@ -369,7 +419,7 @@ public class StatementAttributes1 {
 	 * definition} = "Frequency of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementAttributes1, Optional<FrequencyCodeAndDSSCode1Choice>> mmFrequency = new MMMessageAttribute<StatementAttributes1, Optional<FrequencyCodeAndDSSCode1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> ReportingService.mmStatementFrequency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatementAttributes1.mmObject();
@@ -381,6 +431,16 @@ public class StatementAttributes1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FrequencyCodeAndDSSCode1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FrequencyCodeAndDSSCode1Choice> getValue(StatementAttributes1 obj) {
+			return obj.getFrequency();
+		}
+
+		@Override
+		public void setValue(StatementAttributes1 obj, Optional<FrequencyCodeAndDSSCode1Choice> value) {
+			obj.setFrequency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UpdTp")
@@ -414,7 +474,7 @@ public class StatementAttributes1 {
 	 * "Indicates whether the report is complete or contains changes only."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUpdateType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementAttributes1, Optional<StatementUpdateTypeCodeAndDSSCodeChoice>> mmUpdateType = new MMMessageAttribute<StatementAttributes1, Optional<StatementUpdateTypeCodeAndDSSCodeChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatementAttributes1.mmObject();
 			isDerived = false;
@@ -425,6 +485,16 @@ public class StatementAttributes1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> StatementUpdateTypeCodeAndDSSCodeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<StatementUpdateTypeCodeAndDSSCodeChoice> getValue(StatementAttributes1 obj) {
+			return obj.getUpdateType();
+		}
+
+		@Override
+		public void setValue(StatementAttributes1 obj, Optional<StatementUpdateTypeCodeAndDSSCodeChoice> value) {
+			obj.setUpdateType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StmtBsis")
@@ -457,7 +527,7 @@ public class StatementAttributes1 {
 	 * definition} = "Type of balance on which the statement is prepared."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementAttributes1, Optional<StatementBasisCodeAndDSSCodeChoice>> mmStatementBasis = new MMMessageAttribute<StatementAttributes1, Optional<StatementBasisCodeAndDSSCodeChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatementAttributes1.mmObject();
 			isDerived = false;
@@ -468,6 +538,16 @@ public class StatementAttributes1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> StatementBasisCodeAndDSSCodeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<StatementBasisCodeAndDSSCodeChoice> getValue(StatementAttributes1 obj) {
+			return obj.getStatementBasis();
+		}
+
+		@Override
+		public void setValue(StatementAttributes1 obj, Optional<StatementBasisCodeAndDSSCodeChoice> value) {
+			obj.setStatementBasis(value.orElse(null));
 		}
 	};
 

@@ -67,13 +67,17 @@ public class ConstraintDeliverersIntermediary1DetailsRule {
 	 */
 	public static final MMConstraint<DeliveringPartiesAndAccount14> forDeliveringPartiesAndAccount14 = new MMConstraint<DeliveringPartiesAndAccount14>() {
 		{
-			validator = ConstraintDeliverersIntermediary1DetailsRule::checkDeliveringPartiesAndAccount14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersIntermediary1DetailsRule";
 			definition = "If DeliverersIntermediary2Details is present, then DeliverersIntermediary1Details must also be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeliverersIntermediary1DetailsRule.forDeliveringPartiesAndAccount18);
 			owner_lazy = () -> DeliveringPartiesAndAccount14.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DeliverersIntermediary1Details</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DeliverersIntermediary2Details</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(DeliveringPartiesAndAccount14 obj) throws Exception {
+			checkDeliveringPartiesAndAccount14(obj);
 		}
 	};
 	/**
@@ -103,12 +107,16 @@ public class ConstraintDeliverersIntermediary1DetailsRule {
 	 */
 	public static final MMConstraint<DeliveringPartiesAndAccount16> forDeliveringPartiesAndAccount16 = new MMConstraint<DeliveringPartiesAndAccount16>() {
 		{
-			validator = ConstraintDeliverersIntermediary1DetailsRule::checkDeliveringPartiesAndAccount16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersIntermediary1DetailsRule";
 			definition = "If DeliverersIntermediary2Details is present, then DeliverersIntermediary1Details must be present. If DeliverersIntermediary2Details is not present then DeliverersIntermediary1Details is optional.";
 			owner_lazy = () -> DeliveringPartiesAndAccount16.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DeliverersIntermediary1Details</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DeliverersIntermediary2Details</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(DeliveringPartiesAndAccount16 obj) throws Exception {
+			checkDeliveringPartiesAndAccount16(obj);
 		}
 	};
 	/**
@@ -144,13 +152,17 @@ public class ConstraintDeliverersIntermediary1DetailsRule {
 	 */
 	public static final MMConstraint<DeliveringPartiesAndAccount18> forDeliveringPartiesAndAccount18 = new MMConstraint<DeliveringPartiesAndAccount18>() {
 		{
-			validator = ConstraintDeliverersIntermediary1DetailsRule::checkDeliveringPartiesAndAccount18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersIntermediary1DetailsRule";
 			definition = "If DeliverersIntermediary2Details is present, then DeliverersIntermediary1Details must also be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeliverersIntermediary1DetailsRule.forDeliveringPartiesAndAccount14;
 			owner_lazy = () -> DeliveringPartiesAndAccount18.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DeliverersIntermediary1Details</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DeliverersIntermediary2Details</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(DeliveringPartiesAndAccount18 obj) throws Exception {
+			checkDeliveringPartiesAndAccount18(obj);
 		}
 	};
 

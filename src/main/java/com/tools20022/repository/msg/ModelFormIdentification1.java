@@ -107,7 +107,7 @@ public class ModelFormIdentification1 {
 	 * definition} = "Identification of the model form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ModelFormIdentification1, ModelFormIdentification1Choice> mmIdentification = new MMMessageAttribute<ModelFormIdentification1, ModelFormIdentification1Choice>() {
 		{
 			businessElementTrace_lazy = () -> ModelForm.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ModelFormIdentification1.mmObject();
@@ -119,6 +119,16 @@ public class ModelFormIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ModelFormIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public ModelFormIdentification1Choice getValue(ModelFormIdentification1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(ModelFormIdentification1 obj, ModelFormIdentification1Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Vrsn")
@@ -155,7 +165,7 @@ public class ModelFormIdentification1 {
 	 * definition} = "Version of the model form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ModelFormIdentification1, Optional<Max35Text>> mmVersion = new MMMessageAttribute<ModelFormIdentification1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> ModelForm.mmVersion;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ModelFormIdentification1.mmObject();
@@ -167,6 +177,16 @@ public class ModelFormIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ModelFormIdentification1 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(ModelFormIdentification1 obj, Optional<Max35Text> value) {
+			obj.setVersion(value.orElse(null));
 		}
 	};
 

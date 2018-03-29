@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrumentAttributesSD2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -143,7 +144,7 @@ public class FinancialInstrumentAttributesSD13 {
 	 * FinancialInstrumentAttributesSD1.mmPlaceAndName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributesSD13, Max350Text> mmPlaceAndName = new MMMessageAttribute<FinancialInstrumentAttributesSD13, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD13.mmObject();
 			isDerived = false;
@@ -156,6 +157,16 @@ public class FinancialInstrumentAttributesSD13 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(FinancialInstrumentAttributesSD13 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributesSD13 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "DTCSctyTrfblFlg")
@@ -206,7 +217,7 @@ public class FinancialInstrumentAttributesSD13 {
 	 * FinancialInstrumentAttributesSD1.mmDTCSecurityTransferableFlag}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCSecurityTransferableFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributesSD13, Optional<YesNoIndicator>> mmDTCSecurityTransferableFlag = new MMMessageAttribute<FinancialInstrumentAttributesSD13, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD13.mmObject();
 			isDerived = false;
@@ -220,6 +231,16 @@ public class FinancialInstrumentAttributesSD13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(FinancialInstrumentAttributesSD13 obj) {
+			return obj.getDTCSecurityTransferableFlag();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributesSD13 obj, Optional<YesNoIndicator> value) {
+			obj.setDTCSecurityTransferableFlag(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DclrdDsbrsdSctyDtls")
@@ -269,7 +290,7 @@ public class FinancialInstrumentAttributesSD13 {
 	 * FinancialInstrumentAttributesSD1.mmDeclaredDisbursedSecurityDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDeclaredDisbursedSecurityDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentAttributesSD13, Optional<FinancialInstrumentAttributesSD2>> mmDeclaredDisbursedSecurityDetails = new MMMessageAssociationEnd<FinancialInstrumentAttributesSD13, Optional<FinancialInstrumentAttributesSD2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD13.mmObject();
 			isDerived = false;
@@ -283,7 +304,17 @@ public class FinancialInstrumentAttributesSD13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD2.mmObject();
+			type_lazy = () -> FinancialInstrumentAttributesSD2.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentAttributesSD2> getValue(FinancialInstrumentAttributesSD13 obj) {
+			return obj.getDeclaredDisbursedSecurityDetails();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributesSD13 obj, Optional<FinancialInstrumentAttributesSD2> value) {
+			obj.setDeclaredDisbursedSecurityDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCDsbrsdSctyAsstTp")
@@ -334,7 +365,7 @@ public class FinancialInstrumentAttributesSD13 {
 	 * FinancialInstrumentAttributesSD1.mmDTCDisbursedSecurityAssetType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCDisbursedSecurityAssetType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributesSD13, Optional<DTCAssetType2Code>> mmDTCDisbursedSecurityAssetType = new MMMessageAttribute<FinancialInstrumentAttributesSD13, Optional<DTCAssetType2Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD13.mmObject();
 			isDerived = false;
@@ -348,6 +379,16 @@ public class FinancialInstrumentAttributesSD13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCAssetType2Code.mmObject();
+		}
+
+		@Override
+		public Optional<DTCAssetType2Code> getValue(FinancialInstrumentAttributesSD13 obj) {
+			return obj.getDTCDisbursedSecurityAssetType();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributesSD13 obj, Optional<DTCAssetType2Code> value) {
+			obj.setDTCDisbursedSecurityAssetType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCDsbrsdSctyAsstClss")
@@ -398,7 +439,7 @@ public class FinancialInstrumentAttributesSD13 {
 	 * FinancialInstrumentAttributesSD1.mmDTCDisbursedSecurityAssetClass}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCDisbursedSecurityAssetClass = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributesSD13, Optional<AssetClass1Code>> mmDTCDisbursedSecurityAssetClass = new MMMessageAttribute<FinancialInstrumentAttributesSD13, Optional<AssetClass1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD13.mmObject();
 			isDerived = false;
@@ -412,6 +453,16 @@ public class FinancialInstrumentAttributesSD13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AssetClass1Code.mmObject();
+		}
+
+		@Override
+		public Optional<AssetClass1Code> getValue(FinancialInstrumentAttributesSD13 obj) {
+			return obj.getDTCDisbursedSecurityAssetClass();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributesSD13 obj, Optional<AssetClass1Code> value) {
+			obj.setDTCDisbursedSecurityAssetClass(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BabyBdDnmtn")
@@ -462,7 +513,7 @@ public class FinancialInstrumentAttributesSD13 {
 	 * FinancialInstrumentAttributesSD1.mmBabyBondDenomination}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBabyBondDenomination = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributesSD13, Optional<DecimalNumber>> mmBabyBondDenomination = new MMMessageAttribute<FinancialInstrumentAttributesSD13, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD13.mmObject();
 			isDerived = false;
@@ -476,6 +527,16 @@ public class FinancialInstrumentAttributesSD13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(FinancialInstrumentAttributesSD13 obj) {
+			return obj.getBabyBondDenomination();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributesSD13 obj, Optional<DecimalNumber> value) {
+			obj.setBabyBondDenomination(value.orElse(null));
 		}
 	};
 
@@ -518,7 +579,7 @@ public class FinancialInstrumentAttributesSD13 {
 		return declaredDisbursedSecurityDetails == null ? Optional.empty() : Optional.of(declaredDisbursedSecurityDetails);
 	}
 
-	public FinancialInstrumentAttributesSD13 setDeclaredDisbursedSecurityDetails(com.tools20022.repository.msg.FinancialInstrumentAttributesSD2 declaredDisbursedSecurityDetails) {
+	public FinancialInstrumentAttributesSD13 setDeclaredDisbursedSecurityDetails(FinancialInstrumentAttributesSD2 declaredDisbursedSecurityDetails) {
 		this.declaredDisbursedSecurityDetails = declaredDisbursedSecurityDetails;
 		return this;
 	}

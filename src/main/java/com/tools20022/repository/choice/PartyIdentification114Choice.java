@@ -122,7 +122,7 @@ public class PartyIdentification114Choice {
 	 * PartyIdentification92Choice.mmAnyBIC}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAnyBIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification114Choice, AnyBICIdentifier> mmAnyBIC = new MMMessageAttribute<PartyIdentification114Choice, AnyBICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification114Choice.mmObject();
@@ -135,6 +135,16 @@ public class PartyIdentification114Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public AnyBICIdentifier getValue(PartyIdentification114Choice obj) {
+			return obj.getAnyBIC();
+		}
+
+		@Override
+		public void setValue(PartyIdentification114Choice obj, AnyBICIdentifier value) {
+			obj.setAnyBIC(value);
 		}
 	};
 	@XmlElement(name = "PrtryId", required = true)
@@ -181,7 +191,7 @@ public class PartyIdentification114Choice {
 	 * PartyIdentification92Choice.mmProprietaryIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietaryIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification114Choice, GenericIdentification84> mmProprietaryIdentification = new MMMessageAssociationEnd<PartyIdentification114Choice, GenericIdentification84>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification114Choice.mmObject();
@@ -196,6 +206,16 @@ public class PartyIdentification114Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification84.mmObject();
+		}
+
+		@Override
+		public GenericIdentification84 getValue(PartyIdentification114Choice obj) {
+			return obj.getProprietaryIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification114Choice obj, GenericIdentification84 value) {
+			obj.setProprietaryIdentification(value);
 		}
 	};
 

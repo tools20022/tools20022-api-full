@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.ReceivedReason2Choice;
 import com.tools20022.repository.codeset.NoReasonCode;
 import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
 import com.tools20022.repository.entity.StatusReason;
@@ -109,7 +110,7 @@ public class ReceivedReason1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReceivedReason1Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<ReceivedReason1Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReceivedReason1Choice.mmObject();
@@ -121,6 +122,16 @@ public class ReceivedReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(ReceivedReason1Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(ReceivedReason1Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -157,7 +168,7 @@ public class ReceivedReason1Choice {
 	 * definition} = "Reason for the received status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReceivedReason1Choice, ReceivedReason2Choice> mmReason = new MMMessageAssociationEnd<ReceivedReason1Choice, ReceivedReason2Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReceivedReason1Choice.mmObject();
@@ -169,7 +180,17 @@ public class ReceivedReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.ReceivedReason2Choice.mmObject();
+			type_lazy = () -> ReceivedReason2Choice.mmObject();
+		}
+
+		@Override
+		public ReceivedReason2Choice getValue(ReceivedReason1Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(ReceivedReason1Choice obj, ReceivedReason2Choice value) {
+			obj.setReason(value);
 		}
 	};
 
@@ -200,7 +221,7 @@ public class ReceivedReason1Choice {
 		return reason;
 	}
 
-	public ReceivedReason1Choice setReason(com.tools20022.repository.choice.ReceivedReason2Choice reason) {
+	public ReceivedReason1Choice setReason(ReceivedReason2Choice reason) {
 		this.reason = Objects.requireNonNull(reason);
 		return this;
 	}

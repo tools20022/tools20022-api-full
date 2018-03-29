@@ -114,7 +114,7 @@ public class LineItemTax1 {
 	 * "Amount of money resulting from the calculation of the tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCalculatedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItemTax1, List<CurrencyAndAmount>> mmCalculatedAmount = new MMMessageAttribute<LineItemTax1, List<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemTax1.mmObject();
@@ -125,6 +125,16 @@ public class LineItemTax1 {
 			definition = "Amount of money resulting from the calculation of the tax.";
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public List<CurrencyAndAmount> getValue(LineItemTax1 obj) {
+			return obj.getCalculatedAmount();
+		}
+
+		@Override
+		public void setValue(LineItemTax1 obj, List<CurrencyAndAmount> value) {
+			obj.setCalculatedAmount(value);
 		}
 	};
 	@XmlElement(name = "TpCd")
@@ -160,7 +170,7 @@ public class LineItemTax1 {
 	 * definition} = "Type of tax applied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTypeCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItemTax1, Optional<TaxTypeFormat1Choice>> mmTypeCode = new MMMessageAttribute<LineItemTax1, Optional<TaxTypeFormat1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemTax1.mmObject();
@@ -172,6 +182,16 @@ public class LineItemTax1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> TaxTypeFormat1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<TaxTypeFormat1Choice> getValue(LineItemTax1 obj) {
+			return obj.getTypeCode();
+		}
+
+		@Override
+		public void setValue(LineItemTax1 obj, Optional<TaxTypeFormat1Choice> value) {
+			obj.setTypeCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxPtDt")
@@ -209,7 +229,7 @@ public class LineItemTax1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxPointDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItemTax1, Optional<ISODate>> mmTaxPointDate = new MMMessageAttribute<LineItemTax1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmTaxDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemTax1.mmObject();
@@ -221,6 +241,16 @@ public class LineItemTax1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(LineItemTax1 obj) {
+			return obj.getTaxPointDate();
+		}
+
+		@Override
+		public void setValue(LineItemTax1 obj, Optional<ISODate> value) {
+			obj.setTaxPointDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClctdRate")
@@ -257,7 +287,7 @@ public class LineItemTax1 {
 	 * "Rate used to calculate the amount of this tax, levy or duty."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCalculatedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItemTax1, Optional<PercentageRate>> mmCalculatedRate = new MMMessageAttribute<LineItemTax1, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemTax1.mmObject();
@@ -269,6 +299,16 @@ public class LineItemTax1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(LineItemTax1 obj) {
+			return obj.getCalculatedRate();
+		}
+
+		@Override
+		public void setValue(LineItemTax1 obj, Optional<PercentageRate> value) {
+			obj.setCalculatedRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtgyCd")
@@ -301,7 +341,7 @@ public class LineItemTax1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCategoryCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItemTax1, Optional<Max4Text>> mmCategoryCode = new MMMessageAttribute<LineItemTax1, Optional<Max4Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemTax1.mmObject();
 			isDerived = false;
@@ -312,6 +352,16 @@ public class LineItemTax1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max4Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max4Text> getValue(LineItemTax1 obj) {
+			return obj.getCategoryCode();
+		}
+
+		@Override
+		public void setValue(LineItemTax1 obj, Optional<Max4Text> value) {
+			obj.setCategoryCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtgyNm")
@@ -343,7 +393,7 @@ public class LineItemTax1 {
 	 * "Category name, expressed as text, of the tax, levy or duty."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCategoryName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItemTax1, List<Max35Text>> mmCategoryName = new MMMessageAttribute<LineItemTax1, List<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemTax1.mmObject();
 			isDerived = false;
@@ -353,6 +403,16 @@ public class LineItemTax1 {
 			definition = "Category name, expressed as text, of the tax, levy or duty.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(LineItemTax1 obj) {
+			return obj.getCategoryName();
+		}
+
+		@Override
+		public void setValue(LineItemTax1 obj, List<Max35Text> value) {
+			obj.setCategoryName(value);
 		}
 	};
 

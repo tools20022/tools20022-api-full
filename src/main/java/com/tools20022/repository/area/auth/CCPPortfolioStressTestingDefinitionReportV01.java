@@ -26,7 +26,6 @@ import com.tools20022.repository.area.AuthoritiesLatestVersion;
 import com.tools20022.repository.msg.ScenarioDefinition1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CentralCounterPartyCCPDataReporting;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -120,7 +119,7 @@ public class CCPPortfolioStressTestingDefinitionReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmScenarioDefinition = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CCPPortfolioStressTestingDefinitionReportV01, List<ScenarioDefinition1>> mmScenarioDefinition = new MMMessageBuildingBlock<CCPPortfolioStressTestingDefinitionReportV01, List<ScenarioDefinition1>>() {
 		{
 			xmlTag = "ScnroDef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,12 +129,14 @@ public class CCPPortfolioStressTestingDefinitionReportV01 {
 			complexType_lazy = () -> ScenarioDefinition1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CCPPortfolioStressTestingDefinitionReportV01.class.getMethod("getScenarioDefinition", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<ScenarioDefinition1> getValue(CCPPortfolioStressTestingDefinitionReportV01 obj) {
+			return obj.getScenarioDefinition();
+		}
+
+		@Override
+		public void setValue(CCPPortfolioStressTestingDefinitionReportV01 obj, List<ScenarioDefinition1> value) {
+			obj.setScenarioDefinition(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -165,7 +166,7 @@ public class CCPPortfolioStressTestingDefinitionReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CCPPortfolioStressTestingDefinitionReportV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<CCPPortfolioStressTestingDefinitionReportV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,12 +176,14 @@ public class CCPPortfolioStressTestingDefinitionReportV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CCPPortfolioStressTestingDefinitionReportV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(CCPPortfolioStressTestingDefinitionReportV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(CCPPortfolioStressTestingDefinitionReportV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

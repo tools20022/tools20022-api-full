@@ -112,7 +112,7 @@ public class AccountQuery1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountQuery1, Optional<QueryType2Code>> mmQueryType = new MMMessageAttribute<AccountQuery1, Optional<QueryType2Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountQuery1.mmObject();
 			isDerived = false;
@@ -124,6 +124,16 @@ public class AccountQuery1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> QueryType2Code.mmObject();
+		}
+
+		@Override
+		public Optional<QueryType2Code> getValue(AccountQuery1 obj) {
+			return obj.getQueryType();
+		}
+
+		@Override
+		public void setValue(AccountQuery1 obj, Optional<QueryType2Code> value) {
+			obj.setQueryType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctCrit")
@@ -162,7 +172,7 @@ public class AccountQuery1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountQuery1, Optional<AccountCriteria1Choice>> mmAccountCriteria = new MMMessageAssociationEnd<AccountQuery1, Optional<AccountCriteria1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountQuery1.mmObject();
 			isDerived = false;
@@ -175,6 +185,16 @@ public class AccountQuery1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AccountCriteria1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AccountCriteria1Choice> getValue(AccountQuery1 obj) {
+			return obj.getAccountCriteria();
+		}
+
+		@Override
+		public void setValue(AccountQuery1 obj, Optional<AccountCriteria1Choice> value) {
+			obj.setAccountCriteria(value.orElse(null));
 		}
 	};
 

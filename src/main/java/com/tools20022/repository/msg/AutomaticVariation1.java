@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.AutomaticVariation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountAndTrigger1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -110,7 +111,7 @@ public class AutomaticVariation1 {
 	 * definition} = "Identification of the automatic variation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AutomaticVariation1, Max35Text> mmIdentification = new MMMessageAttribute<AutomaticVariation1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AutomaticVariation1.mmObject();
 			isDerived = false;
@@ -121,6 +122,16 @@ public class AutomaticVariation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AutomaticVariation1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(AutomaticVariation1 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -158,7 +169,7 @@ public class AutomaticVariation1 {
 	 * definition} = "Type of variation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AutomaticVariation1, VariationType1Code> mmType = new MMMessageAttribute<AutomaticVariation1, VariationType1Code>() {
 		{
 			businessElementTrace_lazy = () -> AutomaticVariation.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AutomaticVariation1.mmObject();
@@ -171,9 +182,19 @@ public class AutomaticVariation1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> VariationType1Code.mmObject();
 		}
+
+		@Override
+		public VariationType1Code getValue(AutomaticVariation1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(AutomaticVariation1 obj, VariationType1Code value) {
+			obj.setType(value);
+		}
 	};
 	@XmlElement(name = "AmtAndTrggr", required = true)
-	protected List<com.tools20022.repository.msg.AmountAndTrigger1> amountAndTrigger;
+	protected List<AmountAndTrigger1> amountAndTrigger;
 	/**
 	 * 
 	 <p>
@@ -205,7 +226,7 @@ public class AutomaticVariation1 {
 	 * definition} = "Details related to the variation amount and its trigger."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountAndTrigger = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AutomaticVariation1, List<AmountAndTrigger1>> mmAmountAndTrigger = new MMMessageAssociationEnd<AutomaticVariation1, List<AmountAndTrigger1>>() {
 		{
 			businessComponentTrace_lazy = () -> AutomaticVariation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AutomaticVariation1.mmObject();
@@ -216,7 +237,17 @@ public class AutomaticVariation1 {
 			definition = "Details related to the variation amount and its trigger.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndTrigger1.mmObject();
+			type_lazy = () -> AmountAndTrigger1.mmObject();
+		}
+
+		@Override
+		public List<AmountAndTrigger1> getValue(AutomaticVariation1 obj) {
+			return obj.getAmountAndTrigger();
+		}
+
+		@Override
+		public void setValue(AutomaticVariation1 obj, List<AmountAndTrigger1> value) {
+			obj.setAmountAndTrigger(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -248,7 +279,7 @@ public class AutomaticVariation1 {
 	 * definition} = "Additional information related to the variation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AutomaticVariation1, List<Max2000Text>> mmAdditionalInformation = new MMMessageAttribute<AutomaticVariation1, List<Max2000Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AutomaticVariation1.mmObject();
 			isDerived = false;
@@ -259,6 +290,16 @@ public class AutomaticVariation1 {
 			maxOccurs = 5;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
+		}
+
+		@Override
+		public List<Max2000Text> getValue(AutomaticVariation1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(AutomaticVariation1 obj, List<Max2000Text> value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 
@@ -299,7 +340,7 @@ public class AutomaticVariation1 {
 		return amountAndTrigger == null ? amountAndTrigger = new ArrayList<>() : amountAndTrigger;
 	}
 
-	public AutomaticVariation1 setAmountAndTrigger(List<com.tools20022.repository.msg.AmountAndTrigger1> amountAndTrigger) {
+	public AutomaticVariation1 setAmountAndTrigger(List<AmountAndTrigger1> amountAndTrigger) {
 		this.amountAndTrigger = Objects.requireNonNull(amountAndTrigger);
 		return this;
 	}

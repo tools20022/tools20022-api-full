@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.ReportingPartyRole;
 import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.UniqueTransactionIdentifier2;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -117,7 +118,7 @@ public class CounterpartySideTransactionReporting1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportingJurisdiction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CounterpartySideTransactionReporting1, Optional<Max35Text>> mmReportingJurisdiction = new MMMessageAttribute<CounterpartySideTransactionReporting1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CounterpartySideTransactionReporting1.mmObject();
@@ -129,6 +130,16 @@ public class CounterpartySideTransactionReporting1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CounterpartySideTransactionReporting1 obj) {
+			return obj.getReportingJurisdiction();
+		}
+
+		@Override
+		public void setValue(CounterpartySideTransactionReporting1 obj, Optional<Max35Text> value) {
+			obj.setReportingJurisdiction(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RptgPty")
@@ -168,7 +179,7 @@ public class CounterpartySideTransactionReporting1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportingParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CounterpartySideTransactionReporting1, Optional<PartyIdentification73Choice>> mmReportingParty = new MMMessageAttribute<CounterpartySideTransactionReporting1, Optional<PartyIdentification73Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CounterpartySideTransactionReporting1.mmObject();
@@ -181,9 +192,19 @@ public class CounterpartySideTransactionReporting1 {
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification73Choice.mmObject();
 		}
+
+		@Override
+		public Optional<PartyIdentification73Choice> getValue(CounterpartySideTransactionReporting1 obj) {
+			return obj.getReportingParty();
+		}
+
+		@Override
+		public void setValue(CounterpartySideTransactionReporting1 obj, Optional<PartyIdentification73Choice> value) {
+			obj.setReportingParty(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "CtrPtySdUnqTxIdr")
-	protected List<com.tools20022.repository.msg.UniqueTransactionIdentifier2> counterpartySideUniqueTransactionIdentifier;
+	protected List<UniqueTransactionIdentifier2> counterpartySideUniqueTransactionIdentifier;
 	/**
 	 * 
 	 <p>
@@ -219,7 +240,7 @@ public class CounterpartySideTransactionReporting1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCounterpartySideUniqueTransactionIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CounterpartySideTransactionReporting1, List<UniqueTransactionIdentifier2>> mmCounterpartySideUniqueTransactionIdentifier = new MMMessageAttribute<CounterpartySideTransactionReporting1, List<UniqueTransactionIdentifier2>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeRelatedIdentifications;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CounterpartySideTransactionReporting1.mmObject();
@@ -229,7 +250,17 @@ public class CounterpartySideTransactionReporting1 {
 			name = "CounterpartySideUniqueTransactionIdentifier";
 			definition = "Specifies the unique transaction identifier (UTI) to be created at the time a transaction is first executed, shared with all registered entities and counterparties involved in the transaction, and used to track that particular transaction over its life. This identifier can also be known as the Unique Swap Identifier (USI). This is the UTI from the Counterparty Side party.";
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.UniqueTransactionIdentifier2.mmObject();
+			complexType_lazy = () -> UniqueTransactionIdentifier2.mmObject();
+		}
+
+		@Override
+		public List<UniqueTransactionIdentifier2> getValue(CounterpartySideTransactionReporting1 obj) {
+			return obj.getCounterpartySideUniqueTransactionIdentifier();
+		}
+
+		@Override
+		public void setValue(CounterpartySideTransactionReporting1 obj, List<UniqueTransactionIdentifier2> value) {
+			obj.setCounterpartySideUniqueTransactionIdentifier(value);
 		}
 	};
 
@@ -270,7 +301,7 @@ public class CounterpartySideTransactionReporting1 {
 		return counterpartySideUniqueTransactionIdentifier == null ? counterpartySideUniqueTransactionIdentifier = new ArrayList<>() : counterpartySideUniqueTransactionIdentifier;
 	}
 
-	public CounterpartySideTransactionReporting1 setCounterpartySideUniqueTransactionIdentifier(List<com.tools20022.repository.msg.UniqueTransactionIdentifier2> counterpartySideUniqueTransactionIdentifier) {
+	public CounterpartySideTransactionReporting1 setCounterpartySideUniqueTransactionIdentifier(List<UniqueTransactionIdentifier2> counterpartySideUniqueTransactionIdentifier) {
 		this.counterpartySideUniqueTransactionIdentifier = Objects.requireNonNull(counterpartySideUniqueTransactionIdentifier);
 		return this;
 	}

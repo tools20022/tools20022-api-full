@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.InvestorType3Choice;
 import com.tools20022.repository.choice.LegalRestrictions5Choice;
 import com.tools20022.repository.choice.SecurityRestrictionType2Choice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DateTimePeriodDetails1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -117,7 +118,7 @@ public class SecurityRestriction2 {
 	 * SecurityRestriction1.mmEffectivePeriod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEffectivePeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityRestriction2, Optional<DateTimePeriodDetails1>> mmEffectivePeriod = new MMMessageAttribute<SecurityRestriction2, Optional<DateTimePeriodDetails1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityRestriction2.mmObject();
 			isDerived = false;
@@ -128,7 +129,17 @@ public class SecurityRestriction2 {
 			previousVersion_lazy = () -> SecurityRestriction1.mmEffectivePeriod;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.DateTimePeriodDetails1.mmObject();
+			complexType_lazy = () -> DateTimePeriodDetails1.mmObject();
+		}
+
+		@Override
+		public Optional<DateTimePeriodDetails1> getValue(SecurityRestriction2 obj) {
+			return obj.getEffectivePeriod();
+		}
+
+		@Override
+		public void setValue(SecurityRestriction2 obj, Optional<DateTimePeriodDetails1> value) {
+			obj.setEffectivePeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RstrctnTp")
@@ -168,7 +179,7 @@ public class SecurityRestriction2 {
 	 * SecurityRestriction1.mmRestrictionType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRestrictionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityRestriction2, Optional<SecurityRestrictionType2Choice>> mmRestrictionType = new MMMessageAttribute<SecurityRestriction2, Optional<SecurityRestrictionType2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityRestriction2.mmObject();
 			isDerived = false;
@@ -180,6 +191,16 @@ public class SecurityRestriction2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SecurityRestrictionType2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SecurityRestrictionType2Choice> getValue(SecurityRestriction2 obj) {
+			return obj.getRestrictionType();
+		}
+
+		@Override
+		public void setValue(SecurityRestriction2 obj, Optional<SecurityRestrictionType2Choice> value) {
+			obj.setRestrictionType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LglRstrctnTp")
@@ -218,7 +239,7 @@ public class SecurityRestriction2 {
 	 * SecurityRestriction1.mmLegalRestrictionType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLegalRestrictionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityRestriction2, Optional<LegalRestrictions5Choice>> mmLegalRestrictionType = new MMMessageAttribute<SecurityRestriction2, Optional<LegalRestrictions5Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityRestriction2.mmObject();
 			isDerived = false;
@@ -230,6 +251,16 @@ public class SecurityRestriction2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> LegalRestrictions5Choice.mmObject();
+		}
+
+		@Override
+		public Optional<LegalRestrictions5Choice> getValue(SecurityRestriction2 obj) {
+			return obj.getLegalRestrictionType();
+		}
+
+		@Override
+		public void setValue(SecurityRestriction2 obj, Optional<LegalRestrictions5Choice> value) {
+			obj.setLegalRestrictionType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InvstrRstrctnTp")
@@ -269,7 +300,7 @@ public class SecurityRestriction2 {
 	 * SecurityRestriction1.mmInvestorRestrictionType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInvestorRestrictionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityRestriction2, List<InvestorRestrictionType3Choice>> mmInvestorRestrictionType = new MMMessageAttribute<SecurityRestriction2, List<InvestorRestrictionType3Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityRestriction2.mmObject();
 			isDerived = false;
@@ -280,6 +311,16 @@ public class SecurityRestriction2 {
 			previousVersion_lazy = () -> SecurityRestriction1.mmInvestorRestrictionType;
 			minOccurs = 0;
 			complexType_lazy = () -> InvestorRestrictionType3Choice.mmObject();
+		}
+
+		@Override
+		public List<InvestorRestrictionType3Choice> getValue(SecurityRestriction2 obj) {
+			return obj.getInvestorRestrictionType();
+		}
+
+		@Override
+		public void setValue(SecurityRestriction2 obj, List<InvestorRestrictionType3Choice> value) {
+			obj.setInvestorRestrictionType(value);
 		}
 	};
 	@XmlElement(name = "InvstrTp")
@@ -317,7 +358,7 @@ public class SecurityRestriction2 {
 	 * SecurityRestriction1.mmInvestorType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInvestorType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityRestriction2, List<InvestorType3Choice>> mmInvestorType = new MMMessageAttribute<SecurityRestriction2, List<InvestorType3Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityRestriction2.mmObject();
 			isDerived = false;
@@ -328,6 +369,16 @@ public class SecurityRestriction2 {
 			previousVersion_lazy = () -> SecurityRestriction1.mmInvestorType;
 			minOccurs = 0;
 			complexType_lazy = () -> InvestorType3Choice.mmObject();
+		}
+
+		@Override
+		public List<InvestorType3Choice> getValue(SecurityRestriction2 obj) {
+			return obj.getInvestorType();
+		}
+
+		@Override
+		public void setValue(SecurityRestriction2 obj, List<InvestorType3Choice> value) {
+			obj.setInvestorType(value);
 		}
 	};
 
@@ -351,7 +402,7 @@ public class SecurityRestriction2 {
 		return effectivePeriod == null ? Optional.empty() : Optional.of(effectivePeriod);
 	}
 
-	public SecurityRestriction2 setEffectivePeriod(com.tools20022.repository.msg.DateTimePeriodDetails1 effectivePeriod) {
+	public SecurityRestriction2 setEffectivePeriod(DateTimePeriodDetails1 effectivePeriod) {
 		this.effectivePeriod = effectivePeriod;
 		return this;
 	}

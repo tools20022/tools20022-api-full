@@ -119,7 +119,7 @@ public class ProcessTiming3 {
 	 * ProcessTiming2.mmWaitingTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmWaitingTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProcessTiming3, Optional<Max9NumericText>> mmWaitingTime = new MMMessageAttribute<ProcessTiming3, Optional<Max9NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProcessTiming3.mmObject();
 			isDerived = false;
@@ -131,6 +131,16 @@ public class ProcessTiming3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max9NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max9NumericText> getValue(ProcessTiming3 obj) {
+			return obj.getWaitingTime();
+		}
+
+		@Override
+		public void setValue(ProcessTiming3 obj, Optional<Max9NumericText> value) {
+			obj.setWaitingTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StartTm")
@@ -173,7 +183,7 @@ public class ProcessTiming3 {
 	 * ProcessTiming2.mmStartTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStartTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProcessTiming3, Optional<ISODateTime>> mmStartTime = new MMMessageAttribute<ProcessTiming3, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProcessTiming3.mmObject();
 			isDerived = false;
@@ -186,6 +196,16 @@ public class ProcessTiming3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(ProcessTiming3 obj) {
+			return obj.getStartTime();
+		}
+
+		@Override
+		public void setValue(ProcessTiming3 obj, Optional<ISODateTime> value) {
+			obj.setStartTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EndTm")
@@ -229,7 +249,7 @@ public class ProcessTiming3 {
 	 * ProcessTiming2.mmEndTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEndTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProcessTiming3, Optional<ISODateTime>> mmEndTime = new MMMessageAttribute<ProcessTiming3, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProcessTiming3.mmObject();
 			isDerived = false;
@@ -242,6 +262,16 @@ public class ProcessTiming3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(ProcessTiming3 obj) {
+			return obj.getEndTime();
+		}
+
+		@Override
+		public void setValue(ProcessTiming3 obj, Optional<ISODateTime> value) {
+			obj.setEndTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Prd")
@@ -287,7 +317,7 @@ public class ProcessTiming3 {
 	 * ProcessTiming2.mmPeriod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProcessTiming3, Optional<Max9NumericText>> mmPeriod = new MMMessageAttribute<ProcessTiming3, Optional<Max9NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProcessTiming3.mmObject();
 			isDerived = false;
@@ -300,6 +330,16 @@ public class ProcessTiming3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max9NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max9NumericText> getValue(ProcessTiming3 obj) {
+			return obj.getPeriod();
+		}
+
+		@Override
+		public void setValue(ProcessTiming3 obj, Optional<Max9NumericText> value) {
+			obj.setPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MaxNb")
@@ -335,7 +375,7 @@ public class ProcessTiming3 {
 	 * ProcessTiming2.mmMaximumNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProcessTiming3, Optional<Number>> mmMaximumNumber = new MMMessageAttribute<ProcessTiming3, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProcessTiming3.mmObject();
 			isDerived = false;
@@ -347,6 +387,16 @@ public class ProcessTiming3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(ProcessTiming3 obj) {
+			return obj.getMaximumNumber();
+		}
+
+		@Override
+		public void setValue(ProcessTiming3 obj, Optional<Number> value) {
+			obj.setMaximumNumber(value.orElse(null));
 		}
 	};
 

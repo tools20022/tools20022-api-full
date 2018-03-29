@@ -56,11 +56,15 @@ public class ConstraintBilateralLimitCounterparty3Rule {
 	 */
 	public static final MMConstraint<LimitSearchCriteria1> forLimitSearchCriteria1 = new MMConstraint<LimitSearchCriteria1>() {
 		{
-			validator = ConstraintBilateralLimitCounterparty3Rule::checkLimitSearchCriteria1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilateralLimitCounterparty3Rule";
 			definition = "If at least one occurrence of RiskManagementCurrentLimitType is present and is MULT, then no occurrence of BilateralLimitCounterpartyIdentification is allowed.\nIf no occurrence of RiskManagementCurrentLimitType is MULT, then any occurrence of BilateralLimitCounterpartyIdentification is optional.\nIf RiskManagementCurrentLimitType is not present, then any occurrence of BilateralLimitCounterpartyIdentification is optional.";
 			owner_lazy = () -> LimitSearchCriteria1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(LimitSearchCriteria1 obj) throws Exception {
+			checkLimitSearchCriteria1(obj);
 		}
 	};
 	/**
@@ -86,11 +90,15 @@ public class ConstraintBilateralLimitCounterparty3Rule {
 	 */
 	public static final MMConstraint<LimitSearchCriteria2> forLimitSearchCriteria2 = new MMConstraint<LimitSearchCriteria2>() {
 		{
-			validator = ConstraintBilateralLimitCounterparty3Rule::checkLimitSearchCriteria2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilateralLimitCounterparty3Rule";
 			definition = "If at least one occurrence of RiskManagementCurrentLimitType is present and is MULT, then no occurrence of BilateralLimitCounterpartyIdentification is allowed.\nIf no occurrence of RiskManagementCurrentLimitType is MULT, then any occurrence of BilateralLimitCounterpartyIdentification is optional.\nIf RiskManagementCurrentLimitType is not present, then any occurrence of BilateralLimitCounterpartyIdentification is optional.";
 			owner_lazy = () -> LimitSearchCriteria2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(LimitSearchCriteria2 obj) throws Exception {
+			checkLimitSearchCriteria2(obj);
 		}
 	};
 	/**
@@ -128,13 +136,17 @@ public class ConstraintBilateralLimitCounterparty3Rule {
 	 */
 	public static final MMConstraint<LimitSearchCriteria3> forLimitSearchCriteria3 = new MMConstraint<LimitSearchCriteria3>() {
 		{
-			validator = ConstraintBilateralLimitCounterparty3Rule::checkLimitSearchCriteria3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilateralLimitCounterparty3Rule";
 			definition = "If at least one occurrence of CurrentLimitType is present and is MULT, then no occurrence of BilateralLimitCounterpartyIdentification is allowed.\r\nIf no occurrence of CurrentLimitType is MULT, then any occurrence of BilateralLimitCounterpartyIdentification is optional.\r\nIf CurrentLimitType is not present, then any occurrence of BilateralLimitCounterpartyIdentification is optional.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBilateralLimitCounterparty3Rule.forLimitSearchCriteria4);
 			owner_lazy = () -> LimitSearchCriteria3.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/BilateralLimitCounterpartyIdentification[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CurrentLimitType[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/CurrentLimitType[*]/Code</leftOperand><rightOperand>Multilateral</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(LimitSearchCriteria3 obj) throws Exception {
+			checkLimitSearchCriteria3(obj);
 		}
 	};
 	/**
@@ -177,7 +189,6 @@ public class ConstraintBilateralLimitCounterparty3Rule {
 	 */
 	public static final MMConstraint<LimitSearchCriteria4> forLimitSearchCriteria4 = new MMConstraint<LimitSearchCriteria4>() {
 		{
-			validator = ConstraintBilateralLimitCounterparty3Rule::checkLimitSearchCriteria4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilateralLimitCounterparty3Rule";
 			definition = "If at least one occurrence of CurrentLimitType is present and is MULT, then no occurrence of BilateralLimitCounterpartyIdentification is allowed.\r\nIf no occurrence of CurrentLimitType is MULT, then any occurrence of BilateralLimitCounterpartyIdentification is optional.\r\nIf CurrentLimitType is not present, then any occurrence of BilateralLimitCounterpartyIdentification is optional.";
@@ -185,6 +196,11 @@ public class ConstraintBilateralLimitCounterparty3Rule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBilateralLimitCounterparty3Rule.forLimitSearchCriteria3;
 			owner_lazy = () -> LimitSearchCriteria4.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/BilateralLimitCounterpartyIdentification[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CurrentLimitType[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/CurrentLimitType[*]/Code</leftOperand><rightOperand>Multilateral</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(LimitSearchCriteria4 obj) throws Exception {
+			checkLimitSearchCriteria4(obj);
 		}
 	};
 	/**
@@ -219,13 +235,17 @@ public class ConstraintBilateralLimitCounterparty3Rule {
 	 */
 	public static final MMConstraint<LimitSearchCriteria5> forLimitSearchCriteria5 = new MMConstraint<LimitSearchCriteria5>() {
 		{
-			validator = ConstraintBilateralLimitCounterparty3Rule::checkLimitSearchCriteria5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilateralLimitCounterparty3Rule";
 			definition = "If at least one occurrence of CurrentLimitType is present and is MULT, then no occurrence of BilateralLimitCounterpartyIdentification is allowed.\r\nIf no occurrence of CurrentLimitType is MULT, then any occurrence of BilateralLimitCounterpartyIdentification is optional.\r\nIf CurrentLimitType is not present, then any occurrence of BilateralLimitCounterpartyIdentification is optional.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBilateralLimitCounterparty3Rule.forLimitSearchCriteria4;
 			owner_lazy = () -> LimitSearchCriteria5.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/BilateralLimitCounterpartyIdentification[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CurrentLimitType[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/CurrentLimitType[*]/Code</leftOperand><rightOperand>Multilateral</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(LimitSearchCriteria5 obj) throws Exception {
+			checkLimitSearchCriteria5(obj);
 		}
 	};
 

@@ -25,6 +25,8 @@ import com.tools20022.repository.area.auth.MoneyMarketStatisticalReportStatusAdv
 import com.tools20022.repository.codeset.StatisticalReportingStatus1Code;
 import com.tools20022.repository.datatype.LEIIdentifier;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DateTimePeriod1;
+import com.tools20022.repository.msg.GenericValidationRuleIdentification1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -125,7 +127,7 @@ public class MoneyMarketStatusReportHeader1 {
 	 * definition} = "Agent which is subject to reporting requirements."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportingAgent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MoneyMarketStatusReportHeader1, LEIIdentifier> mmReportingAgent = new MMMessageAttribute<MoneyMarketStatusReportHeader1, LEIIdentifier>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MoneyMarketStatusReportHeader1.mmObject();
 			isDerived = false;
@@ -136,6 +138,16 @@ public class MoneyMarketStatusReportHeader1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public LEIIdentifier getValue(MoneyMarketStatusReportHeader1 obj) {
+			return obj.getReportingAgent();
+		}
+
+		@Override
+		public void setValue(MoneyMarketStatusReportHeader1 obj, LEIIdentifier value) {
+			obj.setReportingAgent(value);
 		}
 	};
 	@XmlElement(name = "RptgPrd", required = true)
@@ -168,7 +180,7 @@ public class MoneyMarketStatusReportHeader1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReportingPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MoneyMarketStatusReportHeader1, DateTimePeriod1> mmReportingPeriod = new MMMessageAssociationEnd<MoneyMarketStatusReportHeader1, DateTimePeriod1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MoneyMarketStatusReportHeader1.mmObject();
 			isDerived = false;
@@ -179,7 +191,17 @@ public class MoneyMarketStatusReportHeader1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DateTimePeriod1.mmObject();
+			type_lazy = () -> DateTimePeriod1.mmObject();
+		}
+
+		@Override
+		public DateTimePeriod1 getValue(MoneyMarketStatusReportHeader1 obj) {
+			return obj.getReportingPeriod();
+		}
+
+		@Override
+		public void setValue(MoneyMarketStatusReportHeader1 obj, DateTimePeriod1 value) {
+			obj.setReportingPeriod(value);
 		}
 	};
 	@XmlElement(name = "RptSts", required = true)
@@ -220,7 +242,7 @@ public class MoneyMarketStatusReportHeader1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MoneyMarketStatusReportHeader1, StatisticalReportingStatus1Code> mmReportStatus = new MMMessageAttribute<MoneyMarketStatusReportHeader1, StatisticalReportingStatus1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MoneyMarketStatusReportHeader1.mmObject();
 			isDerived = false;
@@ -233,9 +255,19 @@ public class MoneyMarketStatusReportHeader1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> StatisticalReportingStatus1Code.mmObject();
 		}
+
+		@Override
+		public StatisticalReportingStatus1Code getValue(MoneyMarketStatusReportHeader1 obj) {
+			return obj.getReportStatus();
+		}
+
+		@Override
+		public void setValue(MoneyMarketStatusReportHeader1 obj, StatisticalReportingStatus1Code value) {
+			obj.setReportStatus(value);
+		}
 	};
 	@XmlElement(name = "VldtnRule")
-	protected List<com.tools20022.repository.msg.GenericValidationRuleIdentification1> validationRule;
+	protected List<GenericValidationRuleIdentification1> validationRule;
 	/**
 	 * 
 	 <p>
@@ -272,7 +304,7 @@ public class MoneyMarketStatusReportHeader1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmValidationRule = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MoneyMarketStatusReportHeader1, List<GenericValidationRuleIdentification1>> mmValidationRule = new MMMessageAssociationEnd<MoneyMarketStatusReportHeader1, List<GenericValidationRuleIdentification1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MoneyMarketStatusReportHeader1.mmObject();
 			isDerived = false;
@@ -283,7 +315,17 @@ public class MoneyMarketStatusReportHeader1 {
 			nextVersions_lazy = () -> Arrays.asList(InvoiceTaxStatusReportHeader1.mmValidationRule);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericValidationRuleIdentification1.mmObject();
+			type_lazy = () -> GenericValidationRuleIdentification1.mmObject();
+		}
+
+		@Override
+		public List<GenericValidationRuleIdentification1> getValue(MoneyMarketStatusReportHeader1 obj) {
+			return obj.getValidationRule();
+		}
+
+		@Override
+		public void setValue(MoneyMarketStatusReportHeader1 obj, List<GenericValidationRuleIdentification1> value) {
+			obj.setValidationRule(value);
 		}
 	};
 
@@ -316,7 +358,7 @@ public class MoneyMarketStatusReportHeader1 {
 		return reportingPeriod;
 	}
 
-	public MoneyMarketStatusReportHeader1 setReportingPeriod(com.tools20022.repository.msg.DateTimePeriod1 reportingPeriod) {
+	public MoneyMarketStatusReportHeader1 setReportingPeriod(DateTimePeriod1 reportingPeriod) {
 		this.reportingPeriod = Objects.requireNonNull(reportingPeriod);
 		return this;
 	}
@@ -334,7 +376,7 @@ public class MoneyMarketStatusReportHeader1 {
 		return validationRule == null ? validationRule = new ArrayList<>() : validationRule;
 	}
 
-	public MoneyMarketStatusReportHeader1 setValidationRule(List<com.tools20022.repository.msg.GenericValidationRuleIdentification1> validationRule) {
+	public MoneyMarketStatusReportHeader1 setValidationRule(List<GenericValidationRuleIdentification1> validationRule) {
 		this.validationRule = Objects.requireNonNull(validationRule);
 		return this;
 	}

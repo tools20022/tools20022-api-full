@@ -54,11 +54,15 @@ public class ConstraintMiniOddLotOfferUsageRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementPreliminaryAdviceV04> forCorporateActionMovementPreliminaryAdviceV04 = new MMConstraint<CorporateActionMovementPreliminaryAdviceV04>() {
 		{
-			validator = ConstraintMiniOddLotOfferUsageRule::checkCorporateActionMovementPreliminaryAdviceV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MiniOddLotOfferUsageRule";
 			definition = "If any occurrence of CorporateActionMovementDetails/OfferType/Code is present with the value MINI (MiniOddLotOffer), then CorporateActionGeneralInformation/EventType/Code value must be ODLT (OddLotSalePurchase).";
 			owner_lazy = () -> CorporateActionMovementPreliminaryAdviceV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementPreliminaryAdviceV04 obj) throws Exception {
+			checkCorporateActionMovementPreliminaryAdviceV04(obj);
 		}
 	};
 	/**
@@ -84,11 +88,15 @@ public class ConstraintMiniOddLotOfferUsageRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV04> forCorporateActionNotificationV04 = new MMConstraint<CorporateActionNotificationV04>() {
 		{
-			validator = ConstraintMiniOddLotOfferUsageRule::checkCorporateActionNotificationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MiniOddLotOfferUsageRule";
 			definition = "If CorporateActionDetails/OfferType/Code is present with the value MINI (MiniOddLotOffer) or if in any occurrence of CorporateActionOptionDetails/OfferType/Code is present with the value MINI (MiniOddLotOffer), then CorporateActionGeneralInformation/EventType/Code value must be ODLT (OddLotSalePurchase).";
 			owner_lazy = () -> CorporateActionNotificationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV04 obj) throws Exception {
+			checkCorporateActionNotificationV04(obj);
 		}
 	};
 

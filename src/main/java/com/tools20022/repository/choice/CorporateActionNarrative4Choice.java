@@ -107,7 +107,7 @@ public class CorporateActionNarrative4Choice {
 	 * "Standard code to specify the narrative type of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative4Choice, CorporateActionNarrative1Code> mmCode = new MMMessageAttribute<CorporateActionNarrative4Choice, CorporateActionNarrative1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionNarrative4Choice.mmObject();
 			isDerived = false;
@@ -119,6 +119,16 @@ public class CorporateActionNarrative4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionNarrative1Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionNarrative1Code getValue(CorporateActionNarrative4Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative4Choice obj, CorporateActionNarrative1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -151,7 +161,7 @@ public class CorporateActionNarrative4Choice {
 	 * "Proprietary identification of the narrative type of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionNarrative4Choice, GenericIdentification47> mmProprietary = new MMMessageAssociationEnd<CorporateActionNarrative4Choice, GenericIdentification47>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionNarrative4Choice.mmObject();
 			isDerived = false;
@@ -163,6 +173,16 @@ public class CorporateActionNarrative4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(CorporateActionNarrative4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative4Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

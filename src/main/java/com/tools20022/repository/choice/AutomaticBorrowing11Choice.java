@@ -112,7 +112,7 @@ public class AutomaticBorrowing11Choice {
 	 * "Condition for automatic borrowing expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AutomaticBorrowing11Choice, AutoBorrowing2Code> mmCode = new MMMessageAttribute<AutomaticBorrowing11Choice, AutoBorrowing2Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmAutomaticBorrowing;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AutomaticBorrowing11Choice.mmObject();
@@ -125,6 +125,16 @@ public class AutomaticBorrowing11Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AutoBorrowing2Code.mmObject();
+		}
+
+		@Override
+		public AutoBorrowing2Code getValue(AutomaticBorrowing11Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(AutomaticBorrowing11Choice obj, AutoBorrowing2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -166,7 +176,7 @@ public class AutomaticBorrowing11Choice {
 	 * "Condition for automatic borrowing expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AutomaticBorrowing11Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<AutomaticBorrowing11Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmAutomaticBorrowing;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AutomaticBorrowing11Choice.mmObject();
@@ -179,6 +189,16 @@ public class AutomaticBorrowing11Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(AutomaticBorrowing11Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(AutomaticBorrowing11Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

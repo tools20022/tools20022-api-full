@@ -25,9 +25,8 @@ import com.tools20022.repository.area.PaymentsClearingandSettlementPreviousVersi
 import com.tools20022.repository.msg.CreditTransferTransaction23;
 import com.tools20022.repository.msg.GroupHeader70;
 import com.tools20022.repository.msg.SupplementaryData1;
-import com.tools20022.repository.msgset.PaymentsClearingandSettlementISOLatestversion;
+import com.tools20022.repository.msgset.PaymentsClearingandSettlementISOPreviousversion;
 import com.tools20022.repository.msgset.PaymentsClearingandSettlementMaintenance20162017;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -74,8 +73,8 @@ import javax.xml.bind.annotation.*;
  * messageSet} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msgset.PaymentsClearingandSettlementISOLatestversion
- * PaymentsClearingandSettlementISOLatestversion}</li>
+ * {@linkplain com.tools20022.repository.msgset.PaymentsClearingandSettlementISOPreviousversion
+ * PaymentsClearingandSettlementISOPreviousversion}</li>
  * <li>
  * {@linkplain com.tools20022.repository.msgset.PaymentsClearingandSettlementMaintenance20162017
  * PaymentsClearingandSettlementMaintenance20162017}</li>
@@ -194,7 +193,7 @@ public class FinancialInstitutionCreditTransferV06 {
 	 * FinancialInstitutionCreditTransferV05.mmGroupHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FinancialInstitutionCreditTransferV06, GroupHeader70> mmGroupHeader = new MMMessageBuildingBlock<FinancialInstitutionCreditTransferV06, GroupHeader70>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -207,12 +206,14 @@ public class FinancialInstitutionCreditTransferV06 {
 			complexType_lazy = () -> GroupHeader70.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FinancialInstitutionCreditTransferV06.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader70 getValue(FinancialInstitutionCreditTransferV06 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(FinancialInstitutionCreditTransferV06 obj, GroupHeader70 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "CdtTrfTxInf", required = true)
@@ -257,7 +258,7 @@ public class FinancialInstitutionCreditTransferV06 {
 	 * mmCreditTransferTransactionInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCreditTransferTransactionInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FinancialInstitutionCreditTransferV06, List<CreditTransferTransaction23>> mmCreditTransferTransactionInformation = new MMMessageBuildingBlock<FinancialInstitutionCreditTransferV06, List<CreditTransferTransaction23>>() {
 		{
 			xmlTag = "CdtTrfTxInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -269,12 +270,14 @@ public class FinancialInstitutionCreditTransferV06 {
 			complexType_lazy = () -> CreditTransferTransaction23.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FinancialInstitutionCreditTransferV06.class.getMethod("getCreditTransferTransactionInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<CreditTransferTransaction23> getValue(FinancialInstitutionCreditTransferV06 obj) {
+			return obj.getCreditTransferTransactionInformation();
+		}
+
+		@Override
+		public void setValue(FinancialInstitutionCreditTransferV06 obj, List<CreditTransferTransaction23> value) {
+			obj.setCreditTransferTransactionInformation(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -317,7 +320,7 @@ public class FinancialInstitutionCreditTransferV06 {
 	 * FinancialInstitutionCreditTransferV05.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FinancialInstitutionCreditTransferV06, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<FinancialInstitutionCreditTransferV06, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -329,12 +332,14 @@ public class FinancialInstitutionCreditTransferV06 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FinancialInstitutionCreditTransferV06.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(FinancialInstitutionCreditTransferV06 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(FinancialInstitutionCreditTransferV06 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -354,7 +359,7 @@ public class FinancialInstitutionCreditTransferV06 {
 				definition = "Scope\r\nThe FinancialInstitutionCreditTransfer message is sent by a debtor financial institution to a creditor financial institution, directly or through other agents and/or a payment clearing and settlement system.\r\nIt is used to move funds from a debtor account to a creditor, where both debtor and creditor are financial institutions.\r\nUsage\r\nThe FinancialInstitutionCreditTransfer message is exchanged between agents and can contain one or more credit transfer instructions where debtor and creditor are both financial institutions.\r\nThe FinancialInstitutionCreditTransfer message does not allow for grouping: a CreditTransferTransactionInformation block must be present for each credit transfer transaction.\r\nThe FinancialInstitutionCreditTransfer message can be used in domestic and cross-border scenarios.";
 				nextVersions_lazy = () -> Arrays.asList(FinancialInstitutionCreditTransferV07.mmObject());
 				previousVersion_lazy = () -> FinancialInstitutionCreditTransferV05.mmObject();
-				messageSet_lazy = () -> Arrays.asList(PaymentsClearingandSettlementISOLatestversion.mmObject(), PaymentsClearingandSettlementMaintenance20162017.mmObject());
+				messageSet_lazy = () -> Arrays.asList(PaymentsClearingandSettlementISOPreviousversion.mmObject(), PaymentsClearingandSettlementMaintenance20162017.mmObject());
 				rootElement = "Document";
 				xmlTag = "FICdtTrf";
 				businessArea_lazy = () -> PaymentsClearingandSettlementPreviousVersion.mmObject();

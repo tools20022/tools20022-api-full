@@ -112,7 +112,7 @@ public class PowerOfAttorneyRequirements1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLegalRequirement = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PowerOfAttorneyRequirements1, Optional<PowerOfAttorneyLegalisation1Code>> mmLegalRequirement = new MMMessageAttribute<PowerOfAttorneyRequirements1, Optional<PowerOfAttorneyLegalisation1Code>>() {
 		{
 			businessElementTrace_lazy = () -> PowerOfAttorneyRequirements.mmLegalRequirement;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PowerOfAttorneyRequirements1.mmObject();
@@ -124,6 +124,16 @@ public class PowerOfAttorneyRequirements1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PowerOfAttorneyLegalisation1Code.mmObject();
+		}
+
+		@Override
+		public Optional<PowerOfAttorneyLegalisation1Code> getValue(PowerOfAttorneyRequirements1 obj) {
+			return obj.getLegalRequirement();
+		}
+
+		@Override
+		public void setValue(PowerOfAttorneyRequirements1 obj, Optional<PowerOfAttorneyLegalisation1Code> value) {
+			obj.setLegalRequirement(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OthrDcmnttn")
@@ -161,7 +171,7 @@ public class PowerOfAttorneyRequirements1 {
 	 * "Specifies the documents needed to obtain a valid power of attorney."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherDocumentation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PowerOfAttorneyRequirements1, Optional<Max350Text>> mmOtherDocumentation = new MMMessageAttribute<PowerOfAttorneyRequirements1, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> PowerOfAttorneyRequirements.mmOtherDocumentation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PowerOfAttorneyRequirements1.mmObject();
@@ -173,6 +183,16 @@ public class PowerOfAttorneyRequirements1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(PowerOfAttorneyRequirements1 obj) {
+			return obj.getOtherDocumentation();
+		}
+
+		@Override
+		public void setValue(PowerOfAttorneyRequirements1 obj, Optional<Max350Text> value) {
+			obj.setOtherDocumentation(value.orElse(null));
 		}
 	};
 

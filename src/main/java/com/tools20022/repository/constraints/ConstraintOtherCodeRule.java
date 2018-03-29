@@ -49,11 +49,15 @@ public class ConstraintOtherCodeRule {
 	 */
 	public static final MMConstraint<IdentificationType1> forIdentificationType1 = new MMConstraint<IdentificationType1>() {
 		{
-			validator = ConstraintOtherCodeRule::checkIdentificationType1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCodeRule";
 			definition = "If Structured is OTHR, then AdditionalInformation is mandatory.";
 			owner_lazy = () -> IdentificationType1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IdentificationType1 obj) throws Exception {
+			checkIdentificationType1(obj);
 		}
 	};
 	/**
@@ -77,11 +81,15 @@ public class ConstraintOtherCodeRule {
 	 */
 	public static final MMConstraint<FundOrderType1> forFundOrderType1 = new MMConstraint<FundOrderType1>() {
 		{
-			validator = ConstraintOtherCodeRule::checkFundOrderType1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCodeRule";
 			definition = "If Structured is OTHR, then AdditionalInformation is mandatory.";
 			owner_lazy = () -> FundOrderType1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FundOrderType1 obj) throws Exception {
+			checkFundOrderType1(obj);
 		}
 	};
 	/**
@@ -105,11 +113,15 @@ public class ConstraintOtherCodeRule {
 	 */
 	public static final MMConstraint<PriceType2> forPriceType2 = new MMConstraint<PriceType2>() {
 		{
-			validator = ConstraintOtherCodeRule::checkPriceType2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCodeRule";
 			definition = "If Structured is OTHR, then AdditionalInformation is mandatory.";
 			owner_lazy = () -> PriceType2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceType2 obj) throws Exception {
+			checkPriceType2(obj);
 		}
 	};
 	/**
@@ -134,11 +146,15 @@ public class ConstraintOtherCodeRule {
 	 */
 	public static final MMConstraint<TaxableIncomePerShareCalculated1> forTaxableIncomePerShareCalculated1 = new MMConstraint<TaxableIncomePerShareCalculated1>() {
 		{
-			validator = ConstraintOtherCodeRule::checkTaxableIncomePerShareCalculated1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCodeRule";
 			definition = "If Structured is OTHR, then AdditionalInformation is mandatory.";
 			owner_lazy = () -> TaxableIncomePerShareCalculated1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TaxableIncomePerShareCalculated1 obj) throws Exception {
+			checkTaxableIncomePerShareCalculated1(obj);
 		}
 	};
 	/**
@@ -162,11 +178,15 @@ public class ConstraintOtherCodeRule {
 	 */
 	public static final MMConstraint<ChargeType2> forChargeType2 = new MMConstraint<ChargeType2>() {
 		{
-			validator = ConstraintOtherCodeRule::checkChargeType2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCodeRule";
 			definition = "If Structured is OTHR, then AdditionalInformation is mandatory.";
 			owner_lazy = () -> ChargeType2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ChargeType2 obj) throws Exception {
+			checkChargeType2(obj);
 		}
 	};
 	/**
@@ -191,11 +211,15 @@ public class ConstraintOtherCodeRule {
 	 */
 	public static final MMConstraint<CalculationBasis1> forCalculationBasis1 = new MMConstraint<CalculationBasis1>() {
 		{
-			validator = ConstraintOtherCodeRule::checkCalculationBasis1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCodeRule";
 			definition = "If Structured is OTHR, then AdditionalInformation is mandatory.";
 			owner_lazy = () -> CalculationBasis1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CalculationBasis1 obj) throws Exception {
+			checkCalculationBasis1(obj);
 		}
 	};
 	/**
@@ -219,11 +243,15 @@ public class ConstraintOtherCodeRule {
 	 */
 	public static final MMConstraint<TaxType3> forTaxType3 = new MMConstraint<TaxType3>() {
 		{
-			validator = ConstraintOtherCodeRule::checkTaxType3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCodeRule";
 			definition = "If Structured is OTHR, then AdditionalInformation is mandatory.";
 			owner_lazy = () -> TaxType3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TaxType3 obj) throws Exception {
+			checkTaxType3(obj);
 		}
 	};
 	/**
@@ -247,11 +275,15 @@ public class ConstraintOtherCodeRule {
 	 */
 	public static final MMConstraint<EUCapitalGain1> forEUCapitalGain1 = new MMConstraint<EUCapitalGain1>() {
 		{
-			validator = ConstraintOtherCodeRule::checkEUCapitalGain1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCodeRule";
 			definition = "If Structured is OTHR, then AdditionalInformation is mandatory.";
 			owner_lazy = () -> EUCapitalGain1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(EUCapitalGain1 obj) throws Exception {
+			checkEUCapitalGain1(obj);
 		}
 	};
 	/**
@@ -276,11 +308,15 @@ public class ConstraintOtherCodeRule {
 	 */
 	public static final MMConstraint<InvestmentFundTransactionInType1> forInvestmentFundTransactionInType1 = new MMConstraint<InvestmentFundTransactionInType1>() {
 		{
-			validator = ConstraintOtherCodeRule::checkInvestmentFundTransactionInType1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCodeRule";
 			definition = "If Structured is OTHR, then AdditionalInformation is mandatory.";
 			owner_lazy = () -> InvestmentFundTransactionInType1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentFundTransactionInType1 obj) throws Exception {
+			checkInvestmentFundTransactionInType1(obj);
 		}
 	};
 	/**
@@ -305,11 +341,15 @@ public class ConstraintOtherCodeRule {
 	 */
 	public static final MMConstraint<OriginalOrderQuantityType1> forOriginalOrderQuantityType1 = new MMConstraint<OriginalOrderQuantityType1>() {
 		{
-			validator = ConstraintOtherCodeRule::checkOriginalOrderQuantityType1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCodeRule";
 			definition = "If Structured is OTHR, then AdditionalInformation is mandatory.";
 			owner_lazy = () -> OriginalOrderQuantityType1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OriginalOrderQuantityType1 obj) throws Exception {
+			checkOriginalOrderQuantityType1(obj);
 		}
 	};
 	/**
@@ -334,11 +374,15 @@ public class ConstraintOtherCodeRule {
 	 */
 	public static final MMConstraint<CommissionType1> forCommissionType1 = new MMConstraint<CommissionType1>() {
 		{
-			validator = ConstraintOtherCodeRule::checkCommissionType1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCodeRule";
 			definition = "If Structured is OTHR, then AdditionalInformation is mandatory.";
 			owner_lazy = () -> CommissionType1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CommissionType1 obj) throws Exception {
+			checkCommissionType1(obj);
 		}
 	};
 	/**
@@ -363,11 +407,15 @@ public class ConstraintOtherCodeRule {
 	 */
 	public static final MMConstraint<InvestmentFundTransactionOutType1> forInvestmentFundTransactionOutType1 = new MMConstraint<InvestmentFundTransactionOutType1>() {
 		{
-			validator = ConstraintOtherCodeRule::checkInvestmentFundTransactionOutType1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCodeRule";
 			definition = "If Structured is OTHR, then AdditionalInformation is mandatory.";
 			owner_lazy = () -> InvestmentFundTransactionOutType1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentFundTransactionOutType1 obj) throws Exception {
+			checkInvestmentFundTransactionOutType1(obj);
 		}
 	};
 	/**
@@ -392,11 +440,15 @@ public class ConstraintOtherCodeRule {
 	 */
 	public static final MMConstraint<RejectedStatusReason4> forRejectedStatusReason4 = new MMConstraint<RejectedStatusReason4>() {
 		{
-			validator = ConstraintOtherCodeRule::checkRejectedStatusReason4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCodeRule";
 			definition = "If Structured is OTHR, then AdditionalInformation is mandatory.";
 			owner_lazy = () -> RejectedStatusReason4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RejectedStatusReason4 obj) throws Exception {
+			checkRejectedStatusReason4(obj);
 		}
 	};
 	/**
@@ -421,11 +473,15 @@ public class ConstraintOtherCodeRule {
 	 */
 	public static final MMConstraint<ConditionallyAcceptedStatusReason1> forConditionallyAcceptedStatusReason1 = new MMConstraint<ConditionallyAcceptedStatusReason1>() {
 		{
-			validator = ConstraintOtherCodeRule::checkConditionallyAcceptedStatusReason1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCodeRule";
 			definition = "If Structured is OTHR, then AdditionalInformation is mandatory.";
 			owner_lazy = () -> ConditionallyAcceptedStatusReason1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ConditionallyAcceptedStatusReason1 obj) throws Exception {
+			checkConditionallyAcceptedStatusReason1(obj);
 		}
 	};
 	/**
@@ -450,11 +506,15 @@ public class ConstraintOtherCodeRule {
 	 */
 	public static final MMConstraint<RejectedStatusReason6> forRejectedStatusReason6 = new MMConstraint<RejectedStatusReason6>() {
 		{
-			validator = ConstraintOtherCodeRule::checkRejectedStatusReason6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCodeRule";
 			definition = "If Structured is OTHR, then AdditionalInformation is mandatory.";
 			owner_lazy = () -> RejectedStatusReason6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RejectedStatusReason6 obj) throws Exception {
+			checkRejectedStatusReason6(obj);
 		}
 	};
 	/**
@@ -479,11 +539,15 @@ public class ConstraintOtherCodeRule {
 	 */
 	public static final MMConstraint<SuspendedStatusReason1> forSuspendedStatusReason1 = new MMConstraint<SuspendedStatusReason1>() {
 		{
-			validator = ConstraintOtherCodeRule::checkSuspendedStatusReason1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCodeRule";
 			definition = "If Structured is OTHR, then AdditionalInformation is mandatory.";
 			owner_lazy = () -> SuspendedStatusReason1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SuspendedStatusReason1 obj) throws Exception {
+			checkSuspendedStatusReason1(obj);
 		}
 	};
 	/**
@@ -507,11 +571,15 @@ public class ConstraintOtherCodeRule {
 	 */
 	public static final MMConstraint<ChargeType1> forChargeType1 = new MMConstraint<ChargeType1>() {
 		{
-			validator = ConstraintOtherCodeRule::checkChargeType1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCodeRule";
 			definition = "If Structured is OTHR, then AdditionalInformation is mandatory.";
 			owner_lazy = () -> ChargeType1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ChargeType1 obj) throws Exception {
+			checkChargeType1(obj);
 		}
 	};
 	/**
@@ -536,11 +604,15 @@ public class ConstraintOtherCodeRule {
 	 */
 	public static final MMConstraint<CancellationRight1> forCancellationRight1 = new MMConstraint<CancellationRight1>() {
 		{
-			validator = ConstraintOtherCodeRule::checkCancellationRight1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCodeRule";
 			definition = "If Structured is OTHR, then AdditionalInformation is mandatory.";
 			owner_lazy = () -> CancellationRight1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CancellationRight1 obj) throws Exception {
+			checkCancellationRight1(obj);
 		}
 	};
 	/**
@@ -564,11 +636,15 @@ public class ConstraintOtherCodeRule {
 	 */
 	public static final MMConstraint<TaxationBasis1> forTaxationBasis1 = new MMConstraint<TaxationBasis1>() {
 		{
-			validator = ConstraintOtherCodeRule::checkTaxationBasis1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCodeRule";
 			definition = "If Structured is OTHR, then AdditionalInformation is mandatory.";
 			owner_lazy = () -> TaxationBasis1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TaxationBasis1 obj) throws Exception {
+			checkTaxationBasis1(obj);
 		}
 	};
 	/**
@@ -592,11 +668,15 @@ public class ConstraintOtherCodeRule {
 	 */
 	public static final MMConstraint<WaivingType1> forWaivingType1 = new MMConstraint<WaivingType1>() {
 		{
-			validator = ConstraintOtherCodeRule::checkWaivingType1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCodeRule";
 			definition = "If Structured is OTHR, then AdditionalInformation is mandatory.";
 			owner_lazy = () -> WaivingType1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(WaivingType1 obj) throws Exception {
+			checkWaivingType1(obj);
 		}
 	};
 	/**
@@ -620,11 +700,15 @@ public class ConstraintOtherCodeRule {
 	 */
 	public static final MMConstraint<TaxType1> forTaxType1 = new MMConstraint<TaxType1>() {
 		{
-			validator = ConstraintOtherCodeRule::checkTaxType1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCodeRule";
 			definition = "If Structured is OTHR, then AdditionalInformation is mandatory.";
 			owner_lazy = () -> TaxType1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TaxType1 obj) throws Exception {
+			checkTaxType1(obj);
 		}
 	};
 	/**
@@ -649,11 +733,15 @@ public class ConstraintOtherCodeRule {
 	 */
 	public static final MMConstraint<TaxExemptionReason1> forTaxExemptionReason1 = new MMConstraint<TaxExemptionReason1>() {
 		{
-			validator = ConstraintOtherCodeRule::checkTaxExemptionReason1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCodeRule";
 			definition = "If Structured is OTHR, then AdditionalInformation is mandatory.";
 			owner_lazy = () -> TaxExemptionReason1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TaxExemptionReason1 obj) throws Exception {
+			checkTaxExemptionReason1(obj);
 		}
 	};
 	/**
@@ -678,11 +766,15 @@ public class ConstraintOtherCodeRule {
 	 */
 	public static final MMConstraint<CashAccountType1> forCashAccountType1 = new MMConstraint<CashAccountType1>() {
 		{
-			validator = ConstraintOtherCodeRule::checkCashAccountType1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCodeRule";
 			definition = "If Structured is OTHR, then AdditionalInformation is mandatory.";
 			owner_lazy = () -> CashAccountType1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashAccountType1 obj) throws Exception {
+			checkCashAccountType1(obj);
 		}
 	};
 	/**
@@ -706,11 +798,15 @@ public class ConstraintOtherCodeRule {
 	 */
 	public static final MMConstraint<PriceType1> forPriceType1 = new MMConstraint<PriceType1>() {
 		{
-			validator = ConstraintOtherCodeRule::checkPriceType1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCodeRule";
 			definition = "If Structured is OTHR, then AdditionalInformation is mandatory.";
 			owner_lazy = () -> PriceType1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceType1 obj) throws Exception {
+			checkPriceType1(obj);
 		}
 	};
 	/**
@@ -734,11 +830,15 @@ public class ConstraintOtherCodeRule {
 	 */
 	public static final MMConstraint<TaxType2> forTaxType2 = new MMConstraint<TaxType2>() {
 		{
-			validator = ConstraintOtherCodeRule::checkTaxType2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCodeRule";
 			definition = "If Structured is OTHR, then AdditionalInformation is mandatory.";
 			owner_lazy = () -> TaxType2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TaxType2 obj) throws Exception {
+			checkTaxType2(obj);
 		}
 	};
 

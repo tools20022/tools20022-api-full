@@ -105,7 +105,7 @@ public class CurrencyQueryDefinition {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyQueryDefinition, Optional<QueryType1Code>> mmQueryType = new MMMessageAttribute<CurrencyQueryDefinition, Optional<QueryType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyQueryDefinition.mmObject();
 			isDerived = false;
@@ -116,6 +116,16 @@ public class CurrencyQueryDefinition {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> QueryType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<QueryType1Code> getValue(CurrencyQueryDefinition obj) {
+			return obj.getQueryType();
+		}
+
+		@Override
+		public void setValue(CurrencyQueryDefinition obj, Optional<QueryType1Code> value) {
+			obj.setQueryType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CcyCrit")
@@ -147,7 +157,7 @@ public class CurrencyQueryDefinition {
 	 * definition} = "Defines of the currency query criteria."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCurrencyCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CurrencyQueryDefinition, Optional<CurrencyCriteriaDefinitionChoice>> mmCurrencyCriteria = new MMMessageAssociationEnd<CurrencyQueryDefinition, Optional<CurrencyCriteriaDefinitionChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyQueryDefinition.mmObject();
 			isDerived = false;
@@ -159,6 +169,16 @@ public class CurrencyQueryDefinition {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CurrencyCriteriaDefinitionChoice.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyCriteriaDefinitionChoice> getValue(CurrencyQueryDefinition obj) {
+			return obj.getCurrencyCriteria();
+		}
+
+		@Override
+		public void setValue(CurrencyQueryDefinition obj, Optional<CurrencyCriteriaDefinitionChoice> value) {
+			obj.setCurrencyCriteria(value.orElse(null));
 		}
 	};
 

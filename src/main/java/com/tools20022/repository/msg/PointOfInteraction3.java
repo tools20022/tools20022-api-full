@@ -26,6 +26,9 @@ import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.PointOfInteraction;
 import com.tools20022.repository.entity.SystemName;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification32;
+import com.tools20022.repository.msg.PointOfInteractionCapabilities2;
+import com.tools20022.repository.msg.PointOfInteractionComponent4;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -137,7 +140,7 @@ public class PointOfInteraction3 {
 	 * PointOfInteraction2.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PointOfInteraction3, GenericIdentification32> mmIdentification = new MMMessageAssociationEnd<PointOfInteraction3, GenericIdentification32>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteraction3.mmObject();
 			isDerived = false;
@@ -150,7 +153,17 @@ public class PointOfInteraction3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
+			type_lazy = () -> GenericIdentification32.mmObject();
+		}
+
+		@Override
+		public GenericIdentification32 getValue(PointOfInteraction3 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(PointOfInteraction3 obj, GenericIdentification32 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "SysNm")
@@ -202,7 +215,7 @@ public class PointOfInteraction3 {
 	 * PointOfInteraction2.mmSystemName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSystemName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PointOfInteraction3, Optional<Max70Text>> mmSystemName = new MMMessageAttribute<PointOfInteraction3, Optional<Max70Text>>() {
 		{
 			businessElementTrace_lazy = () -> SystemName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteraction3.mmObject();
@@ -216,6 +229,16 @@ public class PointOfInteraction3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(PointOfInteraction3 obj) {
+			return obj.getSystemName();
+		}
+
+		@Override
+		public void setValue(PointOfInteraction3 obj, Optional<Max70Text> value) {
+			obj.setSystemName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GrpId")
@@ -262,7 +285,7 @@ public class PointOfInteraction3 {
 	 * PointOfInteraction2.mmGroupIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGroupIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PointOfInteraction3, Optional<Max35Text>> mmGroupIdentification = new MMMessageAttribute<PointOfInteraction3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteraction3.mmObject();
 			isDerived = false;
@@ -275,6 +298,16 @@ public class PointOfInteraction3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PointOfInteraction3 obj) {
+			return obj.getGroupIdentification();
+		}
+
+		@Override
+		public void setValue(PointOfInteraction3 obj, Optional<Max35Text> value) {
+			obj.setGroupIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Cpblties")
@@ -326,7 +359,7 @@ public class PointOfInteraction3 {
 	 * PointOfInteraction2.mmCapabilities}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCapabilities = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PointOfInteraction3, Optional<PointOfInteractionCapabilities2>> mmCapabilities = new MMMessageAssociationEnd<PointOfInteraction3, Optional<PointOfInteractionCapabilities2>>() {
 		{
 			businessComponentTrace_lazy = () -> PointOfInteraction.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteraction3.mmObject();
@@ -340,11 +373,21 @@ public class PointOfInteraction3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities2.mmObject();
+			type_lazy = () -> PointOfInteractionCapabilities2.mmObject();
+		}
+
+		@Override
+		public Optional<PointOfInteractionCapabilities2> getValue(PointOfInteraction3 obj) {
+			return obj.getCapabilities();
+		}
+
+		@Override
+		public void setValue(PointOfInteraction3 obj, Optional<PointOfInteractionCapabilities2> value) {
+			obj.setCapabilities(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Cmpnt")
-	protected List<com.tools20022.repository.msg.PointOfInteractionComponent4> component;
+	protected List<PointOfInteractionComponent4> component;
 	/**
 	 * 
 	 <p>
@@ -392,7 +435,7 @@ public class PointOfInteraction3 {
 	 * PointOfInteraction2.mmComponent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmComponent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PointOfInteraction3, List<PointOfInteractionComponent4>> mmComponent = new MMMessageAssociationEnd<PointOfInteraction3, List<PointOfInteractionComponent4>>() {
 		{
 			businessElementTrace_lazy = () -> PointOfInteraction.mmComponent;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteraction3.mmObject();
@@ -405,7 +448,17 @@ public class PointOfInteraction3 {
 			previousVersion_lazy = () -> PointOfInteraction2.mmComponent;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponent4.mmObject();
+			type_lazy = () -> PointOfInteractionComponent4.mmObject();
+		}
+
+		@Override
+		public List<PointOfInteractionComponent4> getValue(PointOfInteraction3 obj) {
+			return obj.getComponent();
+		}
+
+		@Override
+		public void setValue(PointOfInteraction3 obj, List<PointOfInteractionComponent4> value) {
+			obj.setComponent(value);
 		}
 	};
 
@@ -430,7 +483,7 @@ public class PointOfInteraction3 {
 		return identification;
 	}
 
-	public PointOfInteraction3 setIdentification(com.tools20022.repository.msg.GenericIdentification32 identification) {
+	public PointOfInteraction3 setIdentification(GenericIdentification32 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}
@@ -457,7 +510,7 @@ public class PointOfInteraction3 {
 		return capabilities == null ? Optional.empty() : Optional.of(capabilities);
 	}
 
-	public PointOfInteraction3 setCapabilities(com.tools20022.repository.msg.PointOfInteractionCapabilities2 capabilities) {
+	public PointOfInteraction3 setCapabilities(PointOfInteractionCapabilities2 capabilities) {
 		this.capabilities = capabilities;
 		return this;
 	}
@@ -466,7 +519,7 @@ public class PointOfInteraction3 {
 		return component == null ? component = new ArrayList<>() : component;
 	}
 
-	public PointOfInteraction3 setComponent(List<com.tools20022.repository.msg.PointOfInteractionComponent4> component) {
+	public PointOfInteraction3 setComponent(List<PointOfInteractionComponent4> component) {
 		this.component = Objects.requireNonNull(component);
 		return this;
 	}

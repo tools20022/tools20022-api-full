@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.caam.HostToATMRequestV01;
 import com.tools20022.repository.codeset.MessageFunction8Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMCommandIdentification1;
+import com.tools20022.repository.msg.ATMEnvironment9;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -111,7 +113,7 @@ public class HostToATMRequest1 {
 	 * definition} = "Environment of the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<HostToATMRequest1, ATMEnvironment9> mmEnvironment = new MMMessageAssociationEnd<HostToATMRequest1, ATMEnvironment9>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.HostToATMRequest1.mmObject();
 			isDerived = false;
@@ -122,7 +124,17 @@ public class HostToATMRequest1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMEnvironment9.mmObject();
+			type_lazy = () -> ATMEnvironment9.mmObject();
+		}
+
+		@Override
+		public ATMEnvironment9 getValue(HostToATMRequest1 obj) {
+			return obj.getEnvironment();
+		}
+
+		@Override
+		public void setValue(HostToATMRequest1 obj, ATMEnvironment9 value) {
+			obj.setEnvironment(value);
 		}
 	};
 	@XmlElement(name = "CmdId")
@@ -154,7 +166,7 @@ public class HostToATMRequest1 {
 	 * definition} = "Identification of the entity issuing the command."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCommandIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<HostToATMRequest1, Optional<ATMCommandIdentification1>> mmCommandIdentification = new MMMessageAssociationEnd<HostToATMRequest1, Optional<ATMCommandIdentification1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.HostToATMRequest1.mmObject();
 			isDerived = false;
@@ -165,7 +177,17 @@ public class HostToATMRequest1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMCommandIdentification1.mmObject();
+			type_lazy = () -> ATMCommandIdentification1.mmObject();
+		}
+
+		@Override
+		public Optional<ATMCommandIdentification1> getValue(HostToATMRequest1 obj) {
+			return obj.getCommandIdentification();
+		}
+
+		@Override
+		public void setValue(HostToATMRequest1 obj, Optional<ATMCommandIdentification1> value) {
+			obj.setCommandIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XpctdMsgFctn", required = true)
@@ -198,7 +220,7 @@ public class HostToATMRequest1 {
 	 * definition} = "Message that have to be sent by the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpectedMessageFunction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<HostToATMRequest1, MessageFunction8Code> mmExpectedMessageFunction = new MMMessageAttribute<HostToATMRequest1, MessageFunction8Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.HostToATMRequest1.mmObject();
 			isDerived = false;
@@ -209,6 +231,16 @@ public class HostToATMRequest1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MessageFunction8Code.mmObject();
+		}
+
+		@Override
+		public MessageFunction8Code getValue(HostToATMRequest1 obj) {
+			return obj.getExpectedMessageFunction();
+		}
+
+		@Override
+		public void setValue(HostToATMRequest1 obj, MessageFunction8Code value) {
+			obj.setExpectedMessageFunction(value);
 		}
 	};
 
@@ -231,7 +263,7 @@ public class HostToATMRequest1 {
 		return environment;
 	}
 
-	public HostToATMRequest1 setEnvironment(com.tools20022.repository.msg.ATMEnvironment9 environment) {
+	public HostToATMRequest1 setEnvironment(ATMEnvironment9 environment) {
 		this.environment = Objects.requireNonNull(environment);
 		return this;
 	}
@@ -240,7 +272,7 @@ public class HostToATMRequest1 {
 		return commandIdentification == null ? Optional.empty() : Optional.of(commandIdentification);
 	}
 
-	public HostToATMRequest1 setCommandIdentification(com.tools20022.repository.msg.ATMCommandIdentification1 commandIdentification) {
+	public HostToATMRequest1 setCommandIdentification(ATMCommandIdentification1 commandIdentification) {
 		this.commandIdentification = commandIdentification;
 		return this;
 	}

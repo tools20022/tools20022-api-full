@@ -112,7 +112,7 @@ public class TradePositionReport4Choice {
 	 * "Indicates whether position is reported for the first time."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNew = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradePositionReport4Choice, TradeNewPosition3> mmNew = new MMMessageAssociationEnd<TradePositionReport4Choice, TradeNewPosition3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradePositionReport4Choice.mmObject();
 			isDerived = false;
@@ -124,6 +124,16 @@ public class TradePositionReport4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TradeNewPosition3.mmObject();
+		}
+
+		@Override
+		public TradeNewPosition3 getValue(TradePositionReport4Choice obj) {
+			return obj.getNew();
+		}
+
+		@Override
+		public void setValue(TradePositionReport4Choice obj, TradeNewPosition3 value) {
+			obj.setNew(value);
 		}
 	};
 	@XmlElement(name = "Mod", required = true)
@@ -157,7 +167,7 @@ public class TradePositionReport4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmModification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradePositionReport4Choice, TradePositionModification3> mmModification = new MMMessageAssociationEnd<TradePositionReport4Choice, TradePositionModification3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradePositionReport4Choice.mmObject();
 			isDerived = false;
@@ -169,6 +179,16 @@ public class TradePositionReport4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TradePositionModification3.mmObject();
+		}
+
+		@Override
+		public TradePositionModification3 getValue(TradePositionReport4Choice obj) {
+			return obj.getModification();
+		}
+
+		@Override
+		public void setValue(TradePositionReport4Choice obj, TradePositionModification3 value) {
+			obj.setModification(value);
 		}
 	};
 	@XmlElement(name = "Crrctn", required = true)
@@ -202,7 +222,7 @@ public class TradePositionReport4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCorrection = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradePositionReport4Choice, TradePositionCorrection3> mmCorrection = new MMMessageAssociationEnd<TradePositionReport4Choice, TradePositionCorrection3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradePositionReport4Choice.mmObject();
 			isDerived = false;
@@ -214,6 +234,16 @@ public class TradePositionReport4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TradePositionCorrection3.mmObject();
+		}
+
+		@Override
+		public TradePositionCorrection3 getValue(TradePositionReport4Choice obj) {
+			return obj.getCorrection();
+		}
+
+		@Override
+		public void setValue(TradePositionReport4Choice obj, TradePositionCorrection3 value) {
+			obj.setCorrection(value);
 		}
 	};
 	@XmlElement(name = "EarlyTermntn", required = true)
@@ -247,7 +277,7 @@ public class TradePositionReport4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEarlyTermination = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradePositionReport4Choice, TradePositionEarlyTermination3> mmEarlyTermination = new MMMessageAssociationEnd<TradePositionReport4Choice, TradePositionEarlyTermination3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradePositionReport4Choice.mmObject();
 			isDerived = false;
@@ -259,6 +289,16 @@ public class TradePositionReport4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TradePositionEarlyTermination3.mmObject();
+		}
+
+		@Override
+		public TradePositionEarlyTermination3 getValue(TradePositionReport4Choice obj) {
+			return obj.getEarlyTermination();
+		}
+
+		@Override
+		public void setValue(TradePositionReport4Choice obj, TradePositionEarlyTermination3 value) {
+			obj.setEarlyTermination(value);
 		}
 	};
 	@XmlElement(name = "ValtnUpd", required = true)
@@ -291,7 +331,7 @@ public class TradePositionReport4Choice {
 	 * "Indicates an update of a contract valuation or collateral."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmValuationUpdate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradePositionReport4Choice, TradePositionValuationUpdate3> mmValuationUpdate = new MMMessageAssociationEnd<TradePositionReport4Choice, TradePositionValuationUpdate3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradePositionReport4Choice.mmObject();
 			isDerived = false;
@@ -303,6 +343,16 @@ public class TradePositionReport4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TradePositionValuationUpdate3.mmObject();
+		}
+
+		@Override
+		public TradePositionValuationUpdate3 getValue(TradePositionReport4Choice obj) {
+			return obj.getValuationUpdate();
+		}
+
+		@Override
+		public void setValue(TradePositionReport4Choice obj, TradePositionValuationUpdate3 value) {
+			obj.setValuationUpdate(value);
 		}
 	};
 	@XmlElement(name = "Err", required = true)
@@ -335,7 +385,7 @@ public class TradePositionReport4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradePositionReport4Choice, TradePositionError3> mmError = new MMMessageAssociationEnd<TradePositionReport4Choice, TradePositionError3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradePositionReport4Choice.mmObject();
 			isDerived = false;
@@ -347,6 +397,16 @@ public class TradePositionReport4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TradePositionError3.mmObject();
+		}
+
+		@Override
+		public TradePositionError3 getValue(TradePositionReport4Choice obj) {
+			return obj.getError();
+		}
+
+		@Override
+		public void setValue(TradePositionReport4Choice obj, TradePositionError3 value) {
+			obj.setError(value);
 		}
 	};
 	@XmlElement(name = "Othr", required = true)
@@ -379,7 +439,7 @@ public class TradePositionReport4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOther = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradePositionReport4Choice, TradePositionOther3> mmOther = new MMMessageAssociationEnd<TradePositionReport4Choice, TradePositionOther3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradePositionReport4Choice.mmObject();
 			isDerived = false;
@@ -391,6 +451,16 @@ public class TradePositionReport4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TradePositionOther3.mmObject();
+		}
+
+		@Override
+		public TradePositionOther3 getValue(TradePositionReport4Choice obj) {
+			return obj.getOther();
+		}
+
+		@Override
+		public void setValue(TradePositionReport4Choice obj, TradePositionOther3 value) {
+			obj.setOther(value);
 		}
 	};
 

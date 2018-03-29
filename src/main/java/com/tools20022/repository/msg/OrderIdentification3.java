@@ -121,7 +121,7 @@ public class OrderIdentification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderIdentification3, Optional<Max35Text>> mmOrderIdentification = new MMMessageAttribute<OrderIdentification3, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderIdentification3.mmObject();
@@ -134,6 +134,16 @@ public class OrderIdentification3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(OrderIdentification3 obj) {
+			return obj.getOrderIdentification();
+		}
+
+		@Override
+		public void setValue(OrderIdentification3 obj, Optional<Max35Text> value) {
+			obj.setOrderIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClntOrdrId", required = true)
@@ -175,7 +185,7 @@ public class OrderIdentification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClientOrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderIdentification3, Max35Text> mmClientOrderIdentification = new MMMessageAttribute<OrderIdentification3, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmClientOrderIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderIdentification3.mmObject();
@@ -188,6 +198,16 @@ public class OrderIdentification3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OrderIdentification3 obj) {
+			return obj.getClientOrderIdentification();
+		}
+
+		@Override
+		public void setValue(OrderIdentification3 obj, Max35Text value) {
+			obj.setClientOrderIdentification(value);
 		}
 	};
 	@XmlElement(name = "ScndryClntOrdrId")
@@ -229,7 +249,7 @@ public class OrderIdentification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecondaryClientOrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderIdentification3, Optional<Max35Text>> mmSecondaryClientOrderIdentification = new MMMessageAttribute<OrderIdentification3, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmClientOrderIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderIdentification3.mmObject();
@@ -242,6 +262,16 @@ public class OrderIdentification3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(OrderIdentification3 obj) {
+			return obj.getSecondaryClientOrderIdentification();
+		}
+
+		@Override
+		public void setValue(OrderIdentification3 obj, Optional<Max35Text> value) {
+			obj.setSecondaryClientOrderIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sd")
@@ -281,7 +311,7 @@ public class OrderIdentification3 {
 	 * definition} = "Coded list to specify the side of the order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSide = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderIdentification3, Optional<Side1Code>> mmSide = new MMMessageAttribute<OrderIdentification3, Optional<Side1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmSide;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderIdentification3.mmObject();
@@ -294,6 +324,16 @@ public class OrderIdentification3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Side1Code.mmObject();
+		}
+
+		@Override
+		public Optional<Side1Code> getValue(OrderIdentification3 obj) {
+			return obj.getSide();
+		}
+
+		@Override
+		public void setValue(OrderIdentification3 obj, Optional<Side1Code> value) {
+			obj.setSide(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClntOrdrLkId")
@@ -330,7 +370,7 @@ public class OrderIdentification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClientOrderLinkIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderIdentification3, Optional<Max35Text>> mmClientOrderLinkIdentification = new MMMessageAttribute<OrderIdentification3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderIdentification3.mmObject();
 			isDerived = false;
@@ -342,6 +382,16 @@ public class OrderIdentification3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(OrderIdentification3 obj) {
+			return obj.getClientOrderLinkIdentification();
+		}
+
+		@Override
+		public void setValue(OrderIdentification3 obj, Optional<Max35Text> value) {
+			obj.setClientOrderLinkIdentification(value.orElse(null));
 		}
 	};
 

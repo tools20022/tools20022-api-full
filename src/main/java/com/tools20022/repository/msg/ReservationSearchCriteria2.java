@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.Reservation;
 import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -120,7 +121,7 @@ public class ReservationSearchCriteria2 {
 	 * definition} = "Identification of a particular cash clearing system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSystemIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReservationSearchCriteria2, Optional<SystemIdentification2Choice>> mmSystemIdentification = new MMMessageAttribute<ReservationSearchCriteria2, Optional<SystemIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> System.mmSystemIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationSearchCriteria2.mmObject();
@@ -132,6 +133,16 @@ public class ReservationSearchCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SystemIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SystemIdentification2Choice> getValue(ReservationSearchCriteria2 obj) {
+			return obj.getSystemIdentification();
+		}
+
+		@Override
+		public void setValue(ReservationSearchCriteria2 obj, Optional<SystemIdentification2Choice> value) {
+			obj.setSystemIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DfltRsvatnTp")
@@ -171,7 +182,7 @@ public class ReservationSearchCriteria2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDefaultReservationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReservationSearchCriteria2, List<ReservationType1Code>> mmDefaultReservationType = new MMMessageAttribute<ReservationSearchCriteria2, List<ReservationType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Reservation.mmReservationType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationSearchCriteria2.mmObject();
@@ -182,6 +193,16 @@ public class ReservationSearchCriteria2 {
 			definition = "Type of reservation as set by default in the system. The default reservation is applicable by the system unless otherwise instructed.";
 			minOccurs = 0;
 			simpleType_lazy = () -> ReservationType1Code.mmObject();
+		}
+
+		@Override
+		public List<ReservationType1Code> getValue(ReservationSearchCriteria2 obj) {
+			return obj.getDefaultReservationType();
+		}
+
+		@Override
+		public void setValue(ReservationSearchCriteria2 obj, List<ReservationType1Code> value) {
+			obj.setDefaultReservationType(value);
 		}
 	};
 	@XmlElement(name = "CurRsvatnTp")
@@ -220,7 +241,7 @@ public class ReservationSearchCriteria2 {
 	 * "Type of reservation applied by the system at the present time."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrentReservationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReservationSearchCriteria2, List<ReservationType1Code>> mmCurrentReservationType = new MMMessageAttribute<ReservationSearchCriteria2, List<ReservationType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Reservation.mmReservationType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationSearchCriteria2.mmObject();
@@ -231,6 +252,16 @@ public class ReservationSearchCriteria2 {
 			definition = "Type of reservation applied by the system at the present time.";
 			minOccurs = 0;
 			simpleType_lazy = () -> ReservationType1Code.mmObject();
+		}
+
+		@Override
+		public List<ReservationType1Code> getValue(ReservationSearchCriteria2 obj) {
+			return obj.getCurrentReservationType();
+		}
+
+		@Override
+		public void setValue(ReservationSearchCriteria2 obj, List<ReservationType1Code> value) {
+			obj.setCurrentReservationType(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -267,7 +298,7 @@ public class ReservationSearchCriteria2 {
 	 * definition} = "Owner of the account which is being queried."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReservationSearchCriteria2, Optional<BranchAndFinancialInstitutionIdentification5>> mmAccountOwner = new MMMessageAssociationEnd<ReservationSearchCriteria2, Optional<BranchAndFinancialInstitutionIdentification5>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationSearchCriteria2.mmObject();
@@ -279,7 +310,17 @@ public class ReservationSearchCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+
+		@Override
+		public Optional<BranchAndFinancialInstitutionIdentification5> getValue(ReservationSearchCriteria2 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(ReservationSearchCriteria2 obj, Optional<BranchAndFinancialInstitutionIdentification5> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctId")
@@ -318,7 +359,7 @@ public class ReservationSearchCriteria2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReservationSearchCriteria2, Optional<AccountIdentification4Choice>> mmAccountIdentification = new MMMessageAssociationEnd<ReservationSearchCriteria2, Optional<AccountIdentification4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationSearchCriteria2.mmObject();
@@ -331,6 +372,16 @@ public class ReservationSearchCriteria2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AccountIdentification4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AccountIdentification4Choice> getValue(ReservationSearchCriteria2 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(ReservationSearchCriteria2 obj, Optional<AccountIdentification4Choice> value) {
+			obj.setAccountIdentification(value.orElse(null));
 		}
 	};
 
@@ -381,7 +432,7 @@ public class ReservationSearchCriteria2 {
 		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public ReservationSearchCriteria2 setAccountOwner(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 accountOwner) {
+	public ReservationSearchCriteria2 setAccountOwner(BranchAndFinancialInstitutionIdentification5 accountOwner) {
 		this.accountOwner = accountOwner;
 		return this;
 	}

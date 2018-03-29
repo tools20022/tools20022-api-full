@@ -118,7 +118,7 @@ public class CorporateActionEventReference4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLinkedOfficialCorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionEventReference4Choice, RestrictedFINXMax16Text> mmLinkedOfficialCorporateActionEventIdentification = new MMMessageAttribute<CorporateActionEventReference4Choice, RestrictedFINXMax16Text>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmOfficialCorporateActionEventIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionEventReference4Choice.mmObject();
@@ -131,6 +131,16 @@ public class CorporateActionEventReference4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(CorporateActionEventReference4Choice obj) {
+			return obj.getLinkedOfficialCorporateActionEventIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventReference4Choice obj, RestrictedFINXMax16Text value) {
+			obj.setLinkedOfficialCorporateActionEventIdentification(value);
 		}
 	};
 	@XmlElement(name = "LkdCorpActnId", required = true)
@@ -173,7 +183,7 @@ public class CorporateActionEventReference4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLinkedCorporateActionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionEventReference4Choice, RestrictedFINXMax16Text> mmLinkedCorporateActionIdentification = new MMMessageAttribute<CorporateActionEventReference4Choice, RestrictedFINXMax16Text>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmCorporateActionEventIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionEventReference4Choice.mmObject();
@@ -186,6 +196,16 @@ public class CorporateActionEventReference4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(CorporateActionEventReference4Choice obj) {
+			return obj.getLinkedCorporateActionIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventReference4Choice obj, RestrictedFINXMax16Text value) {
+			obj.setLinkedCorporateActionIdentification(value);
 		}
 	};
 

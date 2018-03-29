@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.datatype.RestrictedFINActiveCurrencyAnd13DecimalAmount;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.RateTypeAndAmountAndStatus10;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -189,7 +190,7 @@ public class RateDetails12 {
 	 * definition} = "Rate used for additional tax that cannot be categorised."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdditionalTax = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RateDetails12, Optional<RateAndAmountFormat6Choice>> mmAdditionalTax = new MMMessageAssociationEnd<RateDetails12, Optional<RateAndAmountFormat6Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmTaxVoucher;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails12.mmObject();
@@ -202,6 +203,16 @@ public class RateDetails12 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> RateAndAmountFormat6Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateAndAmountFormat6Choice> getValue(RateDetails12 obj) {
+			return obj.getAdditionalTax();
+		}
+
+		@Override
+		public void setValue(RateDetails12 obj, Optional<RateAndAmountFormat6Choice> value) {
+			obj.setAdditionalTax(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ChrgsFees")
@@ -239,7 +250,7 @@ public class RateDetails12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmChargesFees = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RateDetails12, Optional<RateAndAmountFormat6Choice>> mmChargesFees = new MMMessageAssociationEnd<RateDetails12, Optional<RateAndAmountFormat6Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmCorporateActionCharge;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails12.mmObject();
@@ -252,6 +263,16 @@ public class RateDetails12 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> RateAndAmountFormat6Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateAndAmountFormat6Choice> getValue(RateDetails12 obj) {
+			return obj.getChargesFees();
+		}
+
+		@Override
+		public void setValue(RateDetails12 obj, Optional<RateAndAmountFormat6Choice> value) {
+			obj.setChargesFees(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FnlDvddRate")
@@ -288,7 +309,7 @@ public class RateDetails12 {
 	 * definition} = "Dividend is final."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinalDividendRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateDetails12, Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount>> mmFinalDividendRate = new MMMessageAttribute<RateDetails12, Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmFinalDividend;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails12.mmObject();
@@ -300,6 +321,16 @@ public class RateDetails12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount> getValue(RateDetails12 obj) {
+			return obj.getFinalDividendRate();
+		}
+
+		@Override
+		public void setValue(RateDetails12 obj, Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount> value) {
+			obj.setFinalDividendRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FsclStmp")
@@ -335,7 +366,7 @@ public class RateDetails12 {
 	 * definition} = "Percentage of fiscal tax to apply."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFiscalStamp = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateDetails12, Optional<PercentageRate>> mmFiscalStamp = new MMMessageAttribute<RateDetails12, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails12.mmObject();
@@ -347,6 +378,16 @@ public class RateDetails12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(RateDetails12 obj) {
+			return obj.getFiscalStamp();
+		}
+
+		@Override
+		public void setValue(RateDetails12 obj, Optional<PercentageRate> value) {
+			obj.setFiscalStamp(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FullyFrnkdRate")
@@ -384,7 +425,7 @@ public class RateDetails12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFullyFrankedRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RateDetails12, Optional<RateAndAmountFormat6Choice>> mmFullyFrankedRate = new MMMessageAssociationEnd<RateDetails12, Optional<RateAndAmountFormat6Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmFullyFrankedRateAndAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails12.mmObject();
@@ -397,6 +438,16 @@ public class RateDetails12 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> RateAndAmountFormat6Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateAndAmountFormat6Choice> getValue(RateDetails12 obj) {
+			return obj.getFullyFrankedRate();
+		}
+
+		@Override
+		public void setValue(RateDetails12 obj, Optional<RateAndAmountFormat6Choice> value) {
+			obj.setFullyFrankedRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GrssDvddRate")
@@ -434,7 +485,7 @@ public class RateDetails12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGrossDividendRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RateDetails12, List<GrossDividendRateFormat12Choice>> mmGrossDividendRate = new MMMessageAssociationEnd<RateDetails12, List<GrossDividendRateFormat12Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmGrossDividend;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails12.mmObject();
@@ -446,6 +497,16 @@ public class RateDetails12 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> GrossDividendRateFormat12Choice.mmObject();
+		}
+
+		@Override
+		public List<GrossDividendRateFormat12Choice> getValue(RateDetails12 obj) {
+			return obj.getGrossDividendRate();
+		}
+
+		@Override
+		public void setValue(RateDetails12 obj, List<GrossDividendRateFormat12Choice> value) {
+			obj.setGrossDividendRate(value);
 		}
 	};
 	@XmlElement(name = "EarlySlctnFeeRate")
@@ -484,7 +545,7 @@ public class RateDetails12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEarlySolicitationFeeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateDetails12, Optional<RateAndAmountFormat18Choice>> mmEarlySolicitationFeeRate = new MMMessageAttribute<RateDetails12, Optional<RateAndAmountFormat18Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionFeesAndCharges.mmEarlySolicitationFeeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails12.mmObject();
@@ -496,6 +557,16 @@ public class RateDetails12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RateAndAmountFormat18Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateAndAmountFormat18Choice> getValue(RateDetails12 obj) {
+			return obj.getEarlySolicitationFeeRate();
+		}
+
+		@Override
+		public void setValue(RateDetails12 obj, Optional<RateAndAmountFormat18Choice> value) {
+			obj.setEarlySolicitationFeeRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ThrdPtyIncntivRate")
@@ -534,7 +605,7 @@ public class RateDetails12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmThirdPartyIncentiveRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateDetails12, Optional<RateAndAmountFormat18Choice>> mmThirdPartyIncentiveRate = new MMMessageAttribute<RateDetails12, Optional<RateAndAmountFormat18Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CashProceedsDefinition.mmCashIncentiveRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails12.mmObject();
@@ -546,6 +617,16 @@ public class RateDetails12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RateAndAmountFormat18Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateAndAmountFormat18Choice> getValue(RateDetails12 obj) {
+			return obj.getThirdPartyIncentiveRate();
+		}
+
+		@Override
+		public void setValue(RateDetails12 obj, Optional<RateAndAmountFormat18Choice> value) {
+			obj.setThirdPartyIncentiveRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrstRateUsdForPmt")
@@ -583,7 +664,7 @@ public class RateDetails12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInterestRateUsedForPayment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RateDetails12, List<InterestRateUsedForPaymentFormat3Choice>> mmInterestRateUsedForPayment = new MMMessageAssociationEnd<RateDetails12, List<InterestRateUsedForPaymentFormat3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails12.mmObject();
@@ -595,6 +676,16 @@ public class RateDetails12 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> InterestRateUsedForPaymentFormat3Choice.mmObject();
+		}
+
+		@Override
+		public List<InterestRateUsedForPaymentFormat3Choice> getValue(RateDetails12 obj) {
+			return obj.getInterestRateUsedForPayment();
+		}
+
+		@Override
+		public void setValue(RateDetails12 obj, List<InterestRateUsedForPaymentFormat3Choice> value) {
+			obj.setInterestRateUsedForPayment(value);
 		}
 	};
 	@XmlElement(name = "NetDvddRate")
@@ -632,7 +723,7 @@ public class RateDetails12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNetDividendRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RateDetails12, List<NetDividendRateFormat14Choice>> mmNetDividendRate = new MMMessageAssociationEnd<RateDetails12, List<NetDividendRateFormat14Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmNetDividend;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails12.mmObject();
@@ -644,6 +735,16 @@ public class RateDetails12 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> NetDividendRateFormat14Choice.mmObject();
+		}
+
+		@Override
+		public List<NetDividendRateFormat14Choice> getValue(RateDetails12 obj) {
+			return obj.getNetDividendRate();
+		}
+
+		@Override
+		public void setValue(RateDetails12 obj, List<NetDividendRateFormat14Choice> value) {
+			obj.setNetDividendRate(value);
 		}
 	};
 	@XmlElement(name = "NonResdtRate")
@@ -679,7 +780,7 @@ public class RateDetails12 {
 	 * definition} = "Rate per share to which a non-resident is entitled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNonResidentRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RateDetails12, Optional<RateAndAmountFormat6Choice>> mmNonResidentRate = new MMMessageAssociationEnd<RateDetails12, Optional<RateAndAmountFormat6Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails12.mmObject();
@@ -692,6 +793,16 @@ public class RateDetails12 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> RateAndAmountFormat6Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateAndAmountFormat6Choice> getValue(RateDetails12 obj) {
+			return obj.getNonResidentRate();
+		}
+
+		@Override
+		public void setValue(RateDetails12 obj, Optional<RateAndAmountFormat6Choice> value) {
+			obj.setNonResidentRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsnlDvddRate")
@@ -728,7 +839,7 @@ public class RateDetails12 {
 	 * definition} = "Dividend is provisional."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProvisionalDividendRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateDetails12, Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount>> mmProvisionalDividendRate = new MMMessageAttribute<RateDetails12, Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmProvisionalDividend;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails12.mmObject();
@@ -740,6 +851,16 @@ public class RateDetails12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount> getValue(RateDetails12 obj) {
+			return obj.getProvisionalDividendRate();
+		}
+
+		@Override
+		public void setValue(RateDetails12 obj, Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount> value) {
+			obj.setProvisionalDividendRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AplblRate")
@@ -778,7 +899,7 @@ public class RateDetails12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmApplicableRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateDetails12, Optional<PercentageRate>> mmApplicableRate = new MMMessageAttribute<RateDetails12, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmApplicableRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails12.mmObject();
@@ -790,6 +911,16 @@ public class RateDetails12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(RateDetails12 obj) {
+			return obj.getApplicableRate();
+		}
+
+		@Override
+		public void setValue(RateDetails12 obj, Optional<PercentageRate> value) {
+			obj.setApplicableRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SlctnFeeRate")
@@ -828,7 +959,7 @@ public class RateDetails12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSolicitationFeeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateDetails12, Optional<RateAndAmountFormat18Choice>> mmSolicitationFeeRate = new MMMessageAttribute<RateDetails12, Optional<RateAndAmountFormat18Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionFeesAndCharges.mmSolicitationFee;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails12.mmObject();
@@ -840,6 +971,16 @@ public class RateDetails12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RateAndAmountFormat18Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateAndAmountFormat18Choice> getValue(RateDetails12 obj) {
+			return obj.getSolicitationFeeRate();
+		}
+
+		@Override
+		public void setValue(RateDetails12 obj, Optional<RateAndAmountFormat18Choice> value) {
+			obj.setSolicitationFeeRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxCdtRate")
@@ -876,7 +1017,7 @@ public class RateDetails12 {
 	 * "Amount of money per equity allocated as the result of a tax credit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTaxCreditRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RateDetails12, List<TaxCreditRateFormat3Choice>> mmTaxCreditRate = new MMMessageAssociationEnd<RateDetails12, List<TaxCreditRateFormat3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> TaxVoucher.mmCreditRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails12.mmObject();
@@ -889,9 +1030,19 @@ public class RateDetails12 {
 			isComposite = true;
 			type_lazy = () -> TaxCreditRateFormat3Choice.mmObject();
 		}
+
+		@Override
+		public List<TaxCreditRateFormat3Choice> getValue(RateDetails12 obj) {
+			return obj.getTaxCreditRate();
+		}
+
+		@Override
+		public void setValue(RateDetails12 obj, List<TaxCreditRateFormat3Choice> value) {
+			obj.setTaxCreditRate(value);
+		}
 	};
 	@XmlElement(name = "TaxRltdRate")
-	protected List<com.tools20022.repository.msg.RateTypeAndAmountAndStatus10> taxRelatedRate;
+	protected List<RateTypeAndAmountAndStatus10> taxRelatedRate;
 	/**
 	 * 
 	 <p>
@@ -923,7 +1074,7 @@ public class RateDetails12 {
 	 * "Percentage of the gross dividend rate on which tax must be paid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTaxRelatedRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RateDetails12, List<RateTypeAndAmountAndStatus10>> mmTaxRelatedRate = new MMMessageAssociationEnd<RateDetails12, List<RateTypeAndAmountAndStatus10>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails12.mmObject();
@@ -934,7 +1085,17 @@ public class RateDetails12 {
 			definition = "Percentage of the gross dividend rate on which tax must be paid.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RateTypeAndAmountAndStatus10.mmObject();
+			type_lazy = () -> RateTypeAndAmountAndStatus10.mmObject();
+		}
+
+		@Override
+		public List<RateTypeAndAmountAndStatus10> getValue(RateDetails12 obj) {
+			return obj.getTaxRelatedRate();
+		}
+
+		@Override
+		public void setValue(RateDetails12 obj, List<RateTypeAndAmountAndStatus10> value) {
+			obj.setTaxRelatedRate(value);
 		}
 	};
 	@XmlElement(name = "WhldgTaxRate")
@@ -972,7 +1133,7 @@ public class RateDetails12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmWithholdingTaxRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateDetails12, Optional<PercentageRate>> mmWithholdingTaxRate = new MMMessageAttribute<RateDetails12, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails12.mmObject();
@@ -984,6 +1145,16 @@ public class RateDetails12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(RateDetails12 obj) {
+			return obj.getWithholdingTaxRate();
+		}
+
+		@Override
+		public void setValue(RateDetails12 obj, Optional<PercentageRate> value) {
+			obj.setWithholdingTaxRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxOnIncm")
@@ -1020,7 +1191,7 @@ public class RateDetails12 {
 	 * "Taxation applied on an amount clearly identified as an income."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxOnIncome = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateDetails12, Optional<PercentageRate>> mmTaxOnIncome = new MMMessageAttribute<RateDetails12, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails12.mmObject();
@@ -1032,6 +1203,16 @@ public class RateDetails12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(RateDetails12 obj) {
+			return obj.getTaxOnIncome();
+		}
+
+		@Override
+		public void setValue(RateDetails12 obj, Optional<PercentageRate> value) {
+			obj.setTaxOnIncome(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxOnPrfts")
@@ -1069,7 +1250,7 @@ public class RateDetails12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxOnProfits = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateDetails12, Optional<PercentageRate>> mmTaxOnProfits = new MMMessageAttribute<RateDetails12, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails12.mmObject();
@@ -1081,6 +1262,16 @@ public class RateDetails12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(RateDetails12 obj) {
+			return obj.getTaxOnProfits();
+		}
+
+		@Override
+		public void setValue(RateDetails12 obj, Optional<PercentageRate> value) {
+			obj.setTaxOnProfits(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxRclmRate")
@@ -1118,7 +1309,7 @@ public class RateDetails12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxReclaimRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateDetails12, Optional<PercentageRate>> mmTaxReclaimRate = new MMMessageAttribute<RateDetails12, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails12.mmObject();
@@ -1130,6 +1321,16 @@ public class RateDetails12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(RateDetails12 obj) {
+			return obj.getTaxReclaimRate();
+		}
+
+		@Override
+		public void setValue(RateDetails12 obj, Optional<PercentageRate> value) {
+			obj.setTaxReclaimRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "WhldgOfFrgnTax")
@@ -1166,7 +1367,7 @@ public class RateDetails12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmWithholdingOfForeignTax = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RateDetails12, Optional<RateAndAmountFormat6Choice>> mmWithholdingOfForeignTax = new MMMessageAssociationEnd<RateDetails12, Optional<RateAndAmountFormat6Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails12.mmObject();
@@ -1179,6 +1380,16 @@ public class RateDetails12 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> RateAndAmountFormat6Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateAndAmountFormat6Choice> getValue(RateDetails12 obj) {
+			return obj.getWithholdingOfForeignTax();
+		}
+
+		@Override
+		public void setValue(RateDetails12 obj, Optional<RateAndAmountFormat6Choice> value) {
+			obj.setWithholdingOfForeignTax(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "WhldgOfLclTax")
@@ -1215,7 +1426,7 @@ public class RateDetails12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmWithholdingOfLocalTax = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RateDetails12, Optional<RateAndAmountFormat6Choice>> mmWithholdingOfLocalTax = new MMMessageAssociationEnd<RateDetails12, Optional<RateAndAmountFormat6Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails12.mmObject();
@@ -1228,6 +1439,16 @@ public class RateDetails12 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> RateAndAmountFormat6Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateAndAmountFormat6Choice> getValue(RateDetails12 obj) {
+			return obj.getWithholdingOfLocalTax();
+		}
+
+		@Override
+		public void setValue(RateDetails12 obj, Optional<RateAndAmountFormat6Choice> value) {
+			obj.setWithholdingOfLocalTax(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EqulstnRate")
@@ -1266,7 +1487,7 @@ public class RateDetails12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEqualisationRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateDetails12, Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount>> mmEqualisationRate = new MMMessageAttribute<RateDetails12, Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Equalisation.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails12.mmObject();
@@ -1278,6 +1499,16 @@ public class RateDetails12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount> getValue(RateDetails12 obj) {
+			return obj.getEqualisationRate();
+		}
+
+		@Override
+		public void setValue(RateDetails12 obj, Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount> value) {
+			obj.setEqualisationRate(value.orElse(null));
 		}
 	};
 
@@ -1445,7 +1676,7 @@ public class RateDetails12 {
 		return taxRelatedRate == null ? taxRelatedRate = new ArrayList<>() : taxRelatedRate;
 	}
 
-	public RateDetails12 setTaxRelatedRate(List<com.tools20022.repository.msg.RateTypeAndAmountAndStatus10> taxRelatedRate) {
+	public RateDetails12 setTaxRelatedRate(List<RateTypeAndAmountAndStatus10> taxRelatedRate) {
 		this.taxRelatedRate = Objects.requireNonNull(taxRelatedRate);
 		return this;
 	}

@@ -22,6 +22,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyIdentification99Choice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification49;
+import com.tools20022.repository.msg.SettlementParties32;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -102,7 +104,7 @@ public class SettlementParties35 {
 	 * definition} = "Parties through which settlement is to take place."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStandingSettlementParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementParties35, SettlementParties32> mmStandingSettlementParties = new MMMessageAssociationEnd<SettlementParties35, SettlementParties32>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementParties35.mmObject();
 			isDerived = false;
@@ -113,11 +115,21 @@ public class SettlementParties35 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SettlementParties32.mmObject();
+			type_lazy = () -> SettlementParties32.mmObject();
+		}
+
+		@Override
+		public SettlementParties32 getValue(SettlementParties35 obj) {
+			return obj.getStandingSettlementParties();
+		}
+
+		@Override
+		public void setValue(SettlementParties35 obj, SettlementParties32 value) {
+			obj.setStandingSettlementParties(value);
 		}
 	};
 	@XmlElement(name = "LclMktId")
-	protected List<com.tools20022.repository.msg.GenericIdentification49> localMarketIdentification;
+	protected List<GenericIdentification49> localMarketIdentification;
 	/**
 	 * 
 	 <p>
@@ -147,7 +159,7 @@ public class SettlementParties35 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLocalMarketIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementParties35, List<GenericIdentification49>> mmLocalMarketIdentification = new MMMessageAssociationEnd<SettlementParties35, List<GenericIdentification49>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementParties35.mmObject();
 			isDerived = false;
@@ -157,7 +169,17 @@ public class SettlementParties35 {
 			definition = "Identifier needed for settlement purposes. This identifier could be, for example, an identifier that identifies an institution or agent at a CDS or ICSD (Depository Trust Clearing Corporation (DTC) Institution ID or DTC Agent ID). It could also be a local tax identification number or an ‘investor identification’, as mandated by local market practice.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification49.mmObject();
+			type_lazy = () -> GenericIdentification49.mmObject();
+		}
+
+		@Override
+		public List<GenericIdentification49> getValue(SettlementParties35 obj) {
+			return obj.getLocalMarketIdentification();
+		}
+
+		@Override
+		public void setValue(SettlementParties35 obj, List<GenericIdentification49> value) {
+			obj.setLocalMarketIdentification(value);
 		}
 	};
 	@XmlElement(name = "RegnDtls")
@@ -191,7 +213,7 @@ public class SettlementParties35 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRegistrationDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementParties35, Optional<PartyIdentification99Choice>> mmRegistrationDetails = new MMMessageAssociationEnd<SettlementParties35, Optional<PartyIdentification99Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementParties35.mmObject();
 			isDerived = false;
@@ -203,6 +225,16 @@ public class SettlementParties35 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification99Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification99Choice> getValue(SettlementParties35 obj) {
+			return obj.getRegistrationDetails();
+		}
+
+		@Override
+		public void setValue(SettlementParties35 obj, Optional<PartyIdentification99Choice> value) {
+			obj.setRegistrationDetails(value.orElse(null));
 		}
 	};
 
@@ -224,7 +256,7 @@ public class SettlementParties35 {
 		return standingSettlementParties;
 	}
 
-	public SettlementParties35 setStandingSettlementParties(com.tools20022.repository.msg.SettlementParties32 standingSettlementParties) {
+	public SettlementParties35 setStandingSettlementParties(SettlementParties32 standingSettlementParties) {
 		this.standingSettlementParties = Objects.requireNonNull(standingSettlementParties);
 		return this;
 	}
@@ -233,7 +265,7 @@ public class SettlementParties35 {
 		return localMarketIdentification == null ? localMarketIdentification = new ArrayList<>() : localMarketIdentification;
 	}
 
-	public SettlementParties35 setLocalMarketIdentification(List<com.tools20022.repository.msg.GenericIdentification49> localMarketIdentification) {
+	public SettlementParties35 setLocalMarketIdentification(List<GenericIdentification49> localMarketIdentification) {
 		this.localMarketIdentification = Objects.requireNonNull(localMarketIdentification);
 		return this;
 	}

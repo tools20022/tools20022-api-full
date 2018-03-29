@@ -23,6 +23,9 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.MarginCall;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Amount2;
+import com.tools20022.repository.msg.SecurityIdentification14;
+import com.tools20022.repository.msg.TotalVariationMargin1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -121,7 +124,7 @@ public class VariationMargin3 {
 	 * definition} = "Provides details about the security identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<VariationMargin3, Optional<SecurityIdentification14>> mmFinancialInstrumentIdentification = new MMMessageAssociationEnd<VariationMargin3, Optional<SecurityIdentification14>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.VariationMargin3.mmObject();
@@ -133,11 +136,21 @@ public class VariationMargin3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
+			type_lazy = () -> SecurityIdentification14.mmObject();
+		}
+
+		@Override
+		public Optional<SecurityIdentification14> getValue(VariationMargin3 obj) {
+			return obj.getFinancialInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(VariationMargin3 obj, Optional<SecurityIdentification14> value) {
+			obj.setFinancialInstrumentIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlVartnMrgn", required = true)
-	protected List<com.tools20022.repository.msg.TotalVariationMargin1> totalVariationMargin;
+	protected List<TotalVariationMargin1> totalVariationMargin;
 	/**
 	 * 
 	 <p>
@@ -166,7 +179,7 @@ public class VariationMargin3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTotalVariationMargin = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<VariationMargin3, List<TotalVariationMargin1>> mmTotalVariationMargin = new MMMessageAssociationEnd<VariationMargin3, List<TotalVariationMargin1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.VariationMargin3.mmObject();
 			isDerived = false;
@@ -176,7 +189,17 @@ public class VariationMargin3 {
 			definition = "Margin required to cover the risk because of the price fluctuations occurred on the unsettled exposures towards the central counterparty.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TotalVariationMargin1.mmObject();
+			type_lazy = () -> TotalVariationMargin1.mmObject();
+		}
+
+		@Override
+		public List<TotalVariationMargin1> getValue(VariationMargin3 obj) {
+			return obj.getTotalVariationMargin();
+		}
+
+		@Override
+		public void setValue(VariationMargin3 obj, List<TotalVariationMargin1> value) {
+			obj.setTotalVariationMargin(value);
 		}
 	};
 	@XmlElement(name = "TtlMrkToMkt", required = true)
@@ -213,7 +236,7 @@ public class VariationMargin3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTotalMarkToMarket = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<VariationMargin3, Amount2> mmTotalMarkToMarket = new MMMessageAssociationEnd<VariationMargin3, Amount2>() {
 		{
 			businessElementTrace_lazy = () -> MarginCall.mmTotalMarkToMarket;
 			componentContext_lazy = () -> com.tools20022.repository.msg.VariationMargin3.mmObject();
@@ -225,11 +248,21 @@ public class VariationMargin3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Amount2.mmObject();
+			type_lazy = () -> Amount2.mmObject();
+		}
+
+		@Override
+		public Amount2 getValue(VariationMargin3 obj) {
+			return obj.getTotalMarkToMarket();
+		}
+
+		@Override
+		public void setValue(VariationMargin3 obj, Amount2 value) {
+			obj.setTotalMarkToMarket(value);
 		}
 	};
 	@XmlElement(name = "MrkToMktNetd")
-	protected List<com.tools20022.repository.msg.Amount2> markToMarketNetted;
+	protected List<Amount2> markToMarketNetted;
 	/**
 	 * 
 	 <p>
@@ -261,7 +294,7 @@ public class VariationMargin3 {
 	 * "Unrealised net loss calculated at the participant portfolio level."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMarkToMarketNetted = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<VariationMargin3, List<Amount2>> mmMarkToMarketNetted = new MMMessageAssociationEnd<VariationMargin3, List<Amount2>>() {
 		{
 			businessElementTrace_lazy = () -> MarginCall.mmMarkToMarketNetted;
 			componentContext_lazy = () -> com.tools20022.repository.msg.VariationMargin3.mmObject();
@@ -272,11 +305,21 @@ public class VariationMargin3 {
 			definition = "Unrealised net loss calculated at the participant portfolio level.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Amount2.mmObject();
+			type_lazy = () -> Amount2.mmObject();
+		}
+
+		@Override
+		public List<Amount2> getValue(VariationMargin3 obj) {
+			return obj.getMarkToMarketNetted();
+		}
+
+		@Override
+		public void setValue(VariationMargin3 obj, List<Amount2> value) {
+			obj.setMarkToMarketNetted(value);
 		}
 	};
 	@XmlElement(name = "MrkToMktGrss")
-	protected List<com.tools20022.repository.msg.Amount2> markToMarketGross;
+	protected List<Amount2> markToMarketGross;
 	/**
 	 * 
 	 <p>
@@ -307,7 +350,7 @@ public class VariationMargin3 {
 	 * definition} = "Unrealised net loss calculated in that market/boundary."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMarkToMarketGross = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<VariationMargin3, List<Amount2>> mmMarkToMarketGross = new MMMessageAssociationEnd<VariationMargin3, List<Amount2>>() {
 		{
 			businessElementTrace_lazy = () -> MarginCall.mmMarkToMarketGross;
 			componentContext_lazy = () -> com.tools20022.repository.msg.VariationMargin3.mmObject();
@@ -318,11 +361,21 @@ public class VariationMargin3 {
 			definition = "Unrealised net loss calculated in that market/boundary.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Amount2.mmObject();
+			type_lazy = () -> Amount2.mmObject();
+		}
+
+		@Override
+		public List<Amount2> getValue(VariationMargin3 obj) {
+			return obj.getMarkToMarketGross();
+		}
+
+		@Override
+		public void setValue(VariationMargin3 obj, List<Amount2> value) {
+			obj.setMarkToMarketGross(value);
 		}
 	};
 	@XmlElement(name = "MrkToMktFls")
-	protected List<com.tools20022.repository.msg.Amount2> markToMarketFails;
+	protected List<Amount2> markToMarketFails;
 	/**
 	 * 
 	 <p>
@@ -354,7 +407,7 @@ public class VariationMargin3 {
 	 * "Sum of the unrealised loss without taking profit into consideration."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMarkToMarketFails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<VariationMargin3, List<Amount2>> mmMarkToMarketFails = new MMMessageAssociationEnd<VariationMargin3, List<Amount2>>() {
 		{
 			businessElementTrace_lazy = () -> MarginCall.mmMarkToMarketFails;
 			componentContext_lazy = () -> com.tools20022.repository.msg.VariationMargin3.mmObject();
@@ -365,7 +418,17 @@ public class VariationMargin3 {
 			definition = "Sum of the unrealised loss without taking profit into consideration.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Amount2.mmObject();
+			type_lazy = () -> Amount2.mmObject();
+		}
+
+		@Override
+		public List<Amount2> getValue(VariationMargin3 obj) {
+			return obj.getMarkToMarketFails();
+		}
+
+		@Override
+		public void setValue(VariationMargin3 obj, List<Amount2> value) {
+			obj.setMarkToMarketFails(value);
 		}
 	};
 	@XmlElement(name = "FlsHrcut")
@@ -402,7 +465,7 @@ public class VariationMargin3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFailsHaircut = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<VariationMargin3, Optional<Amount2>> mmFailsHaircut = new MMMessageAssociationEnd<VariationMargin3, Optional<Amount2>>() {
 		{
 			businessElementTrace_lazy = () -> MarginCall.mmFailsHaircut;
 			componentContext_lazy = () -> com.tools20022.repository.msg.VariationMargin3.mmObject();
@@ -414,7 +477,17 @@ public class VariationMargin3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Amount2.mmObject();
+			type_lazy = () -> Amount2.mmObject();
+		}
+
+		@Override
+		public Optional<Amount2> getValue(VariationMargin3 obj) {
+			return obj.getFailsHaircut();
+		}
+
+		@Override
+		public void setValue(VariationMargin3 obj, Optional<Amount2> value) {
+			obj.setFailsHaircut(value.orElse(null));
 		}
 	};
 
@@ -438,7 +511,7 @@ public class VariationMargin3 {
 		return financialInstrumentIdentification == null ? Optional.empty() : Optional.of(financialInstrumentIdentification);
 	}
 
-	public VariationMargin3 setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
+	public VariationMargin3 setFinancialInstrumentIdentification(SecurityIdentification14 financialInstrumentIdentification) {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 		return this;
 	}
@@ -447,7 +520,7 @@ public class VariationMargin3 {
 		return totalVariationMargin == null ? totalVariationMargin = new ArrayList<>() : totalVariationMargin;
 	}
 
-	public VariationMargin3 setTotalVariationMargin(List<com.tools20022.repository.msg.TotalVariationMargin1> totalVariationMargin) {
+	public VariationMargin3 setTotalVariationMargin(List<TotalVariationMargin1> totalVariationMargin) {
 		this.totalVariationMargin = Objects.requireNonNull(totalVariationMargin);
 		return this;
 	}
@@ -456,7 +529,7 @@ public class VariationMargin3 {
 		return totalMarkToMarket;
 	}
 
-	public VariationMargin3 setTotalMarkToMarket(com.tools20022.repository.msg.Amount2 totalMarkToMarket) {
+	public VariationMargin3 setTotalMarkToMarket(Amount2 totalMarkToMarket) {
 		this.totalMarkToMarket = Objects.requireNonNull(totalMarkToMarket);
 		return this;
 	}
@@ -465,7 +538,7 @@ public class VariationMargin3 {
 		return markToMarketNetted == null ? markToMarketNetted = new ArrayList<>() : markToMarketNetted;
 	}
 
-	public VariationMargin3 setMarkToMarketNetted(List<com.tools20022.repository.msg.Amount2> markToMarketNetted) {
+	public VariationMargin3 setMarkToMarketNetted(List<Amount2> markToMarketNetted) {
 		this.markToMarketNetted = Objects.requireNonNull(markToMarketNetted);
 		return this;
 	}
@@ -474,7 +547,7 @@ public class VariationMargin3 {
 		return markToMarketGross == null ? markToMarketGross = new ArrayList<>() : markToMarketGross;
 	}
 
-	public VariationMargin3 setMarkToMarketGross(List<com.tools20022.repository.msg.Amount2> markToMarketGross) {
+	public VariationMargin3 setMarkToMarketGross(List<Amount2> markToMarketGross) {
 		this.markToMarketGross = Objects.requireNonNull(markToMarketGross);
 		return this;
 	}
@@ -483,7 +556,7 @@ public class VariationMargin3 {
 		return markToMarketFails == null ? markToMarketFails = new ArrayList<>() : markToMarketFails;
 	}
 
-	public VariationMargin3 setMarkToMarketFails(List<com.tools20022.repository.msg.Amount2> markToMarketFails) {
+	public VariationMargin3 setMarkToMarketFails(List<Amount2> markToMarketFails) {
 		this.markToMarketFails = Objects.requireNonNull(markToMarketFails);
 		return this;
 	}
@@ -492,7 +565,7 @@ public class VariationMargin3 {
 		return failsHaircut == null ? Optional.empty() : Optional.of(failsHaircut);
 	}
 
-	public VariationMargin3 setFailsHaircut(com.tools20022.repository.msg.Amount2 failsHaircut) {
+	public VariationMargin3 setFailsHaircut(Amount2 failsHaircut) {
 		this.failsHaircut = failsHaircut;
 		return this;
 	}

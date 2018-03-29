@@ -122,7 +122,7 @@ public class TaxExemptionReason1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxExemptionReason1Choice, TaxExemptReason1Code> mmCode = new MMMessageAttribute<TaxExemptionReason1Choice, TaxExemptReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmExemptionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TaxExemptionReason1Choice.mmObject();
@@ -135,6 +135,16 @@ public class TaxExemptionReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TaxExemptReason1Code.mmObject();
+		}
+
+		@Override
+		public TaxExemptReason1Code getValue(TaxExemptionReason1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(TaxExemptionReason1Choice obj, TaxExemptReason1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -180,7 +190,7 @@ public class TaxExemptionReason1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxExemptionReason1Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<TaxExemptionReason1Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmExemptionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TaxExemptionReason1Choice.mmObject();
@@ -193,6 +203,16 @@ public class TaxExemptionReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(TaxExemptionReason1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(TaxExemptionReason1Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -124,7 +124,7 @@ public class CancellationStatus3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationStatus3Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<CancellationStatus3Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationStatus3Choice.mmObject();
@@ -137,6 +137,16 @@ public class CancellationStatus3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(CancellationStatus3Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(CancellationStatus3Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn")
@@ -175,7 +185,7 @@ public class CancellationStatus3Choice {
 	 * definition} = "Specifies the reason of the CancellationStatus."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CancellationStatus3Choice, List<CancellationReason2>> mmReason = new MMMessageAssociationEnd<CancellationStatus3Choice, List<CancellationReason2>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationStatus3Choice.mmObject();
@@ -188,6 +198,16 @@ public class CancellationStatus3Choice {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CancellationReason2.mmObject();
+		}
+
+		@Override
+		public List<CancellationReason2> getValue(CancellationStatus3Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(CancellationStatus3Choice obj, List<CancellationReason2> value) {
+			obj.setReason(value);
 		}
 	};
 

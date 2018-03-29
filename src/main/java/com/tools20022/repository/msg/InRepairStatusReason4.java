@@ -115,7 +115,7 @@ public class InRepairStatusReason4 {
 	 * ConditionallyAcceptedStatusReason3.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InRepairStatusReason4, InRepairStatusReason5Choice> mmReason = new MMMessageAssociationEnd<InRepairStatusReason4, InRepairStatusReason5Choice>() {
 		{
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.InRepairStatusReason4.mmObject();
@@ -129,6 +129,16 @@ public class InRepairStatusReason4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> InRepairStatusReason5Choice.mmObject();
+		}
+
+		@Override
+		public InRepairStatusReason5Choice getValue(InRepairStatusReason4 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(InRepairStatusReason4 obj, InRepairStatusReason5Choice value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -165,7 +175,7 @@ public class InRepairStatusReason4 {
 	 * ConditionallyAcceptedStatusReason3.mmAdditionalInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InRepairStatusReason4, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<InRepairStatusReason4, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InRepairStatusReason4.mmObject();
 			isDerived = false;
@@ -177,6 +187,16 @@ public class InRepairStatusReason4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(InRepairStatusReason4 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(InRepairStatusReason4 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

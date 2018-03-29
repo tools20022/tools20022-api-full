@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.ContactPersonRole;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PhysicalDelivery;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ContactIdentification2;
+import com.tools20022.repository.msg.NameAndAddress4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -123,7 +125,7 @@ public class DeliveryParameters4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegisteredAddressIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DeliveryParameters4, YesNoIndicator> mmRegisteredAddressIndicator = new MMMessageAttribute<DeliveryParameters4, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> PhysicalDelivery.mmRegisteredAddressIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeliveryParameters4.mmObject();
@@ -135,6 +137,16 @@ public class DeliveryParameters4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(DeliveryParameters4 obj) {
+			return obj.getRegisteredAddressIndicator();
+		}
+
+		@Override
+		public void setValue(DeliveryParameters4 obj, YesNoIndicator value) {
+			obj.setRegisteredAddressIndicator(value);
 		}
 	};
 	@XmlElement(name = "NmAndAdr")
@@ -173,7 +185,7 @@ public class DeliveryParameters4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNameAndAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DeliveryParameters4, Optional<NameAndAddress4>> mmNameAndAddress = new MMMessageAttribute<DeliveryParameters4, Optional<NameAndAddress4>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeliveryParameters4.mmObject();
@@ -184,7 +196,17 @@ public class DeliveryParameters4 {
 			definition = "Name and address to/from which the physical delivery/receipt of the financial instrument must take place.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.NameAndAddress4.mmObject();
+			complexType_lazy = () -> NameAndAddress4.mmObject();
+		}
+
+		@Override
+		public Optional<NameAndAddress4> getValue(DeliveryParameters4 obj) {
+			return obj.getNameAndAddress();
+		}
+
+		@Override
+		public void setValue(DeliveryParameters4 obj, Optional<NameAndAddress4> value) {
+			obj.setNameAndAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtctPrsn")
@@ -220,7 +242,7 @@ public class DeliveryParameters4 {
 	 * definition} = "Contact person and contact information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContactPerson = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DeliveryParameters4, Optional<ContactIdentification2>> mmContactPerson = new MMMessageAssociationEnd<DeliveryParameters4, Optional<ContactIdentification2>>() {
 		{
 			businessComponentTrace_lazy = () -> ContactPersonRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeliveryParameters4.mmObject();
@@ -232,7 +254,17 @@ public class DeliveryParameters4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContactIdentification2.mmObject();
+			type_lazy = () -> ContactIdentification2.mmObject();
+		}
+
+		@Override
+		public Optional<ContactIdentification2> getValue(DeliveryParameters4 obj) {
+			return obj.getContactPerson();
+		}
+
+		@Override
+		public void setValue(DeliveryParameters4 obj, Optional<ContactIdentification2> value) {
+			obj.setContactPerson(value.orElse(null));
 		}
 	};
 
@@ -265,7 +297,7 @@ public class DeliveryParameters4 {
 		return nameAndAddress == null ? Optional.empty() : Optional.of(nameAndAddress);
 	}
 
-	public DeliveryParameters4 setNameAndAddress(com.tools20022.repository.msg.NameAndAddress4 nameAndAddress) {
+	public DeliveryParameters4 setNameAndAddress(NameAndAddress4 nameAndAddress) {
 		this.nameAndAddress = nameAndAddress;
 		return this;
 	}
@@ -274,7 +306,7 @@ public class DeliveryParameters4 {
 		return contactPerson == null ? Optional.empty() : Optional.of(contactPerson);
 	}
 
-	public DeliveryParameters4 setContactPerson(com.tools20022.repository.msg.ContactIdentification2 contactPerson) {
+	public DeliveryParameters4 setContactPerson(ContactIdentification2 contactPerson) {
 		this.contactPerson = contactPerson;
 		return this;
 	}

@@ -114,7 +114,7 @@ public class ProposalType1Choice {
 	 * definition} = "Collateral type is securities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesCollateral = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProposalType1Choice, List<SecuritiesCollateral1>> mmSecuritiesCollateral = new MMMessageAssociationEnd<ProposalType1Choice, List<SecuritiesCollateral1>>() {
 		{
 			businessComponentTrace_lazy = () -> Security.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProposalType1Choice.mmObject();
@@ -126,6 +126,16 @@ public class ProposalType1Choice {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SecuritiesCollateral1.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesCollateral1> getValue(ProposalType1Choice obj) {
+			return obj.getSecuritiesCollateral();
+		}
+
+		@Override
+		public void setValue(ProposalType1Choice obj, List<SecuritiesCollateral1> value) {
+			obj.setSecuritiesCollateral(value);
 		}
 	};
 	@XmlElement(name = "CshColl")
@@ -160,7 +170,7 @@ public class ProposalType1Choice {
 	 * definition} = "Collateral type is cash."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashCollateral = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProposalType1Choice, List<CashCollateral1>> mmCashCollateral = new MMMessageAssociationEnd<ProposalType1Choice, List<CashCollateral1>>() {
 		{
 			businessComponentTrace_lazy = () -> Money.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProposalType1Choice.mmObject();
@@ -172,6 +182,16 @@ public class ProposalType1Choice {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CashCollateral1.mmObject();
+		}
+
+		@Override
+		public List<CashCollateral1> getValue(ProposalType1Choice obj) {
+			return obj.getCashCollateral();
+		}
+
+		@Override
+		public void setValue(ProposalType1Choice obj, List<CashCollateral1> value) {
+			obj.setCashCollateral(value);
 		}
 	};
 	@XmlElement(name = "OthrColl")
@@ -209,7 +229,7 @@ public class ProposalType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherCollateral = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProposalType1Choice, List<OtherCollateral1>> mmOtherCollateral = new MMMessageAssociationEnd<ProposalType1Choice, List<OtherCollateral1>>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmAsset;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProposalType1Choice.mmObject();
@@ -221,6 +241,16 @@ public class ProposalType1Choice {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> OtherCollateral1.mmObject();
+		}
+
+		@Override
+		public List<OtherCollateral1> getValue(ProposalType1Choice obj) {
+			return obj.getOtherCollateral();
+		}
+
+		@Override
+		public void setValue(ProposalType1Choice obj, List<OtherCollateral1> value) {
+			obj.setOtherCollateral(value);
 		}
 	};
 

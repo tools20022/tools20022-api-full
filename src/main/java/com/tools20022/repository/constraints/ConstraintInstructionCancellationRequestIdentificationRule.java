@@ -58,12 +58,50 @@ public class ConstraintInstructionCancellationRequestIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionV08> forCorporateActionInstructionV08 = new MMConstraint<CorporateActionInstructionV08>() {
 		{
-			validator = ConstraintInstructionCancellationRequestIdentificationRule::checkCorporateActionInstructionV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionCancellationRequestIdentificationRule";
 			definition = "If ChangeInstructionIndicator is 'true' or '1' (Yes), then InstructionCancellationRequestIdentification must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInstructionCancellationRequestIdentificationRule.forCorporateActionInstructionV07;
 			owner_lazy = () -> CorporateActionInstructionV08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionV08 obj) throws Exception {
+			checkCorporateActionInstructionV08(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstruction002V08
+	 * CorporateActionInstruction002V08}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InstructionCancellationRequestIdentificationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ChangeInstructionIndicator is 'true' or '1' (Yes), then InstructionCancellationRequestIdentification must be present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionInstruction002V08> forCorporateActionInstruction002V08 = new MMConstraint<CorporateActionInstruction002V08>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InstructionCancellationRequestIdentificationRule";
+			definition = "If ChangeInstructionIndicator is 'true' or '1' (Yes), then InstructionCancellationRequestIdentification must be present.";
+			owner_lazy = () -> CorporateActionInstruction002V08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstruction002V08 obj) throws Exception {
+			checkCorporateActionInstruction002V08(obj);
 		}
 	};
 	/**
@@ -104,7 +142,6 @@ public class ConstraintInstructionCancellationRequestIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionV07> forCorporateActionInstructionV07 = new MMConstraint<CorporateActionInstructionV07>() {
 		{
-			validator = ConstraintInstructionCancellationRequestIdentificationRule::checkCorporateActionInstructionV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionCancellationRequestIdentificationRule";
 			definition = "If ChangeInstructionIndicator is 'true' or '1' (Yes), then InstructionCancellationRequestIdentification must be present.";
@@ -112,35 +149,10 @@ public class ConstraintInstructionCancellationRequestIdentificationRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInstructionCancellationRequestIdentificationRule.forCorporateActionInstructionV06;
 			owner_lazy = () -> CorporateActionInstructionV07.mmObject();
 		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstruction002V07
-	 * CorporateActionInstruction002V07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InstructionCancellationRequestIdentificationRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If ChangeInstructionIndicator is 'true' or '1' (Yes), then InstructionCancellationRequestIdentification must be present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CorporateActionInstruction002V07> forCorporateActionInstruction002V07 = new MMConstraint<CorporateActionInstruction002V07>() {
-		{
-			validator = ConstraintInstructionCancellationRequestIdentificationRule::checkCorporateActionInstruction002V07;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "InstructionCancellationRequestIdentificationRule";
-			definition = "If ChangeInstructionIndicator is 'true' or '1' (Yes), then InstructionCancellationRequestIdentification must be present.";
-			owner_lazy = () -> CorporateActionInstruction002V07.mmObject();
+
+		@Override
+		public void executeValidator(CorporateActionInstructionV07 obj) throws Exception {
+			checkCorporateActionInstructionV07(obj);
 		}
 	};
 	/**
@@ -166,11 +178,15 @@ public class ConstraintInstructionCancellationRequestIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionV01> forCorporateActionInstructionV01 = new MMConstraint<CorporateActionInstructionV01>() {
 		{
-			validator = ConstraintInstructionCancellationRequestIdentificationRule::checkCorporateActionInstructionV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionCancellationRequestIdentificationRule";
 			definition = "If Identification/ChangeInstructionIndicator is YES (True), then InstructionCancellationRequestIdentification must be present.";
 			owner_lazy = () -> CorporateActionInstructionV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionV01 obj) throws Exception {
+			checkCorporateActionInstructionV01(obj);
 		}
 	};
 	/**
@@ -196,11 +212,15 @@ public class ConstraintInstructionCancellationRequestIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionV02> forCorporateActionInstructionV02 = new MMConstraint<CorporateActionInstructionV02>() {
 		{
-			validator = ConstraintInstructionCancellationRequestIdentificationRule::checkCorporateActionInstructionV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionCancellationRequestIdentificationRule";
 			definition = "If Identification/ChangeInstructionIndicator is YES (True), then InstructionCancellationRequestIdentification must be present.";
 			owner_lazy = () -> CorporateActionInstructionV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionV02 obj) throws Exception {
+			checkCorporateActionInstructionV02(obj);
 		}
 	};
 	/**
@@ -226,11 +246,15 @@ public class ConstraintInstructionCancellationRequestIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionV03> forCorporateActionInstructionV03 = new MMConstraint<CorporateActionInstructionV03>() {
 		{
-			validator = ConstraintInstructionCancellationRequestIdentificationRule::checkCorporateActionInstructionV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionCancellationRequestIdentificationRule";
 			definition = "If Identification/ChangeInstructionIndicator is YES (True), then InstructionCancellationRequestIdentification must be present.";
 			owner_lazy = () -> CorporateActionInstructionV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionV03 obj) throws Exception {
+			checkCorporateActionInstructionV03(obj);
 		}
 	};
 	/**
@@ -265,12 +289,16 @@ public class ConstraintInstructionCancellationRequestIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionV04> forCorporateActionInstructionV04 = new MMConstraint<CorporateActionInstructionV04>() {
 		{
-			validator = ConstraintInstructionCancellationRequestIdentificationRule::checkCorporateActionInstructionV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionCancellationRequestIdentificationRule";
 			definition = "If Identification/ChangeInstructionIndicator is YES (True), then InstructionCancellationRequestIdentification must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInstructionCancellationRequestIdentificationRule.forCorporateActionInstructionV05);
 			owner_lazy = () -> CorporateActionInstructionV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionV04 obj) throws Exception {
+			checkCorporateActionInstructionV04(obj);
 		}
 	};
 	/**
@@ -311,13 +339,17 @@ public class ConstraintInstructionCancellationRequestIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionV05> forCorporateActionInstructionV05 = new MMConstraint<CorporateActionInstructionV05>() {
 		{
-			validator = ConstraintInstructionCancellationRequestIdentificationRule::checkCorporateActionInstructionV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionCancellationRequestIdentificationRule";
 			definition = "If Identification/ChangeInstructionIndicator is YES (True), then InstructionCancellationRequestIdentification must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInstructionCancellationRequestIdentificationRule.forCorporateActionInstructionV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInstructionCancellationRequestIdentificationRule.forCorporateActionInstructionV04;
 			owner_lazy = () -> CorporateActionInstructionV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionV05 obj) throws Exception {
+			checkCorporateActionInstructionV05(obj);
 		}
 	};
 	/**
@@ -358,13 +390,51 @@ public class ConstraintInstructionCancellationRequestIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionV06> forCorporateActionInstructionV06 = new MMConstraint<CorporateActionInstructionV06>() {
 		{
-			validator = ConstraintInstructionCancellationRequestIdentificationRule::checkCorporateActionInstructionV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionCancellationRequestIdentificationRule";
 			definition = "If ChangeInstructionIndicator is 'true' or '1' (Yes), then InstructionCancellationRequestIdentification must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInstructionCancellationRequestIdentificationRule.forCorporateActionInstructionV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInstructionCancellationRequestIdentificationRule.forCorporateActionInstructionV05;
 			owner_lazy = () -> CorporateActionInstructionV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionV06 obj) throws Exception {
+			checkCorporateActionInstructionV06(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstruction002V06
+	 * CorporateActionInstruction002V06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InstructionCancellationRequestIdentificationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ChangeInstructionIndicator is 'true' or '1' (Yes), then InstructionCancellationRequestIdentification must be present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionInstruction002V06> forCorporateActionInstruction002V06 = new MMConstraint<CorporateActionInstruction002V06>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InstructionCancellationRequestIdentificationRule";
+			definition = "If ChangeInstructionIndicator is 'true' or '1' (Yes), then InstructionCancellationRequestIdentification must be present.";
+			owner_lazy = () -> CorporateActionInstruction002V06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstruction002V06 obj) throws Exception {
+			checkCorporateActionInstruction002V06(obj);
 		}
 	};
 
@@ -380,7 +450,7 @@ public class ConstraintInstructionCancellationRequestIdentificationRule {
 	 * If ChangeInstructionIndicator is 'true' or '1' (Yes), then
 	 * InstructionCancellationRequestIdentification must be present.
 	 */
-	public static void checkCorporateActionInstructionV07(CorporateActionInstructionV07 obj) throws Exception {
+	public static void checkCorporateActionInstruction002V08(CorporateActionInstruction002V08 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -388,7 +458,7 @@ public class ConstraintInstructionCancellationRequestIdentificationRule {
 	 * If ChangeInstructionIndicator is 'true' or '1' (Yes), then
 	 * InstructionCancellationRequestIdentification must be present.
 	 */
-	public static void checkCorporateActionInstruction002V07(CorporateActionInstruction002V07 obj) throws Exception {
+	public static void checkCorporateActionInstructionV07(CorporateActionInstructionV07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -437,6 +507,14 @@ public class ConstraintInstructionCancellationRequestIdentificationRule {
 	 * InstructionCancellationRequestIdentification must be present.
 	 */
 	public static void checkCorporateActionInstructionV06(CorporateActionInstructionV06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If ChangeInstructionIndicator is 'true' or '1' (Yes), then
+	 * InstructionCancellationRequestIdentification must be present.
+	 */
+	public static void checkCorporateActionInstruction002V06(CorporateActionInstruction002V06 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

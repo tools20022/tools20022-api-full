@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.AssetHolding;
 import com.tools20022.repository.entity.Derivative;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DerivativeForeignExchange2;
+import com.tools20022.repository.msg.DerivativeInterest2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -104,7 +106,7 @@ public class AssetClassAttributes1 {
 	 * "Asset class is a non-financial instrument of type interest rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInterest = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassAttributes1, DerivativeInterest2> mmInterest = new MMMessageAssociationEnd<AssetClassAttributes1, DerivativeInterest2>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmInterest;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AssetClassAttributes1.mmObject();
@@ -116,7 +118,17 @@ public class AssetClassAttributes1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DerivativeInterest2.mmObject();
+			type_lazy = () -> DerivativeInterest2.mmObject();
+		}
+
+		@Override
+		public DerivativeInterest2 getValue(AssetClassAttributes1 obj) {
+			return obj.getInterest();
+		}
+
+		@Override
+		public void setValue(AssetClassAttributes1 obj, DerivativeInterest2 value) {
+			obj.setInterest(value);
 		}
 	};
 	@XmlElement(name = "FX", required = true)
@@ -154,7 +166,7 @@ public class AssetClassAttributes1 {
 	 * "Asset class is a non-financial instrument of type foreign exchange."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmForeignExchange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassAttributes1, DerivativeForeignExchange2> mmForeignExchange = new MMMessageAssociationEnd<AssetClassAttributes1, DerivativeForeignExchange2>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmExchangeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AssetClassAttributes1.mmObject();
@@ -166,7 +178,17 @@ public class AssetClassAttributes1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DerivativeForeignExchange2.mmObject();
+			type_lazy = () -> DerivativeForeignExchange2.mmObject();
+		}
+
+		@Override
+		public DerivativeForeignExchange2 getValue(AssetClassAttributes1 obj) {
+			return obj.getForeignExchange();
+		}
+
+		@Override
+		public void setValue(AssetClassAttributes1 obj, DerivativeForeignExchange2 value) {
+			obj.setForeignExchange(value);
 		}
 	};
 
@@ -188,7 +210,7 @@ public class AssetClassAttributes1 {
 		return interest;
 	}
 
-	public AssetClassAttributes1 setInterest(com.tools20022.repository.msg.DerivativeInterest2 interest) {
+	public AssetClassAttributes1 setInterest(DerivativeInterest2 interest) {
 		this.interest = Objects.requireNonNull(interest);
 		return this;
 	}
@@ -197,7 +219,7 @@ public class AssetClassAttributes1 {
 		return foreignExchange;
 	}
 
-	public AssetClassAttributes1 setForeignExchange(com.tools20022.repository.msg.DerivativeForeignExchange2 foreignExchange) {
+	public AssetClassAttributes1 setForeignExchange(DerivativeForeignExchange2 foreignExchange) {
 		this.foreignExchange = Objects.requireNonNull(foreignExchange);
 		return this;
 	}

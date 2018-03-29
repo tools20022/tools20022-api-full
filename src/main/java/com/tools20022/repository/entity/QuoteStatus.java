@@ -20,10 +20,10 @@ package com.tools20022.repository.entity;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.QuoteStatusCode;
 import com.tools20022.repository.codeset.RejectionReasonV2Code;
+import com.tools20022.repository.entity.Quote;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CancellationType;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -119,7 +119,7 @@ public class QuoteStatus extends Status {
 	 * definition} = "Identifies the status of a quote acknowledgement."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<QuoteStatus, QuoteStatusCode> mmStatus = new MMBusinessAttribute<QuoteStatus, QuoteStatusCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CancellationType.mmCancellationType);
 			isDerived = false;
@@ -132,12 +132,14 @@ public class QuoteStatus extends Status {
 			simpleType_lazy = () -> QuoteStatusCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return QuoteStatus.class.getMethod("getStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public QuoteStatusCode getValue(QuoteStatus obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(QuoteStatus obj, QuoteStatusCode value) {
+			obj.setStatus(value);
 		}
 	};
 	protected RejectionReasonV2Code rejectionReason;
@@ -166,7 +168,7 @@ public class QuoteStatus extends Status {
 	 * definition} = "Reason why the quote is rejected."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmRejectionReason = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<QuoteStatus, RejectionReasonV2Code> mmRejectionReason = new MMBusinessAttribute<QuoteStatus, RejectionReasonV2Code>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.QuoteStatus.mmObject();
@@ -178,12 +180,14 @@ public class QuoteStatus extends Status {
 			simpleType_lazy = () -> RejectionReasonV2Code.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return QuoteStatus.class.getMethod("getRejectionReason", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public RejectionReasonV2Code getValue(QuoteStatus obj) {
+			return obj.getRejectionReason();
+		}
+
+		@Override
+		public void setValue(QuoteStatus obj, RejectionReasonV2Code value) {
+			obj.setRejectionReason(value);
 		}
 	};
 	protected Quote relatedQuote;
@@ -217,7 +221,7 @@ public class QuoteStatus extends Status {
 	 * definition} = "Quote for wich the status is provided."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedQuote = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<QuoteStatus, Quote> mmRelatedQuote = new MMBusinessAssociationEnd<QuoteStatus, Quote>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.QuoteStatus.mmObject();
@@ -226,9 +230,19 @@ public class QuoteStatus extends Status {
 			definition = "Quote for wich the status is provided.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.Quote.mmStatus;
+			opposite_lazy = () -> Quote.mmStatus;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Quote.mmObject();
+			type_lazy = () -> Quote.mmObject();
+		}
+
+		@Override
+		public Quote getValue(QuoteStatus obj) {
+			return obj.getRelatedQuote();
+		}
+
+		@Override
+		public void setValue(QuoteStatus obj, Quote value) {
+			obj.setRelatedQuote(value);
 		}
 	};
 
@@ -239,7 +253,7 @@ public class QuoteStatus extends Status {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QuoteStatus";
 				definition = "Status of a quote and if required, the rejection reason.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Quote.mmStatus);
+				associationDomain_lazy = () -> Arrays.asList(Quote.mmStatus);
 				superType_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.QuoteStatus.mmStatus, com.tools20022.repository.entity.QuoteStatus.mmRejectionReason, com.tools20022.repository.entity.QuoteStatus.mmRelatedQuote);
 				derivationComponent_lazy = () -> Arrays.asList(CancellationType.mmObject());
@@ -275,7 +289,7 @@ public class QuoteStatus extends Status {
 		return relatedQuote;
 	}
 
-	public QuoteStatus setRelatedQuote(com.tools20022.repository.entity.Quote relatedQuote) {
+	public QuoteStatus setRelatedQuote(Quote relatedQuote) {
 		this.relatedQuote = Objects.requireNonNull(relatedQuote);
 		return this;
 	}

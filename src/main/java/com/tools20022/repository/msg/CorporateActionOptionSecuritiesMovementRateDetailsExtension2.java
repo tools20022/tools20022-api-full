@@ -108,7 +108,7 @@ public class CorporateActionOptionSecuritiesMovementRateDetailsExtension2 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOptionSecuritiesMovementRateDetailsExtension2, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionOptionSecuritiesMovementRateDetailsExtension2, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementRateDetailsExtension2.mmObject();
 			isDerived = false;
@@ -119,6 +119,16 @@ public class CorporateActionOptionSecuritiesMovementRateDetailsExtension2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionOptionSecuritiesMovementRateDetailsExtension2 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionOptionSecuritiesMovementRateDetailsExtension2 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "DTCSctyRate")
@@ -156,7 +166,7 @@ public class CorporateActionOptionSecuritiesMovementRateDetailsExtension2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCSecurityRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOptionSecuritiesMovementRateDetailsExtension2, Optional<DecimalNumber>> mmDTCSecurityRate = new MMMessageAttribute<CorporateActionOptionSecuritiesMovementRateDetailsExtension2, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementRateDetailsExtension2.mmObject();
 			isDerived = false;
@@ -168,6 +178,16 @@ public class CorporateActionOptionSecuritiesMovementRateDetailsExtension2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(CorporateActionOptionSecuritiesMovementRateDetailsExtension2 obj) {
+			return obj.getDTCSecurityRate();
+		}
+
+		@Override
+		public void setValue(CorporateActionOptionSecuritiesMovementRateDetailsExtension2 obj, Optional<DecimalNumber> value) {
+			obj.setDTCSecurityRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCMltplyDvdInd")
@@ -205,7 +225,7 @@ public class CorporateActionOptionSecuritiesMovementRateDetailsExtension2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCMultiplyDivideIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOptionSecuritiesMovementRateDetailsExtension2, Optional<DTCMultiplyDivide1Code>> mmDTCMultiplyDivideIndicator = new MMMessageAttribute<CorporateActionOptionSecuritiesMovementRateDetailsExtension2, Optional<DTCMultiplyDivide1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementRateDetailsExtension2.mmObject();
 			isDerived = false;
@@ -217,6 +237,16 @@ public class CorporateActionOptionSecuritiesMovementRateDetailsExtension2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCMultiplyDivide1Code.mmObject();
+		}
+
+		@Override
+		public Optional<DTCMultiplyDivide1Code> getValue(CorporateActionOptionSecuritiesMovementRateDetailsExtension2 obj) {
+			return obj.getDTCMultiplyDivideIndicator();
+		}
+
+		@Override
+		public void setValue(CorporateActionOptionSecuritiesMovementRateDetailsExtension2 obj, Optional<DTCMultiplyDivide1Code> value) {
+			obj.setDTCMultiplyDivideIndicator(value.orElse(null));
 		}
 	};
 

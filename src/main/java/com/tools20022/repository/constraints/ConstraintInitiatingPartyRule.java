@@ -51,11 +51,15 @@ public class ConstraintInitiatingPartyRule {
 	 */
 	public static final MMConstraint<PaymentCancellationRequestV01> forPaymentCancellationRequestV01 = new MMConstraint<PaymentCancellationRequestV01>() {
 		{
-			validator = ConstraintInitiatingPartyRule::checkPaymentCancellationRequestV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatingPartyRule";
 			definition = "GroupHeader/InitiatingParty is not allowed.\n\n.";
 			owner_lazy = () -> PaymentCancellationRequestV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentCancellationRequestV01 obj) throws Exception {
+			checkPaymentCancellationRequestV01(obj);
 		}
 	};
 	/**
@@ -79,11 +83,15 @@ public class ConstraintInitiatingPartyRule {
 	 */
 	public static final MMConstraint<PaymentStatusReportV02> forPaymentStatusReportV02 = new MMConstraint<PaymentStatusReportV02>() {
 		{
-			validator = ConstraintInitiatingPartyRule::checkPaymentStatusReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatingPartyRule";
 			definition = "GroupHeader/InitiatingParty is not allowed.\n\n.";
 			owner_lazy = () -> PaymentStatusReportV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentStatusReportV02 obj) throws Exception {
+			checkPaymentStatusReportV02(obj);
 		}
 	};
 

@@ -99,7 +99,7 @@ public class AutoExtend1Choice {
 	 * definition} = "Number of days."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDays = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AutoExtend1Choice, Number> mmDays = new MMMessageAttribute<AutoExtend1Choice, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AutoExtend1Choice.mmObject();
 			isDerived = false;
@@ -110,6 +110,16 @@ public class AutoExtend1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(AutoExtend1Choice obj) {
+			return obj.getDays();
+		}
+
+		@Override
+		public void setValue(AutoExtend1Choice obj, Number value) {
+			obj.setDays(value);
 		}
 	};
 	@XmlElement(name = "Mnths", required = true)
@@ -141,7 +151,7 @@ public class AutoExtend1Choice {
 	 * definition} = "Number of months."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMonths = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AutoExtend1Choice, Number> mmMonths = new MMMessageAttribute<AutoExtend1Choice, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AutoExtend1Choice.mmObject();
 			isDerived = false;
@@ -152,6 +162,16 @@ public class AutoExtend1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(AutoExtend1Choice obj) {
+			return obj.getMonths();
+		}
+
+		@Override
+		public void setValue(AutoExtend1Choice obj, Number value) {
+			obj.setMonths(value);
 		}
 	};
 	@XmlElement(name = "Yrs", required = true)
@@ -183,7 +203,7 @@ public class AutoExtend1Choice {
 	 * definition} = "Number of years."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmYears = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AutoExtend1Choice, Number> mmYears = new MMMessageAttribute<AutoExtend1Choice, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AutoExtend1Choice.mmObject();
 			isDerived = false;
@@ -194,6 +214,16 @@ public class AutoExtend1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(AutoExtend1Choice obj) {
+			return obj.getYears();
+		}
+
+		@Override
+		public void setValue(AutoExtend1Choice obj, Number value) {
+			obj.setYears(value);
 		}
 	};
 	@XmlElement(name = "Dt", required = true)
@@ -225,7 +255,7 @@ public class AutoExtend1Choice {
 	 * definition} = "Auto extension end date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AutoExtend1Choice, ISODate> mmDate = new MMMessageAttribute<AutoExtend1Choice, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AutoExtend1Choice.mmObject();
 			isDerived = false;
@@ -236,6 +266,16 @@ public class AutoExtend1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(AutoExtend1Choice obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(AutoExtend1Choice obj, ISODate value) {
+			obj.setDate(value);
 		}
 	};
 

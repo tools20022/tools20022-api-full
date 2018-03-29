@@ -123,7 +123,7 @@ public class RejectionReason2 {
 	 * definition} = "Reason of the rejection provided by the rejecting party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRejectingPartyReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionReason2, Max35Text> mmRejectingPartyReason = new MMMessageAttribute<RejectionReason2, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectionReason2.mmObject();
 			isDerived = false;
@@ -134,6 +134,16 @@ public class RejectionReason2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(RejectionReason2 obj) {
+			return obj.getRejectingPartyReason();
+		}
+
+		@Override
+		public void setValue(RejectionReason2 obj, Max35Text value) {
+			obj.setRejectingPartyReason(value);
 		}
 	};
 	@XmlElement(name = "RjctnDtTm")
@@ -165,7 +175,7 @@ public class RejectionReason2 {
 	 * definition} = "Date and time at which the rejection was generated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRejectionDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionReason2, Optional<ISODateTime>> mmRejectionDateTime = new MMMessageAttribute<RejectionReason2, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectionReason2.mmObject();
 			isDerived = false;
@@ -176,6 +186,16 @@ public class RejectionReason2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(RejectionReason2 obj) {
+			return obj.getRejectionDateTime();
+		}
+
+		@Override
+		public void setValue(RejectionReason2 obj, Optional<ISODateTime> value) {
+			obj.setRejectionDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ErrLctn")
@@ -209,7 +229,7 @@ public class RejectionReason2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmErrorLocation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionReason2, Optional<Max350Text>> mmErrorLocation = new MMMessageAttribute<RejectionReason2, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectionReason2.mmObject();
 			isDerived = false;
@@ -220,6 +240,16 @@ public class RejectionReason2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(RejectionReason2 obj) {
+			return obj.getErrorLocation();
+		}
+
+		@Override
+		public void setValue(RejectionReason2 obj, Optional<Max350Text> value) {
+			obj.setErrorLocation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RsnDesc")
@@ -251,7 +281,7 @@ public class RejectionReason2 {
 	 * definition} = "Detailed description of the rejection reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReasonDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionReason2, Optional<Max350Text>> mmReasonDescription = new MMMessageAttribute<RejectionReason2, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectionReason2.mmObject();
 			isDerived = false;
@@ -262,6 +292,16 @@ public class RejectionReason2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(RejectionReason2 obj) {
+			return obj.getReasonDescription();
+		}
+
+		@Override
+		public void setValue(RejectionReason2 obj, Optional<Max350Text> value) {
+			obj.setReasonDescription(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlData")
@@ -296,7 +336,7 @@ public class RejectionReason2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalData = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionReason2, Optional<Max20000Text>> mmAdditionalData = new MMMessageAttribute<RejectionReason2, Optional<Max20000Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectionReason2.mmObject();
 			isDerived = false;
@@ -307,6 +347,16 @@ public class RejectionReason2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max20000Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max20000Text> getValue(RejectionReason2 obj) {
+			return obj.getAdditionalData();
+		}
+
+		@Override
+		public void setValue(RejectionReason2 obj, Optional<Max20000Text> value) {
+			obj.setAdditionalData(value.orElse(null));
 		}
 	};
 

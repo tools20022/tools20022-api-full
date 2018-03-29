@@ -139,7 +139,7 @@ public class SecuritiesOption51 {
 	 * SecuritiesOption23.mmMaximumExercisableQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMaximumQuantityToInstruct = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesOption51, Optional<FinancialInstrumentQuantity19Choice>> mmMaximumQuantityToInstruct = new MMMessageAssociationEnd<SecuritiesOption51, Optional<FinancialInstrumentQuantity19Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesConversion.mmMaximumExercisableQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption51.mmObject();
@@ -154,6 +154,16 @@ public class SecuritiesOption51 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity19Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity19Choice> getValue(SecuritiesOption51 obj) {
+			return obj.getMaximumQuantityToInstruct();
+		}
+
+		@Override
+		public void setValue(SecuritiesOption51 obj, Optional<FinancialInstrumentQuantity19Choice> value) {
+			obj.setMaximumQuantityToInstruct(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinQtyToInst")
@@ -199,7 +209,7 @@ public class SecuritiesOption51 {
 	 * SecuritiesOption23.mmMinimumExercisableQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMinimumQuantityToInstruct = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesOption51, Optional<FinancialInstrumentQuantity19Choice>> mmMinimumQuantityToInstruct = new MMMessageAssociationEnd<SecuritiesOption51, Optional<FinancialInstrumentQuantity19Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesConversion.mmMinimumExercisableQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption51.mmObject();
@@ -214,6 +224,16 @@ public class SecuritiesOption51 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity19Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity19Choice> getValue(SecuritiesOption51 obj) {
+			return obj.getMinimumQuantityToInstruct();
+		}
+
+		@Override
+		public void setValue(SecuritiesOption51 obj, Optional<FinancialInstrumentQuantity19Choice> value) {
+			obj.setMinimumQuantityToInstruct(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinMltplQtyToInst")
@@ -260,7 +280,7 @@ public class SecuritiesOption51 {
 	 * SecuritiesOption23.mmMinimumExercisableMultipleQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMinimumMultipleQuantityToInstruct = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesOption51, Optional<FinancialInstrumentQuantity20Choice>> mmMinimumMultipleQuantityToInstruct = new MMMessageAssociationEnd<SecuritiesOption51, Optional<FinancialInstrumentQuantity20Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesConversion.mmMinimumExercisableMultipleQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption51.mmObject();
@@ -275,6 +295,16 @@ public class SecuritiesOption51 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity20Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity20Choice> getValue(SecuritiesOption51 obj) {
+			return obj.getMinimumMultipleQuantityToInstruct();
+		}
+
+		@Override
+		public void setValue(SecuritiesOption51 obj, Optional<FinancialInstrumentQuantity20Choice> value) {
+			obj.setMinimumMultipleQuantityToInstruct(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NewBrdLotQty")
@@ -319,7 +349,7 @@ public class SecuritiesOption51 {
 	 * SecuritiesOption23.mmNewBoardLotQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNewBoardLotQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesOption51, Optional<FinancialInstrumentQuantity20Choice>> mmNewBoardLotQuantity = new MMMessageAssociationEnd<SecuritiesOption51, Optional<FinancialInstrumentQuantity20Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmBoardLotSecuritiesQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption51.mmObject();
@@ -334,6 +364,16 @@ public class SecuritiesOption51 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity20Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity20Choice> getValue(SecuritiesOption51 obj) {
+			return obj.getNewBoardLotQuantity();
+		}
+
+		@Override
+		public void setValue(SecuritiesOption51 obj, Optional<FinancialInstrumentQuantity20Choice> value) {
+			obj.setNewBoardLotQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NewDnmtnQty")
@@ -380,7 +420,7 @@ public class SecuritiesOption51 {
 	 * SecuritiesOption23.mmNewDenominationQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNewDenominationQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesOption51, Optional<FinancialInstrumentQuantity20Choice>> mmNewDenominationQuantity = new MMMessageAssociationEnd<SecuritiesOption51, Optional<FinancialInstrumentQuantity20Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmNewDenominationSecuritiesQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption51.mmObject();
@@ -395,6 +435,16 @@ public class SecuritiesOption51 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity20Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity20Choice> getValue(SecuritiesOption51 obj) {
+			return obj.getNewDenominationQuantity();
+		}
+
+		@Override
+		public void setValue(SecuritiesOption51 obj, Optional<FinancialInstrumentQuantity20Choice> value) {
+			obj.setNewDenominationQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FrntEndOddLotQty")
@@ -441,7 +491,7 @@ public class SecuritiesOption51 {
 	 * SecuritiesOption23.mmFrontEndOddLotQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFrontEndOddLotQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesOption51, Optional<FinancialInstrumentQuantity20Choice>> mmFrontEndOddLotQuantity = new MMMessageAssociationEnd<SecuritiesOption51, Optional<FinancialInstrumentQuantity20Choice>>() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmFrontEndOddLotQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption51.mmObject();
@@ -456,6 +506,16 @@ public class SecuritiesOption51 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity20Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity20Choice> getValue(SecuritiesOption51 obj) {
+			return obj.getFrontEndOddLotQuantity();
+		}
+
+		@Override
+		public void setValue(SecuritiesOption51 obj, Optional<FinancialInstrumentQuantity20Choice> value) {
+			obj.setFrontEndOddLotQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BckEndOddLotQty")
@@ -502,7 +562,7 @@ public class SecuritiesOption51 {
 	 * SecuritiesOption23.mmBackEndOddLotQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBackEndOddLotQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesOption51, Optional<FinancialInstrumentQuantity20Choice>> mmBackEndOddLotQuantity = new MMMessageAssociationEnd<SecuritiesOption51, Optional<FinancialInstrumentQuantity20Choice>>() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmBackEndOddLotQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption51.mmObject();
@@ -517,6 +577,16 @@ public class SecuritiesOption51 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity20Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity20Choice> getValue(SecuritiesOption51 obj) {
+			return obj.getBackEndOddLotQuantity();
+		}
+
+		@Override
+		public void setValue(SecuritiesOption51 obj, Optional<FinancialInstrumentQuantity20Choice> value) {
+			obj.setBackEndOddLotQuantity(value.orElse(null));
 		}
 	};
 

@@ -139,7 +139,7 @@ public class CashBalance6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashBalance6, ImpliedCurrencyAndAmount> mmAmount = new MMMessageAttribute<CashBalance6, ImpliedCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalance6.mmObject();
@@ -152,6 +152,16 @@ public class CashBalance6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(CashBalance6 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(CashBalance6 obj, ImpliedCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "CdtDbtInd", required = true)
@@ -201,7 +211,7 @@ public class CashBalance6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashBalance6, CreditDebitCode> mmCreditDebitIndicator = new MMMessageAttribute<CashBalance6, CreditDebitCode>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalance6.mmObject();
@@ -214,6 +224,16 @@ public class CashBalance6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public CreditDebitCode getValue(CashBalance6 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(CashBalance6 obj, CreditDebitCode value) {
+			obj.setCreditDebitIndicator(value);
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -257,7 +277,7 @@ public class CashBalance6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashBalance6, Optional<BalanceType9Choice>> mmType = new MMMessageAssociationEnd<CashBalance6, Optional<BalanceType9Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalance6.mmObject();
@@ -271,6 +291,16 @@ public class CashBalance6 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> BalanceType9Choice.mmObject();
+		}
+
+		@Override
+		public Optional<BalanceType9Choice> getValue(CashBalance6 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(CashBalance6 obj, Optional<BalanceType9Choice> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sts")
@@ -314,7 +344,7 @@ public class CashBalance6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashBalance6, Optional<BalanceStatus1Code>> mmStatus = new MMMessageAttribute<CashBalance6, Optional<BalanceStatus1Code>>() {
 		{
 			businessElementTrace_lazy = () -> AccountStatus.mmBalanceStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalance6.mmObject();
@@ -327,6 +357,16 @@ public class CashBalance6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BalanceStatus1Code.mmObject();
+		}
+
+		@Override
+		public Optional<BalanceStatus1Code> getValue(CashBalance6 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(CashBalance6 obj, Optional<BalanceStatus1Code> value) {
+			obj.setStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ValDt")
@@ -371,7 +411,7 @@ public class CashBalance6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashBalance6, Optional<DateAndDateTimeChoice>> mmValueDate = new MMMessageAttribute<CashBalance6, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmValueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalance6.mmObject();
@@ -384,6 +424,16 @@ public class CashBalance6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(CashBalance6 obj) {
+			return obj.getValueDate();
+		}
+
+		@Override
+		public void setValue(CashBalance6 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setValueDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NbOfPmts")
@@ -424,7 +474,7 @@ public class CashBalance6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfPayments = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashBalance6, Optional<Number>> mmNumberOfPayments = new MMMessageAttribute<CashBalance6, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalance6.mmObject();
 			isDerived = false;
@@ -436,6 +486,16 @@ public class CashBalance6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(CashBalance6 obj) {
+			return obj.getNumberOfPayments();
+		}
+
+		@Override
+		public void setValue(CashBalance6 obj, Optional<Number> value) {
+			obj.setNumberOfPayments(value.orElse(null));
 		}
 	};
 

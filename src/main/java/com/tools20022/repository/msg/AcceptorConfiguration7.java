@@ -24,6 +24,8 @@ import com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV07;
 import com.tools20022.repository.entity.AcceptorConfiguration;
 import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification71;
+import com.tools20022.repository.msg.TerminalManagementDataSet23;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -71,7 +73,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "AcceptorConfiguration7"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -130,7 +132,7 @@ public class AcceptorConfiguration7 {
 	 * AcceptorConfiguration6.mmTerminalManagerIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTerminalManagerIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorConfiguration7, GenericIdentification71> mmTerminalManagerIdentification = new MMMessageAssociationEnd<AcceptorConfiguration7, GenericIdentification71>() {
 		{
 			businessElementTrace_lazy = () -> System.mmSystemIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorConfiguration7.mmObject();
@@ -143,11 +145,21 @@ public class AcceptorConfiguration7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification71.mmObject();
+			type_lazy = () -> GenericIdentification71.mmObject();
+		}
+
+		@Override
+		public GenericIdentification71 getValue(AcceptorConfiguration7 obj) {
+			return obj.getTerminalManagerIdentification();
+		}
+
+		@Override
+		public void setValue(AcceptorConfiguration7 obj, GenericIdentification71 value) {
+			obj.setTerminalManagerIdentification(value);
 		}
 	};
 	@XmlElement(name = "DataSet", required = true)
-	protected List<com.tools20022.repository.msg.TerminalManagementDataSet23> dataSet;
+	protected List<TerminalManagementDataSet23> dataSet;
 	/**
 	 * 
 	 <p>
@@ -182,7 +194,7 @@ public class AcceptorConfiguration7 {
 	 * AcceptorConfiguration6.mmDataSet}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSet = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorConfiguration7, List<TerminalManagementDataSet23>> mmDataSet = new MMMessageAssociationEnd<AcceptorConfiguration7, List<TerminalManagementDataSet23>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorConfiguration7.mmObject();
 			isDerived = false;
@@ -193,7 +205,17 @@ public class AcceptorConfiguration7 {
 			previousVersion_lazy = () -> AcceptorConfiguration6.mmDataSet;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet23.mmObject();
+			type_lazy = () -> TerminalManagementDataSet23.mmObject();
+		}
+
+		@Override
+		public List<TerminalManagementDataSet23> getValue(AcceptorConfiguration7 obj) {
+			return obj.getDataSet();
+		}
+
+		@Override
+		public void setValue(AcceptorConfiguration7 obj, List<TerminalManagementDataSet23> value) {
+			obj.setDataSet(value);
 		}
 	};
 
@@ -204,7 +226,7 @@ public class AcceptorConfiguration7 {
 				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorConfigurationUpdateV07.mmAcceptorConfiguration);
 				trace_lazy = () -> AcceptorConfiguration.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorConfiguration7";
 				definition = "Acceptor configuration to be downloaded from the terminal management system.";
 				previousVersion_lazy = () -> AcceptorConfiguration6.mmObject();
@@ -217,7 +239,7 @@ public class AcceptorConfiguration7 {
 		return terminalManagerIdentification;
 	}
 
-	public AcceptorConfiguration7 setTerminalManagerIdentification(com.tools20022.repository.msg.GenericIdentification71 terminalManagerIdentification) {
+	public AcceptorConfiguration7 setTerminalManagerIdentification(GenericIdentification71 terminalManagerIdentification) {
 		this.terminalManagerIdentification = Objects.requireNonNull(terminalManagerIdentification);
 		return this;
 	}
@@ -226,7 +248,7 @@ public class AcceptorConfiguration7 {
 		return dataSet == null ? dataSet = new ArrayList<>() : dataSet;
 	}
 
-	public AcceptorConfiguration7 setDataSet(List<com.tools20022.repository.msg.TerminalManagementDataSet23> dataSet) {
+	public AcceptorConfiguration7 setDataSet(List<TerminalManagementDataSet23> dataSet) {
 		this.dataSet = Objects.requireNonNull(dataSet);
 		return this;
 	}

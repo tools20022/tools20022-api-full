@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.entity.SecuritiesOrderParameters;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Price1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -122,7 +123,7 @@ public class OrderQuantity3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderQuantity3, Optional<FinancialInstrumentQuantityChoice>> mmMinimumQuantity = new MMMessageAttribute<OrderQuantity3, Optional<FinancialInstrumentQuantityChoice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderParameters.mmMinimumQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderQuantity3.mmObject();
@@ -135,6 +136,16 @@ public class OrderQuantity3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantityChoice> getValue(OrderQuantity3 obj) {
+			return obj.getMinimumQuantity();
+		}
+
+		@Override
+		public void setValue(OrderQuantity3 obj, Optional<FinancialInstrumentQuantityChoice> value) {
+			obj.setMinimumQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Pric")
@@ -171,7 +182,7 @@ public class OrderQuantity3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderQuantity3, Optional<Price1>> mmPrice = new MMMessageAttribute<OrderQuantity3, Optional<Price1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderQuantity3.mmObject();
@@ -182,7 +193,17 @@ public class OrderQuantity3 {
 			definition = "Indicates the requested price for the order. This can be a \"stop\" price a \"limit\" price or a \"deal\" price.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
+			complexType_lazy = () -> Price1.mmObject();
+		}
+
+		@Override
+		public Optional<Price1> getValue(OrderQuantity3 obj) {
+			return obj.getPrice();
+		}
+
+		@Override
+		public void setValue(OrderQuantity3 obj, Optional<Price1> value) {
+			obj.setPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MtchIncrmt")
@@ -224,7 +245,7 @@ public class OrderQuantity3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMatchIncrement = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderQuantity3, Optional<FinancialInstrumentQuantityChoice>> mmMatchIncrement = new MMMessageAttribute<OrderQuantity3, Optional<FinancialInstrumentQuantityChoice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderParameters.mmMatchIncrement;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderQuantity3.mmObject();
@@ -237,6 +258,16 @@ public class OrderQuantity3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantityChoice> getValue(OrderQuantity3 obj) {
+			return obj.getMatchIncrement();
+		}
+
+		@Override
+		public void setValue(OrderQuantity3 obj, Optional<FinancialInstrumentQuantityChoice> value) {
+			obj.setMatchIncrement(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MxPricLvls")
@@ -277,7 +308,7 @@ public class OrderQuantity3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaxPriceLevels = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderQuantity3, Optional<Number>> mmMaxPriceLevels = new MMMessageAttribute<OrderQuantity3, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderParameters.mmMaxPriceLevels;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderQuantity3.mmObject();
@@ -290,6 +321,16 @@ public class OrderQuantity3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(OrderQuantity3 obj) {
+			return obj.getMaxPriceLevels();
+		}
+
+		@Override
+		public void setValue(OrderQuantity3 obj, Optional<Number> value) {
+			obj.setMaxPriceLevels(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsClsgPric")
@@ -327,7 +368,7 @@ public class OrderQuantity3 {
 	 * definition} = "Previous closing price of security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreviousClosingPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderQuantity3, Optional<Price1>> mmPreviousClosingPrice = new MMMessageAttribute<OrderQuantity3, Optional<Price1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderParameters.mmPreviousClosingPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderQuantity3.mmObject();
@@ -339,7 +380,17 @@ public class OrderQuantity3 {
 			definition = "Previous closing price of security.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
+			complexType_lazy = () -> Price1.mmObject();
+		}
+
+		@Override
+		public Optional<Price1> getValue(OrderQuantity3 obj) {
+			return obj.getPreviousClosingPrice();
+		}
+
+		@Override
+		public void setValue(OrderQuantity3 obj, Optional<Price1> value) {
+			obj.setPreviousClosingPrice(value.orElse(null));
 		}
 	};
 
@@ -371,7 +422,7 @@ public class OrderQuantity3 {
 		return price == null ? Optional.empty() : Optional.of(price);
 	}
 
-	public OrderQuantity3 setPrice(com.tools20022.repository.msg.Price1 price) {
+	public OrderQuantity3 setPrice(Price1 price) {
 		this.price = price;
 		return this;
 	}
@@ -398,7 +449,7 @@ public class OrderQuantity3 {
 		return previousClosingPrice == null ? Optional.empty() : Optional.of(previousClosingPrice);
 	}
 
-	public OrderQuantity3 setPreviousClosingPrice(com.tools20022.repository.msg.Price1 previousClosingPrice) {
+	public OrderQuantity3 setPreviousClosingPrice(Price1 previousClosingPrice) {
 		this.previousClosingPrice = previousClosingPrice;
 		return this;
 	}

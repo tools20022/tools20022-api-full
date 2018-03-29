@@ -112,7 +112,7 @@ public class ReportType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportType1, ReportType1Code> mmType = new MMMessageAttribute<ReportType1, ReportType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportType1.mmObject();
 			isDerived = false;
@@ -123,6 +123,16 @@ public class ReportType1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ReportType1Code.mmObject();
+		}
+
+		@Override
+		public ReportType1Code getValue(ReportType1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(ReportType1 obj, ReportType1Code value) {
+			obj.setType(value);
 		}
 	};
 

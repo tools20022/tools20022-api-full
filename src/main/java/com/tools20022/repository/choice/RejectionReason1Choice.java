@@ -130,7 +130,7 @@ public class RejectionReason1Choice {
 	 * definition} = "Rejection reason that applies to the whole report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGlobalRejectionReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RejectionReason1Choice, Reason2> mmGlobalRejectionReason = new MMMessageAssociationEnd<RejectionReason1Choice, Reason2>() {
 		{
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectionReason1Choice.mmObject();
@@ -143,6 +143,16 @@ public class RejectionReason1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Reason2.mmObject();
+		}
+
+		@Override
+		public Reason2 getValue(RejectionReason1Choice obj) {
+			return obj.getGlobalRejectionReason();
+		}
+
+		@Override
+		public void setValue(RejectionReason1Choice obj, Reason2 value) {
+			obj.setGlobalRejectionReason(value);
 		}
 	};
 	@XmlElement(name = "RjctdElmt", required = true)
@@ -174,7 +184,7 @@ public class RejectionReason1Choice {
 	 * "Specifies a rejection reason for each individual element of a report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejectedElement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RejectionReason1Choice, List<RejectedElement1>> mmRejectedElement = new MMMessageAssociationEnd<RejectionReason1Choice, List<RejectedElement1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectionReason1Choice.mmObject();
 			isDerived = false;
@@ -185,6 +195,16 @@ public class RejectionReason1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RejectedElement1.mmObject();
+		}
+
+		@Override
+		public List<RejectedElement1> getValue(RejectionReason1Choice obj) {
+			return obj.getRejectedElement();
+		}
+
+		@Override
+		public void setValue(RejectionReason1Choice obj, List<RejectedElement1> value) {
+			obj.setRejectedElement(value);
 		}
 	};
 

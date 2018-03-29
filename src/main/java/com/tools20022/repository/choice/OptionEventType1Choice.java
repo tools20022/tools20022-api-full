@@ -99,7 +99,7 @@ public class OptionEventType1Choice {
 	 * definition} = "Specifies the type of event for an option using a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionEventType1Choice, OptionEventType1Code> mmCode = new MMMessageAttribute<OptionEventType1Choice, OptionEventType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.OptionEventType1Choice.mmObject();
 			isDerived = false;
@@ -110,6 +110,16 @@ public class OptionEventType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OptionEventType1Code.mmObject();
+		}
+
+		@Override
+		public OptionEventType1Code getValue(OptionEventType1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(OptionEventType1Choice obj, OptionEventType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -142,7 +152,7 @@ public class OptionEventType1Choice {
 	 * "Specifies the type of event for an option using a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OptionEventType1Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<OptionEventType1Choice, GenericIdentification30>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.OptionEventType1Choice.mmObject();
 			isDerived = false;
@@ -154,6 +164,16 @@ public class OptionEventType1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(OptionEventType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(OptionEventType1Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -50,11 +50,15 @@ public class ConstraintNumberOfLegsRule {
 	 */
 	public static final MMConstraint<IndicationOfInterest1> forIndicationOfInterest1 = new MMConstraint<IndicationOfInterest1>() {
 		{
-			validator = ConstraintNumberOfLegsRule::checkIndicationOfInterest1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfLegsRule";
 			definition = "If IOI Quantity or RelativeSize is present, NumberOfLegs must not be present.";
 			owner_lazy = () -> IndicationOfInterest1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IndicationOfInterest1 obj) throws Exception {
+			checkIndicationOfInterest1(obj);
 		}
 	};
 

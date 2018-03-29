@@ -118,7 +118,7 @@ public class ReversedStatus2Choice {
 	 * ReversedStatus1.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReversedStatus2Choice, Max350Text> mmReason = new MMMessageAttribute<ReversedStatus2Choice, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReversedStatus2Choice.mmObject();
 			isDerived = false;
@@ -130,6 +130,16 @@ public class ReversedStatus2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(ReversedStatus2Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(ReversedStatus2Choice obj, Max350Text value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "DataSrcSchme", required = true)
@@ -171,7 +181,7 @@ public class ReversedStatus2Choice {
 	 * ReversedStatus1.mmDataSourceScheme}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReversedStatus2Choice, GenericIdentification1> mmDataSourceScheme = new MMMessageAssociationEnd<ReversedStatus2Choice, GenericIdentification1>() {
 		{
 			businessComponentTrace_lazy = () -> GenericIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReversedStatus2Choice.mmObject();
@@ -185,6 +195,16 @@ public class ReversedStatus2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(ReversedStatus2Choice obj) {
+			return obj.getDataSourceScheme();
+		}
+
+		@Override
+		public void setValue(ReversedStatus2Choice obj, GenericIdentification1 value) {
+			obj.setDataSourceScheme(value);
 		}
 	};
 	@XmlElement(name = "NoSpcfdRsn", required = true)
@@ -227,7 +247,7 @@ public class ReversedStatus2Choice {
 	 * ReversedStatus1.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReversedStatus2Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<ReversedStatus2Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReversedStatus2Choice.mmObject();
@@ -240,6 +260,16 @@ public class ReversedStatus2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(ReversedStatus2Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(ReversedStatus2Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 

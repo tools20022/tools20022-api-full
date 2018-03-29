@@ -114,7 +114,7 @@ public class AccountStatusUpdateInstructionReason1Choice {
 	 * EnabledStatusReason1Choice.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountStatusUpdateInstructionReason1Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<AccountStatusUpdateInstructionReason1Choice, NoReasonCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountStatusUpdateInstructionReason1Choice.mmObject();
 			isDerived = false;
@@ -126,6 +126,16 @@ public class AccountStatusUpdateInstructionReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(AccountStatusUpdateInstructionReason1Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(AccountStatusUpdateInstructionReason1Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -162,7 +172,7 @@ public class AccountStatusUpdateInstructionReason1Choice {
 	 * EnabledStatusReason1Choice.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountStatusUpdateInstructionReason1Choice, List<AccountStatusUpdateInstructionReason1>> mmReason = new MMMessageAssociationEnd<AccountStatusUpdateInstructionReason1Choice, List<AccountStatusUpdateInstructionReason1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountStatusUpdateInstructionReason1Choice.mmObject();
 			isDerived = false;
@@ -174,6 +184,16 @@ public class AccountStatusUpdateInstructionReason1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AccountStatusUpdateInstructionReason1.mmObject();
+		}
+
+		@Override
+		public List<AccountStatusUpdateInstructionReason1> getValue(AccountStatusUpdateInstructionReason1Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(AccountStatusUpdateInstructionReason1Choice obj, List<AccountStatusUpdateInstructionReason1> value) {
+			obj.setReason(value);
 		}
 	};
 

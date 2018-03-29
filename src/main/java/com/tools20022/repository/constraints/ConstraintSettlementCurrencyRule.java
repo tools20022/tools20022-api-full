@@ -57,12 +57,16 @@ public class ConstraintSettlementCurrencyRule {
 	 */
 	public static final MMConstraint<RedemptionBulkExecution5> forRedemptionBulkExecution5 = new MMConstraint<RedemptionBulkExecution5>() {
 		{
-			validator = ConstraintSettlementCurrencyRule::checkRedemptionBulkExecution5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementCurrencyRule";
 			definition = "If BulkCashSettlementDetails is present, then Currency in IndividualExecutionDetails/SettlementAmount must be the same in all occurrences of IndividualExecutionDetails.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementCurrency1Rule.forRedemptionBulkExecution3;
 			owner_lazy = () -> RedemptionBulkExecution5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionBulkExecution5 obj) throws Exception {
+			checkRedemptionBulkExecution5(obj);
 		}
 	};
 	/**
@@ -93,12 +97,16 @@ public class ConstraintSettlementCurrencyRule {
 	 */
 	public static final MMConstraint<RedemptionMultipleExecution5> forRedemptionMultipleExecution5 = new MMConstraint<RedemptionMultipleExecution5>() {
 		{
-			validator = ConstraintSettlementCurrencyRule::checkRedemptionMultipleExecution5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementCurrencyRule";
 			definition = "If BulkCashSettlementDetails is present, then Currency in IndividualExecutionDetails/SettlementAmount must be the same in all occurrences of IndividualExecutionDetails.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementCurrency4Rule.forRedemptionMultipleExecution3;
 			owner_lazy = () -> RedemptionMultipleExecution5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionMultipleExecution5 obj) throws Exception {
+			checkRedemptionMultipleExecution5(obj);
 		}
 	};
 	/**
@@ -129,12 +137,16 @@ public class ConstraintSettlementCurrencyRule {
 	 */
 	public static final MMConstraint<RedemptionMultipleOrder6> forRedemptionMultipleOrder6 = new MMConstraint<RedemptionMultipleOrder6>() {
 		{
-			validator = ConstraintSettlementCurrencyRule::checkRedemptionMultipleOrder6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementCurrencyRule";
 			definition = "If BulkCashSettlementDetails is present, then Currency in IndividualOrderDetails/SettlementAmount, if present, must be the same in all occurrences of IndividualOrderDetails.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementCurrency5Rule.forRedemptionMultipleOrder4;
 			owner_lazy = () -> RedemptionMultipleOrder6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionMultipleOrder6 obj) throws Exception {
+			checkRedemptionMultipleOrder6(obj);
 		}
 	};
 	/**
@@ -165,12 +177,16 @@ public class ConstraintSettlementCurrencyRule {
 	 */
 	public static final MMConstraint<SubscriptionMultipleOrder6> forSubscriptionMultipleOrder6 = new MMConstraint<SubscriptionMultipleOrder6>() {
 		{
-			validator = ConstraintSettlementCurrencyRule::checkSubscriptionMultipleOrder6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementCurrencyRule";
 			definition = "If BulkCashSettlementDetails is present, then Currency in IndividualOrderDetails/SettlementAmount, if present, must be the same in all occurrences of IndividualOrderDetails.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementCurrency5Rule.forSubscriptionMultipleOrder4;
 			owner_lazy = () -> SubscriptionMultipleOrder6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionMultipleOrder6 obj) throws Exception {
+			checkSubscriptionMultipleOrder6(obj);
 		}
 	};
 	/**
@@ -201,12 +217,16 @@ public class ConstraintSettlementCurrencyRule {
 	 */
 	public static final MMConstraint<SubscriptionBulkExecution4> forSubscriptionBulkExecution4 = new MMConstraint<SubscriptionBulkExecution4>() {
 		{
-			validator = ConstraintSettlementCurrencyRule::checkSubscriptionBulkExecution4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementCurrencyRule";
 			definition = "If BulkCashSettlementDetails is present, then Currency in IndividualExecutionDetails/SettlementAmount must be the same in all occurrences of IndividualExecutionDetails.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementCurrency3Rule.forSubscriptionBulkExecution3;
 			owner_lazy = () -> SubscriptionBulkExecution4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionBulkExecution4 obj) throws Exception {
+			checkSubscriptionBulkExecution4(obj);
 		}
 	};
 	/**
@@ -237,12 +257,16 @@ public class ConstraintSettlementCurrencyRule {
 	 */
 	public static final MMConstraint<RedemptionBulkOrder6> forRedemptionBulkOrder6 = new MMConstraint<RedemptionBulkOrder6>() {
 		{
-			validator = ConstraintSettlementCurrencyRule::checkRedemptionBulkOrder6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementCurrencyRule";
 			definition = "If BulkCashSettlementDetails is present, then Currency in IndividualOrderDetails/SettlementAmount, if present, must be the same in all occurrences of IndividualOrderDetails.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementCurrency2Rule.forRedemptionBulkOrder4;
 			owner_lazy = () -> RedemptionBulkOrder6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionBulkOrder6 obj) throws Exception {
+			checkRedemptionBulkOrder6(obj);
 		}
 	};
 	/**
@@ -273,12 +297,16 @@ public class ConstraintSettlementCurrencyRule {
 	 */
 	public static final MMConstraint<SubscriptionMultipleExecution5> forSubscriptionMultipleExecution5 = new MMConstraint<SubscriptionMultipleExecution5>() {
 		{
-			validator = ConstraintSettlementCurrencyRule::checkSubscriptionMultipleExecution5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementCurrencyRule";
 			definition = "If BulkCashSettlementDetails is present, then Currency in IndividualExecutionDetails/SettlementAmount must be the same in all occurrences of IndividualExecutionDetails.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementCurrency4Rule.forSubscriptionMultipleExecution3;
 			owner_lazy = () -> SubscriptionMultipleExecution5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionMultipleExecution5 obj) throws Exception {
+			checkSubscriptionMultipleExecution5(obj);
 		}
 	};
 

@@ -52,11 +52,15 @@ public class ConstraintBalanceForSubAccountRule {
 	 */
 	public static final MMConstraint<SubAccountIdentification2> forSubAccountIdentification2 = new MMConstraint<SubAccountIdentification2>() {
 		{
-			validator = ConstraintBalanceForSubAccountRule::checkSubAccountIdentification2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForSubAccountRule";
 			definition = "If SubAccountIdentification2/ActivityIndicator is \"true\" or \"1\" (Yes), then SubAccountIdentification2/BalanceForSubAccount must be present.";
 			owner_lazy = () -> SubAccountIdentification2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubAccountIdentification2 obj) throws Exception {
+			checkSubAccountIdentification2(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintBalanceForSubAccountRule {
 	 */
 	public static final MMConstraint<SubAccountIdentification1> forSubAccountIdentification1 = new MMConstraint<SubAccountIdentification1>() {
 		{
-			validator = ConstraintBalanceForSubAccountRule::checkSubAccountIdentification1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForSubAccountRule";
 			definition = "If SubAccountIdentification/ActivityIndicator is \"true\" or \"1\" (Yes), then SubAccountIdentification/ BalanceForSubAccount must be present.";
 			owner_lazy = () -> SubAccountIdentification1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubAccountIdentification1 obj) throws Exception {
+			checkSubAccountIdentification1(obj);
 		}
 	};
 

@@ -109,7 +109,7 @@ public class DeadlineCode3Choice {
 	 * DeadlineCode1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DeadlineCode3Choice, CorporateActionDeadline1Code> mmCode = new MMMessageAttribute<DeadlineCode3Choice, CorporateActionDeadline1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DeadlineCode3Choice.mmObject();
 			isDerived = false;
@@ -121,6 +121,16 @@ public class DeadlineCode3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionDeadline1Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionDeadline1Code getValue(DeadlineCode3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(DeadlineCode3Choice obj, CorporateActionDeadline1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -159,7 +169,7 @@ public class DeadlineCode3Choice {
 	 * DeadlineCode1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DeadlineCode3Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<DeadlineCode3Choice, GenericIdentification30>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DeadlineCode3Choice.mmObject();
 			isDerived = false;
@@ -172,6 +182,16 @@ public class DeadlineCode3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(DeadlineCode3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(DeadlineCode3Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

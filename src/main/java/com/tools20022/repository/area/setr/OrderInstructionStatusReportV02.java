@@ -23,7 +23,6 @@ import com.tools20022.repository.msg.AdditionalReference3;
 import com.tools20022.repository.msg.IndividualOrderStatusAndReason1;
 import com.tools20022.repository.msg.OrderStatusAndReason3;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -274,7 +273,7 @@ public class OrderInstructionStatusReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOtherReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<OrderInstructionStatusReportV02, List<AdditionalReference3>> mmOtherReference = new MMMessageBuildingBlock<OrderInstructionStatusReportV02, List<AdditionalReference3>>() {
 		{
 			xmlTag = "OthrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -285,12 +284,14 @@ public class OrderInstructionStatusReportV02 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return OrderInstructionStatusReportV02.class.getMethod("getOtherReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<AdditionalReference3> getValue(OrderInstructionStatusReportV02 obj) {
+			return obj.getOtherReference();
+		}
+
+		@Override
+		public void setValue(OrderInstructionStatusReportV02 obj, List<AdditionalReference3> value) {
+			obj.setOtherReference(value);
 		}
 	};
 	@XmlElement(name = "RltdRef", required = true)
@@ -319,7 +320,7 @@ public class OrderInstructionStatusReportV02 {
 	 * "Reference to a linked message that was previously received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<OrderInstructionStatusReportV02, List<AdditionalReference3>> mmRelatedReference = new MMMessageBuildingBlock<OrderInstructionStatusReportV02, List<AdditionalReference3>>() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -330,12 +331,14 @@ public class OrderInstructionStatusReportV02 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return OrderInstructionStatusReportV02.class.getMethod("getRelatedReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<AdditionalReference3> getValue(OrderInstructionStatusReportV02 obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(OrderInstructionStatusReportV02 obj, List<AdditionalReference3> value) {
+			obj.setRelatedReference(value);
 		}
 	};
 	@XmlElement(name = "MstrRef")
@@ -365,7 +368,7 @@ public class OrderInstructionStatusReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMasterReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<OrderInstructionStatusReportV02, Optional<AdditionalReference3>> mmMasterReference = new MMMessageBuildingBlock<OrderInstructionStatusReportV02, Optional<AdditionalReference3>>() {
 		{
 			xmlTag = "MstrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -376,12 +379,14 @@ public class OrderInstructionStatusReportV02 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return OrderInstructionStatusReportV02.class.getMethod("getMasterReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference3> getValue(OrderInstructionStatusReportV02 obj) {
+			return obj.getMasterReference();
+		}
+
+		@Override
+		public void setValue(OrderInstructionStatusReportV02 obj, Optional<AdditionalReference3> value) {
+			obj.setMasterReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrdrDtlsRpt", required = true)
@@ -411,7 +416,7 @@ public class OrderInstructionStatusReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOrderDetailsReport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<OrderInstructionStatusReportV02, OrderStatusAndReason3> mmOrderDetailsReport = new MMMessageBuildingBlock<OrderInstructionStatusReportV02, OrderStatusAndReason3>() {
 		{
 			xmlTag = "OrdrDtlsRpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -422,12 +427,14 @@ public class OrderInstructionStatusReportV02 {
 			complexType_lazy = () -> OrderStatusAndReason3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return OrderInstructionStatusReportV02.class.getMethod("getOrderDetailsReport", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public OrderStatusAndReason3 getValue(OrderInstructionStatusReportV02 obj) {
+			return obj.getOrderDetailsReport();
+		}
+
+		@Override
+		public void setValue(OrderInstructionStatusReportV02 obj, OrderStatusAndReason3 value) {
+			obj.setOrderDetailsReport(value);
 		}
 	};
 	@XmlElement(name = "IndvOrdrDtlsRpt", required = true)
@@ -457,7 +464,7 @@ public class OrderInstructionStatusReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmIndividualOrderDetailsReport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<OrderInstructionStatusReportV02, List<IndividualOrderStatusAndReason1>> mmIndividualOrderDetailsReport = new MMMessageBuildingBlock<OrderInstructionStatusReportV02, List<IndividualOrderStatusAndReason1>>() {
 		{
 			xmlTag = "IndvOrdrDtlsRpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -467,12 +474,14 @@ public class OrderInstructionStatusReportV02 {
 			complexType_lazy = () -> IndividualOrderStatusAndReason1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return OrderInstructionStatusReportV02.class.getMethod("getIndividualOrderDetailsReport", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<IndividualOrderStatusAndReason1> getValue(OrderInstructionStatusReportV02 obj) {
+			return obj.getIndividualOrderDetailsReport();
+		}
+
+		@Override
+		public void setValue(OrderInstructionStatusReportV02 obj, List<IndividualOrderStatusAndReason1> value) {
+			obj.setIndividualOrderDetailsReport(value);
 		}
 	};
 

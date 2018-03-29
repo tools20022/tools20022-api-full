@@ -107,7 +107,7 @@ public class RateOrAbsoluteValue1Choice {
 	 * definition} = "A rate expressed as a percentage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRateValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateOrAbsoluteValue1Choice, PercentageRate> mmRateValue = new MMMessageAttribute<RateOrAbsoluteValue1Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateOrAbsoluteValue1Choice.mmObject();
@@ -119,6 +119,16 @@ public class RateOrAbsoluteValue1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(RateOrAbsoluteValue1Choice obj) {
+			return obj.getRateValue();
+		}
+
+		@Override
+		public void setValue(RateOrAbsoluteValue1Choice obj, PercentageRate value) {
+			obj.setRateValue(value);
 		}
 	};
 	@XmlElement(name = "AbsVal", required = true)
@@ -155,7 +165,7 @@ public class RateOrAbsoluteValue1Choice {
 	 * definition} = "Absolute value determined with a number."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAbsoluteValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateOrAbsoluteValue1Choice, Number> mmAbsoluteValue = new MMMessageAttribute<RateOrAbsoluteValue1Choice, Number>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmAbsoluteValue;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateOrAbsoluteValue1Choice.mmObject();
@@ -167,6 +177,16 @@ public class RateOrAbsoluteValue1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(RateOrAbsoluteValue1Choice obj) {
+			return obj.getAbsoluteValue();
+		}
+
+		@Override
+		public void setValue(RateOrAbsoluteValue1Choice obj, Number value) {
+			obj.setAbsoluteValue(value);
 		}
 	};
 

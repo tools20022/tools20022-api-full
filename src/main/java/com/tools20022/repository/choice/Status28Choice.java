@@ -115,7 +115,7 @@ public class Status28Choice {
 	 * Status5Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Status28Choice, TradeStatus7Code> mmCode = new MMMessageAttribute<Status28Choice, TradeStatus7Code>() {
 		{
 			businessElementTrace_lazy = () -> TreasuryTradeSettlementStatus.mmTradeStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status28Choice.mmObject();
@@ -128,6 +128,16 @@ public class Status28Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TradeStatus7Code.mmObject();
+		}
+
+		@Override
+		public TradeStatus7Code getValue(Status28Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(Status28Choice obj, TradeStatus7Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -169,7 +179,7 @@ public class Status28Choice {
 	 * Status5Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Status28Choice, Max35Text> mmProprietary = new MMMessageAttribute<Status28Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> TreasuryTradeSettlementStatus.mmTradeStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status28Choice.mmObject();
@@ -182,6 +192,16 @@ public class Status28Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Status28Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(Status28Choice obj, Max35Text value) {
+			obj.setProprietary(value);
 		}
 	};
 

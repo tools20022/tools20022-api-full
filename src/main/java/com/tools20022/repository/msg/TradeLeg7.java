@@ -30,6 +30,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.MarketIdentification20;
+import com.tools20022.repository.msg.MarketIdentification21;
+import com.tools20022.repository.msg.Price4;
+import com.tools20022.repository.msg.SecuritiesAccount19;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -166,7 +170,7 @@ public class TradeLeg7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeLegIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeLeg7, Max35Text> mmTradeLegIdentification = new MMMessageAttribute<TradeLeg7, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeLeg7.mmObject();
@@ -179,6 +183,16 @@ public class TradeLeg7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(TradeLeg7 obj) {
+			return obj.getTradeLegIdentification();
+		}
+
+		@Override
+		public void setValue(TradeLeg7 obj, Max35Text value) {
+			obj.setTradeLegIdentification(value);
 		}
 	};
 	@XmlElement(name = "TradId")
@@ -217,7 +231,7 @@ public class TradeLeg7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeLeg7, Optional<Max35Text>> mmTradeIdentification = new MMMessageAttribute<TradeLeg7, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeLeg7.mmObject();
 			isDerived = false;
@@ -229,6 +243,16 @@ public class TradeLeg7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TradeLeg7 obj) {
+			return obj.getTradeIdentification();
+		}
+
+		@Override
+		public void setValue(TradeLeg7 obj, Optional<Max35Text> value) {
+			obj.setTradeIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradExctnId", required = true)
@@ -269,7 +293,7 @@ public class TradeLeg7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeExecutionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeLeg7, Max35Text> mmTradeExecutionIdentification = new MMMessageAttribute<TradeLeg7, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeLeg7.mmObject();
 			isDerived = false;
@@ -281,6 +305,16 @@ public class TradeLeg7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(TradeLeg7 obj) {
+			return obj.getTradeExecutionIdentification();
+		}
+
+		@Override
+		public void setValue(TradeLeg7 obj, Max35Text value) {
+			obj.setTradeExecutionIdentification(value);
 		}
 	};
 	@XmlElement(name = "TradDt", required = true)
@@ -323,7 +357,7 @@ public class TradeLeg7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeLeg7, ISODate> mmTradeDate = new MMMessageAttribute<TradeLeg7, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeLeg7.mmObject();
@@ -336,6 +370,16 @@ public class TradeLeg7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(TradeLeg7 obj) {
+			return obj.getTradeDate();
+		}
+
+		@Override
+		public void setValue(TradeLeg7 obj, ISODate value) {
+			obj.setTradeDate(value);
 		}
 	};
 	@XmlElement(name = "SttlmDt", required = true)
@@ -380,7 +424,7 @@ public class TradeLeg7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeLeg7, DateFormat15Choice> mmSettlementDate = new MMMessageAttribute<TradeLeg7, DateFormat15Choice>() {
 		{
 			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeLeg7.mmObject();
@@ -393,6 +437,16 @@ public class TradeLeg7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateFormat15Choice.mmObject();
+		}
+
+		@Override
+		public DateFormat15Choice getValue(TradeLeg7 obj) {
+			return obj.getSettlementDate();
+		}
+
+		@Override
+		public void setValue(TradeLeg7 obj, DateFormat15Choice value) {
+			obj.setSettlementDate(value);
 		}
 	};
 	@XmlElement(name = "TradgCcy")
@@ -436,7 +490,7 @@ public class TradeLeg7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradingCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeLeg7, Optional<CurrencyCode>> mmTradingCurrency = new MMMessageAttribute<TradeLeg7, Optional<CurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> TradingMarket.mmTradingCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeLeg7.mmObject();
@@ -449,6 +503,16 @@ public class TradeLeg7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyCode> getValue(TradeLeg7 obj) {
+			return obj.getTradingCurrency();
+		}
+
+		@Override
+		public void setValue(TradeLeg7 obj, Optional<CurrencyCode> value) {
+			obj.setTradingCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BuySellInd", required = true)
@@ -494,7 +558,7 @@ public class TradeLeg7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBuySellIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeLeg7, Side1Code> mmBuySellIndicator = new MMMessageAttribute<TradeLeg7, Side1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmSide;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeLeg7.mmObject();
@@ -507,6 +571,16 @@ public class TradeLeg7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Side1Code.mmObject();
+		}
+
+		@Override
+		public Side1Code getValue(TradeLeg7 obj) {
+			return obj.getBuySellIndicator();
+		}
+
+		@Override
+		public void setValue(TradeLeg7 obj, Side1Code value) {
+			obj.setBuySellIndicator(value);
 		}
 	};
 	@XmlElement(name = "TradQty", required = true)
@@ -549,7 +623,7 @@ public class TradeLeg7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradeQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeLeg7, FinancialInstrumentQuantity1Choice> mmTradeQuantity = new MMMessageAssociationEnd<TradeLeg7, FinancialInstrumentQuantity1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTradeQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeLeg7.mmObject();
@@ -563,6 +637,16 @@ public class TradeLeg7 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity1Choice getValue(TradeLeg7 obj) {
+			return obj.getTradeQuantity();
+		}
+
+		@Override
+		public void setValue(TradeLeg7 obj, FinancialInstrumentQuantity1Choice value) {
+			obj.setTradeQuantity(value);
 		}
 	};
 	@XmlElement(name = "DealPric", required = true)
@@ -603,7 +687,7 @@ public class TradeLeg7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDealPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeLeg7, Price4> mmDealPrice = new MMMessageAssociationEnd<TradeLeg7, Price4>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmDealPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeLeg7.mmObject();
@@ -616,7 +700,17 @@ public class TradeLeg7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
+			type_lazy = () -> Price4.mmObject();
+		}
+
+		@Override
+		public Price4 getValue(TradeLeg7 obj) {
+			return obj.getDealPrice();
+		}
+
+		@Override
+		public void setValue(TradeLeg7 obj, Price4 value) {
+			obj.setDealPrice(value);
 		}
 	};
 	@XmlElement(name = "PlcOfTrad", required = true)
@@ -658,7 +752,7 @@ public class TradeLeg7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPlaceOfTrade = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeLeg7, MarketIdentification20> mmPlaceOfTrade = new MMMessageAssociationEnd<TradeLeg7, MarketIdentification20>() {
 		{
 			businessComponentTrace_lazy = () -> TradingMarket.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeLeg7.mmObject();
@@ -671,7 +765,17 @@ public class TradeLeg7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MarketIdentification20.mmObject();
+			type_lazy = () -> MarketIdentification20.mmObject();
+		}
+
+		@Override
+		public MarketIdentification20 getValue(TradeLeg7 obj) {
+			return obj.getPlaceOfTrade();
+		}
+
+		@Override
+		public void setValue(TradeLeg7 obj, MarketIdentification20 value) {
+			obj.setPlaceOfTrade(value);
 		}
 	};
 	@XmlElement(name = "PlcOfListg")
@@ -715,7 +819,7 @@ public class TradeLeg7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPlaceOfListing = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeLeg7, Optional<MarketIdentification21>> mmPlaceOfListing = new MMMessageAssociationEnd<TradeLeg7, Optional<MarketIdentification21>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmPlaceOfListing;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeLeg7.mmObject();
@@ -728,7 +832,17 @@ public class TradeLeg7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MarketIdentification21.mmObject();
+			type_lazy = () -> MarketIdentification21.mmObject();
+		}
+
+		@Override
+		public Optional<MarketIdentification21> getValue(TradeLeg7 obj) {
+			return obj.getPlaceOfListing();
+		}
+
+		@Override
+		public void setValue(TradeLeg7 obj, Optional<MarketIdentification21> value) {
+			obj.setPlaceOfListing(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradTp", required = true)
@@ -772,7 +886,7 @@ public class TradeLeg7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeLeg7, TradeType1Code> mmTradeType = new MMMessageAttribute<TradeLeg7, TradeType1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTransactionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeLeg7.mmObject();
@@ -785,6 +899,16 @@ public class TradeLeg7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TradeType1Code.mmObject();
+		}
+
+		@Override
+		public TradeType1Code getValue(TradeLeg7 obj) {
+			return obj.getTradeType();
+		}
+
+		@Override
+		public void setValue(TradeLeg7 obj, TradeType1Code value) {
+			obj.setTradeType(value);
 		}
 	};
 	@XmlElement(name = "DerivRltdTrad")
@@ -826,7 +950,7 @@ public class TradeLeg7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDerivativeRelatedTrade = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeLeg7, Optional<YesNoIndicator>> mmDerivativeRelatedTrade = new MMMessageAttribute<TradeLeg7, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeLeg7.mmObject();
 			isDerived = false;
@@ -838,6 +962,16 @@ public class TradeLeg7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(TradeLeg7 obj) {
+			return obj.getDerivativeRelatedTrade();
+		}
+
+		@Override
+		public void setValue(TradeLeg7 obj, Optional<YesNoIndicator> value) {
+			obj.setDerivativeRelatedTrade(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradgPty", required = true)
@@ -881,7 +1015,7 @@ public class TradeLeg7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradingParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeLeg7, PartyIdentification35Choice> mmTradingParty = new MMMessageAttribute<TradeLeg7, PartyIdentification35Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeLeg7.mmObject();
@@ -894,6 +1028,16 @@ public class TradeLeg7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification35Choice getValue(TradeLeg7 obj) {
+			return obj.getTradingParty();
+		}
+
+		@Override
+		public void setValue(TradeLeg7 obj, PartyIdentification35Choice value) {
+			obj.setTradingParty(value);
 		}
 	};
 	@XmlElement(name = "TradgPtyAcct")
@@ -938,7 +1082,7 @@ public class TradeLeg7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradingPartyAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeLeg7, Optional<SecuritiesAccount19>> mmTradingPartyAccount = new MMMessageAssociationEnd<TradeLeg7, Optional<SecuritiesAccount19>>() {
 		{
 			businessElementTrace_lazy = () -> TradePartyRole.mmAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeLeg7.mmObject();
@@ -951,7 +1095,17 @@ public class TradeLeg7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount19.mmObject();
+			type_lazy = () -> SecuritiesAccount19.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesAccount19> getValue(TradeLeg7 obj) {
+			return obj.getTradingPartyAccount();
+		}
+
+		@Override
+		public void setValue(TradeLeg7 obj, Optional<SecuritiesAccount19> value) {
+			obj.setTradingPartyAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradgCpcty", required = true)
@@ -997,7 +1151,7 @@ public class TradeLeg7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradingCapacity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeLeg7, TradingCapacity5Code> mmTradingCapacity = new MMMessageAttribute<TradeLeg7, TradingCapacity5Code>() {
 		{
 			businessElementTrace_lazy = () -> TradePartyRole.mmTradingPartyCapacity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeLeg7.mmObject();
@@ -1010,6 +1164,16 @@ public class TradeLeg7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TradingCapacity5Code.mmObject();
+		}
+
+		@Override
+		public TradingCapacity5Code getValue(TradeLeg7 obj) {
+			return obj.getTradingCapacity();
+		}
+
+		@Override
+		public void setValue(TradeLeg7 obj, TradingCapacity5Code value) {
+			obj.setTradingCapacity(value);
 		}
 	};
 	@XmlElement(name = "TradPstngCd")
@@ -1055,7 +1219,7 @@ public class TradeLeg7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradePostingCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeLeg7, Optional<TradePosting1Code>> mmTradePostingCode = new MMMessageAttribute<TradeLeg7, Optional<TradePosting1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Clearing.mmTradePostingType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeLeg7.mmObject();
@@ -1068,6 +1232,16 @@ public class TradeLeg7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TradePosting1Code.mmObject();
+		}
+
+		@Override
+		public Optional<TradePosting1Code> getValue(TradeLeg7 obj) {
+			return obj.getTradePostingCode();
+		}
+
+		@Override
+		public void setValue(TradeLeg7 obj, Optional<TradePosting1Code> value) {
+			obj.setTradePostingCode(value.orElse(null));
 		}
 	};
 
@@ -1174,7 +1348,7 @@ public class TradeLeg7 {
 		return dealPrice;
 	}
 
-	public TradeLeg7 setDealPrice(com.tools20022.repository.msg.Price4 dealPrice) {
+	public TradeLeg7 setDealPrice(Price4 dealPrice) {
 		this.dealPrice = Objects.requireNonNull(dealPrice);
 		return this;
 	}
@@ -1183,7 +1357,7 @@ public class TradeLeg7 {
 		return placeOfTrade;
 	}
 
-	public TradeLeg7 setPlaceOfTrade(com.tools20022.repository.msg.MarketIdentification20 placeOfTrade) {
+	public TradeLeg7 setPlaceOfTrade(MarketIdentification20 placeOfTrade) {
 		this.placeOfTrade = Objects.requireNonNull(placeOfTrade);
 		return this;
 	}
@@ -1192,7 +1366,7 @@ public class TradeLeg7 {
 		return placeOfListing == null ? Optional.empty() : Optional.of(placeOfListing);
 	}
 
-	public TradeLeg7 setPlaceOfListing(com.tools20022.repository.msg.MarketIdentification21 placeOfListing) {
+	public TradeLeg7 setPlaceOfListing(MarketIdentification21 placeOfListing) {
 		this.placeOfListing = placeOfListing;
 		return this;
 	}
@@ -1228,7 +1402,7 @@ public class TradeLeg7 {
 		return tradingPartyAccount == null ? Optional.empty() : Optional.of(tradingPartyAccount);
 	}
 
-	public TradeLeg7 setTradingPartyAccount(com.tools20022.repository.msg.SecuritiesAccount19 tradingPartyAccount) {
+	public TradeLeg7 setTradingPartyAccount(SecuritiesAccount19 tradingPartyAccount) {
 		this.tradingPartyAccount = tradingPartyAccount;
 		return this;
 	}

@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.TerminalManagementAction;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TMSActionIdentification3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -134,7 +135,7 @@ public class TMSEvent3 {
 	 * TMSEvent2.mmTimeStamp}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTimeStamp = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSEvent3, ISODateTime> mmTimeStamp = new MMMessageAttribute<TMSEvent3, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSEvent3.mmObject();
 			isDerived = false;
@@ -147,6 +148,16 @@ public class TMSEvent3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(TMSEvent3 obj) {
+			return obj.getTimeStamp();
+		}
+
+		@Override
+		public void setValue(TMSEvent3 obj, ISODateTime value) {
+			obj.setTimeStamp(value);
 		}
 	};
 	@XmlElement(name = "Rslt", required = true)
@@ -196,7 +207,7 @@ public class TMSEvent3 {
 	 * TMSEvent2.mmResult}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResult = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSEvent3, TerminalManagementActionResult1Code> mmResult = new MMMessageAttribute<TMSEvent3, TerminalManagementActionResult1Code>() {
 		{
 			businessElementTrace_lazy = () -> TerminalManagementAction.mmActionResult;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSEvent3.mmObject();
@@ -210,6 +221,16 @@ public class TMSEvent3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementActionResult1Code.mmObject();
+		}
+
+		@Override
+		public TerminalManagementActionResult1Code getValue(TMSEvent3 obj) {
+			return obj.getResult();
+		}
+
+		@Override
+		public void setValue(TMSEvent3 obj, TerminalManagementActionResult1Code value) {
+			obj.setResult(value);
 		}
 	};
 	@XmlElement(name = "ActnId", required = true)
@@ -255,7 +276,7 @@ public class TMSEvent3 {
 	 * TMSEvent2.mmActionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmActionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TMSEvent3, TMSActionIdentification3> mmActionIdentification = new MMMessageAssociationEnd<TMSEvent3, TMSActionIdentification3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSEvent3.mmObject();
 			isDerived = false;
@@ -268,7 +289,17 @@ public class TMSEvent3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TMSActionIdentification3.mmObject();
+			type_lazy = () -> TMSActionIdentification3.mmObject();
+		}
+
+		@Override
+		public TMSActionIdentification3 getValue(TMSEvent3 obj) {
+			return obj.getActionIdentification();
+		}
+
+		@Override
+		public void setValue(TMSEvent3 obj, TMSActionIdentification3 value) {
+			obj.setActionIdentification(value);
 		}
 	};
 	@XmlElement(name = "AddtlErrInf")
@@ -312,7 +343,7 @@ public class TMSEvent3 {
 	 * TMSEvent2.mmAdditionalErrorInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalErrorInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSEvent3, Optional<Max70Text>> mmAdditionalErrorInformation = new MMMessageAttribute<TMSEvent3, Optional<Max70Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSEvent3.mmObject();
 			isDerived = false;
@@ -325,6 +356,16 @@ public class TMSEvent3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(TMSEvent3 obj) {
+			return obj.getAdditionalErrorInformation();
+		}
+
+		@Override
+		public void setValue(TMSEvent3 obj, Optional<Max70Text> value) {
+			obj.setAdditionalErrorInformation(value.orElse(null));
 		}
 	};
 
@@ -367,7 +408,7 @@ public class TMSEvent3 {
 		return actionIdentification;
 	}
 
-	public TMSEvent3 setActionIdentification(com.tools20022.repository.msg.TMSActionIdentification3 actionIdentification) {
+	public TMSEvent3 setActionIdentification(TMSActionIdentification3 actionIdentification) {
 		this.actionIdentification = Objects.requireNonNull(actionIdentification);
 		return this;
 	}

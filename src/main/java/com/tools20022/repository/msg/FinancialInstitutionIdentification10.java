@@ -130,7 +130,7 @@ public class FinancialInstitutionIdentification10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstitutionIdentification10, FinancialInstitutionIdentification8Choice> mmParty = new MMMessageAssociationEnd<FinancialInstitutionIdentification10, FinancialInstitutionIdentification8Choice>() {
 		{
 			businessComponentTrace_lazy = () -> OrganisationIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification10.mmObject();
@@ -144,6 +144,16 @@ public class FinancialInstitutionIdentification10 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FinancialInstitutionIdentification8Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstitutionIdentification8Choice getValue(FinancialInstitutionIdentification10 obj) {
+			return obj.getParty();
+		}
+
+		@Override
+		public void setValue(FinancialInstitutionIdentification10 obj, FinancialInstitutionIdentification8Choice value) {
+			obj.setParty(value);
 		}
 	};
 	@XmlElement(name = "LEI")
@@ -191,7 +201,7 @@ public class FinancialInstitutionIdentification10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstitutionIdentification10, Optional<LEIIdentifier>> mmLEI = new MMMessageAttribute<FinancialInstitutionIdentification10, Optional<LEIIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification10.mmObject();
@@ -204,6 +214,16 @@ public class FinancialInstitutionIdentification10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<LEIIdentifier> getValue(FinancialInstitutionIdentification10 obj) {
+			return obj.getLEI();
+		}
+
+		@Override
+		public void setValue(FinancialInstitutionIdentification10 obj, Optional<LEIIdentifier> value) {
+			obj.setLEI(value.orElse(null));
 		}
 	};
 

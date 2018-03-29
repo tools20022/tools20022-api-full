@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.ContentInformationType10;
 import com.tools20022.repository.msg.ContentInformationType13;
 import com.tools20022.repository.msg.Header31;
 import com.tools20022.repository.msgset.ATMInterfaceforTransactionProcessingandATMManagementISOPreviousversion;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -131,7 +130,7 @@ public class ATMKeyDownloadRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ATMKeyDownloadRequestV02, Header31> mmHeader = new MMMessageBuildingBlock<ATMKeyDownloadRequestV02, Header31>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -142,12 +141,14 @@ public class ATMKeyDownloadRequestV02 {
 			complexType_lazy = () -> Header31.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ATMKeyDownloadRequestV02.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header31 getValue(ATMKeyDownloadRequestV02 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(ATMKeyDownloadRequestV02 obj, Header31 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "PrtctdATMKeyDwnldReq")
@@ -175,7 +176,7 @@ public class ATMKeyDownloadRequestV02 {
 	 * definition} = "Encrypted body of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmProtectedATMKeyDownloadRequest = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ATMKeyDownloadRequestV02, Optional<ContentInformationType10>> mmProtectedATMKeyDownloadRequest = new MMMessageBuildingBlock<ATMKeyDownloadRequestV02, Optional<ContentInformationType10>>() {
 		{
 			xmlTag = "PrtctdATMKeyDwnldReq";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -186,12 +187,14 @@ public class ATMKeyDownloadRequestV02 {
 			complexType_lazy = () -> ContentInformationType10.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ATMKeyDownloadRequestV02.class.getMethod("getProtectedATMKeyDownloadRequest", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ContentInformationType10> getValue(ATMKeyDownloadRequestV02 obj) {
+			return obj.getProtectedATMKeyDownloadRequest();
+		}
+
+		@Override
+		public void setValue(ATMKeyDownloadRequestV02 obj, Optional<ContentInformationType10> value) {
+			obj.setProtectedATMKeyDownloadRequest(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ATMKeyDwnldReq")
@@ -220,7 +223,7 @@ public class ATMKeyDownloadRequestV02 {
 	 * "Information related to the request of a key download from an ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmATMKeyDownloadRequest = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ATMKeyDownloadRequestV02, Optional<ATMKeyDownloadRequest2>> mmATMKeyDownloadRequest = new MMMessageBuildingBlock<ATMKeyDownloadRequestV02, Optional<ATMKeyDownloadRequest2>>() {
 		{
 			xmlTag = "ATMKeyDwnldReq";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -231,12 +234,14 @@ public class ATMKeyDownloadRequestV02 {
 			complexType_lazy = () -> ATMKeyDownloadRequest2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ATMKeyDownloadRequestV02.class.getMethod("getATMKeyDownloadRequest", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ATMKeyDownloadRequest2> getValue(ATMKeyDownloadRequestV02 obj) {
+			return obj.getATMKeyDownloadRequest();
+		}
+
+		@Override
+		public void setValue(ATMKeyDownloadRequestV02 obj, Optional<ATMKeyDownloadRequest2> value) {
+			obj.setATMKeyDownloadRequest(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctyTrlr")
@@ -265,7 +270,7 @@ public class ATMKeyDownloadRequestV02 {
 	 * "Trailer of the message containing a MAC or a digital signature."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ATMKeyDownloadRequestV02, Optional<ContentInformationType13>> mmSecurityTrailer = new MMMessageBuildingBlock<ATMKeyDownloadRequestV02, Optional<ContentInformationType13>>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -276,12 +281,14 @@ public class ATMKeyDownloadRequestV02 {
 			complexType_lazy = () -> ContentInformationType13.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ATMKeyDownloadRequestV02.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ContentInformationType13> getValue(ATMKeyDownloadRequestV02 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(ATMKeyDownloadRequestV02 obj, Optional<ContentInformationType13> value) {
+			obj.setSecurityTrailer(value.orElse(null));
 		}
 	};
 

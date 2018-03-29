@@ -106,7 +106,7 @@ public class SecuritiesTransactionPrice4 {
 	 * definition} = "Value of the price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTransactionPrice4, Optional<LongDecimalNumberFraction21>> mmValue = new MMMessageAttribute<SecuritiesTransactionPrice4, Optional<LongDecimalNumberFraction21>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTransactionPrice4.mmObject();
 			isDerived = false;
@@ -117,6 +117,16 @@ public class SecuritiesTransactionPrice4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LongDecimalNumberFraction21.mmObject();
+		}
+
+		@Override
+		public Optional<LongDecimalNumberFraction21> getValue(SecuritiesTransactionPrice4 obj) {
+			return obj.getValue();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionPrice4 obj, Optional<LongDecimalNumberFraction21> value) {
+			obj.setValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -148,7 +158,7 @@ public class SecuritiesTransactionPrice4 {
 	 * definition} = "Notation of the price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTransactionPrice4, Optional<Max35Text>> mmType = new MMMessageAttribute<SecuritiesTransactionPrice4, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTransactionPrice4.mmObject();
 			isDerived = false;
@@ -159,6 +169,16 @@ public class SecuritiesTransactionPrice4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SecuritiesTransactionPrice4 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionPrice4 obj, Optional<Max35Text> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 

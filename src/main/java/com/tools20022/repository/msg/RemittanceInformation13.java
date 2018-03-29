@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.PaymentInstruction;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.OriginalPaymentInformation7;
+import com.tools20022.repository.msg.StructuredRemittanceInformation13;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -138,7 +140,7 @@ public class RemittanceInformation13 {
 	 * RemittanceInformation12.mmRemittanceIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRemittanceIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RemittanceInformation13, Optional<Max35Text>> mmRemittanceIdentification = new MMMessageAttribute<RemittanceInformation13, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RemittanceInformation13.mmObject();
@@ -151,6 +153,16 @@ public class RemittanceInformation13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(RemittanceInformation13 obj) {
+			return obj.getRemittanceIdentification();
+		}
+
+		@Override
+		public void setValue(RemittanceInformation13 obj, Optional<Max35Text> value) {
+			obj.setRemittanceIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ustrd")
@@ -189,7 +201,7 @@ public class RemittanceInformation13 {
 	 * RemittanceInformation12.mmUnstructured}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnstructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RemittanceInformation13, List<Max140Text>> mmUnstructured = new MMMessageAttribute<RemittanceInformation13, List<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RemittanceInformation13.mmObject();
 			isDerived = false;
@@ -201,9 +213,19 @@ public class RemittanceInformation13 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
+
+		@Override
+		public List<Max140Text> getValue(RemittanceInformation13 obj) {
+			return obj.getUnstructured();
+		}
+
+		@Override
+		public void setValue(RemittanceInformation13 obj, List<Max140Text> value) {
+			obj.setUnstructured(value);
+		}
 	};
 	@XmlElement(name = "Strd")
-	protected List<com.tools20022.repository.msg.StructuredRemittanceInformation13> structured;
+	protected List<StructuredRemittanceInformation13> structured;
 	/**
 	 * 
 	 <p>
@@ -242,7 +264,7 @@ public class RemittanceInformation13 {
 	 * RemittanceInformation12.mmStructured}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStructured = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RemittanceInformation13, List<StructuredRemittanceInformation13>> mmStructured = new MMMessageAssociationEnd<RemittanceInformation13, List<StructuredRemittanceInformation13>>() {
 		{
 			businessComponentTrace_lazy = () -> Document.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.RemittanceInformation13.mmObject();
@@ -254,7 +276,17 @@ public class RemittanceInformation13 {
 			previousVersion_lazy = () -> RemittanceInformation12.mmStructured;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.StructuredRemittanceInformation13.mmObject();
+			type_lazy = () -> StructuredRemittanceInformation13.mmObject();
+		}
+
+		@Override
+		public List<StructuredRemittanceInformation13> getValue(RemittanceInformation13 obj) {
+			return obj.getStructured();
+		}
+
+		@Override
+		public void setValue(RemittanceInformation13 obj, List<StructuredRemittanceInformation13> value) {
+			obj.setStructured(value);
 		}
 	};
 	@XmlElement(name = "OrgnlPmtInf", required = true)
@@ -298,7 +330,7 @@ public class RemittanceInformation13 {
 	 * RemittanceInformation12.mmOriginalPaymentInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalPaymentInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RemittanceInformation13, OriginalPaymentInformation7> mmOriginalPaymentInformation = new MMMessageAssociationEnd<RemittanceInformation13, OriginalPaymentInformation7>() {
 		{
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.RemittanceInformation13.mmObject();
@@ -311,7 +343,17 @@ public class RemittanceInformation13 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInformation7.mmObject();
+			type_lazy = () -> OriginalPaymentInformation7.mmObject();
+		}
+
+		@Override
+		public OriginalPaymentInformation7 getValue(RemittanceInformation13 obj) {
+			return obj.getOriginalPaymentInformation();
+		}
+
+		@Override
+		public void setValue(RemittanceInformation13 obj, OriginalPaymentInformation7 value) {
+			obj.setOriginalPaymentInformation(value);
 		}
 	};
 
@@ -354,7 +396,7 @@ public class RemittanceInformation13 {
 		return structured == null ? structured = new ArrayList<>() : structured;
 	}
 
-	public RemittanceInformation13 setStructured(List<com.tools20022.repository.msg.StructuredRemittanceInformation13> structured) {
+	public RemittanceInformation13 setStructured(List<StructuredRemittanceInformation13> structured) {
 		this.structured = Objects.requireNonNull(structured);
 		return this;
 	}
@@ -363,7 +405,7 @@ public class RemittanceInformation13 {
 		return originalPaymentInformation;
 	}
 
-	public RemittanceInformation13 setOriginalPaymentInformation(com.tools20022.repository.msg.OriginalPaymentInformation7 originalPaymentInformation) {
+	public RemittanceInformation13 setOriginalPaymentInformation(OriginalPaymentInformation7 originalPaymentInformation) {
 		this.originalPaymentInformation = Objects.requireNonNull(originalPaymentInformation);
 		return this;
 	}

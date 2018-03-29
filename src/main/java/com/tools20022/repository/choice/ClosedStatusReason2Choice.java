@@ -125,7 +125,7 @@ public class ClosedStatusReason2Choice {
 	 * ProformaStatusReason2Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClosedStatusReason2Choice, ClosedStatusReason1Code> mmCode = new MMMessageAttribute<ClosedStatusReason2Choice, ClosedStatusReason1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClosedStatusReason2Choice.mmObject();
 			isDerived = false;
@@ -138,6 +138,16 @@ public class ClosedStatusReason2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ClosedStatusReason1Code.mmObject();
+		}
+
+		@Override
+		public ClosedStatusReason1Code getValue(ClosedStatusReason2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ClosedStatusReason2Choice obj, ClosedStatusReason1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -183,7 +193,7 @@ public class ClosedStatusReason2Choice {
 	 * ProformaStatusReason2Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ClosedStatusReason2Choice, GenericIdentification36> mmProprietary = new MMMessageAssociationEnd<ClosedStatusReason2Choice, GenericIdentification36>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClosedStatusReason2Choice.mmObject();
 			isDerived = false;
@@ -197,6 +207,16 @@ public class ClosedStatusReason2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification36.mmObject();
+		}
+
+		@Override
+		public GenericIdentification36 getValue(ClosedStatusReason2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ClosedStatusReason2Choice obj, GenericIdentification36 value) {
+			obj.setProprietary(value);
 		}
 	};
 

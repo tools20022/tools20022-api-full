@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.CreditInstrument;
 import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstitutionIdentification10;
+import com.tools20022.repository.msg.PartyIdentification113;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -123,7 +125,7 @@ public class Cheque9 {
 	 * Cheque3.mmNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Cheque9, Optional<Max35Text>> mmNumber = new MMMessageAttribute<Cheque9, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> CreditInstrument.mmCreditInstrumentIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Cheque9.mmObject();
@@ -136,6 +138,16 @@ public class Cheque9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Cheque9 obj) {
+			return obj.getNumber();
+		}
+
+		@Override
+		public void setValue(Cheque9 obj, Optional<Max35Text> value) {
+			obj.setNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PyeeId", required = true)
@@ -177,7 +189,7 @@ public class Cheque9 {
 	 * Cheque3.mmPayeeIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPayeeIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Cheque9, PartyIdentification113> mmPayeeIdentification = new MMMessageAttribute<Cheque9, PartyIdentification113>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Cheque9.mmObject();
@@ -189,7 +201,17 @@ public class Cheque9 {
 			previousVersion_lazy = () -> Cheque3.mmPayeeIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification113.mmObject();
+			complexType_lazy = () -> PartyIdentification113.mmObject();
+		}
+
+		@Override
+		public PartyIdentification113 getValue(Cheque9 obj) {
+			return obj.getPayeeIdentification();
+		}
+
+		@Override
+		public void setValue(Cheque9 obj, PartyIdentification113 value) {
+			obj.setPayeeIdentification(value);
 		}
 	};
 	@XmlElement(name = "DrweeId")
@@ -233,7 +255,7 @@ public class Cheque9 {
 	 * Cheque3.mmDraweeIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDraweeIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Cheque9, Optional<FinancialInstitutionIdentification10>> mmDraweeIdentification = new MMMessageAttribute<Cheque9, Optional<FinancialInstitutionIdentification10>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Cheque9.mmObject();
@@ -245,7 +267,17 @@ public class Cheque9 {
 			previousVersion_lazy = () -> Cheque3.mmDraweeIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification10.mmObject();
+			complexType_lazy = () -> FinancialInstitutionIdentification10.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstitutionIdentification10> getValue(Cheque9 obj) {
+			return obj.getDraweeIdentification();
+		}
+
+		@Override
+		public void setValue(Cheque9 obj, Optional<FinancialInstitutionIdentification10> value) {
+			obj.setDraweeIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DrwrId")
@@ -289,7 +321,7 @@ public class Cheque9 {
 	 * Cheque3.mmDrawerIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDrawerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Cheque9, Optional<PartyIdentification113>> mmDrawerIdentification = new MMMessageAttribute<Cheque9, Optional<PartyIdentification113>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Cheque9.mmObject();
@@ -301,7 +333,17 @@ public class Cheque9 {
 			previousVersion_lazy = () -> Cheque3.mmDrawerIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification113.mmObject();
+			complexType_lazy = () -> PartyIdentification113.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification113> getValue(Cheque9 obj) {
+			return obj.getDrawerIdentification();
+		}
+
+		@Override
+		public void setValue(Cheque9 obj, Optional<PartyIdentification113> value) {
+			obj.setDrawerIdentification(value.orElse(null));
 		}
 	};
 
@@ -334,7 +376,7 @@ public class Cheque9 {
 		return payeeIdentification;
 	}
 
-	public Cheque9 setPayeeIdentification(com.tools20022.repository.msg.PartyIdentification113 payeeIdentification) {
+	public Cheque9 setPayeeIdentification(PartyIdentification113 payeeIdentification) {
 		this.payeeIdentification = Objects.requireNonNull(payeeIdentification);
 		return this;
 	}
@@ -343,7 +385,7 @@ public class Cheque9 {
 		return draweeIdentification == null ? Optional.empty() : Optional.of(draweeIdentification);
 	}
 
-	public Cheque9 setDraweeIdentification(com.tools20022.repository.msg.FinancialInstitutionIdentification10 draweeIdentification) {
+	public Cheque9 setDraweeIdentification(FinancialInstitutionIdentification10 draweeIdentification) {
 		this.draweeIdentification = draweeIdentification;
 		return this;
 	}
@@ -352,7 +394,7 @@ public class Cheque9 {
 		return drawerIdentification == null ? Optional.empty() : Optional.of(drawerIdentification);
 	}
 
-	public Cheque9 setDrawerIdentification(com.tools20022.repository.msg.PartyIdentification113 drawerIdentification) {
+	public Cheque9 setDrawerIdentification(PartyIdentification113 drawerIdentification) {
 		this.drawerIdentification = drawerIdentification;
 		return this;
 	}

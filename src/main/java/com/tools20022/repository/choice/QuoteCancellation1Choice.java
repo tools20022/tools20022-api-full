@@ -129,7 +129,7 @@ public class QuoteCancellation1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<QuoteCancellation1Choice, List<SecurityIdentification7>> mmFinancialInstrumentDetails = new MMMessageAssociationEnd<QuoteCancellation1Choice, List<SecurityIdentification7>>() {
 		{
 			businessComponentTrace_lazy = () -> Security.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.QuoteCancellation1Choice.mmObject();
@@ -141,6 +141,16 @@ public class QuoteCancellation1Choice {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SecurityIdentification7.mmObject();
+		}
+
+		@Override
+		public List<SecurityIdentification7> getValue(QuoteCancellation1Choice obj) {
+			return obj.getFinancialInstrumentDetails();
+		}
+
+		@Override
+		public void setValue(QuoteCancellation1Choice obj, List<SecurityIdentification7> value) {
+			obj.setFinancialInstrumentDetails(value);
 		}
 	};
 	@XmlElement(name = "FinInstrmAttrbts")
@@ -178,7 +188,7 @@ public class QuoteCancellation1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<QuoteCancellation1Choice, List<FinancialInstrumentAttributes1>> mmFinancialInstrumentAttributes = new MMMessageAssociationEnd<QuoteCancellation1Choice, List<FinancialInstrumentAttributes1>>() {
 		{
 			businessComponentTrace_lazy = () -> Security.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.QuoteCancellation1Choice.mmObject();
@@ -190,6 +200,16 @@ public class QuoteCancellation1Choice {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentAttributes1.mmObject();
+		}
+
+		@Override
+		public List<FinancialInstrumentAttributes1> getValue(QuoteCancellation1Choice obj) {
+			return obj.getFinancialInstrumentAttributes();
+		}
+
+		@Override
+		public void setValue(QuoteCancellation1Choice obj, List<FinancialInstrumentAttributes1> value) {
+			obj.setFinancialInstrumentAttributes(value);
 		}
 	};
 	@XmlElement(name = "Stiptns")
@@ -227,7 +247,7 @@ public class QuoteCancellation1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStipulations = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<QuoteCancellation1Choice, List<FinancialInstrumentStipulations>> mmStipulations = new MMMessageAssociationEnd<QuoteCancellation1Choice, List<FinancialInstrumentStipulations>>() {
 		{
 			businessComponentTrace_lazy = () -> Debt.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.QuoteCancellation1Choice.mmObject();
@@ -239,6 +259,16 @@ public class QuoteCancellation1Choice {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentStipulations.mmObject();
+		}
+
+		@Override
+		public List<FinancialInstrumentStipulations> getValue(QuoteCancellation1Choice obj) {
+			return obj.getStipulations();
+		}
+
+		@Override
+		public void setValue(QuoteCancellation1Choice obj, List<FinancialInstrumentStipulations> value) {
+			obj.setStipulations(value);
 		}
 	};
 	@XmlElement(name = "UndrlygFinInstrmDtls")
@@ -276,7 +306,7 @@ public class QuoteCancellation1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnderlyingFinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<QuoteCancellation1Choice, List<SecurityIdentification7>> mmUnderlyingFinancialInstrumentDetails = new MMMessageAssociationEnd<QuoteCancellation1Choice, List<SecurityIdentification7>>() {
 		{
 			businessComponentTrace_lazy = () -> Security.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.QuoteCancellation1Choice.mmObject();
@@ -288,6 +318,16 @@ public class QuoteCancellation1Choice {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SecurityIdentification7.mmObject();
+		}
+
+		@Override
+		public List<SecurityIdentification7> getValue(QuoteCancellation1Choice obj) {
+			return obj.getUnderlyingFinancialInstrumentDetails();
+		}
+
+		@Override
+		public void setValue(QuoteCancellation1Choice obj, List<SecurityIdentification7> value) {
+			obj.setUnderlyingFinancialInstrumentDetails(value);
 		}
 	};
 	@XmlElement(name = "UndrlygFinInstrmAttrbts")
@@ -325,7 +365,7 @@ public class QuoteCancellation1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnderlyingFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<QuoteCancellation1Choice, List<FinancialInstrumentAttributes1>> mmUnderlyingFinancialInstrumentAttributes = new MMMessageAssociationEnd<QuoteCancellation1Choice, List<FinancialInstrumentAttributes1>>() {
 		{
 			businessComponentTrace_lazy = () -> Security.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.QuoteCancellation1Choice.mmObject();
@@ -337,6 +377,16 @@ public class QuoteCancellation1Choice {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentAttributes1.mmObject();
+		}
+
+		@Override
+		public List<FinancialInstrumentAttributes1> getValue(QuoteCancellation1Choice obj) {
+			return obj.getUnderlyingFinancialInstrumentAttributes();
+		}
+
+		@Override
+		public void setValue(QuoteCancellation1Choice obj, List<FinancialInstrumentAttributes1> value) {
+			obj.setUnderlyingFinancialInstrumentAttributes(value);
 		}
 	};
 	@XmlElement(name = "UndrlygStiptns")
@@ -374,7 +424,7 @@ public class QuoteCancellation1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnderlyingStipulations = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<QuoteCancellation1Choice, List<FinancialInstrumentStipulations>> mmUnderlyingStipulations = new MMMessageAssociationEnd<QuoteCancellation1Choice, List<FinancialInstrumentStipulations>>() {
 		{
 			businessComponentTrace_lazy = () -> Debt.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.QuoteCancellation1Choice.mmObject();
@@ -386,6 +436,16 @@ public class QuoteCancellation1Choice {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentStipulations.mmObject();
+		}
+
+		@Override
+		public List<FinancialInstrumentStipulations> getValue(QuoteCancellation1Choice obj) {
+			return obj.getUnderlyingStipulations();
+		}
+
+		@Override
+		public void setValue(QuoteCancellation1Choice obj, List<FinancialInstrumentStipulations> value) {
+			obj.setUnderlyingStipulations(value);
 		}
 	};
 	@XmlElement(name = "InstrmLegGrpDtls")
@@ -422,7 +482,7 @@ public class QuoteCancellation1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstrumentLegGroupDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<QuoteCancellation1Choice, List<InstrumentLeg2>> mmInstrumentLegGroupDetails = new MMMessageAssociationEnd<QuoteCancellation1Choice, List<InstrumentLeg2>>() {
 		{
 			businessComponentTrace_lazy = () -> Leg.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.QuoteCancellation1Choice.mmObject();
@@ -434,6 +494,16 @@ public class QuoteCancellation1Choice {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> InstrumentLeg2.mmObject();
+		}
+
+		@Override
+		public List<InstrumentLeg2> getValue(QuoteCancellation1Choice obj) {
+			return obj.getInstrumentLegGroupDetails();
+		}
+
+		@Override
+		public void setValue(QuoteCancellation1Choice obj, List<InstrumentLeg2> value) {
+			obj.setInstrumentLegGroupDetails(value);
 		}
 	};
 

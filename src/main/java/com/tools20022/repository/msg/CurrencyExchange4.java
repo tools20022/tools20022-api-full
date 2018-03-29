@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.BaseOneRate;
 import com.tools20022.repository.entity.CurrencyExchange;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CurrencyReferenceDetails;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -113,7 +114,7 @@ public class CurrencyExchange4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyExchange4, BaseOneRate> mmExchangeRate = new MMMessageAttribute<CurrencyExchange4, BaseOneRate>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmExchangeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyExchange4.mmObject();
@@ -125,6 +126,16 @@ public class CurrencyExchange4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		@Override
+		public BaseOneRate getValue(CurrencyExchange4 obj) {
+			return obj.getExchangeRate();
+		}
+
+		@Override
+		public void setValue(CurrencyExchange4 obj, BaseOneRate value) {
+			obj.setExchangeRate(value);
 		}
 	};
 	@XmlElement(name = "RsltgAmt", required = true)
@@ -163,7 +174,7 @@ public class CurrencyExchange4 {
 	 * "Amount of money resulting from a foreign exchange conversion."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResultingAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyExchange4, ActiveCurrencyAndAmount> mmResultingAmount = new MMMessageAttribute<CurrencyExchange4, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmResultingAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyExchange4.mmObject();
@@ -175,6 +186,16 @@ public class CurrencyExchange4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(CurrencyExchange4 obj) {
+			return obj.getResultingAmount();
+		}
+
+		@Override
+		public void setValue(CurrencyExchange4 obj, ActiveCurrencyAndAmount value) {
+			obj.setResultingAmount(value);
 		}
 	};
 	@XmlElement(name = "SrcAndTrgtCcy", required = true)
@@ -212,7 +233,7 @@ public class CurrencyExchange4 {
 	 * "Information needed to process a currency exchange or conversion."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSourceAndTargetCurrency = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CurrencyExchange4, CurrencyReferenceDetails> mmSourceAndTargetCurrency = new MMMessageAssociationEnd<CurrencyExchange4, CurrencyReferenceDetails>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmSourceCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyExchange4.mmObject();
@@ -224,7 +245,17 @@ public class CurrencyExchange4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CurrencyReferenceDetails.mmObject();
+			type_lazy = () -> CurrencyReferenceDetails.mmObject();
+		}
+
+		@Override
+		public CurrencyReferenceDetails getValue(CurrencyExchange4 obj) {
+			return obj.getSourceAndTargetCurrency();
+		}
+
+		@Override
+		public void setValue(CurrencyExchange4 obj, CurrencyReferenceDetails value) {
+			obj.setSourceAndTargetCurrency(value);
 		}
 	};
 
@@ -265,7 +296,7 @@ public class CurrencyExchange4 {
 		return sourceAndTargetCurrency;
 	}
 
-	public CurrencyExchange4 setSourceAndTargetCurrency(com.tools20022.repository.msg.CurrencyReferenceDetails sourceAndTargetCurrency) {
+	public CurrencyExchange4 setSourceAndTargetCurrency(CurrencyReferenceDetails sourceAndTargetCurrency) {
 		this.sourceAndTargetCurrency = Objects.requireNonNull(sourceAndTargetCurrency);
 		return this;
 	}

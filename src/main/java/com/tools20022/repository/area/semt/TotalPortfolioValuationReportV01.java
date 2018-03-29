@@ -25,7 +25,6 @@ import com.tools20022.repository.area.SecuritiesManagementLatestVersion;
 import com.tools20022.repository.choice.PortfolioBalance1;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.TotalPortfolioValuationReportISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -138,7 +137,7 @@ public class TotalPortfolioValuationReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TotalPortfolioValuationReportV01, Pagination> mmPagination = new MMMessageBuildingBlock<TotalPortfolioValuationReportV01, Pagination>() {
 		{
 			xmlTag = "Pgntn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -149,12 +148,14 @@ public class TotalPortfolioValuationReportV01 {
 			complexType_lazy = () -> Pagination.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TotalPortfolioValuationReportV01.class.getMethod("getPagination", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Pagination getValue(TotalPortfolioValuationReportV01 obj) {
+			return obj.getPagination();
+		}
+
+		@Override
+		public void setValue(TotalPortfolioValuationReportV01 obj, Pagination value) {
+			obj.setPagination(value);
 		}
 	};
 	@XmlElement(name = "RptGnlDtls", required = true)
@@ -182,7 +183,7 @@ public class TotalPortfolioValuationReportV01 {
 	 * "General information related to the total portfolio valuation report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportGeneralDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TotalPortfolioValuationReportV01, Report4> mmReportGeneralDetails = new MMMessageBuildingBlock<TotalPortfolioValuationReportV01, Report4>() {
 		{
 			xmlTag = "RptGnlDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -193,12 +194,14 @@ public class TotalPortfolioValuationReportV01 {
 			complexType_lazy = () -> Report4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TotalPortfolioValuationReportV01.class.getMethod("getReportGeneralDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Report4 getValue(TotalPortfolioValuationReportV01 obj) {
+			return obj.getReportGeneralDetails();
+		}
+
+		@Override
+		public void setValue(TotalPortfolioValuationReportV01 obj, Report4 value) {
+			obj.setReportGeneralDetails(value);
 		}
 	};
 	@XmlElement(name = "AcctDtls", required = true)
@@ -228,7 +231,7 @@ public class TotalPortfolioValuationReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAccountDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TotalPortfolioValuationReportV01, SecuritiesAccount21> mmAccountDetails = new MMMessageBuildingBlock<TotalPortfolioValuationReportV01, SecuritiesAccount21>() {
 		{
 			xmlTag = "AcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -239,12 +242,14 @@ public class TotalPortfolioValuationReportV01 {
 			complexType_lazy = () -> SecuritiesAccount21.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TotalPortfolioValuationReportV01.class.getMethod("getAccountDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SecuritiesAccount21 getValue(TotalPortfolioValuationReportV01 obj) {
+			return obj.getAccountDetails();
+		}
+
+		@Override
+		public void setValue(TotalPortfolioValuationReportV01 obj, SecuritiesAccount21 value) {
+			obj.setAccountDetails(value);
 		}
 	};
 	@XmlElement(name = "TtlPrtflValtn", required = true)
@@ -274,7 +279,7 @@ public class TotalPortfolioValuationReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTotalPortfolioValuation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TotalPortfolioValuationReportV01, TotalPortfolioValuation1> mmTotalPortfolioValuation = new MMMessageBuildingBlock<TotalPortfolioValuationReportV01, TotalPortfolioValuation1>() {
 		{
 			xmlTag = "TtlPrtflValtn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -285,12 +290,14 @@ public class TotalPortfolioValuationReportV01 {
 			complexType_lazy = () -> TotalPortfolioValuation1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TotalPortfolioValuationReportV01.class.getMethod("getTotalPortfolioValuation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TotalPortfolioValuation1 getValue(TotalPortfolioValuationReportV01 obj) {
+			return obj.getTotalPortfolioValuation();
+		}
+
+		@Override
+		public void setValue(TotalPortfolioValuationReportV01 obj, TotalPortfolioValuation1 value) {
+			obj.setTotalPortfolioValuation(value);
 		}
 	};
 	@XmlElement(name = "Bal")
@@ -318,7 +325,7 @@ public class TotalPortfolioValuationReportV01 {
 	 * definition} = "Balance breakdown information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmBalance = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TotalPortfolioValuationReportV01, Optional<PortfolioBalance1>> mmBalance = new MMMessageBuildingBlock<TotalPortfolioValuationReportV01, Optional<PortfolioBalance1>>() {
 		{
 			xmlTag = "Bal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -329,12 +336,14 @@ public class TotalPortfolioValuationReportV01 {
 			complexType_lazy = () -> PortfolioBalance1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TotalPortfolioValuationReportV01.class.getMethod("getBalance", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PortfolioBalance1> getValue(TotalPortfolioValuationReportV01 obj) {
+			return obj.getBalance();
+		}
+
+		@Override
+		public void setValue(TotalPortfolioValuationReportV01 obj, Optional<PortfolioBalance1> value) {
+			obj.setBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -364,7 +373,7 @@ public class TotalPortfolioValuationReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TotalPortfolioValuationReportV01, Optional<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<TotalPortfolioValuationReportV01, Optional<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -375,12 +384,14 @@ public class TotalPortfolioValuationReportV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TotalPortfolioValuationReportV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<SupplementaryData1> getValue(TotalPortfolioValuationReportV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(TotalPortfolioValuationReportV01 obj, Optional<SupplementaryData1> value) {
+			obj.setSupplementaryData(value.orElse(null));
 		}
 	};
 

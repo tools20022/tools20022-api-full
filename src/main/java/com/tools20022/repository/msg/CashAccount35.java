@@ -26,6 +26,7 @@ import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -139,7 +140,7 @@ public class CashAccount35 {
 	 * CashAccount23.mmName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount35, Optional<Max70Text>> mmName = new MMMessageAttribute<CashAccount35, Optional<Max70Text>>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount35.mmObject();
@@ -152,6 +153,16 @@ public class CashAccount35 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(CashAccount35 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(CashAccount35 obj, Optional<Max70Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -193,7 +204,7 @@ public class CashAccount35 {
 	 * CashAccount23.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount35, Optional<CashAccountType2Choice>> mmType = new MMMessageAttribute<CashAccount35, Optional<CashAccountType2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CashAccount.mmCashAccountType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount35.mmObject();
@@ -206,6 +217,16 @@ public class CashAccount35 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CashAccountType2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccountType2Choice> getValue(CashAccount35 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(CashAccount35 obj, Optional<CashAccountType2Choice> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ccy")
@@ -247,7 +268,7 @@ public class CashAccount35 {
 	 * CashAccount23.mmCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount35, Optional<ActiveOrHistoricCurrencyCode>> mmCurrency = new MMMessageAttribute<CashAccount35, Optional<ActiveOrHistoricCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmBaseCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount35.mmObject();
@@ -260,6 +281,16 @@ public class CashAccount35 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyCode> getValue(CashAccount35 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(CashAccount35 obj, Optional<ActiveOrHistoricCurrencyCode> value) {
+			obj.setCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CurMulLmt")
@@ -300,7 +331,7 @@ public class CashAccount35 {
 	 * CashAccount23.mmCurrentMultilateralLimit}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCurrentMultilateralLimit = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccount35, Optional<Limit5>> mmCurrentMultilateralLimit = new MMMessageAssociationEnd<CashAccount35, Optional<Limit5>>() {
 		{
 			businessElementTrace_lazy = () -> CashManagementService.mmRiskManagementLimit;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount35.mmObject();
@@ -313,7 +344,17 @@ public class CashAccount35 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Limit5.mmObject();
+			type_lazy = () -> Limit5.mmObject();
+		}
+
+		@Override
+		public Optional<Limit5> getValue(CashAccount35 obj) {
+			return obj.getCurrentMultilateralLimit();
+		}
+
+		@Override
+		public void setValue(CashAccount35 obj, Optional<Limit5> value) {
+			obj.setCurrentMultilateralLimit(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ownr")
@@ -353,7 +394,7 @@ public class CashAccount35 {
 	 * CashAccount23.mmOwner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccount35, Optional<PartyIdentification125>> mmOwner = new MMMessageAssociationEnd<CashAccount35, Optional<PartyIdentification125>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount35.mmObject();
@@ -366,7 +407,17 @@ public class CashAccount35 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification125.mmObject();
+			type_lazy = () -> PartyIdentification125.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification125> getValue(CashAccount35 obj) {
+			return obj.getOwner();
+		}
+
+		@Override
+		public void setValue(CashAccount35 obj, Optional<PartyIdentification125> value) {
+			obj.setOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Svcr")
@@ -407,7 +458,7 @@ public class CashAccount35 {
 	 * CashAccount23.mmServicer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmServicer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccount35, Optional<BranchAndFinancialInstitutionIdentification5>> mmServicer = new MMMessageAssociationEnd<CashAccount35, Optional<BranchAndFinancialInstitutionIdentification5>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount35.mmObject();
@@ -420,11 +471,21 @@ public class CashAccount35 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+
+		@Override
+		public Optional<BranchAndFinancialInstitutionIdentification5> getValue(CashAccount35 obj) {
+			return obj.getServicer();
+		}
+
+		@Override
+		public void setValue(CashAccount35 obj, Optional<BranchAndFinancialInstitutionIdentification5> value) {
+			obj.setServicer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MulBal")
-	protected List<com.tools20022.repository.msg.CashBalance10> multilateralBalance;
+	protected List<CashBalance10> multilateralBalance;
 	/**
 	 * 
 	 <p>
@@ -461,7 +522,7 @@ public class CashAccount35 {
 	 * CashAccount23.mmMultilateralBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMultilateralBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccount35, List<CashBalance10>> mmMultilateralBalance = new MMMessageAssociationEnd<CashAccount35, List<CashBalance10>>() {
 		{
 			businessElementTrace_lazy = () -> CashAccount.mmCashBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount35.mmObject();
@@ -473,11 +534,21 @@ public class CashAccount35 {
 			previousVersion_lazy = () -> CashAccount23.mmMultilateralBalance;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashBalance10.mmObject();
+			type_lazy = () -> CashBalance10.mmObject();
+		}
+
+		@Override
+		public List<CashBalance10> getValue(CashAccount35 obj) {
+			return obj.getMultilateralBalance();
+		}
+
+		@Override
+		public void setValue(CashAccount35 obj, List<CashBalance10> value) {
+			obj.setMultilateralBalance(value);
 		}
 	};
 	@XmlElement(name = "CurBilLmt")
-	protected List<com.tools20022.repository.msg.BilateralLimit2> currentBilateralLimit;
+	protected List<BilateralLimit2> currentBilateralLimit;
 	/**
 	 * 
 	 <p>
@@ -515,7 +586,7 @@ public class CashAccount35 {
 	 * CashAccount23.mmCurrentBilateralLimit}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCurrentBilateralLimit = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccount35, List<BilateralLimit2>> mmCurrentBilateralLimit = new MMMessageAssociationEnd<CashAccount35, List<BilateralLimit2>>() {
 		{
 			businessElementTrace_lazy = () -> CashManagementService.mmRiskManagementLimit;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount35.mmObject();
@@ -527,11 +598,21 @@ public class CashAccount35 {
 			previousVersion_lazy = () -> CashAccount23.mmCurrentBilateralLimit;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BilateralLimit2.mmObject();
+			type_lazy = () -> BilateralLimit2.mmObject();
+		}
+
+		@Override
+		public List<BilateralLimit2> getValue(CashAccount35 obj) {
+			return obj.getCurrentBilateralLimit();
+		}
+
+		@Override
+		public void setValue(CashAccount35 obj, List<BilateralLimit2> value) {
+			obj.setCurrentBilateralLimit(value);
 		}
 	};
 	@XmlElement(name = "StgOrdr")
-	protected List<com.tools20022.repository.msg.StandingOrder2> standingOrder;
+	protected List<StandingOrder2> standingOrder;
 	/**
 	 * 
 	 <p>
@@ -569,7 +650,7 @@ public class CashAccount35 {
 	 * CashAccount23.mmStandingOrder}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStandingOrder = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccount35, List<StandingOrder2>> mmStandingOrder = new MMMessageAssociationEnd<CashAccount35, List<StandingOrder2>>() {
 		{
 			businessElementTrace_lazy = () -> CashManagementService.mmStandingOrder;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount35.mmObject();
@@ -581,7 +662,17 @@ public class CashAccount35 {
 			previousVersion_lazy = () -> CashAccount23.mmStandingOrder;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.StandingOrder2.mmObject();
+			type_lazy = () -> StandingOrder2.mmObject();
+		}
+
+		@Override
+		public List<StandingOrder2> getValue(CashAccount35 obj) {
+			return obj.getStandingOrder();
+		}
+
+		@Override
+		public void setValue(CashAccount35 obj, List<StandingOrder2> value) {
+			obj.setStandingOrder(value);
 		}
 	};
 
@@ -634,7 +725,7 @@ public class CashAccount35 {
 		return currentMultilateralLimit == null ? Optional.empty() : Optional.of(currentMultilateralLimit);
 	}
 
-	public CashAccount35 setCurrentMultilateralLimit(com.tools20022.repository.msg.Limit5 currentMultilateralLimit) {
+	public CashAccount35 setCurrentMultilateralLimit(Limit5 currentMultilateralLimit) {
 		this.currentMultilateralLimit = currentMultilateralLimit;
 		return this;
 	}
@@ -643,7 +734,7 @@ public class CashAccount35 {
 		return owner == null ? Optional.empty() : Optional.of(owner);
 	}
 
-	public CashAccount35 setOwner(com.tools20022.repository.msg.PartyIdentification125 owner) {
+	public CashAccount35 setOwner(PartyIdentification125 owner) {
 		this.owner = owner;
 		return this;
 	}
@@ -652,7 +743,7 @@ public class CashAccount35 {
 		return servicer == null ? Optional.empty() : Optional.of(servicer);
 	}
 
-	public CashAccount35 setServicer(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 servicer) {
+	public CashAccount35 setServicer(BranchAndFinancialInstitutionIdentification5 servicer) {
 		this.servicer = servicer;
 		return this;
 	}
@@ -661,7 +752,7 @@ public class CashAccount35 {
 		return multilateralBalance == null ? multilateralBalance = new ArrayList<>() : multilateralBalance;
 	}
 
-	public CashAccount35 setMultilateralBalance(List<com.tools20022.repository.msg.CashBalance10> multilateralBalance) {
+	public CashAccount35 setMultilateralBalance(List<CashBalance10> multilateralBalance) {
 		this.multilateralBalance = Objects.requireNonNull(multilateralBalance);
 		return this;
 	}
@@ -670,7 +761,7 @@ public class CashAccount35 {
 		return currentBilateralLimit == null ? currentBilateralLimit = new ArrayList<>() : currentBilateralLimit;
 	}
 
-	public CashAccount35 setCurrentBilateralLimit(List<com.tools20022.repository.msg.BilateralLimit2> currentBilateralLimit) {
+	public CashAccount35 setCurrentBilateralLimit(List<BilateralLimit2> currentBilateralLimit) {
 		this.currentBilateralLimit = Objects.requireNonNull(currentBilateralLimit);
 		return this;
 	}
@@ -679,7 +770,7 @@ public class CashAccount35 {
 		return standingOrder == null ? standingOrder = new ArrayList<>() : standingOrder;
 	}
 
-	public CashAccount35 setStandingOrder(List<com.tools20022.repository.msg.StandingOrder2> standingOrder) {
+	public CashAccount35 setStandingOrder(List<StandingOrder2> standingOrder) {
 		this.standingOrder = Objects.requireNonNull(standingOrder);
 		return this;
 	}

@@ -21,6 +21,8 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.MemberIdentificationChoice;
 import com.tools20022.repository.entity.SystemMemberRole;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ErrorHandling3;
+import com.tools20022.repository.msg.MemberDetails;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -118,7 +120,7 @@ public class MemberReport2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMemberIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MemberReport2, MemberIdentificationChoice> mmMemberIdentification = new MMMessageAttribute<MemberReport2, MemberIdentificationChoice>() {
 		{
 			businessComponentTrace_lazy = () -> SystemMemberRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MemberReport2.mmObject();
@@ -130,6 +132,16 @@ public class MemberReport2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MemberIdentificationChoice.mmObject();
+		}
+
+		@Override
+		public MemberIdentificationChoice getValue(MemberReport2 obj) {
+			return obj.getMemberIdentification();
+		}
+
+		@Override
+		public void setValue(MemberReport2 obj, MemberIdentificationChoice value) {
+			obj.setMemberIdentification(value);
 		}
 	};
 	@XmlElement(name = "BizErr", required = true)
@@ -159,7 +171,7 @@ public class MemberReport2 {
 	 * definition} = "Reason the requested business information is not given."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MemberReport2, ErrorHandling3> mmBusinessError = new MMMessageAssociationEnd<MemberReport2, ErrorHandling3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MemberReport2.mmObject();
 			isDerived = false;
@@ -170,7 +182,17 @@ public class MemberReport2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ErrorHandling3.mmObject();
+			type_lazy = () -> ErrorHandling3.mmObject();
+		}
+
+		@Override
+		public ErrorHandling3 getValue(MemberReport2 obj) {
+			return obj.getBusinessError();
+		}
+
+		@Override
+		public void setValue(MemberReport2 obj, ErrorHandling3 value) {
+			obj.setBusinessError(value);
 		}
 	};
 	@XmlElement(name = "MmbInf", required = true)
@@ -205,7 +227,7 @@ public class MemberReport2 {
 	 * definition} = "Requested business information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMemberInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MemberReport2, MemberDetails> mmMemberInformation = new MMMessageAssociationEnd<MemberReport2, MemberDetails>() {
 		{
 			businessComponentTrace_lazy = () -> SystemMemberRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MemberReport2.mmObject();
@@ -217,7 +239,17 @@ public class MemberReport2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MemberDetails.mmObject();
+			type_lazy = () -> MemberDetails.mmObject();
+		}
+
+		@Override
+		public MemberDetails getValue(MemberReport2 obj) {
+			return obj.getMemberInformation();
+		}
+
+		@Override
+		public void setValue(MemberReport2 obj, MemberDetails value) {
+			obj.setMemberInformation(value);
 		}
 	};
 	/**
@@ -298,7 +330,7 @@ public class MemberReport2 {
 		return businessError;
 	}
 
-	public MemberReport2 setBusinessError(com.tools20022.repository.msg.ErrorHandling3 businessError) {
+	public MemberReport2 setBusinessError(ErrorHandling3 businessError) {
 		this.businessError = Objects.requireNonNull(businessError);
 		return this;
 	}
@@ -307,7 +339,7 @@ public class MemberReport2 {
 		return memberInformation;
 	}
 
-	public MemberReport2 setMemberInformation(com.tools20022.repository.msg.MemberDetails memberInformation) {
+	public MemberReport2 setMemberInformation(MemberDetails memberInformation) {
 		this.memberInformation = Objects.requireNonNull(memberInformation);
 		return this;
 	}

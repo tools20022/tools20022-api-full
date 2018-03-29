@@ -113,7 +113,7 @@ public class MemberSearchCriteria {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MemberSearchCriteria, List<MemberIdentificationChoice>> mmIdentification = new MMMessageAttribute<MemberSearchCriteria, List<MemberIdentificationChoice>>() {
 		{
 			businessComponentTrace_lazy = () -> SystemMemberRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MemberSearchCriteria.mmObject();
@@ -124,6 +124,16 @@ public class MemberSearchCriteria {
 			definition = "Unique and unambiguous identification of a member within a system, assigned using the member identification scheme of the system.";
 			minOccurs = 0;
 			complexType_lazy = () -> MemberIdentificationChoice.mmObject();
+		}
+
+		@Override
+		public List<MemberIdentificationChoice> getValue(MemberSearchCriteria obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(MemberSearchCriteria obj, List<MemberIdentificationChoice> value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -161,7 +171,7 @@ public class MemberSearchCriteria {
 	 * definition} = "Nature of the relationship a member has with a system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MemberSearchCriteria, List<MemberType1Code>> mmType = new MMMessageAttribute<MemberSearchCriteria, List<MemberType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SystemMemberRole.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MemberSearchCriteria.mmObject();
@@ -172,6 +182,16 @@ public class MemberSearchCriteria {
 			definition = "Nature of the relationship a member has with a system.";
 			minOccurs = 0;
 			simpleType_lazy = () -> MemberType1Code.mmObject();
+		}
+
+		@Override
+		public List<MemberType1Code> getValue(MemberSearchCriteria obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(MemberSearchCriteria obj, List<MemberType1Code> value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Sts")
@@ -209,7 +229,7 @@ public class MemberSearchCriteria {
 	 * definition} = "Status of a member in a system, eg, enabled or deleted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MemberSearchCriteria, List<MemberStatus1Code>> mmStatus = new MMMessageAttribute<MemberSearchCriteria, List<MemberStatus1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SystemMemberRole.mmMemberStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MemberSearchCriteria.mmObject();
@@ -220,6 +240,16 @@ public class MemberSearchCriteria {
 			definition = "Status of a member in a system, eg, enabled or deleted.";
 			minOccurs = 0;
 			simpleType_lazy = () -> MemberStatus1Code.mmObject();
+		}
+
+		@Override
+		public List<MemberStatus1Code> getValue(MemberSearchCriteria obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(MemberSearchCriteria obj, List<MemberStatus1Code> value) {
+			obj.setStatus(value);
 		}
 	};
 

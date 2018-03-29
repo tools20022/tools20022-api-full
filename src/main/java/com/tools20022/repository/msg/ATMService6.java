@@ -109,7 +109,7 @@ public class ATMService6 {
 	 * ATMService4.mmServiceReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmServiceReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMService6, Optional<Max35Text>> mmServiceReference = new MMMessageAttribute<ATMService6, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMService6.mmObject();
 			isDerived = false;
@@ -121,6 +121,16 @@ public class ATMService6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMService6 obj) {
+			return obj.getServiceReference();
+		}
+
+		@Override
+		public void setValue(ATMService6 obj, Optional<Max35Text> value) {
+			obj.setServiceReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ATMSvcCd")
@@ -156,7 +166,7 @@ public class ATMService6 {
 	 * ATMService4.mmATMServiceCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmATMServiceCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMService6, Optional<Max35Text>> mmATMServiceCode = new MMMessageAttribute<ATMService6, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMService6.mmObject();
 			isDerived = false;
@@ -168,6 +178,16 @@ public class ATMService6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMService6 obj) {
+			return obj.getATMServiceCode();
+		}
+
+		@Override
+		public void setValue(ATMService6 obj, Optional<Max35Text> value) {
+			obj.setATMServiceCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "HstSvcCd")
@@ -203,7 +223,7 @@ public class ATMService6 {
 	 * ATMService4.mmHostServiceCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHostServiceCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMService6, Optional<Max35Text>> mmHostServiceCode = new MMMessageAttribute<ATMService6, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMService6.mmObject();
 			isDerived = false;
@@ -215,6 +235,16 @@ public class ATMService6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMService6 obj) {
+			return obj.getHostServiceCode();
+		}
+
+		@Override
+		public void setValue(ATMService6 obj, Optional<Max35Text> value) {
+			obj.setHostServiceCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SvcTp", required = true)
@@ -252,7 +282,7 @@ public class ATMService6 {
 	 * ATMService4.mmServiceType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmServiceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMService6, ATMServiceType3Code> mmServiceType = new MMMessageAttribute<ATMService6, ATMServiceType3Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMService6.mmObject();
 			isDerived = false;
@@ -264,6 +294,16 @@ public class ATMService6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ATMServiceType3Code.mmObject();
+		}
+
+		@Override
+		public ATMServiceType3Code getValue(ATMService6 obj) {
+			return obj.getServiceType();
+		}
+
+		@Override
+		public void setValue(ATMService6 obj, ATMServiceType3Code value) {
+			obj.setServiceType(value);
 		}
 	};
 

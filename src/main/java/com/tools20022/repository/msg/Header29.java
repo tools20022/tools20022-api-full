@@ -26,6 +26,8 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max6Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification72;
+import com.tools20022.repository.msg.GenericIdentification93;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -148,7 +150,7 @@ public class Header29 {
 	 * Header16.mmProtocolVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProtocolVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Header29, Max6Text> mmProtocolVersion = new MMMessageAttribute<Header29, Max6Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header29.mmObject();
 			isDerived = false;
@@ -160,6 +162,16 @@ public class Header29 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max6Text.mmObject();
+		}
+
+		@Override
+		public Max6Text getValue(Header29 obj) {
+			return obj.getProtocolVersion();
+		}
+
+		@Override
+		public void setValue(Header29 obj, Max6Text value) {
+			obj.setProtocolVersion(value);
 		}
 	};
 	@XmlElement(name = "XchgId")
@@ -195,7 +207,7 @@ public class Header29 {
 	 * Header16.mmExchangeIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExchangeIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Header29, Optional<Number>> mmExchangeIdentification = new MMMessageAttribute<Header29, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header29.mmObject();
 			isDerived = false;
@@ -207,6 +219,16 @@ public class Header29 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(Header29 obj) {
+			return obj.getExchangeIdentification();
+		}
+
+		@Override
+		public void setValue(Header29 obj, Optional<Number> value) {
+			obj.setExchangeIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CreDtTm", required = true)
@@ -242,7 +264,7 @@ public class Header29 {
 	 * Header16.mmCreationDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Header29, ISODateTime> mmCreationDateTime = new MMMessageAttribute<Header29, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header29.mmObject();
 			isDerived = false;
@@ -254,6 +276,16 @@ public class Header29 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(Header29 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(Header29 obj, ISODateTime value) {
+			obj.setCreationDateTime(value);
 		}
 	};
 	@XmlElement(name = "InitgPty", required = true)
@@ -290,7 +322,7 @@ public class Header29 {
 	 * Header16.mmInitiatingParty}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInitiatingParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Header29, GenericIdentification72> mmInitiatingParty = new MMMessageAssociationEnd<Header29, GenericIdentification72>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header29.mmObject();
 			isDerived = false;
@@ -302,7 +334,17 @@ public class Header29 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification72.mmObject();
+			type_lazy = () -> GenericIdentification72.mmObject();
+		}
+
+		@Override
+		public GenericIdentification72 getValue(Header29 obj) {
+			return obj.getInitiatingParty();
+		}
+
+		@Override
+		public void setValue(Header29 obj, GenericIdentification72 value) {
+			obj.setInitiatingParty(value);
 		}
 	};
 	@XmlElement(name = "RcptPty")
@@ -340,7 +382,7 @@ public class Header29 {
 	 * Header16.mmRecipientParty}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRecipientParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Header29, Optional<GenericIdentification93>> mmRecipientParty = new MMMessageAssociationEnd<Header29, Optional<GenericIdentification93>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header29.mmObject();
 			isDerived = false;
@@ -352,7 +394,17 @@ public class Header29 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification93.mmObject();
+			type_lazy = () -> GenericIdentification93.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification93> getValue(Header29 obj) {
+			return obj.getRecipientParty();
+		}
+
+		@Override
+		public void setValue(Header29 obj, Optional<GenericIdentification93> value) {
+			obj.setRecipientParty(value.orElse(null));
 		}
 	};
 
@@ -404,7 +456,7 @@ public class Header29 {
 		return initiatingParty;
 	}
 
-	public Header29 setInitiatingParty(com.tools20022.repository.msg.GenericIdentification72 initiatingParty) {
+	public Header29 setInitiatingParty(GenericIdentification72 initiatingParty) {
 		this.initiatingParty = Objects.requireNonNull(initiatingParty);
 		return this;
 	}
@@ -413,7 +465,7 @@ public class Header29 {
 		return recipientParty == null ? Optional.empty() : Optional.of(recipientParty);
 	}
 
-	public Header29 setRecipientParty(com.tools20022.repository.msg.GenericIdentification93 recipientParty) {
+	public Header29 setRecipientParty(GenericIdentification93 recipientParty) {
 		this.recipientParty = recipientParty;
 		return this;
 	}

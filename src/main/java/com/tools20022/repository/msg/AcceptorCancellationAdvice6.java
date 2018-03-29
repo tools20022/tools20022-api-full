@@ -23,6 +23,9 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.caaa.AcceptorCancellationAdviceV06;
 import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CardPaymentContext23;
+import com.tools20022.repository.msg.CardPaymentEnvironment59;
+import com.tools20022.repository.msg.CardPaymentTransaction75;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -142,7 +145,7 @@ public class AcceptorCancellationAdvice6 {
 	 * AcceptorCancellationAdvice5.mmEnvironment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorCancellationAdvice6, CardPaymentEnvironment59> mmEnvironment = new MMMessageAssociationEnd<AcceptorCancellationAdvice6, CardPaymentEnvironment59>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorCancellationAdvice6.mmObject();
@@ -156,7 +159,17 @@ public class AcceptorCancellationAdvice6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment59.mmObject();
+			type_lazy = () -> CardPaymentEnvironment59.mmObject();
+		}
+
+		@Override
+		public CardPaymentEnvironment59 getValue(AcceptorCancellationAdvice6 obj) {
+			return obj.getEnvironment();
+		}
+
+		@Override
+		public void setValue(AcceptorCancellationAdvice6 obj, CardPaymentEnvironment59 value) {
+			obj.setEnvironment(value);
 		}
 	};
 	@XmlElement(name = "Cntxt")
@@ -206,7 +219,7 @@ public class AcceptorCancellationAdvice6 {
 	 * AcceptorCancellationAdvice5.mmContext}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContext = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorCancellationAdvice6, Optional<CardPaymentContext23>> mmContext = new MMMessageAssociationEnd<AcceptorCancellationAdvice6, Optional<CardPaymentContext23>>() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmCardPaymentAcquiring;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorCancellationAdvice6.mmObject();
@@ -220,7 +233,17 @@ public class AcceptorCancellationAdvice6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentContext23.mmObject();
+			type_lazy = () -> CardPaymentContext23.mmObject();
+		}
+
+		@Override
+		public Optional<CardPaymentContext23> getValue(AcceptorCancellationAdvice6 obj) {
+			return obj.getContext();
+		}
+
+		@Override
+		public void setValue(AcceptorCancellationAdvice6 obj, Optional<CardPaymentContext23> value) {
+			obj.setContext(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tx", required = true)
@@ -270,7 +293,7 @@ public class AcceptorCancellationAdvice6 {
 	 * AcceptorCancellationAdvice5.mmTransaction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorCancellationAdvice6, CardPaymentTransaction75> mmTransaction = new MMMessageAssociationEnd<AcceptorCancellationAdvice6, CardPaymentTransaction75>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorCancellationAdvice6.mmObject();
@@ -284,7 +307,17 @@ public class AcceptorCancellationAdvice6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction75.mmObject();
+			type_lazy = () -> CardPaymentTransaction75.mmObject();
+		}
+
+		@Override
+		public CardPaymentTransaction75 getValue(AcceptorCancellationAdvice6 obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(AcceptorCancellationAdvice6 obj, CardPaymentTransaction75 value) {
+			obj.setTransaction(value);
 		}
 	};
 
@@ -310,7 +343,7 @@ public class AcceptorCancellationAdvice6 {
 		return environment;
 	}
 
-	public AcceptorCancellationAdvice6 setEnvironment(com.tools20022.repository.msg.CardPaymentEnvironment59 environment) {
+	public AcceptorCancellationAdvice6 setEnvironment(CardPaymentEnvironment59 environment) {
 		this.environment = Objects.requireNonNull(environment);
 		return this;
 	}
@@ -319,7 +352,7 @@ public class AcceptorCancellationAdvice6 {
 		return context == null ? Optional.empty() : Optional.of(context);
 	}
 
-	public AcceptorCancellationAdvice6 setContext(com.tools20022.repository.msg.CardPaymentContext23 context) {
+	public AcceptorCancellationAdvice6 setContext(CardPaymentContext23 context) {
 		this.context = context;
 		return this;
 	}
@@ -328,7 +361,7 @@ public class AcceptorCancellationAdvice6 {
 		return transaction;
 	}
 
-	public AcceptorCancellationAdvice6 setTransaction(com.tools20022.repository.msg.CardPaymentTransaction75 transaction) {
+	public AcceptorCancellationAdvice6 setTransaction(CardPaymentTransaction75 transaction) {
 		this.transaction = Objects.requireNonNull(transaction);
 		return this;
 	}

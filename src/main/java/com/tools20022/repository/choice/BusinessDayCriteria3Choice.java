@@ -112,7 +112,7 @@ public class BusinessDayCriteria3Choice {
 	 * BusinessDayCriteria2Choice.mmQueryName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BusinessDayCriteria3Choice, Max35Text> mmQueryName = new MMMessageAttribute<BusinessDayCriteria3Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.BusinessDayCriteria3Choice.mmObject();
 			isDerived = false;
@@ -124,6 +124,16 @@ public class BusinessDayCriteria3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(BusinessDayCriteria3Choice obj) {
+			return obj.getQueryName();
+		}
+
+		@Override
+		public void setValue(BusinessDayCriteria3Choice obj, Max35Text value) {
+			obj.setQueryName(value);
 		}
 	};
 	@XmlElement(name = "NewCrit", required = true)
@@ -159,7 +169,7 @@ public class BusinessDayCriteria3Choice {
 	 * BusinessDayCriteria2Choice.mmNewCriteria}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNewCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BusinessDayCriteria3Choice, BusinessDayCriteria2> mmNewCriteria = new MMMessageAssociationEnd<BusinessDayCriteria3Choice, BusinessDayCriteria2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.BusinessDayCriteria3Choice.mmObject();
 			isDerived = false;
@@ -172,6 +182,16 @@ public class BusinessDayCriteria3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> BusinessDayCriteria2.mmObject();
+		}
+
+		@Override
+		public BusinessDayCriteria2 getValue(BusinessDayCriteria3Choice obj) {
+			return obj.getNewCriteria();
+		}
+
+		@Override
+		public void setValue(BusinessDayCriteria3Choice obj, BusinessDayCriteria2 value) {
+			obj.setNewCriteria(value);
 		}
 	};
 

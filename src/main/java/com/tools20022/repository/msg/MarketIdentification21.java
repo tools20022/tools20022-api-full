@@ -138,7 +138,7 @@ public class MarketIdentification21 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarketIdentification21, Optional<MarketIdentification1Choice>> mmIdentification = new MMMessageAssociationEnd<MarketIdentification21, Optional<MarketIdentification1Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> TradingMarket.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification21.mmObject();
@@ -153,6 +153,16 @@ public class MarketIdentification21 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> MarketIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<MarketIdentification1Choice> getValue(MarketIdentification21 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(MarketIdentification21 obj, Optional<MarketIdentification1Choice> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -199,7 +209,7 @@ public class MarketIdentification21 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarketIdentification21, MarketType9Choice> mmType = new MMMessageAssociationEnd<MarketIdentification21, MarketType9Choice>() {
 		{
 			businessElementTrace_lazy = () -> TradingMarket.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification21.mmObject();
@@ -214,6 +224,16 @@ public class MarketIdentification21 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> MarketType9Choice.mmObject();
+		}
+
+		@Override
+		public MarketType9Choice getValue(MarketIdentification21 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(MarketIdentification21 obj, MarketType9Choice value) {
+			obj.setType(value);
 		}
 	};
 

@@ -26,7 +26,6 @@ import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.msg.Amendment9;
 import com.tools20022.repository.msg.PartyAndSignature2;
 import com.tools20022.repository.msgset.DemandGuaranteesandStandbyLettersofCreditISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -120,7 +119,7 @@ public class UndertakingAmendmentResponseNotificationV01 {
 	 * "Details related to the proposed amendment response notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUndertakingAmendmentResponseNotificationDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<UndertakingAmendmentResponseNotificationV01, Amendment9> mmUndertakingAmendmentResponseNotificationDetails = new MMMessageBuildingBlock<UndertakingAmendmentResponseNotificationV01, Amendment9>() {
 		{
 			xmlTag = "UdrtkgAmdmntRspnNtfctnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,12 +130,14 @@ public class UndertakingAmendmentResponseNotificationV01 {
 			complexType_lazy = () -> Amendment9.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return UndertakingAmendmentResponseNotificationV01.class.getMethod("getUndertakingAmendmentResponseNotificationDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Amendment9 getValue(UndertakingAmendmentResponseNotificationV01 obj) {
+			return obj.getUndertakingAmendmentResponseNotificationDetails();
+		}
+
+		@Override
+		public void setValue(UndertakingAmendmentResponseNotificationV01 obj, Amendment9 value) {
+			obj.setUndertakingAmendmentResponseNotificationDetails(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -163,7 +164,7 @@ public class UndertakingAmendmentResponseNotificationV01 {
 	 * definition} = "Additional information reported by the beneficiary."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAdditionalInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<UndertakingAmendmentResponseNotificationV01, Optional<Max2000Text>> mmAdditionalInformation = new MMMessageBuildingBlock<UndertakingAmendmentResponseNotificationV01, Optional<Max2000Text>>() {
 		{
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,12 +175,14 @@ public class UndertakingAmendmentResponseNotificationV01 {
 			simpleType_lazy = () -> Max2000Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return UndertakingAmendmentResponseNotificationV01.class.getMethod("getAdditionalInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Max2000Text> getValue(UndertakingAmendmentResponseNotificationV01 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(UndertakingAmendmentResponseNotificationV01 obj, Optional<Max2000Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DgtlSgntr")
@@ -207,7 +210,7 @@ public class UndertakingAmendmentResponseNotificationV01 {
 	 * definition} = "Digital signature of the response notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmDigitalSignature = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<UndertakingAmendmentResponseNotificationV01, Optional<PartyAndSignature2>> mmDigitalSignature = new MMMessageBuildingBlock<UndertakingAmendmentResponseNotificationV01, Optional<PartyAndSignature2>>() {
 		{
 			xmlTag = "DgtlSgntr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -218,12 +221,14 @@ public class UndertakingAmendmentResponseNotificationV01 {
 			complexType_lazy = () -> PartyAndSignature2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return UndertakingAmendmentResponseNotificationV01.class.getMethod("getDigitalSignature", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyAndSignature2> getValue(UndertakingAmendmentResponseNotificationV01 obj) {
+			return obj.getDigitalSignature();
+		}
+
+		@Override
+		public void setValue(UndertakingAmendmentResponseNotificationV01 obj, Optional<PartyAndSignature2> value) {
+			obj.setDigitalSignature(value.orElse(null));
 		}
 	};
 

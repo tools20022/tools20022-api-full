@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.StandingOrder5;
 import com.tools20022.repository.msg.StandingOrderIdentification2;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset._SR2018_MX_CashManagement_Maintenance;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -117,7 +116,7 @@ import javax.xml.bind.annotation.*;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ModifyStandingOrderV05"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -155,7 +154,7 @@ public class ModifyStandingOrderV05 {
 	 * definition} = "Common business identification for the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ModifyStandingOrderV05, MessageHeader1> mmMessageHeader = new MMMessageBuildingBlock<ModifyStandingOrderV05, MessageHeader1>() {
 		{
 			xmlTag = "MsgHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -166,12 +165,14 @@ public class ModifyStandingOrderV05 {
 			complexType_lazy = () -> MessageHeader1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ModifyStandingOrderV05.class.getMethod("getMessageHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageHeader1 getValue(ModifyStandingOrderV05 obj) {
+			return obj.getMessageHeader();
+		}
+
+		@Override
+		public void setValue(ModifyStandingOrderV05 obj, MessageHeader1 value) {
+			obj.setMessageHeader(value);
 		}
 	};
 	@XmlElement(name = "StgOrdrId", required = true)
@@ -199,7 +200,7 @@ public class ModifyStandingOrderV05 {
 	 * definition} = "Identifies the standing order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmStandingOrderIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ModifyStandingOrderV05, StandingOrderIdentification2> mmStandingOrderIdentification = new MMMessageBuildingBlock<ModifyStandingOrderV05, StandingOrderIdentification2>() {
 		{
 			xmlTag = "StgOrdrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -210,12 +211,14 @@ public class ModifyStandingOrderV05 {
 			complexType_lazy = () -> StandingOrderIdentification2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ModifyStandingOrderV05.class.getMethod("getStandingOrderIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public StandingOrderIdentification2 getValue(ModifyStandingOrderV05 obj) {
+			return obj.getStandingOrderIdentification();
+		}
+
+		@Override
+		public void setValue(ModifyStandingOrderV05 obj, StandingOrderIdentification2 value) {
+			obj.setStandingOrderIdentification(value);
 		}
 	};
 	@XmlElement(name = "NewStgOrdrValSet", required = true)
@@ -242,7 +245,7 @@ public class ModifyStandingOrderV05 {
 	 * definition} = "New set of values for the standing order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmNewStandingOrderValueSet = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ModifyStandingOrderV05, StandingOrder5> mmNewStandingOrderValueSet = new MMMessageBuildingBlock<ModifyStandingOrderV05, StandingOrder5>() {
 		{
 			xmlTag = "NewStgOrdrValSet";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -253,12 +256,14 @@ public class ModifyStandingOrderV05 {
 			complexType_lazy = () -> StandingOrder5.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ModifyStandingOrderV05.class.getMethod("getNewStandingOrderValueSet", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public StandingOrder5 getValue(ModifyStandingOrderV05 obj) {
+			return obj.getNewStandingOrderValueSet();
+		}
+
+		@Override
+		public void setValue(ModifyStandingOrderV05 obj, StandingOrder5 value) {
+			obj.setNewStandingOrderValueSet(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -288,7 +293,7 @@ public class ModifyStandingOrderV05 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ModifyStandingOrderV05, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<ModifyStandingOrderV05, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -298,12 +303,14 @@ public class ModifyStandingOrderV05 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ModifyStandingOrderV05.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(ModifyStandingOrderV05 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(ModifyStandingOrderV05 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -311,7 +318,7 @@ public class ModifyStandingOrderV05 {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintModifyStandingOrderRules.forModifyStandingOrderV05);
-				registrationStatus = MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ModifyStandingOrderV05";
 				definition = "Scope\r\nThe ModifyStandingOrder message is sent by a member to the transaction administrator.\r\nIt is used to request a change in the features of a permanent order for the transfer of funds between two accounts belonging to the same member and being held at the transaction administrator.\r\nUsage\r\nThere should be one standing order per (direct) member and per business day. The ModifyStandingOrder message must not be used to request a transfer of funds between accounts during the working day. The liquidity transfer messages must be used for this purpose. There is no need to have a standing order to empty the settlement account at the end of the day and transfer the funds to the current account. For liquidity savings purposes, systems will effect the necessary transfers automatically when and where relevant.\r\nThe ModifyStandingOrder message first identifies the standing order to be modified and then provide the details of the new standing order. The elements that can be modified are:\r\n- amount\r\n- account to be credited\r\n- account to be debited\r\n- account owner (for on behalf scenario)\r\n- frequency of payment\r\n- daytime or overnight processing\r\n- dates when the standing order begins and ceases to be effective\r\nBased on the criteria received within the ModifyStandingOrder message, the transaction administrator will execute or reject the requested modifications.\r\nThe transaction administrator may send a Receipt message as a reply to the Modify Standing Order request. To verify the outcome of the request, the member may submit a GetStandingOrder message with the appropriate search criteria.";
 				messageSet_lazy = () -> Arrays.asList(_SR2018_MX_CashManagement_Maintenance.mmObject());

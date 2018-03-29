@@ -125,7 +125,7 @@ public class SecuritiesCertificate3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesCertificate3, Max35Text> mmNumber = new MMMessageAttribute<SecuritiesCertificate3, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesCertificate.mmNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCertificate3.mmObject();
@@ -138,6 +138,16 @@ public class SecuritiesCertificate3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(SecuritiesCertificate3 obj) {
+			return obj.getNumber();
+		}
+
+		@Override
+		public void setValue(SecuritiesCertificate3 obj, Max35Text value) {
+			obj.setNumber(value);
 		}
 	};
 	@XmlElement(name = "Issr")
@@ -177,7 +187,7 @@ public class SecuritiesCertificate3 {
 	 * definition} = "Entity that assigns the identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesCertificate3, Optional<Max35Text>> mmIssuer = new MMMessageAttribute<SecuritiesCertificate3, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> IdentificationIssuerRole.mmEntityName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCertificate3.mmObject();
@@ -190,6 +200,16 @@ public class SecuritiesCertificate3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SecuritiesCertificate3 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(SecuritiesCertificate3 obj, Optional<Max35Text> value) {
+			obj.setIssuer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SchmeNm")
@@ -229,7 +249,7 @@ public class SecuritiesCertificate3 {
 	 * definition} = "Short textual description of the scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSchemeName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesCertificate3, Optional<Max35Text>> mmSchemeName = new MMMessageAttribute<SecuritiesCertificate3, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Scheme.mmNameShort;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCertificate3.mmObject();
@@ -242,6 +262,16 @@ public class SecuritiesCertificate3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SecuritiesCertificate3 obj) {
+			return obj.getSchemeName();
+		}
+
+		@Override
+		public void setValue(SecuritiesCertificate3 obj, Optional<Max35Text> value) {
+			obj.setSchemeName(value.orElse(null));
 		}
 	};
 

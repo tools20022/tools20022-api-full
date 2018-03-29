@@ -108,7 +108,7 @@ public class CardholderIdentification1 {
 	 * "Identification value of the cardholder involved in a transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCardholderIdentificationValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardholderIdentification1, Max35Text> mmCardholderIdentificationValue = new MMMessageAttribute<CardholderIdentification1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardholderIdentification1.mmObject();
@@ -120,6 +120,16 @@ public class CardholderIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CardholderIdentification1 obj) {
+			return obj.getCardholderIdentificationValue();
+		}
+
+		@Override
+		public void setValue(CardholderIdentification1 obj, Max35Text value) {
+			obj.setCardholderIdentificationValue(value);
 		}
 	};
 	@XmlElement(name = "CrdhldrIdTp", required = true)
@@ -158,7 +168,7 @@ public class CardholderIdentification1 {
 	 * "Type of identification used for identifying the cardholder."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCardholderIdentificationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardholderIdentification1, PersonIdentificationType4Code> mmCardholderIdentificationType = new MMMessageAttribute<CardholderIdentification1, PersonIdentificationType4Code>() {
 		{
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardholderIdentification1.mmObject();
@@ -170,6 +180,16 @@ public class CardholderIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PersonIdentificationType4Code.mmObject();
+		}
+
+		@Override
+		public PersonIdentificationType4Code getValue(CardholderIdentification1 obj) {
+			return obj.getCardholderIdentificationType();
+		}
+
+		@Override
+		public void setValue(CardholderIdentification1 obj, PersonIdentificationType4Code value) {
+			obj.setCardholderIdentificationType(value);
 		}
 	};
 

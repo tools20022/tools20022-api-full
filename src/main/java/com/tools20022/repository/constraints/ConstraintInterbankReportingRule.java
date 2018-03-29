@@ -65,12 +65,16 @@ public class ConstraintInterbankReportingRule {
 	 */
 	public static final MMConstraint<CounterpartyIdentification1Choice> forCounterpartyIdentification1Choice = new MMConstraint<CounterpartyIdentification1Choice>() {
 		{
-			validator = ConstraintInterbankReportingRule::checkCounterpartyIdentification1Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankReportingRule";
 			definition = "When the reported transaction is an interbank transaction or when the counterparty is a supranational authority or when transaction is conducted via a central clearing counterparty (CCP), the counterparty must be identified with the LEI only. In the latter case, this variable must specify the LEI of the CCP.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInterbankReportingRule.forCounterpartyIdentification2Choice);
 			owner_lazy = () -> CounterpartyIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CounterpartyIdentification1Choice obj) throws Exception {
+			checkCounterpartyIdentification1Choice(obj);
 		}
 	};
 	/**
@@ -109,13 +113,17 @@ public class ConstraintInterbankReportingRule {
 	 */
 	public static final MMConstraint<CounterpartyIdentification2Choice> forCounterpartyIdentification2Choice = new MMConstraint<CounterpartyIdentification2Choice>() {
 		{
-			validator = ConstraintInterbankReportingRule::checkCounterpartyIdentification2Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankReportingRule";
 			definition = "When the reported transaction is an interbank transaction or when the counterparty is a supranational authority or when transaction is conducted via a central clearing counterparty (CCP), the counterparty must be identified with the LEI only. In the latter case, this variable must specify the LEI of the CCP.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInterbankReportingRule.forCounterpartyIdentification3Choice);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInterbankReportingRule.forCounterpartyIdentification1Choice;
 			owner_lazy = () -> CounterpartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CounterpartyIdentification2Choice obj) throws Exception {
+			checkCounterpartyIdentification2Choice(obj);
 		}
 	};
 	/**
@@ -146,12 +154,16 @@ public class ConstraintInterbankReportingRule {
 	 */
 	public static final MMConstraint<CounterpartyIdentification3Choice> forCounterpartyIdentification3Choice = new MMConstraint<CounterpartyIdentification3Choice>() {
 		{
-			validator = ConstraintInterbankReportingRule::checkCounterpartyIdentification3Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankReportingRule";
 			definition = "When the reported transaction is an interbank transaction or when the counterparty is a supranational authority or when transaction is conducted via a central clearing counterparty (CCP), the counterparty must be identified with the LEI only. In the latter case, this variable must specify the LEI of the CCP.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInterbankReportingRule.forCounterpartyIdentification2Choice;
 			owner_lazy = () -> CounterpartyIdentification3Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CounterpartyIdentification3Choice obj) throws Exception {
+			checkCounterpartyIdentification3Choice(obj);
 		}
 	};
 

@@ -104,7 +104,7 @@ public class UpdateType24Choice {
 	 * UpdateType7Choice.mmAdd}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdd = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UpdateType24Choice, SecurityAttributes5> mmAdd = new MMMessageAssociationEnd<UpdateType24Choice, SecurityAttributes5>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UpdateType24Choice.mmObject();
 			isDerived = false;
@@ -117,6 +117,16 @@ public class UpdateType24Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecurityAttributes5.mmObject();
+		}
+
+		@Override
+		public SecurityAttributes5 getValue(UpdateType24Choice obj) {
+			return obj.getAdd();
+		}
+
+		@Override
+		public void setValue(UpdateType24Choice obj, SecurityAttributes5 value) {
+			obj.setAdd(value);
 		}
 	};
 	@XmlElement(name = "Del", required = true)
@@ -152,7 +162,7 @@ public class UpdateType24Choice {
 	 * UpdateType7Choice.mmDelete}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDelete = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UpdateType24Choice, SecurityAttributes5> mmDelete = new MMMessageAssociationEnd<UpdateType24Choice, SecurityAttributes5>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UpdateType24Choice.mmObject();
 			isDerived = false;
@@ -165,6 +175,16 @@ public class UpdateType24Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecurityAttributes5.mmObject();
+		}
+
+		@Override
+		public SecurityAttributes5 getValue(UpdateType24Choice obj) {
+			return obj.getDelete();
+		}
+
+		@Override
+		public void setValue(UpdateType24Choice obj, SecurityAttributes5 value) {
+			obj.setDelete(value);
 		}
 	};
 	@XmlElement(name = "Modfy", required = true)
@@ -200,7 +220,7 @@ public class UpdateType24Choice {
 	 * UpdateType7Choice.mmModify}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmModify = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UpdateType24Choice, SecurityAttributes5> mmModify = new MMMessageAssociationEnd<UpdateType24Choice, SecurityAttributes5>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UpdateType24Choice.mmObject();
 			isDerived = false;
@@ -213,6 +233,16 @@ public class UpdateType24Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecurityAttributes5.mmObject();
+		}
+
+		@Override
+		public SecurityAttributes5 getValue(UpdateType24Choice obj) {
+			return obj.getModify();
+		}
+
+		@Override
+		public void setValue(UpdateType24Choice obj, SecurityAttributes5 value) {
+			obj.setModify(value);
 		}
 	};
 

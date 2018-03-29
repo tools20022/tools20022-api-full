@@ -147,7 +147,7 @@ public class SecuritiesMarketReportHeader1 {
 	 * definition} = "Identification of the venue which generates the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReportingEntity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesMarketReportHeader1, TradingVenueIdentification1Choice> mmReportingEntity = new MMMessageAssociationEnd<SecuritiesMarketReportHeader1, TradingVenueIdentification1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesMarketReportHeader1.mmObject();
 			isDerived = false;
@@ -159,6 +159,16 @@ public class SecuritiesMarketReportHeader1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TradingVenueIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public TradingVenueIdentification1Choice getValue(SecuritiesMarketReportHeader1 obj) {
+			return obj.getReportingEntity();
+		}
+
+		@Override
+		public void setValue(SecuritiesMarketReportHeader1 obj, TradingVenueIdentification1Choice value) {
+			obj.setReportingEntity(value);
 		}
 	};
 	@XmlElement(name = "RptgPrd", required = true)
@@ -189,7 +199,7 @@ public class SecuritiesMarketReportHeader1 {
 	 * definition} = "Date or date range the report relates to."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReportingPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesMarketReportHeader1, Period4Choice> mmReportingPeriod = new MMMessageAssociationEnd<SecuritiesMarketReportHeader1, Period4Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesMarketReportHeader1.mmObject();
 			isDerived = false;
@@ -201,6 +211,16 @@ public class SecuritiesMarketReportHeader1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Period4Choice.mmObject();
+		}
+
+		@Override
+		public Period4Choice getValue(SecuritiesMarketReportHeader1 obj) {
+			return obj.getReportingPeriod();
+		}
+
+		@Override
+		public void setValue(SecuritiesMarketReportHeader1 obj, Period4Choice value) {
+			obj.setReportingPeriod(value);
 		}
 	};
 	@XmlElement(name = "SubmissnDtTm")
@@ -234,7 +254,7 @@ public class SecuritiesMarketReportHeader1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubmissionDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesMarketReportHeader1, Optional<ISODateTime>> mmSubmissionDateTime = new MMMessageAttribute<SecuritiesMarketReportHeader1, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesMarketReportHeader1.mmObject();
 			isDerived = false;
@@ -245,6 +265,16 @@ public class SecuritiesMarketReportHeader1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(SecuritiesMarketReportHeader1 obj) {
+			return obj.getSubmissionDateTime();
+		}
+
+		@Override
+		public void setValue(SecuritiesMarketReportHeader1 obj, Optional<ISODateTime> value) {
+			obj.setSubmissionDateTime(value.orElse(null));
 		}
 	};
 

@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.DateAndDateTime1Choice;
 import com.tools20022.repository.codeset.DateType6Code;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification13;
@@ -58,7 +59,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "DateFormat56Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -109,7 +110,7 @@ public class DateFormat56Choice {
 	 * DateFormat4Choice.mmDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateFormat56Choice, DateAndDateTime1Choice> mmDate = new MMMessageAttribute<DateFormat56Choice, DateAndDateTime1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat56Choice.mmObject();
 			isDerived = false;
@@ -120,7 +121,17 @@ public class DateFormat56Choice {
 			previousVersion_lazy = () -> DateFormat4Choice.mmDate;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.DateAndDateTime1Choice.mmObject();
+			complexType_lazy = () -> DateAndDateTime1Choice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTime1Choice getValue(DateFormat56Choice obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(DateFormat56Choice obj, DateAndDateTime1Choice value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "NotSpcfdDt", required = true)
@@ -158,7 +169,7 @@ public class DateFormat56Choice {
 	 * DateFormat4Choice.mmNotSpecifiedDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecifiedDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateFormat56Choice, DateType6Code> mmNotSpecifiedDate = new MMMessageAttribute<DateFormat56Choice, DateType6Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat56Choice.mmObject();
 			isDerived = false;
@@ -170,6 +181,16 @@ public class DateFormat56Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DateType6Code.mmObject();
+		}
+
+		@Override
+		public DateType6Code getValue(DateFormat56Choice obj) {
+			return obj.getNotSpecifiedDate();
+		}
+
+		@Override
+		public void setValue(DateFormat56Choice obj, DateType6Code value) {
+			obj.setNotSpecifiedDate(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -207,7 +228,7 @@ public class DateFormat56Choice {
 	 * DateFormat4Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateFormat56Choice, GenericIdentification13> mmProprietary = new MMMessageAttribute<DateFormat56Choice, GenericIdentification13>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat56Choice.mmObject();
 			isDerived = false;
@@ -220,6 +241,16 @@ public class DateFormat56Choice {
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
 		}
+
+		@Override
+		public GenericIdentification13 getValue(DateFormat56Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(DateFormat56Choice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
+		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
@@ -228,7 +259,7 @@ public class DateFormat56Choice {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateFormat56Choice.mmDate, com.tools20022.repository.choice.DateFormat56Choice.mmNotSpecifiedDate,
 						com.tools20022.repository.choice.DateFormat56Choice.mmProprietary);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateFormat56Choice";
 				definition = "Specifies the value of a date.";
 				previousVersion_lazy = () -> DateFormat4Choice.mmObject();
@@ -241,7 +272,7 @@ public class DateFormat56Choice {
 		return date;
 	}
 
-	public DateFormat56Choice setDate(com.tools20022.repository.choice.DateAndDateTime1Choice date) {
+	public DateFormat56Choice setDate(DateAndDateTime1Choice date) {
 		this.date = Objects.requireNonNull(date);
 		return this;
 	}

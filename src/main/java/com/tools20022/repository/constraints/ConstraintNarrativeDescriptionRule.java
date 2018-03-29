@@ -54,11 +54,15 @@ public class ConstraintNarrativeDescriptionRule {
 	 */
 	public static final MMConstraint<BeneficiaryCertificationType2Choice> forBeneficiaryCertificationType2Choice = new MMConstraint<BeneficiaryCertificationType2Choice>() {
 		{
-			validator = ConstraintNarrativeDescriptionRule::checkBeneficiaryCertificationType2Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NarrativeDescriptionRule";
 			definition = "Code/NarrativeDescription shall only be used when all the other code possibilities are not appropriate.";
 			owner_lazy = () -> BeneficiaryCertificationType2Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BeneficiaryCertificationType2Choice obj) throws Exception {
+			checkBeneficiaryCertificationType2Choice(obj);
 		}
 	};
 	/**
@@ -84,11 +88,15 @@ public class ConstraintNarrativeDescriptionRule {
 	 */
 	public static final MMConstraint<BeneficiaryCertificationType4Choice> forBeneficiaryCertificationType4Choice = new MMConstraint<BeneficiaryCertificationType4Choice>() {
 		{
-			validator = ConstraintNarrativeDescriptionRule::checkBeneficiaryCertificationType4Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NarrativeDescriptionRule";
 			definition = "Code/NarrativeDescription shall only be used when all the other code possibilities are not appropriate.";
 			owner_lazy = () -> BeneficiaryCertificationType4Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BeneficiaryCertificationType4Choice obj) throws Exception {
+			checkBeneficiaryCertificationType4Choice(obj);
 		}
 	};
 	/**
@@ -114,11 +122,15 @@ public class ConstraintNarrativeDescriptionRule {
 	 */
 	public static final MMConstraint<BeneficiaryCertificationType1Choice> forBeneficiaryCertificationType1Choice = new MMConstraint<BeneficiaryCertificationType1Choice>() {
 		{
-			validator = ConstraintNarrativeDescriptionRule::checkBeneficiaryCertificationType1Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NarrativeDescriptionRule";
 			definition = "Code/NarrativeDescription shall only be used when all the other code possibilities are not appropriate.";
 			owner_lazy = () -> BeneficiaryCertificationType1Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BeneficiaryCertificationType1Choice obj) throws Exception {
+			checkBeneficiaryCertificationType1Choice(obj);
 		}
 	};
 	/**
@@ -144,11 +156,15 @@ public class ConstraintNarrativeDescriptionRule {
 	 */
 	public static final MMConstraint<BeneficiaryCertificationType3Choice> forBeneficiaryCertificationType3Choice = new MMConstraint<BeneficiaryCertificationType3Choice>() {
 		{
-			validator = ConstraintNarrativeDescriptionRule::checkBeneficiaryCertificationType3Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NarrativeDescriptionRule";
 			definition = "Code/NarrativeDescription shall only be used when all the other code possibilities are not appropriate.";
 			owner_lazy = () -> BeneficiaryCertificationType3Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BeneficiaryCertificationType3Choice obj) throws Exception {
+			checkBeneficiaryCertificationType3Choice(obj);
 		}
 	};
 

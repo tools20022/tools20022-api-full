@@ -103,7 +103,7 @@ public class AssetClassCommodityPolypropylene1Choice {
 	 * definition} = "Plastic commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPlastic = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodityPolypropylene1Choice, PolypropyleneCommodityPlastic1> mmPlastic = new MMMessageAssociationEnd<AssetClassCommodityPolypropylene1Choice, PolypropyleneCommodityPlastic1>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityPolypropylene1Choice.mmObject();
@@ -116,6 +116,16 @@ public class AssetClassCommodityPolypropylene1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PolypropyleneCommodityPlastic1.mmObject();
+		}
+
+		@Override
+		public PolypropyleneCommodityPlastic1 getValue(AssetClassCommodityPolypropylene1Choice obj) {
+			return obj.getPlastic();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodityPolypropylene1Choice obj, PolypropyleneCommodityPlastic1 value) {
+			obj.setPlastic(value);
 		}
 	};
 

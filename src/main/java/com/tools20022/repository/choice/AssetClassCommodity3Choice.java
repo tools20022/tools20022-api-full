@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.*;
 import com.tools20022.repository.entity.Commodity;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AssetClassCommodityInflation1;
@@ -145,7 +146,7 @@ public class AssetClassCommodity3Choice {
 	 * definition} = "Agricultural commodities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAgricultural = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodity3Choice, AssetClassCommodityAgricultural1Choice> mmAgricultural = new MMMessageAssociationEnd<AssetClassCommodity3Choice, AssetClassCommodityAgricultural1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodity3Choice.mmObject();
@@ -157,7 +158,17 @@ public class AssetClassCommodity3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityAgricultural1Choice.mmObject();
+			type_lazy = () -> AssetClassCommodityAgricultural1Choice.mmObject();
+		}
+
+		@Override
+		public AssetClassCommodityAgricultural1Choice getValue(AssetClassCommodity3Choice obj) {
+			return obj.getAgricultural();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodity3Choice obj, AssetClassCommodityAgricultural1Choice value) {
+			obj.setAgricultural(value);
 		}
 	};
 	@XmlElement(name = "Nrgy", required = true)
@@ -194,7 +205,7 @@ public class AssetClassCommodity3Choice {
 	 * definition} = "Energy commodities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnergy = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodity3Choice, AssetClassCommodityEnergy1Choice> mmEnergy = new MMMessageAssociationEnd<AssetClassCommodity3Choice, AssetClassCommodityEnergy1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodity3Choice.mmObject();
@@ -206,7 +217,17 @@ public class AssetClassCommodity3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmObject();
+			type_lazy = () -> AssetClassCommodityEnergy1Choice.mmObject();
+		}
+
+		@Override
+		public AssetClassCommodityEnergy1Choice getValue(AssetClassCommodity3Choice obj) {
+			return obj.getEnergy();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodity3Choice obj, AssetClassCommodityEnergy1Choice value) {
+			obj.setEnergy(value);
 		}
 	};
 	@XmlElement(name = "Envttl", required = true)
@@ -243,7 +264,7 @@ public class AssetClassCommodity3Choice {
 	 * definition} = "Environmental commodities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvironmental = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodity3Choice, AssetClassCommodityEnvironmental1Choice> mmEnvironmental = new MMMessageAssociationEnd<AssetClassCommodity3Choice, AssetClassCommodityEnvironmental1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodity3Choice.mmObject();
@@ -255,7 +276,17 @@ public class AssetClassCommodity3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityEnvironmental1Choice.mmObject();
+			type_lazy = () -> AssetClassCommodityEnvironmental1Choice.mmObject();
+		}
+
+		@Override
+		public AssetClassCommodityEnvironmental1Choice getValue(AssetClassCommodity3Choice obj) {
+			return obj.getEnvironmental();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodity3Choice obj, AssetClassCommodityEnvironmental1Choice value) {
+			obj.setEnvironmental(value);
 		}
 	};
 	@XmlElement(name = "Frtlzr", required = true)
@@ -292,7 +323,7 @@ public class AssetClassCommodity3Choice {
 	 * definition} = "Fertilizer commodities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFertilizer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodity3Choice, AssetClassCommodityFertilizer1Choice> mmFertilizer = new MMMessageAssociationEnd<AssetClassCommodity3Choice, AssetClassCommodityFertilizer1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodity3Choice.mmObject();
@@ -304,7 +335,17 @@ public class AssetClassCommodity3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.mmObject();
+			type_lazy = () -> AssetClassCommodityFertilizer1Choice.mmObject();
+		}
+
+		@Override
+		public AssetClassCommodityFertilizer1Choice getValue(AssetClassCommodity3Choice obj) {
+			return obj.getFertilizer();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodity3Choice obj, AssetClassCommodityFertilizer1Choice value) {
+			obj.setFertilizer(value);
 		}
 	};
 	@XmlElement(name = "Frght", required = true)
@@ -341,7 +382,7 @@ public class AssetClassCommodity3Choice {
 	 * definition} = "Freight commodities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFreight = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodity3Choice, AssetClassCommodityFreight1Choice> mmFreight = new MMMessageAssociationEnd<AssetClassCommodity3Choice, AssetClassCommodityFreight1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodity3Choice.mmObject();
@@ -353,7 +394,17 @@ public class AssetClassCommodity3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityFreight1Choice.mmObject();
+			type_lazy = () -> AssetClassCommodityFreight1Choice.mmObject();
+		}
+
+		@Override
+		public AssetClassCommodityFreight1Choice getValue(AssetClassCommodity3Choice obj) {
+			return obj.getFreight();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodity3Choice obj, AssetClassCommodityFreight1Choice value) {
+			obj.setFreight(value);
 		}
 	};
 	@XmlElement(name = "IndstrlPdct", required = true)
@@ -390,7 +441,7 @@ public class AssetClassCommodity3Choice {
 	 * definition} = "Industrial Product commodities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIndustrialProduct = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodity3Choice, AssetClassCommodityIndustrialProduct1Choice> mmIndustrialProduct = new MMMessageAssociationEnd<AssetClassCommodity3Choice, AssetClassCommodityIndustrialProduct1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodity3Choice.mmObject();
@@ -402,7 +453,17 @@ public class AssetClassCommodity3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityIndustrialProduct1Choice.mmObject();
+			type_lazy = () -> AssetClassCommodityIndustrialProduct1Choice.mmObject();
+		}
+
+		@Override
+		public AssetClassCommodityIndustrialProduct1Choice getValue(AssetClassCommodity3Choice obj) {
+			return obj.getIndustrialProduct();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodity3Choice obj, AssetClassCommodityIndustrialProduct1Choice value) {
+			obj.setIndustrialProduct(value);
 		}
 	};
 	@XmlElement(name = "Metl", required = true)
@@ -439,7 +500,7 @@ public class AssetClassCommodity3Choice {
 	 * definition} = "Metal commodities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMetal = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodity3Choice, AssetClassCommodityMetal1Choice> mmMetal = new MMMessageAssociationEnd<AssetClassCommodity3Choice, AssetClassCommodityMetal1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodity3Choice.mmObject();
@@ -451,7 +512,17 @@ public class AssetClassCommodity3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityMetal1Choice.mmObject();
+			type_lazy = () -> AssetClassCommodityMetal1Choice.mmObject();
+		}
+
+		@Override
+		public AssetClassCommodityMetal1Choice getValue(AssetClassCommodity3Choice obj) {
+			return obj.getMetal();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodity3Choice obj, AssetClassCommodityMetal1Choice value) {
+			obj.setMetal(value);
 		}
 	};
 	@XmlElement(name = "OthrC10", required = true)
@@ -488,7 +559,7 @@ public class AssetClassCommodity3Choice {
 	 * definition} = "Other C10 commodities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherC10 = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodity3Choice, AssetClassCommodityOtherC102Choice> mmOtherC10 = new MMMessageAssociationEnd<AssetClassCommodity3Choice, AssetClassCommodityOtherC102Choice>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodity3Choice.mmObject();
@@ -500,7 +571,17 @@ public class AssetClassCommodity3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityOtherC102Choice.mmObject();
+			type_lazy = () -> AssetClassCommodityOtherC102Choice.mmObject();
+		}
+
+		@Override
+		public AssetClassCommodityOtherC102Choice getValue(AssetClassCommodity3Choice obj) {
+			return obj.getOtherC10();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodity3Choice obj, AssetClassCommodityOtherC102Choice value) {
+			obj.setOtherC10(value);
 		}
 	};
 	@XmlElement(name = "Ppr", required = true)
@@ -537,7 +618,7 @@ public class AssetClassCommodity3Choice {
 	 * definition} = "Paper commodities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaper = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodity3Choice, AssetClassCommodityPaper1Choice> mmPaper = new MMMessageAssociationEnd<AssetClassCommodity3Choice, AssetClassCommodityPaper1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodity3Choice.mmObject();
@@ -549,7 +630,17 @@ public class AssetClassCommodity3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityPaper1Choice.mmObject();
+			type_lazy = () -> AssetClassCommodityPaper1Choice.mmObject();
+		}
+
+		@Override
+		public AssetClassCommodityPaper1Choice getValue(AssetClassCommodity3Choice obj) {
+			return obj.getPaper();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodity3Choice obj, AssetClassCommodityPaper1Choice value) {
+			obj.setPaper(value);
 		}
 	};
 	@XmlElement(name = "Plprpln", required = true)
@@ -586,7 +677,7 @@ public class AssetClassCommodity3Choice {
 	 * definition} = "Polypropylene commodities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPolypropylene = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodity3Choice, AssetClassCommodityPolypropylene1Choice> mmPolypropylene = new MMMessageAssociationEnd<AssetClassCommodity3Choice, AssetClassCommodityPolypropylene1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodity3Choice.mmObject();
@@ -598,7 +689,17 @@ public class AssetClassCommodity3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityPolypropylene1Choice.mmObject();
+			type_lazy = () -> AssetClassCommodityPolypropylene1Choice.mmObject();
+		}
+
+		@Override
+		public AssetClassCommodityPolypropylene1Choice getValue(AssetClassCommodity3Choice obj) {
+			return obj.getPolypropylene();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodity3Choice obj, AssetClassCommodityPolypropylene1Choice value) {
+			obj.setPolypropylene(value);
 		}
 	};
 	@XmlElement(name = "Infltn", required = true)
@@ -635,7 +736,7 @@ public class AssetClassCommodity3Choice {
 	 * definition} = "Inflation commodities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInflation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodity3Choice, AssetClassCommodityInflation1> mmInflation = new MMMessageAssociationEnd<AssetClassCommodity3Choice, AssetClassCommodityInflation1>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodity3Choice.mmObject();
@@ -648,6 +749,16 @@ public class AssetClassCommodity3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AssetClassCommodityInflation1.mmObject();
+		}
+
+		@Override
+		public AssetClassCommodityInflation1 getValue(AssetClassCommodity3Choice obj) {
+			return obj.getInflation();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodity3Choice obj, AssetClassCommodityInflation1 value) {
+			obj.setInflation(value);
 		}
 	};
 	@XmlElement(name = "MultiCmmdtyExtc", required = true)
@@ -684,7 +795,7 @@ public class AssetClassCommodity3Choice {
 	 * definition} = "Multi Commodity Exotic."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMultiCommodityExotic = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodity3Choice, AssetClassCommodityMultiCommodityExotic1> mmMultiCommodityExotic = new MMMessageAssociationEnd<AssetClassCommodity3Choice, AssetClassCommodityMultiCommodityExotic1>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodity3Choice.mmObject();
@@ -697,6 +808,16 @@ public class AssetClassCommodity3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AssetClassCommodityMultiCommodityExotic1.mmObject();
+		}
+
+		@Override
+		public AssetClassCommodityMultiCommodityExotic1 getValue(AssetClassCommodity3Choice obj) {
+			return obj.getMultiCommodityExotic();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodity3Choice obj, AssetClassCommodityMultiCommodityExotic1 value) {
+			obj.setMultiCommodityExotic(value);
 		}
 	};
 	@XmlElement(name = "OffclEcnmcSttstcs", required = true)
@@ -733,7 +854,7 @@ public class AssetClassCommodity3Choice {
 	 * definition} = "Official Economic Statistics commodities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOfficialEconomicStatistics = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodity3Choice, AssetClassCommodityOfficialEconomicStatistics1> mmOfficialEconomicStatistics = new MMMessageAssociationEnd<AssetClassCommodity3Choice, AssetClassCommodityOfficialEconomicStatistics1>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodity3Choice.mmObject();
@@ -746,6 +867,16 @@ public class AssetClassCommodity3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AssetClassCommodityOfficialEconomicStatistics1.mmObject();
+		}
+
+		@Override
+		public AssetClassCommodityOfficialEconomicStatistics1 getValue(AssetClassCommodity3Choice obj) {
+			return obj.getOfficialEconomicStatistics();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodity3Choice obj, AssetClassCommodityOfficialEconomicStatistics1 value) {
+			obj.setOfficialEconomicStatistics(value);
 		}
 	};
 	@XmlElement(name = "Othr", required = true)
@@ -782,7 +913,7 @@ public class AssetClassCommodity3Choice {
 	 * definition} = "Other commodities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOther = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodity3Choice, AssetClassCommodityOther1> mmOther = new MMMessageAssociationEnd<AssetClassCommodity3Choice, AssetClassCommodityOther1>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodity3Choice.mmObject();
@@ -795,6 +926,16 @@ public class AssetClassCommodity3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AssetClassCommodityOther1.mmObject();
+		}
+
+		@Override
+		public AssetClassCommodityOther1 getValue(AssetClassCommodity3Choice obj) {
+			return obj.getOther();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodity3Choice obj, AssetClassCommodityOther1 value) {
+			obj.setOther(value);
 		}
 	};
 
@@ -822,7 +963,7 @@ public class AssetClassCommodity3Choice {
 		return agricultural;
 	}
 
-	public AssetClassCommodity3Choice setAgricultural(com.tools20022.repository.choice.AssetClassCommodityAgricultural1Choice agricultural) {
+	public AssetClassCommodity3Choice setAgricultural(AssetClassCommodityAgricultural1Choice agricultural) {
 		this.agricultural = Objects.requireNonNull(agricultural);
 		return this;
 	}
@@ -831,7 +972,7 @@ public class AssetClassCommodity3Choice {
 		return energy;
 	}
 
-	public AssetClassCommodity3Choice setEnergy(com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice energy) {
+	public AssetClassCommodity3Choice setEnergy(AssetClassCommodityEnergy1Choice energy) {
 		this.energy = Objects.requireNonNull(energy);
 		return this;
 	}
@@ -840,7 +981,7 @@ public class AssetClassCommodity3Choice {
 		return environmental;
 	}
 
-	public AssetClassCommodity3Choice setEnvironmental(com.tools20022.repository.choice.AssetClassCommodityEnvironmental1Choice environmental) {
+	public AssetClassCommodity3Choice setEnvironmental(AssetClassCommodityEnvironmental1Choice environmental) {
 		this.environmental = Objects.requireNonNull(environmental);
 		return this;
 	}
@@ -849,7 +990,7 @@ public class AssetClassCommodity3Choice {
 		return fertilizer;
 	}
 
-	public AssetClassCommodity3Choice setFertilizer(com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice fertilizer) {
+	public AssetClassCommodity3Choice setFertilizer(AssetClassCommodityFertilizer1Choice fertilizer) {
 		this.fertilizer = Objects.requireNonNull(fertilizer);
 		return this;
 	}
@@ -858,7 +999,7 @@ public class AssetClassCommodity3Choice {
 		return freight;
 	}
 
-	public AssetClassCommodity3Choice setFreight(com.tools20022.repository.choice.AssetClassCommodityFreight1Choice freight) {
+	public AssetClassCommodity3Choice setFreight(AssetClassCommodityFreight1Choice freight) {
 		this.freight = Objects.requireNonNull(freight);
 		return this;
 	}
@@ -867,7 +1008,7 @@ public class AssetClassCommodity3Choice {
 		return industrialProduct;
 	}
 
-	public AssetClassCommodity3Choice setIndustrialProduct(com.tools20022.repository.choice.AssetClassCommodityIndustrialProduct1Choice industrialProduct) {
+	public AssetClassCommodity3Choice setIndustrialProduct(AssetClassCommodityIndustrialProduct1Choice industrialProduct) {
 		this.industrialProduct = Objects.requireNonNull(industrialProduct);
 		return this;
 	}
@@ -876,7 +1017,7 @@ public class AssetClassCommodity3Choice {
 		return metal;
 	}
 
-	public AssetClassCommodity3Choice setMetal(com.tools20022.repository.choice.AssetClassCommodityMetal1Choice metal) {
+	public AssetClassCommodity3Choice setMetal(AssetClassCommodityMetal1Choice metal) {
 		this.metal = Objects.requireNonNull(metal);
 		return this;
 	}
@@ -885,7 +1026,7 @@ public class AssetClassCommodity3Choice {
 		return otherC10;
 	}
 
-	public AssetClassCommodity3Choice setOtherC10(com.tools20022.repository.choice.AssetClassCommodityOtherC102Choice otherC10) {
+	public AssetClassCommodity3Choice setOtherC10(AssetClassCommodityOtherC102Choice otherC10) {
 		this.otherC10 = Objects.requireNonNull(otherC10);
 		return this;
 	}
@@ -894,7 +1035,7 @@ public class AssetClassCommodity3Choice {
 		return paper;
 	}
 
-	public AssetClassCommodity3Choice setPaper(com.tools20022.repository.choice.AssetClassCommodityPaper1Choice paper) {
+	public AssetClassCommodity3Choice setPaper(AssetClassCommodityPaper1Choice paper) {
 		this.paper = Objects.requireNonNull(paper);
 		return this;
 	}
@@ -903,7 +1044,7 @@ public class AssetClassCommodity3Choice {
 		return polypropylene;
 	}
 
-	public AssetClassCommodity3Choice setPolypropylene(com.tools20022.repository.choice.AssetClassCommodityPolypropylene1Choice polypropylene) {
+	public AssetClassCommodity3Choice setPolypropylene(AssetClassCommodityPolypropylene1Choice polypropylene) {
 		this.polypropylene = Objects.requireNonNull(polypropylene);
 		return this;
 	}

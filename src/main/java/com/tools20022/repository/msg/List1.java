@@ -29,6 +29,7 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.ListTrading;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Order6;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -160,7 +161,7 @@ public class List1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmListIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<List1, Max35Text> mmListIdentification = new MMMessageAttribute<List1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> ListTrading.mmListIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.List1.mmObject();
@@ -173,6 +174,16 @@ public class List1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(List1 obj) {
+			return obj.getListIdentification();
+		}
+
+		@Override
+		public void setValue(List1 obj, Max35Text value) {
+			obj.setListIdentification(value);
 		}
 	};
 	@XmlElement(name = "NbOfListOrdrs", required = true)
@@ -206,7 +217,7 @@ public class List1 {
 	 * definition} = "Identifies the number of orders in this message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfListOrders = new MMMessageAttribute() {
+	public static final MMMessageAttribute<List1, Number> mmNumberOfListOrders = new MMMessageAttribute<List1, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.List1.mmObject();
 			isDerived = false;
@@ -218,6 +229,16 @@ public class List1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(List1 obj) {
+			return obj.getNumberOfListOrders();
+		}
+
+		@Override
+		public void setValue(List1 obj, Number value) {
+			obj.setNumberOfListOrders(value);
 		}
 	};
 	@XmlElement(name = "TtlNbOfListOrdrs", required = true)
@@ -253,7 +274,7 @@ public class List1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalNumberOfListOrders = new MMMessageAttribute() {
+	public static final MMMessageAttribute<List1, Number> mmTotalNumberOfListOrders = new MMMessageAttribute<List1, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.List1.mmObject();
 			isDerived = false;
@@ -265,6 +286,16 @@ public class List1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(List1 obj) {
+			return obj.getTotalNumberOfListOrders();
+		}
+
+		@Override
+		public void setValue(List1 obj, Number value) {
+			obj.setTotalNumberOfListOrders(value);
 		}
 	};
 	@XmlElement(name = "ImdtExctnInd")
@@ -301,7 +332,7 @@ public class List1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmImmediateExecutionIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<List1, Optional<YesNoIndicator>> mmImmediateExecutionIndicator = new MMMessageAttribute<List1, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.List1.mmObject();
 			isDerived = false;
@@ -313,6 +344,16 @@ public class List1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(List1 obj) {
+			return obj.getImmediateExecutionIndicator();
+		}
+
+		@Override
+		public void setValue(List1 obj, Optional<YesNoIndicator> value) {
+			obj.setImmediateExecutionIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ExctnInstr")
@@ -346,7 +387,7 @@ public class List1 {
 	 * definition} = "Additional list handling or execution instructions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExecutionInstruction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<List1, Optional<Max140Text>> mmExecutionInstruction = new MMMessageAttribute<List1, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.List1.mmObject();
 			isDerived = false;
@@ -358,6 +399,16 @@ public class List1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(List1 obj) {
+			return obj.getExecutionInstruction();
+		}
+
+		@Override
+		public void setValue(List1 obj, Optional<Max140Text> value) {
+			obj.setExecutionInstruction(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrgrsRptInd")
@@ -394,7 +445,7 @@ public class List1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProgressReportIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<List1, Optional<YesNoIndicator>> mmProgressReportIndicator = new MMMessageAttribute<List1, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.List1.mmObject();
 			isDerived = false;
@@ -406,6 +457,16 @@ public class List1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(List1 obj) {
+			return obj.getProgressReportIndicator();
+		}
+
+		@Override
+		public void setValue(List1 obj, Optional<YesNoIndicator> value) {
+			obj.setProgressReportIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrgrsPrdIntrvl")
@@ -441,7 +502,7 @@ public class List1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProgressPeriodInterval = new MMMessageAttribute() {
+	public static final MMMessageAttribute<List1, Optional<ISOTime>> mmProgressPeriodInterval = new MMMessageAttribute<List1, Optional<ISOTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.List1.mmObject();
 			isDerived = false;
@@ -453,6 +514,16 @@ public class List1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISOTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISOTime> getValue(List1 obj) {
+			return obj.getProgressPeriodInterval();
+		}
+
+		@Override
+		public void setValue(List1 obj, Optional<ISOTime> value) {
+			obj.setProgressPeriodInterval(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RealTmExctnRptInd")
@@ -488,7 +559,7 @@ public class List1 {
 	 * "Identifies the request to receive a real time execution report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRealTimeExecutionReportIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<List1, Optional<YesNoIndicator>> mmRealTimeExecutionReportIndicator = new MMMessageAttribute<List1, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.List1.mmObject();
 			isDerived = false;
@@ -500,6 +571,16 @@ public class List1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(List1 obj) {
+			return obj.getRealTimeExecutionReportIndicator();
+		}
+
+		@Override
+		public void setValue(List1 obj, Optional<YesNoIndicator> value) {
+			obj.setRealTimeExecutionReportIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BidTp")
@@ -537,7 +618,7 @@ public class List1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBidType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<List1, Optional<BidType1Code>> mmBidType = new MMMessageAttribute<List1, Optional<BidType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> ListTrading.mmBidType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.List1.mmObject();
@@ -549,6 +630,16 @@ public class List1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BidType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<BidType1Code> getValue(List1 obj) {
+			return obj.getBidType();
+		}
+
+		@Override
+		public void setValue(List1 obj, Optional<BidType1Code> value) {
+			obj.setBidType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MnyLndrgSts")
@@ -586,7 +677,7 @@ public class List1 {
 	 * "Provides the status of an identity check to prevent money laundering."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMoneyLaunderingStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<List1, Optional<OldMoneyLaunderingCheck1Code>> mmMoneyLaunderingStatus = new MMMessageAttribute<List1, Optional<OldMoneyLaunderingCheck1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmMoneyLaunderingCheck;
 			componentContext_lazy = () -> com.tools20022.repository.msg.List1.mmObject();
@@ -598,6 +689,16 @@ public class List1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> OldMoneyLaunderingCheck1Code.mmObject();
+		}
+
+		@Override
+		public Optional<OldMoneyLaunderingCheck1Code> getValue(List1 obj) {
+			return obj.getMoneyLaunderingStatus();
+		}
+
+		@Override
+		public void setValue(List1 obj, Optional<OldMoneyLaunderingCheck1Code> value) {
+			obj.setMoneyLaunderingStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AllwblOneSddnsPct", required = true)
@@ -631,7 +732,7 @@ public class List1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAllowableOneSidednessPercent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<List1, PercentageRate> mmAllowableOneSidednessPercent = new MMMessageAttribute<List1, PercentageRate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.List1.mmObject();
 			isDerived = false;
@@ -642,6 +743,16 @@ public class List1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(List1 obj) {
+			return obj.getAllowableOneSidednessPercent();
+		}
+
+		@Override
+		public void setValue(List1 obj, PercentageRate value) {
+			obj.setAllowableOneSidednessPercent(value);
 		}
 	};
 	@XmlElement(name = "AllwblOneSddnsVal", required = true)
@@ -675,7 +786,7 @@ public class List1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAllowableOneSidednessValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<List1, ActiveCurrencyAndAmount> mmAllowableOneSidednessValue = new MMMessageAttribute<List1, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.List1.mmObject();
 			isDerived = false;
@@ -687,9 +798,19 @@ public class List1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(List1 obj) {
+			return obj.getAllowableOneSidednessValue();
+		}
+
+		@Override
+		public void setValue(List1 obj, ActiveCurrencyAndAmount value) {
+			obj.setAllowableOneSidednessValue(value);
+		}
 	};
 	@XmlElement(name = "OrdrDtls", required = true)
-	protected List<com.tools20022.repository.msg.Order6> orderDetails;
+	protected List<Order6> orderDetails;
 	/**
 	 * 
 	 <p>
@@ -720,7 +841,7 @@ public class List1 {
 	 * "The intention to transfer an ownership of a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOrderDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<List1, List<Order6>> mmOrderDetails = new MMMessageAssociationEnd<List1, List<Order6>>() {
 		{
 			businessElementTrace_lazy = () -> ListTrading.mmSecuritiesListOrder;
 			componentContext_lazy = () -> com.tools20022.repository.msg.List1.mmObject();
@@ -731,7 +852,17 @@ public class List1 {
 			definition = "The intention to transfer an ownership of a financial instrument.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Order6.mmObject();
+			type_lazy = () -> Order6.mmObject();
+		}
+
+		@Override
+		public List<Order6> getValue(List1 obj) {
+			return obj.getOrderDetails();
+		}
+
+		@Override
+		public void setValue(List1 obj, List<Order6> value) {
+			obj.setOrderDetails(value);
 		}
 	};
 
@@ -866,7 +997,7 @@ public class List1 {
 		return orderDetails == null ? orderDetails = new ArrayList<>() : orderDetails;
 	}
 
-	public List1 setOrderDetails(List<com.tools20022.repository.msg.Order6> orderDetails) {
+	public List1 setOrderDetails(List<Order6> orderDetails) {
 		this.orderDetails = Objects.requireNonNull(orderDetails);
 		return this;
 	}

@@ -111,7 +111,7 @@ public class UnilateralSplit4Choice {
 	 * definition} = "Unilateral split expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnilateralSplit4Choice, SecuritiesTransactionType5Code> mmCode = new MMMessageAttribute<UnilateralSplit4Choice, SecuritiesTransactionType5Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTransactionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnilateralSplit4Choice.mmObject();
@@ -124,6 +124,16 @@ public class UnilateralSplit4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesTransactionType5Code.mmObject();
+		}
+
+		@Override
+		public SecuritiesTransactionType5Code getValue(UnilateralSplit4Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(UnilateralSplit4Choice obj, SecuritiesTransactionType5Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -164,7 +174,7 @@ public class UnilateralSplit4Choice {
 	 * definition} = "Unilateral split expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnilateralSplit4Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<UnilateralSplit4Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTransactionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnilateralSplit4Choice.mmObject();
@@ -177,6 +187,16 @@ public class UnilateralSplit4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(UnilateralSplit4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(UnilateralSplit4Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

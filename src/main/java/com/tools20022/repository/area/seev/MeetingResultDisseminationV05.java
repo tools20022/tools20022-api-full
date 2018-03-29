@@ -24,7 +24,6 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesEventsLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ProxyVotingISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -142,7 +141,7 @@ public class MeetingResultDisseminationV05 {
 	 * MeetingResultDisseminationV04.mmAmendment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAmendment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingResultDisseminationV05, Optional<AmendInformation3>> mmAmendment = new MMMessageBuildingBlock<MeetingResultDisseminationV05, Optional<AmendInformation3>>() {
 		{
 			xmlTag = "Amdmnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,12 +153,14 @@ public class MeetingResultDisseminationV05 {
 			complexType_lazy = () -> AmendInformation3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingResultDisseminationV05.class.getMethod("getAmendment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AmendInformation3> getValue(MeetingResultDisseminationV05 obj) {
+			return obj.getAmendment();
+		}
+
+		@Override
+		public void setValue(MeetingResultDisseminationV05 obj, Optional<AmendInformation3> value) {
+			obj.setAmendment(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MtgRef", required = true)
@@ -192,7 +193,7 @@ public class MeetingResultDisseminationV05 {
 	 * MeetingResultDisseminationV04.mmMeetingReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMeetingReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingResultDisseminationV05, MeetingReference7> mmMeetingReference = new MMMessageBuildingBlock<MeetingResultDisseminationV05, MeetingReference7>() {
 		{
 			xmlTag = "MtgRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -204,12 +205,14 @@ public class MeetingResultDisseminationV05 {
 			complexType_lazy = () -> MeetingReference7.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingResultDisseminationV05.class.getMethod("getMeetingReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MeetingReference7 getValue(MeetingResultDisseminationV05 obj) {
+			return obj.getMeetingReference();
+		}
+
+		@Override
+		public void setValue(MeetingResultDisseminationV05 obj, MeetingReference7 value) {
+			obj.setMeetingReference(value);
 		}
 	};
 	@XmlElement(name = "Scty", required = true)
@@ -243,7 +246,7 @@ public class MeetingResultDisseminationV05 {
 	 * MeetingResultDisseminationV04.mmSecurity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurity = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingResultDisseminationV05, List<SecurityPosition8>> mmSecurity = new MMMessageBuildingBlock<MeetingResultDisseminationV05, List<SecurityPosition8>>() {
 		{
 			xmlTag = "Scty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -255,12 +258,14 @@ public class MeetingResultDisseminationV05 {
 			complexType_lazy = () -> SecurityPosition8.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingResultDisseminationV05.class.getMethod("getSecurity", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SecurityPosition8> getValue(MeetingResultDisseminationV05 obj) {
+			return obj.getSecurity();
+		}
+
+		@Override
+		public void setValue(MeetingResultDisseminationV05 obj, List<SecurityPosition8> value) {
+			obj.setSecurity(value);
 		}
 	};
 	@XmlElement(name = "VoteRslt", required = true)
@@ -291,7 +296,7 @@ public class MeetingResultDisseminationV05 {
 	 * MeetingResultDisseminationV04.mmVoteResult}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmVoteResult = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingResultDisseminationV05, List<Vote7>> mmVoteResult = new MMMessageBuildingBlock<MeetingResultDisseminationV05, List<Vote7>>() {
 		{
 			xmlTag = "VoteRslt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -303,12 +308,14 @@ public class MeetingResultDisseminationV05 {
 			complexType_lazy = () -> Vote7.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingResultDisseminationV05.class.getMethod("getVoteResult", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Vote7> getValue(MeetingResultDisseminationV05 obj) {
+			return obj.getVoteResult();
+		}
+
+		@Override
+		public void setValue(MeetingResultDisseminationV05 obj, List<Vote7> value) {
+			obj.setVoteResult(value);
 		}
 	};
 	@XmlElement(name = "Prtcptn")
@@ -341,7 +348,7 @@ public class MeetingResultDisseminationV05 {
 	 * MeetingResultDisseminationV04.mmParticipation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmParticipation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingResultDisseminationV05, Optional<Participation4>> mmParticipation = new MMMessageBuildingBlock<MeetingResultDisseminationV05, Optional<Participation4>>() {
 		{
 			xmlTag = "Prtcptn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -353,12 +360,14 @@ public class MeetingResultDisseminationV05 {
 			complexType_lazy = () -> Participation4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingResultDisseminationV05.class.getMethod("getParticipation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Participation4> getValue(MeetingResultDisseminationV05 obj) {
+			return obj.getParticipation();
+		}
+
+		@Override
+		public void setValue(MeetingResultDisseminationV05 obj, Optional<Participation4> value) {
+			obj.setParticipation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -392,7 +401,7 @@ public class MeetingResultDisseminationV05 {
 	 * MeetingResultDisseminationV04.mmAdditionalInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAdditionalInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingResultDisseminationV05, Optional<CommunicationAddress4>> mmAdditionalInformation = new MMMessageBuildingBlock<MeetingResultDisseminationV05, Optional<CommunicationAddress4>>() {
 		{
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -404,12 +413,14 @@ public class MeetingResultDisseminationV05 {
 			complexType_lazy = () -> CommunicationAddress4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingResultDisseminationV05.class.getMethod("getAdditionalInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<CommunicationAddress4> getValue(MeetingResultDisseminationV05 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(MeetingResultDisseminationV05 obj, Optional<CommunicationAddress4> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -439,7 +450,7 @@ public class MeetingResultDisseminationV05 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingResultDisseminationV05, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<MeetingResultDisseminationV05, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -449,12 +460,14 @@ public class MeetingResultDisseminationV05 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingResultDisseminationV05.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(MeetingResultDisseminationV05 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(MeetingResultDisseminationV05 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

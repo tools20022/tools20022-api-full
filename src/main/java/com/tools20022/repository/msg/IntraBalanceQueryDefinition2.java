@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MovementResponseType1Code;
 import com.tools20022.repository.entity.IntraPositionTransfer;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.IntraBalanceQueryCriteria2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -117,7 +118,7 @@ public class IntraBalanceQueryDefinition2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalanceQueryDefinition2, MovementResponseType1Code> mmQueryType = new MMMessageAttribute<IntraBalanceQueryDefinition2, MovementResponseType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceQueryDefinition2.mmObject();
 			isDerived = false;
@@ -129,6 +130,16 @@ public class IntraBalanceQueryDefinition2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MovementResponseType1Code.mmObject();
+		}
+
+		@Override
+		public MovementResponseType1Code getValue(IntraBalanceQueryDefinition2 obj) {
+			return obj.getQueryType();
+		}
+
+		@Override
+		public void setValue(IntraBalanceQueryDefinition2 obj, MovementResponseType1Code value) {
+			obj.setQueryType(value);
 		}
 	};
 	@XmlElement(name = "SchCrit", required = true)
@@ -176,7 +187,7 @@ public class IntraBalanceQueryDefinition2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSearchCriteria = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalanceQueryDefinition2, IntraBalanceQueryCriteria2> mmSearchCriteria = new MMMessageAttribute<IntraBalanceQueryDefinition2, IntraBalanceQueryCriteria2>() {
 		{
 			businessComponentTrace_lazy = () -> IntraPositionTransfer.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceQueryDefinition2.mmObject();
@@ -188,7 +199,17 @@ public class IntraBalanceQueryDefinition2 {
 			nextVersions_lazy = () -> Arrays.asList(IntraBalanceQueryDefinition5.mmSearchCriteria);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.IntraBalanceQueryCriteria2.mmObject();
+			complexType_lazy = () -> IntraBalanceQueryCriteria2.mmObject();
+		}
+
+		@Override
+		public IntraBalanceQueryCriteria2 getValue(IntraBalanceQueryDefinition2 obj) {
+			return obj.getSearchCriteria();
+		}
+
+		@Override
+		public void setValue(IntraBalanceQueryDefinition2 obj, IntraBalanceQueryCriteria2 value) {
+			obj.setSearchCriteria(value);
 		}
 	};
 
@@ -220,7 +241,7 @@ public class IntraBalanceQueryDefinition2 {
 		return searchCriteria;
 	}
 
-	public IntraBalanceQueryDefinition2 setSearchCriteria(com.tools20022.repository.msg.IntraBalanceQueryCriteria2 searchCriteria) {
+	public IntraBalanceQueryDefinition2 setSearchCriteria(IntraBalanceQueryCriteria2 searchCriteria) {
 		this.searchCriteria = Objects.requireNonNull(searchCriteria);
 		return this;
 	}

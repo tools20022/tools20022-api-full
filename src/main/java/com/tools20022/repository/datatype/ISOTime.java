@@ -21,6 +21,10 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMTime;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.XmlValue;
 
 /**
  * A particular point in the progression of time in a calendar day expressed in
@@ -53,9 +57,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType
 public class ISOTime {
 
 	final static private AtomicReference<MMTime> mmObject_lazy = new AtomicReference<>();
+	@XmlValue
+	protected String value;
 
 	final static public MMTime mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMTime() {
@@ -67,5 +75,25 @@ public class ISOTime {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISOTime() {
+	}
+
+	public ISOTime(String value) {
+		this.value = value;
+	}
+
+	public String getValue() {
+		return value;
+	}
+
+	public void setValue(String value) {
+		this.value = value;
+	}
+
+	@Override
+	public String toString() {
+		return value == null ? null : value.toString();
 	}
 }

@@ -143,7 +143,7 @@ public class PowerOfAttorneyRequirements3 {
 	 * PowerOfAttorneyRequirements2.mmLegalRequirement}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLegalRequirement = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PowerOfAttorneyRequirements3, List<PowerOfAttorneyLegalisation1Code>> mmLegalRequirement = new MMMessageAttribute<PowerOfAttorneyRequirements3, List<PowerOfAttorneyLegalisation1Code>>() {
 		{
 			businessElementTrace_lazy = () -> PowerOfAttorneyRequirements.mmLegalRequirement;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PowerOfAttorneyRequirements3.mmObject();
@@ -156,6 +156,16 @@ public class PowerOfAttorneyRequirements3 {
 			maxOccurs = 4;
 			minOccurs = 0;
 			simpleType_lazy = () -> PowerOfAttorneyLegalisation1Code.mmObject();
+		}
+
+		@Override
+		public List<PowerOfAttorneyLegalisation1Code> getValue(PowerOfAttorneyRequirements3 obj) {
+			return obj.getLegalRequirement();
+		}
+
+		@Override
+		public void setValue(PowerOfAttorneyRequirements3 obj, List<PowerOfAttorneyLegalisation1Code> value) {
+			obj.setLegalRequirement(value);
 		}
 	};
 	@XmlElement(name = "OthrDcmnttn")
@@ -198,7 +208,7 @@ public class PowerOfAttorneyRequirements3 {
 	 * PowerOfAttorneyRequirements2.mmOtherDocumentation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherDocumentation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PowerOfAttorneyRequirements3, Optional<Max350Text>> mmOtherDocumentation = new MMMessageAttribute<PowerOfAttorneyRequirements3, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> PowerOfAttorneyRequirements.mmOtherDocumentation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PowerOfAttorneyRequirements3.mmObject();
@@ -211,6 +221,16 @@ public class PowerOfAttorneyRequirements3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(PowerOfAttorneyRequirements3 obj) {
+			return obj.getOtherDocumentation();
+		}
+
+		@Override
+		public void setValue(PowerOfAttorneyRequirements3 obj, Optional<Max350Text> value) {
+			obj.setOtherDocumentation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DocSubmissnDdln")
@@ -241,7 +261,7 @@ public class PowerOfAttorneyRequirements3 {
 	 * definition} = "Date by which the requested documents must be provided."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDocumentSubmissionDeadline = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PowerOfAttorneyRequirements3, Optional<DateFormat29Choice>> mmDocumentSubmissionDeadline = new MMMessageAssociationEnd<PowerOfAttorneyRequirements3, Optional<DateFormat29Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PowerOfAttorneyRequirements3.mmObject();
 			isDerived = false;
@@ -253,6 +273,16 @@ public class PowerOfAttorneyRequirements3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat29Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat29Choice> getValue(PowerOfAttorneyRequirements3 obj) {
+			return obj.getDocumentSubmissionDeadline();
+		}
+
+		@Override
+		public void setValue(PowerOfAttorneyRequirements3 obj, Optional<DateFormat29Choice> value) {
+			obj.setDocumentSubmissionDeadline(value.orElse(null));
 		}
 	};
 

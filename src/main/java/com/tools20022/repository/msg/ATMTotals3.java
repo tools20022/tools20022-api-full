@@ -112,7 +112,7 @@ public class ATMTotals3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTotals3, Max70Text> mmIdentification = new MMMessageAttribute<ATMTotals3, Max70Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTotals3.mmObject();
 			isDerived = false;
@@ -123,6 +123,16 @@ public class ATMTotals3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Max70Text getValue(ATMTotals3 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(ATMTotals3 obj, Max70Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "AddtlId")
@@ -155,7 +165,7 @@ public class ATMTotals3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTotals3, Optional<Max70Text>> mmAdditionalIdentification = new MMMessageAttribute<ATMTotals3, Optional<Max70Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTotals3.mmObject();
 			isDerived = false;
@@ -166,6 +176,16 @@ public class ATMTotals3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(ATMTotals3 obj) {
+			return obj.getAdditionalIdentification();
+		}
+
+		@Override
+		public void setValue(ATMTotals3 obj, Optional<Max70Text> value) {
+			obj.setAdditionalIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Prd", required = true)
@@ -201,7 +221,7 @@ public class ATMTotals3 {
 	 * definition} = "Period of computation for the counters."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTotals3, ATMCounterType2Code> mmPeriod = new MMMessageAttribute<ATMTotals3, ATMCounterType2Code>() {
 		{
 			businessComponentTrace_lazy = () -> ATMTotal.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTotals3.mmObject();
@@ -213,6 +233,16 @@ public class ATMTotals3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ATMCounterType2Code.mmObject();
+		}
+
+		@Override
+		public ATMCounterType2Code getValue(ATMTotals3 obj) {
+			return obj.getPeriod();
+		}
+
+		@Override
+		public void setValue(ATMTotals3 obj, ATMCounterType2Code value) {
+			obj.setPeriod(value);
 		}
 	};
 	@XmlElement(name = "Ccy")
@@ -249,7 +279,7 @@ public class ATMTotals3 {
 	 * definition} = "Currency of the totals."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTotals3, Optional<ActiveCurrencyCode>> mmCurrency = new MMMessageAttribute<ATMTotals3, Optional<ActiveCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> ATMTotal.mmCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTotals3.mmObject();
@@ -261,6 +291,16 @@ public class ATMTotals3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyCode> getValue(ATMTotals3 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(ATMTotals3 obj, Optional<ActiveCurrencyCode> value) {
+			obj.setCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Cnt", required = true)
@@ -296,7 +336,7 @@ public class ATMTotals3 {
 	 * definition} = "Number of transaction with the defined currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTotals3, Number> mmCount = new MMMessageAttribute<ATMTotals3, Number>() {
 		{
 			businessElementTrace_lazy = () -> ATMTotal.mmATMCurrentNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTotals3.mmObject();
@@ -308,6 +348,16 @@ public class ATMTotals3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(ATMTotals3 obj) {
+			return obj.getCount();
+		}
+
+		@Override
+		public void setValue(ATMTotals3 obj, Number value) {
+			obj.setCount(value);
 		}
 	};
 	@XmlElement(name = "Amt")
@@ -344,7 +394,7 @@ public class ATMTotals3 {
 	 * definition} = "Amount of transaction with the defined currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTotals3, Optional<ImpliedCurrencyAndAmount>> mmAmount = new MMMessageAttribute<ATMTotals3, Optional<ImpliedCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> ATMTotal.mmATMCurrent;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTotals3.mmObject();
@@ -356,6 +406,16 @@ public class ATMTotals3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ImpliedCurrencyAndAmount> getValue(ATMTotals3 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(ATMTotals3 obj, Optional<ImpliedCurrencyAndAmount> value) {
+			obj.setAmount(value.orElse(null));
 		}
 	};
 

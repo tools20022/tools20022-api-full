@@ -29,6 +29,8 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.entity.SecuritiesTrade;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.MarketIdentification1;
+import com.tools20022.repository.msg.OrderQuantity1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -122,7 +124,7 @@ public class Order2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order2, Optional<OrderType1Code>> mmType = new MMMessageAttribute<Order2, Optional<OrderType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order2.mmObject();
@@ -135,6 +137,16 @@ public class Order2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> OrderType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<OrderType1Code> getValue(Order2 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Order2 obj, Optional<OrderType1Code> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradgCpcty")
@@ -176,7 +188,7 @@ public class Order2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradingCapacity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order2, Optional<TradingCapacity3Code>> mmTradingCapacity = new MMMessageAttribute<Order2, Optional<TradingCapacity3Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmCustomerCapacity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order2.mmObject();
@@ -189,6 +201,16 @@ public class Order2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TradingCapacity3Code.mmObject();
+		}
+
+		@Override
+		public Optional<TradingCapacity3Code> getValue(Order2 obj) {
+			return obj.getTradingCapacity();
+		}
+
+		@Override
+		public void setValue(Order2 obj, Optional<TradingCapacity3Code> value) {
+			obj.setTradingCapacity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradOrgtnDt")
@@ -229,7 +251,7 @@ public class Order2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeOriginationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order2, Optional<ISODateTime>> mmTradeOriginationDate = new MMMessageAttribute<Order2, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTradeOriginationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order2.mmObject();
@@ -242,6 +264,16 @@ public class Order2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(Order2 obj) {
+			return obj.getTradeOriginationDate();
+		}
+
+		@Override
+		public void setValue(Order2 obj, Optional<ISODateTime> value) {
+			obj.setTradeOriginationDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CstmrCpcty")
@@ -280,7 +312,7 @@ public class Order2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCustomerCapacity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order2, Optional<CustomerOrderCapacity1Code>> mmCustomerCapacity = new MMMessageAttribute<Order2, Optional<CustomerOrderCapacity1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmCustomerCapacity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order2.mmObject();
@@ -292,6 +324,16 @@ public class Order2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CustomerOrderCapacity1Code.mmObject();
+		}
+
+		@Override
+		public Optional<CustomerOrderCapacity1Code> getValue(Order2 obj) {
+			return obj.getCustomerCapacity();
+		}
+
+		@Override
+		public void setValue(Order2 obj, Optional<CustomerOrderCapacity1Code> value) {
+			obj.setCustomerCapacity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PlcOfExctn")
@@ -326,7 +368,7 @@ public class Order2 {
 	 * definition} = "Unique and unambiguous way to identify an organisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPlaceOfExecution = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Order2, Optional<MarketIdentification1>> mmPlaceOfExecution = new MMMessageAssociationEnd<Order2, Optional<MarketIdentification1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmPlaceOfTrade;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order2.mmObject();
@@ -338,7 +380,17 @@ public class Order2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MarketIdentification1.mmObject();
+			type_lazy = () -> MarketIdentification1.mmObject();
+		}
+
+		@Override
+		public Optional<MarketIdentification1> getValue(Order2 obj) {
+			return obj.getPlaceOfExecution();
+		}
+
+		@Override
+		public void setValue(Order2 obj, Optional<MarketIdentification1> value) {
+			obj.setPlaceOfExecution(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "QtyDtls")
@@ -373,7 +425,7 @@ public class Order2 {
 	 * definition} = "Quantity of financial instrument to be ordered."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuantityDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Order2, Optional<OrderQuantity1>> mmQuantityDetails = new MMMessageAssociationEnd<Order2, Optional<OrderQuantity1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order2.mmObject();
@@ -385,7 +437,17 @@ public class Order2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OrderQuantity1.mmObject();
+			type_lazy = () -> OrderQuantity1.mmObject();
+		}
+
+		@Override
+		public Optional<OrderQuantity1> getValue(Order2 obj) {
+			return obj.getQuantityDetails();
+		}
+
+		@Override
+		public void setValue(Order2 obj, Optional<OrderQuantity1> value) {
+			obj.setQuantityDetails(value.orElse(null));
 		}
 	};
 
@@ -444,7 +506,7 @@ public class Order2 {
 		return placeOfExecution == null ? Optional.empty() : Optional.of(placeOfExecution);
 	}
 
-	public Order2 setPlaceOfExecution(com.tools20022.repository.msg.MarketIdentification1 placeOfExecution) {
+	public Order2 setPlaceOfExecution(MarketIdentification1 placeOfExecution) {
 		this.placeOfExecution = placeOfExecution;
 		return this;
 	}
@@ -453,7 +515,7 @@ public class Order2 {
 		return quantityDetails == null ? Optional.empty() : Optional.of(quantityDetails);
 	}
 
-	public Order2 setQuantityDetails(com.tools20022.repository.msg.OrderQuantity1 quantityDetails) {
+	public Order2 setQuantityDetails(OrderQuantity1 quantityDetails) {
 		this.quantityDetails = quantityDetails;
 		return this;
 	}

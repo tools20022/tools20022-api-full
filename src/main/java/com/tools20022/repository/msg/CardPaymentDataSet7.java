@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.CardPaymentDataSetTransaction2Choice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -132,7 +133,7 @@ public class CardPaymentDataSet7 {
 	 * CardPaymentDataSet4.mmDataSetIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSetIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentDataSet7, DataSetIdentification1> mmDataSetIdentification = new MMMessageAssociationEnd<CardPaymentDataSet7, DataSetIdentification1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSet7.mmObject();
 			isDerived = false;
@@ -145,11 +146,21 @@ public class CardPaymentDataSet7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DataSetIdentification1.mmObject();
+			type_lazy = () -> DataSetIdentification1.mmObject();
+		}
+
+		@Override
+		public DataSetIdentification1 getValue(CardPaymentDataSet7 obj) {
+			return obj.getDataSetIdentification();
+		}
+
+		@Override
+		public void setValue(CardPaymentDataSet7 obj, DataSetIdentification1 value) {
+			obj.setDataSetIdentification(value);
 		}
 	};
 	@XmlElement(name = "Tracblt")
-	protected List<com.tools20022.repository.msg.Traceability1> traceability;
+	protected List<Traceability1> traceability;
 	/**
 	 * 
 	 <p>
@@ -190,7 +201,7 @@ public class CardPaymentDataSet7 {
 	 * CardPaymentDataSet4.mmTraceability}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTraceability = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentDataSet7, List<Traceability1>> mmTraceability = new MMMessageAssociationEnd<CardPaymentDataSet7, List<Traceability1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSet7.mmObject();
 			isDerived = false;
@@ -202,7 +213,17 @@ public class CardPaymentDataSet7 {
 			previousVersion_lazy = () -> CardPaymentDataSet4.mmTraceability;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Traceability1.mmObject();
+			type_lazy = () -> Traceability1.mmObject();
+		}
+
+		@Override
+		public List<Traceability1> getValue(CardPaymentDataSet7 obj) {
+			return obj.getTraceability();
+		}
+
+		@Override
+		public void setValue(CardPaymentDataSet7 obj, List<Traceability1> value) {
+			obj.setTraceability(value);
 		}
 	};
 	@XmlElement(name = "DataSetInitr")
@@ -247,7 +268,7 @@ public class CardPaymentDataSet7 {
 	 * CardPaymentDataSet4.mmDataSetInitiator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSetInitiator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentDataSet7, Optional<GenericIdentification32>> mmDataSetInitiator = new MMMessageAssociationEnd<CardPaymentDataSet7, Optional<GenericIdentification32>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSet7.mmObject();
 			isDerived = false;
@@ -260,11 +281,21 @@ public class CardPaymentDataSet7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
+			type_lazy = () -> GenericIdentification32.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification32> getValue(CardPaymentDataSet7 obj) {
+			return obj.getDataSetInitiator();
+		}
+
+		@Override
+		public void setValue(CardPaymentDataSet7 obj, Optional<GenericIdentification32> value) {
+			obj.setDataSetInitiator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxTtls", required = true)
-	protected List<com.tools20022.repository.msg.TransactionTotals2> transactionTotals;
+	protected List<TransactionTotals2> transactionTotals;
 	/**
 	 * 
 	 <p>
@@ -304,7 +335,7 @@ public class CardPaymentDataSet7 {
 	 * CardPaymentDataSet4.mmTransactionTotals}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionTotals = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentDataSet7, List<TransactionTotals2>> mmTransactionTotals = new MMMessageAssociationEnd<CardPaymentDataSet7, List<TransactionTotals2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSet7.mmObject();
 			isDerived = false;
@@ -316,7 +347,17 @@ public class CardPaymentDataSet7 {
 			previousVersion_lazy = () -> CardPaymentDataSet4.mmTransactionTotals;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransactionTotals2.mmObject();
+			type_lazy = () -> TransactionTotals2.mmObject();
+		}
+
+		@Override
+		public List<TransactionTotals2> getValue(CardPaymentDataSet7 obj) {
+			return obj.getTransactionTotals();
+		}
+
+		@Override
+		public void setValue(CardPaymentDataSet7 obj, List<TransactionTotals2> value) {
+			obj.setTransactionTotals(value);
 		}
 	};
 	@XmlElement(name = "CmonData")
@@ -360,7 +401,7 @@ public class CardPaymentDataSet7 {
 	 * CardPaymentDataSet4.mmCommonData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCommonData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentDataSet7, Optional<CommonData3>> mmCommonData = new MMMessageAssociationEnd<CardPaymentDataSet7, Optional<CommonData3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSet7.mmObject();
 			isDerived = false;
@@ -373,7 +414,17 @@ public class CardPaymentDataSet7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CommonData3.mmObject();
+			type_lazy = () -> CommonData3.mmObject();
+		}
+
+		@Override
+		public Optional<CommonData3> getValue(CardPaymentDataSet7 obj) {
+			return obj.getCommonData();
+		}
+
+		@Override
+		public void setValue(CardPaymentDataSet7 obj, Optional<CommonData3> value) {
+			obj.setCommonData(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tx", required = true)
@@ -419,7 +470,7 @@ public class CardPaymentDataSet7 {
 	 * CardPaymentDataSet4.mmTransaction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransaction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentDataSet7, List<CardPaymentDataSetTransaction2Choice>> mmTransaction = new MMMessageAttribute<CardPaymentDataSet7, List<CardPaymentDataSetTransaction2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSet7.mmObject();
 			isDerived = false;
@@ -431,6 +482,16 @@ public class CardPaymentDataSet7 {
 			previousVersion_lazy = () -> CardPaymentDataSet4.mmTransaction;
 			minOccurs = 1;
 			complexType_lazy = () -> CardPaymentDataSetTransaction2Choice.mmObject();
+		}
+
+		@Override
+		public List<CardPaymentDataSetTransaction2Choice> getValue(CardPaymentDataSet7 obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(CardPaymentDataSet7 obj, List<CardPaymentDataSetTransaction2Choice> value) {
+			obj.setTransaction(value);
 		}
 	};
 
@@ -455,7 +516,7 @@ public class CardPaymentDataSet7 {
 		return dataSetIdentification;
 	}
 
-	public CardPaymentDataSet7 setDataSetIdentification(com.tools20022.repository.msg.DataSetIdentification1 dataSetIdentification) {
+	public CardPaymentDataSet7 setDataSetIdentification(DataSetIdentification1 dataSetIdentification) {
 		this.dataSetIdentification = Objects.requireNonNull(dataSetIdentification);
 		return this;
 	}
@@ -464,7 +525,7 @@ public class CardPaymentDataSet7 {
 		return traceability == null ? traceability = new ArrayList<>() : traceability;
 	}
 
-	public CardPaymentDataSet7 setTraceability(List<com.tools20022.repository.msg.Traceability1> traceability) {
+	public CardPaymentDataSet7 setTraceability(List<Traceability1> traceability) {
 		this.traceability = Objects.requireNonNull(traceability);
 		return this;
 	}
@@ -473,7 +534,7 @@ public class CardPaymentDataSet7 {
 		return dataSetInitiator == null ? Optional.empty() : Optional.of(dataSetInitiator);
 	}
 
-	public CardPaymentDataSet7 setDataSetInitiator(com.tools20022.repository.msg.GenericIdentification32 dataSetInitiator) {
+	public CardPaymentDataSet7 setDataSetInitiator(GenericIdentification32 dataSetInitiator) {
 		this.dataSetInitiator = dataSetInitiator;
 		return this;
 	}
@@ -482,7 +543,7 @@ public class CardPaymentDataSet7 {
 		return transactionTotals == null ? transactionTotals = new ArrayList<>() : transactionTotals;
 	}
 
-	public CardPaymentDataSet7 setTransactionTotals(List<com.tools20022.repository.msg.TransactionTotals2> transactionTotals) {
+	public CardPaymentDataSet7 setTransactionTotals(List<TransactionTotals2> transactionTotals) {
 		this.transactionTotals = Objects.requireNonNull(transactionTotals);
 		return this;
 	}
@@ -491,7 +552,7 @@ public class CardPaymentDataSet7 {
 		return commonData == null ? Optional.empty() : Optional.of(commonData);
 	}
 
-	public CardPaymentDataSet7 setCommonData(com.tools20022.repository.msg.CommonData3 commonData) {
+	public CardPaymentDataSet7 setCommonData(CommonData3 commonData) {
 		this.commonData = commonData;
 		return this;
 	}

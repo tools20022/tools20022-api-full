@@ -28,6 +28,7 @@ import com.tools20022.repository.choice.CommissionType1Choice;
 import com.tools20022.repository.entity.Commission;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification23;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -117,7 +118,7 @@ public class Commission2 {
 	 * definition} = "Commission expressed as an amount of money or a rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommission = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Commission2, AmountOrRate1Choice> mmCommission = new MMMessageAttribute<Commission2, AmountOrRate1Choice>() {
 		{
 			businessComponentTrace_lazy = () -> Commission.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission2.mmObject();
@@ -130,6 +131,16 @@ public class Commission2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AmountOrRate1Choice.mmObject();
+		}
+
+		@Override
+		public AmountOrRate1Choice getValue(Commission2 obj) {
+			return obj.getCommission();
+		}
+
+		@Override
+		public void setValue(Commission2 obj, AmountOrRate1Choice value) {
+			obj.setCommission(value);
 		}
 	};
 	@XmlElement(name = "RcptId")
@@ -169,7 +180,7 @@ public class Commission2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRecipientIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Commission2, Optional<PartyIdentification23>> mmRecipientIdentification = new MMMessageAssociationEnd<Commission2, Optional<PartyIdentification23>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission2.mmObject();
@@ -182,7 +193,17 @@ public class Commission2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification23.mmObject();
+			type_lazy = () -> PartyIdentification23.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification23> getValue(Commission2 obj) {
+			return obj.getRecipientIdentification();
+		}
+
+		@Override
+		public void setValue(Commission2 obj, Optional<PartyIdentification23> value) {
+			obj.setRecipientIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -221,7 +242,7 @@ public class Commission2 {
 	 * definition} = "Specification of the commission type."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Commission2, CommissionType1Choice> mmType = new MMMessageAssociationEnd<Commission2, CommissionType1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommissionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission2.mmObject();
@@ -235,6 +256,16 @@ public class Commission2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CommissionType1Choice.mmObject();
+		}
+
+		@Override
+		public CommissionType1Choice getValue(Commission2 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Commission2 obj, CommissionType1Choice value) {
+			obj.setType(value);
 		}
 	};
 
@@ -266,7 +297,7 @@ public class Commission2 {
 		return recipientIdentification == null ? Optional.empty() : Optional.of(recipientIdentification);
 	}
 
-	public Commission2 setRecipientIdentification(com.tools20022.repository.msg.PartyIdentification23 recipientIdentification) {
+	public Commission2 setRecipientIdentification(PartyIdentification23 recipientIdentification) {
 		this.recipientIdentification = recipientIdentification;
 		return this;
 	}

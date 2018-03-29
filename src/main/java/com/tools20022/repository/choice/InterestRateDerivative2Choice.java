@@ -103,7 +103,7 @@ public class InterestRateDerivative2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSwapRelated = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestRateDerivative2Choice, SwapType1Code> mmSwapRelated = new MMMessageAttribute<InterestRateDerivative2Choice, SwapType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.InterestRateDerivative2Choice.mmObject();
 			isDerived = false;
@@ -114,6 +114,16 @@ public class InterestRateDerivative2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SwapType1Code.mmObject();
+		}
+
+		@Override
+		public SwapType1Code getValue(InterestRateDerivative2Choice obj) {
+			return obj.getSwapRelated();
+		}
+
+		@Override
+		public void setValue(InterestRateDerivative2Choice obj, SwapType1Code value) {
+			obj.setSwapRelated(value);
 		}
 	};
 	@XmlElement(name = "Othr", required = true)
@@ -148,7 +158,7 @@ public class InterestRateDerivative2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOther = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestRateDerivative2Choice, UnderlyingInterestRateType3Code> mmOther = new MMMessageAttribute<InterestRateDerivative2Choice, UnderlyingInterestRateType3Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.InterestRateDerivative2Choice.mmObject();
 			isDerived = false;
@@ -159,6 +169,16 @@ public class InterestRateDerivative2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UnderlyingInterestRateType3Code.mmObject();
+		}
+
+		@Override
+		public UnderlyingInterestRateType3Code getValue(InterestRateDerivative2Choice obj) {
+			return obj.getOther();
+		}
+
+		@Override
+		public void setValue(InterestRateDerivative2Choice obj, UnderlyingInterestRateType3Code value) {
+			obj.setOther(value);
 		}
 	};
 

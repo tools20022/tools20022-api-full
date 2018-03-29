@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.AcquirerRole;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification32;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -123,7 +124,7 @@ public class Acquirer3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Acquirer3, GenericIdentification32> mmIdentification = new MMMessageAssociationEnd<Acquirer3, GenericIdentification32>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Acquirer3.mmObject();
@@ -136,7 +137,17 @@ public class Acquirer3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
+			type_lazy = () -> GenericIdentification32.mmObject();
+		}
+
+		@Override
+		public GenericIdentification32 getValue(Acquirer3 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Acquirer3 obj, GenericIdentification32 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "ParamsVrsn")
@@ -175,7 +186,7 @@ public class Acquirer3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmParametersVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Acquirer3, Optional<Max35Text>> mmParametersVersion = new MMMessageAttribute<Acquirer3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Acquirer3.mmObject();
 			isDerived = false;
@@ -187,6 +198,16 @@ public class Acquirer3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Acquirer3 obj) {
+			return obj.getParametersVersion();
+		}
+
+		@Override
+		public void setValue(Acquirer3 obj, Optional<Max35Text> value) {
+			obj.setParametersVersion(value.orElse(null));
 		}
 	};
 
@@ -210,7 +231,7 @@ public class Acquirer3 {
 		return identification;
 	}
 
-	public Acquirer3 setIdentification(com.tools20022.repository.msg.GenericIdentification32 identification) {
+	public Acquirer3 setIdentification(GenericIdentification32 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}

@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.ListTrading;
 import com.tools20022.repository.entity.NonDisclosedListTrading;
 import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ExchangeForPhysicalTradeParameters1;
+import com.tools20022.repository.msg.Liquidity1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -131,7 +133,7 @@ public class NonDisclosedBid1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBidByCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NonDisclosedBid1, Optional<CountryCode>> mmBidByCurrency = new MMMessageAttribute<NonDisclosedBid1, Optional<CountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> NonDisclosedListTrading.mmBidByCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NonDisclosedBid1.mmObject();
@@ -144,6 +146,16 @@ public class NonDisclosedBid1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(NonDisclosedBid1 obj) {
+			return obj.getBidByCurrency();
+		}
+
+		@Override
+		public void setValue(NonDisclosedBid1 obj, Optional<CountryCode> value) {
+			obj.setBidByCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BidBySctr")
@@ -185,7 +197,7 @@ public class NonDisclosedBid1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBidBySector = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NonDisclosedBid1, Optional<Max128Text>> mmBidBySector = new MMMessageAttribute<NonDisclosedBid1, Optional<Max128Text>>() {
 		{
 			businessElementTrace_lazy = () -> NonDisclosedListTrading.mmBidBySector;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NonDisclosedBid1.mmObject();
@@ -198,6 +210,16 @@ public class NonDisclosedBid1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max128Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max128Text> getValue(NonDisclosedBid1 obj) {
+			return obj.getBidBySector();
+		}
+
+		@Override
+		public void setValue(NonDisclosedBid1 obj, Optional<Max128Text> value) {
+			obj.setBidBySector(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BidByIndx")
@@ -239,7 +261,7 @@ public class NonDisclosedBid1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBidByIndex = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NonDisclosedBid1, Optional<Max128Text>> mmBidByIndex = new MMMessageAttribute<NonDisclosedBid1, Optional<Max128Text>>() {
 		{
 			businessElementTrace_lazy = () -> NonDisclosedListTrading.mmBidByIndex;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NonDisclosedBid1.mmObject();
@@ -252,6 +274,16 @@ public class NonDisclosedBid1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max128Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max128Text> getValue(NonDisclosedBid1 obj) {
+			return obj.getBidByIndex();
+		}
+
+		@Override
+		public void setValue(NonDisclosedBid1 obj, Optional<Max128Text> value) {
+			obj.setBidByIndex(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SdInd")
@@ -289,7 +321,7 @@ public class NonDisclosedBid1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSideIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NonDisclosedBid1, Optional<TrueFalseIndicator>> mmSideIndicator = new MMMessageAttribute<NonDisclosedBid1, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NonDisclosedBid1.mmObject();
 			isDerived = false;
@@ -301,6 +333,16 @@ public class NonDisclosedBid1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(NonDisclosedBid1 obj) {
+			return obj.getSideIndicator();
+		}
+
+		@Override
+		public void setValue(NonDisclosedBid1 obj, Optional<TrueFalseIndicator> value) {
+			obj.setSideIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Lqdty")
@@ -337,7 +379,7 @@ public class NonDisclosedBid1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLiquidity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NonDisclosedBid1, Optional<Liquidity1>> mmLiquidity = new MMMessageAssociationEnd<NonDisclosedBid1, Optional<Liquidity1>>() {
 		{
 			businessElementTrace_lazy = () -> ListTrading.mmLiquidity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NonDisclosedBid1.mmObject();
@@ -349,7 +391,17 @@ public class NonDisclosedBid1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Liquidity1.mmObject();
+			type_lazy = () -> Liquidity1.mmObject();
+		}
+
+		@Override
+		public Optional<Liquidity1> getValue(NonDisclosedBid1 obj) {
+			return obj.getLiquidity();
+		}
+
+		@Override
+		public void setValue(NonDisclosedBid1 obj, Optional<Liquidity1> value) {
+			obj.setLiquidity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XchgForPhysTrad")
@@ -387,7 +439,7 @@ public class NonDisclosedBid1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExchangeForPhysicalTrade = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NonDisclosedBid1, Optional<ExchangeForPhysicalTradeParameters1>> mmExchangeForPhysicalTrade = new MMMessageAssociationEnd<NonDisclosedBid1, Optional<ExchangeForPhysicalTradeParameters1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmExchangeForPhysicalTrade;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NonDisclosedBid1.mmObject();
@@ -399,7 +451,17 @@ public class NonDisclosedBid1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ExchangeForPhysicalTradeParameters1.mmObject();
+			type_lazy = () -> ExchangeForPhysicalTradeParameters1.mmObject();
+		}
+
+		@Override
+		public Optional<ExchangeForPhysicalTradeParameters1> getValue(NonDisclosedBid1 obj) {
+			return obj.getExchangeForPhysicalTrade();
+		}
+
+		@Override
+		public void setValue(NonDisclosedBid1 obj, Optional<ExchangeForPhysicalTradeParameters1> value) {
+			obj.setExchangeForPhysicalTrade(value.orElse(null));
 		}
 	};
 
@@ -459,7 +521,7 @@ public class NonDisclosedBid1 {
 		return liquidity == null ? Optional.empty() : Optional.of(liquidity);
 	}
 
-	public NonDisclosedBid1 setLiquidity(com.tools20022.repository.msg.Liquidity1 liquidity) {
+	public NonDisclosedBid1 setLiquidity(Liquidity1 liquidity) {
 		this.liquidity = liquidity;
 		return this;
 	}
@@ -468,7 +530,7 @@ public class NonDisclosedBid1 {
 		return exchangeForPhysicalTrade == null ? Optional.empty() : Optional.of(exchangeForPhysicalTrade);
 	}
 
-	public NonDisclosedBid1 setExchangeForPhysicalTrade(com.tools20022.repository.msg.ExchangeForPhysicalTradeParameters1 exchangeForPhysicalTrade) {
+	public NonDisclosedBid1 setExchangeForPhysicalTrade(ExchangeForPhysicalTradeParameters1 exchangeForPhysicalTrade) {
 		this.exchangeForPhysicalTrade = exchangeForPhysicalTrade;
 		return this;
 	}

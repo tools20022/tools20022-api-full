@@ -140,7 +140,7 @@ public class ReferredAgent2 {
 	 * ReferredAgent1.mmReferred}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReferred = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReferredAgent2, Referred1Code> mmReferred = new MMMessageAttribute<ReferredAgent2, Referred1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReferredAgent2.mmObject();
 			isDerived = false;
@@ -152,6 +152,16 @@ public class ReferredAgent2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Referred1Code.mmObject();
+		}
+
+		@Override
+		public Referred1Code getValue(ReferredAgent2 obj) {
+			return obj.getReferred();
+		}
+
+		@Override
+		public void setValue(ReferredAgent2 obj, Referred1Code value) {
+			obj.setReferred(value);
 		}
 	};
 	@XmlElement(name = "RfrdPlcmntAgt")
@@ -187,7 +197,7 @@ public class ReferredAgent2 {
 	 * ReferredAgent1.mmReferredPlacementAgent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReferredPlacementAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReferredAgent2, Optional<PartyIdentification70Choice>> mmReferredPlacementAgent = new MMMessageAssociationEnd<ReferredAgent2, Optional<PartyIdentification70Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReferredAgent2.mmObject();
 			isDerived = false;
@@ -200,6 +210,16 @@ public class ReferredAgent2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification70Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification70Choice> getValue(ReferredAgent2 obj) {
+			return obj.getReferredPlacementAgent();
+		}
+
+		@Override
+		public void setValue(ReferredAgent2 obj, Optional<PartyIdentification70Choice> value) {
+			obj.setReferredPlacementAgent(value.orElse(null));
 		}
 	};
 

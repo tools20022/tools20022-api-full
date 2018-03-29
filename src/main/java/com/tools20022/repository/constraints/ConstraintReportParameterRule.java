@@ -53,11 +53,15 @@ public class ConstraintReportParameterRule {
 	 */
 	public static final MMConstraint<FundCashForecastParameters2> forFundCashForecastParameters2 = new MMConstraint<FundCashForecastParameters2>() {
 		{
-			validator = ConstraintReportParameterRule::checkFundCashForecastParameters2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportParameterRule";
 			definition = "At least one element in the list (FinancialInstrumentDetails, TradeDateTime, DetailedReportParameter) must be present.";
 			owner_lazy = () -> FundCashForecastParameters2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FundCashForecastParameters2 obj) throws Exception {
+			checkFundCashForecastParameters2(obj);
 		}
 	};
 	/**
@@ -83,11 +87,15 @@ public class ConstraintReportParameterRule {
 	 */
 	public static final MMConstraint<FundParameters2> forFundParameters2 = new MMConstraint<FundParameters2>() {
 		{
-			validator = ConstraintReportParameterRule::checkFundParameters2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportParameterRule";
 			definition = "At least one element in the list (FundManagementCompany, FinancialInstrumentDetails, DateFrom) must be present. More than one element in the list (FundManagementCompany, FinancialInstrumentDetails, DateFrom) may be present.";
 			owner_lazy = () -> FundParameters2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FundParameters2 obj) throws Exception {
+			checkFundParameters2(obj);
 		}
 	};
 	/**
@@ -113,11 +121,15 @@ public class ConstraintReportParameterRule {
 	 */
 	public static final MMConstraint<FundParameters3> forFundParameters3 = new MMConstraint<FundParameters3>() {
 		{
-			validator = ConstraintReportParameterRule::checkFundParameters3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportParameterRule";
 			definition = "Either FinancialInstrumentDetails or ValuationDateTime must be present. Both FinancialInstrumentDetails and ValuationDateTime may be present.";
 			owner_lazy = () -> FundParameters3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FundParameters3 obj) throws Exception {
+			checkFundParameters3(obj);
 		}
 	};
 

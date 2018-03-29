@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.secl.SettlementObligationReportV03;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentificationAndAccount31;
+import com.tools20022.repository.msg.SettlementObligation8;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -82,7 +84,7 @@ public class Report5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "NonClrMmb")
-	protected List<com.tools20022.repository.msg.PartyIdentificationAndAccount31> nonClearingMember;
+	protected List<PartyIdentificationAndAccount31> nonClearingMember;
 	/**
 	 * 
 	 <p>
@@ -120,7 +122,7 @@ public class Report5 {
 	 * Report2.mmNonClearingMember}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNonClearingMember = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Report5, List<PartyIdentificationAndAccount31>> mmNonClearingMember = new MMMessageAssociationEnd<Report5, List<PartyIdentificationAndAccount31>>() {
 		{
 			businessComponentTrace_lazy = () -> Party.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Report5.mmObject();
@@ -132,11 +134,21 @@ public class Report5 {
 			previousVersion_lazy = () -> Report2.mmNonClearingMember;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount31.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount31.mmObject();
+		}
+
+		@Override
+		public List<PartyIdentificationAndAccount31> getValue(Report5 obj) {
+			return obj.getNonClearingMember();
+		}
+
+		@Override
+		public void setValue(Report5 obj, List<PartyIdentificationAndAccount31> value) {
+			obj.setNonClearingMember(value);
 		}
 	};
 	@XmlElement(name = "SttlmOblgtnDtls", required = true)
-	protected List<com.tools20022.repository.msg.SettlementObligation8> settlementObligationDetails;
+	protected List<SettlementObligation8> settlementObligationDetails;
 	/**
 	 * 
 	 <p>
@@ -168,7 +180,7 @@ public class Report5 {
 	 * Report2.mmSettlementObligationDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementObligationDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Report5, List<SettlementObligation8>> mmSettlementObligationDetails = new MMMessageAssociationEnd<Report5, List<SettlementObligation8>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Report5.mmObject();
 			isDerived = false;
@@ -179,7 +191,17 @@ public class Report5 {
 			previousVersion_lazy = () -> Report2.mmSettlementObligationDetails;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SettlementObligation8.mmObject();
+			type_lazy = () -> SettlementObligation8.mmObject();
+		}
+
+		@Override
+		public List<SettlementObligation8> getValue(Report5 obj) {
+			return obj.getSettlementObligationDetails();
+		}
+
+		@Override
+		public void setValue(Report5 obj, List<SettlementObligation8> value) {
+			obj.setSettlementObligationDetails(value);
 		}
 	};
 
@@ -202,7 +224,7 @@ public class Report5 {
 		return nonClearingMember == null ? nonClearingMember = new ArrayList<>() : nonClearingMember;
 	}
 
-	public Report5 setNonClearingMember(List<com.tools20022.repository.msg.PartyIdentificationAndAccount31> nonClearingMember) {
+	public Report5 setNonClearingMember(List<PartyIdentificationAndAccount31> nonClearingMember) {
 		this.nonClearingMember = Objects.requireNonNull(nonClearingMember);
 		return this;
 	}
@@ -211,7 +233,7 @@ public class Report5 {
 		return settlementObligationDetails == null ? settlementObligationDetails = new ArrayList<>() : settlementObligationDetails;
 	}
 
-	public Report5 setSettlementObligationDetails(List<com.tools20022.repository.msg.SettlementObligation8> settlementObligationDetails) {
+	public Report5 setSettlementObligationDetails(List<SettlementObligation8> settlementObligationDetails) {
 		this.settlementObligationDetails = Objects.requireNonNull(settlementObligationDetails);
 		return this;
 	}

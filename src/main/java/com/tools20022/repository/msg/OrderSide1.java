@@ -107,7 +107,7 @@ public class OrderSide1 {
 	 * definition} = "Coded list to specify the side of the order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSide = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderSide1, Optional<Side1Code>> mmSide = new MMMessageAttribute<OrderSide1, Optional<Side1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmSide;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderSide1.mmObject();
@@ -119,6 +119,16 @@ public class OrderSide1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Side1Code.mmObject();
+		}
+
+		@Override
+		public Optional<Side1Code> getValue(OrderSide1 obj) {
+			return obj.getSide();
+		}
+
+		@Override
+		public void setValue(OrderSide1 obj, Optional<Side1Code> value) {
+			obj.setSide(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AllOrdrsInd")
@@ -152,7 +162,7 @@ public class OrderSide1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAllOrdersIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderSide1, Optional<YesNoIndicator>> mmAllOrdersIndicator = new MMMessageAttribute<OrderSide1, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderSide1.mmObject();
 			isDerived = false;
@@ -163,6 +173,16 @@ public class OrderSide1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(OrderSide1 obj) {
+			return obj.getAllOrdersIndicator();
+		}
+
+		@Override
+		public void setValue(OrderSide1 obj, Optional<YesNoIndicator> value) {
+			obj.setAllOrdersIndicator(value.orElse(null));
 		}
 	};
 

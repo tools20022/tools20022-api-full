@@ -25,6 +25,8 @@ import com.tools20022.repository.choice.InterestType1Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.InterestCalculation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DateTimePeriodDetails;
+import com.tools20022.repository.msg.Rate3;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -110,7 +112,7 @@ public class AccountInterest2 {
 	 * definition} = "Specifies the type of interest."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountInterest2, Optional<InterestType1Choice>> mmType = new MMMessageAssociationEnd<AccountInterest2, Optional<InterestType1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmInterestType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountInterest2.mmObject();
@@ -124,9 +126,19 @@ public class AccountInterest2 {
 			isComposite = true;
 			type_lazy = () -> InterestType1Choice.mmObject();
 		}
+
+		@Override
+		public Optional<InterestType1Choice> getValue(AccountInterest2 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(AccountInterest2 obj, Optional<InterestType1Choice> value) {
+			obj.setType(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "Rate")
-	protected List<com.tools20022.repository.msg.Rate3> rate;
+	protected List<Rate3> rate;
 	/**
 	 * 
 	 <p>
@@ -157,7 +169,7 @@ public class AccountInterest2 {
 	 * definition} = "Set of elements used to qualify the interest rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountInterest2, List<Rate3>> mmRate = new MMMessageAssociationEnd<AccountInterest2, List<Rate3>>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountInterest2.mmObject();
@@ -168,7 +180,17 @@ public class AccountInterest2 {
 			definition = "Set of elements used to qualify the interest rate.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Rate3.mmObject();
+			type_lazy = () -> Rate3.mmObject();
+		}
+
+		@Override
+		public List<Rate3> getValue(AccountInterest2 obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(AccountInterest2 obj, List<Rate3> value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "FrToDt")
@@ -206,7 +228,7 @@ public class AccountInterest2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFromToDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountInterest2, Optional<DateTimePeriodDetails>> mmFromToDate = new MMMessageAssociationEnd<AccountInterest2, Optional<DateTimePeriodDetails>>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmInterestPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountInterest2.mmObject();
@@ -218,7 +240,17 @@ public class AccountInterest2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DateTimePeriodDetails.mmObject();
+			type_lazy = () -> DateTimePeriodDetails.mmObject();
+		}
+
+		@Override
+		public Optional<DateTimePeriodDetails> getValue(AccountInterest2 obj) {
+			return obj.getFromToDate();
+		}
+
+		@Override
+		public void setValue(AccountInterest2 obj, Optional<DateTimePeriodDetails> value) {
+			obj.setFromToDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rsn")
@@ -250,7 +282,7 @@ public class AccountInterest2 {
 	 * definition} = "Specifies the reason for the interest."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountInterest2, Optional<Max35Text>> mmReason = new MMMessageAttribute<AccountInterest2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountInterest2.mmObject();
 			isDerived = false;
@@ -261,6 +293,16 @@ public class AccountInterest2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AccountInterest2 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(AccountInterest2 obj, Optional<Max35Text> value) {
+			obj.setReason(value.orElse(null));
 		}
 	};
 
@@ -292,7 +334,7 @@ public class AccountInterest2 {
 		return rate == null ? rate = new ArrayList<>() : rate;
 	}
 
-	public AccountInterest2 setRate(List<com.tools20022.repository.msg.Rate3> rate) {
+	public AccountInterest2 setRate(List<Rate3> rate) {
 		this.rate = Objects.requireNonNull(rate);
 		return this;
 	}
@@ -301,7 +343,7 @@ public class AccountInterest2 {
 		return fromToDate == null ? Optional.empty() : Optional.of(fromToDate);
 	}
 
-	public AccountInterest2 setFromToDate(com.tools20022.repository.msg.DateTimePeriodDetails fromToDate) {
+	public AccountInterest2 setFromToDate(DateTimePeriodDetails fromToDate) {
 		this.fromToDate = fromToDate;
 		return this;
 	}

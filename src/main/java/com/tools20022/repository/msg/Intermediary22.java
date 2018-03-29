@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.AccountPartyRole;
 import com.tools20022.repository.entity.IntermediaryRole;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Account12;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -113,7 +114,7 @@ public class Intermediary22 {
 	 * definition} = "Unique and unambiguous identifier of the intermediary."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Intermediary22, PartyIdentification59Choice> mmIdentification = new MMMessageAssociationEnd<Intermediary22, PartyIdentification59Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary22.mmObject();
@@ -126,6 +127,16 @@ public class Intermediary22 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification59Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification59Choice getValue(Intermediary22 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Intermediary22 obj, PartyIdentification59Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Role")
@@ -161,7 +172,7 @@ public class Intermediary22 {
 	 * "Function performed by the intermediary (investment funds)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRole = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Intermediary22, Optional<Role3Choice>> mmRole = new MMMessageAssociationEnd<Intermediary22, Optional<Role3Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> IntermediaryRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary22.mmObject();
@@ -174,6 +185,16 @@ public class Intermediary22 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Role3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Role3Choice> getValue(Intermediary22 obj) {
+			return obj.getRole();
+		}
+
+		@Override
+		public void setValue(Intermediary22 obj, Optional<Role3Choice> value) {
+			obj.setRole(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Acct")
@@ -212,7 +233,7 @@ public class Intermediary22 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Intermediary22, Optional<Account12>> mmAccount = new MMMessageAssociationEnd<Intermediary22, Optional<Account12>>() {
 		{
 			businessElementTrace_lazy = () -> AccountPartyRole.mmAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary22.mmObject();
@@ -225,7 +246,17 @@ public class Intermediary22 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Account12.mmObject();
+			type_lazy = () -> Account12.mmObject();
+		}
+
+		@Override
+		public Optional<Account12> getValue(Intermediary22 obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(Intermediary22 obj, Optional<Account12> value) {
+			obj.setAccount(value.orElse(null));
 		}
 	};
 
@@ -265,7 +296,7 @@ public class Intermediary22 {
 		return account == null ? Optional.empty() : Optional.of(account);
 	}
 
-	public Intermediary22 setAccount(com.tools20022.repository.msg.Account12 account) {
+	public Intermediary22 setAccount(Account12 account) {
 		this.account = account;
 		return this;
 	}

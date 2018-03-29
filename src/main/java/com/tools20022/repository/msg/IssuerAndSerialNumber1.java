@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Binary;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CertificateIssuer1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -96,7 +97,7 @@ public class IssuerAndSerialNumber1 {
 	 * definition} = "Certificate issuer name (see X.509)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIssuer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IssuerAndSerialNumber1, CertificateIssuer1> mmIssuer = new MMMessageAssociationEnd<IssuerAndSerialNumber1, CertificateIssuer1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IssuerAndSerialNumber1.mmObject();
 			isDerived = false;
@@ -107,7 +108,17 @@ public class IssuerAndSerialNumber1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CertificateIssuer1.mmObject();
+			type_lazy = () -> CertificateIssuer1.mmObject();
+		}
+
+		@Override
+		public CertificateIssuer1 getValue(IssuerAndSerialNumber1 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(IssuerAndSerialNumber1 obj, CertificateIssuer1 value) {
+			obj.setIssuer(value);
 		}
 	};
 	@XmlElement(name = "SrlNb", required = true)
@@ -139,7 +150,7 @@ public class IssuerAndSerialNumber1 {
 	 * definition} = "Certificate serial number (see X.509)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSerialNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IssuerAndSerialNumber1, Max35Binary> mmSerialNumber = new MMMessageAttribute<IssuerAndSerialNumber1, Max35Binary>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IssuerAndSerialNumber1.mmObject();
 			isDerived = false;
@@ -150,6 +161,16 @@ public class IssuerAndSerialNumber1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Binary.mmObject();
+		}
+
+		@Override
+		public Max35Binary getValue(IssuerAndSerialNumber1 obj) {
+			return obj.getSerialNumber();
+		}
+
+		@Override
+		public void setValue(IssuerAndSerialNumber1 obj, Max35Binary value) {
+			obj.setSerialNumber(value);
 		}
 	};
 
@@ -170,7 +191,7 @@ public class IssuerAndSerialNumber1 {
 		return issuer;
 	}
 
-	public IssuerAndSerialNumber1 setIssuer(com.tools20022.repository.msg.CertificateIssuer1 issuer) {
+	public IssuerAndSerialNumber1 setIssuer(CertificateIssuer1 issuer) {
 		this.issuer = Objects.requireNonNull(issuer);
 		return this;
 	}

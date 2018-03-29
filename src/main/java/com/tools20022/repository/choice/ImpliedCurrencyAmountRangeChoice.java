@@ -140,7 +140,7 @@ public class ImpliedCurrencyAmountRangeChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFromAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ImpliedCurrencyAmountRangeChoice, AmountRangeBoundary1> mmFromAmount = new MMMessageAttribute<ImpliedCurrencyAmountRangeChoice, AmountRangeBoundary1>() {
 		{
 			businessElementTrace_lazy = () -> AmountRange.mmFromAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice.mmObject();
@@ -153,6 +153,16 @@ public class ImpliedCurrencyAmountRangeChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AmountRangeBoundary1.mmObject();
+		}
+
+		@Override
+		public AmountRangeBoundary1 getValue(ImpliedCurrencyAmountRangeChoice obj) {
+			return obj.getFromAmount();
+		}
+
+		@Override
+		public void setValue(ImpliedCurrencyAmountRangeChoice obj, AmountRangeBoundary1 value) {
+			obj.setFromAmount(value);
 		}
 	};
 	@XmlElement(name = "ToAmt", required = true)
@@ -198,7 +208,7 @@ public class ImpliedCurrencyAmountRangeChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmToAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ImpliedCurrencyAmountRangeChoice, AmountRangeBoundary1> mmToAmount = new MMMessageAttribute<ImpliedCurrencyAmountRangeChoice, AmountRangeBoundary1>() {
 		{
 			businessElementTrace_lazy = () -> AmountRange.mmToAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice.mmObject();
@@ -211,6 +221,16 @@ public class ImpliedCurrencyAmountRangeChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AmountRangeBoundary1.mmObject();
+		}
+
+		@Override
+		public AmountRangeBoundary1 getValue(ImpliedCurrencyAmountRangeChoice obj) {
+			return obj.getToAmount();
+		}
+
+		@Override
+		public void setValue(ImpliedCurrencyAmountRangeChoice obj, AmountRangeBoundary1 value) {
+			obj.setToAmount(value);
 		}
 	};
 	@XmlElement(name = "FrToAmt", required = true)
@@ -255,7 +275,7 @@ public class ImpliedCurrencyAmountRangeChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFromToAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ImpliedCurrencyAmountRangeChoice, FromToAmountRange> mmFromToAmount = new MMMessageAttribute<ImpliedCurrencyAmountRangeChoice, FromToAmountRange>() {
 		{
 			businessComponentTrace_lazy = () -> AmountRange.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice.mmObject();
@@ -268,6 +288,16 @@ public class ImpliedCurrencyAmountRangeChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> FromToAmountRange.mmObject();
+		}
+
+		@Override
+		public FromToAmountRange getValue(ImpliedCurrencyAmountRangeChoice obj) {
+			return obj.getFromToAmount();
+		}
+
+		@Override
+		public void setValue(ImpliedCurrencyAmountRangeChoice obj, FromToAmountRange value) {
+			obj.setFromToAmount(value);
 		}
 	};
 	@XmlElement(name = "EQAmt", required = true)
@@ -313,7 +343,7 @@ public class ImpliedCurrencyAmountRangeChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEqualAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ImpliedCurrencyAmountRangeChoice, ImpliedCurrencyAndAmount> mmEqualAmount = new MMMessageAttribute<ImpliedCurrencyAmountRangeChoice, ImpliedCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> AmountRange.mmEqualAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice.mmObject();
@@ -326,6 +356,16 @@ public class ImpliedCurrencyAmountRangeChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(ImpliedCurrencyAmountRangeChoice obj) {
+			return obj.getEqualAmount();
+		}
+
+		@Override
+		public void setValue(ImpliedCurrencyAmountRangeChoice obj, ImpliedCurrencyAndAmount value) {
+			obj.setEqualAmount(value);
 		}
 	};
 	@XmlElement(name = "NEQAmt", required = true)
@@ -372,7 +412,7 @@ public class ImpliedCurrencyAmountRangeChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotEqualAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ImpliedCurrencyAmountRangeChoice, ImpliedCurrencyAndAmount> mmNotEqualAmount = new MMMessageAttribute<ImpliedCurrencyAmountRangeChoice, ImpliedCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> AmountRange.mmNotEqualAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice.mmObject();
@@ -385,6 +425,16 @@ public class ImpliedCurrencyAmountRangeChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(ImpliedCurrencyAmountRangeChoice obj) {
+			return obj.getNotEqualAmount();
+		}
+
+		@Override
+		public void setValue(ImpliedCurrencyAmountRangeChoice obj, ImpliedCurrencyAndAmount value) {
+			obj.setNotEqualAmount(value);
 		}
 	};
 

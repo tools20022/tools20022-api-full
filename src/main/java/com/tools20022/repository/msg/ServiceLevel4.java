@@ -107,7 +107,7 @@ public class ServiceLevel4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ServiceLevel4, ServiceLevel3Code> mmCode = new MMMessageAttribute<ServiceLevel4, ServiceLevel3Code>() {
 		{
 			businessElementTrace_lazy = () -> ServiceLevel.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ServiceLevel4.mmObject();
@@ -119,6 +119,16 @@ public class ServiceLevel4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ServiceLevel3Code.mmObject();
+		}
+
+		@Override
+		public ServiceLevel3Code getValue(ServiceLevel4 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ServiceLevel4 obj, ServiceLevel3Code value) {
+			obj.setCode(value);
 		}
 	};
 

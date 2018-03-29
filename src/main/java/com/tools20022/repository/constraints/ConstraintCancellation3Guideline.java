@@ -65,12 +65,16 @@ public class ConstraintCancellation3Guideline {
 	 */
 	public static final MMConstraint<MeetingInstructionCancellationRequestV05> forMeetingInstructionCancellationRequestV05 = new MMConstraint<MeetingInstructionCancellationRequestV05>() {
 		{
-			validator = ConstraintCancellation3Guideline::checkMeetingInstructionCancellationRequestV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation3Guideline";
 			definition = "It is recommended to cancel an instruction message by using PreviousReference only. It is recommended to avoid the repetition of optional building blocks, unless otherwise specified by market practise rules and or legislation. If any information is present in the optional building blocks, it must be identical to the information being present into the instruction message being cancelled.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCancellation3Guideline.forMeetingInstructionCancellationRequestV04;
 			owner_lazy = () -> MeetingInstructionCancellationRequestV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MeetingInstructionCancellationRequestV05 obj) throws Exception {
+			checkMeetingInstructionCancellationRequestV05(obj);
 		}
 	};
 	/**
@@ -105,12 +109,16 @@ public class ConstraintCancellation3Guideline {
 	 */
 	public static final MMConstraint<MeetingInstructionCancellationRequestV04> forMeetingInstructionCancellationRequestV04 = new MMConstraint<MeetingInstructionCancellationRequestV04>() {
 		{
-			validator = ConstraintCancellation3Guideline::checkMeetingInstructionCancellationRequestV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation3Guideline";
 			definition = "It is recommended to cancel an instruction message by using PreviousReference only. It is recommended to avoid the repetition of optional building blocks, unless otherwise specified by market practise rules and or legislation.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCancellation3Guideline.forMeetingInstructionCancellationRequestV05);
 			owner_lazy = () -> MeetingInstructionCancellationRequestV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MeetingInstructionCancellationRequestV04 obj) throws Exception {
+			checkMeetingInstructionCancellationRequestV04(obj);
 		}
 	};
 	/**
@@ -136,11 +144,15 @@ public class ConstraintCancellation3Guideline {
 	 */
 	public static final MMConstraint<MeetingInstructionCancellationRequestV02> forMeetingInstructionCancellationRequestV02 = new MMConstraint<MeetingInstructionCancellationRequestV02>() {
 		{
-			validator = ConstraintCancellation3Guideline::checkMeetingInstructionCancellationRequestV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation3Guideline";
 			definition = "It is recommended to cancel an instruction message by using PreviousReference only. It is recommended to avoid the repetition of optional building blocks, unless otherwise specified by market practise rules and or legislation.";
 			owner_lazy = () -> MeetingInstructionCancellationRequestV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MeetingInstructionCancellationRequestV02 obj) throws Exception {
+			checkMeetingInstructionCancellationRequestV02(obj);
 		}
 	};
 	/**
@@ -166,11 +178,15 @@ public class ConstraintCancellation3Guideline {
 	 */
 	public static final MMConstraint<MeetingInstructionCancellationRequestV03> forMeetingInstructionCancellationRequestV03 = new MMConstraint<MeetingInstructionCancellationRequestV03>() {
 		{
-			validator = ConstraintCancellation3Guideline::checkMeetingInstructionCancellationRequestV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation3Guideline";
 			definition = "It is recommended to cancel an instruction message by using PreviousReference only. It is recommended to avoid the repetition of optional building blocks, unless otherwise specified by market practise rules and or legislation.";
 			owner_lazy = () -> MeetingInstructionCancellationRequestV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MeetingInstructionCancellationRequestV03 obj) throws Exception {
+			checkMeetingInstructionCancellationRequestV03(obj);
 		}
 	};
 

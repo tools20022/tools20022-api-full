@@ -106,7 +106,7 @@ public class CorporateActionDateDetailsExtension2 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDateDetailsExtension2, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionDateDetailsExtension2, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateDetailsExtension2.mmObject();
 			isDerived = false;
@@ -117,6 +117,16 @@ public class CorporateActionDateDetailsExtension2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionDateDetailsExtension2 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionDateDetailsExtension2 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "DueBllRedDt")
@@ -152,7 +162,7 @@ public class CorporateActionDateDetailsExtension2 {
 	 * "Date on which accounting for due bills and associated tracking ends."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDueBillRedemptionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDateDetailsExtension2, Optional<ISODate>> mmDueBillRedemptionDate = new MMMessageAttribute<CorporateActionDateDetailsExtension2, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateDetailsExtension2.mmObject();
 			isDerived = false;
@@ -164,6 +174,16 @@ public class CorporateActionDateDetailsExtension2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CorporateActionDateDetailsExtension2 obj) {
+			return obj.getDueBillRedemptionDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDateDetailsExtension2 obj, Optional<ISODate> value) {
+			obj.setDueBillRedemptionDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NewYorkCutOffDt")
@@ -200,7 +220,7 @@ public class CorporateActionDateDetailsExtension2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewYorkCutOffDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDateDetailsExtension2, Optional<ISODate>> mmNewYorkCutOffDate = new MMMessageAttribute<CorporateActionDateDetailsExtension2, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateDetailsExtension2.mmObject();
 			isDerived = false;
@@ -212,6 +232,16 @@ public class CorporateActionDateDetailsExtension2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CorporateActionDateDetailsExtension2 obj) {
+			return obj.getNewYorkCutOffDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDateDetailsExtension2 obj, Optional<ISODate> value) {
+			obj.setNewYorkCutOffDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtDt")
@@ -246,7 +276,7 @@ public class CorporateActionDateDetailsExtension2 {
 	 * definition} = "Payable date as declared by the issuer/offeror."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDateDetailsExtension2, Optional<ISODate>> mmPaymentDate = new MMMessageAttribute<CorporateActionDateDetailsExtension2, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateDetailsExtension2.mmObject();
 			isDerived = false;
@@ -258,6 +288,16 @@ public class CorporateActionDateDetailsExtension2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CorporateActionDateDetailsExtension2 obj) {
+			return obj.getPaymentDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDateDetailsExtension2 obj, Optional<ISODate> value) {
+			obj.setPaymentDate(value.orElse(null));
 		}
 	};
 

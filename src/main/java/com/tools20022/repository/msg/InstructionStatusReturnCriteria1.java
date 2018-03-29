@@ -112,7 +112,7 @@ public class InstructionStatusReturnCriteria1 {
 	 * InstructionStatusReturnCriteria.mmPaymentInstructionStatusIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentInstructionStatusIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstructionStatusReturnCriteria1, RequestedIndicator> mmPaymentInstructionStatusIndicator = new MMMessageAttribute<InstructionStatusReturnCriteria1, RequestedIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstructionStatusReturnCriteria1.mmObject();
 			isDerived = false;
@@ -124,6 +124,16 @@ public class InstructionStatusReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public RequestedIndicator getValue(InstructionStatusReturnCriteria1 obj) {
+			return obj.getPaymentInstructionStatusIndicator();
+		}
+
+		@Override
+		public void setValue(InstructionStatusReturnCriteria1 obj, RequestedIndicator value) {
+			obj.setPaymentInstructionStatusIndicator(value);
 		}
 	};
 	@XmlElement(name = "PmtInstrStsDtTmInd")
@@ -162,7 +172,7 @@ public class InstructionStatusReturnCriteria1 {
 	 * mmPaymentInstructionStatusDateTimeIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentInstructionStatusDateTimeIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstructionStatusReturnCriteria1, Optional<RequestedIndicator>> mmPaymentInstructionStatusDateTimeIndicator = new MMMessageAttribute<InstructionStatusReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstructionStatusReturnCriteria1.mmObject();
 			isDerived = false;
@@ -174,6 +184,16 @@ public class InstructionStatusReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(InstructionStatusReturnCriteria1 obj) {
+			return obj.getPaymentInstructionStatusDateTimeIndicator();
+		}
+
+		@Override
+		public void setValue(InstructionStatusReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setPaymentInstructionStatusDateTimeIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtInstrStsRsnInd")
@@ -212,7 +232,7 @@ public class InstructionStatusReturnCriteria1 {
 	 * }</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentInstructionStatusReasonIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstructionStatusReturnCriteria1, Optional<RequestedIndicator>> mmPaymentInstructionStatusReasonIndicator = new MMMessageAttribute<InstructionStatusReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstructionStatusReturnCriteria1.mmObject();
 			isDerived = false;
@@ -224,6 +244,16 @@ public class InstructionStatusReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(InstructionStatusReturnCriteria1 obj) {
+			return obj.getPaymentInstructionStatusReasonIndicator();
+		}
+
+		@Override
+		public void setValue(InstructionStatusReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setPaymentInstructionStatusReasonIndicator(value.orElse(null));
 		}
 	};
 

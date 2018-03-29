@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Broker;
+import com.tools20022.repository.entity.ExecutingTrader;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ConfirmationParties2;
 import com.tools20022.repository.msg.ConfirmationParties4;
@@ -121,21 +122,31 @@ public class ExecutingBrokerRole extends Broker {
 	 * name} = "ExecutingTrader"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Trader at the executing broker."</li>
+	 * definition} = "Trader at the executing broker"</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmExecutingTrader = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ExecutingBrokerRole, com.tools20022.repository.entity.ExecutingTrader> mmExecutingTrader = new MMBusinessAssociationEnd<ExecutingBrokerRole, com.tools20022.repository.entity.ExecutingTrader>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ExecutingBrokerRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExecutingTrader";
-			definition = "Trader at the executing broker.";
+			definition = "Trader at the executing broker";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.ExecutingTrader.mmExecutingBroker;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ExecutingTrader.mmObject();
+		}
+
+		@Override
+		public com.tools20022.repository.entity.ExecutingTrader getValue(ExecutingBrokerRole obj) {
+			return obj.getExecutingTrader();
+		}
+
+		@Override
+		public void setValue(ExecutingBrokerRole obj, com.tools20022.repository.entity.ExecutingTrader value) {
+			obj.setExecutingTrader(value);
 		}
 	};
 

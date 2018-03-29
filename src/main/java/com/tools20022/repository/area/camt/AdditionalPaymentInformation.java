@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.CaseAssignment;
 import com.tools20022.repository.msg.PaymentComplementaryInformation;
 import com.tools20022.repository.msg.PaymentInstructionExtract;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -159,7 +158,7 @@ public class AdditionalPaymentInformation {
 	 * definition} = "Identifies the assignment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AdditionalPaymentInformation, CaseAssignment> mmAssignment = new MMMessageBuildingBlock<AdditionalPaymentInformation, CaseAssignment>() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,12 +169,14 @@ public class AdditionalPaymentInformation {
 			complexType_lazy = () -> CaseAssignment.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AdditionalPaymentInformation.class.getMethod("getAssignment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CaseAssignment getValue(AdditionalPaymentInformation obj) {
+			return obj.getAssignment();
+		}
+
+		@Override
+		public void setValue(AdditionalPaymentInformation obj, CaseAssignment value) {
+			obj.setAssignment(value);
 		}
 	};
 	@XmlElement(name = "Case", required = true)
@@ -201,7 +202,7 @@ public class AdditionalPaymentInformation {
 	 * definition} = "Identifies the case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AdditionalPaymentInformation, Case> mmCase = new MMMessageBuildingBlock<AdditionalPaymentInformation, Case>() {
 		{
 			xmlTag = "Case";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -212,12 +213,14 @@ public class AdditionalPaymentInformation {
 			complexType_lazy = () -> Case.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AdditionalPaymentInformation.class.getMethod("getCase", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Case getValue(AdditionalPaymentInformation obj) {
+			return obj.getCase();
+		}
+
+		@Override
+		public void setValue(AdditionalPaymentInformation obj, Case value) {
+			obj.setCase(value);
 		}
 	};
 	@XmlElement(name = "Undrlyg", required = true)
@@ -245,7 +248,7 @@ public class AdditionalPaymentInformation {
 	 * definition} = "Identifies the underlying payment instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUnderlying = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AdditionalPaymentInformation, PaymentInstructionExtract> mmUnderlying = new MMMessageBuildingBlock<AdditionalPaymentInformation, PaymentInstructionExtract>() {
 		{
 			xmlTag = "Undrlyg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -256,12 +259,14 @@ public class AdditionalPaymentInformation {
 			complexType_lazy = () -> PaymentInstructionExtract.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AdditionalPaymentInformation.class.getMethod("getUnderlying", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PaymentInstructionExtract getValue(AdditionalPaymentInformation obj) {
+			return obj.getUnderlying();
+		}
+
+		@Override
+		public void setValue(AdditionalPaymentInformation obj, PaymentInstructionExtract value) {
+			obj.setUnderlying(value);
 		}
 	};
 	@XmlElement(name = "Inf", required = true)
@@ -290,7 +295,7 @@ public class AdditionalPaymentInformation {
 	 * "Additional information to the underlying payment instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AdditionalPaymentInformation, PaymentComplementaryInformation> mmInformation = new MMMessageBuildingBlock<AdditionalPaymentInformation, PaymentComplementaryInformation>() {
 		{
 			xmlTag = "Inf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -301,12 +306,14 @@ public class AdditionalPaymentInformation {
 			complexType_lazy = () -> PaymentComplementaryInformation.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AdditionalPaymentInformation.class.getMethod("getInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PaymentComplementaryInformation getValue(AdditionalPaymentInformation obj) {
+			return obj.getInformation();
+		}
+
+		@Override
+		public void setValue(AdditionalPaymentInformation obj, PaymentComplementaryInformation value) {
+			obj.setInformation(value);
 		}
 	};
 

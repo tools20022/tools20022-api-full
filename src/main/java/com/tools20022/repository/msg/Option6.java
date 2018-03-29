@@ -30,6 +30,9 @@ import com.tools20022.repository.datatype.Max4AlphaNumericText;
 import com.tools20022.repository.entity.CurrencyOption;
 import com.tools20022.repository.entity.Option;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AgreedRate1;
+import com.tools20022.repository.msg.AmountsAndValueDate5;
+import com.tools20022.repository.msg.PremiumAmount2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -138,7 +141,7 @@ public class Option6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOptionAmounts = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Option6, AmountsAndValueDate5> mmOptionAmounts = new MMMessageAssociationEnd<Option6, AmountsAndValueDate5>() {
 		{
 			businessComponentTrace_lazy = () -> CurrencyOption.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Option6.mmObject();
@@ -150,7 +153,17 @@ public class Option6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountsAndValueDate5.mmObject();
+			type_lazy = () -> AmountsAndValueDate5.mmObject();
+		}
+
+		@Override
+		public AmountsAndValueDate5 getValue(Option6 obj) {
+			return obj.getOptionAmounts();
+		}
+
+		@Override
+		public void setValue(Option6 obj, AmountsAndValueDate5 value) {
+			obj.setOptionAmounts(value);
 		}
 	};
 	@XmlElement(name = "StrkPric", required = true)
@@ -187,7 +200,7 @@ public class Option6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStrikePrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Option6, AgreedRate1> mmStrikePrice = new MMMessageAssociationEnd<Option6, AgreedRate1>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyOption.mmStrikeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Option6.mmObject();
@@ -199,7 +212,17 @@ public class Option6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AgreedRate1.mmObject();
+			type_lazy = () -> AgreedRate1.mmObject();
+		}
+
+		@Override
+		public AgreedRate1 getValue(Option6 obj) {
+			return obj.getStrikePrice();
+		}
+
+		@Override
+		public void setValue(Option6 obj, AgreedRate1 value) {
+			obj.setStrikePrice(value);
 		}
 	};
 	@XmlElement(name = "ExrcStyle", required = true)
@@ -236,7 +259,7 @@ public class Option6 {
 	 * definition} = "Defines how an option can be exercised."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExerciseStyle = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Option6, OptionStyle2Code> mmExerciseStyle = new MMMessageAttribute<Option6, OptionStyle2Code>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmOptionStyle;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Option6.mmObject();
@@ -248,6 +271,16 @@ public class Option6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OptionStyle2Code.mmObject();
+		}
+
+		@Override
+		public OptionStyle2Code getValue(Option6 obj) {
+			return obj.getExerciseStyle();
+		}
+
+		@Override
+		public void setValue(Option6 obj, OptionStyle2Code value) {
+			obj.setExerciseStyle(value);
 		}
 	};
 	@XmlElement(name = "EarlstExrcDt")
@@ -283,7 +316,7 @@ public class Option6 {
 	 * definition} = "First date on which an american option can be exercised."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEarliestExerciseDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Option6, Optional<ISODate>> mmEarliestExerciseDate = new MMMessageAttribute<Option6, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmEarliestExerciseDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Option6.mmObject();
@@ -295,6 +328,16 @@ public class Option6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(Option6 obj) {
+			return obj.getEarliestExerciseDate();
+		}
+
+		@Override
+		public void setValue(Option6 obj, Optional<ISODate> value) {
+			obj.setEarliestExerciseDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XpryDtAndTm", required = true)
@@ -332,7 +375,7 @@ public class Option6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpiryDateAndTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Option6, ISODateTime> mmExpiryDateAndTime = new MMMessageAttribute<Option6, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmExpiryDateAndTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Option6.mmObject();
@@ -344,6 +387,16 @@ public class Option6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(Option6 obj) {
+			return obj.getExpiryDateAndTime();
+		}
+
+		@Override
+		public void setValue(Option6 obj, ISODateTime value) {
+			obj.setExpiryDateAndTime(value);
 		}
 	};
 	@XmlElement(name = "XpryLctn", required = true)
@@ -380,7 +433,7 @@ public class Option6 {
 	 * definition} = "Financial center where option expires."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpiryLocation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Option6, Max4AlphaNumericText> mmExpiryLocation = new MMMessageAttribute<Option6, Max4AlphaNumericText>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmExpiryLocation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Option6.mmObject();
@@ -392,6 +445,16 @@ public class Option6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max4AlphaNumericText getValue(Option6 obj) {
+			return obj.getExpiryLocation();
+		}
+
+		@Override
+		public void setValue(Option6 obj, Max4AlphaNumericText value) {
+			obj.setExpiryLocation(value);
 		}
 	};
 	@XmlElement(name = "SttlmTp", required = true)
@@ -430,7 +493,7 @@ public class Option6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Option6, SettlementType1Code> mmSettlementType = new MMMessageAttribute<Option6, SettlementType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmSettlementType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Option6.mmObject();
@@ -442,6 +505,16 @@ public class Option6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SettlementType1Code.mmObject();
+		}
+
+		@Override
+		public SettlementType1Code getValue(Option6 obj) {
+			return obj.getSettlementType();
+		}
+
+		@Override
+		public void setValue(Option6 obj, SettlementType1Code value) {
+			obj.setSettlementType(value);
 		}
 	};
 	@XmlElement(name = "AddtlOptnInf")
@@ -473,7 +546,7 @@ public class Option6 {
 	 * "Free format text that may contain information on the option."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalOptionInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Option6, Optional<Max140Text>> mmAdditionalOptionInformation = new MMMessageAttribute<Option6, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Option6.mmObject();
 			isDerived = false;
@@ -484,6 +557,16 @@ public class Option6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(Option6 obj) {
+			return obj.getAdditionalOptionInformation();
+		}
+
+		@Override
+		public void setValue(Option6 obj, Optional<Max140Text> value) {
+			obj.setAdditionalOptionInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Prm", required = true)
@@ -520,7 +603,7 @@ public class Option6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPremium = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Option6, PremiumAmount2> mmPremium = new MMMessageAssociationEnd<Option6, PremiumAmount2>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyOption.mmPremiumCalculation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Option6.mmObject();
@@ -532,7 +615,17 @@ public class Option6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PremiumAmount2.mmObject();
+			type_lazy = () -> PremiumAmount2.mmObject();
+		}
+
+		@Override
+		public PremiumAmount2 getValue(Option6 obj) {
+			return obj.getPremium();
+		}
+
+		@Override
+		public void setValue(Option6 obj, PremiumAmount2 value) {
+			obj.setPremium(value);
 		}
 	};
 
@@ -557,7 +650,7 @@ public class Option6 {
 		return optionAmounts;
 	}
 
-	public Option6 setOptionAmounts(com.tools20022.repository.msg.AmountsAndValueDate5 optionAmounts) {
+	public Option6 setOptionAmounts(AmountsAndValueDate5 optionAmounts) {
 		this.optionAmounts = Objects.requireNonNull(optionAmounts);
 		return this;
 	}
@@ -566,7 +659,7 @@ public class Option6 {
 		return strikePrice;
 	}
 
-	public Option6 setStrikePrice(com.tools20022.repository.msg.AgreedRate1 strikePrice) {
+	public Option6 setStrikePrice(AgreedRate1 strikePrice) {
 		this.strikePrice = Objects.requireNonNull(strikePrice);
 		return this;
 	}
@@ -629,7 +722,7 @@ public class Option6 {
 		return premium;
 	}
 
-	public Option6 setPremium(com.tools20022.repository.msg.PremiumAmount2 premium) {
+	public Option6 setPremium(PremiumAmount2 premium) {
 		this.premium = Objects.requireNonNull(premium);
 		return this;
 	}

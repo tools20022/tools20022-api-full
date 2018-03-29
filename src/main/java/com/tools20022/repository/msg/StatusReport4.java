@@ -22,6 +22,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.catm.StatusReportV04;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification71;
+import com.tools20022.repository.msg.TerminalManagementDataSet13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -133,7 +135,7 @@ public class StatusReport4 {
 	 * StatusReport3.mmPOIIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPOIIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusReport4, GenericIdentification71> mmPOIIdentification = new MMMessageAssociationEnd<StatusReport4, GenericIdentification71>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReport4.mmObject();
 			isDerived = false;
@@ -146,7 +148,17 @@ public class StatusReport4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification71.mmObject();
+			type_lazy = () -> GenericIdentification71.mmObject();
+		}
+
+		@Override
+		public GenericIdentification71 getValue(StatusReport4 obj) {
+			return obj.getPOIIdentification();
+		}
+
+		@Override
+		public void setValue(StatusReport4 obj, GenericIdentification71 value) {
+			obj.setPOIIdentification(value);
 		}
 	};
 	@XmlElement(name = "TermnlMgrId")
@@ -192,7 +204,7 @@ public class StatusReport4 {
 	 * StatusReport3.mmTerminalManagerIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTerminalManagerIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusReport4, Optional<GenericIdentification71>> mmTerminalManagerIdentification = new MMMessageAssociationEnd<StatusReport4, Optional<GenericIdentification71>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReport4.mmObject();
 			isDerived = false;
@@ -205,7 +217,17 @@ public class StatusReport4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification71.mmObject();
+			type_lazy = () -> GenericIdentification71.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification71> getValue(StatusReport4 obj) {
+			return obj.getTerminalManagerIdentification();
+		}
+
+		@Override
+		public void setValue(StatusReport4 obj, Optional<GenericIdentification71> value) {
+			obj.setTerminalManagerIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DataSet", required = true)
@@ -249,7 +271,7 @@ public class StatusReport4 {
 	 * StatusReport3.mmDataSet}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSet = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusReport4, TerminalManagementDataSet13> mmDataSet = new MMMessageAssociationEnd<StatusReport4, TerminalManagementDataSet13>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReport4.mmObject();
 			isDerived = false;
@@ -262,7 +284,17 @@ public class StatusReport4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet13.mmObject();
+			type_lazy = () -> TerminalManagementDataSet13.mmObject();
+		}
+
+		@Override
+		public TerminalManagementDataSet13 getValue(StatusReport4 obj) {
+			return obj.getDataSet();
+		}
+
+		@Override
+		public void setValue(StatusReport4 obj, TerminalManagementDataSet13 value) {
+			obj.setDataSet(value);
 		}
 	};
 
@@ -287,7 +319,7 @@ public class StatusReport4 {
 		return pOIIdentification;
 	}
 
-	public StatusReport4 setPOIIdentification(com.tools20022.repository.msg.GenericIdentification71 pOIIdentification) {
+	public StatusReport4 setPOIIdentification(GenericIdentification71 pOIIdentification) {
 		this.pOIIdentification = Objects.requireNonNull(pOIIdentification);
 		return this;
 	}
@@ -296,7 +328,7 @@ public class StatusReport4 {
 		return terminalManagerIdentification == null ? Optional.empty() : Optional.of(terminalManagerIdentification);
 	}
 
-	public StatusReport4 setTerminalManagerIdentification(com.tools20022.repository.msg.GenericIdentification71 terminalManagerIdentification) {
+	public StatusReport4 setTerminalManagerIdentification(GenericIdentification71 terminalManagerIdentification) {
 		this.terminalManagerIdentification = terminalManagerIdentification;
 		return this;
 	}
@@ -305,7 +337,7 @@ public class StatusReport4 {
 		return dataSet;
 	}
 
-	public StatusReport4 setDataSet(com.tools20022.repository.msg.TerminalManagementDataSet13 dataSet) {
+	public StatusReport4 setDataSet(TerminalManagementDataSet13 dataSet) {
 		this.dataSet = Objects.requireNonNull(dataSet);
 		return this;
 	}

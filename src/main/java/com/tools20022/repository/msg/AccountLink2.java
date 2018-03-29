@@ -25,6 +25,8 @@ import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.entity.AccountLink;
 import com.tools20022.repository.entity.DateTimePeriod;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccount24;
+import com.tools20022.repository.msg.SecuritiesAccount13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -123,7 +125,7 @@ public class AccountLink2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountLink2, SecuritiesAccount13> mmSecuritiesAccount = new MMMessageAttribute<AccountLink2, SecuritiesAccount13>() {
 		{
 			businessElementTrace_lazy = () -> AccountLink.mmSecuritiesAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLink2.mmObject();
@@ -135,7 +137,17 @@ public class AccountLink2 {
 			nextVersions_lazy = () -> Arrays.asList(AccountLink4.mmSecuritiesAccount);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
+			complexType_lazy = () -> SecuritiesAccount13.mmObject();
+		}
+
+		@Override
+		public SecuritiesAccount13 getValue(AccountLink2 obj) {
+			return obj.getSecuritiesAccount();
+		}
+
+		@Override
+		public void setValue(AccountLink2 obj, SecuritiesAccount13 value) {
+			obj.setSecuritiesAccount(value);
 		}
 	};
 	@XmlElement(name = "CshAcct", required = true)
@@ -177,7 +189,7 @@ public class AccountLink2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountLink2, CashAccount24> mmCashAccount = new MMMessageAssociationEnd<AccountLink2, CashAccount24>() {
 		{
 			businessElementTrace_lazy = () -> AccountLink.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLink2.mmObject();
@@ -190,7 +202,17 @@ public class AccountLink2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
+			type_lazy = () -> CashAccount24.mmObject();
+		}
+
+		@Override
+		public CashAccount24 getValue(AccountLink2 obj) {
+			return obj.getCashAccount();
+		}
+
+		@Override
+		public void setValue(AccountLink2 obj, CashAccount24 value) {
+			obj.setCashAccount(value);
 		}
 	};
 	@XmlElement(name = "VldFr", required = true)
@@ -236,7 +258,7 @@ public class AccountLink2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValidFrom = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountLink2, DateAndDateTimeChoice> mmValidFrom = new MMMessageAttribute<AccountLink2, DateAndDateTimeChoice>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLink2.mmObject();
@@ -249,6 +271,16 @@ public class AccountLink2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(AccountLink2 obj) {
+			return obj.getValidFrom();
+		}
+
+		@Override
+		public void setValue(AccountLink2 obj, DateAndDateTimeChoice value) {
+			obj.setValidFrom(value);
 		}
 	};
 
@@ -271,7 +303,7 @@ public class AccountLink2 {
 		return securitiesAccount;
 	}
 
-	public AccountLink2 setSecuritiesAccount(com.tools20022.repository.msg.SecuritiesAccount13 securitiesAccount) {
+	public AccountLink2 setSecuritiesAccount(SecuritiesAccount13 securitiesAccount) {
 		this.securitiesAccount = Objects.requireNonNull(securitiesAccount);
 		return this;
 	}
@@ -280,7 +312,7 @@ public class AccountLink2 {
 		return cashAccount;
 	}
 
-	public AccountLink2 setCashAccount(com.tools20022.repository.msg.CashAccount24 cashAccount) {
+	public AccountLink2 setCashAccount(CashAccount24 cashAccount) {
 		this.cashAccount = Objects.requireNonNull(cashAccount);
 		return this;
 	}

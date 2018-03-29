@@ -128,7 +128,7 @@ public class AccountBalanceExtensionSD1 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountBalanceExtensionSD1, Max350Text> mmPlaceAndName = new MMMessageAttribute<AccountBalanceExtensionSD1, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountBalanceExtensionSD1.mmObject();
 			isDerived = false;
@@ -139,6 +139,16 @@ public class AccountBalanceExtensionSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(AccountBalanceExtensionSD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(AccountBalanceExtensionSD1 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "TxPos")
@@ -174,7 +184,7 @@ public class AccountBalanceExtensionSD1 {
 	 * definition} = "Position that is concerned in transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionPosition = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountBalanceExtensionSD1, Optional<AdjustedBalanceTypeSD1Choice>> mmTransactionPosition = new MMMessageAttribute<AccountBalanceExtensionSD1, Optional<AdjustedBalanceTypeSD1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountBalanceExtensionSD1.mmObject();
 			isDerived = false;
@@ -186,6 +196,16 @@ public class AccountBalanceExtensionSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdjustedBalanceTypeSD1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AdjustedBalanceTypeSD1Choice> getValue(AccountBalanceExtensionSD1 obj) {
+			return obj.getTransactionPosition();
+		}
+
+		@Override
+		public void setValue(AccountBalanceExtensionSD1 obj, Optional<AdjustedBalanceTypeSD1Choice> value) {
+			obj.setTransactionPosition(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AsOfDt")
@@ -221,7 +241,7 @@ public class AccountBalanceExtensionSD1 {
 	 * "Effective date of the transaction. Applicable to Fail transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAsOfDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountBalanceExtensionSD1, Optional<ISODate>> mmAsOfDate = new MMMessageAttribute<AccountBalanceExtensionSD1, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountBalanceExtensionSD1.mmObject();
 			isDerived = false;
@@ -233,6 +253,16 @@ public class AccountBalanceExtensionSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(AccountBalanceExtensionSD1 obj) {
+			return obj.getAsOfDate();
+		}
+
+		@Override
+		public void setValue(AccountBalanceExtensionSD1 obj, Optional<ISODate> value) {
+			obj.setAsOfDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DlvryDt")
@@ -267,7 +297,7 @@ public class AccountBalanceExtensionSD1 {
 	 * definition} = "Date of the delivery. Applicable to Fail transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeliveryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountBalanceExtensionSD1, Optional<ISODate>> mmDeliveryDate = new MMMessageAttribute<AccountBalanceExtensionSD1, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountBalanceExtensionSD1.mmObject();
 			isDerived = false;
@@ -279,6 +309,16 @@ public class AccountBalanceExtensionSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(AccountBalanceExtensionSD1 obj) {
+			return obj.getDeliveryDate();
+		}
+
+		@Override
+		public void setValue(AccountBalanceExtensionSD1 obj, Optional<ISODate> value) {
+			obj.setDeliveryDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ContraPtcptNb")
@@ -315,7 +355,7 @@ public class AccountBalanceExtensionSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContraParticipantNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountBalanceExtensionSD1, Optional<Max8Text>> mmContraParticipantNumber = new MMMessageAttribute<AccountBalanceExtensionSD1, Optional<Max8Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountBalanceExtensionSD1.mmObject();
 			isDerived = false;
@@ -327,6 +367,16 @@ public class AccountBalanceExtensionSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max8Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max8Text> getValue(AccountBalanceExtensionSD1 obj) {
+			return obj.getContraParticipantNumber();
+		}
+
+		@Override
+		public void setValue(AccountBalanceExtensionSD1 obj, Optional<Max8Text> value) {
+			obj.setContraParticipantNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcvrAcctNb")
@@ -363,7 +413,7 @@ public class AccountBalanceExtensionSD1 {
 	 * "Account number at receiver’s side. Applicable to Fail transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReceiverAccountNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountBalanceExtensionSD1, Optional<RestrictedFINXMax35Text>> mmReceiverAccountNumber = new MMMessageAttribute<AccountBalanceExtensionSD1, Optional<RestrictedFINXMax35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountBalanceExtensionSD1.mmObject();
 			isDerived = false;
@@ -375,6 +425,16 @@ public class AccountBalanceExtensionSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax35Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax35Text> getValue(AccountBalanceExtensionSD1 obj) {
+			return obj.getReceiverAccountNumber();
+		}
+
+		@Override
+		public void setValue(AccountBalanceExtensionSD1 obj, Optional<RestrictedFINXMax35Text> value) {
+			obj.setReceiverAccountNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DlvrrAcctNb")
@@ -411,7 +471,7 @@ public class AccountBalanceExtensionSD1 {
 	 * "Account number at deliverer’s side. Applicable to Fail transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDelivererAccountNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountBalanceExtensionSD1, Optional<RestrictedFINXMax35Text>> mmDelivererAccountNumber = new MMMessageAttribute<AccountBalanceExtensionSD1, Optional<RestrictedFINXMax35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountBalanceExtensionSD1.mmObject();
 			isDerived = false;
@@ -423,6 +483,16 @@ public class AccountBalanceExtensionSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax35Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax35Text> getValue(AccountBalanceExtensionSD1 obj) {
+			return obj.getDelivererAccountNumber();
+		}
+
+		@Override
+		public void setValue(AccountBalanceExtensionSD1 obj, Optional<RestrictedFINXMax35Text> value) {
+			obj.setDelivererAccountNumber(value.orElse(null));
 		}
 	};
 

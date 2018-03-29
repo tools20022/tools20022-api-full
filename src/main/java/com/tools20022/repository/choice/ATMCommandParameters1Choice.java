@@ -130,7 +130,7 @@ public class ATMCommandParameters1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmATMRequiredGlobalStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMCommandParameters1Choice, ATMStatus1Code> mmATMRequiredGlobalStatus = new MMMessageAttribute<ATMCommandParameters1Choice, ATMStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> System.mmStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ATMCommandParameters1Choice.mmObject();
@@ -143,6 +143,16 @@ public class ATMCommandParameters1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ATMStatus1Code.mmObject();
+		}
+
+		@Override
+		public ATMStatus1Code getValue(ATMCommandParameters1Choice obj) {
+			return obj.getATMRequiredGlobalStatus();
+		}
+
+		@Override
+		public void setValue(ATMCommandParameters1Choice obj, ATMStatus1Code value) {
+			obj.setATMRequiredGlobalStatus(value);
 		}
 	};
 	@XmlElement(name = "XpctdMsgFctn", required = true)
@@ -183,7 +193,7 @@ public class ATMCommandParameters1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpectedMessageFunction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMCommandParameters1Choice, MessageFunction8Code> mmExpectedMessageFunction = new MMMessageAttribute<ATMCommandParameters1Choice, MessageFunction8Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ATMCommandParameters1Choice.mmObject();
 			isDerived = false;
@@ -195,6 +205,16 @@ public class ATMCommandParameters1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MessageFunction8Code.mmObject();
+		}
+
+		@Override
+		public MessageFunction8Code getValue(ATMCommandParameters1Choice obj) {
+			return obj.getExpectedMessageFunction();
+		}
+
+		@Override
+		public void setValue(ATMCommandParameters1Choice obj, MessageFunction8Code value) {
+			obj.setExpectedMessageFunction(value);
 		}
 	};
 	@XmlElement(name = "ReqrdCfgtnParam", required = true)
@@ -235,7 +255,7 @@ public class ATMCommandParameters1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRequiredConfigurationParameter = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMCommandParameters1Choice, ATMConfigurationParameter1> mmRequiredConfigurationParameter = new MMMessageAssociationEnd<ATMCommandParameters1Choice, ATMConfigurationParameter1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ATMCommandParameters1Choice.mmObject();
 			isDerived = false;
@@ -248,6 +268,16 @@ public class ATMCommandParameters1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ATMConfigurationParameter1.mmObject();
+		}
+
+		@Override
+		public ATMConfigurationParameter1 getValue(ATMCommandParameters1Choice obj) {
+			return obj.getRequiredConfigurationParameter();
+		}
+
+		@Override
+		public void setValue(ATMCommandParameters1Choice obj, ATMConfigurationParameter1 value) {
+			obj.setRequiredConfigurationParameter(value);
 		}
 	};
 

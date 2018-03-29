@@ -112,7 +112,7 @@ public class TransactionIdentifier2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReconciliationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionIdentifier2, ISODate> mmReconciliationDate = new MMMessageAttribute<TransactionIdentifier2, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionIdentifier2.mmObject();
 			isDerived = false;
@@ -123,6 +123,16 @@ public class TransactionIdentifier2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(TransactionIdentifier2 obj) {
+			return obj.getReconciliationDate();
+		}
+
+		@Override
+		public void setValue(TransactionIdentifier2 obj, ISODate value) {
+			obj.setReconciliationDate(value);
 		}
 	};
 	@XmlElement(name = "RcncltnId")
@@ -161,7 +171,7 @@ public class TransactionIdentifier2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReconciliationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionIdentifier2, Optional<Max35Text>> mmReconciliationIdentification = new MMMessageAttribute<TransactionIdentifier2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> ReconciliationTransaction.mmReconciliationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionIdentifier2.mmObject();
@@ -173,6 +183,16 @@ public class TransactionIdentifier2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransactionIdentifier2 obj) {
+			return obj.getReconciliationIdentification();
+		}
+
+		@Override
+		public void setValue(TransactionIdentifier2 obj, Optional<Max35Text> value) {
+			obj.setReconciliationIdentification(value.orElse(null));
 		}
 	};
 

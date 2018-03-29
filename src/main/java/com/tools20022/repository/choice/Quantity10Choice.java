@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice;
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.OriginalAndCurrentQuantities4;
@@ -106,7 +107,7 @@ public class Quantity10Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Quantity10Choice, FinancialInstrumentQuantity15Choice> mmQuantity = new MMMessageAssociationEnd<Quantity10Choice, FinancialInstrumentQuantity15Choice>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesQuantity.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity10Choice.mmObject();
@@ -118,7 +119,17 @@ public class Quantity10Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice.mmObject();
+			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity15Choice getValue(Quantity10Choice obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(Quantity10Choice obj, FinancialInstrumentQuantity15Choice value) {
+			obj.setQuantity(value);
 		}
 	};
 	@XmlElement(name = "OrgnlAndCurFace", required = true)
@@ -155,7 +166,7 @@ public class Quantity10Choice {
 	 * definition} = "Original and current value of an asset-back instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalAndCurrentFace = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Quantity10Choice, OriginalAndCurrentQuantities4> mmOriginalAndCurrentFace = new MMMessageAssociationEnd<Quantity10Choice, OriginalAndCurrentQuantities4>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesQuantity.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity10Choice.mmObject();
@@ -168,6 +179,16 @@ public class Quantity10Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OriginalAndCurrentQuantities4.mmObject();
+		}
+
+		@Override
+		public OriginalAndCurrentQuantities4 getValue(Quantity10Choice obj) {
+			return obj.getOriginalAndCurrentFace();
+		}
+
+		@Override
+		public void setValue(Quantity10Choice obj, OriginalAndCurrentQuantities4 value) {
+			obj.setOriginalAndCurrentFace(value);
 		}
 	};
 
@@ -189,7 +210,7 @@ public class Quantity10Choice {
 		return quantity;
 	}
 
-	public Quantity10Choice setQuantity(com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice quantity) {
+	public Quantity10Choice setQuantity(FinancialInstrumentQuantity15Choice quantity) {
 		this.quantity = Objects.requireNonNull(quantity);
 		return this;
 	}

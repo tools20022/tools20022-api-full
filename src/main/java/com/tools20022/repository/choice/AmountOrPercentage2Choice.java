@@ -98,7 +98,7 @@ public class AmountOrPercentage2Choice {
 	 * definition} = "Specifies that the payment is for a fixed amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountOrPercentage2Choice, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<AmountOrPercentage2Choice, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AmountOrPercentage2Choice.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class AmountOrPercentage2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(AmountOrPercentage2Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(AmountOrPercentage2Choice obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "Pctg", required = true)
@@ -143,7 +153,7 @@ public class AmountOrPercentage2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPercentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountOrPercentage2Choice, PercentageRate> mmPercentage = new MMMessageAttribute<AmountOrPercentage2Choice, PercentageRate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AmountOrPercentage2Choice.mmObject();
 			isDerived = false;
@@ -154,6 +164,16 @@ public class AmountOrPercentage2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(AmountOrPercentage2Choice obj) {
+			return obj.getPercentage();
+		}
+
+		@Override
+		public void setValue(AmountOrPercentage2Choice obj, PercentageRate value) {
+			obj.setPercentage(value);
 		}
 	};
 

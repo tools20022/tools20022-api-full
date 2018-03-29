@@ -128,7 +128,7 @@ public class CorporateActionOption11 {
 	 * "Number identifying the available corporate action options."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOptionNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOption11, Optional<Exact3NumericText>> mmOptionNumber = new MMMessageAttribute<CorporateActionOption11, Optional<Exact3NumericText>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption11.mmObject();
@@ -141,6 +141,16 @@ public class CorporateActionOption11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Exact3NumericText> getValue(CorporateActionOption11 obj) {
+			return obj.getOptionNumber();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption11 obj, Optional<Exact3NumericText> value) {
+			obj.setOptionNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OptnTp", required = true)
@@ -182,7 +192,7 @@ public class CorporateActionOption11 {
 	 * "Specifies the corporate action options available to the account owner."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOptionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOption11, CorporateActionOption5Choice> mmOptionType = new MMMessageAttribute<CorporateActionOption11, CorporateActionOption5Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption11.mmObject();
@@ -195,6 +205,16 @@ public class CorporateActionOption11 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionOption5Choice.mmObject();
+		}
+
+		@Override
+		public CorporateActionOption5Choice getValue(CorporateActionOption11 obj) {
+			return obj.getOptionType();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption11 obj, CorporateActionOption5Choice value) {
+			obj.setOptionType(value);
 		}
 	};
 	@XmlElement(name = "MktDdln")
@@ -237,7 +257,7 @@ public class CorporateActionOption11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarketDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOption11, Optional<DateFormat7Choice>> mmMarketDeadline = new MMMessageAttribute<CorporateActionOption11, Optional<DateFormat7Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmMarketDeadline;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption11.mmObject();
@@ -250,6 +270,16 @@ public class CorporateActionOption11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat7Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat7Choice> getValue(CorporateActionOption11 obj) {
+			return obj.getMarketDeadline();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption11 obj, Optional<DateFormat7Choice> value) {
+			obj.setMarketDeadline(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DfltPrcgOrStgInstr")
@@ -287,7 +317,7 @@ public class CorporateActionOption11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDefaultProcessingOrStandingInstruction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOption11, Optional<DefaultProcessingOrStandingInstruction1Choice>> mmDefaultProcessingOrStandingInstruction = new MMMessageAttribute<CorporateActionOption11, Optional<DefaultProcessingOrStandingInstruction1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption11.mmObject();
 			isDerived = false;
@@ -299,6 +329,16 @@ public class CorporateActionOption11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DefaultProcessingOrStandingInstruction1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DefaultProcessingOrStandingInstruction1Choice> getValue(CorporateActionOption11 obj) {
+			return obj.getDefaultProcessingOrStandingInstruction();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption11 obj, Optional<DefaultProcessingOrStandingInstruction1Choice> value) {
+			obj.setDefaultProcessingOrStandingInstruction(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RspnDdln")
@@ -341,7 +381,7 @@ public class CorporateActionOption11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResponseDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOption11, Optional<DateFormat6Choice>> mmResponseDeadline = new MMMessageAttribute<CorporateActionOption11, Optional<DateFormat6Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDeadline.mmResponseDeadline;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption11.mmObject();
@@ -354,6 +394,16 @@ public class CorporateActionOption11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat6Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat6Choice> getValue(CorporateActionOption11 obj) {
+			return obj.getResponseDeadline();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption11 obj, Optional<DateFormat6Choice> value) {
+			obj.setResponseDeadline(value.orElse(null));
 		}
 	};
 

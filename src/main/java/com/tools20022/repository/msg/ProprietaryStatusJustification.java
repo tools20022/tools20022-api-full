@@ -129,7 +129,7 @@ public class ProprietaryStatusJustification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietaryStatusReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryStatusJustification, Max4AlphaNumericText> mmProprietaryStatusReason = new MMMessageAttribute<ProprietaryStatusJustification, Max4AlphaNumericText>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryStatusJustification.mmObject();
@@ -142,6 +142,16 @@ public class ProprietaryStatusJustification {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max4AlphaNumericText getValue(ProprietaryStatusJustification obj) {
+			return obj.getProprietaryStatusReason();
+		}
+
+		@Override
+		public void setValue(ProprietaryStatusJustification obj, Max4AlphaNumericText value) {
+			obj.setProprietaryStatusReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -188,7 +198,7 @@ public class ProprietaryStatusJustification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryStatusJustification, Max256Text> mmReason = new MMMessageAttribute<ProprietaryStatusJustification, Max256Text>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryStatusJustification.mmObject();
@@ -201,6 +211,16 @@ public class ProprietaryStatusJustification {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Max256Text getValue(ProprietaryStatusJustification obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(ProprietaryStatusJustification obj, Max256Text value) {
+			obj.setReason(value);
 		}
 	};
 

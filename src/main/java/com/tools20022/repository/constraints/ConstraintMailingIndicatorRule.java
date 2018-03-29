@@ -60,12 +60,16 @@ public class ConstraintMailingIndicatorRule {
 	 */
 	public static final MMConstraint<PostalAddress3> forPostalAddress3 = new MMConstraint<PostalAddress3>() {
 		{
-			validator = ConstraintMailingIndicatorRule::checkPostalAddress3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MailingIndicatorRule";
 			definition = "If RegistrationAddressIndicator is \"true\" or \"1\" (Yes), then MailingIndicator must be \"true\" or \"1\".";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMailingIndicatorRule.forPostalAddress21);
 			owner_lazy = () -> PostalAddress3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PostalAddress3 obj) throws Exception {
+			checkPostalAddress3(obj);
 		}
 	};
 	/**
@@ -96,12 +100,16 @@ public class ConstraintMailingIndicatorRule {
 	 */
 	public static final MMConstraint<PostalAddress21> forPostalAddress21 = new MMConstraint<PostalAddress21>() {
 		{
-			validator = ConstraintMailingIndicatorRule::checkPostalAddress21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MailingIndicatorRule";
 			definition = "If RegistrationAddressIndicator is \"true\" or \"1\" (Yes), then MailingIndicator must be \"true\" or \"1\".";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMailingIndicatorRule.forPostalAddress3;
 			owner_lazy = () -> PostalAddress21.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PostalAddress21 obj) throws Exception {
+			checkPostalAddress21(obj);
 		}
 	};
 

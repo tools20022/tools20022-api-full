@@ -29,6 +29,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification125;
+import com.tools20022.repository.msg.TransferInstruction1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -142,7 +144,7 @@ public class DirectDebitInstructionDetails1 {
 	 * "Identification of the mandate for a direct debit instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMandateIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DirectDebitInstructionDetails1, Max35Text> mmMandateIdentification = new MMMessageAttribute<DirectDebitInstructionDetails1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Mandate.mmMandateIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectDebitInstructionDetails1.mmObject();
@@ -154,6 +156,16 @@ public class DirectDebitInstructionDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(DirectDebitInstructionDetails1 obj) {
+			return obj.getMandateIdentification();
+		}
+
+		@Override
+		public void setValue(DirectDebitInstructionDetails1 obj, Max35Text value) {
+			obj.setMandateIdentification(value);
 		}
 	};
 	@XmlElement(name = "AutomtdDrctDbtInstrInd")
@@ -188,7 +200,7 @@ public class DirectDebitInstructionDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAutomatedDirectDebitInstructionIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DirectDebitInstructionDetails1, Optional<YesNoIndicator>> mmAutomatedDirectDebitInstructionIndicator = new MMMessageAttribute<DirectDebitInstructionDetails1, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectDebitInstructionDetails1.mmObject();
 			isDerived = false;
@@ -199,6 +211,16 @@ public class DirectDebitInstructionDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(DirectDebitInstructionDetails1 obj) {
+			return obj.getAutomatedDirectDebitInstructionIndicator();
+		}
+
+		@Override
+		public void setValue(DirectDebitInstructionDetails1 obj, Optional<YesNoIndicator> value) {
+			obj.setAutomatedDirectDebitInstructionIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DrctDbtTrfblInd")
@@ -233,7 +255,7 @@ public class DirectDebitInstructionDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDirectDebitTransferableIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DirectDebitInstructionDetails1, Optional<YesNoIndicator>> mmDirectDebitTransferableIndicator = new MMMessageAttribute<DirectDebitInstructionDetails1, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectDebitInstructionDetails1.mmObject();
 			isDerived = false;
@@ -244,6 +266,16 @@ public class DirectDebitInstructionDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(DirectDebitInstructionDetails1 obj) {
+			return obj.getDirectDebitTransferableIndicator();
+		}
+
+		@Override
+		public void setValue(DirectDebitInstructionDetails1 obj, Optional<YesNoIndicator> value) {
+			obj.setDirectDebitTransferableIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Cdtr", required = true)
@@ -278,7 +310,7 @@ public class DirectDebitInstructionDetails1 {
 	 * definition} = "Party to which an amount of money is due."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DirectDebitInstructionDetails1, PartyIdentification125> mmCreditor = new MMMessageAssociationEnd<DirectDebitInstructionDetails1, PartyIdentification125>() {
 		{
 			businessComponentTrace_lazy = () -> CreditorRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectDebitInstructionDetails1.mmObject();
@@ -290,7 +322,17 @@ public class DirectDebitInstructionDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification125.mmObject();
+			type_lazy = () -> PartyIdentification125.mmObject();
+		}
+
+		@Override
+		public PartyIdentification125 getValue(DirectDebitInstructionDetails1 obj) {
+			return obj.getCreditor();
+		}
+
+		@Override
+		public void setValue(DirectDebitInstructionDetails1 obj, PartyIdentification125 value) {
+			obj.setCreditor(value);
 		}
 	};
 	@XmlElement(name = "LastColltnCcyAmt")
@@ -326,10 +368,10 @@ public class DirectDebitInstructionDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The amount of the last payment for the standing order schedule."</li>
+	 * "Amount of the last debit made for the direct debit mandate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLastCollectionCurrencyAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DirectDebitInstructionDetails1, Optional<ActiveOrHistoricCurrencyAndAmount>> mmLastCollectionCurrencyAmount = new MMMessageAttribute<DirectDebitInstructionDetails1, Optional<ActiveOrHistoricCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> StandingOrder.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectDebitInstructionDetails1.mmObject();
@@ -337,10 +379,20 @@ public class DirectDebitInstructionDetails1 {
 			xmlTag = "LastColltnCcyAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastCollectionCurrencyAmount";
-			definition = "The amount of the last payment for the standing order schedule.";
+			definition = "Amount of the last debit made for the direct debit mandate.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAndAmount> getValue(DirectDebitInstructionDetails1 obj) {
+			return obj.getLastCollectionCurrencyAmount();
+		}
+
+		@Override
+		public void setValue(DirectDebitInstructionDetails1 obj, Optional<ActiveOrHistoricCurrencyAndAmount> value) {
+			obj.setLastCollectionCurrencyAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LastColltnDt")
@@ -375,11 +427,11 @@ public class DirectDebitInstructionDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date on which the last payment for the standing order schedule will be made. Not included if the number of payments to make is provided or the standing order is set up to pay indefinitely."
+	 * "Date on which the last debit for the direct debit mandate may be made.\r\n\r\nUsage: Not included if all limits to the validity of the direct debit mandate have already been specified or if there are no time limits on the validity of the direct debit."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLastCollectionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DirectDebitInstructionDetails1, Optional<ISODate>> mmLastCollectionDate = new MMMessageAttribute<DirectDebitInstructionDetails1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> ObligationFulfilment.mmDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectDebitInstructionDetails1.mmObject();
@@ -387,14 +439,24 @@ public class DirectDebitInstructionDetails1 {
 			xmlTag = "LastColltnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastCollectionDate";
-			definition = "Date on which the last payment for the standing order schedule will be made. Not included if the number of payments to make is provided or the standing order is set up to pay indefinitely.";
+			definition = "Date on which the last debit for the direct debit mandate may be made.\r\n\r\nUsage: Not included if all limits to the validity of the direct debit mandate have already been specified or if there are no time limits on the validity of the direct debit.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
+
+		@Override
+		public Optional<ISODate> getValue(DirectDebitInstructionDetails1 obj) {
+			return obj.getLastCollectionDate();
+		}
+
+		@Override
+		public void setValue(DirectDebitInstructionDetails1 obj, Optional<ISODate> value) {
+			obj.setLastCollectionDate(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "OthrDtls")
-	protected List<com.tools20022.repository.msg.TransferInstruction1> otherDetails;
+	protected List<TransferInstruction1> otherDetails;
 	/**
 	 * 
 	 <p>
@@ -419,21 +481,31 @@ public class DirectDebitInstructionDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Additional information about a non transferable direct debit instruction."
+	 * "Provides further information about the status of a requested transaction schedule transfer."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DirectDebitInstructionDetails1, List<TransferInstruction1>> mmOtherDetails = new MMMessageAssociationEnd<DirectDebitInstructionDetails1, List<TransferInstruction1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectDebitInstructionDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "OthrDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherDetails";
-			definition = "Additional information about a non transferable direct debit instruction.";
+			definition = "Provides further information about the status of a requested transaction schedule transfer.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransferInstruction1.mmObject();
+			type_lazy = () -> TransferInstruction1.mmObject();
+		}
+
+		@Override
+		public List<TransferInstruction1> getValue(DirectDebitInstructionDetails1 obj) {
+			return obj.getOtherDetails();
+		}
+
+		@Override
+		public void setValue(DirectDebitInstructionDetails1 obj, List<TransferInstruction1> value) {
+			obj.setOtherDetails(value);
 		}
 	};
 
@@ -486,7 +558,7 @@ public class DirectDebitInstructionDetails1 {
 		return creditor;
 	}
 
-	public DirectDebitInstructionDetails1 setCreditor(com.tools20022.repository.msg.PartyIdentification125 creditor) {
+	public DirectDebitInstructionDetails1 setCreditor(PartyIdentification125 creditor) {
 		this.creditor = Objects.requireNonNull(creditor);
 		return this;
 	}
@@ -513,7 +585,7 @@ public class DirectDebitInstructionDetails1 {
 		return otherDetails == null ? otherDetails = new ArrayList<>() : otherDetails;
 	}
 
-	public DirectDebitInstructionDetails1 setOtherDetails(List<com.tools20022.repository.msg.TransferInstruction1> otherDetails) {
+	public DirectDebitInstructionDetails1 setOtherDetails(List<TransferInstruction1> otherDetails) {
 		this.otherDetails = Objects.requireNonNull(otherDetails);
 		return this;
 	}

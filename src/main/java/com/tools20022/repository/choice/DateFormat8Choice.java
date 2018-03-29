@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.DateCode6Choice;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
@@ -100,7 +101,7 @@ public class DateFormat8Choice {
 	 * definition} = "Date expressed as a calendar date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateFormat8Choice, ISODate> mmDate = new MMMessageAttribute<DateFormat8Choice, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat8Choice.mmObject();
 			isDerived = false;
@@ -112,6 +113,16 @@ public class DateFormat8Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(DateFormat8Choice obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(DateFormat8Choice obj, ISODate value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "DtCd", required = true)
@@ -145,7 +156,7 @@ public class DateFormat8Choice {
 	 * definition} = "Specifies the type of date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDateCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DateFormat8Choice, DateCode6Choice> mmDateCode = new MMMessageAssociationEnd<DateFormat8Choice, DateCode6Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat8Choice.mmObject();
 			isDerived = false;
@@ -157,7 +168,17 @@ public class DateFormat8Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.DateCode6Choice.mmObject();
+			type_lazy = () -> DateCode6Choice.mmObject();
+		}
+
+		@Override
+		public DateCode6Choice getValue(DateFormat8Choice obj) {
+			return obj.getDateCode();
+		}
+
+		@Override
+		public void setValue(DateFormat8Choice obj, DateCode6Choice value) {
+			obj.setDateCode(value);
 		}
 	};
 
@@ -187,7 +208,7 @@ public class DateFormat8Choice {
 		return dateCode;
 	}
 
-	public DateFormat8Choice setDateCode(com.tools20022.repository.choice.DateCode6Choice dateCode) {
+	public DateFormat8Choice setDateCode(DateCode6Choice dateCode) {
 		this.dateCode = Objects.requireNonNull(dateCode);
 		return this;
 	}

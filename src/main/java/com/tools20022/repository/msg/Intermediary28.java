@@ -24,6 +24,7 @@ import com.tools20022.repository.choice.Role5Choice;
 import com.tools20022.repository.entity.IntermediaryRole;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification100;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -114,7 +115,7 @@ public class Intermediary28 {
 	 * Intermediary23.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Intermediary28, PartyIdentification100> mmIdentification = new MMMessageAssociationEnd<Intermediary28, PartyIdentification100>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary28.mmObject();
@@ -127,7 +128,17 @@ public class Intermediary28 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification100.mmObject();
+			type_lazy = () -> PartyIdentification100.mmObject();
+		}
+
+		@Override
+		public PartyIdentification100 getValue(Intermediary28 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Intermediary28 obj, PartyIdentification100 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Role", required = true)
@@ -167,7 +178,7 @@ public class Intermediary28 {
 	 * Intermediary23.mmRole}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRole = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Intermediary28, Role5Choice> mmRole = new MMMessageAssociationEnd<Intermediary28, Role5Choice>() {
 		{
 			businessComponentTrace_lazy = () -> IntermediaryRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary28.mmObject();
@@ -181,6 +192,16 @@ public class Intermediary28 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Role5Choice.mmObject();
+		}
+
+		@Override
+		public Role5Choice getValue(Intermediary28 obj) {
+			return obj.getRole();
+		}
+
+		@Override
+		public void setValue(Intermediary28 obj, Role5Choice value) {
+			obj.setRole(value);
 		}
 	};
 
@@ -203,7 +224,7 @@ public class Intermediary28 {
 		return identification;
 	}
 
-	public Intermediary28 setIdentification(com.tools20022.repository.msg.PartyIdentification100 identification) {
+	public Intermediary28 setIdentification(PartyIdentification100 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}

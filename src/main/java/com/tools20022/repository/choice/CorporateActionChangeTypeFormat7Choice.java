@@ -115,7 +115,7 @@ public class CorporateActionChangeTypeFormat7Choice {
 	 * definition} = "Standard code to specify the type of changes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionChangeTypeFormat7Choice, CorporateActionChangeType2Code> mmCode = new MMMessageAttribute<CorporateActionChangeTypeFormat7Choice, CorporateActionChangeType2Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesModification.mmChangeType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionChangeTypeFormat7Choice.mmObject();
@@ -128,6 +128,16 @@ public class CorporateActionChangeTypeFormat7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionChangeType2Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionChangeType2Code getValue(CorporateActionChangeTypeFormat7Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CorporateActionChangeTypeFormat7Choice obj, CorporateActionChangeType2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -167,7 +177,7 @@ public class CorporateActionChangeTypeFormat7Choice {
 	 * definition} = "Proprietary identification of the type of changes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionChangeTypeFormat7Choice, GenericIdentification47> mmProprietary = new MMMessageAssociationEnd<CorporateActionChangeTypeFormat7Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesModification.mmChangeType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionChangeTypeFormat7Choice.mmObject();
@@ -181,6 +191,16 @@ public class CorporateActionChangeTypeFormat7Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(CorporateActionChangeTypeFormat7Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CorporateActionChangeTypeFormat7Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

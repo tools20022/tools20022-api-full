@@ -49,11 +49,15 @@ public class ConstraintStatusAndBookingDateRule {
 	 */
 	public static final MMConstraint<ReportEntry1> forReportEntry1 = new MMConstraint<ReportEntry1>() {
 		{
-			validator = ConstraintStatusAndBookingDateRule::checkReportEntry1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusAndBookingDateRule";
 			definition = "If Status is pending, BookingDate is not allowed.";
 			owner_lazy = () -> ReportEntry1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReportEntry1 obj) throws Exception {
+			checkReportEntry1(obj);
 		}
 	};
 	/**
@@ -77,11 +81,15 @@ public class ConstraintStatusAndBookingDateRule {
 	 */
 	public static final MMConstraint<NotificationEntry1> forNotificationEntry1 = new MMConstraint<NotificationEntry1>() {
 		{
-			validator = ConstraintStatusAndBookingDateRule::checkNotificationEntry1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusAndBookingDateRule";
 			definition = "If Status is pending, BookingDate is not allowed.";
 			owner_lazy = () -> NotificationEntry1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(NotificationEntry1 obj) throws Exception {
+			checkNotificationEntry1(obj);
 		}
 	};
 	/**
@@ -105,11 +113,15 @@ public class ConstraintStatusAndBookingDateRule {
 	 */
 	public static final MMConstraint<StatementEntry1> forStatementEntry1 = new MMConstraint<StatementEntry1>() {
 		{
-			validator = ConstraintStatusAndBookingDateRule::checkStatementEntry1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusAndBookingDateRule";
 			definition = "If Status is pending, BookingDate must is not allowed.";
 			owner_lazy = () -> StatementEntry1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(StatementEntry1 obj) throws Exception {
+			checkStatementEntry1(obj);
 		}
 	};
 

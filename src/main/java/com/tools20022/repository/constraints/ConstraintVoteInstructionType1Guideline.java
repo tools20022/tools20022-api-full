@@ -62,12 +62,16 @@ public class ConstraintVoteInstructionType1Guideline {
 	 */
 	public static final MMConstraint<MeetingNotificationV05> forMeetingNotificationV05 = new MMConstraint<MeetingNotificationV05>() {
 		{
-			validator = ConstraintVoteInstructionType1Guideline::checkMeetingNotificationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteInstructionType1Guideline";
 			definition = "If all of the vote instructions types are to be the same for all resolutions, it is recommended to use only the element Vote/VoteInstructionType. If the vote instruction types are not going to be the same for each resolution, then, it is recommended to use only the element Resolution/VoteInstructionType in each occurrence of Resolution.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintVoteInstructionType1Guideline.forMeetingNotificationV04;
 			owner_lazy = () -> MeetingNotificationV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MeetingNotificationV05 obj) throws Exception {
+			checkMeetingNotificationV05(obj);
 		}
 	};
 	/**
@@ -101,12 +105,16 @@ public class ConstraintVoteInstructionType1Guideline {
 	 */
 	public static final MMConstraint<MeetingNotificationV04> forMeetingNotificationV04 = new MMConstraint<MeetingNotificationV04>() {
 		{
-			validator = ConstraintVoteInstructionType1Guideline::checkMeetingNotificationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteInstructionType1Guideline";
 			definition = "If all of the vote instructions types are to be the same for all resolutions, it is recommended to use only the element Vote/Vote InstructionType. If the vote instruction types are not going to be the same for each resolution, then, it is recommended to use only the element Resolution/VoteInstructionType in each occurrence of Resolution.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintVoteInstructionType1Guideline.forMeetingNotificationV05);
 			owner_lazy = () -> MeetingNotificationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MeetingNotificationV04 obj) throws Exception {
+			checkMeetingNotificationV04(obj);
 		}
 	};
 	/**
@@ -132,11 +140,15 @@ public class ConstraintVoteInstructionType1Guideline {
 	 */
 	public static final MMConstraint<MeetingNotificationV03> forMeetingNotificationV03 = new MMConstraint<MeetingNotificationV03>() {
 		{
-			validator = ConstraintVoteInstructionType1Guideline::checkMeetingNotificationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteInstructionType1Guideline";
 			definition = "If all of the vote instructions types are to be the same for all resolutions, it is recommended to use only the element Vote/Vote InstructionType. If the vote instruction types are not going to be the same for each resolution, then, it is recommended to use only the element Resolution/VoteInstructionType in each occurrence of Resolution.";
 			owner_lazy = () -> MeetingNotificationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MeetingNotificationV03 obj) throws Exception {
+			checkMeetingNotificationV03(obj);
 		}
 	};
 

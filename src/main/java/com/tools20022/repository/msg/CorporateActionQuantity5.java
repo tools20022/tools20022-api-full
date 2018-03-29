@@ -161,7 +161,7 @@ public class CorporateActionQuantity5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMinimumExercisableQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionQuantity5, Optional<FinancialInstrumentQuantity19Choice>> mmMinimumExercisableQuantity = new MMMessageAssociationEnd<CorporateActionQuantity5, Optional<FinancialInstrumentQuantity19Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesConversion.mmMinimumExercisableQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionQuantity5.mmObject();
@@ -175,6 +175,16 @@ public class CorporateActionQuantity5 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity19Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity19Choice> getValue(CorporateActionQuantity5 obj) {
+			return obj.getMinimumExercisableQuantity();
+		}
+
+		@Override
+		public void setValue(CorporateActionQuantity5 obj, Optional<FinancialInstrumentQuantity19Choice> value) {
+			obj.setMinimumExercisableQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinExrcblMltplQty")
@@ -216,7 +226,7 @@ public class CorporateActionQuantity5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMinimumExercisableMultipleQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionQuantity5, Optional<FinancialInstrumentQuantity20Choice>> mmMinimumExercisableMultipleQuantity = new MMMessageAssociationEnd<CorporateActionQuantity5, Optional<FinancialInstrumentQuantity20Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesConversion.mmMinimumExercisableMultipleQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionQuantity5.mmObject();
@@ -230,6 +240,16 @@ public class CorporateActionQuantity5 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity20Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity20Choice> getValue(CorporateActionQuantity5 obj) {
+			return obj.getMinimumExercisableMultipleQuantity();
+		}
+
+		@Override
+		public void setValue(CorporateActionQuantity5 obj, Optional<FinancialInstrumentQuantity20Choice> value) {
+			obj.setMinimumExercisableMultipleQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MaxQty")
@@ -279,7 +299,7 @@ public class CorporateActionQuantity5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMaximumQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionQuantity5, Optional<FinancialInstrumentQuantity19Choice>> mmMaximumQuantity = new MMMessageAssociationEnd<CorporateActionQuantity5, Optional<FinancialInstrumentQuantity19Choice>>() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmMaximumQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionQuantity5.mmObject();
@@ -294,6 +314,16 @@ public class CorporateActionQuantity5 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity19Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity19Choice> getValue(CorporateActionQuantity5 obj) {
+			return obj.getMaximumQuantity();
+		}
+
+		@Override
+		public void setValue(CorporateActionQuantity5 obj, Optional<FinancialInstrumentQuantity19Choice> value) {
+			obj.setMaximumQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinQtySght")
@@ -343,7 +373,7 @@ public class CorporateActionQuantity5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMinimumQuantitySought = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionQuantity5, Optional<FinancialInstrumentQuantity19Choice>> mmMinimumQuantitySought = new MMMessageAssociationEnd<CorporateActionQuantity5, Optional<FinancialInstrumentQuantity19Choice>>() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmMinimumQuantitySought;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionQuantity5.mmObject();
@@ -358,6 +388,16 @@ public class CorporateActionQuantity5 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity19Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity19Choice> getValue(CorporateActionQuantity5 obj) {
+			return obj.getMinimumQuantitySought();
+		}
+
+		@Override
+		public void setValue(CorporateActionQuantity5 obj, Optional<FinancialInstrumentQuantity19Choice> value) {
+			obj.setMinimumQuantitySought(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NewBrdLotQty")
@@ -405,7 +445,7 @@ public class CorporateActionQuantity5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNewBoardLotQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionQuantity5, Optional<FinancialInstrumentQuantity20Choice>> mmNewBoardLotQuantity = new MMMessageAssociationEnd<CorporateActionQuantity5, Optional<FinancialInstrumentQuantity20Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmBoardLotSecuritiesQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionQuantity5.mmObject();
@@ -420,6 +460,16 @@ public class CorporateActionQuantity5 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity20Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity20Choice> getValue(CorporateActionQuantity5 obj) {
+			return obj.getNewBoardLotQuantity();
+		}
+
+		@Override
+		public void setValue(CorporateActionQuantity5 obj, Optional<FinancialInstrumentQuantity20Choice> value) {
+			obj.setNewBoardLotQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NewDnmtnQty")
@@ -469,7 +519,7 @@ public class CorporateActionQuantity5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNewDenominationQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionQuantity5, Optional<FinancialInstrumentQuantity20Choice>> mmNewDenominationQuantity = new MMMessageAssociationEnd<CorporateActionQuantity5, Optional<FinancialInstrumentQuantity20Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmNewDenominationSecuritiesQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionQuantity5.mmObject();
@@ -484,6 +534,16 @@ public class CorporateActionQuantity5 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity20Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity20Choice> getValue(CorporateActionQuantity5 obj) {
+			return obj.getNewDenominationQuantity();
+		}
+
+		@Override
+		public void setValue(CorporateActionQuantity5 obj, Optional<FinancialInstrumentQuantity20Choice> value) {
+			obj.setNewDenominationQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BaseDnmtn")
@@ -533,7 +593,7 @@ public class CorporateActionQuantity5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBaseDenomination = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionQuantity5, Optional<FinancialInstrumentQuantity20Choice>> mmBaseDenomination = new MMMessageAssociationEnd<CorporateActionQuantity5, Optional<FinancialInstrumentQuantity20Choice>>() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmBaseDenomination;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionQuantity5.mmObject();
@@ -548,6 +608,16 @@ public class CorporateActionQuantity5 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity20Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity20Choice> getValue(CorporateActionQuantity5 obj) {
+			return obj.getBaseDenomination();
+		}
+
+		@Override
+		public void setValue(CorporateActionQuantity5 obj, Optional<FinancialInstrumentQuantity20Choice> value) {
+			obj.setBaseDenomination(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IncrmtlDnmtn")
@@ -597,7 +667,7 @@ public class CorporateActionQuantity5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIncrementalDenomination = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionQuantity5, Optional<FinancialInstrumentQuantity20Choice>> mmIncrementalDenomination = new MMMessageAssociationEnd<CorporateActionQuantity5, Optional<FinancialInstrumentQuantity20Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Lottery.mmIncrementalDenomination;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionQuantity5.mmObject();
@@ -612,6 +682,16 @@ public class CorporateActionQuantity5 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity20Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity20Choice> getValue(CorporateActionQuantity5 obj) {
+			return obj.getIncrementalDenomination();
+		}
+
+		@Override
+		public void setValue(CorporateActionQuantity5 obj, Optional<FinancialInstrumentQuantity20Choice> value) {
+			obj.setIncrementalDenomination(value.orElse(null));
 		}
 	};
 

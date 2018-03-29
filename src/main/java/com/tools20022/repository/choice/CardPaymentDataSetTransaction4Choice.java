@@ -134,7 +134,7 @@ public class CardPaymentDataSetTransaction4Choice {
 	 * CardPaymentDataSetTransaction3Choice.mmCompletion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCompletion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentDataSetTransaction4Choice, CardPaymentDataSetTransaction14> mmCompletion = new MMMessageAttribute<CardPaymentDataSetTransaction4Choice, CardPaymentDataSetTransaction14>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CardPaymentDataSetTransaction4Choice.mmObject();
 			isDerived = false;
@@ -147,6 +147,16 @@ public class CardPaymentDataSetTransaction4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CardPaymentDataSetTransaction14.mmObject();
+		}
+
+		@Override
+		public CardPaymentDataSetTransaction14 getValue(CardPaymentDataSetTransaction4Choice obj) {
+			return obj.getCompletion();
+		}
+
+		@Override
+		public void setValue(CardPaymentDataSetTransaction4Choice obj, CardPaymentDataSetTransaction14 value) {
+			obj.setCompletion(value);
 		}
 	};
 	@XmlElement(name = "Cxl", required = true)
@@ -192,7 +202,7 @@ public class CardPaymentDataSetTransaction4Choice {
 	 * CardPaymentDataSetTransaction3Choice.mmCancellation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancellation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentDataSetTransaction4Choice, CardPaymentDataSetTransaction15> mmCancellation = new MMMessageAttribute<CardPaymentDataSetTransaction4Choice, CardPaymentDataSetTransaction15>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CardPaymentDataSetTransaction4Choice.mmObject();
 			isDerived = false;
@@ -205,6 +215,16 @@ public class CardPaymentDataSetTransaction4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CardPaymentDataSetTransaction15.mmObject();
+		}
+
+		@Override
+		public CardPaymentDataSetTransaction15 getValue(CardPaymentDataSetTransaction4Choice obj) {
+			return obj.getCancellation();
+		}
+
+		@Override
+		public void setValue(CardPaymentDataSetTransaction4Choice obj, CardPaymentDataSetTransaction15 value) {
+			obj.setCancellation(value);
 		}
 	};
 	@XmlElement(name = "AuthstnReq", required = true)
@@ -251,7 +271,7 @@ public class CardPaymentDataSetTransaction4Choice {
 	 * CardPaymentDataSetTransaction3Choice.mmAuthorisationRequest}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAuthorisationRequest = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentDataSetTransaction4Choice, CardPaymentDataSetTransaction16> mmAuthorisationRequest = new MMMessageAttribute<CardPaymentDataSetTransaction4Choice, CardPaymentDataSetTransaction16>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CardPaymentDataSetTransaction4Choice.mmObject();
 			isDerived = false;
@@ -264,6 +284,16 @@ public class CardPaymentDataSetTransaction4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CardPaymentDataSetTransaction16.mmObject();
+		}
+
+		@Override
+		public CardPaymentDataSetTransaction16 getValue(CardPaymentDataSetTransaction4Choice obj) {
+			return obj.getAuthorisationRequest();
+		}
+
+		@Override
+		public void setValue(CardPaymentDataSetTransaction4Choice obj, CardPaymentDataSetTransaction16 value) {
+			obj.setAuthorisationRequest(value);
 		}
 	};
 	@XmlElement(name = "AuthstnRspn", required = true)
@@ -310,7 +340,7 @@ public class CardPaymentDataSetTransaction4Choice {
 	 * CardPaymentDataSetTransaction3Choice.mmAuthorisationResponse}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAuthorisationResponse = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentDataSetTransaction4Choice, CardPaymentDataSetTransaction17> mmAuthorisationResponse = new MMMessageAttribute<CardPaymentDataSetTransaction4Choice, CardPaymentDataSetTransaction17>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CardPaymentDataSetTransaction4Choice.mmObject();
 			isDerived = false;
@@ -323,6 +353,16 @@ public class CardPaymentDataSetTransaction4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CardPaymentDataSetTransaction17.mmObject();
+		}
+
+		@Override
+		public CardPaymentDataSetTransaction17 getValue(CardPaymentDataSetTransaction4Choice obj) {
+			return obj.getAuthorisationResponse();
+		}
+
+		@Override
+		public void setValue(CardPaymentDataSetTransaction4Choice obj, CardPaymentDataSetTransaction17 value) {
+			obj.setAuthorisationResponse(value);
 		}
 	};
 

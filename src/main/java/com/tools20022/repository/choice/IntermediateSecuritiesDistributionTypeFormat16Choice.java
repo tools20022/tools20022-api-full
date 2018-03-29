@@ -123,7 +123,7 @@ public class IntermediateSecuritiesDistributionTypeFormat16Choice {
 	 * IntermediateSecuritiesDistributionTypeFormat5Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntermediateSecuritiesDistributionTypeFormat16Choice, IntermediateSecurityDistributionType4Code> mmCode = new MMMessageAttribute<IntermediateSecuritiesDistributionTypeFormat16Choice, IntermediateSecurityDistributionType4Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmIntermediateSecuritiesDistributionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.IntermediateSecuritiesDistributionTypeFormat16Choice.mmObject();
@@ -136,6 +136,16 @@ public class IntermediateSecuritiesDistributionTypeFormat16Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> IntermediateSecurityDistributionType4Code.mmObject();
+		}
+
+		@Override
+		public IntermediateSecurityDistributionType4Code getValue(IntermediateSecuritiesDistributionTypeFormat16Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(IntermediateSecuritiesDistributionTypeFormat16Choice obj, IntermediateSecurityDistributionType4Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -179,7 +189,7 @@ public class IntermediateSecuritiesDistributionTypeFormat16Choice {
 	 * IntermediateSecuritiesDistributionTypeFormat5Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntermediateSecuritiesDistributionTypeFormat16Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<IntermediateSecuritiesDistributionTypeFormat16Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmIntermediateSecuritiesDistributionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.IntermediateSecuritiesDistributionTypeFormat16Choice.mmObject();
@@ -193,6 +203,16 @@ public class IntermediateSecuritiesDistributionTypeFormat16Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(IntermediateSecuritiesDistributionTypeFormat16Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(IntermediateSecuritiesDistributionTypeFormat16Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

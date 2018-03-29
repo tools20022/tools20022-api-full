@@ -118,7 +118,7 @@ public class AccountOrBusinessError3Choice {
 	 * AccountOrBusinessError2Choice.mmAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountOrBusinessError3Choice, CashAccount35> mmAccount = new MMMessageAssociationEnd<AccountOrBusinessError3Choice, CashAccount35>() {
 		{
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountOrBusinessError3Choice.mmObject();
@@ -132,6 +132,16 @@ public class AccountOrBusinessError3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CashAccount35.mmObject();
+		}
+
+		@Override
+		public CashAccount35 getValue(AccountOrBusinessError3Choice obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(AccountOrBusinessError3Choice obj, CashAccount35 value) {
+			obj.setAccount(value);
 		}
 	};
 	@XmlElement(name = "BizErr", required = true)
@@ -167,7 +177,7 @@ public class AccountOrBusinessError3Choice {
 	 * AccountOrBusinessError2Choice.mmBusinessError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountOrBusinessError3Choice, List<ErrorHandling4>> mmBusinessError = new MMMessageAssociationEnd<AccountOrBusinessError3Choice, List<ErrorHandling4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountOrBusinessError3Choice.mmObject();
 			isDerived = false;
@@ -179,6 +189,16 @@ public class AccountOrBusinessError3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling4.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling4> getValue(AccountOrBusinessError3Choice obj) {
+			return obj.getBusinessError();
+		}
+
+		@Override
+		public void setValue(AccountOrBusinessError3Choice obj, List<ErrorHandling4> value) {
+			obj.setBusinessError(value);
 		}
 	};
 

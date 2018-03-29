@@ -65,12 +65,16 @@ public class ConstraintVoteInstruction1Guideline {
 	 */
 	public static final MMConstraint<Instruction2> forInstruction2 = new MMConstraint<Instruction2>() {
 		{
-			validator = ConstraintVoteInstruction1Guideline::checkInstruction2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteInstruction1Guideline";
 			definition = "If instructions are provided via a proxy, then it is recommended that vote instructions are provided via the element Proxy/VoteInstructionForAgendaResolution/VoteInstruction or Proxy/VoteInstructionForAgendaResolution/GlobalVoteInstruction.\nIf instructions are not provided via a proxy, then it is recommended to use the element VoteDetails/VoteInstructionForAgendaResolution/VoteInstruction or VoteDetails/VoteInstructionForAgendaResolution/GlobalVoteInstruction.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintVoteInstruction1Guideline.forInstruction3);
 			owner_lazy = () -> Instruction2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Instruction2 obj) throws Exception {
+			checkInstruction2(obj);
 		}
 	};
 	/**
@@ -100,12 +104,16 @@ public class ConstraintVoteInstruction1Guideline {
 	 */
 	public static final MMConstraint<Instruction3> forInstruction3 = new MMConstraint<Instruction3>() {
 		{
-			validator = ConstraintVoteInstruction1Guideline::checkInstruction3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteInstruction1Guideline";
 			definition = "If instructions are provided via a proxy, then it is recommended that vote instructions are provided via the element Proxy/VoteInstructionForAgendaResolution/VoteInstruction or Proxy/VoteInstructionForAgendaResolution/GlobalVoteInstruction.\nIf instructions are not provided via a proxy, then it is recommended to use the element VoteDetails/VoteInstructionForAgendaResolution/VoteInstruction or VoteDetails/VoteInstructionForAgendaResolution/GlobalVoteInstruction.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintVoteInstruction1Guideline.forInstruction2;
 			owner_lazy = () -> Instruction3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Instruction3 obj) throws Exception {
+			checkInstruction3(obj);
 		}
 	};
 

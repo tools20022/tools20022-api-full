@@ -131,7 +131,7 @@ public class CollateralProposalResponse3Choice {
 	 * CollateralProposalResponse2Choice.mmCollateralProposal}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCollateralProposal = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralProposalResponse3Choice, CollateralProposalResponse3> mmCollateralProposal = new MMMessageAssociationEnd<CollateralProposalResponse3Choice, CollateralProposalResponse3>() {
 		{
 			businessElementTrace_lazy = () -> CollateralProposal.mmProposedCollateralMovement;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralProposalResponse3Choice.mmObject();
@@ -145,6 +145,16 @@ public class CollateralProposalResponse3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CollateralProposalResponse3.mmObject();
+		}
+
+		@Override
+		public CollateralProposalResponse3 getValue(CollateralProposalResponse3Choice obj) {
+			return obj.getCollateralProposal();
+		}
+
+		@Override
+		public void setValue(CollateralProposalResponse3Choice obj, CollateralProposalResponse3 value) {
+			obj.setCollateralProposal(value);
 		}
 	};
 	@XmlElement(name = "SgrtdIndpdntAmt", required = true)
@@ -188,7 +198,7 @@ public class CollateralProposalResponse3Choice {
 	 * CollateralProposalResponse2Choice.mmSegregatedIndependentAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSegregatedIndependentAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralProposalResponse3Choice, CollateralProposalResponseType3> mmSegregatedIndependentAmount = new MMMessageAssociationEnd<CollateralProposalResponse3Choice, CollateralProposalResponseType3>() {
 		{
 			businessElementTrace_lazy = () -> CollateralMovement.mmSegregatedIndependentAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralProposalResponse3Choice.mmObject();
@@ -202,6 +212,16 @@ public class CollateralProposalResponse3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CollateralProposalResponseType3.mmObject();
+		}
+
+		@Override
+		public CollateralProposalResponseType3 getValue(CollateralProposalResponse3Choice obj) {
+			return obj.getSegregatedIndependentAmount();
+		}
+
+		@Override
+		public void setValue(CollateralProposalResponse3Choice obj, CollateralProposalResponseType3 value) {
+			obj.setSegregatedIndependentAmount(value);
 		}
 	};
 

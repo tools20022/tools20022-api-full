@@ -95,7 +95,7 @@ public class TransferEvent1 {
 	 * definition} = "Code of fund transfer event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEventCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferEvent1, Max4Text> mmEventCode = new MMMessageAttribute<TransferEvent1, Max4Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferEvent1.mmObject();
 			isDerived = false;
@@ -106,6 +106,16 @@ public class TransferEvent1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4Text.mmObject();
+		}
+
+		@Override
+		public Max4Text getValue(TransferEvent1 obj) {
+			return obj.getEventCode();
+		}
+
+		@Override
+		public void setValue(TransferEvent1 obj, Max4Text value) {
+			obj.setEventCode(value);
 		}
 	};
 	@XmlElement(name = "EvtNb")
@@ -137,7 +147,7 @@ public class TransferEvent1 {
 	 * definition} = "Event number related to the event code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEventNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferEvent1, Optional<Max3NumericText>> mmEventNumber = new MMMessageAttribute<TransferEvent1, Optional<Max3NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferEvent1.mmObject();
 			isDerived = false;
@@ -148,6 +158,16 @@ public class TransferEvent1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max3NumericText> getValue(TransferEvent1 obj) {
+			return obj.getEventNumber();
+		}
+
+		@Override
+		public void setValue(TransferEvent1 obj, Optional<Max3NumericText> value) {
+			obj.setEventNumber(value.orElse(null));
 		}
 	};
 

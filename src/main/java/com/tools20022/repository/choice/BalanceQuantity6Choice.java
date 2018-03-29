@@ -21,6 +21,7 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.Quantity10Choice;
 import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification28;
@@ -120,7 +121,7 @@ public class BalanceQuantity6Choice {
 	 * definition} = "Total quantity of financial instruments of the balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BalanceQuantity6Choice, Quantity10Choice> mmQuantity = new MMMessageAssociationEnd<BalanceQuantity6Choice, Quantity10Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmAggregateQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BalanceQuantity6Choice.mmObject();
@@ -133,7 +134,17 @@ public class BalanceQuantity6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.Quantity10Choice.mmObject();
+			type_lazy = () -> Quantity10Choice.mmObject();
+		}
+
+		@Override
+		public Quantity10Choice getValue(BalanceQuantity6Choice obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(BalanceQuantity6Choice obj, Quantity10Choice value) {
+			obj.setQuantity(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -173,7 +184,7 @@ public class BalanceQuantity6Choice {
 	 * definition} = "Total quantity of financial instruments of the balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BalanceQuantity6Choice, GenericIdentification28> mmProprietary = new MMMessageAssociationEnd<BalanceQuantity6Choice, GenericIdentification28>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmAggregateQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BalanceQuantity6Choice.mmObject();
@@ -187,6 +198,16 @@ public class BalanceQuantity6Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification28.mmObject();
+		}
+
+		@Override
+		public GenericIdentification28 getValue(BalanceQuantity6Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(BalanceQuantity6Choice obj, GenericIdentification28 value) {
+			obj.setProprietary(value);
 		}
 	};
 
@@ -216,7 +237,7 @@ public class BalanceQuantity6Choice {
 		return quantity;
 	}
 
-	public BalanceQuantity6Choice setQuantity(com.tools20022.repository.choice.Quantity10Choice quantity) {
+	public BalanceQuantity6Choice setQuantity(Quantity10Choice quantity) {
 		this.quantity = Objects.requireNonNull(quantity);
 		return this;
 	}

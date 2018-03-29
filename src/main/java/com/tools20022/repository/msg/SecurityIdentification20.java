@@ -24,12 +24,14 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.seev.CorporateActionNarrative002V04;
 import com.tools20022.repository.area.seev.IntraPositionMovementConfirmation002V06;
 import com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V05;
+import com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V07;
 import com.tools20022.repository.area.semt.IntraPositionMovementInstruction002V04;
 import com.tools20022.repository.area.sese.*;
 import com.tools20022.repository.datatype.ISINOct2015Identifier;
 import com.tools20022.repository.datatype.RestrictedFINXMax140Text;
 import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.OtherIdentification2;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -137,6 +139,35 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V06#mmFinancialInstrumentIdentification
  * SecuritiesSettlementTransactionReversalAdvice002V06.
  * mmFinancialInstrumentIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V07#mmFinancialInstrumentIdentification
+ * IntraPositionMovementConfirmation002V07.mmFinancialInstrumentIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmation002V08#mmFinancialInstrumentIdentification
+ * SecuritiesFinancingConfirmation002V08.mmFinancialInstrumentIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstruction002V08#mmFinancialInstrumentIdentification
+ * SecuritiesFinancingInstruction002V08.mmFinancialInstrumentIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V07#mmFinancialInstrumentIdentification
+ * SecuritiesSettlementTransactionAllegementNotification002V07.
+ * mmFinancialInstrumentIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V08#mmFinancialInstrumentIdentification
+ * SecuritiesSettlementTransactionConfirmation002V08.
+ * mmFinancialInstrumentIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V08#mmFinancialInstrumentIdentification
+ * SecuritiesSettlementTransactionGenerationNotification002V08.
+ * mmFinancialInstrumentIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V08#mmFinancialInstrumentIdentification
+ * SecuritiesSettlementTransactionInstruction002V08.
+ * mmFinancialInstrumentIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V07#mmFinancialInstrumentIdentification
+ * SecuritiesSettlementTransactionReversalAdvice002V07.
+ * mmFinancialInstrumentIdentification}</li>
  * </ul>
  * </li>
  * <li>
@@ -216,7 +247,7 @@ public class SecurityIdentification20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification20, Optional<ISINOct2015Identifier>> mmISIN = new MMMessageAttribute<SecurityIdentification20, Optional<ISINOct2015Identifier>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification20.mmObject();
@@ -229,9 +260,19 @@ public class SecurityIdentification20 {
 			minOccurs = 0;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
 		}
+
+		@Override
+		public Optional<ISINOct2015Identifier> getValue(SecurityIdentification20 obj) {
+			return obj.getISIN();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification20 obj, Optional<ISINOct2015Identifier> value) {
+			obj.setISIN(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "OthrId")
-	protected List<com.tools20022.repository.msg.OtherIdentification2> otherIdentification;
+	protected List<OtherIdentification2> otherIdentification;
 	/**
 	 * 
 	 <p>
@@ -265,7 +306,7 @@ public class SecurityIdentification20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityIdentification20, List<OtherIdentification2>> mmOtherIdentification = new MMMessageAssociationEnd<SecurityIdentification20, List<OtherIdentification2>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification20.mmObject();
@@ -276,7 +317,17 @@ public class SecurityIdentification20 {
 			definition = "Identification of a security by proprietary or domestic identification scheme.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OtherIdentification2.mmObject();
+			type_lazy = () -> OtherIdentification2.mmObject();
+		}
+
+		@Override
+		public List<OtherIdentification2> getValue(SecurityIdentification20 obj) {
+			return obj.getOtherIdentification();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification20 obj, List<OtherIdentification2> value) {
+			obj.setOtherIdentification(value);
 		}
 	};
 	@XmlElement(name = "Desc")
@@ -314,7 +365,7 @@ public class SecurityIdentification20 {
 	 * definition} = "Textual description of a security instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification20, Optional<RestrictedFINXMax140Text>> mmDescription = new MMMessageAttribute<SecurityIdentification20, Optional<RestrictedFINXMax140Text>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification20.mmObject();
@@ -326,6 +377,16 @@ public class SecurityIdentification20 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax140Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax140Text> getValue(SecurityIdentification20 obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification20 obj, Optional<RestrictedFINXMax140Text> value) {
+			obj.setDescription(value.orElse(null));
 		}
 	};
 
@@ -343,7 +404,11 @@ public class SecurityIdentification20 {
 						SecuritiesSettlementTransactionAllegementNotification002V06.mmFinancialInstrumentIdentification, SecuritiesSettlementTransactionInstruction002V07.mmFinancialInstrumentIdentification,
 						SecuritiesFinancingConfirmation002V07.mmFinancialInstrumentIdentification, SecuritiesFinancingInstruction002V07.mmFinancialInstrumentIdentification,
 						SecuritiesSettlementTransactionGenerationNotification002V07.mmFinancialInstrumentIdentification, SecuritiesFinancingModificationInstruction002V06.mmFinancialInstrumentIdentification,
-						SecuritiesSettlementTransactionConfirmation002V07.mmFinancialInstrumentIdentification, SecuritiesSettlementTransactionReversalAdvice002V06.mmFinancialInstrumentIdentification);
+						SecuritiesSettlementTransactionConfirmation002V07.mmFinancialInstrumentIdentification, SecuritiesSettlementTransactionReversalAdvice002V06.mmFinancialInstrumentIdentification,
+						IntraPositionMovementConfirmation002V07.mmFinancialInstrumentIdentification, SecuritiesFinancingConfirmation002V08.mmFinancialInstrumentIdentification,
+						SecuritiesFinancingInstruction002V08.mmFinancialInstrumentIdentification, SecuritiesSettlementTransactionAllegementNotification002V07.mmFinancialInstrumentIdentification,
+						SecuritiesSettlementTransactionConfirmation002V08.mmFinancialInstrumentIdentification, SecuritiesSettlementTransactionGenerationNotification002V08.mmFinancialInstrumentIdentification,
+						SecuritiesSettlementTransactionInstruction002V08.mmFinancialInstrumentIdentification, SecuritiesSettlementTransactionReversalAdvice002V07.mmFinancialInstrumentIdentification);
 				trace_lazy = () -> SecuritiesIdentification.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDescriptionPresenceRule.forSecurityIdentification20,
@@ -370,7 +435,7 @@ public class SecurityIdentification20 {
 		return otherIdentification == null ? otherIdentification = new ArrayList<>() : otherIdentification;
 	}
 
-	public SecurityIdentification20 setOtherIdentification(List<com.tools20022.repository.msg.OtherIdentification2> otherIdentification) {
+	public SecurityIdentification20 setOtherIdentification(List<OtherIdentification2> otherIdentification) {
 		this.otherIdentification = Objects.requireNonNull(otherIdentification);
 		return this;
 	}

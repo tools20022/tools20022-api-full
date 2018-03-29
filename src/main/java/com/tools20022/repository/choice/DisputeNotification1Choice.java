@@ -125,7 +125,7 @@ public class DisputeNotification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDisputeNotificationDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DisputeNotification1Choice, DisputeNotification1> mmDisputeNotificationDetails = new MMMessageAssociationEnd<DisputeNotification1Choice, DisputeNotification1>() {
 		{
 			businessComponentTrace_lazy = () -> DisputeManagement.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.DisputeNotification1Choice.mmObject();
@@ -138,6 +138,16 @@ public class DisputeNotification1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DisputeNotification1.mmObject();
+		}
+
+		@Override
+		public DisputeNotification1 getValue(DisputeNotification1Choice obj) {
+			return obj.getDisputeNotificationDetails();
+		}
+
+		@Override
+		public void setValue(DisputeNotification1Choice obj, DisputeNotification1 value) {
+			obj.setDisputeNotificationDetails(value);
 		}
 	};
 	@XmlElement(name = "SgrtdIndpdntAmtDsptDtls", required = true)
@@ -176,7 +186,7 @@ public class DisputeNotification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSegregatedIndependentAmountDisputeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DisputeNotification1Choice, SegregatedIndependentAmountDispute1> mmSegregatedIndependentAmountDisputeDetails = new MMMessageAssociationEnd<DisputeNotification1Choice, SegregatedIndependentAmountDispute1>() {
 		{
 			businessElementTrace_lazy = () -> MarginCall.mmSegregatedIndependentAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DisputeNotification1Choice.mmObject();
@@ -189,6 +199,16 @@ public class DisputeNotification1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SegregatedIndependentAmountDispute1.mmObject();
+		}
+
+		@Override
+		public SegregatedIndependentAmountDispute1 getValue(DisputeNotification1Choice obj) {
+			return obj.getSegregatedIndependentAmountDisputeDetails();
+		}
+
+		@Override
+		public void setValue(DisputeNotification1Choice obj, SegregatedIndependentAmountDispute1 value) {
+			obj.setSegregatedIndependentAmountDisputeDetails(value);
 		}
 	};
 

@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.AmountType1FormatChoice;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
@@ -97,7 +98,7 @@ public class AmountFormat1Choice {
 	 * definition} = "Number of monetary units specified in a currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountFormat1Choice, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<AmountFormat1Choice, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AmountFormat1Choice.mmObject();
 			isDerived = false;
@@ -108,6 +109,16 @@ public class AmountFormat1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(AmountFormat1Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(AmountFormat1Choice obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "NotSpcfdAmt", required = true)
@@ -140,7 +151,7 @@ public class AmountFormat1Choice {
 	 * definition} = "The amount is not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecifiedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountFormat1Choice, AmountType1FormatChoice> mmNotSpecifiedAmount = new MMMessageAttribute<AmountFormat1Choice, AmountType1FormatChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AmountFormat1Choice.mmObject();
 			isDerived = false;
@@ -150,7 +161,17 @@ public class AmountFormat1Choice {
 			definition = "The amount is not specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.AmountType1FormatChoice.mmObject();
+			complexType_lazy = () -> AmountType1FormatChoice.mmObject();
+		}
+
+		@Override
+		public AmountType1FormatChoice getValue(AmountFormat1Choice obj) {
+			return obj.getNotSpecifiedAmount();
+		}
+
+		@Override
+		public void setValue(AmountFormat1Choice obj, AmountType1FormatChoice value) {
+			obj.setNotSpecifiedAmount(value);
 		}
 	};
 
@@ -180,7 +201,7 @@ public class AmountFormat1Choice {
 		return notSpecifiedAmount;
 	}
 
-	public AmountFormat1Choice setNotSpecifiedAmount(com.tools20022.repository.choice.AmountType1FormatChoice notSpecifiedAmount) {
+	public AmountFormat1Choice setNotSpecifiedAmount(AmountType1FormatChoice notSpecifiedAmount) {
 		this.notSpecifiedAmount = Objects.requireNonNull(notSpecifiedAmount);
 		return this;
 	}

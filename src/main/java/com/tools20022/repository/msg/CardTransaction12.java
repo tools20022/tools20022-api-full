@@ -25,6 +25,7 @@ import com.tools20022.repository.codeset.CardServiceType2Code;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ResponseType2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -128,7 +129,7 @@ public class CardTransaction12 {
 	 * CardTransaction11.mmNetworkManagementType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNetworkManagementType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardTransaction12, CardServiceType2Code> mmNetworkManagementType = new MMMessageAttribute<CardTransaction12, CardServiceType2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransaction12.mmObject();
 			isDerived = false;
@@ -140,6 +141,16 @@ public class CardTransaction12 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CardServiceType2Code.mmObject();
+		}
+
+		@Override
+		public CardServiceType2Code getValue(CardTransaction12 obj) {
+			return obj.getNetworkManagementType();
+		}
+
+		@Override
+		public void setValue(CardTransaction12 obj, CardServiceType2Code value) {
+			obj.setNetworkManagementType(value);
 		}
 	};
 	@XmlElement(name = "InitrDtTm")
@@ -171,7 +182,7 @@ public class CardTransaction12 {
 	 * definition} = "Date and time of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInitiatorDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardTransaction12, Optional<ISODateTime>> mmInitiatorDateTime = new MMMessageAttribute<CardTransaction12, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransaction12.mmObject();
 			isDerived = false;
@@ -182,6 +193,16 @@ public class CardTransaction12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(CardTransaction12 obj) {
+			return obj.getInitiatorDateTime();
+		}
+
+		@Override
+		public void setValue(CardTransaction12 obj, Optional<ISODateTime> value) {
+			obj.setInitiatorDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NbOfMsgs")
@@ -218,7 +239,7 @@ public class CardTransaction12 {
 	 * CardTransaction11.mmNumberOfMessages}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfMessages = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardTransaction12, Optional<Number>> mmNumberOfMessages = new MMMessageAttribute<CardTransaction12, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransaction12.mmObject();
 			isDerived = false;
@@ -230,6 +251,16 @@ public class CardTransaction12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(CardTransaction12 obj) {
+			return obj.getNumberOfMessages();
+		}
+
+		@Override
+		public void setValue(CardTransaction12 obj, Optional<Number> value) {
+			obj.setNumberOfMessages(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MaxNbOfMsgs")
@@ -267,7 +298,7 @@ public class CardTransaction12 {
 	 * CardTransaction11.mmMaximumNumberOfMessages}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumNumberOfMessages = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardTransaction12, Optional<Number>> mmMaximumNumberOfMessages = new MMMessageAttribute<CardTransaction12, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransaction12.mmObject();
 			isDerived = false;
@@ -279,6 +310,16 @@ public class CardTransaction12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(CardTransaction12 obj) {
+			return obj.getMaximumNumberOfMessages();
+		}
+
+		@Override
+		public void setValue(CardTransaction12 obj, Optional<Number> value) {
+			obj.setMaximumNumberOfMessages(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxRspn", required = true)
@@ -309,7 +350,7 @@ public class CardTransaction12 {
 	 * definition} = "Response to the network management request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionResponse = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardTransaction12, ResponseType2> mmTransactionResponse = new MMMessageAssociationEnd<CardTransaction12, ResponseType2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransaction12.mmObject();
 			isDerived = false;
@@ -320,7 +361,17 @@ public class CardTransaction12 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ResponseType2.mmObject();
+			type_lazy = () -> ResponseType2.mmObject();
+		}
+
+		@Override
+		public ResponseType2 getValue(CardTransaction12 obj) {
+			return obj.getTransactionResponse();
+		}
+
+		@Override
+		public void setValue(CardTransaction12 obj, ResponseType2 value) {
+			obj.setTransactionResponse(value);
 		}
 	};
 
@@ -380,7 +431,7 @@ public class CardTransaction12 {
 		return transactionResponse;
 	}
 
-	public CardTransaction12 setTransactionResponse(com.tools20022.repository.msg.ResponseType2 transactionResponse) {
+	public CardTransaction12 setTransactionResponse(ResponseType2 transactionResponse) {
 		this.transactionResponse = Objects.requireNonNull(transactionResponse);
 		return this;
 	}

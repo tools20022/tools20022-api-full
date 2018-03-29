@@ -127,7 +127,7 @@ public class TransactionActivity1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionActivity1Choice, TransactionActivity1Code> mmCode = new MMMessageAttribute<TransactionActivity1Choice, TransactionActivity1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmActivity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransactionActivity1Choice.mmObject();
@@ -141,6 +141,16 @@ public class TransactionActivity1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TransactionActivity1Code.mmObject();
+		}
+
+		@Override
+		public TransactionActivity1Code getValue(TransactionActivity1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(TransactionActivity1Choice obj, TransactionActivity1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -189,7 +199,7 @@ public class TransactionActivity1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionActivity1Choice, GenericIdentification20> mmProprietary = new MMMessageAttribute<TransactionActivity1Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmActivity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransactionActivity1Choice.mmObject();
@@ -203,6 +213,16 @@ public class TransactionActivity1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(TransactionActivity1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(TransactionActivity1Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

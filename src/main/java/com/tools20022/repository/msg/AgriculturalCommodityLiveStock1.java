@@ -111,7 +111,7 @@ public class AgriculturalCommodityLiveStock1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBaseProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AgriculturalCommodityLiveStock1, AssetClassProductType1Code> mmBaseProduct = new MMMessageAttribute<AgriculturalCommodityLiveStock1, AssetClassProductType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AgriculturalCommodityLiveStock1.mmObject();
@@ -123,6 +123,16 @@ public class AgriculturalCommodityLiveStock1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassProductType1Code.mmObject();
+		}
+
+		@Override
+		public AssetClassProductType1Code getValue(AgriculturalCommodityLiveStock1 obj) {
+			return obj.getBaseProduct();
+		}
+
+		@Override
+		public void setValue(AgriculturalCommodityLiveStock1 obj, AssetClassProductType1Code value) {
+			obj.setBaseProduct(value);
 		}
 	};
 	@XmlElement(name = "SubPdct", required = true)
@@ -160,7 +170,7 @@ public class AgriculturalCommodityLiveStock1 {
 	 * definition} = "Sub-product for the underlying asset class."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AgriculturalCommodityLiveStock1, AssetClassSubProductType22Code> mmSubProduct = new MMMessageAttribute<AgriculturalCommodityLiveStock1, AssetClassSubProductType22Code>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AgriculturalCommodityLiveStock1.mmObject();
@@ -172,6 +182,16 @@ public class AgriculturalCommodityLiveStock1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassSubProductType22Code.mmObject();
+		}
+
+		@Override
+		public AssetClassSubProductType22Code getValue(AgriculturalCommodityLiveStock1 obj) {
+			return obj.getSubProduct();
+		}
+
+		@Override
+		public void setValue(AgriculturalCommodityLiveStock1 obj, AssetClassSubProductType22Code value) {
+			obj.setSubProduct(value);
 		}
 	};
 

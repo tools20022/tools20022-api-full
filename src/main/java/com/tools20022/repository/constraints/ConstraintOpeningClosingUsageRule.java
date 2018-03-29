@@ -109,12 +109,16 @@ public class ConstraintOpeningClosingUsageRule {
 	 */
 	public static final MMConstraint<SettlementDetails50> forSettlementDetails50 = new MMConstraint<SettlementDetails50>() {
 		{
-			validator = ConstraintOpeningClosingUsageRule::checkSettlementDetails50;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningClosingUsageRule";
 			definition = "For settlement of two parts transactions (Securities Financing, buy-sell back, sell buy-back), the opening/initiation and closing/return of the transaction will be confirmed by sending the below combination of ReceiveDelivery codes and SettlementTransactionType codes:\n\nRepo Opening\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: Repo (REPU)\nRepo Closing\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: Repo (REPU)\n\nReverse Repo Opening\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: ReverseRepo (RVPO)\nReverse Repo Closing\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: ReverseRepo (RVPO)\n\nTriParty Repo Opening\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: TriPartyRepo (TRPO)\nTriParty Repo Closing\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: TriPartyRepo (TRPO)\n\nTriParty Reverse Repo Opening\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: TriPartyReverseRepo (TRVO)\nTriParty Reverse Repo Closing\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: TriPartyReverseRepo (TRVO)\n\nSecurities Lending Initiation\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: SecuritiesLending (SECL)\nSecurities Lending Return\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: SecuritiesLending (SECL)\n\nSecurities Borrowing Initiation\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: SecuritiesBorrowing (SECB)\nSecurities Borrowing Return\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: SecuritiesBorrowing (SECB)\n\nSell-Buy Back: Sell\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: SellBuyBack (SBBK)\nSell-Buy Back: Buy Back\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: SellBuyBack (SBBK)\n\nBuy-Sell Back: Buy\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: BuySellBack (BSBK)\nBuy-Sell Back: Sell Back\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: BuySellBack (BSBK)\n\nCollateral (giver) Out Initiation\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: CollateralOut (COLO)\nCollateral (giver) Out Return\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: CollateralOut (COLO)\n\nCollateral (taker) In Initiation\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: CollateralIn (COLI)\nCollateral (taker) In Return\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: CollateralIn (COLI).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOpeningClosingUsageRule.forSettlementDetails68);
 			owner_lazy = () -> SettlementDetails50.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails50 obj) throws Exception {
+			checkSettlementDetails50(obj);
 		}
 	};
 	/**
@@ -140,11 +144,15 @@ public class ConstraintOpeningClosingUsageRule {
 	 */
 	public static final MMConstraint<SettlementDetails51> forSettlementDetails51 = new MMConstraint<SettlementDetails51>() {
 		{
-			validator = ConstraintOpeningClosingUsageRule::checkSettlementDetails51;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningClosingUsageRule";
 			definition = "For settlement of two parts transactions (Securities Financing, buy-sell back, sell buy-back), the opening/initiation and closing/return of the transaction will be confirmed by sending the below combination of ReceiveDelivery codes and SettlementTransactionType codes:\n\nRepo Opening\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: Repo (REPU)\nRepo Closing\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: Repo (REPU)\n\nReverse Repo Opening\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: ReverseRepo (RVPO)\nReverse Repo Closing\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: ReverseRepo (RVPO)\n\nTriParty Repo Opening\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: TriPartyRepo (TRPO)\nTriParty Repo Closing\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: TriPartyRepo (TRPO)\n\nTriParty Reverse Repo Opening\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: TriPartyReverseRepo (TRVO)\nTriParty Reverse Repo Closing\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: TriPartyReverseRepo (TRVO)\n\nSecurities Lending Initiation\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: SecuritiesLending (SECL)\nSecurities Lending Return\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: SecuritiesLending (SECL)\n\nSecurities Borrowing Initiation\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: SecuritiesBorrowing (SECB)\nSecurities Borrowing Return\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: SecuritiesBorrowing (SECB)\n\nSell-Buy Back: Sell\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: SellBuyBack (SBBK)\nSell-Buy Back: Buy Back\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: SellBuyBack (SBBK)\n\nBuy-Sell Back: Buy\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: BuySellBack (BSBK)\nBuy-Sell Back: Sell Back\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: BuySellBack (BSBK)\n\nCollateral (giver) Out Initiation\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: CollateralOut (COLO)\nCollateral (giver) Out Return\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: CollateralOut (COLO)\n\nCollateral (taker) In Initiation\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: CollateralIn (COLI)\nCollateral (taker) In Return\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> SettlementDetails51.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails51 obj) throws Exception {
+			checkSettlementDetails51(obj);
 		}
 	};
 	/**
@@ -183,13 +191,17 @@ public class ConstraintOpeningClosingUsageRule {
 	 */
 	public static final MMConstraint<SettlementDetails68> forSettlementDetails68 = new MMConstraint<SettlementDetails68>() {
 		{
-			validator = ConstraintOpeningClosingUsageRule::checkSettlementDetails68;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningClosingUsageRule";
 			definition = "For settlement of two parts transactions (Securities Financing, buy-sell back, sell buy-back), the opening/initiation and closing/return of the transaction will be confirmed by sending the below combination of ReceiveDelivery codes and SettlementTransactionType codes:\n\nRepo Opening\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: Repo (REPU)\nRepo Closing\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: Repo (REPU)\n\nReverse Repo Opening\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: ReverseRepo (RVPO)\nReverse Repo Closing\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: ReverseRepo (RVPO)\n\nTriParty Repo Opening\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: TriPartyRepo (TRPO)\nTriParty Repo Closing\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: TriPartyRepo (TRPO)\n\nTriParty Reverse Repo Opening\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: TriPartyReverseRepo (TRVO)\nTriParty Reverse Repo Closing\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: TriPartyReverseRepo (TRVO)\n\nSecurities Lending Initiation\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: SecuritiesLending (SECL)\nSecurities Lending Return\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: SecuritiesLending (SECL)\n\nSecurities Borrowing Initiation\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: SecuritiesBorrowing (SECB)\nSecurities Borrowing Return\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: SecuritiesBorrowing (SECB)\n\nSell-Buy Back: Sell\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: SellBuyBack (SBBK)\nSell-Buy Back: Buy Back\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: SellBuyBack (SBBK)\n\nBuy-Sell Back: Buy\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: BuySellBack (BSBK)\nBuy-Sell Back: Sell Back\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: BuySellBack (BSBK)\n\nCollateral (giver) Out Initiation\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: CollateralOut (COLO)\nCollateral (giver) Out Return\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: CollateralOut (COLO)\n\nCollateral (taker) In Initiation\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: CollateralIn (COLI)\nCollateral (taker) In Return\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: CollateralIn (COLI).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOpeningClosingUsageRule.forSettlementDetails94);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOpeningClosingUsageRule.forSettlementDetails50;
 			owner_lazy = () -> SettlementDetails68.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails68 obj) throws Exception {
+			checkSettlementDetails68(obj);
 		}
 	};
 	/**
@@ -215,11 +227,15 @@ public class ConstraintOpeningClosingUsageRule {
 	 */
 	public static final MMConstraint<SettlementDetails83> forSettlementDetails83 = new MMConstraint<SettlementDetails83>() {
 		{
-			validator = ConstraintOpeningClosingUsageRule::checkSettlementDetails83;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningClosingUsageRule";
 			definition = "For settlement of two parts transactions (Securities Financing, buy-sell back, sell buy-back), the opening/initiation and closing/return of the transaction will be confirmed by sending the below combination of ReceiveDelivery codes and SettlementTransactionType codes:\n\nRepo Opening\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: Repo (REPU)\nRepo Closing\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: Repo (REPU)\n\nReverse Repo Opening\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: ReverseRepo (RVPO)\nReverse Repo Closing\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: ReverseRepo (RVPO)\n\nTriParty Repo Opening\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: TriPartyRepo (TRPO)\nTriParty Repo Closing\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: TriPartyRepo (TRPO)\n\nTriParty Reverse Repo Opening\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: TriPartyReverseRepo (TRVO)\nTriParty Reverse Repo Closing\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: TriPartyReverseRepo (TRVO)\n\nSecurities Lending Initiation\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: SecuritiesLending (SECL)\nSecurities Lending Return\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: SecuritiesLending (SECL)\n\nSecurities Borrowing Initiation\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: SecuritiesBorrowing (SECB)\nSecurities Borrowing Return\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: SecuritiesBorrowing (SECB)\n\nSell-Buy Back: Sell\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: SellBuyBack (SBBK)\nSell-Buy Back: Buy Back\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: SellBuyBack (SBBK)\n\nBuy-Sell Back: Buy\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: BuySellBack (BSBK)\nBuy-Sell Back: Sell Back\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: BuySellBack (BSBK)\n\nCollateral (giver) Out Initiation\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: CollateralOut (COLO)\nCollateral (giver) Out Return\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: CollateralOut (COLO)\n\nCollateral (taker) In Initiation\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: CollateralIn (COLI)\nCollateral (taker) In Return\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> SettlementDetails83.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails83 obj) throws Exception {
+			checkSettlementDetails83(obj);
 		}
 	};
 	/**
@@ -258,13 +274,17 @@ public class ConstraintOpeningClosingUsageRule {
 	 */
 	public static final MMConstraint<SettlementDetails94> forSettlementDetails94 = new MMConstraint<SettlementDetails94>() {
 		{
-			validator = ConstraintOpeningClosingUsageRule::checkSettlementDetails94;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningClosingUsageRule";
 			definition = "For settlement of two parts transactions (Securities Financing, buy-sell back, sell buy-back), the opening/initiation and closing/return of the transaction will be confirmed by sending the below combination of ReceiveDelivery codes and SettlementTransactionType codes:\n\nRepo Opening\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: Repo (REPU)\nRepo Closing\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: Repo (REPU)\n\nReverse Repo Opening\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: ReverseRepo (RVPO)\nReverse Repo Closing\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: ReverseRepo (RVPO)\n\nTriParty Repo Opening\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: TriPartyRepo (TRPO)\nTriParty Repo Closing\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: TriPartyRepo (TRPO)\n\nTriParty Reverse Repo Opening\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: TriPartyReverseRepo (TRVO)\nTriParty Reverse Repo Closing\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: TriPartyReverseRepo (TRVO)\n\nSecurities Lending Initiation\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: SecuritiesLending (SECL)\nSecurities Lending Return\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: SecuritiesLending (SECL)\n\nSecurities Borrowing Initiation\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: SecuritiesBorrowing (SECB)\nSecurities Borrowing Return\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: SecuritiesBorrowing (SECB)\n\nSell-Buy Back: Sell\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: SellBuyBack (SBBK)\nSell-Buy Back: Buy Back\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: SellBuyBack (SBBK)\n\nBuy-Sell Back: Buy\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: BuySellBack (BSBK)\nBuy-Sell Back: Sell Back\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: BuySellBack (BSBK)\n\nCollateral (giver) Out Initiation\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: CollateralOut (COLO)\nCollateral (giver) Out Return\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: CollateralOut (COLO)\n\nCollateral (taker) In Initiation\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: CollateralIn (COLI)\nCollateral (taker) In Return\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: CollateralIn (COLI).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOpeningClosingUsageRule.forSettlementDetails122);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOpeningClosingUsageRule.forSettlementDetails68;
 			owner_lazy = () -> SettlementDetails94.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails94 obj) throws Exception {
+			checkSettlementDetails94(obj);
 		}
 	};
 	/**
@@ -290,11 +310,15 @@ public class ConstraintOpeningClosingUsageRule {
 	 */
 	public static final MMConstraint<SettlementDetails113> forSettlementDetails113 = new MMConstraint<SettlementDetails113>() {
 		{
-			validator = ConstraintOpeningClosingUsageRule::checkSettlementDetails113;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningClosingUsageRule";
 			definition = "For settlement of two parts transactions (Securities Financing, buy-sell back, sell buy-back), the opening/initiation and closing/return of the transaction will be confirmed by sending the below combination of ReceiveDelivery codes and SettlementTransactionType codes:\n\nRepo Opening\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: Repo (REPU)\nRepo Closing\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: Repo (REPU)\n\nReverse Repo Opening\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: ReverseRepo (RVPO)\nReverse Repo Closing\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: ReverseRepo (RVPO)\n\nTriParty Repo Opening\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: TriPartyRepo (TRPO)\nTriParty Repo Closing\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: TriPartyRepo (TRPO)\n\nTriParty Reverse Repo Opening\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: TriPartyReverseRepo (TRVO)\nTriParty Reverse Repo Closing\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: TriPartyReverseRepo (TRVO)\n\nSecurities Lending Initiation\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: SecuritiesLending (SECL)\nSecurities Lending Return\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: SecuritiesLending (SECL)\n\nSecurities Borrowing Initiation\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: SecuritiesBorrowing (SECB)\nSecurities Borrowing Return\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: SecuritiesBorrowing (SECB)\n\nSell-Buy Back: Sell\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: SellBuyBack (SBBK)\nSell-Buy Back: Buy Back\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: SellBuyBack (SBBK)\n\nBuy-Sell Back: Buy\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: BuySellBack (BSBK)\nBuy-Sell Back: Sell Back\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: BuySellBack (BSBK)\n\nCollateral (giver) Out Initiation\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: CollateralOut (COLO)\nCollateral (giver) Out Return\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: CollateralOut (COLO)\n\nCollateral (taker) In Initiation\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: CollateralIn (COLI)\nCollateral (taker) In Return\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> SettlementDetails113.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails113 obj) throws Exception {
+			checkSettlementDetails113(obj);
 		}
 	};
 	/**
@@ -333,13 +357,17 @@ public class ConstraintOpeningClosingUsageRule {
 	 */
 	public static final MMConstraint<SettlementDetails122> forSettlementDetails122 = new MMConstraint<SettlementDetails122>() {
 		{
-			validator = ConstraintOpeningClosingUsageRule::checkSettlementDetails122;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningClosingUsageRule";
 			definition = "For settlement of two parts transactions (Securities Financing, buy-sell back, sell buy-back), the opening/initiation and closing/return of the transaction will be confirmed by sending the below combination of ReceiveDelivery codes and SettlementTransactionType codes:\n\nRepo Opening\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: Repo (REPU)\nRepo Closing\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: Repo (REPU)\n\nReverse Repo Opening\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: ReverseRepo (RVPO)\nReverse Repo Closing\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: ReverseRepo (RVPO)\n\nTriParty Repo Opening\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: TriPartyRepo (TRPO)\nTriParty Repo Closing\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: TriPartyRepo (TRPO)\n\nTriParty Reverse Repo Opening\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: TriPartyReverseRepo (TRVO)\nTriParty Reverse Repo Closing\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: TriPartyReverseRepo (TRVO)\n\nSecurities Lending Initiation\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: SecuritiesLending (SECL)\nSecurities Lending Return\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: SecuritiesLending (SECL)\n\nSecurities Borrowing Initiation\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: SecuritiesBorrowing (SECB)\nSecurities Borrowing Return\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: SecuritiesBorrowing (SECB)\n\nSell-Buy Back: Sell\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: SellBuyBack (SBBK)\nSell-Buy Back: Buy Back\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: SellBuyBack (SBBK)\n\nBuy-Sell Back: Buy\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: BuySellBack (BSBK)\nBuy-Sell Back: Sell Back\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: BuySellBack (BSBK)\n\nCollateral (giver) Out Initiation\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: CollateralOut (COLO)\nCollateral (giver) Out Return\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: CollateralOut (COLO)\n\nCollateral (taker) In Initiation\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: CollateralIn (COLI)\nCollateral (taker) In Return\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: CollateralIn (COLI).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOpeningClosingUsageRule.forSettlementDetails146);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOpeningClosingUsageRule.forSettlementDetails94;
 			owner_lazy = () -> SettlementDetails122.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails122 obj) throws Exception {
+			checkSettlementDetails122(obj);
 		}
 	};
 	/**
@@ -365,11 +393,15 @@ public class ConstraintOpeningClosingUsageRule {
 	 */
 	public static final MMConstraint<SettlementDetails138> forSettlementDetails138 = new MMConstraint<SettlementDetails138>() {
 		{
-			validator = ConstraintOpeningClosingUsageRule::checkSettlementDetails138;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningClosingUsageRule";
 			definition = "For settlement of two parts transactions (Securities Financing, buy-sell back, sell buy-back), the opening/initiation and closing/return of the transaction will be confirmed by sending the below combination of ReceiveDelivery codes and SettlementTransactionType codes:\n\nRepo Opening\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: Repo (REPU)\nRepo Closing\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: Repo (REPU)\n\nReverse Repo Opening\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: ReverseRepo (RVPO)\nReverse Repo Closing\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: ReverseRepo (RVPO)\n\nTriParty Repo Opening\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: TriPartyRepo (TRPO)\nTriParty Repo Closing\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: TriPartyRepo (TRPO)\n\nTriParty Reverse Repo Opening\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: TriPartyReverseRepo (TRVO)\nTriParty Reverse Repo Closing\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: TriPartyReverseRepo (TRVO)\n\nSecurities Lending Initiation\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: SecuritiesLending (SECL)\nSecurities Lending Return\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: SecuritiesLending (SECL)\n\nSecurities Borrowing Initiation\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: SecuritiesBorrowing (SECB)\nSecurities Borrowing Return\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: SecuritiesBorrowing (SECB)\n\nSell-Buy Back: Sell\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: SellBuyBack (SBBK)\nSell-Buy Back: Buy Back\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: SellBuyBack (SBBK)\n\nBuy-Sell Back: Buy\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: BuySellBack (BSBK)\nBuy-Sell Back: Sell Back\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: BuySellBack (BSBK)\n\nCollateral (giver) Out Initiation\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: CollateralOut (COLO)\nCollateral (giver) Out Return\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: CollateralOut (COLO)\n\nCollateral (taker) In Initiation\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: CollateralIn (COLI)\nCollateral (taker) In Return\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> SettlementDetails138.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails138 obj) throws Exception {
+			checkSettlementDetails138(obj);
 		}
 	};
 	/**
@@ -400,12 +432,16 @@ public class ConstraintOpeningClosingUsageRule {
 	 */
 	public static final MMConstraint<SettlementDetails146> forSettlementDetails146 = new MMConstraint<SettlementDetails146>() {
 		{
-			validator = ConstraintOpeningClosingUsageRule::checkSettlementDetails146;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningClosingUsageRule";
 			definition = "For settlement of two parts transactions (Securities Financing, buy-sell back, sell buy-back), the opening/initiation and closing/return of the transaction will be confirmed by sending the below combination of ReceiveDelivery codes and SettlementTransactionType codes:\n\nRepo Opening\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: Repo (REPU)\nRepo Closing\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: Repo (REPU)\n\nReverse Repo Opening\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: ReverseRepo (RVPO)\nReverse Repo Closing\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: ReverseRepo (RVPO)\n\nTriParty Repo Opening\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: TriPartyRepo (TRPO)\nTriParty Repo Closing\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: TriPartyRepo (TRPO)\n\nTriParty Reverse Repo Opening\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: TriPartyReverseRepo (TRVO)\nTriParty Reverse Repo Closing\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: TriPartyReverseRepo (TRVO)\n\nSecurities Lending Initiation\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: SecuritiesLending (SECL)\nSecurities Lending Return\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: SecuritiesLending (SECL)\n\nSecurities Borrowing Initiation\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: SecuritiesBorrowing (SECB)\nSecurities Borrowing Return\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: SecuritiesBorrowing (SECB)\n\nSell-Buy Back: Sell\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: SellBuyBack (SBBK)\nSell-Buy Back: Buy Back\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: SellBuyBack (SBBK)\n\nBuy-Sell Back: Buy\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: BuySellBack (BSBK)\nBuy-Sell Back: Sell Back\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: BuySellBack (BSBK)\n\nCollateral (giver) Out Initiation\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: CollateralOut (COLO)\nCollateral (giver) Out Return\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: CollateralOut (COLO)\n\nCollateral (taker) In Initiation\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: CollateralIn (COLI)\nCollateral (taker) In Return\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: CollateralIn (COLI).";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOpeningClosingUsageRule.forSettlementDetails122;
 			owner_lazy = () -> SettlementDetails146.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails146 obj) throws Exception {
+			checkSettlementDetails146(obj);
 		}
 	};
 	/**
@@ -431,11 +467,15 @@ public class ConstraintOpeningClosingUsageRule {
 	 */
 	public static final MMConstraint<SettlementDetails158> forSettlementDetails158 = new MMConstraint<SettlementDetails158>() {
 		{
-			validator = ConstraintOpeningClosingUsageRule::checkSettlementDetails158;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningClosingUsageRule";
 			definition = "For settlement of two parts transactions (Securities Financing, buy-sell back, sell buy-back), the opening/initiation and closing/return of the transaction will be confirmed by sending the below combination of ReceiveDelivery codes and SettlementTransactionType codes:\n\nRepo Opening\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: Repo (REPU)\nRepo Closing\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: Repo (REPU)\n\nReverse Repo Opening\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: ReverseRepo (RVPO)\nReverse Repo Closing\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: ReverseRepo (RVPO)\n\nTriParty Repo Opening\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: TriPartyRepo (TRPO)\nTriParty Repo Closing\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: TriPartyRepo (TRPO)\n\nTriParty Reverse Repo Opening\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: TriPartyReverseRepo (TRVO)\nTriParty Reverse Repo Closing\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: TriPartyReverseRepo (TRVO)\n\nSecurities Lending Initiation\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: SecuritiesLending (SECL)\nSecurities Lending Return\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: SecuritiesLending (SECL)\n\nSecurities Borrowing Initiation\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: SecuritiesBorrowing (SECB)\nSecurities Borrowing Return\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: SecuritiesBorrowing (SECB)\n\nSell-Buy Back: Sell\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: SellBuyBack (SBBK)\nSell-Buy Back: Buy Back\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: SellBuyBack (SBBK)\n\nBuy-Sell Back: Buy\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: BuySellBack (BSBK)\nBuy-Sell Back: Sell Back\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: BuySellBack (BSBK)\n\nCollateral (giver) Out Initiation\nReceiveDelivery: Delivery (DELI)\nSettlementTransactionType: CollateralOut (COLO)\nCollateral (giver) Out Return\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: CollateralOut (COLO)\n\nCollateral (taker) In Initiation\nReceiveDelivery: Receive (RECE)\nSettlementTransactionType: CollateralIn (COLI)\nCollateral (taker) In Return\nReceiveDelivery: Delivery (DELI) \nSettlementTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> SettlementDetails158.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails158 obj) throws Exception {
+			checkSettlementDetails158(obj);
 		}
 	};
 

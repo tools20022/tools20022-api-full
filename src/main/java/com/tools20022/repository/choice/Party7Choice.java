@@ -105,7 +105,7 @@ public class Party7Choice {
 	 * definition} = "Identification of a person or an organisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Party7Choice, PartyIdentification32> mmParty = new MMMessageAssociationEnd<Party7Choice, PartyIdentification32>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Party7Choice.mmObject();
@@ -118,6 +118,16 @@ public class Party7Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification32.mmObject();
+		}
+
+		@Override
+		public PartyIdentification32 getValue(Party7Choice obj) {
+			return obj.getParty();
+		}
+
+		@Override
+		public void setValue(Party7Choice obj, PartyIdentification32 value) {
+			obj.setParty(value);
 		}
 	};
 	@XmlElement(name = "Agt", required = true)
@@ -153,7 +163,7 @@ public class Party7Choice {
 	 * definition} = "Identification of a financial institution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Party7Choice, BranchAndFinancialInstitutionIdentification4> mmAgent = new MMMessageAssociationEnd<Party7Choice, BranchAndFinancialInstitutionIdentification4>() {
 		{
 			businessComponentTrace_lazy = () -> FinancialInstitution.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Party7Choice.mmObject();
@@ -166,6 +176,16 @@ public class Party7Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> BranchAndFinancialInstitutionIdentification4.mmObject();
+		}
+
+		@Override
+		public BranchAndFinancialInstitutionIdentification4 getValue(Party7Choice obj) {
+			return obj.getAgent();
+		}
+
+		@Override
+		public void setValue(Party7Choice obj, BranchAndFinancialInstitutionIdentification4 value) {
+			obj.setAgent(value);
 		}
 	};
 

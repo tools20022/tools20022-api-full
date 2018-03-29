@@ -56,12 +56,16 @@ public class ConstraintSEPAOriginalDebtorAccountRule {
 	 */
 	public static final MMConstraint<DirectDebitTransactionInformation7> forDirectDebitTransactionInformation7 = new MMConstraint<DirectDebitTransactionInformation7>() {
 		{
-			validator = ConstraintSEPAOriginalDebtorAccountRule::checkDirectDebitTransactionInformation7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SEPAOriginalDebtorAccountRule";
 			definition = "SEPA TVS 3.x rule: \nOriginalDebtorAccount field states if changes occur in Debtor Account, otherwise not to be used.";
 			owner_lazy = () -> DirectDebitTransactionInformation7.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromNode\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalDebtorAccount/Identification/IBAN</leftOperand><rightOperand>/DebtorAccount/Identification/IBAN</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalDebtorAccount</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(DirectDebitTransactionInformation7 obj) throws Exception {
+			checkDirectDebitTransactionInformation7(obj);
 		}
 	};
 	/**
@@ -91,12 +95,16 @@ public class ConstraintSEPAOriginalDebtorAccountRule {
 	 */
 	public static final MMConstraint<DirectDebitTransactionInformation8> forDirectDebitTransactionInformation8 = new MMConstraint<DirectDebitTransactionInformation8>() {
 		{
-			validator = ConstraintSEPAOriginalDebtorAccountRule::checkDirectDebitTransactionInformation8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SEPAOriginalDebtorAccountRule";
 			definition = "SEPA TVS 3.x rule: \nOriginalDebtorAccount field states if changes occur in Debtor Account, otherwise not to be used.";
 			owner_lazy = () -> DirectDebitTransactionInformation8.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromNode\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalDebtorAccount/Identification/IBAN</leftOperand><rightOperand>/DebtorAccount/Identification/IBAN</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalDebtorAccount</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(DirectDebitTransactionInformation8 obj) throws Exception {
+			checkDirectDebitTransactionInformation8(obj);
 		}
 	};
 

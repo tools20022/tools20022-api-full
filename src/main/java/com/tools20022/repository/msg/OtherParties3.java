@@ -136,7 +136,7 @@ public class OtherParties3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInvestor = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherParties3, Optional<PartyIdentification14Choice>> mmInvestor = new MMMessageAttribute<OtherParties3, Optional<PartyIdentification14Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherParties3.mmObject();
@@ -149,6 +149,16 @@ public class OtherParties3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification14Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification14Choice> getValue(OtherParties3 obj) {
+			return obj.getInvestor();
+		}
+
+		@Override
+		public void setValue(OtherParties3 obj, Optional<PartyIdentification14Choice> value) {
+			obj.setInvestor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "QlfdFrgnIntrmy")
@@ -190,7 +200,7 @@ public class OtherParties3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQualifiedForeignIntermediary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherParties3, Optional<PartyIdentification10Choice>> mmQualifiedForeignIntermediary = new MMMessageAttribute<OtherParties3, Optional<PartyIdentification10Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherParties3.mmObject();
@@ -203,6 +213,16 @@ public class OtherParties3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification10Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification10Choice> getValue(OtherParties3 obj) {
+			return obj.getQualifiedForeignIntermediary();
+		}
+
+		@Override
+		public void setValue(OtherParties3 obj, Optional<PartyIdentification10Choice> value) {
+			obj.setQualifiedForeignIntermediary(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StockXchg")
@@ -244,7 +264,7 @@ public class OtherParties3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStockExchange = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherParties3, Optional<PartyIdentification10Choice>> mmStockExchange = new MMMessageAttribute<OtherParties3, Optional<PartyIdentification10Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherParties3.mmObject();
@@ -257,6 +277,16 @@ public class OtherParties3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification10Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification10Choice> getValue(OtherParties3 obj) {
+			return obj.getStockExchange();
+		}
+
+		@Override
+		public void setValue(OtherParties3 obj, Optional<PartyIdentification10Choice> value) {
+			obj.setStockExchange(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradRgltr")
@@ -296,7 +326,7 @@ public class OtherParties3 {
 	 * definition} = "Institution to which a trade must be reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeRegulator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherParties3, Optional<PartyIdentification10Choice>> mmTradeRegulator = new MMMessageAttribute<OtherParties3, Optional<PartyIdentification10Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherParties3.mmObject();
@@ -309,6 +339,16 @@ public class OtherParties3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification10Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification10Choice> getValue(OtherParties3 obj) {
+			return obj.getTradeRegulator();
+		}
+
+		@Override
+		public void setValue(OtherParties3 obj, Optional<PartyIdentification10Choice> value) {
+			obj.setTradeRegulator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrptyAgt")
@@ -350,7 +390,7 @@ public class OtherParties3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTripartyAgent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherParties3, Optional<PartyIdentification10Choice>> mmTripartyAgent = new MMMessageAttribute<OtherParties3, Optional<PartyIdentification10Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherParties3.mmObject();
@@ -363,6 +403,16 @@ public class OtherParties3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification10Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification10Choice> getValue(OtherParties3 obj) {
+			return obj.getTripartyAgent();
+		}
+
+		@Override
+		public void setValue(OtherParties3 obj, Optional<PartyIdentification10Choice> value) {
+			obj.setTripartyAgent(value.orElse(null));
 		}
 	};
 

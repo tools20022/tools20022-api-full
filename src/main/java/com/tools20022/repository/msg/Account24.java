@@ -30,6 +30,7 @@ import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.AccountServicerRole;
 import com.tools20022.repository.entity.InvestmentAccount;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification113;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -155,7 +156,7 @@ public class Account24 {
 	 * Account19.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Account24, Optional<Max35Text>> mmIdentification = new MMMessageAttribute<Account24, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Account24.mmObject();
@@ -168,6 +169,16 @@ public class Account24 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Account24 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Account24 obj, Optional<Max35Text> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Dsgnt")
@@ -210,7 +221,7 @@ public class Account24 {
 	 * Account19.mmDesignation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDesignation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Account24, Optional<Max35Text>> mmDesignation = new MMMessageAttribute<Account24, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmDesignation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Account24.mmObject();
@@ -223,6 +234,16 @@ public class Account24 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Account24 obj) {
+			return obj.getDesignation();
+		}
+
+		@Override
+		public void setValue(Account24 obj, Optional<Max35Text> value) {
+			obj.setDesignation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Svcr")
@@ -263,7 +284,7 @@ public class Account24 {
 	 * Account19.mmServicer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmServicer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Account24, Optional<PartyIdentification113>> mmServicer = new MMMessageAssociationEnd<Account24, Optional<PartyIdentification113>>() {
 		{
 			businessComponentTrace_lazy = () -> AccountServicerRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Account24.mmObject();
@@ -276,7 +297,17 @@ public class Account24 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification113.mmObject();
+			type_lazy = () -> PartyIdentification113.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification113> getValue(Account24 obj) {
+			return obj.getServicer();
+		}
+
+		@Override
+		public void setValue(Account24 obj, Optional<PartyIdentification113> value) {
+			obj.setServicer(value.orElse(null));
 		}
 	};
 
@@ -320,7 +351,7 @@ public class Account24 {
 		return servicer == null ? Optional.empty() : Optional.of(servicer);
 	}
 
-	public Account24 setServicer(com.tools20022.repository.msg.PartyIdentification113 servicer) {
+	public Account24 setServicer(PartyIdentification113 servicer) {
 		this.servicer = servicer;
 		return this;
 	}

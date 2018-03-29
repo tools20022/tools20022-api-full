@@ -133,7 +133,7 @@ public class GeneralBusinessOrError3Choice {
 	 * GeneralBusinessOrError1Choice.mmOperationalError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GeneralBusinessOrError3Choice, List<ErrorHandling4>> mmOperationalError = new MMMessageAssociationEnd<GeneralBusinessOrError3Choice, List<ErrorHandling4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.GeneralBusinessOrError3Choice.mmObject();
 			isDerived = false;
@@ -146,6 +146,16 @@ public class GeneralBusinessOrError3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling4.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling4> getValue(GeneralBusinessOrError3Choice obj) {
+			return obj.getOperationalError();
+		}
+
+		@Override
+		public void setValue(GeneralBusinessOrError3Choice obj, List<ErrorHandling4> value) {
+			obj.setOperationalError(value);
 		}
 	};
 	@XmlElement(name = "BizRpt", required = true)
@@ -190,7 +200,7 @@ public class GeneralBusinessOrError3Choice {
 	 * GeneralBusinessOrError1Choice.mmBusinessReport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GeneralBusinessOrError3Choice, List<GeneralBusinessReport4>> mmBusinessReport = new MMMessageAssociationEnd<GeneralBusinessOrError3Choice, List<GeneralBusinessReport4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.GeneralBusinessOrError3Choice.mmObject();
 			isDerived = false;
@@ -203,6 +213,16 @@ public class GeneralBusinessOrError3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GeneralBusinessReport4.mmObject();
+		}
+
+		@Override
+		public List<GeneralBusinessReport4> getValue(GeneralBusinessOrError3Choice obj) {
+			return obj.getBusinessReport();
+		}
+
+		@Override
+		public void setValue(GeneralBusinessOrError3Choice obj, List<GeneralBusinessReport4> value) {
+			obj.setBusinessReport(value);
 		}
 	};
 

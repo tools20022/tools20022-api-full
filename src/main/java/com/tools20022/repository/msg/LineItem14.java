@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.CommercialTrade;
 import com.tools20022.repository.entity.Invoice;
 import com.tools20022.repository.entity.PurchaseOrder;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.LineItemDetails12;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -111,7 +112,7 @@ public class LineItem14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "LineItmDtls", required = true)
-	protected List<com.tools20022.repository.msg.LineItemDetails12> lineItemDetails;
+	protected List<LineItemDetails12> lineItemDetails;
 	/**
 	 * 
 	 <p>
@@ -148,7 +149,7 @@ public class LineItem14 {
 	 * LineItem8.mmLineItemDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLineItemDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LineItem14, List<LineItemDetails12>> mmLineItemDetails = new MMMessageAssociationEnd<LineItem14, List<LineItemDetails12>>() {
 		{
 			businessElementTrace_lazy = () -> Invoice.mmLineItem;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItem14.mmObject();
@@ -160,7 +161,17 @@ public class LineItem14 {
 			previousVersion_lazy = () -> LineItem8.mmLineItemDetails;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.LineItemDetails12.mmObject();
+			type_lazy = () -> LineItemDetails12.mmObject();
+		}
+
+		@Override
+		public List<LineItemDetails12> getValue(LineItem14 obj) {
+			return obj.getLineItemDetails();
+		}
+
+		@Override
+		public void setValue(LineItem14 obj, List<LineItemDetails12> value) {
+			obj.setLineItemDetails(value);
 		}
 	};
 	@XmlElement(name = "OrdrdLineItmsTtlAmt", required = true)
@@ -202,7 +213,7 @@ public class LineItem14 {
 	 * LineItem8.mmOrderedLineItemsTotalAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderedLineItemsTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItem14, CurrencyAndAmount> mmOrderedLineItemsTotalAmount = new MMMessageAttribute<LineItem14, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> PurchaseOrder.mmTotalAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItem14.mmObject();
@@ -215,6 +226,16 @@ public class LineItem14 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(LineItem14 obj) {
+			return obj.getOrderedLineItemsTotalAmount();
+		}
+
+		@Override
+		public void setValue(LineItem14 obj, CurrencyAndAmount value) {
+			obj.setOrderedLineItemsTotalAmount(value);
 		}
 	};
 	@XmlElement(name = "AccptdLineItmsTtlAmt", required = true)
@@ -257,7 +278,7 @@ public class LineItem14 {
 	 * LineItem8.mmAcceptedLineItemsTotalAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAcceptedLineItemsTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItem14, CurrencyAndAmount> mmAcceptedLineItemsTotalAmount = new MMMessageAttribute<LineItem14, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> CommercialTrade.mmTotalAcceptedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItem14.mmObject();
@@ -270,6 +291,16 @@ public class LineItem14 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(LineItem14 obj) {
+			return obj.getAcceptedLineItemsTotalAmount();
+		}
+
+		@Override
+		public void setValue(LineItem14 obj, CurrencyAndAmount value) {
+			obj.setAcceptedLineItemsTotalAmount(value);
 		}
 	};
 	@XmlElement(name = "OutsdngLineItmsTtlAmt", required = true)
@@ -308,7 +339,7 @@ public class LineItem14 {
 	 * LineItem8.mmOutstandingLineItemsTotalAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOutstandingLineItemsTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItem14, CurrencyAndAmount> mmOutstandingLineItemsTotalAmount = new MMMessageAttribute<LineItem14, CurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItem14.mmObject();
 			isDerived = false;
@@ -320,6 +351,16 @@ public class LineItem14 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(LineItem14 obj) {
+			return obj.getOutstandingLineItemsTotalAmount();
+		}
+
+		@Override
+		public void setValue(LineItem14 obj, CurrencyAndAmount value) {
+			obj.setOutstandingLineItemsTotalAmount(value);
 		}
 	};
 	@XmlElement(name = "PdgLineItmsTtlAmt", required = true)
@@ -358,7 +399,7 @@ public class LineItem14 {
 	 * LineItem8.mmPendingLineItemsTotalAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPendingLineItemsTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItem14, CurrencyAndAmount> mmPendingLineItemsTotalAmount = new MMMessageAttribute<LineItem14, CurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItem14.mmObject();
 			isDerived = false;
@@ -370,6 +411,16 @@ public class LineItem14 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(LineItem14 obj) {
+			return obj.getPendingLineItemsTotalAmount();
+		}
+
+		@Override
+		public void setValue(LineItem14 obj, CurrencyAndAmount value) {
+			obj.setPendingLineItemsTotalAmount(value);
 		}
 	};
 	@XmlElement(name = "OrdrdTtlNetAmt", required = true)
@@ -411,7 +462,7 @@ public class LineItem14 {
 	 * LineItem8.mmOrderedTotalNetAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderedTotalNetAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItem14, CurrencyAndAmount> mmOrderedTotalNetAmount = new MMMessageAttribute<LineItem14, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Invoice.mmTotalNetAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItem14.mmObject();
@@ -424,6 +475,16 @@ public class LineItem14 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(LineItem14 obj) {
+			return obj.getOrderedTotalNetAmount();
+		}
+
+		@Override
+		public void setValue(LineItem14 obj, CurrencyAndAmount value) {
+			obj.setOrderedTotalNetAmount(value);
 		}
 	};
 	@XmlElement(name = "AccptdTtlNetAmt", required = true)
@@ -465,7 +526,7 @@ public class LineItem14 {
 	 * LineItem8.mmAcceptedTotalNetAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAcceptedTotalNetAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItem14, CurrencyAndAmount> mmAcceptedTotalNetAmount = new MMMessageAttribute<LineItem14, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Invoice.mmTotalInvoiceAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItem14.mmObject();
@@ -478,6 +539,16 @@ public class LineItem14 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(LineItem14 obj) {
+			return obj.getAcceptedTotalNetAmount();
+		}
+
+		@Override
+		public void setValue(LineItem14 obj, CurrencyAndAmount value) {
+			obj.setAcceptedTotalNetAmount(value);
 		}
 	};
 	@XmlElement(name = "OutsdngTtlNetAmt", required = true)
@@ -516,7 +587,7 @@ public class LineItem14 {
 	 * LineItem8.mmOutstandingTotalNetAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOutstandingTotalNetAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItem14, CurrencyAndAmount> mmOutstandingTotalNetAmount = new MMMessageAttribute<LineItem14, CurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItem14.mmObject();
 			isDerived = false;
@@ -528,6 +599,16 @@ public class LineItem14 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(LineItem14 obj) {
+			return obj.getOutstandingTotalNetAmount();
+		}
+
+		@Override
+		public void setValue(LineItem14 obj, CurrencyAndAmount value) {
+			obj.setOutstandingTotalNetAmount(value);
 		}
 	};
 	@XmlElement(name = "PdgTtlNetAmt", required = true)
@@ -565,7 +646,7 @@ public class LineItem14 {
 	 * LineItem8.mmPendingTotalNetAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPendingTotalNetAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItem14, CurrencyAndAmount> mmPendingTotalNetAmount = new MMMessageAttribute<LineItem14, CurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItem14.mmObject();
 			isDerived = false;
@@ -577,6 +658,16 @@ public class LineItem14 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(LineItem14 obj) {
+			return obj.getPendingTotalNetAmount();
+		}
+
+		@Override
+		public void setValue(LineItem14 obj, CurrencyAndAmount value) {
+			obj.setPendingTotalNetAmount(value);
 		}
 	};
 
@@ -602,7 +693,7 @@ public class LineItem14 {
 		return lineItemDetails == null ? lineItemDetails = new ArrayList<>() : lineItemDetails;
 	}
 
-	public LineItem14 setLineItemDetails(List<com.tools20022.repository.msg.LineItemDetails12> lineItemDetails) {
+	public LineItem14 setLineItemDetails(List<LineItemDetails12> lineItemDetails) {
 		this.lineItemDetails = Objects.requireNonNull(lineItemDetails);
 		return this;
 	}

@@ -24,6 +24,8 @@ import com.tools20022.repository.choice.CardTransaction1Choice;
 import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PaymentCard4;
+import com.tools20022.repository.msg.PointOfInteraction1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -121,7 +123,7 @@ public class CardTransaction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCard = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardTransaction1, Optional<PaymentCard4>> mmCard = new MMMessageAssociationEnd<CardTransaction1, Optional<PaymentCard4>>() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmPaymentCard;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransaction1.mmObject();
@@ -134,7 +136,17 @@ public class CardTransaction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentCard4.mmObject();
+			type_lazy = () -> PaymentCard4.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentCard4> getValue(CardTransaction1 obj) {
+			return obj.getCard();
+		}
+
+		@Override
+		public void setValue(CardTransaction1 obj, Optional<PaymentCard4> value) {
+			obj.setCard(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "POI")
@@ -179,7 +191,7 @@ public class CardTransaction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPOI = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardTransaction1, Optional<PointOfInteraction1>> mmPOI = new MMMessageAssociationEnd<CardTransaction1, Optional<PointOfInteraction1>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmPointOfInteraction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransaction1.mmObject();
@@ -192,7 +204,17 @@ public class CardTransaction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PointOfInteraction1.mmObject();
+			type_lazy = () -> PointOfInteraction1.mmObject();
+		}
+
+		@Override
+		public Optional<PointOfInteraction1> getValue(CardTransaction1 obj) {
+			return obj.getPOI();
+		}
+
+		@Override
+		public void setValue(CardTransaction1 obj, Optional<PointOfInteraction1> value) {
+			obj.setPOI(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tx")
@@ -238,7 +260,7 @@ public class CardTransaction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardTransaction1, Optional<CardTransaction1Choice>> mmTransaction = new MMMessageAssociationEnd<CardTransaction1, Optional<CardTransaction1Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransaction1.mmObject();
@@ -252,6 +274,16 @@ public class CardTransaction1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CardTransaction1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CardTransaction1Choice> getValue(CardTransaction1 obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(CardTransaction1 obj, Optional<CardTransaction1Choice> value) {
+			obj.setTransaction(value.orElse(null));
 		}
 	};
 
@@ -274,7 +306,7 @@ public class CardTransaction1 {
 		return card == null ? Optional.empty() : Optional.of(card);
 	}
 
-	public CardTransaction1 setCard(com.tools20022.repository.msg.PaymentCard4 card) {
+	public CardTransaction1 setCard(PaymentCard4 card) {
 		this.card = card;
 		return this;
 	}
@@ -283,7 +315,7 @@ public class CardTransaction1 {
 		return pOI == null ? Optional.empty() : Optional.of(pOI);
 	}
 
-	public CardTransaction1 setPOI(com.tools20022.repository.msg.PointOfInteraction1 pOI) {
+	public CardTransaction1 setPOI(PointOfInteraction1 pOI) {
 		this.pOI = pOI;
 		return this;
 	}

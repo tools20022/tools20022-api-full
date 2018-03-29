@@ -26,6 +26,9 @@ import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ContentInformationType5;
+import com.tools20022.repository.msg.GenericIdentification32;
+import com.tools20022.repository.msg.PlainCardData3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -139,7 +142,7 @@ public class CardPaymentEnvironment11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAcquirerIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentEnvironment11, Optional<GenericIdentification32>> mmAcquirerIdentification = new MMMessageAssociationEnd<CardPaymentEnvironment11, Optional<GenericIdentification32>>() {
 		{
 			businessComponentTrace_lazy = () -> AcquirerRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment11.mmObject();
@@ -152,7 +155,17 @@ public class CardPaymentEnvironment11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
+			type_lazy = () -> GenericIdentification32.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification32> getValue(CardPaymentEnvironment11 obj) {
+			return obj.getAcquirerIdentification();
+		}
+
+		@Override
+		public void setValue(CardPaymentEnvironment11 obj, Optional<GenericIdentification32> value) {
+			obj.setAcquirerIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MrchntId")
@@ -197,7 +210,7 @@ public class CardPaymentEnvironment11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMerchantIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentEnvironment11, Optional<GenericIdentification32>> mmMerchantIdentification = new MMMessageAssociationEnd<CardPaymentEnvironment11, Optional<GenericIdentification32>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment11.mmObject();
@@ -210,7 +223,17 @@ public class CardPaymentEnvironment11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
+			type_lazy = () -> GenericIdentification32.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification32> getValue(CardPaymentEnvironment11 obj) {
+			return obj.getMerchantIdentification();
+		}
+
+		@Override
+		public void setValue(CardPaymentEnvironment11 obj, Optional<GenericIdentification32> value) {
+			obj.setMerchantIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "POIId", required = true)
@@ -255,7 +278,7 @@ public class CardPaymentEnvironment11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPOIIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentEnvironment11, GenericIdentification32> mmPOIIdentification = new MMMessageAssociationEnd<CardPaymentEnvironment11, GenericIdentification32>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmPointOfInteraction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment11.mmObject();
@@ -268,7 +291,17 @@ public class CardPaymentEnvironment11 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
+			type_lazy = () -> GenericIdentification32.mmObject();
+		}
+
+		@Override
+		public GenericIdentification32 getValue(CardPaymentEnvironment11 obj) {
+			return obj.getPOIIdentification();
+		}
+
+		@Override
+		public void setValue(CardPaymentEnvironment11 obj, GenericIdentification32 value) {
+			obj.setPOIIdentification(value);
 		}
 	};
 	@XmlElement(name = "PrtctdCardData")
@@ -310,7 +343,7 @@ public class CardPaymentEnvironment11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProtectedCardData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentEnvironment11, Optional<ContentInformationType5>> mmProtectedCardData = new MMMessageAssociationEnd<CardPaymentEnvironment11, Optional<ContentInformationType5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment11.mmObject();
 			isDerived = false;
@@ -322,7 +355,17 @@ public class CardPaymentEnvironment11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContentInformationType5.mmObject();
+			type_lazy = () -> ContentInformationType5.mmObject();
+		}
+
+		@Override
+		public Optional<ContentInformationType5> getValue(CardPaymentEnvironment11 obj) {
+			return obj.getProtectedCardData();
+		}
+
+		@Override
+		public void setValue(CardPaymentEnvironment11 obj, Optional<ContentInformationType5> value) {
+			obj.setProtectedCardData(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PlainCardData")
@@ -367,7 +410,7 @@ public class CardPaymentEnvironment11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlainCardData = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentEnvironment11, Optional<PlainCardData3>> mmPlainCardData = new MMMessageAttribute<CardPaymentEnvironment11, Optional<PlainCardData3>>() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmPaymentCard;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment11.mmObject();
@@ -379,7 +422,17 @@ public class CardPaymentEnvironment11 {
 			nextVersions_lazy = () -> Arrays.asList(CardPaymentEnvironment21.mmPlainCardData);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PlainCardData3.mmObject();
+			complexType_lazy = () -> PlainCardData3.mmObject();
+		}
+
+		@Override
+		public Optional<PlainCardData3> getValue(CardPaymentEnvironment11 obj) {
+			return obj.getPlainCardData();
+		}
+
+		@Override
+		public void setValue(CardPaymentEnvironment11 obj, Optional<PlainCardData3> value) {
+			obj.setPlainCardData(value.orElse(null));
 		}
 	};
 
@@ -405,7 +458,7 @@ public class CardPaymentEnvironment11 {
 		return acquirerIdentification == null ? Optional.empty() : Optional.of(acquirerIdentification);
 	}
 
-	public CardPaymentEnvironment11 setAcquirerIdentification(com.tools20022.repository.msg.GenericIdentification32 acquirerIdentification) {
+	public CardPaymentEnvironment11 setAcquirerIdentification(GenericIdentification32 acquirerIdentification) {
 		this.acquirerIdentification = acquirerIdentification;
 		return this;
 	}
@@ -414,7 +467,7 @@ public class CardPaymentEnvironment11 {
 		return merchantIdentification == null ? Optional.empty() : Optional.of(merchantIdentification);
 	}
 
-	public CardPaymentEnvironment11 setMerchantIdentification(com.tools20022.repository.msg.GenericIdentification32 merchantIdentification) {
+	public CardPaymentEnvironment11 setMerchantIdentification(GenericIdentification32 merchantIdentification) {
 		this.merchantIdentification = merchantIdentification;
 		return this;
 	}
@@ -423,7 +476,7 @@ public class CardPaymentEnvironment11 {
 		return pOIIdentification;
 	}
 
-	public CardPaymentEnvironment11 setPOIIdentification(com.tools20022.repository.msg.GenericIdentification32 pOIIdentification) {
+	public CardPaymentEnvironment11 setPOIIdentification(GenericIdentification32 pOIIdentification) {
 		this.pOIIdentification = Objects.requireNonNull(pOIIdentification);
 		return this;
 	}
@@ -432,7 +485,7 @@ public class CardPaymentEnvironment11 {
 		return protectedCardData == null ? Optional.empty() : Optional.of(protectedCardData);
 	}
 
-	public CardPaymentEnvironment11 setProtectedCardData(com.tools20022.repository.msg.ContentInformationType5 protectedCardData) {
+	public CardPaymentEnvironment11 setProtectedCardData(ContentInformationType5 protectedCardData) {
 		this.protectedCardData = protectedCardData;
 		return this;
 	}
@@ -441,7 +494,7 @@ public class CardPaymentEnvironment11 {
 		return plainCardData == null ? Optional.empty() : Optional.of(plainCardData);
 	}
 
-	public CardPaymentEnvironment11 setPlainCardData(com.tools20022.repository.msg.PlainCardData3 plainCardData) {
+	public CardPaymentEnvironment11 setPlainCardData(PlainCardData3 plainCardData) {
 		this.plainCardData = plainCardData;
 		return this;
 	}

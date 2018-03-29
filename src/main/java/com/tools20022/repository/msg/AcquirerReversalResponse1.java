@@ -22,6 +22,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.cain.AcquirerReversalResponse;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CardTransaction8;
+import com.tools20022.repository.msg.CardTransactionEnvironment4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -105,7 +107,7 @@ public class AcquirerReversalResponse1 {
 	 * definition} = "Environment of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcquirerReversalResponse1, CardTransactionEnvironment4> mmEnvironment = new MMMessageAssociationEnd<AcquirerReversalResponse1, CardTransactionEnvironment4>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerReversalResponse1.mmObject();
 			isDerived = false;
@@ -116,7 +118,17 @@ public class AcquirerReversalResponse1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardTransactionEnvironment4.mmObject();
+			type_lazy = () -> CardTransactionEnvironment4.mmObject();
+		}
+
+		@Override
+		public CardTransactionEnvironment4 getValue(AcquirerReversalResponse1 obj) {
+			return obj.getEnvironment();
+		}
+
+		@Override
+		public void setValue(AcquirerReversalResponse1 obj, CardTransactionEnvironment4 value) {
+			obj.setEnvironment(value);
 		}
 	};
 	@XmlElement(name = "Tx", required = true)
@@ -147,7 +159,7 @@ public class AcquirerReversalResponse1 {
 	 * definition} = "Reversal card transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcquirerReversalResponse1, CardTransaction8> mmTransaction = new MMMessageAssociationEnd<AcquirerReversalResponse1, CardTransaction8>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerReversalResponse1.mmObject();
 			isDerived = false;
@@ -158,7 +170,17 @@ public class AcquirerReversalResponse1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardTransaction8.mmObject();
+			type_lazy = () -> CardTransaction8.mmObject();
+		}
+
+		@Override
+		public CardTransaction8 getValue(AcquirerReversalResponse1 obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(AcquirerReversalResponse1 obj, CardTransaction8 value) {
+			obj.setTransaction(value);
 		}
 	};
 
@@ -180,7 +202,7 @@ public class AcquirerReversalResponse1 {
 		return environment;
 	}
 
-	public AcquirerReversalResponse1 setEnvironment(com.tools20022.repository.msg.CardTransactionEnvironment4 environment) {
+	public AcquirerReversalResponse1 setEnvironment(CardTransactionEnvironment4 environment) {
 		this.environment = Objects.requireNonNull(environment);
 		return this;
 	}
@@ -189,7 +211,7 @@ public class AcquirerReversalResponse1 {
 		return transaction;
 	}
 
-	public AcquirerReversalResponse1 setTransaction(com.tools20022.repository.msg.CardTransaction8 transaction) {
+	public AcquirerReversalResponse1 setTransaction(CardTransaction8 transaction) {
 		this.transaction = Objects.requireNonNull(transaction);
 		return this;
 	}

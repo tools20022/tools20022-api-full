@@ -51,11 +51,15 @@ public class ConstraintFinancialInstrumentdentificationGuideline {
 	 */
 	public static final MMConstraint<FinancialInstrument4> forFinancialInstrument4 = new MMConstraint<FinancialInstrument4>() {
 		{
-			validator = ConstraintFinancialInstrumentdentificationGuideline::checkFinancialInstrument4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentdentificationGuideline";
 			definition = "It is recommended that ISIN be used in Identification\\SecurityIdentification1Choice.";
 			owner_lazy = () -> FinancialInstrument4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrument4 obj) throws Exception {
+			checkFinancialInstrument4(obj);
 		}
 	};
 

@@ -106,7 +106,7 @@ public class CorporateActionEventReferenceSD2 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionEventReferenceSD2, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionEventReferenceSD2, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionEventReferenceSD2.mmObject();
 			isDerived = false;
@@ -117,6 +117,16 @@ public class CorporateActionEventReferenceSD2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionEventReferenceSD2 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventReferenceSD2 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "LkgTp", required = true)
@@ -152,7 +162,7 @@ public class CorporateActionEventReferenceSD2 {
 	 * definition} = "Indicates the reason why two or more events are related."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLinkageType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionEventReferenceSD2, DTCCLinkType1Code> mmLinkageType = new MMMessageAttribute<CorporateActionEventReferenceSD2, DTCCLinkType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionEventReferenceSD2.mmObject();
 			isDerived = false;
@@ -164,6 +174,16 @@ public class CorporateActionEventReferenceSD2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DTCCLinkType1Code.mmObject();
+		}
+
+		@Override
+		public DTCCLinkType1Code getValue(CorporateActionEventReferenceSD2 obj) {
+			return obj.getLinkageType();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventReferenceSD2 obj, DTCCLinkType1Code value) {
+			obj.setLinkageType(value);
 		}
 	};
 	@XmlElement(name = "LkAddedDt", required = true)
@@ -200,7 +220,7 @@ public class CorporateActionEventReferenceSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLinkAddedDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionEventReferenceSD2, ISODate> mmLinkAddedDate = new MMMessageAttribute<CorporateActionEventReferenceSD2, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionEventReferenceSD2.mmObject();
 			isDerived = false;
@@ -212,6 +232,16 @@ public class CorporateActionEventReferenceSD2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(CorporateActionEventReferenceSD2 obj) {
+			return obj.getLinkAddedDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventReferenceSD2 obj, ISODate value) {
+			obj.setLinkAddedDate(value);
 		}
 	};
 	@XmlElement(name = "LkModfdDt")
@@ -248,7 +278,7 @@ public class CorporateActionEventReferenceSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLinkModifiedDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionEventReferenceSD2, Optional<ISODate>> mmLinkModifiedDate = new MMMessageAttribute<CorporateActionEventReferenceSD2, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionEventReferenceSD2.mmObject();
 			isDerived = false;
@@ -260,6 +290,16 @@ public class CorporateActionEventReferenceSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CorporateActionEventReferenceSD2 obj) {
+			return obj.getLinkModifiedDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventReferenceSD2 obj, Optional<ISODate> value) {
+			obj.setLinkModifiedDate(value.orElse(null));
 		}
 	};
 

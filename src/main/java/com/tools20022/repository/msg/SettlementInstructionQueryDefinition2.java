@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SettlementQueryType1Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SettlementInstructionQueryCriteria2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -109,7 +110,7 @@ public class SettlementInstructionQueryDefinition2 {
 	 * SettlementInstructionQueryDefinition1.mmQueryType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementInstructionQueryDefinition2, SettlementQueryType1Code> mmQueryType = new MMMessageAttribute<SettlementInstructionQueryDefinition2, SettlementQueryType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryDefinition2.mmObject();
 			isDerived = false;
@@ -121,6 +122,16 @@ public class SettlementInstructionQueryDefinition2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SettlementQueryType1Code.mmObject();
+		}
+
+		@Override
+		public SettlementQueryType1Code getValue(SettlementInstructionQueryDefinition2 obj) {
+			return obj.getQueryType();
+		}
+
+		@Override
+		public void setValue(SettlementInstructionQueryDefinition2 obj, SettlementQueryType1Code value) {
+			obj.setQueryType(value);
 		}
 	};
 	@XmlElement(name = "SchCrit", required = true)
@@ -160,7 +171,7 @@ public class SettlementInstructionQueryDefinition2 {
 	 * SettlementInstructionQueryDefinition1.mmSearchCriteria}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSearchCriteria = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementInstructionQueryDefinition2, SettlementInstructionQueryCriteria2> mmSearchCriteria = new MMMessageAttribute<SettlementInstructionQueryDefinition2, SettlementInstructionQueryCriteria2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryDefinition2.mmObject();
 			isDerived = false;
@@ -171,7 +182,17 @@ public class SettlementInstructionQueryDefinition2 {
 			previousVersion_lazy = () -> SettlementInstructionQueryDefinition1.mmSearchCriteria;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria2.mmObject();
+			complexType_lazy = () -> SettlementInstructionQueryCriteria2.mmObject();
+		}
+
+		@Override
+		public SettlementInstructionQueryCriteria2 getValue(SettlementInstructionQueryDefinition2 obj) {
+			return obj.getSearchCriteria();
+		}
+
+		@Override
+		public void setValue(SettlementInstructionQueryDefinition2 obj, SettlementInstructionQueryCriteria2 value) {
+			obj.setSearchCriteria(value);
 		}
 	};
 
@@ -202,7 +223,7 @@ public class SettlementInstructionQueryDefinition2 {
 		return searchCriteria;
 	}
 
-	public SettlementInstructionQueryDefinition2 setSearchCriteria(com.tools20022.repository.msg.SettlementInstructionQueryCriteria2 searchCriteria) {
+	public SettlementInstructionQueryDefinition2 setSearchCriteria(SettlementInstructionQueryCriteria2 searchCriteria) {
 		this.searchCriteria = Objects.requireNonNull(searchCriteria);
 		return this;
 	}

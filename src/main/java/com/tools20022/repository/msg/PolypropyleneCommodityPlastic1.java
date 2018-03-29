@@ -112,7 +112,7 @@ public class PolypropyleneCommodityPlastic1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBaseProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PolypropyleneCommodityPlastic1, AssetClassProductType9Code> mmBaseProduct = new MMMessageAttribute<PolypropyleneCommodityPlastic1, AssetClassProductType9Code>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PolypropyleneCommodityPlastic1.mmObject();
@@ -124,6 +124,16 @@ public class PolypropyleneCommodityPlastic1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassProductType9Code.mmObject();
+		}
+
+		@Override
+		public AssetClassProductType9Code getValue(PolypropyleneCommodityPlastic1 obj) {
+			return obj.getBaseProduct();
+		}
+
+		@Override
+		public void setValue(PolypropyleneCommodityPlastic1 obj, AssetClassProductType9Code value) {
+			obj.setBaseProduct(value);
 		}
 	};
 	@XmlElement(name = "SubPdct")
@@ -161,7 +171,7 @@ public class PolypropyleneCommodityPlastic1 {
 	 * definition} = "Sub-product for the underlying asset class."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PolypropyleneCommodityPlastic1, Optional<AssetClassSubProductType18Code>> mmSubProduct = new MMMessageAttribute<PolypropyleneCommodityPlastic1, Optional<AssetClassSubProductType18Code>>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PolypropyleneCommodityPlastic1.mmObject();
@@ -173,6 +183,16 @@ public class PolypropyleneCommodityPlastic1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AssetClassSubProductType18Code.mmObject();
+		}
+
+		@Override
+		public Optional<AssetClassSubProductType18Code> getValue(PolypropyleneCommodityPlastic1 obj) {
+			return obj.getSubProduct();
+		}
+
+		@Override
+		public void setValue(PolypropyleneCommodityPlastic1 obj, Optional<AssetClassSubProductType18Code> value) {
+			obj.setSubProduct(value.orElse(null));
 		}
 	};
 

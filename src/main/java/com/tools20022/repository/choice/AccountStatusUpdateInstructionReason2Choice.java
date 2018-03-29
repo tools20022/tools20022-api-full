@@ -113,7 +113,7 @@ public class AccountStatusUpdateInstructionReason2Choice {
 	 * EnabledStatusReason2Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountStatusUpdateInstructionReason2Choice, AccountStatusUpdateRequestReason1Code> mmCode = new MMMessageAttribute<AccountStatusUpdateInstructionReason2Choice, AccountStatusUpdateRequestReason1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountStatusUpdateInstructionReason2Choice.mmObject();
 			isDerived = false;
@@ -125,6 +125,16 @@ public class AccountStatusUpdateInstructionReason2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AccountStatusUpdateRequestReason1Code.mmObject();
+		}
+
+		@Override
+		public AccountStatusUpdateRequestReason1Code getValue(AccountStatusUpdateInstructionReason2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(AccountStatusUpdateInstructionReason2Choice obj, AccountStatusUpdateRequestReason1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -163,7 +173,7 @@ public class AccountStatusUpdateInstructionReason2Choice {
 	 * EnabledStatusReason2Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountStatusUpdateInstructionReason2Choice, GenericIdentification36> mmProprietary = new MMMessageAssociationEnd<AccountStatusUpdateInstructionReason2Choice, GenericIdentification36>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountStatusUpdateInstructionReason2Choice.mmObject();
 			isDerived = false;
@@ -176,6 +186,16 @@ public class AccountStatusUpdateInstructionReason2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification36.mmObject();
+		}
+
+		@Override
+		public GenericIdentification36 getValue(AccountStatusUpdateInstructionReason2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(AccountStatusUpdateInstructionReason2Choice obj, GenericIdentification36 value) {
+			obj.setProprietary(value);
 		}
 	};
 

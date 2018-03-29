@@ -24,7 +24,6 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TradeServicesManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -163,7 +162,7 @@ public class FullPushThroughReportV05 {
 	 * FullPushThroughReportV04.mmReportIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FullPushThroughReportV05, MessageIdentification1> mmReportIdentification = new MMMessageBuildingBlock<FullPushThroughReportV05, MessageIdentification1>() {
 		{
 			xmlTag = "RptId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,12 +174,14 @@ public class FullPushThroughReportV05 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FullPushThroughReportV05.class.getMethod("getReportIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(FullPushThroughReportV05 obj) {
+			return obj.getReportIdentification();
+		}
+
+		@Override
+		public void setValue(FullPushThroughReportV05 obj, MessageIdentification1 value) {
+			obj.setReportIdentification(value);
 		}
 	};
 	@XmlElement(name = "TxId", required = true)
@@ -215,7 +216,7 @@ public class FullPushThroughReportV05 {
 	 * FullPushThroughReportV04.mmTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FullPushThroughReportV05, SimpleIdentificationInformation> mmTransactionIdentification = new MMMessageBuildingBlock<FullPushThroughReportV05, SimpleIdentificationInformation>() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -227,12 +228,14 @@ public class FullPushThroughReportV05 {
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FullPushThroughReportV05.class.getMethod("getTransactionIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SimpleIdentificationInformation getValue(FullPushThroughReportV05 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(FullPushThroughReportV05 obj, SimpleIdentificationInformation value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "EstblishdBaselnId")
@@ -267,7 +270,7 @@ public class FullPushThroughReportV05 {
 	 * FullPushThroughReportV04.mmEstablishedBaselineIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmEstablishedBaselineIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FullPushThroughReportV05, Optional<DocumentIdentification3>> mmEstablishedBaselineIdentification = new MMMessageBuildingBlock<FullPushThroughReportV05, Optional<DocumentIdentification3>>() {
 		{
 			xmlTag = "EstblishdBaselnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -279,12 +282,14 @@ public class FullPushThroughReportV05 {
 			complexType_lazy = () -> DocumentIdentification3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FullPushThroughReportV05.class.getMethod("getEstablishedBaselineIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<DocumentIdentification3> getValue(FullPushThroughReportV05 obj) {
+			return obj.getEstablishedBaselineIdentification();
+		}
+
+		@Override
+		public void setValue(FullPushThroughReportV05 obj, Optional<DocumentIdentification3> value) {
+			obj.setEstablishedBaselineIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxSts", required = true)
@@ -318,7 +323,7 @@ public class FullPushThroughReportV05 {
 	 * FullPushThroughReportV04.mmTransactionStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FullPushThroughReportV05, TransactionStatus4> mmTransactionStatus = new MMMessageBuildingBlock<FullPushThroughReportV05, TransactionStatus4>() {
 		{
 			xmlTag = "TxSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -330,12 +335,14 @@ public class FullPushThroughReportV05 {
 			complexType_lazy = () -> TransactionStatus4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FullPushThroughReportV05.class.getMethod("getTransactionStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TransactionStatus4 getValue(FullPushThroughReportV05 obj) {
+			return obj.getTransactionStatus();
+		}
+
+		@Override
+		public void setValue(FullPushThroughReportV05 obj, TransactionStatus4 value) {
+			obj.setTransactionStatus(value);
 		}
 	};
 	@XmlElement(name = "UsrTxRef")
@@ -370,7 +377,7 @@ public class FullPushThroughReportV05 {
 	 * FullPushThroughReportV04.mmUserTransactionReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUserTransactionReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FullPushThroughReportV05, List<DocumentIdentification5>> mmUserTransactionReference = new MMMessageBuildingBlock<FullPushThroughReportV05, List<DocumentIdentification5>>() {
 		{
 			xmlTag = "UsrTxRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -382,12 +389,14 @@ public class FullPushThroughReportV05 {
 			complexType_lazy = () -> DocumentIdentification5.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FullPushThroughReportV05.class.getMethod("getUserTransactionReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<DocumentIdentification5> getValue(FullPushThroughReportV05 obj) {
+			return obj.getUserTransactionReference();
+		}
+
+		@Override
+		public void setValue(FullPushThroughReportV05 obj, List<DocumentIdentification5> value) {
+			obj.setUserTransactionReference(value);
 		}
 	};
 	@XmlElement(name = "RptPurp", required = true)
@@ -419,7 +428,7 @@ public class FullPushThroughReportV05 {
 	 * FullPushThroughReportV04.mmReportPurpose}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportPurpose = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FullPushThroughReportV05, ReportType1> mmReportPurpose = new MMMessageBuildingBlock<FullPushThroughReportV05, ReportType1>() {
 		{
 			xmlTag = "RptPurp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -431,12 +440,14 @@ public class FullPushThroughReportV05 {
 			complexType_lazy = () -> ReportType1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FullPushThroughReportV05.class.getMethod("getReportPurpose", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ReportType1 getValue(FullPushThroughReportV05 obj) {
+			return obj.getReportPurpose();
+		}
+
+		@Override
+		public void setValue(FullPushThroughReportV05 obj, ReportType1 value) {
+			obj.setReportPurpose(value);
 		}
 	};
 	@XmlElement(name = "PushdThrghBaseln", required = true)
@@ -469,7 +480,7 @@ public class FullPushThroughReportV05 {
 	 * FullPushThroughReportV04.mmPushedThroughBaseline}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPushedThroughBaseline = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FullPushThroughReportV05, Baseline5> mmPushedThroughBaseline = new MMMessageBuildingBlock<FullPushThroughReportV05, Baseline5>() {
 		{
 			xmlTag = "PushdThrghBaseln";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -481,12 +492,14 @@ public class FullPushThroughReportV05 {
 			complexType_lazy = () -> Baseline5.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FullPushThroughReportV05.class.getMethod("getPushedThroughBaseline", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Baseline5 getValue(FullPushThroughReportV05 obj) {
+			return obj.getPushedThroughBaseline();
+		}
+
+		@Override
+		public void setValue(FullPushThroughReportV05 obj, Baseline5 value) {
+			obj.setPushedThroughBaseline(value);
 		}
 	};
 	@XmlElement(name = "BuyrCtctPrsn")
@@ -519,7 +532,7 @@ public class FullPushThroughReportV05 {
 	 * FullPushThroughReportV04.mmBuyerContactPerson}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmBuyerContactPerson = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FullPushThroughReportV05, List<ContactIdentification1>> mmBuyerContactPerson = new MMMessageBuildingBlock<FullPushThroughReportV05, List<ContactIdentification1>>() {
 		{
 			xmlTag = "BuyrCtctPrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -530,12 +543,14 @@ public class FullPushThroughReportV05 {
 			complexType_lazy = () -> ContactIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FullPushThroughReportV05.class.getMethod("getBuyerContactPerson", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<ContactIdentification1> getValue(FullPushThroughReportV05 obj) {
+			return obj.getBuyerContactPerson();
+		}
+
+		@Override
+		public void setValue(FullPushThroughReportV05 obj, List<ContactIdentification1> value) {
+			obj.setBuyerContactPerson(value);
 		}
 	};
 	@XmlElement(name = "SellrCtctPrsn")
@@ -569,7 +584,7 @@ public class FullPushThroughReportV05 {
 	 * FullPushThroughReportV04.mmSellerContactPerson}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSellerContactPerson = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FullPushThroughReportV05, List<ContactIdentification1>> mmSellerContactPerson = new MMMessageBuildingBlock<FullPushThroughReportV05, List<ContactIdentification1>>() {
 		{
 			xmlTag = "SellrCtctPrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -580,12 +595,14 @@ public class FullPushThroughReportV05 {
 			complexType_lazy = () -> ContactIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FullPushThroughReportV05.class.getMethod("getSellerContactPerson", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<ContactIdentification1> getValue(FullPushThroughReportV05 obj) {
+			return obj.getSellerContactPerson();
+		}
+
+		@Override
+		public void setValue(FullPushThroughReportV05 obj, List<ContactIdentification1> value) {
+			obj.setSellerContactPerson(value);
 		}
 	};
 	@XmlElement(name = "BuyrBkCtctPrsn")
@@ -618,7 +635,7 @@ public class FullPushThroughReportV05 {
 	 * FullPushThroughReportV04.mmBuyerBankContactPerson}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmBuyerBankContactPerson = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FullPushThroughReportV05, List<ContactIdentification1>> mmBuyerBankContactPerson = new MMMessageBuildingBlock<FullPushThroughReportV05, List<ContactIdentification1>>() {
 		{
 			xmlTag = "BuyrBkCtctPrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -629,12 +646,14 @@ public class FullPushThroughReportV05 {
 			complexType_lazy = () -> ContactIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FullPushThroughReportV05.class.getMethod("getBuyerBankContactPerson", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<ContactIdentification1> getValue(FullPushThroughReportV05 obj) {
+			return obj.getBuyerBankContactPerson();
+		}
+
+		@Override
+		public void setValue(FullPushThroughReportV05 obj, List<ContactIdentification1> value) {
+			obj.setBuyerBankContactPerson(value);
 		}
 	};
 	@XmlElement(name = "SellrBkCtctPrsn")
@@ -667,7 +686,7 @@ public class FullPushThroughReportV05 {
 	 * FullPushThroughReportV04.mmSellerBankContactPerson}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSellerBankContactPerson = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FullPushThroughReportV05, List<ContactIdentification1>> mmSellerBankContactPerson = new MMMessageBuildingBlock<FullPushThroughReportV05, List<ContactIdentification1>>() {
 		{
 			xmlTag = "SellrBkCtctPrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -678,12 +697,14 @@ public class FullPushThroughReportV05 {
 			complexType_lazy = () -> ContactIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FullPushThroughReportV05.class.getMethod("getSellerBankContactPerson", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<ContactIdentification1> getValue(FullPushThroughReportV05 obj) {
+			return obj.getSellerBankContactPerson();
+		}
+
+		@Override
+		public void setValue(FullPushThroughReportV05 obj, List<ContactIdentification1> value) {
+			obj.setSellerBankContactPerson(value);
 		}
 	};
 	@XmlElement(name = "OthrBkCtctPrsn")
@@ -718,7 +739,7 @@ public class FullPushThroughReportV05 {
 	 * FullPushThroughReportV04.mmOtherBankContactPerson}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOtherBankContactPerson = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FullPushThroughReportV05, List<ContactIdentification3>> mmOtherBankContactPerson = new MMMessageBuildingBlock<FullPushThroughReportV05, List<ContactIdentification3>>() {
 		{
 			xmlTag = "OthrBkCtctPrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -729,12 +750,14 @@ public class FullPushThroughReportV05 {
 			complexType_lazy = () -> ContactIdentification3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FullPushThroughReportV05.class.getMethod("getOtherBankContactPerson", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<ContactIdentification3> getValue(FullPushThroughReportV05 obj) {
+			return obj.getOtherBankContactPerson();
+		}
+
+		@Override
+		public void setValue(FullPushThroughReportV05 obj, List<ContactIdentification3> value) {
+			obj.setOtherBankContactPerson(value);
 		}
 	};
 	@XmlElement(name = "ReqForActn")
@@ -767,7 +790,7 @@ public class FullPushThroughReportV05 {
 	 * FullPushThroughReportV04.mmRequestForAction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRequestForAction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FullPushThroughReportV05, Optional<PendingActivity2>> mmRequestForAction = new MMMessageBuildingBlock<FullPushThroughReportV05, Optional<PendingActivity2>>() {
 		{
 			xmlTag = "ReqForActn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -779,12 +802,14 @@ public class FullPushThroughReportV05 {
 			complexType_lazy = () -> PendingActivity2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FullPushThroughReportV05.class.getMethod("getRequestForAction", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PendingActivity2> getValue(FullPushThroughReportV05 obj) {
+			return obj.getRequestForAction();
+		}
+
+		@Override
+		public void setValue(FullPushThroughReportV05 obj, Optional<PendingActivity2> value) {
+			obj.setRequestForAction(value.orElse(null));
 		}
 	};
 

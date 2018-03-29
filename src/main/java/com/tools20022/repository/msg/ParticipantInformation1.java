@@ -25,6 +25,8 @@ import com.tools20022.repository.choice.CentralisedAndAuthorisedBranchIdentifica
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ExternalPaymentSystemDetails1;
+import com.tools20022.repository.msg.SystemMigration1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -110,7 +112,7 @@ public class ParticipantInformation1 {
 	 * definition} = "Date the profile was deleted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProfileDeletionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ParticipantInformation1, Optional<ISODateTime>> mmProfileDeletionDate = new MMMessageAttribute<ParticipantInformation1, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantInformation1.mmObject();
 			isDerived = false;
@@ -121,6 +123,16 @@ public class ParticipantInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(ParticipantInformation1 obj) {
+			return obj.getProfileDeletionDate();
+		}
+
+		@Override
+		public void setValue(ParticipantInformation1 obj, Optional<ISODateTime> value) {
+			obj.setProfileDeletionDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BkBrnch")
@@ -153,7 +165,7 @@ public class ParticipantInformation1 {
 	 * "National BIC identifiers for authorised and central branches."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBankBranch = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ParticipantInformation1, Optional<CentralisedAndAuthorisedBranchIdentification1Choice>> mmBankBranch = new MMMessageAssociationEnd<ParticipantInformation1, Optional<CentralisedAndAuthorisedBranchIdentification1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantInformation1.mmObject();
 			isDerived = false;
@@ -165,6 +177,16 @@ public class ParticipantInformation1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CentralisedAndAuthorisedBranchIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CentralisedAndAuthorisedBranchIdentification1Choice> getValue(ParticipantInformation1 obj) {
+			return obj.getBankBranch();
+		}
+
+		@Override
+		public void setValue(ParticipantInformation1 obj, Optional<CentralisedAndAuthorisedBranchIdentification1Choice> value) {
+			obj.setBankBranch(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TermnlId")
@@ -196,7 +218,7 @@ public class ParticipantInformation1 {
 	 * definition} = "CBRF identification of the terminal."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTerminalIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ParticipantInformation1, Optional<Max35Text>> mmTerminalIdentification = new MMMessageAttribute<ParticipantInformation1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantInformation1.mmObject();
 			isDerived = false;
@@ -207,6 +229,16 @@ public class ParticipantInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ParticipantInformation1 obj) {
+			return obj.getTerminalIdentification();
+		}
+
+		@Override
+		public void setValue(ParticipantInformation1 obj, Optional<Max35Text> value) {
+			obj.setTerminalIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rstrctns")
@@ -238,7 +270,7 @@ public class ParticipantInformation1 {
 	 * definition} = "Intraday restrictions details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRestrictions = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ParticipantInformation1, List<Max35Text>> mmRestrictions = new MMMessageAttribute<ParticipantInformation1, List<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantInformation1.mmObject();
 			isDerived = false;
@@ -248,6 +280,16 @@ public class ParticipantInformation1 {
 			definition = "Intraday restrictions details.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(ParticipantInformation1 obj) {
+			return obj.getRestrictions();
+		}
+
+		@Override
+		public void setValue(ParticipantInformation1 obj, List<Max35Text> value) {
+			obj.setRestrictions(value);
 		}
 	};
 	@XmlElement(name = "XtrnlPmtSysInf")
@@ -279,7 +321,7 @@ public class ParticipantInformation1 {
 	 * definition} = "External payment system details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExternalPaymentSystemInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ParticipantInformation1, Optional<ExternalPaymentSystemDetails1>> mmExternalPaymentSystemInformation = new MMMessageAssociationEnd<ParticipantInformation1, Optional<ExternalPaymentSystemDetails1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantInformation1.mmObject();
 			isDerived = false;
@@ -290,7 +332,17 @@ public class ParticipantInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ExternalPaymentSystemDetails1.mmObject();
+			type_lazy = () -> ExternalPaymentSystemDetails1.mmObject();
+		}
+
+		@Override
+		public Optional<ExternalPaymentSystemDetails1> getValue(ParticipantInformation1 obj) {
+			return obj.getExternalPaymentSystemInformation();
+		}
+
+		@Override
+		public void setValue(ParticipantInformation1 obj, Optional<ExternalPaymentSystemDetails1> value) {
+			obj.setExternalPaymentSystemInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Mgrtn", required = true)
@@ -321,7 +373,7 @@ public class ParticipantInformation1 {
 	 * definition} = "Information related for participant migration process."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMigration = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ParticipantInformation1, SystemMigration1> mmMigration = new MMMessageAssociationEnd<ParticipantInformation1, SystemMigration1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantInformation1.mmObject();
 			isDerived = false;
@@ -332,7 +384,17 @@ public class ParticipantInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemMigration1.mmObject();
+			type_lazy = () -> SystemMigration1.mmObject();
+		}
+
+		@Override
+		public SystemMigration1 getValue(ParticipantInformation1 obj) {
+			return obj.getMigration();
+		}
+
+		@Override
+		public void setValue(ParticipantInformation1 obj, SystemMigration1 value) {
+			obj.setMigration(value);
 		}
 	};
 
@@ -391,7 +453,7 @@ public class ParticipantInformation1 {
 		return externalPaymentSystemInformation == null ? Optional.empty() : Optional.of(externalPaymentSystemInformation);
 	}
 
-	public ParticipantInformation1 setExternalPaymentSystemInformation(com.tools20022.repository.msg.ExternalPaymentSystemDetails1 externalPaymentSystemInformation) {
+	public ParticipantInformation1 setExternalPaymentSystemInformation(ExternalPaymentSystemDetails1 externalPaymentSystemInformation) {
 		this.externalPaymentSystemInformation = externalPaymentSystemInformation;
 		return this;
 	}
@@ -400,7 +462,7 @@ public class ParticipantInformation1 {
 		return migration;
 	}
 
-	public ParticipantInformation1 setMigration(com.tools20022.repository.msg.SystemMigration1 migration) {
+	public ParticipantInformation1 setMigration(SystemMigration1 migration) {
 		this.migration = Objects.requireNonNull(migration);
 		return this;
 	}

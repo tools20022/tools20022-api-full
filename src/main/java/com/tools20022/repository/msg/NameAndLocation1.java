@@ -115,7 +115,7 @@ public class NameAndLocation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NameAndLocation1, Max70Text> mmName = new MMMessageAttribute<NameAndLocation1, Max70Text>() {
 		{
 			businessElementTrace_lazy = () -> Sector.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NameAndLocation1.mmObject();
@@ -127,6 +127,16 @@ public class NameAndLocation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Max70Text getValue(NameAndLocation1 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(NameAndLocation1 obj, Max70Text value) {
+			obj.setName(value);
 		}
 	};
 	@XmlElement(name = "Lctn", required = true)
@@ -169,7 +179,7 @@ public class NameAndLocation1 {
 	 * ReportedPartyIdentification1.mmLocation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLocation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NameAndLocation1, CountryCode> mmLocation = new MMMessageAttribute<NameAndLocation1, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmCountry;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NameAndLocation1.mmObject();
@@ -182,6 +192,16 @@ public class NameAndLocation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(NameAndLocation1 obj) {
+			return obj.getLocation();
+		}
+
+		@Override
+		public void setValue(NameAndLocation1 obj, CountryCode value) {
+			obj.setLocation(value);
 		}
 	};
 

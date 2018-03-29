@@ -54,11 +54,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingConfirmationV01> forSecuritiesFinancingConfirmationV01 = new MMConstraint<SecuritiesFinancingConfirmationV01>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesFinancingConfirmationV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesFinancingConfirmationV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingConfirmationV01 obj) throws Exception {
+			checkSecuritiesFinancingConfirmationV01(obj);
 		}
 	};
 	/**
@@ -84,11 +88,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingConfirmationV02> forSecuritiesFinancingConfirmationV02 = new MMConstraint<SecuritiesFinancingConfirmationV02>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesFinancingConfirmationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesFinancingConfirmationV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingConfirmationV02 obj) throws Exception {
+			checkSecuritiesFinancingConfirmationV02(obj);
 		}
 	};
 	/**
@@ -114,11 +122,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingConfirmationV03> forSecuritiesFinancingConfirmationV03 = new MMConstraint<SecuritiesFinancingConfirmationV03>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesFinancingConfirmationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesFinancingConfirmationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingConfirmationV03 obj) throws Exception {
+			checkSecuritiesFinancingConfirmationV03(obj);
 		}
 	};
 	/**
@@ -152,12 +164,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingConfirmationV04> forSecuritiesFinancingConfirmationV04 = new MMConstraint<SecuritiesFinancingConfirmationV04>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesFinancingConfirmationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forSecuritiesFinancingConfirmationV05);
 			owner_lazy = () -> SecuritiesFinancingConfirmationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingConfirmationV04 obj) throws Exception {
+			checkSecuritiesFinancingConfirmationV04(obj);
 		}
 	};
 	/**
@@ -183,11 +199,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingInstructionV01> forSecuritiesFinancingInstructionV01 = new MMConstraint<SecuritiesFinancingInstructionV01>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesFinancingInstructionV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesFinancingInstructionV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingInstructionV01 obj) throws Exception {
+			checkSecuritiesFinancingInstructionV01(obj);
 		}
 	};
 	/**
@@ -213,11 +233,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingInstructionV02> forSecuritiesFinancingInstructionV02 = new MMConstraint<SecuritiesFinancingInstructionV02>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesFinancingInstructionV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesFinancingInstructionV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingInstructionV02 obj) throws Exception {
+			checkSecuritiesFinancingInstructionV02(obj);
 		}
 	};
 	/**
@@ -243,11 +267,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingInstructionV03> forSecuritiesFinancingInstructionV03 = new MMConstraint<SecuritiesFinancingInstructionV03>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesFinancingInstructionV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesFinancingInstructionV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingInstructionV03 obj) throws Exception {
+			checkSecuritiesFinancingInstructionV03(obj);
 		}
 	};
 	/**
@@ -273,11 +301,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV01> forSecuritiesSettlementTransactionConfirmationV01 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV01>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesSettlementTransactionConfirmationV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionConfirmationV01 obj) throws Exception {
+			checkSecuritiesSettlementTransactionConfirmationV01(obj);
 		}
 	};
 	/**
@@ -303,11 +335,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV02> forSecuritiesSettlementTransactionConfirmationV02 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV02>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesSettlementTransactionConfirmationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionConfirmationV02 obj) throws Exception {
+			checkSecuritiesSettlementTransactionConfirmationV02(obj);
 		}
 	};
 	/**
@@ -333,11 +369,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV03> forSecuritiesSettlementTransactionConfirmationV03 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV03>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesSettlementTransactionConfirmationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionConfirmationV03 obj) throws Exception {
+			checkSecuritiesSettlementTransactionConfirmationV03(obj);
 		}
 	};
 	/**
@@ -372,12 +412,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV04> forSecuritiesSettlementTransactionConfirmationV04 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV04>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesSettlementTransactionConfirmationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forSecuritiesSettlementTransactionConfirmationV05);
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionConfirmationV04 obj) throws Exception {
+			checkSecuritiesSettlementTransactionConfirmationV04(obj);
 		}
 	};
 	/**
@@ -403,11 +447,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV01> forSecuritiesSettlementTransactionGenerationNotificationV01 = new MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV01>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesSettlementTransactionGenerationNotificationV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesSettlementTransactionGenerationNotificationV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionGenerationNotificationV01 obj) throws Exception {
+			checkSecuritiesSettlementTransactionGenerationNotificationV01(obj);
 		}
 	};
 	/**
@@ -433,11 +481,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV02> forSecuritiesSettlementTransactionGenerationNotificationV02 = new MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV02>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesSettlementTransactionGenerationNotificationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesSettlementTransactionGenerationNotificationV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionGenerationNotificationV02 obj) throws Exception {
+			checkSecuritiesSettlementTransactionGenerationNotificationV02(obj);
 		}
 	};
 	/**
@@ -463,11 +515,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV03> forSecuritiesSettlementTransactionGenerationNotificationV03 = new MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV03>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesSettlementTransactionGenerationNotificationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesSettlementTransactionGenerationNotificationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionGenerationNotificationV03 obj) throws Exception {
+			checkSecuritiesSettlementTransactionGenerationNotificationV03(obj);
 		}
 	};
 	/**
@@ -502,12 +558,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV04> forSecuritiesSettlementTransactionGenerationNotificationV04 = new MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV04>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesSettlementTransactionGenerationNotificationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forSecuritiesSettlementTransactionGenerationNotificationV05);
 			owner_lazy = () -> SecuritiesSettlementTransactionGenerationNotificationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionGenerationNotificationV04 obj) throws Exception {
+			checkSecuritiesSettlementTransactionGenerationNotificationV04(obj);
 		}
 	};
 	/**
@@ -533,11 +593,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV01> forSecuritiesSettlementTransactionInstructionV01 = new MMConstraint<SecuritiesSettlementTransactionInstructionV01>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesSettlementTransactionInstructionV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV01 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV01(obj);
 		}
 	};
 	/**
@@ -563,11 +627,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV02> forSecuritiesSettlementTransactionInstructionV02 = new MMConstraint<SecuritiesSettlementTransactionInstructionV02>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesSettlementTransactionInstructionV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV02 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV02(obj);
 		}
 	};
 	/**
@@ -593,11 +661,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV03> forSecuritiesSettlementTransactionInstructionV03 = new MMConstraint<SecuritiesSettlementTransactionInstructionV03>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesSettlementTransactionInstructionV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV03 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV03(obj);
 		}
 	};
 	/**
@@ -632,12 +704,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV04> forSecuritiesSettlementTransactionInstructionV04 = new MMConstraint<SecuritiesSettlementTransactionInstructionV04>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesSettlementTransactionInstructionV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forSecuritiesSettlementTransactionInstructionV05);
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV04 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV04(obj);
 		}
 	};
 	/**
@@ -671,12 +747,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingInstructionV04> forSecuritiesFinancingInstructionV04 = new MMConstraint<SecuritiesFinancingInstructionV04>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesFinancingInstructionV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forSecuritiesFinancingInstructionV05);
 			owner_lazy = () -> SecuritiesFinancingInstructionV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingInstructionV04 obj) throws Exception {
+			checkSecuritiesFinancingInstructionV04(obj);
 		}
 	};
 	/**
@@ -702,11 +782,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingModificationInstructionV01> forSecuritiesFinancingModificationInstructionV01 = new MMConstraint<SecuritiesFinancingModificationInstructionV01>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesFinancingModificationInstructionV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesFinancingModificationInstructionV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingModificationInstructionV01 obj) throws Exception {
+			checkSecuritiesFinancingModificationInstructionV01(obj);
 		}
 	};
 	/**
@@ -732,11 +816,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingModificationInstructionV02> forSecuritiesFinancingModificationInstructionV02 = new MMConstraint<SecuritiesFinancingModificationInstructionV02>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesFinancingModificationInstructionV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesFinancingModificationInstructionV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingModificationInstructionV02 obj) throws Exception {
+			checkSecuritiesFinancingModificationInstructionV02(obj);
 		}
 	};
 	/**
@@ -762,11 +850,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV01> forSecuritiesSettlementTransactionAllegementNotificationV01 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV01>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesSettlementTransactionAllegementNotificationV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementNotificationV01 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementNotificationV01(obj);
 		}
 	};
 	/**
@@ -792,11 +884,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV02> forSecuritiesSettlementTransactionAllegementNotificationV02 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV02>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesSettlementTransactionAllegementNotificationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementNotificationV02 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementNotificationV02(obj);
 		}
 	};
 	/**
@@ -822,11 +918,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionReversalAdviceV01> forSecuritiesSettlementTransactionReversalAdviceV01 = new MMConstraint<SecuritiesSettlementTransactionReversalAdviceV01>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesSettlementTransactionReversalAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesSettlementTransactionReversalAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionReversalAdviceV01 obj) throws Exception {
+			checkSecuritiesSettlementTransactionReversalAdviceV01(obj);
 		}
 	};
 	/**
@@ -852,11 +952,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionReversalAdviceV02> forSecuritiesSettlementTransactionReversalAdviceV02 = new MMConstraint<SecuritiesSettlementTransactionReversalAdviceV02>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesSettlementTransactionReversalAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesSettlementTransactionReversalAdviceV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionReversalAdviceV02 obj) throws Exception {
+			checkSecuritiesSettlementTransactionReversalAdviceV02(obj);
 		}
 	};
 	/**
@@ -891,12 +995,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingModificationInstructionV03> forSecuritiesFinancingModificationInstructionV03 = new MMConstraint<SecuritiesFinancingModificationInstructionV03>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesFinancingModificationInstructionV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forSecuritiesFinancingModificationInstructionV04);
 			owner_lazy = () -> SecuritiesFinancingModificationInstructionV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingModificationInstructionV03 obj) throws Exception {
+			checkSecuritiesFinancingModificationInstructionV03(obj);
 		}
 	};
 	/**
@@ -931,12 +1039,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV03> forSecuritiesSettlementTransactionAllegementNotificationV03 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV03>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesSettlementTransactionAllegementNotificationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forSecuritiesSettlementTransactionAllegementNotificationV04);
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementNotificationV03 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementNotificationV03(obj);
 		}
 	};
 	/**
@@ -971,12 +1083,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionReversalAdviceV03> forSecuritiesSettlementTransactionReversalAdviceV03 = new MMConstraint<SecuritiesSettlementTransactionReversalAdviceV03>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesSettlementTransactionReversalAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forSecuritiesSettlementTransactionReversalAdviceV04);
 			owner_lazy = () -> SecuritiesSettlementTransactionReversalAdviceV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionReversalAdviceV03 obj) throws Exception {
+			checkSecuritiesSettlementTransactionReversalAdviceV03(obj);
 		}
 	};
 	/**
@@ -1008,12 +1124,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV04> forSecuritiesSettlementTransactionAllegementNotificationV04 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV04>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesSettlementTransactionAllegementNotificationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forSecuritiesSettlementTransactionAllegementNotificationV03;
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementNotificationV04 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementNotificationV04(obj);
 		}
 	};
 	/**
@@ -1044,12 +1164,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingConfirmationV05> forSecuritiesFinancingConfirmationV05 = new MMConstraint<SecuritiesFinancingConfirmationV05>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesFinancingConfirmationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forSecuritiesFinancingConfirmationV04;
 			owner_lazy = () -> SecuritiesFinancingConfirmationV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingConfirmationV05 obj) throws Exception {
+			checkSecuritiesFinancingConfirmationV05(obj);
 		}
 	};
 	/**
@@ -1081,12 +1205,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV05> forSecuritiesSettlementTransactionGenerationNotificationV05 = new MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV05>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesSettlementTransactionGenerationNotificationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forSecuritiesSettlementTransactionGenerationNotificationV04;
 			owner_lazy = () -> SecuritiesSettlementTransactionGenerationNotificationV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionGenerationNotificationV05 obj) throws Exception {
+			checkSecuritiesSettlementTransactionGenerationNotificationV05(obj);
 		}
 	};
 	/**
@@ -1118,12 +1246,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionReversalAdviceV04> forSecuritiesSettlementTransactionReversalAdviceV04 = new MMConstraint<SecuritiesSettlementTransactionReversalAdviceV04>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesSettlementTransactionReversalAdviceV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forSecuritiesSettlementTransactionReversalAdviceV03;
 			owner_lazy = () -> SecuritiesSettlementTransactionReversalAdviceV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionReversalAdviceV04 obj) throws Exception {
+			checkSecuritiesSettlementTransactionReversalAdviceV04(obj);
 		}
 	};
 	/**
@@ -1154,12 +1286,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingInstructionV05> forSecuritiesFinancingInstructionV05 = new MMConstraint<SecuritiesFinancingInstructionV05>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesFinancingInstructionV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forSecuritiesFinancingInstructionV04;
 			owner_lazy = () -> SecuritiesFinancingInstructionV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingInstructionV05 obj) throws Exception {
+			checkSecuritiesFinancingInstructionV05(obj);
 		}
 	};
 	/**
@@ -1191,12 +1327,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV05> forSecuritiesSettlementTransactionInstructionV05 = new MMConstraint<SecuritiesSettlementTransactionInstructionV05>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesSettlementTransactionInstructionV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forSecuritiesSettlementTransactionInstructionV04;
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV05 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV05(obj);
 		}
 	};
 	/**
@@ -1228,12 +1368,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV05> forSecuritiesSettlementTransactionConfirmationV05 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV05>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesSettlementTransactionConfirmationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forSecuritiesSettlementTransactionConfirmationV04;
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionConfirmationV05 obj) throws Exception {
+			checkSecuritiesSettlementTransactionConfirmationV05(obj);
 		}
 	};
 	/**
@@ -1265,12 +1409,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingModificationInstructionV04> forSecuritiesFinancingModificationInstructionV04 = new MMConstraint<SecuritiesFinancingModificationInstructionV04>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesFinancingModificationInstructionV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forSecuritiesFinancingModificationInstructionV03;
 			owner_lazy = () -> SecuritiesFinancingModificationInstructionV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingModificationInstructionV04 obj) throws Exception {
+			checkSecuritiesFinancingModificationInstructionV04(obj);
 		}
 	};
 	/**
@@ -1296,11 +1444,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AmountAndDirection8> forAmountAndDirection8 = new MMConstraint<AmountAndDirection8>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAmountAndDirection8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AmountAndDirection8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AmountAndDirection8 obj) throws Exception {
+			checkAmountAndDirection8(obj);
 		}
 	};
 	/**
@@ -1326,11 +1478,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails10> forTransactionDetails10 = new MMConstraint<TransactionDetails10>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails10 obj) throws Exception {
+			checkTransactionDetails10(obj);
 		}
 	};
 	/**
@@ -1356,11 +1512,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails29> forTransactionDetails29 = new MMConstraint<TransactionDetails29>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails29;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails29.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails29 obj) throws Exception {
+			checkTransactionDetails29(obj);
 		}
 	};
 	/**
@@ -1386,11 +1546,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<ForeignExchangeTerms11> forForeignExchangeTerms11 = new MMConstraint<ForeignExchangeTerms11>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkForeignExchangeTerms11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> ForeignExchangeTerms11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ForeignExchangeTerms11 obj) throws Exception {
+			checkForeignExchangeTerms11(obj);
 		}
 	};
 	/**
@@ -1424,12 +1588,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AmountAndDirection32> forAmountAndDirection32 = new MMConstraint<AmountAndDirection32>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAmountAndDirection32;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forAmountAndDirection37);
 			owner_lazy = () -> AmountAndDirection32.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AmountAndDirection32 obj) throws Exception {
+			checkAmountAndDirection32(obj);
 		}
 	};
 	/**
@@ -1455,11 +1623,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AmountAndDirection9> forAmountAndDirection9 = new MMConstraint<AmountAndDirection9>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAmountAndDirection9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AmountAndDirection9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AmountAndDirection9 obj) throws Exception {
+			checkAmountAndDirection9(obj);
 		}
 	};
 	/**
@@ -1484,11 +1656,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<OtherAmounts12> forOtherAmounts12 = new MMConstraint<OtherAmounts12>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkOtherAmounts12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> OtherAmounts12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherAmounts12 obj) throws Exception {
+			checkOtherAmounts12(obj);
 		}
 	};
 	/**
@@ -1513,11 +1689,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<OtherAmounts14> forOtherAmounts14 = new MMConstraint<OtherAmounts14>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkOtherAmounts14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> OtherAmounts14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherAmounts14 obj) throws Exception {
+			checkOtherAmounts14(obj);
 		}
 	};
 	/**
@@ -1543,11 +1723,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails28> forTransactionDetails28 = new MMConstraint<TransactionDetails28>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails28.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails28 obj) throws Exception {
+			checkTransactionDetails28(obj);
 		}
 	};
 	/**
@@ -1573,11 +1757,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AmountAndDirection12> forAmountAndDirection12 = new MMConstraint<AmountAndDirection12>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAmountAndDirection12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> AmountAndDirection12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AmountAndDirection12 obj) throws Exception {
+			checkAmountAndDirection12(obj);
 		}
 	};
 	/**
@@ -1603,11 +1791,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails31> forTransactionDetails31 = new MMConstraint<TransactionDetails31>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails31;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails31.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails31 obj) throws Exception {
+			checkTransactionDetails31(obj);
 		}
 	};
 	/**
@@ -1633,11 +1825,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails44> forTransactionDetails44 = new MMConstraint<TransactionDetails44>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails44;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails44.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails44 obj) throws Exception {
+			checkTransactionDetails44(obj);
 		}
 	};
 	/**
@@ -1663,11 +1859,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<ForeignExchangeTerms12> forForeignExchangeTerms12 = new MMConstraint<ForeignExchangeTerms12>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkForeignExchangeTerms12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> ForeignExchangeTerms12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ForeignExchangeTerms12 obj) throws Exception {
+			checkForeignExchangeTerms12(obj);
 		}
 	};
 	/**
@@ -1693,11 +1893,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AmountAndDirection33> forAmountAndDirection33 = new MMConstraint<AmountAndDirection33>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAmountAndDirection33;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AmountAndDirection33.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AmountAndDirection33 obj) throws Exception {
+			checkAmountAndDirection33(obj);
 		}
 	};
 	/**
@@ -1723,11 +1927,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AmountAndDirection17> forAmountAndDirection17 = new MMConstraint<AmountAndDirection17>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAmountAndDirection17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> AmountAndDirection17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AmountAndDirection17 obj) throws Exception {
+			checkAmountAndDirection17(obj);
 		}
 	};
 	/**
@@ -1752,11 +1960,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<OtherAmounts20> forOtherAmounts20 = new MMConstraint<OtherAmounts20>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkOtherAmounts20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> OtherAmounts20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherAmounts20 obj) throws Exception {
+			checkOtherAmounts20(obj);
 		}
 	};
 	/**
@@ -1782,11 +1994,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<OriginalAndCurrentQuantities2> forOriginalAndCurrentQuantities2 = new MMConstraint<OriginalAndCurrentQuantities2>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkOriginalAndCurrentQuantities2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> OriginalAndCurrentQuantities2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OriginalAndCurrentQuantities2 obj) throws Exception {
+			checkOriginalAndCurrentQuantities2(obj);
 		}
 	};
 	/**
@@ -1812,11 +2028,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<Quantity4Choice> forQuantity4Choice = new MMConstraint<Quantity4Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkQuantity4Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> Quantity4Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Quantity4Choice obj) throws Exception {
+			checkQuantity4Choice(obj);
 		}
 	};
 	/**
@@ -1842,11 +2062,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateAndAmountFormat12Choice> forRateAndAmountFormat12Choice = new MMConstraint<RateAndAmountFormat12Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateAndAmountFormat12Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> RateAndAmountFormat12Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateAndAmountFormat12Choice obj) throws Exception {
+			checkRateAndAmountFormat12Choice(obj);
 		}
 	};
 	/**
@@ -1872,11 +2096,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<PriceFormat5Choice> forPriceFormat5Choice = new MMConstraint<PriceFormat5Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkPriceFormat5Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> PriceFormat5Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceFormat5Choice obj) throws Exception {
+			checkPriceFormat5Choice(obj);
 		}
 	};
 	/**
@@ -1902,11 +2130,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<PriceFormat9Choice> forPriceFormat9Choice = new MMConstraint<PriceFormat9Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkPriceFormat9Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> PriceFormat9Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceFormat9Choice obj) throws Exception {
+			checkPriceFormat9Choice(obj);
 		}
 	};
 	/**
@@ -1932,11 +2164,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption5> forCorporateActionOption5 = new MMConstraint<CorporateActionOption5>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionOption5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption5 obj) throws Exception {
+			checkCorporateActionOption5(obj);
 		}
 	};
 	/**
@@ -1962,11 +2198,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<OriginalAndCurrentQuantities3> forOriginalAndCurrentQuantities3 = new MMConstraint<OriginalAndCurrentQuantities3>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkOriginalAndCurrentQuantities3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> OriginalAndCurrentQuantities3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OriginalAndCurrentQuantities3 obj) throws Exception {
+			checkOriginalAndCurrentQuantities3(obj);
 		}
 	};
 	/**
@@ -1992,11 +2232,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<Quantity9Choice> forQuantity9Choice = new MMConstraint<Quantity9Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkQuantity9Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> Quantity9Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Quantity9Choice obj) throws Exception {
+			checkQuantity9Choice(obj);
 		}
 	};
 	/**
@@ -2022,11 +2266,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateAndAmountFormat13Choice> forRateAndAmountFormat13Choice = new MMConstraint<RateAndAmountFormat13Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateAndAmountFormat13Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> RateAndAmountFormat13Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateAndAmountFormat13Choice obj) throws Exception {
+			checkRateAndAmountFormat13Choice(obj);
 		}
 	};
 	/**
@@ -2052,11 +2300,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<PriceFormat17Choice> forPriceFormat17Choice = new MMConstraint<PriceFormat17Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkPriceFormat17Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> PriceFormat17Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceFormat17Choice obj) throws Exception {
+			checkPriceFormat17Choice(obj);
 		}
 	};
 	/**
@@ -2082,11 +2334,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<PriceFormat18Choice> forPriceFormat18Choice = new MMConstraint<PriceFormat18Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkPriceFormat18Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> PriceFormat18Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceFormat18Choice obj) throws Exception {
+			checkPriceFormat18Choice(obj);
 		}
 	};
 	/**
@@ -2112,11 +2368,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption13> forCorporateActionOption13 = new MMConstraint<CorporateActionOption13>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> CorporateActionOption13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption13 obj) throws Exception {
+			checkCorporateActionOption13(obj);
 		}
 	};
 	/**
@@ -2150,12 +2410,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<PriceFormat21Choice> forPriceFormat21Choice = new MMConstraint<PriceFormat21Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkPriceFormat21Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forPriceFormat33Choice);
 			owner_lazy = () -> PriceFormat21Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceFormat21Choice obj) throws Exception {
+			checkPriceFormat21Choice(obj);
 		}
 	};
 	/**
@@ -2181,11 +2445,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption25> forCorporateActionOption25 = new MMConstraint<CorporateActionOption25>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionOption25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption25 obj) throws Exception {
+			checkCorporateActionOption25(obj);
 		}
 	};
 	/**
@@ -2211,11 +2479,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<PriceFormat24Choice> forPriceFormat24Choice = new MMConstraint<PriceFormat24Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkPriceFormat24Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> PriceFormat24Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceFormat24Choice obj) throws Exception {
+			checkPriceFormat24Choice(obj);
 		}
 	};
 	/**
@@ -2241,11 +2513,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption30> forCorporateActionOption30 = new MMConstraint<CorporateActionOption30>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionOption30.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption30 obj) throws Exception {
+			checkCorporateActionOption30(obj);
 		}
 	};
 	/**
@@ -2271,11 +2547,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption38> forCorporateActionOption38 = new MMConstraint<CorporateActionOption38>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption38;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionOption38.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption38 obj) throws Exception {
+			checkCorporateActionOption38(obj);
 		}
 	};
 	/**
@@ -2301,11 +2581,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption47> forCorporateActionOption47 = new MMConstraint<CorporateActionOption47>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption47;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionOption47.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption47 obj) throws Exception {
+			checkCorporateActionOption47(obj);
 		}
 	};
 	/**
@@ -2339,12 +2623,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption57> forCorporateActionOption57 = new MMConstraint<CorporateActionOption57>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption57;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forCorporateActionOption103);
 			owner_lazy = () -> CorporateActionOption57.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption57 obj) throws Exception {
+			checkCorporateActionOption57(obj);
 		}
 	};
 	/**
@@ -2370,11 +2658,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption58> forCorporateActionOption58 = new MMConstraint<CorporateActionOption58>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption58;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionOption58.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption58 obj) throws Exception {
+			checkCorporateActionOption58(obj);
 		}
 	};
 	/**
@@ -2400,11 +2692,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateAndAmountFormat5Choice> forRateAndAmountFormat5Choice = new MMConstraint<RateAndAmountFormat5Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateAndAmountFormat5Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> RateAndAmountFormat5Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateAndAmountFormat5Choice obj) throws Exception {
+			checkRateAndAmountFormat5Choice(obj);
 		}
 	};
 	/**
@@ -2430,11 +2726,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateTypeAndAmountAndStatus1> forRateTypeAndAmountAndStatus1 = new MMConstraint<RateTypeAndAmountAndStatus1>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateTypeAndAmountAndStatus1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> RateTypeAndAmountAndStatus1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateTypeAndAmountAndStatus1 obj) throws Exception {
+			checkRateTypeAndAmountAndStatus1(obj);
 		}
 	};
 	/**
@@ -2460,11 +2760,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<GrossDividendRateFormat2Choice> forGrossDividendRateFormat2Choice = new MMConstraint<GrossDividendRateFormat2Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkGrossDividendRateFormat2Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> GrossDividendRateFormat2Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GrossDividendRateFormat2Choice obj) throws Exception {
+			checkGrossDividendRateFormat2Choice(obj);
 		}
 	};
 	/**
@@ -2490,11 +2794,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateTypeAndAmountAndStatus3> forRateTypeAndAmountAndStatus3 = new MMConstraint<RateTypeAndAmountAndStatus3>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateTypeAndAmountAndStatus3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> RateTypeAndAmountAndStatus3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateTypeAndAmountAndStatus3 obj) throws Exception {
+			checkRateTypeAndAmountAndStatus3(obj);
 		}
 	};
 	/**
@@ -2520,11 +2828,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<InterestRateUsedForPaymentFormat2Choice> forInterestRateUsedForPaymentFormat2Choice = new MMConstraint<InterestRateUsedForPaymentFormat2Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkInterestRateUsedForPaymentFormat2Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> InterestRateUsedForPaymentFormat2Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InterestRateUsedForPaymentFormat2Choice obj) throws Exception {
+			checkInterestRateUsedForPaymentFormat2Choice(obj);
 		}
 	};
 	/**
@@ -2550,11 +2862,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateTypeAndAmountAndStatus4> forRateTypeAndAmountAndStatus4 = new MMConstraint<RateTypeAndAmountAndStatus4>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateTypeAndAmountAndStatus4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> RateTypeAndAmountAndStatus4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateTypeAndAmountAndStatus4 obj) throws Exception {
+			checkRateTypeAndAmountAndStatus4(obj);
 		}
 	};
 	/**
@@ -2580,11 +2896,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<NetDividendRateFormat2Choice> forNetDividendRateFormat2Choice = new MMConstraint<NetDividendRateFormat2Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkNetDividendRateFormat2Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> NetDividendRateFormat2Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(NetDividendRateFormat2Choice obj) throws Exception {
+			checkNetDividendRateFormat2Choice(obj);
 		}
 	};
 	/**
@@ -2610,11 +2930,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateTypeAndAmountAndStatus5> forRateTypeAndAmountAndStatus5 = new MMConstraint<RateTypeAndAmountAndStatus5>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateTypeAndAmountAndStatus5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> RateTypeAndAmountAndStatus5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateTypeAndAmountAndStatus5 obj) throws Exception {
+			checkRateTypeAndAmountAndStatus5(obj);
 		}
 	};
 	/**
@@ -2640,11 +2964,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TaxCreditRateFormat2Choice> forTaxCreditRateFormat2Choice = new MMConstraint<TaxCreditRateFormat2Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTaxCreditRateFormat2Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TaxCreditRateFormat2Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TaxCreditRateFormat2Choice obj) throws Exception {
+			checkTaxCreditRateFormat2Choice(obj);
 		}
 	};
 	/**
@@ -2670,11 +2998,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateTypeAndAmountAndStatus6> forRateTypeAndAmountAndStatus6 = new MMConstraint<RateTypeAndAmountAndStatus6>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateTypeAndAmountAndStatus6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> RateTypeAndAmountAndStatus6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateTypeAndAmountAndStatus6 obj) throws Exception {
+			checkRateTypeAndAmountAndStatus6(obj);
 		}
 	};
 	/**
@@ -2700,11 +3032,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<PriceFormat6Choice> forPriceFormat6Choice = new MMConstraint<PriceFormat6Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkPriceFormat6Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> PriceFormat6Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceFormat6Choice obj) throws Exception {
+			checkPriceFormat6Choice(obj);
 		}
 	};
 	/**
@@ -2738,12 +3074,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<PriceFormat7Choice> forPriceFormat7Choice = new MMConstraint<PriceFormat7Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkPriceFormat7Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forPriceFormat34Choice);
 			owner_lazy = () -> PriceFormat7Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceFormat7Choice obj) throws Exception {
+			checkPriceFormat7Choice(obj);
 		}
 	};
 	/**
@@ -2769,11 +3109,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RatioFormat3Choice> forRatioFormat3Choice = new MMConstraint<RatioFormat3Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRatioFormat3Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> RatioFormat3Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RatioFormat3Choice obj) throws Exception {
+			checkRatioFormat3Choice(obj);
 		}
 	};
 	/**
@@ -2799,11 +3143,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AmountAndQuantityRatio2> forAmountAndQuantityRatio2 = new MMConstraint<AmountAndQuantityRatio2>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAmountAndQuantityRatio2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AmountAndQuantityRatio2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AmountAndQuantityRatio2 obj) throws Exception {
+			checkAmountAndQuantityRatio2(obj);
 		}
 	};
 	/**
@@ -2829,11 +3177,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RatioFormat4Choice> forRatioFormat4Choice = new MMConstraint<RatioFormat4Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRatioFormat4Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> RatioFormat4Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RatioFormat4Choice obj) throws Exception {
+			checkRatioFormat4Choice(obj);
 		}
 	};
 	/**
@@ -2859,11 +3211,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionAmounts2> forCorporateActionAmounts2 = new MMConstraint<CorporateActionAmounts2>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionAmounts2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionAmounts2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionAmounts2 obj) throws Exception {
+			checkCorporateActionAmounts2(obj);
 		}
 	};
 	/**
@@ -2888,11 +3244,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CashOption2> forCashOption2 = new MMConstraint<CashOption2>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCashOption2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CashOption2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption2 obj) throws Exception {
+			checkCashOption2(obj);
 		}
 	};
 	/**
@@ -2918,11 +3278,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption4> forCorporateActionOption4 = new MMConstraint<CorporateActionOption4>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionOption4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption4 obj) throws Exception {
+			checkCorporateActionOption4(obj);
 		}
 	};
 	/**
@@ -2948,11 +3312,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateAndAmountFormat6Choice> forRateAndAmountFormat6Choice = new MMConstraint<RateAndAmountFormat6Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateAndAmountFormat6Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> RateAndAmountFormat6Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateAndAmountFormat6Choice obj) throws Exception {
+			checkRateAndAmountFormat6Choice(obj);
 		}
 	};
 	/**
@@ -2978,11 +3346,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateTypeAndAmountAndStatus2> forRateTypeAndAmountAndStatus2 = new MMConstraint<RateTypeAndAmountAndStatus2>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateTypeAndAmountAndStatus2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> RateTypeAndAmountAndStatus2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateTypeAndAmountAndStatus2 obj) throws Exception {
+			checkRateTypeAndAmountAndStatus2(obj);
 		}
 	};
 	/**
@@ -3008,11 +3380,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<GrossDividendRateFormat3Choice> forGrossDividendRateFormat3Choice = new MMConstraint<GrossDividendRateFormat3Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkGrossDividendRateFormat3Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> GrossDividendRateFormat3Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GrossDividendRateFormat3Choice obj) throws Exception {
+			checkGrossDividendRateFormat3Choice(obj);
 		}
 	};
 	/**
@@ -3038,11 +3414,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateTypeAndAmountAndStatus7> forRateTypeAndAmountAndStatus7 = new MMConstraint<RateTypeAndAmountAndStatus7>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateTypeAndAmountAndStatus7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> RateTypeAndAmountAndStatus7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateTypeAndAmountAndStatus7 obj) throws Exception {
+			checkRateTypeAndAmountAndStatus7(obj);
 		}
 	};
 	/**
@@ -3068,11 +3448,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<InterestRateUsedForPaymentFormat3Choice> forInterestRateUsedForPaymentFormat3Choice = new MMConstraint<InterestRateUsedForPaymentFormat3Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkInterestRateUsedForPaymentFormat3Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> InterestRateUsedForPaymentFormat3Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InterestRateUsedForPaymentFormat3Choice obj) throws Exception {
+			checkInterestRateUsedForPaymentFormat3Choice(obj);
 		}
 	};
 	/**
@@ -3098,11 +3482,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateTypeAndAmountAndStatus8> forRateTypeAndAmountAndStatus8 = new MMConstraint<RateTypeAndAmountAndStatus8>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateTypeAndAmountAndStatus8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> RateTypeAndAmountAndStatus8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateTypeAndAmountAndStatus8 obj) throws Exception {
+			checkRateTypeAndAmountAndStatus8(obj);
 		}
 	};
 	/**
@@ -3128,11 +3516,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<NetDividendRateFormat3Choice> forNetDividendRateFormat3Choice = new MMConstraint<NetDividendRateFormat3Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkNetDividendRateFormat3Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> NetDividendRateFormat3Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(NetDividendRateFormat3Choice obj) throws Exception {
+			checkNetDividendRateFormat3Choice(obj);
 		}
 	};
 	/**
@@ -3158,11 +3550,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateTypeAndAmountAndStatus9> forRateTypeAndAmountAndStatus9 = new MMConstraint<RateTypeAndAmountAndStatus9>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateTypeAndAmountAndStatus9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> RateTypeAndAmountAndStatus9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateTypeAndAmountAndStatus9 obj) throws Exception {
+			checkRateTypeAndAmountAndStatus9(obj);
 		}
 	};
 	/**
@@ -3188,11 +3584,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TaxCreditRateFormat3Choice> forTaxCreditRateFormat3Choice = new MMConstraint<TaxCreditRateFormat3Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTaxCreditRateFormat3Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> TaxCreditRateFormat3Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TaxCreditRateFormat3Choice obj) throws Exception {
+			checkTaxCreditRateFormat3Choice(obj);
 		}
 	};
 	/**
@@ -3218,11 +3618,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateTypeAndAmountAndStatus10> forRateTypeAndAmountAndStatus10 = new MMConstraint<RateTypeAndAmountAndStatus10>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateTypeAndAmountAndStatus10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> RateTypeAndAmountAndStatus10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateTypeAndAmountAndStatus10 obj) throws Exception {
+			checkRateTypeAndAmountAndStatus10(obj);
 		}
 	};
 	/**
@@ -3248,11 +3652,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<PriceFormat12Choice> forPriceFormat12Choice = new MMConstraint<PriceFormat12Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkPriceFormat12Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> PriceFormat12Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceFormat12Choice obj) throws Exception {
+			checkPriceFormat12Choice(obj);
 		}
 	};
 	/**
@@ -3278,11 +3686,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<PriceFormat13Choice> forPriceFormat13Choice = new MMConstraint<PriceFormat13Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkPriceFormat13Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> PriceFormat13Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceFormat13Choice obj) throws Exception {
+			checkPriceFormat13Choice(obj);
 		}
 	};
 	/**
@@ -3308,11 +3720,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RatioFormat7Choice> forRatioFormat7Choice = new MMConstraint<RatioFormat7Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRatioFormat7Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> RatioFormat7Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RatioFormat7Choice obj) throws Exception {
+			checkRatioFormat7Choice(obj);
 		}
 	};
 	/**
@@ -3338,11 +3754,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AmountAndQuantityRatio3> forAmountAndQuantityRatio3 = new MMConstraint<AmountAndQuantityRatio3>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAmountAndQuantityRatio3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> AmountAndQuantityRatio3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AmountAndQuantityRatio3 obj) throws Exception {
+			checkAmountAndQuantityRatio3(obj);
 		}
 	};
 	/**
@@ -3368,11 +3788,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RatioFormat8Choice> forRatioFormat8Choice = new MMConstraint<RatioFormat8Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRatioFormat8Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> RatioFormat8Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RatioFormat8Choice obj) throws Exception {
+			checkRatioFormat8Choice(obj);
 		}
 	};
 	/**
@@ -3398,11 +3822,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionAmounts5> forCorporateActionAmounts5 = new MMConstraint<CorporateActionAmounts5>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionAmounts5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> CorporateActionAmounts5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionAmounts5 obj) throws Exception {
+			checkCorporateActionAmounts5(obj);
 		}
 	};
 	/**
@@ -3427,11 +3855,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CashOption9> forCashOption9 = new MMConstraint<CashOption9>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCashOption9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> CashOption9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption9 obj) throws Exception {
+			checkCashOption9(obj);
 		}
 	};
 	/**
@@ -3457,11 +3889,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption14> forCorporateActionOption14 = new MMConstraint<CorporateActionOption14>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> CorporateActionOption14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption14 obj) throws Exception {
+			checkCorporateActionOption14(obj);
 		}
 	};
 	/**
@@ -3487,11 +3923,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateTypeAndAmountAndStatus11> forRateTypeAndAmountAndStatus11 = new MMConstraint<RateTypeAndAmountAndStatus11>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateTypeAndAmountAndStatus11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> RateTypeAndAmountAndStatus11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateTypeAndAmountAndStatus11 obj) throws Exception {
+			checkRateTypeAndAmountAndStatus11(obj);
 		}
 	};
 	/**
@@ -3517,11 +3957,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionAmounts11> forCorporateActionAmounts11 = new MMConstraint<CorporateActionAmounts11>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionAmounts11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionAmounts11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionAmounts11 obj) throws Exception {
+			checkCorporateActionAmounts11(obj);
 		}
 	};
 	/**
@@ -3546,11 +3990,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CashOption12> forCashOption12 = new MMConstraint<CashOption12>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCashOption12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CashOption12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption12 obj) throws Exception {
+			checkCashOption12(obj);
 		}
 	};
 	/**
@@ -3576,11 +4024,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption23> forCorporateActionOption23 = new MMConstraint<CorporateActionOption23>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionOption23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption23 obj) throws Exception {
+			checkCorporateActionOption23(obj);
 		}
 	};
 	/**
@@ -3606,11 +4058,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateTypeAndAmountAndStatus12> forRateTypeAndAmountAndStatus12 = new MMConstraint<RateTypeAndAmountAndStatus12>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateTypeAndAmountAndStatus12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> RateTypeAndAmountAndStatus12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateTypeAndAmountAndStatus12 obj) throws Exception {
+			checkRateTypeAndAmountAndStatus12(obj);
 		}
 	};
 	/**
@@ -3636,11 +4092,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionAmounts12> forCorporateActionAmounts12 = new MMConstraint<CorporateActionAmounts12>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionAmounts12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionAmounts12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionAmounts12 obj) throws Exception {
+			checkCorporateActionAmounts12(obj);
 		}
 	};
 	/**
@@ -3665,11 +4125,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CashOption13> forCashOption13 = new MMConstraint<CashOption13>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCashOption13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CashOption13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption13 obj) throws Exception {
+			checkCashOption13(obj);
 		}
 	};
 	/**
@@ -3695,11 +4159,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption31> forCorporateActionOption31 = new MMConstraint<CorporateActionOption31>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption31;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionOption31.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption31 obj) throws Exception {
+			checkCorporateActionOption31(obj);
 		}
 	};
 	/**
@@ -3725,11 +4193,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<NetDividendRateFormat1Choice> forNetDividendRateFormat1Choice = new MMConstraint<NetDividendRateFormat1Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkNetDividendRateFormat1Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> NetDividendRateFormat1Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(NetDividendRateFormat1Choice obj) throws Exception {
+			checkNetDividendRateFormat1Choice(obj);
 		}
 	};
 	/**
@@ -3755,11 +4227,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<NetDividendRateFormat5Choice> forNetDividendRateFormat5Choice = new MMConstraint<NetDividendRateFormat5Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkNetDividendRateFormat5Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> NetDividendRateFormat5Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(NetDividendRateFormat5Choice obj) throws Exception {
+			checkNetDividendRateFormat5Choice(obj);
 		}
 	};
 	/**
@@ -3785,11 +4261,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<NetDividendRateFormat7Choice> forNetDividendRateFormat7Choice = new MMConstraint<NetDividendRateFormat7Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkNetDividendRateFormat7Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> NetDividendRateFormat7Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(NetDividendRateFormat7Choice obj) throws Exception {
+			checkNetDividendRateFormat7Choice(obj);
 		}
 	};
 	/**
@@ -3815,11 +4295,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RatioFormat15Choice> forRatioFormat15Choice = new MMConstraint<RatioFormat15Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRatioFormat15Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> RatioFormat15Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RatioFormat15Choice obj) throws Exception {
+			checkRatioFormat15Choice(obj);
 		}
 	};
 	/**
@@ -3845,11 +4329,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionAmounts17> forCorporateActionAmounts17 = new MMConstraint<CorporateActionAmounts17>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionAmounts17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionAmounts17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionAmounts17 obj) throws Exception {
+			checkCorporateActionAmounts17(obj);
 		}
 	};
 	/**
@@ -3874,11 +4362,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CashOption18> forCashOption18 = new MMConstraint<CashOption18>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCashOption18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CashOption18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption18 obj) throws Exception {
+			checkCashOption18(obj);
 		}
 	};
 	/**
@@ -3904,11 +4396,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption37> forCorporateActionOption37 = new MMConstraint<CorporateActionOption37>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption37;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionOption37.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption37 obj) throws Exception {
+			checkCorporateActionOption37(obj);
 		}
 	};
 	/**
@@ -3934,11 +4430,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<NetDividendRateFormat8Choice> forNetDividendRateFormat8Choice = new MMConstraint<NetDividendRateFormat8Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkNetDividendRateFormat8Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> NetDividendRateFormat8Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(NetDividendRateFormat8Choice obj) throws Exception {
+			checkNetDividendRateFormat8Choice(obj);
 		}
 	};
 	/**
@@ -3964,11 +4464,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RatioFormat16Choice> forRatioFormat16Choice = new MMConstraint<RatioFormat16Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRatioFormat16Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> RatioFormat16Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RatioFormat16Choice obj) throws Exception {
+			checkRatioFormat16Choice(obj);
 		}
 	};
 	/**
@@ -3994,11 +4498,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionAmounts20> forCorporateActionAmounts20 = new MMConstraint<CorporateActionAmounts20>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionAmounts20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionAmounts20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionAmounts20 obj) throws Exception {
+			checkCorporateActionAmounts20(obj);
 		}
 	};
 	/**
@@ -4023,11 +4531,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CashOption22> forCashOption22 = new MMConstraint<CashOption22>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCashOption22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CashOption22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption22 obj) throws Exception {
+			checkCashOption22(obj);
 		}
 	};
 	/**
@@ -4053,11 +4565,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption46> forCorporateActionOption46 = new MMConstraint<CorporateActionOption46>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption46;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionOption46.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption46 obj) throws Exception {
+			checkCorporateActionOption46(obj);
 		}
 	};
 	/**
@@ -4083,11 +4599,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateTypeAndAmountAndStatus15> forRateTypeAndAmountAndStatus15 = new MMConstraint<RateTypeAndAmountAndStatus15>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateTypeAndAmountAndStatus15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> RateTypeAndAmountAndStatus15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateTypeAndAmountAndStatus15 obj) throws Exception {
+			checkRateTypeAndAmountAndStatus15(obj);
 		}
 	};
 	/**
@@ -4113,11 +4633,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<GrossDividendRateFormat10Choice> forGrossDividendRateFormat10Choice = new MMConstraint<GrossDividendRateFormat10Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkGrossDividendRateFormat10Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> GrossDividendRateFormat10Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GrossDividendRateFormat10Choice obj) throws Exception {
+			checkGrossDividendRateFormat10Choice(obj);
 		}
 	};
 	/**
@@ -4143,11 +4667,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateTypeAndAmountAndStatus16> forRateTypeAndAmountAndStatus16 = new MMConstraint<RateTypeAndAmountAndStatus16>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateTypeAndAmountAndStatus16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> RateTypeAndAmountAndStatus16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateTypeAndAmountAndStatus16 obj) throws Exception {
+			checkRateTypeAndAmountAndStatus16(obj);
 		}
 	};
 	/**
@@ -4173,11 +4701,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<NetDividendRateFormat12Choice> forNetDividendRateFormat12Choice = new MMConstraint<NetDividendRateFormat12Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkNetDividendRateFormat12Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> NetDividendRateFormat12Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(NetDividendRateFormat12Choice obj) throws Exception {
+			checkNetDividendRateFormat12Choice(obj);
 		}
 	};
 	/**
@@ -4211,12 +4743,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionAmounts23> forCorporateActionAmounts23 = new MMConstraint<CorporateActionAmounts23>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionAmounts23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forCorporateActionAmounts29);
 			owner_lazy = () -> CorporateActionAmounts23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionAmounts23 obj) throws Exception {
+			checkCorporateActionAmounts23(obj);
 		}
 	};
 	/**
@@ -4242,11 +4778,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateTypeAndAmountAndStatus13> forRateTypeAndAmountAndStatus13 = new MMConstraint<RateTypeAndAmountAndStatus13>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateTypeAndAmountAndStatus13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> RateTypeAndAmountAndStatus13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateTypeAndAmountAndStatus13 obj) throws Exception {
+			checkRateTypeAndAmountAndStatus13(obj);
 		}
 	};
 	/**
@@ -4272,11 +4812,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<GrossDividendRateFormat8Choice> forGrossDividendRateFormat8Choice = new MMConstraint<GrossDividendRateFormat8Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkGrossDividendRateFormat8Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> GrossDividendRateFormat8Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GrossDividendRateFormat8Choice obj) throws Exception {
+			checkGrossDividendRateFormat8Choice(obj);
 		}
 	};
 	/**
@@ -4302,11 +4846,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateTypeAndAmountAndStatus14> forRateTypeAndAmountAndStatus14 = new MMConstraint<RateTypeAndAmountAndStatus14>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateTypeAndAmountAndStatus14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> RateTypeAndAmountAndStatus14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateTypeAndAmountAndStatus14 obj) throws Exception {
+			checkRateTypeAndAmountAndStatus14(obj);
 		}
 	};
 	/**
@@ -4332,11 +4880,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<NetDividendRateFormat10Choice> forNetDividendRateFormat10Choice = new MMConstraint<NetDividendRateFormat10Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkNetDividendRateFormat10Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> NetDividendRateFormat10Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(NetDividendRateFormat10Choice obj) throws Exception {
+			checkNetDividendRateFormat10Choice(obj);
 		}
 	};
 	/**
@@ -4369,12 +4921,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CashOption26> forCashOption26 = new MMConstraint<CashOption26>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCashOption26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forCashOption30);
 			owner_lazy = () -> CashOption26.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption26 obj) throws Exception {
+			checkCashOption26(obj);
 		}
 	};
 	/**
@@ -4408,12 +4964,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption53> forCorporateActionOption53 = new MMConstraint<CorporateActionOption53>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption53;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forCorporateActionOption102);
 			owner_lazy = () -> CorporateActionOption53.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption53 obj) throws Exception {
+			checkCorporateActionOption53(obj);
 		}
 	};
 	/**
@@ -4439,11 +4999,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateTypeAndAmountAndStatus17> forRateTypeAndAmountAndStatus17 = new MMConstraint<RateTypeAndAmountAndStatus17>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateTypeAndAmountAndStatus17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> RateTypeAndAmountAndStatus17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateTypeAndAmountAndStatus17 obj) throws Exception {
+			checkRateTypeAndAmountAndStatus17(obj);
 		}
 	};
 	/**
@@ -4469,11 +5033,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<GrossDividendRateFormat11Choice> forGrossDividendRateFormat11Choice = new MMConstraint<GrossDividendRateFormat11Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkGrossDividendRateFormat11Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> GrossDividendRateFormat11Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GrossDividendRateFormat11Choice obj) throws Exception {
+			checkGrossDividendRateFormat11Choice(obj);
 		}
 	};
 	/**
@@ -4499,11 +5067,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateTypeAndAmountAndStatus18> forRateTypeAndAmountAndStatus18 = new MMConstraint<RateTypeAndAmountAndStatus18>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateTypeAndAmountAndStatus18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> RateTypeAndAmountAndStatus18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateTypeAndAmountAndStatus18 obj) throws Exception {
+			checkRateTypeAndAmountAndStatus18(obj);
 		}
 	};
 	/**
@@ -4529,11 +5101,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<NetDividendRateFormat13Choice> forNetDividendRateFormat13Choice = new MMConstraint<NetDividendRateFormat13Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkNetDividendRateFormat13Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> NetDividendRateFormat13Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(NetDividendRateFormat13Choice obj) throws Exception {
+			checkNetDividendRateFormat13Choice(obj);
 		}
 	};
 	/**
@@ -4559,11 +5135,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateTypeAndAmountAndStatus19> forRateTypeAndAmountAndStatus19 = new MMConstraint<RateTypeAndAmountAndStatus19>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateTypeAndAmountAndStatus19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> RateTypeAndAmountAndStatus19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateTypeAndAmountAndStatus19 obj) throws Exception {
+			checkRateTypeAndAmountAndStatus19(obj);
 		}
 	};
 	/**
@@ -4589,11 +5169,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionAmounts24> forCorporateActionAmounts24 = new MMConstraint<CorporateActionAmounts24>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionAmounts24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionAmounts24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionAmounts24 obj) throws Exception {
+			checkCorporateActionAmounts24(obj);
 		}
 	};
 	/**
@@ -4619,11 +5203,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateTypeAndAmountAndStatus20> forRateTypeAndAmountAndStatus20 = new MMConstraint<RateTypeAndAmountAndStatus20>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateTypeAndAmountAndStatus20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> RateTypeAndAmountAndStatus20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateTypeAndAmountAndStatus20 obj) throws Exception {
+			checkRateTypeAndAmountAndStatus20(obj);
 		}
 	};
 	/**
@@ -4649,11 +5237,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<GrossDividendRateFormat12Choice> forGrossDividendRateFormat12Choice = new MMConstraint<GrossDividendRateFormat12Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkGrossDividendRateFormat12Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> GrossDividendRateFormat12Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GrossDividendRateFormat12Choice obj) throws Exception {
+			checkGrossDividendRateFormat12Choice(obj);
 		}
 	};
 	/**
@@ -4679,11 +5271,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateAndAmountFormat18Choice> forRateAndAmountFormat18Choice = new MMConstraint<RateAndAmountFormat18Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateAndAmountFormat18Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> RateAndAmountFormat18Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateAndAmountFormat18Choice obj) throws Exception {
+			checkRateAndAmountFormat18Choice(obj);
 		}
 	};
 	/**
@@ -4709,11 +5305,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateTypeAndAmountAndStatus21> forRateTypeAndAmountAndStatus21 = new MMConstraint<RateTypeAndAmountAndStatus21>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateTypeAndAmountAndStatus21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> RateTypeAndAmountAndStatus21.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateTypeAndAmountAndStatus21 obj) throws Exception {
+			checkRateTypeAndAmountAndStatus21(obj);
 		}
 	};
 	/**
@@ -4739,11 +5339,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<NetDividendRateFormat14Choice> forNetDividendRateFormat14Choice = new MMConstraint<NetDividendRateFormat14Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkNetDividendRateFormat14Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> NetDividendRateFormat14Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(NetDividendRateFormat14Choice obj) throws Exception {
+			checkNetDividendRateFormat14Choice(obj);
 		}
 	};
 	/**
@@ -4768,11 +5372,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CashOption27> forCashOption27 = new MMConstraint<CashOption27>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCashOption27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CashOption27.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption27 obj) throws Exception {
+			checkCashOption27(obj);
 		}
 	};
 	/**
@@ -4798,11 +5406,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption54> forCorporateActionOption54 = new MMConstraint<CorporateActionOption54>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption54;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionOption54.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption54 obj) throws Exception {
+			checkCorporateActionOption54(obj);
 		}
 	};
 	/**
@@ -4828,11 +5440,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateAndAmountFormat3Choice> forRateAndAmountFormat3Choice = new MMConstraint<RateAndAmountFormat3Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateAndAmountFormat3Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> RateAndAmountFormat3Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateAndAmountFormat3Choice obj) throws Exception {
+			checkRateAndAmountFormat3Choice(obj);
 		}
 	};
 	/**
@@ -4858,11 +5474,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateAndAmountFormat4Choice> forRateAndAmountFormat4Choice = new MMConstraint<RateAndAmountFormat4Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateAndAmountFormat4Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> RateAndAmountFormat4Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateAndAmountFormat4Choice obj) throws Exception {
+			checkRateAndAmountFormat4Choice(obj);
 		}
 	};
 	/**
@@ -4888,11 +5508,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<GrossDividendRateFormat1Choice> forGrossDividendRateFormat1Choice = new MMConstraint<GrossDividendRateFormat1Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkGrossDividendRateFormat1Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> GrossDividendRateFormat1Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GrossDividendRateFormat1Choice obj) throws Exception {
+			checkGrossDividendRateFormat1Choice(obj);
 		}
 	};
 	/**
@@ -4918,11 +5542,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<InterestRateUsedForPaymentFormat1Choice> forInterestRateUsedForPaymentFormat1Choice = new MMConstraint<InterestRateUsedForPaymentFormat1Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkInterestRateUsedForPaymentFormat1Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> InterestRateUsedForPaymentFormat1Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InterestRateUsedForPaymentFormat1Choice obj) throws Exception {
+			checkInterestRateUsedForPaymentFormat1Choice(obj);
 		}
 	};
 	/**
@@ -4948,11 +5576,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TaxCreditRateFormat1Choice> forTaxCreditRateFormat1Choice = new MMConstraint<TaxCreditRateFormat1Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTaxCreditRateFormat1Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TaxCreditRateFormat1Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TaxCreditRateFormat1Choice obj) throws Exception {
+			checkTaxCreditRateFormat1Choice(obj);
 		}
 	};
 	/**
@@ -4978,11 +5610,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SolicitationFeeRateFormat1Choice> forSolicitationFeeRateFormat1Choice = new MMConstraint<SolicitationFeeRateFormat1Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSolicitationFeeRateFormat1Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SolicitationFeeRateFormat1Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SolicitationFeeRateFormat1Choice obj) throws Exception {
+			checkSolicitationFeeRateFormat1Choice(obj);
 		}
 	};
 	/**
@@ -5008,11 +5644,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<PriceFormat11Choice> forPriceFormat11Choice = new MMConstraint<PriceFormat11Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkPriceFormat11Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> PriceFormat11Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceFormat11Choice obj) throws Exception {
+			checkPriceFormat11Choice(obj);
 		}
 	};
 	/**
@@ -5038,11 +5678,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<PriceFormat8Choice> forPriceFormat8Choice = new MMConstraint<PriceFormat8Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkPriceFormat8Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> PriceFormat8Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceFormat8Choice obj) throws Exception {
+			checkPriceFormat8Choice(obj);
 		}
 	};
 	/**
@@ -5068,11 +5712,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RatioFormat5Choice> forRatioFormat5Choice = new MMConstraint<RatioFormat5Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRatioFormat5Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> RatioFormat5Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RatioFormat5Choice obj) throws Exception {
+			checkRatioFormat5Choice(obj);
 		}
 	};
 	/**
@@ -5098,11 +5746,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RatioFormat6Choice> forRatioFormat6Choice = new MMConstraint<RatioFormat6Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRatioFormat6Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> RatioFormat6Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RatioFormat6Choice obj) throws Exception {
+			checkRatioFormat6Choice(obj);
 		}
 	};
 	/**
@@ -5128,11 +5780,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<PriceFormat10Choice> forPriceFormat10Choice = new MMConstraint<PriceFormat10Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkPriceFormat10Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> PriceFormat10Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceFormat10Choice obj) throws Exception {
+			checkPriceFormat10Choice(obj);
 		}
 	};
 	/**
@@ -5157,11 +5813,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CashOption3> forCashOption3 = new MMConstraint<CashOption3>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCashOption3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CashOption3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption3 obj) throws Exception {
+			checkCashOption3(obj);
 		}
 	};
 	/**
@@ -5187,11 +5847,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption10> forCorporateActionOption10 = new MMConstraint<CorporateActionOption10>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionOption10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption10 obj) throws Exception {
+			checkCorporateActionOption10(obj);
 		}
 	};
 	/**
@@ -5217,11 +5881,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateAndAmountFormat7Choice> forRateAndAmountFormat7Choice = new MMConstraint<RateAndAmountFormat7Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateAndAmountFormat7Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> RateAndAmountFormat7Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateAndAmountFormat7Choice obj) throws Exception {
+			checkRateAndAmountFormat7Choice(obj);
 		}
 	};
 	/**
@@ -5247,11 +5915,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateAndAmountFormat8Choice> forRateAndAmountFormat8Choice = new MMConstraint<RateAndAmountFormat8Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateAndAmountFormat8Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> RateAndAmountFormat8Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateAndAmountFormat8Choice obj) throws Exception {
+			checkRateAndAmountFormat8Choice(obj);
 		}
 	};
 	/**
@@ -5277,11 +5949,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<GrossDividendRateFormat4Choice> forGrossDividendRateFormat4Choice = new MMConstraint<GrossDividendRateFormat4Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkGrossDividendRateFormat4Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> GrossDividendRateFormat4Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GrossDividendRateFormat4Choice obj) throws Exception {
+			checkGrossDividendRateFormat4Choice(obj);
 		}
 	};
 	/**
@@ -5307,11 +5983,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<InterestRateUsedForPaymentFormat4Choice> forInterestRateUsedForPaymentFormat4Choice = new MMConstraint<InterestRateUsedForPaymentFormat4Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkInterestRateUsedForPaymentFormat4Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> InterestRateUsedForPaymentFormat4Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InterestRateUsedForPaymentFormat4Choice obj) throws Exception {
+			checkInterestRateUsedForPaymentFormat4Choice(obj);
 		}
 	};
 	/**
@@ -5337,11 +6017,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<NetDividendRateFormat4Choice> forNetDividendRateFormat4Choice = new MMConstraint<NetDividendRateFormat4Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkNetDividendRateFormat4Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> NetDividendRateFormat4Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(NetDividendRateFormat4Choice obj) throws Exception {
+			checkNetDividendRateFormat4Choice(obj);
 		}
 	};
 	/**
@@ -5367,11 +6051,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TaxCreditRateFormat4Choice> forTaxCreditRateFormat4Choice = new MMConstraint<TaxCreditRateFormat4Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTaxCreditRateFormat4Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> TaxCreditRateFormat4Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TaxCreditRateFormat4Choice obj) throws Exception {
+			checkTaxCreditRateFormat4Choice(obj);
 		}
 	};
 	/**
@@ -5397,11 +6085,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SolicitationFeeRateFormat2Choice> forSolicitationFeeRateFormat2Choice = new MMConstraint<SolicitationFeeRateFormat2Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSolicitationFeeRateFormat2Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> SolicitationFeeRateFormat2Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SolicitationFeeRateFormat2Choice obj) throws Exception {
+			checkSolicitationFeeRateFormat2Choice(obj);
 		}
 	};
 	/**
@@ -5427,11 +6119,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<PriceFormat15Choice> forPriceFormat15Choice = new MMConstraint<PriceFormat15Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkPriceFormat15Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> PriceFormat15Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceFormat15Choice obj) throws Exception {
+			checkPriceFormat15Choice(obj);
 		}
 	};
 	/**
@@ -5457,11 +6153,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<PriceFormat16Choice> forPriceFormat16Choice = new MMConstraint<PriceFormat16Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkPriceFormat16Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> PriceFormat16Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceFormat16Choice obj) throws Exception {
+			checkPriceFormat16Choice(obj);
 		}
 	};
 	/**
@@ -5487,11 +6187,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RatioFormat9Choice> forRatioFormat9Choice = new MMConstraint<RatioFormat9Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRatioFormat9Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> RatioFormat9Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RatioFormat9Choice obj) throws Exception {
+			checkRatioFormat9Choice(obj);
 		}
 	};
 	/**
@@ -5517,11 +6221,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RatioFormat10Choice> forRatioFormat10Choice = new MMConstraint<RatioFormat10Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRatioFormat10Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> RatioFormat10Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RatioFormat10Choice obj) throws Exception {
+			checkRatioFormat10Choice(obj);
 		}
 	};
 	/**
@@ -5547,11 +6255,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<PriceFormat14Choice> forPriceFormat14Choice = new MMConstraint<PriceFormat14Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkPriceFormat14Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> PriceFormat14Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceFormat14Choice obj) throws Exception {
+			checkPriceFormat14Choice(obj);
 		}
 	};
 	/**
@@ -5576,11 +6288,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CashOption6> forCashOption6 = new MMConstraint<CashOption6>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCashOption6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> CashOption6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption6 obj) throws Exception {
+			checkCashOption6(obj);
 		}
 	};
 	/**
@@ -5606,11 +6322,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption15> forCorporateActionOption15 = new MMConstraint<CorporateActionOption15>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> CorporateActionOption15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption15 obj) throws Exception {
+			checkCorporateActionOption15(obj);
 		}
 	};
 	/**
@@ -5644,12 +6364,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateAndAmountFormat14Choice> forRateAndAmountFormat14Choice = new MMConstraint<RateAndAmountFormat14Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateAndAmountFormat14Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forRateAndAmountFormat19Choice);
 			owner_lazy = () -> RateAndAmountFormat14Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateAndAmountFormat14Choice obj) throws Exception {
+			checkRateAndAmountFormat14Choice(obj);
 		}
 	};
 	/**
@@ -5675,11 +6399,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<GrossDividendRateFormat5Choice> forGrossDividendRateFormat5Choice = new MMConstraint<GrossDividendRateFormat5Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkGrossDividendRateFormat5Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> GrossDividendRateFormat5Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GrossDividendRateFormat5Choice obj) throws Exception {
+			checkGrossDividendRateFormat5Choice(obj);
 		}
 	};
 	/**
@@ -5705,11 +6433,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<InterestRateUsedForPaymentFormat5Choice> forInterestRateUsedForPaymentFormat5Choice = new MMConstraint<InterestRateUsedForPaymentFormat5Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkInterestRateUsedForPaymentFormat5Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> InterestRateUsedForPaymentFormat5Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InterestRateUsedForPaymentFormat5Choice obj) throws Exception {
+			checkInterestRateUsedForPaymentFormat5Choice(obj);
 		}
 	};
 	/**
@@ -5735,11 +6467,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<PriceFormat19Choice> forPriceFormat19Choice = new MMConstraint<PriceFormat19Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkPriceFormat19Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> PriceFormat19Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceFormat19Choice obj) throws Exception {
+			checkPriceFormat19Choice(obj);
 		}
 	};
 	/**
@@ -5773,12 +6509,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<PriceFormat20Choice> forPriceFormat20Choice = new MMConstraint<PriceFormat20Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkPriceFormat20Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forPriceFormat32Choice);
 			owner_lazy = () -> PriceFormat20Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceFormat20Choice obj) throws Exception {
+			checkPriceFormat20Choice(obj);
 		}
 	};
 	/**
@@ -5804,11 +6544,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RatioFormat11Choice> forRatioFormat11Choice = new MMConstraint<RatioFormat11Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRatioFormat11Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> RatioFormat11Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RatioFormat11Choice obj) throws Exception {
+			checkRatioFormat11Choice(obj);
 		}
 	};
 	/**
@@ -5834,11 +6578,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RatioFormat12Choice> forRatioFormat12Choice = new MMConstraint<RatioFormat12Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRatioFormat12Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> RatioFormat12Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RatioFormat12Choice obj) throws Exception {
+			checkRatioFormat12Choice(obj);
 		}
 	};
 	/**
@@ -5864,11 +6612,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<ForeignExchangeTerms13> forForeignExchangeTerms13 = new MMConstraint<ForeignExchangeTerms13>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkForeignExchangeTerms13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> ForeignExchangeTerms13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ForeignExchangeTerms13 obj) throws Exception {
+			checkForeignExchangeTerms13(obj);
 		}
 	};
 	/**
@@ -5894,11 +6646,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SolicitationFeeRateFormat3Choice> forSolicitationFeeRateFormat3Choice = new MMConstraint<SolicitationFeeRateFormat3Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSolicitationFeeRateFormat3Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SolicitationFeeRateFormat3Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SolicitationFeeRateFormat3Choice obj) throws Exception {
+			checkSolicitationFeeRateFormat3Choice(obj);
 		}
 	};
 	/**
@@ -5924,11 +6680,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateAndAmountFormat15Choice> forRateAndAmountFormat15Choice = new MMConstraint<RateAndAmountFormat15Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateAndAmountFormat15Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> RateAndAmountFormat15Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateAndAmountFormat15Choice obj) throws Exception {
+			checkRateAndAmountFormat15Choice(obj);
 		}
 	};
 	/**
@@ -5954,11 +6714,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TaxCreditRateFormat5Choice> forTaxCreditRateFormat5Choice = new MMConstraint<TaxCreditRateFormat5Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTaxCreditRateFormat5Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TaxCreditRateFormat5Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TaxCreditRateFormat5Choice obj) throws Exception {
+			checkTaxCreditRateFormat5Choice(obj);
 		}
 	};
 	/**
@@ -5984,11 +6748,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<PriceFormat23Choice> forPriceFormat23Choice = new MMConstraint<PriceFormat23Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkPriceFormat23Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> PriceFormat23Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceFormat23Choice obj) throws Exception {
+			checkPriceFormat23Choice(obj);
 		}
 	};
 	/**
@@ -6014,11 +6782,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<PriceFormat22Choice> forPriceFormat22Choice = new MMConstraint<PriceFormat22Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkPriceFormat22Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> PriceFormat22Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceFormat22Choice obj) throws Exception {
+			checkPriceFormat22Choice(obj);
 		}
 	};
 	/**
@@ -6043,11 +6815,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CashOption11> forCashOption11 = new MMConstraint<CashOption11>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCashOption11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CashOption11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption11 obj) throws Exception {
+			checkCashOption11(obj);
 		}
 	};
 	/**
@@ -6073,11 +6849,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption20> forCorporateActionOption20 = new MMConstraint<CorporateActionOption20>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionOption20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption20 obj) throws Exception {
+			checkCorporateActionOption20(obj);
 		}
 	};
 	/**
@@ -6103,11 +6883,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateAndAmountFormat16Choice> forRateAndAmountFormat16Choice = new MMConstraint<RateAndAmountFormat16Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateAndAmountFormat16Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> RateAndAmountFormat16Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateAndAmountFormat16Choice obj) throws Exception {
+			checkRateAndAmountFormat16Choice(obj);
 		}
 	};
 	/**
@@ -6133,11 +6917,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<GrossDividendRateFormat6Choice> forGrossDividendRateFormat6Choice = new MMConstraint<GrossDividendRateFormat6Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkGrossDividendRateFormat6Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> GrossDividendRateFormat6Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GrossDividendRateFormat6Choice obj) throws Exception {
+			checkGrossDividendRateFormat6Choice(obj);
 		}
 	};
 	/**
@@ -6163,11 +6951,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<InterestRateUsedForPaymentFormat6Choice> forInterestRateUsedForPaymentFormat6Choice = new MMConstraint<InterestRateUsedForPaymentFormat6Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkInterestRateUsedForPaymentFormat6Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> InterestRateUsedForPaymentFormat6Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InterestRateUsedForPaymentFormat6Choice obj) throws Exception {
+			checkInterestRateUsedForPaymentFormat6Choice(obj);
 		}
 	};
 	/**
@@ -6193,11 +6985,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<PriceFormat25Choice> forPriceFormat25Choice = new MMConstraint<PriceFormat25Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkPriceFormat25Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> PriceFormat25Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceFormat25Choice obj) throws Exception {
+			checkPriceFormat25Choice(obj);
 		}
 	};
 	/**
@@ -6223,11 +7019,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<PriceFormat26Choice> forPriceFormat26Choice = new MMConstraint<PriceFormat26Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkPriceFormat26Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> PriceFormat26Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceFormat26Choice obj) throws Exception {
+			checkPriceFormat26Choice(obj);
 		}
 	};
 	/**
@@ -6253,11 +7053,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RatioFormat13Choice> forRatioFormat13Choice = new MMConstraint<RatioFormat13Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRatioFormat13Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> RatioFormat13Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RatioFormat13Choice obj) throws Exception {
+			checkRatioFormat13Choice(obj);
 		}
 	};
 	/**
@@ -6283,11 +7087,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RatioFormat14Choice> forRatioFormat14Choice = new MMConstraint<RatioFormat14Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRatioFormat14Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> RatioFormat14Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RatioFormat14Choice obj) throws Exception {
+			checkRatioFormat14Choice(obj);
 		}
 	};
 	/**
@@ -6313,11 +7121,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<ForeignExchangeTerms15> forForeignExchangeTerms15 = new MMConstraint<ForeignExchangeTerms15>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkForeignExchangeTerms15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> ForeignExchangeTerms15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ForeignExchangeTerms15 obj) throws Exception {
+			checkForeignExchangeTerms15(obj);
 		}
 	};
 	/**
@@ -6343,11 +7155,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SolicitationFeeRateFormat4Choice> forSolicitationFeeRateFormat4Choice = new MMConstraint<SolicitationFeeRateFormat4Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSolicitationFeeRateFormat4Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SolicitationFeeRateFormat4Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SolicitationFeeRateFormat4Choice obj) throws Exception {
+			checkSolicitationFeeRateFormat4Choice(obj);
 		}
 	};
 	/**
@@ -6373,11 +7189,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateAndAmountFormat17Choice> forRateAndAmountFormat17Choice = new MMConstraint<RateAndAmountFormat17Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateAndAmountFormat17Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> RateAndAmountFormat17Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateAndAmountFormat17Choice obj) throws Exception {
+			checkRateAndAmountFormat17Choice(obj);
 		}
 	};
 	/**
@@ -6403,11 +7223,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<NetDividendRateFormat6Choice> forNetDividendRateFormat6Choice = new MMConstraint<NetDividendRateFormat6Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkNetDividendRateFormat6Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> NetDividendRateFormat6Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(NetDividendRateFormat6Choice obj) throws Exception {
+			checkNetDividendRateFormat6Choice(obj);
 		}
 	};
 	/**
@@ -6433,11 +7257,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TaxCreditRateFormat6Choice> forTaxCreditRateFormat6Choice = new MMConstraint<TaxCreditRateFormat6Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTaxCreditRateFormat6Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TaxCreditRateFormat6Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TaxCreditRateFormat6Choice obj) throws Exception {
+			checkTaxCreditRateFormat6Choice(obj);
 		}
 	};
 	/**
@@ -6463,11 +7291,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<PriceFormat27Choice> forPriceFormat27Choice = new MMConstraint<PriceFormat27Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkPriceFormat27Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> PriceFormat27Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceFormat27Choice obj) throws Exception {
+			checkPriceFormat27Choice(obj);
 		}
 	};
 	/**
@@ -6493,11 +7325,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<PriceFormat28Choice> forPriceFormat28Choice = new MMConstraint<PriceFormat28Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkPriceFormat28Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> PriceFormat28Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceFormat28Choice obj) throws Exception {
+			checkPriceFormat28Choice(obj);
 		}
 	};
 	/**
@@ -6522,11 +7358,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CashOption14> forCashOption14 = new MMConstraint<CashOption14>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCashOption14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CashOption14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption14 obj) throws Exception {
+			checkCashOption14(obj);
 		}
 	};
 	/**
@@ -6552,11 +7392,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption32> forCorporateActionOption32 = new MMConstraint<CorporateActionOption32>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption32;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionOption32.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption32 obj) throws Exception {
+			checkCorporateActionOption32(obj);
 		}
 	};
 	/**
@@ -6582,11 +7426,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<PriceFormat29Choice> forPriceFormat29Choice = new MMConstraint<PriceFormat29Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkPriceFormat29Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> PriceFormat29Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceFormat29Choice obj) throws Exception {
+			checkPriceFormat29Choice(obj);
 		}
 	};
 	/**
@@ -6611,11 +7459,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CashOption16> forCashOption16 = new MMConstraint<CashOption16>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCashOption16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CashOption16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption16 obj) throws Exception {
+			checkCashOption16(obj);
 		}
 	};
 	/**
@@ -6641,11 +7493,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption35> forCorporateActionOption35 = new MMConstraint<CorporateActionOption35>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption35;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionOption35.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption35 obj) throws Exception {
+			checkCorporateActionOption35(obj);
 		}
 	};
 	/**
@@ -6671,11 +7527,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<PriceFormat31Choice> forPriceFormat31Choice = new MMConstraint<PriceFormat31Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkPriceFormat31Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> PriceFormat31Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceFormat31Choice obj) throws Exception {
+			checkPriceFormat31Choice(obj);
 		}
 	};
 	/**
@@ -6700,11 +7560,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CashOption20> forCashOption20 = new MMConstraint<CashOption20>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCashOption20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CashOption20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption20 obj) throws Exception {
+			checkCashOption20(obj);
 		}
 	};
 	/**
@@ -6730,11 +7594,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption44> forCorporateActionOption44 = new MMConstraint<CorporateActionOption44>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption44;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionOption44.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption44 obj) throws Exception {
+			checkCorporateActionOption44(obj);
 		}
 	};
 	/**
@@ -6760,11 +7628,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<GrossDividendRateFormat9Choice> forGrossDividendRateFormat9Choice = new MMConstraint<GrossDividendRateFormat9Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkGrossDividendRateFormat9Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> GrossDividendRateFormat9Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GrossDividendRateFormat9Choice obj) throws Exception {
+			checkGrossDividendRateFormat9Choice(obj);
 		}
 	};
 	/**
@@ -6790,11 +7662,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<NetDividendRateFormat11Choice> forNetDividendRateFormat11Choice = new MMConstraint<NetDividendRateFormat11Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkNetDividendRateFormat11Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> NetDividendRateFormat11Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(NetDividendRateFormat11Choice obj) throws Exception {
+			checkNetDividendRateFormat11Choice(obj);
 		}
 	};
 	/**
@@ -6820,11 +7696,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<GrossDividendRateFormat7Choice> forGrossDividendRateFormat7Choice = new MMConstraint<GrossDividendRateFormat7Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkGrossDividendRateFormat7Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> GrossDividendRateFormat7Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GrossDividendRateFormat7Choice obj) throws Exception {
+			checkGrossDividendRateFormat7Choice(obj);
 		}
 	};
 	/**
@@ -6850,11 +7730,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SolicitationFeeRateFormat5Choice> forSolicitationFeeRateFormat5Choice = new MMConstraint<SolicitationFeeRateFormat5Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSolicitationFeeRateFormat5Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SolicitationFeeRateFormat5Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SolicitationFeeRateFormat5Choice obj) throws Exception {
+			checkSolicitationFeeRateFormat5Choice(obj);
 		}
 	};
 	/**
@@ -6880,11 +7764,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateFormat8Choice> forRateFormat8Choice = new MMConstraint<RateFormat8Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateFormat8Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> RateFormat8Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateFormat8Choice obj) throws Exception {
+			checkRateFormat8Choice(obj);
 		}
 	};
 	/**
@@ -6910,11 +7798,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<NetDividendRateFormat9Choice> forNetDividendRateFormat9Choice = new MMConstraint<NetDividendRateFormat9Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkNetDividendRateFormat9Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> NetDividendRateFormat9Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(NetDividendRateFormat9Choice obj) throws Exception {
+			checkNetDividendRateFormat9Choice(obj);
 		}
 	};
 	/**
@@ -6947,12 +7839,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CashOption25> forCashOption25 = new MMConstraint<CashOption25>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCashOption25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forCashOption31);
 			owner_lazy = () -> CashOption25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption25 obj) throws Exception {
+			checkCashOption25(obj);
 		}
 	};
 	/**
@@ -6986,12 +7882,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption52> forCorporateActionOption52 = new MMConstraint<CorporateActionOption52>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption52;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forCorporateActionOption100);
 			owner_lazy = () -> CorporateActionOption52.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption52 obj) throws Exception {
+			checkCorporateActionOption52(obj);
 		}
 	};
 	/**
@@ -7017,11 +7917,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<GrossDividendRateFormat13Choice> forGrossDividendRateFormat13Choice = new MMConstraint<GrossDividendRateFormat13Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkGrossDividendRateFormat13Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> GrossDividendRateFormat13Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GrossDividendRateFormat13Choice obj) throws Exception {
+			checkGrossDividendRateFormat13Choice(obj);
 		}
 	};
 	/**
@@ -7047,11 +7951,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<NetDividendRateFormat15Choice> forNetDividendRateFormat15Choice = new MMConstraint<NetDividendRateFormat15Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkNetDividendRateFormat15Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> NetDividendRateFormat15Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(NetDividendRateFormat15Choice obj) throws Exception {
+			checkNetDividendRateFormat15Choice(obj);
 		}
 	};
 	/**
@@ -7077,11 +7985,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<GrossDividendRateFormat14Choice> forGrossDividendRateFormat14Choice = new MMConstraint<GrossDividendRateFormat14Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkGrossDividendRateFormat14Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> GrossDividendRateFormat14Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GrossDividendRateFormat14Choice obj) throws Exception {
+			checkGrossDividendRateFormat14Choice(obj);
 		}
 	};
 	/**
@@ -7107,11 +8019,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SolicitationFeeRateFormat6Choice> forSolicitationFeeRateFormat6Choice = new MMConstraint<SolicitationFeeRateFormat6Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSolicitationFeeRateFormat6Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SolicitationFeeRateFormat6Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SolicitationFeeRateFormat6Choice obj) throws Exception {
+			checkSolicitationFeeRateFormat6Choice(obj);
 		}
 	};
 	/**
@@ -7137,11 +8053,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateFormat9Choice> forRateFormat9Choice = new MMConstraint<RateFormat9Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateFormat9Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> RateFormat9Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateFormat9Choice obj) throws Exception {
+			checkRateFormat9Choice(obj);
 		}
 	};
 	/**
@@ -7167,11 +8087,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<NetDividendRateFormat16Choice> forNetDividendRateFormat16Choice = new MMConstraint<NetDividendRateFormat16Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkNetDividendRateFormat16Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> NetDividendRateFormat16Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(NetDividendRateFormat16Choice obj) throws Exception {
+			checkNetDividendRateFormat16Choice(obj);
 		}
 	};
 	/**
@@ -7196,11 +8120,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CashOption28> forCashOption28 = new MMConstraint<CashOption28>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCashOption28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CashOption28.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption28 obj) throws Exception {
+			checkCashOption28(obj);
 		}
 	};
 	/**
@@ -7226,11 +8154,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption55> forCorporateActionOption55 = new MMConstraint<CorporateActionOption55>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption55;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionOption55.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption55 obj) throws Exception {
+			checkCorporateActionOption55(obj);
 		}
 	};
 	/**
@@ -7255,11 +8187,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CashOption5> forCashOption5 = new MMConstraint<CashOption5>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCashOption5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CashOption5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption5 obj) throws Exception {
+			checkCashOption5(obj);
 		}
 	};
 	/**
@@ -7284,11 +8220,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CashOption7> forCashOption7 = new MMConstraint<CashOption7>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCashOption7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> CashOption7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption7 obj) throws Exception {
+			checkCashOption7(obj);
 		}
 	};
 	/**
@@ -7313,11 +8253,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CashOption19> forCashOption19 = new MMConstraint<CashOption19>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCashOption19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CashOption19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption19 obj) throws Exception {
+			checkCashOption19(obj);
 		}
 	};
 	/**
@@ -7342,11 +8286,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CashOption23> forCashOption23 = new MMConstraint<CashOption23>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCashOption23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CashOption23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption23 obj) throws Exception {
+			checkCashOption23(obj);
 		}
 	};
 	/**
@@ -7372,11 +8320,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionAmounts4> forCorporateActionAmounts4 = new MMConstraint<CorporateActionAmounts4>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionAmounts4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionAmounts4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionAmounts4 obj) throws Exception {
+			checkCorporateActionAmounts4(obj);
 		}
 	};
 	/**
@@ -7401,11 +8353,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CashOption4> forCashOption4 = new MMConstraint<CashOption4>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCashOption4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CashOption4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption4 obj) throws Exception {
+			checkCashOption4(obj);
 		}
 	};
 	/**
@@ -7431,11 +8387,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption3> forCorporateActionOption3 = new MMConstraint<CorporateActionOption3>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionOption3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption3 obj) throws Exception {
+			checkCorporateActionOption3(obj);
 		}
 	};
 	/**
@@ -7461,11 +8421,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionAmounts7> forCorporateActionAmounts7 = new MMConstraint<CorporateActionAmounts7>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionAmounts7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> CorporateActionAmounts7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionAmounts7 obj) throws Exception {
+			checkCorporateActionAmounts7(obj);
 		}
 	};
 	/**
@@ -7490,11 +8454,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CashOption8> forCashOption8 = new MMConstraint<CashOption8>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCashOption8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> CashOption8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption8 obj) throws Exception {
+			checkCashOption8(obj);
 		}
 	};
 	/**
@@ -7520,11 +8488,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption17> forCorporateActionOption17 = new MMConstraint<CorporateActionOption17>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> CorporateActionOption17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption17 obj) throws Exception {
+			checkCorporateActionOption17(obj);
 		}
 	};
 	/**
@@ -7550,11 +8522,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionAmounts10> forCorporateActionAmounts10 = new MMConstraint<CorporateActionAmounts10>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionAmounts10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionAmounts10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionAmounts10 obj) throws Exception {
+			checkCorporateActionAmounts10(obj);
 		}
 	};
 	/**
@@ -7579,11 +8555,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CashOption10> forCashOption10 = new MMConstraint<CashOption10>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCashOption10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CashOption10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption10 obj) throws Exception {
+			checkCashOption10(obj);
 		}
 	};
 	/**
@@ -7609,11 +8589,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption19> forCorporateActionOption19 = new MMConstraint<CorporateActionOption19>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionOption19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption19 obj) throws Exception {
+			checkCorporateActionOption19(obj);
 		}
 	};
 	/**
@@ -7639,11 +8623,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionAmounts14> forCorporateActionAmounts14 = new MMConstraint<CorporateActionAmounts14>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionAmounts14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionAmounts14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionAmounts14 obj) throws Exception {
+			checkCorporateActionAmounts14(obj);
 		}
 	};
 	/**
@@ -7668,11 +8656,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CashOption15> forCashOption15 = new MMConstraint<CashOption15>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCashOption15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CashOption15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption15 obj) throws Exception {
+			checkCashOption15(obj);
 		}
 	};
 	/**
@@ -7698,11 +8690,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption34> forCorporateActionOption34 = new MMConstraint<CorporateActionOption34>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption34;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionOption34.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption34 obj) throws Exception {
+			checkCorporateActionOption34(obj);
 		}
 	};
 	/**
@@ -7728,11 +8724,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionAmounts15> forCorporateActionAmounts15 = new MMConstraint<CorporateActionAmounts15>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionAmounts15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionAmounts15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionAmounts15 obj) throws Exception {
+			checkCorporateActionAmounts15(obj);
 		}
 	};
 	/**
@@ -7757,11 +8757,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CashOption17> forCashOption17 = new MMConstraint<CashOption17>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCashOption17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CashOption17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption17 obj) throws Exception {
+			checkCashOption17(obj);
 		}
 	};
 	/**
@@ -7787,11 +8791,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption36> forCorporateActionOption36 = new MMConstraint<CorporateActionOption36>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption36;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionOption36.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption36 obj) throws Exception {
+			checkCorporateActionOption36(obj);
 		}
 	};
 	/**
@@ -7817,11 +8825,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionAmounts18> forCorporateActionAmounts18 = new MMConstraint<CorporateActionAmounts18>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionAmounts18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionAmounts18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionAmounts18 obj) throws Exception {
+			checkCorporateActionAmounts18(obj);
 		}
 	};
 	/**
@@ -7846,11 +8858,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CashOption21> forCashOption21 = new MMConstraint<CashOption21>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCashOption21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CashOption21.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption21 obj) throws Exception {
+			checkCashOption21(obj);
 		}
 	};
 	/**
@@ -7876,11 +8892,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption45> forCorporateActionOption45 = new MMConstraint<CorporateActionOption45>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption45;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionOption45.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption45 obj) throws Exception {
+			checkCorporateActionOption45(obj);
 		}
 	};
 	/**
@@ -7914,12 +8934,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionAmounts21> forCorporateActionAmounts21 = new MMConstraint<CorporateActionAmounts21>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionAmounts21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forCorporateActionAmounts27);
 			owner_lazy = () -> CorporateActionAmounts21.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionAmounts21 obj) throws Exception {
+			checkCorporateActionAmounts21(obj);
 		}
 	};
 	/**
@@ -7952,12 +8976,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CashOption24> forCashOption24 = new MMConstraint<CashOption24>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCashOption24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forCashOption32);
 			owner_lazy = () -> CashOption24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption24 obj) throws Exception {
+			checkCashOption24(obj);
 		}
 	};
 	/**
@@ -7991,12 +9019,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption51> forCorporateActionOption51 = new MMConstraint<CorporateActionOption51>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption51;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forCorporateActionOption101);
 			owner_lazy = () -> CorporateActionOption51.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption51 obj) throws Exception {
+			checkCorporateActionOption51(obj);
 		}
 	};
 	/**
@@ -8022,11 +9054,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionAmounts26> forCorporateActionAmounts26 = new MMConstraint<CorporateActionAmounts26>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionAmounts26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionAmounts26.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionAmounts26 obj) throws Exception {
+			checkCorporateActionAmounts26(obj);
 		}
 	};
 	/**
@@ -8051,11 +9087,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CashOption29> forCashOption29 = new MMConstraint<CashOption29>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCashOption29;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CashOption29.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption29 obj) throws Exception {
+			checkCashOption29(obj);
 		}
 	};
 	/**
@@ -8081,11 +9121,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption56> forCorporateActionOption56 = new MMConstraint<CorporateActionOption56>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption56;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionOption56.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption56 obj) throws Exception {
+			checkCorporateActionOption56(obj);
 		}
 	};
 	/**
@@ -8119,12 +9163,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<PriceFormatSD1Choice> forPriceFormatSD1Choice = new MMConstraint<PriceFormatSD1Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkPriceFormatSD1Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forPriceFormatSD2Choice);
 			owner_lazy = () -> PriceFormatSD1Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceFormatSD1Choice obj) throws Exception {
+			checkPriceFormatSD1Choice(obj);
 		}
 	};
 	/**
@@ -8150,11 +9198,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AmountAndDirection24> forAmountAndDirection24 = new MMConstraint<AmountAndDirection24>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAmountAndDirection24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AmountAndDirection24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AmountAndDirection24 obj) throws Exception {
+			checkAmountAndDirection24(obj);
 		}
 	};
 	/**
@@ -8180,11 +9232,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<QuantityBreakdown4> forQuantityBreakdown4 = new MMConstraint<QuantityBreakdown4>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkQuantityBreakdown4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> QuantityBreakdown4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityBreakdown4 obj) throws Exception {
+			checkQuantityBreakdown4(obj);
 		}
 	};
 	/**
@@ -8210,11 +9266,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace7> forAggregateBalancePerSafekeepingPlace7 = new MMConstraint<AggregateBalancePerSafekeepingPlace7>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalancePerSafekeepingPlace7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace7 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace7(obj);
 		}
 	};
 	/**
@@ -8240,11 +9300,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation8> forAggregateBalanceInformation8 = new MMConstraint<AggregateBalanceInformation8>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalanceInformation8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AggregateBalanceInformation8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation8 obj) throws Exception {
+			checkAggregateBalanceInformation8(obj);
 		}
 	};
 	/**
@@ -8270,11 +9334,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<QuantityBreakdown8> forQuantityBreakdown8 = new MMConstraint<QuantityBreakdown8>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkQuantityBreakdown8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> QuantityBreakdown8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityBreakdown8 obj) throws Exception {
+			checkQuantityBreakdown8(obj);
 		}
 	};
 	/**
@@ -8300,11 +9368,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace10> forAggregateBalancePerSafekeepingPlace10 = new MMConstraint<AggregateBalancePerSafekeepingPlace10>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalancePerSafekeepingPlace10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace10 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace10(obj);
 		}
 	};
 	/**
@@ -8330,11 +9402,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation11> forAggregateBalanceInformation11 = new MMConstraint<AggregateBalanceInformation11>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalanceInformation11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> AggregateBalanceInformation11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation11 obj) throws Exception {
+			checkAggregateBalanceInformation11(obj);
 		}
 	};
 	/**
@@ -8360,11 +9436,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace12> forAggregateBalancePerSafekeepingPlace12 = new MMConstraint<AggregateBalancePerSafekeepingPlace12>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalancePerSafekeepingPlace12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace12 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace12(obj);
 		}
 	};
 	/**
@@ -8390,11 +9470,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation13> forAggregateBalanceInformation13 = new MMConstraint<AggregateBalanceInformation13>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalanceInformation13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AggregateBalanceInformation13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation13 obj) throws Exception {
+			checkAggregateBalanceInformation13(obj);
 		}
 	};
 	/**
@@ -8420,11 +9504,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace14> forAggregateBalancePerSafekeepingPlace14 = new MMConstraint<AggregateBalancePerSafekeepingPlace14>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalancePerSafekeepingPlace14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace14 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace14(obj);
 		}
 	};
 	/**
@@ -8450,11 +9538,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation15> forAggregateBalanceInformation15 = new MMConstraint<AggregateBalanceInformation15>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalanceInformation15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AggregateBalanceInformation15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation15 obj) throws Exception {
+			checkAggregateBalanceInformation15(obj);
 		}
 	};
 	/**
@@ -8480,11 +9572,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<QuantityBreakdown14> forQuantityBreakdown14 = new MMConstraint<QuantityBreakdown14>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkQuantityBreakdown14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> QuantityBreakdown14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityBreakdown14 obj) throws Exception {
+			checkQuantityBreakdown14(obj);
 		}
 	};
 	/**
@@ -8510,11 +9606,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace16> forAggregateBalancePerSafekeepingPlace16 = new MMConstraint<AggregateBalancePerSafekeepingPlace16>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalancePerSafekeepingPlace16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace16 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace16(obj);
 		}
 	};
 	/**
@@ -8540,11 +9640,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation17> forAggregateBalanceInformation17 = new MMConstraint<AggregateBalanceInformation17>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalanceInformation17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AggregateBalanceInformation17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation17 obj) throws Exception {
+			checkAggregateBalanceInformation17(obj);
 		}
 	};
 	/**
@@ -8570,11 +9674,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<QuantityBreakdown19> forQuantityBreakdown19 = new MMConstraint<QuantityBreakdown19>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkQuantityBreakdown19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> QuantityBreakdown19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityBreakdown19 obj) throws Exception {
+			checkQuantityBreakdown19(obj);
 		}
 	};
 	/**
@@ -8600,11 +9708,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace18> forAggregateBalancePerSafekeepingPlace18 = new MMConstraint<AggregateBalancePerSafekeepingPlace18>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalancePerSafekeepingPlace18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace18 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace18(obj);
 		}
 	};
 	/**
@@ -8630,11 +9742,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation19> forAggregateBalanceInformation19 = new MMConstraint<AggregateBalanceInformation19>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalanceInformation19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AggregateBalanceInformation19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation19 obj) throws Exception {
+			checkAggregateBalanceInformation19(obj);
 		}
 	};
 	/**
@@ -8660,11 +9776,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<QuantityBreakdown24> forQuantityBreakdown24 = new MMConstraint<QuantityBreakdown24>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkQuantityBreakdown24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> QuantityBreakdown24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityBreakdown24 obj) throws Exception {
+			checkQuantityBreakdown24(obj);
 		}
 	};
 	/**
@@ -8699,12 +9819,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace21> forAggregateBalancePerSafekeepingPlace21 = new MMConstraint<AggregateBalancePerSafekeepingPlace21>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalancePerSafekeepingPlace21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forAggregateBalancePerSafekeepingPlace25);
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace21.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace21 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace21(obj);
 		}
 	};
 	/**
@@ -8738,12 +9862,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation22> forAggregateBalanceInformation22 = new MMConstraint<AggregateBalanceInformation22>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalanceInformation22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forAggregateBalanceInformation26);
 			owner_lazy = () -> AggregateBalanceInformation22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation22 obj) throws Exception {
+			checkAggregateBalanceInformation22(obj);
 		}
 	};
 	/**
@@ -8769,11 +9897,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<QuantityBreakdown25> forQuantityBreakdown25 = new MMConstraint<QuantityBreakdown25>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkQuantityBreakdown25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> QuantityBreakdown25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityBreakdown25 obj) throws Exception {
+			checkQuantityBreakdown25(obj);
 		}
 	};
 	/**
@@ -8799,11 +9931,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace22> forAggregateBalancePerSafekeepingPlace22 = new MMConstraint<AggregateBalancePerSafekeepingPlace22>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalancePerSafekeepingPlace22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace22 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace22(obj);
 		}
 	};
 	/**
@@ -8829,11 +9965,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation23> forAggregateBalanceInformation23 = new MMConstraint<AggregateBalanceInformation23>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalanceInformation23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AggregateBalanceInformation23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation23 obj) throws Exception {
+			checkAggregateBalanceInformation23(obj);
 		}
 	};
 	/**
@@ -8859,11 +9999,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace8> forAggregateBalancePerSafekeepingPlace8 = new MMConstraint<AggregateBalancePerSafekeepingPlace8>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalancePerSafekeepingPlace8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace8 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace8(obj);
 		}
 	};
 	/**
@@ -8889,11 +10033,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation9> forAggregateBalanceInformation9 = new MMConstraint<AggregateBalanceInformation9>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalanceInformation9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AggregateBalanceInformation9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation9 obj) throws Exception {
+			checkAggregateBalanceInformation9(obj);
 		}
 	};
 	/**
@@ -8919,11 +10067,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace9> forAggregateBalancePerSafekeepingPlace9 = new MMConstraint<AggregateBalancePerSafekeepingPlace9>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalancePerSafekeepingPlace9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace9 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace9(obj);
 		}
 	};
 	/**
@@ -8949,11 +10101,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation10> forAggregateBalanceInformation10 = new MMConstraint<AggregateBalanceInformation10>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalanceInformation10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> AggregateBalanceInformation10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation10 obj) throws Exception {
+			checkAggregateBalanceInformation10(obj);
 		}
 	};
 	/**
@@ -8979,11 +10135,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace11> forAggregateBalancePerSafekeepingPlace11 = new MMConstraint<AggregateBalancePerSafekeepingPlace11>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalancePerSafekeepingPlace11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace11 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace11(obj);
 		}
 	};
 	/**
@@ -9009,11 +10169,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation12> forAggregateBalanceInformation12 = new MMConstraint<AggregateBalanceInformation12>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalanceInformation12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AggregateBalanceInformation12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation12 obj) throws Exception {
+			checkAggregateBalanceInformation12(obj);
 		}
 	};
 	/**
@@ -9039,11 +10203,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace13> forAggregateBalancePerSafekeepingPlace13 = new MMConstraint<AggregateBalancePerSafekeepingPlace13>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalancePerSafekeepingPlace13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace13 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace13(obj);
 		}
 	};
 	/**
@@ -9069,11 +10237,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation14> forAggregateBalanceInformation14 = new MMConstraint<AggregateBalanceInformation14>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalanceInformation14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AggregateBalanceInformation14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation14 obj) throws Exception {
+			checkAggregateBalanceInformation14(obj);
 		}
 	};
 	/**
@@ -9099,11 +10271,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace15> forAggregateBalancePerSafekeepingPlace15 = new MMConstraint<AggregateBalancePerSafekeepingPlace15>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalancePerSafekeepingPlace15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace15 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace15(obj);
 		}
 	};
 	/**
@@ -9129,11 +10305,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation16> forAggregateBalanceInformation16 = new MMConstraint<AggregateBalanceInformation16>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalanceInformation16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AggregateBalanceInformation16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation16 obj) throws Exception {
+			checkAggregateBalanceInformation16(obj);
 		}
 	};
 	/**
@@ -9159,11 +10339,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace17> forAggregateBalancePerSafekeepingPlace17 = new MMConstraint<AggregateBalancePerSafekeepingPlace17>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalancePerSafekeepingPlace17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace17 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace17(obj);
 		}
 	};
 	/**
@@ -9189,11 +10373,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation18> forAggregateBalanceInformation18 = new MMConstraint<AggregateBalanceInformation18>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalanceInformation18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AggregateBalanceInformation18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation18 obj) throws Exception {
+			checkAggregateBalanceInformation18(obj);
 		}
 	};
 	/**
@@ -9228,12 +10416,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace20> forAggregateBalancePerSafekeepingPlace20 = new MMConstraint<AggregateBalancePerSafekeepingPlace20>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalancePerSafekeepingPlace20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forAggregateBalancePerSafekeepingPlace24);
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace20 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace20(obj);
 		}
 	};
 	/**
@@ -9267,12 +10459,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation21> forAggregateBalanceInformation21 = new MMConstraint<AggregateBalanceInformation21>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalanceInformation21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forAggregateBalanceInformation25);
 			owner_lazy = () -> AggregateBalanceInformation21.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation21 obj) throws Exception {
+			checkAggregateBalanceInformation21(obj);
 		}
 	};
 	/**
@@ -9298,11 +10494,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace23> forAggregateBalancePerSafekeepingPlace23 = new MMConstraint<AggregateBalancePerSafekeepingPlace23>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalancePerSafekeepingPlace23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace23 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace23(obj);
 		}
 	};
 	/**
@@ -9328,11 +10528,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation24> forAggregateBalanceInformation24 = new MMConstraint<AggregateBalanceInformation24>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalanceInformation24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AggregateBalanceInformation24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation24 obj) throws Exception {
+			checkAggregateBalanceInformation24(obj);
 		}
 	};
 	/**
@@ -9358,11 +10562,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount6> forQuantityAndAccount6 = new MMConstraint<QuantityAndAccount6>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkQuantityAndAccount6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> QuantityAndAccount6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount6 obj) throws Exception {
+			checkQuantityAndAccount6(obj);
 		}
 	};
 	/**
@@ -9388,11 +10596,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AmountAndDirection4> forAmountAndDirection4 = new MMConstraint<AmountAndDirection4>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAmountAndDirection4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AmountAndDirection4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AmountAndDirection4 obj) throws Exception {
+			checkAmountAndDirection4(obj);
 		}
 	};
 	/**
@@ -9418,11 +10630,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails3> forSecuritiesFinancingTransactionDetails3 = new MMConstraint<SecuritiesFinancingTransactionDetails3>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesFinancingTransactionDetails3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails3 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails3(obj);
 		}
 	};
 	/**
@@ -9456,12 +10672,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AmountAndDirection2> forAmountAndDirection2 = new MMConstraint<AmountAndDirection2>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAmountAndDirection2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forAmountAndDirection36);
 			owner_lazy = () -> AmountAndDirection2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AmountAndDirection2 obj) throws Exception {
+			checkAmountAndDirection2(obj);
 		}
 	};
 	/**
@@ -9486,11 +10706,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<OtherAmounts4> forOtherAmounts4 = new MMConstraint<OtherAmounts4>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkOtherAmounts4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> OtherAmounts4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherAmounts4 obj) throws Exception {
+			checkOtherAmounts4(obj);
 		}
 	};
 	/**
@@ -9516,11 +10740,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount11> forQuantityAndAccount11 = new MMConstraint<QuantityAndAccount11>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkQuantityAndAccount11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> QuantityAndAccount11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount11 obj) throws Exception {
+			checkQuantityAndAccount11(obj);
 		}
 	};
 	/**
@@ -9546,11 +10774,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AmountAndDirection13> forAmountAndDirection13 = new MMConstraint<AmountAndDirection13>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAmountAndDirection13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> AmountAndDirection13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AmountAndDirection13 obj) throws Exception {
+			checkAmountAndDirection13(obj);
 		}
 	};
 	/**
@@ -9576,11 +10808,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails5> forSecuritiesFinancingTransactionDetails5 = new MMConstraint<SecuritiesFinancingTransactionDetails5>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesFinancingTransactionDetails5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails5 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails5(obj);
 		}
 	};
 	/**
@@ -9606,11 +10842,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AmountAndDirection16> forAmountAndDirection16 = new MMConstraint<AmountAndDirection16>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAmountAndDirection16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> AmountAndDirection16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AmountAndDirection16 obj) throws Exception {
+			checkAmountAndDirection16(obj);
 		}
 	};
 	/**
@@ -9635,11 +10875,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<OtherAmounts5> forOtherAmounts5 = new MMConstraint<OtherAmounts5>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkOtherAmounts5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> OtherAmounts5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherAmounts5 obj) throws Exception {
+			checkOtherAmounts5(obj);
 		}
 	};
 	/**
@@ -9665,11 +10909,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount18> forQuantityAndAccount18 = new MMConstraint<QuantityAndAccount18>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkQuantityAndAccount18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> QuantityAndAccount18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount18 obj) throws Exception {
+			checkQuantityAndAccount18(obj);
 		}
 	};
 	/**
@@ -9695,11 +10943,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount19> forQuantityAndAccount19 = new MMConstraint<QuantityAndAccount19>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkQuantityAndAccount19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> QuantityAndAccount19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount19 obj) throws Exception {
+			checkQuantityAndAccount19(obj);
 		}
 	};
 	/**
@@ -9725,11 +10977,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails1> forSecuritiesFinancingTransactionDetails1 = new MMConstraint<SecuritiesFinancingTransactionDetails1>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesFinancingTransactionDetails1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails1 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails1(obj);
 		}
 	};
 	/**
@@ -9755,11 +11011,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails11> forSecuritiesFinancingTransactionDetails11 = new MMConstraint<SecuritiesFinancingTransactionDetails11>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesFinancingTransactionDetails11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails11 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails11(obj);
 		}
 	};
 	/**
@@ -9784,11 +11044,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<OtherAmounts17> forOtherAmounts17 = new MMConstraint<OtherAmounts17>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkOtherAmounts17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> OtherAmounts17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherAmounts17 obj) throws Exception {
+			checkOtherAmounts17(obj);
 		}
 	};
 	/**
@@ -9814,11 +11078,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails14> forSecuritiesFinancingTransactionDetails14 = new MMConstraint<SecuritiesFinancingTransactionDetails14>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesFinancingTransactionDetails14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails14 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails14(obj);
 		}
 	};
 	/**
@@ -9843,11 +11111,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<OtherAmounts23> forOtherAmounts23 = new MMConstraint<OtherAmounts23>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkOtherAmounts23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> OtherAmounts23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherAmounts23 obj) throws Exception {
+			checkOtherAmounts23(obj);
 		}
 	};
 	/**
@@ -9872,11 +11144,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<OtherAmounts3> forOtherAmounts3 = new MMConstraint<OtherAmounts3>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkOtherAmounts3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> OtherAmounts3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherAmounts3 obj) throws Exception {
+			checkOtherAmounts3(obj);
 		}
 	};
 	/**
@@ -9902,11 +11178,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails4> forSecuritiesFinancingTransactionDetails4 = new MMConstraint<SecuritiesFinancingTransactionDetails4>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesFinancingTransactionDetails4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails4 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails4(obj);
 		}
 	};
 	/**
@@ -9931,11 +11211,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<OtherAmounts7> forOtherAmounts7 = new MMConstraint<OtherAmounts7>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkOtherAmounts7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> OtherAmounts7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherAmounts7 obj) throws Exception {
+			checkOtherAmounts7(obj);
 		}
 	};
 	/**
@@ -9961,11 +11245,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AmountAndDirection7> forAmountAndDirection7 = new MMConstraint<AmountAndDirection7>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAmountAndDirection7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AmountAndDirection7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AmountAndDirection7 obj) throws Exception {
+			checkAmountAndDirection7(obj);
 		}
 	};
 	/**
@@ -9991,11 +11279,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount2> forQuantityAndAccount2 = new MMConstraint<QuantityAndAccount2>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkQuantityAndAccount2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> QuantityAndAccount2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount2 obj) throws Exception {
+			checkQuantityAndAccount2(obj);
 		}
 	};
 	/**
@@ -10021,11 +11313,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AmountAndDirection15> forAmountAndDirection15 = new MMConstraint<AmountAndDirection15>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAmountAndDirection15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> AmountAndDirection15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AmountAndDirection15 obj) throws Exception {
+			checkAmountAndDirection15(obj);
 		}
 	};
 	/**
@@ -10051,11 +11347,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount12> forQuantityAndAccount12 = new MMConstraint<QuantityAndAccount12>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkQuantityAndAccount12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> QuantityAndAccount12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount12 obj) throws Exception {
+			checkQuantityAndAccount12(obj);
 		}
 	};
 	/**
@@ -10081,11 +11381,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount15> forQuantityAndAccount15 = new MMConstraint<QuantityAndAccount15>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkQuantityAndAccount15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> QuantityAndAccount15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount15 obj) throws Exception {
+			checkQuantityAndAccount15(obj);
 		}
 	};
 	/**
@@ -10110,11 +11414,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<OtherAmounts9> forOtherAmounts9 = new MMConstraint<OtherAmounts9>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkOtherAmounts9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> OtherAmounts9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherAmounts9 obj) throws Exception {
+			checkOtherAmounts9(obj);
 		}
 	};
 	/**
@@ -10140,11 +11448,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount20> forQuantityAndAccount20 = new MMConstraint<QuantityAndAccount20>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkQuantityAndAccount20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> QuantityAndAccount20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount20 obj) throws Exception {
+			checkQuantityAndAccount20(obj);
 		}
 	};
 	/**
@@ -10169,11 +11481,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<OtherAmounts10> forOtherAmounts10 = new MMConstraint<OtherAmounts10>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkOtherAmounts10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> OtherAmounts10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherAmounts10 obj) throws Exception {
+			checkOtherAmounts10(obj);
 		}
 	};
 	/**
@@ -10199,11 +11515,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount28> forQuantityAndAccount28 = new MMConstraint<QuantityAndAccount28>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkQuantityAndAccount28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> QuantityAndAccount28.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount28 obj) throws Exception {
+			checkQuantityAndAccount28(obj);
 		}
 	};
 	/**
@@ -10228,11 +11548,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<OtherAmounts18> forOtherAmounts18 = new MMConstraint<OtherAmounts18>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkOtherAmounts18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> OtherAmounts18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherAmounts18 obj) throws Exception {
+			checkOtherAmounts18(obj);
 		}
 	};
 	/**
@@ -10258,11 +11582,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount37> forQuantityAndAccount37 = new MMConstraint<QuantityAndAccount37>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkQuantityAndAccount37;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> QuantityAndAccount37.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount37 obj) throws Exception {
+			checkQuantityAndAccount37(obj);
 		}
 	};
 	/**
@@ -10287,11 +11615,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<OtherAmounts24> forOtherAmounts24 = new MMConstraint<OtherAmounts24>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkOtherAmounts24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> OtherAmounts24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherAmounts24 obj) throws Exception {
+			checkOtherAmounts24(obj);
 		}
 	};
 	/**
@@ -10316,11 +11648,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<OtherAmounts13> forOtherAmounts13 = new MMConstraint<OtherAmounts13>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkOtherAmounts13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> OtherAmounts13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherAmounts13 obj) throws Exception {
+			checkOtherAmounts13(obj);
 		}
 	};
 	/**
@@ -10346,11 +11682,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails5> forTransactionDetails5 = new MMConstraint<TransactionDetails5>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails5 obj) throws Exception {
+			checkTransactionDetails5(obj);
 		}
 	};
 	/**
@@ -10376,11 +11716,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails9> forTransactionDetails9 = new MMConstraint<TransactionDetails9>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> TransactionDetails9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails9 obj) throws Exception {
+			checkTransactionDetails9(obj);
 		}
 	};
 	/**
@@ -10406,11 +11750,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails22> forTransactionDetails22 = new MMConstraint<TransactionDetails22>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails22 obj) throws Exception {
+			checkTransactionDetails22(obj);
 		}
 	};
 	/**
@@ -10436,11 +11784,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails23> forTransactionDetails23 = new MMConstraint<TransactionDetails23>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails23 obj) throws Exception {
+			checkTransactionDetails23(obj);
 		}
 	};
 	/**
@@ -10466,11 +11818,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails36> forTransactionDetails36 = new MMConstraint<TransactionDetails36>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails36;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails36.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails36 obj) throws Exception {
+			checkTransactionDetails36(obj);
 		}
 	};
 	/**
@@ -10496,11 +11852,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails47> forTransactionDetails47 = new MMConstraint<TransactionDetails47>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails47;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails47.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails47 obj) throws Exception {
+			checkTransactionDetails47(obj);
 		}
 	};
 	/**
@@ -10534,12 +11894,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails53> forTransactionDetails53 = new MMConstraint<TransactionDetails53>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails53;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forTransactionDetails61);
 			owner_lazy = () -> TransactionDetails53.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails53 obj) throws Exception {
+			checkTransactionDetails53(obj);
 		}
 	};
 	/**
@@ -10565,11 +11929,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails58> forTransactionDetails58 = new MMConstraint<TransactionDetails58>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails58;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails58.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails58 obj) throws Exception {
+			checkTransactionDetails58(obj);
 		}
 	};
 	/**
@@ -10595,11 +11963,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails7> forTransactionDetails7 = new MMConstraint<TransactionDetails7>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails7 obj) throws Exception {
+			checkTransactionDetails7(obj);
 		}
 	};
 	/**
@@ -10625,11 +11997,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails8> forTransactionDetails8 = new MMConstraint<TransactionDetails8>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails8 obj) throws Exception {
+			checkTransactionDetails8(obj);
 		}
 	};
 	/**
@@ -10655,11 +12031,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails16> forTransactionDetails16 = new MMConstraint<TransactionDetails16>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> TransactionDetails16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails16 obj) throws Exception {
+			checkTransactionDetails16(obj);
 		}
 	};
 	/**
@@ -10685,11 +12065,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails17> forTransactionDetails17 = new MMConstraint<TransactionDetails17>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> TransactionDetails17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails17 obj) throws Exception {
+			checkTransactionDetails17(obj);
 		}
 	};
 	/**
@@ -10715,11 +12099,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails26> forTransactionDetails26 = new MMConstraint<TransactionDetails26>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails26.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails26 obj) throws Exception {
+			checkTransactionDetails26(obj);
 		}
 	};
 	/**
@@ -10745,11 +12133,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails25> forTransactionDetails25 = new MMConstraint<TransactionDetails25>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails25 obj) throws Exception {
+			checkTransactionDetails25(obj);
 		}
 	};
 	/**
@@ -10775,11 +12167,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails27> forTransactionDetails27 = new MMConstraint<TransactionDetails27>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails27.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails27 obj) throws Exception {
+			checkTransactionDetails27(obj);
 		}
 	};
 	/**
@@ -10805,11 +12201,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails33> forTransactionDetails33 = new MMConstraint<TransactionDetails33>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails33;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails33.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails33 obj) throws Exception {
+			checkTransactionDetails33(obj);
 		}
 	};
 	/**
@@ -10835,11 +12235,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails39> forTransactionDetails39 = new MMConstraint<TransactionDetails39>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails39;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails39.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails39 obj) throws Exception {
+			checkTransactionDetails39(obj);
 		}
 	};
 	/**
@@ -10865,11 +12269,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails50> forTransactionDetails50 = new MMConstraint<TransactionDetails50>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails50;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails50.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails50 obj) throws Exception {
+			checkTransactionDetails50(obj);
 		}
 	};
 	/**
@@ -10903,12 +12311,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails56> forTransactionDetails56 = new MMConstraint<TransactionDetails56>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails56;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forTransactionDetails62);
 			owner_lazy = () -> TransactionDetails56.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails56 obj) throws Exception {
+			checkTransactionDetails56(obj);
 		}
 	};
 	/**
@@ -10934,11 +12346,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails59> forTransactionDetails59 = new MMConstraint<TransactionDetails59>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails59;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails59.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails59 obj) throws Exception {
+			checkTransactionDetails59(obj);
 		}
 	};
 	/**
@@ -10964,11 +12380,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails6> forTransactionDetails6 = new MMConstraint<TransactionDetails6>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails6 obj) throws Exception {
+			checkTransactionDetails6(obj);
 		}
 	};
 	/**
@@ -10994,11 +12414,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails18> forTransactionDetails18 = new MMConstraint<TransactionDetails18>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> TransactionDetails18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails18 obj) throws Exception {
+			checkTransactionDetails18(obj);
 		}
 	};
 	/**
@@ -11024,11 +12448,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails24> forTransactionDetails24 = new MMConstraint<TransactionDetails24>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails24 obj) throws Exception {
+			checkTransactionDetails24(obj);
 		}
 	};
 	/**
@@ -11054,11 +12482,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails34> forTransactionDetails34 = new MMConstraint<TransactionDetails34>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails34;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails34.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails34 obj) throws Exception {
+			checkTransactionDetails34(obj);
 		}
 	};
 	/**
@@ -11084,11 +12516,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails37> forTransactionDetails37 = new MMConstraint<TransactionDetails37>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails37;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails37.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails37 obj) throws Exception {
+			checkTransactionDetails37(obj);
 		}
 	};
 	/**
@@ -11114,11 +12550,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails48> forTransactionDetails48 = new MMConstraint<TransactionDetails48>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails48;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails48.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails48 obj) throws Exception {
+			checkTransactionDetails48(obj);
 		}
 	};
 	/**
@@ -11152,12 +12592,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails57> forTransactionDetails57 = new MMConstraint<TransactionDetails57>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails57;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forTransactionDetails63);
 			owner_lazy = () -> TransactionDetails57.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails57 obj) throws Exception {
+			checkTransactionDetails57(obj);
 		}
 	};
 	/**
@@ -11183,11 +12627,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails60> forTransactionDetails60 = new MMConstraint<TransactionDetails60>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails60;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails60.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails60 obj) throws Exception {
+			checkTransactionDetails60(obj);
 		}
 	};
 	/**
@@ -11212,11 +12660,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<OtherAmounts2> forOtherAmounts2 = new MMConstraint<OtherAmounts2>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkOtherAmounts2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> OtherAmounts2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherAmounts2 obj) throws Exception {
+			checkOtherAmounts2(obj);
 		}
 	};
 	/**
@@ -11242,11 +12694,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails7> forSecuritiesTradeDetails7 = new MMConstraint<SecuritiesTradeDetails7>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesTradeDetails7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesTradeDetails7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails7 obj) throws Exception {
+			checkSecuritiesTradeDetails7(obj);
 		}
 	};
 	/**
@@ -11272,11 +12728,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails19> forSecuritiesTradeDetails19 = new MMConstraint<SecuritiesTradeDetails19>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesTradeDetails19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesTradeDetails19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails19 obj) throws Exception {
+			checkSecuritiesTradeDetails19(obj);
 		}
 	};
 	/**
@@ -11302,11 +12762,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AmountAndDirection10> forAmountAndDirection10 = new MMConstraint<AmountAndDirection10>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAmountAndDirection10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AmountAndDirection10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AmountAndDirection10 obj) throws Exception {
+			checkAmountAndDirection10(obj);
 		}
 	};
 	/**
@@ -11332,11 +12796,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails2> forSecuritiesFinancingTransactionDetails2 = new MMConstraint<SecuritiesFinancingTransactionDetails2>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesFinancingTransactionDetails2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails2 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails2(obj);
 		}
 	};
 	/**
@@ -11362,11 +12830,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails8> forSecuritiesFinancingTransactionDetails8 = new MMConstraint<SecuritiesFinancingTransactionDetails8>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesFinancingTransactionDetails8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails8 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails8(obj);
 		}
 	};
 	/**
@@ -11392,11 +12864,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails7> forSecuritiesFinancingTransactionDetails7 = new MMConstraint<SecuritiesFinancingTransactionDetails7>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesFinancingTransactionDetails7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails7 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails7(obj);
 		}
 	};
 	/**
@@ -11422,11 +12898,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AmountAndDirection22> forAmountAndDirection22 = new MMConstraint<AmountAndDirection22>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAmountAndDirection22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AmountAndDirection22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AmountAndDirection22 obj) throws Exception {
+			checkAmountAndDirection22(obj);
 		}
 	};
 	/**
@@ -11452,11 +12932,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AmountAndDirection23> forAmountAndDirection23 = new MMConstraint<AmountAndDirection23>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAmountAndDirection23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AmountAndDirection23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AmountAndDirection23 obj) throws Exception {
+			checkAmountAndDirection23(obj);
 		}
 	};
 	/**
@@ -11481,11 +12965,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<OtherAmounts8> forOtherAmounts8 = new MMConstraint<OtherAmounts8>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkOtherAmounts8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> OtherAmounts8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherAmounts8 obj) throws Exception {
+			checkOtherAmounts8(obj);
 		}
 	};
 	/**
@@ -11511,11 +12999,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails4> forSecuritiesTradeDetails4 = new MMConstraint<SecuritiesTradeDetails4>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesTradeDetails4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesTradeDetails4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails4 obj) throws Exception {
+			checkSecuritiesTradeDetails4(obj);
 		}
 	};
 	/**
@@ -11541,11 +13033,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails17> forSecuritiesTradeDetails17 = new MMConstraint<SecuritiesTradeDetails17>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesTradeDetails17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesTradeDetails17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails17 obj) throws Exception {
+			checkSecuritiesTradeDetails17(obj);
 		}
 	};
 	/**
@@ -11571,11 +13067,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails4> forTransactionDetails4 = new MMConstraint<TransactionDetails4>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails4 obj) throws Exception {
+			checkTransactionDetails4(obj);
 		}
 	};
 	/**
@@ -11601,11 +13101,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails30> forTransactionDetails30 = new MMConstraint<TransactionDetails30>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails30.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails30 obj) throws Exception {
+			checkTransactionDetails30(obj);
 		}
 	};
 	/**
@@ -11631,11 +13135,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AmountAndDirection11> forAmountAndDirection11 = new MMConstraint<AmountAndDirection11>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAmountAndDirection11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> AmountAndDirection11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AmountAndDirection11 obj) throws Exception {
+			checkAmountAndDirection11(obj);
 		}
 	};
 	/**
@@ -11661,11 +13169,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails19> forSecuritiesFinancingTransactionDetails19 = new MMConstraint<SecuritiesFinancingTransactionDetails19>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesFinancingTransactionDetails19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails19 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails19(obj);
 		}
 	};
 	/**
@@ -11691,11 +13203,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails20> forSecuritiesFinancingTransactionDetails20 = new MMConstraint<SecuritiesFinancingTransactionDetails20>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesFinancingTransactionDetails20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails20 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails20(obj);
 		}
 	};
 	/**
@@ -11721,11 +13237,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails6> forSecuritiesFinancingTransactionDetails6 = new MMConstraint<SecuritiesFinancingTransactionDetails6>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesFinancingTransactionDetails6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails6 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails6(obj);
 		}
 	};
 	/**
@@ -11751,11 +13271,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails10> forSecuritiesFinancingTransactionDetails10 = new MMConstraint<SecuritiesFinancingTransactionDetails10>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesFinancingTransactionDetails10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails10 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails10(obj);
 		}
 	};
 	/**
@@ -11790,12 +13314,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails17> forSecuritiesFinancingTransactionDetails17 = new MMConstraint<SecuritiesFinancingTransactionDetails17>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesFinancingTransactionDetails17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forSecuritiesFinancingTransactionDetails21);
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails17 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails17(obj);
 		}
 	};
 	/**
@@ -11821,11 +13349,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails18> forSecuritiesFinancingTransactionDetails18 = new MMConstraint<SecuritiesFinancingTransactionDetails18>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesFinancingTransactionDetails18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails18 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails18(obj);
 		}
 	};
 	/**
@@ -11851,11 +13383,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails20> forTransactionDetails20 = new MMConstraint<TransactionDetails20>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> TransactionDetails20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails20 obj) throws Exception {
+			checkTransactionDetails20(obj);
 		}
 	};
 	/**
@@ -11881,11 +13417,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails9> forSecuritiesFinancingTransactionDetails9 = new MMConstraint<SecuritiesFinancingTransactionDetails9>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesFinancingTransactionDetails9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails9 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails9(obj);
 		}
 	};
 	/**
@@ -11911,11 +13451,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AmountAndDirection25> forAmountAndDirection25 = new MMConstraint<AmountAndDirection25>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAmountAndDirection25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AmountAndDirection25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AmountAndDirection25 obj) throws Exception {
+			checkAmountAndDirection25(obj);
 		}
 	};
 	/**
@@ -11941,11 +13485,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AmountAndDirection26> forAmountAndDirection26 = new MMConstraint<AmountAndDirection26>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAmountAndDirection26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AmountAndDirection26.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AmountAndDirection26 obj) throws Exception {
+			checkAmountAndDirection26(obj);
 		}
 	};
 	/**
@@ -11970,11 +13518,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<OtherAmounts11> forOtherAmounts11 = new MMConstraint<OtherAmounts11>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkOtherAmounts11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> OtherAmounts11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherAmounts11 obj) throws Exception {
+			checkOtherAmounts11(obj);
 		}
 	};
 	/**
@@ -12000,11 +13552,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails10> forSecuritiesTradeDetails10 = new MMConstraint<SecuritiesTradeDetails10>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesTradeDetails10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> SecuritiesTradeDetails10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails10 obj) throws Exception {
+			checkSecuritiesTradeDetails10(obj);
 		}
 	};
 	/**
@@ -12030,11 +13586,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails22> forSecuritiesTradeDetails22 = new MMConstraint<SecuritiesTradeDetails22>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesTradeDetails22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesTradeDetails22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails22 obj) throws Exception {
+			checkSecuritiesTradeDetails22(obj);
 		}
 	};
 	/**
@@ -12068,12 +13628,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails23> forSecuritiesTradeDetails23 = new MMConstraint<SecuritiesTradeDetails23>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesTradeDetails23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forSecuritiesTradeDetails35);
 			owner_lazy = () -> SecuritiesTradeDetails23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails23 obj) throws Exception {
+			checkSecuritiesTradeDetails23(obj);
 		}
 	};
 	/**
@@ -12099,11 +13663,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails29> forSecuritiesTradeDetails29 = new MMConstraint<SecuritiesTradeDetails29>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesTradeDetails29;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesTradeDetails29.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails29 obj) throws Exception {
+			checkSecuritiesTradeDetails29(obj);
 		}
 	};
 	/**
@@ -12129,11 +13697,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails40> forTransactionDetails40 = new MMConstraint<TransactionDetails40>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails40;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails40.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails40 obj) throws Exception {
+			checkTransactionDetails40(obj);
 		}
 	};
 	/**
@@ -12159,11 +13731,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails42> forTransactionDetails42 = new MMConstraint<TransactionDetails42>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails42;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails42.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails42 obj) throws Exception {
+			checkTransactionDetails42(obj);
 		}
 	};
 	/**
@@ -12189,11 +13765,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails46> forTransactionDetails46 = new MMConstraint<TransactionDetails46>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails46;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails46.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails46 obj) throws Exception {
+			checkTransactionDetails46(obj);
 		}
 	};
 	/**
@@ -12219,11 +13799,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails32> forTransactionDetails32 = new MMConstraint<TransactionDetails32>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails32;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails32.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails32 obj) throws Exception {
+			checkTransactionDetails32(obj);
 		}
 	};
 	/**
@@ -12249,11 +13833,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails14> forTransactionDetails14 = new MMConstraint<TransactionDetails14>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> TransactionDetails14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails14 obj) throws Exception {
+			checkTransactionDetails14(obj);
 		}
 	};
 	/**
@@ -12279,11 +13867,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails35> forTransactionDetails35 = new MMConstraint<TransactionDetails35>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails35;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails35.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails35 obj) throws Exception {
+			checkTransactionDetails35(obj);
 		}
 	};
 	/**
@@ -12308,11 +13900,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<OtherAmounts6> forOtherAmounts6 = new MMConstraint<OtherAmounts6>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkOtherAmounts6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> OtherAmounts6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherAmounts6 obj) throws Exception {
+			checkOtherAmounts6(obj);
 		}
 	};
 	/**
@@ -12338,11 +13934,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails14> forSecuritiesTradeDetails14 = new MMConstraint<SecuritiesTradeDetails14>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesTradeDetails14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> SecuritiesTradeDetails14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails14 obj) throws Exception {
+			checkSecuritiesTradeDetails14(obj);
 		}
 	};
 	/**
@@ -12368,11 +13968,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails20> forSecuritiesTradeDetails20 = new MMConstraint<SecuritiesTradeDetails20>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesTradeDetails20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesTradeDetails20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails20 obj) throws Exception {
+			checkSecuritiesTradeDetails20(obj);
 		}
 	};
 	/**
@@ -12397,11 +14001,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<OtherAmounts15> forOtherAmounts15 = new MMConstraint<OtherAmounts15>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkOtherAmounts15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> OtherAmounts15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherAmounts15 obj) throws Exception {
+			checkOtherAmounts15(obj);
 		}
 	};
 	/**
@@ -12427,11 +14035,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails24> forSecuritiesTradeDetails24 = new MMConstraint<SecuritiesTradeDetails24>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesTradeDetails24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesTradeDetails24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails24 obj) throws Exception {
+			checkSecuritiesTradeDetails24(obj);
 		}
 	};
 	/**
@@ -12456,11 +14068,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<OtherAmounts22> forOtherAmounts22 = new MMConstraint<OtherAmounts22>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkOtherAmounts22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> OtherAmounts22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherAmounts22 obj) throws Exception {
+			checkOtherAmounts22(obj);
 		}
 	};
 	/**
@@ -12486,11 +14102,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails30> forSecuritiesTradeDetails30 = new MMConstraint<SecuritiesTradeDetails30>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesTradeDetails30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesTradeDetails30.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails30 obj) throws Exception {
+			checkSecuritiesTradeDetails30(obj);
 		}
 	};
 	/**
@@ -12516,11 +14136,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails45> forTransactionDetails45 = new MMConstraint<TransactionDetails45>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails45;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails45.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails45 obj) throws Exception {
+			checkTransactionDetails45(obj);
 		}
 	};
 	/**
@@ -12546,11 +14170,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails51> forTransactionDetails51 = new MMConstraint<TransactionDetails51>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails51;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails51.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails51 obj) throws Exception {
+			checkTransactionDetails51(obj);
 		}
 	};
 	/**
@@ -12576,11 +14204,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace19> forAggregateBalancePerSafekeepingPlace19 = new MMConstraint<AggregateBalancePerSafekeepingPlace19>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalancePerSafekeepingPlace19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace19 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace19(obj);
 		}
 	};
 	/**
@@ -12606,11 +14238,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails52> forTransactionDetails52 = new MMConstraint<TransactionDetails52>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails52;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails52.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails52 obj) throws Exception {
+			checkTransactionDetails52(obj);
 		}
 	};
 	/**
@@ -12649,13 +14285,17 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails61> forTransactionDetails61 = new MMConstraint<TransactionDetails61>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails61;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forTransactionDetails70);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forTransactionDetails53;
 			owner_lazy = () -> TransactionDetails61.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails61 obj) throws Exception {
+			checkTransactionDetails61(obj);
 		}
 	};
 	/**
@@ -12686,12 +14326,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AmountAndDirection36> forAmountAndDirection36 = new MMConstraint<AmountAndDirection36>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAmountAndDirection36;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forAmountAndDirection2;
 			owner_lazy = () -> AmountAndDirection36.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AmountAndDirection36 obj) throws Exception {
+			checkAmountAndDirection36(obj);
 		}
 	};
 	/**
@@ -12732,13 +14376,17 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails21> forSecuritiesFinancingTransactionDetails21 = new MMConstraint<SecuritiesFinancingTransactionDetails21>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesFinancingTransactionDetails21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forSecuritiesFinancingTransactionDetails24);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forSecuritiesFinancingTransactionDetails17;
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails21.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails21 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails21(obj);
 		}
 	};
 	/**
@@ -12777,13 +14425,17 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails62> forTransactionDetails62 = new MMConstraint<TransactionDetails62>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails62;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forTransactionDetails69);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forTransactionDetails56;
 			owner_lazy = () -> TransactionDetails62.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails62 obj) throws Exception {
+			checkTransactionDetails62(obj);
 		}
 	};
 	/**
@@ -12814,12 +14466,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AmountAndDirection37> forAmountAndDirection37 = new MMConstraint<AmountAndDirection37>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAmountAndDirection37;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forAmountAndDirection32;
 			owner_lazy = () -> AmountAndDirection37.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AmountAndDirection37 obj) throws Exception {
+			checkAmountAndDirection37(obj);
 		}
 	};
 	/**
@@ -12850,12 +14506,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails63> forTransactionDetails63 = new MMConstraint<TransactionDetails63>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails63;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forTransactionDetails57;
 			owner_lazy = () -> TransactionDetails63.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails63 obj) throws Exception {
+			checkTransactionDetails63(obj);
 		}
 	};
 	/**
@@ -12886,12 +14546,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption103> forCorporateActionOption103 = new MMConstraint<CorporateActionOption103>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption103;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forCorporateActionOption57;
 			owner_lazy = () -> CorporateActionOption103.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption103 obj) throws Exception {
+			checkCorporateActionOption103(obj);
 		}
 	};
 	/**
@@ -12922,12 +14586,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption100> forCorporateActionOption100 = new MMConstraint<CorporateActionOption100>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption100;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forCorporateActionOption52;
 			owner_lazy = () -> CorporateActionOption100.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption100 obj) throws Exception {
+			checkCorporateActionOption100(obj);
 		}
 	};
 	/**
@@ -12958,12 +14626,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption101> forCorporateActionOption101 = new MMConstraint<CorporateActionOption101>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption101;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forCorporateActionOption51;
 			owner_lazy = () -> CorporateActionOption101.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption101 obj) throws Exception {
+			checkCorporateActionOption101(obj);
 		}
 	};
 	/**
@@ -13002,13 +14674,17 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption102> forCorporateActionOption102 = new MMConstraint<CorporateActionOption102>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption102;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forCorporateActionOption111);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forCorporateActionOption53;
 			owner_lazy = () -> CorporateActionOption102.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption102 obj) throws Exception {
+			checkCorporateActionOption102(obj);
 		}
 	};
 	/**
@@ -13039,12 +14715,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<PriceFormat33Choice> forPriceFormat33Choice = new MMConstraint<PriceFormat33Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkPriceFormat33Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forPriceFormat21Choice;
 			owner_lazy = () -> PriceFormat33Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceFormat33Choice obj) throws Exception {
+			checkPriceFormat33Choice(obj);
 		}
 	};
 	/**
@@ -13075,12 +14755,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionAmounts29> forCorporateActionAmounts29 = new MMConstraint<CorporateActionAmounts29>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionAmounts29;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forCorporateActionAmounts23;
 			owner_lazy = () -> CorporateActionAmounts29.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionAmounts29 obj) throws Exception {
+			checkCorporateActionAmounts29(obj);
 		}
 	};
 	/**
@@ -13118,13 +14802,17 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CashOption30> forCashOption30 = new MMConstraint<CashOption30>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCashOption30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forCashOption39);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forCashOption26;
 			owner_lazy = () -> CashOption30.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption30 obj) throws Exception {
+			checkCashOption30(obj);
 		}
 	};
 	/**
@@ -13155,12 +14843,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateAndAmountFormat19Choice> forRateAndAmountFormat19Choice = new MMConstraint<RateAndAmountFormat19Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateAndAmountFormat19Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forRateAndAmountFormat14Choice;
 			owner_lazy = () -> RateAndAmountFormat19Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateAndAmountFormat19Choice obj) throws Exception {
+			checkRateAndAmountFormat19Choice(obj);
 		}
 	};
 	/**
@@ -13186,11 +14878,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateAndAmountFormat20Choice> forRateAndAmountFormat20Choice = new MMConstraint<RateAndAmountFormat20Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateAndAmountFormat20Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> RateAndAmountFormat20Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateAndAmountFormat20Choice obj) throws Exception {
+			checkRateAndAmountFormat20Choice(obj);
 		}
 	};
 	/**
@@ -13216,11 +14912,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateAndAmountFormat21Choice> forRateAndAmountFormat21Choice = new MMConstraint<RateAndAmountFormat21Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateAndAmountFormat21Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> RateAndAmountFormat21Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateAndAmountFormat21Choice obj) throws Exception {
+			checkRateAndAmountFormat21Choice(obj);
 		}
 	};
 	/**
@@ -13251,12 +14951,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<PriceFormat32Choice> forPriceFormat32Choice = new MMConstraint<PriceFormat32Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkPriceFormat32Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forPriceFormat20Choice;
 			owner_lazy = () -> PriceFormat32Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceFormat32Choice obj) throws Exception {
+			checkPriceFormat32Choice(obj);
 		}
 	};
 	/**
@@ -13287,12 +14991,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionAmounts27> forCorporateActionAmounts27 = new MMConstraint<CorporateActionAmounts27>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionAmounts27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forCorporateActionAmounts21;
 			owner_lazy = () -> CorporateActionAmounts27.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionAmounts27 obj) throws Exception {
+			checkCorporateActionAmounts27(obj);
 		}
 	};
 	/**
@@ -13323,12 +15031,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<PriceFormat34Choice> forPriceFormat34Choice = new MMConstraint<PriceFormat34Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkPriceFormat34Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forPriceFormat7Choice;
 			owner_lazy = () -> PriceFormat34Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceFormat34Choice obj) throws Exception {
+			checkPriceFormat34Choice(obj);
 		}
 	};
 	/**
@@ -13358,12 +15070,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CashOption31> forCashOption31 = new MMConstraint<CashOption31>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCashOption31;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forCashOption25;
 			owner_lazy = () -> CashOption31.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption31 obj) throws Exception {
+			checkCashOption31(obj);
 		}
 	};
 	/**
@@ -13393,12 +15109,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CashOption32> forCashOption32 = new MMConstraint<CashOption32>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCashOption32;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forCashOption24;
 			owner_lazy = () -> CashOption32.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption32 obj) throws Exception {
+			checkCashOption32(obj);
 		}
 	};
 	/**
@@ -13429,12 +15149,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails35> forSecuritiesTradeDetails35 = new MMConstraint<SecuritiesTradeDetails35>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesTradeDetails35;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forSecuritiesTradeDetails23;
 			owner_lazy = () -> SecuritiesTradeDetails35.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails35 obj) throws Exception {
+			checkSecuritiesTradeDetails35(obj);
 		}
 	};
 	/**
@@ -13460,11 +15184,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption110> forCorporateActionOption110 = new MMConstraint<CorporateActionOption110>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption110;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionOption110.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption110 obj) throws Exception {
+			checkCorporateActionOption110(obj);
 		}
 	};
 	/**
@@ -13490,11 +15218,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption108> forCorporateActionOption108 = new MMConstraint<CorporateActionOption108>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption108;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionOption108.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption108 obj) throws Exception {
+			checkCorporateActionOption108(obj);
 		}
 	};
 	/**
@@ -13520,11 +15252,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption107> forCorporateActionOption107 = new MMConstraint<CorporateActionOption107>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption107;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionOption107.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption107 obj) throws Exception {
+			checkCorporateActionOption107(obj);
 		}
 	};
 	/**
@@ -13550,11 +15286,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption106> forCorporateActionOption106 = new MMConstraint<CorporateActionOption106>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption106;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionOption106.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption106 obj) throws Exception {
+			checkCorporateActionOption106(obj);
 		}
 	};
 	/**
@@ -13580,11 +15320,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<PriceFormat43Choice> forPriceFormat43Choice = new MMConstraint<PriceFormat43Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkPriceFormat43Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> PriceFormat43Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceFormat43Choice obj) throws Exception {
+			checkPriceFormat43Choice(obj);
 		}
 	};
 	/**
@@ -13610,11 +15354,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateAndAmountFormat28Choice> forRateAndAmountFormat28Choice = new MMConstraint<RateAndAmountFormat28Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateAndAmountFormat28Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> RateAndAmountFormat28Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateAndAmountFormat28Choice obj) throws Exception {
+			checkRateAndAmountFormat28Choice(obj);
 		}
 	};
 	/**
@@ -13639,11 +15387,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CashOption36> forCashOption36 = new MMConstraint<CashOption36>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCashOption36;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CashOption36.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption36 obj) throws Exception {
+			checkCashOption36(obj);
 		}
 	};
 	/**
@@ -13669,11 +15421,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<Quantity16Choice> forQuantity16Choice = new MMConstraint<Quantity16Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkQuantity16Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> Quantity16Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Quantity16Choice obj) throws Exception {
+			checkQuantity16Choice(obj);
 		}
 	};
 	/**
@@ -13698,11 +15454,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CashOption35> forCashOption35 = new MMConstraint<CashOption35>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCashOption35;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CashOption35.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption35 obj) throws Exception {
+			checkCashOption35(obj);
 		}
 	};
 	/**
@@ -13728,11 +15488,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionAmounts32> forCorporateActionAmounts32 = new MMConstraint<CorporateActionAmounts32>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionAmounts32;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionAmounts32.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionAmounts32 obj) throws Exception {
+			checkCorporateActionAmounts32(obj);
 		}
 	};
 	/**
@@ -13758,11 +15522,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateAndAmountFormat35Choice> forRateAndAmountFormat35Choice = new MMConstraint<RateAndAmountFormat35Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateAndAmountFormat35Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> RateAndAmountFormat35Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateAndAmountFormat35Choice obj) throws Exception {
+			checkRateAndAmountFormat35Choice(obj);
 		}
 	};
 	/**
@@ -13788,11 +15556,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateAndAmountFormat32Choice> forRateAndAmountFormat32Choice = new MMConstraint<RateAndAmountFormat32Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateAndAmountFormat32Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> RateAndAmountFormat32Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateAndAmountFormat32Choice obj) throws Exception {
+			checkRateAndAmountFormat32Choice(obj);
 		}
 	};
 	/**
@@ -13818,11 +15590,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<PriceFormat40Choice> forPriceFormat40Choice = new MMConstraint<PriceFormat40Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkPriceFormat40Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> PriceFormat40Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceFormat40Choice obj) throws Exception {
+			checkPriceFormat40Choice(obj);
 		}
 	};
 	/**
@@ -13847,11 +15623,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CashOption38> forCashOption38 = new MMConstraint<CashOption38>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCashOption38;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CashOption38.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption38 obj) throws Exception {
+			checkCashOption38(obj);
 		}
 	};
 	/**
@@ -13877,11 +15657,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<RateAndAmountFormat30Choice> forRateAndAmountFormat30Choice = new MMConstraint<RateAndAmountFormat30Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkRateAndAmountFormat30Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> RateAndAmountFormat30Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateAndAmountFormat30Choice obj) throws Exception {
+			checkRateAndAmountFormat30Choice(obj);
 		}
 	};
 	/**
@@ -13907,11 +15691,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<PriceFormat39Choice> forPriceFormat39Choice = new MMConstraint<PriceFormat39Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkPriceFormat39Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> PriceFormat39Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceFormat39Choice obj) throws Exception {
+			checkPriceFormat39Choice(obj);
 		}
 	};
 	/**
@@ -13937,11 +15725,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<OriginalAndCurrentQuantities5> forOriginalAndCurrentQuantities5 = new MMConstraint<OriginalAndCurrentQuantities5>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkOriginalAndCurrentQuantities5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> OriginalAndCurrentQuantities5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OriginalAndCurrentQuantities5 obj) throws Exception {
+			checkOriginalAndCurrentQuantities5(obj);
 		}
 	};
 	/**
@@ -13967,11 +15759,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionAmounts35> forCorporateActionAmounts35 = new MMConstraint<CorporateActionAmounts35>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionAmounts35;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionAmounts35.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionAmounts35 obj) throws Exception {
+			checkCorporateActionAmounts35(obj);
 		}
 	};
 	/**
@@ -13997,11 +15793,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AmountAndDirection38> forAmountAndDirection38 = new MMConstraint<AmountAndDirection38>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAmountAndDirection38;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> AmountAndDirection38.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AmountAndDirection38 obj) throws Exception {
+			checkAmountAndDirection38(obj);
 		}
 	};
 	/**
@@ -14027,11 +15827,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails22> forSecuritiesFinancingTransactionDetails22 = new MMConstraint<SecuritiesFinancingTransactionDetails22>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesFinancingTransactionDetails22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails22 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails22(obj);
 		}
 	};
 	/**
@@ -14057,11 +15861,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails66> forTransactionDetails66 = new MMConstraint<TransactionDetails66>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails66;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails66.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails66 obj) throws Exception {
+			checkTransactionDetails66(obj);
 		}
 	};
 	/**
@@ -14087,11 +15895,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails42> forSecuritiesTradeDetails42 = new MMConstraint<SecuritiesTradeDetails42>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesTradeDetails42;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesTradeDetails42.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails42 obj) throws Exception {
+			checkSecuritiesTradeDetails42(obj);
 		}
 	};
 	/**
@@ -14117,11 +15929,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails67> forTransactionDetails67 = new MMConstraint<TransactionDetails67>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails67;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails67.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails67 obj) throws Exception {
+			checkTransactionDetails67(obj);
 		}
 	};
 	/**
@@ -14147,11 +15963,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails68> forTransactionDetails68 = new MMConstraint<TransactionDetails68>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails68;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails68.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails68 obj) throws Exception {
+			checkTransactionDetails68(obj);
 		}
 	};
 	/**
@@ -14177,11 +15997,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AmountAndDirection40> forAmountAndDirection40 = new MMConstraint<AmountAndDirection40>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAmountAndDirection40;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AmountAndDirection40.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AmountAndDirection40 obj) throws Exception {
+			checkAmountAndDirection40(obj);
 		}
 	};
 	/**
@@ -14213,12 +16037,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails24> forSecuritiesFinancingTransactionDetails24 = new MMConstraint<SecuritiesFinancingTransactionDetails24>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesFinancingTransactionDetails24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forSecuritiesFinancingTransactionDetails21;
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails24 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails24(obj);
 		}
 	};
 	/**
@@ -14249,12 +16077,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails70> forTransactionDetails70 = new MMConstraint<TransactionDetails70>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails70;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forTransactionDetails61;
 			owner_lazy = () -> TransactionDetails70.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails70 obj) throws Exception {
+			checkTransactionDetails70(obj);
 		}
 	};
 	/**
@@ -14285,12 +16117,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails69> forTransactionDetails69 = new MMConstraint<TransactionDetails69>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails69;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forTransactionDetails62;
 			owner_lazy = () -> TransactionDetails69.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails69 obj) throws Exception {
+			checkTransactionDetails69(obj);
 		}
 	};
 	/**
@@ -14321,12 +16157,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation26> forAggregateBalanceInformation26 = new MMConstraint<AggregateBalanceInformation26>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalanceInformation26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forAggregateBalanceInformation22;
 			owner_lazy = () -> AggregateBalanceInformation26.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation26 obj) throws Exception {
+			checkAggregateBalanceInformation26(obj);
 		}
 	};
 	/**
@@ -14357,12 +16197,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation25> forAggregateBalanceInformation25 = new MMConstraint<AggregateBalanceInformation25>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalanceInformation25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forAggregateBalanceInformation21;
 			owner_lazy = () -> AggregateBalanceInformation25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation25 obj) throws Exception {
+			checkAggregateBalanceInformation25(obj);
 		}
 	};
 	/**
@@ -14394,12 +16238,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace24> forAggregateBalancePerSafekeepingPlace24 = new MMConstraint<AggregateBalancePerSafekeepingPlace24>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalancePerSafekeepingPlace24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forAggregateBalancePerSafekeepingPlace20;
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace24 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace24(obj);
 		}
 	};
 	/**
@@ -14431,12 +16279,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace25> forAggregateBalancePerSafekeepingPlace25 = new MMConstraint<AggregateBalancePerSafekeepingPlace25>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalancePerSafekeepingPlace25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forAggregateBalancePerSafekeepingPlace21;
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace25 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace25(obj);
 		}
 	};
 	/**
@@ -14467,12 +16319,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption111> forCorporateActionOption111 = new MMConstraint<CorporateActionOption111>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption111;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forCorporateActionOption102;
 			owner_lazy = () -> CorporateActionOption111.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption111 obj) throws Exception {
+			checkCorporateActionOption111(obj);
 		}
 	};
 	/**
@@ -14502,12 +16358,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CashOption39> forCashOption39 = new MMConstraint<CashOption39>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCashOption39;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forCashOption30;
 			owner_lazy = () -> CashOption39.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption39 obj) throws Exception {
+			checkCashOption39(obj);
 		}
 	};
 	/**
@@ -14533,11 +16393,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption113> forCorporateActionOption113 = new MMConstraint<CorporateActionOption113>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCorporateActionOption113;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CorporateActionOption113.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption113 obj) throws Exception {
+			checkCorporateActionOption113(obj);
 		}
 	};
 	/**
@@ -14562,11 +16426,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<CashOption41> forCashOption41 = new MMConstraint<CashOption41>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkCashOption41;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> CashOption41.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption41 obj) throws Exception {
+			checkCashOption41(obj);
 		}
 	};
 	/**
@@ -14592,11 +16460,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation28> forAggregateBalanceInformation28 = new MMConstraint<AggregateBalanceInformation28>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalanceInformation28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AggregateBalanceInformation28.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation28 obj) throws Exception {
+			checkAggregateBalanceInformation28(obj);
 		}
 	};
 	/**
@@ -14622,11 +16494,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails71> forTransactionDetails71 = new MMConstraint<TransactionDetails71>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails71;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails71.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails71 obj) throws Exception {
+			checkTransactionDetails71(obj);
 		}
 	};
 	/**
@@ -14652,11 +16528,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails25> forSecuritiesFinancingTransactionDetails25 = new MMConstraint<SecuritiesFinancingTransactionDetails25>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkSecuritiesFinancingTransactionDetails25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails25 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails25(obj);
 		}
 	};
 	/**
@@ -14682,11 +16562,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation27> forAggregateBalanceInformation27 = new MMConstraint<AggregateBalanceInformation27>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalanceInformation27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AggregateBalanceInformation27.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation27 obj) throws Exception {
+			checkAggregateBalanceInformation27(obj);
 		}
 	};
 	/**
@@ -14712,11 +16596,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace26> forAggregateBalancePerSafekeepingPlace26 = new MMConstraint<AggregateBalancePerSafekeepingPlace26>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalancePerSafekeepingPlace26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace26.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace26 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace26(obj);
 		}
 	};
 	/**
@@ -14742,11 +16630,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace27> forAggregateBalancePerSafekeepingPlace27 = new MMConstraint<AggregateBalancePerSafekeepingPlace27>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkAggregateBalancePerSafekeepingPlace27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace27.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace27 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace27(obj);
 		}
 	};
 	/**
@@ -14772,11 +16664,15 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<TransactionDetails72> forTransactionDetails72 = new MMConstraint<TransactionDetails72>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkTransactionDetails72;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			owner_lazy = () -> TransactionDetails72.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails72 obj) throws Exception {
+			checkTransactionDetails72(obj);
 		}
 	};
 	/**
@@ -14807,12 +16703,16 @@ public class ConstraintCoexistenceAmountRule {
 	 */
 	public static final MMConstraint<PriceFormatSD2Choice> forPriceFormatSD2Choice = new MMConstraint<PriceFormatSD2Choice>() {
 		{
-			validator = ConstraintCoexistenceAmountRule::checkPriceFormatSD2Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceAmountRule";
 			definition = "During ISO 15022 – 20022 coexistence, Amount length must not be greater than 15, including the decimal point.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forPriceFormatSD1Choice;
 			owner_lazy = () -> PriceFormatSD2Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceFormatSD2Choice obj) throws Exception {
+			checkPriceFormatSD2Choice(obj);
 		}
 	};
 

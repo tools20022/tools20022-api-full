@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccountReturnCriteria3;
+import com.tools20022.repository.msg.CashAccountSearchCriteria5;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -126,7 +128,7 @@ public class AccountCriteria5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewQueryName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountCriteria5, Optional<Max35Text>> mmNewQueryName = new MMMessageAttribute<AccountCriteria5, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountCriteria5.mmObject();
 			isDerived = false;
@@ -139,9 +141,19 @@ public class AccountCriteria5 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max35Text> getValue(AccountCriteria5 obj) {
+			return obj.getNewQueryName();
+		}
+
+		@Override
+		public void setValue(AccountCriteria5 obj, Optional<Max35Text> value) {
+			obj.setNewQueryName(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "SchCrit")
-	protected List<com.tools20022.repository.msg.CashAccountSearchCriteria5> searchCriteria;
+	protected List<CashAccountSearchCriteria5> searchCriteria;
 	/**
 	 * 
 	 <p>
@@ -178,7 +190,7 @@ public class AccountCriteria5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSearchCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountCriteria5, List<CashAccountSearchCriteria5>> mmSearchCriteria = new MMMessageAssociationEnd<AccountCriteria5, List<CashAccountSearchCriteria5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountCriteria5.mmObject();
 			isDerived = false;
@@ -189,7 +201,17 @@ public class AccountCriteria5 {
 			nextVersions_lazy = () -> Arrays.asList(AccountCriteria6.mmSearchCriteria);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccountSearchCriteria5.mmObject();
+			type_lazy = () -> CashAccountSearchCriteria5.mmObject();
+		}
+
+		@Override
+		public List<CashAccountSearchCriteria5> getValue(AccountCriteria5 obj) {
+			return obj.getSearchCriteria();
+		}
+
+		@Override
+		public void setValue(AccountCriteria5 obj, List<CashAccountSearchCriteria5> value) {
+			obj.setSearchCriteria(value);
 		}
 	};
 	@XmlElement(name = "RtrCrit")
@@ -229,7 +251,7 @@ public class AccountCriteria5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReturnCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountCriteria5, Optional<CashAccountReturnCriteria3>> mmReturnCriteria = new MMMessageAssociationEnd<AccountCriteria5, Optional<CashAccountReturnCriteria3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountCriteria5.mmObject();
 			isDerived = false;
@@ -241,7 +263,17 @@ public class AccountCriteria5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccountReturnCriteria3.mmObject();
+			type_lazy = () -> CashAccountReturnCriteria3.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccountReturnCriteria3> getValue(AccountCriteria5 obj) {
+			return obj.getReturnCriteria();
+		}
+
+		@Override
+		public void setValue(AccountCriteria5 obj, Optional<CashAccountReturnCriteria3> value) {
+			obj.setReturnCriteria(value.orElse(null));
 		}
 	};
 
@@ -274,7 +306,7 @@ public class AccountCriteria5 {
 		return searchCriteria == null ? searchCriteria = new ArrayList<>() : searchCriteria;
 	}
 
-	public AccountCriteria5 setSearchCriteria(List<com.tools20022.repository.msg.CashAccountSearchCriteria5> searchCriteria) {
+	public AccountCriteria5 setSearchCriteria(List<CashAccountSearchCriteria5> searchCriteria) {
 		this.searchCriteria = Objects.requireNonNull(searchCriteria);
 		return this;
 	}
@@ -283,7 +315,7 @@ public class AccountCriteria5 {
 		return returnCriteria == null ? Optional.empty() : Optional.of(returnCriteria);
 	}
 
-	public AccountCriteria5 setReturnCriteria(com.tools20022.repository.msg.CashAccountReturnCriteria3 returnCriteria) {
+	public AccountCriteria5 setReturnCriteria(CashAccountReturnCriteria3 returnCriteria) {
 		this.returnCriteria = returnCriteria;
 		return this;
 	}

@@ -137,7 +137,7 @@ public class CorporateActionMovementDetailsExtension1 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMovementDetailsExtension1, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionMovementDetailsExtension1, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmObject();
 			isDerived = false;
@@ -148,6 +148,16 @@ public class CorporateActionMovementDetailsExtension1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionMovementDetailsExtension1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementDetailsExtension1 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "DTCCOptnTp")
@@ -185,7 +195,7 @@ public class CorporateActionMovementDetailsExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCCOptionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMovementDetailsExtension1, Optional<Max4AlphaNumericText>> mmDTCCOptionType = new MMMessageAttribute<CorporateActionMovementDetailsExtension1, Optional<Max4AlphaNumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmObject();
 			isDerived = false;
@@ -197,6 +207,16 @@ public class CorporateActionMovementDetailsExtension1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max4AlphaNumericText> getValue(CorporateActionMovementDetailsExtension1 obj) {
+			return obj.getDTCCOptionType();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementDetailsExtension1 obj, Optional<Max4AlphaNumericText> value) {
+			obj.setDTCCOptionType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCPosCaptrDt")
@@ -233,7 +253,7 @@ public class CorporateActionMovementDetailsExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCPositionCaptureDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMovementDetailsExtension1, Optional<ISODate>> mmDTCPositionCaptureDate = new MMMessageAttribute<CorporateActionMovementDetailsExtension1, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmObject();
 			isDerived = false;
@@ -245,6 +265,16 @@ public class CorporateActionMovementDetailsExtension1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CorporateActionMovementDetailsExtension1 obj) {
+			return obj.getDTCPositionCaptureDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementDetailsExtension1 obj, Optional<ISODate> value) {
+			obj.setDTCPositionCaptureDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DpstDt")
@@ -279,7 +309,7 @@ public class CorporateActionMovementDetailsExtension1 {
 	 * definition} = "Date at which the reorganisation deposit was made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDepositDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMovementDetailsExtension1, Optional<ISODate>> mmDepositDate = new MMMessageAttribute<CorporateActionMovementDetailsExtension1, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmObject();
 			isDerived = false;
@@ -291,6 +321,16 @@ public class CorporateActionMovementDetailsExtension1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CorporateActionMovementDetailsExtension1 obj) {
+			return obj.getDepositDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementDetailsExtension1 obj, Optional<ISODate> value) {
+			obj.setDepositDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCGnrtdDpstRefId")
@@ -328,7 +368,7 @@ public class CorporateActionMovementDetailsExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCGeneratedDepositReferenceIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMovementDetailsExtension1, Optional<Max16Text>> mmDTCGeneratedDepositReferenceIdentification = new MMMessageAttribute<CorporateActionMovementDetailsExtension1, Optional<Max16Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmObject();
 			isDerived = false;
@@ -340,6 +380,16 @@ public class CorporateActionMovementDetailsExtension1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max16Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max16Text> getValue(CorporateActionMovementDetailsExtension1 obj) {
+			return obj.getDTCGeneratedDepositReferenceIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementDetailsExtension1 obj, Optional<Max16Text> value) {
+			obj.setDTCGeneratedDepositReferenceIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PtcptDpstRefId")
@@ -377,7 +427,7 @@ public class CorporateActionMovementDetailsExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmParticipantDepositReferenceIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMovementDetailsExtension1, Optional<Max16Text>> mmParticipantDepositReferenceIdentification = new MMMessageAttribute<CorporateActionMovementDetailsExtension1, Optional<Max16Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmObject();
 			isDerived = false;
@@ -389,6 +439,16 @@ public class CorporateActionMovementDetailsExtension1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max16Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max16Text> getValue(CorporateActionMovementDetailsExtension1 obj) {
+			return obj.getParticipantDepositReferenceIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementDetailsExtension1 obj, Optional<Max16Text> value) {
+			obj.setParticipantDepositReferenceIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PtcptCrossRefId")
@@ -426,7 +486,7 @@ public class CorporateActionMovementDetailsExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmParticipantCrossReferenceIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMovementDetailsExtension1, Optional<Max16Text>> mmParticipantCrossReferenceIdentification = new MMMessageAttribute<CorporateActionMovementDetailsExtension1, Optional<Max16Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmObject();
 			isDerived = false;
@@ -438,6 +498,16 @@ public class CorporateActionMovementDetailsExtension1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max16Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max16Text> getValue(CorporateActionMovementDetailsExtension1 obj) {
+			return obj.getParticipantCrossReferenceIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementDetailsExtension1 obj, Optional<Max16Text> value) {
+			obj.setParticipantCrossReferenceIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtdyCstmrId")
@@ -473,7 +543,7 @@ public class CorporateActionMovementDetailsExtension1 {
 	 * "Participant generated account number for custody deposits."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCustodyCustomerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMovementDetailsExtension1, Optional<Max35Text>> mmCustodyCustomerIdentification = new MMMessageAttribute<CorporateActionMovementDetailsExtension1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmObject();
 			isDerived = false;
@@ -485,6 +555,16 @@ public class CorporateActionMovementDetailsExtension1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CorporateActionMovementDetailsExtension1 obj) {
+			return obj.getCustodyCustomerIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementDetailsExtension1 obj, Optional<Max35Text> value) {
+			obj.setCustodyCustomerIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ContraPtcptNb")
@@ -521,7 +601,7 @@ public class CorporateActionMovementDetailsExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContraParticipantNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMovementDetailsExtension1, Optional<Max8Text>> mmContraParticipantNumber = new MMMessageAttribute<CorporateActionMovementDetailsExtension1, Optional<Max8Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmObject();
 			isDerived = false;
@@ -533,6 +613,16 @@ public class CorporateActionMovementDetailsExtension1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max8Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max8Text> getValue(CorporateActionMovementDetailsExtension1 obj) {
+			return obj.getContraParticipantNumber();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementDetailsExtension1 obj, Optional<Max8Text> value) {
+			obj.setContraParticipantNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PyoutNb", required = true)
@@ -568,7 +658,7 @@ public class CorporateActionMovementDetailsExtension1 {
 	 * definition} = "Unique number associated with a payout within an option."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPayoutNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMovementDetailsExtension1, Exact3NumericText> mmPayoutNumber = new MMMessageAttribute<CorporateActionMovementDetailsExtension1, Exact3NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmObject();
 			isDerived = false;
@@ -580,6 +670,16 @@ public class CorporateActionMovementDetailsExtension1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
+		}
+
+		@Override
+		public Exact3NumericText getValue(CorporateActionMovementDetailsExtension1 obj) {
+			return obj.getPayoutNumber();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementDetailsExtension1 obj, Exact3NumericText value) {
+			obj.setPayoutNumber(value);
 		}
 	};
 	@XmlElement(name = "DTCSctyRate")
@@ -617,7 +717,7 @@ public class CorporateActionMovementDetailsExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCSecurityRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMovementDetailsExtension1, Optional<DecimalNumber>> mmDTCSecurityRate = new MMMessageAttribute<CorporateActionMovementDetailsExtension1, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmObject();
 			isDerived = false;
@@ -629,6 +729,16 @@ public class CorporateActionMovementDetailsExtension1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(CorporateActionMovementDetailsExtension1 obj) {
+			return obj.getDTCSecurityRate();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementDetailsExtension1 obj, Optional<DecimalNumber> value) {
+			obj.setDTCSecurityRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrjctdCshVal")
@@ -664,7 +774,7 @@ public class CorporateActionMovementDetailsExtension1 {
 	 * definition} = "Projected cash value based on entitlement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProjectedCashValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMovementDetailsExtension1, Optional<DecimalNumber>> mmProjectedCashValue = new MMMessageAttribute<CorporateActionMovementDetailsExtension1, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmObject();
 			isDerived = false;
@@ -676,6 +786,16 @@ public class CorporateActionMovementDetailsExtension1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(CorporateActionMovementDetailsExtension1 obj) {
+			return obj.getProjectedCashValue();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementDetailsExtension1 obj, Optional<DecimalNumber> value) {
+			obj.setProjectedCashValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCCshRate")
@@ -713,7 +833,7 @@ public class CorporateActionMovementDetailsExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCCashRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMovementDetailsExtension1, Optional<DecimalNumber>> mmDTCCashRate = new MMMessageAttribute<CorporateActionMovementDetailsExtension1, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementDetailsExtension1.mmObject();
 			isDerived = false;
@@ -725,6 +845,16 @@ public class CorporateActionMovementDetailsExtension1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(CorporateActionMovementDetailsExtension1 obj) {
+			return obj.getDTCCashRate();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementDetailsExtension1 obj, Optional<DecimalNumber> value) {
+			obj.setDTCCashRate(value.orElse(null));
 		}
 	};
 

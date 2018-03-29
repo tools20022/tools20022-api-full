@@ -21,6 +21,8 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Future3;
+import com.tools20022.repository.msg.Option13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -92,7 +94,7 @@ public class Derivative2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFuture = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Derivative2, Optional<Future3>> mmFuture = new MMMessageAssociationEnd<Derivative2, Optional<Future3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Derivative2.mmObject();
 			isDerived = false;
@@ -103,7 +105,17 @@ public class Derivative2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Future3.mmObject();
+			type_lazy = () -> Future3.mmObject();
+		}
+
+		@Override
+		public Optional<Future3> getValue(Derivative2 obj) {
+			return obj.getFuture();
+		}
+
+		@Override
+		public void setValue(Derivative2 obj, Optional<Future3> value) {
+			obj.setFuture(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Optn")
@@ -134,7 +146,7 @@ public class Derivative2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOption = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Derivative2, Optional<Option13>> mmOption = new MMMessageAssociationEnd<Derivative2, Optional<Option13>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Derivative2.mmObject();
 			isDerived = false;
@@ -145,7 +157,17 @@ public class Derivative2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Option13.mmObject();
+			type_lazy = () -> Option13.mmObject();
+		}
+
+		@Override
+		public Optional<Option13> getValue(Derivative2 obj) {
+			return obj.getOption();
+		}
+
+		@Override
+		public void setValue(Derivative2 obj, Optional<Option13> value) {
+			obj.setOption(value.orElse(null));
 		}
 	};
 
@@ -166,7 +188,7 @@ public class Derivative2 {
 		return future == null ? Optional.empty() : Optional.of(future);
 	}
 
-	public Derivative2 setFuture(com.tools20022.repository.msg.Future3 future) {
+	public Derivative2 setFuture(Future3 future) {
 		this.future = future;
 		return this;
 	}
@@ -175,7 +197,7 @@ public class Derivative2 {
 		return option == null ? Optional.empty() : Optional.of(option);
 	}
 
-	public Derivative2 setOption(com.tools20022.repository.msg.Option13 option) {
+	public Derivative2 setOption(Option13 option) {
 		this.option = option;
 		return this;
 	}

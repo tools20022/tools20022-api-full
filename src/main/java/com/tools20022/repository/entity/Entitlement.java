@@ -22,12 +22,12 @@ import com.tools20022.repository.codeset.OptionStyleCode;
 import com.tools20022.repository.codeset.OptionTypeCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1;
 import com.tools20022.repository.msg.CommonFinancialInstrumentAttributes4;
 import com.tools20022.repository.msg.FinancialInstrumentAttributes44;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -127,7 +127,7 @@ public class Entitlement extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmStrikePrice = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Entitlement, SecuritiesPricing> mmStrikePrice = new MMBusinessAssociationEnd<Entitlement, SecuritiesPricing>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Entitlement.mmObject();
@@ -136,9 +136,19 @@ public class Entitlement extends Security {
 			definition = "Predetermined price at which the holder buys or sells the underlying assets.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmEntitlement;
+			opposite_lazy = () -> SecuritiesPricing.mmEntitlement;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
+			type_lazy = () -> SecuritiesPricing.mmObject();
+		}
+
+		@Override
+		public SecuritiesPricing getValue(Entitlement obj) {
+			return obj.getStrikePrice();
+		}
+
+		@Override
+		public void setValue(Entitlement obj, SecuritiesPricing value) {
+			obj.setStrikePrice(value);
 		}
 	};
 	protected YesNoIndicator coveredIndicator;
@@ -183,7 +193,7 @@ public class Entitlement extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCoveredIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Entitlement, YesNoIndicator> mmCoveredIndicator = new MMBusinessAttribute<Entitlement, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes44.mmCoveredIndicator, CommonFinancialInstrumentAttributes1.mmCoveredIndicator, CommonFinancialInstrumentAttributes4.mmCoveredIndicator);
 			isDerived = false;
@@ -196,12 +206,14 @@ public class Entitlement extends Security {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Entitlement.class.getMethod("getCoveredIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Entitlement obj) {
+			return obj.getCoveredIndicator();
+		}
+
+		@Override
+		public void setValue(Entitlement obj, YesNoIndicator value) {
+			obj.setCoveredIndicator(value);
 		}
 	};
 	protected OptionStyleCode optionStyle;
@@ -230,7 +242,7 @@ public class Entitlement extends Security {
 	 * definition} = "Specifies how an option can be exercised."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmOptionStyle = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Entitlement, OptionStyleCode> mmOptionStyle = new MMBusinessAttribute<Entitlement, OptionStyleCode>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Entitlement.mmObject();
@@ -242,12 +254,14 @@ public class Entitlement extends Security {
 			simpleType_lazy = () -> OptionStyleCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Entitlement.class.getMethod("getOptionStyle", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public OptionStyleCode getValue(Entitlement obj) {
+			return obj.getOptionStyle();
+		}
+
+		@Override
+		public void setValue(Entitlement obj, OptionStyleCode value) {
+			obj.setOptionStyle(value);
 		}
 	};
 	protected OptionTypeCode optionType;
@@ -278,7 +292,7 @@ public class Entitlement extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmOptionType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Entitlement, OptionTypeCode> mmOptionType = new MMBusinessAttribute<Entitlement, OptionTypeCode>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Entitlement.mmObject();
@@ -290,12 +304,14 @@ public class Entitlement extends Security {
 			simpleType_lazy = () -> OptionTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Entitlement.class.getMethod("getOptionType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public OptionTypeCode getValue(Entitlement obj) {
+			return obj.getOptionType();
+		}
+
+		@Override
+		public void setValue(Entitlement obj, OptionTypeCode value) {
+			obj.setOptionType(value);
 		}
 	};
 	protected CurrencyAndAmount cappedValue;
@@ -326,7 +342,7 @@ public class Entitlement extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCappedValue = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Entitlement, CurrencyAndAmount> mmCappedValue = new MMBusinessAttribute<Entitlement, CurrencyAndAmount>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Entitlement.mmObject();
@@ -338,12 +354,14 @@ public class Entitlement extends Security {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Entitlement.class.getMethod("getCappedValue", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(Entitlement obj) {
+			return obj.getCappedValue();
+		}
+
+		@Override
+		public void setValue(Entitlement obj, CurrencyAndAmount value) {
+			obj.setCappedValue(value);
 		}
 	};
 	protected YesNoIndicator cappedIndicator;
@@ -372,7 +390,7 @@ public class Entitlement extends Security {
 	 * definition} = "Indicates whether an entitlement is capped."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCappedIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Entitlement, YesNoIndicator> mmCappedIndicator = new MMBusinessAttribute<Entitlement, YesNoIndicator>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Entitlement.mmObject();
@@ -384,12 +402,14 @@ public class Entitlement extends Security {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Entitlement.class.getMethod("getCappedIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Entitlement obj) {
+			return obj.getCappedIndicator();
+		}
+
+		@Override
+		public void setValue(Entitlement obj, YesNoIndicator value) {
+			obj.setCappedIndicator(value);
 		}
 	};
 
@@ -400,7 +420,7 @@ public class Entitlement extends Security {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Entitlement";
 				definition = "Financial instrument providing the holder the privilege to subscribe to or to receive specific assets on terms specified.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.mmEntitlement);
+				associationDomain_lazy = () -> Arrays.asList(SecuritiesPricing.mmEntitlement);
 				superType_lazy = () -> Security.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Entitlement.mmStrikePrice, com.tools20022.repository.entity.Entitlement.mmCoveredIndicator, com.tools20022.repository.entity.Entitlement.mmOptionStyle,
 						com.tools20022.repository.entity.Entitlement.mmOptionType, com.tools20022.repository.entity.Entitlement.mmCappedValue, com.tools20022.repository.entity.Entitlement.mmCappedIndicator);
@@ -418,7 +438,7 @@ public class Entitlement extends Security {
 		return strikePrice;
 	}
 
-	public Entitlement setStrikePrice(com.tools20022.repository.entity.SecuritiesPricing strikePrice) {
+	public Entitlement setStrikePrice(SecuritiesPricing strikePrice) {
 		this.strikePrice = Objects.requireNonNull(strikePrice);
 		return this;
 	}

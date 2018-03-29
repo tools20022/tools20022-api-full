@@ -24,6 +24,8 @@ import com.tools20022.repository.choice.PartyIdentification102Choice;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesSettlementPartyRole;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentificationAndAccount126;
+import com.tools20022.repository.msg.PartyIdentificationAndAccount127;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -135,7 +137,7 @@ public class DeliveringPartiesAndAccount15 {
 	 * DeliveringPartiesAndAccount10.mmDepository}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDepository = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DeliveringPartiesAndAccount15, PartyIdentification102Choice> mmDepository = new MMMessageAssociationEnd<DeliveringPartiesAndAccount15, PartyIdentification102Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeliveringPartiesAndAccount15.mmObject();
@@ -149,6 +151,16 @@ public class DeliveringPartiesAndAccount15 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification102Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification102Choice getValue(DeliveringPartiesAndAccount15 obj) {
+			return obj.getDepository();
+		}
+
+		@Override
+		public void setValue(DeliveringPartiesAndAccount15 obj, PartyIdentification102Choice value) {
+			obj.setDepository(value);
 		}
 	};
 	@XmlElement(name = "Pty1", required = true)
@@ -191,7 +203,7 @@ public class DeliveringPartiesAndAccount15 {
 	 * DeliveringPartiesAndAccount10.mmParty1}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParty1 = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DeliveringPartiesAndAccount15, PartyIdentificationAndAccount126> mmParty1 = new MMMessageAssociationEnd<DeliveringPartiesAndAccount15, PartyIdentificationAndAccount126>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeliveringPartiesAndAccount15.mmObject();
@@ -204,7 +216,17 @@ public class DeliveringPartiesAndAccount15 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount126.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount126.mmObject();
+		}
+
+		@Override
+		public PartyIdentificationAndAccount126 getValue(DeliveringPartiesAndAccount15 obj) {
+			return obj.getParty1();
+		}
+
+		@Override
+		public void setValue(DeliveringPartiesAndAccount15 obj, PartyIdentificationAndAccount126 value) {
+			obj.setParty1(value);
 		}
 	};
 	@XmlElement(name = "Pty2")
@@ -247,7 +269,7 @@ public class DeliveringPartiesAndAccount15 {
 	 * DeliveringPartiesAndAccount10.mmParty2}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParty2 = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DeliveringPartiesAndAccount15, Optional<PartyIdentificationAndAccount127>> mmParty2 = new MMMessageAssociationEnd<DeliveringPartiesAndAccount15, Optional<PartyIdentificationAndAccount127>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeliveringPartiesAndAccount15.mmObject();
@@ -260,7 +282,17 @@ public class DeliveringPartiesAndAccount15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount127.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount127.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount127> getValue(DeliveringPartiesAndAccount15 obj) {
+			return obj.getParty2();
+		}
+
+		@Override
+		public void setValue(DeliveringPartiesAndAccount15 obj, Optional<PartyIdentificationAndAccount127> value) {
+			obj.setParty2(value.orElse(null));
 		}
 	};
 
@@ -294,7 +326,7 @@ public class DeliveringPartiesAndAccount15 {
 		return party1;
 	}
 
-	public DeliveringPartiesAndAccount15 setParty1(com.tools20022.repository.msg.PartyIdentificationAndAccount126 party1) {
+	public DeliveringPartiesAndAccount15 setParty1(PartyIdentificationAndAccount126 party1) {
 		this.party1 = Objects.requireNonNull(party1);
 		return this;
 	}
@@ -303,7 +335,7 @@ public class DeliveringPartiesAndAccount15 {
 		return party2 == null ? Optional.empty() : Optional.of(party2);
 	}
 
-	public DeliveringPartiesAndAccount15 setParty2(com.tools20022.repository.msg.PartyIdentificationAndAccount127 party2) {
+	public DeliveringPartiesAndAccount15 setParty2(PartyIdentificationAndAccount127 party2) {
 		this.party2 = party2;
 		return this;
 	}

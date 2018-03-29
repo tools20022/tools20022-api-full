@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DocumentNumber2Choice;
 import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Identification4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -108,7 +109,7 @@ public class DocumentIdentification26 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentIdentification26, Optional<DocumentNumber2Choice>> mmMessageNumber = new MMMessageAttribute<DocumentIdentification26, Optional<DocumentNumber2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification26.mmObject();
 			isDerived = false;
@@ -119,6 +120,16 @@ public class DocumentIdentification26 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentNumber2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DocumentNumber2Choice> getValue(DocumentIdentification26 obj) {
+			return obj.getMessageNumber();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification26 obj, Optional<DocumentNumber2Choice> value) {
+			obj.setMessageNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ref", required = true)
@@ -150,7 +161,7 @@ public class DocumentIdentification26 {
 	 * definition} = "Reference to the query identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentIdentification26, Identification4> mmReference = new MMMessageAttribute<DocumentIdentification26, Identification4>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification26.mmObject();
 			isDerived = false;
@@ -160,7 +171,17 @@ public class DocumentIdentification26 {
 			definition = "Reference to the query identification.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.Identification4.mmObject();
+			complexType_lazy = () -> Identification4.mmObject();
+		}
+
+		@Override
+		public Identification4 getValue(DocumentIdentification26 obj) {
+			return obj.getReference();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification26 obj, Identification4 value) {
+			obj.setReference(value);
 		}
 	};
 
@@ -192,7 +213,7 @@ public class DocumentIdentification26 {
 		return reference;
 	}
 
-	public DocumentIdentification26 setReference(com.tools20022.repository.msg.Identification4 reference) {
+	public DocumentIdentification26 setReference(Identification4 reference) {
 		this.reference = Objects.requireNonNull(reference);
 		return this;
 	}

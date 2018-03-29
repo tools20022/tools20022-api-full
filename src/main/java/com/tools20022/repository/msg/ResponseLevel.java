@@ -100,7 +100,7 @@ public class ResponseLevel {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResponseLevel = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ResponseLevel, ResponseLevel1Code> mmResponseLevel = new MMMessageAttribute<ResponseLevel, ResponseLevel1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ResponseLevel.mmObject();
 			isDerived = false;
@@ -112,6 +112,16 @@ public class ResponseLevel {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ResponseLevel1Code.mmObject();
+		}
+
+		@Override
+		public ResponseLevel1Code getValue(ResponseLevel obj) {
+			return obj.getResponseLevel();
+		}
+
+		@Override
+		public void setValue(ResponseLevel obj, ResponseLevel1Code value) {
+			obj.setResponseLevel(value);
 		}
 	};
 

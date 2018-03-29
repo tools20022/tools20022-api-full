@@ -56,11 +56,15 @@ public class ConstraintChequeMaturityDateRule {
 	 */
 	public static final MMConstraint<Cheque5> forCheque5 = new MMConstraint<Cheque5>() {
 		{
-			validator = ConstraintChequeMaturityDateRule::checkCheque5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeMaturityDateRule";
 			definition = "If ChequeType is present and is DRFT or ELDR, then ChequeMaturityDate is optional. If ChequeType is not present or is different from DRFT or ELDR, then ChequeMaturityDate is not allowed.\n\nRule rationale: ChequeMaturityDate may be present only when ChequeType is DRFT or ELDR.";
 			owner_lazy = () -> Cheque5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Cheque5 obj) throws Exception {
+			checkCheque5(obj);
 		}
 	};
 	/**
@@ -89,12 +93,16 @@ public class ConstraintChequeMaturityDateRule {
 	 */
 	public static final MMConstraint<Cheque6> forCheque6 = new MMConstraint<Cheque6>() {
 		{
-			validator = ConstraintChequeMaturityDateRule::checkCheque6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeMaturityDateRule";
 			definition = "If ChequeMaturityDate is present, then ChequeType must be present and equal to DRFT or ELDR.";
 			owner_lazy = () -> Cheque6.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ChequeMaturityDate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChequeType</leftOperand></BooleanRule><BooleanRule xsi:type=\"WithInList\"><leftOperand>/ChequeType</leftOperand><rightOperand>ChequeType3Code</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(Cheque6 obj) throws Exception {
+			checkCheque6(obj);
 		}
 	};
 	/**
@@ -123,12 +131,16 @@ public class ConstraintChequeMaturityDateRule {
 	 */
 	public static final MMConstraint<Cheque7> forCheque7 = new MMConstraint<Cheque7>() {
 		{
-			validator = ConstraintChequeMaturityDateRule::checkCheque7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeMaturityDateRule";
 			definition = "If ChequeMaturityDate is present, then ChequeType must be present and equal to DRFT or ELDR.";
 			owner_lazy = () -> Cheque7.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ChequeMaturityDate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChequeType</leftOperand></BooleanRule><BooleanRule xsi:type=\"WithInList\"><leftOperand>/ChequeType</leftOperand><rightOperand>ChequeType3Code</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(Cheque7 obj) throws Exception {
+			checkCheque7(obj);
 		}
 	};
 

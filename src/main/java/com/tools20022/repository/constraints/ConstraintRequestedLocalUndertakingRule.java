@@ -52,12 +52,16 @@ public class ConstraintRequestedLocalUndertakingRule {
 	 */
 	public static final MMConstraint<UndertakingAdvice1> forUndertakingAdvice1 = new MMConstraint<UndertakingAdvice1>() {
 		{
-			validator = ConstraintRequestedLocalUndertakingRule::checkUndertakingAdvice1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedLocalUndertakingRule";
 			definition = "Requested local undertaking must not be present.";
 			owner_lazy = () -> UndertakingAdvice1.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/UndertakingIssuanceMessage/UndertakingDetails/RequestedLocalUndertaking</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(UndertakingAdvice1 obj) throws Exception {
+			checkUndertakingAdvice1(obj);
 		}
 	};
 

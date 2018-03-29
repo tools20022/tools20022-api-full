@@ -109,7 +109,7 @@ public class AssetClassCommodityFreight1Choice {
 	 * definition} = "Dry freight commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDry = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodityFreight1Choice, FreightCommodityDry1> mmDry = new MMMessageAssociationEnd<AssetClassCommodityFreight1Choice, FreightCommodityDry1>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityFreight1Choice.mmObject();
@@ -122,6 +122,16 @@ public class AssetClassCommodityFreight1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FreightCommodityDry1.mmObject();
+		}
+
+		@Override
+		public FreightCommodityDry1 getValue(AssetClassCommodityFreight1Choice obj) {
+			return obj.getDry();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodityFreight1Choice obj, FreightCommodityDry1 value) {
+			obj.setDry(value);
 		}
 	};
 	@XmlElement(name = "Wet", required = true)
@@ -157,7 +167,7 @@ public class AssetClassCommodityFreight1Choice {
 	 * definition} = "Wet freight commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmWet = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodityFreight1Choice, FreightCommodityWet1> mmWet = new MMMessageAssociationEnd<AssetClassCommodityFreight1Choice, FreightCommodityWet1>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityFreight1Choice.mmObject();
@@ -170,6 +180,16 @@ public class AssetClassCommodityFreight1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FreightCommodityWet1.mmObject();
+		}
+
+		@Override
+		public FreightCommodityWet1 getValue(AssetClassCommodityFreight1Choice obj) {
+			return obj.getWet();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodityFreight1Choice obj, FreightCommodityWet1 value) {
+			obj.setWet(value);
 		}
 	};
 	@XmlElement(name = "CntnrShip", required = true)
@@ -206,7 +226,7 @@ public class AssetClassCommodityFreight1Choice {
 	 * definition} = "Container ship freight commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContainerShip = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodityFreight1Choice, FreightCommodityContainerShip1> mmContainerShip = new MMMessageAssociationEnd<AssetClassCommodityFreight1Choice, FreightCommodityContainerShip1>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityFreight1Choice.mmObject();
@@ -219,6 +239,16 @@ public class AssetClassCommodityFreight1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FreightCommodityContainerShip1.mmObject();
+		}
+
+		@Override
+		public FreightCommodityContainerShip1 getValue(AssetClassCommodityFreight1Choice obj) {
+			return obj.getContainerShip();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodityFreight1Choice obj, FreightCommodityContainerShip1 value) {
+			obj.setContainerShip(value);
 		}
 	};
 

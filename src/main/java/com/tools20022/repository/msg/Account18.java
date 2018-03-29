@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.PartyIdentification71Choice;
 import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountIdentification26;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -120,7 +121,7 @@ public class Account18 {
 	 * Account13.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Account18, AccountIdentification26> mmIdentification = new MMMessageAssociationEnd<Account18, AccountIdentification26>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Account18.mmObject();
@@ -134,7 +135,17 @@ public class Account18 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AccountIdentification26.mmObject();
+			type_lazy = () -> AccountIdentification26.mmObject();
+		}
+
+		@Override
+		public AccountIdentification26 getValue(Account18 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Account18 obj, AccountIdentification26 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctSvcr")
@@ -177,7 +188,7 @@ public class Account18 {
 	 * Account13.mmAccountServicer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountServicer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Account18, Optional<PartyIdentification71Choice>> mmAccountServicer = new MMMessageAssociationEnd<Account18, Optional<PartyIdentification71Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Account18.mmObject();
@@ -191,6 +202,16 @@ public class Account18 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification71Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification71Choice> getValue(Account18 obj) {
+			return obj.getAccountServicer();
+		}
+
+		@Override
+		public void setValue(Account18 obj, Optional<PartyIdentification71Choice> value) {
+			obj.setAccountServicer(value.orElse(null));
 		}
 	};
 
@@ -213,7 +234,7 @@ public class Account18 {
 		return identification;
 	}
 
-	public Account18 setIdentification(com.tools20022.repository.msg.AccountIdentification26 identification) {
+	public Account18 setIdentification(AccountIdentification26 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}

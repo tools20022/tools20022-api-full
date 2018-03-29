@@ -22,6 +22,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.caaa.AcceptorBatchTransferV06;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CardPaymentDataSet16;
+import com.tools20022.repository.msg.TransactionTotals7;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -91,7 +93,7 @@ public class CardPaymentBatchTransfer5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "TxTtls")
-	protected List<com.tools20022.repository.msg.TransactionTotals7> transactionTotals;
+	protected List<TransactionTotals7> transactionTotals;
 	/**
 	 * 
 	 <p>
@@ -133,7 +135,7 @@ public class CardPaymentBatchTransfer5 {
 	 * CardPaymentBatchTransfer4.mmTransactionTotals}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionTotals = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentBatchTransfer5, List<TransactionTotals7>> mmTransactionTotals = new MMMessageAttribute<CardPaymentBatchTransfer5, List<TransactionTotals7>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentBatchTransfer5.mmObject();
 			isDerived = false;
@@ -144,11 +146,21 @@ public class CardPaymentBatchTransfer5 {
 			nextVersions_lazy = () -> Arrays.asList(CardPaymentBatchTransfer6.mmTransactionTotals);
 			previousVersion_lazy = () -> CardPaymentBatchTransfer4.mmTransactionTotals;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.TransactionTotals7.mmObject();
+			complexType_lazy = () -> TransactionTotals7.mmObject();
+		}
+
+		@Override
+		public List<TransactionTotals7> getValue(CardPaymentBatchTransfer5 obj) {
+			return obj.getTransactionTotals();
+		}
+
+		@Override
+		public void setValue(CardPaymentBatchTransfer5 obj, List<TransactionTotals7> value) {
+			obj.setTransactionTotals(value);
 		}
 	};
 	@XmlElement(name = "DataSet")
-	protected List<com.tools20022.repository.msg.CardPaymentDataSet16> dataSet;
+	protected List<CardPaymentDataSet16> dataSet;
 	/**
 	 * 
 	 <p>
@@ -191,7 +203,7 @@ public class CardPaymentBatchTransfer5 {
 	 * CardPaymentBatchTransfer4.mmDataSet}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDataSet = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentBatchTransfer5, List<CardPaymentDataSet16>> mmDataSet = new MMMessageAttribute<CardPaymentBatchTransfer5, List<CardPaymentDataSet16>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentBatchTransfer5.mmObject();
 			isDerived = false;
@@ -202,7 +214,17 @@ public class CardPaymentBatchTransfer5 {
 			nextVersions_lazy = () -> Arrays.asList(CardPaymentBatchTransfer6.mmDataSet);
 			previousVersion_lazy = () -> CardPaymentBatchTransfer4.mmDataSet;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSet16.mmObject();
+			complexType_lazy = () -> CardPaymentDataSet16.mmObject();
+		}
+
+		@Override
+		public List<CardPaymentDataSet16> getValue(CardPaymentBatchTransfer5 obj) {
+			return obj.getDataSet();
+		}
+
+		@Override
+		public void setValue(CardPaymentBatchTransfer5 obj, List<CardPaymentDataSet16> value) {
+			obj.setDataSet(value);
 		}
 	};
 
@@ -226,7 +248,7 @@ public class CardPaymentBatchTransfer5 {
 		return transactionTotals == null ? transactionTotals = new ArrayList<>() : transactionTotals;
 	}
 
-	public CardPaymentBatchTransfer5 setTransactionTotals(List<com.tools20022.repository.msg.TransactionTotals7> transactionTotals) {
+	public CardPaymentBatchTransfer5 setTransactionTotals(List<TransactionTotals7> transactionTotals) {
 		this.transactionTotals = Objects.requireNonNull(transactionTotals);
 		return this;
 	}
@@ -235,7 +257,7 @@ public class CardPaymentBatchTransfer5 {
 		return dataSet == null ? dataSet = new ArrayList<>() : dataSet;
 	}
 
-	public CardPaymentBatchTransfer5 setDataSet(List<com.tools20022.repository.msg.CardPaymentDataSet16> dataSet) {
+	public CardPaymentBatchTransfer5 setDataSet(List<CardPaymentDataSet16> dataSet) {
 		this.dataSet = Objects.requireNonNull(dataSet);
 		return this;
 	}

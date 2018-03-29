@@ -29,6 +29,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -165,7 +166,7 @@ public class IntraBalanceMovement4 {
 	 * IntraBalanceMovement2.mmBalanceFrom}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalanceFrom = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalanceMovement4, CashSubBalanceTypeAndQuantityBreakdown2> mmBalanceFrom = new MMMessageAssociationEnd<IntraBalanceMovement4, CashSubBalanceTypeAndQuantityBreakdown2>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmCashBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement4.mmObject();
@@ -179,7 +180,17 @@ public class IntraBalanceMovement4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown2.mmObject();
+			type_lazy = () -> CashSubBalanceTypeAndQuantityBreakdown2.mmObject();
+		}
+
+		@Override
+		public CashSubBalanceTypeAndQuantityBreakdown2 getValue(IntraBalanceMovement4 obj) {
+			return obj.getBalanceFrom();
+		}
+
+		@Override
+		public void setValue(IntraBalanceMovement4 obj, CashSubBalanceTypeAndQuantityBreakdown2 value) {
+			obj.setBalanceFrom(value);
 		}
 	};
 	@XmlElement(name = "BalTo", required = true)
@@ -224,7 +235,7 @@ public class IntraBalanceMovement4 {
 	 * IntraBalanceMovement2.mmBalanceTo}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalanceTo = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalanceMovement4, CashSubBalanceTypeAndQuantityBreakdown2> mmBalanceTo = new MMMessageAssociationEnd<IntraBalanceMovement4, CashSubBalanceTypeAndQuantityBreakdown2>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmCashBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement4.mmObject();
@@ -238,7 +249,17 @@ public class IntraBalanceMovement4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown2.mmObject();
+			type_lazy = () -> CashSubBalanceTypeAndQuantityBreakdown2.mmObject();
+		}
+
+		@Override
+		public CashSubBalanceTypeAndQuantityBreakdown2 getValue(IntraBalanceMovement4 obj) {
+			return obj.getBalanceTo();
+		}
+
+		@Override
+		public void setValue(IntraBalanceMovement4 obj, CashSubBalanceTypeAndQuantityBreakdown2 value) {
+			obj.setBalanceTo(value);
 		}
 	};
 	@XmlElement(name = "SttlmAmt", required = true)
@@ -283,7 +304,7 @@ public class IntraBalanceMovement4 {
 	 * IntraBalanceMovement2.mmSettlementAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalanceMovement4, Amount2Choice> mmSettlementAmount = new MMMessageAttribute<IntraBalanceMovement4, Amount2Choice>() {
 		{
 			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement4.mmObject();
@@ -296,6 +317,16 @@ public class IntraBalanceMovement4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Amount2Choice.mmObject();
+		}
+
+		@Override
+		public Amount2Choice getValue(IntraBalanceMovement4 obj) {
+			return obj.getSettlementAmount();
+		}
+
+		@Override
+		public void setValue(IntraBalanceMovement4 obj, Amount2Choice value) {
+			obj.setSettlementAmount(value);
 		}
 	};
 	@XmlElement(name = "SttldAmt")
@@ -340,7 +371,7 @@ public class IntraBalanceMovement4 {
 	 * IntraBalanceMovement2.mmSettledAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettledAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalanceMovement4, Optional<Amount2Choice>> mmSettledAmount = new MMMessageAttribute<IntraBalanceMovement4, Optional<Amount2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement4.mmObject();
@@ -353,6 +384,16 @@ public class IntraBalanceMovement4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Amount2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Amount2Choice> getValue(IntraBalanceMovement4 obj) {
+			return obj.getSettledAmount();
+		}
+
+		@Override
+		public void setValue(IntraBalanceMovement4 obj, Optional<Amount2Choice> value) {
+			obj.setSettledAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrevslySttldAmt")
@@ -395,7 +436,7 @@ public class IntraBalanceMovement4 {
 	 * IntraBalanceMovement2.mmPreviouslySettledAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreviouslySettledAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalanceMovement4, Optional<Amount2Choice>> mmPreviouslySettledAmount = new MMMessageAttribute<IntraBalanceMovement4, Optional<Amount2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement4.mmObject();
@@ -408,6 +449,16 @@ public class IntraBalanceMovement4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Amount2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Amount2Choice> getValue(IntraBalanceMovement4 obj) {
+			return obj.getPreviouslySettledAmount();
+		}
+
+		@Override
+		public void setValue(IntraBalanceMovement4 obj, Optional<Amount2Choice> value) {
+			obj.setPreviouslySettledAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RmngSttlmAmt")
@@ -450,7 +501,7 @@ public class IntraBalanceMovement4 {
 	 * IntraBalanceMovement2.mmRemainingSettlementAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRemainingSettlementAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalanceMovement4, Optional<Amount2Choice>> mmRemainingSettlementAmount = new MMMessageAttribute<IntraBalanceMovement4, Optional<Amount2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement4.mmObject();
@@ -463,6 +514,16 @@ public class IntraBalanceMovement4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Amount2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Amount2Choice> getValue(IntraBalanceMovement4 obj) {
+			return obj.getRemainingSettlementAmount();
+		}
+
+		@Override
+		public void setValue(IntraBalanceMovement4 obj, Optional<Amount2Choice> value) {
+			obj.setRemainingSettlementAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntnddSttlmDt", required = true)
@@ -509,7 +570,7 @@ public class IntraBalanceMovement4 {
 	 * IntraBalanceMovement2.mmIntendedSettlementDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIntendedSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalanceMovement4, DateAndDateTimeChoice> mmIntendedSettlementDate = new MMMessageAttribute<IntraBalanceMovement4, DateAndDateTimeChoice>() {
 		{
 			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement4.mmObject();
@@ -523,6 +584,16 @@ public class IntraBalanceMovement4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(IntraBalanceMovement4 obj) {
+			return obj.getIntendedSettlementDate();
+		}
+
+		@Override
+		public void setValue(IntraBalanceMovement4 obj, DateAndDateTimeChoice value) {
+			obj.setIntendedSettlementDate(value);
 		}
 	};
 	@XmlElement(name = "FctvSttlmDt")
@@ -568,7 +639,7 @@ public class IntraBalanceMovement4 {
 	 * IntraBalanceMovement2.mmEffectiveSettlementDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEffectiveSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalanceMovement4, Optional<DateAndDateTimeChoice>> mmEffectiveSettlementDate = new MMMessageAttribute<IntraBalanceMovement4, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmValueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement4.mmObject();
@@ -582,6 +653,16 @@ public class IntraBalanceMovement4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(IntraBalanceMovement4 obj) {
+			return obj.getEffectiveSettlementDate();
+		}
+
+		@Override
+		public void setValue(IntraBalanceMovement4 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setEffectiveSettlementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StsDt")
@@ -626,7 +707,7 @@ public class IntraBalanceMovement4 {
 	 * IntraBalanceMovement2.mmStatusDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatusDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalanceMovement4, Optional<ISODateTime>> mmStatusDate = new MMMessageAttribute<IntraBalanceMovement4, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement4.mmObject();
@@ -640,6 +721,16 @@ public class IntraBalanceMovement4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(IntraBalanceMovement4 obj) {
+			return obj.getStatusDate();
+		}
+
+		@Override
+		public void setValue(IntraBalanceMovement4 obj, Optional<ISODateTime> value) {
+			obj.setStatusDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CshSubBalId")
@@ -676,7 +767,7 @@ public class IntraBalanceMovement4 {
 	 * IntraBalanceMovement2.mmCashSubBalanceIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashSubBalanceIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalanceMovement4, Optional<GenericIdentification37>> mmCashSubBalanceIdentification = new MMMessageAssociationEnd<IntraBalanceMovement4, Optional<GenericIdentification37>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement4.mmObject();
 			isDerived = false;
@@ -688,11 +779,21 @@ public class IntraBalanceMovement4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification37.mmObject();
+			type_lazy = () -> GenericIdentification37.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification37> getValue(IntraBalanceMovement4 obj) {
+			return obj.getCashSubBalanceIdentification();
+		}
+
+		@Override
+		public void setValue(IntraBalanceMovement4 obj, Optional<GenericIdentification37> value) {
+			obj.setCashSubBalanceIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Lnkgs")
-	protected List<com.tools20022.repository.msg.Linkages51> linkages;
+	protected List<Linkages51> linkages;
 	/**
 	 * 
 	 <p>
@@ -727,7 +828,7 @@ public class IntraBalanceMovement4 {
 	 * IntraBalanceMovement2.mmLinkages}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLinkages = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalanceMovement4, List<Linkages51>> mmLinkages = new MMMessageAttribute<IntraBalanceMovement4, List<Linkages51>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement4.mmObject();
 			isDerived = false;
@@ -737,7 +838,17 @@ public class IntraBalanceMovement4 {
 			definition = "Link to another transaction that must be processed after, before or at the same time.";
 			previousVersion_lazy = () -> IntraBalanceMovement2.mmLinkages;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Linkages51.mmObject();
+			complexType_lazy = () -> Linkages51.mmObject();
+		}
+
+		@Override
+		public List<Linkages51> getValue(IntraBalanceMovement4 obj) {
+			return obj.getLinkages();
+		}
+
+		@Override
+		public void setValue(IntraBalanceMovement4 obj, List<Linkages51> value) {
+			obj.setLinkages(value);
 		}
 	};
 	@XmlElement(name = "Prty")
@@ -780,7 +891,7 @@ public class IntraBalanceMovement4 {
 	 * IntraBalanceMovement2.mmPriority}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriority = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalanceMovement4, Optional<PriorityNumeric4Choice>> mmPriority = new MMMessageAttribute<IntraBalanceMovement4, Optional<PriorityNumeric4Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement4.mmObject();
 			isDerived = false;
@@ -793,6 +904,16 @@ public class IntraBalanceMovement4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PriorityNumeric4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriorityNumeric4Choice> getValue(IntraBalanceMovement4 obj) {
+			return obj.getPriority();
+		}
+
+		@Override
+		public void setValue(IntraBalanceMovement4 obj, Optional<PriorityNumeric4Choice> value) {
+			obj.setPriority(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MsgOrgtr")
@@ -830,7 +951,7 @@ public class IntraBalanceMovement4 {
 	 * IntraBalanceMovement2.mmMessageOriginator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMessageOriginator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalanceMovement4, Optional<SystemPartyIdentification6>> mmMessageOriginator = new MMMessageAssociationEnd<IntraBalanceMovement4, Optional<SystemPartyIdentification6>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement4.mmObject();
 			isDerived = false;
@@ -842,7 +963,17 @@ public class IntraBalanceMovement4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification6.mmObject();
+			type_lazy = () -> SystemPartyIdentification6.mmObject();
+		}
+
+		@Override
+		public Optional<SystemPartyIdentification6> getValue(IntraBalanceMovement4 obj) {
+			return obj.getMessageOriginator();
+		}
+
+		@Override
+		public void setValue(IntraBalanceMovement4 obj, Optional<SystemPartyIdentification6> value) {
+			obj.setMessageOriginator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CreDtTm", required = true)
@@ -882,7 +1013,7 @@ public class IntraBalanceMovement4 {
 	 * IntraBalanceMovement2.mmCreationDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalanceMovement4, ISODateTime> mmCreationDateTime = new MMMessageAttribute<IntraBalanceMovement4, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement4.mmObject();
 			isDerived = false;
@@ -895,6 +1026,16 @@ public class IntraBalanceMovement4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(IntraBalanceMovement4 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(IntraBalanceMovement4 obj, ISODateTime value) {
+			obj.setCreationDateTime(value);
 		}
 	};
 	@XmlElement(name = "InstrPrcgAddtlDtls")
@@ -936,7 +1077,7 @@ public class IntraBalanceMovement4 {
 	 * IntraBalanceMovement2.mmInstructionProcessingAdditionalDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructionProcessingAdditionalDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalanceMovement4, Optional<Max350Text>> mmInstructionProcessingAdditionalDetails = new MMMessageAttribute<IntraBalanceMovement4, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement4.mmObject();
 			isDerived = false;
@@ -950,9 +1091,19 @@ public class IntraBalanceMovement4 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max350Text> getValue(IntraBalanceMovement4 obj) {
+			return obj.getInstructionProcessingAdditionalDetails();
+		}
+
+		@Override
+		public void setValue(IntraBalanceMovement4 obj, Optional<Max350Text> value) {
+			obj.setInstructionProcessingAdditionalDetails(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "SplmtryData")
-	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * 
 	 <p>
@@ -986,7 +1137,7 @@ public class IntraBalanceMovement4 {
 	 * IntraBalanceMovement2.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalanceMovement4, List<SupplementaryData1>> mmSupplementaryData = new MMMessageAssociationEnd<IntraBalanceMovement4, List<SupplementaryData1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement4.mmObject();
 			isDerived = false;
@@ -997,7 +1148,17 @@ public class IntraBalanceMovement4 {
 			previousVersion_lazy = () -> IntraBalanceMovement2.mmSupplementaryData;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
+			type_lazy = () -> SupplementaryData1.mmObject();
+		}
+
+		@Override
+		public List<SupplementaryData1> getValue(IntraBalanceMovement4 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(IntraBalanceMovement4 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -1026,7 +1187,7 @@ public class IntraBalanceMovement4 {
 		return balanceFrom;
 	}
 
-	public IntraBalanceMovement4 setBalanceFrom(com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown2 balanceFrom) {
+	public IntraBalanceMovement4 setBalanceFrom(CashSubBalanceTypeAndQuantityBreakdown2 balanceFrom) {
 		this.balanceFrom = Objects.requireNonNull(balanceFrom);
 		return this;
 	}
@@ -1035,7 +1196,7 @@ public class IntraBalanceMovement4 {
 		return balanceTo;
 	}
 
-	public IntraBalanceMovement4 setBalanceTo(com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown2 balanceTo) {
+	public IntraBalanceMovement4 setBalanceTo(CashSubBalanceTypeAndQuantityBreakdown2 balanceTo) {
 		this.balanceTo = Objects.requireNonNull(balanceTo);
 		return this;
 	}
@@ -1107,7 +1268,7 @@ public class IntraBalanceMovement4 {
 		return cashSubBalanceIdentification == null ? Optional.empty() : Optional.of(cashSubBalanceIdentification);
 	}
 
-	public IntraBalanceMovement4 setCashSubBalanceIdentification(com.tools20022.repository.msg.GenericIdentification37 cashSubBalanceIdentification) {
+	public IntraBalanceMovement4 setCashSubBalanceIdentification(GenericIdentification37 cashSubBalanceIdentification) {
 		this.cashSubBalanceIdentification = cashSubBalanceIdentification;
 		return this;
 	}
@@ -1116,7 +1277,7 @@ public class IntraBalanceMovement4 {
 		return linkages == null ? linkages = new ArrayList<>() : linkages;
 	}
 
-	public IntraBalanceMovement4 setLinkages(List<com.tools20022.repository.msg.Linkages51> linkages) {
+	public IntraBalanceMovement4 setLinkages(List<Linkages51> linkages) {
 		this.linkages = Objects.requireNonNull(linkages);
 		return this;
 	}
@@ -1134,7 +1295,7 @@ public class IntraBalanceMovement4 {
 		return messageOriginator == null ? Optional.empty() : Optional.of(messageOriginator);
 	}
 
-	public IntraBalanceMovement4 setMessageOriginator(com.tools20022.repository.msg.SystemPartyIdentification6 messageOriginator) {
+	public IntraBalanceMovement4 setMessageOriginator(SystemPartyIdentification6 messageOriginator) {
 		this.messageOriginator = messageOriginator;
 		return this;
 	}
@@ -1161,7 +1322,7 @@ public class IntraBalanceMovement4 {
 		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public IntraBalanceMovement4 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+	public IntraBalanceMovement4 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = Objects.requireNonNull(supplementaryData);
 		return this;
 	}

@@ -26,6 +26,9 @@ import com.tools20022.repository.entity.SecuritiesTradeStatus;
 import com.tools20022.repository.entity.SecuritiesTransfer;
 import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.IntraPositionModification4;
+import com.tools20022.repository.msg.SecuritiesAccount19;
+import com.tools20022.repository.msg.SystemPartyIdentification6;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -136,7 +139,7 @@ public class IntraPositionModification3 {
 	 * IntraPositionModification1.mmAccountOwner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionModification3, Optional<SystemPartyIdentification6>> mmAccountOwner = new MMMessageAssociationEnd<IntraPositionModification3, Optional<SystemPartyIdentification6>>() {
 		{
 			businessElementTrace_lazy = () -> System.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionModification3.mmObject();
@@ -149,7 +152,17 @@ public class IntraPositionModification3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification6.mmObject();
+			type_lazy = () -> SystemPartyIdentification6.mmObject();
+		}
+
+		@Override
+		public Optional<SystemPartyIdentification6> getValue(IntraPositionModification3 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(IntraPositionModification3 obj, Optional<SystemPartyIdentification6> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SfkpgAcct")
@@ -190,7 +203,7 @@ public class IntraPositionModification3 {
 	 * IntraPositionModification1.mmSafekeepingAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionModification3, Optional<SecuritiesAccount19>> mmSafekeepingAccount = new MMMessageAssociationEnd<IntraPositionModification3, Optional<SecuritiesAccount19>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionModification3.mmObject();
@@ -203,7 +216,17 @@ public class IntraPositionModification3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount19.mmObject();
+			type_lazy = () -> SecuritiesAccount19.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesAccount19> getValue(IntraPositionModification3 obj) {
+			return obj.getSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(IntraPositionModification3 obj, Optional<SecuritiesAccount19> value) {
+			obj.setSafekeepingAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcgSts")
@@ -245,7 +268,7 @@ public class IntraPositionModification3 {
 	 * IntraPositionModification1.mmProcessingStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionModification3, Optional<ProcessingStatus71Choice>> mmProcessingStatus = new MMMessageAssociationEnd<IntraPositionModification3, Optional<ProcessingStatus71Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionModification3.mmObject();
@@ -260,9 +283,19 @@ public class IntraPositionModification3 {
 			isComposite = true;
 			type_lazy = () -> ProcessingStatus71Choice.mmObject();
 		}
+
+		@Override
+		public Optional<ProcessingStatus71Choice> getValue(IntraPositionModification3 obj) {
+			return obj.getProcessingStatus();
+		}
+
+		@Override
+		public void setValue(IntraPositionModification3 obj, Optional<ProcessingStatus71Choice> value) {
+			obj.setProcessingStatus(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "Mod", required = true)
-	protected List<com.tools20022.repository.msg.IntraPositionModification4> modification;
+	protected List<IntraPositionModification4> modification;
 	/**
 	 * 
 	 <p>
@@ -300,7 +333,7 @@ public class IntraPositionModification3 {
 	 * IntraPositionModification1.mmModification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmModification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionModification3, List<IntraPositionModification4>> mmModification = new MMMessageAssociationEnd<IntraPositionModification3, List<IntraPositionModification4>>() {
 		{
 			businessComponentTrace_lazy = () -> IntraPositionTransfer.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionModification3.mmObject();
@@ -312,7 +345,17 @@ public class IntraPositionModification3 {
 			previousVersion_lazy = () -> IntraPositionModification1.mmModification;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IntraPositionModification4.mmObject();
+			type_lazy = () -> IntraPositionModification4.mmObject();
+		}
+
+		@Override
+		public List<IntraPositionModification4> getValue(IntraPositionModification3 obj) {
+			return obj.getModification();
+		}
+
+		@Override
+		public void setValue(IntraPositionModification3 obj, List<IntraPositionModification4> value) {
+			obj.setModification(value);
 		}
 	};
 
@@ -338,7 +381,7 @@ public class IntraPositionModification3 {
 		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public IntraPositionModification3 setAccountOwner(com.tools20022.repository.msg.SystemPartyIdentification6 accountOwner) {
+	public IntraPositionModification3 setAccountOwner(SystemPartyIdentification6 accountOwner) {
 		this.accountOwner = accountOwner;
 		return this;
 	}
@@ -347,7 +390,7 @@ public class IntraPositionModification3 {
 		return safekeepingAccount == null ? Optional.empty() : Optional.of(safekeepingAccount);
 	}
 
-	public IntraPositionModification3 setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount19 safekeepingAccount) {
+	public IntraPositionModification3 setSafekeepingAccount(SecuritiesAccount19 safekeepingAccount) {
 		this.safekeepingAccount = safekeepingAccount;
 		return this;
 	}
@@ -365,7 +408,7 @@ public class IntraPositionModification3 {
 		return modification == null ? modification = new ArrayList<>() : modification;
 	}
 
-	public IntraPositionModification3 setModification(List<com.tools20022.repository.msg.IntraPositionModification4> modification) {
+	public IntraPositionModification3 setModification(List<IntraPositionModification4> modification) {
 		this.modification = Objects.requireNonNull(modification);
 		return this;
 	}

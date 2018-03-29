@@ -25,6 +25,7 @@ import com.tools20022.repository.codeset.PINFormat1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Authentication;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ContentInformationType2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -109,7 +110,7 @@ public class OnLinePIN1 {
 	 * definition} = "Encrypted PIN (Personal Identification Number)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEncryptedPINBlock = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OnLinePIN1, ContentInformationType2> mmEncryptedPINBlock = new MMMessageAssociationEnd<OnLinePIN1, ContentInformationType2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OnLinePIN1.mmObject();
 			isDerived = false;
@@ -120,7 +121,17 @@ public class OnLinePIN1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContentInformationType2.mmObject();
+			type_lazy = () -> ContentInformationType2.mmObject();
+		}
+
+		@Override
+		public ContentInformationType2 getValue(OnLinePIN1 obj) {
+			return obj.getEncryptedPINBlock();
+		}
+
+		@Override
+		public void setValue(OnLinePIN1 obj, ContentInformationType2 value) {
+			obj.setEncryptedPINBlock(value);
 		}
 	};
 	@XmlElement(name = "PINFrmt", required = true)
@@ -157,7 +168,7 @@ public class OnLinePIN1 {
 	 * definition} = "PIN format before encryption."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPINFormat = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OnLinePIN1, PINFormat1Code> mmPINFormat = new MMMessageAttribute<OnLinePIN1, PINFormat1Code>() {
 		{
 			businessElementTrace_lazy = () -> Authentication.mmPINFormat;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OnLinePIN1.mmObject();
@@ -169,6 +180,16 @@ public class OnLinePIN1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PINFormat1Code.mmObject();
+		}
+
+		@Override
+		public PINFormat1Code getValue(OnLinePIN1 obj) {
+			return obj.getPINFormat();
+		}
+
+		@Override
+		public void setValue(OnLinePIN1 obj, PINFormat1Code value) {
+			obj.setPINFormat(value);
 		}
 	};
 	@XmlElement(name = "AddtlInpt")
@@ -199,7 +220,7 @@ public class OnLinePIN1 {
 	 * definition} = "Additional information required to verify the PIN."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInput = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OnLinePIN1, Optional<Max35Text>> mmAdditionalInput = new MMMessageAttribute<OnLinePIN1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OnLinePIN1.mmObject();
 			isDerived = false;
@@ -210,6 +231,16 @@ public class OnLinePIN1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(OnLinePIN1 obj) {
+			return obj.getAdditionalInput();
+		}
+
+		@Override
+		public void setValue(OnLinePIN1 obj, Optional<Max35Text> value) {
+			obj.setAdditionalInput(value.orElse(null));
 		}
 	};
 
@@ -232,7 +263,7 @@ public class OnLinePIN1 {
 		return encryptedPINBlock;
 	}
 
-	public OnLinePIN1 setEncryptedPINBlock(com.tools20022.repository.msg.ContentInformationType2 encryptedPINBlock) {
+	public OnLinePIN1 setEncryptedPINBlock(ContentInformationType2 encryptedPINBlock) {
 		this.encryptedPINBlock = Objects.requireNonNull(encryptedPINBlock);
 		return this;
 	}

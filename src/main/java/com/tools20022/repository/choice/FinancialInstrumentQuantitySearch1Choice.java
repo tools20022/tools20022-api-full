@@ -21,6 +21,8 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice;
+import com.tools20022.repository.choice.QuantityRange1Choice;
 import com.tools20022.repository.entity.AssetHolding;
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
@@ -114,7 +116,7 @@ public class FinancialInstrumentQuantitySearch1Choice {
 	 * "Quantity expressed as a number, for example a number of shares."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentQuantitySearch1Choice, QuantityRange1Choice> mmUnit = new MMMessageAttribute<FinancialInstrumentQuantitySearch1Choice, QuantityRange1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantitySearch1Choice.mmObject();
@@ -126,7 +128,17 @@ public class FinancialInstrumentQuantitySearch1Choice {
 			definition = "Quantity expressed as a number, for example a number of shares.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.QuantityRange1Choice.mmObject();
+			complexType_lazy = () -> QuantityRange1Choice.mmObject();
+		}
+
+		@Override
+		public QuantityRange1Choice getValue(FinancialInstrumentQuantitySearch1Choice obj) {
+			return obj.getUnit();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentQuantitySearch1Choice obj, QuantityRange1Choice value) {
+			obj.setUnit(value);
 		}
 	};
 	@XmlElement(name = "FaceAmt", required = true)
@@ -166,7 +178,7 @@ public class FinancialInstrumentQuantitySearch1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFaceAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentQuantitySearch1Choice, ImpliedCurrencyAmountRangeChoice> mmFaceAmount = new MMMessageAttribute<FinancialInstrumentQuantitySearch1Choice, ImpliedCurrencyAmountRangeChoice>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmFaceAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantitySearch1Choice.mmObject();
@@ -177,7 +189,17 @@ public class FinancialInstrumentQuantitySearch1Choice {
 			definition = "Quantity expressed as an amount representing the face amount, that is the principal, of a debt instrument.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice.mmObject();
+			complexType_lazy = () -> ImpliedCurrencyAmountRangeChoice.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAmountRangeChoice getValue(FinancialInstrumentQuantitySearch1Choice obj) {
+			return obj.getFaceAmount();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentQuantitySearch1Choice obj, ImpliedCurrencyAmountRangeChoice value) {
+			obj.setFaceAmount(value);
 		}
 	};
 	@XmlElement(name = "AmtsdVal", required = true)
@@ -217,7 +239,7 @@ public class FinancialInstrumentQuantitySearch1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmortisedValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentQuantitySearch1Choice, ImpliedCurrencyAmountRangeChoice> mmAmortisedValue = new MMMessageAttribute<FinancialInstrumentQuantitySearch1Choice, ImpliedCurrencyAmountRangeChoice>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmAmortisedFaceValue;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantitySearch1Choice.mmObject();
@@ -228,7 +250,17 @@ public class FinancialInstrumentQuantitySearch1Choice {
 			definition = "Quantity expressed as an amount representing the current amortised face amount of a bond, for example, a periodic reduction/increase of a bond's principal amount.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice.mmObject();
+			complexType_lazy = () -> ImpliedCurrencyAmountRangeChoice.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAmountRangeChoice getValue(FinancialInstrumentQuantitySearch1Choice obj) {
+			return obj.getAmortisedValue();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentQuantitySearch1Choice obj, ImpliedCurrencyAmountRangeChoice value) {
+			obj.setAmortisedValue(value);
 		}
 	};
 
@@ -251,7 +283,7 @@ public class FinancialInstrumentQuantitySearch1Choice {
 		return unit;
 	}
 
-	public FinancialInstrumentQuantitySearch1Choice setUnit(com.tools20022.repository.choice.QuantityRange1Choice unit) {
+	public FinancialInstrumentQuantitySearch1Choice setUnit(QuantityRange1Choice unit) {
 		this.unit = Objects.requireNonNull(unit);
 		return this;
 	}
@@ -260,7 +292,7 @@ public class FinancialInstrumentQuantitySearch1Choice {
 		return faceAmount;
 	}
 
-	public FinancialInstrumentQuantitySearch1Choice setFaceAmount(com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice faceAmount) {
+	public FinancialInstrumentQuantitySearch1Choice setFaceAmount(ImpliedCurrencyAmountRangeChoice faceAmount) {
 		this.faceAmount = Objects.requireNonNull(faceAmount);
 		return this;
 	}
@@ -269,7 +301,7 @@ public class FinancialInstrumentQuantitySearch1Choice {
 		return amortisedValue;
 	}
 
-	public FinancialInstrumentQuantitySearch1Choice setAmortisedValue(com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice amortisedValue) {
+	public FinancialInstrumentQuantitySearch1Choice setAmortisedValue(ImpliedCurrencyAmountRangeChoice amortisedValue) {
 		this.amortisedValue = Objects.requireNonNull(amortisedValue);
 		return this;
 	}

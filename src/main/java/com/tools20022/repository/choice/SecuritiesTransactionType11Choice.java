@@ -133,7 +133,7 @@ public class SecuritiesTransactionType11Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTransactionType11Choice, SecuritiesTransactionType9Code> mmCode = new MMMessageAttribute<SecuritiesTransactionType11Choice, SecuritiesTransactionType9Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTransactionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesTransactionType11Choice.mmObject();
@@ -147,6 +147,16 @@ public class SecuritiesTransactionType11Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesTransactionType9Code.mmObject();
+		}
+
+		@Override
+		public SecuritiesTransactionType9Code getValue(SecuritiesTransactionType11Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionType11Choice obj, SecuritiesTransactionType9Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -196,7 +206,7 @@ public class SecuritiesTransactionType11Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTransactionType11Choice, GenericIdentification20> mmProprietary = new MMMessageAttribute<SecuritiesTransactionType11Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTransactionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesTransactionType11Choice.mmObject();
@@ -210,6 +220,16 @@ public class SecuritiesTransactionType11Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(SecuritiesTransactionType11Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionType11Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

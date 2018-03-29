@@ -25,7 +25,6 @@ import com.tools20022.repository.area.ATMCardTransactionLatestVersion;
 import com.tools20022.repository.msg.ATMReject2;
 import com.tools20022.repository.msg.Header33;
 import com.tools20022.repository.msgset.ATMInterfaceforTransactionProcessingandATMManagementISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -110,7 +109,7 @@ public class ATMRejectV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ATMRejectV02, Header33> mmHeader = new MMMessageBuildingBlock<ATMRejectV02, Header33>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,12 +120,14 @@ public class ATMRejectV02 {
 			complexType_lazy = () -> Header33.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ATMRejectV02.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header33 getValue(ATMRejectV02 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(ATMRejectV02 obj, Header33 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "ATMRjct", required = true)
@@ -155,7 +156,7 @@ public class ATMRejectV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmATMReject = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ATMRejectV02, ATMReject2> mmATMReject = new MMMessageBuildingBlock<ATMRejectV02, ATMReject2>() {
 		{
 			xmlTag = "ATMRjct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -166,12 +167,14 @@ public class ATMRejectV02 {
 			complexType_lazy = () -> ATMReject2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ATMRejectV02.class.getMethod("getATMReject", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ATMReject2 getValue(ATMRejectV02 obj) {
+			return obj.getATMReject();
+		}
+
+		@Override
+		public void setValue(ATMRejectV02 obj, ATMReject2 value) {
+			obj.setATMReject(value);
 		}
 	};
 

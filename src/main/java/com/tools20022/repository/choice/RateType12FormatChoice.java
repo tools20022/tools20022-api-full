@@ -98,7 +98,7 @@ public class RateType12FormatChoice {
 	 * definition} = "Standard code to specify the type of rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateType12FormatChoice, RateType12Code> mmCode = new MMMessageAttribute<RateType12FormatChoice, RateType12Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateType12FormatChoice.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class RateType12FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RateType12Code.mmObject();
+		}
+
+		@Override
+		public RateType12Code getValue(RateType12FormatChoice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RateType12FormatChoice obj, RateType12Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -141,7 +151,7 @@ public class RateType12FormatChoice {
 	 * definition} = "Proprietary code to express the type of rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateType12FormatChoice, GenericIdentification13> mmProprietary = new MMMessageAttribute<RateType12FormatChoice, GenericIdentification13>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateType12FormatChoice.mmObject();
 			isDerived = false;
@@ -152,6 +162,16 @@ public class RateType12FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(RateType12FormatChoice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RateType12FormatChoice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

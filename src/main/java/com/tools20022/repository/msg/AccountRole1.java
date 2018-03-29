@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.AccountOwnerRole;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.Role;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.OwnerType1;
+import com.tools20022.repository.msg.PartyIdentification41;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -110,7 +112,7 @@ public class AccountRole1 {
 	 * "Account owner/user identification and contact information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountRole1, PartyIdentification41> mmParty = new MMMessageAssociationEnd<AccountRole1, PartyIdentification41>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountRole1.mmObject();
@@ -122,7 +124,17 @@ public class AccountRole1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification41.mmObject();
+			type_lazy = () -> PartyIdentification41.mmObject();
+		}
+
+		@Override
+		public PartyIdentification41 getValue(AccountRole1 obj) {
+			return obj.getParty();
+		}
+
+		@Override
+		public void setValue(AccountRole1 obj, PartyIdentification41 value) {
+			obj.setParty(value);
 		}
 	};
 	@XmlElement(name = "OwnrTp", required = true)
@@ -156,7 +168,7 @@ public class AccountRole1 {
 	 * definition} = "Defines account owners/users relation to the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOwnerType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountRole1, OwnerType1> mmOwnerType = new MMMessageAssociationEnd<AccountRole1, OwnerType1>() {
 		{
 			businessElementTrace_lazy = () -> Role.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountRole1.mmObject();
@@ -168,7 +180,17 @@ public class AccountRole1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OwnerType1.mmObject();
+			type_lazy = () -> OwnerType1.mmObject();
+		}
+
+		@Override
+		public OwnerType1 getValue(AccountRole1 obj) {
+			return obj.getOwnerType();
+		}
+
+		@Override
+		public void setValue(AccountRole1 obj, OwnerType1 value) {
+			obj.setOwnerType(value);
 		}
 	};
 	@XmlElement(name = "StartDt")
@@ -199,7 +221,7 @@ public class AccountRole1 {
 	 * definition} = "Start date related to the role."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountRole1, Optional<ISODate>> mmStartDate = new MMMessageAttribute<AccountRole1, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountRole1.mmObject();
 			isDerived = false;
@@ -210,6 +232,16 @@ public class AccountRole1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(AccountRole1 obj) {
+			return obj.getStartDate();
+		}
+
+		@Override
+		public void setValue(AccountRole1 obj, Optional<ISODate> value) {
+			obj.setStartDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EndDt")
@@ -240,7 +272,7 @@ public class AccountRole1 {
 	 * definition} = "End date related to the role."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEndDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountRole1, Optional<ISODate>> mmEndDate = new MMMessageAttribute<AccountRole1, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountRole1.mmObject();
 			isDerived = false;
@@ -251,6 +283,16 @@ public class AccountRole1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(AccountRole1 obj) {
+			return obj.getEndDate();
+		}
+
+		@Override
+		public void setValue(AccountRole1 obj, Optional<ISODate> value) {
+			obj.setEndDate(value.orElse(null));
 		}
 	};
 
@@ -273,7 +315,7 @@ public class AccountRole1 {
 		return party;
 	}
 
-	public AccountRole1 setParty(com.tools20022.repository.msg.PartyIdentification41 party) {
+	public AccountRole1 setParty(PartyIdentification41 party) {
 		this.party = Objects.requireNonNull(party);
 		return this;
 	}
@@ -282,7 +324,7 @@ public class AccountRole1 {
 		return ownerType;
 	}
 
-	public AccountRole1 setOwnerType(com.tools20022.repository.msg.OwnerType1 ownerType) {
+	public AccountRole1 setOwnerType(OwnerType1 ownerType) {
 		this.ownerType = Objects.requireNonNull(ownerType);
 		return this;
 	}

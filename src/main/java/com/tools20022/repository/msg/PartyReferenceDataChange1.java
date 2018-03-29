@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SystemPartyIdentification3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -112,7 +113,7 @@ public class PartyReferenceDataChange1 {
 	 * "Identifies the party for which the changes are listed in the advice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyReferenceDataChange1, SystemPartyIdentification3> mmPartyIdentification = new MMMessageAssociationEnd<PartyReferenceDataChange1, SystemPartyIdentification3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyReferenceDataChange1.mmObject();
 			isDerived = false;
@@ -123,7 +124,17 @@ public class PartyReferenceDataChange1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification3.mmObject();
+			type_lazy = () -> SystemPartyIdentification3.mmObject();
+		}
+
+		@Override
+		public SystemPartyIdentification3 getValue(PartyReferenceDataChange1 obj) {
+			return obj.getPartyIdentification();
+		}
+
+		@Override
+		public void setValue(PartyReferenceDataChange1 obj, SystemPartyIdentification3 value) {
+			obj.setPartyIdentification(value);
 		}
 	};
 	@XmlElement(name = "FldNm", required = true)
@@ -157,7 +168,7 @@ public class PartyReferenceDataChange1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFieldName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyReferenceDataChange1, Max35Text> mmFieldName = new MMMessageAttribute<PartyReferenceDataChange1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyReferenceDataChange1.mmObject();
 			isDerived = false;
@@ -168,6 +179,16 @@ public class PartyReferenceDataChange1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PartyReferenceDataChange1 obj) {
+			return obj.getFieldName();
+		}
+
+		@Override
+		public void setValue(PartyReferenceDataChange1 obj, Max35Text value) {
+			obj.setFieldName(value);
 		}
 	};
 	@XmlElement(name = "OdFldVal", required = true)
@@ -200,7 +221,7 @@ public class PartyReferenceDataChange1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOldFieldValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyReferenceDataChange1, Max350Text> mmOldFieldValue = new MMMessageAttribute<PartyReferenceDataChange1, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyReferenceDataChange1.mmObject();
 			isDerived = false;
@@ -211,6 +232,16 @@ public class PartyReferenceDataChange1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(PartyReferenceDataChange1 obj) {
+			return obj.getOldFieldValue();
+		}
+
+		@Override
+		public void setValue(PartyReferenceDataChange1 obj, Max350Text value) {
+			obj.setOldFieldValue(value);
 		}
 	};
 	@XmlElement(name = "NewFldVal", required = true)
@@ -242,7 +273,7 @@ public class PartyReferenceDataChange1 {
 	 * definition} = "Value of the related field after the change was applied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewFieldValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyReferenceDataChange1, Max350Text> mmNewFieldValue = new MMMessageAttribute<PartyReferenceDataChange1, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyReferenceDataChange1.mmObject();
 			isDerived = false;
@@ -253,6 +284,16 @@ public class PartyReferenceDataChange1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(PartyReferenceDataChange1 obj) {
+			return obj.getNewFieldValue();
+		}
+
+		@Override
+		public void setValue(PartyReferenceDataChange1 obj, Max350Text value) {
+			obj.setNewFieldValue(value);
 		}
 	};
 	@XmlElement(name = "OprTmStmp", required = true)
@@ -284,7 +325,7 @@ public class PartyReferenceDataChange1 {
 	 * definition} = "Specifies the timestamp of the operation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOperationTimeStamp = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyReferenceDataChange1, ISODateTime> mmOperationTimeStamp = new MMMessageAttribute<PartyReferenceDataChange1, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyReferenceDataChange1.mmObject();
 			isDerived = false;
@@ -295,6 +336,16 @@ public class PartyReferenceDataChange1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(PartyReferenceDataChange1 obj) {
+			return obj.getOperationTimeStamp();
+		}
+
+		@Override
+		public void setValue(PartyReferenceDataChange1 obj, ISODateTime value) {
+			obj.setOperationTimeStamp(value);
 		}
 	};
 
@@ -317,7 +368,7 @@ public class PartyReferenceDataChange1 {
 		return partyIdentification;
 	}
 
-	public PartyReferenceDataChange1 setPartyIdentification(com.tools20022.repository.msg.SystemPartyIdentification3 partyIdentification) {
+	public PartyReferenceDataChange1 setPartyIdentification(SystemPartyIdentification3 partyIdentification) {
 		this.partyIdentification = Objects.requireNonNull(partyIdentification);
 		return this;
 	}

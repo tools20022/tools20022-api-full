@@ -26,6 +26,9 @@ import com.tools20022.repository.entity.MarginCall;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Margin2;
+import com.tools20022.repository.msg.PartyIdentificationAndAccount31;
+import com.tools20022.repository.msg.SecuritiesAccount18;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -113,7 +116,7 @@ public class MarginReport1 {
 	 * definition} = "Identifies the clearing member's account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMarginAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarginReport1, SecuritiesAccount18> mmMarginAccount = new MMMessageAssociationEnd<MarginReport1, SecuritiesAccount18>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarginReport1.mmObject();
@@ -125,11 +128,21 @@ public class MarginReport1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount18.mmObject();
+			type_lazy = () -> SecuritiesAccount18.mmObject();
+		}
+
+		@Override
+		public SecuritiesAccount18 getValue(MarginReport1 obj) {
+			return obj.getMarginAccount();
+		}
+
+		@Override
+		public void setValue(MarginReport1 obj, SecuritiesAccount18 value) {
+			obj.setMarginAccount(value);
 		}
 	};
 	@XmlElement(name = "NonClrMmb")
-	protected List<com.tools20022.repository.msg.PartyIdentificationAndAccount31> nonClearingMember;
+	protected List<PartyIdentificationAndAccount31> nonClearingMember;
 	/**
 	 * 
 	 <p>
@@ -163,7 +176,7 @@ public class MarginReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNonClearingMember = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarginReport1, List<PartyIdentificationAndAccount31>> mmNonClearingMember = new MMMessageAssociationEnd<MarginReport1, List<PartyIdentificationAndAccount31>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarginReport1.mmObject();
@@ -174,7 +187,17 @@ public class MarginReport1 {
 			definition = "Provides details about the non clearing member identification and account.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount31.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount31.mmObject();
+		}
+
+		@Override
+		public List<PartyIdentificationAndAccount31> getValue(MarginReport1 obj) {
+			return obj.getNonClearingMember();
+		}
+
+		@Override
+		public void setValue(MarginReport1 obj, List<PartyIdentificationAndAccount31> value) {
+			obj.setNonClearingMember(value);
 		}
 	};
 	@XmlElement(name = "MrgnPdct", required = true)
@@ -211,7 +234,7 @@ public class MarginReport1 {
 	 * "Specifies if the margin is related to equities or fixed income."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarginProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarginReport1, List<MarginProductType1Choice>> mmMarginProduct = new MMMessageAttribute<MarginReport1, List<MarginProductType1Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> MarginCall.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarginReport1.mmObject();
@@ -223,9 +246,19 @@ public class MarginReport1 {
 			minOccurs = 1;
 			complexType_lazy = () -> MarginProductType1Choice.mmObject();
 		}
+
+		@Override
+		public List<MarginProductType1Choice> getValue(MarginReport1 obj) {
+			return obj.getMarginProduct();
+		}
+
+		@Override
+		public void setValue(MarginReport1 obj, List<MarginProductType1Choice> value) {
+			obj.setMarginProduct(value);
+		}
 	};
 	@XmlElement(name = "MrgnDtls", required = true)
-	protected List<com.tools20022.repository.msg.Margin2> marginDetails;
+	protected List<Margin2> marginDetails;
 	/**
 	 * 
 	 <p>
@@ -256,7 +289,7 @@ public class MarginReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMarginDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarginReport1, List<Margin2>> mmMarginDetails = new MMMessageAssociationEnd<MarginReport1, List<Margin2>>() {
 		{
 			businessComponentTrace_lazy = () -> MarginCall.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarginReport1.mmObject();
@@ -267,7 +300,17 @@ public class MarginReport1 {
 			definition = "Provides the margin details such as the exposure amount and the initial margin.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Margin2.mmObject();
+			type_lazy = () -> Margin2.mmObject();
+		}
+
+		@Override
+		public List<Margin2> getValue(MarginReport1 obj) {
+			return obj.getMarginDetails();
+		}
+
+		@Override
+		public void setValue(MarginReport1 obj, List<Margin2> value) {
+			obj.setMarginDetails(value);
 		}
 	};
 
@@ -290,7 +333,7 @@ public class MarginReport1 {
 		return marginAccount;
 	}
 
-	public MarginReport1 setMarginAccount(com.tools20022.repository.msg.SecuritiesAccount18 marginAccount) {
+	public MarginReport1 setMarginAccount(SecuritiesAccount18 marginAccount) {
 		this.marginAccount = Objects.requireNonNull(marginAccount);
 		return this;
 	}
@@ -299,7 +342,7 @@ public class MarginReport1 {
 		return nonClearingMember == null ? nonClearingMember = new ArrayList<>() : nonClearingMember;
 	}
 
-	public MarginReport1 setNonClearingMember(List<com.tools20022.repository.msg.PartyIdentificationAndAccount31> nonClearingMember) {
+	public MarginReport1 setNonClearingMember(List<PartyIdentificationAndAccount31> nonClearingMember) {
 		this.nonClearingMember = Objects.requireNonNull(nonClearingMember);
 		return this;
 	}
@@ -317,7 +360,7 @@ public class MarginReport1 {
 		return marginDetails == null ? marginDetails = new ArrayList<>() : marginDetails;
 	}
 
-	public MarginReport1 setMarginDetails(List<com.tools20022.repository.msg.Margin2> marginDetails) {
+	public MarginReport1 setMarginDetails(List<Margin2> marginDetails) {
 		this.marginDetails = Objects.requireNonNull(marginDetails);
 		return this;
 	}

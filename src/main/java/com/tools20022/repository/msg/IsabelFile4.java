@@ -98,7 +98,7 @@ public class IsabelFile4 {
 	 * definition} = "Format of the file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFormat = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelFile4, Max16Text> mmFormat = new MMMessageAttribute<IsabelFile4, Max16Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelFile4.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class IsabelFile4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
+		}
+
+		@Override
+		public Max16Text getValue(IsabelFile4 obj) {
+			return obj.getFormat();
+		}
+
+		@Override
+		public void setValue(IsabelFile4 obj, Max16Text value) {
+			obj.setFormat(value);
 		}
 	};
 	@XmlElement(name = "Nm")
@@ -140,7 +150,7 @@ public class IsabelFile4 {
 	 * definition} = "Name of the mime file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelFile4, Optional<Max100AlphaNumericUnderscoreText>> mmName = new MMMessageAttribute<IsabelFile4, Optional<Max100AlphaNumericUnderscoreText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelFile4.mmObject();
 			isDerived = false;
@@ -151,6 +161,16 @@ public class IsabelFile4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max100AlphaNumericUnderscoreText.mmObject();
+		}
+
+		@Override
+		public Optional<Max100AlphaNumericUnderscoreText> getValue(IsabelFile4 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(IsabelFile4 obj, Optional<Max100AlphaNumericUnderscoreText> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MIMETp")
@@ -181,7 +201,7 @@ public class IsabelFile4 {
 	 * definition} = "Type of the mime file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMIMEType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelFile4, Optional<Max256Text>> mmMIMEType = new MMMessageAttribute<IsabelFile4, Optional<Max256Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelFile4.mmObject();
 			isDerived = false;
@@ -192,6 +212,16 @@ public class IsabelFile4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max256Text> getValue(IsabelFile4 obj) {
+			return obj.getMIMEType();
+		}
+
+		@Override
+		public void setValue(IsabelFile4 obj, Optional<Max256Text> value) {
+			obj.setMIMEType(value.orElse(null));
 		}
 	};
 

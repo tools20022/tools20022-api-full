@@ -111,7 +111,7 @@ public class SafekeepingPlaceTypeAndAnyBICIdentifier1 {
 	 * definition} = "Place of safekeeping as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSafekeepingPlaceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SafekeepingPlaceTypeAndAnyBICIdentifier1, SafekeepingPlace1Code> mmSafekeepingPlaceType = new MMMessageAttribute<SafekeepingPlaceTypeAndAnyBICIdentifier1, SafekeepingPlace1Code>() {
 		{
 			businessElementTrace_lazy = () -> SafekeepingPlace.mmSafekeepingPlaceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SafekeepingPlaceTypeAndAnyBICIdentifier1.mmObject();
@@ -123,6 +123,16 @@ public class SafekeepingPlaceTypeAndAnyBICIdentifier1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SafekeepingPlace1Code.mmObject();
+		}
+
+		@Override
+		public SafekeepingPlace1Code getValue(SafekeepingPlaceTypeAndAnyBICIdentifier1 obj) {
+			return obj.getSafekeepingPlaceType();
+		}
+
+		@Override
+		public void setValue(SafekeepingPlaceTypeAndAnyBICIdentifier1 obj, SafekeepingPlace1Code value) {
+			obj.setSafekeepingPlaceType(value);
 		}
 	};
 	@XmlElement(name = "Id", required = true)
@@ -160,7 +170,7 @@ public class SafekeepingPlaceTypeAndAnyBICIdentifier1 {
 	 * definition} = "Place of safekeeping."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SafekeepingPlaceTypeAndAnyBICIdentifier1, AnyBICIdentifier> mmIdentification = new MMMessageAttribute<SafekeepingPlaceTypeAndAnyBICIdentifier1, AnyBICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SafekeepingPlaceTypeAndAnyBICIdentifier1.mmObject();
@@ -172,6 +182,16 @@ public class SafekeepingPlaceTypeAndAnyBICIdentifier1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public AnyBICIdentifier getValue(SafekeepingPlaceTypeAndAnyBICIdentifier1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SafekeepingPlaceTypeAndAnyBICIdentifier1 obj, AnyBICIdentifier value) {
+			obj.setIdentification(value);
 		}
 	};
 

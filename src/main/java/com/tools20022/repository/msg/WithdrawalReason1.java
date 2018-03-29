@@ -112,7 +112,7 @@ public class WithdrawalReason1 {
 	 * definition} = "Withdrawal reason expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmWithdrawalReasonCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<WithdrawalReason1, WithdrawalReason1Code> mmWithdrawalReasonCode = new MMMessageAttribute<WithdrawalReason1, WithdrawalReason1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.WithdrawalReason1.mmObject();
 			isDerived = false;
@@ -123,6 +123,16 @@ public class WithdrawalReason1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> WithdrawalReason1Code.mmObject();
+		}
+
+		@Override
+		public WithdrawalReason1Code getValue(WithdrawalReason1 obj) {
+			return obj.getWithdrawalReasonCode();
+		}
+
+		@Override
+		public void setValue(WithdrawalReason1 obj, WithdrawalReason1Code value) {
+			obj.setWithdrawalReasonCode(value);
 		}
 	};
 	@XmlElement(name = "WdrwlRsnSubCd")
@@ -155,7 +165,7 @@ public class WithdrawalReason1 {
 	 * "Further withdrawal reason information expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmWithdrawalReasonSubCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<WithdrawalReason1, Optional<Max4Text>> mmWithdrawalReasonSubCode = new MMMessageAttribute<WithdrawalReason1, Optional<Max4Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.WithdrawalReason1.mmObject();
 			isDerived = false;
@@ -166,6 +176,16 @@ public class WithdrawalReason1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max4Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max4Text> getValue(WithdrawalReason1 obj) {
+			return obj.getWithdrawalReasonSubCode();
+		}
+
+		@Override
+		public void setValue(WithdrawalReason1 obj, Optional<Max4Text> value) {
+			obj.setWithdrawalReasonSubCode(value.orElse(null));
 		}
 	};
 

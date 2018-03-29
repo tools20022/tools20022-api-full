@@ -27,6 +27,7 @@ import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV03;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountAndDirection29;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -235,7 +236,7 @@ public class OtherAmounts16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmChargesFees = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>> mmChargesFees = new MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
@@ -247,7 +248,17 @@ public class OtherAmounts16 {
 			definition = "Amount of money paid for the provision of financial services that cannot be categorised by another qualifier.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(OtherAmounts16 obj) {
+			return obj.getChargesFees();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<AmountAndDirection29> value) {
+			obj.setChargesFees(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtryNtlFdrlTax")
@@ -288,7 +299,7 @@ public class OtherAmounts16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountryNationalFederalTax = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>> mmCountryNationalFederalTax = new MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
@@ -300,7 +311,17 @@ public class OtherAmounts16 {
 			definition = "Amount of country, national or federal tax charged by the jurisdiction in which the account servicer is located.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(OtherAmounts16 obj) {
+			return obj.getCountryNationalFederalTax();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<AmountAndDirection29> value) {
+			obj.setCountryNationalFederalTax(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ExctgBrkrAmt")
@@ -341,7 +362,7 @@ public class OtherAmounts16 {
 	 * "Amount of money paid to an executing broker as a commission."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExecutingBrokerAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>> mmExecutingBrokerAmount = new MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
@@ -353,7 +374,17 @@ public class OtherAmounts16 {
 			definition = "Amount of money paid to an executing broker as a commission.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(OtherAmounts16 obj) {
+			return obj.getExecutingBrokerAmount();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<AmountAndDirection29> value) {
+			obj.setExecutingBrokerAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IsseDscntAllwnc")
@@ -395,7 +426,7 @@ public class OtherAmounts16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssueDiscountAllowance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>> mmIssueDiscountAllowance = new MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> Issuance.mmIssueDiscountAllowance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
@@ -407,7 +438,17 @@ public class OtherAmounts16 {
 			definition = "Amount of money defined as a discount on a new issue or on a tranche of an existing issue.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(OtherAmounts16 obj) {
+			return obj.getIssueDiscountAllowance();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<AmountAndDirection29> value) {
+			obj.setIssueDiscountAllowance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtLevyTax")
@@ -446,7 +487,7 @@ public class OtherAmounts16 {
 	 * definition} = "Amount of payment levy tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentLevyTax = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>> mmPaymentLevyTax = new MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
@@ -458,7 +499,17 @@ public class OtherAmounts16 {
 			definition = "Amount of payment levy tax.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(OtherAmounts16 obj) {
+			return obj.getPaymentLevyTax();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<AmountAndDirection29> value) {
+			obj.setPaymentLevyTax(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LclTax")
@@ -499,7 +550,7 @@ public class OtherAmounts16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLocalTax = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>> mmLocalTax = new MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
@@ -511,7 +562,17 @@ public class OtherAmounts16 {
 			definition = "Tax charged by the jurisdiction in which the financial instrument settles.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(OtherAmounts16 obj) {
+			return obj.getLocalTax();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<AmountAndDirection29> value) {
+			obj.setLocalTax(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LclBrkrComssn")
@@ -551,7 +612,7 @@ public class OtherAmounts16 {
 	 * definition} = "Amount of commission paid to a local broker."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLocalBrokerCommission = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>> mmLocalBrokerCommission = new MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
@@ -563,7 +624,17 @@ public class OtherAmounts16 {
 			definition = "Amount of commission paid to a local broker.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(OtherAmounts16 obj) {
+			return obj.getLocalBrokerCommission();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<AmountAndDirection29> value) {
+			obj.setLocalBrokerCommission(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Mrgn")
@@ -604,7 +675,7 @@ public class OtherAmounts16 {
 	 * "Amount of money deposited by the trading party in a margin account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMargin = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>> mmMargin = new MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> Collateral.mmCollateralAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
@@ -616,7 +687,17 @@ public class OtherAmounts16 {
 			definition = "Amount of money deposited by the trading party in a margin account.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(OtherAmounts16 obj) {
+			return obj.getMargin();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<AmountAndDirection29> value) {
+			obj.setMargin(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Othr")
@@ -652,7 +733,7 @@ public class OtherAmounts16 {
 	 * "An amount that is not indicated by a known business denomination."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOther = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>> mmOther = new MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
 			isDerived = false;
@@ -663,7 +744,17 @@ public class OtherAmounts16 {
 			definition = "An amount that is not indicated by a known business denomination.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(OtherAmounts16 obj) {
+			return obj.getOther();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<AmountAndDirection29> value) {
+			obj.setOther(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RgltryAmt")
@@ -705,7 +796,7 @@ public class OtherAmounts16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegulatoryAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>> mmRegulatoryAmount = new MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesRelatedFees.mmRegulatoryFeesAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
@@ -717,7 +808,17 @@ public class OtherAmounts16 {
 			definition = "Amount of money charged by a regulatory authority, for example, Securities and Exchange fees.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(OtherAmounts16 obj) {
+			return obj.getRegulatoryAmount();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<AmountAndDirection29> value) {
+			obj.setRegulatoryAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SpclCncssn")
@@ -759,7 +860,7 @@ public class OtherAmounts16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSpecialConcession = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>> mmSpecialConcession = new MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> ProceedsDefinition.mmSpecialConcessionAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
@@ -771,7 +872,17 @@ public class OtherAmounts16 {
 			definition = "Amount of drawdown or other reduction from or in addition to the deal price.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(OtherAmounts16 obj) {
+			return obj.getSpecialConcession();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<AmountAndDirection29> value) {
+			obj.setSpecialConcession(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StmpDty")
@@ -810,7 +921,7 @@ public class OtherAmounts16 {
 	 * definition} = "Amount of stamp duty."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStampDuty = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>> mmStampDuty = new MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
@@ -822,7 +933,17 @@ public class OtherAmounts16 {
 			definition = "Amount of stamp duty.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(OtherAmounts16 obj) {
+			return obj.getStampDuty();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<AmountAndDirection29> value) {
+			obj.setStampDuty(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StockXchgTax")
@@ -861,7 +982,7 @@ public class OtherAmounts16 {
 	 * definition} = "Amount of stock exchange tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStockExchangeTax = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>> mmStockExchangeTax = new MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
@@ -873,7 +994,17 @@ public class OtherAmounts16 {
 			definition = "Amount of stock exchange tax.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(OtherAmounts16 obj) {
+			return obj.getStockExchangeTax();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<AmountAndDirection29> value) {
+			obj.setStockExchangeTax(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrfTax")
@@ -915,7 +1046,7 @@ public class OtherAmounts16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransferTax = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>> mmTransferTax = new MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferTax;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
@@ -927,7 +1058,17 @@ public class OtherAmounts16 {
 			definition = "Amount of tax levied on a transfer of ownership of financial instrument.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(OtherAmounts16 obj) {
+			return obj.getTransferTax();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<AmountAndDirection29> value) {
+			obj.setTransferTax(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxTax")
@@ -966,7 +1107,7 @@ public class OtherAmounts16 {
 	 * definition} = "Amount of transaction tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionTax = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>> mmTransactionTax = new MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
@@ -978,7 +1119,17 @@ public class OtherAmounts16 {
 			definition = "Amount of transaction tax.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(OtherAmounts16 obj) {
+			return obj.getTransactionTax();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<AmountAndDirection29> value) {
+			obj.setTransactionTax(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ValAddedTax")
@@ -1017,7 +1168,7 @@ public class OtherAmounts16 {
 	 * definition} = "Amount of value-added tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValueAddedTax = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>> mmValueAddedTax = new MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
@@ -1029,7 +1180,17 @@ public class OtherAmounts16 {
 			definition = "Amount of value-added tax.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(OtherAmounts16 obj) {
+			return obj.getValueAddedTax();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<AmountAndDirection29> value) {
+			obj.setValueAddedTax(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "WhldgTax")
@@ -1069,7 +1230,7 @@ public class OtherAmounts16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmWithholdingTax = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>> mmWithholdingTax = new MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
@@ -1081,7 +1242,17 @@ public class OtherAmounts16 {
 			definition = "Amount of money that will be withheld by a tax authority.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(OtherAmounts16 obj) {
+			return obj.getWithholdingTax();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<AmountAndDirection29> value) {
+			obj.setWithholdingTax(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NetGnLoss")
@@ -1123,7 +1294,7 @@ public class OtherAmounts16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNetGainLoss = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>> mmNetGainLoss = new MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmNetGainLoss;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
@@ -1135,7 +1306,17 @@ public class OtherAmounts16 {
 			definition = "Amount representing the difference between the cost and the current price of a security. In the context of securities settlement, it is the amount paid or received when the instructions are netted or paired off.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(OtherAmounts16 obj) {
+			return obj.getNetGainLoss();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<AmountAndDirection29> value) {
+			obj.setNetGainLoss(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CsmptnTax")
@@ -1174,7 +1355,7 @@ public class OtherAmounts16 {
 	 * definition} = "A tax on spending on goods and services."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmConsumptionTax = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>> mmConsumptionTax = new MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
@@ -1186,7 +1367,17 @@ public class OtherAmounts16 {
 			definition = "A tax on spending on goods and services.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(OtherAmounts16 obj) {
+			return obj.getConsumptionTax();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<AmountAndDirection29> value) {
+			obj.setConsumptionTax(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MtchgConfFee")
@@ -1224,7 +1415,7 @@ public class OtherAmounts16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMatchingConfirmationFee = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>> mmMatchingConfirmationFee = new MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmFees;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
@@ -1235,7 +1426,17 @@ public class OtherAmounts16 {
 			definition = "Amount of money charged for matching and/or confirmation.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(OtherAmounts16 obj) {
+			return obj.getMatchingConfirmationFee();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<AmountAndDirection29> value) {
+			obj.setMatchingConfirmationFee(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ConvtdAmt")
@@ -1272,7 +1473,7 @@ public class OtherAmounts16 {
 	 * definition} = "Amount following a foreign exchange conversion."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmConvertedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>> mmConvertedAmount = new MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmResultingAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
@@ -1283,7 +1484,17 @@ public class OtherAmounts16 {
 			definition = "Amount following a foreign exchange conversion.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(OtherAmounts16 obj) {
+			return obj.getConvertedAmount();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<AmountAndDirection29> value) {
+			obj.setConvertedAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlCcyAmt")
@@ -1322,7 +1533,7 @@ public class OtherAmounts16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalCurrencyAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>> mmOriginalCurrencyAmount = new MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmOriginalAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
@@ -1333,7 +1544,17 @@ public class OtherAmounts16 {
 			definition = "Posting/settlement amount in its original currency when conversion from/into another currency has occurred.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(OtherAmounts16 obj) {
+			return obj.getOriginalCurrencyAmount();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<AmountAndDirection29> value) {
+			obj.setOriginalCurrencyAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BookVal")
@@ -1375,7 +1596,7 @@ public class OtherAmounts16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBookValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>> mmBookValue = new MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmBookValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
@@ -1387,7 +1608,17 @@ public class OtherAmounts16 {
 			definition = "Cost of the securities. May be requested in some countries for tax purposes.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(OtherAmounts16 obj) {
+			return obj.getBookValue();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<AmountAndDirection29> value) {
+			obj.setBookValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcrdCptlstnAmt")
@@ -1429,7 +1660,7 @@ public class OtherAmounts16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccruedCapitalisationAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>> mmAccruedCapitalisationAmount = new MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmAccruedCapitalisationAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
@@ -1441,7 +1672,17 @@ public class OtherAmounts16 {
 			definition = "Amount of unpaid interest (on bonds which have defaulted and have subsequently \nrestructured), which is capitalized and added to the original principal amount of the bond.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(OtherAmounts16 obj) {
+			return obj.getAccruedCapitalisationAmount();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<AmountAndDirection29> value) {
+			obj.setAccruedCapitalisationAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LclTaxCtrySpcfc1")
@@ -1481,7 +1722,7 @@ public class OtherAmounts16 {
 	 * "Local tax as defined by the country in its market practice document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLocalTaxCountrySpecific1 = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>> mmLocalTaxCountrySpecific1 = new MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
@@ -1493,7 +1734,17 @@ public class OtherAmounts16 {
 			definition = "Local tax as defined by the country in its market practice document.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(OtherAmounts16 obj) {
+			return obj.getLocalTaxCountrySpecific1();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<AmountAndDirection29> value) {
+			obj.setLocalTaxCountrySpecific1(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LclTaxCtrySpcfc2")
@@ -1533,7 +1784,7 @@ public class OtherAmounts16 {
 	 * "Local tax as defined by the country in its market practice document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLocalTaxCountrySpecific2 = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>> mmLocalTaxCountrySpecific2 = new MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
@@ -1545,7 +1796,17 @@ public class OtherAmounts16 {
 			definition = "Local tax as defined by the country in its market practice document.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(OtherAmounts16 obj) {
+			return obj.getLocalTaxCountrySpecific2();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<AmountAndDirection29> value) {
+			obj.setLocalTaxCountrySpecific2(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LclTaxCtrySpcfc3")
@@ -1585,7 +1846,7 @@ public class OtherAmounts16 {
 	 * "Local tax as defined by the country in its market practice document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLocalTaxCountrySpecific3 = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>> mmLocalTaxCountrySpecific3 = new MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
@@ -1597,7 +1858,17 @@ public class OtherAmounts16 {
 			definition = "Local tax as defined by the country in its market practice document.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(OtherAmounts16 obj) {
+			return obj.getLocalTaxCountrySpecific3();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<AmountAndDirection29> value) {
+			obj.setLocalTaxCountrySpecific3(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LclTaxCtrySpcfc4")
@@ -1637,7 +1908,7 @@ public class OtherAmounts16 {
 	 * "Local tax as defined by the country in its market practice document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLocalTaxCountrySpecific4 = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>> mmLocalTaxCountrySpecific4 = new MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
@@ -1649,7 +1920,17 @@ public class OtherAmounts16 {
 			definition = "Local tax as defined by the country in its market practice document.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(OtherAmounts16 obj) {
+			return obj.getLocalTaxCountrySpecific4();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<AmountAndDirection29> value) {
+			obj.setLocalTaxCountrySpecific4(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ShrdBrkrgAmt")
@@ -1688,7 +1969,7 @@ public class OtherAmounts16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSharedBrokerageAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>> mmSharedBrokerageAmount = new MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
@@ -1699,7 +1980,17 @@ public class OtherAmounts16 {
 			definition = "Amount paid as result of transactions subject to shared brokerage commissions.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(OtherAmounts16 obj) {
+			return obj.getSharedBrokerageAmount();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<AmountAndDirection29> value) {
+			obj.setSharedBrokerageAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MktMmbFeeAmt")
@@ -1738,7 +2029,7 @@ public class OtherAmounts16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarketMemberFeeAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>> mmMarketMemberFeeAmount = new MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmFees;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
@@ -1749,7 +2040,17 @@ public class OtherAmounts16 {
 			definition = "Indicates the total fees related to the trade, with deduction of rebates (on brokerage, commission or differential) granted by the market member (fee amount with tax excluded).";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(OtherAmounts16 obj) {
+			return obj.getMarketMemberFeeAmount();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<AmountAndDirection29> value) {
+			obj.setMarketMemberFeeAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RmnrtnAmtReq")
@@ -1782,7 +2083,7 @@ public class OtherAmounts16 {
 	 * "Specifies that this information is available upon request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRemunerationAmountRequest = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<YesNoIndicator>> mmRemunerationAmountRequest = new MMMessageAttribute<OtherAmounts16, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
 			isDerived = false;
@@ -1793,6 +2094,16 @@ public class OtherAmounts16 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(OtherAmounts16 obj) {
+			return obj.getRemunerationAmountRequest();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<YesNoIndicator> value) {
+			obj.setRemunerationAmountRequest(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RmnrtnAmt")
@@ -1831,7 +2142,7 @@ public class OtherAmounts16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRemunerationAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>> mmRemunerationAmount = new MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> Broker.mmRemunerationAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
@@ -1842,7 +2153,17 @@ public class OtherAmounts16 {
 			definition = "Specifies the source and amount of any other remuneration received or to be received by the broker in connection with the transaction.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(OtherAmounts16 obj) {
+			return obj.getRemunerationAmount();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<AmountAndDirection29> value) {
+			obj.setRemunerationAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BrrwgIntrstAmt")
@@ -1881,7 +2202,7 @@ public class OtherAmounts16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBorrowingInterestAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>> mmBorrowingInterestAmount = new MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
@@ -1892,7 +2213,17 @@ public class OtherAmounts16 {
 			definition = "Amount to be paid by the lender to the borrower calculated based on the interest rate.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(OtherAmounts16 obj) {
+			return obj.getBorrowingInterestAmount();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<AmountAndDirection29> value) {
+			obj.setBorrowingInterestAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BrrwgFee")
@@ -1931,7 +2262,7 @@ public class OtherAmounts16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBorrowingFee = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>> mmBorrowingFee = new MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesLending.mmBorrowingFee;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
@@ -1942,7 +2273,17 @@ public class OtherAmounts16 {
 			definition = "Amount to be paid by the Borrower to the Lender for the securities borrowed calculated based on the bond loan rate.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(OtherAmounts16 obj) {
+			return obj.getBorrowingFee();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<AmountAndDirection29> value) {
+			obj.setBorrowingFee(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NetMktVal")
@@ -1981,7 +2322,7 @@ public class OtherAmounts16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNetMarketValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>> mmNetMarketValue = new MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmMarketValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
@@ -1992,7 +2333,17 @@ public class OtherAmounts16 {
 			definition = "Net market value of the securities lent used to calculate the collateral amount.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(OtherAmounts16 obj) {
+			return obj.getNetMarketValue();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<AmountAndDirection29> value) {
+			obj.setNetMarketValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RmngFaceVal")
@@ -2029,7 +2380,7 @@ public class OtherAmounts16 {
 	 * definition} = "Remaining nominal value of a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRemainingFaceValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>> mmRemainingFaceValue = new MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmAmortisedFaceValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
@@ -2040,7 +2391,17 @@ public class OtherAmounts16 {
 			definition = "Remaining nominal value of a security.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(OtherAmounts16 obj) {
+			return obj.getRemainingFaceValue();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<AmountAndDirection29> value) {
+			obj.setRemainingFaceValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RmngBookVal")
@@ -2078,7 +2439,7 @@ public class OtherAmounts16 {
 	 * "Remaining value at which an asset is carried on a balance sheet."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRemainingBookValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>> mmRemainingBookValue = new MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmBookValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
@@ -2089,7 +2450,17 @@ public class OtherAmounts16 {
 			definition = "Remaining value at which an asset is carried on a balance sheet.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(OtherAmounts16 obj) {
+			return obj.getRemainingBookValue();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<AmountAndDirection29> value) {
+			obj.setRemainingBookValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClrBrkrComssn")
@@ -2129,7 +2500,7 @@ public class OtherAmounts16 {
 	 * definition} = "Amount of commission paid to a clearing broker."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClearingBrokerCommission = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>> mmClearingBrokerCommission = new MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
@@ -2141,7 +2512,17 @@ public class OtherAmounts16 {
 			definition = "Amount of commission paid to a clearing broker.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(OtherAmounts16 obj) {
+			return obj.getClearingBrokerCommission();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<AmountAndDirection29> value) {
+			obj.setClearingBrokerCommission(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DiffInPric")
@@ -2174,7 +2555,7 @@ public class OtherAmounts16 {
 	 * "Difference between the deal price and another reference price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDifferenceInPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>> mmDifferenceInPrice = new MMMessageAttribute<OtherAmounts16, Optional<AmountAndDirection29>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
 			isDerived = false;
@@ -2184,7 +2565,17 @@ public class OtherAmounts16 {
 			definition = "Difference between the deal price and another reference price.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(OtherAmounts16 obj) {
+			return obj.getDifferenceInPrice();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<AmountAndDirection29> value) {
+			obj.setDifferenceInPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OddLotFee")
@@ -2223,7 +2614,7 @@ public class OtherAmounts16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOddLotFee = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmounts16, Optional<YesNoIndicator>> mmOddLotFee = new MMMessageAttribute<OtherAmounts16, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmFees;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
@@ -2235,6 +2626,16 @@ public class OtherAmounts16 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(OtherAmounts16 obj) {
+			return obj.getOddLotFee();
+		}
+
+		@Override
+		public void setValue(OtherAmounts16 obj, Optional<YesNoIndicator> value) {
+			obj.setOddLotFee(value.orElse(null));
 		}
 	};
 
@@ -2271,7 +2672,7 @@ public class OtherAmounts16 {
 		return chargesFees == null ? Optional.empty() : Optional.of(chargesFees);
 	}
 
-	public OtherAmounts16 setChargesFees(com.tools20022.repository.msg.AmountAndDirection29 chargesFees) {
+	public OtherAmounts16 setChargesFees(AmountAndDirection29 chargesFees) {
 		this.chargesFees = chargesFees;
 		return this;
 	}
@@ -2280,7 +2681,7 @@ public class OtherAmounts16 {
 		return countryNationalFederalTax == null ? Optional.empty() : Optional.of(countryNationalFederalTax);
 	}
 
-	public OtherAmounts16 setCountryNationalFederalTax(com.tools20022.repository.msg.AmountAndDirection29 countryNationalFederalTax) {
+	public OtherAmounts16 setCountryNationalFederalTax(AmountAndDirection29 countryNationalFederalTax) {
 		this.countryNationalFederalTax = countryNationalFederalTax;
 		return this;
 	}
@@ -2289,7 +2690,7 @@ public class OtherAmounts16 {
 		return executingBrokerAmount == null ? Optional.empty() : Optional.of(executingBrokerAmount);
 	}
 
-	public OtherAmounts16 setExecutingBrokerAmount(com.tools20022.repository.msg.AmountAndDirection29 executingBrokerAmount) {
+	public OtherAmounts16 setExecutingBrokerAmount(AmountAndDirection29 executingBrokerAmount) {
 		this.executingBrokerAmount = executingBrokerAmount;
 		return this;
 	}
@@ -2298,7 +2699,7 @@ public class OtherAmounts16 {
 		return issueDiscountAllowance == null ? Optional.empty() : Optional.of(issueDiscountAllowance);
 	}
 
-	public OtherAmounts16 setIssueDiscountAllowance(com.tools20022.repository.msg.AmountAndDirection29 issueDiscountAllowance) {
+	public OtherAmounts16 setIssueDiscountAllowance(AmountAndDirection29 issueDiscountAllowance) {
 		this.issueDiscountAllowance = issueDiscountAllowance;
 		return this;
 	}
@@ -2307,7 +2708,7 @@ public class OtherAmounts16 {
 		return paymentLevyTax == null ? Optional.empty() : Optional.of(paymentLevyTax);
 	}
 
-	public OtherAmounts16 setPaymentLevyTax(com.tools20022.repository.msg.AmountAndDirection29 paymentLevyTax) {
+	public OtherAmounts16 setPaymentLevyTax(AmountAndDirection29 paymentLevyTax) {
 		this.paymentLevyTax = paymentLevyTax;
 		return this;
 	}
@@ -2316,7 +2717,7 @@ public class OtherAmounts16 {
 		return localTax == null ? Optional.empty() : Optional.of(localTax);
 	}
 
-	public OtherAmounts16 setLocalTax(com.tools20022.repository.msg.AmountAndDirection29 localTax) {
+	public OtherAmounts16 setLocalTax(AmountAndDirection29 localTax) {
 		this.localTax = localTax;
 		return this;
 	}
@@ -2325,7 +2726,7 @@ public class OtherAmounts16 {
 		return localBrokerCommission == null ? Optional.empty() : Optional.of(localBrokerCommission);
 	}
 
-	public OtherAmounts16 setLocalBrokerCommission(com.tools20022.repository.msg.AmountAndDirection29 localBrokerCommission) {
+	public OtherAmounts16 setLocalBrokerCommission(AmountAndDirection29 localBrokerCommission) {
 		this.localBrokerCommission = localBrokerCommission;
 		return this;
 	}
@@ -2334,7 +2735,7 @@ public class OtherAmounts16 {
 		return margin == null ? Optional.empty() : Optional.of(margin);
 	}
 
-	public OtherAmounts16 setMargin(com.tools20022.repository.msg.AmountAndDirection29 margin) {
+	public OtherAmounts16 setMargin(AmountAndDirection29 margin) {
 		this.margin = margin;
 		return this;
 	}
@@ -2343,7 +2744,7 @@ public class OtherAmounts16 {
 		return other == null ? Optional.empty() : Optional.of(other);
 	}
 
-	public OtherAmounts16 setOther(com.tools20022.repository.msg.AmountAndDirection29 other) {
+	public OtherAmounts16 setOther(AmountAndDirection29 other) {
 		this.other = other;
 		return this;
 	}
@@ -2352,7 +2753,7 @@ public class OtherAmounts16 {
 		return regulatoryAmount == null ? Optional.empty() : Optional.of(regulatoryAmount);
 	}
 
-	public OtherAmounts16 setRegulatoryAmount(com.tools20022.repository.msg.AmountAndDirection29 regulatoryAmount) {
+	public OtherAmounts16 setRegulatoryAmount(AmountAndDirection29 regulatoryAmount) {
 		this.regulatoryAmount = regulatoryAmount;
 		return this;
 	}
@@ -2361,7 +2762,7 @@ public class OtherAmounts16 {
 		return specialConcession == null ? Optional.empty() : Optional.of(specialConcession);
 	}
 
-	public OtherAmounts16 setSpecialConcession(com.tools20022.repository.msg.AmountAndDirection29 specialConcession) {
+	public OtherAmounts16 setSpecialConcession(AmountAndDirection29 specialConcession) {
 		this.specialConcession = specialConcession;
 		return this;
 	}
@@ -2370,7 +2771,7 @@ public class OtherAmounts16 {
 		return stampDuty == null ? Optional.empty() : Optional.of(stampDuty);
 	}
 
-	public OtherAmounts16 setStampDuty(com.tools20022.repository.msg.AmountAndDirection29 stampDuty) {
+	public OtherAmounts16 setStampDuty(AmountAndDirection29 stampDuty) {
 		this.stampDuty = stampDuty;
 		return this;
 	}
@@ -2379,7 +2780,7 @@ public class OtherAmounts16 {
 		return stockExchangeTax == null ? Optional.empty() : Optional.of(stockExchangeTax);
 	}
 
-	public OtherAmounts16 setStockExchangeTax(com.tools20022.repository.msg.AmountAndDirection29 stockExchangeTax) {
+	public OtherAmounts16 setStockExchangeTax(AmountAndDirection29 stockExchangeTax) {
 		this.stockExchangeTax = stockExchangeTax;
 		return this;
 	}
@@ -2388,7 +2789,7 @@ public class OtherAmounts16 {
 		return transferTax == null ? Optional.empty() : Optional.of(transferTax);
 	}
 
-	public OtherAmounts16 setTransferTax(com.tools20022.repository.msg.AmountAndDirection29 transferTax) {
+	public OtherAmounts16 setTransferTax(AmountAndDirection29 transferTax) {
 		this.transferTax = transferTax;
 		return this;
 	}
@@ -2397,7 +2798,7 @@ public class OtherAmounts16 {
 		return transactionTax == null ? Optional.empty() : Optional.of(transactionTax);
 	}
 
-	public OtherAmounts16 setTransactionTax(com.tools20022.repository.msg.AmountAndDirection29 transactionTax) {
+	public OtherAmounts16 setTransactionTax(AmountAndDirection29 transactionTax) {
 		this.transactionTax = transactionTax;
 		return this;
 	}
@@ -2406,7 +2807,7 @@ public class OtherAmounts16 {
 		return valueAddedTax == null ? Optional.empty() : Optional.of(valueAddedTax);
 	}
 
-	public OtherAmounts16 setValueAddedTax(com.tools20022.repository.msg.AmountAndDirection29 valueAddedTax) {
+	public OtherAmounts16 setValueAddedTax(AmountAndDirection29 valueAddedTax) {
 		this.valueAddedTax = valueAddedTax;
 		return this;
 	}
@@ -2415,7 +2816,7 @@ public class OtherAmounts16 {
 		return withholdingTax == null ? Optional.empty() : Optional.of(withholdingTax);
 	}
 
-	public OtherAmounts16 setWithholdingTax(com.tools20022.repository.msg.AmountAndDirection29 withholdingTax) {
+	public OtherAmounts16 setWithholdingTax(AmountAndDirection29 withholdingTax) {
 		this.withholdingTax = withholdingTax;
 		return this;
 	}
@@ -2424,7 +2825,7 @@ public class OtherAmounts16 {
 		return netGainLoss == null ? Optional.empty() : Optional.of(netGainLoss);
 	}
 
-	public OtherAmounts16 setNetGainLoss(com.tools20022.repository.msg.AmountAndDirection29 netGainLoss) {
+	public OtherAmounts16 setNetGainLoss(AmountAndDirection29 netGainLoss) {
 		this.netGainLoss = netGainLoss;
 		return this;
 	}
@@ -2433,7 +2834,7 @@ public class OtherAmounts16 {
 		return consumptionTax == null ? Optional.empty() : Optional.of(consumptionTax);
 	}
 
-	public OtherAmounts16 setConsumptionTax(com.tools20022.repository.msg.AmountAndDirection29 consumptionTax) {
+	public OtherAmounts16 setConsumptionTax(AmountAndDirection29 consumptionTax) {
 		this.consumptionTax = consumptionTax;
 		return this;
 	}
@@ -2442,7 +2843,7 @@ public class OtherAmounts16 {
 		return matchingConfirmationFee == null ? Optional.empty() : Optional.of(matchingConfirmationFee);
 	}
 
-	public OtherAmounts16 setMatchingConfirmationFee(com.tools20022.repository.msg.AmountAndDirection29 matchingConfirmationFee) {
+	public OtherAmounts16 setMatchingConfirmationFee(AmountAndDirection29 matchingConfirmationFee) {
 		this.matchingConfirmationFee = matchingConfirmationFee;
 		return this;
 	}
@@ -2451,7 +2852,7 @@ public class OtherAmounts16 {
 		return convertedAmount == null ? Optional.empty() : Optional.of(convertedAmount);
 	}
 
-	public OtherAmounts16 setConvertedAmount(com.tools20022.repository.msg.AmountAndDirection29 convertedAmount) {
+	public OtherAmounts16 setConvertedAmount(AmountAndDirection29 convertedAmount) {
 		this.convertedAmount = convertedAmount;
 		return this;
 	}
@@ -2460,7 +2861,7 @@ public class OtherAmounts16 {
 		return originalCurrencyAmount == null ? Optional.empty() : Optional.of(originalCurrencyAmount);
 	}
 
-	public OtherAmounts16 setOriginalCurrencyAmount(com.tools20022.repository.msg.AmountAndDirection29 originalCurrencyAmount) {
+	public OtherAmounts16 setOriginalCurrencyAmount(AmountAndDirection29 originalCurrencyAmount) {
 		this.originalCurrencyAmount = originalCurrencyAmount;
 		return this;
 	}
@@ -2469,7 +2870,7 @@ public class OtherAmounts16 {
 		return bookValue == null ? Optional.empty() : Optional.of(bookValue);
 	}
 
-	public OtherAmounts16 setBookValue(com.tools20022.repository.msg.AmountAndDirection29 bookValue) {
+	public OtherAmounts16 setBookValue(AmountAndDirection29 bookValue) {
 		this.bookValue = bookValue;
 		return this;
 	}
@@ -2478,7 +2879,7 @@ public class OtherAmounts16 {
 		return accruedCapitalisationAmount == null ? Optional.empty() : Optional.of(accruedCapitalisationAmount);
 	}
 
-	public OtherAmounts16 setAccruedCapitalisationAmount(com.tools20022.repository.msg.AmountAndDirection29 accruedCapitalisationAmount) {
+	public OtherAmounts16 setAccruedCapitalisationAmount(AmountAndDirection29 accruedCapitalisationAmount) {
 		this.accruedCapitalisationAmount = accruedCapitalisationAmount;
 		return this;
 	}
@@ -2487,7 +2888,7 @@ public class OtherAmounts16 {
 		return localTaxCountrySpecific1 == null ? Optional.empty() : Optional.of(localTaxCountrySpecific1);
 	}
 
-	public OtherAmounts16 setLocalTaxCountrySpecific1(com.tools20022.repository.msg.AmountAndDirection29 localTaxCountrySpecific1) {
+	public OtherAmounts16 setLocalTaxCountrySpecific1(AmountAndDirection29 localTaxCountrySpecific1) {
 		this.localTaxCountrySpecific1 = localTaxCountrySpecific1;
 		return this;
 	}
@@ -2496,7 +2897,7 @@ public class OtherAmounts16 {
 		return localTaxCountrySpecific2 == null ? Optional.empty() : Optional.of(localTaxCountrySpecific2);
 	}
 
-	public OtherAmounts16 setLocalTaxCountrySpecific2(com.tools20022.repository.msg.AmountAndDirection29 localTaxCountrySpecific2) {
+	public OtherAmounts16 setLocalTaxCountrySpecific2(AmountAndDirection29 localTaxCountrySpecific2) {
 		this.localTaxCountrySpecific2 = localTaxCountrySpecific2;
 		return this;
 	}
@@ -2505,7 +2906,7 @@ public class OtherAmounts16 {
 		return localTaxCountrySpecific3 == null ? Optional.empty() : Optional.of(localTaxCountrySpecific3);
 	}
 
-	public OtherAmounts16 setLocalTaxCountrySpecific3(com.tools20022.repository.msg.AmountAndDirection29 localTaxCountrySpecific3) {
+	public OtherAmounts16 setLocalTaxCountrySpecific3(AmountAndDirection29 localTaxCountrySpecific3) {
 		this.localTaxCountrySpecific3 = localTaxCountrySpecific3;
 		return this;
 	}
@@ -2514,7 +2915,7 @@ public class OtherAmounts16 {
 		return localTaxCountrySpecific4 == null ? Optional.empty() : Optional.of(localTaxCountrySpecific4);
 	}
 
-	public OtherAmounts16 setLocalTaxCountrySpecific4(com.tools20022.repository.msg.AmountAndDirection29 localTaxCountrySpecific4) {
+	public OtherAmounts16 setLocalTaxCountrySpecific4(AmountAndDirection29 localTaxCountrySpecific4) {
 		this.localTaxCountrySpecific4 = localTaxCountrySpecific4;
 		return this;
 	}
@@ -2523,7 +2924,7 @@ public class OtherAmounts16 {
 		return sharedBrokerageAmount == null ? Optional.empty() : Optional.of(sharedBrokerageAmount);
 	}
 
-	public OtherAmounts16 setSharedBrokerageAmount(com.tools20022.repository.msg.AmountAndDirection29 sharedBrokerageAmount) {
+	public OtherAmounts16 setSharedBrokerageAmount(AmountAndDirection29 sharedBrokerageAmount) {
 		this.sharedBrokerageAmount = sharedBrokerageAmount;
 		return this;
 	}
@@ -2532,7 +2933,7 @@ public class OtherAmounts16 {
 		return marketMemberFeeAmount == null ? Optional.empty() : Optional.of(marketMemberFeeAmount);
 	}
 
-	public OtherAmounts16 setMarketMemberFeeAmount(com.tools20022.repository.msg.AmountAndDirection29 marketMemberFeeAmount) {
+	public OtherAmounts16 setMarketMemberFeeAmount(AmountAndDirection29 marketMemberFeeAmount) {
 		this.marketMemberFeeAmount = marketMemberFeeAmount;
 		return this;
 	}
@@ -2550,7 +2951,7 @@ public class OtherAmounts16 {
 		return remunerationAmount == null ? Optional.empty() : Optional.of(remunerationAmount);
 	}
 
-	public OtherAmounts16 setRemunerationAmount(com.tools20022.repository.msg.AmountAndDirection29 remunerationAmount) {
+	public OtherAmounts16 setRemunerationAmount(AmountAndDirection29 remunerationAmount) {
 		this.remunerationAmount = remunerationAmount;
 		return this;
 	}
@@ -2559,7 +2960,7 @@ public class OtherAmounts16 {
 		return borrowingInterestAmount == null ? Optional.empty() : Optional.of(borrowingInterestAmount);
 	}
 
-	public OtherAmounts16 setBorrowingInterestAmount(com.tools20022.repository.msg.AmountAndDirection29 borrowingInterestAmount) {
+	public OtherAmounts16 setBorrowingInterestAmount(AmountAndDirection29 borrowingInterestAmount) {
 		this.borrowingInterestAmount = borrowingInterestAmount;
 		return this;
 	}
@@ -2568,7 +2969,7 @@ public class OtherAmounts16 {
 		return borrowingFee == null ? Optional.empty() : Optional.of(borrowingFee);
 	}
 
-	public OtherAmounts16 setBorrowingFee(com.tools20022.repository.msg.AmountAndDirection29 borrowingFee) {
+	public OtherAmounts16 setBorrowingFee(AmountAndDirection29 borrowingFee) {
 		this.borrowingFee = borrowingFee;
 		return this;
 	}
@@ -2577,7 +2978,7 @@ public class OtherAmounts16 {
 		return netMarketValue == null ? Optional.empty() : Optional.of(netMarketValue);
 	}
 
-	public OtherAmounts16 setNetMarketValue(com.tools20022.repository.msg.AmountAndDirection29 netMarketValue) {
+	public OtherAmounts16 setNetMarketValue(AmountAndDirection29 netMarketValue) {
 		this.netMarketValue = netMarketValue;
 		return this;
 	}
@@ -2586,7 +2987,7 @@ public class OtherAmounts16 {
 		return remainingFaceValue == null ? Optional.empty() : Optional.of(remainingFaceValue);
 	}
 
-	public OtherAmounts16 setRemainingFaceValue(com.tools20022.repository.msg.AmountAndDirection29 remainingFaceValue) {
+	public OtherAmounts16 setRemainingFaceValue(AmountAndDirection29 remainingFaceValue) {
 		this.remainingFaceValue = remainingFaceValue;
 		return this;
 	}
@@ -2595,7 +2996,7 @@ public class OtherAmounts16 {
 		return remainingBookValue == null ? Optional.empty() : Optional.of(remainingBookValue);
 	}
 
-	public OtherAmounts16 setRemainingBookValue(com.tools20022.repository.msg.AmountAndDirection29 remainingBookValue) {
+	public OtherAmounts16 setRemainingBookValue(AmountAndDirection29 remainingBookValue) {
 		this.remainingBookValue = remainingBookValue;
 		return this;
 	}
@@ -2604,7 +3005,7 @@ public class OtherAmounts16 {
 		return clearingBrokerCommission == null ? Optional.empty() : Optional.of(clearingBrokerCommission);
 	}
 
-	public OtherAmounts16 setClearingBrokerCommission(com.tools20022.repository.msg.AmountAndDirection29 clearingBrokerCommission) {
+	public OtherAmounts16 setClearingBrokerCommission(AmountAndDirection29 clearingBrokerCommission) {
 		this.clearingBrokerCommission = clearingBrokerCommission;
 		return this;
 	}
@@ -2613,7 +3014,7 @@ public class OtherAmounts16 {
 		return differenceInPrice == null ? Optional.empty() : Optional.of(differenceInPrice);
 	}
 
-	public OtherAmounts16 setDifferenceInPrice(com.tools20022.repository.msg.AmountAndDirection29 differenceInPrice) {
+	public OtherAmounts16 setDifferenceInPrice(AmountAndDirection29 differenceInPrice) {
 		this.differenceInPrice = differenceInPrice;
 		return this;
 	}

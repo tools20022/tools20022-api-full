@@ -107,7 +107,7 @@ public class ConversionType1FormatChoice {
 	 * definition} = "Standard code to specify the type of conversion."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConversionType1FormatChoice, ConversionType1Code> mmCode = new MMMessageAttribute<ConversionType1FormatChoice, ConversionType1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesConversion.mmConversionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ConversionType1FormatChoice.mmObject();
@@ -119,6 +119,16 @@ public class ConversionType1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ConversionType1Code.mmObject();
+		}
+
+		@Override
+		public ConversionType1Code getValue(ConversionType1FormatChoice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ConversionType1FormatChoice obj, ConversionType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -156,7 +166,7 @@ public class ConversionType1FormatChoice {
 	 * definition} = "Proprietary code to express the type of conversion."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConversionType1FormatChoice, GenericIdentification13> mmProprietary = new MMMessageAttribute<ConversionType1FormatChoice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesConversion.mmConversionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ConversionType1FormatChoice.mmObject();
@@ -168,6 +178,16 @@ public class ConversionType1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(ConversionType1FormatChoice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ConversionType1FormatChoice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

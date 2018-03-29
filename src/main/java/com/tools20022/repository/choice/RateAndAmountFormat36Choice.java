@@ -116,7 +116,7 @@ public class RateAndAmountFormat36Choice {
 	 * RateAndAmountFormat2Choice.mmRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateAndAmountFormat36Choice, PercentageRate> mmRate = new MMMessageAttribute<RateAndAmountFormat36Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat36Choice.mmObject();
@@ -129,6 +129,16 @@ public class RateAndAmountFormat36Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(RateAndAmountFormat36Choice obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(RateAndAmountFormat36Choice obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -171,7 +181,7 @@ public class RateAndAmountFormat36Choice {
 	 * RateAndAmountFormat2Choice.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateAndAmountFormat36Choice, CurrencyAnd30Amount> mmAmount = new MMMessageAttribute<RateAndAmountFormat36Choice, CurrencyAnd30Amount>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat36Choice.mmObject();
@@ -184,6 +194,16 @@ public class RateAndAmountFormat36Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAnd30Amount.mmObject();
+		}
+
+		@Override
+		public CurrencyAnd30Amount getValue(RateAndAmountFormat36Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(RateAndAmountFormat36Choice obj, CurrencyAnd30Amount value) {
+			obj.setAmount(value);
 		}
 	};
 

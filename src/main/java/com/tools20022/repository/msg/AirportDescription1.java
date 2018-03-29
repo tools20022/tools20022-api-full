@@ -107,7 +107,7 @@ public class AirportDescription1 {
 	 * "Identifies the town where the airport is located. For example: London."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTown = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AirportDescription1, Max35Text> mmTown = new MMMessageAttribute<AirportDescription1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmTownName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AirportDescription1.mmObject();
@@ -119,6 +119,16 @@ public class AirportDescription1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AirportDescription1 obj) {
+			return obj.getTown();
+		}
+
+		@Override
+		public void setValue(AirportDescription1 obj, Max35Text value) {
+			obj.setTown(value);
 		}
 	};
 	@XmlElement(name = "AirprtNm")
@@ -156,7 +166,7 @@ public class AirportDescription1 {
 	 * "Identifies the airport by its name. For example: Heathrow."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAirportName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AirportDescription1, Optional<Max35Text>> mmAirportName = new MMMessageAttribute<AirportDescription1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AirportDescription1.mmObject();
@@ -168,6 +178,16 @@ public class AirportDescription1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AirportDescription1 obj) {
+			return obj.getAirportName();
+		}
+
+		@Override
+		public void setValue(AirportDescription1 obj, Optional<Max35Text> value) {
+			obj.setAirportName(value.orElse(null));
 		}
 	};
 

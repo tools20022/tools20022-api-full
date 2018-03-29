@@ -116,7 +116,7 @@ public class PaymentInstrument7Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditTransferDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstrument7Choice, CreditTransfer3> mmCreditTransferDetails = new MMMessageAssociationEnd<PaymentInstrument7Choice, CreditTransfer3>() {
 		{
 			businessComponentTrace_lazy = () -> CreditTransfer.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument7Choice.mmObject();
@@ -129,6 +129,16 @@ public class PaymentInstrument7Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CreditTransfer3.mmObject();
+		}
+
+		@Override
+		public CreditTransfer3 getValue(PaymentInstrument7Choice obj) {
+			return obj.getCreditTransferDetails();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument7Choice obj, CreditTransfer3 value) {
+			obj.setCreditTransferDetails(value);
 		}
 	};
 	@XmlElement(name = "ChqDtls", required = true)
@@ -164,7 +174,7 @@ public class PaymentInstrument7Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmChequeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstrument7Choice, Cheque3> mmChequeDetails = new MMMessageAssociationEnd<PaymentInstrument7Choice, Cheque3>() {
 		{
 			businessComponentTrace_lazy = () -> ChequeIssue.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument7Choice.mmObject();
@@ -177,6 +187,16 @@ public class PaymentInstrument7Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Cheque3.mmObject();
+		}
+
+		@Override
+		public Cheque3 getValue(PaymentInstrument7Choice obj) {
+			return obj.getChequeDetails();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument7Choice obj, Cheque3 value) {
+			obj.setChequeDetails(value);
 		}
 	};
 	@XmlElement(name = "AcctDtls", required = true)
@@ -213,7 +233,7 @@ public class PaymentInstrument7Choice {
 	 * "Part of the investment account to or from which cash entries are made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstrument7Choice, InvestmentAccount15> mmAccountDetails = new MMMessageAssociationEnd<PaymentInstrument7Choice, InvestmentAccount15>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument7Choice.mmObject();
@@ -226,6 +246,16 @@ public class PaymentInstrument7Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> InvestmentAccount15.mmObject();
+		}
+
+		@Override
+		public InvestmentAccount15 getValue(PaymentInstrument7Choice obj) {
+			return obj.getAccountDetails();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument7Choice obj, InvestmentAccount15 value) {
+			obj.setAccountDetails(value);
 		}
 	};
 

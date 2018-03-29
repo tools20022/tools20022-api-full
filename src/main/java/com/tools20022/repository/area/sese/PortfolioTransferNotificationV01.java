@@ -27,7 +27,6 @@ import com.tools20022.repository.choice.PartyIdentification10Choice;
 import com.tools20022.repository.choice.PartyIdentification13Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -186,7 +185,7 @@ public class PortfolioTransferNotificationV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferNotificationV01, DocumentIdentification11> mmIdentification = new MMMessageBuildingBlock<PortfolioTransferNotificationV01, DocumentIdentification11>() {
 		{
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -197,12 +196,14 @@ public class PortfolioTransferNotificationV01 {
 			complexType_lazy = () -> DocumentIdentification11.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferNotificationV01.class.getMethod("getIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DocumentIdentification11 getValue(PortfolioTransferNotificationV01 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferNotificationV01 obj, DocumentIdentification11 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Pgntn", required = true)
@@ -231,7 +232,7 @@ public class PortfolioTransferNotificationV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferNotificationV01, Pagination> mmPagination = new MMMessageBuildingBlock<PortfolioTransferNotificationV01, Pagination>() {
 		{
 			xmlTag = "Pgntn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -242,12 +243,14 @@ public class PortfolioTransferNotificationV01 {
 			complexType_lazy = () -> Pagination.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferNotificationV01.class.getMethod("getPagination", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Pagination getValue(PortfolioTransferNotificationV01 obj) {
+			return obj.getPagination();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferNotificationV01 obj, Pagination value) {
+			obj.setPagination(value);
 		}
 	};
 	@XmlElement(name = "StmtGnlDtls", required = true)
@@ -274,7 +277,7 @@ public class PortfolioTransferNotificationV01 {
 	 * definition} = "Provides general information on the notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmStatementGeneralDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferNotificationV01, Statement19> mmStatementGeneralDetails = new MMMessageBuildingBlock<PortfolioTransferNotificationV01, Statement19>() {
 		{
 			xmlTag = "StmtGnlDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -285,12 +288,14 @@ public class PortfolioTransferNotificationV01 {
 			complexType_lazy = () -> Statement19.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferNotificationV01.class.getMethod("getStatementGeneralDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Statement19 getValue(PortfolioTransferNotificationV01 obj) {
+			return obj.getStatementGeneralDetails();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferNotificationV01 obj, Statement19 value) {
+			obj.setStatementGeneralDetails(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -318,7 +323,7 @@ public class PortfolioTransferNotificationV01 {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAccountOwner = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferNotificationV01, Optional<PartyIdentification13Choice>> mmAccountOwner = new MMMessageBuildingBlock<PortfolioTransferNotificationV01, Optional<PartyIdentification13Choice>>() {
 		{
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -329,12 +334,14 @@ public class PortfolioTransferNotificationV01 {
 			complexType_lazy = () -> PartyIdentification13Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferNotificationV01.class.getMethod("getAccountOwner", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification13Choice> getValue(PortfolioTransferNotificationV01 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferNotificationV01 obj, Optional<PartyIdentification13Choice> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SfkpgAcct", required = true)
@@ -362,7 +369,7 @@ public class PortfolioTransferNotificationV01 {
 	 * definition} = "Account to or from which a securities entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSafekeepingAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferNotificationV01, SecuritiesAccount13> mmSafekeepingAccount = new MMMessageBuildingBlock<PortfolioTransferNotificationV01, SecuritiesAccount13>() {
 		{
 			xmlTag = "SfkpgAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -373,12 +380,14 @@ public class PortfolioTransferNotificationV01 {
 			complexType_lazy = () -> SecuritiesAccount13.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferNotificationV01.class.getMethod("getSafekeepingAccount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SecuritiesAccount13 getValue(PortfolioTransferNotificationV01 obj) {
+			return obj.getSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferNotificationV01 obj, SecuritiesAccount13 value) {
+			obj.setSafekeepingAccount(value);
 		}
 	};
 	@XmlElement(name = "TrfNtfctnDtls")
@@ -406,7 +415,7 @@ public class PortfolioTransferNotificationV01 {
 	 * definition} = "Details of transfer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransferNotificationDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferNotificationV01, List<SecuritiesTradeDetails7>> mmTransferNotificationDetails = new MMMessageBuildingBlock<PortfolioTransferNotificationV01, List<SecuritiesTradeDetails7>>() {
 		{
 			xmlTag = "TrfNtfctnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -416,12 +425,14 @@ public class PortfolioTransferNotificationV01 {
 			complexType_lazy = () -> SecuritiesTradeDetails7.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferNotificationV01.class.getMethod("getTransferNotificationDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SecuritiesTradeDetails7> getValue(PortfolioTransferNotificationV01 obj) {
+			return obj.getTransferNotificationDetails();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferNotificationV01 obj, List<SecuritiesTradeDetails7> value) {
+			obj.setTransferNotificationDetails(value);
 		}
 	};
 	@XmlElement(name = "MsgOrgtr")
@@ -450,7 +461,7 @@ public class PortfolioTransferNotificationV01 {
 	 * "Party that originated the message, if other than the sender."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageOriginator = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferNotificationV01, Optional<PartyIdentification10Choice>> mmMessageOriginator = new MMMessageBuildingBlock<PortfolioTransferNotificationV01, Optional<PartyIdentification10Choice>>() {
 		{
 			xmlTag = "MsgOrgtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -461,12 +472,14 @@ public class PortfolioTransferNotificationV01 {
 			complexType_lazy = () -> PartyIdentification10Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferNotificationV01.class.getMethod("getMessageOriginator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification10Choice> getValue(PortfolioTransferNotificationV01 obj) {
+			return obj.getMessageOriginator();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferNotificationV01 obj, Optional<PartyIdentification10Choice> value) {
+			obj.setMessageOriginator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MsgRcpt")
@@ -496,7 +509,7 @@ public class PortfolioTransferNotificationV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageRecipient = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferNotificationV01, Optional<PartyIdentification10Choice>> mmMessageRecipient = new MMMessageBuildingBlock<PortfolioTransferNotificationV01, Optional<PartyIdentification10Choice>>() {
 		{
 			xmlTag = "MsgRcpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -507,12 +520,14 @@ public class PortfolioTransferNotificationV01 {
 			complexType_lazy = () -> PartyIdentification10Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferNotificationV01.class.getMethod("getMessageRecipient", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification10Choice> getValue(PortfolioTransferNotificationV01 obj) {
+			return obj.getMessageRecipient();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferNotificationV01 obj, Optional<PartyIdentification10Choice> value) {
+			obj.setMessageRecipient(value.orElse(null));
 		}
 	};
 

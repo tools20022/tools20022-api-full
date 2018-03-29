@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max105Text;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PaymentStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification32;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -120,7 +121,7 @@ public class StatusReasonInformation8 {
 	 * definition} = "Party that issues the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusReasonInformation8, Optional<PartyIdentification32>> mmOriginator = new MMMessageAssociationEnd<StatusReasonInformation8, Optional<PartyIdentification32>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation8.mmObject();
@@ -132,7 +133,17 @@ public class StatusReasonInformation8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification32.mmObject();
+			type_lazy = () -> PartyIdentification32.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification32> getValue(StatusReasonInformation8 obj) {
+			return obj.getOriginator();
+		}
+
+		@Override
+		public void setValue(StatusReasonInformation8 obj, Optional<PartyIdentification32> value) {
+			obj.setOriginator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rsn")
@@ -168,7 +179,7 @@ public class StatusReasonInformation8 {
 	 * definition} = "Specifies the reason for the status report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusReasonInformation8, Optional<StatusReason6Choice>> mmReason = new MMMessageAssociationEnd<StatusReasonInformation8, Optional<StatusReason6Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> PaymentStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation8.mmObject();
@@ -181,6 +192,16 @@ public class StatusReasonInformation8 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> StatusReason6Choice.mmObject();
+		}
+
+		@Override
+		public Optional<StatusReason6Choice> getValue(StatusReasonInformation8 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(StatusReasonInformation8 obj, Optional<StatusReason6Choice> value) {
+			obj.setReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -214,7 +235,7 @@ public class StatusReasonInformation8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatusReasonInformation8, List<Max105Text>> mmAdditionalInformation = new MMMessageAttribute<StatusReasonInformation8, List<Max105Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation8.mmObject();
 			isDerived = false;
@@ -224,6 +245,16 @@ public class StatusReasonInformation8 {
 			definition = "Further details on the status reason.\n\nUsage: Additional information can be used for several purposes such as the reporting of repaired information.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public List<Max105Text> getValue(StatusReasonInformation8 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(StatusReasonInformation8 obj, List<Max105Text> value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 
@@ -247,7 +278,7 @@ public class StatusReasonInformation8 {
 		return originator == null ? Optional.empty() : Optional.of(originator);
 	}
 
-	public StatusReasonInformation8 setOriginator(com.tools20022.repository.msg.PartyIdentification32 originator) {
+	public StatusReasonInformation8 setOriginator(PartyIdentification32 originator) {
 		this.originator = originator;
 		return this;
 	}

@@ -25,7 +25,6 @@ import com.tools20022.repository.area.PaymentsInitiationArchive;
 import com.tools20022.repository.msg.GroupHeader31;
 import com.tools20022.repository.msg.MandateInformation2;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -132,7 +131,7 @@ public class MandateInitiationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MandateInitiationRequestV01, GroupHeader31> mmGroupHeader = new MMMessageBuildingBlock<MandateInitiationRequestV01, GroupHeader31>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -143,12 +142,14 @@ public class MandateInitiationRequestV01 {
 			complexType_lazy = () -> GroupHeader31.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MandateInitiationRequestV01.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader31 getValue(MandateInitiationRequestV01 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(MandateInitiationRequestV01 obj, GroupHeader31 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "Mndt", required = true)
@@ -178,7 +179,7 @@ public class MandateInitiationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMandate = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MandateInitiationRequestV01, MandateInformation2> mmMandate = new MMMessageBuildingBlock<MandateInitiationRequestV01, MandateInformation2>() {
 		{
 			xmlTag = "Mndt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -189,12 +190,14 @@ public class MandateInitiationRequestV01 {
 			complexType_lazy = () -> MandateInformation2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MandateInitiationRequestV01.class.getMethod("getMandate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MandateInformation2 getValue(MandateInitiationRequestV01 obj) {
+			return obj.getMandate();
+		}
+
+		@Override
+		public void setValue(MandateInitiationRequestV01 obj, MandateInformation2 value) {
+			obj.setMandate(value);
 		}
 	};
 

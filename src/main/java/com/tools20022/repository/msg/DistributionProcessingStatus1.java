@@ -100,7 +100,7 @@ public class DistributionProcessingStatus1 {
 	 * definition} = "The processing status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DistributionProcessingStatus1, ProcessedStatus3FormatChoice> mmStatus = new MMMessageAttribute<DistributionProcessingStatus1, ProcessedStatus3FormatChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DistributionProcessingStatus1.mmObject();
 			isDerived = false;
@@ -111,6 +111,16 @@ public class DistributionProcessingStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ProcessedStatus3FormatChoice.mmObject();
+		}
+
+		@Override
+		public ProcessedStatus3FormatChoice getValue(DistributionProcessingStatus1 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(DistributionProcessingStatus1 obj, ProcessedStatus3FormatChoice value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -142,7 +152,7 @@ public class DistributionProcessingStatus1 {
 	 * definition} = "Additional information about the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DistributionProcessingStatus1, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<DistributionProcessingStatus1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DistributionProcessingStatus1.mmObject();
 			isDerived = false;
@@ -153,6 +163,16 @@ public class DistributionProcessingStatus1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(DistributionProcessingStatus1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(DistributionProcessingStatus1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

@@ -25,6 +25,8 @@ import com.tools20022.repository.codeset.MultilegReportType1Code;
 import com.tools20022.repository.entity.Asset;
 import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.InstrumentLeg3;
+import com.tools20022.repository.msg.Order3;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -105,7 +107,7 @@ public class MultiLegOrder1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportTypeRequest = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MultiLegOrder1, Optional<MultilegReportType1Code>> mmReportTypeRequest = new MMMessageAttribute<MultiLegOrder1, Optional<MultilegReportType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MultiLegOrder1.mmObject();
 			isDerived = false;
@@ -116,6 +118,16 @@ public class MultiLegOrder1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> MultilegReportType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<MultilegReportType1Code> getValue(MultiLegOrder1 obj) {
+			return obj.getReportTypeRequest();
+		}
+
+		@Override
+		public void setValue(MultiLegOrder1 obj, Optional<MultilegReportType1Code> value) {
+			obj.setReportTypeRequest(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrdrDtls", required = true)
@@ -149,7 +161,7 @@ public class MultiLegOrder1 {
 	 * definition} = "Provides order details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOrderDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MultiLegOrder1, Order3> mmOrderDetails = new MMMessageAssociationEnd<MultiLegOrder1, Order3>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesOrder.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MultiLegOrder1.mmObject();
@@ -161,11 +173,21 @@ public class MultiLegOrder1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Order3.mmObject();
+			type_lazy = () -> Order3.mmObject();
+		}
+
+		@Override
+		public Order3 getValue(MultiLegOrder1 obj) {
+			return obj.getOrderDetails();
+		}
+
+		@Override
+		public void setValue(MultiLegOrder1 obj, Order3 value) {
+			obj.setOrderDetails(value);
 		}
 	};
 	@XmlElement(name = "LegGrpDtls")
-	protected List<com.tools20022.repository.msg.InstrumentLeg3> legGroupDetails;
+	protected List<InstrumentLeg3> legGroupDetails;
 	/**
 	 * 
 	 <p>
@@ -196,7 +218,7 @@ public class MultiLegOrder1 {
 	 * definition} = "Provides details about each intrument leg."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLegGroupDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MultiLegOrder1, List<InstrumentLeg3>> mmLegGroupDetails = new MMMessageAssociationEnd<MultiLegOrder1, List<InstrumentLeg3>>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmLegAdditionalInformation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MultiLegOrder1.mmObject();
@@ -207,7 +229,17 @@ public class MultiLegOrder1 {
 			definition = "Provides details about each intrument leg.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InstrumentLeg3.mmObject();
+			type_lazy = () -> InstrumentLeg3.mmObject();
+		}
+
+		@Override
+		public List<InstrumentLeg3> getValue(MultiLegOrder1 obj) {
+			return obj.getLegGroupDetails();
+		}
+
+		@Override
+		public void setValue(MultiLegOrder1 obj, List<InstrumentLeg3> value) {
+			obj.setLegGroupDetails(value);
 		}
 	};
 
@@ -239,7 +271,7 @@ public class MultiLegOrder1 {
 		return orderDetails;
 	}
 
-	public MultiLegOrder1 setOrderDetails(com.tools20022.repository.msg.Order3 orderDetails) {
+	public MultiLegOrder1 setOrderDetails(Order3 orderDetails) {
 		this.orderDetails = Objects.requireNonNull(orderDetails);
 		return this;
 	}
@@ -248,7 +280,7 @@ public class MultiLegOrder1 {
 		return legGroupDetails == null ? legGroupDetails = new ArrayList<>() : legGroupDetails;
 	}
 
-	public MultiLegOrder1 setLegGroupDetails(List<com.tools20022.repository.msg.InstrumentLeg3> legGroupDetails) {
+	public MultiLegOrder1 setLegGroupDetails(List<InstrumentLeg3> legGroupDetails) {
 		this.legGroupDetails = Objects.requireNonNull(legGroupDetails);
 		return this;
 	}

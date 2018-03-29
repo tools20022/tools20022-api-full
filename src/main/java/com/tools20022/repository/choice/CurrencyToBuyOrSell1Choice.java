@@ -112,7 +112,7 @@ public class CurrencyToBuyOrSell1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrencyToBuy = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyToBuyOrSell1Choice, ActiveCurrencyCode> mmCurrencyToBuy = new MMMessageAttribute<CurrencyToBuyOrSell1Choice, ActiveCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmCurrencyToBuy;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CurrencyToBuyOrSell1Choice.mmObject();
@@ -125,6 +125,16 @@ public class CurrencyToBuyOrSell1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyCode getValue(CurrencyToBuyOrSell1Choice obj) {
+			return obj.getCurrencyToBuy();
+		}
+
+		@Override
+		public void setValue(CurrencyToBuyOrSell1Choice obj, ActiveCurrencyCode value) {
+			obj.setCurrencyToBuy(value);
 		}
 	};
 	@XmlElement(name = "CcyToSell", required = true)
@@ -167,7 +177,7 @@ public class CurrencyToBuyOrSell1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrencyToSell = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyToBuyOrSell1Choice, ActiveCurrencyCode> mmCurrencyToSell = new MMMessageAttribute<CurrencyToBuyOrSell1Choice, ActiveCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmCurrencyToSell;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CurrencyToBuyOrSell1Choice.mmObject();
@@ -180,6 +190,16 @@ public class CurrencyToBuyOrSell1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyCode getValue(CurrencyToBuyOrSell1Choice obj) {
+			return obj.getCurrencyToSell();
+		}
+
+		@Override
+		public void setValue(CurrencyToBuyOrSell1Choice obj, ActiveCurrencyCode value) {
+			obj.setCurrencyToSell(value);
 		}
 	};
 

@@ -117,7 +117,7 @@ public class CurrentOrDefaultReservation1Choice {
 	 * definition} = "Identification of the current reservation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCurrent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CurrentOrDefaultReservation1Choice, ReservationIdentification1> mmCurrent = new MMMessageAssociationEnd<CurrentOrDefaultReservation1Choice, ReservationIdentification1>() {
 		{
 			businessComponentTrace_lazy = () -> Reservation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.CurrentOrDefaultReservation1Choice.mmObject();
@@ -130,6 +130,16 @@ public class CurrentOrDefaultReservation1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ReservationIdentification1.mmObject();
+		}
+
+		@Override
+		public ReservationIdentification1 getValue(CurrentOrDefaultReservation1Choice obj) {
+			return obj.getCurrent();
+		}
+
+		@Override
+		public void setValue(CurrentOrDefaultReservation1Choice obj, ReservationIdentification1 value) {
+			obj.setCurrent(value);
 		}
 	};
 	@XmlElement(name = "Dflt", required = true)
@@ -165,7 +175,7 @@ public class CurrentOrDefaultReservation1Choice {
 	 * definition} = "Identification of the default reservation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDefault = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CurrentOrDefaultReservation1Choice, ReservationIdentification1> mmDefault = new MMMessageAssociationEnd<CurrentOrDefaultReservation1Choice, ReservationIdentification1>() {
 		{
 			businessComponentTrace_lazy = () -> Reservation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.CurrentOrDefaultReservation1Choice.mmObject();
@@ -178,6 +188,16 @@ public class CurrentOrDefaultReservation1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ReservationIdentification1.mmObject();
+		}
+
+		@Override
+		public ReservationIdentification1 getValue(CurrentOrDefaultReservation1Choice obj) {
+			return obj.getDefault();
+		}
+
+		@Override
+		public void setValue(CurrentOrDefaultReservation1Choice obj, ReservationIdentification1 value) {
+			obj.setDefault(value);
 		}
 	};
 

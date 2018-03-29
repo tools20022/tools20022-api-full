@@ -139,7 +139,7 @@ public class ExpectedCollateral1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExpectedCollateralDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ExpectedCollateral1Choice, ExpectedCollateral1> mmExpectedCollateralDetails = new MMMessageAssociationEnd<ExpectedCollateral1Choice, ExpectedCollateral1>() {
 		{
 			businessComponentTrace_lazy = () -> ExpectedCollateralType.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ExpectedCollateral1Choice.mmObject();
@@ -153,6 +153,16 @@ public class ExpectedCollateral1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ExpectedCollateral1.mmObject();
+		}
+
+		@Override
+		public ExpectedCollateral1 getValue(ExpectedCollateral1Choice obj) {
+			return obj.getExpectedCollateralDetails();
+		}
+
+		@Override
+		public void setValue(ExpectedCollateral1Choice obj, ExpectedCollateral1 value) {
+			obj.setExpectedCollateralDetails(value);
 		}
 	};
 	@XmlElement(name = "SgrtdIndpdntAmt", required = true)
@@ -199,7 +209,7 @@ public class ExpectedCollateral1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSegregatedIndependentAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ExpectedCollateral1Choice, ExpectedCollateralMovement1> mmSegregatedIndependentAmount = new MMMessageAssociationEnd<ExpectedCollateral1Choice, ExpectedCollateralMovement1>() {
 		{
 			businessComponentTrace_lazy = () -> ExpectedCollateralType.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ExpectedCollateral1Choice.mmObject();
@@ -213,6 +223,16 @@ public class ExpectedCollateral1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ExpectedCollateralMovement1.mmObject();
+		}
+
+		@Override
+		public ExpectedCollateralMovement1 getValue(ExpectedCollateral1Choice obj) {
+			return obj.getSegregatedIndependentAmount();
+		}
+
+		@Override
+		public void setValue(ExpectedCollateral1Choice obj, ExpectedCollateralMovement1 value) {
+			obj.setSegregatedIndependentAmount(value);
 		}
 	};
 

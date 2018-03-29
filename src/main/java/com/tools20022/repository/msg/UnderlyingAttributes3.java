@@ -29,6 +29,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Price1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -163,7 +164,7 @@ public class UnderlyingAttributes3 {
 	 * UnderlyingAttributes2.mmAllocationPercentage}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAllocationPercentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingAttributes3, Optional<PercentageRate>> mmAllocationPercentage = new MMMessageAttribute<UnderlyingAttributes3, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Allocation.mmPercentage;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingAttributes3.mmObject();
@@ -177,6 +178,16 @@ public class UnderlyingAttributes3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(UnderlyingAttributes3 obj) {
+			return obj.getAllocationPercentage();
+		}
+
+		@Override
+		public void setValue(UnderlyingAttributes3 obj, Optional<PercentageRate> value) {
+			obj.setAllocationPercentage(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Qty")
@@ -218,7 +229,7 @@ public class UnderlyingAttributes3 {
 	 * UnderlyingAttributes2.mmQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnderlyingAttributes3, Optional<UnitOrFaceAmountChoice>> mmQuantity = new MMMessageAssociationEnd<UnderlyingAttributes3, Optional<UnitOrFaceAmountChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmSecuritiesQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingAttributes3.mmObject();
@@ -232,6 +243,16 @@ public class UnderlyingAttributes3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> UnitOrFaceAmountChoice.mmObject();
+		}
+
+		@Override
+		public Optional<UnitOrFaceAmountChoice> getValue(UnderlyingAttributes3 obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(UnderlyingAttributes3 obj, Optional<UnitOrFaceAmountChoice> value) {
+			obj.setQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmTp")
@@ -279,7 +300,7 @@ public class UnderlyingAttributes3 {
 	 * UnderlyingAttributes2.mmSettlementType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingAttributes3, Optional<SettlementType3Choice>> mmSettlementType = new MMMessageAttribute<UnderlyingAttributes3, Optional<SettlementType3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmSettlementType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingAttributes3.mmObject();
@@ -293,6 +314,16 @@ public class UnderlyingAttributes3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SettlementType3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SettlementType3Choice> getValue(UnderlyingAttributes3 obj) {
+			return obj.getSettlementType();
+		}
+
+		@Override
+		public void setValue(UnderlyingAttributes3 obj, Optional<SettlementType3Choice> value) {
+			obj.setSettlementType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CshAmt")
@@ -340,7 +371,7 @@ public class UnderlyingAttributes3 {
 	 * UnderlyingAttributes2.mmCashAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingAttributes3, Optional<ActiveCurrencyAndAmount>> mmCashAmount = new MMMessageAttribute<UnderlyingAttributes3, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmNotionalCurrencyAndAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingAttributes3.mmObject();
@@ -354,6 +385,16 @@ public class UnderlyingAttributes3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(UnderlyingAttributes3 obj) {
+			return obj.getCashAmount();
+		}
+
+		@Override
+		public void setValue(UnderlyingAttributes3 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setCashAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CshTp")
@@ -395,7 +436,7 @@ public class UnderlyingAttributes3 {
 	 * UnderlyingAttributes2.mmCashType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingAttributes3, Optional<Max35Text>> mmCashType = new MMMessageAttribute<UnderlyingAttributes3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingAttributes3.mmObject();
 			isDerived = false;
@@ -408,6 +449,16 @@ public class UnderlyingAttributes3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(UnderlyingAttributes3 obj) {
+			return obj.getCashType();
+		}
+
+		@Override
+		public void setValue(UnderlyingAttributes3 obj, Optional<Max35Text> value) {
+			obj.setCashType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Pric")
@@ -453,7 +504,7 @@ public class UnderlyingAttributes3 {
 	 * UnderlyingAttributes2.mmPrice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingAttributes3, Optional<Price1>> mmPrice = new MMMessageAttribute<UnderlyingAttributes3, Optional<Price1>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmPricing;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingAttributes3.mmObject();
@@ -466,7 +517,17 @@ public class UnderlyingAttributes3 {
 			previousVersion_lazy = () -> UnderlyingAttributes2.mmPrice;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
+			complexType_lazy = () -> Price1.mmObject();
+		}
+
+		@Override
+		public Optional<Price1> getValue(UnderlyingAttributes3 obj) {
+			return obj.getPrice();
+		}
+
+		@Override
+		public void setValue(UnderlyingAttributes3 obj, Optional<Price1> value) {
+			obj.setPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DrtyPric")
@@ -512,7 +573,7 @@ public class UnderlyingAttributes3 {
 	 * UnderlyingAttributes2.mmDirtyPrice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDirtyPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingAttributes3, Optional<Price1>> mmDirtyPrice = new MMMessageAttribute<UnderlyingAttributes3, Optional<Price1>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmDirtyPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingAttributes3.mmObject();
@@ -525,7 +586,17 @@ public class UnderlyingAttributes3 {
 			previousVersion_lazy = () -> UnderlyingAttributes2.mmDirtyPrice;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
+			complexType_lazy = () -> Price1.mmObject();
+		}
+
+		@Override
+		public Optional<Price1> getValue(UnderlyingAttributes3 obj) {
+			return obj.getDirtyPrice();
+		}
+
+		@Override
+		public void setValue(UnderlyingAttributes3 obj, Optional<Price1> value) {
+			obj.setDirtyPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EndPric")
@@ -571,7 +642,7 @@ public class UnderlyingAttributes3 {
 	 * UnderlyingAttributes2.mmEndPrice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEndPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingAttributes3, Optional<Price1>> mmEndPrice = new MMMessageAttribute<UnderlyingAttributes3, Optional<Price1>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmPricing;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingAttributes3.mmObject();
@@ -584,7 +655,17 @@ public class UnderlyingAttributes3 {
 			previousVersion_lazy = () -> UnderlyingAttributes2.mmEndPrice;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
+			complexType_lazy = () -> Price1.mmObject();
+		}
+
+		@Override
+		public Optional<Price1> getValue(UnderlyingAttributes3 obj) {
+			return obj.getEndPrice();
+		}
+
+		@Override
+		public void setValue(UnderlyingAttributes3 obj, Optional<Price1> value) {
+			obj.setEndPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StartVal")
@@ -632,7 +713,7 @@ public class UnderlyingAttributes3 {
 	 * UnderlyingAttributes2.mmStartValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStartValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingAttributes3, Optional<ActiveCurrencyAndAmount>> mmStartValue = new MMMessageAttribute<UnderlyingAttributes3, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Collateral.mmValuation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingAttributes3.mmObject();
@@ -646,6 +727,16 @@ public class UnderlyingAttributes3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(UnderlyingAttributes3 obj) {
+			return obj.getStartValue();
+		}
+
+		@Override
+		public void setValue(UnderlyingAttributes3 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setStartValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CurVal")
@@ -691,7 +782,7 @@ public class UnderlyingAttributes3 {
 	 * UnderlyingAttributes2.mmCurrentValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrentValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingAttributes3, Optional<ActiveCurrencyAndAmount>> mmCurrentValue = new MMMessageAttribute<UnderlyingAttributes3, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Collateral.mmValuation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingAttributes3.mmObject();
@@ -705,6 +796,16 @@ public class UnderlyingAttributes3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(UnderlyingAttributes3 obj) {
+			return obj.getCurrentValue();
+		}
+
+		@Override
+		public void setValue(UnderlyingAttributes3 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setCurrentValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EndVal")
@@ -752,7 +853,7 @@ public class UnderlyingAttributes3 {
 	 * UnderlyingAttributes2.mmEndValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEndValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingAttributes3, Optional<ActiveCurrencyAndAmount>> mmEndValue = new MMMessageAttribute<UnderlyingAttributes3, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Collateral.mmValuation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingAttributes3.mmObject();
@@ -766,6 +867,16 @@ public class UnderlyingAttributes3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(UnderlyingAttributes3 obj) {
+			return obj.getEndValue();
+		}
+
+		@Override
+		public void setValue(UnderlyingAttributes3 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setEndValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AdjstdQty")
@@ -809,7 +920,7 @@ public class UnderlyingAttributes3 {
 	 * UnderlyingAttributes2.mmAdjustedQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdjustedQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnderlyingAttributes3, Optional<UnitOrFaceAmountChoice>> mmAdjustedQuantity = new MMMessageAssociationEnd<UnderlyingAttributes3, Optional<UnitOrFaceAmountChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmSecuritiesQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingAttributes3.mmObject();
@@ -823,6 +934,16 @@ public class UnderlyingAttributes3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> UnitOrFaceAmountChoice.mmObject();
+		}
+
+		@Override
+		public Optional<UnitOrFaceAmountChoice> getValue(UnderlyingAttributes3 obj) {
+			return obj.getAdjustedQuantity();
+		}
+
+		@Override
+		public void setValue(UnderlyingAttributes3 obj, Optional<UnitOrFaceAmountChoice> value) {
+			obj.setAdjustedQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XchgRate")
@@ -868,7 +989,7 @@ public class UnderlyingAttributes3 {
 	 * UnderlyingAttributes2.mmExchangeRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingAttributes3, Optional<PercentageRate>> mmExchangeRate = new MMMessageAttribute<UnderlyingAttributes3, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmExchangeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingAttributes3.mmObject();
@@ -882,6 +1003,16 @@ public class UnderlyingAttributes3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(UnderlyingAttributes3 obj) {
+			return obj.getExchangeRate();
+		}
+
+		@Override
+		public void setValue(UnderlyingAttributes3 obj, Optional<PercentageRate> value) {
+			obj.setExchangeRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CapVal")
@@ -928,7 +1059,7 @@ public class UnderlyingAttributes3 {
 	 * UnderlyingAttributes2.mmCapValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCapValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingAttributes3, Optional<ActiveCurrencyAndAmount>> mmCapValue = new MMMessageAttribute<UnderlyingAttributes3, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmCapValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingAttributes3.mmObject();
@@ -942,6 +1073,16 @@ public class UnderlyingAttributes3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(UnderlyingAttributes3 obj) {
+			return obj.getCapValue();
+		}
+
+		@Override
+		public void setValue(UnderlyingAttributes3 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setCapValue(value.orElse(null));
 		}
 	};
 
@@ -1013,7 +1154,7 @@ public class UnderlyingAttributes3 {
 		return price == null ? Optional.empty() : Optional.of(price);
 	}
 
-	public UnderlyingAttributes3 setPrice(com.tools20022.repository.msg.Price1 price) {
+	public UnderlyingAttributes3 setPrice(Price1 price) {
 		this.price = price;
 		return this;
 	}
@@ -1022,7 +1163,7 @@ public class UnderlyingAttributes3 {
 		return dirtyPrice == null ? Optional.empty() : Optional.of(dirtyPrice);
 	}
 
-	public UnderlyingAttributes3 setDirtyPrice(com.tools20022.repository.msg.Price1 dirtyPrice) {
+	public UnderlyingAttributes3 setDirtyPrice(Price1 dirtyPrice) {
 		this.dirtyPrice = dirtyPrice;
 		return this;
 	}
@@ -1031,7 +1172,7 @@ public class UnderlyingAttributes3 {
 		return endPrice == null ? Optional.empty() : Optional.of(endPrice);
 	}
 
-	public UnderlyingAttributes3 setEndPrice(com.tools20022.repository.msg.Price1 endPrice) {
+	public UnderlyingAttributes3 setEndPrice(Price1 endPrice) {
 		this.endPrice = endPrice;
 		return this;
 	}

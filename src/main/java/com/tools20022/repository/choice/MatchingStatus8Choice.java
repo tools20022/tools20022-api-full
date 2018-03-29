@@ -111,7 +111,7 @@ public class MatchingStatus8Choice {
 	 * definition} = "Provides the matching status of the instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MatchingStatus8Choice, MatchingStatus1Code> mmCode = new MMMessageAttribute<MatchingStatus8Choice, MatchingStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus8Choice.mmObject();
@@ -124,6 +124,16 @@ public class MatchingStatus8Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MatchingStatus1Code.mmObject();
+		}
+
+		@Override
+		public MatchingStatus1Code getValue(MatchingStatus8Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(MatchingStatus8Choice obj, MatchingStatus1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -164,7 +174,7 @@ public class MatchingStatus8Choice {
 	 * definition} = "Provides the matching status of the instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MatchingStatus8Choice, GenericIdentification38> mmProprietary = new MMMessageAttribute<MatchingStatus8Choice, GenericIdentification38>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus8Choice.mmObject();
@@ -177,6 +187,16 @@ public class MatchingStatus8Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification38.mmObject();
+		}
+
+		@Override
+		public GenericIdentification38 getValue(MatchingStatus8Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(MatchingStatus8Choice obj, GenericIdentification38 value) {
+			obj.setProprietary(value);
 		}
 	};
 

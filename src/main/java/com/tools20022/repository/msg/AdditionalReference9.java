@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification113;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -231,7 +232,7 @@ public class AdditionalReference9 {
 	 * AdditionalReference8.mmReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalReference9, Max35Text> mmReference = new MMMessageAttribute<AdditionalReference9, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalReference9.mmObject();
@@ -244,6 +245,16 @@ public class AdditionalReference9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AdditionalReference9 obj) {
+			return obj.getReference();
+		}
+
+		@Override
+		public void setValue(AdditionalReference9 obj, Max35Text value) {
+			obj.setReference(value);
 		}
 	};
 	@XmlElement(name = "RefIssr")
@@ -286,7 +297,7 @@ public class AdditionalReference9 {
 	 * AdditionalReference8.mmReferenceIssuer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReferenceIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalReference9, Optional<PartyIdentification113>> mmReferenceIssuer = new MMMessageAttribute<AdditionalReference9, Optional<PartyIdentification113>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalReference9.mmObject();
@@ -298,7 +309,17 @@ public class AdditionalReference9 {
 			previousVersion_lazy = () -> AdditionalReference8.mmReferenceIssuer;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification113.mmObject();
+			complexType_lazy = () -> PartyIdentification113.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification113> getValue(AdditionalReference9 obj) {
+			return obj.getReferenceIssuer();
+		}
+
+		@Override
+		public void setValue(AdditionalReference9 obj, Optional<PartyIdentification113> value) {
+			obj.setReferenceIssuer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MsgNm")
@@ -335,7 +356,7 @@ public class AdditionalReference9 {
 	 * AdditionalReference8.mmMessageName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalReference9, Optional<Max35Text>> mmMessageName = new MMMessageAttribute<AdditionalReference9, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalReference9.mmObject();
 			isDerived = false;
@@ -347,6 +368,16 @@ public class AdditionalReference9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AdditionalReference9 obj) {
+			return obj.getMessageName();
+		}
+
+		@Override
+		public void setValue(AdditionalReference9 obj, Optional<Max35Text> value) {
+			obj.setMessageName(value.orElse(null));
 		}
 	};
 
@@ -389,7 +420,7 @@ public class AdditionalReference9 {
 		return referenceIssuer == null ? Optional.empty() : Optional.of(referenceIssuer);
 	}
 
-	public AdditionalReference9 setReferenceIssuer(com.tools20022.repository.msg.PartyIdentification113 referenceIssuer) {
+	public AdditionalReference9 setReferenceIssuer(PartyIdentification113 referenceIssuer) {
 		this.referenceIssuer = referenceIssuer;
 		return this;
 	}

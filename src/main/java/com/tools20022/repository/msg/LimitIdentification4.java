@@ -27,6 +27,7 @@ import com.tools20022.repository.codeset.LimitType4Code;
 import com.tools20022.repository.datatype.BICFIIdentifier;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SystemPartyIdentification4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -129,7 +130,7 @@ public class LimitIdentification4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitIdentification4, AccountIdentification4Choice> mmAccountIdentification = new MMMessageAssociationEnd<LimitIdentification4, AccountIdentification4Choice>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitIdentification4.mmObject();
@@ -142,6 +143,16 @@ public class LimitIdentification4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AccountIdentification4Choice.mmObject();
+		}
+
+		@Override
+		public AccountIdentification4Choice getValue(LimitIdentification4 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(LimitIdentification4 obj, AccountIdentification4Choice value) {
+			obj.setAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -178,7 +189,7 @@ public class LimitIdentification4 {
 	 * definition} = "Nature of the risk management limit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitIdentification4, LimitType4Code> mmType = new MMMessageAttribute<LimitIdentification4, LimitType4Code>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitIdentification4.mmObject();
@@ -190,6 +201,16 @@ public class LimitIdentification4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LimitType4Code.mmObject();
+		}
+
+		@Override
+		public LimitType4Code getValue(LimitIdentification4 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(LimitIdentification4 obj, LimitType4Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "LmtCcy")
@@ -227,7 +248,7 @@ public class LimitIdentification4 {
 	 * definition} = "Currency unit used to specify the limit amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLimitCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitIdentification4, Optional<ActiveCurrencyCode>> mmLimitCurrency = new MMMessageAttribute<LimitIdentification4, Optional<ActiveCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitIdentification4.mmObject();
@@ -239,6 +260,16 @@ public class LimitIdentification4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyCode> getValue(LimitIdentification4 obj) {
+			return obj.getLimitCurrency();
+		}
+
+		@Override
+		public void setValue(LimitIdentification4 obj, Optional<ActiveCurrencyCode> value) {
+			obj.setLimitCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctOwnr", required = true)
@@ -276,7 +307,7 @@ public class LimitIdentification4 {
 	 * definition} = "Owner of the account which is being queried."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitIdentification4, BICFIIdentifier> mmAccountOwner = new MMMessageAttribute<LimitIdentification4, BICFIIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitIdentification4.mmObject();
@@ -288,6 +319,16 @@ public class LimitIdentification4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
+		}
+
+		@Override
+		public BICFIIdentifier getValue(LimitIdentification4 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(LimitIdentification4 obj, BICFIIdentifier value) {
+			obj.setAccountOwner(value);
 		}
 	};
 	@XmlElement(name = "BilLmtCtrPtyId")
@@ -326,7 +367,7 @@ public class LimitIdentification4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBilateralLimitCounterpartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitIdentification4, Optional<SystemPartyIdentification4>> mmBilateralLimitCounterpartyIdentification = new MMMessageAssociationEnd<LimitIdentification4, Optional<SystemPartyIdentification4>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitIdentification4.mmObject();
@@ -338,7 +379,17 @@ public class LimitIdentification4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification4.mmObject();
+			type_lazy = () -> SystemPartyIdentification4.mmObject();
+		}
+
+		@Override
+		public Optional<SystemPartyIdentification4> getValue(LimitIdentification4 obj) {
+			return obj.getBilateralLimitCounterpartyIdentification();
+		}
+
+		@Override
+		public void setValue(LimitIdentification4 obj, Optional<SystemPartyIdentification4> value) {
+			obj.setBilateralLimitCounterpartyIdentification(value.orElse(null));
 		}
 	};
 
@@ -398,7 +449,7 @@ public class LimitIdentification4 {
 		return bilateralLimitCounterpartyIdentification == null ? Optional.empty() : Optional.of(bilateralLimitCounterpartyIdentification);
 	}
 
-	public LimitIdentification4 setBilateralLimitCounterpartyIdentification(com.tools20022.repository.msg.SystemPartyIdentification4 bilateralLimitCounterpartyIdentification) {
+	public LimitIdentification4 setBilateralLimitCounterpartyIdentification(SystemPartyIdentification4 bilateralLimitCounterpartyIdentification) {
 		this.bilateralLimitCounterpartyIdentification = bilateralLimitCounterpartyIdentification;
 		return this;
 	}

@@ -185,7 +185,7 @@ public class EntitlementAssessment2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesBlockingDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EntitlementAssessment2, Optional<DateFormat2Choice>> mmSecuritiesBlockingDeadline = new MMMessageAttribute<EntitlementAssessment2, Optional<DateFormat2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmIntermediaryDeadline;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment2.mmObject();
@@ -198,6 +198,16 @@ public class EntitlementAssessment2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat2Choice> getValue(EntitlementAssessment2 obj) {
+			return obj.getSecuritiesBlockingDeadline();
+		}
+
+		@Override
+		public void setValue(EntitlementAssessment2 obj, Optional<DateFormat2Choice> value) {
+			obj.setSecuritiesBlockingDeadline(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctiesBlckgSTPDdln")
@@ -245,7 +255,7 @@ public class EntitlementAssessment2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesBlockingSTPDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EntitlementAssessment2, Optional<DateFormat2Choice>> mmSecuritiesBlockingSTPDeadline = new MMMessageAttribute<EntitlementAssessment2, Optional<DateFormat2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmSTPDeadline;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment2.mmObject();
@@ -258,6 +268,16 @@ public class EntitlementAssessment2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat2Choice> getValue(EntitlementAssessment2 obj) {
+			return obj.getSecuritiesBlockingSTPDeadline();
+		}
+
+		@Override
+		public void setValue(EntitlementAssessment2 obj, Optional<DateFormat2Choice> value) {
+			obj.setSecuritiesBlockingSTPDeadline(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctiesBlckgMktDdln")
@@ -305,7 +325,7 @@ public class EntitlementAssessment2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesBlockingMarketDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EntitlementAssessment2, Optional<DateFormat2Choice>> mmSecuritiesBlockingMarketDeadline = new MMMessageAttribute<EntitlementAssessment2, Optional<DateFormat2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmMarketDeadline;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment2.mmObject();
@@ -318,6 +338,16 @@ public class EntitlementAssessment2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat2Choice> getValue(EntitlementAssessment2 obj) {
+			return obj.getSecuritiesBlockingMarketDeadline();
+		}
+
+		@Override
+		public void setValue(EntitlementAssessment2 obj, Optional<DateFormat2Choice> value) {
+			obj.setSecuritiesBlockingMarketDeadline(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctiesBlckgPrdEndDt")
@@ -363,7 +393,7 @@ public class EntitlementAssessment2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesBlockingPeriodEndDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EntitlementAssessment2, Optional<ISODateTime>> mmSecuritiesBlockingPeriodEndDate = new MMMessageAttribute<EntitlementAssessment2, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmToDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment2.mmObject();
@@ -376,6 +406,16 @@ public class EntitlementAssessment2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(EntitlementAssessment2 obj) {
+			return obj.getSecuritiesBlockingPeriodEndDate();
+		}
+
+		@Override
+		public void setValue(EntitlementAssessment2 obj, Optional<ISODateTime> value) {
+			obj.setSecuritiesBlockingPeriodEndDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EntitlmntFxgDt")
@@ -423,7 +463,7 @@ public class EntitlementAssessment2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEntitlementFixingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EntitlementAssessment2, Optional<DateFormat3Choice>> mmEntitlementFixingDate = new MMMessageAttribute<EntitlementAssessment2, Optional<DateFormat3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> MeetingEntitlement.mmEntitlementFixingDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment2.mmObject();
@@ -436,6 +476,16 @@ public class EntitlementAssessment2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat3Choice> getValue(EntitlementAssessment2 obj) {
+			return obj.getEntitlementFixingDate();
+		}
+
+		@Override
+		public void setValue(EntitlementAssessment2 obj, Optional<DateFormat3Choice> value) {
+			obj.setEntitlementFixingDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RegnSctiesDdln")
@@ -483,7 +533,7 @@ public class EntitlementAssessment2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegistrationSecuritiesDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EntitlementAssessment2, Optional<DateFormat2Choice>> mmRegistrationSecuritiesDeadline = new MMMessageAttribute<EntitlementAssessment2, Optional<DateFormat2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmIntermediaryDeadline;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment2.mmObject();
@@ -496,6 +546,16 @@ public class EntitlementAssessment2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat2Choice> getValue(EntitlementAssessment2 obj) {
+			return obj.getRegistrationSecuritiesDeadline();
+		}
+
+		@Override
+		public void setValue(EntitlementAssessment2 obj, Optional<DateFormat2Choice> value) {
+			obj.setRegistrationSecuritiesDeadline(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RegnSctiesSTPDdln")
@@ -543,7 +603,7 @@ public class EntitlementAssessment2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegistrationSecuritiesSTPDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EntitlementAssessment2, Optional<DateFormat2Choice>> mmRegistrationSecuritiesSTPDeadline = new MMMessageAttribute<EntitlementAssessment2, Optional<DateFormat2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmSTPDeadline;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment2.mmObject();
@@ -556,6 +616,16 @@ public class EntitlementAssessment2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat2Choice> getValue(EntitlementAssessment2 obj) {
+			return obj.getRegistrationSecuritiesSTPDeadline();
+		}
+
+		@Override
+		public void setValue(EntitlementAssessment2 obj, Optional<DateFormat2Choice> value) {
+			obj.setRegistrationSecuritiesSTPDeadline(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RegnSctiesMktDdln")
@@ -603,7 +673,7 @@ public class EntitlementAssessment2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegistrationSecuritiesMarketDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EntitlementAssessment2, Optional<DateFormat2Choice>> mmRegistrationSecuritiesMarketDeadline = new MMMessageAttribute<EntitlementAssessment2, Optional<DateFormat2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmMarketDeadline;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment2.mmObject();
@@ -616,6 +686,16 @@ public class EntitlementAssessment2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat2Choice> getValue(EntitlementAssessment2 obj) {
+			return obj.getRegistrationSecuritiesMarketDeadline();
+		}
+
+		@Override
+		public void setValue(EntitlementAssessment2 obj, Optional<DateFormat2Choice> value) {
+			obj.setRegistrationSecuritiesMarketDeadline(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RegnPrtcptnDdln")
@@ -663,7 +743,7 @@ public class EntitlementAssessment2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegistrationParticipationDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EntitlementAssessment2, Optional<DateFormat2Choice>> mmRegistrationParticipationDeadline = new MMMessageAttribute<EntitlementAssessment2, Optional<DateFormat2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmIntermediaryDeadline;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment2.mmObject();
@@ -676,6 +756,16 @@ public class EntitlementAssessment2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat2Choice> getValue(EntitlementAssessment2 obj) {
+			return obj.getRegistrationParticipationDeadline();
+		}
+
+		@Override
+		public void setValue(EntitlementAssessment2 obj, Optional<DateFormat2Choice> value) {
+			obj.setRegistrationParticipationDeadline(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RegnPrtcptnSTPDdln")
@@ -723,7 +813,7 @@ public class EntitlementAssessment2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegistrationParticipationSTPDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EntitlementAssessment2, Optional<DateFormat2Choice>> mmRegistrationParticipationSTPDeadline = new MMMessageAttribute<EntitlementAssessment2, Optional<DateFormat2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmSTPDeadline;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment2.mmObject();
@@ -736,6 +826,16 @@ public class EntitlementAssessment2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat2Choice> getValue(EntitlementAssessment2 obj) {
+			return obj.getRegistrationParticipationSTPDeadline();
+		}
+
+		@Override
+		public void setValue(EntitlementAssessment2 obj, Optional<DateFormat2Choice> value) {
+			obj.setRegistrationParticipationSTPDeadline(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RegnPrtcptnMktDdln")
@@ -783,7 +883,7 @@ public class EntitlementAssessment2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegistrationParticipationMarketDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EntitlementAssessment2, Optional<DateFormat2Choice>> mmRegistrationParticipationMarketDeadline = new MMMessageAttribute<EntitlementAssessment2, Optional<DateFormat2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmMarketDeadline;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment2.mmObject();
@@ -796,6 +896,16 @@ public class EntitlementAssessment2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat2Choice> getValue(EntitlementAssessment2 obj) {
+			return obj.getRegistrationParticipationMarketDeadline();
+		}
+
+		@Override
+		public void setValue(EntitlementAssessment2 obj, Optional<DateFormat2Choice> value) {
+			obj.setRegistrationParticipationMarketDeadline(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Entitlmnt")
@@ -841,7 +951,7 @@ public class EntitlementAssessment2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEntitlement = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EntitlementAssessment2, Optional<Entitlement1Choice>> mmEntitlement = new MMMessageAttribute<EntitlementAssessment2, Optional<Entitlement1Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> MeetingEntitlement.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment2.mmObject();
@@ -854,6 +964,16 @@ public class EntitlementAssessment2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Entitlement1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Entitlement1Choice> getValue(EntitlementAssessment2 obj) {
+			return obj.getEntitlement();
+		}
+
+		@Override
+		public void setValue(EntitlementAssessment2 obj, Optional<Entitlement1Choice> value) {
+			obj.setEntitlement(value.orElse(null));
 		}
 	};
 

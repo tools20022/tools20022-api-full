@@ -102,7 +102,7 @@ public class Number21Choice {
 	 * definition} = "Number of maximum 4 numeric text."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Number21Choice, Max4NumericText> mmNumberIdentification = new MMMessageAttribute<Number21Choice, Max4NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Number21Choice.mmObject();
 			isDerived = false;
@@ -114,6 +114,16 @@ public class Number21Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4NumericText.mmObject();
+		}
+
+		@Override
+		public Max4NumericText getValue(Number21Choice obj) {
+			return obj.getNumberIdentification();
+		}
+
+		@Override
+		public void setValue(Number21Choice obj, Max4NumericText value) {
+			obj.setNumberIdentification(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -151,7 +161,7 @@ public class Number21Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Number21Choice, GenericIdentification29> mmProprietary = new MMMessageAttribute<Number21Choice, GenericIdentification29>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Number21Choice.mmObject();
 			isDerived = false;
@@ -163,6 +173,16 @@ public class Number21Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification29.mmObject();
+		}
+
+		@Override
+		public GenericIdentification29 getValue(Number21Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(Number21Choice obj, GenericIdentification29 value) {
+			obj.setProprietary(value);
 		}
 	};
 

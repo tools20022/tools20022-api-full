@@ -101,7 +101,7 @@ public class Price3 {
 	 * definition} = "Specification of the price type."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Price3, YieldedOrValueType1Choice> mmType = new MMMessageAssociationEnd<Price3, YieldedOrValueType1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Price3.mmObject();
@@ -114,6 +114,16 @@ public class Price3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> YieldedOrValueType1Choice.mmObject();
+		}
+
+		@Override
+		public YieldedOrValueType1Choice getValue(Price3 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Price3 obj, YieldedOrValueType1Choice value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Val", required = true)
@@ -149,7 +159,7 @@ public class Price3 {
 	 * definition} = "Value of the price, eg, as a currency and value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmValue = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Price3, PriceRateOrAmount1Choice> mmValue = new MMMessageAssociationEnd<Price3, PriceRateOrAmount1Choice>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesPricing.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Price3.mmObject();
@@ -162,6 +172,16 @@ public class Price3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PriceRateOrAmount1Choice.mmObject();
+		}
+
+		@Override
+		public PriceRateOrAmount1Choice getValue(Price3 obj) {
+			return obj.getValue();
+		}
+
+		@Override
+		public void setValue(Price3 obj, PriceRateOrAmount1Choice value) {
+			obj.setValue(value);
 		}
 	};
 

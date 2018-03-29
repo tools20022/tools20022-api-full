@@ -117,7 +117,7 @@ public class RejectedReason15Choice {
 	 * RejectedReason17Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectedReason15Choice, TransferRejectedStatusReason2Code> mmCode = new MMMessageAttribute<RejectedReason15Choice, TransferRejectedStatusReason2Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectedReason15Choice.mmObject();
@@ -130,6 +130,16 @@ public class RejectedReason15Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TransferRejectedStatusReason2Code.mmObject();
+		}
+
+		@Override
+		public TransferRejectedStatusReason2Code getValue(RejectedReason15Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RejectedReason15Choice obj, TransferRejectedStatusReason2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -172,7 +182,7 @@ public class RejectedReason15Choice {
 	 * RejectedReason17Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectedReason15Choice, GenericIdentification36> mmProprietary = new MMMessageAttribute<RejectedReason15Choice, GenericIdentification36>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectedReason15Choice.mmObject();
@@ -185,6 +195,16 @@ public class RejectedReason15Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification36.mmObject();
+		}
+
+		@Override
+		public GenericIdentification36 getValue(RejectedReason15Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RejectedReason15Choice obj, GenericIdentification36 value) {
+			obj.setProprietary(value);
 		}
 	};
 

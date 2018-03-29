@@ -124,7 +124,7 @@ public class Organisation26 {
 	 * Organisation25.mmCommonName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommonName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Organisation26, Max70Text> mmCommonName = new MMMessageAttribute<Organisation26, Max70Text>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation26.mmObject();
@@ -137,6 +137,16 @@ public class Organisation26 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Max70Text getValue(Organisation26 obj) {
+			return obj.getCommonName();
+		}
+
+		@Override
+		public void setValue(Organisation26 obj, Max70Text value) {
+			obj.setCommonName(value);
 		}
 	};
 	@XmlElement(name = "Adr")
@@ -167,7 +177,7 @@ public class Organisation26 {
 	 * definition} = "Location of the merchant."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Organisation26, Optional<Max140Text>> mmAddress = new MMMessageAttribute<Organisation26, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation26.mmObject();
 			isDerived = false;
@@ -178,6 +188,16 @@ public class Organisation26 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(Organisation26 obj) {
+			return obj.getAddress();
+		}
+
+		@Override
+		public void setValue(Organisation26 obj, Optional<Max140Text> value) {
+			obj.setAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtryCd", required = true)
@@ -209,7 +229,7 @@ public class Organisation26 {
 	 * definition} = "Country of the merchant."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountryCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Organisation26, ISO3NumericCountryCode> mmCountryCode = new MMMessageAttribute<Organisation26, ISO3NumericCountryCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation26.mmObject();
 			isDerived = false;
@@ -220,6 +240,16 @@ public class Organisation26 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISO3NumericCountryCode.mmObject();
+		}
+
+		@Override
+		public ISO3NumericCountryCode getValue(Organisation26 obj) {
+			return obj.getCountryCode();
+		}
+
+		@Override
+		public void setValue(Organisation26 obj, ISO3NumericCountryCode value) {
+			obj.setCountryCode(value);
 		}
 	};
 	@XmlElement(name = "MrchntCtgyCd", required = true)
@@ -253,7 +283,7 @@ public class Organisation26 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMerchantCategoryCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Organisation26, Min3Max4Text> mmMerchantCategoryCode = new MMMessageAttribute<Organisation26, Min3Max4Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation26.mmObject();
 			isDerived = false;
@@ -264,6 +294,16 @@ public class Organisation26 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Min3Max4Text.mmObject();
+		}
+
+		@Override
+		public Min3Max4Text getValue(Organisation26 obj) {
+			return obj.getMerchantCategoryCode();
+		}
+
+		@Override
+		public void setValue(Organisation26 obj, Min3Max4Text value) {
+			obj.setMerchantCategoryCode(value);
 		}
 	};
 	@XmlElement(name = "RegdIdr", required = true)
@@ -296,7 +336,7 @@ public class Organisation26 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegisteredIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Organisation26, Max35Text> mmRegisteredIdentifier = new MMMessageAttribute<Organisation26, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation26.mmObject();
 			isDerived = false;
@@ -307,6 +347,16 @@ public class Organisation26 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Organisation26 obj) {
+			return obj.getRegisteredIdentifier();
+		}
+
+		@Override
+		public void setValue(Organisation26 obj, Max35Text value) {
+			obj.setRegisteredIdentifier(value);
 		}
 	};
 

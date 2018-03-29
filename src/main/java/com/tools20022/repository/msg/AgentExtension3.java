@@ -27,6 +27,8 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max8Text;
 import com.tools20022.repository.datatype.PhoneNumber;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ContactInformation3;
+import com.tools20022.repository.msg.PostalAddress1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -123,7 +125,7 @@ public class AgentExtension3 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AgentExtension3, Max350Text> mmPlaceAndName = new MMMessageAttribute<AgentExtension3, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AgentExtension3.mmObject();
 			isDerived = false;
@@ -134,6 +136,16 @@ public class AgentExtension3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(AgentExtension3 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(AgentExtension3 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "AgtId")
@@ -168,7 +180,7 @@ public class AgentExtension3 {
 	 * definition} = "DTC agent identification number."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAgentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AgentExtension3, Optional<Max8Text>> mmAgentIdentification = new MMMessageAttribute<AgentExtension3, Optional<Max8Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AgentExtension3.mmObject();
 			isDerived = false;
@@ -180,6 +192,16 @@ public class AgentExtension3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max8Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max8Text> getValue(AgentExtension3 obj) {
+			return obj.getAgentIdentification();
+		}
+
+		@Override
+		public void setValue(AgentExtension3 obj, Optional<Max8Text> value) {
+			obj.setAgentIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AgtAdr")
@@ -214,7 +236,7 @@ public class AgentExtension3 {
 	 * definition} = "Event agent address."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAgentAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AgentExtension3, Optional<PostalAddress1>> mmAgentAddress = new MMMessageAttribute<AgentExtension3, Optional<PostalAddress1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AgentExtension3.mmObject();
 			isDerived = false;
@@ -225,7 +247,17 @@ public class AgentExtension3 {
 			definition = "Event agent address.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PostalAddress1.mmObject();
+			complexType_lazy = () -> PostalAddress1.mmObject();
+		}
+
+		@Override
+		public Optional<PostalAddress1> getValue(AgentExtension3 obj) {
+			return obj.getAgentAddress();
+		}
+
+		@Override
+		public void setValue(AgentExtension3 obj, Optional<PostalAddress1> value) {
+			obj.setAgentAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AgtTelNb")
@@ -260,7 +292,7 @@ public class AgentExtension3 {
 	 * definition} = "Telephone number of the agent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAgentTelephoneNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AgentExtension3, Optional<PhoneNumber>> mmAgentTelephoneNumber = new MMMessageAttribute<AgentExtension3, Optional<PhoneNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AgentExtension3.mmObject();
 			isDerived = false;
@@ -272,6 +304,16 @@ public class AgentExtension3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PhoneNumber.mmObject();
+		}
+
+		@Override
+		public Optional<PhoneNumber> getValue(AgentExtension3 obj) {
+			return obj.getAgentTelephoneNumber();
+		}
+
+		@Override
+		public void setValue(AgentExtension3 obj, Optional<PhoneNumber> value) {
+			obj.setAgentTelephoneNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AgtEmailAdr")
@@ -306,7 +348,7 @@ public class AgentExtension3 {
 	 * definition} = "Email address of the event agent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAgentEmailAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AgentExtension3, Optional<Max256Text>> mmAgentEmailAddress = new MMMessageAttribute<AgentExtension3, Optional<Max256Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AgentExtension3.mmObject();
 			isDerived = false;
@@ -318,6 +360,16 @@ public class AgentExtension3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max256Text> getValue(AgentExtension3 obj) {
+			return obj.getAgentEmailAddress();
+		}
+
+		@Override
+		public void setValue(AgentExtension3 obj, Optional<Max256Text> value) {
+			obj.setAgentEmailAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtctInf")
@@ -351,7 +403,7 @@ public class AgentExtension3 {
 	 * definition} = "Agent designated contact Information details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContactInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AgentExtension3, Optional<ContactInformation3>> mmContactInformation = new MMMessageAssociationEnd<AgentExtension3, Optional<ContactInformation3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AgentExtension3.mmObject();
 			isDerived = false;
@@ -363,7 +415,17 @@ public class AgentExtension3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContactInformation3.mmObject();
+			type_lazy = () -> ContactInformation3.mmObject();
+		}
+
+		@Override
+		public Optional<ContactInformation3> getValue(AgentExtension3 obj) {
+			return obj.getContactInformation();
+		}
+
+		@Override
+		public void setValue(AgentExtension3 obj, Optional<ContactInformation3> value) {
+			obj.setContactInformation(value.orElse(null));
 		}
 	};
 
@@ -405,7 +467,7 @@ public class AgentExtension3 {
 		return agentAddress == null ? Optional.empty() : Optional.of(agentAddress);
 	}
 
-	public AgentExtension3 setAgentAddress(com.tools20022.repository.msg.PostalAddress1 agentAddress) {
+	public AgentExtension3 setAgentAddress(PostalAddress1 agentAddress) {
 		this.agentAddress = agentAddress;
 		return this;
 	}
@@ -432,7 +494,7 @@ public class AgentExtension3 {
 		return contactInformation == null ? Optional.empty() : Optional.of(contactInformation);
 	}
 
-	public AgentExtension3 setContactInformation(com.tools20022.repository.msg.ContactInformation3 contactInformation) {
+	public AgentExtension3 setContactInformation(ContactInformation3 contactInformation) {
 		this.contactInformation = contactInformation;
 		return this;
 	}

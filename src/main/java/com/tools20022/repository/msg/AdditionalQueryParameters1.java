@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.SecuritiesTradeStatus;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecurityIdentification11;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -125,7 +126,7 @@ public class AdditionalQueryParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AdditionalQueryParameters1, Optional<Status1Choice>> mmStatus = new MMMessageAssociationEnd<AdditionalQueryParameters1, Optional<Status1Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalQueryParameters1.mmObject();
@@ -139,6 +140,16 @@ public class AdditionalQueryParameters1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Status1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Status1Choice> getValue(AdditionalQueryParameters1 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(AdditionalQueryParameters1 obj, Optional<Status1Choice> value) {
+			obj.setStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rsn")
@@ -179,7 +190,7 @@ public class AdditionalQueryParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AdditionalQueryParameters1, List<Reason1Choice>> mmReason = new MMMessageAssociationEnd<AdditionalQueryParameters1, List<Reason1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalQueryParameters1.mmObject();
@@ -193,9 +204,19 @@ public class AdditionalQueryParameters1 {
 			isComposite = true;
 			type_lazy = () -> Reason1Choice.mmObject();
 		}
+
+		@Override
+		public List<Reason1Choice> getValue(AdditionalQueryParameters1 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(AdditionalQueryParameters1 obj, List<Reason1Choice> value) {
+			obj.setReason(value);
+		}
 	};
 	@XmlElement(name = "FinInstrmId")
-	protected List<com.tools20022.repository.msg.SecurityIdentification11> financialInstrumentIdentification;
+	protected List<SecurityIdentification11> financialInstrumentIdentification;
 	/**
 	 * 
 	 <p>
@@ -233,7 +254,7 @@ public class AdditionalQueryParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AdditionalQueryParameters1, List<SecurityIdentification11>> mmFinancialInstrumentIdentification = new MMMessageAssociationEnd<AdditionalQueryParameters1, List<SecurityIdentification11>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalQueryParameters1.mmObject();
@@ -245,7 +266,17 @@ public class AdditionalQueryParameters1 {
 			definition = "Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification11.mmObject();
+			type_lazy = () -> SecurityIdentification11.mmObject();
+		}
+
+		@Override
+		public List<SecurityIdentification11> getValue(AdditionalQueryParameters1 obj) {
+			return obj.getFinancialInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(AdditionalQueryParameters1 obj, List<SecurityIdentification11> value) {
+			obj.setFinancialInstrumentIdentification(value);
 		}
 	};
 
@@ -287,7 +318,7 @@ public class AdditionalQueryParameters1 {
 		return financialInstrumentIdentification == null ? financialInstrumentIdentification = new ArrayList<>() : financialInstrumentIdentification;
 	}
 
-	public AdditionalQueryParameters1 setFinancialInstrumentIdentification(List<com.tools20022.repository.msg.SecurityIdentification11> financialInstrumentIdentification) {
+	public AdditionalQueryParameters1 setFinancialInstrumentIdentification(List<SecurityIdentification11> financialInstrumentIdentification) {
 		this.financialInstrumentIdentification = Objects.requireNonNull(financialInstrumentIdentification);
 		return this;
 	}

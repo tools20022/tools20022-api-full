@@ -101,7 +101,7 @@ public class TradeDate3Choice {
 	 * definition} = "Trade date expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeDate3Choice, ISODate> mmDate = new MMMessageAttribute<TradeDate3Choice, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradeDate3Choice.mmObject();
@@ -113,6 +113,16 @@ public class TradeDate3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(TradeDate3Choice obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(TradeDate3Choice obj, ISODate value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "DtCd", required = true)
@@ -145,7 +155,7 @@ public class TradeDate3Choice {
 	 * definition} = "Date expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeDate3Choice, DateType1Code> mmDateCode = new MMMessageAttribute<TradeDate3Choice, DateType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradeDate3Choice.mmObject();
 			isDerived = false;
@@ -156,6 +166,16 @@ public class TradeDate3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DateType1Code.mmObject();
+		}
+
+		@Override
+		public DateType1Code getValue(TradeDate3Choice obj) {
+			return obj.getDateCode();
+		}
+
+		@Override
+		public void setValue(TradeDate3Choice obj, DateType1Code value) {
+			obj.setDateCode(value);
 		}
 	};
 

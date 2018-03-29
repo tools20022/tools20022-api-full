@@ -108,7 +108,7 @@ public class PresentationMedium1Choice {
 	 * definition} = "Presentation medium.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PresentationMedium1Choice, PresentationMedium1Code> mmCode = new MMMessageAttribute<PresentationMedium1Choice, PresentationMedium1Code>() {
 		{
 			businessElementTrace_lazy = () -> Presentation.mmMedium;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PresentationMedium1Choice.mmObject();
@@ -120,6 +120,16 @@ public class PresentationMedium1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PresentationMedium1Code.mmObject();
+		}
+
+		@Override
+		public PresentationMedium1Code getValue(PresentationMedium1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(PresentationMedium1Choice obj, PresentationMedium1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -155,7 +165,7 @@ public class PresentationMedium1Choice {
 	 * definition} = "Presentation medium expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PresentationMedium1Choice, GenericIdentification1> mmProprietary = new MMMessageAssociationEnd<PresentationMedium1Choice, GenericIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> Presentation.mmMedium;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PresentationMedium1Choice.mmObject();
@@ -168,6 +178,16 @@ public class PresentationMedium1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(PresentationMedium1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(PresentationMedium1Choice obj, GenericIdentification1 value) {
+			obj.setProprietary(value);
 		}
 	};
 

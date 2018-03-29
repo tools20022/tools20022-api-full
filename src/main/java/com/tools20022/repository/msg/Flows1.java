@@ -106,7 +106,7 @@ public class Flows1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentBankFlows = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Flows1, ImpliedCurrencyAndAmount> mmPaymentBankFlows = new MMMessageAttribute<Flows1, ImpliedCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Flows1.mmObject();
@@ -118,6 +118,16 @@ public class Flows1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(Flows1 obj) {
+			return obj.getPaymentBankFlows();
+		}
+
+		@Override
+		public void setValue(Flows1 obj, ImpliedCurrencyAndAmount value) {
+			obj.setPaymentBankFlows(value);
 		}
 	};
 	@XmlElement(name = "InvstmtFlows", required = true)
@@ -156,7 +166,7 @@ public class Flows1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInvestmentFlows = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Flows1, ImpliedCurrencyAndAmount> mmInvestmentFlows = new MMMessageAttribute<Flows1, ImpliedCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Flows1.mmObject();
@@ -168,6 +178,16 @@ public class Flows1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(Flows1 obj) {
+			return obj.getInvestmentFlows();
+		}
+
+		@Override
+		public void setValue(Flows1 obj, ImpliedCurrencyAndAmount value) {
+			obj.setInvestmentFlows(value);
 		}
 	};
 

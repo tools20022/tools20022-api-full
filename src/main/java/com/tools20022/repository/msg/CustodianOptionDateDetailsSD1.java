@@ -104,7 +104,7 @@ public class CustodianOptionDateDetailsSD1 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustodianOptionDateDetailsSD1, Max350Text> mmPlaceAndName = new MMMessageAttribute<CustodianOptionDateDetailsSD1, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustodianOptionDateDetailsSD1.mmObject();
 			isDerived = false;
@@ -115,6 +115,16 @@ public class CustodianOptionDateDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CustodianOptionDateDetailsSD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CustodianOptionDateDetailsSD1 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "AgtDdlnDt")
@@ -151,7 +161,7 @@ public class CustodianOptionDateDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAgentDeadlineDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustodianOptionDateDetailsSD1, Optional<ISODate>> mmAgentDeadlineDate = new MMMessageAttribute<CustodianOptionDateDetailsSD1, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustodianOptionDateDetailsSD1.mmObject();
 			isDerived = false;
@@ -163,6 +173,16 @@ public class CustodianOptionDateDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CustodianOptionDateDetailsSD1 obj) {
+			return obj.getAgentDeadlineDate();
+		}
+
+		@Override
+		public void setValue(CustodianOptionDateDetailsSD1 obj, Optional<ISODate> value) {
+			obj.setAgentDeadlineDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AgtDdlnTm")
@@ -199,7 +219,7 @@ public class CustodianOptionDateDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAgentDeadlineTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustodianOptionDateDetailsSD1, Optional<ISOTime>> mmAgentDeadlineTime = new MMMessageAttribute<CustodianOptionDateDetailsSD1, Optional<ISOTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustodianOptionDateDetailsSD1.mmObject();
 			isDerived = false;
@@ -211,6 +231,16 @@ public class CustodianOptionDateDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISOTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISOTime> getValue(CustodianOptionDateDetailsSD1 obj) {
+			return obj.getAgentDeadlineTime();
+		}
+
+		@Override
+		public void setValue(CustodianOptionDateDetailsSD1 obj, Optional<ISOTime> value) {
+			obj.setAgentDeadlineTime(value.orElse(null));
 		}
 	};
 

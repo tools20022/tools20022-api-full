@@ -111,11 +111,11 @@ public class TechnicalIdentification1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Technical address of the party is defined as a financial institution business idenfier code."
+	 * "Technical address of the party is defined as a financial institution business identifier code."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBICFI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TechnicalIdentification1Choice, BICFIIdentifier> mmBICFI = new MMMessageAttribute<TechnicalIdentification1Choice, BICFIIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TechnicalIdentification1Choice.mmObject();
@@ -123,10 +123,20 @@ public class TechnicalIdentification1Choice {
 			xmlTag = "BICFI";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BICFI";
-			definition = "Technical address of the party is defined as a financial institution business idenfier code.";
+			definition = "Technical address of the party is defined as a financial institution business identifier code.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
+		}
+
+		@Override
+		public BICFIIdentifier getValue(TechnicalIdentification1Choice obj) {
+			return obj.getBICFI();
+		}
+
+		@Override
+		public void setValue(TechnicalIdentification1Choice obj, BICFIIdentifier value) {
+			obj.setBICFI(value);
 		}
 	};
 	@XmlElement(name = "TechAdr", required = true)
@@ -164,7 +174,7 @@ public class TechnicalIdentification1Choice {
 	 * "Technical address of the party is defined in a free text format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTechnicalAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TechnicalIdentification1Choice, Max256Text> mmTechnicalAddress = new MMMessageAttribute<TechnicalIdentification1Choice, Max256Text>() {
 		{
 			businessComponentTrace_lazy = () -> ElectronicAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.TechnicalIdentification1Choice.mmObject();
@@ -176,6 +186,16 @@ public class TechnicalIdentification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Max256Text getValue(TechnicalIdentification1Choice obj) {
+			return obj.getTechnicalAddress();
+		}
+
+		@Override
+		public void setValue(TechnicalIdentification1Choice obj, Max256Text value) {
+			obj.setTechnicalAddress(value);
 		}
 	};
 

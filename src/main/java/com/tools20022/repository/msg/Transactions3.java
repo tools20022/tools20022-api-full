@@ -21,6 +21,8 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PaymentCommonDetails3;
+import com.tools20022.repository.msg.TransactionReportDetails4;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -109,7 +111,7 @@ public class Transactions3 {
 	 * definition} = "Common detailed payment instruction information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentCommonInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Transactions3, Optional<PaymentCommonDetails3>> mmPaymentCommonInformation = new MMMessageAssociationEnd<Transactions3, Optional<PaymentCommonDetails3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transactions3.mmObject();
 			isDerived = false;
@@ -120,11 +122,21 @@ public class Transactions3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentCommonDetails3.mmObject();
+			type_lazy = () -> PaymentCommonDetails3.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentCommonDetails3> getValue(Transactions3 obj) {
+			return obj.getPaymentCommonInformation();
+		}
+
+		@Override
+		public void setValue(Transactions3 obj, Optional<PaymentCommonDetails3> value) {
+			obj.setPaymentCommonInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxRpt", required = true)
-	protected List<com.tools20022.repository.msg.TransactionReportDetails4> transactionReport;
+	protected List<TransactionReportDetails4> transactionReport;
 	/**
 	 * 
 	 <p>
@@ -152,7 +164,7 @@ public class Transactions3 {
 	 * "Reports either on the transaction information or on a business error."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Transactions3, List<TransactionReportDetails4>> mmTransactionReport = new MMMessageAssociationEnd<Transactions3, List<TransactionReportDetails4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transactions3.mmObject();
 			isDerived = false;
@@ -162,7 +174,17 @@ public class Transactions3 {
 			definition = "Reports either on the transaction information or on a business error.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransactionReportDetails4.mmObject();
+			type_lazy = () -> TransactionReportDetails4.mmObject();
+		}
+
+		@Override
+		public List<TransactionReportDetails4> getValue(Transactions3 obj) {
+			return obj.getTransactionReport();
+		}
+
+		@Override
+		public void setValue(Transactions3 obj, List<TransactionReportDetails4> value) {
+			obj.setTransactionReport(value);
 		}
 	};
 
@@ -185,7 +207,7 @@ public class Transactions3 {
 		return paymentCommonInformation == null ? Optional.empty() : Optional.of(paymentCommonInformation);
 	}
 
-	public Transactions3 setPaymentCommonInformation(com.tools20022.repository.msg.PaymentCommonDetails3 paymentCommonInformation) {
+	public Transactions3 setPaymentCommonInformation(PaymentCommonDetails3 paymentCommonInformation) {
 		this.paymentCommonInformation = paymentCommonInformation;
 		return this;
 	}
@@ -194,7 +216,7 @@ public class Transactions3 {
 		return transactionReport == null ? transactionReport = new ArrayList<>() : transactionReport;
 	}
 
-	public Transactions3 setTransactionReport(List<com.tools20022.repository.msg.TransactionReportDetails4> transactionReport) {
+	public Transactions3 setTransactionReport(List<TransactionReportDetails4> transactionReport) {
 		this.transactionReport = Objects.requireNonNull(transactionReport);
 		return this;
 	}

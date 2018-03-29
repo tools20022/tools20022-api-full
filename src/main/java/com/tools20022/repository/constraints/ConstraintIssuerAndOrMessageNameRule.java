@@ -51,11 +51,15 @@ public class ConstraintIssuerAndOrMessageNameRule {
 	 */
 	public static final MMConstraint<AdditionalReferences> forAdditionalReferences = new MMConstraint<AdditionalReferences>() {
 		{
-			validator = ConstraintIssuerAndOrMessageNameRule::checkAdditionalReferences;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerAndOrMessageNameRule";
 			definition = "If MessageName is not present, then ReferenceIssuer is mandatory. If MessageName is present, then ReferenceIssuer is optional.";
 			owner_lazy = () -> AdditionalReferences.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalReferences obj) throws Exception {
+			checkAdditionalReferences(obj);
 		}
 	};
 

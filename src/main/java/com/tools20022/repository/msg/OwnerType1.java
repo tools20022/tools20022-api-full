@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.MandatePartyRole;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.Role;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -111,7 +112,7 @@ public class OwnerType1 {
 	 * definition} = "Type of ownership."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OwnerType1, AccountOwnerType1Code> mmType = new MMMessageAttribute<OwnerType1, AccountOwnerType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Role.mmPlayer;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OwnerType1.mmObject();
@@ -123,6 +124,16 @@ public class OwnerType1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AccountOwnerType1Code.mmObject();
+		}
+
+		@Override
+		public AccountOwnerType1Code getValue(OwnerType1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(OwnerType1 obj, AccountOwnerType1Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "MndtTp")
@@ -159,7 +170,7 @@ public class OwnerType1 {
 	 * definition} = "Type of mandate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMandateType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OwnerType1, Optional<AccountPermissionType1Code>> mmMandateType = new MMMessageAttribute<OwnerType1, Optional<AccountPermissionType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> MandatePartyRole.mmMandate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OwnerType1.mmObject();
@@ -171,6 +182,16 @@ public class OwnerType1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AccountPermissionType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<AccountPermissionType1Code> getValue(OwnerType1 obj) {
+			return obj.getMandateType();
+		}
+
+		@Override
+		public void setValue(OwnerType1 obj, Optional<AccountPermissionType1Code> value) {
+			obj.setMandateType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Prtry")
@@ -207,7 +228,7 @@ public class OwnerType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OwnerType1, Optional<GenericIdentification1>> mmProprietary = new MMMessageAssociationEnd<OwnerType1, Optional<GenericIdentification1>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OwnerType1.mmObject();
@@ -219,7 +240,17 @@ public class OwnerType1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
+			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification1> getValue(OwnerType1 obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(OwnerType1 obj, Optional<GenericIdentification1> value) {
+			obj.setProprietary(value.orElse(null));
 		}
 	};
 
@@ -259,7 +290,7 @@ public class OwnerType1 {
 		return proprietary == null ? Optional.empty() : Optional.of(proprietary);
 	}
 
-	public OwnerType1 setProprietary(com.tools20022.repository.msg.GenericIdentification1 proprietary) {
+	public OwnerType1 setProprietary(GenericIdentification1 proprietary) {
 		this.proprietary = proprietary;
 		return this;
 	}

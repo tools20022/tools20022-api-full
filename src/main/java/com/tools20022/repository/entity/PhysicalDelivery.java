@@ -20,9 +20,11 @@ package com.tools20022.repository.entity;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.PhysicalTransferTypeCode;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.entity.PostalAddress;
+import com.tools20022.repository.entity.SecuritiesCertificate;
+import com.tools20022.repository.entity.SecuritiesTransfer;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -135,7 +137,7 @@ public class PhysicalDelivery {
 	 * "Transfer process which requires physical delivery of the securities."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedTransfer = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<PhysicalDelivery, Optional<SecuritiesTransfer>> mmRelatedTransfer = new MMBusinessAssociationEnd<PhysicalDelivery, Optional<SecuritiesTransfer>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PhysicalDelivery.mmObject();
@@ -144,9 +146,19 @@ public class PhysicalDelivery {
 			definition = "Transfer process which requires physical delivery of the securities.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmPhysicalDelivery;
+			opposite_lazy = () -> SecuritiesTransfer.mmPhysicalDelivery;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
+			type_lazy = () -> SecuritiesTransfer.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesTransfer> getValue(PhysicalDelivery obj) {
+			return obj.getRelatedTransfer();
+		}
+
+		@Override
+		public void setValue(PhysicalDelivery obj, Optional<SecuritiesTransfer> value) {
+			obj.setRelatedTransfer(value.orElse(null));
 		}
 	};
 	protected YesNoIndicator registeredAddressIndicator;
@@ -189,7 +201,7 @@ public class PhysicalDelivery {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmRegisteredAddressIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<PhysicalDelivery, YesNoIndicator> mmRegisteredAddressIndicator = new MMBusinessAttribute<PhysicalDelivery, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(DeliveryParameters2.mmRegisteredAddressIndicator, DeliveryParameters4.mmRegisteredAddressIndicator);
 			isDerived = false;
@@ -202,12 +214,14 @@ public class PhysicalDelivery {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PhysicalDelivery.class.getMethod("getRegisteredAddressIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(PhysicalDelivery obj) {
+			return obj.getRegisteredAddressIndicator();
+		}
+
+		@Override
+		public void setValue(PhysicalDelivery obj, YesNoIndicator value) {
+			obj.setRegisteredAddressIndicator(value);
 		}
 	};
 	protected SecuritiesCertificate issuedCertificateNumber;
@@ -253,7 +267,7 @@ public class PhysicalDelivery {
 	 * definition} = "Certificate representing a security that is delivered."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmIssuedCertificateNumber = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<PhysicalDelivery, SecuritiesCertificate> mmIssuedCertificateNumber = new MMBusinessAssociationEnd<PhysicalDelivery, SecuritiesCertificate>() {
 		{
 			derivation_lazy = () -> Arrays.asList(DeliveryParameters3.mmIssuedCertificateNumber);
 			isDerived = false;
@@ -263,9 +277,19 @@ public class PhysicalDelivery {
 			definition = "Certificate representing a security that is delivered.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesCertificate.mmRelatedDelivery;
+			opposite_lazy = () -> SecuritiesCertificate.mmRelatedDelivery;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesCertificate.mmObject();
+			type_lazy = () -> SecuritiesCertificate.mmObject();
+		}
+
+		@Override
+		public SecuritiesCertificate getValue(PhysicalDelivery obj) {
+			return obj.getIssuedCertificateNumber();
+		}
+
+		@Override
+		public void setValue(PhysicalDelivery obj, SecuritiesCertificate value) {
+			obj.setIssuedCertificateNumber(value);
 		}
 	};
 	protected PostalAddress address;
@@ -343,7 +367,7 @@ public class PhysicalDelivery {
 	 * definition} = "Address for physical delivery."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmAddress = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<PhysicalDelivery, PostalAddress> mmAddress = new MMBusinessAssociationEnd<PhysicalDelivery, PostalAddress>() {
 		{
 			derivation_lazy = () -> Arrays.asList(DeliveryParameters3.mmAddress, SubscriptionOrder3.mmPhysicalDeliveryDetails, SubscriptionOrder5.mmPhysicalDeliveryDetails, SubscriptionOrder7.mmPhysicalDeliveryDetails,
 					SubscriptionOrder4.mmPhysicalDeliveryDetails, SubscriptionOrder6.mmPhysicalDeliveryDetails, SubscriptionOrder8.mmPhysicalDeliveryDetails, SwitchSubscriptionLegOrder2.mmPhysicalDeliveryDetails,
@@ -355,9 +379,19 @@ public class PhysicalDelivery {
 			definition = "Address for physical delivery.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmPhysicalDelivery;
+			opposite_lazy = () -> PostalAddress.mmPhysicalDelivery;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
+			type_lazy = () -> PostalAddress.mmObject();
+		}
+
+		@Override
+		public PostalAddress getValue(PhysicalDelivery obj) {
+			return obj.getAddress();
+		}
+
+		@Override
+		public void setValue(PhysicalDelivery obj, PostalAddress value) {
+			obj.setAddress(value);
 		}
 	};
 	protected PhysicalTransferTypeCode type;
@@ -450,6 +484,9 @@ public class PhysicalDelivery {
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation17#mmPhysicalTransfer
 	 * DeliverInformation17.mmPhysicalTransfer}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes89#mmDeliveryType
+	 * FinancialInstrumentAttributes89.mmDeliveryType}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation18#mmPhysicalTransfer
 	 * ReceiveInformation18.mmPhysicalTransfer}</li>
 	 * <li>
@@ -479,14 +516,15 @@ public class PhysicalDelivery {
 	 * definition} = "Specifies the type of delivery."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<PhysicalDelivery, PhysicalTransferTypeCode> mmType = new MMBusinessAttribute<PhysicalDelivery, PhysicalTransferTypeCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(DeliverInformation7.mmPhysicalTransfer, ReceiveInformation8.mmPhysicalTransfer, ReceiveInformation6.mmPhysicalTransfer, ReceiveInformation11.mmPhysicalTransfer,
 					DeliverInformation11.mmPhysicalTransfer, DeliverInformation8.mmPhysicalTransfer, ReceiveInformation7.mmPhysicalTransfer, ReceiveInformation5.mmPhysicalTransfer, ReceiveInformation9.mmPhysicalTransfer,
 					DeliverInformation5.mmPhysicalTransfer, DeliverInformation9.mmPhysicalTransfer, DeliverInformation6.mmPhysicalTransfer, ReceiveInformation13.mmPhysicalTransfer, ReceiveInformation12.mmPhysicalTransfer,
 					DeliverInformation12.mmPhysicalTransfer, DeliverInformation13.mmPhysicalTransfer, DeliverInformation15.mmPhysicalTransfer, DeliverInformation14.mmPhysicalTransfer, ReceiveInformation15.mmPhysicalTransfer,
 					ReceiveInformation14.mmPhysicalTransfer, AggregateHoldingBalance1.mmHoldingPhysicalType, ReceiveInformation17.mmPhysicalTransfer, ReceiveInformation16.mmPhysicalTransfer, DeliverInformation16.mmPhysicalTransfer,
-					DeliverInformation17.mmPhysicalTransfer, ReceiveInformation18.mmPhysicalTransfer, DeliverInformation19.mmPhysicalTransfer, ReceiveInformation19.mmPhysicalTransfer, DeliverInformation18.mmPhysicalTransfer);
+					DeliverInformation17.mmPhysicalTransfer, FinancialInstrumentAttributes89.mmDeliveryType, ReceiveInformation18.mmPhysicalTransfer, DeliverInformation19.mmPhysicalTransfer, ReceiveInformation19.mmPhysicalTransfer,
+					DeliverInformation18.mmPhysicalTransfer);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PhysicalDelivery.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -497,12 +535,14 @@ public class PhysicalDelivery {
 			simpleType_lazy = () -> PhysicalTransferTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PhysicalDelivery.class.getMethod("getType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PhysicalTransferTypeCode getValue(PhysicalDelivery obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(PhysicalDelivery obj, PhysicalTransferTypeCode value) {
+			obj.setType(value);
 		}
 	};
 
@@ -513,8 +553,7 @@ public class PhysicalDelivery {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PhysicalDelivery";
 				definition = "Parameters of a physical delivery.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PostalAddress.mmPhysicalDelivery, com.tools20022.repository.entity.SecuritiesTransfer.mmPhysicalDelivery,
-						com.tools20022.repository.entity.SecuritiesCertificate.mmRelatedDelivery);
+				associationDomain_lazy = () -> Arrays.asList(PostalAddress.mmPhysicalDelivery, SecuritiesTransfer.mmPhysicalDelivery, SecuritiesCertificate.mmRelatedDelivery);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PhysicalDelivery.mmRelatedTransfer, com.tools20022.repository.entity.PhysicalDelivery.mmRegisteredAddressIndicator,
 						com.tools20022.repository.entity.PhysicalDelivery.mmIssuedCertificateNumber, com.tools20022.repository.entity.PhysicalDelivery.mmAddress, com.tools20022.repository.entity.PhysicalDelivery.mmType);
 				derivationComponent_lazy = () -> Arrays.asList(DeliveryParameters2.mmObject(), DeliveryParameters4.mmObject(), DeliveryParameters3.mmObject());
@@ -532,7 +571,7 @@ public class PhysicalDelivery {
 		return relatedTransfer == null ? Optional.empty() : Optional.of(relatedTransfer);
 	}
 
-	public PhysicalDelivery setRelatedTransfer(com.tools20022.repository.entity.SecuritiesTransfer relatedTransfer) {
+	public PhysicalDelivery setRelatedTransfer(SecuritiesTransfer relatedTransfer) {
 		this.relatedTransfer = relatedTransfer;
 		return this;
 	}
@@ -550,7 +589,7 @@ public class PhysicalDelivery {
 		return issuedCertificateNumber;
 	}
 
-	public PhysicalDelivery setIssuedCertificateNumber(com.tools20022.repository.entity.SecuritiesCertificate issuedCertificateNumber) {
+	public PhysicalDelivery setIssuedCertificateNumber(SecuritiesCertificate issuedCertificateNumber) {
 		this.issuedCertificateNumber = Objects.requireNonNull(issuedCertificateNumber);
 		return this;
 	}
@@ -559,7 +598,7 @@ public class PhysicalDelivery {
 		return address;
 	}
 
-	public PhysicalDelivery setAddress(com.tools20022.repository.entity.PostalAddress address) {
+	public PhysicalDelivery setAddress(PostalAddress address) {
 		this.address = Objects.requireNonNull(address);
 		return this;
 	}

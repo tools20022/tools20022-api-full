@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PaymentPeriod1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -123,7 +124,7 @@ public class PaymentTerms6 {
 	 * definition} = "Due date specified for the payment terms."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTerms6, Optional<ISODate>> mmDueDate = new MMMessageAttribute<PaymentTerms6, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> CashAvailability.mmDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTerms6.mmObject();
@@ -135,6 +136,16 @@ public class PaymentTerms6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(PaymentTerms6 obj) {
+			return obj.getDueDate();
+		}
+
+		@Override
+		public void setValue(PaymentTerms6 obj, Optional<ISODate> value) {
+			obj.setDueDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtPrd")
@@ -164,7 +175,7 @@ public class PaymentTerms6 {
 	 * definition} = "Payment period specified for these payment terms."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentTerms6, Optional<PaymentPeriod1>> mmPaymentPeriod = new MMMessageAssociationEnd<PaymentTerms6, Optional<PaymentPeriod1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTerms6.mmObject();
 			isDerived = false;
@@ -175,7 +186,17 @@ public class PaymentTerms6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentPeriod1.mmObject();
+			type_lazy = () -> PaymentPeriod1.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentPeriod1> getValue(PaymentTerms6 obj) {
+			return obj.getPaymentPeriod();
+		}
+
+		@Override
+		public void setValue(PaymentTerms6 obj, Optional<PaymentPeriod1> value) {
+			obj.setPaymentPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Desc")
@@ -206,7 +227,7 @@ public class PaymentTerms6 {
 	 * definition} = "Textual description of these payment terms."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTerms6, List<Max140Text>> mmDescription = new MMMessageAttribute<PaymentTerms6, List<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTerms6.mmObject();
 			isDerived = false;
@@ -216,6 +237,16 @@ public class PaymentTerms6 {
 			definition = "Textual description of these payment terms.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public List<Max140Text> getValue(PaymentTerms6 obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(PaymentTerms6 obj, List<Max140Text> value) {
+			obj.setDescription(value);
 		}
 	};
 	@XmlElement(name = "PrtlPmtPct")
@@ -248,7 +279,7 @@ public class PaymentTerms6 {
 	 * "Partial payment, expressed as a percentage, for the payment terms."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartialPaymentPercent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTerms6, Optional<PercentageRate>> mmPartialPaymentPercent = new MMMessageAttribute<PaymentTerms6, Optional<PercentageRate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTerms6.mmObject();
 			isDerived = false;
@@ -259,6 +290,16 @@ public class PaymentTerms6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(PaymentTerms6 obj) {
+			return obj.getPartialPaymentPercent();
+		}
+
+		@Override
+		public void setValue(PaymentTerms6 obj, Optional<PercentageRate> value) {
+			obj.setPartialPaymentPercent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DrctDbtMndtId")
@@ -295,7 +336,7 @@ public class PaymentTerms6 {
 	 * "Direct debit mandate identification specified for these payment terms."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDirectDebitMandateIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTerms6, List<Max35Text>> mmDirectDebitMandateIdentification = new MMMessageAttribute<PaymentTerms6, List<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> DirectDebit.mmDirectDebitMandate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTerms6.mmObject();
@@ -306,6 +347,16 @@ public class PaymentTerms6 {
 			definition = "Direct debit mandate identification specified for these payment terms.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(PaymentTerms6 obj) {
+			return obj.getDirectDebitMandateIdentification();
+		}
+
+		@Override
+		public void setValue(PaymentTerms6 obj, List<Max35Text> value) {
+			obj.setDirectDebitMandateIdentification(value);
 		}
 	};
 	@XmlElement(name = "BsisAmt")
@@ -344,7 +395,7 @@ public class PaymentTerms6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBasisAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTerms6, Optional<CurrencyAndAmount>> mmBasisAmount = new MMMessageAttribute<PaymentTerms6, Optional<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Discount.mmDiscountBasisAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTerms6.mmObject();
@@ -356,6 +407,16 @@ public class PaymentTerms6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyAndAmount> getValue(PaymentTerms6 obj) {
+			return obj.getBasisAmount();
+		}
+
+		@Override
+		public void setValue(PaymentTerms6 obj, Optional<CurrencyAndAmount> value) {
+			obj.setBasisAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DscntAmt")
@@ -394,7 +455,7 @@ public class PaymentTerms6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDiscountAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTerms6, Optional<CurrencyAndAmount>> mmDiscountAmount = new MMMessageAttribute<PaymentTerms6, Optional<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Discount.mmDiscountAppliedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTerms6.mmObject();
@@ -406,6 +467,16 @@ public class PaymentTerms6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyAndAmount> getValue(PaymentTerms6 obj) {
+			return obj.getDiscountAmount();
+		}
+
+		@Override
+		public void setValue(PaymentTerms6 obj, Optional<CurrencyAndAmount> value) {
+			obj.setDiscountAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DscntPctRate")
@@ -443,7 +514,7 @@ public class PaymentTerms6 {
 	 * "Percent rate used to calculate the discount for these payment terms."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDiscountPercentRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTerms6, Optional<PercentageRate>> mmDiscountPercentRate = new MMMessageAttribute<PaymentTerms6, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmChargeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTerms6.mmObject();
@@ -455,6 +526,16 @@ public class PaymentTerms6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(PaymentTerms6 obj) {
+			return obj.getDiscountPercentRate();
+		}
+
+		@Override
+		public void setValue(PaymentTerms6 obj, Optional<PercentageRate> value) {
+			obj.setDiscountPercentRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PnltyAmt")
@@ -493,7 +574,7 @@ public class PaymentTerms6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPenaltyAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTerms6, Optional<CurrencyAndAmount>> mmPenaltyAmount = new MMMessageAttribute<PaymentTerms6, Optional<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTerms6.mmObject();
@@ -505,6 +586,16 @@ public class PaymentTerms6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyAndAmount> getValue(PaymentTerms6 obj) {
+			return obj.getPenaltyAmount();
+		}
+
+		@Override
+		public void setValue(PaymentTerms6 obj, Optional<CurrencyAndAmount> value) {
+			obj.setPenaltyAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PnltyPctRate")
@@ -542,7 +633,7 @@ public class PaymentTerms6 {
 	 * "Percent rate used to calculate the penalty for these payment terms."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPenaltyPercentRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTerms6, Optional<PercentageRate>> mmPenaltyPercentRate = new MMMessageAttribute<PaymentTerms6, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmChargeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTerms6.mmObject();
@@ -554,6 +645,16 @@ public class PaymentTerms6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(PaymentTerms6 obj) {
+			return obj.getPenaltyPercentRate();
+		}
+
+		@Override
+		public void setValue(PaymentTerms6 obj, Optional<PercentageRate> value) {
+			obj.setPenaltyPercentRate(value.orElse(null));
 		}
 	};
 
@@ -587,7 +688,7 @@ public class PaymentTerms6 {
 		return paymentPeriod == null ? Optional.empty() : Optional.of(paymentPeriod);
 	}
 
-	public PaymentTerms6 setPaymentPeriod(com.tools20022.repository.msg.PaymentPeriod1 paymentPeriod) {
+	public PaymentTerms6 setPaymentPeriod(PaymentPeriod1 paymentPeriod) {
 		this.paymentPeriod = paymentPeriod;
 		return this;
 	}

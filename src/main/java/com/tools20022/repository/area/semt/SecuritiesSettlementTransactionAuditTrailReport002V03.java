@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISO15022VariantsISOLatestversion;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISO15022VariantsISOPreviousversion;
 import com.tools20022.repository.msgset.SettlementandReconciliationMaintenance20162017ISO15022Variants;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -143,7 +142,7 @@ public class SecuritiesSettlementTransactionAuditTrailReport002V03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesSettlementTransactionAuditTrailReport002V03, Pagination> mmPagination = new MMMessageBuildingBlock<SecuritiesSettlementTransactionAuditTrailReport002V03, Pagination>() {
 		{
 			xmlTag = "Pgntn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,12 +153,14 @@ public class SecuritiesSettlementTransactionAuditTrailReport002V03 {
 			complexType_lazy = () -> Pagination.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlementTransactionAuditTrailReport002V03.class.getMethod("getPagination", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Pagination getValue(SecuritiesSettlementTransactionAuditTrailReport002V03 obj) {
+			return obj.getPagination();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlementTransactionAuditTrailReport002V03 obj, Pagination value) {
+			obj.setPagination(value);
 		}
 	};
 	@XmlElement(name = "QryRef")
@@ -189,7 +190,7 @@ public class SecuritiesSettlementTransactionAuditTrailReport002V03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmQueryReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesSettlementTransactionAuditTrailReport002V03, Optional<Identification16>> mmQueryReference = new MMMessageBuildingBlock<SecuritiesSettlementTransactionAuditTrailReport002V03, Optional<Identification16>>() {
 		{
 			xmlTag = "QryRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -200,12 +201,14 @@ public class SecuritiesSettlementTransactionAuditTrailReport002V03 {
 			complexType_lazy = () -> Identification16.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlementTransactionAuditTrailReport002V03.class.getMethod("getQueryReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Identification16> getValue(SecuritiesSettlementTransactionAuditTrailReport002V03 obj) {
+			return obj.getQueryReference();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlementTransactionAuditTrailReport002V03 obj, Optional<Identification16> value) {
+			obj.setQueryReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxId")
@@ -234,7 +237,7 @@ public class SecuritiesSettlementTransactionAuditTrailReport002V03 {
 	 * "Provides unambiguous transaction identification information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesSettlementTransactionAuditTrailReport002V03, Optional<TransactionIdentifications34>> mmTransactionIdentification = new MMMessageBuildingBlock<SecuritiesSettlementTransactionAuditTrailReport002V03, Optional<TransactionIdentifications34>>() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -245,12 +248,14 @@ public class SecuritiesSettlementTransactionAuditTrailReport002V03 {
 			complexType_lazy = () -> TransactionIdentifications34.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlementTransactionAuditTrailReport002V03.class.getMethod("getTransactionIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<TransactionIdentifications34> getValue(SecuritiesSettlementTransactionAuditTrailReport002V03 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlementTransactionAuditTrailReport002V03 obj, Optional<TransactionIdentifications34> value) {
+			obj.setTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SfkpgAcct", required = true)
@@ -278,7 +283,7 @@ public class SecuritiesSettlementTransactionAuditTrailReport002V03 {
 	 * definition} = "Account to or from which a securities entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSafekeepingAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesSettlementTransactionAuditTrailReport002V03, SecuritiesAccount27> mmSafekeepingAccount = new MMMessageBuildingBlock<SecuritiesSettlementTransactionAuditTrailReport002V03, SecuritiesAccount27>() {
 		{
 			xmlTag = "SfkpgAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -289,12 +294,14 @@ public class SecuritiesSettlementTransactionAuditTrailReport002V03 {
 			complexType_lazy = () -> SecuritiesAccount27.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlementTransactionAuditTrailReport002V03.class.getMethod("getSafekeepingAccount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SecuritiesAccount27 getValue(SecuritiesSettlementTransactionAuditTrailReport002V03 obj) {
+			return obj.getSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlementTransactionAuditTrailReport002V03 obj, SecuritiesAccount27 value) {
+			obj.setSafekeepingAccount(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -322,7 +329,7 @@ public class SecuritiesSettlementTransactionAuditTrailReport002V03 {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAccountOwner = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesSettlementTransactionAuditTrailReport002V03, Optional<PartyIdentification109>> mmAccountOwner = new MMMessageBuildingBlock<SecuritiesSettlementTransactionAuditTrailReport002V03, Optional<PartyIdentification109>>() {
 		{
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -333,12 +340,14 @@ public class SecuritiesSettlementTransactionAuditTrailReport002V03 {
 			complexType_lazy = () -> PartyIdentification109.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlementTransactionAuditTrailReport002V03.class.getMethod("getAccountOwner", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification109> getValue(SecuritiesSettlementTransactionAuditTrailReport002V03 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlementTransactionAuditTrailReport002V03 obj, Optional<PartyIdentification109> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StsTrl")
@@ -367,7 +376,7 @@ public class SecuritiesSettlementTransactionAuditTrailReport002V03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmStatusTrail = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesSettlementTransactionAuditTrailReport002V03, List<StatusTrail7>> mmStatusTrail = new MMMessageBuildingBlock<SecuritiesSettlementTransactionAuditTrailReport002V03, List<StatusTrail7>>() {
 		{
 			xmlTag = "StsTrl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -377,12 +386,14 @@ public class SecuritiesSettlementTransactionAuditTrailReport002V03 {
 			complexType_lazy = () -> StatusTrail7.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlementTransactionAuditTrailReport002V03.class.getMethod("getStatusTrail", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<StatusTrail7> getValue(SecuritiesSettlementTransactionAuditTrailReport002V03 obj) {
+			return obj.getStatusTrail();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlementTransactionAuditTrailReport002V03 obj, List<StatusTrail7> value) {
+			obj.setStatusTrail(value);
 		}
 	};
 

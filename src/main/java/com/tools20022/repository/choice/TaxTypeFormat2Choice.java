@@ -100,7 +100,7 @@ public class TaxTypeFormat2Choice {
 	 * definition} = "Specifies the type of tax in free text form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnstructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxTypeFormat2Choice, Max35Text> mmUnstructured = new MMMessageAttribute<TaxTypeFormat2Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TaxTypeFormat2Choice.mmObject();
 			isDerived = false;
@@ -111,6 +111,16 @@ public class TaxTypeFormat2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(TaxTypeFormat2Choice obj) {
+			return obj.getUnstructured();
+		}
+
+		@Override
+		public void setValue(TaxTypeFormat2Choice obj, Max35Text value) {
+			obj.setUnstructured(value);
 		}
 	};
 	@XmlElement(name = "Strd", required = true)
@@ -146,7 +156,7 @@ public class TaxTypeFormat2Choice {
 	 * definition} = "Specifies the type of tax in structured form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxTypeFormat2Choice, TaxType2Code> mmStructured = new MMMessageAttribute<TaxTypeFormat2Choice, TaxType2Code>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TaxTypeFormat2Choice.mmObject();
@@ -158,6 +168,16 @@ public class TaxTypeFormat2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TaxType2Code.mmObject();
+		}
+
+		@Override
+		public TaxType2Code getValue(TaxTypeFormat2Choice obj) {
+			return obj.getStructured();
+		}
+
+		@Override
+		public void setValue(TaxTypeFormat2Choice obj, TaxType2Code value) {
+			obj.setStructured(value);
 		}
 	};
 

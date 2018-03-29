@@ -137,7 +137,7 @@ public class TaxCalculationInformation8 {
 	 * TaxCalculationInformation5.mmBasis}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCalculationInformation8, Optional<TaxBasis1Choice>> mmBasis = new MMMessageAttribute<TaxCalculationInformation8, Optional<TaxBasis1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmBasis;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation8.mmObject();
@@ -151,6 +151,16 @@ public class TaxCalculationInformation8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> TaxBasis1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<TaxBasis1Choice> getValue(TaxCalculationInformation8 obj) {
+			return obj.getBasis();
+		}
+
+		@Override
+		public void setValue(TaxCalculationInformation8 obj, Optional<TaxBasis1Choice> value) {
+			obj.setBasis(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxblAmt", required = true)
@@ -196,7 +206,7 @@ public class TaxCalculationInformation8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxableAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCalculationInformation8, ActiveCurrencyAnd13DecimalAmount> mmTaxableAmount = new MMMessageAttribute<TaxCalculationInformation8, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmTaxableBaseAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation8.mmObject();
@@ -209,6 +219,16 @@ public class TaxCalculationInformation8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(TaxCalculationInformation8 obj) {
+			return obj.getTaxableAmount();
+		}
+
+		@Override
+		public void setValue(TaxCalculationInformation8 obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setTaxableAmount(value);
 		}
 	};
 

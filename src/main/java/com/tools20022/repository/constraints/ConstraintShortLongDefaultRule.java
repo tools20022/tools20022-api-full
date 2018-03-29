@@ -60,12 +60,16 @@ public class ConstraintShortLongDefaultRule {
 	 */
 	public static final MMConstraint<OpeningBalance1> forOpeningBalance1 = new MMConstraint<OpeningBalance1>() {
 		{
-			validator = ConstraintShortLongDefaultRule::checkOpeningBalance1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortLongDefaultRule";
 			definition = "If Shortlong is absent, then the default is long, that is, balance is positive.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintShortLongDefaultRule.forOpeningBalance3);
 			owner_lazy = () -> OpeningBalance1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OpeningBalance1 obj) throws Exception {
+			checkOpeningBalance1(obj);
 		}
 	};
 	/**
@@ -99,12 +103,16 @@ public class ConstraintShortLongDefaultRule {
 	 */
 	public static final MMConstraint<ClosingBalance1> forClosingBalance1 = new MMConstraint<ClosingBalance1>() {
 		{
-			validator = ConstraintShortLongDefaultRule::checkClosingBalance1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortLongDefaultRule";
 			definition = "If Shortlong is absent, then the default is long, that is, balance is positive.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintShortLongDefaultRule.forClosingBalance3);
 			owner_lazy = () -> ClosingBalance1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ClosingBalance1 obj) throws Exception {
+			checkClosingBalance1(obj);
 		}
 	};
 	/**
@@ -130,11 +138,15 @@ public class ConstraintShortLongDefaultRule {
 	 */
 	public static final MMConstraint<OpeningBalance2> forOpeningBalance2 = new MMConstraint<OpeningBalance2>() {
 		{
-			validator = ConstraintShortLongDefaultRule::checkOpeningBalance2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortLongDefaultRule";
 			definition = "If Shortlong is absent, then the default is long, that is, balance is positive.";
 			owner_lazy = () -> OpeningBalance2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OpeningBalance2 obj) throws Exception {
+			checkOpeningBalance2(obj);
 		}
 	};
 	/**
@@ -160,11 +172,15 @@ public class ConstraintShortLongDefaultRule {
 	 */
 	public static final MMConstraint<ClosingBalance2> forClosingBalance2 = new MMConstraint<ClosingBalance2>() {
 		{
-			validator = ConstraintShortLongDefaultRule::checkClosingBalance2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortLongDefaultRule";
 			definition = "If Shortlong is absent, then the default is long, that is, balance is positive.";
 			owner_lazy = () -> ClosingBalance2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ClosingBalance2 obj) throws Exception {
+			checkClosingBalance2(obj);
 		}
 	};
 	/**
@@ -189,11 +205,15 @@ public class ConstraintShortLongDefaultRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation6> forAggregateBalanceInformation6 = new MMConstraint<AggregateBalanceInformation6>() {
 		{
-			validator = ConstraintShortLongDefaultRule::checkAggregateBalanceInformation6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortLongDefaultRule";
 			definition = "When absent, the defaut is long, that is, balance is positive.";
 			owner_lazy = () -> AggregateBalanceInformation6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation6 obj) throws Exception {
+			checkAggregateBalanceInformation6(obj);
 		}
 	};
 	/**
@@ -218,11 +238,15 @@ public class ConstraintShortLongDefaultRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation7> forAggregateBalanceInformation7 = new MMConstraint<AggregateBalanceInformation7>() {
 		{
-			validator = ConstraintShortLongDefaultRule::checkAggregateBalanceInformation7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortLongDefaultRule";
 			definition = "When absent, the defaut is long, that is, balance is positive.";
 			owner_lazy = () -> AggregateBalanceInformation7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation7 obj) throws Exception {
+			checkAggregateBalanceInformation7(obj);
 		}
 	};
 	/**
@@ -253,12 +277,16 @@ public class ConstraintShortLongDefaultRule {
 	 */
 	public static final MMConstraint<OpeningBalance3> forOpeningBalance3 = new MMConstraint<OpeningBalance3>() {
 		{
-			validator = ConstraintShortLongDefaultRule::checkOpeningBalance3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortLongDefaultRule";
 			definition = "If Shortlong is absent, then the default is long, that is, balance is positive.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintShortLongDefaultRule.forOpeningBalance1;
 			owner_lazy = () -> OpeningBalance3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OpeningBalance3 obj) throws Exception {
+			checkOpeningBalance3(obj);
 		}
 	};
 	/**
@@ -289,12 +317,16 @@ public class ConstraintShortLongDefaultRule {
 	 */
 	public static final MMConstraint<ClosingBalance3> forClosingBalance3 = new MMConstraint<ClosingBalance3>() {
 		{
-			validator = ConstraintShortLongDefaultRule::checkClosingBalance3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortLongDefaultRule";
 			definition = "If Shortlong is absent, then the default is long, that is, balance is positive.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintShortLongDefaultRule.forClosingBalance1;
 			owner_lazy = () -> ClosingBalance3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ClosingBalance3 obj) throws Exception {
+			checkClosingBalance3(obj);
 		}
 	};
 	/**
@@ -320,11 +352,15 @@ public class ConstraintShortLongDefaultRule {
 	 */
 	public static final MMConstraint<ClosingBalance4> forClosingBalance4 = new MMConstraint<ClosingBalance4>() {
 		{
-			validator = ConstraintShortLongDefaultRule::checkClosingBalance4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortLongDefaultRule";
 			definition = "If Shortlong is absent, then the default is long, that is, balance is positive.";
 			owner_lazy = () -> ClosingBalance4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ClosingBalance4 obj) throws Exception {
+			checkClosingBalance4(obj);
 		}
 	};
 	/**
@@ -350,11 +386,15 @@ public class ConstraintShortLongDefaultRule {
 	 */
 	public static final MMConstraint<OpeningBalance4> forOpeningBalance4 = new MMConstraint<OpeningBalance4>() {
 		{
-			validator = ConstraintShortLongDefaultRule::checkOpeningBalance4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortLongDefaultRule";
 			definition = "If Shortlong is absent, then the default is long, that is, balance is positive.";
 			owner_lazy = () -> OpeningBalance4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OpeningBalance4 obj) throws Exception {
+			checkOpeningBalance4(obj);
 		}
 	};
 

@@ -110,7 +110,7 @@ public class DataSetIdentification2 {
 	 * definition} = "Name of the data set."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DataSetIdentification2, Optional<Max256Text>> mmName = new MMMessageAttribute<DataSetIdentification2, Optional<Max256Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DataSetIdentification2.mmObject();
 			isDerived = false;
@@ -121,6 +121,16 @@ public class DataSetIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max256Text> getValue(DataSetIdentification2 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(DataSetIdentification2 obj, Optional<Max256Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -153,7 +163,7 @@ public class DataSetIdentification2 {
 	 * definition} = "Category of data set."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DataSetIdentification2, DataSetCategory2Code> mmType = new MMMessageAttribute<DataSetIdentification2, DataSetCategory2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DataSetIdentification2.mmObject();
 			isDerived = false;
@@ -164,6 +174,16 @@ public class DataSetIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DataSetCategory2Code.mmObject();
+		}
+
+		@Override
+		public DataSetCategory2Code getValue(DataSetIdentification2 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(DataSetIdentification2 obj, DataSetCategory2Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Vrsn")
@@ -195,7 +215,7 @@ public class DataSetIdentification2 {
 	 * definition} = "Version of the data set."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DataSetIdentification2, Optional<Max256Text>> mmVersion = new MMMessageAttribute<DataSetIdentification2, Optional<Max256Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DataSetIdentification2.mmObject();
 			isDerived = false;
@@ -206,6 +226,16 @@ public class DataSetIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max256Text> getValue(DataSetIdentification2 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(DataSetIdentification2 obj, Optional<Max256Text> value) {
+			obj.setVersion(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CreDtTm")
@@ -237,7 +267,7 @@ public class DataSetIdentification2 {
 	 * definition} = "Date and time of creation of the data set."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DataSetIdentification2, Optional<ISODateTime>> mmCreationDateTime = new MMMessageAttribute<DataSetIdentification2, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DataSetIdentification2.mmObject();
 			isDerived = false;
@@ -248,6 +278,16 @@ public class DataSetIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(DataSetIdentification2 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(DataSetIdentification2 obj, Optional<ISODateTime> value) {
+			obj.setCreationDateTime(value.orElse(null));
 		}
 	};
 

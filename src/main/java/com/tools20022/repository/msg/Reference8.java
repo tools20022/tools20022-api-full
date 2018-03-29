@@ -101,7 +101,7 @@ public class Reference8 {
 	 * definition} = "Unique identifier for quote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuoteIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference8, Optional<Max35Text>> mmQuoteIdentification = new MMMessageAttribute<Reference8, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reference8.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class Reference8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Reference8 obj) {
+			return obj.getQuoteIdentification();
+		}
+
+		@Override
+		public void setValue(Reference8 obj, Optional<Max35Text> value) {
+			obj.setQuoteIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IOIId")
@@ -146,7 +156,7 @@ public class Reference8 {
 	 * definition} = "Unique identifier of indication of interest message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIOIIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference8, Optional<Max35Text>> mmIOIIdentification = new MMMessageAttribute<Reference8, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reference8.mmObject();
 			isDerived = false;
@@ -158,6 +168,16 @@ public class Reference8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Reference8 obj) {
+			return obj.getIOIIdentification();
+		}
+
+		@Override
+		public void setValue(Reference8 obj, Optional<Max35Text> value) {
+			obj.setIOIIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RefOrdrId")
@@ -193,7 +213,7 @@ public class Reference8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReferenceOrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference8, Optional<Max35Text>> mmReferenceOrderIdentification = new MMMessageAttribute<Reference8, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reference8.mmObject();
 			isDerived = false;
@@ -205,6 +225,16 @@ public class Reference8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Reference8 obj) {
+			return obj.getReferenceOrderIdentification();
+		}
+
+		@Override
+		public void setValue(Reference8 obj, Optional<Max35Text> value) {
+			obj.setReferenceOrderIdentification(value.orElse(null));
 		}
 	};
 

@@ -50,11 +50,15 @@ public class ConstraintSocialSecurityNumberGuideline {
 	 */
 	public static final MMConstraint<IndividualPerson3> forIndividualPerson3 = new MMConstraint<IndividualPerson3>() {
 		{
-			validator = ConstraintSocialSecurityNumberGuideline::checkIndividualPerson3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SocialSecurityNumberGuideline";
 			definition = "The UK Insurance Number must be indicated without spaces.";
 			owner_lazy = () -> IndividualPerson3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IndividualPerson3 obj) throws Exception {
+			checkIndividualPerson3(obj);
 		}
 	};
 	/**
@@ -79,11 +83,15 @@ public class ConstraintSocialSecurityNumberGuideline {
 	 */
 	public static final MMConstraint<IndividualPerson8> forIndividualPerson8 = new MMConstraint<IndividualPerson8>() {
 		{
-			validator = ConstraintSocialSecurityNumberGuideline::checkIndividualPerson8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SocialSecurityNumberGuideline";
 			definition = "The UK Insurance Number must be indicated without spaces.";
 			owner_lazy = () -> IndividualPerson8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IndividualPerson8 obj) throws Exception {
+			checkIndividualPerson8(obj);
 		}
 	};
 

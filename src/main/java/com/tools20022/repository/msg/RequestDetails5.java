@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.admi.StaticDataReportV02;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.RequestDetails4;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -110,7 +111,7 @@ public class RequestDetails5 {
 	 * definition} = "Type of data requested, for example, a sub-member BIC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequestDetails5, Max35Text> mmType = new MMMessageAttribute<RequestDetails5, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestDetails5.mmObject();
 			isDerived = false;
@@ -121,6 +122,16 @@ public class RequestDetails5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(RequestDetails5 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(RequestDetails5 obj, Max35Text value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "ReqRef", required = true)
@@ -152,7 +163,7 @@ public class RequestDetails5 {
 	 * definition} = "Reference to the request for which the report is sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequestDetails5, Max35Text> mmRequestReference = new MMMessageAttribute<RequestDetails5, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestDetails5.mmObject();
 			isDerived = false;
@@ -164,9 +175,19 @@ public class RequestDetails5 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Max35Text getValue(RequestDetails5 obj) {
+			return obj.getRequestReference();
+		}
+
+		@Override
+		public void setValue(RequestDetails5 obj, Max35Text value) {
+			obj.setRequestReference(value);
+		}
 	};
 	@XmlElement(name = "RptKey", required = true)
-	protected List<com.tools20022.repository.msg.RequestDetails4> reportKey;
+	protected List<RequestDetails4> reportKey;
 	/**
 	 * 
 	 <p>
@@ -193,7 +214,7 @@ public class RequestDetails5 {
 	 * definition} = "Report key and returned data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReportKey = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RequestDetails5, List<RequestDetails4>> mmReportKey = new MMMessageAssociationEnd<RequestDetails5, List<RequestDetails4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestDetails5.mmObject();
 			isDerived = false;
@@ -203,7 +224,17 @@ public class RequestDetails5 {
 			definition = "Report key and returned data.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RequestDetails4.mmObject();
+			type_lazy = () -> RequestDetails4.mmObject();
+		}
+
+		@Override
+		public List<RequestDetails4> getValue(RequestDetails5 obj) {
+			return obj.getReportKey();
+		}
+
+		@Override
+		public void setValue(RequestDetails5 obj, List<RequestDetails4> value) {
+			obj.setReportKey(value);
 		}
 	};
 
@@ -243,7 +274,7 @@ public class RequestDetails5 {
 		return reportKey == null ? reportKey = new ArrayList<>() : reportKey;
 	}
 
-	public RequestDetails5 setReportKey(List<com.tools20022.repository.msg.RequestDetails4> reportKey) {
+	public RequestDetails5 setReportKey(List<RequestDetails4> reportKey) {
 		this.reportKey = Objects.requireNonNull(reportKey);
 		return this;
 	}

@@ -106,7 +106,7 @@ public class ShipmentDate1Choice {
 	 * definition} = "Proposed date on which the goods should be shipped."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProposedShipmentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ShipmentDate1Choice, ISODate> mmProposedShipmentDate = new MMMessageAttribute<ShipmentDate1Choice, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> ShipmentDateRange.mmShipmentDate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ShipmentDate1Choice.mmObject();
@@ -118,6 +118,16 @@ public class ShipmentDate1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(ShipmentDate1Choice obj) {
+			return obj.getProposedShipmentDate();
+		}
+
+		@Override
+		public void setValue(ShipmentDate1Choice obj, ISODate value) {
+			obj.setProposedShipmentDate(value);
 		}
 	};
 	@XmlElement(name = "ActlShipmntDt", required = true)
@@ -154,7 +164,7 @@ public class ShipmentDate1Choice {
 	 * definition} = "Actual date whereby the goods were shipped."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActualShipmentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ShipmentDate1Choice, ISODate> mmActualShipmentDate = new MMMessageAttribute<ShipmentDate1Choice, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> ShipmentDateRange.mmShipmentDate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ShipmentDate1Choice.mmObject();
@@ -166,6 +176,16 @@ public class ShipmentDate1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(ShipmentDate1Choice obj) {
+			return obj.getActualShipmentDate();
+		}
+
+		@Override
+		public void setValue(ShipmentDate1Choice obj, ISODate value) {
+			obj.setActualShipmentDate(value);
 		}
 	};
 

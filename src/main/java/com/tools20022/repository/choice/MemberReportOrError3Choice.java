@@ -129,7 +129,7 @@ public class MemberReportOrError3Choice {
 	 * MemberReportOrError1Choice.mmReport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MemberReportOrError3Choice, List<MemberReport4>> mmReport = new MMMessageAssociationEnd<MemberReportOrError3Choice, List<MemberReport4>>() {
 		{
 			businessComponentTrace_lazy = () -> SystemMemberRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.MemberReportOrError3Choice.mmObject();
@@ -142,6 +142,16 @@ public class MemberReportOrError3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> MemberReport4.mmObject();
+		}
+
+		@Override
+		public List<MemberReport4> getValue(MemberReportOrError3Choice obj) {
+			return obj.getReport();
+		}
+
+		@Override
+		public void setValue(MemberReportOrError3Choice obj, List<MemberReport4> value) {
+			obj.setReport(value);
 		}
 	};
 	@XmlElement(name = "OprlErr", required = true)
@@ -179,7 +189,7 @@ public class MemberReportOrError3Choice {
 	 * MemberReportOrError1Choice.mmOperationalError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MemberReportOrError3Choice, List<ErrorHandling3>> mmOperationalError = new MMMessageAssociationEnd<MemberReportOrError3Choice, List<ErrorHandling3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.MemberReportOrError3Choice.mmObject();
 			isDerived = false;
@@ -191,6 +201,16 @@ public class MemberReportOrError3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling3> getValue(MemberReportOrError3Choice obj) {
+			return obj.getOperationalError();
+		}
+
+		@Override
+		public void setValue(MemberReportOrError3Choice obj, List<ErrorHandling3> value) {
+			obj.setOperationalError(value);
 		}
 	};
 

@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Expiry;
 import com.tools20022.repository.entity.Undertaking;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AutoExtension1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -132,7 +133,7 @@ public class ExpiryTerms1 {
 	 * "Date and time when the undertaking will cease to be available."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExpiryTerms1, Optional<DateAndDateTimeChoice>> mmDateTime = new MMMessageAttribute<ExpiryTerms1, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Expiry.mmExpiryDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExpiryTerms1.mmObject();
@@ -144,6 +145,16 @@ public class ExpiryTerms1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(ExpiryTerms1 obj) {
+			return obj.getDateTime();
+		}
+
+		@Override
+		public void setValue(ExpiryTerms1 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AutoXtnsn")
@@ -179,7 +190,7 @@ public class ExpiryTerms1 {
 	 * "Details related to the automatic extension of the undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAutoExtension = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ExpiryTerms1, Optional<AutoExtension1>> mmAutoExtension = new MMMessageAssociationEnd<ExpiryTerms1, Optional<AutoExtension1>>() {
 		{
 			businessElementTrace_lazy = () -> Undertaking.mmUndertakingExtension;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExpiryTerms1.mmObject();
@@ -191,7 +202,17 @@ public class ExpiryTerms1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AutoExtension1.mmObject();
+			type_lazy = () -> AutoExtension1.mmObject();
+		}
+
+		@Override
+		public Optional<AutoExtension1> getValue(ExpiryTerms1 obj) {
+			return obj.getAutoExtension();
+		}
+
+		@Override
+		public void setValue(ExpiryTerms1 obj, Optional<AutoExtension1> value) {
+			obj.setAutoExtension(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Cond")
@@ -229,7 +250,7 @@ public class ExpiryTerms1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCondition = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExpiryTerms1, Optional<Max2000Text>> mmCondition = new MMMessageAttribute<ExpiryTerms1, Optional<Max2000Text>>() {
 		{
 			businessElementTrace_lazy = () -> Expiry.mmExpiryCondition;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExpiryTerms1.mmObject();
@@ -241,6 +262,16 @@ public class ExpiryTerms1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max2000Text> getValue(ExpiryTerms1 obj) {
+			return obj.getCondition();
+		}
+
+		@Override
+		public void setValue(ExpiryTerms1 obj, Optional<Max2000Text> value) {
+			obj.setCondition(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OpnEnddInd")
@@ -278,7 +309,7 @@ public class ExpiryTerms1 {
 	 * "Indicates whether the expiry terms are without a fixed expiry date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOpenEndedIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExpiryTerms1, Optional<YesNoIndicator>> mmOpenEndedIndicator = new MMMessageAttribute<ExpiryTerms1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> Expiry.mmOpenEndedIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExpiryTerms1.mmObject();
@@ -290,6 +321,16 @@ public class ExpiryTerms1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(ExpiryTerms1 obj) {
+			return obj.getOpenEndedIndicator();
+		}
+
+		@Override
+		public void setValue(ExpiryTerms1 obj, Optional<YesNoIndicator> value) {
+			obj.setOpenEndedIndicator(value.orElse(null));
 		}
 	};
 
@@ -324,7 +365,7 @@ public class ExpiryTerms1 {
 		return autoExtension == null ? Optional.empty() : Optional.of(autoExtension);
 	}
 
-	public ExpiryTerms1 setAutoExtension(com.tools20022.repository.msg.AutoExtension1 autoExtension) {
+	public ExpiryTerms1 setAutoExtension(AutoExtension1 autoExtension) {
 		this.autoExtension = autoExtension;
 		return this;
 	}

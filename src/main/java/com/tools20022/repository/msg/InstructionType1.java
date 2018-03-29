@@ -116,7 +116,7 @@ public class InstructionType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstructionType1, InstructionType1Code> mmType = new MMMessageAttribute<InstructionType1, InstructionType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstructionType1.mmObject();
 			isDerived = false;
@@ -127,6 +127,16 @@ public class InstructionType1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InstructionType1Code.mmObject();
+		}
+
+		@Override
+		public InstructionType1Code getValue(InstructionType1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(InstructionType1 obj, InstructionType1Code value) {
+			obj.setType(value);
 		}
 	};
 

@@ -21,8 +21,9 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.rATMCommand6Code;
+import com.tools20022.repository.codeset.ATMCommand6Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMCommandIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -72,7 +73,7 @@ public class ATMCommand12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "Tp", required = true)
-	protected rATMCommand6Code type;
+	protected ATMCommand6Code type;
 	/**
 	 * 
 	 <p>
@@ -81,8 +82,8 @@ public class ATMCommand12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageAttribute#getSimpleType
 	 * simpleType} =
-	 * {@linkplain com.tools20022.repository.codeset.rATMCommand6Code
-	 * rATMCommand6Code}</li>
+	 * {@linkplain com.tools20022.repository.codeset.ATMCommand6Code
+	 * ATMCommand6Code}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -105,7 +106,7 @@ public class ATMCommand12 {
 	 * ATMCommand3.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMCommand12, ATMCommand6Code> mmType = new MMMessageAttribute<ATMCommand12, ATMCommand6Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCommand12.mmObject();
 			isDerived = false;
@@ -116,7 +117,17 @@ public class ATMCommand12 {
 			previousVersion_lazy = () -> ATMCommand3.mmType;
 			maxOccurs = 1;
 			minOccurs = 1;
-			simpleType_lazy = () -> rATMCommand6Code.mmObject();
+			simpleType_lazy = () -> ATMCommand6Code.mmObject();
+		}
+
+		@Override
+		public ATMCommand6Code getValue(ATMCommand12 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(ATMCommand12 obj, ATMCommand6Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "CmdId")
@@ -152,7 +163,7 @@ public class ATMCommand12 {
 	 * ATMCommand3.mmCommandIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCommandIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMCommand12, Optional<ATMCommandIdentification1>> mmCommandIdentification = new MMMessageAssociationEnd<ATMCommand12, Optional<ATMCommandIdentification1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCommand12.mmObject();
 			isDerived = false;
@@ -164,7 +175,17 @@ public class ATMCommand12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMCommandIdentification1.mmObject();
+			type_lazy = () -> ATMCommandIdentification1.mmObject();
+		}
+
+		@Override
+		public Optional<ATMCommandIdentification1> getValue(ATMCommand12 obj) {
+			return obj.getCommandIdentification();
+		}
+
+		@Override
+		public void setValue(ATMCommand12 obj, Optional<ATMCommandIdentification1> value) {
+			obj.setCommandIdentification(value.orElse(null));
 		}
 	};
 
@@ -182,11 +203,11 @@ public class ATMCommand12 {
 		return mmObject_lazy.get();
 	}
 
-	public rATMCommand6Code getType() {
+	public ATMCommand6Code getType() {
 		return type;
 	}
 
-	public ATMCommand12 setType(rATMCommand6Code type) {
+	public ATMCommand12 setType(ATMCommand6Code type) {
 		this.type = Objects.requireNonNull(type);
 		return this;
 	}
@@ -195,7 +216,7 @@ public class ATMCommand12 {
 		return commandIdentification == null ? Optional.empty() : Optional.of(commandIdentification);
 	}
 
-	public ATMCommand12 setCommandIdentification(com.tools20022.repository.msg.ATMCommandIdentification1 commandIdentification) {
+	public ATMCommand12 setCommandIdentification(ATMCommandIdentification1 commandIdentification) {
 		this.commandIdentification = commandIdentification;
 		return this;
 	}

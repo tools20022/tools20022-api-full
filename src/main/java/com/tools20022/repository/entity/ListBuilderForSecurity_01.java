@@ -52,6 +52,10 @@ class ListBuilderForSecurity_01 {
 		list.add((T) FinancialInstrumentAttributes83.mmFinancialInstrumentIdentification);
 		list.add((T) ContractType5.mmProductIdentification);
 		list.add((T) TransactionDetails102.mmFinancialInstrumentIdentification);
+		list.add((T) Position1.mmProductIdentification);
+		list.add((T) FinancialInstrumentAttributes89.mmUnderlyingIdentification);
+		list.add((T) OtherInvestment1.mmDescription);
+		list.add((T) OptionEvent2.mmDescription);
 		list.add((T) FinancialInstrument60.mmIdentification);
 		list.add((T) FinancialInstrument64.mmIdentification);
 		list.add((T) FinancialInstrument63.mmIdentification);

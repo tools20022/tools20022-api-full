@@ -98,7 +98,7 @@ public class Percentage1 {
 	 * definition} = "Percentage of an amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Percentage1, PercentageRate> mmRate = new MMMessageAttribute<Percentage1, PercentageRate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Percentage1.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class Percentage1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(Percentage1 obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(Percentage1 obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "RltvTo", required = true)
@@ -140,7 +150,7 @@ public class Percentage1 {
 	 * definition} = "Indication of what the percentage is relative to."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRelativeTo = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Percentage1, ExternalRelativeTo1Code> mmRelativeTo = new MMMessageAttribute<Percentage1, ExternalRelativeTo1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Percentage1.mmObject();
 			isDerived = false;
@@ -151,6 +161,16 @@ public class Percentage1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalRelativeTo1Code.mmObject();
+		}
+
+		@Override
+		public ExternalRelativeTo1Code getValue(Percentage1 obj) {
+			return obj.getRelativeTo();
+		}
+
+		@Override
+		public void setValue(Percentage1 obj, ExternalRelativeTo1Code value) {
+			obj.setRelativeTo(value);
 		}
 	};
 

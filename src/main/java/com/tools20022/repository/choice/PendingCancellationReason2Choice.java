@@ -119,7 +119,7 @@ public class PendingCancellationReason2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingCancellationReason2Choice, PendingCancellationReason4Code> mmCode = new MMMessageAttribute<PendingCancellationReason2Choice, PendingCancellationReason4Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingCancellationReason2Choice.mmObject();
@@ -132,6 +132,16 @@ public class PendingCancellationReason2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PendingCancellationReason4Code.mmObject();
+		}
+
+		@Override
+		public PendingCancellationReason4Code getValue(PendingCancellationReason2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(PendingCancellationReason2Choice obj, PendingCancellationReason4Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -173,7 +183,7 @@ public class PendingCancellationReason2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PendingCancellationReason2Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<PendingCancellationReason2Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingCancellationReason2Choice.mmObject();
@@ -187,6 +197,16 @@ public class PendingCancellationReason2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(PendingCancellationReason2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(PendingCancellationReason2Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

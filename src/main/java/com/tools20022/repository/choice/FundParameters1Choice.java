@@ -101,7 +101,7 @@ public class FundParameters1Choice {
 	 * definition} = "Report parameters."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParameters = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FundParameters1Choice, FundParameters2> mmParameters = new MMMessageAssociationEnd<FundParameters1Choice, FundParameters2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.FundParameters1Choice.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class FundParameters1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FundParameters2.mmObject();
+		}
+
+		@Override
+		public FundParameters2 getValue(FundParameters1Choice obj) {
+			return obj.getParameters();
+		}
+
+		@Override
+		public void setValue(FundParameters1Choice obj, FundParameters2 value) {
+			obj.setParameters(value);
 		}
 	};
 	@XmlElement(name = "NoCrit", required = true)
@@ -147,7 +157,7 @@ public class FundParameters1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoCriteria = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundParameters1Choice, NoCriteria1Code> mmNoCriteria = new MMMessageAttribute<FundParameters1Choice, NoCriteria1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.FundParameters1Choice.mmObject();
 			isDerived = false;
@@ -158,6 +168,16 @@ public class FundParameters1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoCriteria1Code.mmObject();
+		}
+
+		@Override
+		public NoCriteria1Code getValue(FundParameters1Choice obj) {
+			return obj.getNoCriteria();
+		}
+
+		@Override
+		public void setValue(FundParameters1Choice obj, NoCriteria1Code value) {
+			obj.setNoCriteria(value);
 		}
 	};
 

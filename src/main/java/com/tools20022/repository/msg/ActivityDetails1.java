@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Activity1;
+import com.tools20022.repository.msg.BICIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -100,7 +102,7 @@ public class ActivityDetails1 {
 	 * definition} = "Date and time when the activity occurred."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ActivityDetails1, ISODateTime> mmDateTime = new MMMessageAttribute<ActivityDetails1, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ActivityDetails1.mmObject();
 			isDerived = false;
@@ -111,6 +113,16 @@ public class ActivityDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(ActivityDetails1 obj) {
+			return obj.getDateTime();
+		}
+
+		@Override
+		public void setValue(ActivityDetails1 obj, ISODateTime value) {
+			obj.setDateTime(value);
 		}
 	};
 	@XmlElement(name = "Actvty", required = true)
@@ -140,7 +152,7 @@ public class ActivityDetails1 {
 	 * definition} = "Description of the reported activities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmActivity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ActivityDetails1, Activity1> mmActivity = new MMMessageAssociationEnd<ActivityDetails1, Activity1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ActivityDetails1.mmObject();
 			isDerived = false;
@@ -151,7 +163,17 @@ public class ActivityDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Activity1.mmObject();
+			type_lazy = () -> Activity1.mmObject();
+		}
+
+		@Override
+		public Activity1 getValue(ActivityDetails1 obj) {
+			return obj.getActivity();
+		}
+
+		@Override
+		public void setValue(ActivityDetails1 obj, Activity1 value) {
+			obj.setActivity(value);
 		}
 	};
 	@XmlElement(name = "Initr", required = true)
@@ -182,7 +204,7 @@ public class ActivityDetails1 {
 	 * definition} = "Financial institution which initiated the activity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInitiator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ActivityDetails1, BICIdentification1> mmInitiator = new MMMessageAssociationEnd<ActivityDetails1, BICIdentification1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ActivityDetails1.mmObject();
 			isDerived = false;
@@ -193,7 +215,17 @@ public class ActivityDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
+			type_lazy = () -> BICIdentification1.mmObject();
+		}
+
+		@Override
+		public BICIdentification1 getValue(ActivityDetails1 obj) {
+			return obj.getInitiator();
+		}
+
+		@Override
+		public void setValue(ActivityDetails1 obj, BICIdentification1 value) {
+			obj.setInitiator(value);
 		}
 	};
 
@@ -223,7 +255,7 @@ public class ActivityDetails1 {
 		return activity;
 	}
 
-	public ActivityDetails1 setActivity(com.tools20022.repository.msg.Activity1 activity) {
+	public ActivityDetails1 setActivity(Activity1 activity) {
 		this.activity = Objects.requireNonNull(activity);
 		return this;
 	}
@@ -232,7 +264,7 @@ public class ActivityDetails1 {
 		return initiator;
 	}
 
-	public ActivityDetails1 setInitiator(com.tools20022.repository.msg.BICIdentification1 initiator) {
+	public ActivityDetails1 setInitiator(BICIdentification1 initiator) {
 		this.initiator = Objects.requireNonNull(initiator);
 		return this;
 	}

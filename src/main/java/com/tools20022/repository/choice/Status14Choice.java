@@ -133,7 +133,7 @@ public class Status14Choice {
 	 * Status12Choice.mmStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Status14Choice, AccountManagementStatus1Code> mmStatus = new MMMessageAttribute<Status14Choice, AccountManagementStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> AccountStatus.mmManagementStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status14Choice.mmObject();
@@ -147,6 +147,16 @@ public class Status14Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AccountManagementStatus1Code.mmObject();
+		}
+
+		@Override
+		public AccountManagementStatus1Code getValue(Status14Choice obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(Status14Choice obj, AccountManagementStatus1Code value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "Rjctd", required = true)
@@ -195,7 +205,7 @@ public class Status14Choice {
 	 * Status12Choice.mmRejected}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Status14Choice, List<RejectionReason16>> mmRejected = new MMMessageAssociationEnd<Status14Choice, List<RejectionReason16>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status14Choice.mmObject();
@@ -210,6 +220,16 @@ public class Status14Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RejectionReason16.mmObject();
+		}
+
+		@Override
+		public List<RejectionReason16> getValue(Status14Choice obj) {
+			return obj.getRejected();
+		}
+
+		@Override
+		public void setValue(Status14Choice obj, List<RejectionReason16> value) {
+			obj.setRejected(value);
 		}
 	};
 

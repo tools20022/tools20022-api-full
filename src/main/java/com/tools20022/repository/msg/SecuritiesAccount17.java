@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.AccountIdentification;
 import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification25;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -120,7 +121,7 @@ public class SecuritiesAccount17 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccount17, RestrictedFINXMax35Text> mmIdentification = new MMMessageAttribute<SecuritiesAccount17, RestrictedFINXMax35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount17.mmObject();
@@ -133,6 +134,16 @@ public class SecuritiesAccount17 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax35Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax35Text getValue(SecuritiesAccount17 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount17 obj, RestrictedFINXMax35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -173,7 +184,7 @@ public class SecuritiesAccount17 {
 	 * definition} = "Specifies the type of securities account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesAccount17, Optional<GenericIdentification25>> mmType = new MMMessageAssociationEnd<SecuritiesAccount17, Optional<GenericIdentification25>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesAccount.mmSecuritiesAccountType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount17.mmObject();
@@ -186,7 +197,17 @@ public class SecuritiesAccount17 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification25.mmObject();
+			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification25> getValue(SecuritiesAccount17 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount17 obj, Optional<GenericIdentification25> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Nm")
@@ -226,7 +247,7 @@ public class SecuritiesAccount17 {
 	 * definition} = "Description of the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccount17, Optional<Max70Text>> mmName = new MMMessageAttribute<SecuritiesAccount17, Optional<Max70Text>>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount17.mmObject();
@@ -239,6 +260,16 @@ public class SecuritiesAccount17 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(SecuritiesAccount17 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount17 obj, Optional<Max70Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 
@@ -270,7 +301,7 @@ public class SecuritiesAccount17 {
 		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public SecuritiesAccount17 setType(com.tools20022.repository.msg.GenericIdentification25 type) {
+	public SecuritiesAccount17 setType(GenericIdentification25 type) {
 		this.type = type;
 		return this;
 	}

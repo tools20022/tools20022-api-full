@@ -114,7 +114,7 @@ public class SecuritiesReferenceDeltaStatusReport2Choice {
 	 * "Specifies data that has been modified since the previous report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmModifiedRecord = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesReferenceDeltaStatusReport2Choice, SecuritiesReferenceDataReport5> mmModifiedRecord = new MMMessageAssociationEnd<SecuritiesReferenceDeltaStatusReport2Choice, SecuritiesReferenceDataReport5>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesReferenceDeltaStatusReport2Choice.mmObject();
 			isDerived = false;
@@ -126,6 +126,16 @@ public class SecuritiesReferenceDeltaStatusReport2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecuritiesReferenceDataReport5.mmObject();
+		}
+
+		@Override
+		public SecuritiesReferenceDataReport5 getValue(SecuritiesReferenceDeltaStatusReport2Choice obj) {
+			return obj.getModifiedRecord();
+		}
+
+		@Override
+		public void setValue(SecuritiesReferenceDeltaStatusReport2Choice obj, SecuritiesReferenceDataReport5 value) {
+			obj.setModifiedRecord(value);
 		}
 	};
 	@XmlElement(name = "NewRcrd", required = true)
@@ -159,7 +169,7 @@ public class SecuritiesReferenceDeltaStatusReport2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNewRecord = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesReferenceDeltaStatusReport2Choice, SecuritiesReferenceDataReport5> mmNewRecord = new MMMessageAssociationEnd<SecuritiesReferenceDeltaStatusReport2Choice, SecuritiesReferenceDataReport5>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesReferenceDeltaStatusReport2Choice.mmObject();
 			isDerived = false;
@@ -171,6 +181,16 @@ public class SecuritiesReferenceDeltaStatusReport2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecuritiesReferenceDataReport5.mmObject();
+		}
+
+		@Override
+		public SecuritiesReferenceDataReport5 getValue(SecuritiesReferenceDeltaStatusReport2Choice obj) {
+			return obj.getNewRecord();
+		}
+
+		@Override
+		public void setValue(SecuritiesReferenceDeltaStatusReport2Choice obj, SecuritiesReferenceDataReport5 value) {
+			obj.setNewRecord(value);
 		}
 	};
 	@XmlElement(name = "TermntdRcrd", required = true)
@@ -204,7 +224,7 @@ public class SecuritiesReferenceDeltaStatusReport2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTerminatedRecord = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesReferenceDeltaStatusReport2Choice, SecuritiesReferenceDataReport5> mmTerminatedRecord = new MMMessageAssociationEnd<SecuritiesReferenceDeltaStatusReport2Choice, SecuritiesReferenceDataReport5>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesReferenceDeltaStatusReport2Choice.mmObject();
 			isDerived = false;
@@ -216,6 +236,16 @@ public class SecuritiesReferenceDeltaStatusReport2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecuritiesReferenceDataReport5.mmObject();
+		}
+
+		@Override
+		public SecuritiesReferenceDataReport5 getValue(SecuritiesReferenceDeltaStatusReport2Choice obj) {
+			return obj.getTerminatedRecord();
+		}
+
+		@Override
+		public void setValue(SecuritiesReferenceDeltaStatusReport2Choice obj, SecuritiesReferenceDataReport5 value) {
+			obj.setTerminatedRecord(value);
 		}
 	};
 

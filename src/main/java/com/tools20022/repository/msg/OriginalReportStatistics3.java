@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max15NumericText;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.NumberOfRecordsPerStatus1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -103,7 +104,7 @@ public class OriginalReportStatistics3 {
 	 * definition} = "Total numbers of records included in the original file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalNumberOfRecords = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalReportStatistics3, Max15NumericText> mmTotalNumberOfRecords = new MMMessageAttribute<OriginalReportStatistics3, Max15NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalReportStatistics3.mmObject();
 			isDerived = false;
@@ -115,9 +116,19 @@ public class OriginalReportStatistics3 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
+
+		@Override
+		public Max15NumericText getValue(OriginalReportStatistics3 obj) {
+			return obj.getTotalNumberOfRecords();
+		}
+
+		@Override
+		public void setValue(OriginalReportStatistics3 obj, Max15NumericText value) {
+			obj.setTotalNumberOfRecords(value);
+		}
 	};
 	@XmlElement(name = "NbOfRcrdsPerSts", required = true)
-	protected List<com.tools20022.repository.msg.NumberOfRecordsPerStatus1> numberOfRecordsPerStatus;
+	protected List<NumberOfRecordsPerStatus1> numberOfRecordsPerStatus;
 	/**
 	 * 
 	 <p>
@@ -146,7 +157,7 @@ public class OriginalReportStatistics3 {
 	 * "Detailed information on the number of records for each records status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNumberOfRecordsPerStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OriginalReportStatistics3, List<NumberOfRecordsPerStatus1>> mmNumberOfRecordsPerStatus = new MMMessageAssociationEnd<OriginalReportStatistics3, List<NumberOfRecordsPerStatus1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalReportStatistics3.mmObject();
 			isDerived = false;
@@ -156,7 +167,17 @@ public class OriginalReportStatistics3 {
 			definition = "Detailed information on the number of records for each records status.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NumberOfRecordsPerStatus1.mmObject();
+			type_lazy = () -> NumberOfRecordsPerStatus1.mmObject();
+		}
+
+		@Override
+		public List<NumberOfRecordsPerStatus1> getValue(OriginalReportStatistics3 obj) {
+			return obj.getNumberOfRecordsPerStatus();
+		}
+
+		@Override
+		public void setValue(OriginalReportStatistics3 obj, List<NumberOfRecordsPerStatus1> value) {
+			obj.setNumberOfRecordsPerStatus(value);
 		}
 	};
 
@@ -186,7 +207,7 @@ public class OriginalReportStatistics3 {
 		return numberOfRecordsPerStatus == null ? numberOfRecordsPerStatus = new ArrayList<>() : numberOfRecordsPerStatus;
 	}
 
-	public OriginalReportStatistics3 setNumberOfRecordsPerStatus(List<com.tools20022.repository.msg.NumberOfRecordsPerStatus1> numberOfRecordsPerStatus) {
+	public OriginalReportStatistics3 setNumberOfRecordsPerStatus(List<NumberOfRecordsPerStatus1> numberOfRecordsPerStatus) {
 		this.numberOfRecordsPerStatus = Objects.requireNonNull(numberOfRecordsPerStatus);
 		return this;
 	}

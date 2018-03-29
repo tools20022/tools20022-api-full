@@ -190,7 +190,7 @@ public class DateAndAmountSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateAndAmountSD1, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<DateAndAmountSD1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
@@ -201,6 +201,16 @@ public class DateAndAmountSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(DateAndAmountSD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(DateAndAmountSD1 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FrstSttlmDtOfDfrrdTrds")
@@ -233,7 +243,7 @@ public class DateAndAmountSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFirstSettlementDateOfDeferredTrades = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>> mmFirstSettlementDateOfDeferredTrades = new MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
@@ -245,6 +255,16 @@ public class DateAndAmountSD1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat22Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat22Choice> getValue(DateAndAmountSD1 obj) {
+			return obj.getFirstSettlementDateOfDeferredTrades();
+		}
+
+		@Override
+		public void setValue(DateAndAmountSD1 obj, Optional<DateFormat22Choice> value) {
+			obj.setFirstSettlementDateOfDeferredTrades(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TpOfPmtDt")
@@ -278,7 +298,7 @@ public class DateAndAmountSD1 {
 	 * "Specifies whether the payment date is estimated or actual."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTypeOfPaymentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfDate1Code>> mmTypeOfPaymentDate = new MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfDate1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
@@ -289,6 +309,16 @@ public class DateAndAmountSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TypeOfDate1Code.mmObject();
+		}
+
+		@Override
+		public Optional<TypeOfDate1Code> getValue(DateAndAmountSD1 obj) {
+			return obj.getTypeOfPaymentDate();
+		}
+
+		@Override
+		public void setValue(DateAndAmountSD1 obj, Optional<TypeOfDate1Code> value) {
+			obj.setTypeOfPaymentDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EqvtLclAmtAnncmntDt")
@@ -321,7 +351,7 @@ public class DateAndAmountSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEquivalentLocalAmountAnnouncementDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>> mmEquivalentLocalAmountAnnouncementDate = new MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
@@ -333,6 +363,16 @@ public class DateAndAmountSD1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat22Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat22Choice> getValue(DateAndAmountSD1 obj) {
+			return obj.getEquivalentLocalAmountAnnouncementDate();
+		}
+
+		@Override
+		public void setValue(DateAndAmountSD1 obj, Optional<DateFormat22Choice> value) {
+			obj.setEquivalentLocalAmountAnnouncementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TpOfEqvtLclAmtAnncmntDt")
@@ -367,7 +407,7 @@ public class DateAndAmountSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTypeOfEquivalentLocalAmountAnnouncementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfAmount4Code>> mmTypeOfEquivalentLocalAmountAnnouncementDate = new MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfAmount4Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
@@ -378,6 +418,16 @@ public class DateAndAmountSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TypeOfAmount4Code.mmObject();
+		}
+
+		@Override
+		public Optional<TypeOfAmount4Code> getValue(DateAndAmountSD1 obj) {
+			return obj.getTypeOfEquivalentLocalAmountAnnouncementDate();
+		}
+
+		@Override
+		public void setValue(DateAndAmountSD1 obj, Optional<TypeOfAmount4Code> value) {
+			obj.setTypeOfEquivalentLocalAmountAnnouncementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EqvtFrgnAmtAnncmntDt")
@@ -410,7 +460,7 @@ public class DateAndAmountSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEquivalentForeignAmountAnnouncementDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>> mmEquivalentForeignAmountAnnouncementDate = new MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
@@ -422,6 +472,16 @@ public class DateAndAmountSD1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat22Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat22Choice> getValue(DateAndAmountSD1 obj) {
+			return obj.getEquivalentForeignAmountAnnouncementDate();
+		}
+
+		@Override
+		public void setValue(DateAndAmountSD1 obj, Optional<DateFormat22Choice> value) {
+			obj.setEquivalentForeignAmountAnnouncementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TpOfEqvtFrgnAmtAnncmntDt")
@@ -456,7 +516,7 @@ public class DateAndAmountSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTypeOfEquivalentForeignAmountAnnouncementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfAmount4Code>> mmTypeOfEquivalentForeignAmountAnnouncementDate = new MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfAmount4Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
@@ -467,6 +527,16 @@ public class DateAndAmountSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TypeOfAmount4Code.mmObject();
+		}
+
+		@Override
+		public Optional<TypeOfAmount4Code> getValue(DateAndAmountSD1 obj) {
+			return obj.getTypeOfEquivalentForeignAmountAnnouncementDate();
+		}
+
+		@Override
+		public void setValue(DateAndAmountSD1 obj, Optional<TypeOfAmount4Code> value) {
+			obj.setTypeOfEquivalentForeignAmountAnnouncementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TpOfIsseDt")
@@ -500,7 +570,7 @@ public class DateAndAmountSD1 {
 	 * "Specifies whether the securities issue date is estimated or actual."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTypeOfIssueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfDate1Code>> mmTypeOfIssueDate = new MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfDate1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
@@ -511,6 +581,16 @@ public class DateAndAmountSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TypeOfDate1Code.mmObject();
+		}
+
+		@Override
+		public Optional<TypeOfDate1Code> getValue(DateAndAmountSD1 obj) {
+			return obj.getTypeOfIssueDate();
+		}
+
+		@Override
+		public void setValue(DateAndAmountSD1 obj, Optional<TypeOfDate1Code> value) {
+			obj.setTypeOfIssueDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrpssFrIsseDtInd")
@@ -545,7 +625,7 @@ public class DateAndAmountSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPariPassuFromIssueDateIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateAndAmountSD1, Optional<TrueFalseIndicator>> mmPariPassuFromIssueDateIndicator = new MMMessageAttribute<DateAndAmountSD1, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
@@ -556,6 +636,16 @@ public class DateAndAmountSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(DateAndAmountSD1 obj) {
+			return obj.getPariPassuFromIssueDateIndicator();
+		}
+
+		@Override
+		public void setValue(DateAndAmountSD1 obj, Optional<TrueFalseIndicator> value) {
+			obj.setPariPassuFromIssueDateIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LdgmntOfSctyHldrRsltnDt")
@@ -588,7 +678,7 @@ public class DateAndAmountSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLodgementOfSecurityHolderResolutionDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>> mmLodgementOfSecurityHolderResolutionDate = new MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
@@ -600,6 +690,16 @@ public class DateAndAmountSD1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat22Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat22Choice> getValue(DateAndAmountSD1 obj) {
+			return obj.getLodgementOfSecurityHolderResolutionDate();
+		}
+
+		@Override
+		public void setValue(DateAndAmountSD1 obj, Optional<DateFormat22Choice> value) {
+			obj.setLodgementOfSecurityHolderResolutionDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TpOfLdgmntOfSctyHldrRsltnDt")
@@ -634,7 +734,7 @@ public class DateAndAmountSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTypeOfLodgementOfSecurityHolderResolutionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfDate1Code>> mmTypeOfLodgementOfSecurityHolderResolutionDate = new MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfDate1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
@@ -645,6 +745,16 @@ public class DateAndAmountSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TypeOfDate1Code.mmObject();
+		}
+
+		@Override
+		public Optional<TypeOfDate1Code> getValue(DateAndAmountSD1 obj) {
+			return obj.getTypeOfLodgementOfSecurityHolderResolutionDate();
+		}
+
+		@Override
+		public void setValue(DateAndAmountSD1 obj, Optional<TypeOfDate1Code> value) {
+			obj.setTypeOfLodgementOfSecurityHolderResolutionDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SelctvRtrOfCptlInd")
@@ -679,7 +789,7 @@ public class DateAndAmountSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSelectiveReturnOfCapitalIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateAndAmountSD1, Optional<TrueFalseIndicator>> mmSelectiveReturnOfCapitalIndicator = new MMMessageAttribute<DateAndAmountSD1, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
@@ -690,6 +800,16 @@ public class DateAndAmountSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(DateAndAmountSD1 obj) {
+			return obj.getSelectiveReturnOfCapitalIndicator();
+		}
+
+		@Override
+		public void setValue(DateAndAmountSD1 obj, Optional<TrueFalseIndicator> value) {
+			obj.setSelectiveReturnOfCapitalIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SpclAmtPerSctyAnncmntDt")
@@ -722,7 +842,7 @@ public class DateAndAmountSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSpecialAmountPerSecurityAnnouncementDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>> mmSpecialAmountPerSecurityAnnouncementDate = new MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
@@ -734,6 +854,16 @@ public class DateAndAmountSD1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat22Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat22Choice> getValue(DateAndAmountSD1 obj) {
+			return obj.getSpecialAmountPerSecurityAnnouncementDate();
+		}
+
+		@Override
+		public void setValue(DateAndAmountSD1 obj, Optional<DateFormat22Choice> value) {
+			obj.setSpecialAmountPerSecurityAnnouncementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TpOfSpclAmtPerSctyAnncmntDt")
@@ -768,7 +898,7 @@ public class DateAndAmountSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTypeOfSpecialAmountPerSecurityAnnouncementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfDateCode>> mmTypeOfSpecialAmountPerSecurityAnnouncementDate = new MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfDateCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
@@ -779,6 +909,16 @@ public class DateAndAmountSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TypeOfDateCode.mmObject();
+		}
+
+		@Override
+		public Optional<TypeOfDateCode> getValue(DateAndAmountSD1 obj) {
+			return obj.getTypeOfSpecialAmountPerSecurityAnnouncementDate();
+		}
+
+		@Override
+		public void setValue(DateAndAmountSD1 obj, Optional<TypeOfDateCode> value) {
+			obj.setTypeOfSpecialAmountPerSecurityAnnouncementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ScripAmtPerSctyAnncmntDt")
@@ -811,7 +951,7 @@ public class DateAndAmountSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmScripAmountPerSecurityAnnouncementDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>> mmScripAmountPerSecurityAnnouncementDate = new MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
@@ -823,6 +963,16 @@ public class DateAndAmountSD1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat22Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat22Choice> getValue(DateAndAmountSD1 obj) {
+			return obj.getScripAmountPerSecurityAnnouncementDate();
+		}
+
+		@Override
+		public void setValue(DateAndAmountSD1 obj, Optional<DateFormat22Choice> value) {
+			obj.setScripAmountPerSecurityAnnouncementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TpOfScripAmtPerSctyAnncmntDt")
@@ -857,7 +1007,7 @@ public class DateAndAmountSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTypeOfScripAmountPerSecurityAnnouncementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfDateCode>> mmTypeOfScripAmountPerSecurityAnnouncementDate = new MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfDateCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
@@ -868,6 +1018,16 @@ public class DateAndAmountSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TypeOfDateCode.mmObject();
+		}
+
+		@Override
+		public Optional<TypeOfDateCode> getValue(DateAndAmountSD1 obj) {
+			return obj.getTypeOfScripAmountPerSecurityAnnouncementDate();
+		}
+
+		@Override
+		public void setValue(DateAndAmountSD1 obj, Optional<TypeOfDateCode> value) {
+			obj.setTypeOfScripAmountPerSecurityAnnouncementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryAmtPerSctyAnncmntDt")
@@ -900,7 +1060,7 @@ public class DateAndAmountSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSupplementaryAmountPerSecurityAnnouncementDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>> mmSupplementaryAmountPerSecurityAnnouncementDate = new MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
@@ -912,6 +1072,16 @@ public class DateAndAmountSD1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat22Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat22Choice> getValue(DateAndAmountSD1 obj) {
+			return obj.getSupplementaryAmountPerSecurityAnnouncementDate();
+		}
+
+		@Override
+		public void setValue(DateAndAmountSD1 obj, Optional<DateFormat22Choice> value) {
+			obj.setSupplementaryAmountPerSecurityAnnouncementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TpOfSplmtryAmtPerSctyAnncmntDt")
@@ -946,7 +1116,7 @@ public class DateAndAmountSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTypeOfSupplementaryAmountPerSecurityAnnouncementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfDateCode>> mmTypeOfSupplementaryAmountPerSecurityAnnouncementDate = new MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfDateCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
@@ -957,6 +1127,16 @@ public class DateAndAmountSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TypeOfDateCode.mmObject();
+		}
+
+		@Override
+		public Optional<TypeOfDateCode> getValue(DateAndAmountSD1 obj) {
+			return obj.getTypeOfSupplementaryAmountPerSecurityAnnouncementDate();
+		}
+
+		@Override
+		public void setValue(DateAndAmountSD1 obj, Optional<TypeOfDateCode> value) {
+			obj.setTypeOfSupplementaryAmountPerSecurityAnnouncementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AmtPerSctyAnncmntDt")
@@ -989,7 +1169,7 @@ public class DateAndAmountSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountPerSecurityAnnouncementDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>> mmAmountPerSecurityAnnouncementDate = new MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
@@ -1001,6 +1181,16 @@ public class DateAndAmountSD1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat22Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat22Choice> getValue(DateAndAmountSD1 obj) {
+			return obj.getAmountPerSecurityAnnouncementDate();
+		}
+
+		@Override
+		public void setValue(DateAndAmountSD1 obj, Optional<DateFormat22Choice> value) {
+			obj.setAmountPerSecurityAnnouncementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TpOfAmtPerSctyAnncmntDt")
@@ -1035,7 +1225,7 @@ public class DateAndAmountSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTypeOfAmountPerSecurityAnnouncementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfDateCode>> mmTypeOfAmountPerSecurityAnnouncementDate = new MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfDateCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
@@ -1046,6 +1236,16 @@ public class DateAndAmountSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TypeOfDateCode.mmObject();
+		}
+
+		@Override
+		public Optional<TypeOfDateCode> getValue(DateAndAmountSD1 obj) {
+			return obj.getTypeOfAmountPerSecurityAnnouncementDate();
+		}
+
+		@Override
+		public void setValue(DateAndAmountSD1 obj, Optional<TypeOfDateCode> value) {
+			obj.setTypeOfAmountPerSecurityAnnouncementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TpOfGrssDvddRate")
@@ -1079,7 +1279,7 @@ public class DateAndAmountSD1 {
 	 * "Specifies whether the Gross Dividend Rate is estimated or actual."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTypeOfGrossDividendRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfAmount4Code>> mmTypeOfGrossDividendRate = new MMMessageAttribute<DateAndAmountSD1, Optional<TypeOfAmount4Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
@@ -1090,6 +1290,16 @@ public class DateAndAmountSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TypeOfAmount4Code.mmObject();
+		}
+
+		@Override
+		public Optional<TypeOfAmount4Code> getValue(DateAndAmountSD1 obj) {
+			return obj.getTypeOfGrossDividendRate();
+		}
+
+		@Override
+		public void setValue(DateAndAmountSD1 obj, Optional<TypeOfAmount4Code> value) {
+			obj.setTypeOfGrossDividendRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EndDtOfDvddPrd")
@@ -1122,7 +1332,7 @@ public class DateAndAmountSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEndDateOfDividendPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>> mmEndDateOfDividendPeriod = new MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
@@ -1134,6 +1344,16 @@ public class DateAndAmountSD1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat22Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat22Choice> getValue(DateAndAmountSD1 obj) {
+			return obj.getEndDateOfDividendPeriod();
+		}
+
+		@Override
+		public void setValue(DateAndAmountSD1 obj, Optional<DateFormat22Choice> value) {
+			obj.setEndDateOfDividendPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LastTradgDayForOrgnlScties")
@@ -1164,7 +1384,7 @@ public class DateAndAmountSD1 {
 	 * definition} = "Last day for trading in pre-reorganisation securities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLastTradingDayForOriginalSecurities = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>> mmLastTradingDayForOriginalSecurities = new MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
@@ -1176,6 +1396,16 @@ public class DateAndAmountSD1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat22Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat22Choice> getValue(DateAndAmountSD1 obj) {
+			return obj.getLastTradingDayForOriginalSecurities();
+		}
+
+		@Override
+		public void setValue(DateAndAmountSD1 obj, Optional<DateFormat22Choice> value) {
+			obj.setLastTradingDayForOriginalSecurities(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EarlstPstCnsldtnNtfctnDt")
@@ -1208,7 +1438,7 @@ public class DateAndAmountSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEarliestPostConsolidationNotificationDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>> mmEarliestPostConsolidationNotificationDate = new MMMessageAssociationEnd<DateAndAmountSD1, Optional<DateFormat22Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
@@ -1220,6 +1450,16 @@ public class DateAndAmountSD1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat22Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat22Choice> getValue(DateAndAmountSD1 obj) {
+			return obj.getEarliestPostConsolidationNotificationDate();
+		}
+
+		@Override
+		public void setValue(DateAndAmountSD1 obj, Optional<DateFormat22Choice> value) {
+			obj.setEarliestPostConsolidationNotificationDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinAmtForPrtcptn")
@@ -1254,7 +1494,7 @@ public class DateAndAmountSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumAmountForParticipation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateAndAmountSD1, Optional<ActiveCurrencyAnd13DecimalAmount>> mmMinimumAmountForParticipation = new MMMessageAttribute<DateAndAmountSD1, Optional<ActiveCurrencyAnd13DecimalAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
@@ -1265,6 +1505,16 @@ public class DateAndAmountSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAnd13DecimalAmount> getValue(DateAndAmountSD1 obj) {
+			return obj.getMinimumAmountForParticipation();
+		}
+
+		@Override
+		public void setValue(DateAndAmountSD1 obj, Optional<ActiveCurrencyAnd13DecimalAmount> value) {
+			obj.setMinimumAmountForParticipation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MaxAmtForPrtcptn")
@@ -1299,7 +1549,7 @@ public class DateAndAmountSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumAmountForParticipation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateAndAmountSD1, Optional<ActiveCurrencyAnd13DecimalAmount>> mmMaximumAmountForParticipation = new MMMessageAttribute<DateAndAmountSD1, Optional<ActiveCurrencyAnd13DecimalAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
@@ -1310,6 +1560,16 @@ public class DateAndAmountSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAnd13DecimalAmount> getValue(DateAndAmountSD1 obj) {
+			return obj.getMaximumAmountForParticipation();
+		}
+
+		@Override
+		public void setValue(DateAndAmountSD1 obj, Optional<ActiveCurrencyAnd13DecimalAmount> value) {
+			obj.setMaximumAmountForParticipation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RinvstmtDscntRate")
@@ -1342,7 +1602,7 @@ public class DateAndAmountSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReinvestmentDiscountRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DateAndAmountSD1, Optional<RateFormat6Choice>> mmReinvestmentDiscountRate = new MMMessageAssociationEnd<DateAndAmountSD1, Optional<RateFormat6Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
@@ -1354,6 +1614,16 @@ public class DateAndAmountSD1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> RateFormat6Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateFormat6Choice> getValue(DateAndAmountSD1 obj) {
+			return obj.getReinvestmentDiscountRate();
+		}
+
+		@Override
+		public void setValue(DateAndAmountSD1 obj, Optional<RateFormat6Choice> value) {
+			obj.setReinvestmentDiscountRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RinvstmtPlanTp")
@@ -1386,7 +1656,7 @@ public class DateAndAmountSD1 {
 	 * definition} = "Indicates for whom this reinvestment plan applies."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReinvestmentPlanType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateAndAmountSD1, Optional<ReinvestmentPlan1Code>> mmReinvestmentPlanType = new MMMessageAttribute<DateAndAmountSD1, Optional<ReinvestmentPlan1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmountSD1.mmObject();
 			isDerived = false;
@@ -1397,6 +1667,16 @@ public class DateAndAmountSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ReinvestmentPlan1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ReinvestmentPlan1Code> getValue(DateAndAmountSD1 obj) {
+			return obj.getReinvestmentPlanType();
+		}
+
+		@Override
+		public void setValue(DateAndAmountSD1 obj, Optional<ReinvestmentPlan1Code> value) {
+			obj.setReinvestmentPlanType(value.orElse(null));
 		}
 	};
 

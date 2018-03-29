@@ -126,7 +126,7 @@ public class TransactionTotals7 {
 	 * TransactionTotals3.mmPOIGroupIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPOIGroupIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTotals7, Optional<Max35Text>> mmPOIGroupIdentification = new MMMessageAttribute<TransactionTotals7, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals7.mmObject();
 			isDerived = false;
@@ -138,6 +138,16 @@ public class TransactionTotals7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransactionTotals7 obj) {
+			return obj.getPOIGroupIdentification();
+		}
+
+		@Override
+		public void setValue(TransactionTotals7 obj, Optional<Max35Text> value) {
+			obj.setPOIGroupIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CardPdctPrfl")
@@ -176,7 +186,7 @@ public class TransactionTotals7 {
 	 * TransactionTotals3.mmCardProductProfile}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCardProductProfile = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTotals7, Optional<Max35Text>> mmCardProductProfile = new MMMessageAttribute<TransactionTotals7, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals7.mmObject();
 			isDerived = false;
@@ -188,6 +198,16 @@ public class TransactionTotals7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransactionTotals7 obj) {
+			return obj.getCardProductProfile();
+		}
+
+		@Override
+		public void setValue(TransactionTotals7 obj, Optional<Max35Text> value) {
+			obj.setCardProductProfile(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ccy")
@@ -230,7 +250,7 @@ public class TransactionTotals7 {
 	 * TransactionTotals3.mmCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTotals7, Optional<ActiveCurrencyCode>> mmCurrency = new MMMessageAttribute<TransactionTotals7, Optional<ActiveCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> ReconciliationTransaction.mmCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals7.mmObject();
@@ -243,6 +263,16 @@ public class TransactionTotals7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyCode> getValue(TransactionTotals7 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(TransactionTotals7 obj, Optional<ActiveCurrencyCode> value) {
+			obj.setCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -285,7 +315,7 @@ public class TransactionTotals7 {
 	 * TransactionTotals3.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTotals7, TypeTransactionTotals2Code> mmType = new MMMessageAttribute<TransactionTotals7, TypeTransactionTotals2Code>() {
 		{
 			businessElementTrace_lazy = () -> ReconciliationTransaction.mmTransactionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals7.mmObject();
@@ -298,6 +328,16 @@ public class TransactionTotals7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TypeTransactionTotals2Code.mmObject();
+		}
+
+		@Override
+		public TypeTransactionTotals2Code getValue(TransactionTotals7 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(TransactionTotals7 obj, TypeTransactionTotals2Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "TtlNb", required = true)
@@ -335,7 +375,7 @@ public class TransactionTotals7 {
 	 * TransactionTotals3.mmTotalNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTotals7, Number> mmTotalNumber = new MMMessageAttribute<TransactionTotals7, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals7.mmObject();
 			isDerived = false;
@@ -347,6 +387,16 @@ public class TransactionTotals7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(TransactionTotals7 obj) {
+			return obj.getTotalNumber();
+		}
+
+		@Override
+		public void setValue(TransactionTotals7 obj, Number value) {
+			obj.setTotalNumber(value);
 		}
 	};
 	@XmlElement(name = "CmltvAmt", required = true)
@@ -389,7 +439,7 @@ public class TransactionTotals7 {
 	 * TransactionTotals3.mmCumulativeAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCumulativeAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTotals7, ImpliedCurrencyAndAmount> mmCumulativeAmount = new MMMessageAttribute<TransactionTotals7, ImpliedCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> ReconciliationTransaction.mmCumulativeAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals7.mmObject();
@@ -402,6 +452,16 @@ public class TransactionTotals7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(TransactionTotals7 obj) {
+			return obj.getCumulativeAmount();
+		}
+
+		@Override
+		public void setValue(TransactionTotals7 obj, ImpliedCurrencyAndAmount value) {
+			obj.setCumulativeAmount(value);
 		}
 	};
 

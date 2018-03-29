@@ -64,7 +64,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "AcquirerHostConfiguration5"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -119,7 +119,7 @@ public class AcquirerHostConfiguration5 {
 	 * AcquirerHostConfiguration4.mmHostIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHostIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcquirerHostConfiguration5, Max35Text> mmHostIdentification = new MMMessageAttribute<AcquirerHostConfiguration5, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> System.mmSystemIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerHostConfiguration5.mmObject();
@@ -132,6 +132,16 @@ public class AcquirerHostConfiguration5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AcquirerHostConfiguration5 obj) {
+			return obj.getHostIdentification();
+		}
+
+		@Override
+		public void setValue(AcquirerHostConfiguration5 obj, Max35Text value) {
+			obj.setHostIdentification(value);
 		}
 	};
 	@XmlElement(name = "MsgToSnd")
@@ -169,7 +179,7 @@ public class AcquirerHostConfiguration5 {
 	 * AcquirerHostConfiguration4.mmMessageToSend}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageToSend = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcquirerHostConfiguration5, List<MessageFunction15Code>> mmMessageToSend = new MMMessageAttribute<AcquirerHostConfiguration5, List<MessageFunction15Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerHostConfiguration5.mmObject();
 			isDerived = false;
@@ -181,6 +191,16 @@ public class AcquirerHostConfiguration5 {
 			minOccurs = 0;
 			simpleType_lazy = () -> MessageFunction15Code.mmObject();
 		}
+
+		@Override
+		public List<MessageFunction15Code> getValue(AcquirerHostConfiguration5 obj) {
+			return obj.getMessageToSend();
+		}
+
+		@Override
+		public void setValue(AcquirerHostConfiguration5 obj, List<MessageFunction15Code> value) {
+			obj.setMessageToSend(value);
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -189,7 +209,7 @@ public class AcquirerHostConfiguration5 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerHostConfiguration5.mmHostIdentification, com.tools20022.repository.msg.AcquirerHostConfiguration5.mmMessageToSend);
 				trace_lazy = () -> TerminalManagementSystem.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcquirerHostConfiguration5";
 				definition = "Acquirer configuration parameters for a host.";
 				previousVersion_lazy = () -> AcquirerHostConfiguration4.mmObject();

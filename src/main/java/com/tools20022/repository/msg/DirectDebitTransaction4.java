@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.DirectDebit;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.MandateRelatedInformation4;
+import com.tools20022.repository.msg.PartyIdentification11;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -110,7 +112,7 @@ public class DirectDebitTransaction4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMandateRelatedInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DirectDebitTransaction4, MandateRelatedInformation4> mmMandateRelatedInformation = new MMMessageAssociationEnd<DirectDebitTransaction4, MandateRelatedInformation4>() {
 		{
 			businessElementTrace_lazy = () -> DirectDebit.mmDirectDebitMandate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectDebitTransaction4.mmObject();
@@ -122,7 +124,17 @@ public class DirectDebitTransaction4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MandateRelatedInformation4.mmObject();
+			type_lazy = () -> MandateRelatedInformation4.mmObject();
+		}
+
+		@Override
+		public MandateRelatedInformation4 getValue(DirectDebitTransaction4 obj) {
+			return obj.getMandateRelatedInformation();
+		}
+
+		@Override
+		public void setValue(DirectDebitTransaction4 obj, MandateRelatedInformation4 value) {
+			obj.setMandateRelatedInformation(value);
 		}
 	};
 	@XmlElement(name = "CdtrSchmeId", required = true)
@@ -158,7 +170,7 @@ public class DirectDebitTransaction4 {
 	 * definition} = "Credit party that signs the direct debit mandate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditorSchemeIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DirectDebitTransaction4, PartyIdentification11> mmCreditorSchemeIdentification = new MMMessageAssociationEnd<DirectDebitTransaction4, PartyIdentification11>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectDebitTransaction4.mmObject();
@@ -170,7 +182,17 @@ public class DirectDebitTransaction4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification11.mmObject();
+			type_lazy = () -> PartyIdentification11.mmObject();
+		}
+
+		@Override
+		public PartyIdentification11 getValue(DirectDebitTransaction4 obj) {
+			return obj.getCreditorSchemeIdentification();
+		}
+
+		@Override
+		public void setValue(DirectDebitTransaction4 obj, PartyIdentification11 value) {
+			obj.setCreditorSchemeIdentification(value);
 		}
 	};
 
@@ -192,7 +214,7 @@ public class DirectDebitTransaction4 {
 		return mandateRelatedInformation;
 	}
 
-	public DirectDebitTransaction4 setMandateRelatedInformation(com.tools20022.repository.msg.MandateRelatedInformation4 mandateRelatedInformation) {
+	public DirectDebitTransaction4 setMandateRelatedInformation(MandateRelatedInformation4 mandateRelatedInformation) {
 		this.mandateRelatedInformation = Objects.requireNonNull(mandateRelatedInformation);
 		return this;
 	}
@@ -201,7 +223,7 @@ public class DirectDebitTransaction4 {
 		return creditorSchemeIdentification;
 	}
 
-	public DirectDebitTransaction4 setCreditorSchemeIdentification(com.tools20022.repository.msg.PartyIdentification11 creditorSchemeIdentification) {
+	public DirectDebitTransaction4 setCreditorSchemeIdentification(PartyIdentification11 creditorSchemeIdentification) {
 		this.creditorSchemeIdentification = Objects.requireNonNull(creditorSchemeIdentification);
 		return this;
 	}

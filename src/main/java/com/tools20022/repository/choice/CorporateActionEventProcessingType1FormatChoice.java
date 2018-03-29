@@ -107,7 +107,7 @@ public class CorporateActionEventProcessingType1FormatChoice {
 	 * definition} = "Standard code to specify the type of event processing."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionEventProcessingType1FormatChoice, CorporateActionEventProcessingType1Code> mmCode = new MMMessageAttribute<CorporateActionEventProcessingType1FormatChoice, CorporateActionEventProcessingType1Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmEventProcessingType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionEventProcessingType1FormatChoice.mmObject();
@@ -119,6 +119,16 @@ public class CorporateActionEventProcessingType1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionEventProcessingType1Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionEventProcessingType1Code getValue(CorporateActionEventProcessingType1FormatChoice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventProcessingType1FormatChoice obj, CorporateActionEventProcessingType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -157,7 +167,7 @@ public class CorporateActionEventProcessingType1FormatChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionEventProcessingType1FormatChoice, GenericIdentification13> mmProprietary = new MMMessageAttribute<CorporateActionEventProcessingType1FormatChoice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmEventProcessingType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionEventProcessingType1FormatChoice.mmObject();
@@ -169,6 +179,16 @@ public class CorporateActionEventProcessingType1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(CorporateActionEventProcessingType1FormatChoice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventProcessingType1FormatChoice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

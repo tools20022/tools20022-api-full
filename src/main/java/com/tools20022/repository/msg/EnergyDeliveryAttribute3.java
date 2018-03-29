@@ -28,6 +28,7 @@ import com.tools20022.repository.codeset.WeekDay1Code;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.ISOTime;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Period10;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -117,7 +118,7 @@ public class EnergyDeliveryAttribute3 {
 	 * definition} = "Time interval for each block or shape."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeliveryInterval = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EnergyDeliveryAttribute3, Optional<ISOTime>> mmDeliveryInterval = new MMMessageAttribute<EnergyDeliveryAttribute3, Optional<ISOTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EnergyDeliveryAttribute3.mmObject();
 			isDerived = false;
@@ -128,6 +129,16 @@ public class EnergyDeliveryAttribute3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISOTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISOTime> getValue(EnergyDeliveryAttribute3 obj) {
+			return obj.getDeliveryInterval();
+		}
+
+		@Override
+		public void setValue(EnergyDeliveryAttribute3 obj, Optional<ISOTime> value) {
+			obj.setDeliveryInterval(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DlvryPrd")
@@ -157,7 +168,7 @@ public class EnergyDeliveryAttribute3 {
 	 * definition} = "Definition of delivery start datetime and end datetime."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDeliveryPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EnergyDeliveryAttribute3, Optional<Period10>> mmDeliveryPeriod = new MMMessageAssociationEnd<EnergyDeliveryAttribute3, Optional<Period10>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EnergyDeliveryAttribute3.mmObject();
 			isDerived = false;
@@ -168,7 +179,17 @@ public class EnergyDeliveryAttribute3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Period10.mmObject();
+			type_lazy = () -> Period10.mmObject();
+		}
+
+		@Override
+		public Optional<Period10> getValue(EnergyDeliveryAttribute3 obj) {
+			return obj.getDeliveryPeriod();
+		}
+
+		@Override
+		public void setValue(EnergyDeliveryAttribute3 obj, Optional<Period10> value) {
+			obj.setDeliveryPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Drtn")
@@ -201,7 +222,7 @@ public class EnergyDeliveryAttribute3 {
 	 * definition} = "The duration of the delivery period."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDuration = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EnergyDeliveryAttribute3, Optional<DurationType1Code>> mmDuration = new MMMessageAttribute<EnergyDeliveryAttribute3, Optional<DurationType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EnergyDeliveryAttribute3.mmObject();
 			isDerived = false;
@@ -212,6 +233,16 @@ public class EnergyDeliveryAttribute3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DurationType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<DurationType1Code> getValue(EnergyDeliveryAttribute3 obj) {
+			return obj.getDuration();
+		}
+
+		@Override
+		public void setValue(EnergyDeliveryAttribute3 obj, Optional<DurationType1Code> value) {
+			obj.setDuration(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "WkDay")
@@ -243,7 +274,7 @@ public class EnergyDeliveryAttribute3 {
 	 * definition} = "Days of the week of the delivery."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmWeekDay = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EnergyDeliveryAttribute3, Optional<WeekDay1Code>> mmWeekDay = new MMMessageAttribute<EnergyDeliveryAttribute3, Optional<WeekDay1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EnergyDeliveryAttribute3.mmObject();
 			isDerived = false;
@@ -254,6 +285,16 @@ public class EnergyDeliveryAttribute3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> WeekDay1Code.mmObject();
+		}
+
+		@Override
+		public Optional<WeekDay1Code> getValue(EnergyDeliveryAttribute3 obj) {
+			return obj.getWeekDay();
+		}
+
+		@Override
+		public void setValue(EnergyDeliveryAttribute3 obj, Optional<WeekDay1Code> value) {
+			obj.setWeekDay(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DlvryCpcty")
@@ -284,7 +325,7 @@ public class EnergyDeliveryAttribute3 {
 	 * definition} = "Delivery capacity for each delivery interval specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDeliveryCapacity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EnergyDeliveryAttribute3, Optional<Quantity41Choice>> mmDeliveryCapacity = new MMMessageAssociationEnd<EnergyDeliveryAttribute3, Optional<Quantity41Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EnergyDeliveryAttribute3.mmObject();
 			isDerived = false;
@@ -296,6 +337,16 @@ public class EnergyDeliveryAttribute3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Quantity41Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Quantity41Choice> getValue(EnergyDeliveryAttribute3 obj) {
+			return obj.getDeliveryCapacity();
+		}
+
+		@Override
+		public void setValue(EnergyDeliveryAttribute3 obj, Optional<Quantity41Choice> value) {
+			obj.setDeliveryCapacity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "QtyUnit")
@@ -329,7 +380,7 @@ public class EnergyDeliveryAttribute3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuantityUnit = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EnergyDeliveryAttribute3, Optional<EnergyQuantityUnit1Choice>> mmQuantityUnit = new MMMessageAssociationEnd<EnergyDeliveryAttribute3, Optional<EnergyQuantityUnit1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EnergyDeliveryAttribute3.mmObject();
 			isDerived = false;
@@ -341,6 +392,16 @@ public class EnergyDeliveryAttribute3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> EnergyQuantityUnit1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<EnergyQuantityUnit1Choice> getValue(EnergyDeliveryAttribute3 obj) {
+			return obj.getQuantityUnit();
+		}
+
+		@Override
+		public void setValue(EnergyDeliveryAttribute3 obj, Optional<EnergyQuantityUnit1Choice> value) {
+			obj.setQuantityUnit(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PricTmIntrvlQty")
@@ -375,7 +436,7 @@ public class EnergyDeliveryAttribute3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriceTimeIntervalQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EnergyDeliveryAttribute3, Optional<DecimalNumber>> mmPriceTimeIntervalQuantity = new MMMessageAttribute<EnergyDeliveryAttribute3, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EnergyDeliveryAttribute3.mmObject();
 			isDerived = false;
@@ -386,6 +447,16 @@ public class EnergyDeliveryAttribute3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(EnergyDeliveryAttribute3 obj) {
+			return obj.getPriceTimeIntervalQuantity();
+		}
+
+		@Override
+		public void setValue(EnergyDeliveryAttribute3 obj, Optional<DecimalNumber> value) {
+			obj.setPriceTimeIntervalQuantity(value.orElse(null));
 		}
 	};
 
@@ -417,7 +488,7 @@ public class EnergyDeliveryAttribute3 {
 		return deliveryPeriod == null ? Optional.empty() : Optional.of(deliveryPeriod);
 	}
 
-	public EnergyDeliveryAttribute3 setDeliveryPeriod(com.tools20022.repository.msg.Period10 deliveryPeriod) {
+	public EnergyDeliveryAttribute3 setDeliveryPeriod(Period10 deliveryPeriod) {
 		this.deliveryPeriod = deliveryPeriod;
 		return this;
 	}

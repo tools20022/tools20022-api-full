@@ -117,7 +117,7 @@ public class Party34Choice {
 	 * Party11Choice.mmOrganisationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOrganisationIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Party34Choice, OrganisationIdentification8> mmOrganisationIdentification = new MMMessageAssociationEnd<Party34Choice, OrganisationIdentification8>() {
 		{
 			businessComponentTrace_lazy = () -> OrganisationIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Party34Choice.mmObject();
@@ -131,6 +131,16 @@ public class Party34Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OrganisationIdentification8.mmObject();
+		}
+
+		@Override
+		public OrganisationIdentification8 getValue(Party34Choice obj) {
+			return obj.getOrganisationIdentification();
+		}
+
+		@Override
+		public void setValue(Party34Choice obj, OrganisationIdentification8 value) {
+			obj.setOrganisationIdentification(value);
 		}
 	};
 	@XmlElement(name = "PrvtId", required = true)
@@ -173,7 +183,7 @@ public class Party34Choice {
 	 * Party11Choice.mmPrivateIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPrivateIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Party34Choice, PersonIdentification13> mmPrivateIdentification = new MMMessageAssociationEnd<Party34Choice, PersonIdentification13>() {
 		{
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Party34Choice.mmObject();
@@ -187,6 +197,16 @@ public class Party34Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PersonIdentification13.mmObject();
+		}
+
+		@Override
+		public PersonIdentification13 getValue(Party34Choice obj) {
+			return obj.getPrivateIdentification();
+		}
+
+		@Override
+		public void setValue(Party34Choice obj, PersonIdentification13 value) {
+			obj.setPrivateIdentification(value);
 		}
 	};
 

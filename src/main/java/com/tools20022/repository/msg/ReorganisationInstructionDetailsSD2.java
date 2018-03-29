@@ -27,6 +27,7 @@ import com.tools20022.repository.codeset.InstructionRejectionReason1Code;
 import com.tools20022.repository.codeset.ReorganisationTransactionType1Code;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -162,7 +163,7 @@ public class ReorganisationInstructionDetailsSD2 {
 	 * definition} = "Xpath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReorganisationInstructionDetailsSD2, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<ReorganisationInstructionDetailsSD2, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReorganisationInstructionDetailsSD2.mmObject();
 			isDerived = false;
@@ -173,6 +174,16 @@ public class ReorganisationInstructionDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(ReorganisationInstructionDetailsSD2 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(ReorganisationInstructionDetailsSD2 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxTp")
@@ -205,7 +216,7 @@ public class ReorganisationInstructionDetailsSD2 {
 	 * definition} = "Identifies the reorganisation transaction type."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReorganisationInstructionDetailsSD2, Optional<ReorganisationTransactionType1Code>> mmTransactionType = new MMMessageAttribute<ReorganisationInstructionDetailsSD2, Optional<ReorganisationTransactionType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReorganisationInstructionDetailsSD2.mmObject();
 			isDerived = false;
@@ -216,6 +227,16 @@ public class ReorganisationInstructionDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ReorganisationTransactionType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ReorganisationTransactionType1Code> getValue(ReorganisationInstructionDetailsSD2 obj) {
+			return obj.getTransactionType();
+		}
+
+		@Override
+		public void setValue(ReorganisationInstructionDetailsSD2 obj, Optional<ReorganisationTransactionType1Code> value) {
+			obj.setTransactionType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxId")
@@ -249,7 +270,7 @@ public class ReorganisationInstructionDetailsSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReorganisationInstructionDetailsSD2, Optional<Max15Text>> mmTransactionIdentification = new MMMessageAttribute<ReorganisationInstructionDetailsSD2, Optional<Max15Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReorganisationInstructionDetailsSD2.mmObject();
 			isDerived = false;
@@ -260,6 +281,16 @@ public class ReorganisationInstructionDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max15Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max15Text> getValue(ReorganisationInstructionDetailsSD2 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(ReorganisationInstructionDetailsSD2 obj, Optional<Max15Text> value) {
+			obj.setTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxSeqNb")
@@ -294,7 +325,7 @@ public class ReorganisationInstructionDetailsSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionSequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReorganisationInstructionDetailsSD2, Optional<Max3NumericText>> mmTransactionSequenceNumber = new MMMessageAttribute<ReorganisationInstructionDetailsSD2, Optional<Max3NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReorganisationInstructionDetailsSD2.mmObject();
 			isDerived = false;
@@ -305,6 +336,16 @@ public class ReorganisationInstructionDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max3NumericText> getValue(ReorganisationInstructionDetailsSD2 obj) {
+			return obj.getTransactionSequenceNumber();
+		}
+
+		@Override
+		public void setValue(ReorganisationInstructionDetailsSD2 obj, Optional<Max3NumericText> value) {
+			obj.setTransactionSequenceNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CstmrSeqNb")
@@ -337,7 +378,7 @@ public class ReorganisationInstructionDetailsSD2 {
 	 * definition} = "Unique identifier for each customer in a transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCustomerSequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReorganisationInstructionDetailsSD2, Optional<Max9NumericText>> mmCustomerSequenceNumber = new MMMessageAttribute<ReorganisationInstructionDetailsSD2, Optional<Max9NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReorganisationInstructionDetailsSD2.mmObject();
 			isDerived = false;
@@ -348,6 +389,16 @@ public class ReorganisationInstructionDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max9NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max9NumericText> getValue(ReorganisationInstructionDetailsSD2 obj) {
+			return obj.getCustomerSequenceNumber();
+		}
+
+		@Override
+		public void setValue(ReorganisationInstructionDetailsSD2 obj, Optional<Max9NumericText> value) {
+			obj.setCustomerSequenceNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxIdSts")
@@ -380,7 +431,7 @@ public class ReorganisationInstructionDetailsSD2 {
 	 * definition} = "Status of the instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionIdentificationStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReorganisationInstructionDetailsSD2, Optional<DTCInstructionStatus2Code>> mmTransactionIdentificationStatus = new MMMessageAttribute<ReorganisationInstructionDetailsSD2, Optional<DTCInstructionStatus2Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReorganisationInstructionDetailsSD2.mmObject();
 			isDerived = false;
@@ -391,6 +442,16 @@ public class ReorganisationInstructionDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCInstructionStatus2Code.mmObject();
+		}
+
+		@Override
+		public Optional<DTCInstructionStatus2Code> getValue(ReorganisationInstructionDetailsSD2 obj) {
+			return obj.getTransactionIdentificationStatus();
+		}
+
+		@Override
+		public void setValue(ReorganisationInstructionDetailsSD2 obj, Optional<DTCInstructionStatus2Code> value) {
+			obj.setTransactionIdentificationStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrtctTxSts")
@@ -423,7 +484,7 @@ public class ReorganisationInstructionDetailsSD2 {
 	 * definition} = "Status of the Protect Instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProtectTransactionStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReorganisationInstructionDetailsSD2, Optional<DTCProtectInstructionStatus1Code>> mmProtectTransactionStatus = new MMMessageAttribute<ReorganisationInstructionDetailsSD2, Optional<DTCProtectInstructionStatus1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReorganisationInstructionDetailsSD2.mmObject();
 			isDerived = false;
@@ -434,6 +495,16 @@ public class ReorganisationInstructionDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCProtectInstructionStatus1Code.mmObject();
+		}
+
+		@Override
+		public Optional<DTCProtectInstructionStatus1Code> getValue(ReorganisationInstructionDetailsSD2 obj) {
+			return obj.getProtectTransactionStatus();
+		}
+
+		@Override
+		public void setValue(ReorganisationInstructionDetailsSD2 obj, Optional<DTCProtectInstructionStatus1Code> value) {
+			obj.setProtectTransactionStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RjctnRsn")
@@ -468,7 +539,7 @@ public class ReorganisationInstructionDetailsSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRejectionReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReorganisationInstructionDetailsSD2, List<InstructionRejectionReason1Code>> mmRejectionReason = new MMMessageAttribute<ReorganisationInstructionDetailsSD2, List<InstructionRejectionReason1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReorganisationInstructionDetailsSD2.mmObject();
 			isDerived = false;
@@ -479,6 +550,16 @@ public class ReorganisationInstructionDetailsSD2 {
 			maxOccurs = 6;
 			minOccurs = 0;
 			simpleType_lazy = () -> InstructionRejectionReason1Code.mmObject();
+		}
+
+		@Override
+		public List<InstructionRejectionReason1Code> getValue(ReorganisationInstructionDetailsSD2 obj) {
+			return obj.getRejectionReason();
+		}
+
+		@Override
+		public void setValue(ReorganisationInstructionDetailsSD2 obj, List<InstructionRejectionReason1Code> value) {
+			obj.setRejectionReason(value);
 		}
 	};
 	@XmlElement(name = "PrtctId", required = true)
@@ -512,7 +593,7 @@ public class ReorganisationInstructionDetailsSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProtectIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReorganisationInstructionDetailsSD2, Max15Text> mmProtectIdentification = new MMMessageAttribute<ReorganisationInstructionDetailsSD2, Max15Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReorganisationInstructionDetailsSD2.mmObject();
 			isDerived = false;
@@ -523,6 +604,16 @@ public class ReorganisationInstructionDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max15Text.mmObject();
+		}
+
+		@Override
+		public Max15Text getValue(ReorganisationInstructionDetailsSD2 obj) {
+			return obj.getProtectIdentification();
+		}
+
+		@Override
+		public void setValue(ReorganisationInstructionDetailsSD2 obj, Max15Text value) {
+			obj.setProtectIdentification(value);
 		}
 	};
 	@XmlElement(name = "PrtctSfkpgAcct")
@@ -557,7 +648,7 @@ public class ReorganisationInstructionDetailsSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProtectSafekeepingAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReorganisationInstructionDetailsSD2, Optional<RestrictedFINMax35Text>> mmProtectSafekeepingAccount = new MMMessageAttribute<ReorganisationInstructionDetailsSD2, Optional<RestrictedFINMax35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReorganisationInstructionDetailsSD2.mmObject();
 			isDerived = false;
@@ -568,6 +659,16 @@ public class ReorganisationInstructionDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINMax35Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINMax35Text> getValue(ReorganisationInstructionDetailsSD2 obj) {
+			return obj.getProtectSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(ReorganisationInstructionDetailsSD2 obj, Optional<RestrictedFINMax35Text> value) {
+			obj.setProtectSafekeepingAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrtctDt", required = true)
@@ -601,7 +702,7 @@ public class ReorganisationInstructionDetailsSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProtectDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReorganisationInstructionDetailsSD2, ISODate> mmProtectDate = new MMMessageAttribute<ReorganisationInstructionDetailsSD2, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReorganisationInstructionDetailsSD2.mmObject();
 			isDerived = false;
@@ -612,6 +713,16 @@ public class ReorganisationInstructionDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(ReorganisationInstructionDetailsSD2 obj) {
+			return obj.getProtectDate();
+		}
+
+		@Override
+		public void setValue(ReorganisationInstructionDetailsSD2 obj, ISODate value) {
+			obj.setProtectDate(value);
 		}
 	};
 	@XmlElement(name = "SctiesQtyDtls")
@@ -645,7 +756,7 @@ public class ReorganisationInstructionDetailsSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesQuantityDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReorganisationInstructionDetailsSD2, Optional<SecuritiesQuantityDetailsSD4>> mmSecuritiesQuantityDetails = new MMMessageAssociationEnd<ReorganisationInstructionDetailsSD2, Optional<SecuritiesQuantityDetailsSD4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReorganisationInstructionDetailsSD2.mmObject();
 			isDerived = false;
@@ -656,7 +767,17 @@ public class ReorganisationInstructionDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesQuantityDetailsSD4.mmObject();
+			type_lazy = () -> SecuritiesQuantityDetailsSD4.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesQuantityDetailsSD4> getValue(ReorganisationInstructionDetailsSD2 obj) {
+			return obj.getSecuritiesQuantityDetails();
+		}
+
+		@Override
+		public void setValue(ReorganisationInstructionDetailsSD2 obj, Optional<SecuritiesQuantityDetailsSD4> value) {
+			obj.setSecuritiesQuantityDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "WarrtSbcptChrgAmt")
@@ -691,7 +812,7 @@ public class ReorganisationInstructionDetailsSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmWarrantSubscriptionChargeAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReorganisationInstructionDetailsSD2, Optional<RestrictedFINActiveCurrencyAndAmount>> mmWarrantSubscriptionChargeAmount = new MMMessageAttribute<ReorganisationInstructionDetailsSD2, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReorganisationInstructionDetailsSD2.mmObject();
 			isDerived = false;
@@ -702,6 +823,16 @@ public class ReorganisationInstructionDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(ReorganisationInstructionDetailsSD2 obj) {
+			return obj.getWarrantSubscriptionChargeAmount();
+		}
+
+		@Override
+		public void setValue(ReorganisationInstructionDetailsSD2 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setWarrantSubscriptionChargeAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TndrOddLotInd")
@@ -736,7 +867,7 @@ public class ReorganisationInstructionDetailsSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTenderOddLotIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReorganisationInstructionDetailsSD2, Optional<YesNoIndicator>> mmTenderOddLotIndicator = new MMMessageAttribute<ReorganisationInstructionDetailsSD2, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReorganisationInstructionDetailsSD2.mmObject();
 			isDerived = false;
@@ -747,6 +878,16 @@ public class ReorganisationInstructionDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(ReorganisationInstructionDetailsSD2 obj) {
+			return obj.getTenderOddLotIndicator();
+		}
+
+		@Override
+		public void setValue(ReorganisationInstructionDetailsSD2 obj, Optional<YesNoIndicator> value) {
+			obj.setTenderOddLotIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Cert")
@@ -778,7 +919,7 @@ public class ReorganisationInstructionDetailsSD2 {
 	 * definition} = "Certificate information for a given instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCertificate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReorganisationInstructionDetailsSD2, Optional<CorporateActionCertificateSD1>> mmCertificate = new MMMessageAssociationEnd<ReorganisationInstructionDetailsSD2, Optional<CorporateActionCertificateSD1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReorganisationInstructionDetailsSD2.mmObject();
 			isDerived = false;
@@ -789,7 +930,17 @@ public class ReorganisationInstructionDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CorporateActionCertificateSD1.mmObject();
+			type_lazy = () -> CorporateActionCertificateSD1.mmObject();
+		}
+
+		@Override
+		public Optional<CorporateActionCertificateSD1> getValue(ReorganisationInstructionDetailsSD2 obj) {
+			return obj.getCertificate();
+		}
+
+		@Override
+		public void setValue(ReorganisationInstructionDetailsSD2 obj, Optional<CorporateActionCertificateSD1> value) {
+			obj.setCertificate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CstmrRefId")
@@ -822,7 +973,7 @@ public class ReorganisationInstructionDetailsSD2 {
 	 * "Customer identification entered by client upon instruction submission."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCustomerReferenceIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReorganisationInstructionDetailsSD2, Optional<Max30Text>> mmCustomerReferenceIdentification = new MMMessageAttribute<ReorganisationInstructionDetailsSD2, Optional<Max30Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReorganisationInstructionDetailsSD2.mmObject();
 			isDerived = false;
@@ -833,6 +984,16 @@ public class ReorganisationInstructionDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max30Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max30Text> getValue(ReorganisationInstructionDetailsSD2 obj) {
+			return obj.getCustomerReferenceIdentification();
+		}
+
+		@Override
+		public void setValue(ReorganisationInstructionDetailsSD2 obj, Optional<Max30Text> value) {
+			obj.setCustomerReferenceIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UsrRefNb")
@@ -866,7 +1027,7 @@ public class ReorganisationInstructionDetailsSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUserReferenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReorganisationInstructionDetailsSD2, Optional<Max6Text>> mmUserReferenceNumber = new MMMessageAttribute<ReorganisationInstructionDetailsSD2, Optional<Max6Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReorganisationInstructionDetailsSD2.mmObject();
 			isDerived = false;
@@ -877,6 +1038,16 @@ public class ReorganisationInstructionDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max6Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max6Text> getValue(ReorganisationInstructionDetailsSD2 obj) {
+			return obj.getUserReferenceNumber();
+		}
+
+		@Override
+		public void setValue(ReorganisationInstructionDetailsSD2 obj, Optional<Max6Text> value) {
+			obj.setUserReferenceNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtctPrsn")
@@ -909,7 +1080,7 @@ public class ReorganisationInstructionDetailsSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContactPerson = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReorganisationInstructionDetailsSD2, Optional<ContactIdentification5>> mmContactPerson = new MMMessageAssociationEnd<ReorganisationInstructionDetailsSD2, Optional<ContactIdentification5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReorganisationInstructionDetailsSD2.mmObject();
 			isDerived = false;
@@ -920,7 +1091,17 @@ public class ReorganisationInstructionDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContactIdentification5.mmObject();
+			type_lazy = () -> ContactIdentification5.mmObject();
+		}
+
+		@Override
+		public Optional<ContactIdentification5> getValue(ReorganisationInstructionDetailsSD2 obj) {
+			return obj.getContactPerson();
+		}
+
+		@Override
+		public void setValue(ReorganisationInstructionDetailsSD2 obj, Optional<ContactIdentification5> value) {
+			obj.setContactPerson(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AckDtls")
@@ -954,7 +1135,7 @@ public class ReorganisationInstructionDetailsSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAcknowledgementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReorganisationInstructionDetailsSD2, Optional<CorporateActionAcknowledgementSD1>> mmAcknowledgementDetails = new MMMessageAssociationEnd<ReorganisationInstructionDetailsSD2, Optional<CorporateActionAcknowledgementSD1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReorganisationInstructionDetailsSD2.mmObject();
 			isDerived = false;
@@ -965,7 +1146,17 @@ public class ReorganisationInstructionDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CorporateActionAcknowledgementSD1.mmObject();
+			type_lazy = () -> CorporateActionAcknowledgementSD1.mmObject();
+		}
+
+		@Override
+		public Optional<CorporateActionAcknowledgementSD1> getValue(ReorganisationInstructionDetailsSD2 obj) {
+			return obj.getAcknowledgementDetails();
+		}
+
+		@Override
+		public void setValue(ReorganisationInstructionDetailsSD2 obj, Optional<CorporateActionAcknowledgementSD1> value) {
+			obj.setAcknowledgementDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DcsdBnfclOwnrDtls")
@@ -998,7 +1189,7 @@ public class ReorganisationInstructionDetailsSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDeceasedBeneficialOwnerDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReorganisationInstructionDetailsSD2, Optional<DeceasedStatusSD1>> mmDeceasedBeneficialOwnerDetails = new MMMessageAssociationEnd<ReorganisationInstructionDetailsSD2, Optional<DeceasedStatusSD1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReorganisationInstructionDetailsSD2.mmObject();
 			isDerived = false;
@@ -1009,7 +1200,17 @@ public class ReorganisationInstructionDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DeceasedStatusSD1.mmObject();
+			type_lazy = () -> DeceasedStatusSD1.mmObject();
+		}
+
+		@Override
+		public Optional<DeceasedStatusSD1> getValue(ReorganisationInstructionDetailsSD2 obj) {
+			return obj.getDeceasedBeneficialOwnerDetails();
+		}
+
+		@Override
+		public void setValue(ReorganisationInstructionDetailsSD2 obj, Optional<DeceasedStatusSD1> value) {
+			obj.setDeceasedBeneficialOwnerDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxRcrdNb")
@@ -1044,7 +1245,7 @@ public class ReorganisationInstructionDetailsSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionRecordNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReorganisationInstructionDetailsSD2, Optional<Max10NumericText>> mmTransactionRecordNumber = new MMMessageAttribute<ReorganisationInstructionDetailsSD2, Optional<Max10NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReorganisationInstructionDetailsSD2.mmObject();
 			isDerived = false;
@@ -1055,6 +1256,16 @@ public class ReorganisationInstructionDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max10NumericText> getValue(ReorganisationInstructionDetailsSD2 obj) {
+			return obj.getTransactionRecordNumber();
+		}
+
+		@Override
+		public void setValue(ReorganisationInstructionDetailsSD2 obj, Optional<Max10NumericText> value) {
+			obj.setTransactionRecordNumber(value.orElse(null));
 		}
 	};
 
@@ -1184,7 +1395,7 @@ public class ReorganisationInstructionDetailsSD2 {
 		return securitiesQuantityDetails == null ? Optional.empty() : Optional.of(securitiesQuantityDetails);
 	}
 
-	public ReorganisationInstructionDetailsSD2 setSecuritiesQuantityDetails(com.tools20022.repository.msg.SecuritiesQuantityDetailsSD4 securitiesQuantityDetails) {
+	public ReorganisationInstructionDetailsSD2 setSecuritiesQuantityDetails(SecuritiesQuantityDetailsSD4 securitiesQuantityDetails) {
 		this.securitiesQuantityDetails = securitiesQuantityDetails;
 		return this;
 	}
@@ -1211,7 +1422,7 @@ public class ReorganisationInstructionDetailsSD2 {
 		return certificate == null ? Optional.empty() : Optional.of(certificate);
 	}
 
-	public ReorganisationInstructionDetailsSD2 setCertificate(com.tools20022.repository.msg.CorporateActionCertificateSD1 certificate) {
+	public ReorganisationInstructionDetailsSD2 setCertificate(CorporateActionCertificateSD1 certificate) {
 		this.certificate = certificate;
 		return this;
 	}
@@ -1238,7 +1449,7 @@ public class ReorganisationInstructionDetailsSD2 {
 		return contactPerson == null ? Optional.empty() : Optional.of(contactPerson);
 	}
 
-	public ReorganisationInstructionDetailsSD2 setContactPerson(com.tools20022.repository.msg.ContactIdentification5 contactPerson) {
+	public ReorganisationInstructionDetailsSD2 setContactPerson(ContactIdentification5 contactPerson) {
 		this.contactPerson = contactPerson;
 		return this;
 	}
@@ -1247,7 +1458,7 @@ public class ReorganisationInstructionDetailsSD2 {
 		return acknowledgementDetails == null ? Optional.empty() : Optional.of(acknowledgementDetails);
 	}
 
-	public ReorganisationInstructionDetailsSD2 setAcknowledgementDetails(com.tools20022.repository.msg.CorporateActionAcknowledgementSD1 acknowledgementDetails) {
+	public ReorganisationInstructionDetailsSD2 setAcknowledgementDetails(CorporateActionAcknowledgementSD1 acknowledgementDetails) {
 		this.acknowledgementDetails = acknowledgementDetails;
 		return this;
 	}
@@ -1256,7 +1467,7 @@ public class ReorganisationInstructionDetailsSD2 {
 		return deceasedBeneficialOwnerDetails == null ? Optional.empty() : Optional.of(deceasedBeneficialOwnerDetails);
 	}
 
-	public ReorganisationInstructionDetailsSD2 setDeceasedBeneficialOwnerDetails(com.tools20022.repository.msg.DeceasedStatusSD1 deceasedBeneficialOwnerDetails) {
+	public ReorganisationInstructionDetailsSD2 setDeceasedBeneficialOwnerDetails(DeceasedStatusSD1 deceasedBeneficialOwnerDetails) {
 		this.deceasedBeneficialOwnerDetails = deceasedBeneficialOwnerDetails;
 		return this;
 	}

@@ -24,7 +24,6 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesSettlementArchive;
 import com.tools20022.repository.msg.MessageAndBusinessReference1;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -126,7 +125,7 @@ public class RequestForTransferStatusReport {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRequestDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RequestForTransferStatusReport, List<MessageAndBusinessReference1>> mmRequestDetails = new MMMessageBuildingBlock<RequestForTransferStatusReport, List<MessageAndBusinessReference1>>() {
 		{
 			xmlTag = "ReqDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -136,12 +135,14 @@ public class RequestForTransferStatusReport {
 			complexType_lazy = () -> MessageAndBusinessReference1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RequestForTransferStatusReport.class.getMethod("getRequestDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<MessageAndBusinessReference1> getValue(RequestForTransferStatusReport obj) {
+			return obj.getRequestDetails();
+		}
+
+		@Override
+		public void setValue(RequestForTransferStatusReport obj, List<MessageAndBusinessReference1> value) {
+			obj.setRequestDetails(value);
 		}
 	};
 

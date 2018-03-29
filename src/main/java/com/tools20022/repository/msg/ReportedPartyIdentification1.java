@@ -124,7 +124,7 @@ public class ReportedPartyIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNameOrSector = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportedPartyIdentification1, NameOrSector1Choice> mmNameOrSector = new MMMessageAssociationEnd<ReportedPartyIdentification1, NameOrSector1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Sector.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportedPartyIdentification1.mmObject();
@@ -137,6 +137,16 @@ public class ReportedPartyIdentification1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> NameOrSector1Choice.mmObject();
+		}
+
+		@Override
+		public NameOrSector1Choice getValue(ReportedPartyIdentification1 obj) {
+			return obj.getNameOrSector();
+		}
+
+		@Override
+		public void setValue(ReportedPartyIdentification1 obj, NameOrSector1Choice value) {
+			obj.setNameOrSector(value);
 		}
 	};
 	@XmlElement(name = "Lctn", required = true)
@@ -187,7 +197,7 @@ public class ReportedPartyIdentification1 {
 	 * SectorAndLocation1.mmLocation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLocation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportedPartyIdentification1, CountryCode> mmLocation = new MMMessageAttribute<ReportedPartyIdentification1, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmCountry;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportedPartyIdentification1.mmObject();
@@ -201,6 +211,16 @@ public class ReportedPartyIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(ReportedPartyIdentification1 obj) {
+			return obj.getLocation();
+		}
+
+		@Override
+		public void setValue(ReportedPartyIdentification1 obj, CountryCode value) {
+			obj.setLocation(value);
 		}
 	};
 

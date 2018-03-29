@@ -122,7 +122,7 @@ public class CancellationReason31Choice {
 	 * CancellationReason19Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationReason31Choice, ConfirmationCancellationReason1Code> mmCode = new MMMessageAttribute<CancellationReason31Choice, ConfirmationCancellationReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationReason31Choice.mmObject();
@@ -136,6 +136,16 @@ public class CancellationReason31Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ConfirmationCancellationReason1Code.mmObject();
+		}
+
+		@Override
+		public ConfirmationCancellationReason1Code getValue(CancellationReason31Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CancellationReason31Choice obj, ConfirmationCancellationReason1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -182,7 +192,7 @@ public class CancellationReason31Choice {
 	 * CancellationReason19Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationReason31Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<CancellationReason31Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationReason31Choice.mmObject();
@@ -196,6 +206,16 @@ public class CancellationReason31Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(CancellationReason31Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CancellationReason31Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

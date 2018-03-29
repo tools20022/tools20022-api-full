@@ -100,7 +100,7 @@ public class Number3Choice {
 	 * definition} = "Number of maximum 3 numeric text."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmShort = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Number3Choice, Exact3NumericText> mmShort = new MMMessageAttribute<Number3Choice, Exact3NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Number3Choice.mmObject();
 			isDerived = false;
@@ -112,6 +112,16 @@ public class Number3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
+		}
+
+		@Override
+		public Exact3NumericText getValue(Number3Choice obj) {
+			return obj.getShort();
+		}
+
+		@Override
+		public void setValue(Number3Choice obj, Exact3NumericText value) {
+			obj.setShort(value);
 		}
 	};
 	@XmlElement(name = "Lng", required = true)
@@ -149,7 +159,7 @@ public class Number3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLong = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Number3Choice, Exact5NumericText> mmLong = new MMMessageAttribute<Number3Choice, Exact5NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Number3Choice.mmObject();
 			isDerived = false;
@@ -161,6 +171,16 @@ public class Number3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact5NumericText.mmObject();
+		}
+
+		@Override
+		public Exact5NumericText getValue(Number3Choice obj) {
+			return obj.getLong();
+		}
+
+		@Override
+		public void setValue(Number3Choice obj, Exact5NumericText value) {
+			obj.setLong(value);
 		}
 	};
 

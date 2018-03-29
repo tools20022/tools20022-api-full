@@ -30,6 +30,7 @@ import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.entity.SecuritiesOrderParameters;
 import com.tools20022.repository.entity.SecuritiesOrderStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.OrderQuantity1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -132,7 +133,7 @@ public class OrderStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmWorkingIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderStatus1, YesNoIndicator> mmWorkingIndicator = new MMMessageAttribute<OrderStatus1, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderParameters.mmWorkingIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatus1.mmObject();
@@ -145,6 +146,16 @@ public class OrderStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(OrderStatus1 obj) {
+			return obj.getWorkingIndicator();
+		}
+
+		@Override
+		public void setValue(OrderStatus1 obj, YesNoIndicator value) {
+			obj.setWorkingIndicator(value);
 		}
 	};
 	@XmlElement(name = "Sd", required = true)
@@ -183,7 +194,7 @@ public class OrderStatus1 {
 	 * definition} = "Side of order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSide = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderStatus1, Side1Code> mmSide = new MMMessageAttribute<OrderStatus1, Side1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmSide;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatus1.mmObject();
@@ -196,6 +207,16 @@ public class OrderStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Side1Code.mmObject();
+		}
+
+		@Override
+		public Side1Code getValue(OrderStatus1 obj) {
+			return obj.getSide();
+		}
+
+		@Override
+		public void setValue(OrderStatus1 obj, Side1Code value) {
+			obj.setSide(value);
 		}
 	};
 	@XmlElement(name = "RmngQty", required = true)
@@ -232,7 +253,7 @@ public class OrderStatus1 {
 	 * definition} = "Quantity opened for further execution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRemainingQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderStatus1, FinancialInstrumentQuantityChoice> mmRemainingQuantity = new MMMessageAttribute<OrderStatus1, FinancialInstrumentQuantityChoice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmRemainingQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatus1.mmObject();
@@ -244,6 +265,16 @@ public class OrderStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantityChoice getValue(OrderStatus1 obj) {
+			return obj.getRemainingQuantity();
+		}
+
+		@Override
+		public void setValue(OrderStatus1 obj, FinancialInstrumentQuantityChoice value) {
+			obj.setRemainingQuantity(value);
 		}
 	};
 	@XmlElement(name = "CmltvQty", required = true)
@@ -283,7 +314,7 @@ public class OrderStatus1 {
 	 * definition} = "Total quantity (e.g. number of shares) filled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCumulativeQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderStatus1, FinancialInstrumentQuantityChoice> mmCumulativeQuantity = new MMMessageAttribute<OrderStatus1, FinancialInstrumentQuantityChoice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmCumulativeQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatus1.mmObject();
@@ -296,6 +327,16 @@ public class OrderStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantityChoice getValue(OrderStatus1 obj) {
+			return obj.getCumulativeQuantity();
+		}
+
+		@Override
+		public void setValue(OrderStatus1 obj, FinancialInstrumentQuantityChoice value) {
+			obj.setCumulativeQuantity(value);
 		}
 	};
 	@XmlElement(name = "TtlNbRpts", required = true)
@@ -327,7 +368,7 @@ public class OrderStatus1 {
 	 * "Total number or reports returned in response to a request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalNumberReports = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderStatus1, Number> mmTotalNumberReports = new MMMessageAttribute<OrderStatus1, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatus1.mmObject();
 			isDerived = false;
@@ -338,6 +379,16 @@ public class OrderStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(OrderStatus1 obj) {
+			return obj.getTotalNumberReports();
+		}
+
+		@Override
+		public void setValue(OrderStatus1 obj, Number value) {
+			obj.setTotalNumberReports(value);
 		}
 	};
 	@XmlElement(name = "LastRptReqd", required = true)
@@ -371,7 +422,7 @@ public class OrderStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLastReportRequested = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderStatus1, YesNoIndicator> mmLastReportRequested = new MMMessageAttribute<OrderStatus1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatus1.mmObject();
 			isDerived = false;
@@ -382,6 +433,16 @@ public class OrderStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(OrderStatus1 obj) {
+			return obj.getLastReportRequested();
+		}
+
+		@Override
+		public void setValue(OrderStatus1 obj, YesNoIndicator value) {
+			obj.setLastReportRequested(value);
 		}
 	};
 	@XmlElement(name = "OrdrQtyDtls")
@@ -416,7 +477,7 @@ public class OrderStatus1 {
 	 * definition} = "Provides details related to the ordered quantity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOrderQuantityDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OrderStatus1, Optional<OrderQuantity1>> mmOrderQuantityDetails = new MMMessageAssociationEnd<OrderStatus1, Optional<OrderQuantity1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatus1.mmObject();
@@ -428,7 +489,17 @@ public class OrderStatus1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OrderQuantity1.mmObject();
+			type_lazy = () -> OrderQuantity1.mmObject();
+		}
+
+		@Override
+		public Optional<OrderQuantity1> getValue(OrderStatus1 obj) {
+			return obj.getOrderQuantityDetails();
+		}
+
+		@Override
+		public void setValue(OrderStatus1 obj, Optional<OrderQuantity1> value) {
+			obj.setOrderQuantityDetails(value.orElse(null));
 		}
 	};
 
@@ -506,7 +577,7 @@ public class OrderStatus1 {
 		return orderQuantityDetails == null ? Optional.empty() : Optional.of(orderQuantityDetails);
 	}
 
-	public OrderStatus1 setOrderQuantityDetails(com.tools20022.repository.msg.OrderQuantity1 orderQuantityDetails) {
+	public OrderStatus1 setOrderQuantityDetails(OrderQuantity1 orderQuantityDetails) {
 		this.orderQuantityDetails = orderQuantityDetails;
 		return this;
 	}

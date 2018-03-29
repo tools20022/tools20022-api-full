@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Algorithm16Code;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AlgorithmIdentification12;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -61,7 +62,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "Parameter11"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -112,7 +113,7 @@ public class Parameter11 {
 	 * Parameter8.mmDigestAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDigestAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Parameter11, Algorithm16Code> mmDigestAlgorithm = new MMMessageAttribute<Parameter11, Algorithm16Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Parameter11.mmObject();
 			isDerived = false;
@@ -124,6 +125,16 @@ public class Parameter11 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Algorithm16Code.mmObject();
+		}
+
+		@Override
+		public Algorithm16Code getValue(Parameter11 obj) {
+			return obj.getDigestAlgorithm();
+		}
+
+		@Override
+		public void setValue(Parameter11 obj, Algorithm16Code value) {
+			obj.setDigestAlgorithm(value);
 		}
 	};
 	@XmlElement(name = "MskGnrtrAlgo", required = true)
@@ -161,7 +172,7 @@ public class Parameter11 {
 	 * Parameter8.mmMaskGeneratorAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaskGeneratorAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Parameter11, AlgorithmIdentification12> mmMaskGeneratorAlgorithm = new MMMessageAttribute<Parameter11, AlgorithmIdentification12>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Parameter11.mmObject();
 			isDerived = false;
@@ -172,7 +183,17 @@ public class Parameter11 {
 			previousVersion_lazy = () -> Parameter8.mmMaskGeneratorAlgorithm;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification12.mmObject();
+			complexType_lazy = () -> AlgorithmIdentification12.mmObject();
+		}
+
+		@Override
+		public AlgorithmIdentification12 getValue(Parameter11 obj) {
+			return obj.getMaskGeneratorAlgorithm();
+		}
+
+		@Override
+		public void setValue(Parameter11 obj, AlgorithmIdentification12 value) {
+			obj.setMaskGeneratorAlgorithm(value);
 		}
 	};
 	@XmlElement(name = "SaltLngth", required = true)
@@ -208,7 +229,7 @@ public class Parameter11 {
 	 * Parameter8.mmSaltLength}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSaltLength = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Parameter11, Number> mmSaltLength = new MMMessageAttribute<Parameter11, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Parameter11.mmObject();
 			isDerived = false;
@@ -220,6 +241,16 @@ public class Parameter11 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(Parameter11 obj) {
+			return obj.getSaltLength();
+		}
+
+		@Override
+		public void setValue(Parameter11 obj, Number value) {
+			obj.setSaltLength(value);
 		}
 	};
 	@XmlElement(name = "TrlrFld")
@@ -255,7 +286,7 @@ public class Parameter11 {
 	 * Parameter8.mmTrailerField}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTrailerField = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Parameter11, Optional<Number>> mmTrailerField = new MMMessageAttribute<Parameter11, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Parameter11.mmObject();
 			isDerived = false;
@@ -268,6 +299,16 @@ public class Parameter11 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
+
+		@Override
+		public Optional<Number> getValue(Parameter11 obj) {
+			return obj.getTrailerField();
+		}
+
+		@Override
+		public void setValue(Parameter11 obj, Optional<Number> value) {
+			obj.setTrailerField(value.orElse(null));
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -276,7 +317,7 @@ public class Parameter11 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Parameter11.mmDigestAlgorithm, com.tools20022.repository.msg.Parameter11.mmMaskGeneratorAlgorithm,
 						com.tools20022.repository.msg.Parameter11.mmSaltLength, com.tools20022.repository.msg.Parameter11.mmTrailerField);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Parameter11";
 				definition = "Parameters of the RSASSA-PSS digital signature algorithm (RSA signature algorithm with appendix: Probabilistic Signature Scheme).";
 				previousVersion_lazy = () -> Parameter8.mmObject();
@@ -298,7 +339,7 @@ public class Parameter11 {
 		return maskGeneratorAlgorithm;
 	}
 
-	public Parameter11 setMaskGeneratorAlgorithm(com.tools20022.repository.msg.AlgorithmIdentification12 maskGeneratorAlgorithm) {
+	public Parameter11 setMaskGeneratorAlgorithm(AlgorithmIdentification12 maskGeneratorAlgorithm) {
 		this.maskGeneratorAlgorithm = Objects.requireNonNull(maskGeneratorAlgorithm);
 		return this;
 	}

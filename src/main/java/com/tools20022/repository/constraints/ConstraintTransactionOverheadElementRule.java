@@ -51,11 +51,15 @@ public class ConstraintTransactionOverheadElementRule {
 	 */
 	public static final MMConstraint<TotalFeesAndTaxes40> forTotalFeesAndTaxes40 = new MMConstraint<TotalFeesAndTaxes40>() {
 		{
-			validator = ConstraintTransactionOverheadElementRule::checkTotalFeesAndTaxes40;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionOverheadElementRule";
 			definition = "One of the elements (TotalOverheadApplied, TotalFees, TotalTaxes, CommercialAgreementReference, IndividualFee, IndividualTax) must be present.";
 			owner_lazy = () -> TotalFeesAndTaxes40.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TotalFeesAndTaxes40 obj) throws Exception {
+			checkTotalFeesAndTaxes40(obj);
 		}
 	};
 

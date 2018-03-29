@@ -121,7 +121,7 @@ public class FinancialInstitutionIdentification6Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNameAndAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstitutionIdentification6Choice, NameAndAddress11> mmNameAndAddress = new MMMessageAttribute<FinancialInstitutionIdentification6Choice, NameAndAddress11>() {
 		{
 			businessComponentTrace_lazy = () -> OrganisationIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstitutionIdentification6Choice.mmObject();
@@ -133,6 +133,16 @@ public class FinancialInstitutionIdentification6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> NameAndAddress11.mmObject();
+		}
+
+		@Override
+		public NameAndAddress11 getValue(FinancialInstitutionIdentification6Choice obj) {
+			return obj.getNameAndAddress();
+		}
+
+		@Override
+		public void setValue(FinancialInstitutionIdentification6Choice obj, NameAndAddress11 value) {
+			obj.setNameAndAddress(value);
 		}
 	};
 	@XmlElement(name = "BIC", required = true)
@@ -172,7 +182,7 @@ public class FinancialInstitutionIdentification6Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstitutionIdentification6Choice, BICIdentifier> mmBIC = new MMMessageAttribute<FinancialInstitutionIdentification6Choice, BICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstitutionIdentification6Choice.mmObject();
@@ -184,6 +194,16 @@ public class FinancialInstitutionIdentification6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
+		}
+
+		@Override
+		public BICIdentifier getValue(FinancialInstitutionIdentification6Choice obj) {
+			return obj.getBIC();
+		}
+
+		@Override
+		public void setValue(FinancialInstitutionIdentification6Choice obj, BICIdentifier value) {
+			obj.setBIC(value);
 		}
 	};
 	@XmlElement(name = "PrtryId", required = true)
@@ -223,7 +243,7 @@ public class FinancialInstitutionIdentification6Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstitutionIdentification6Choice, SimpleIdentificationInformation3> mmProprietaryIdentification = new MMMessageAttribute<FinancialInstitutionIdentification6Choice, SimpleIdentificationInformation3>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstitutionIdentification6Choice.mmObject();
@@ -235,6 +255,16 @@ public class FinancialInstitutionIdentification6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation3.mmObject();
+		}
+
+		@Override
+		public SimpleIdentificationInformation3 getValue(FinancialInstitutionIdentification6Choice obj) {
+			return obj.getProprietaryIdentification();
+		}
+
+		@Override
+		public void setValue(FinancialInstitutionIdentification6Choice obj, SimpleIdentificationInformation3 value) {
+			obj.setProprietaryIdentification(value);
 		}
 	};
 

@@ -125,7 +125,7 @@ public class DateTimePeriodDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFromDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateTimePeriodDetails, ISODateTime> mmFromDateTime = new MMMessageAttribute<DateTimePeriodDetails, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateTimePeriodDetails.mmObject();
@@ -138,6 +138,16 @@ public class DateTimePeriodDetails {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(DateTimePeriodDetails obj) {
+			return obj.getFromDateTime();
+		}
+
+		@Override
+		public void setValue(DateTimePeriodDetails obj, ISODateTime value) {
+			obj.setFromDateTime(value);
 		}
 	};
 	@XmlElement(name = "ToDtTm", required = true)
@@ -182,7 +192,7 @@ public class DateTimePeriodDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmToDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateTimePeriodDetails, ISODateTime> mmToDateTime = new MMMessageAttribute<DateTimePeriodDetails, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmToDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateTimePeriodDetails.mmObject();
@@ -195,6 +205,16 @@ public class DateTimePeriodDetails {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(DateTimePeriodDetails obj) {
+			return obj.getToDateTime();
+		}
+
+		@Override
+		public void setValue(DateTimePeriodDetails obj, ISODateTime value) {
+			obj.setToDateTime(value);
 		}
 	};
 

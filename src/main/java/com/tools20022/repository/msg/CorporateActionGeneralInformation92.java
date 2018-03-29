@@ -147,7 +147,7 @@ public class CorporateActionGeneralInformation92 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformation92, Max35Text> mmCorporateActionEventIdentification = new MMMessageAttribute<CorporateActionGeneralInformation92, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmCorporateActionEventIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformation92.mmObject();
@@ -161,6 +161,16 @@ public class CorporateActionGeneralInformation92 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CorporateActionGeneralInformation92 obj) {
+			return obj.getCorporateActionEventIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformation92 obj, Max35Text value) {
+			obj.setCorporateActionEventIdentification(value);
 		}
 	};
 	@XmlElement(name = "OffclCorpActnEvtId")
@@ -209,7 +219,7 @@ public class CorporateActionGeneralInformation92 {
 	 * mmOfficialCorporateActionEventIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOfficialCorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformation92, Optional<Max35Text>> mmOfficialCorporateActionEventIdentification = new MMMessageAttribute<CorporateActionGeneralInformation92, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmOfficialCorporateActionEventIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformation92.mmObject();
@@ -223,6 +233,16 @@ public class CorporateActionGeneralInformation92 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CorporateActionGeneralInformation92 obj) {
+			return obj.getOfficialCorporateActionEventIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformation92 obj, Optional<Max35Text> value) {
+			obj.setOfficialCorporateActionEventIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NrrtvTp")
@@ -260,7 +280,7 @@ public class CorporateActionGeneralInformation92 {
 	 * CorporateActionGeneralInformation40.mmNarrativeType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNarrativeType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformation92, Optional<CorporateActionNarrative3Choice>> mmNarrativeType = new MMMessageAttribute<CorporateActionGeneralInformation92, Optional<CorporateActionNarrative3Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformation92.mmObject();
 			isDerived = false;
@@ -272,6 +292,16 @@ public class CorporateActionGeneralInformation92 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CorporateActionNarrative3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CorporateActionNarrative3Choice> getValue(CorporateActionGeneralInformation92 obj) {
+			return obj.getNarrativeType();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformation92 obj, Optional<CorporateActionNarrative3Choice> value) {
+			obj.setNarrativeType(value.orElse(null));
 		}
 	};
 

@@ -21,6 +21,8 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.area.seev.AgentCAGlobalDistributionStatusAdviceV01;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DistributionRejectionStatus1;
+import com.tools20022.repository.msg.MovementProcessingStatus1;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -119,7 +121,7 @@ public class IndividualMovementStatus1 {
 	 * definition} = "Identification of the movement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMovementIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualMovementStatus1, Optional<Max35Text>> mmMovementIdentification = new MMMessageAttribute<IndividualMovementStatus1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualMovementStatus1.mmObject();
 			isDerived = false;
@@ -130,6 +132,16 @@ public class IndividualMovementStatus1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(IndividualMovementStatus1 obj) {
+			return obj.getMovementIdentification();
+		}
+
+		@Override
+		public void setValue(IndividualMovementStatus1 obj, Optional<Max35Text> value) {
+			obj.setMovementIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcdSts", required = true)
@@ -163,7 +175,7 @@ public class IndividualMovementStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndividualMovementStatus1, MovementProcessingStatus1> mmProcessedStatus = new MMMessageAssociationEnd<IndividualMovementStatus1, MovementProcessingStatus1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualMovementStatus1.mmObject();
 			isDerived = false;
@@ -174,7 +186,17 @@ public class IndividualMovementStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MovementProcessingStatus1.mmObject();
+			type_lazy = () -> MovementProcessingStatus1.mmObject();
+		}
+
+		@Override
+		public MovementProcessingStatus1 getValue(IndividualMovementStatus1 obj) {
+			return obj.getProcessedStatus();
+		}
+
+		@Override
+		public void setValue(IndividualMovementStatus1 obj, MovementProcessingStatus1 value) {
+			obj.setProcessedStatus(value);
 		}
 	};
 	@XmlElement(name = "RjctdSts", required = true)
@@ -206,7 +228,7 @@ public class IndividualMovementStatus1 {
 	 * definition} = "Provides information about the rejection status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejectedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndividualMovementStatus1, DistributionRejectionStatus1> mmRejectedStatus = new MMMessageAssociationEnd<IndividualMovementStatus1, DistributionRejectionStatus1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualMovementStatus1.mmObject();
 			isDerived = false;
@@ -217,7 +239,17 @@ public class IndividualMovementStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DistributionRejectionStatus1.mmObject();
+			type_lazy = () -> DistributionRejectionStatus1.mmObject();
+		}
+
+		@Override
+		public DistributionRejectionStatus1 getValue(IndividualMovementStatus1 obj) {
+			return obj.getRejectedStatus();
+		}
+
+		@Override
+		public void setValue(IndividualMovementStatus1 obj, DistributionRejectionStatus1 value) {
+			obj.setRejectedStatus(value);
 		}
 	};
 	/**
@@ -297,7 +329,7 @@ public class IndividualMovementStatus1 {
 		return processedStatus;
 	}
 
-	public IndividualMovementStatus1 setProcessedStatus(com.tools20022.repository.msg.MovementProcessingStatus1 processedStatus) {
+	public IndividualMovementStatus1 setProcessedStatus(MovementProcessingStatus1 processedStatus) {
 		this.processedStatus = Objects.requireNonNull(processedStatus);
 		return this;
 	}
@@ -306,7 +338,7 @@ public class IndividualMovementStatus1 {
 		return rejectedStatus;
 	}
 
-	public IndividualMovementStatus1 setRejectedStatus(com.tools20022.repository.msg.DistributionRejectionStatus1 rejectedStatus) {
+	public IndividualMovementStatus1 setRejectedStatus(DistributionRejectionStatus1 rejectedStatus) {
 		this.rejectedStatus = Objects.requireNonNull(rejectedStatus);
 		return this;
 	}

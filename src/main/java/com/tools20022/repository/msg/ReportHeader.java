@@ -118,7 +118,7 @@ public class ReportHeader {
 	 * definition} = "Identification of the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportHeader, Max35Text> mmIdentification = new MMMessageAttribute<ReportHeader, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportHeader.mmObject();
 			isDerived = false;
@@ -129,6 +129,16 @@ public class ReportHeader {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ReportHeader obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(ReportHeader obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Fr", required = true)
@@ -160,7 +170,7 @@ public class ReportHeader {
 	 * definition} = "Party reporting the status of the case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFrom = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportHeader, AnyBICIdentifier> mmFrom = new MMMessageAttribute<ReportHeader, AnyBICIdentifier>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportHeader.mmObject();
 			isDerived = false;
@@ -171,6 +181,16 @@ public class ReportHeader {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public AnyBICIdentifier getValue(ReportHeader obj) {
+			return obj.getFrom();
+		}
+
+		@Override
+		public void setValue(ReportHeader obj, AnyBICIdentifier value) {
+			obj.setFrom(value);
 		}
 	};
 	@XmlElement(name = "To", required = true)
@@ -202,7 +222,7 @@ public class ReportHeader {
 	 * definition} = "Party to which the status of the case is reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTo = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportHeader, AnyBICIdentifier> mmTo = new MMMessageAttribute<ReportHeader, AnyBICIdentifier>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportHeader.mmObject();
 			isDerived = false;
@@ -213,6 +233,16 @@ public class ReportHeader {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public AnyBICIdentifier getValue(ReportHeader obj) {
+			return obj.getTo();
+		}
+
+		@Override
+		public void setValue(ReportHeader obj, AnyBICIdentifier value) {
+			obj.setTo(value);
 		}
 	};
 	@XmlElement(name = "CreDtTm", required = true)
@@ -243,7 +273,7 @@ public class ReportHeader {
 	 * definition} = "Creation date and time of the report generation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportHeader, ISODateTime> mmCreationDateTime = new MMMessageAttribute<ReportHeader, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportHeader.mmObject();
 			isDerived = false;
@@ -254,6 +284,16 @@ public class ReportHeader {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(ReportHeader obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(ReportHeader obj, ISODateTime value) {
+			obj.setCreationDateTime(value);
 		}
 	};
 

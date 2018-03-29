@@ -109,7 +109,7 @@ public class ExchangeRateBasis2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBaseCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExchangeRateBasis2, ActiveOrHistoricCurrencyCode> mmBaseCurrency = new MMMessageAttribute<ExchangeRateBasis2, ActiveOrHistoricCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmUnitCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExchangeRateBasis2.mmObject();
@@ -121,6 +121,16 @@ public class ExchangeRateBasis2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyCode getValue(ExchangeRateBasis2 obj) {
+			return obj.getBaseCurrency();
+		}
+
+		@Override
+		public void setValue(ExchangeRateBasis2 obj, ActiveOrHistoricCurrencyCode value) {
+			obj.setBaseCurrency(value);
 		}
 	};
 	@XmlElement(name = "QtdCcy", required = true)
@@ -160,7 +170,7 @@ public class ExchangeRateBasis2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuotedCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExchangeRateBasis2, ActiveOrHistoricCurrencyCode> mmQuotedCurrency = new MMMessageAttribute<ExchangeRateBasis2, ActiveOrHistoricCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmQuotedCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExchangeRateBasis2.mmObject();
@@ -172,6 +182,16 @@ public class ExchangeRateBasis2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyCode getValue(ExchangeRateBasis2 obj) {
+			return obj.getQuotedCurrency();
+		}
+
+		@Override
+		public void setValue(ExchangeRateBasis2 obj, ActiveOrHistoricCurrencyCode value) {
+			obj.setQuotedCurrency(value);
 		}
 	};
 

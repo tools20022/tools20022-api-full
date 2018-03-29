@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max210Text;
 import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ReportItem1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -114,7 +115,7 @@ public class ReportItemStatus1 {
 	 * definition} = "Reason for the exception status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmException = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportItemStatus1, ReportItemRejectionReason1Choice> mmException = new MMMessageAssociationEnd<ReportItemStatus1, ReportItemRejectionReason1Choice>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportItemStatus1.mmObject();
@@ -127,6 +128,16 @@ public class ReportItemStatus1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ReportItemRejectionReason1Choice.mmObject();
+		}
+
+		@Override
+		public ReportItemRejectionReason1Choice getValue(ReportItemStatus1 obj) {
+			return obj.getException();
+		}
+
+		@Override
+		public void setValue(ReportItemStatus1 obj, ReportItemRejectionReason1Choice value) {
+			obj.setException(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -165,7 +176,7 @@ public class ReportItemStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportItemStatus1, Optional<Max210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<ReportItemStatus1, Optional<Max210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportItemStatus1.mmObject();
@@ -178,9 +189,19 @@ public class ReportItemStatus1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max210Text> getValue(ReportItemStatus1 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(ReportItemStatus1 obj, Optional<Max210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "RptItm")
-	protected List<com.tools20022.repository.msg.ReportItem1> reportItem;
+	protected List<ReportItem1> reportItem;
 	/**
 	 * 
 	 <p>
@@ -207,7 +228,7 @@ public class ReportItemStatus1 {
 	 * definition} = "Details of the report item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReportItem = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportItemStatus1, List<ReportItem1>> mmReportItem = new MMMessageAssociationEnd<ReportItemStatus1, List<ReportItem1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportItemStatus1.mmObject();
 			isDerived = false;
@@ -217,7 +238,17 @@ public class ReportItemStatus1 {
 			definition = "Details of the report item.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ReportItem1.mmObject();
+			type_lazy = () -> ReportItem1.mmObject();
+		}
+
+		@Override
+		public List<ReportItem1> getValue(ReportItemStatus1 obj) {
+			return obj.getReportItem();
+		}
+
+		@Override
+		public void setValue(ReportItemStatus1 obj, List<ReportItem1> value) {
+			obj.setReportItem(value);
 		}
 	};
 
@@ -259,7 +290,7 @@ public class ReportItemStatus1 {
 		return reportItem == null ? reportItem = new ArrayList<>() : reportItem;
 	}
 
-	public ReportItemStatus1 setReportItem(List<com.tools20022.repository.msg.ReportItem1> reportItem) {
+	public ReportItemStatus1 setReportItem(List<ReportItem1> reportItem) {
 		this.reportItem = Objects.requireNonNull(reportItem);
 		return this;
 	}

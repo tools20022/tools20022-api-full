@@ -106,7 +106,7 @@ public class StatusReason1Choice {
 	 * definition} = "Reason for the status in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatusReason1Choice, TransactionRejectReason2Code> mmCode = new MMMessageAttribute<StatusReason1Choice, TransactionRejectReason2Code>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmTransactionRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.StatusReason1Choice.mmObject();
@@ -118,6 +118,16 @@ public class StatusReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TransactionRejectReason2Code.mmObject();
+		}
+
+		@Override
+		public TransactionRejectReason2Code getValue(StatusReason1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(StatusReason1Choice obj, TransactionRejectReason2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -155,7 +165,7 @@ public class StatusReason1Choice {
 	 * "Reason for the status not catered for by the available codes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatusReason1Choice, Max35Text> mmProprietary = new MMMessageAttribute<StatusReason1Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmTransactionRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.StatusReason1Choice.mmObject();
@@ -167,6 +177,16 @@ public class StatusReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(StatusReason1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(StatusReason1Choice obj, Max35Text value) {
+			obj.setProprietary(value);
 		}
 	};
 

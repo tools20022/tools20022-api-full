@@ -19,12 +19,13 @@ package com.tools20022.repository.datatype;
 
 import com.tools20022.metamodel.MMQuantity;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.datatype.NonNegativeNumber.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
 import java.math.BigDecimal;
 import java.util.concurrent.atomic.AtomicReference;
-import javax.xml.bind.annotation.adapters.XmlAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.XmlValue;
 
 /**
  * Non negative integer.
@@ -48,10 +49,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * definition} = "Non negative integer."</li>
  * </ul>
  */
-@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType
 public class NonNegativeNumber {
 
 	final static private AtomicReference<MMQuantity> mmObject_lazy = new AtomicReference<>();
+	@XmlValue
 	protected BigDecimal value;
 
 	final static public MMQuantity mmObject() {
@@ -69,23 +72,23 @@ public class NonNegativeNumber {
 		return mmObject_lazy.get();
 	}
 
+	public NonNegativeNumber() {
+	}
+
 	public NonNegativeNumber(BigDecimal value) {
 		this.value = value;
 	}
 
-	public BigDecimal toBigDecimal() {
+	public BigDecimal getValue() {
 		return value;
 	}
 
-	protected static class InternalXmlAdapter extends XmlAdapter<BigDecimal, NonNegativeNumber> {
-		@Override
-		public NonNegativeNumber unmarshal(BigDecimal value) {
-			return new NonNegativeNumber(value);
-		}
+	public void setValue(BigDecimal value) {
+		this.value = value;
+	}
 
-		@Override
-		public BigDecimal marshal(NonNegativeNumber typedData) {
-			return typedData.value;
-		}
+	@Override
+	public String toString() {
+		return value == null ? null : value.toString();
 	}
 }

@@ -146,7 +146,7 @@ public class RateAndAmountFormat21Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateAndAmountFormat21Choice, PercentageRate> mmRate = new MMMessageAttribute<RateAndAmountFormat21Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat21Choice.mmObject();
@@ -160,6 +160,16 @@ public class RateAndAmountFormat21Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(RateAndAmountFormat21Choice obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(RateAndAmountFormat21Choice obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -207,7 +217,7 @@ public class RateAndAmountFormat21Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateAndAmountFormat21Choice, ActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<RateAndAmountFormat21Choice, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat21Choice.mmObject();
@@ -221,6 +231,16 @@ public class RateAndAmountFormat21Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(RateAndAmountFormat21Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(RateAndAmountFormat21Choice obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "RateTpAndRate", required = true)
@@ -265,7 +285,7 @@ public class RateAndAmountFormat21Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateTypeAndRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RateAndAmountFormat21Choice, RateTypeAndPercentageRate1> mmRateTypeAndRate = new MMMessageAssociationEnd<RateAndAmountFormat21Choice, RateTypeAndPercentageRate1>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTax.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat21Choice.mmObject();
@@ -279,6 +299,16 @@ public class RateAndAmountFormat21Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RateTypeAndPercentageRate1.mmObject();
+		}
+
+		@Override
+		public RateTypeAndPercentageRate1 getValue(RateAndAmountFormat21Choice obj) {
+			return obj.getRateTypeAndRate();
+		}
+
+		@Override
+		public void setValue(RateAndAmountFormat21Choice obj, RateTypeAndPercentageRate1 value) {
+			obj.setRateTypeAndRate(value);
 		}
 	};
 

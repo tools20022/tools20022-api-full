@@ -48,11 +48,15 @@ public class ConstraintDomainAndProprietary2Rule {
 	 */
 	public static final MMConstraint<BankTransactionCodeStructure1> forBankTransactionCodeStructure1 = new MMConstraint<BankTransactionCodeStructure1>() {
 		{
-			validator = ConstraintDomainAndProprietary2Rule::checkBankTransactionCodeStructure1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DomainAndProprietary2Rule";
 			definition = "If Proprietary is absent, then Domain must be present.";
 			owner_lazy = () -> BankTransactionCodeStructure1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BankTransactionCodeStructure1 obj) throws Exception {
+			checkBankTransactionCodeStructure1(obj);
 		}
 	};
 

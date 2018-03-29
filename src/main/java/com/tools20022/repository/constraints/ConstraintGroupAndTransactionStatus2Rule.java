@@ -69,13 +69,17 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 	 */
 	public static final MMConstraint<CreditorPaymentActivationRequestStatusReportV05> forCreditorPaymentActivationRequestStatusReportV05 = new MMConstraint<CreditorPaymentActivationRequestStatusReportV05>() {
 		{
-			validator = ConstraintGroupAndTransactionStatus2Rule::checkCreditorPaymentActivationRequestStatusReportV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupAndTransactionStatus2Rule";
 			definition = "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule.forCreditorPaymentActivationRequestStatusReportV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule.forCreditorPaymentActivationRequestStatusReportV04;
 			owner_lazy = () -> CreditorPaymentActivationRequestStatusReportV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditorPaymentActivationRequestStatusReportV05 obj) throws Exception {
+			checkCreditorPaymentActivationRequestStatusReportV05(obj);
 		}
 	};
 	/**
@@ -107,12 +111,16 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 	 */
 	public static final MMConstraint<CreditorPaymentActivationRequestStatusReportV06> forCreditorPaymentActivationRequestStatusReportV06 = new MMConstraint<CreditorPaymentActivationRequestStatusReportV06>() {
 		{
-			validator = ConstraintGroupAndTransactionStatus2Rule::checkCreditorPaymentActivationRequestStatusReportV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupAndTransactionStatus2Rule";
 			definition = "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule.forCreditorPaymentActivationRequestStatusReportV05;
 			owner_lazy = () -> CreditorPaymentActivationRequestStatusReportV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditorPaymentActivationRequestStatusReportV06 obj) throws Exception {
+			checkCreditorPaymentActivationRequestStatusReportV06(obj);
 		}
 	};
 	/**
@@ -138,11 +146,15 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 	 */
 	public static final MMConstraint<com.tools20022.repository.area.pain.PaymentStatusReportV02> forPaymentStatusReportV02 = new MMConstraint<com.tools20022.repository.area.pain.PaymentStatusReportV02>() {
 		{
-			validator = ConstraintGroupAndTransactionStatus2Rule::checkPaymentStatusReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupAndTransactionStatus2Rule";
 			definition = "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT.";
 			owner_lazy = () -> com.tools20022.repository.area.pain.PaymentStatusReportV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(com.tools20022.repository.area.pain.PaymentStatusReportV02 obj) throws Exception {
+			checkPaymentStatusReportV02(obj);
 		}
 	};
 	/**
@@ -168,11 +180,15 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 	 */
 	public static final MMConstraint<CreditorPaymentActivationRequestStatusReportV01> forCreditorPaymentActivationRequestStatusReportV01 = new MMConstraint<CreditorPaymentActivationRequestStatusReportV01>() {
 		{
-			validator = ConstraintGroupAndTransactionStatus2Rule::checkCreditorPaymentActivationRequestStatusReportV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupAndTransactionStatus2Rule";
 			definition = "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT.";
 			owner_lazy = () -> CreditorPaymentActivationRequestStatusReportV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditorPaymentActivationRequestStatusReportV01 obj) throws Exception {
+			checkCreditorPaymentActivationRequestStatusReportV01(obj);
 		}
 	};
 	/**
@@ -198,11 +214,15 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 	 */
 	public static final MMConstraint<CreditorPaymentActivationRequestStatusReportV02> forCreditorPaymentActivationRequestStatusReportV02 = new MMConstraint<CreditorPaymentActivationRequestStatusReportV02>() {
 		{
-			validator = ConstraintGroupAndTransactionStatus2Rule::checkCreditorPaymentActivationRequestStatusReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupAndTransactionStatus2Rule";
 			definition = "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT.";
 			owner_lazy = () -> CreditorPaymentActivationRequestStatusReportV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditorPaymentActivationRequestStatusReportV02 obj) throws Exception {
+			checkCreditorPaymentActivationRequestStatusReportV02(obj);
 		}
 	};
 	/**
@@ -237,12 +257,16 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 	 */
 	public static final MMConstraint<CreditorPaymentActivationRequestStatusReportV03> forCreditorPaymentActivationRequestStatusReportV03 = new MMConstraint<CreditorPaymentActivationRequestStatusReportV03>() {
 		{
-			validator = ConstraintGroupAndTransactionStatus2Rule::checkCreditorPaymentActivationRequestStatusReportV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupAndTransactionStatus2Rule";
 			definition = "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule.forCreditorPaymentActivationRequestStatusReportV04);
 			owner_lazy = () -> CreditorPaymentActivationRequestStatusReportV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditorPaymentActivationRequestStatusReportV03 obj) throws Exception {
+			checkCreditorPaymentActivationRequestStatusReportV03(obj);
 		}
 	};
 	/**
@@ -283,13 +307,17 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 	 */
 	public static final MMConstraint<CreditorPaymentActivationRequestStatusReportV04> forCreditorPaymentActivationRequestStatusReportV04 = new MMConstraint<CreditorPaymentActivationRequestStatusReportV04>() {
 		{
-			validator = ConstraintGroupAndTransactionStatus2Rule::checkCreditorPaymentActivationRequestStatusReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupAndTransactionStatus2Rule";
 			definition = "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule.forCreditorPaymentActivationRequestStatusReportV05);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule.forCreditorPaymentActivationRequestStatusReportV03;
 			owner_lazy = () -> CreditorPaymentActivationRequestStatusReportV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditorPaymentActivationRequestStatusReportV04 obj) throws Exception {
+			checkCreditorPaymentActivationRequestStatusReportV04(obj);
 		}
 	};
 	/**
@@ -315,11 +343,15 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 	 */
 	public static final MMConstraint<com.tools20022.repository.area.pacs.PaymentStatusReportV02> forPaymentStatusReportV02 = new MMConstraint<com.tools20022.repository.area.pacs.PaymentStatusReportV02>() {
 		{
-			validator = ConstraintGroupAndTransactionStatus2Rule::checkPaymentStatusReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupAndTransactionStatus2Rule";
 			definition = "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT.\n.";
 			owner_lazy = () -> com.tools20022.repository.area.pacs.PaymentStatusReportV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(com.tools20022.repository.area.pacs.PaymentStatusReportV02 obj) throws Exception {
+			checkPaymentStatusReportV02(obj);
 		}
 	};
 

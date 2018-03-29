@@ -57,12 +57,16 @@ public class ConstraintSEPAReturnedAndOriginalInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<PaymentTransactionInformation18> forPaymentTransactionInformation18 = new MMConstraint<PaymentTransactionInformation18>() {
 		{
-			validator = ConstraintSEPAReturnedAndOriginalInterbankSettlementAmountRule::checkPaymentTransactionInformation18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SEPAReturnedAndOriginalInterbankSettlementAmountRule";
 			definition = "SEPA TVS 3.x Rule: \nOnly Applicable for SCT, therefore not injected in validation rules\nReturnInterbankSettlementAmount must be the same as the OriginalInterbankSettlementAmount.";
 			owner_lazy = () -> PaymentTransactionInformation18.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><SimpleRule xsi:type=\"SimpleRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/ReturnedInterbankSettlementAmount</leftOperand><rightOperand>/OriginalInterbankSettlementAmount</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>substring(/OriginalGroupInformation/OriginalMessageNameIdentification,1,8)</leftOperand><rightOperand>pacs.008</rightOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentTransactionInformation18 obj) throws Exception {
+			checkPaymentTransactionInformation18(obj);
 		}
 	};
 	/**
@@ -92,12 +96,16 @@ public class ConstraintSEPAReturnedAndOriginalInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<PaymentTransactionInformation23> forPaymentTransactionInformation23 = new MMConstraint<PaymentTransactionInformation23>() {
 		{
-			validator = ConstraintSEPAReturnedAndOriginalInterbankSettlementAmountRule::checkPaymentTransactionInformation23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SEPAReturnedAndOriginalInterbankSettlementAmountRule";
 			definition = "SEPA TVS 3.x Rule: \nOnly Applicable for SCT, therefore not injected in validation rules\nReturnInterbankSettlementAmount must be the same as the OriginalInterbankSettlementAmount.";
 			owner_lazy = () -> PaymentTransactionInformation23.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><SimpleRule xsi:type=\"SimpleRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/ReturnedInterbankSettlementAmount</leftOperand><rightOperand>/OriginalInterbankSettlementAmount</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>substring(/OriginalGroupInformation/OriginalMessageNameIdentification,1,8)</leftOperand><rightOperand>pacs.003</rightOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentTransactionInformation23 obj) throws Exception {
+			checkPaymentTransactionInformation23(obj);
 		}
 	};
 

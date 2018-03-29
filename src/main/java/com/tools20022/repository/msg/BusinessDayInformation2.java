@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BusinessDayInformationReport2;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -66,7 +67,7 @@ public class BusinessDayInformation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "BizDayInfRpt", required = true)
-	protected List<com.tools20022.repository.msg.BusinessDayInformationReport2> businessDayInformationReport;
+	protected List<BusinessDayInformationReport2> businessDayInformationReport;
 	/**
 	 * 
 	 <p>
@@ -95,7 +96,7 @@ public class BusinessDayInformation2 {
 	 * "Reports either business day information or a business error."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessDayInformationReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BusinessDayInformation2, List<BusinessDayInformationReport2>> mmBusinessDayInformationReport = new MMMessageAssociationEnd<BusinessDayInformation2, List<BusinessDayInformationReport2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDayInformation2.mmObject();
 			isDerived = false;
@@ -105,7 +106,17 @@ public class BusinessDayInformation2 {
 			definition = "Reports either business day information or a business error.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BusinessDayInformationReport2.mmObject();
+			type_lazy = () -> BusinessDayInformationReport2.mmObject();
+		}
+
+		@Override
+		public List<BusinessDayInformationReport2> getValue(BusinessDayInformation2 obj) {
+			return obj.getBusinessDayInformationReport();
+		}
+
+		@Override
+		public void setValue(BusinessDayInformation2 obj, List<BusinessDayInformationReport2> value) {
+			obj.setBusinessDayInformationReport(value);
 		}
 	};
 
@@ -126,7 +137,7 @@ public class BusinessDayInformation2 {
 		return businessDayInformationReport == null ? businessDayInformationReport = new ArrayList<>() : businessDayInformationReport;
 	}
 
-	public BusinessDayInformation2 setBusinessDayInformationReport(List<com.tools20022.repository.msg.BusinessDayInformationReport2> businessDayInformationReport) {
+	public BusinessDayInformation2 setBusinessDayInformationReport(List<BusinessDayInformationReport2> businessDayInformationReport) {
 		this.businessDayInformationReport = Objects.requireNonNull(businessDayInformationReport);
 		return this;
 	}

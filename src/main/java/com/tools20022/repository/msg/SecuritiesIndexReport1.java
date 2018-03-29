@@ -121,7 +121,7 @@ public class SecuritiesIndexReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTechnicalRecordIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesIndexReport1, Optional<Max35Text>> mmTechnicalRecordIdentification = new MMMessageAttribute<SecuritiesIndexReport1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesIndexReport1.mmObject();
 			isDerived = false;
@@ -132,6 +132,16 @@ public class SecuritiesIndexReport1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SecuritiesIndexReport1 obj) {
+			return obj.getTechnicalRecordIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesIndexReport1 obj, Optional<Max35Text> value) {
+			obj.setTechnicalRecordIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RqstngNtty")
@@ -165,7 +175,7 @@ public class SecuritiesIndexReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestingEntity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesIndexReport1, Optional<CountryCode>> mmRequestingEntity = new MMMessageAttribute<SecuritiesIndexReport1, Optional<CountryCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesIndexReport1.mmObject();
 			isDerived = false;
@@ -176,6 +186,16 @@ public class SecuritiesIndexReport1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(SecuritiesIndexReport1 obj) {
+			return obj.getRequestingEntity();
+		}
+
+		@Override
+		public void setValue(SecuritiesIndexReport1 obj, Optional<CountryCode> value) {
+			obj.setRequestingEntity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Indx", required = true)
@@ -207,7 +227,7 @@ public class SecuritiesIndexReport1 {
 	 * definition} = "Details the index that is being requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIndex = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesIndexReport1, FinancialInstrument46Choice> mmIndex = new MMMessageAssociationEnd<SecuritiesIndexReport1, FinancialInstrument46Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesIndexReport1.mmObject();
 			isDerived = false;
@@ -219,6 +239,16 @@ public class SecuritiesIndexReport1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrument46Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrument46Choice getValue(SecuritiesIndexReport1 obj) {
+			return obj.getIndex();
+		}
+
+		@Override
+		public void setValue(SecuritiesIndexReport1 obj, FinancialInstrument46Choice value) {
+			obj.setIndex(value);
 		}
 	};
 	@XmlElement(name = "VldtyPrd")
@@ -251,7 +281,7 @@ public class SecuritiesIndexReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmValidityPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesIndexReport1, Optional<Period4Choice>> mmValidityPeriod = new MMMessageAssociationEnd<SecuritiesIndexReport1, Optional<Period4Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesIndexReport1.mmObject();
 			isDerived = false;
@@ -263,6 +293,16 @@ public class SecuritiesIndexReport1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Period4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Period4Choice> getValue(SecuritiesIndexReport1 obj) {
+			return obj.getValidityPeriod();
+		}
+
+		@Override
+		public void setValue(SecuritiesIndexReport1 obj, Optional<Period4Choice> value) {
+			obj.setValidityPeriod(value.orElse(null));
 		}
 	};
 

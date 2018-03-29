@@ -52,11 +52,15 @@ public class ConstraintMidSideRule {
 	 */
 	public static final MMConstraint<QuoteSide1> forQuoteSide1 = new MMConstraint<QuoteSide1>() {
 		{
-			validator = ConstraintMidSideRule::checkQuoteSide1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MidSideRule";
 			definition = "If MidSide is present then MinimumQuantity, MaximumQuantity, Quantity and MarketPrice must not be present.";
 			owner_lazy = () -> QuoteSide1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuoteSide1 obj) throws Exception {
+			checkQuoteSide1(obj);
 		}
 	};
 	/**
@@ -81,11 +85,15 @@ public class ConstraintMidSideRule {
 	 */
 	public static final MMConstraint<QuoteEntry2> forQuoteEntry2 = new MMConstraint<QuoteEntry2>() {
 		{
-			validator = ConstraintMidSideRule::checkQuoteEntry2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MidSideRule";
 			definition = "If MidSide is present then MinimumQuantity, MaximumQuantity, Quantity and MarketPrice must not be present.";
 			owner_lazy = () -> QuoteEntry2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuoteEntry2 obj) throws Exception {
+			checkQuoteEntry2(obj);
 		}
 	};
 	/**
@@ -110,11 +118,15 @@ public class ConstraintMidSideRule {
 	 */
 	public static final MMConstraint<QuoteEntry1> forQuoteEntry1 = new MMConstraint<QuoteEntry1>() {
 		{
-			validator = ConstraintMidSideRule::checkQuoteEntry1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MidSideRule";
 			definition = "If MidSide is present then MinimumQuantity, MaximumQuantity, Quantity and MarketPrice must not be present.";
 			owner_lazy = () -> QuoteEntry1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuoteEntry1 obj) throws Exception {
+			checkQuoteEntry1(obj);
 		}
 	};
 

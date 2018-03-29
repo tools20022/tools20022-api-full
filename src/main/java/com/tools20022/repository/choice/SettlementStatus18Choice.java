@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06;
 import com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV07;
+import com.tools20022.repository.choice.FailingStatus10Choice;
+import com.tools20022.repository.choice.PendingStatus40Choice;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason6;
@@ -145,7 +147,7 @@ public class SettlementStatus18Choice {
 	 * SettlementStatus10Choice.mmPending}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPending = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementStatus18Choice, PendingStatus40Choice> mmPending = new MMMessageAssociationEnd<SettlementStatus18Choice, PendingStatus40Choice>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementStatus18Choice.mmObject();
@@ -159,7 +161,17 @@ public class SettlementStatus18Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.PendingStatus40Choice.mmObject();
+			type_lazy = () -> PendingStatus40Choice.mmObject();
+		}
+
+		@Override
+		public PendingStatus40Choice getValue(SettlementStatus18Choice obj) {
+			return obj.getPending();
+		}
+
+		@Override
+		public void setValue(SettlementStatus18Choice obj, PendingStatus40Choice value) {
+			obj.setPending(value);
 		}
 	};
 	@XmlElement(name = "Flng", required = true)
@@ -206,7 +218,7 @@ public class SettlementStatus18Choice {
 	 * SettlementStatus10Choice.mmFailing}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFailing = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementStatus18Choice, FailingStatus10Choice> mmFailing = new MMMessageAssociationEnd<SettlementStatus18Choice, FailingStatus10Choice>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementStatus18Choice.mmObject();
@@ -220,7 +232,17 @@ public class SettlementStatus18Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.FailingStatus10Choice.mmObject();
+			type_lazy = () -> FailingStatus10Choice.mmObject();
+		}
+
+		@Override
+		public FailingStatus10Choice getValue(SettlementStatus18Choice obj) {
+			return obj.getFailing();
+		}
+
+		@Override
+		public void setValue(SettlementStatus18Choice obj, FailingStatus10Choice value) {
+			obj.setFailing(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -265,7 +287,7 @@ public class SettlementStatus18Choice {
 	 * SettlementStatus10Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementStatus18Choice, ProprietaryStatusAndReason6> mmProprietary = new MMMessageAssociationEnd<SettlementStatus18Choice, ProprietaryStatusAndReason6>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementStatus18Choice.mmObject();
@@ -280,6 +302,16 @@ public class SettlementStatus18Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryStatusAndReason6.mmObject();
+		}
+
+		@Override
+		public ProprietaryStatusAndReason6 getValue(SettlementStatus18Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SettlementStatus18Choice obj, ProprietaryStatusAndReason6 value) {
+			obj.setProprietary(value);
 		}
 	};
 
@@ -305,7 +337,7 @@ public class SettlementStatus18Choice {
 		return pending;
 	}
 
-	public SettlementStatus18Choice setPending(com.tools20022.repository.choice.PendingStatus40Choice pending) {
+	public SettlementStatus18Choice setPending(PendingStatus40Choice pending) {
 		this.pending = Objects.requireNonNull(pending);
 		return this;
 	}
@@ -314,7 +346,7 @@ public class SettlementStatus18Choice {
 		return failing;
 	}
 
-	public SettlementStatus18Choice setFailing(com.tools20022.repository.choice.FailingStatus10Choice failing) {
+	public SettlementStatus18Choice setFailing(FailingStatus10Choice failing) {
 		this.failing = Objects.requireNonNull(failing);
 		return this;
 	}

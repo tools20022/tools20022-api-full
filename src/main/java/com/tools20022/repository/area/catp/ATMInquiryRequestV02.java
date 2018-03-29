@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.ContentInformationType10;
 import com.tools20022.repository.msg.ContentInformationType15;
 import com.tools20022.repository.msg.Header31;
 import com.tools20022.repository.msgset.ATMInterfaceforTransactionProcessingandATMManagementISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -124,7 +123,7 @@ public class ATMInquiryRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ATMInquiryRequestV02, Header31> mmHeader = new MMMessageBuildingBlock<ATMInquiryRequestV02, Header31>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -135,12 +134,14 @@ public class ATMInquiryRequestV02 {
 			complexType_lazy = () -> Header31.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ATMInquiryRequestV02.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header31 getValue(ATMInquiryRequestV02 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(ATMInquiryRequestV02 obj, Header31 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "PrtctdATMNqryReq")
@@ -168,7 +169,7 @@ public class ATMInquiryRequestV02 {
 	 * definition} = "Encrypted body of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmProtectedATMInquiryRequest = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ATMInquiryRequestV02, Optional<ContentInformationType10>> mmProtectedATMInquiryRequest = new MMMessageBuildingBlock<ATMInquiryRequestV02, Optional<ContentInformationType10>>() {
 		{
 			xmlTag = "PrtctdATMNqryReq";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -179,12 +180,14 @@ public class ATMInquiryRequestV02 {
 			complexType_lazy = () -> ContentInformationType10.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ATMInquiryRequestV02.class.getMethod("getProtectedATMInquiryRequest", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ContentInformationType10> getValue(ATMInquiryRequestV02 obj) {
+			return obj.getProtectedATMInquiryRequest();
+		}
+
+		@Override
+		public void setValue(ATMInquiryRequestV02 obj, Optional<ContentInformationType10> value) {
+			obj.setProtectedATMInquiryRequest(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ATMNqryReq")
@@ -213,7 +216,7 @@ public class ATMInquiryRequestV02 {
 	 * "Information related to the request of an inquiry from an ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmATMInquiryRequest = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ATMInquiryRequestV02, Optional<ATMInquiryRequest2>> mmATMInquiryRequest = new MMMessageBuildingBlock<ATMInquiryRequestV02, Optional<ATMInquiryRequest2>>() {
 		{
 			xmlTag = "ATMNqryReq";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -224,12 +227,14 @@ public class ATMInquiryRequestV02 {
 			complexType_lazy = () -> ATMInquiryRequest2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ATMInquiryRequestV02.class.getMethod("getATMInquiryRequest", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ATMInquiryRequest2> getValue(ATMInquiryRequestV02 obj) {
+			return obj.getATMInquiryRequest();
+		}
+
+		@Override
+		public void setValue(ATMInquiryRequestV02 obj, Optional<ATMInquiryRequest2> value) {
+			obj.setATMInquiryRequest(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctyTrlr")
@@ -257,7 +262,7 @@ public class ATMInquiryRequestV02 {
 	 * definition} = "Trailer of the message containing a MAC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ATMInquiryRequestV02, Optional<ContentInformationType15>> mmSecurityTrailer = new MMMessageBuildingBlock<ATMInquiryRequestV02, Optional<ContentInformationType15>>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -268,12 +273,14 @@ public class ATMInquiryRequestV02 {
 			complexType_lazy = () -> ContentInformationType15.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ATMInquiryRequestV02.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ContentInformationType15> getValue(ATMInquiryRequestV02 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(ATMInquiryRequestV02 obj, Optional<ContentInformationType15> value) {
+			obj.setSecurityTrailer(value.orElse(null));
 		}
 	};
 

@@ -138,7 +138,7 @@ public class Cancellation2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Cancellation2Choice, TransferReference1> mmReference = new MMMessageAttribute<Cancellation2Choice, TransferReference1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTradeRelatedIdentifications;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Cancellation2Choice.mmObject();
@@ -151,6 +151,16 @@ public class Cancellation2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TransferReference1.mmObject();
+		}
+
+		@Override
+		public TransferReference1 getValue(Cancellation2Choice obj) {
+			return obj.getReference();
+		}
+
+		@Override
+		public void setValue(Cancellation2Choice obj, TransferReference1 value) {
+			obj.setReference(value);
 		}
 	};
 	@XmlElement(name = "TrfInDtls", required = true)
@@ -195,7 +205,7 @@ public class Cancellation2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransferInDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Cancellation2Choice, TransferIn7> mmTransferInDetails = new MMMessageAttribute<Cancellation2Choice, TransferIn7>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesSettlement.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Cancellation2Choice.mmObject();
@@ -208,6 +218,16 @@ public class Cancellation2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TransferIn7.mmObject();
+		}
+
+		@Override
+		public TransferIn7 getValue(Cancellation2Choice obj) {
+			return obj.getTransferInDetails();
+		}
+
+		@Override
+		public void setValue(Cancellation2Choice obj, TransferIn7 value) {
+			obj.setTransferInDetails(value);
 		}
 	};
 

@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.entity.ObligationFulfilment;
+import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.*;
@@ -165,7 +165,7 @@ public class ProductDelivery extends ObligationFulfilment {
 	 * definition} = "Actual delivery period of the products and/or services."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmDeliveryPeriod = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ProductDelivery, DateTimePeriod> mmDeliveryPeriod = new MMBusinessAssociationEnd<ProductDelivery, DateTimePeriod>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TradeDelivery1.mmDeliveryPeriod, TradeDelivery2.mmDeliveryPeriod, TradeDelivery3.mmDeliveryPeriod);
 			isDerived = false;
@@ -175,12 +175,22 @@ public class ProductDelivery extends ObligationFulfilment {
 			definition = "Actual delivery period of the products and/or services.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmRelatedProductDelivery;
+			opposite_lazy = () -> DateTimePeriod.mmRelatedProductDelivery;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
+			type_lazy = () -> DateTimePeriod.mmObject();
+		}
+
+		@Override
+		public DateTimePeriod getValue(ProductDelivery obj) {
+			return obj.getDeliveryPeriod();
+		}
+
+		@Override
+		public void setValue(ProductDelivery obj, DateTimePeriod value) {
+			obj.setDeliveryPeriod(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.Transport> routing;
+	protected List<Transport> routing;
 	/**
 	 * 
 	 <p>
@@ -253,7 +263,7 @@ public class ProductDelivery extends ObligationFulfilment {
 	 * definition} = "Information related to the conveyance of goods."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRouting = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ProductDelivery, List<Transport>> mmRouting = new MMBusinessAssociationEnd<ProductDelivery, List<Transport>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TradeDelivery1.mmConsignment, LineItemDetails4.mmRoutingSummary, LineItem5.mmRoutingSummary, LineItemDetails7.mmRoutingSummary, LineItem7.mmRoutingSummary, CertificateDataSet1.mmTransport,
 					LineItem11.mmRoutingSummary, LineItemDetails10.mmRoutingSummary, LineItemDetails13.mmRoutingSummary, LineItem13.mmRoutingSummary, TradeDelivery2.mmConsignment, TradeDelivery3.mmConsignment);
@@ -263,9 +273,19 @@ public class ProductDelivery extends ObligationFulfilment {
 			name = "Routing";
 			definition = "Information related to the conveyance of goods.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Transport.mmProductDelivery;
+			opposite_lazy = () -> Transport.mmProductDelivery;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Transport.mmObject();
+			type_lazy = () -> Transport.mmObject();
+		}
+
+		@Override
+		public List<Transport> getValue(ProductDelivery obj) {
+			return obj.getRouting();
+		}
+
+		@Override
+		public void setValue(ProductDelivery obj, List<Transport> value) {
+			obj.setRouting(value);
 		}
 	};
 	protected CommercialTradeSettlement tradeSettlement;
@@ -305,7 +325,7 @@ public class ProductDelivery extends ObligationFulfilment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmTradeSettlement = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ProductDelivery, Optional<CommercialTradeSettlement>> mmTradeSettlement = new MMBusinessAssociationEnd<ProductDelivery, Optional<CommercialTradeSettlement>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ProductDelivery.mmObject();
@@ -314,9 +334,19 @@ public class ProductDelivery extends ObligationFulfilment {
 			definition = "Specifies the settlement operation which originates the delivery of a product.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.CommercialTradeSettlement.mmProductDelivery;
+			opposite_lazy = () -> CommercialTradeSettlement.mmProductDelivery;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.CommercialTradeSettlement.mmObject();
+			type_lazy = () -> CommercialTradeSettlement.mmObject();
+		}
+
+		@Override
+		public Optional<CommercialTradeSettlement> getValue(ProductDelivery obj) {
+			return obj.getTradeSettlement();
+		}
+
+		@Override
+		public void setValue(ProductDelivery obj, Optional<CommercialTradeSettlement> value) {
+			obj.setTradeSettlement(value.orElse(null));
 		}
 	};
 	protected ProductDeliveryObligation obligation;
@@ -355,7 +385,7 @@ public class ProductDelivery extends ObligationFulfilment {
 	 * "Specifies the obligation which is offset by the delivery of a product."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmObligation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ProductDelivery, Optional<ProductDeliveryObligation>> mmObligation = new MMBusinessAssociationEnd<ProductDelivery, Optional<ProductDeliveryObligation>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ProductDelivery.mmObject();
@@ -364,9 +394,19 @@ public class ProductDelivery extends ObligationFulfilment {
 			definition = "Specifies the obligation which is offset by the delivery of a product.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.ProductDeliveryObligation.mmProductDeliveryOffset;
+			opposite_lazy = () -> ProductDeliveryObligation.mmProductDeliveryOffset;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.ProductDeliveryObligation.mmObject();
+			type_lazy = () -> ProductDeliveryObligation.mmObject();
+		}
+
+		@Override
+		public Optional<ProductDeliveryObligation> getValue(ProductDelivery obj) {
+			return obj.getObligation();
+		}
+
+		@Override
+		public void setValue(ProductDelivery obj, Optional<ProductDeliveryObligation> value) {
+			obj.setObligation(value.orElse(null));
 		}
 	};
 	protected List<com.tools20022.repository.entity.TradeCertificate> tradeCertificate;
@@ -405,7 +445,7 @@ public class ProductDelivery extends ObligationFulfilment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmTradeCertificate = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ProductDelivery, List<TradeCertificate>> mmTradeCertificate = new MMBusinessAssociationEnd<ProductDelivery, List<TradeCertificate>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ProductDelivery.mmObject();
@@ -416,6 +456,16 @@ public class ProductDelivery extends ObligationFulfilment {
 			opposite_lazy = () -> com.tools20022.repository.entity.TradeCertificate.mmProductDelivery;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.TradeCertificate.mmObject();
+		}
+
+		@Override
+		public List<TradeCertificate> getValue(ProductDelivery obj) {
+			return obj.getTradeCertificate();
+		}
+
+		@Override
+		public void setValue(ProductDelivery obj, List<TradeCertificate> value) {
+			obj.setTradeCertificate(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.InsuranceCertificate> insuranceCertificate;
@@ -455,7 +505,7 @@ public class ProductDelivery extends ObligationFulfilment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmInsuranceCertificate = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ProductDelivery, List<InsuranceCertificate>> mmInsuranceCertificate = new MMBusinessAssociationEnd<ProductDelivery, List<InsuranceCertificate>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ProductDelivery.mmObject();
@@ -466,6 +516,16 @@ public class ProductDelivery extends ObligationFulfilment {
 			opposite_lazy = () -> com.tools20022.repository.entity.InsuranceCertificate.mmProductDelivery;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InsuranceCertificate.mmObject();
+		}
+
+		@Override
+		public List<InsuranceCertificate> getValue(ProductDelivery obj) {
+			return obj.getInsuranceCertificate();
+		}
+
+		@Override
+		public void setValue(ProductDelivery obj, List<InsuranceCertificate> value) {
+			obj.setInsuranceCertificate(value);
 		}
 	};
 	protected Product product;
@@ -510,7 +570,7 @@ public class ProductDelivery extends ObligationFulfilment {
 	 * "Specifies the type of goods and services linked to the quantity."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmProduct = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ProductDelivery, com.tools20022.repository.entity.Product> mmProduct = new MMBusinessAssociationEnd<ProductDelivery, com.tools20022.repository.entity.Product>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CertificateDataSet2.mmCertifiedCharacteristics);
 			isDerived = false;
@@ -524,6 +584,16 @@ public class ProductDelivery extends ObligationFulfilment {
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 		}
+
+		@Override
+		public com.tools20022.repository.entity.Product getValue(ProductDelivery obj) {
+			return obj.getProduct();
+		}
+
+		@Override
+		public void setValue(ProductDelivery obj, com.tools20022.repository.entity.Product value) {
+			obj.setProduct(value);
+		}
 	};
 
 	static public MMBusinessComponent mmObject() {
@@ -533,9 +603,8 @@ public class ProductDelivery extends ObligationFulfilment {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProductDelivery";
 				definition = "Arrangements for delivery of invoiced products and/or services.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DateTimePeriod.mmRelatedProductDelivery, com.tools20022.repository.entity.Product.mmDelivery,
-						com.tools20022.repository.entity.InsuranceCertificate.mmProductDelivery, com.tools20022.repository.entity.Transport.mmProductDelivery, com.tools20022.repository.entity.CommercialTradeSettlement.mmProductDelivery,
-						com.tools20022.repository.entity.TradeCertificate.mmProductDelivery, com.tools20022.repository.entity.ProductDeliveryObligation.mmProductDeliveryOffset);
+				associationDomain_lazy = () -> Arrays.asList(DateTimePeriod.mmRelatedProductDelivery, com.tools20022.repository.entity.Product.mmDelivery, com.tools20022.repository.entity.InsuranceCertificate.mmProductDelivery,
+						Transport.mmProductDelivery, CommercialTradeSettlement.mmProductDelivery, com.tools20022.repository.entity.TradeCertificate.mmProductDelivery, ProductDeliveryObligation.mmProductDeliveryOffset);
 				superType_lazy = () -> ObligationFulfilment.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ProductDelivery.mmDeliveryPeriod, com.tools20022.repository.entity.ProductDelivery.mmRouting,
 						com.tools20022.repository.entity.ProductDelivery.mmTradeSettlement, com.tools20022.repository.entity.ProductDelivery.mmObligation, com.tools20022.repository.entity.ProductDelivery.mmTradeCertificate,
@@ -555,7 +624,7 @@ public class ProductDelivery extends ObligationFulfilment {
 		return deliveryPeriod;
 	}
 
-	public ProductDelivery setDeliveryPeriod(com.tools20022.repository.entity.DateTimePeriod deliveryPeriod) {
+	public ProductDelivery setDeliveryPeriod(DateTimePeriod deliveryPeriod) {
 		this.deliveryPeriod = Objects.requireNonNull(deliveryPeriod);
 		return this;
 	}
@@ -564,7 +633,7 @@ public class ProductDelivery extends ObligationFulfilment {
 		return routing == null ? routing = new ArrayList<>() : routing;
 	}
 
-	public ProductDelivery setRouting(List<com.tools20022.repository.entity.Transport> routing) {
+	public ProductDelivery setRouting(List<Transport> routing) {
 		this.routing = Objects.requireNonNull(routing);
 		return this;
 	}
@@ -573,7 +642,7 @@ public class ProductDelivery extends ObligationFulfilment {
 		return tradeSettlement == null ? Optional.empty() : Optional.of(tradeSettlement);
 	}
 
-	public ProductDelivery setTradeSettlement(com.tools20022.repository.entity.CommercialTradeSettlement tradeSettlement) {
+	public ProductDelivery setTradeSettlement(CommercialTradeSettlement tradeSettlement) {
 		this.tradeSettlement = tradeSettlement;
 		return this;
 	}
@@ -582,7 +651,7 @@ public class ProductDelivery extends ObligationFulfilment {
 		return obligation == null ? Optional.empty() : Optional.of(obligation);
 	}
 
-	public ProductDelivery setObligation(com.tools20022.repository.entity.ProductDeliveryObligation obligation) {
+	public ProductDelivery setObligation(ProductDeliveryObligation obligation) {
 		this.obligation = obligation;
 		return this;
 	}

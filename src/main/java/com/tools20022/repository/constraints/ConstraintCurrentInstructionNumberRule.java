@@ -52,11 +52,15 @@ public class ConstraintCurrentInstructionNumberRule {
 	 */
 	public static final MMConstraint<TotalNumber1> forTotalNumber1 = new MMConstraint<TotalNumber1>() {
 		{
-			validator = ConstraintCurrentInstructionNumberRule::checkTotalNumber1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentInstructionNumberRule";
 			definition = "If the Sender wants to indicate that this instruction is linked to one or more settlement instruction, then the CurrentInstructionNumber must be specified.";
 			owner_lazy = () -> TotalNumber1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TotalNumber1 obj) throws Exception {
+			checkTotalNumber1(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintCurrentInstructionNumberRule {
 	 */
 	public static final MMConstraint<NumberCount1Choice> forNumberCount1Choice = new MMConstraint<NumberCount1Choice>() {
 		{
-			validator = ConstraintCurrentInstructionNumberRule::checkNumberCount1Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentInstructionNumberRule";
 			definition = "If the Sender wants to indicate that this instruction is linked to one or more settlement instruction, then the CurrentInstructionNumber must be specified.";
 			owner_lazy = () -> NumberCount1Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(NumberCount1Choice obj) throws Exception {
+			checkNumberCount1Choice(obj);
 		}
 	};
 

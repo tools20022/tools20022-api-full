@@ -132,7 +132,7 @@ public class Adjustment3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Adjustment3, AdjustmentType2Code> mmType = new MMMessageAttribute<Adjustment3, AdjustmentType2Code>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Adjustment3.mmObject();
@@ -144,6 +144,16 @@ public class Adjustment3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AdjustmentType2Code.mmObject();
+		}
+
+		@Override
+		public AdjustmentType2Code getValue(Adjustment3 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Adjustment3 obj, AdjustmentType2Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "OthrAdjstmntTp", required = true)
@@ -180,7 +190,7 @@ public class Adjustment3 {
 	 * "Specifies a type of adjustment not present in the code list."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherAdjustmentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Adjustment3, Max35Text> mmOtherAdjustmentType = new MMMessageAttribute<Adjustment3, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Adjustment3.mmObject();
@@ -192,6 +202,16 @@ public class Adjustment3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Adjustment3 obj) {
+			return obj.getOtherAdjustmentType();
+		}
+
+		@Override
+		public void setValue(Adjustment3 obj, Max35Text value) {
+			obj.setOtherAdjustmentType(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -228,7 +248,7 @@ public class Adjustment3 {
 	 * definition} = "Specifies the monetary amount of the adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Adjustment3, CurrencyAndAmount> mmAmount = new MMMessageAttribute<Adjustment3, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Adjustment3.mmObject();
@@ -240,6 +260,16 @@ public class Adjustment3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(Adjustment3 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Adjustment3 obj, CurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "Rate", required = true)
@@ -276,7 +306,7 @@ public class Adjustment3 {
 	 * definition} = "Specifies the percentage rate of the adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Adjustment3, PercentageRate> mmRate = new MMMessageAttribute<Adjustment3, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmChargeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Adjustment3.mmObject();
@@ -288,6 +318,16 @@ public class Adjustment3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(Adjustment3 obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(Adjustment3 obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "Drctn", required = true)
@@ -326,7 +366,7 @@ public class Adjustment3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDirection = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Adjustment3, AdjustmentDirection1Code> mmDirection = new MMMessageAttribute<Adjustment3, AdjustmentDirection1Code>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmDirection;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Adjustment3.mmObject();
@@ -338,6 +378,16 @@ public class Adjustment3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AdjustmentDirection1Code.mmObject();
+		}
+
+		@Override
+		public AdjustmentDirection1Code getValue(Adjustment3 obj) {
+			return obj.getDirection();
+		}
+
+		@Override
+		public void setValue(Adjustment3 obj, AdjustmentDirection1Code value) {
+			obj.setDirection(value);
 		}
 	};
 	/**

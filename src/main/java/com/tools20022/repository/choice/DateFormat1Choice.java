@@ -121,7 +121,7 @@ public class DateFormat1Choice {
 	 * definition} = "Date expressed as a calendar date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateFormat1Choice, ISODate> mmDate = new MMMessageAttribute<DateFormat1Choice, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat1Choice.mmObject();
 			isDerived = false;
@@ -132,6 +132,16 @@ public class DateFormat1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(DateFormat1Choice obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(DateFormat1Choice obj, ISODate value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "Cd", required = true)
@@ -164,7 +174,7 @@ public class DateFormat1Choice {
 	 * definition} = "Date expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateFormat1Choice, SettlementDate1Code> mmCode = new MMMessageAttribute<DateFormat1Choice, SettlementDate1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat1Choice.mmObject();
 			isDerived = false;
@@ -175,6 +185,16 @@ public class DateFormat1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SettlementDate1Code.mmObject();
+		}
+
+		@Override
+		public SettlementDate1Code getValue(DateFormat1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(DateFormat1Choice obj, SettlementDate1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "DtTm", required = true)
@@ -206,7 +226,7 @@ public class DateFormat1Choice {
 	 * definition} = "Date expressed as a calendar date and time."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateFormat1Choice, ISODateTime> mmDateTime = new MMMessageAttribute<DateFormat1Choice, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat1Choice.mmObject();
 			isDerived = false;
@@ -217,6 +237,16 @@ public class DateFormat1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(DateFormat1Choice obj) {
+			return obj.getDateTime();
+		}
+
+		@Override
+		public void setValue(DateFormat1Choice obj, ISODateTime value) {
+			obj.setDateTime(value);
 		}
 	};
 

@@ -115,7 +115,7 @@ public class UTCOffset1 {
 	 * "Indicates whether the offset is before or after 00: 00 hour UTC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSign = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UTCOffset1, PlusOrMinusIndicator> mmSign = new MMMessageAttribute<UTCOffset1, PlusOrMinusIndicator>() {
 		{
 			businessElementTrace_lazy = () -> UTCOffset.mmSign;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UTCOffset1.mmObject();
@@ -127,6 +127,16 @@ public class UTCOffset1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PlusOrMinusIndicator.mmObject();
+		}
+
+		@Override
+		public PlusOrMinusIndicator getValue(UTCOffset1 obj) {
+			return obj.getSign();
+		}
+
+		@Override
+		public void setValue(UTCOffset1 obj, PlusOrMinusIndicator value) {
+			obj.setSign(value);
 		}
 	};
 	@XmlElement(name = "NbOfHrs", required = true)
@@ -164,7 +174,7 @@ public class UTCOffset1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfHours = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UTCOffset1, ISOTime> mmNumberOfHours = new MMMessageAttribute<UTCOffset1, ISOTime>() {
 		{
 			businessElementTrace_lazy = () -> UTCOffset.mmNumberOfHours;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UTCOffset1.mmObject();
@@ -176,6 +186,16 @@ public class UTCOffset1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISOTime.mmObject();
+		}
+
+		@Override
+		public ISOTime getValue(UTCOffset1 obj) {
+			return obj.getNumberOfHours();
+		}
+
+		@Override
+		public void setValue(UTCOffset1 obj, ISOTime value) {
+			obj.setNumberOfHours(value);
 		}
 	};
 

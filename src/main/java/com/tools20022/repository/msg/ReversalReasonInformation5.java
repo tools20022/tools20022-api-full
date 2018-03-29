@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max105Text;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PaymentStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification14;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -113,7 +114,7 @@ public class ReversalReasonInformation5 {
 	 * definition} = "Party issuing the reversal."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReversalOriginator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReversalReasonInformation5, PartyIdentification14> mmReversalOriginator = new MMMessageAssociationEnd<ReversalReasonInformation5, PartyIdentification14>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReversalReasonInformation5.mmObject();
@@ -125,7 +126,17 @@ public class ReversalReasonInformation5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification14.mmObject();
+			type_lazy = () -> PartyIdentification14.mmObject();
+		}
+
+		@Override
+		public PartyIdentification14 getValue(ReversalReasonInformation5 obj) {
+			return obj.getReversalOriginator();
+		}
+
+		@Override
+		public void setValue(ReversalReasonInformation5 obj, PartyIdentification14 value) {
+			obj.setReversalOriginator(value);
 		}
 	};
 	@XmlElement(name = "RvslRsn", required = true)
@@ -162,7 +173,7 @@ public class ReversalReasonInformation5 {
 	 * definition} = "Specifies the reason for the reversal."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReversalReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReversalReasonInformation5, ReversalReason1Choice> mmReversalReason = new MMMessageAssociationEnd<ReversalReasonInformation5, ReversalReason1Choice>() {
 		{
 			businessComponentTrace_lazy = () -> PaymentStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReversalReasonInformation5.mmObject();
@@ -175,6 +186,16 @@ public class ReversalReasonInformation5 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ReversalReason1Choice.mmObject();
+		}
+
+		@Override
+		public ReversalReason1Choice getValue(ReversalReasonInformation5 obj) {
+			return obj.getReversalReason();
+		}
+
+		@Override
+		public void setValue(ReversalReasonInformation5 obj, ReversalReason1Choice value) {
+			obj.setReversalReason(value);
 		}
 	};
 	@XmlElement(name = "AddtlRvslRsnInf")
@@ -206,7 +227,7 @@ public class ReversalReasonInformation5 {
 	 * definition} = "Further details on the reversal reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReversalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReversalReasonInformation5, List<Max105Text>> mmAdditionalReversalReasonInformation = new MMMessageAttribute<ReversalReasonInformation5, List<Max105Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReversalReasonInformation5.mmObject();
 			isDerived = false;
@@ -216,6 +237,16 @@ public class ReversalReasonInformation5 {
 			definition = "Further details on the reversal reason.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public List<Max105Text> getValue(ReversalReasonInformation5 obj) {
+			return obj.getAdditionalReversalReasonInformation();
+		}
+
+		@Override
+		public void setValue(ReversalReasonInformation5 obj, List<Max105Text> value) {
+			obj.setAdditionalReversalReasonInformation(value);
 		}
 	};
 
@@ -238,7 +269,7 @@ public class ReversalReasonInformation5 {
 		return reversalOriginator;
 	}
 
-	public ReversalReasonInformation5 setReversalOriginator(com.tools20022.repository.msg.PartyIdentification14 reversalOriginator) {
+	public ReversalReasonInformation5 setReversalOriginator(PartyIdentification14 reversalOriginator) {
 		this.reversalOriginator = Objects.requireNonNull(reversalOriginator);
 		return this;
 	}

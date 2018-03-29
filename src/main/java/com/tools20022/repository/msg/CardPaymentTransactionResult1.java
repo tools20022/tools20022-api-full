@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.entity.CardPaymentValidation;
 import com.tools20022.repository.entity.Response;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification33;
+import com.tools20022.repository.msg.ResponseType1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -130,7 +132,7 @@ public class CardPaymentTransactionResult1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAuthorisationEntity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentTransactionResult1, Optional<GenericIdentification33>> mmAuthorisationEntity = new MMMessageAssociationEnd<CardPaymentTransactionResult1, Optional<GenericIdentification33>>() {
 		{
 			businessComponentTrace_lazy = () -> AuthorisationEntity.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionResult1.mmObject();
@@ -143,7 +145,17 @@ public class CardPaymentTransactionResult1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification33.mmObject();
+			type_lazy = () -> GenericIdentification33.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification33> getValue(CardPaymentTransactionResult1 obj) {
+			return obj.getAuthorisationEntity();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransactionResult1 obj, Optional<GenericIdentification33> value) {
+			obj.setAuthorisationEntity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RspnToAuthstn", required = true)
@@ -187,7 +199,7 @@ public class CardPaymentTransactionResult1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmResponseToAuthorisation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentTransactionResult1, ResponseType1> mmResponseToAuthorisation = new MMMessageAssociationEnd<CardPaymentTransactionResult1, ResponseType1>() {
 		{
 			businessElementTrace_lazy = () -> Response.mmResponseToAuthorisation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionResult1.mmObject();
@@ -200,7 +212,17 @@ public class CardPaymentTransactionResult1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ResponseType1.mmObject();
+			type_lazy = () -> ResponseType1.mmObject();
+		}
+
+		@Override
+		public ResponseType1 getValue(CardPaymentTransactionResult1 obj) {
+			return obj.getResponseToAuthorisation();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransactionResult1 obj, ResponseType1 value) {
+			obj.setResponseToAuthorisation(value);
 		}
 	};
 	@XmlElement(name = "AuthstnCd")
@@ -246,7 +268,7 @@ public class CardPaymentTransactionResult1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAuthorisationCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentTransactionResult1, Optional<Min6Max8Text>> mmAuthorisationCode = new MMMessageAttribute<CardPaymentTransactionResult1, Optional<Min6Max8Text>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentValidation.mmAuthorisationCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionResult1.mmObject();
@@ -259,6 +281,16 @@ public class CardPaymentTransactionResult1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Min6Max8Text.mmObject();
+		}
+
+		@Override
+		public Optional<Min6Max8Text> getValue(CardPaymentTransactionResult1 obj) {
+			return obj.getAuthorisationCode();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransactionResult1 obj, Optional<Min6Max8Text> value) {
+			obj.setAuthorisationCode(value.orElse(null));
 		}
 	};
 
@@ -282,7 +314,7 @@ public class CardPaymentTransactionResult1 {
 		return authorisationEntity == null ? Optional.empty() : Optional.of(authorisationEntity);
 	}
 
-	public CardPaymentTransactionResult1 setAuthorisationEntity(com.tools20022.repository.msg.GenericIdentification33 authorisationEntity) {
+	public CardPaymentTransactionResult1 setAuthorisationEntity(GenericIdentification33 authorisationEntity) {
 		this.authorisationEntity = authorisationEntity;
 		return this;
 	}
@@ -291,7 +323,7 @@ public class CardPaymentTransactionResult1 {
 		return responseToAuthorisation;
 	}
 
-	public CardPaymentTransactionResult1 setResponseToAuthorisation(com.tools20022.repository.msg.ResponseType1 responseToAuthorisation) {
+	public CardPaymentTransactionResult1 setResponseToAuthorisation(ResponseType1 responseToAuthorisation) {
 		this.responseToAuthorisation = Objects.requireNonNull(responseToAuthorisation);
 		return this;
 	}

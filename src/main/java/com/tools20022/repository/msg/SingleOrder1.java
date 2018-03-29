@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -134,7 +135,7 @@ public class SingleOrder1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmManualOrderIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SingleOrder1, Optional<YesNoIndicator>> mmManualOrderIndicator = new MMMessageAttribute<SingleOrder1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderParameters.mmManualOrderIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SingleOrder1.mmObject();
@@ -147,6 +148,16 @@ public class SingleOrder1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SingleOrder1 obj) {
+			return obj.getManualOrderIndicator();
+		}
+
+		@Override
+		public void setValue(SingleOrder1 obj, Optional<YesNoIndicator> value) {
+			obj.setManualOrderIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DrctdOrdr")
@@ -188,7 +199,7 @@ public class SingleOrder1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDirectedOrder = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SingleOrder1, Optional<YesNoIndicator>> mmDirectedOrder = new MMMessageAttribute<SingleOrder1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderParameters.mmDirectedOrder;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SingleOrder1.mmObject();
@@ -201,6 +212,16 @@ public class SingleOrder1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SingleOrder1 obj) {
+			return obj.getDirectedOrder();
+		}
+
+		@Override
+		public void setValue(SingleOrder1 obj, Optional<YesNoIndicator> value) {
+			obj.setDirectedOrder(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcvdDptmt")
@@ -240,7 +261,7 @@ public class SingleOrder1 {
 	 * "Identifies the Broker / Dealer Department that first took the order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReceivedDepartment = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SingleOrder1, Optional<Max35Text>> mmReceivedDepartment = new MMMessageAttribute<SingleOrder1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderParameters.mmReceivedDepartment;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SingleOrder1.mmObject();
@@ -253,6 +274,16 @@ public class SingleOrder1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SingleOrder1 obj) {
+			return obj.getReceivedDepartment();
+		}
+
+		@Override
+		public void setValue(SingleOrder1 obj, Optional<Max35Text> value) {
+			obj.setReceivedDepartment(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CstmrHdlgInstr")
@@ -294,7 +325,7 @@ public class SingleOrder1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCustomerHandlingInstruction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SingleOrder1, Optional<CustomerHandlingInstructionChoice>> mmCustomerHandlingInstruction = new MMMessageAttribute<SingleOrder1, Optional<CustomerHandlingInstructionChoice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderParameters.mmCustomerHandlingInstruction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SingleOrder1.mmObject();
@@ -307,6 +338,16 @@ public class SingleOrder1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CustomerHandlingInstructionChoice.mmObject();
+		}
+
+		@Override
+		public Optional<CustomerHandlingInstructionChoice> getValue(SingleOrder1 obj) {
+			return obj.getCustomerHandlingInstruction();
+		}
+
+		@Override
+		public void setValue(SingleOrder1 obj, Optional<CustomerHandlingInstructionChoice> value) {
+			obj.setCustomerHandlingInstruction(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrdrDtls", required = true)
@@ -340,7 +381,7 @@ public class SingleOrder1 {
 	 * definition} = "Provides order details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOrderDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SingleOrder1, Order3> mmOrderDetails = new MMMessageAssociationEnd<SingleOrder1, Order3>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesOrder.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SingleOrder1.mmObject();
@@ -352,7 +393,17 @@ public class SingleOrder1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Order3.mmObject();
+			type_lazy = () -> Order3.mmObject();
+		}
+
+		@Override
+		public Order3 getValue(SingleOrder1 obj) {
+			return obj.getOrderDetails();
+		}
+
+		@Override
+		public void setValue(SingleOrder1 obj, Order3 value) {
+			obj.setOrderDetails(value);
 		}
 	};
 	@XmlElement(name = "SprdAndBchmkCrvDtls")
@@ -388,7 +439,7 @@ public class SingleOrder1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSpreadAndBenchmarkCurveDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SingleOrder1, Optional<BenchmarkCurve1>> mmSpreadAndBenchmarkCurveDetails = new MMMessageAssociationEnd<SingleOrder1, Optional<BenchmarkCurve1>>() {
 		{
 			businessComponentTrace_lazy = () -> Spread.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SingleOrder1.mmObject();
@@ -400,7 +451,17 @@ public class SingleOrder1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BenchmarkCurve1.mmObject();
+			type_lazy = () -> BenchmarkCurve1.mmObject();
+		}
+
+		@Override
+		public Optional<BenchmarkCurve1> getValue(SingleOrder1 obj) {
+			return obj.getSpreadAndBenchmarkCurveDetails();
+		}
+
+		@Override
+		public void setValue(SingleOrder1 obj, Optional<BenchmarkCurve1> value) {
+			obj.setSpreadAndBenchmarkCurveDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "YldDtls")
@@ -436,7 +497,7 @@ public class SingleOrder1 {
 	 * "Details about the return provided by a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmYieldDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SingleOrder1, Optional<YieldCalculation1>> mmYieldDetails = new MMMessageAssociationEnd<SingleOrder1, Optional<YieldCalculation1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmYieldCalculation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SingleOrder1.mmObject();
@@ -448,7 +509,17 @@ public class SingleOrder1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.YieldCalculation1.mmObject();
+			type_lazy = () -> YieldCalculation1.mmObject();
+		}
+
+		@Override
+		public Optional<YieldCalculation1> getValue(SingleOrder1 obj) {
+			return obj.getYieldDetails();
+		}
+
+		@Override
+		public void setValue(SingleOrder1 obj, Optional<YieldCalculation1> value) {
+			obj.setYieldDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TwoLegTxDtls")
@@ -483,7 +554,7 @@ public class SingleOrder1 {
 	 * definition} = "Provides details about the two leg transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTwoLegTransactionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SingleOrder1, Optional<SecuritiesFinancing1>> mmTwoLegTransactionDetails = new MMMessageAssociationEnd<SingleOrder1, Optional<SecuritiesFinancing1>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesFinancing.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SingleOrder1.mmObject();
@@ -495,7 +566,17 @@ public class SingleOrder1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancing1.mmObject();
+			type_lazy = () -> SecuritiesFinancing1.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesFinancing1> getValue(SingleOrder1 obj) {
+			return obj.getTwoLegTransactionDetails();
+		}
+
+		@Override
+		public void setValue(SingleOrder1 obj, Optional<SecuritiesFinancing1> value) {
+			obj.setTwoLegTransactionDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradRgltryTmStmpsDtls")
@@ -527,7 +608,7 @@ public class SingleOrder1 {
 	 * "Provides details about the time the order was received and executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradeRegulatoryTimeStampsDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SingleOrder1, Optional<TradeRegulatoryTimeStampGroup>> mmTradeRegulatoryTimeStampsDetails = new MMMessageAssociationEnd<SingleOrder1, Optional<TradeRegulatoryTimeStampGroup>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SingleOrder1.mmObject();
 			isDerived = false;
@@ -538,7 +619,17 @@ public class SingleOrder1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup.mmObject();
+			type_lazy = () -> TradeRegulatoryTimeStampGroup.mmObject();
+		}
+
+		@Override
+		public Optional<TradeRegulatoryTimeStampGroup> getValue(SingleOrder1 obj) {
+			return obj.getTradeRegulatoryTimeStampsDetails();
+		}
+
+		@Override
+		public void setValue(SingleOrder1 obj, Optional<TradeRegulatoryTimeStampGroup> value) {
+			obj.setTradeRegulatoryTimeStampsDetails(value.orElse(null));
 		}
 	};
 
@@ -599,7 +690,7 @@ public class SingleOrder1 {
 		return orderDetails;
 	}
 
-	public SingleOrder1 setOrderDetails(com.tools20022.repository.msg.Order3 orderDetails) {
+	public SingleOrder1 setOrderDetails(Order3 orderDetails) {
 		this.orderDetails = Objects.requireNonNull(orderDetails);
 		return this;
 	}
@@ -608,7 +699,7 @@ public class SingleOrder1 {
 		return spreadAndBenchmarkCurveDetails == null ? Optional.empty() : Optional.of(spreadAndBenchmarkCurveDetails);
 	}
 
-	public SingleOrder1 setSpreadAndBenchmarkCurveDetails(com.tools20022.repository.msg.BenchmarkCurve1 spreadAndBenchmarkCurveDetails) {
+	public SingleOrder1 setSpreadAndBenchmarkCurveDetails(BenchmarkCurve1 spreadAndBenchmarkCurveDetails) {
 		this.spreadAndBenchmarkCurveDetails = spreadAndBenchmarkCurveDetails;
 		return this;
 	}
@@ -617,7 +708,7 @@ public class SingleOrder1 {
 		return yieldDetails == null ? Optional.empty() : Optional.of(yieldDetails);
 	}
 
-	public SingleOrder1 setYieldDetails(com.tools20022.repository.msg.YieldCalculation1 yieldDetails) {
+	public SingleOrder1 setYieldDetails(YieldCalculation1 yieldDetails) {
 		this.yieldDetails = yieldDetails;
 		return this;
 	}
@@ -626,7 +717,7 @@ public class SingleOrder1 {
 		return twoLegTransactionDetails == null ? Optional.empty() : Optional.of(twoLegTransactionDetails);
 	}
 
-	public SingleOrder1 setTwoLegTransactionDetails(com.tools20022.repository.msg.SecuritiesFinancing1 twoLegTransactionDetails) {
+	public SingleOrder1 setTwoLegTransactionDetails(SecuritiesFinancing1 twoLegTransactionDetails) {
 		this.twoLegTransactionDetails = twoLegTransactionDetails;
 		return this;
 	}
@@ -635,7 +726,7 @@ public class SingleOrder1 {
 		return tradeRegulatoryTimeStampsDetails == null ? Optional.empty() : Optional.of(tradeRegulatoryTimeStampsDetails);
 	}
 
-	public SingleOrder1 setTradeRegulatoryTimeStampsDetails(com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup tradeRegulatoryTimeStampsDetails) {
+	public SingleOrder1 setTradeRegulatoryTimeStampsDetails(TradeRegulatoryTimeStampGroup tradeRegulatoryTimeStampsDetails) {
 		this.tradeRegulatoryTimeStampsDetails = tradeRegulatoryTimeStampsDetails;
 		return this;
 	}

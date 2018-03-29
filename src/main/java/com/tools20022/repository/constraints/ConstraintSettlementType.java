@@ -50,11 +50,15 @@ public class ConstraintSettlementType {
 	 */
 	public static final MMConstraint<Option6> forOption6 = new MMConstraint<Option6>() {
 		{
-			validator = ConstraintSettlementType::checkOption6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementType";
 			definition = "If Option/SettlementType is NETO, then OptionAmounts/OptionSettlementCurrency must be present.";
 			owner_lazy = () -> Option6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Option6 obj) throws Exception {
+			checkOption6(obj);
 		}
 	};
 

@@ -121,7 +121,7 @@ public class MissingOrIncorrectInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAntiMoneyLaunderingRequest = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MissingOrIncorrectInformation2, Optional<AMLIndicator>> mmAntiMoneyLaunderingRequest = new MMMessageAttribute<MissingOrIncorrectInformation2, Optional<AMLIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MissingOrIncorrectInformation2.mmObject();
 			isDerived = false;
@@ -133,6 +133,16 @@ public class MissingOrIncorrectInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AMLIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<AMLIndicator> getValue(MissingOrIncorrectInformation2 obj) {
+			return obj.getAntiMoneyLaunderingRequest();
+		}
+
+		@Override
+		public void setValue(MissingOrIncorrectInformation2 obj, Optional<AMLIndicator> value) {
+			obj.setAntiMoneyLaunderingRequest(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MssngInf")
@@ -173,7 +183,7 @@ public class MissingOrIncorrectInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMissingInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MissingOrIncorrectInformation2, List<UnableToApplyMissingInformation2Code>> mmMissingInformation = new MMMessageAttribute<MissingOrIncorrectInformation2, List<UnableToApplyMissingInformation2Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MissingOrIncorrectInformation2.mmObject();
 			isDerived = false;
@@ -185,6 +195,16 @@ public class MissingOrIncorrectInformation2 {
 			maxOccurs = 10;
 			minOccurs = 0;
 			simpleType_lazy = () -> UnableToApplyMissingInformation2Code.mmObject();
+		}
+
+		@Override
+		public List<UnableToApplyMissingInformation2Code> getValue(MissingOrIncorrectInformation2 obj) {
+			return obj.getMissingInformation();
+		}
+
+		@Override
+		public void setValue(MissingOrIncorrectInformation2 obj, List<UnableToApplyMissingInformation2Code> value) {
+			obj.setMissingInformation(value);
 		}
 	};
 	@XmlElement(name = "IncrrctInf")
@@ -225,7 +245,7 @@ public class MissingOrIncorrectInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIncorrectInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MissingOrIncorrectInformation2, List<UnableToApplyIncorrectInformation3Code>> mmIncorrectInformation = new MMMessageAttribute<MissingOrIncorrectInformation2, List<UnableToApplyIncorrectInformation3Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MissingOrIncorrectInformation2.mmObject();
 			isDerived = false;
@@ -237,6 +257,16 @@ public class MissingOrIncorrectInformation2 {
 			maxOccurs = 10;
 			minOccurs = 0;
 			simpleType_lazy = () -> UnableToApplyIncorrectInformation3Code.mmObject();
+		}
+
+		@Override
+		public List<UnableToApplyIncorrectInformation3Code> getValue(MissingOrIncorrectInformation2 obj) {
+			return obj.getIncorrectInformation();
+		}
+
+		@Override
+		public void setValue(MissingOrIncorrectInformation2 obj, List<UnableToApplyIncorrectInformation3Code> value) {
+			obj.setIncorrectInformation(value);
 		}
 	};
 

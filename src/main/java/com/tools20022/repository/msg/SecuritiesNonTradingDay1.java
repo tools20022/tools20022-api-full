@@ -104,7 +104,7 @@ public class SecuritiesNonTradingDay1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTechnicalRecordIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesNonTradingDay1, Optional<Max35Text>> mmTechnicalRecordIdentification = new MMMessageAttribute<SecuritiesNonTradingDay1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesNonTradingDay1.mmObject();
 			isDerived = false;
@@ -115,6 +115,16 @@ public class SecuritiesNonTradingDay1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SecuritiesNonTradingDay1 obj) {
+			return obj.getTechnicalRecordIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesNonTradingDay1 obj, Optional<Max35Text> value) {
+			obj.setTechnicalRecordIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Dt", required = true)
@@ -146,7 +156,7 @@ public class SecuritiesNonTradingDay1 {
 	 * definition} = "Non-working date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesNonTradingDay1, ISODate> mmDate = new MMMessageAttribute<SecuritiesNonTradingDay1, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesNonTradingDay1.mmObject();
 			isDerived = false;
@@ -157,6 +167,16 @@ public class SecuritiesNonTradingDay1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(SecuritiesNonTradingDay1 obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(SecuritiesNonTradingDay1 obj, ISODate value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "Rsn")
@@ -189,7 +209,7 @@ public class SecuritiesNonTradingDay1 {
 	 * definition} = "Reason code for the non-working day."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesNonTradingDay1, Optional<NonTradingDayReason1Code>> mmReason = new MMMessageAttribute<SecuritiesNonTradingDay1, Optional<NonTradingDayReason1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesNonTradingDay1.mmObject();
 			isDerived = false;
@@ -200,6 +220,16 @@ public class SecuritiesNonTradingDay1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> NonTradingDayReason1Code.mmObject();
+		}
+
+		@Override
+		public Optional<NonTradingDayReason1Code> getValue(SecuritiesNonTradingDay1 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(SecuritiesNonTradingDay1 obj, Optional<NonTradingDayReason1Code> value) {
+			obj.setReason(value.orElse(null));
 		}
 	};
 

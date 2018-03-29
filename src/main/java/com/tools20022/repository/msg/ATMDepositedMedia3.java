@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMMediaType2Code;
 import com.tools20022.repository.codeset.ATMMediaType3Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMDepositedMedia2;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -109,7 +110,7 @@ public class ATMDepositedMedia3 {
 	 * ATMDepositedMedia1.mmMediaType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMediaType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMDepositedMedia3, ATMMediaType2Code> mmMediaType = new MMMessageAttribute<ATMDepositedMedia3, ATMMediaType2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDepositedMedia3.mmObject();
 			isDerived = false;
@@ -121,6 +122,16 @@ public class ATMDepositedMedia3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ATMMediaType2Code.mmObject();
+		}
+
+		@Override
+		public ATMMediaType2Code getValue(ATMDepositedMedia3 obj) {
+			return obj.getMediaType();
+		}
+
+		@Override
+		public void setValue(ATMDepositedMedia3 obj, ATMMediaType2Code value) {
+			obj.setMediaType(value);
 		}
 	};
 	@XmlElement(name = "MdiaCtgy")
@@ -158,7 +169,7 @@ public class ATMDepositedMedia3 {
 	 * ATMDepositedMedia1.mmMediaCategory}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMediaCategory = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMDepositedMedia3, Optional<ATMMediaType3Code>> mmMediaCategory = new MMMessageAttribute<ATMDepositedMedia3, Optional<ATMMediaType3Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDepositedMedia3.mmObject();
 			isDerived = false;
@@ -171,9 +182,19 @@ public class ATMDepositedMedia3 {
 			minOccurs = 0;
 			simpleType_lazy = () -> ATMMediaType3Code.mmObject();
 		}
+
+		@Override
+		public Optional<ATMMediaType3Code> getValue(ATMDepositedMedia3 obj) {
+			return obj.getMediaCategory();
+		}
+
+		@Override
+		public void setValue(ATMDepositedMedia3 obj, Optional<ATMMediaType3Code> value) {
+			obj.setMediaCategory(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "MdiaItms", required = true)
-	protected List<com.tools20022.repository.msg.ATMDepositedMedia2> mediaItems;
+	protected List<ATMDepositedMedia2> mediaItems;
 	/**
 	 * 
 	 <p>
@@ -205,7 +226,7 @@ public class ATMDepositedMedia3 {
 	 * ATMDepositedMedia1.mmMediaItems}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMediaItems = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMDepositedMedia3, List<ATMDepositedMedia2>> mmMediaItems = new MMMessageAssociationEnd<ATMDepositedMedia3, List<ATMDepositedMedia2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDepositedMedia3.mmObject();
 			isDerived = false;
@@ -216,7 +237,17 @@ public class ATMDepositedMedia3 {
 			previousVersion_lazy = () -> ATMDepositedMedia1.mmMediaItems;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMDepositedMedia2.mmObject();
+			type_lazy = () -> ATMDepositedMedia2.mmObject();
+		}
+
+		@Override
+		public List<ATMDepositedMedia2> getValue(ATMDepositedMedia3 obj) {
+			return obj.getMediaItems();
+		}
+
+		@Override
+		public void setValue(ATMDepositedMedia3 obj, List<ATMDepositedMedia2> value) {
+			obj.setMediaItems(value);
 		}
 	};
 
@@ -257,7 +288,7 @@ public class ATMDepositedMedia3 {
 		return mediaItems == null ? mediaItems = new ArrayList<>() : mediaItems;
 	}
 
-	public ATMDepositedMedia3 setMediaItems(List<com.tools20022.repository.msg.ATMDepositedMedia2> mediaItems) {
+	public ATMDepositedMedia3 setMediaItems(List<ATMDepositedMedia2> mediaItems) {
 		this.mediaItems = Objects.requireNonNull(mediaItems);
 		return this;
 	}

@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.datatype.Max35Binary;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ContentInformationType10;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -144,7 +145,7 @@ public class CryptographicKey5 {
 	 * CryptographicKey4.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CryptographicKey5, Max140Text> mmIdentification = new MMMessageAttribute<CryptographicKey5, Max140Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CryptographicKey5.mmObject();
 			isDerived = false;
@@ -157,6 +158,16 @@ public class CryptographicKey5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Max140Text getValue(CryptographicKey5 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(CryptographicKey5 obj, Max140Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "AddtlId")
@@ -203,7 +214,7 @@ public class CryptographicKey5 {
 	 * CryptographicKey4.mmAdditionalIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CryptographicKey5, Optional<Max35Binary>> mmAdditionalIdentification = new MMMessageAttribute<CryptographicKey5, Optional<Max35Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CryptographicKey5.mmObject();
 			isDerived = false;
@@ -216,6 +227,16 @@ public class CryptographicKey5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Binary.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Binary> getValue(CryptographicKey5 obj) {
+			return obj.getAdditionalIdentification();
+		}
+
+		@Override
+		public void setValue(CryptographicKey5 obj, Optional<Max35Binary> value) {
+			obj.setAdditionalIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Vrsn", required = true)
@@ -263,7 +284,7 @@ public class CryptographicKey5 {
 	 * CryptographicKey4.mmVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CryptographicKey5, Max256Text> mmVersion = new MMMessageAttribute<CryptographicKey5, Max256Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CryptographicKey5.mmObject();
 			isDerived = false;
@@ -276,6 +297,16 @@ public class CryptographicKey5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Max256Text getValue(CryptographicKey5 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(CryptographicKey5 obj, Max256Text value) {
+			obj.setVersion(value);
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -322,7 +353,7 @@ public class CryptographicKey5 {
 	 * CryptographicKey4.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CryptographicKey5, CryptographicKeyType3Code> mmType = new MMMessageAttribute<CryptographicKey5, CryptographicKeyType3Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CryptographicKey5.mmObject();
 			isDerived = false;
@@ -335,6 +366,16 @@ public class CryptographicKey5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CryptographicKeyType3Code.mmObject();
+		}
+
+		@Override
+		public CryptographicKeyType3Code getValue(CryptographicKey5 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(CryptographicKey5 obj, CryptographicKeyType3Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Fctn", required = true)
@@ -383,7 +424,7 @@ public class CryptographicKey5 {
 	 * CryptographicKey4.mmFunction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFunction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CryptographicKey5, List<KeyUsage1Code>> mmFunction = new MMMessageAttribute<CryptographicKey5, List<KeyUsage1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CryptographicKey5.mmObject();
 			isDerived = false;
@@ -395,6 +436,16 @@ public class CryptographicKey5 {
 			previousVersion_lazy = () -> CryptographicKey4.mmFunction;
 			minOccurs = 1;
 			simpleType_lazy = () -> KeyUsage1Code.mmObject();
+		}
+
+		@Override
+		public List<KeyUsage1Code> getValue(CryptographicKey5 obj) {
+			return obj.getFunction();
+		}
+
+		@Override
+		public void setValue(CryptographicKey5 obj, List<KeyUsage1Code> value) {
+			obj.setFunction(value);
 		}
 	};
 	@XmlElement(name = "ActvtnDt")
@@ -442,7 +493,7 @@ public class CryptographicKey5 {
 	 * CryptographicKey4.mmActivationDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActivationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CryptographicKey5, Optional<ISODateTime>> mmActivationDate = new MMMessageAttribute<CryptographicKey5, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CryptographicKey5.mmObject();
 			isDerived = false;
@@ -455,6 +506,16 @@ public class CryptographicKey5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(CryptographicKey5 obj) {
+			return obj.getActivationDate();
+		}
+
+		@Override
+		public void setValue(CryptographicKey5 obj, Optional<ISODateTime> value) {
+			obj.setActivationDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DeactvtnDt")
@@ -502,7 +563,7 @@ public class CryptographicKey5 {
 	 * CryptographicKey4.mmDeactivationDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeactivationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CryptographicKey5, Optional<ISODateTime>> mmDeactivationDate = new MMMessageAttribute<CryptographicKey5, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CryptographicKey5.mmObject();
 			isDerived = false;
@@ -515,6 +576,16 @@ public class CryptographicKey5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(CryptographicKey5 obj) {
+			return obj.getDeactivationDate();
+		}
+
+		@Override
+		public void setValue(CryptographicKey5 obj, Optional<ISODateTime> value) {
+			obj.setDeactivationDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "KeyVal", required = true)
@@ -559,7 +630,7 @@ public class CryptographicKey5 {
 	 * CryptographicKey4.mmKeyValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmKeyValue = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CryptographicKey5, ContentInformationType10> mmKeyValue = new MMMessageAssociationEnd<CryptographicKey5, ContentInformationType10>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CryptographicKey5.mmObject();
 			isDerived = false;
@@ -572,7 +643,17 @@ public class CryptographicKey5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContentInformationType10.mmObject();
+			type_lazy = () -> ContentInformationType10.mmObject();
+		}
+
+		@Override
+		public ContentInformationType10 getValue(CryptographicKey5 obj) {
+			return obj.getKeyValue();
+		}
+
+		@Override
+		public void setValue(CryptographicKey5 obj, ContentInformationType10 value) {
+			obj.setKeyValue(value);
 		}
 	};
 
@@ -660,7 +741,7 @@ public class CryptographicKey5 {
 		return keyValue;
 	}
 
-	public CryptographicKey5 setKeyValue(com.tools20022.repository.msg.ContentInformationType10 keyValue) {
+	public CryptographicKey5 setKeyValue(ContentInformationType10 keyValue) {
 		this.keyValue = Objects.requireNonNull(keyValue);
 		return this;
 	}

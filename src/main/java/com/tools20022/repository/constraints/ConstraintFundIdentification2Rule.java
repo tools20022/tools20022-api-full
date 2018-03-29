@@ -67,13 +67,17 @@ public class ConstraintFundIdentification2Rule {
 	 */
 	public static final MMConstraint<Fund2> forFund2 = new MMConstraint<Fund2>() {
 		{
-			validator = ConstraintFundIdentification2Rule::checkFund2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundIdentification2Rule";
 			definition = "If Name is not present, then Identification or Legal Entity Identifier must be present. Identification, Name and Legal Entity Identifier may all be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFundIdentification2Rule.forFund4);
 			owner_lazy = () -> Fund2.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Identification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/LegalEntityIdentifier</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Name</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(Fund2 obj) throws Exception {
+			checkFund2(obj);
 		}
 	};
 	/**
@@ -110,13 +114,17 @@ public class ConstraintFundIdentification2Rule {
 	 */
 	public static final MMConstraint<Fund1> forFund1 = new MMConstraint<Fund1>() {
 		{
-			validator = ConstraintFundIdentification2Rule::checkFund1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundIdentification2Rule";
 			definition = "If Name is not present, then Identification or Legal Entity Identifier must be present. Identification, Name and Legal Entity Identifier may all be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFundIdentification2Rule.forFund3);
 			owner_lazy = () -> Fund1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Identification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/LegalEntityIdentifier</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Name</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(Fund1 obj) throws Exception {
+			checkFund1(obj);
 		}
 	};
 	/**
@@ -150,13 +158,17 @@ public class ConstraintFundIdentification2Rule {
 	 */
 	public static final MMConstraint<Fund3> forFund3 = new MMConstraint<Fund3>() {
 		{
-			validator = ConstraintFundIdentification2Rule::checkFund3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundIdentification2Rule";
 			definition = "If Name is not present, then Identification or Legal Entity Identifier must be present. Identification, Name and Legal Entity Identifier may all be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFundIdentification2Rule.forFund1;
 			owner_lazy = () -> Fund3.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Identification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/LegalEntityIdentifier</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Name</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(Fund3 obj) throws Exception {
+			checkFund3(obj);
 		}
 	};
 	/**
@@ -190,13 +202,17 @@ public class ConstraintFundIdentification2Rule {
 	 */
 	public static final MMConstraint<Fund4> forFund4 = new MMConstraint<Fund4>() {
 		{
-			validator = ConstraintFundIdentification2Rule::checkFund4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundIdentification2Rule";
 			definition = "If Name is not present, then Identification or Legal Entity Identifier must be present. Identification, Name and Legal Entity Identifier may all be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFundIdentification2Rule.forFund2;
 			owner_lazy = () -> Fund4.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Identification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/LegalEntityIdentifier</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Name</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(Fund4 obj) throws Exception {
+			checkFund4(obj);
 		}
 	};
 

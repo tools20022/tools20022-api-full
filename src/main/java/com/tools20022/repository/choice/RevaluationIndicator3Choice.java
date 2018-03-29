@@ -122,7 +122,7 @@ public class RevaluationIndicator3Choice {
 	 * RevaluationIndicator1Choice.mmIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RevaluationIndicator3Choice, YesNoIndicator> mmIndicator = new MMMessageAttribute<RevaluationIndicator3Choice, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmRevaluationIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RevaluationIndicator3Choice.mmObject();
@@ -136,6 +136,16 @@ public class RevaluationIndicator3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(RevaluationIndicator3Choice obj) {
+			return obj.getIndicator();
+		}
+
+		@Override
+		public void setValue(RevaluationIndicator3Choice obj, YesNoIndicator value) {
+			obj.setIndicator(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -181,7 +191,7 @@ public class RevaluationIndicator3Choice {
 	 * RevaluationIndicator1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RevaluationIndicator3Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<RevaluationIndicator3Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmRevaluationIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RevaluationIndicator3Choice.mmObject();
@@ -195,6 +205,16 @@ public class RevaluationIndicator3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(RevaluationIndicator3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RevaluationIndicator3Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

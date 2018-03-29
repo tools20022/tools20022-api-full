@@ -120,7 +120,7 @@ public class CurrencyQueryDefinition3 {
 	 * CurrencyQueryDefinition2.mmQueryType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyQueryDefinition3, Optional<QueryType2Code>> mmQueryType = new MMMessageAttribute<CurrencyQueryDefinition3, Optional<QueryType2Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyQueryDefinition3.mmObject();
 			isDerived = false;
@@ -132,6 +132,16 @@ public class CurrencyQueryDefinition3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> QueryType2Code.mmObject();
+		}
+
+		@Override
+		public Optional<QueryType2Code> getValue(CurrencyQueryDefinition3 obj) {
+			return obj.getQueryType();
+		}
+
+		@Override
+		public void setValue(CurrencyQueryDefinition3 obj, Optional<QueryType2Code> value) {
+			obj.setQueryType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CcyCrit")
@@ -168,7 +178,7 @@ public class CurrencyQueryDefinition3 {
 	 * CurrencyQueryDefinition2.mmCurrencyCriteria}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCurrencyCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CurrencyQueryDefinition3, Optional<CurrencyCriteriaDefinition1Choice>> mmCurrencyCriteria = new MMMessageAssociationEnd<CurrencyQueryDefinition3, Optional<CurrencyCriteriaDefinition1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyQueryDefinition3.mmObject();
 			isDerived = false;
@@ -181,6 +191,16 @@ public class CurrencyQueryDefinition3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CurrencyCriteriaDefinition1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyCriteriaDefinition1Choice> getValue(CurrencyQueryDefinition3 obj) {
+			return obj.getCurrencyCriteria();
+		}
+
+		@Override
+		public void setValue(CurrencyQueryDefinition3 obj, Optional<CurrencyCriteriaDefinition1Choice> value) {
+			obj.setCurrencyCriteria(value.orElse(null));
 		}
 	};
 

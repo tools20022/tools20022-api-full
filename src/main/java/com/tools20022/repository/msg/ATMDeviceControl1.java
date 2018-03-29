@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.caam.ATMDeviceControlV01;
 import com.tools20022.repository.area.caam.ATMDeviceControlV02;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMCommand4;
+import com.tools20022.repository.msg.ATMEnvironment7;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -124,7 +126,7 @@ public class ATMDeviceControl1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMDeviceControl1, ATMEnvironment7> mmEnvironment = new MMMessageAssociationEnd<ATMDeviceControl1, ATMEnvironment7>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDeviceControl1.mmObject();
 			isDerived = false;
@@ -136,11 +138,21 @@ public class ATMDeviceControl1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMEnvironment7.mmObject();
+			type_lazy = () -> ATMEnvironment7.mmObject();
+		}
+
+		@Override
+		public ATMEnvironment7 getValue(ATMDeviceControl1 obj) {
+			return obj.getEnvironment();
+		}
+
+		@Override
+		public void setValue(ATMDeviceControl1 obj, ATMEnvironment7 value) {
+			obj.setEnvironment(value);
 		}
 	};
 	@XmlElement(name = "Cmd")
-	protected List<com.tools20022.repository.msg.ATMCommand4> command;
+	protected List<ATMCommand4> command;
 	/**
 	 * 
 	 <p>
@@ -175,7 +187,7 @@ public class ATMDeviceControl1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCommand = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMDeviceControl1, List<ATMCommand4>> mmCommand = new MMMessageAssociationEnd<ATMDeviceControl1, List<ATMCommand4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDeviceControl1.mmObject();
 			isDerived = false;
@@ -186,7 +198,17 @@ public class ATMDeviceControl1 {
 			nextVersions_lazy = () -> Arrays.asList(ATMDeviceControl2.mmCommand);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMCommand4.mmObject();
+			type_lazy = () -> ATMCommand4.mmObject();
+		}
+
+		@Override
+		public List<ATMCommand4> getValue(ATMDeviceControl1 obj) {
+			return obj.getCommand();
+		}
+
+		@Override
+		public void setValue(ATMDeviceControl1 obj, List<ATMCommand4> value) {
+			obj.setCommand(value);
 		}
 	};
 
@@ -209,7 +231,7 @@ public class ATMDeviceControl1 {
 		return environment;
 	}
 
-	public ATMDeviceControl1 setEnvironment(com.tools20022.repository.msg.ATMEnvironment7 environment) {
+	public ATMDeviceControl1 setEnvironment(ATMEnvironment7 environment) {
 		this.environment = Objects.requireNonNull(environment);
 		return this;
 	}
@@ -218,7 +240,7 @@ public class ATMDeviceControl1 {
 		return command == null ? command = new ArrayList<>() : command;
 	}
 
-	public ATMDeviceControl1 setCommand(List<com.tools20022.repository.msg.ATMCommand4> command) {
+	public ATMDeviceControl1 setCommand(List<ATMCommand4> command) {
 		this.command = Objects.requireNonNull(command);
 		return this;
 	}

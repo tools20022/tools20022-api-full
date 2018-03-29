@@ -111,7 +111,7 @@ public class BasisPriceType1Choice {
 	 * definition} = "Basis price type is defined using a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BasisPriceType1Choice, BasisPriceType1Code> mmCode = new MMMessageAttribute<BasisPriceType1Choice, BasisPriceType1Code>() {
 		{
 			businessElementTrace_lazy = () -> ListTrading.mmBasisPriceType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BasisPriceType1Choice.mmObject();
@@ -123,6 +123,16 @@ public class BasisPriceType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BasisPriceType1Code.mmObject();
+		}
+
+		@Override
+		public BasisPriceType1Code getValue(BasisPriceType1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(BasisPriceType1Choice obj, BasisPriceType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -159,7 +169,7 @@ public class BasisPriceType1Choice {
 	 * definition} = "Basis price type is defined using a data source scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BasisPriceType1Choice, GenericIdentification13> mmProprietary = new MMMessageAssociationEnd<BasisPriceType1Choice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> ListTrading.mmBasisPriceType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BasisPriceType1Choice.mmObject();
@@ -172,6 +182,16 @@ public class BasisPriceType1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(BasisPriceType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(BasisPriceType1Choice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

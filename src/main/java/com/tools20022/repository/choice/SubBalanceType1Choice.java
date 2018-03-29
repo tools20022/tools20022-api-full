@@ -107,7 +107,7 @@ public class SubBalanceType1Choice {
 	 * definition} = "Reason for the sub-balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubBalanceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubBalanceType1Choice, SecuritiesBalanceType4Code> mmSubBalanceType = new MMMessageAttribute<SubBalanceType1Choice, SecuritiesBalanceType4Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SubBalanceType1Choice.mmObject();
@@ -119,6 +119,16 @@ public class SubBalanceType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesBalanceType4Code.mmObject();
+		}
+
+		@Override
+		public SecuritiesBalanceType4Code getValue(SubBalanceType1Choice obj) {
+			return obj.getSubBalanceType();
+		}
+
+		@Override
+		public void setValue(SubBalanceType1Choice obj, SecuritiesBalanceType4Code value) {
+			obj.setSubBalanceType(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -158,7 +168,7 @@ public class SubBalanceType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubBalanceType1Choice, GenericIdentification13> mmProprietary = new MMMessageAttribute<SubBalanceType1Choice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SubBalanceType1Choice.mmObject();
@@ -170,6 +180,16 @@ public class SubBalanceType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(SubBalanceType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SubBalanceType1Choice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

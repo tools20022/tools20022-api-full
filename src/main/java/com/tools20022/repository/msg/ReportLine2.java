@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.LineItem;
 import com.tools20022.repository.entity.Price;
 import com.tools20022.repository.entity.PurchaseOrder;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Adjustment4;
+import com.tools20022.repository.msg.DocumentIdentification7;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -125,7 +127,7 @@ public class ReportLine2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportLine2, Max35Text> mmTransactionIdentification = new MMMessageAttribute<ReportLine2, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportLine2.mmObject();
 			isDerived = false;
@@ -137,6 +139,16 @@ public class ReportLine2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ReportLine2 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(ReportLine2 obj, Max35Text value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "PurchsOrdrRef", required = true)
@@ -182,7 +194,7 @@ public class ReportLine2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPurchaseOrderReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportLine2, DocumentIdentification7> mmPurchaseOrderReference = new MMMessageAttribute<ReportLine2, DocumentIdentification7>() {
 		{
 			businessElementTrace_lazy = () -> PurchaseOrder.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportLine2.mmObject();
@@ -194,11 +206,21 @@ public class ReportLine2 {
 			nextVersions_lazy = () -> Arrays.asList(ReportLine7.mmPurchaseOrderReference);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.DocumentIdentification7.mmObject();
+			complexType_lazy = () -> DocumentIdentification7.mmObject();
+		}
+
+		@Override
+		public DocumentIdentification7 getValue(ReportLine2 obj) {
+			return obj.getPurchaseOrderReference();
+		}
+
+		@Override
+		public void setValue(ReportLine2 obj, DocumentIdentification7 value) {
+			obj.setPurchaseOrderReference(value);
 		}
 	};
 	@XmlElement(name = "Adjstmnt")
-	protected List<com.tools20022.repository.msg.Adjustment4> adjustment;
+	protected List<Adjustment4> adjustment;
 	/**
 	 * 
 	 <p>
@@ -237,7 +259,7 @@ public class ReportLine2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdjustment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportLine2, List<Adjustment4>> mmAdjustment = new MMMessageAssociationEnd<ReportLine2, List<Adjustment4>>() {
 		{
 			businessElementTrace_lazy = () -> Price.mmPriceAdjustment;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportLine2.mmObject();
@@ -249,7 +271,17 @@ public class ReportLine2 {
 			nextVersions_lazy = () -> Arrays.asList(ReportLine7.mmAdjustment);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Adjustment4.mmObject();
+			type_lazy = () -> Adjustment4.mmObject();
+		}
+
+		@Override
+		public List<Adjustment4> getValue(ReportLine2 obj) {
+			return obj.getAdjustment();
+		}
+
+		@Override
+		public void setValue(ReportLine2 obj, List<Adjustment4> value) {
+			obj.setAdjustment(value);
 		}
 	};
 	@XmlElement(name = "NetAmt", required = true)
@@ -293,7 +325,7 @@ public class ReportLine2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNetAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportLine2, CurrencyAndAmount> mmNetAmount = new MMMessageAttribute<ReportLine2, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> LineItem.mmNetAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportLine2.mmObject();
@@ -306,6 +338,16 @@ public class ReportLine2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(ReportLine2 obj) {
+			return obj.getNetAmount();
+		}
+
+		@Override
+		public void setValue(ReportLine2 obj, CurrencyAndAmount value) {
+			obj.setNetAmount(value);
 		}
 	};
 
@@ -338,7 +380,7 @@ public class ReportLine2 {
 		return purchaseOrderReference;
 	}
 
-	public ReportLine2 setPurchaseOrderReference(com.tools20022.repository.msg.DocumentIdentification7 purchaseOrderReference) {
+	public ReportLine2 setPurchaseOrderReference(DocumentIdentification7 purchaseOrderReference) {
 		this.purchaseOrderReference = Objects.requireNonNull(purchaseOrderReference);
 		return this;
 	}
@@ -347,7 +389,7 @@ public class ReportLine2 {
 		return adjustment == null ? adjustment = new ArrayList<>() : adjustment;
 	}
 
-	public ReportLine2 setAdjustment(List<com.tools20022.repository.msg.Adjustment4> adjustment) {
+	public ReportLine2 setAdjustment(List<Adjustment4> adjustment) {
 		this.adjustment = Objects.requireNonNull(adjustment);
 		return this;
 	}

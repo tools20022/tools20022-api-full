@@ -99,7 +99,7 @@ public class MiFIDClassification1 {
 	 * definition} = "MiFID classification of the account owner."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClassification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MiFIDClassification1, OrderOriginatorEligibility1Code> mmClassification = new MMMessageAttribute<MiFIDClassification1, OrderOriginatorEligibility1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MiFIDClassification1.mmObject();
 			isDerived = false;
@@ -110,6 +110,16 @@ public class MiFIDClassification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OrderOriginatorEligibility1Code.mmObject();
+		}
+
+		@Override
+		public OrderOriginatorEligibility1Code getValue(MiFIDClassification1 obj) {
+			return obj.getClassification();
+		}
+
+		@Override
+		public void setValue(MiFIDClassification1 obj, OrderOriginatorEligibility1Code value) {
+			obj.setClassification(value);
 		}
 	};
 	@XmlElement(name = "Nrrtv")
@@ -142,7 +152,7 @@ public class MiFIDClassification1 {
 	 * "Additional information about the source of classification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNarrative = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MiFIDClassification1, Optional<Max350Text>> mmNarrative = new MMMessageAttribute<MiFIDClassification1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MiFIDClassification1.mmObject();
 			isDerived = false;
@@ -153,6 +163,16 @@ public class MiFIDClassification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(MiFIDClassification1 obj) {
+			return obj.getNarrative();
+		}
+
+		@Override
+		public void setValue(MiFIDClassification1 obj, Optional<Max350Text> value) {
+			obj.setNarrative(value.orElse(null));
 		}
 	};
 

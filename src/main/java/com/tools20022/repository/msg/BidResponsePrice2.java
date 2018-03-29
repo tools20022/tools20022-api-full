@@ -26,6 +26,9 @@ import com.tools20022.repository.codeset.Side1Code;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Commission2;
+import com.tools20022.repository.msg.NonDisclosedBid2;
+import com.tools20022.repository.msg.Price1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -129,7 +132,7 @@ public class BidResponsePrice2 {
 	 * "Amount of money due to a party as compensation for a service."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommission = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BidResponsePrice2, Commission2> mmCommission = new MMMessageAttribute<BidResponsePrice2, Commission2>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuoteVariable.mmCommission;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BidResponsePrice2.mmObject();
@@ -141,7 +144,17 @@ public class BidResponsePrice2 {
 			definition = "Amount of money due to a party as compensation for a service.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.Commission2.mmObject();
+			complexType_lazy = () -> Commission2.mmObject();
+		}
+
+		@Override
+		public Commission2 getValue(BidResponsePrice2 obj) {
+			return obj.getCommission();
+		}
+
+		@Override
+		public void setValue(BidResponsePrice2 obj, Commission2 value) {
+			obj.setCommission(value);
 		}
 	};
 	@XmlElement(name = "GrssInd", required = true)
@@ -183,7 +196,7 @@ public class BidResponsePrice2 {
 	 * "Indicates whether the price is gross of commission and tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGrossIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BidResponsePrice2, TrueFalseIndicator> mmGrossIndicator = new MMMessageAttribute<BidResponsePrice2, TrueFalseIndicator>() {
 		{
 			businessElementTrace_lazy = () -> ListTrading.mmGrossAmountIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BidResponsePrice2.mmObject();
@@ -196,6 +209,16 @@ public class BidResponsePrice2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public TrueFalseIndicator getValue(BidResponsePrice2 obj) {
+			return obj.getGrossIndicator();
+		}
+
+		@Override
+		public void setValue(BidResponsePrice2 obj, TrueFalseIndicator value) {
+			obj.setGrossIndicator(value);
 		}
 	};
 	@XmlElement(name = "Pric")
@@ -234,7 +257,7 @@ public class BidResponsePrice2 {
 	 * definition} = "Proposition of price for a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BidResponsePrice2, Optional<Price1>> mmPrice = new MMMessageAttribute<BidResponsePrice2, Optional<Price1>>() {
 		{
 			businessElementTrace_lazy = () -> Quote.mmPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BidResponsePrice2.mmObject();
@@ -246,7 +269,17 @@ public class BidResponsePrice2 {
 			definition = "Proposition of price for a financial instrument.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
+			complexType_lazy = () -> Price1.mmObject();
+		}
+
+		@Override
+		public Optional<Price1> getValue(BidResponsePrice2 obj) {
+			return obj.getPrice();
+		}
+
+		@Override
+		public void setValue(BidResponsePrice2 obj, Optional<Price1> value) {
+			obj.setPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sd")
@@ -283,7 +316,7 @@ public class BidResponsePrice2 {
 	 * definition} = "Indicates the side of the bid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSide = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BidResponsePrice2, Optional<Side1Code>> mmSide = new MMMessageAttribute<BidResponsePrice2, Optional<Side1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmSide;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BidResponsePrice2.mmObject();
@@ -295,6 +328,16 @@ public class BidResponsePrice2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Side1Code.mmObject();
+		}
+
+		@Override
+		public Optional<Side1Code> getValue(BidResponsePrice2 obj) {
+			return obj.getSide();
+		}
+
+		@Override
+		public void setValue(BidResponsePrice2 obj, Optional<Side1Code> value) {
+			obj.setSide(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NonDscldBidDtls")
@@ -332,7 +375,7 @@ public class BidResponsePrice2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNonDisclosedBidDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BidResponsePrice2, Optional<NonDisclosedBid2>> mmNonDisclosedBidDetails = new MMMessageAssociationEnd<BidResponsePrice2, Optional<NonDisclosedBid2>>() {
 		{
 			businessComponentTrace_lazy = () -> NonDisclosedListTrading.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.BidResponsePrice2.mmObject();
@@ -344,7 +387,17 @@ public class BidResponsePrice2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NonDisclosedBid2.mmObject();
+			type_lazy = () -> NonDisclosedBid2.mmObject();
+		}
+
+		@Override
+		public Optional<NonDisclosedBid2> getValue(BidResponsePrice2 obj) {
+			return obj.getNonDisclosedBidDetails();
+		}
+
+		@Override
+		public void setValue(BidResponsePrice2 obj, Optional<NonDisclosedBid2> value) {
+			obj.setNonDisclosedBidDetails(value.orElse(null));
 		}
 	};
 
@@ -367,7 +420,7 @@ public class BidResponsePrice2 {
 		return commission;
 	}
 
-	public BidResponsePrice2 setCommission(com.tools20022.repository.msg.Commission2 commission) {
+	public BidResponsePrice2 setCommission(Commission2 commission) {
 		this.commission = Objects.requireNonNull(commission);
 		return this;
 	}
@@ -385,7 +438,7 @@ public class BidResponsePrice2 {
 		return price == null ? Optional.empty() : Optional.of(price);
 	}
 
-	public BidResponsePrice2 setPrice(com.tools20022.repository.msg.Price1 price) {
+	public BidResponsePrice2 setPrice(Price1 price) {
 		this.price = price;
 		return this;
 	}
@@ -403,7 +456,7 @@ public class BidResponsePrice2 {
 		return nonDisclosedBidDetails == null ? Optional.empty() : Optional.of(nonDisclosedBidDetails);
 	}
 
-	public BidResponsePrice2 setNonDisclosedBidDetails(com.tools20022.repository.msg.NonDisclosedBid2 nonDisclosedBidDetails) {
+	public BidResponsePrice2 setNonDisclosedBidDetails(NonDisclosedBid2 nonDisclosedBidDetails) {
 		this.nonDisclosedBidDetails = nonDisclosedBidDetails;
 		return this;
 	}

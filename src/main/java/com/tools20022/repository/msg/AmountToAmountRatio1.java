@@ -104,7 +104,7 @@ public class AmountToAmountRatio1 {
 	 * definition} = "Numerator of the quotient of amounts."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount1 = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountToAmountRatio1, ActiveCurrencyAndAmount> mmAmount1 = new MMMessageAttribute<AmountToAmountRatio1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> AmountRatio.mmAmount1;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountToAmountRatio1.mmObject();
@@ -116,6 +116,16 @@ public class AmountToAmountRatio1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(AmountToAmountRatio1 obj) {
+			return obj.getAmount1();
+		}
+
+		@Override
+		public void setValue(AmountToAmountRatio1 obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount1(value);
 		}
 	};
 	@XmlElement(name = "Amt2", required = true)
@@ -153,7 +163,7 @@ public class AmountToAmountRatio1 {
 	 * definition} = "Denominator of the quotient of amounts."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount2 = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountToAmountRatio1, ActiveCurrencyAndAmount> mmAmount2 = new MMMessageAttribute<AmountToAmountRatio1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> AmountRatio.mmAmount2;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountToAmountRatio1.mmObject();
@@ -165,6 +175,16 @@ public class AmountToAmountRatio1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(AmountToAmountRatio1 obj) {
+			return obj.getAmount2();
+		}
+
+		@Override
+		public void setValue(AmountToAmountRatio1 obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount2(value);
 		}
 	};
 

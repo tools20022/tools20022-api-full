@@ -64,7 +64,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "AmountAndDirection93"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -115,7 +115,7 @@ public class AmountAndDirection93 {
 	 * AmountAndDirection41.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndDirection93, ImpliedCurrencyAndAmount> mmAmount = new MMMessageAttribute<AmountAndDirection93, ImpliedCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection93.mmObject();
 			isDerived = false;
@@ -127,6 +127,16 @@ public class AmountAndDirection93 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(AmountAndDirection93 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection93 obj, ImpliedCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "Ccy", required = true)
@@ -164,7 +174,7 @@ public class AmountAndDirection93 {
 	 * definition} = "Currency associated with the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndDirection93, ActiveCurrencyCode> mmCurrency = new MMMessageAttribute<AmountAndDirection93, ActiveCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmCurrencyOfTransfer;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection93.mmObject();
@@ -176,6 +186,16 @@ public class AmountAndDirection93 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyCode getValue(AmountAndDirection93 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection93 obj, ActiveCurrencyCode value) {
+			obj.setCurrency(value);
 		}
 	};
 	@XmlElement(name = "Sgn")
@@ -213,7 +233,7 @@ public class AmountAndDirection93 {
 	 * AmountAndDirection41.mmSign}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSign = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndDirection93, Optional<PlusOrMinusIndicator>> mmSign = new MMMessageAttribute<AmountAndDirection93, Optional<PlusOrMinusIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection93.mmObject();
 			isDerived = false;
@@ -226,6 +246,16 @@ public class AmountAndDirection93 {
 			minOccurs = 0;
 			simpleType_lazy = () -> PlusOrMinusIndicator.mmObject();
 		}
+
+		@Override
+		public Optional<PlusOrMinusIndicator> getValue(AmountAndDirection93 obj) {
+			return obj.getSign();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection93 obj, Optional<PlusOrMinusIndicator> value) {
+			obj.setSign(value.orElse(null));
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -235,7 +265,7 @@ public class AmountAndDirection93 {
 						.asList(com.tools20022.repository.msg.AmountAndDirection93.mmAmount, com.tools20022.repository.msg.AmountAndDirection93.mmCurrency, com.tools20022.repository.msg.AmountAndDirection93.mmSign);
 				trace_lazy = () -> CardPayment.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountAndDirection93";
 				definition = "Signed amount.";
 				previousVersion_lazy = () -> AmountAndDirection41.mmObject();

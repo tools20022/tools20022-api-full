@@ -154,7 +154,7 @@ public class GenericIdentification55 {
 	 * GenericIdentification44.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification55, Max35Text> mmIdentification = new MMMessageAttribute<GenericIdentification55, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification55.mmObject();
@@ -168,6 +168,16 @@ public class GenericIdentification55 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(GenericIdentification55 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(GenericIdentification55 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -221,7 +231,7 @@ public class GenericIdentification55 {
 	 * GenericIdentification44.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification55, OtherIdentification2Choice> mmType = new MMMessageAttribute<GenericIdentification55, OtherIdentification2Choice>() {
 		{
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification55.mmObject();
@@ -235,6 +245,16 @@ public class GenericIdentification55 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> OtherIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public OtherIdentification2Choice getValue(GenericIdentification55 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(GenericIdentification55 obj, OtherIdentification2Choice value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Issr")
@@ -287,7 +307,7 @@ public class GenericIdentification55 {
 	 * GenericIdentification44.mmIssuer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification55, Optional<Max35Text>> mmIssuer = new MMMessageAttribute<GenericIdentification55, Optional<Max35Text>>() {
 		{
 			businessComponentTrace_lazy = () -> IdentificationIssuerRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification55.mmObject();
@@ -301,6 +321,16 @@ public class GenericIdentification55 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(GenericIdentification55 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(GenericIdentification55 obj, Optional<Max35Text> value) {
+			obj.setIssuer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IsseDt")
@@ -353,7 +383,7 @@ public class GenericIdentification55 {
 	 * GenericIdentification44.mmIssueDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification55, Optional<ISODate>> mmIssueDate = new MMMessageAttribute<GenericIdentification55, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIssueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification55.mmObject();
@@ -367,6 +397,16 @@ public class GenericIdentification55 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(GenericIdentification55 obj) {
+			return obj.getIssueDate();
+		}
+
+		@Override
+		public void setValue(GenericIdentification55 obj, Optional<ISODate> value) {
+			obj.setIssueDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XpryDt")
@@ -419,7 +459,7 @@ public class GenericIdentification55 {
 	 * GenericIdentification44.mmExpiryDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpiryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification55, Optional<ISODate>> mmExpiryDate = new MMMessageAttribute<GenericIdentification55, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmExpiryDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification55.mmObject();
@@ -433,6 +473,16 @@ public class GenericIdentification55 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(GenericIdentification55 obj) {
+			return obj.getExpiryDate();
+		}
+
+		@Override
+		public void setValue(GenericIdentification55 obj, Optional<ISODate> value) {
+			obj.setExpiryDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IssrCtry")
@@ -480,7 +530,7 @@ public class GenericIdentification55 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuerCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification55, Optional<CountryCode>> mmIssuerCountry = new MMMessageAttribute<GenericIdentification55, Optional<CountryCode>>() {
 		{
 			businessComponentTrace_lazy = () -> GenericIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification55.mmObject();
@@ -493,6 +543,16 @@ public class GenericIdentification55 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(GenericIdentification55 obj) {
+			return obj.getIssuerCountry();
+		}
+
+		@Override
+		public void setValue(GenericIdentification55 obj, Optional<CountryCode> value) {
+			obj.setIssuerCountry(value.orElse(null));
 		}
 	};
 

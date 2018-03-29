@@ -51,12 +51,16 @@ public class ConstraintClosedStatus3Rule {
 	 */
 	public static final MMConstraint<AccountStatus2> forAccountStatus2 = new MMConstraint<AccountStatus2>() {
 		{
-			validator = ConstraintClosedStatus3Rule::checkAccountStatus2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosedStatus3Rule";
 			definition = "If Closed is present then Pending is not allowed.";
 			owner_lazy = () -> AccountStatus2.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Pending</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Closed</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(AccountStatus2 obj) throws Exception {
+			checkAccountStatus2(obj);
 		}
 	};
 

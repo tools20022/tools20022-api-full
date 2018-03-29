@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.PartyName;
 import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PostalAddress4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -118,7 +119,7 @@ public class PartyIdentification19 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification19, Max70Text> mmName = new MMMessageAttribute<PartyIdentification19, Max70Text>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification19.mmObject();
@@ -130,6 +131,16 @@ public class PartyIdentification19 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Max70Text getValue(PartyIdentification19 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(PartyIdentification19 obj, Max70Text value) {
+			obj.setName(value);
 		}
 	};
 	@XmlElement(name = "PstlAdr")
@@ -167,7 +178,7 @@ public class PartyIdentification19 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPostalAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification19, Optional<PostalAddress4>> mmPostalAddress = new MMMessageAssociationEnd<PartyIdentification19, Optional<PostalAddress4>>() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification19.mmObject();
@@ -179,7 +190,17 @@ public class PartyIdentification19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PostalAddress4.mmObject();
+			type_lazy = () -> PostalAddress4.mmObject();
+		}
+
+		@Override
+		public Optional<PostalAddress4> getValue(PartyIdentification19 obj) {
+			return obj.getPostalAddress();
+		}
+
+		@Override
+		public void setValue(PartyIdentification19 obj, Optional<PostalAddress4> value) {
+			obj.setPostalAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Id")
@@ -217,7 +238,7 @@ public class PartyIdentification19 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification19, Optional<Party5Choice>> mmIdentification = new MMMessageAssociationEnd<PartyIdentification19, Optional<Party5Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification19.mmObject();
@@ -230,6 +251,16 @@ public class PartyIdentification19 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Party5Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Party5Choice> getValue(PartyIdentification19 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification19 obj, Optional<Party5Choice> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 
@@ -261,7 +292,7 @@ public class PartyIdentification19 {
 		return postalAddress == null ? Optional.empty() : Optional.of(postalAddress);
 	}
 
-	public PartyIdentification19 setPostalAddress(com.tools20022.repository.msg.PostalAddress4 postalAddress) {
+	public PartyIdentification19 setPostalAddress(PostalAddress4 postalAddress) {
 		this.postalAddress = postalAddress;
 		return this;
 	}

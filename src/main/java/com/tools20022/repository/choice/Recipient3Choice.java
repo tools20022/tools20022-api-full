@@ -124,7 +124,7 @@ public class Recipient3Choice {
 	 * Recipient2Choice.mmKeyTransport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmKeyTransport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Recipient3Choice, KeyTransport3> mmKeyTransport = new MMMessageAssociationEnd<Recipient3Choice, KeyTransport3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Recipient3Choice.mmObject();
 			isDerived = false;
@@ -138,6 +138,16 @@ public class Recipient3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> KeyTransport3.mmObject();
+		}
+
+		@Override
+		public KeyTransport3 getValue(Recipient3Choice obj) {
+			return obj.getKeyTransport();
+		}
+
+		@Override
+		public void setValue(Recipient3Choice obj, KeyTransport3 value) {
+			obj.setKeyTransport(value);
 		}
 	};
 	@XmlElement(name = "KEK", required = true)
@@ -180,7 +190,7 @@ public class Recipient3Choice {
 	 * Recipient2Choice.mmKEK}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmKEK = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Recipient3Choice, KEK3> mmKEK = new MMMessageAssociationEnd<Recipient3Choice, KEK3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Recipient3Choice.mmObject();
 			isDerived = false;
@@ -194,6 +204,16 @@ public class Recipient3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> KEK3.mmObject();
+		}
+
+		@Override
+		public KEK3 getValue(Recipient3Choice obj) {
+			return obj.getKEK();
+		}
+
+		@Override
+		public void setValue(Recipient3Choice obj, KEK3 value) {
+			obj.setKEK(value);
 		}
 	};
 	@XmlElement(name = "KeyIdr", required = true)
@@ -234,7 +254,7 @@ public class Recipient3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmKeyIdentifier = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Recipient3Choice, KEKIdentifier1> mmKeyIdentifier = new MMMessageAssociationEnd<Recipient3Choice, KEKIdentifier1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Recipient3Choice.mmObject();
 			isDerived = false;
@@ -247,6 +267,16 @@ public class Recipient3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> KEKIdentifier1.mmObject();
+		}
+
+		@Override
+		public KEKIdentifier1 getValue(Recipient3Choice obj) {
+			return obj.getKeyIdentifier();
+		}
+
+		@Override
+		public void setValue(Recipient3Choice obj, KEKIdentifier1 value) {
+			obj.setKeyIdentifier(value);
 		}
 	};
 

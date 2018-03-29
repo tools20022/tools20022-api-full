@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.FundsCashFlow;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrumentQuantity1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -124,7 +125,7 @@ public class NetCashForecast5 {
 	 * NetCashForecast4.mmCashSettlementDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetCashForecast5, Optional<ISODate>> mmCashSettlementDate = new MMMessageAttribute<NetCashForecast5, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmValueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetCashForecast5.mmObject();
@@ -137,6 +138,16 @@ public class NetCashForecast5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(NetCashForecast5 obj) {
+			return obj.getCashSettlementDate();
+		}
+
+		@Override
+		public void setValue(NetCashForecast5 obj, Optional<ISODate> value) {
+			obj.setCashSettlementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NetAmt")
@@ -180,7 +191,7 @@ public class NetCashForecast5 {
 	 * NetCashForecast4.mmNetAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNetAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetCashForecast5, Optional<ActiveOrHistoricCurrencyAndAmount>> mmNetAmount = new MMMessageAttribute<NetCashForecast5, Optional<ActiveOrHistoricCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetCashForecast5.mmObject();
@@ -193,6 +204,16 @@ public class NetCashForecast5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAndAmount> getValue(NetCashForecast5 obj) {
+			return obj.getNetAmount();
+		}
+
+		@Override
+		public void setValue(NetCashForecast5 obj, Optional<ActiveOrHistoricCurrencyAndAmount> value) {
+			obj.setNetAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NetUnitsNb")
@@ -235,7 +256,7 @@ public class NetCashForecast5 {
 	 * NetCashForecast4.mmNetUnitsNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNetUnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetCashForecast5, Optional<FinancialInstrumentQuantity1>> mmNetUnitsNumber = new MMMessageAttribute<NetCashForecast5, Optional<FinancialInstrumentQuantity1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetCashForecast5.mmObject();
@@ -247,7 +268,17 @@ public class NetCashForecast5 {
 			previousVersion_lazy = () -> NetCashForecast4.mmNetUnitsNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
+			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1> getValue(NetCashForecast5 obj) {
+			return obj.getNetUnitsNumber();
+		}
+
+		@Override
+		public void setValue(NetCashForecast5 obj, Optional<FinancialInstrumentQuantity1> value) {
+			obj.setNetUnitsNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FlowDrctn", required = true)
@@ -292,7 +323,7 @@ public class NetCashForecast5 {
 	 * NetCashForecast4.mmFlowDirection}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFlowDirection = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetCashForecast5, FlowDirectionType1Code> mmFlowDirection = new MMMessageAttribute<NetCashForecast5, FlowDirectionType1Code>() {
 		{
 			businessElementTrace_lazy = () -> FundsCashFlow.mmFlowDirection;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetCashForecast5.mmObject();
@@ -305,6 +336,16 @@ public class NetCashForecast5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FlowDirectionType1Code.mmObject();
+		}
+
+		@Override
+		public FlowDirectionType1Code getValue(NetCashForecast5 obj) {
+			return obj.getFlowDirection();
+		}
+
+		@Override
+		public void setValue(NetCashForecast5 obj, FlowDirectionType1Code value) {
+			obj.setFlowDirection(value);
 		}
 	};
 
@@ -346,7 +387,7 @@ public class NetCashForecast5 {
 		return netUnitsNumber == null ? Optional.empty() : Optional.of(netUnitsNumber);
 	}
 
-	public NetCashForecast5 setNetUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 netUnitsNumber) {
+	public NetCashForecast5 setNetUnitsNumber(FinancialInstrumentQuantity1 netUnitsNumber) {
 		this.netUnitsNumber = netUnitsNumber;
 		return this;
 	}

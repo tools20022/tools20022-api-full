@@ -51,11 +51,15 @@ public class ConstraintDebitCreditIndicatorGuideline {
 	 */
 	public static final MMConstraint<NumberAndSumOfTransactions2> forNumberAndSumOfTransactions2 = new MMConstraint<NumberAndSumOfTransactions2>() {
 		{
-			validator = ConstraintDebitCreditIndicatorGuideline::checkNumberAndSumOfTransactions2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebitCreditIndicatorGuideline";
 			definition = "DebitCreditIndicator should be present when TotalNetEntryAmount is present.";
 			owner_lazy = () -> NumberAndSumOfTransactions2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(NumberAndSumOfTransactions2 obj) throws Exception {
+			checkNumberAndSumOfTransactions2(obj);
 		}
 	};
 	/**
@@ -81,11 +85,15 @@ public class ConstraintDebitCreditIndicatorGuideline {
 	 */
 	public static final MMConstraint<NumberAndSumOfTransactionsPerBankTransactionCode1> forNumberAndSumOfTransactionsPerBankTransactionCode1 = new MMConstraint<NumberAndSumOfTransactionsPerBankTransactionCode1>() {
 		{
-			validator = ConstraintDebitCreditIndicatorGuideline::checkNumberAndSumOfTransactionsPerBankTransactionCode1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebitCreditIndicatorGuideline";
 			definition = "DebitCreditIndicator should be present when TotalNetEntryAmount is present.";
 			owner_lazy = () -> NumberAndSumOfTransactionsPerBankTransactionCode1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(NumberAndSumOfTransactionsPerBankTransactionCode1 obj) throws Exception {
+			checkNumberAndSumOfTransactionsPerBankTransactionCode1(obj);
 		}
 	};
 

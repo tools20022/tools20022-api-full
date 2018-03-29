@@ -138,7 +138,7 @@ public class DiscretionInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOffset = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DiscretionInstructions1, ActiveCurrencyAndAmount> mmOffset = new MMMessageAttribute<DiscretionInstructions1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Discretion.mmOffset;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DiscretionInstructions1.mmObject();
@@ -151,6 +151,16 @@ public class DiscretionInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(DiscretionInstructions1 obj) {
+			return obj.getOffset();
+		}
+
+		@Override
+		public void setValue(DiscretionInstructions1 obj, ActiveCurrencyAndAmount value) {
+			obj.setOffset(value);
 		}
 	};
 	@XmlElement(name = "OffsetSgn", required = true)
@@ -193,7 +203,7 @@ public class DiscretionInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOffsetSign = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DiscretionInstructions1, PlusOrMinusIndicator> mmOffsetSign = new MMMessageAttribute<DiscretionInstructions1, PlusOrMinusIndicator>() {
 		{
 			businessElementTrace_lazy = () -> Discretion.mmOffsetSign;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DiscretionInstructions1.mmObject();
@@ -206,6 +216,16 @@ public class DiscretionInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PlusOrMinusIndicator.mmObject();
+		}
+
+		@Override
+		public PlusOrMinusIndicator getValue(DiscretionInstructions1 obj) {
+			return obj.getOffsetSign();
+		}
+
+		@Override
+		public void setValue(DiscretionInstructions1 obj, PlusOrMinusIndicator value) {
+			obj.setOffsetSign(value);
 		}
 	};
 	@XmlElement(name = "RltdPricTp", required = true)
@@ -248,7 +268,7 @@ public class DiscretionInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRelatedPriceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DiscretionInstructions1, TypeOfDiscretionPrice1Code> mmRelatedPriceType = new MMMessageAttribute<DiscretionInstructions1, TypeOfDiscretionPrice1Code>() {
 		{
 			businessElementTrace_lazy = () -> Discretion.mmRelatedPriceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DiscretionInstructions1.mmObject();
@@ -261,6 +281,16 @@ public class DiscretionInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TypeOfDiscretionPrice1Code.mmObject();
+		}
+
+		@Override
+		public TypeOfDiscretionPrice1Code getValue(DiscretionInstructions1 obj) {
+			return obj.getRelatedPriceType();
+		}
+
+		@Override
+		public void setValue(DiscretionInstructions1 obj, TypeOfDiscretionPrice1Code value) {
+			obj.setRelatedPriceType(value);
 		}
 	};
 	@XmlElement(name = "MvTp", required = true)
@@ -302,7 +332,7 @@ public class DiscretionInstructions1 {
 	 * "Describes whether discretion price is static/fixed or floats."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMoveType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DiscretionInstructions1, MoveType1Code> mmMoveType = new MMMessageAttribute<DiscretionInstructions1, MoveType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Discretion.mmMoveType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DiscretionInstructions1.mmObject();
@@ -315,6 +345,16 @@ public class DiscretionInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MoveType1Code.mmObject();
+		}
+
+		@Override
+		public MoveType1Code getValue(DiscretionInstructions1 obj) {
+			return obj.getMoveType();
+		}
+
+		@Override
+		public void setValue(DiscretionInstructions1 obj, MoveType1Code value) {
+			obj.setMoveType(value);
 		}
 	};
 	@XmlElement(name = "LmtTp", required = true)
@@ -356,7 +396,7 @@ public class DiscretionInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLimitType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DiscretionInstructions1, Max35Text> mmLimitType = new MMMessageAttribute<DiscretionInstructions1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Discretion.mmLimitType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DiscretionInstructions1.mmObject();
@@ -369,6 +409,16 @@ public class DiscretionInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(DiscretionInstructions1 obj) {
+			return obj.getLimitType();
+		}
+
+		@Override
+		public void setValue(DiscretionInstructions1 obj, Max35Text value) {
+			obj.setLimitType(value);
 		}
 	};
 	@XmlElement(name = "RndDrctn", required = true)
@@ -410,7 +460,7 @@ public class DiscretionInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRoundDirection = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DiscretionInstructions1, Max35Text> mmRoundDirection = new MMMessageAttribute<DiscretionInstructions1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Discretion.mmRoundDirection;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DiscretionInstructions1.mmObject();
@@ -423,6 +473,16 @@ public class DiscretionInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(DiscretionInstructions1 obj) {
+			return obj.getRoundDirection();
+		}
+
+		@Override
+		public void setValue(DiscretionInstructions1 obj, Max35Text value) {
+			obj.setRoundDirection(value);
 		}
 	};
 	@XmlElement(name = "Scp", required = true)
@@ -465,7 +525,7 @@ public class DiscretionInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmScope = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DiscretionInstructions1, PriceProtectionScope2Code> mmScope = new MMMessageAttribute<DiscretionInstructions1, PriceProtectionScope2Code>() {
 		{
 			businessElementTrace_lazy = () -> Discretion.mmScope;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DiscretionInstructions1.mmObject();
@@ -478,6 +538,16 @@ public class DiscretionInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PriceProtectionScope2Code.mmObject();
+		}
+
+		@Override
+		public PriceProtectionScope2Code getValue(DiscretionInstructions1 obj) {
+			return obj.getScope();
+		}
+
+		@Override
+		public void setValue(DiscretionInstructions1 obj, PriceProtectionScope2Code value) {
+			obj.setScope(value);
 		}
 	};
 	@XmlElement(name = "OffsetTp", required = true)
@@ -518,7 +588,7 @@ public class DiscretionInstructions1 {
 	 * definition} = "Describes the type of Discretion Offset."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOffsetType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DiscretionInstructions1, OffsetType1Code> mmOffsetType = new MMMessageAttribute<DiscretionInstructions1, OffsetType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Discretion.mmOffsetType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DiscretionInstructions1.mmObject();
@@ -531,6 +601,16 @@ public class DiscretionInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OffsetType1Code.mmObject();
+		}
+
+		@Override
+		public OffsetType1Code getValue(DiscretionInstructions1 obj) {
+			return obj.getOffsetType();
+		}
+
+		@Override
+		public void setValue(DiscretionInstructions1 obj, OffsetType1Code value) {
+			obj.setOffsetType(value);
 		}
 	};
 

@@ -48,11 +48,15 @@ public class ConstraintDateAndTimeAndDateStatus1Rule {
 	 */
 	public static final MMConstraint<Meeting2> forMeeting2 = new MMConstraint<Meeting2>() {
 		{
-			validator = ConstraintDateAndTimeAndDateStatus1Rule::checkMeeting2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateAndTimeAndDateStatus1Rule";
 			definition = "If DateAndTime is UKWN, then DateStatus must not be present.";
 			owner_lazy = () -> Meeting2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Meeting2 obj) throws Exception {
+			checkMeeting2(obj);
 		}
 	};
 

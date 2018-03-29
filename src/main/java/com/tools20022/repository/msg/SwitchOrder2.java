@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -173,7 +174,7 @@ public class SwitchOrder2 {
 	 * "Date and time at which the order was placed by the investor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SwitchOrder2, Optional<ISODateTime>> mmOrderDateTime = new MMMessageAttribute<SwitchOrder2, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrder2.mmObject();
@@ -185,6 +186,16 @@ public class SwitchOrder2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(SwitchOrder2 obj) {
+			return obj.getOrderDateTime();
+		}
+
+		@Override
+		public void setValue(SwitchOrder2 obj, Optional<ISODateTime> value) {
+			obj.setOrderDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrdrRef", required = true)
@@ -222,7 +233,7 @@ public class SwitchOrder2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SwitchOrder2, Max35Text> mmOrderReference = new MMMessageAttribute<SwitchOrder2, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrder2.mmObject();
@@ -234,6 +245,16 @@ public class SwitchOrder2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(SwitchOrder2 obj) {
+			return obj.getOrderReference();
+		}
+
+		@Override
+		public void setValue(SwitchOrder2 obj, Max35Text value) {
+			obj.setOrderReference(value);
 		}
 	};
 	@XmlElement(name = "InvstmtAcctDtls", required = true)
@@ -270,7 +291,7 @@ public class SwitchOrder2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchOrder2, InvestmentAccount13> mmInvestmentAccountDetails = new MMMessageAssociationEnd<SwitchOrder2, InvestmentAccount13>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrder2.mmObject();
@@ -282,7 +303,17 @@ public class SwitchOrder2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount13.mmObject();
+			type_lazy = () -> InvestmentAccount13.mmObject();
+		}
+
+		@Override
+		public InvestmentAccount13 getValue(SwitchOrder2 obj) {
+			return obj.getInvestmentAccountDetails();
+		}
+
+		@Override
+		public void setValue(SwitchOrder2 obj, InvestmentAccount13 value) {
+			obj.setInvestmentAccountDetails(value);
 		}
 	};
 	@XmlElement(name = "TtlRedAmt")
@@ -321,7 +352,7 @@ public class SwitchOrder2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalRedemptionAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SwitchOrder2, Optional<ActiveOrHistoricCurrencyAndAmount>> mmTotalRedemptionAmount = new MMMessageAttribute<SwitchOrder2, Optional<ActiveOrHistoricCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> SwitchOrder.mmTotalRedemptionAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrder2.mmObject();
@@ -333,6 +364,16 @@ public class SwitchOrder2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAndAmount> getValue(SwitchOrder2 obj) {
+			return obj.getTotalRedemptionAmount();
+		}
+
+		@Override
+		public void setValue(SwitchOrder2 obj, Optional<ActiveOrHistoricCurrencyAndAmount> value) {
+			obj.setTotalRedemptionAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlSbcptAmt")
@@ -371,7 +412,7 @@ public class SwitchOrder2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalSubscriptionAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SwitchOrder2, Optional<ActiveOrHistoricCurrencyAndAmount>> mmTotalSubscriptionAmount = new MMMessageAttribute<SwitchOrder2, Optional<ActiveOrHistoricCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> SwitchOrder.mmTotalSubscriptionAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrder2.mmObject();
@@ -383,6 +424,16 @@ public class SwitchOrder2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAndAmount> getValue(SwitchOrder2 obj) {
+			return obj.getTotalSubscriptionAmount();
+		}
+
+		@Override
+		public void setValue(SwitchOrder2 obj, Optional<ActiveOrHistoricCurrencyAndAmount> value) {
+			obj.setTotalSubscriptionAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XpryDtTm")
@@ -418,7 +469,7 @@ public class SwitchOrder2 {
 	 * definition} = "Date on which the order expires."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpiryDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SwitchOrder2, Optional<ISODateTime>> mmExpiryDateTime = new MMMessageAttribute<SwitchOrder2, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmExpiryDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrder2.mmObject();
@@ -430,6 +481,16 @@ public class SwitchOrder2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(SwitchOrder2 obj) {
+			return obj.getExpiryDateTime();
+		}
+
+		@Override
+		public void setValue(SwitchOrder2 obj, Optional<ISODateTime> value) {
+			obj.setExpiryDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlCshIn")
@@ -468,7 +529,7 @@ public class SwitchOrder2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalCashIn = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SwitchOrder2, Optional<ActiveOrHistoricCurrencyAndAmount>> mmAdditionalCashIn = new MMMessageAttribute<SwitchOrder2, Optional<ActiveOrHistoricCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> SwitchOrder.mmAdditionalCashIn;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrder2.mmObject();
@@ -480,6 +541,16 @@ public class SwitchOrder2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAndAmount> getValue(SwitchOrder2 obj) {
+			return obj.getAdditionalCashIn();
+		}
+
+		@Override
+		public void setValue(SwitchOrder2 obj, Optional<ActiveOrHistoricCurrencyAndAmount> value) {
+			obj.setAdditionalCashIn(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RsltgCshOut")
@@ -518,7 +589,7 @@ public class SwitchOrder2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResultingCashOut = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SwitchOrder2, Optional<ActiveOrHistoricCurrencyAndAmount>> mmResultingCashOut = new MMMessageAttribute<SwitchOrder2, Optional<ActiveOrHistoricCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> SwitchOrder.mmResultingCashOut;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrder2.mmObject();
@@ -530,6 +601,16 @@ public class SwitchOrder2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAndAmount> getValue(SwitchOrder2 obj) {
+			return obj.getResultingCashOut();
+		}
+
+		@Override
+		public void setValue(SwitchOrder2 obj, Optional<ActiveOrHistoricCurrencyAndAmount> value) {
+			obj.setResultingCashOut(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CxlRght")
@@ -568,7 +649,7 @@ public class SwitchOrder2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancellationRight = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SwitchOrder2, Optional<CancellationRight1>> mmCancellationRight = new MMMessageAttribute<SwitchOrder2, Optional<CancellationRight1>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmCancellationRight;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrder2.mmObject();
@@ -579,11 +660,21 @@ public class SwitchOrder2 {
 			definition = "Cancellation right of an investor with respect to an investment fund order.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.CancellationRight1.mmObject();
+			complexType_lazy = () -> CancellationRight1.mmObject();
+		}
+
+		@Override
+		public Optional<CancellationRight1> getValue(SwitchOrder2 obj) {
+			return obj.getCancellationRight();
+		}
+
+		@Override
+		public void setValue(SwitchOrder2 obj, Optional<CancellationRight1> value) {
+			obj.setCancellationRight(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RedLegDtls", required = true)
-	protected List<com.tools20022.repository.msg.SwitchRedemptionLegOrder2> redemptionLegDetails;
+	protected List<SwitchRedemptionLegOrder2> redemptionLegDetails;
 	/**
 	 * 
 	 <p>
@@ -616,7 +707,7 @@ public class SwitchOrder2 {
 	 * "Part of an investment fund switch order that is a redemption."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRedemptionLegDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchOrder2, List<SwitchRedemptionLegOrder2>> mmRedemptionLegDetails = new MMMessageAssociationEnd<SwitchOrder2, List<SwitchRedemptionLegOrder2>>() {
 		{
 			businessElementTrace_lazy = () -> SwitchOrder.mmRedemptionLeg;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrder2.mmObject();
@@ -627,11 +718,21 @@ public class SwitchOrder2 {
 			definition = "Part of an investment fund switch order that is a redemption.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegOrder2.mmObject();
+			type_lazy = () -> SwitchRedemptionLegOrder2.mmObject();
+		}
+
+		@Override
+		public List<SwitchRedemptionLegOrder2> getValue(SwitchOrder2 obj) {
+			return obj.getRedemptionLegDetails();
+		}
+
+		@Override
+		public void setValue(SwitchOrder2 obj, List<SwitchRedemptionLegOrder2> value) {
+			obj.setRedemptionLegDetails(value);
 		}
 	};
 	@XmlElement(name = "SbcptLegDtls", required = true)
-	protected List<com.tools20022.repository.msg.SwitchSubscriptionLegOrder2> subscriptionLegDetails;
+	protected List<SwitchSubscriptionLegOrder2> subscriptionLegDetails;
 	/**
 	 * 
 	 <p>
@@ -664,7 +765,7 @@ public class SwitchOrder2 {
 	 * "Part of an investment fund switch order that is a subscription."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSubscriptionLegDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchOrder2, List<SwitchSubscriptionLegOrder2>> mmSubscriptionLegDetails = new MMMessageAssociationEnd<SwitchOrder2, List<SwitchSubscriptionLegOrder2>>() {
 		{
 			businessElementTrace_lazy = () -> SwitchOrder.mmSubscriptionLeg;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrder2.mmObject();
@@ -675,7 +776,17 @@ public class SwitchOrder2 {
 			definition = "Part of an investment fund switch order that is a subscription.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SwitchSubscriptionLegOrder2.mmObject();
+			type_lazy = () -> SwitchSubscriptionLegOrder2.mmObject();
+		}
+
+		@Override
+		public List<SwitchSubscriptionLegOrder2> getValue(SwitchOrder2 obj) {
+			return obj.getSubscriptionLegDetails();
+		}
+
+		@Override
+		public void setValue(SwitchOrder2 obj, List<SwitchSubscriptionLegOrder2> value) {
+			obj.setSubscriptionLegDetails(value);
 		}
 	};
 	@XmlElement(name = "CshSttlmDtls")
@@ -712,7 +823,7 @@ public class SwitchOrder2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashSettlementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchOrder2, Optional<PaymentTransaction20>> mmCashSettlementDetails = new MMMessageAssociationEnd<SwitchOrder2, Optional<PaymentTransaction20>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmPaymentOffset;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrder2.mmObject();
@@ -724,7 +835,17 @@ public class SwitchOrder2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentTransaction20.mmObject();
+			type_lazy = () -> PaymentTransaction20.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentTransaction20> getValue(SwitchOrder2 obj) {
+			return obj.getCashSettlementDetails();
+		}
+
+		@Override
+		public void setValue(SwitchOrder2 obj, Optional<PaymentTransaction20> value) {
+			obj.setCashSettlementDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FXDtls")
@@ -760,7 +881,7 @@ public class SwitchOrder2 {
 	 * "Information needed to process a currency exchange or conversion."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmForeignExchangeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchOrder2, Optional<ForeignExchangeTerms5>> mmForeignExchangeDetails = new MMMessageAssociationEnd<SwitchOrder2, Optional<ForeignExchangeTerms5>>() {
 		{
 			businessElementTrace_lazy = () -> ForeignExchangeTrade.mmAgreedRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrder2.mmObject();
@@ -772,7 +893,17 @@ public class SwitchOrder2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms5.mmObject();
+			type_lazy = () -> ForeignExchangeTerms5.mmObject();
+		}
+
+		@Override
+		public Optional<ForeignExchangeTerms5> getValue(SwitchOrder2 obj) {
+			return obj.getForeignExchangeDetails();
+		}
+
+		@Override
+		public void setValue(SwitchOrder2 obj, Optional<ForeignExchangeTerms5> value) {
+			obj.setForeignExchangeDetails(value.orElse(null));
 		}
 	};
 	/**
@@ -869,7 +1000,7 @@ public class SwitchOrder2 {
 		return investmentAccountDetails;
 	}
 
-	public SwitchOrder2 setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount13 investmentAccountDetails) {
+	public SwitchOrder2 setInvestmentAccountDetails(InvestmentAccount13 investmentAccountDetails) {
 		this.investmentAccountDetails = Objects.requireNonNull(investmentAccountDetails);
 		return this;
 	}
@@ -923,7 +1054,7 @@ public class SwitchOrder2 {
 		return cancellationRight == null ? Optional.empty() : Optional.of(cancellationRight);
 	}
 
-	public SwitchOrder2 setCancellationRight(com.tools20022.repository.msg.CancellationRight1 cancellationRight) {
+	public SwitchOrder2 setCancellationRight(CancellationRight1 cancellationRight) {
 		this.cancellationRight = cancellationRight;
 		return this;
 	}
@@ -932,7 +1063,7 @@ public class SwitchOrder2 {
 		return redemptionLegDetails == null ? redemptionLegDetails = new ArrayList<>() : redemptionLegDetails;
 	}
 
-	public SwitchOrder2 setRedemptionLegDetails(List<com.tools20022.repository.msg.SwitchRedemptionLegOrder2> redemptionLegDetails) {
+	public SwitchOrder2 setRedemptionLegDetails(List<SwitchRedemptionLegOrder2> redemptionLegDetails) {
 		this.redemptionLegDetails = Objects.requireNonNull(redemptionLegDetails);
 		return this;
 	}
@@ -941,7 +1072,7 @@ public class SwitchOrder2 {
 		return subscriptionLegDetails == null ? subscriptionLegDetails = new ArrayList<>() : subscriptionLegDetails;
 	}
 
-	public SwitchOrder2 setSubscriptionLegDetails(List<com.tools20022.repository.msg.SwitchSubscriptionLegOrder2> subscriptionLegDetails) {
+	public SwitchOrder2 setSubscriptionLegDetails(List<SwitchSubscriptionLegOrder2> subscriptionLegDetails) {
 		this.subscriptionLegDetails = Objects.requireNonNull(subscriptionLegDetails);
 		return this;
 	}
@@ -950,7 +1081,7 @@ public class SwitchOrder2 {
 		return cashSettlementDetails == null ? Optional.empty() : Optional.of(cashSettlementDetails);
 	}
 
-	public SwitchOrder2 setCashSettlementDetails(com.tools20022.repository.msg.PaymentTransaction20 cashSettlementDetails) {
+	public SwitchOrder2 setCashSettlementDetails(PaymentTransaction20 cashSettlementDetails) {
 		this.cashSettlementDetails = cashSettlementDetails;
 		return this;
 	}
@@ -959,7 +1090,7 @@ public class SwitchOrder2 {
 		return foreignExchangeDetails == null ? Optional.empty() : Optional.of(foreignExchangeDetails);
 	}
 
-	public SwitchOrder2 setForeignExchangeDetails(com.tools20022.repository.msg.ForeignExchangeTerms5 foreignExchangeDetails) {
+	public SwitchOrder2 setForeignExchangeDetails(ForeignExchangeTerms5 foreignExchangeDetails) {
 		this.foreignExchangeDetails = foreignExchangeDetails;
 		return this;
 	}

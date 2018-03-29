@@ -25,7 +25,6 @@ import com.tools20022.repository.area.SecuritiesEventsArchive;
 import com.tools20022.repository.choice.PartyIdentification9Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -145,7 +144,7 @@ public class MeetingInstructionCancellationRequestV02 {
 	 * definition} = "Uniquely identifies the cancellation request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmInstructionCancellationIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingInstructionCancellationRequestV02, MessageIdentification1> mmInstructionCancellationIdentification = new MMMessageBuildingBlock<MeetingInstructionCancellationRequestV02, MessageIdentification1>() {
 		{
 			xmlTag = "InstrCxlId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,12 +155,14 @@ public class MeetingInstructionCancellationRequestV02 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingInstructionCancellationRequestV02.class.getMethod("getInstructionCancellationIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(MeetingInstructionCancellationRequestV02 obj) {
+			return obj.getInstructionCancellationIdentification();
+		}
+
+		@Override
+		public void setValue(MeetingInstructionCancellationRequestV02 obj, MessageIdentification1 value) {
+			obj.setInstructionCancellationIdentification(value);
 		}
 	};
 	@XmlElement(name = "PrvsRef", required = true)
@@ -189,7 +190,7 @@ public class MeetingInstructionCancellationRequestV02 {
 	 * definition} = "Identifies the instruction to be cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingInstructionCancellationRequestV02, MessageIdentification> mmPreviousReference = new MMMessageBuildingBlock<MeetingInstructionCancellationRequestV02, MessageIdentification>() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -200,12 +201,14 @@ public class MeetingInstructionCancellationRequestV02 {
 			complexType_lazy = () -> MessageIdentification.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingInstructionCancellationRequestV02.class.getMethod("getPreviousReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification getValue(MeetingInstructionCancellationRequestV02 obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(MeetingInstructionCancellationRequestV02 obj, MessageIdentification value) {
+			obj.setPreviousReference(value);
 		}
 	};
 	@XmlElement(name = "MtgRef")
@@ -233,7 +236,7 @@ public class MeetingInstructionCancellationRequestV02 {
 	 * definition} = "Series of elements which allow to identify a meeting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMeetingReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingInstructionCancellationRequestV02, Optional<MeetingReference3>> mmMeetingReference = new MMMessageBuildingBlock<MeetingInstructionCancellationRequestV02, Optional<MeetingReference3>>() {
 		{
 			xmlTag = "MtgRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -244,12 +247,14 @@ public class MeetingInstructionCancellationRequestV02 {
 			complexType_lazy = () -> MeetingReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingInstructionCancellationRequestV02.class.getMethod("getMeetingReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<MeetingReference3> getValue(MeetingInstructionCancellationRequestV02 obj) {
+			return obj.getMeetingReference();
+		}
+
+		@Override
+		public void setValue(MeetingInstructionCancellationRequestV02 obj, Optional<MeetingReference3> value) {
+			obj.setMeetingReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RqstngPty")
@@ -277,7 +282,7 @@ public class MeetingInstructionCancellationRequestV02 {
 	 * definition} = "Party requesting the cancellation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRequestingParty = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingInstructionCancellationRequestV02, Optional<PartyIdentification9Choice>> mmRequestingParty = new MMMessageBuildingBlock<MeetingInstructionCancellationRequestV02, Optional<PartyIdentification9Choice>>() {
 		{
 			xmlTag = "RqstngPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -288,12 +293,14 @@ public class MeetingInstructionCancellationRequestV02 {
 			complexType_lazy = () -> PartyIdentification9Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingInstructionCancellationRequestV02.class.getMethod("getRequestingParty", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification9Choice> getValue(MeetingInstructionCancellationRequestV02 obj) {
+			return obj.getRequestingParty();
+		}
+
+		@Override
+		public void setValue(MeetingInstructionCancellationRequestV02 obj, Optional<PartyIdentification9Choice> value) {
+			obj.setRequestingParty(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctyId")
@@ -322,7 +329,7 @@ public class MeetingInstructionCancellationRequestV02 {
 	 * "Identifies the security for which the meeting is organised."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingInstructionCancellationRequestV02, Optional<SecurityIdentification3>> mmSecurityIdentification = new MMMessageBuildingBlock<MeetingInstructionCancellationRequestV02, Optional<SecurityIdentification3>>() {
 		{
 			xmlTag = "SctyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -333,12 +340,14 @@ public class MeetingInstructionCancellationRequestV02 {
 			complexType_lazy = () -> SecurityIdentification3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingInstructionCancellationRequestV02.class.getMethod("getSecurityIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<SecurityIdentification3> getValue(MeetingInstructionCancellationRequestV02 obj) {
+			return obj.getSecurityIdentification();
+		}
+
+		@Override
+		public void setValue(MeetingInstructionCancellationRequestV02 obj, Optional<SecurityIdentification3> value) {
+			obj.setSecurityIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstdPos")
@@ -368,7 +377,7 @@ public class MeetingInstructionCancellationRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmInstructedPosition = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingInstructionCancellationRequestV02, List<SafekeepingAccount3>> mmInstructedPosition = new MMMessageBuildingBlock<MeetingInstructionCancellationRequestV02, List<SafekeepingAccount3>>() {
 		{
 			xmlTag = "InstdPos";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -378,12 +387,14 @@ public class MeetingInstructionCancellationRequestV02 {
 			complexType_lazy = () -> SafekeepingAccount3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingInstructionCancellationRequestV02.class.getMethod("getInstructedPosition", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SafekeepingAccount3> getValue(MeetingInstructionCancellationRequestV02 obj) {
+			return obj.getInstructedPosition();
+		}
+
+		@Override
+		public void setValue(MeetingInstructionCancellationRequestV02 obj, List<SafekeepingAccount3> value) {
+			obj.setInstructedPosition(value);
 		}
 	};
 

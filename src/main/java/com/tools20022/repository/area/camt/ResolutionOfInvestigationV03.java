@@ -26,7 +26,6 @@ import com.tools20022.repository.choice.CorrectiveTransaction1Choice;
 import com.tools20022.repository.choice.InvestigationStatus2Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -206,7 +205,7 @@ public class ResolutionOfInvestigationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ResolutionOfInvestigationV03, CaseAssignment2> mmAssignment = new MMMessageBuildingBlock<ResolutionOfInvestigationV03, CaseAssignment2>() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -217,12 +216,14 @@ public class ResolutionOfInvestigationV03 {
 			complexType_lazy = () -> CaseAssignment2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ResolutionOfInvestigationV03.class.getMethod("getAssignment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CaseAssignment2 getValue(ResolutionOfInvestigationV03 obj) {
+			return obj.getAssignment();
+		}
+
+		@Override
+		public void setValue(ResolutionOfInvestigationV03 obj, CaseAssignment2 value) {
+			obj.setAssignment(value);
 		}
 	};
 	@XmlElement(name = "RslvdCase")
@@ -248,7 +249,7 @@ public class ResolutionOfInvestigationV03 {
 	 * definition} = "Identifies a resolved case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmResolvedCase = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ResolutionOfInvestigationV03, Optional<Case2>> mmResolvedCase = new MMMessageBuildingBlock<ResolutionOfInvestigationV03, Optional<Case2>>() {
 		{
 			xmlTag = "RslvdCase";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -259,12 +260,14 @@ public class ResolutionOfInvestigationV03 {
 			complexType_lazy = () -> Case2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ResolutionOfInvestigationV03.class.getMethod("getResolvedCase", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Case2> getValue(ResolutionOfInvestigationV03 obj) {
+			return obj.getResolvedCase();
+		}
+
+		@Override
+		public void setValue(ResolutionOfInvestigationV03 obj, Optional<Case2> value) {
+			obj.setResolvedCase(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sts", required = true)
@@ -292,7 +295,7 @@ public class ResolutionOfInvestigationV03 {
 	 * definition} = "Indicates the status of the investigation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ResolutionOfInvestigationV03, InvestigationStatus2Choice> mmStatus = new MMMessageBuildingBlock<ResolutionOfInvestigationV03, InvestigationStatus2Choice>() {
 		{
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -303,12 +306,14 @@ public class ResolutionOfInvestigationV03 {
 			complexType_lazy = () -> InvestigationStatus2Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ResolutionOfInvestigationV03.class.getMethod("getStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public InvestigationStatus2Choice getValue(ResolutionOfInvestigationV03 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(ResolutionOfInvestigationV03 obj, InvestigationStatus2Choice value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "CxlDtls")
@@ -337,7 +342,7 @@ public class ResolutionOfInvestigationV03 {
 	 * "Specifies the details of the underlying transactions being cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCancellationDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ResolutionOfInvestigationV03, List<UnderlyingTransaction3>> mmCancellationDetails = new MMMessageBuildingBlock<ResolutionOfInvestigationV03, List<UnderlyingTransaction3>>() {
 		{
 			xmlTag = "CxlDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -347,12 +352,14 @@ public class ResolutionOfInvestigationV03 {
 			complexType_lazy = () -> UnderlyingTransaction3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ResolutionOfInvestigationV03.class.getMethod("getCancellationDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<UnderlyingTransaction3> getValue(ResolutionOfInvestigationV03 obj) {
+			return obj.getCancellationDetails();
+		}
+
+		@Override
+		public void setValue(ResolutionOfInvestigationV03 obj, List<UnderlyingTransaction3> value) {
+			obj.setCancellationDetails(value);
 		}
 	};
 	@XmlElement(name = "StmtDtls")
@@ -380,7 +387,7 @@ public class ResolutionOfInvestigationV03 {
 	 * definition} = "Details on the underlying statement entry."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmStatementDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ResolutionOfInvestigationV03, Optional<StatementResolutionEntry1>> mmStatementDetails = new MMMessageBuildingBlock<ResolutionOfInvestigationV03, Optional<StatementResolutionEntry1>>() {
 		{
 			xmlTag = "StmtDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -391,12 +398,14 @@ public class ResolutionOfInvestigationV03 {
 			complexType_lazy = () -> StatementResolutionEntry1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ResolutionOfInvestigationV03.class.getMethod("getStatementDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<StatementResolutionEntry1> getValue(ResolutionOfInvestigationV03 obj) {
+			return obj.getStatementDetails();
+		}
+
+		@Override
+		public void setValue(ResolutionOfInvestigationV03 obj, Optional<StatementResolutionEntry1> value) {
+			obj.setStatementDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CrrctnTx")
@@ -426,7 +435,7 @@ public class ResolutionOfInvestigationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCorrectionTransaction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ResolutionOfInvestigationV03, Optional<CorrectiveTransaction1Choice>> mmCorrectionTransaction = new MMMessageBuildingBlock<ResolutionOfInvestigationV03, Optional<CorrectiveTransaction1Choice>>() {
 		{
 			xmlTag = "CrrctnTx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -437,12 +446,14 @@ public class ResolutionOfInvestigationV03 {
 			complexType_lazy = () -> CorrectiveTransaction1Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ResolutionOfInvestigationV03.class.getMethod("getCorrectionTransaction", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<CorrectiveTransaction1Choice> getValue(ResolutionOfInvestigationV03 obj) {
+			return obj.getCorrectionTransaction();
+		}
+
+		@Override
+		public void setValue(ResolutionOfInvestigationV03 obj, Optional<CorrectiveTransaction1Choice> value) {
+			obj.setCorrectionTransaction(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RsltnRltdInf")
@@ -472,7 +483,7 @@ public class ResolutionOfInvestigationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmResolutionRelatedInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ResolutionOfInvestigationV03, Optional<ResolutionInformation1>> mmResolutionRelatedInformation = new MMMessageBuildingBlock<ResolutionOfInvestigationV03, Optional<ResolutionInformation1>>() {
 		{
 			xmlTag = "RsltnRltdInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -483,12 +494,14 @@ public class ResolutionOfInvestigationV03 {
 			complexType_lazy = () -> ResolutionInformation1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ResolutionOfInvestigationV03.class.getMethod("getResolutionRelatedInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ResolutionInformation1> getValue(ResolutionOfInvestigationV03 obj) {
+			return obj.getResolutionRelatedInformation();
+		}
+
+		@Override
+		public void setValue(ResolutionOfInvestigationV03 obj, Optional<ResolutionInformation1> value) {
+			obj.setResolutionRelatedInformation(value.orElse(null));
 		}
 	};
 

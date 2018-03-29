@@ -54,12 +54,16 @@ public class ConstraintApplicant6Rule {
 	 */
 	public static final MMConstraint<UndertakingIssuanceV01> forUndertakingIssuanceV01 = new MMConstraint<UndertakingIssuanceV01>() {
 		{
-			validator = ConstraintApplicant6Rule::checkUndertakingIssuanceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Applicant6Rule";
 			definition = "If IssuanceType is \"CRQB\" then Applicant must not be present.";
 			owner_lazy = () -> UndertakingIssuanceV01.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/UndertakingIssuanceDetails/Applicant[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/UndertakingIssuanceDetails/IssuanceType</leftOperand><rightOperand>CRQB</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(UndertakingIssuanceV01 obj) throws Exception {
+			checkUndertakingIssuanceV01(obj);
 		}
 	};
 	/**
@@ -88,12 +92,16 @@ public class ConstraintApplicant6Rule {
 	 */
 	public static final MMConstraint<UndertakingAdvice2> forUndertakingAdvice2 = new MMConstraint<UndertakingAdvice2>() {
 		{
-			validator = ConstraintApplicant6Rule::checkUndertakingAdvice2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Applicant6Rule";
 			definition = "If IssuanceType is \"CRQB\" then Applicant must not be present.";
 			owner_lazy = () -> UndertakingAdvice2.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/UndertakingIssuanceMessage/UndertakingDetails/Applicant[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/UndertakingIssuanceMessage/UndertakingDetails/IssuanceType</leftOperand><rightOperand>CRQB</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(UndertakingAdvice2 obj) throws Exception {
+			checkUndertakingAdvice2(obj);
 		}
 	};
 

@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.LotBreakdown;
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrumentQuantity1;
+import com.tools20022.repository.msg.Unit5;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -120,7 +122,7 @@ public class Unit4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalUnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Unit4, FinancialInstrumentQuantity1> mmTotalUnitsNumber = new MMMessageAttribute<Unit4, FinancialInstrumentQuantity1>() {
 		{
 			businessElementTrace_lazy = () -> LotBreakdown.mmLotUnit;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Unit4.mmObject();
@@ -132,11 +134,21 @@ public class Unit4 {
 			nextVersions_lazy = () -> Arrays.asList(Unit9.mmTotalUnitsNumber);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
+			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity1 getValue(Unit4 obj) {
+			return obj.getTotalUnitsNumber();
+		}
+
+		@Override
+		public void setValue(Unit4 obj, FinancialInstrumentQuantity1 value) {
+			obj.setTotalUnitsNumber(value);
 		}
 	};
 	@XmlElement(name = "UnitDtls")
-	protected List<com.tools20022.repository.msg.Unit5> unitDetails;
+	protected List<Unit5> unitDetails;
 	/**
 	 * 
 	 <p>
@@ -174,7 +186,7 @@ public class Unit4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnitDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Unit4, List<Unit5>> mmUnitDetails = new MMMessageAttribute<Unit4, List<Unit5>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmLotBreakdown;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Unit4.mmObject();
@@ -186,7 +198,17 @@ public class Unit4 {
 			nextVersions_lazy = () -> Arrays.asList(Unit9.mmUnitDetails);
 			maxOccurs = 2;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Unit5.mmObject();
+			complexType_lazy = () -> Unit5.mmObject();
+		}
+
+		@Override
+		public List<Unit5> getValue(Unit4 obj) {
+			return obj.getUnitDetails();
+		}
+
+		@Override
+		public void setValue(Unit4 obj, List<Unit5> value) {
+			obj.setUnitDetails(value);
 		}
 	};
 
@@ -199,7 +221,7 @@ public class Unit4 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Unit4";
 				definition = "Quantity expressed as a number and its details.";
-				nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Unit5.mmObject(), Unit9.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(Unit5.mmObject(), Unit9.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
@@ -209,7 +231,7 @@ public class Unit4 {
 		return totalUnitsNumber;
 	}
 
-	public Unit4 setTotalUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 totalUnitsNumber) {
+	public Unit4 setTotalUnitsNumber(FinancialInstrumentQuantity1 totalUnitsNumber) {
 		this.totalUnitsNumber = Objects.requireNonNull(totalUnitsNumber);
 		return this;
 	}
@@ -218,7 +240,7 @@ public class Unit4 {
 		return unitDetails == null ? unitDetails = new ArrayList<>() : unitDetails;
 	}
 
-	public Unit4 setUnitDetails(List<com.tools20022.repository.msg.Unit5> unitDetails) {
+	public Unit4 setUnitDetails(List<Unit5> unitDetails) {
 		this.unitDetails = Objects.requireNonNull(unitDetails);
 		return this;
 	}

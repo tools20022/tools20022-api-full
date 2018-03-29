@@ -64,12 +64,16 @@ public class ConstraintWithLinkageRule {
 	 */
 	public static final MMConstraint<ProcessingPosition1Choice> forProcessingPosition1Choice = new MMConstraint<ProcessingPosition1Choice>() {
 		{
-			validator = ConstraintWithLinkageRule::checkProcessingPosition1Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithLinkageRule";
 			definition = "If Code WITH is used, then the one or more instruction which are linked become bound and which must be executed together. Even if one single transactions/instructions/notifications can not be executed, then all the other transactions/instructions/notifications must also be kept pending. Therefore the use of code WITH must be limited to combine up to 2 or 3 transactions/instructions/notifications.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintWithLinkageRule.forProcessingPosition7Choice);
 			owner_lazy = () -> ProcessingPosition1Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ProcessingPosition1Choice obj) throws Exception {
+			checkProcessingPosition1Choice(obj);
 		}
 	};
 	/**
@@ -95,11 +99,15 @@ public class ConstraintWithLinkageRule {
 	 */
 	public static final MMConstraint<ProcessingPosition3Choice> forProcessingPosition3Choice = new MMConstraint<ProcessingPosition3Choice>() {
 		{
-			validator = ConstraintWithLinkageRule::checkProcessingPosition3Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithLinkageRule";
 			definition = "If Code WITH is used, then the one or more instruction which are linked become bound and which must be executed together. Even if one single transactions/instructions/notifications can not be executed, then all the other transactions/instructions/notifications must also be kept pending. Therefore the use of code WITH must be limited to combine up to 2 or 3 transactions/instructions/notifications.";
 			owner_lazy = () -> ProcessingPosition3Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ProcessingPosition3Choice obj) throws Exception {
+			checkProcessingPosition3Choice(obj);
 		}
 	};
 	/**
@@ -125,11 +133,15 @@ public class ConstraintWithLinkageRule {
 	 */
 	public static final MMConstraint<ProcessingPosition2Choice> forProcessingPosition2Choice = new MMConstraint<ProcessingPosition2Choice>() {
 		{
-			validator = ConstraintWithLinkageRule::checkProcessingPosition2Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithLinkageRule";
 			definition = "If Code WITH is used, then the one or more instruction which are linked become bound and which must be executed together. Even if one single transactions/instructions/notifications can not be executed, then all the other transactions/instructions/notifications must also be kept pending. Therefore the use of code WITH must be limited to combine up to 2 or 3 transactions/instructions/notifications.";
 			owner_lazy = () -> ProcessingPosition2Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ProcessingPosition2Choice obj) throws Exception {
+			checkProcessingPosition2Choice(obj);
 		}
 	};
 	/**
@@ -155,11 +167,15 @@ public class ConstraintWithLinkageRule {
 	 */
 	public static final MMConstraint<ProcessingPosition4Choice> forProcessingPosition4Choice = new MMConstraint<ProcessingPosition4Choice>() {
 		{
-			validator = ConstraintWithLinkageRule::checkProcessingPosition4Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithLinkageRule";
 			definition = "If Code WITH is used, then the one or more instruction which are linked become bound and which must be executed together. Even if one single transactions/instructions/notifications can not be executed, then all the other transactions/instructions/notifications must also be kept pending. Therefore the use of code WITH must be limited to combine up to 2 or 3 transactions/instructions/notifications.";
 			owner_lazy = () -> ProcessingPosition4Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ProcessingPosition4Choice obj) throws Exception {
+			checkProcessingPosition4Choice(obj);
 		}
 	};
 	/**
@@ -193,12 +209,16 @@ public class ConstraintWithLinkageRule {
 	 */
 	public static final MMConstraint<ProcessingPosition5Choice> forProcessingPosition5Choice = new MMConstraint<ProcessingPosition5Choice>() {
 		{
-			validator = ConstraintWithLinkageRule::checkProcessingPosition5Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithLinkageRule";
 			definition = "If Code WITH is used, then the one or more instruction which are linked become bound and which must be executed together. Even if one single transactions/instructions/notifications can not be executed, then all the other transactions/instructions/notifications must also be kept pending. Therefore the use of code WITH must be limited to combine up to 2 or 3 transactions/instructions/notifications.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintWithLinkageRule.forProcessingPosition8Choice);
 			owner_lazy = () -> ProcessingPosition5Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ProcessingPosition5Choice obj) throws Exception {
+			checkProcessingPosition5Choice(obj);
 		}
 	};
 	/**
@@ -224,11 +244,15 @@ public class ConstraintWithLinkageRule {
 	 */
 	public static final MMConstraint<ProcessingPosition6Choice> forProcessingPosition6Choice = new MMConstraint<ProcessingPosition6Choice>() {
 		{
-			validator = ConstraintWithLinkageRule::checkProcessingPosition6Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithLinkageRule";
 			definition = "If Code WITH is used, then the one or more instruction which are linked become bound and which must be executed together. Even if one single transactions/instructions/notifications can not be executed, then all the other transactions/instructions/notifications must also be kept pending. Therefore the use of code WITH must be limited to combine up to 2 or 3 transactions/instructions/notifications.";
 			owner_lazy = () -> ProcessingPosition6Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ProcessingPosition6Choice obj) throws Exception {
+			checkProcessingPosition6Choice(obj);
 		}
 	};
 	/**
@@ -259,12 +283,16 @@ public class ConstraintWithLinkageRule {
 	 */
 	public static final MMConstraint<ProcessingPosition7Choice> forProcessingPosition7Choice = new MMConstraint<ProcessingPosition7Choice>() {
 		{
-			validator = ConstraintWithLinkageRule::checkProcessingPosition7Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithLinkageRule";
 			definition = "If Code WITH is used, then the one or more instruction which are linked become bound and which must be executed together. Even if one single transactions/instructions/notifications can not be executed, then all the other transactions/instructions/notifications must also be kept pending. Therefore the use of code WITH must be limited to combine up to 2 or 3 transactions/instructions/notifications.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintWithLinkageRule.forProcessingPosition1Choice;
 			owner_lazy = () -> ProcessingPosition7Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ProcessingPosition7Choice obj) throws Exception {
+			checkProcessingPosition7Choice(obj);
 		}
 	};
 	/**
@@ -295,12 +323,16 @@ public class ConstraintWithLinkageRule {
 	 */
 	public static final MMConstraint<ProcessingPosition8Choice> forProcessingPosition8Choice = new MMConstraint<ProcessingPosition8Choice>() {
 		{
-			validator = ConstraintWithLinkageRule::checkProcessingPosition8Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithLinkageRule";
 			definition = "If Code WITH is used, then the one or more instruction which are linked become bound and which must be executed together. Even if one single transactions/instructions/notifications can not be executed, then all the other transactions/instructions/notifications must also be kept pending. Therefore the use of code WITH must be limited to combine up to 2 or 3 transactions/instructions/notifications.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintWithLinkageRule.forProcessingPosition5Choice;
 			owner_lazy = () -> ProcessingPosition8Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ProcessingPosition8Choice obj) throws Exception {
+			checkProcessingPosition8Choice(obj);
 		}
 	};
 	/**
@@ -326,11 +358,15 @@ public class ConstraintWithLinkageRule {
 	 */
 	public static final MMConstraint<ProcessingPosition10Choice> forProcessingPosition10Choice = new MMConstraint<ProcessingPosition10Choice>() {
 		{
-			validator = ConstraintWithLinkageRule::checkProcessingPosition10Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithLinkageRule";
 			definition = "If Code WITH is used, then the one or more instruction which are linked become bound and which must be executed together. Even if one single transactions/instructions/notifications can not be executed, then all the other transactions/instructions/notifications must also be kept pending. Therefore the use of code WITH must be limited to combine up to 2 or 3 transactions/instructions/notifications.";
 			owner_lazy = () -> ProcessingPosition10Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ProcessingPosition10Choice obj) throws Exception {
+			checkProcessingPosition10Choice(obj);
 		}
 	};
 	/**
@@ -356,11 +392,15 @@ public class ConstraintWithLinkageRule {
 	 */
 	public static final MMConstraint<ProcessingPosition18Choice> forProcessingPosition18Choice = new MMConstraint<ProcessingPosition18Choice>() {
 		{
-			validator = ConstraintWithLinkageRule::checkProcessingPosition18Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithLinkageRule";
 			definition = "If Code WITH is used, then the one or more instruction which are linked become bound and which must be executed together. Even if one single transactions/instructions/notifications can not be executed, then all the other transactions/instructions/notifications must also be kept pending. Therefore the use of code WITH must be limited to combine up to 2 or 3 transactions/instructions/notifications.";
 			owner_lazy = () -> ProcessingPosition18Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ProcessingPosition18Choice obj) throws Exception {
+			checkProcessingPosition18Choice(obj);
 		}
 	};
 	/**
@@ -386,11 +426,15 @@ public class ConstraintWithLinkageRule {
 	 */
 	public static final MMConstraint<ProcessingPosition22Choice> forProcessingPosition22Choice = new MMConstraint<ProcessingPosition22Choice>() {
 		{
-			validator = ConstraintWithLinkageRule::checkProcessingPosition22Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithLinkageRule";
 			definition = "If Code WITH is used, then the one or more instruction which are linked become bound and which must be executed together. Even if one single transactions/instructions/notifications can not be executed, then all the other transactions/instructions/notifications must also be kept pending. Therefore the use of code WITH must be limited to combine up to 2 or 3 transactions/instructions/notifications.";
 			owner_lazy = () -> ProcessingPosition22Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ProcessingPosition22Choice obj) throws Exception {
+			checkProcessingPosition22Choice(obj);
 		}
 	};
 

@@ -112,7 +112,7 @@ public class Vote9 {
 	 * Vote3.mmIssuerLabel}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuerLabel = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Vote9, Max35Text> mmIssuerLabel = new MMMessageAttribute<Vote9, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Resolution.mmIssuerLabel;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Vote9.mmObject();
@@ -125,6 +125,16 @@ public class Vote9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Vote9 obj) {
+			return obj.getIssuerLabel();
+		}
+
+		@Override
+		public void setValue(Vote9 obj, Max35Text value) {
+			obj.setIssuerLabel(value);
 		}
 	};
 	@XmlElement(name = "VoteOptn", required = true)
@@ -167,7 +177,7 @@ public class Vote9 {
 	 * Vote3.mmVoteOption}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVoteOption = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Vote9, VoteInstruction3Code> mmVoteOption = new MMMessageAttribute<Vote9, VoteInstruction3Code>() {
 		{
 			businessElementTrace_lazy = () -> VoteInstructionRequest.mmVoteForMeetingResolution;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Vote9.mmObject();
@@ -180,6 +190,16 @@ public class Vote9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> VoteInstruction3Code.mmObject();
+		}
+
+		@Override
+		public VoteInstruction3Code getValue(Vote9 obj) {
+			return obj.getVoteOption();
+		}
+
+		@Override
+		public void setValue(Vote9 obj, VoteInstruction3Code value) {
+			obj.setVoteOption(value);
 		}
 	};
 

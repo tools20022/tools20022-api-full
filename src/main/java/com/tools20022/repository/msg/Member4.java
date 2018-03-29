@@ -27,6 +27,9 @@ import com.tools20022.repository.codeset.MemberType1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccount24;
+import com.tools20022.repository.msg.CommunicationAddress8;
+import com.tools20022.repository.msg.ContactIdentificationAndAddress1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -122,7 +125,7 @@ public class Member4 {
 	 * {@linkplain com.tools20022.repository.msg.Member1#mmName Member1.mmName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Member4, Optional<Max35Text>> mmName = new MMMessageAttribute<Member4, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Member4.mmObject();
@@ -135,6 +138,16 @@ public class Member4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Member4 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(Member4 obj, Optional<Max35Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RtrAdr")
@@ -178,7 +191,7 @@ public class Member4 {
 	 * Member1.mmReturnAddress}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReturnAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Member4, List<MemberIdentification2Choice>> mmReturnAddress = new MMMessageAttribute<Member4, List<MemberIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> ContactPoint.mmBICAddress;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Member4.mmObject();
@@ -191,9 +204,19 @@ public class Member4 {
 			minOccurs = 0;
 			complexType_lazy = () -> MemberIdentification2Choice.mmObject();
 		}
+
+		@Override
+		public List<MemberIdentification2Choice> getValue(Member4 obj) {
+			return obj.getReturnAddress();
+		}
+
+		@Override
+		public void setValue(Member4 obj, List<MemberIdentification2Choice> value) {
+			obj.setReturnAddress(value);
+		}
 	};
 	@XmlElement(name = "Acct")
-	protected List<com.tools20022.repository.msg.CashAccount24> account;
+	protected List<CashAccount24> account;
 	/**
 	 * 
 	 <p>
@@ -228,7 +251,7 @@ public class Member4 {
 	 * Member1.mmAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Member4, List<CashAccount24>> mmAccount = new MMMessageAssociationEnd<Member4, List<CashAccount24>>() {
 		{
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Member4.mmObject();
@@ -240,7 +263,17 @@ public class Member4 {
 			previousVersion_lazy = () -> Member1.mmAccount;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
+			type_lazy = () -> CashAccount24.mmObject();
+		}
+
+		@Override
+		public List<CashAccount24> getValue(Member4 obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(Member4 obj, List<CashAccount24> value) {
+			obj.setAccount(value);
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -281,7 +314,7 @@ public class Member4 {
 	 * {@linkplain com.tools20022.repository.msg.Member1#mmType Member1.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Member4, Optional<MemberType1Code>> mmType = new MMMessageAttribute<Member4, Optional<MemberType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SystemMemberRole.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Member4.mmObject();
@@ -294,6 +327,16 @@ public class Member4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> MemberType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<MemberType1Code> getValue(Member4 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Member4 obj, Optional<MemberType1Code> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sts")
@@ -336,7 +379,7 @@ public class Member4 {
 	 * Member1.mmStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Member4, Optional<MemberStatus1Code>> mmStatus = new MMMessageAttribute<Member4, Optional<MemberStatus1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SystemStatus.mmMemberStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Member4.mmObject();
@@ -350,9 +393,19 @@ public class Member4 {
 			minOccurs = 0;
 			simpleType_lazy = () -> MemberStatus1Code.mmObject();
 		}
+
+		@Override
+		public Optional<MemberStatus1Code> getValue(Member4 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(Member4 obj, Optional<MemberStatus1Code> value) {
+			obj.setStatus(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "CtctRef")
-	protected List<com.tools20022.repository.msg.ContactIdentificationAndAddress1> contactReference;
+	protected List<ContactIdentificationAndAddress1> contactReference;
 	/**
 	 * 
 	 <p>
@@ -388,7 +441,7 @@ public class Member4 {
 	 * Member1.mmContactReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContactReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Member4, List<ContactIdentificationAndAddress1>> mmContactReference = new MMMessageAssociationEnd<Member4, List<ContactIdentificationAndAddress1>>() {
 		{
 			businessComponentTrace_lazy = () -> Person.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Member4.mmObject();
@@ -400,7 +453,17 @@ public class Member4 {
 			previousVersion_lazy = () -> Member1.mmContactReference;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContactIdentificationAndAddress1.mmObject();
+			type_lazy = () -> ContactIdentificationAndAddress1.mmObject();
+		}
+
+		@Override
+		public List<ContactIdentificationAndAddress1> getValue(Member4 obj) {
+			return obj.getContactReference();
+		}
+
+		@Override
+		public void setValue(Member4 obj, List<ContactIdentificationAndAddress1> value) {
+			obj.setContactReference(value);
 		}
 	};
 	@XmlElement(name = "ComAdr")
@@ -440,7 +503,7 @@ public class Member4 {
 	 * Member1.mmCommunicationAddress}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCommunicationAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Member4, Optional<CommunicationAddress8>> mmCommunicationAddress = new MMMessageAssociationEnd<Member4, Optional<CommunicationAddress8>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmContactPoint;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Member4.mmObject();
@@ -453,7 +516,17 @@ public class Member4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CommunicationAddress8.mmObject();
+			type_lazy = () -> CommunicationAddress8.mmObject();
+		}
+
+		@Override
+		public Optional<CommunicationAddress8> getValue(Member4 obj) {
+			return obj.getCommunicationAddress();
+		}
+
+		@Override
+		public void setValue(Member4 obj, Optional<CommunicationAddress8> value) {
+			obj.setCommunicationAddress(value.orElse(null));
 		}
 	};
 
@@ -495,7 +568,7 @@ public class Member4 {
 		return account == null ? account = new ArrayList<>() : account;
 	}
 
-	public Member4 setAccount(List<com.tools20022.repository.msg.CashAccount24> account) {
+	public Member4 setAccount(List<CashAccount24> account) {
 		this.account = Objects.requireNonNull(account);
 		return this;
 	}
@@ -522,7 +595,7 @@ public class Member4 {
 		return contactReference == null ? contactReference = new ArrayList<>() : contactReference;
 	}
 
-	public Member4 setContactReference(List<com.tools20022.repository.msg.ContactIdentificationAndAddress1> contactReference) {
+	public Member4 setContactReference(List<ContactIdentificationAndAddress1> contactReference) {
 		this.contactReference = Objects.requireNonNull(contactReference);
 		return this;
 	}
@@ -531,7 +604,7 @@ public class Member4 {
 		return communicationAddress == null ? Optional.empty() : Optional.of(communicationAddress);
 	}
 
-	public Member4 setCommunicationAddress(com.tools20022.repository.msg.CommunicationAddress8 communicationAddress) {
+	public Member4 setCommunicationAddress(CommunicationAddress8 communicationAddress) {
 		this.communicationAddress = communicationAddress;
 		return this;
 	}

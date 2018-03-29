@@ -111,7 +111,7 @@ public class TransactionAndDocumentIdentification4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionAndDocumentIdentification4, Optional<Max35Text>> mmTransactionIdentification = new MMMessageAttribute<TransactionAndDocumentIdentification4, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionAndDocumentIdentification4.mmObject();
 			isDerived = false;
@@ -123,6 +123,16 @@ public class TransactionAndDocumentIdentification4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransactionAndDocumentIdentification4 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(TransactionAndDocumentIdentification4 obj, Optional<Max35Text> value) {
+			obj.setTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DocId", required = true)
@@ -156,7 +166,7 @@ public class TransactionAndDocumentIdentification4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDocumentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionAndDocumentIdentification4, Max35Text> mmDocumentIdentification = new MMMessageAttribute<TransactionAndDocumentIdentification4, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionAndDocumentIdentification4.mmObject();
 			isDerived = false;
@@ -167,6 +177,16 @@ public class TransactionAndDocumentIdentification4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(TransactionAndDocumentIdentification4 obj) {
+			return obj.getDocumentIdentification();
+		}
+
+		@Override
+		public void setValue(TransactionAndDocumentIdentification4 obj, Max35Text value) {
+			obj.setDocumentIdentification(value);
 		}
 	};
 	@XmlElement(name = "CreDtTm")
@@ -204,7 +224,7 @@ public class TransactionAndDocumentIdentification4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionAndDocumentIdentification4, Optional<DateAndDateTimeChoice>> mmCreationDateTime = new MMMessageAttribute<TransactionAndDocumentIdentification4, Optional<DateAndDateTimeChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionAndDocumentIdentification4.mmObject();
 			isDerived = false;
@@ -216,6 +236,16 @@ public class TransactionAndDocumentIdentification4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(TransactionAndDocumentIdentification4 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(TransactionAndDocumentIdentification4 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setCreationDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CpyDplct")
@@ -253,7 +283,7 @@ public class TransactionAndDocumentIdentification4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCopyDuplicate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionAndDocumentIdentification4, Optional<CopyDuplicate1Code>> mmCopyDuplicate = new MMMessageAttribute<TransactionAndDocumentIdentification4, Optional<CopyDuplicate1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionAndDocumentIdentification4.mmObject();
 			isDerived = false;
@@ -265,6 +295,16 @@ public class TransactionAndDocumentIdentification4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CopyDuplicate1Code.mmObject();
+		}
+
+		@Override
+		public Optional<CopyDuplicate1Code> getValue(TransactionAndDocumentIdentification4 obj) {
+			return obj.getCopyDuplicate();
+		}
+
+		@Override
+		public void setValue(TransactionAndDocumentIdentification4 obj, Optional<CopyDuplicate1Code> value) {
+			obj.setCopyDuplicate(value.orElse(null));
 		}
 	};
 

@@ -243,7 +243,7 @@ public class CaseAssignment3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CaseAssignment3, Max35Text> mmIdentification = new MMMessageAttribute<CaseAssignment3, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> InvestigationCase.mmAssignmentIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CaseAssignment3.mmObject();
@@ -256,6 +256,16 @@ public class CaseAssignment3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CaseAssignment3 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(CaseAssignment3 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Assgnr", required = true)
@@ -300,7 +310,7 @@ public class CaseAssignment3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAssigner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CaseAssignment3, Party12Choice> mmAssigner = new MMMessageAssociationEnd<CaseAssignment3, Party12Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CaseAssignment3.mmObject();
@@ -314,6 +324,16 @@ public class CaseAssignment3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Party12Choice.mmObject();
+		}
+
+		@Override
+		public Party12Choice getValue(CaseAssignment3 obj) {
+			return obj.getAssigner();
+		}
+
+		@Override
+		public void setValue(CaseAssignment3 obj, Party12Choice value) {
+			obj.setAssigner(value);
 		}
 	};
 	@XmlElement(name = "Assgne", required = true)
@@ -358,7 +378,7 @@ public class CaseAssignment3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAssignee = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CaseAssignment3, Party12Choice> mmAssignee = new MMMessageAssociationEnd<CaseAssignment3, Party12Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CaseAssignment3.mmObject();
@@ -372,6 +392,16 @@ public class CaseAssignment3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Party12Choice.mmObject();
+		}
+
+		@Override
+		public Party12Choice getValue(CaseAssignment3 obj) {
+			return obj.getAssignee();
+		}
+
+		@Override
+		public void setValue(CaseAssignment3 obj, Party12Choice value) {
+			obj.setAssignee(value);
 		}
 	};
 	@XmlElement(name = "CreDtTm", required = true)
@@ -416,7 +446,7 @@ public class CaseAssignment3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CaseAssignment3, ISODateTime> mmCreationDateTime = new MMMessageAttribute<CaseAssignment3, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> InvestigationCase.mmCreationDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CaseAssignment3.mmObject();
@@ -429,6 +459,16 @@ public class CaseAssignment3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(CaseAssignment3 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(CaseAssignment3 obj, ISODateTime value) {
+			obj.setCreationDateTime(value);
 		}
 	};
 

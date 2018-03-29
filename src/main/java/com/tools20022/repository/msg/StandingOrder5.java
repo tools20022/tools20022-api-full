@@ -30,6 +30,7 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.CashStandingOrder;
 import com.tools20022.repository.entity.StandingOrder;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccount24;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -142,7 +143,7 @@ public class StandingOrder5 {
 	 * StandingOrder1.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrder5, Optional<Amount2Choice>> mmAmount = new MMMessageAttribute<StandingOrder5, Optional<Amount2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> StandingOrder.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrder5.mmObject();
@@ -155,6 +156,16 @@ public class StandingOrder5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Amount2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Amount2Choice> getValue(StandingOrder5 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(StandingOrder5 obj, Optional<Amount2Choice> value) {
+			obj.setAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtrAcct")
@@ -194,7 +205,7 @@ public class StandingOrder5 {
 	 * StandingOrder1.mmCreditorAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditorAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StandingOrder5, Optional<CashAccount24>> mmCreditorAccount = new MMMessageAssociationEnd<StandingOrder5, Optional<CashAccount24>>() {
 		{
 			businessComponentTrace_lazy = () -> CashStandingOrder.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrder5.mmObject();
@@ -207,7 +218,17 @@ public class StandingOrder5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
+			type_lazy = () -> CashAccount24.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount24> getValue(StandingOrder5 obj) {
+			return obj.getCreditorAccount();
+		}
+
+		@Override
+		public void setValue(StandingOrder5 obj, Optional<CashAccount24> value) {
+			obj.setCreditorAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DbtrAcct")
@@ -247,7 +268,7 @@ public class StandingOrder5 {
 	 * StandingOrder1.mmDebtorAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDebtorAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StandingOrder5, Optional<CashAccount24>> mmDebtorAccount = new MMMessageAssociationEnd<StandingOrder5, Optional<CashAccount24>>() {
 		{
 			businessComponentTrace_lazy = () -> CashStandingOrder.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrder5.mmObject();
@@ -260,7 +281,17 @@ public class StandingOrder5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
+			type_lazy = () -> CashAccount24.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount24> getValue(StandingOrder5 obj) {
+			return obj.getDebtorAccount();
+		}
+
+		@Override
+		public void setValue(StandingOrder5 obj, Optional<CashAccount24> value) {
+			obj.setDebtorAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ExctnTp")
@@ -303,7 +334,7 @@ public class StandingOrder5 {
 	 * StandingOrder1.mmExecutionType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExecutionType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StandingOrder5, Optional<ExecutionType1Choice>> mmExecutionType = new MMMessageAssociationEnd<StandingOrder5, Optional<ExecutionType1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> StandingOrder.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrder5.mmObject();
@@ -317,6 +348,16 @@ public class StandingOrder5 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ExecutionType1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ExecutionType1Choice> getValue(StandingOrder5 obj) {
+			return obj.getExecutionType();
+		}
+
+		@Override
+		public void setValue(StandingOrder5 obj, Optional<ExecutionType1Choice> value) {
+			obj.setExecutionType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Frqcy")
@@ -360,7 +401,7 @@ public class StandingOrder5 {
 	 * StandingOrder1.mmFrequency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrder5, Optional<Frequency2Code>> mmFrequency = new MMMessageAttribute<StandingOrder5, Optional<Frequency2Code>>() {
 		{
 			businessElementTrace_lazy = () -> StandingOrder.mmFrequency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrder5.mmObject();
@@ -373,6 +414,16 @@ public class StandingOrder5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Frequency2Code.mmObject();
+		}
+
+		@Override
+		public Optional<Frequency2Code> getValue(StandingOrder5 obj) {
+			return obj.getFrequency();
+		}
+
+		@Override
+		public void setValue(StandingOrder5 obj, Optional<Frequency2Code> value) {
+			obj.setFrequency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "VldtyPrd")
@@ -412,7 +463,7 @@ public class StandingOrder5 {
 	 * StandingOrder1.mmValidityPeriod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmValidityPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StandingOrder5, Optional<DatePeriod2Choice>> mmValidityPeriod = new MMMessageAssociationEnd<StandingOrder5, Optional<DatePeriod2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> StandingOrder.mmValidityPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrder5.mmObject();
@@ -426,6 +477,16 @@ public class StandingOrder5 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DatePeriod2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DatePeriod2Choice> getValue(StandingOrder5 obj) {
+			return obj.getValidityPeriod();
+		}
+
+		@Override
+		public void setValue(StandingOrder5 obj, Optional<DatePeriod2Choice> value) {
+			obj.setValidityPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ZeroSweepInd")
@@ -469,7 +530,7 @@ public class StandingOrder5 {
 	 * StandingOrder1.mmZeroSweepIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmZeroSweepIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrder5, Optional<TrueFalseIndicator>> mmZeroSweepIndicator = new MMMessageAttribute<StandingOrder5, Optional<TrueFalseIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> CashStandingOrder.mmZeroSweepIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrder5.mmObject();
@@ -482,6 +543,16 @@ public class StandingOrder5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(StandingOrder5 obj) {
+			return obj.getZeroSweepIndicator();
+		}
+
+		@Override
+		public void setValue(StandingOrder5 obj, Optional<TrueFalseIndicator> value) {
+			obj.setZeroSweepIndicator(value.orElse(null));
 		}
 	};
 
@@ -516,7 +587,7 @@ public class StandingOrder5 {
 		return creditorAccount == null ? Optional.empty() : Optional.of(creditorAccount);
 	}
 
-	public StandingOrder5 setCreditorAccount(com.tools20022.repository.msg.CashAccount24 creditorAccount) {
+	public StandingOrder5 setCreditorAccount(CashAccount24 creditorAccount) {
 		this.creditorAccount = creditorAccount;
 		return this;
 	}
@@ -525,7 +596,7 @@ public class StandingOrder5 {
 		return debtorAccount == null ? Optional.empty() : Optional.of(debtorAccount);
 	}
 
-	public StandingOrder5 setDebtorAccount(com.tools20022.repository.msg.CashAccount24 debtorAccount) {
+	public StandingOrder5 setDebtorAccount(CashAccount24 debtorAccount) {
 		this.debtorAccount = debtorAccount;
 		return this;
 	}

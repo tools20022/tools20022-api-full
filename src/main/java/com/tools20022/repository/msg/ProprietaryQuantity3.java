@@ -142,7 +142,7 @@ public class ProprietaryQuantity3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmShortLongPosition = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryQuantity3, Optional<ShortLong1Code>> mmShortLongPosition = new MMMessageAttribute<ProprietaryQuantity3, Optional<ShortLong1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryQuantity3.mmObject();
 			isDerived = false;
@@ -154,6 +154,16 @@ public class ProprietaryQuantity3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ShortLong1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ShortLong1Code> getValue(ProprietaryQuantity3 obj) {
+			return obj.getShortLongPosition();
+		}
+
+		@Override
+		public void setValue(ProprietaryQuantity3 obj, Optional<ShortLong1Code> value) {
+			obj.setShortLongPosition(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Qty", required = true)
@@ -194,7 +204,7 @@ public class ProprietaryQuantity3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryQuantity3, DecimalNumber> mmQuantity = new MMMessageAttribute<ProprietaryQuantity3, DecimalNumber>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryQuantity3.mmObject();
 			isDerived = false;
@@ -206,6 +216,16 @@ public class ProprietaryQuantity3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(ProprietaryQuantity3 obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(ProprietaryQuantity3 obj, DecimalNumber value) {
+			obj.setQuantity(value);
 		}
 	};
 	@XmlElement(name = "QtyTp", required = true)
@@ -246,7 +266,7 @@ public class ProprietaryQuantity3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantityType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryQuantity3, Exact4AlphaNumericText> mmQuantityType = new MMMessageAttribute<ProprietaryQuantity3, Exact4AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryQuantity3.mmObject();
 			isDerived = false;
@@ -258,6 +278,16 @@ public class ProprietaryQuantity3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Exact4AlphaNumericText getValue(ProprietaryQuantity3 obj) {
+			return obj.getQuantityType();
+		}
+
+		@Override
+		public void setValue(ProprietaryQuantity3 obj, Exact4AlphaNumericText value) {
+			obj.setQuantityType(value);
 		}
 	};
 	@XmlElement(name = "Issr", required = true)
@@ -305,7 +335,7 @@ public class ProprietaryQuantity3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryQuantity3, Max35Text> mmIssuer = new MMMessageAttribute<ProprietaryQuantity3, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryQuantity3.mmObject();
@@ -319,6 +349,16 @@ public class ProprietaryQuantity3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ProprietaryQuantity3 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(ProprietaryQuantity3 obj, Max35Text value) {
+			obj.setIssuer(value);
 		}
 	};
 	@XmlElement(name = "SchmeNm")
@@ -363,7 +403,7 @@ public class ProprietaryQuantity3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSchemeName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryQuantity3, Optional<Max35Text>> mmSchemeName = new MMMessageAttribute<ProprietaryQuantity3, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Scheme.mmNameShort;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryQuantity3.mmObject();
@@ -376,6 +416,16 @@ public class ProprietaryQuantity3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ProprietaryQuantity3 obj) {
+			return obj.getSchemeName();
+		}
+
+		@Override
+		public void setValue(ProprietaryQuantity3 obj, Optional<Max35Text> value) {
+			obj.setSchemeName(value.orElse(null));
 		}
 	};
 

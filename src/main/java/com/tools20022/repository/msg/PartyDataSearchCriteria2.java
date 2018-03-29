@@ -137,7 +137,7 @@ public class PartyDataSearchCriteria2 {
 	 * PartyDataSearchCriteria1.mmOpeningDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOpeningDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyDataSearchCriteria2, Optional<DatePeriodSearch1Choice>> mmOpeningDate = new MMMessageAttribute<PartyDataSearchCriteria2, Optional<DatePeriodSearch1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyDataSearchCriteria2.mmObject();
 			isDerived = false;
@@ -149,6 +149,16 @@ public class PartyDataSearchCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DatePeriodSearch1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DatePeriodSearch1Choice> getValue(PartyDataSearchCriteria2 obj) {
+			return obj.getOpeningDate();
+		}
+
+		@Override
+		public void setValue(PartyDataSearchCriteria2 obj, Optional<DatePeriodSearch1Choice> value) {
+			obj.setOpeningDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClsgDt")
@@ -186,7 +196,7 @@ public class PartyDataSearchCriteria2 {
 	 * PartyDataSearchCriteria1.mmClosingDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClosingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyDataSearchCriteria2, Optional<DatePeriodSearch1Choice>> mmClosingDate = new MMMessageAttribute<PartyDataSearchCriteria2, Optional<DatePeriodSearch1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyDataSearchCriteria2.mmObject();
 			isDerived = false;
@@ -198,6 +208,16 @@ public class PartyDataSearchCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DatePeriodSearch1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DatePeriodSearch1Choice> getValue(PartyDataSearchCriteria2 obj) {
+			return obj.getClosingDate();
+		}
+
+		@Override
+		public void setValue(PartyDataSearchCriteria2 obj, Optional<DatePeriodSearch1Choice> value) {
+			obj.setClosingDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -235,7 +255,7 @@ public class PartyDataSearchCriteria2 {
 	 * PartyDataSearchCriteria1.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyDataSearchCriteria2, Optional<SystemPartyType1Code>> mmType = new MMMessageAttribute<PartyDataSearchCriteria2, Optional<SystemPartyType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyDataSearchCriteria2.mmObject();
 			isDerived = false;
@@ -247,6 +267,16 @@ public class PartyDataSearchCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> SystemPartyType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<SystemPartyType1Code> getValue(PartyDataSearchCriteria2 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(PartyDataSearchCriteria2 obj, Optional<SystemPartyType1Code> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CSDOrNCB")
@@ -284,7 +314,7 @@ public class PartyDataSearchCriteria2 {
 	 * PartyDataSearchCriteria1.mmCSDOrNCB}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCSDOrNCB = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyDataSearchCriteria2, Optional<CSDOrNCB1Choice>> mmCSDOrNCB = new MMMessageAssociationEnd<PartyDataSearchCriteria2, Optional<CSDOrNCB1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyDataSearchCriteria2.mmObject();
 			isDerived = false;
@@ -297,6 +327,16 @@ public class PartyDataSearchCriteria2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CSDOrNCB1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CSDOrNCB1Choice> getValue(PartyDataSearchCriteria2 obj) {
+			return obj.getCSDOrNCB();
+		}
+
+		@Override
+		public void setValue(PartyDataSearchCriteria2 obj, Optional<CSDOrNCB1Choice> value) {
+			obj.setCSDOrNCB(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Id")
@@ -336,7 +376,7 @@ public class PartyDataSearchCriteria2 {
 	 * PartyDataSearchCriteria1.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyDataSearchCriteria2, Optional<BICFIIdentifier>> mmIdentification = new MMMessageAttribute<PartyDataSearchCriteria2, Optional<BICFIIdentifier>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyDataSearchCriteria2.mmObject();
 			isDerived = false;
@@ -348,6 +388,16 @@ public class PartyDataSearchCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<BICFIIdentifier> getValue(PartyDataSearchCriteria2 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(PartyDataSearchCriteria2 obj, Optional<BICFIIdentifier> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RstrctnId")
@@ -384,7 +434,7 @@ public class PartyDataSearchCriteria2 {
 	 * PartyDataSearchCriteria1.mmRestrictionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRestrictionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyDataSearchCriteria2, Optional<Max35Text>> mmRestrictionIdentification = new MMMessageAttribute<PartyDataSearchCriteria2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyDataSearchCriteria2.mmObject();
 			isDerived = false;
@@ -396,6 +446,16 @@ public class PartyDataSearchCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PartyDataSearchCriteria2 obj) {
+			return obj.getRestrictionIdentification();
+		}
+
+		@Override
+		public void setValue(PartyDataSearchCriteria2 obj, Optional<Max35Text> value) {
+			obj.setRestrictionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RstrctnIsseDt")
@@ -434,7 +494,7 @@ public class PartyDataSearchCriteria2 {
 	 * PartyDataSearchCriteria1.mmRestrictionIssueDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRestrictionIssueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyDataSearchCriteria2, Optional<DateAndDateTimeSearch3Choice>> mmRestrictionIssueDate = new MMMessageAttribute<PartyDataSearchCriteria2, Optional<DateAndDateTimeSearch3Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyDataSearchCriteria2.mmObject();
 			isDerived = false;
@@ -446,6 +506,16 @@ public class PartyDataSearchCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeSearch3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeSearch3Choice> getValue(PartyDataSearchCriteria2 obj) {
+			return obj.getRestrictionIssueDate();
+		}
+
+		@Override
+		public void setValue(PartyDataSearchCriteria2 obj, Optional<DateAndDateTimeSearch3Choice> value) {
+			obj.setRestrictionIssueDate(value.orElse(null));
 		}
 	};
 

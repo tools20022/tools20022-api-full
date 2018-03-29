@@ -52,11 +52,15 @@ public class ConstraintAccountDataElementRule {
 	 */
 	public static final MMConstraint<InvestmentAccount64> forInvestmentAccount64 = new MMConstraint<InvestmentAccount64>() {
 		{
-			validator = ConstraintAccountDataElementRule::checkInvestmentAccount64;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDataElementRule";
 			definition = "One of the elements (Name, Designation, FundType, FundFamilyName, SecurityDetails, AccountOwner, Intermediary, Account Servicer) must be present.";
 			owner_lazy = () -> InvestmentAccount64.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentAccount64 obj) throws Exception {
+			checkInvestmentAccount64(obj);
 		}
 	};
 

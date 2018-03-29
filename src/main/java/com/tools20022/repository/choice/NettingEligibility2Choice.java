@@ -114,7 +114,7 @@ public class NettingEligibility2Choice {
 	 * "Specifies whether the settlement transaction is eligible for netting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NettingEligibility2Choice, YesNoIndicator> mmIndicator = new MMMessageAttribute<NettingEligibility2Choice, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesDeliveryObligation.mmNettingEligibility;
 			componentContext_lazy = () -> com.tools20022.repository.choice.NettingEligibility2Choice.mmObject();
@@ -127,6 +127,16 @@ public class NettingEligibility2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(NettingEligibility2Choice obj) {
+			return obj.getIndicator();
+		}
+
+		@Override
+		public void setValue(NettingEligibility2Choice obj, YesNoIndicator value) {
+			obj.setIndicator(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -161,7 +171,7 @@ public class NettingEligibility2Choice {
 	 * definition} = "Netting eligibility expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NettingEligibility2Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<NettingEligibility2Choice, GenericIdentification25>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.NettingEligibility2Choice.mmObject();
 			isDerived = false;
@@ -174,6 +184,16 @@ public class NettingEligibility2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(NettingEligibility2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(NettingEligibility2Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -115,7 +115,7 @@ public class Amount3 {
 	 * Amount2.mmOriginalCurrencyAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Amount3, Optional<ActiveCurrencyAndAmount>> mmOriginalAmount = new MMMessageAttribute<Amount3, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> AmountAndQuantity.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Amount3.mmObject();
@@ -128,6 +128,16 @@ public class Amount3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(Amount3 obj) {
+			return obj.getOriginalAmount();
+		}
+
+		@Override
+		public void setValue(Amount3 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setOriginalAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RptgAmt", required = true)
@@ -164,7 +174,7 @@ public class Amount3 {
 	 * definition} = "Amount expressed in the reporting currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportingAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Amount3, ActiveCurrencyAndAmount> mmReportingAmount = new MMMessageAttribute<Amount3, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> AmountAndQuantity.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Amount3.mmObject();
@@ -176,6 +186,16 @@ public class Amount3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(Amount3 obj) {
+			return obj.getReportingAmount();
+		}
+
+		@Override
+		public void setValue(Amount3 obj, ActiveCurrencyAndAmount value) {
+			obj.setReportingAmount(value);
 		}
 	};
 

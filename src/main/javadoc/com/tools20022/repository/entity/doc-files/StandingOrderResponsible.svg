@@ -21,7 +21,7 @@ class StandingOrderResponsible [[../StandingOrderResponsible.html{Party responsi
 together {
 class RolePlayer [[../RolePlayer.html{Type of entity that plays a specific role in a specific context.}]] #EEEEEE {
 }
-class ContactPersonRole [[../ContactPersonRole.html{Person to be contacted in a given organisation. In the corporate action domain (including meeting notifications), it is the contact person at the party organising the meeting, at the issuer or at an intermediary.}]] #EEEEEE {
+class ContactPersonRole [[../ContactPersonRole.html{Person to be contacted in a given organisation. In the corporate action domain (including meeting notifications) , it is the contact person at the party organising the meeting, at the issuer or at an intermediary.}]] #EEEEEE {
 }
 ContactPersonRole -[hidden]-> RolePlayer
 class CounterpartyRisk [[../CounterpartyRisk.html{Calculation of the exposure amount that one party has vis-a-vis one counterparty or a central system, based on its credit risk.}]] #EEEEEE {

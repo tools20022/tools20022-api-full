@@ -108,7 +108,7 @@ public class MarginResult1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExcessAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarginResult1Choice, ActiveCurrencyAndAmount> mmExcessAmount = new MMMessageAttribute<MarginResult1Choice, ActiveCurrencyAndAmount>() {
 		{
 			businessComponentTrace_lazy = () -> CollateralMovement.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.MarginResult1Choice.mmObject();
@@ -120,6 +120,16 @@ public class MarginResult1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(MarginResult1Choice obj) {
+			return obj.getExcessAmount();
+		}
+
+		@Override
+		public void setValue(MarginResult1Choice obj, ActiveCurrencyAndAmount value) {
+			obj.setExcessAmount(value);
 		}
 	};
 	@XmlElement(name = "DfcitAmt", required = true)
@@ -159,7 +169,7 @@ public class MarginResult1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeficitAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarginResult1Choice, ActiveCurrencyAndAmount> mmDeficitAmount = new MMMessageAttribute<MarginResult1Choice, ActiveCurrencyAndAmount>() {
 		{
 			businessComponentTrace_lazy = () -> CollateralMovement.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.MarginResult1Choice.mmObject();
@@ -171,6 +181,16 @@ public class MarginResult1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(MarginResult1Choice obj) {
+			return obj.getDeficitAmount();
+		}
+
+		@Override
+		public void setValue(MarginResult1Choice obj, ActiveCurrencyAndAmount value) {
+			obj.setDeficitAmount(value);
 		}
 	};
 

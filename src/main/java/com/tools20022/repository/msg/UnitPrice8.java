@@ -126,7 +126,7 @@ public class UnitPrice8 {
 	 * "Specifies the unit of measurement. For example, kilo, tons."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnitOfMeasureCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice8, UnitOfMeasure3Code> mmUnitOfMeasureCode = new MMMessageAttribute<UnitPrice8, UnitOfMeasure3Code>() {
 		{
 			businessElementTrace_lazy = () -> Price.mmUnitOfMeasure;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice8.mmObject();
@@ -138,6 +138,16 @@ public class UnitPrice8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UnitOfMeasure3Code.mmObject();
+		}
+
+		@Override
+		public UnitOfMeasure3Code getValue(UnitPrice8 obj) {
+			return obj.getUnitOfMeasureCode();
+		}
+
+		@Override
+		public void setValue(UnitPrice8 obj, UnitOfMeasure3Code value) {
+			obj.setUnitOfMeasureCode(value);
 		}
 	};
 	@XmlElement(name = "OthrUnitOfMeasr", required = true)
@@ -174,7 +184,7 @@ public class UnitPrice8 {
 	 * "Identifies the unit of measure not present in the code list."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherUnitOfMeasure = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice8, Max35Text> mmOtherUnitOfMeasure = new MMMessageAttribute<UnitPrice8, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Price.mmUnitOfMeasure;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice8.mmObject();
@@ -186,6 +196,16 @@ public class UnitPrice8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(UnitPrice8 obj) {
+			return obj.getOtherUnitOfMeasure();
+		}
+
+		@Override
+		public void setValue(UnitPrice8 obj, Max35Text value) {
+			obj.setOtherUnitOfMeasure(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -222,7 +242,7 @@ public class UnitPrice8 {
 	 * definition} = "Price expressed as a currency and value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice8, CurrencyAndAmount> mmAmount = new MMMessageAttribute<UnitPrice8, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Price.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice8.mmObject();
@@ -234,6 +254,16 @@ public class UnitPrice8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(UnitPrice8 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(UnitPrice8 obj, CurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "Fctr")
@@ -272,7 +302,7 @@ public class UnitPrice8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFactor = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice8, Optional<Max15NumericText>> mmFactor = new MMMessageAttribute<UnitPrice8, Optional<Max15NumericText>>() {
 		{
 			businessElementTrace_lazy = () -> ProductQuantity.mmFactor;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice8.mmObject();
@@ -284,6 +314,16 @@ public class UnitPrice8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max15NumericText> getValue(UnitPrice8 obj) {
+			return obj.getFactor();
+		}
+
+		@Override
+		public void setValue(UnitPrice8 obj, Optional<Max15NumericText> value) {
+			obj.setFactor(value.orElse(null));
 		}
 	};
 	/**

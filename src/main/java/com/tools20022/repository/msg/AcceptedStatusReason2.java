@@ -124,7 +124,7 @@ public class AcceptedStatusReason2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReasonCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptedStatusReason2, AcceptedReason2Choice> mmReasonCode = new MMMessageAssociationEnd<AcceptedStatusReason2, AcceptedReason2Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatusReason.mmAcceptedReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptedStatusReason2.mmObject();
@@ -138,6 +138,16 @@ public class AcceptedStatusReason2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AcceptedReason2Choice.mmObject();
+		}
+
+		@Override
+		public AcceptedReason2Choice getValue(AcceptedStatusReason2 obj) {
+			return obj.getReasonCode();
+		}
+
+		@Override
+		public void setValue(AcceptedStatusReason2 obj, AcceptedReason2Choice value) {
+			obj.setReasonCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -179,7 +189,7 @@ public class AcceptedStatusReason2 {
 	 * "Provides additional information about the processed instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcceptedStatusReason2, Optional<RestrictedFINXMax210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<AcceptedStatusReason2, Optional<RestrictedFINXMax210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptedStatusReason2.mmObject();
@@ -192,6 +202,16 @@ public class AcceptedStatusReason2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax210Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax210Text> getValue(AcceptedStatusReason2 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(AcceptedStatusReason2 obj, Optional<RestrictedFINXMax210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

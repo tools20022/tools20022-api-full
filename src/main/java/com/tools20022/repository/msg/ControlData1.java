@@ -150,7 +150,7 @@ public class ControlData1 {
 	 * "Number of individual transactions contained in the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfTransactions = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ControlData1, Max15NumericText> mmNumberOfTransactions = new MMMessageAttribute<ControlData1, Max15NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ControlData1.mmObject();
 			isDerived = false;
@@ -161,6 +161,16 @@ public class ControlData1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
+		}
+
+		@Override
+		public Max15NumericText getValue(ControlData1 obj) {
+			return obj.getNumberOfTransactions();
+		}
+
+		@Override
+		public void setValue(ControlData1 obj, Max15NumericText value) {
+			obj.setNumberOfTransactions(value);
 		}
 	};
 	@XmlElement(name = "CtrlSum")
@@ -194,7 +204,7 @@ public class ControlData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmControlSum = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ControlData1, Optional<DecimalNumber>> mmControlSum = new MMMessageAttribute<ControlData1, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ControlData1.mmObject();
 			isDerived = false;
@@ -205,6 +215,16 @@ public class ControlData1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(ControlData1 obj) {
+			return obj.getControlSum();
+		}
+
+		@Override
+		public void setValue(ControlData1 obj, Optional<DecimalNumber> value) {
+			obj.setControlSum(value.orElse(null));
 		}
 	};
 

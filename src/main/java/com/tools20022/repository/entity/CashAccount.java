@@ -23,10 +23,9 @@ import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.AccountLevelCode;
 import com.tools20022.repository.codeset.CashAccountTypeCode;
 import com.tools20022.repository.codeset.CurrencyCode;
-import com.tools20022.repository.entity.Account;
+import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -573,6 +572,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CustomerAccount7}</li>
  * <li>{@linkplain com.tools20022.repository.msg.CustomerAccount6
  * CustomerAccount6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SettlementAccount1
+ * SettlementAccount1}</li>
  * <li>{@linkplain com.tools20022.repository.msg.ConcentrationAccount1
  * ConcentrationAccount1}</li>
  * <li>{@linkplain com.tools20022.repository.msg.CashAccount201 CashAccount201}</li>
@@ -720,7 +721,7 @@ public class CashAccount extends Account {
 	 * definition} = "Specifies the nature, or use, of the cash account."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCashAccountType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CashAccount, CashAccountTypeCode> mmCashAccountType = new MMBusinessAttribute<CashAccount, CashAccountTypeCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CashAccount22.mmAccountTypeDescription, CashAccount5.mmType, CashAccount12.mmType, CashAccount12.mmExtendedType, CashAccountSearchCriteria2.mmType, CashAccountSearchCriteria3.mmType,
 					CashAccountSearchCriteria4.mmType, CashAccountType2.mmCode, CashAccountType2.mmProprietary, CashAccountType2Choice.mmCode, CashAccountType2Choice.mmProprietary, CashAccountSearchCriteria5.mmType, CashAccount7.mmType,
@@ -738,12 +739,14 @@ public class CashAccount extends Account {
 			simpleType_lazy = () -> CashAccountTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CashAccount.class.getMethod("getCashAccountType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CashAccountTypeCode getValue(CashAccount obj) {
+			return obj.getCashAccountType();
+		}
+
+		@Override
+		public void setValue(CashAccount obj, CashAccountTypeCode value) {
+			obj.setCashAccountType(value);
 		}
 	};
 	protected InvestmentAccount relatedInvestmentAccount;
@@ -790,7 +793,7 @@ public class CashAccount extends Account {
 	 * definition} = "Investment account for which a cash branch is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedInvestmentAccount = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CashAccount, InvestmentAccount> mmRelatedInvestmentAccount = new MMBusinessAssociationEnd<CashAccount, InvestmentAccount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CashAccount26.mmInvestmentAccountType, CashAccount33.mmInvestmentAccountType);
 			isDerived = false;
@@ -800,9 +803,19 @@ public class CashAccount extends Account {
 			definition = "Investment account for which a cash branch is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmCashAccount;
+			opposite_lazy = () -> InvestmentAccount.mmCashAccount;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmObject();
+			type_lazy = () -> InvestmentAccount.mmObject();
+		}
+
+		@Override
+		public InvestmentAccount getValue(CashAccount obj) {
+			return obj.getRelatedInvestmentAccount();
+		}
+
+		@Override
+		public void setValue(CashAccount obj, InvestmentAccount value) {
+			obj.setRelatedInvestmentAccount(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.CashEntry> cashEntry;
@@ -863,7 +876,7 @@ public class CashAccount extends Account {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCashEntry = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CashAccount, List<CashEntry>> mmCashEntry = new MMBusinessAssociationEnd<CashAccount, List<CashEntry>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CashAccountAndEntry1.mmEntry, ReportingRequest1.mmRequestedTransactionType, ReportingRequest2.mmRequestedTransactionType, ReportingRequest3.mmRequestedTransactionType,
 					ReportingRequest4.mmRequestedTransactionType, CashAccountAndEntry2.mmEntry);
@@ -876,6 +889,16 @@ public class CashAccount extends Account {
 			opposite_lazy = () -> com.tools20022.repository.entity.CashEntry.mmCashAccount;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CashEntry.mmObject();
+		}
+
+		@Override
+		public List<CashEntry> getValue(CashAccount obj) {
+			return obj.getCashEntry();
+		}
+
+		@Override
+		public void setValue(CashAccount obj, List<CashEntry> value) {
+			obj.setCashEntry(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.CashBalance> cashBalance;
@@ -948,6 +971,24 @@ public class CashAccount extends Account {
 	 * {@linkplain com.tools20022.repository.msg.BillingStatement2#mmBalanceAdjustment
 	 * BillingStatement2.mmBalanceAdjustment}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementAccount1#mmEndOfDayInitialMarginCalled
+	 * SettlementAccount1.mmEndOfDayInitialMarginCalled}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementAccount1#mmEndOfDayVariationMarginCalled
+	 * SettlementAccount1.mmEndOfDayVariationMarginCalled}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementAccount1#mmEndOfDayDefaultFundCalled
+	 * SettlementAccount1.mmEndOfDayDefaultFundCalled}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementAccount1#mmEndOfDaySettlementCalled
+	 * SettlementAccount1.mmEndOfDaySettlementCalled}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementAccount1#mmEndOfDayOtherCalled
+	 * SettlementAccount1.mmEndOfDayOtherCalled}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementAccount1#mmEndOfDayLiquidityCalled
+	 * SettlementAccount1.mmEndOfDayLiquidityCalled}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CashAccountSearchCriteria6#mmBalance
 	 * CashAccountSearchCriteria6.mmBalance}</li>
 	 * <li>
@@ -975,12 +1016,14 @@ public class CashAccount extends Account {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCashBalance = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CashAccount, List<CashBalance>> mmCashBalance = new MMBusinessAssociationEnd<CashAccount, List<CashBalance>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CashAccountSearchCriteria2.mmBalance, CashAccountSearchCriteria3.mmBalance, CashAccountSearchCriteria4.mmBalance, CashAccountSearchCriteria5.mmBalance,
 					BilateralLimitDetails1.mmBilateralBalance, CashAccountDetails1.mmMultilateralBalance, BilateralLimitDetails2.mmBilateralBalance, CashAccountDetails3.mmMultilateralBalance, BilateralLimitDetails3.mmBilateralBalance,
 					CashAccountDetails4.mmMultilateralBalance, BilateralLimit1.mmBilateralBalance, CashAccount23.mmMultilateralBalance, BillingStatement1.mmBalance, BillingStatement1.mmBalanceAdjustment, BillingStatement2.mmBalance,
-					BillingStatement2.mmBalanceAdjustment, CashAccountSearchCriteria6.mmBalance, CashAccount35.mmMultilateralBalance, BilateralLimit2.mmBilateralBalance);
+					BillingStatement2.mmBalanceAdjustment, SettlementAccount1.mmEndOfDayInitialMarginCalled, SettlementAccount1.mmEndOfDayVariationMarginCalled, SettlementAccount1.mmEndOfDayDefaultFundCalled,
+					SettlementAccount1.mmEndOfDaySettlementCalled, SettlementAccount1.mmEndOfDayOtherCalled, SettlementAccount1.mmEndOfDayLiquidityCalled, CashAccountSearchCriteria6.mmBalance, CashAccount35.mmMultilateralBalance,
+					BilateralLimit2.mmBilateralBalance);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -990,6 +1033,16 @@ public class CashAccount extends Account {
 			opposite_lazy = () -> com.tools20022.repository.entity.CashBalance.mmCashAccount;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CashBalance.mmObject();
+		}
+
+		@Override
+		public List<CashBalance> getValue(CashAccount obj) {
+			return obj.getCashBalance();
+		}
+
+		@Override
+		public void setValue(CashAccount obj, List<CashBalance> value) {
+			obj.setCashBalance(value);
 		}
 	};
 	protected PaymentPartyRole paymentPartyRole;
@@ -1023,22 +1076,32 @@ public class CashAccount extends Account {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies each role linked to a payment and using a specific cash account in the payment context."
+	 * "Specifies each role linked to a payment and using a specific cash account in the payment context. "
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPaymentPartyRole = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CashAccount, com.tools20022.repository.entity.PaymentPartyRole> mmPaymentPartyRole = new MMBusinessAssociationEnd<CashAccount, com.tools20022.repository.entity.PaymentPartyRole>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentPartyRole";
-			definition = "Specifies each role linked to a payment and using a specific cash account in the payment context.";
+			definition = "Specifies each role linked to a payment and using a specific cash account in the payment context. ";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmCashAccount;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmObject();
+		}
+
+		@Override
+		public com.tools20022.repository.entity.PaymentPartyRole getValue(CashAccount obj) {
+			return obj.getPaymentPartyRole();
+		}
+
+		@Override
+		public void setValue(CashAccount obj, com.tools20022.repository.entity.PaymentPartyRole value) {
+			obj.setPaymentPartyRole(value);
 		}
 	};
 	protected StandingOrder relatedCreditStandingOrder;
@@ -1076,7 +1139,7 @@ public class CashAccount extends Account {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedCreditStandingOrder = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CashAccount, StandingOrder> mmRelatedCreditStandingOrder = new MMBusinessAssociationEnd<CashAccount, StandingOrder>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
@@ -1085,9 +1148,19 @@ public class CashAccount extends Account {
 			definition = "Instruction given by an account holder to an account servicer to make regular transfers on given dates to the same beneficiary.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmCreditAccount;
+			opposite_lazy = () -> StandingOrder.mmCreditAccount;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmObject();
+			type_lazy = () -> StandingOrder.mmObject();
+		}
+
+		@Override
+		public StandingOrder getValue(CashAccount obj) {
+			return obj.getRelatedCreditStandingOrder();
+		}
+
+		@Override
+		public void setValue(CashAccount obj, StandingOrder value) {
+			obj.setRelatedCreditStandingOrder(value);
 		}
 	};
 	protected StandingOrder relatedDebitStandingOrder;
@@ -1125,7 +1198,7 @@ public class CashAccount extends Account {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedDebitStandingOrder = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CashAccount, StandingOrder> mmRelatedDebitStandingOrder = new MMBusinessAssociationEnd<CashAccount, StandingOrder>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
@@ -1134,9 +1207,19 @@ public class CashAccount extends Account {
 			definition = "Instruction given by an account holder to an account servicer to make regular transfers on given dates to the same beneficiary.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmDebitAccount;
+			opposite_lazy = () -> StandingOrder.mmDebitAccount;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmObject();
+			type_lazy = () -> StandingOrder.mmObject();
+		}
+
+		@Override
+		public StandingOrder getValue(CashAccount obj) {
+			return obj.getRelatedDebitStandingOrder();
+		}
+
+		@Override
+		public void setValue(CashAccount obj, StandingOrder value) {
+			obj.setRelatedDebitStandingOrder(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.CashAccountContract> cashAccountContract;
@@ -1185,7 +1268,7 @@ public class CashAccount extends Account {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCashAccountContract = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CashAccount, List<CashAccountContract>> mmCashAccountContract = new MMBusinessAssociationEnd<CashAccount, List<CashAccountContract>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Accounts2.mmAccountReport, Accounts3.mmAccountReport, Accounts4.mmAccountReport);
 			isDerived = false;
@@ -1197,6 +1280,16 @@ public class CashAccount extends Account {
 			opposite_lazy = () -> com.tools20022.repository.entity.CashAccountContract.mmCashAccount;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CashAccountContract.mmObject();
+		}
+
+		@Override
+		public List<CashAccountContract> getValue(CashAccount obj) {
+			return obj.getCashAccountContract();
+		}
+
+		@Override
+		public void setValue(CashAccount obj, List<CashAccountContract> value) {
+			obj.setCashAccountContract(value);
 		}
 	};
 	protected CorporateActionElection relatedCorporateActionElection;
@@ -1233,7 +1326,7 @@ public class CashAccount extends Account {
 	 * definition} = "Election process which uses specific cash accounts."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedCorporateActionElection = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CashAccount, CorporateActionElection> mmRelatedCorporateActionElection = new MMBusinessAssociationEnd<CashAccount, CorporateActionElection>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
@@ -1242,9 +1335,19 @@ public class CashAccount extends Account {
 			definition = "Election process which uses specific cash accounts.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.mmCashAccount;
+			opposite_lazy = () -> CorporateActionElection.mmCashAccount;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.mmObject();
+			type_lazy = () -> CorporateActionElection.mmObject();
+		}
+
+		@Override
+		public CorporateActionElection getValue(CashAccount obj) {
+			return obj.getRelatedCorporateActionElection();
+		}
+
+		@Override
+		public void setValue(CashAccount obj, CorporateActionElection value) {
+			obj.setRelatedCorporateActionElection(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.Charges> charges;
@@ -1280,7 +1383,7 @@ public class CashAccount extends Account {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCharges = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CashAccount, List<Charges>> mmCharges = new MMBusinessAssociationEnd<CashAccount, List<Charges>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
@@ -1291,6 +1394,16 @@ public class CashAccount extends Account {
 			opposite_lazy = () -> com.tools20022.repository.entity.Charges.mmChargesDebitAccount;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
+		}
+
+		@Override
+		public List<Charges> getValue(CashAccount obj) {
+			return obj.getCharges();
+		}
+
+		@Override
+		public void setValue(CashAccount obj, List<Charges> value) {
+			obj.setCharges(value);
 		}
 	};
 	protected Tax tax;
@@ -1336,7 +1449,7 @@ public class CashAccount extends Account {
 	 * definition} = "Tax charged on a cash account."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmTax = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CashAccount, Optional<Tax>> mmTax = new MMBusinessAssociationEnd<CashAccount, Optional<Tax>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CashAccountCharacteristics1.mmTax, CashAccountCharacteristics2.mmTax);
 			isDerived = false;
@@ -1349,6 +1462,16 @@ public class CashAccount extends Account {
 			opposite_lazy = () -> com.tools20022.repository.entity.Tax.mmTaxAccount;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
+		}
+
+		@Override
+		public Optional<Tax> getValue(CashAccount obj) {
+			return obj.getTax();
+		}
+
+		@Override
+		public void setValue(CashAccount obj, Optional<Tax> value) {
+			obj.setTax(value.orElse(null));
 		}
 	};
 	protected CashSettlement relatedSettlementInstruction;
@@ -1392,7 +1515,7 @@ public class CashAccount extends Account {
 	 * definition} = "Settlement process which uses specific cash accounts."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedSettlementInstruction = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CashAccount, Optional<CashSettlement>> mmRelatedSettlementInstruction = new MMBusinessAssociationEnd<CashAccount, Optional<CashSettlement>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CashAccount33.mmSettlementInstructionReason);
 			isDerived = false;
@@ -1402,9 +1525,19 @@ public class CashAccount extends Account {
 			definition = "Settlement process which uses specific cash accounts.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmSettlementAccount;
+			opposite_lazy = () -> CashSettlement.mmSettlementAccount;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmObject();
+			type_lazy = () -> CashSettlement.mmObject();
+		}
+
+		@Override
+		public Optional<CashSettlement> getValue(CashAccount obj) {
+			return obj.getRelatedSettlementInstruction();
+		}
+
+		@Override
+		public void setValue(CashAccount obj, Optional<CashSettlement> value) {
+			obj.setRelatedSettlementInstruction(value.orElse(null));
 		}
 	};
 	protected CashSettlementInstructionPartyRole cashSettlementPartyRole;
@@ -1439,22 +1572,32 @@ public class CashAccount extends Account {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies each role linked to a payment settlement and using a specific cash account in the payment context."
+	 * "Specifies each role linked to a payment settlement and using a specific cash account in the payment context. "
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCashSettlementPartyRole = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CashAccount, CashSettlementInstructionPartyRole> mmCashSettlementPartyRole = new MMBusinessAssociationEnd<CashAccount, CashSettlementInstructionPartyRole>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashSettlementPartyRole";
-			definition = "Specifies each role linked to a payment settlement and using a specific cash account in the payment context.";
+			definition = "Specifies each role linked to a payment settlement and using a specific cash account in the payment context. ";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.CashSettlementInstructionPartyRole.mmCashAccount;
+			opposite_lazy = () -> CashSettlementInstructionPartyRole.mmCashAccount;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.CashSettlementInstructionPartyRole.mmObject();
+			type_lazy = () -> CashSettlementInstructionPartyRole.mmObject();
+		}
+
+		@Override
+		public CashSettlementInstructionPartyRole getValue(CashAccount obj) {
+			return obj.getCashSettlementPartyRole();
+		}
+
+		@Override
+		public void setValue(CashAccount obj, CashSettlementInstructionPartyRole value) {
+			obj.setCashSettlementPartyRole(value);
 		}
 	};
 	protected UndertakingUltimateObligor ultimateObligor;
@@ -1492,7 +1635,7 @@ public class CashAccount extends Account {
 	 * "Party for which different types of cash accounts are specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmUltimateObligor = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CashAccount, UndertakingUltimateObligor> mmUltimateObligor = new MMBusinessAssociationEnd<CashAccount, UndertakingUltimateObligor>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
@@ -1501,9 +1644,19 @@ public class CashAccount extends Account {
 			definition = "Party for which different types of cash accounts are specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.UndertakingUltimateObligor.mmCashAccount;
+			opposite_lazy = () -> UndertakingUltimateObligor.mmCashAccount;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.UndertakingUltimateObligor.mmObject();
+			type_lazy = () -> UndertakingUltimateObligor.mmObject();
+		}
+
+		@Override
+		public UndertakingUltimateObligor getValue(CashAccount obj) {
+			return obj.getUltimateObligor();
+		}
+
+		@Override
+		public void setValue(CashAccount obj, UndertakingUltimateObligor value) {
+			obj.setUltimateObligor(value);
 		}
 	};
 	protected PaymentCard relatedPaymentCard;
@@ -1539,7 +1692,7 @@ public class CashAccount extends Account {
 	 * definition} = "Payment card for which an account is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedPaymentCard = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CashAccount, Optional<PaymentCard>> mmRelatedPaymentCard = new MMBusinessAssociationEnd<CashAccount, Optional<PaymentCard>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
@@ -1548,9 +1701,19 @@ public class CashAccount extends Account {
 			definition = "Payment card for which an account is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmRelatedAccount;
+			opposite_lazy = () -> PaymentCard.mmRelatedAccount;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
+			type_lazy = () -> PaymentCard.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentCard> getValue(CashAccount obj) {
+			return obj.getRelatedPaymentCard();
+		}
+
+		@Override
+		public void setValue(CashAccount obj, Optional<PaymentCard> value) {
+			obj.setRelatedPaymentCard(value.orElse(null));
 		}
 	};
 	protected SecuritiesPartyRole securitiesPartyRole;
@@ -1586,7 +1749,7 @@ public class CashAccount extends Account {
 	 * definition} = "Specifies the role which uses a cash account."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSecuritiesPartyRole = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CashAccount, com.tools20022.repository.entity.SecuritiesPartyRole> mmSecuritiesPartyRole = new MMBusinessAssociationEnd<CashAccount, com.tools20022.repository.entity.SecuritiesPartyRole>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
@@ -1598,6 +1761,16 @@ public class CashAccount extends Account {
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPartyRole.mmCashAccount;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPartyRole.mmObject();
+		}
+
+		@Override
+		public com.tools20022.repository.entity.SecuritiesPartyRole getValue(CashAccount obj) {
+			return obj.getSecuritiesPartyRole();
+		}
+
+		@Override
+		public void setValue(CashAccount obj, com.tools20022.repository.entity.SecuritiesPartyRole value) {
+			obj.setSecuritiesPartyRole(value);
 		}
 	};
 	protected InvoiceFinancingPartyRole relatedInvoiceFinancingPartyRole;
@@ -1636,7 +1809,7 @@ public class CashAccount extends Account {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedInvoiceFinancingPartyRole = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CashAccount, InvoiceFinancingPartyRole> mmRelatedInvoiceFinancingPartyRole = new MMBusinessAssociationEnd<CashAccount, InvoiceFinancingPartyRole>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
@@ -1645,9 +1818,19 @@ public class CashAccount extends Account {
 			definition = "Specifies each role using a specific account in the context of invoice financing.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingPartyRole.mmCashAccount;
+			opposite_lazy = () -> InvoiceFinancingPartyRole.mmCashAccount;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingPartyRole.mmObject();
+			type_lazy = () -> InvoiceFinancingPartyRole.mmObject();
+		}
+
+		@Override
+		public InvoiceFinancingPartyRole getValue(CashAccount obj) {
+			return obj.getRelatedInvoiceFinancingPartyRole();
+		}
+
+		@Override
+		public void setValue(CashAccount obj, InvoiceFinancingPartyRole value) {
+			obj.setRelatedInvoiceFinancingPartyRole(value);
 		}
 	};
 	protected CommercialTrade relatedCommercialTrade;
@@ -1684,7 +1867,7 @@ public class CashAccount extends Account {
 	 * "Commercial trade for which a purchase account is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedCommercialTrade = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CashAccount, CommercialTrade> mmRelatedCommercialTrade = new MMBusinessAssociationEnd<CashAccount, CommercialTrade>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
@@ -1693,9 +1876,19 @@ public class CashAccount extends Account {
 			definition = "Commercial trade for which a purchase account is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.CommercialTrade.mmPurchaseAccount;
+			opposite_lazy = () -> CommercialTrade.mmPurchaseAccount;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.CommercialTrade.mmObject();
+			type_lazy = () -> CommercialTrade.mmObject();
+		}
+
+		@Override
+		public CommercialTrade getValue(CashAccount obj) {
+			return obj.getRelatedCommercialTrade();
+		}
+
+		@Override
+		public void setValue(CashAccount obj, CommercialTrade value) {
+			obj.setRelatedCommercialTrade(value);
 		}
 	};
 	protected AccountLevelCode level;
@@ -1740,7 +1933,7 @@ public class CashAccount extends Account {
 	 * "Defines the level of an account within the account hierarchy."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmLevel = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CashAccount, AccountLevelCode> mmLevel = new MMBusinessAttribute<CashAccount, AccountLevelCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(ParentCashAccount1.mmLevel, CashAccountCharacteristics1.mmAccountLevel, CashAccountCharacteristics2.mmAccountLevel, ParentCashAccount2.mmLevel);
 			isDerived = false;
@@ -1753,12 +1946,14 @@ public class CashAccount extends Account {
 			simpleType_lazy = () -> AccountLevelCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CashAccount.class.getMethod("getLevel", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AccountLevelCode getValue(CashAccount obj) {
+			return obj.getLevel();
+		}
+
+		@Override
+		public void setValue(CashAccount obj, AccountLevelCode value) {
+			obj.setLevel(value);
 		}
 	};
 	protected CurrencyCode settlementCurrency;
@@ -1799,7 +1994,7 @@ public class CashAccount extends Account {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSettlementCurrency = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CashAccount, CurrencyCode> mmSettlementCurrency = new MMBusinessAttribute<CashAccount, CurrencyCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CashAccountCharacteristics1.mmSettlementCurrencyCode, CashAccountCharacteristics2.mmSettlementCurrencyCode);
 			isDerived = false;
@@ -1812,15 +2007,17 @@ public class CashAccount extends Account {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CashAccount.class.getMethod("getSettlementCurrency", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyCode getValue(CashAccount obj) {
+			return obj.getSettlementCurrency();
+		}
+
+		@Override
+		public void setValue(CashAccount obj, CurrencyCode value) {
+			obj.setSettlementCurrency(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.AccountReportedMovement> reportedMovements;
+	protected List<AccountReportedMovement> reportedMovements;
 	/**
 	 * 
 	 <p>
@@ -1856,7 +2053,7 @@ public class CashAccount extends Account {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmReportedMovements = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CashAccount, List<AccountReportedMovement>> mmReportedMovements = new MMBusinessAssociationEnd<CashAccount, List<AccountReportedMovement>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
@@ -1864,9 +2061,19 @@ public class CashAccount extends Account {
 			name = "ReportedMovements";
 			definition = "Provides statistical information on the number of movements and their value for a particular account.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.AccountReportedMovement.mmReportedCashAccount;
+			opposite_lazy = () -> AccountReportedMovement.mmReportedCashAccount;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.AccountReportedMovement.mmObject();
+			type_lazy = () -> AccountReportedMovement.mmObject();
+		}
+
+		@Override
+		public List<AccountReportedMovement> getValue(CashAccount obj) {
+			return obj.getReportedMovements();
+		}
+
+		@Override
+		public void setValue(CashAccount obj, List<AccountReportedMovement> value) {
+			obj.setReportedMovements(value);
 		}
 	};
 	protected CashAccountContract closedAccountContract;
@@ -1904,7 +2111,7 @@ public class CashAccount extends Account {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmClosedAccountContract = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CashAccount, com.tools20022.repository.entity.CashAccountContract> mmClosedAccountContract = new MMBusinessAssociationEnd<CashAccount, com.tools20022.repository.entity.CashAccountContract>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
@@ -1916,6 +2123,16 @@ public class CashAccount extends Account {
 			opposite_lazy = () -> com.tools20022.repository.entity.CashAccountContract.mmTransferCashAccount;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CashAccountContract.mmObject();
+		}
+
+		@Override
+		public com.tools20022.repository.entity.CashAccountContract getValue(CashAccount obj) {
+			return obj.getClosedAccountContract();
+		}
+
+		@Override
+		public void setValue(CashAccount obj, com.tools20022.repository.entity.CashAccountContract value) {
+			obj.setClosedAccountContract(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.AccountLink> accountLink;
@@ -1952,7 +2169,7 @@ public class CashAccount extends Account {
 	 * "Defines the link between a cash account and a securities account."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmAccountLink = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CashAccount, List<AccountLink>> mmAccountLink = new MMBusinessAssociationEnd<CashAccount, List<AccountLink>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
@@ -1963,6 +2180,16 @@ public class CashAccount extends Account {
 			opposite_lazy = () -> com.tools20022.repository.entity.AccountLink.mmCashAccount;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.AccountLink.mmObject();
+		}
+
+		@Override
+		public List<AccountLink> getValue(CashAccount obj) {
+			return obj.getAccountLink();
+		}
+
+		@Override
+		public void setValue(CashAccount obj, List<AccountLink> value) {
+			obj.setAccountLink(value);
 		}
 	};
 	protected CashStandingOrder cashStandingOrder;
@@ -2009,7 +2236,7 @@ public class CashAccount extends Account {
 	 * definition} = "Standing order which applies on a specific account."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCashStandingOrder = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CashAccount, com.tools20022.repository.entity.CashStandingOrder> mmCashStandingOrder = new MMBusinessAssociationEnd<CashAccount, com.tools20022.repository.entity.CashStandingOrder>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CashAccountDetails3.mmStandingOrder, CashAccountDetails4.mmStandingOrder);
 			isDerived = false;
@@ -2022,6 +2249,16 @@ public class CashAccount extends Account {
 			opposite_lazy = () -> com.tools20022.repository.entity.CashStandingOrder.mmCashAccount;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CashStandingOrder.mmObject();
+		}
+
+		@Override
+		public com.tools20022.repository.entity.CashStandingOrder getValue(CashAccount obj) {
+			return obj.getCashStandingOrder();
+		}
+
+		@Override
+		public void setValue(CashAccount obj, com.tools20022.repository.entity.CashStandingOrder value) {
+			obj.setCashStandingOrder(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.Cheque> cheque;
@@ -2056,7 +2293,7 @@ public class CashAccount extends Account {
 	 * definition} = "Cheques drawn on a cash account."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCheque = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CashAccount, List<Cheque>> mmCheque = new MMBusinessAssociationEnd<CashAccount, List<Cheque>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
@@ -2067,6 +2304,16 @@ public class CashAccount extends Account {
 			opposite_lazy = () -> com.tools20022.repository.entity.Cheque.mmCashAccount;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
+		}
+
+		@Override
+		public List<Cheque> getValue(CashAccount obj) {
+			return obj.getCheque();
+		}
+
+		@Override
+		public void setValue(CashAccount obj, List<Cheque> value) {
+			obj.setCheque(value);
 		}
 	};
 	protected CashAccountService cashAccountService;
@@ -2104,7 +2351,7 @@ public class CashAccount extends Account {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCashAccountService = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CashAccount, com.tools20022.repository.entity.CashAccountService> mmCashAccountService = new MMBusinessAssociationEnd<CashAccount, com.tools20022.repository.entity.CashAccountService>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
@@ -2116,6 +2363,16 @@ public class CashAccount extends Account {
 			opposite_lazy = () -> com.tools20022.repository.entity.CashAccountService.mmCashAccount;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CashAccountService.mmObject();
+		}
+
+		@Override
+		public com.tools20022.repository.entity.CashAccountService getValue(CashAccount obj) {
+			return obj.getCashAccountService();
+		}
+
+		@Override
+		public void setValue(CashAccount obj, com.tools20022.repository.entity.CashAccountService value) {
+			obj.setCashAccountService(value);
 		}
 	};
 	protected Payment payment;
@@ -2150,7 +2407,7 @@ public class CashAccount extends Account {
 	 * definition} = "Payment for which an account is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPayment = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CashAccount, com.tools20022.repository.entity.Payment> mmPayment = new MMBusinessAssociationEnd<CashAccount, com.tools20022.repository.entity.Payment>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
@@ -2162,6 +2419,16 @@ public class CashAccount extends Account {
 			opposite_lazy = () -> com.tools20022.repository.entity.Payment.mmAccount;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+		}
+
+		@Override
+		public com.tools20022.repository.entity.Payment getValue(CashAccount obj) {
+			return obj.getPayment();
+		}
+
+		@Override
+		public void setValue(CashAccount obj, com.tools20022.repository.entity.Payment value) {
+			obj.setPayment(value);
 		}
 	};
 	protected Commission commission;
@@ -2209,7 +2476,7 @@ public class CashAccount extends Account {
 	 * "Amount of money due to a party as compensation for a service."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCommission = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CashAccount, com.tools20022.repository.entity.Commission> mmCommission = new MMBusinessAssociationEnd<CashAccount, com.tools20022.repository.entity.Commission>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FeeAndTax1.mmCommercialAgreementReference, Fees1.mmCommercialAgreementReference);
 			isDerived = false;
@@ -2223,6 +2490,16 @@ public class CashAccount extends Account {
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Commission.mmObject();
 		}
+
+		@Override
+		public com.tools20022.repository.entity.Commission getValue(CashAccount obj) {
+			return obj.getCommission();
+		}
+
+		@Override
+		public void setValue(CashAccount obj, com.tools20022.repository.entity.Commission value) {
+			obj.setCommission(value);
+		}
 	};
 
 	static public MMBusinessComponent mmObject() {
@@ -2233,15 +2510,13 @@ public class CashAccount extends Account {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashAccount";
 				definition = "Account to or from which a cash entry is made.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentAccount.mmCashAccount, com.tools20022.repository.entity.Tax.mmTaxAccount, com.tools20022.repository.entity.Commission.mmAccount,
-						com.tools20022.repository.entity.Payment.mmAccount, com.tools20022.repository.entity.PaymentCard.mmRelatedAccount, com.tools20022.repository.entity.CashEntry.mmCashAccount,
-						com.tools20022.repository.entity.Cheque.mmCashAccount, com.tools20022.repository.entity.CashSettlement.mmSettlementAccount, com.tools20022.repository.entity.PaymentPartyRole.mmCashAccount,
-						com.tools20022.repository.entity.CashBalance.mmCashAccount, com.tools20022.repository.entity.StandingOrder.mmCreditAccount, com.tools20022.repository.entity.StandingOrder.mmDebitAccount,
-						com.tools20022.repository.entity.CashStandingOrder.mmCashAccount, com.tools20022.repository.entity.SecuritiesPartyRole.mmCashAccount, com.tools20022.repository.entity.Charges.mmChargesDebitAccount,
-						com.tools20022.repository.entity.CashAccountContract.mmCashAccount, com.tools20022.repository.entity.CashAccountContract.mmTransferCashAccount, com.tools20022.repository.entity.CashAccountService.mmCashAccount,
-						com.tools20022.repository.entity.CashSettlementInstructionPartyRole.mmCashAccount, com.tools20022.repository.entity.CorporateActionElection.mmCashAccount,
-						com.tools20022.repository.entity.AccountReportedMovement.mmReportedCashAccount, com.tools20022.repository.entity.UndertakingUltimateObligor.mmCashAccount,
-						com.tools20022.repository.entity.InvoiceFinancingPartyRole.mmCashAccount, com.tools20022.repository.entity.CommercialTrade.mmPurchaseAccount, com.tools20022.repository.entity.AccountLink.mmCashAccount);
+				associationDomain_lazy = () -> Arrays.asList(InvestmentAccount.mmCashAccount, com.tools20022.repository.entity.Tax.mmTaxAccount, com.tools20022.repository.entity.Commission.mmAccount,
+						com.tools20022.repository.entity.Payment.mmAccount, PaymentCard.mmRelatedAccount, com.tools20022.repository.entity.CashEntry.mmCashAccount, com.tools20022.repository.entity.Cheque.mmCashAccount,
+						CashSettlement.mmSettlementAccount, com.tools20022.repository.entity.PaymentPartyRole.mmCashAccount, com.tools20022.repository.entity.CashBalance.mmCashAccount, StandingOrder.mmCreditAccount,
+						StandingOrder.mmDebitAccount, com.tools20022.repository.entity.CashStandingOrder.mmCashAccount, com.tools20022.repository.entity.SecuritiesPartyRole.mmCashAccount,
+						com.tools20022.repository.entity.Charges.mmChargesDebitAccount, com.tools20022.repository.entity.CashAccountContract.mmCashAccount, com.tools20022.repository.entity.CashAccountContract.mmTransferCashAccount,
+						com.tools20022.repository.entity.CashAccountService.mmCashAccount, CashSettlementInstructionPartyRole.mmCashAccount, CorporateActionElection.mmCashAccount, AccountReportedMovement.mmReportedCashAccount,
+						UndertakingUltimateObligor.mmCashAccount, InvoiceFinancingPartyRole.mmCashAccount, CommercialTrade.mmPurchaseAccount, com.tools20022.repository.entity.AccountLink.mmCashAccount);
 				derivationElement_lazy = () -> Arrays.asList(OrderDeskContactDetails.mmSettlementDetails, PaymentInstrument17Choice.mmCashAccountDetails, AccountOrBusinessError1Choice.mmAccount, CashAccountAndEntry1.mmAccount,
 						CorporateActionOption9.mmCashAccount, CorporateActionOption18.mmCashAccount, CorporateActionOption22.mmCashAccount, CorporateActionOption27.mmCashAccount, CorporateActionOption26.mmCashAccount,
 						CorporateActionOption41.mmCashAccount, CorporateActionOption50.mmCashAccount, CorporateActionOption29.mmCashAccount, Account8Choice.mmCashAccount, Account9Choice.mmCashAccount,
@@ -2284,8 +2559,8 @@ public class CashAccount extends Account {
 						CustomerAccount2.mmObject(), CustomerAccount3.mmObject(), AccountOrBusinessError2Choice.mmObject(), CashAccount29.mmObject(), CardAccount3.mmObject(), CardAccount1.mmObject(), CardAccount6.mmObject(),
 						CardAccount4.mmObject(), CardAccount5.mmObject(), CardAccount2.mmObject(), CashAccountCharacteristics2.mmObject(), ParentCashAccount2.mmObject(), CashAccount34.mmObject(), CashAccount32.mmObject(),
 						CashAccount33.mmObject(), CardAccount10.mmObject(), CardAccount9.mmObject(), CardAccount8.mmObject(), CardAccount11.mmObject(), CardAccount13.mmObject(), CardAccount7.mmObject(), CardAccount12.mmObject(),
-						CustomerAccount7.mmObject(), CustomerAccount6.mmObject(), ConcentrationAccount1.mmObject(), CashAccount201.mmObject(), AccountOrBusinessError3Choice.mmObject(), CashAccountSearchCriteria6.mmObject(),
-						CashAccount35.mmObject(), CashAccountAndEntry2.mmObject(), CashAccount36.mmObject(), CardAccount14.mmObject());
+						CustomerAccount7.mmObject(), CustomerAccount6.mmObject(), SettlementAccount1.mmObject(), ConcentrationAccount1.mmObject(), CashAccount201.mmObject(), AccountOrBusinessError3Choice.mmObject(),
+						CashAccountSearchCriteria6.mmObject(), CashAccount35.mmObject(), CashAccountAndEntry2.mmObject(), CashAccount36.mmObject(), CardAccount14.mmObject());
 			}
 
 			@Override
@@ -2309,7 +2584,7 @@ public class CashAccount extends Account {
 		return relatedInvestmentAccount;
 	}
 
-	public CashAccount setRelatedInvestmentAccount(com.tools20022.repository.entity.InvestmentAccount relatedInvestmentAccount) {
+	public CashAccount setRelatedInvestmentAccount(InvestmentAccount relatedInvestmentAccount) {
 		this.relatedInvestmentAccount = Objects.requireNonNull(relatedInvestmentAccount);
 		return this;
 	}
@@ -2345,7 +2620,7 @@ public class CashAccount extends Account {
 		return relatedCreditStandingOrder;
 	}
 
-	public CashAccount setRelatedCreditStandingOrder(com.tools20022.repository.entity.StandingOrder relatedCreditStandingOrder) {
+	public CashAccount setRelatedCreditStandingOrder(StandingOrder relatedCreditStandingOrder) {
 		this.relatedCreditStandingOrder = Objects.requireNonNull(relatedCreditStandingOrder);
 		return this;
 	}
@@ -2354,7 +2629,7 @@ public class CashAccount extends Account {
 		return relatedDebitStandingOrder;
 	}
 
-	public CashAccount setRelatedDebitStandingOrder(com.tools20022.repository.entity.StandingOrder relatedDebitStandingOrder) {
+	public CashAccount setRelatedDebitStandingOrder(StandingOrder relatedDebitStandingOrder) {
 		this.relatedDebitStandingOrder = Objects.requireNonNull(relatedDebitStandingOrder);
 		return this;
 	}
@@ -2372,7 +2647,7 @@ public class CashAccount extends Account {
 		return relatedCorporateActionElection;
 	}
 
-	public CashAccount setRelatedCorporateActionElection(com.tools20022.repository.entity.CorporateActionElection relatedCorporateActionElection) {
+	public CashAccount setRelatedCorporateActionElection(CorporateActionElection relatedCorporateActionElection) {
 		this.relatedCorporateActionElection = Objects.requireNonNull(relatedCorporateActionElection);
 		return this;
 	}
@@ -2399,7 +2674,7 @@ public class CashAccount extends Account {
 		return relatedSettlementInstruction == null ? Optional.empty() : Optional.of(relatedSettlementInstruction);
 	}
 
-	public CashAccount setRelatedSettlementInstruction(com.tools20022.repository.entity.CashSettlement relatedSettlementInstruction) {
+	public CashAccount setRelatedSettlementInstruction(CashSettlement relatedSettlementInstruction) {
 		this.relatedSettlementInstruction = relatedSettlementInstruction;
 		return this;
 	}
@@ -2408,7 +2683,7 @@ public class CashAccount extends Account {
 		return cashSettlementPartyRole;
 	}
 
-	public CashAccount setCashSettlementPartyRole(com.tools20022.repository.entity.CashSettlementInstructionPartyRole cashSettlementPartyRole) {
+	public CashAccount setCashSettlementPartyRole(CashSettlementInstructionPartyRole cashSettlementPartyRole) {
 		this.cashSettlementPartyRole = Objects.requireNonNull(cashSettlementPartyRole);
 		return this;
 	}
@@ -2417,7 +2692,7 @@ public class CashAccount extends Account {
 		return ultimateObligor;
 	}
 
-	public CashAccount setUltimateObligor(com.tools20022.repository.entity.UndertakingUltimateObligor ultimateObligor) {
+	public CashAccount setUltimateObligor(UndertakingUltimateObligor ultimateObligor) {
 		this.ultimateObligor = Objects.requireNonNull(ultimateObligor);
 		return this;
 	}
@@ -2426,7 +2701,7 @@ public class CashAccount extends Account {
 		return relatedPaymentCard == null ? Optional.empty() : Optional.of(relatedPaymentCard);
 	}
 
-	public CashAccount setRelatedPaymentCard(com.tools20022.repository.entity.PaymentCard relatedPaymentCard) {
+	public CashAccount setRelatedPaymentCard(PaymentCard relatedPaymentCard) {
 		this.relatedPaymentCard = relatedPaymentCard;
 		return this;
 	}
@@ -2444,7 +2719,7 @@ public class CashAccount extends Account {
 		return relatedInvoiceFinancingPartyRole;
 	}
 
-	public CashAccount setRelatedInvoiceFinancingPartyRole(com.tools20022.repository.entity.InvoiceFinancingPartyRole relatedInvoiceFinancingPartyRole) {
+	public CashAccount setRelatedInvoiceFinancingPartyRole(InvoiceFinancingPartyRole relatedInvoiceFinancingPartyRole) {
 		this.relatedInvoiceFinancingPartyRole = Objects.requireNonNull(relatedInvoiceFinancingPartyRole);
 		return this;
 	}
@@ -2453,7 +2728,7 @@ public class CashAccount extends Account {
 		return relatedCommercialTrade;
 	}
 
-	public CashAccount setRelatedCommercialTrade(com.tools20022.repository.entity.CommercialTrade relatedCommercialTrade) {
+	public CashAccount setRelatedCommercialTrade(CommercialTrade relatedCommercialTrade) {
 		this.relatedCommercialTrade = Objects.requireNonNull(relatedCommercialTrade);
 		return this;
 	}
@@ -2480,7 +2755,7 @@ public class CashAccount extends Account {
 		return reportedMovements == null ? reportedMovements = new ArrayList<>() : reportedMovements;
 	}
 
-	public CashAccount setReportedMovements(List<com.tools20022.repository.entity.AccountReportedMovement> reportedMovements) {
+	public CashAccount setReportedMovements(List<AccountReportedMovement> reportedMovements) {
 		this.reportedMovements = Objects.requireNonNull(reportedMovements);
 		return this;
 	}

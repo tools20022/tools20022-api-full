@@ -124,7 +124,7 @@ public class FXStandingInstruction4Choice {
 	 * FXStandingInstruction1Choice.mmIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FXStandingInstruction4Choice, YesNoIndicator> mmIndicator = new MMMessageAttribute<FXStandingInstruction4Choice, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> StandingSettlementInstruction.mmFXStandingInstruction;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FXStandingInstruction4Choice.mmObject();
@@ -138,6 +138,16 @@ public class FXStandingInstruction4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(FXStandingInstruction4Choice obj) {
+			return obj.getIndicator();
+		}
+
+		@Override
+		public void setValue(FXStandingInstruction4Choice obj, YesNoIndicator value) {
+			obj.setIndicator(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -184,7 +194,7 @@ public class FXStandingInstruction4Choice {
 	 * FXStandingInstruction1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FXStandingInstruction4Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<FXStandingInstruction4Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> StandingSettlementInstruction.mmFXStandingInstruction;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FXStandingInstruction4Choice.mmObject();
@@ -198,6 +208,16 @@ public class FXStandingInstruction4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(FXStandingInstruction4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(FXStandingInstruction4Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

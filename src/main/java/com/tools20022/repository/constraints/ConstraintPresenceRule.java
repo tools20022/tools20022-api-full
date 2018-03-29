@@ -61,12 +61,16 @@ public class ConstraintPresenceRule {
 	 */
 	public static final MMConstraint<SecuritiesAccountStatus1> forSecuritiesAccountStatus1 = new MMConstraint<SecuritiesAccountStatus1>() {
 		{
-			validator = ConstraintPresenceRule::checkSecuritiesAccountStatus1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PresenceRule";
 			definition = "If Status equals COMP (Completed) then RelatedSecuritiesAccount must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPresenceRule.forSecuritiesAccountStatus2);
 			owner_lazy = () -> SecuritiesAccountStatus1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesAccountStatus1 obj) throws Exception {
+			checkSecuritiesAccountStatus1(obj);
 		}
 	};
 	/**
@@ -97,12 +101,16 @@ public class ConstraintPresenceRule {
 	 */
 	public static final MMConstraint<SecuritiesAccountStatus2> forSecuritiesAccountStatus2 = new MMConstraint<SecuritiesAccountStatus2>() {
 		{
-			validator = ConstraintPresenceRule::checkSecuritiesAccountStatus2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PresenceRule";
 			definition = "If Status equals COMP (Completed) then RelatedSecuritiesAccount must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPresenceRule.forSecuritiesAccountStatus1;
 			owner_lazy = () -> SecuritiesAccountStatus2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesAccountStatus2 obj) throws Exception {
+			checkSecuritiesAccountStatus2(obj);
 		}
 	};
 

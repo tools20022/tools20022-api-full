@@ -61,12 +61,16 @@ public class ConstraintISARule {
 	 */
 	public static final MMConstraint<PortfolioTransferInstructionV08> forPortfolioTransferInstructionV08 = new MMConstraint<PortfolioTransferInstructionV08>() {
 		{
-			validator = ConstraintISARule::checkPortfolioTransferInstructionV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISARule";
 			definition = "If any occurrence of ProductTransfer/Portfolio/ISA is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\nIf any occurrence of ProductTransfer/Portfolio/ISA is present then the elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintISARule.forPortfolioTransferInstructionV07;
 			owner_lazy = () -> PortfolioTransferInstructionV08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PortfolioTransferInstructionV08 obj) throws Exception {
+			checkPortfolioTransferInstructionV08(obj);
 		}
 	};
 	/**
@@ -97,12 +101,16 @@ public class ConstraintISARule {
 	 */
 	public static final MMConstraint<PortfolioTransferConfirmationV08> forPortfolioTransferConfirmationV08 = new MMConstraint<PortfolioTransferConfirmationV08>() {
 		{
-			validator = ConstraintISARule::checkPortfolioTransferConfirmationV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISARule";
 			definition = "If any occurrence of ProductTransfer/Portfolio/ISA is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\nIf any occurrence of ProductTransfer/Portfolio/ISA is present, then the elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.\r\n\r\n";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintISARule.forPortfolioTransferConfirmationV07;
 			owner_lazy = () -> PortfolioTransferConfirmationV08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PortfolioTransferConfirmationV08 obj) throws Exception {
+			checkPortfolioTransferConfirmationV08(obj);
 		}
 	};
 	/**
@@ -133,12 +141,16 @@ public class ConstraintISARule {
 	 */
 	public static final MMConstraint<AccountHoldingInformationV06> forAccountHoldingInformationV06 = new MMConstraint<AccountHoldingInformationV06>() {
 		{
-			validator = ConstraintISARule::checkAccountHoldingInformationV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISARule";
 			definition = "If any occurrence of ProductTransfer/Portfolio/ISA is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\nIf any occurrence of ProductTransfer/Portfolio/ISA is present, then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.\r\n";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintISARule.forAccountHoldingInformationV05;
 			owner_lazy = () -> AccountHoldingInformationV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountHoldingInformationV06 obj) throws Exception {
+			checkAccountHoldingInformationV06(obj);
 		}
 	};
 	/**
@@ -169,12 +181,16 @@ public class ConstraintISARule {
 	 */
 	public static final MMConstraint<AccountHoldingInformationRequestV05> forAccountHoldingInformationRequestV05 = new MMConstraint<AccountHoldingInformationRequestV05>() {
 		{
-			validator = ConstraintISARule::checkAccountHoldingInformationRequestV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISARule";
 			definition = "If any occurrence of ProductTransfer/Portfolio/ISA is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\nIf any occurrence of ProductTransfer/Portfolio/ISA is present then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.\r\n";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintISARule.forAccountHoldingInformationRequestV04;
 			owner_lazy = () -> AccountHoldingInformationRequestV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountHoldingInformationRequestV05 obj) throws Exception {
+			checkAccountHoldingInformationRequestV05(obj);
 		}
 	};
 	/**
@@ -213,13 +229,17 @@ public class ConstraintISARule {
 	 */
 	public static final MMConstraint<PortfolioTransferInstructionV07> forPortfolioTransferInstructionV07 = new MMConstraint<PortfolioTransferInstructionV07>() {
 		{
-			validator = ConstraintISARule::checkPortfolioTransferInstructionV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISARule";
 			definition = "If any occurrence of ProductTransfer/Portfolio/ISA is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\nIf any occurrence of ProductTransfer/Portfolio/ISA is present then the elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintISARule.forPortfolioTransferInstructionV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintISARule.forPortfolioTransferInstructionV06;
 			owner_lazy = () -> PortfolioTransferInstructionV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PortfolioTransferInstructionV07 obj) throws Exception {
+			checkPortfolioTransferInstructionV07(obj);
 		}
 	};
 	/**
@@ -258,13 +278,17 @@ public class ConstraintISARule {
 	 */
 	public static final MMConstraint<AccountHoldingInformationV05> forAccountHoldingInformationV05 = new MMConstraint<AccountHoldingInformationV05>() {
 		{
-			validator = ConstraintISARule::checkAccountHoldingInformationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISARule";
 			definition = "If any occurrence of ProductTransfer/Portfolio/ISA is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\nIf any occurrence of ProductTransfer/Portfolio/ISA is present, then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.\r\n";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintISARule.forAccountHoldingInformationV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintISARule.forAccountHoldingInformationV04;
 			owner_lazy = () -> AccountHoldingInformationV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountHoldingInformationV05 obj) throws Exception {
+			checkAccountHoldingInformationV05(obj);
 		}
 	};
 	/**
@@ -303,13 +327,17 @@ public class ConstraintISARule {
 	 */
 	public static final MMConstraint<PortfolioTransferConfirmationV07> forPortfolioTransferConfirmationV07 = new MMConstraint<PortfolioTransferConfirmationV07>() {
 		{
-			validator = ConstraintISARule::checkPortfolioTransferConfirmationV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISARule";
 			definition = "If any occurrence of ProductTransfer/Portfolio/ISA is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\nIf any occurrence of ProductTransfer/Portfolio/ISA is present, then the elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.\r\n\r\n";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintISARule.forPortfolioTransferConfirmationV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintISARule.forPortfolioTransferConfirmationV06;
 			owner_lazy = () -> PortfolioTransferConfirmationV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PortfolioTransferConfirmationV07 obj) throws Exception {
+			checkPortfolioTransferConfirmationV07(obj);
 		}
 	};
 	/**
@@ -348,13 +376,17 @@ public class ConstraintISARule {
 	 */
 	public static final MMConstraint<AccountHoldingInformationRequestV04> forAccountHoldingInformationRequestV04 = new MMConstraint<AccountHoldingInformationRequestV04>() {
 		{
-			validator = ConstraintISARule::checkAccountHoldingInformationRequestV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISARule";
 			definition = "If any occurrence of ProductTransfer/Portfolio/ISA is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\nIf any occurrence of ProductTransfer/Portfolio/ISA is present then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.\r\n";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintISARule.forAccountHoldingInformationRequestV05);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintISARule.forAccountHoldingInformationRequestV03;
 			owner_lazy = () -> AccountHoldingInformationRequestV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountHoldingInformationRequestV04 obj) throws Exception {
+			checkAccountHoldingInformationRequestV04(obj);
 		}
 	};
 	/**
@@ -388,12 +420,16 @@ public class ConstraintISARule {
 	 */
 	public static final MMConstraint<AccountHoldingInformationRequestV03> forAccountHoldingInformationRequestV03 = new MMConstraint<AccountHoldingInformationRequestV03>() {
 		{
-			validator = ConstraintISARule::checkAccountHoldingInformationRequestV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISARule";
 			definition = "If ProductTransfer/Portfolio/ISA or ProductTransfer/Portfolio/Portfolio is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\n\r\nIf ProductTransfer/Portfolio/ISA or ProductTransfer/Portfolio/Portfolio is present then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.\r\n";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintISARule.forAccountHoldingInformationRequestV04);
 			owner_lazy = () -> AccountHoldingInformationRequestV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountHoldingInformationRequestV03 obj) throws Exception {
+			checkAccountHoldingInformationRequestV03(obj);
 		}
 	};
 	/**
@@ -427,12 +463,16 @@ public class ConstraintISARule {
 	 */
 	public static final MMConstraint<AccountHoldingInformationV04> forAccountHoldingInformationV04 = new MMConstraint<AccountHoldingInformationV04>() {
 		{
-			validator = ConstraintISARule::checkAccountHoldingInformationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISARule";
 			definition = "If ProductTransfer/Portfolio/ISA is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\nIf ProductTransfer/Portfolio/ISA is present, then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.\r\n";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintISARule.forAccountHoldingInformationV05);
 			owner_lazy = () -> AccountHoldingInformationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountHoldingInformationV04 obj) throws Exception {
+			checkAccountHoldingInformationV04(obj);
 		}
 	};
 	/**
@@ -466,12 +506,16 @@ public class ConstraintISARule {
 	 */
 	public static final MMConstraint<PortfolioTransferInstructionV05> forPortfolioTransferInstructionV05 = new MMConstraint<PortfolioTransferInstructionV05>() {
 		{
-			validator = ConstraintISARule::checkPortfolioTransferInstructionV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISARule";
 			definition = "If ProductTransfer/Portfolio/ISA is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\nIf ProductTransfer/Portfolio/ISA is present, then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.\r\n";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintISARule.forPortfolioTransferInstructionV06);
 			owner_lazy = () -> PortfolioTransferInstructionV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PortfolioTransferInstructionV05 obj) throws Exception {
+			checkPortfolioTransferInstructionV05(obj);
 		}
 	};
 	/**
@@ -505,12 +549,16 @@ public class ConstraintISARule {
 	 */
 	public static final MMConstraint<PortfolioTransferConfirmationV05> forPortfolioTransferConfirmationV05 = new MMConstraint<PortfolioTransferConfirmationV05>() {
 		{
-			validator = ConstraintISARule::checkPortfolioTransferConfirmationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISARule";
 			definition = "If ProductTransfer/Portfolio/ISA is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\nIf ProductTransfer/Portfolio/ISA is present, then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.\r\n\r\n";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintISARule.forPortfolioTransferConfirmationV06);
 			owner_lazy = () -> PortfolioTransferConfirmationV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PortfolioTransferConfirmationV05 obj) throws Exception {
+			checkPortfolioTransferConfirmationV05(obj);
 		}
 	};
 	/**
@@ -549,13 +597,17 @@ public class ConstraintISARule {
 	 */
 	public static final MMConstraint<PortfolioTransferConfirmationV06> forPortfolioTransferConfirmationV06 = new MMConstraint<PortfolioTransferConfirmationV06>() {
 		{
-			validator = ConstraintISARule::checkPortfolioTransferConfirmationV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISARule";
 			definition = "If any occurrence of ProductTransfer/Portfolio/ISA is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\nIf any occurrence of ProductTransfer/Portfolio/ISA is present, then the elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.\r\n\r\n";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintISARule.forPortfolioTransferConfirmationV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintISARule.forPortfolioTransferConfirmationV05;
 			owner_lazy = () -> PortfolioTransferConfirmationV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PortfolioTransferConfirmationV06 obj) throws Exception {
+			checkPortfolioTransferConfirmationV06(obj);
 		}
 	};
 	/**
@@ -594,13 +646,17 @@ public class ConstraintISARule {
 	 */
 	public static final MMConstraint<PortfolioTransferInstructionV06> forPortfolioTransferInstructionV06 = new MMConstraint<PortfolioTransferInstructionV06>() {
 		{
-			validator = ConstraintISARule::checkPortfolioTransferInstructionV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISARule";
 			definition = "If ProductTransfer/Portfolio/ISA is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\nIf ProductTransfer/Portfolio/ISA is present, then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.\r\n";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintISARule.forPortfolioTransferInstructionV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintISARule.forPortfolioTransferInstructionV05;
 			owner_lazy = () -> PortfolioTransferInstructionV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PortfolioTransferInstructionV06 obj) throws Exception {
+			checkPortfolioTransferInstructionV06(obj);
 		}
 	};
 	/**
@@ -625,11 +681,15 @@ public class ConstraintISARule {
 	 */
 	public static final MMConstraint<ISATransfer4> forISATransfer4 = new MMConstraint<ISATransfer4>() {
 		{
-			validator = ConstraintISARule::checkISATransfer4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISARule";
 			definition = "If ProductTransfer\\Portfolio\\ISA or ProductTransfer\\Portfolio\\Portfolio is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\n\r\nIf ProductTransfer\\Portfolio\\ISA or ProductTransfer\\Portfolio\\Portfolio is present then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.";
 			owner_lazy = () -> ISATransfer4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ISATransfer4 obj) throws Exception {
+			checkISATransfer4(obj);
 		}
 	};
 	/**
@@ -654,11 +714,15 @@ public class ConstraintISARule {
 	 */
 	public static final MMConstraint<ISATransfer6> forISATransfer6 = new MMConstraint<ISATransfer6>() {
 		{
-			validator = ConstraintISARule::checkISATransfer6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISARule";
 			definition = "If ProductTransfer\\Portfolio\\ISA or ProductTransfer\\Portfolio\\Portfolio is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\n\r\nIf ProductTransfer\\Portfolio\\ISA or ProductTransfer\\Portfolio\\Portfolio is present then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.";
 			owner_lazy = () -> ISATransfer6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ISATransfer6 obj) throws Exception {
+			checkISATransfer6(obj);
 		}
 	};
 	/**
@@ -684,11 +748,15 @@ public class ConstraintISARule {
 	 */
 	public static final MMConstraint<PEPISATransfer11> forPEPISATransfer11 = new MMConstraint<PEPISATransfer11>() {
 		{
-			validator = ConstraintISARule::checkPEPISATransfer11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISARule";
 			definition = "If ProductTransfer\\Portfolio\\ISA or ProductTransfer\\Portfolio\\Portfolio is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\n\r\nIf ProductTransfer\\Portfolio\\ISA or ProductTransfer\\Portfolio\\Portfolio is present then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.";
 			owner_lazy = () -> PEPISATransfer11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PEPISATransfer11 obj) throws Exception {
+			checkPEPISATransfer11(obj);
 		}
 	};
 	/**
@@ -721,12 +789,16 @@ public class ConstraintISARule {
 	 */
 	public static final MMConstraint<ISATransfer9> forISATransfer9 = new MMConstraint<ISATransfer9>() {
 		{
-			validator = ConstraintISARule::checkISATransfer9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISARule";
 			definition = "If ProductTransfer\\Portfolio\\ISA or ProductTransfer\\Portfolio\\Portfolio is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\n\r\nIf ProductTransfer\\Portfolio\\ISA or ProductTransfer\\Portfolio\\Portfolio is present then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintISARule.forISATransfer12);
 			owner_lazy = () -> ISATransfer9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ISATransfer9 obj) throws Exception {
+			checkISATransfer9(obj);
 		}
 	};
 	/**
@@ -751,11 +823,15 @@ public class ConstraintISARule {
 	 */
 	public static final MMConstraint<ISATransfer2> forISATransfer2 = new MMConstraint<ISATransfer2>() {
 		{
-			validator = ConstraintISARule::checkISATransfer2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISARule";
 			definition = "If ProductTransfer\\Portfolio\\ISA or ProductTransfer\\Portfolio\\Portfolio is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\n\r\nIf ProductTransfer\\Portfolio\\ISA or ProductTransfer\\Portfolio\\Portfolio is present then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.";
 			owner_lazy = () -> ISATransfer2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ISATransfer2 obj) throws Exception {
+			checkISATransfer2(obj);
 		}
 	};
 	/**
@@ -780,11 +856,15 @@ public class ConstraintISARule {
 	 */
 	public static final MMConstraint<ISATransfer10> forISATransfer10 = new MMConstraint<ISATransfer10>() {
 		{
-			validator = ConstraintISARule::checkISATransfer10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISARule";
 			definition = "If ProductTransfer\\Portfolio\\ISA or ProductTransfer\\Portfolio\\Portfolio is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\n\r\nIf ProductTransfer\\Portfolio\\ISA or ProductTransfer\\Portfolio\\Portfolio is present then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.";
 			owner_lazy = () -> ISATransfer10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ISATransfer10 obj) throws Exception {
+			checkISATransfer10(obj);
 		}
 	};
 	/**
@@ -809,11 +889,15 @@ public class ConstraintISARule {
 	 */
 	public static final MMConstraint<ISATransfer1> forISATransfer1 = new MMConstraint<ISATransfer1>() {
 		{
-			validator = ConstraintISARule::checkISATransfer1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISARule";
 			definition = "If ProductTransfer\\Portfolio\\ISA or ProductTransfer\\Portfolio\\Portfolio is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\n\r\nIf ProductTransfer\\Portfolio\\ISA or ProductTransfer\\Portfolio\\Portfolio is present then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.";
 			owner_lazy = () -> ISATransfer1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ISATransfer1 obj) throws Exception {
+			checkISATransfer1(obj);
 		}
 	};
 	/**
@@ -838,11 +922,15 @@ public class ConstraintISARule {
 	 */
 	public static final MMConstraint<ISATransfer7> forISATransfer7 = new MMConstraint<ISATransfer7>() {
 		{
-			validator = ConstraintISARule::checkISATransfer7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISARule";
 			definition = "If ProductTransfer\\Portfolio\\ISA or ProductTransfer\\Portfolio\\Portfolio is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\n\r\nIf ProductTransfer\\Portfolio\\ISA or ProductTransfer\\Portfolio\\Portfolio is present then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.";
 			owner_lazy = () -> ISATransfer7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ISATransfer7 obj) throws Exception {
+			checkISATransfer7(obj);
 		}
 	};
 	/**
@@ -867,11 +955,15 @@ public class ConstraintISARule {
 	 */
 	public static final MMConstraint<ISATransfer5> forISATransfer5 = new MMConstraint<ISATransfer5>() {
 		{
-			validator = ConstraintISARule::checkISATransfer5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISARule";
 			definition = "If ProductTransfer\\Portfolio\\ISA or ProductTransfer\\Portfolio\\Portfolio is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\n\r\nIf ProductTransfer\\Portfolio\\ISA or ProductTransfer\\Portfolio\\Portfolio is present then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.";
 			owner_lazy = () -> ISATransfer5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ISATransfer5 obj) throws Exception {
+			checkISATransfer5(obj);
 		}
 	};
 	/**
@@ -909,13 +1001,17 @@ public class ConstraintISARule {
 	 */
 	public static final MMConstraint<ISATransfer12> forISATransfer12 = new MMConstraint<ISATransfer12>() {
 		{
-			validator = ConstraintISARule::checkISATransfer12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISARule";
 			definition = "If ProductTransfer/Portfolio/ISA or ProductTransfer/Portfolio/Portfolio is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\n\r\nIf ProductTransfer/Portfolio/ISA or ProductTransfer/Portfolio/Portfolio is present then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.\r\n";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintISARule.forISATransfer19);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintISARule.forISATransfer9;
 			owner_lazy = () -> ISATransfer12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ISATransfer12 obj) throws Exception {
+			checkISATransfer12(obj);
 		}
 	};
 	/**
@@ -953,13 +1049,17 @@ public class ConstraintISARule {
 	 */
 	public static final MMConstraint<ISATransfer19> forISATransfer19 = new MMConstraint<ISATransfer19>() {
 		{
-			validator = ConstraintISARule::checkISATransfer19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISARule";
 			definition = "If any occurrence of ProductTransfer/Portfolio/ISA or ProductTransfer/Portfolio/Portfolio is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\nIf any occurrence of ProductTransfer/Portfolio/ISA or ProductTransfer/Portfolio/Portfolio is present then the elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.\r\n";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintISARule.forISATransfer24);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintISARule.forISATransfer12;
 			owner_lazy = () -> ISATransfer19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ISATransfer19 obj) throws Exception {
+			checkISATransfer19(obj);
 		}
 	};
 	/**
@@ -989,12 +1089,16 @@ public class ConstraintISARule {
 	 */
 	public static final MMConstraint<ISATransfer24> forISATransfer24 = new MMConstraint<ISATransfer24>() {
 		{
-			validator = ConstraintISARule::checkISATransfer24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISARule";
 			definition = "If any occurrence of ProductTransfer/Portfolio/ISA is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed. \r\nIf any occurrence of ProductTransfer/Portfolio/ISA is present then the elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.\r\n";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintISARule.forISATransfer19;
 			owner_lazy = () -> ISATransfer24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ISATransfer24 obj) throws Exception {
+			checkISATransfer24(obj);
 		}
 	};
 

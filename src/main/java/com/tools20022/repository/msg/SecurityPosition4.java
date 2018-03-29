@@ -24,6 +24,8 @@ import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.InstructionForMeeting;
 import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.EligiblePosition1;
+import com.tools20022.repository.msg.VoteInstruction1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -107,7 +109,7 @@ public class SecurityPosition4 {
 	 * definition} = "Amount of securities that are eligible for the vote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSubAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityPosition4, EligiblePosition1> mmSubAccount = new MMMessageAssociationEnd<SecurityPosition4, EligiblePosition1>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmSubAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityPosition4.mmObject();
@@ -119,7 +121,17 @@ public class SecurityPosition4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.EligiblePosition1.mmObject();
+			type_lazy = () -> EligiblePosition1.mmObject();
+		}
+
+		@Override
+		public EligiblePosition1 getValue(SecurityPosition4 obj) {
+			return obj.getSubAccount();
+		}
+
+		@Override
+		public void setValue(SecurityPosition4 obj, EligiblePosition1 value) {
+			obj.setSubAccount(value);
 		}
 	};
 	@XmlElement(name = "VoteInstr", required = true)
@@ -155,7 +167,7 @@ public class SecurityPosition4 {
 	 * definition} = "Specifies how a party has voted for each agenda item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmVoteInstruction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityPosition4, VoteInstruction1> mmVoteInstruction = new MMMessageAssociationEnd<SecurityPosition4, VoteInstruction1>() {
 		{
 			businessElementTrace_lazy = () -> InstructionForMeeting.mmVoteInstruction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityPosition4.mmObject();
@@ -167,7 +179,17 @@ public class SecurityPosition4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.VoteInstruction1.mmObject();
+			type_lazy = () -> VoteInstruction1.mmObject();
+		}
+
+		@Override
+		public VoteInstruction1 getValue(SecurityPosition4 obj) {
+			return obj.getVoteInstruction();
+		}
+
+		@Override
+		public void setValue(SecurityPosition4 obj, VoteInstruction1 value) {
+			obj.setVoteInstruction(value);
 		}
 	};
 
@@ -189,7 +211,7 @@ public class SecurityPosition4 {
 		return subAccount;
 	}
 
-	public SecurityPosition4 setSubAccount(com.tools20022.repository.msg.EligiblePosition1 subAccount) {
+	public SecurityPosition4 setSubAccount(EligiblePosition1 subAccount) {
 		this.subAccount = Objects.requireNonNull(subAccount);
 		return this;
 	}
@@ -198,7 +220,7 @@ public class SecurityPosition4 {
 		return voteInstruction;
 	}
 
-	public SecurityPosition4 setVoteInstruction(com.tools20022.repository.msg.VoteInstruction1 voteInstruction) {
+	public SecurityPosition4 setVoteInstruction(VoteInstruction1 voteInstruction) {
 		this.voteInstruction = Objects.requireNonNull(voteInstruction);
 		return this;
 	}

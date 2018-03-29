@@ -115,7 +115,7 @@ public class MetalCommodityPrecious1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBaseProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MetalCommodityPrecious1, AssetClassProductType7Code> mmBaseProduct = new MMMessageAttribute<MetalCommodityPrecious1, AssetClassProductType7Code>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MetalCommodityPrecious1.mmObject();
@@ -127,6 +127,16 @@ public class MetalCommodityPrecious1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassProductType7Code.mmObject();
+		}
+
+		@Override
+		public AssetClassProductType7Code getValue(MetalCommodityPrecious1 obj) {
+			return obj.getBaseProduct();
+		}
+
+		@Override
+		public void setValue(MetalCommodityPrecious1 obj, AssetClassProductType7Code value) {
+			obj.setBaseProduct(value);
 		}
 	};
 	@XmlElement(name = "SubPdct", required = true)
@@ -164,7 +174,7 @@ public class MetalCommodityPrecious1 {
 	 * definition} = "Sub-product for the underlying asset class."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MetalCommodityPrecious1, AssetClassSubProductType16Code> mmSubProduct = new MMMessageAttribute<MetalCommodityPrecious1, AssetClassSubProductType16Code>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MetalCommodityPrecious1.mmObject();
@@ -176,6 +186,16 @@ public class MetalCommodityPrecious1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassSubProductType16Code.mmObject();
+		}
+
+		@Override
+		public AssetClassSubProductType16Code getValue(MetalCommodityPrecious1 obj) {
+			return obj.getSubProduct();
+		}
+
+		@Override
+		public void setValue(MetalCommodityPrecious1 obj, AssetClassSubProductType16Code value) {
+			obj.setSubProduct(value);
 		}
 	};
 	@XmlElement(name = "AddtlSubPdct", required = true)
@@ -210,7 +230,7 @@ public class MetalCommodityPrecious1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalSubProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MetalCommodityPrecious1, AssetClassDetailedSubProductType11Code> mmAdditionalSubProduct = new MMMessageAttribute<MetalCommodityPrecious1, AssetClassDetailedSubProductType11Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MetalCommodityPrecious1.mmObject();
 			isDerived = false;
@@ -221,6 +241,16 @@ public class MetalCommodityPrecious1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassDetailedSubProductType11Code.mmObject();
+		}
+
+		@Override
+		public AssetClassDetailedSubProductType11Code getValue(MetalCommodityPrecious1 obj) {
+			return obj.getAdditionalSubProduct();
+		}
+
+		@Override
+		public void setValue(MetalCommodityPrecious1 obj, AssetClassDetailedSubProductType11Code value) {
+			obj.setAdditionalSubProduct(value);
 		}
 	};
 

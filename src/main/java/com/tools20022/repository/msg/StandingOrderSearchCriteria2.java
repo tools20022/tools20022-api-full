@@ -33,6 +33,8 @@ import com.tools20022.repository.entity.CashStandingOrder;
 import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.entity.StandingOrder;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5;
+import com.tools20022.repository.msg.CashAccount24;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -159,7 +161,7 @@ public class StandingOrderSearchCriteria2 {
 	 * StandingOrderSearchCriteria1.mmKeyAttributesIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmKeyAttributesIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrderSearchCriteria2, Optional<TrueFalseIndicator>> mmKeyAttributesIndicator = new MMMessageAttribute<StandingOrderSearchCriteria2, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderSearchCriteria2.mmObject();
 			isDerived = false;
@@ -171,6 +173,16 @@ public class StandingOrderSearchCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(StandingOrderSearchCriteria2 obj) {
+			return obj.getKeyAttributesIndicator();
+		}
+
+		@Override
+		public void setValue(StandingOrderSearchCriteria2 obj, Optional<TrueFalseIndicator> value) {
+			obj.setKeyAttributesIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StgOrdrId")
@@ -214,7 +226,7 @@ public class StandingOrderSearchCriteria2 {
 	 * StandingOrderSearchCriteria1.mmStandingOrderIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStandingOrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrderSearchCriteria2, Optional<Max35Text>> mmStandingOrderIdentification = new MMMessageAttribute<StandingOrderSearchCriteria2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> StandingOrder.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderSearchCriteria2.mmObject();
@@ -227,6 +239,16 @@ public class StandingOrderSearchCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(StandingOrderSearchCriteria2 obj) {
+			return obj.getStandingOrderIdentification();
+		}
+
+		@Override
+		public void setValue(StandingOrderSearchCriteria2 obj, Optional<Max35Text> value) {
+			obj.setStandingOrderIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -269,7 +291,7 @@ public class StandingOrderSearchCriteria2 {
 	 * StandingOrderSearchCriteria1.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrderSearchCriteria2, Optional<StandingOrderType1Choice>> mmType = new MMMessageAttribute<StandingOrderSearchCriteria2, Optional<StandingOrderType1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> StandingOrder.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderSearchCriteria2.mmObject();
@@ -282,6 +304,16 @@ public class StandingOrderSearchCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> StandingOrderType1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<StandingOrderType1Choice> getValue(StandingOrderSearchCriteria2 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(StandingOrderSearchCriteria2 obj, Optional<StandingOrderType1Choice> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Acct")
@@ -324,7 +356,7 @@ public class StandingOrderSearchCriteria2 {
 	 * StandingOrderSearchCriteria1.mmAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StandingOrderSearchCriteria2, Optional<CashAccount24>> mmAccount = new MMMessageAssociationEnd<StandingOrderSearchCriteria2, Optional<CashAccount24>>() {
 		{
 			businessElementTrace_lazy = () -> CashStandingOrder.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderSearchCriteria2.mmObject();
@@ -337,7 +369,17 @@ public class StandingOrderSearchCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
+			type_lazy = () -> CashAccount24.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount24> getValue(StandingOrderSearchCriteria2 obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(StandingOrderSearchCriteria2 obj, Optional<CashAccount24> value) {
+			obj.setAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ccy")
@@ -377,7 +419,7 @@ public class StandingOrderSearchCriteria2 {
 	 * StandingOrderSearchCriteria1.mmCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrderSearchCriteria2, Optional<ActiveCurrencyCode>> mmCurrency = new MMMessageAttribute<StandingOrderSearchCriteria2, Optional<ActiveCurrencyCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderSearchCriteria2.mmObject();
 			isDerived = false;
@@ -389,6 +431,16 @@ public class StandingOrderSearchCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyCode> getValue(StandingOrderSearchCriteria2 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(StandingOrderSearchCriteria2 obj, Optional<ActiveCurrencyCode> value) {
+			obj.setCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "VldtyPrd")
@@ -431,7 +483,7 @@ public class StandingOrderSearchCriteria2 {
 	 * StandingOrderSearchCriteria1.mmValidityPeriod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValidityPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrderSearchCriteria2, Optional<DatePeriod2Choice>> mmValidityPeriod = new MMMessageAttribute<StandingOrderSearchCriteria2, Optional<DatePeriod2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> StandingOrder.mmValidityPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderSearchCriteria2.mmObject();
@@ -444,6 +496,16 @@ public class StandingOrderSearchCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DatePeriod2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DatePeriod2Choice> getValue(StandingOrderSearchCriteria2 obj) {
+			return obj.getValidityPeriod();
+		}
+
+		@Override
+		public void setValue(StandingOrderSearchCriteria2 obj, Optional<DatePeriod2Choice> value) {
+			obj.setValidityPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SysMmb")
@@ -481,7 +543,7 @@ public class StandingOrderSearchCriteria2 {
 	 * StandingOrderSearchCriteria1.mmSystemMember}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSystemMember = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StandingOrderSearchCriteria2, Optional<BranchAndFinancialInstitutionIdentification5>> mmSystemMember = new MMMessageAssociationEnd<StandingOrderSearchCriteria2, Optional<BranchAndFinancialInstitutionIdentification5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderSearchCriteria2.mmObject();
 			isDerived = false;
@@ -493,7 +555,17 @@ public class StandingOrderSearchCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+
+		@Override
+		public Optional<BranchAndFinancialInstitutionIdentification5> getValue(StandingOrderSearchCriteria2 obj) {
+			return obj.getSystemMember();
+		}
+
+		@Override
+		public void setValue(StandingOrderSearchCriteria2 obj, Optional<BranchAndFinancialInstitutionIdentification5> value) {
+			obj.setSystemMember(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RspnsblPty")
@@ -535,7 +607,7 @@ public class StandingOrderSearchCriteria2 {
 	 * StandingOrderSearchCriteria1.mmResponsibleParty}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmResponsibleParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StandingOrderSearchCriteria2, Optional<BranchAndFinancialInstitutionIdentification5>> mmResponsibleParty = new MMMessageAssociationEnd<StandingOrderSearchCriteria2, Optional<BranchAndFinancialInstitutionIdentification5>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderSearchCriteria2.mmObject();
@@ -548,7 +620,17 @@ public class StandingOrderSearchCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+
+		@Override
+		public Optional<BranchAndFinancialInstitutionIdentification5> getValue(StandingOrderSearchCriteria2 obj) {
+			return obj.getResponsibleParty();
+		}
+
+		@Override
+		public void setValue(StandingOrderSearchCriteria2 obj, Optional<BranchAndFinancialInstitutionIdentification5> value) {
+			obj.setResponsibleParty(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AssoctdPoolAcct")
@@ -593,7 +675,7 @@ public class StandingOrderSearchCriteria2 {
 	 * StandingOrderSearchCriteria1.mmAssociatedPoolAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAssociatedPoolAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrderSearchCriteria2, Optional<AccountIdentification4Choice>> mmAssociatedPoolAccount = new MMMessageAttribute<StandingOrderSearchCriteria2, Optional<AccountIdentification4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderSearchCriteria2.mmObject();
@@ -606,6 +688,16 @@ public class StandingOrderSearchCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AccountIdentification4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AccountIdentification4Choice> getValue(StandingOrderSearchCriteria2 obj) {
+			return obj.getAssociatedPoolAccount();
+		}
+
+		@Override
+		public void setValue(StandingOrderSearchCriteria2 obj, Optional<AccountIdentification4Choice> value) {
+			obj.setAssociatedPoolAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LkSetId")
@@ -649,7 +741,7 @@ public class StandingOrderSearchCriteria2 {
 	 * StandingOrderSearchCriteria1.mmLinkSetIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLinkSetIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrderSearchCriteria2, Optional<Max35Text>> mmLinkSetIdentification = new MMMessageAttribute<StandingOrderSearchCriteria2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> StandingOrder.mmLinkSetIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderSearchCriteria2.mmObject();
@@ -662,6 +754,16 @@ public class StandingOrderSearchCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(StandingOrderSearchCriteria2 obj) {
+			return obj.getLinkSetIdentification();
+		}
+
+		@Override
+		public void setValue(StandingOrderSearchCriteria2 obj, Optional<Max35Text> value) {
+			obj.setLinkSetIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LkSetOrdrId")
@@ -705,7 +807,7 @@ public class StandingOrderSearchCriteria2 {
 	 * StandingOrderSearchCriteria1.mmLinkSetOrderIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLinkSetOrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrderSearchCriteria2, Optional<Max35Text>> mmLinkSetOrderIdentification = new MMMessageAttribute<StandingOrderSearchCriteria2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> StandingOrder.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderSearchCriteria2.mmObject();
@@ -718,6 +820,16 @@ public class StandingOrderSearchCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(StandingOrderSearchCriteria2 obj) {
+			return obj.getLinkSetOrderIdentification();
+		}
+
+		@Override
+		public void setValue(StandingOrderSearchCriteria2 obj, Optional<Max35Text> value) {
+			obj.setLinkSetOrderIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LkSetOrdrSeq")
@@ -761,7 +873,7 @@ public class StandingOrderSearchCriteria2 {
 	 * StandingOrderSearchCriteria1.mmLinkSetOrderSequence}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLinkSetOrderSequence = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrderSearchCriteria2, Optional<Number>> mmLinkSetOrderSequence = new MMMessageAttribute<StandingOrderSearchCriteria2, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> StandingOrder.mmStandingOrderSequence;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderSearchCriteria2.mmObject();
@@ -774,6 +886,16 @@ public class StandingOrderSearchCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(StandingOrderSearchCriteria2 obj) {
+			return obj.getLinkSetOrderSequence();
+		}
+
+		@Override
+		public void setValue(StandingOrderSearchCriteria2 obj, Optional<Number> value) {
+			obj.setLinkSetOrderSequence(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ZeroSweepInd")
@@ -818,7 +940,7 @@ public class StandingOrderSearchCriteria2 {
 	 * StandingOrderSearchCriteria1.mmZeroSweepIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmZeroSweepIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrderSearchCriteria2, Optional<TrueFalseIndicator>> mmZeroSweepIndicator = new MMMessageAttribute<StandingOrderSearchCriteria2, Optional<TrueFalseIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> CashStandingOrder.mmZeroSweepIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderSearchCriteria2.mmObject();
@@ -831,6 +953,16 @@ public class StandingOrderSearchCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(StandingOrderSearchCriteria2 obj) {
+			return obj.getZeroSweepIndicator();
+		}
+
+		@Override
+		public void setValue(StandingOrderSearchCriteria2 obj, Optional<TrueFalseIndicator> value) {
+			obj.setZeroSweepIndicator(value.orElse(null));
 		}
 	};
 
@@ -885,7 +1017,7 @@ public class StandingOrderSearchCriteria2 {
 		return account == null ? Optional.empty() : Optional.of(account);
 	}
 
-	public StandingOrderSearchCriteria2 setAccount(com.tools20022.repository.msg.CashAccount24 account) {
+	public StandingOrderSearchCriteria2 setAccount(CashAccount24 account) {
 		this.account = account;
 		return this;
 	}
@@ -912,7 +1044,7 @@ public class StandingOrderSearchCriteria2 {
 		return systemMember == null ? Optional.empty() : Optional.of(systemMember);
 	}
 
-	public StandingOrderSearchCriteria2 setSystemMember(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 systemMember) {
+	public StandingOrderSearchCriteria2 setSystemMember(BranchAndFinancialInstitutionIdentification5 systemMember) {
 		this.systemMember = systemMember;
 		return this;
 	}
@@ -921,7 +1053,7 @@ public class StandingOrderSearchCriteria2 {
 		return responsibleParty == null ? Optional.empty() : Optional.of(responsibleParty);
 	}
 
-	public StandingOrderSearchCriteria2 setResponsibleParty(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 responsibleParty) {
+	public StandingOrderSearchCriteria2 setResponsibleParty(BranchAndFinancialInstitutionIdentification5 responsibleParty) {
 		this.responsibleParty = responsibleParty;
 		return this;
 	}

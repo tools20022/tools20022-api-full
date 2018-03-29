@@ -54,12 +54,16 @@ public class ConstraintDateTimeAndCondition7Rule {
 	 */
 	public static final MMConstraint<ExpiryTerms2> forExpiryTerms2 = new MMConstraint<ExpiryTerms2>() {
 		{
-			validator = ConstraintDateTimeAndCondition7Rule::checkExpiryTerms2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = " DateTimeAndCondition7Rule";
 			definition = "If DateTime is not present and OpenEndedIndicator is FALSE, Condition must be present.";
 			owner_lazy = () -> ExpiryTerms2.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Condition</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/DateTime</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/OpenEndedIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(ExpiryTerms2 obj) throws Exception {
+			checkExpiryTerms2(obj);
 		}
 	};
 

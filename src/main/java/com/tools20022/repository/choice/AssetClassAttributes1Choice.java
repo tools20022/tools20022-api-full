@@ -110,7 +110,7 @@ public class AssetClassAttributes1Choice {
 	 * "Asset class is a non-financial instrument of type interest rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInterest = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassAttributes1Choice, DerivativeInterest2> mmInterest = new MMMessageAssociationEnd<AssetClassAttributes1Choice, DerivativeInterest2>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmInterest;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassAttributes1Choice.mmObject();
@@ -123,6 +123,16 @@ public class AssetClassAttributes1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DerivativeInterest2.mmObject();
+		}
+
+		@Override
+		public DerivativeInterest2 getValue(AssetClassAttributes1Choice obj) {
+			return obj.getInterest();
+		}
+
+		@Override
+		public void setValue(AssetClassAttributes1Choice obj, DerivativeInterest2 value) {
+			obj.setInterest(value);
 		}
 	};
 	@XmlElement(name = "FX", required = true)
@@ -160,7 +170,7 @@ public class AssetClassAttributes1Choice {
 	 * "Asset class is a non-financial instrument of type foreign exchange."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmForeignExchange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassAttributes1Choice, DerivativeForeignExchange2> mmForeignExchange = new MMMessageAssociationEnd<AssetClassAttributes1Choice, DerivativeForeignExchange2>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmExchangeRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassAttributes1Choice.mmObject();
@@ -173,6 +183,16 @@ public class AssetClassAttributes1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DerivativeForeignExchange2.mmObject();
+		}
+
+		@Override
+		public DerivativeForeignExchange2 getValue(AssetClassAttributes1Choice obj) {
+			return obj.getForeignExchange();
+		}
+
+		@Override
+		public void setValue(AssetClassAttributes1Choice obj, DerivativeForeignExchange2 value) {
+			obj.setForeignExchange(value);
 		}
 	};
 	@XmlElement(name = "Both", required = true)
@@ -209,7 +229,7 @@ public class AssetClassAttributes1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBoth = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassAttributes1Choice, AssetClassAttributes1> mmBoth = new MMMessageAssociationEnd<AssetClassAttributes1Choice, AssetClassAttributes1>() {
 		{
 			businessComponentTrace_lazy = () -> Derivative.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassAttributes1Choice.mmObject();
@@ -222,6 +242,16 @@ public class AssetClassAttributes1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AssetClassAttributes1.mmObject();
+		}
+
+		@Override
+		public AssetClassAttributes1 getValue(AssetClassAttributes1Choice obj) {
+			return obj.getBoth();
+		}
+
+		@Override
+		public void setValue(AssetClassAttributes1Choice obj, AssetClassAttributes1 value) {
+			obj.setBoth(value);
 		}
 	};
 

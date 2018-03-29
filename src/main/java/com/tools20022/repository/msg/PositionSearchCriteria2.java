@@ -26,6 +26,8 @@ import com.tools20022.repository.choice.SecuritiesBalanceType7Choice;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification100;
+import com.tools20022.repository.msg.SecurityIdentification19;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -126,7 +128,7 @@ public class PositionSearchCriteria2 {
 	 * PositionSearchCriteria1.mmAccountOwner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PositionSearchCriteria2, Optional<PartyIdentification100>> mmAccountOwner = new MMMessageAttribute<PositionSearchCriteria2, Optional<PartyIdentification100>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PositionSearchCriteria2.mmObject();
 			isDerived = false;
@@ -137,7 +139,17 @@ public class PositionSearchCriteria2 {
 			previousVersion_lazy = () -> PositionSearchCriteria1.mmAccountOwner;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification100.mmObject();
+			complexType_lazy = () -> PartyIdentification100.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification100> getValue(PositionSearchCriteria2 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(PositionSearchCriteria2 obj, Optional<PartyIdentification100> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctSvcr")
@@ -177,7 +189,7 @@ public class PositionSearchCriteria2 {
 	 * PositionSearchCriteria1.mmAccountServicer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PositionSearchCriteria2, Optional<PartyIdentification100>> mmAccountServicer = new MMMessageAttribute<PositionSearchCriteria2, Optional<PartyIdentification100>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PositionSearchCriteria2.mmObject();
 			isDerived = false;
@@ -188,7 +200,17 @@ public class PositionSearchCriteria2 {
 			previousVersion_lazy = () -> PositionSearchCriteria1.mmAccountServicer;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification100.mmObject();
+			complexType_lazy = () -> PartyIdentification100.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification100> getValue(PositionSearchCriteria2 obj) {
+			return obj.getAccountServicer();
+		}
+
+		@Override
+		public void setValue(PositionSearchCriteria2 obj, Optional<PartyIdentification100> value) {
+			obj.setAccountServicer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SfkpgAcct")
@@ -225,7 +247,7 @@ public class PositionSearchCriteria2 {
 	 * PositionSearchCriteria1.mmSafekeepingAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PositionSearchCriteria2, Optional<SecuritiesAccount2Choice>> mmSafekeepingAccount = new MMMessageAssociationEnd<PositionSearchCriteria2, Optional<SecuritiesAccount2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PositionSearchCriteria2.mmObject();
 			isDerived = false;
@@ -238,6 +260,16 @@ public class PositionSearchCriteria2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SecuritiesAccount2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesAccount2Choice> getValue(PositionSearchCriteria2 obj) {
+			return obj.getSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(PositionSearchCriteria2 obj, Optional<SecuritiesAccount2Choice> value) {
+			obj.setSafekeepingAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FinInstrm")
@@ -276,7 +308,7 @@ public class PositionSearchCriteria2 {
 	 * PositionSearchCriteria1.mmFinancialInstrument}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PositionSearchCriteria2, Optional<SecurityIdentification19>> mmFinancialInstrument = new MMMessageAssociationEnd<PositionSearchCriteria2, Optional<SecurityIdentification19>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PositionSearchCriteria2.mmObject();
 			isDerived = false;
@@ -288,7 +320,17 @@ public class PositionSearchCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification19.mmObject();
+			type_lazy = () -> SecurityIdentification19.mmObject();
+		}
+
+		@Override
+		public Optional<SecurityIdentification19> getValue(PositionSearchCriteria2 obj) {
+			return obj.getFinancialInstrument();
+		}
+
+		@Override
+		public void setValue(PositionSearchCriteria2 obj, Optional<SecurityIdentification19> value) {
+			obj.setFinancialInstrument(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtryOfIsse")
@@ -325,7 +367,7 @@ public class PositionSearchCriteria2 {
 	 * PositionSearchCriteria1.mmCountryOfIssue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountryOfIssue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PositionSearchCriteria2, Optional<CountryCode>> mmCountryOfIssue = new MMMessageAttribute<PositionSearchCriteria2, Optional<CountryCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PositionSearchCriteria2.mmObject();
 			isDerived = false;
@@ -337,6 +379,16 @@ public class PositionSearchCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(PositionSearchCriteria2 obj) {
+			return obj.getCountryOfIssue();
+		}
+
+		@Override
+		public void setValue(PositionSearchCriteria2 obj, Optional<CountryCode> value) {
+			obj.setCountryOfIssue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SubBalTp")
@@ -375,7 +427,7 @@ public class PositionSearchCriteria2 {
 	 * PositionSearchCriteria1.mmSubBalanceType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSubBalanceType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PositionSearchCriteria2, Optional<SecuritiesBalanceType7Choice>> mmSubBalanceType = new MMMessageAssociationEnd<PositionSearchCriteria2, Optional<SecuritiesBalanceType7Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PositionSearchCriteria2.mmObject();
 			isDerived = false;
@@ -388,6 +440,16 @@ public class PositionSearchCriteria2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SecuritiesBalanceType7Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesBalanceType7Choice> getValue(PositionSearchCriteria2 obj) {
+			return obj.getSubBalanceType();
+		}
+
+		@Override
+		public void setValue(PositionSearchCriteria2 obj, Optional<SecuritiesBalanceType7Choice> value) {
+			obj.setSubBalanceType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RtrZeroPos", required = true)
@@ -425,7 +487,7 @@ public class PositionSearchCriteria2 {
 	 * PositionSearchCriteria1.mmReturnZeroPosition}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReturnZeroPosition = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PositionSearchCriteria2, TrueFalseIndicator> mmReturnZeroPosition = new MMMessageAttribute<PositionSearchCriteria2, TrueFalseIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PositionSearchCriteria2.mmObject();
 			isDerived = false;
@@ -437,6 +499,16 @@ public class PositionSearchCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public TrueFalseIndicator getValue(PositionSearchCriteria2 obj) {
+			return obj.getReturnZeroPosition();
+		}
+
+		@Override
+		public void setValue(PositionSearchCriteria2 obj, TrueFalseIndicator value) {
+			obj.setReturnZeroPosition(value);
 		}
 	};
 
@@ -461,7 +533,7 @@ public class PositionSearchCriteria2 {
 		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public PositionSearchCriteria2 setAccountOwner(com.tools20022.repository.msg.PartyIdentification100 accountOwner) {
+	public PositionSearchCriteria2 setAccountOwner(PartyIdentification100 accountOwner) {
 		this.accountOwner = accountOwner;
 		return this;
 	}
@@ -470,7 +542,7 @@ public class PositionSearchCriteria2 {
 		return accountServicer == null ? Optional.empty() : Optional.of(accountServicer);
 	}
 
-	public PositionSearchCriteria2 setAccountServicer(com.tools20022.repository.msg.PartyIdentification100 accountServicer) {
+	public PositionSearchCriteria2 setAccountServicer(PartyIdentification100 accountServicer) {
 		this.accountServicer = accountServicer;
 		return this;
 	}
@@ -488,7 +560,7 @@ public class PositionSearchCriteria2 {
 		return financialInstrument == null ? Optional.empty() : Optional.of(financialInstrument);
 	}
 
-	public PositionSearchCriteria2 setFinancialInstrument(com.tools20022.repository.msg.SecurityIdentification19 financialInstrument) {
+	public PositionSearchCriteria2 setFinancialInstrument(SecurityIdentification19 financialInstrument) {
 		this.financialInstrument = financialInstrument;
 		return this;
 	}

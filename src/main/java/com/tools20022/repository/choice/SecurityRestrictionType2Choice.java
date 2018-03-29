@@ -109,7 +109,7 @@ public class SecurityRestrictionType2Choice {
 	 * SecurityRestrictionType1Choice.mmRestrictionType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRestrictionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityRestrictionType2Choice, RestrictionType1Code> mmRestrictionType = new MMMessageAttribute<SecurityRestrictionType2Choice, RestrictionType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityRestrictionType2Choice.mmObject();
 			isDerived = false;
@@ -121,6 +121,16 @@ public class SecurityRestrictionType2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictionType1Code.mmObject();
+		}
+
+		@Override
+		public RestrictionType1Code getValue(SecurityRestrictionType2Choice obj) {
+			return obj.getRestrictionType();
+		}
+
+		@Override
+		public void setValue(SecurityRestrictionType2Choice obj, RestrictionType1Code value) {
+			obj.setRestrictionType(value);
 		}
 	};
 	@XmlElement(name = "PrtryRstrctn", required = true)
@@ -160,7 +170,7 @@ public class SecurityRestrictionType2Choice {
 	 * SecurityRestrictionType1Choice.mmProprietaryRestriction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietaryRestriction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityRestrictionType2Choice, GenericIdentification30> mmProprietaryRestriction = new MMMessageAttribute<SecurityRestrictionType2Choice, GenericIdentification30>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityRestrictionType2Choice.mmObject();
 			isDerived = false;
@@ -172,6 +182,16 @@ public class SecurityRestrictionType2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(SecurityRestrictionType2Choice obj) {
+			return obj.getProprietaryRestriction();
+		}
+
+		@Override
+		public void setValue(SecurityRestrictionType2Choice obj, GenericIdentification30 value) {
+			obj.setProprietaryRestriction(value);
 		}
 	};
 

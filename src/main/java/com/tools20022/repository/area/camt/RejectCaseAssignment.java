@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.Case;
 import com.tools20022.repository.msg.CaseAssignment;
 import com.tools20022.repository.msg.CaseAssignmentRejectionJustification;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -131,7 +130,7 @@ public class RejectCaseAssignment {
 	 * definition} = "Identifies the assignment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RejectCaseAssignment, CaseAssignment> mmAssignment = new MMMessageBuildingBlock<RejectCaseAssignment, CaseAssignment>() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -142,12 +141,14 @@ public class RejectCaseAssignment {
 			complexType_lazy = () -> CaseAssignment.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RejectCaseAssignment.class.getMethod("getAssignment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CaseAssignment getValue(RejectCaseAssignment obj) {
+			return obj.getAssignment();
+		}
+
+		@Override
+		public void setValue(RejectCaseAssignment obj, CaseAssignment value) {
+			obj.setAssignment(value);
 		}
 	};
 	@XmlElement(name = "Case", required = true)
@@ -173,7 +174,7 @@ public class RejectCaseAssignment {
 	 * definition} = "Identifies the case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RejectCaseAssignment, Case> mmCase = new MMMessageBuildingBlock<RejectCaseAssignment, Case>() {
 		{
 			xmlTag = "Case";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,12 +185,14 @@ public class RejectCaseAssignment {
 			complexType_lazy = () -> Case.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RejectCaseAssignment.class.getMethod("getCase", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Case getValue(RejectCaseAssignment obj) {
+			return obj.getCase();
+		}
+
+		@Override
+		public void setValue(RejectCaseAssignment obj, Case value) {
+			obj.setCase(value);
 		}
 	};
 	@XmlElement(name = "Justfn", required = true)
@@ -217,7 +220,7 @@ public class RejectCaseAssignment {
 	 * definition} = "Specifies the reason for not accepting a Case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmJustification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RejectCaseAssignment, CaseAssignmentRejectionJustification> mmJustification = new MMMessageBuildingBlock<RejectCaseAssignment, CaseAssignmentRejectionJustification>() {
 		{
 			xmlTag = "Justfn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -228,12 +231,14 @@ public class RejectCaseAssignment {
 			complexType_lazy = () -> CaseAssignmentRejectionJustification.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RejectCaseAssignment.class.getMethod("getJustification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CaseAssignmentRejectionJustification getValue(RejectCaseAssignment obj) {
+			return obj.getJustification();
+		}
+
+		@Override
+		public void setValue(RejectCaseAssignment obj, CaseAssignmentRejectionJustification value) {
+			obj.setJustification(value);
 		}
 	};
 

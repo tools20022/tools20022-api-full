@@ -110,7 +110,7 @@ public class CashAccountIdentification2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIBAN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountIdentification2Choice, IBANIdentifier> mmIBAN = new MMMessageAttribute<CashAccountIdentification2Choice, IBANIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmIBAN;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CashAccountIdentification2Choice.mmObject();
@@ -122,6 +122,16 @@ public class CashAccountIdentification2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> IBANIdentifier.mmObject();
+		}
+
+		@Override
+		public IBANIdentifier getValue(CashAccountIdentification2Choice obj) {
+			return obj.getIBAN();
+		}
+
+		@Override
+		public void setValue(CashAccountIdentification2Choice obj, IBANIdentifier value) {
+			obj.setIBAN(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -160,7 +170,7 @@ public class CashAccountIdentification2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountIdentification2Choice, Max34Text> mmProprietary = new MMMessageAttribute<CashAccountIdentification2Choice, Max34Text>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmProprietaryIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CashAccountIdentification2Choice.mmObject();
@@ -172,6 +182,16 @@ public class CashAccountIdentification2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max34Text.mmObject();
+		}
+
+		@Override
+		public Max34Text getValue(CashAccountIdentification2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CashAccountIdentification2Choice obj, Max34Text value) {
+			obj.setProprietary(value);
 		}
 	};
 

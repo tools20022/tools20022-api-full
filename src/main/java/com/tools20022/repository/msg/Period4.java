@@ -134,7 +134,7 @@ public class Period4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStartDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Period4, DateFormat18Choice> mmStartDate = new MMMessageAssociationEnd<Period4, DateFormat18Choice>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Period4.mmObject();
@@ -148,6 +148,16 @@ public class Period4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DateFormat18Choice.mmObject();
+		}
+
+		@Override
+		public DateFormat18Choice getValue(Period4 obj) {
+			return obj.getStartDate();
+		}
+
+		@Override
+		public void setValue(Period4 obj, DateFormat18Choice value) {
+			obj.setStartDate(value);
 		}
 	};
 	@XmlElement(name = "EndDt", required = true)
@@ -192,7 +202,7 @@ public class Period4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEndDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Period4, DateFormat18Choice> mmEndDate = new MMMessageAssociationEnd<Period4, DateFormat18Choice>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmToDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Period4.mmObject();
@@ -207,6 +217,16 @@ public class Period4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DateFormat18Choice.mmObject();
+		}
+
+		@Override
+		public DateFormat18Choice getValue(Period4 obj) {
+			return obj.getEndDate();
+		}
+
+		@Override
+		public void setValue(Period4 obj, DateFormat18Choice value) {
+			obj.setEndDate(value);
 		}
 	};
 

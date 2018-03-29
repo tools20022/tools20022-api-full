@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.BaseOneRate;
 import com.tools20022.repository.datatype.NonNegativeNumber;
 import com.tools20022.repository.datatype.PositiveNumber;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification165;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -125,7 +126,7 @@ public class MonthlyResult1 {
 	 * "Total number of accounts subject to backtesting in the month.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfObservations = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MonthlyResult1, PositiveNumber> mmNumberOfObservations = new MMMessageAttribute<MonthlyResult1, PositiveNumber>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MonthlyResult1.mmObject();
 			isDerived = false;
@@ -136,6 +137,16 @@ public class MonthlyResult1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PositiveNumber.mmObject();
+		}
+
+		@Override
+		public PositiveNumber getValue(MonthlyResult1 obj) {
+			return obj.getNumberOfObservations();
+		}
+
+		@Override
+		public void setValue(MonthlyResult1 obj, PositiveNumber value) {
+			obj.setNumberOfObservations(value);
 		}
 	};
 	@XmlElement(name = "NbOfXcptns", required = true)
@@ -169,7 +180,7 @@ public class MonthlyResult1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfExceptions = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MonthlyResult1, NonNegativeNumber> mmNumberOfExceptions = new MMMessageAttribute<MonthlyResult1, NonNegativeNumber>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MonthlyResult1.mmObject();
 			isDerived = false;
@@ -180,6 +191,16 @@ public class MonthlyResult1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NonNegativeNumber.mmObject();
+		}
+
+		@Override
+		public NonNegativeNumber getValue(MonthlyResult1 obj) {
+			return obj.getNumberOfExceptions();
+		}
+
+		@Override
+		public void setValue(MonthlyResult1 obj, NonNegativeNumber value) {
+			obj.setNumberOfExceptions(value);
 		}
 	};
 	@XmlElement(name = "Cvrg", required = true)
@@ -210,7 +231,7 @@ public class MonthlyResult1 {
 	 * definition} = "Achieved coverage level."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCoverage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MonthlyResult1, BaseOneRate> mmCoverage = new MMMessageAttribute<MonthlyResult1, BaseOneRate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MonthlyResult1.mmObject();
 			isDerived = false;
@@ -221,6 +242,16 @@ public class MonthlyResult1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		@Override
+		public BaseOneRate getValue(MonthlyResult1 obj) {
+			return obj.getCoverage();
+		}
+
+		@Override
+		public void setValue(MonthlyResult1 obj, BaseOneRate value) {
+			obj.setCoverage(value);
 		}
 	};
 	@XmlElement(name = "LrgstXcptn", required = true)
@@ -254,7 +285,7 @@ public class MonthlyResult1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLargestException = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MonthlyResult1, ActiveCurrencyAndAmount> mmLargestException = new MMMessageAttribute<MonthlyResult1, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MonthlyResult1.mmObject();
 			isDerived = false;
@@ -265,6 +296,16 @@ public class MonthlyResult1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(MonthlyResult1 obj) {
+			return obj.getLargestException();
+		}
+
+		@Override
+		public void setValue(MonthlyResult1 obj, ActiveCurrencyAndAmount value) {
+			obj.setLargestException(value);
 		}
 	};
 	@XmlElement(name = "AvrgXcptn", required = true)
@@ -298,7 +339,7 @@ public class MonthlyResult1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAverageException = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MonthlyResult1, ActiveCurrencyAndAmount> mmAverageException = new MMMessageAttribute<MonthlyResult1, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MonthlyResult1.mmObject();
 			isDerived = false;
@@ -309,6 +350,16 @@ public class MonthlyResult1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(MonthlyResult1 obj) {
+			return obj.getAverageException();
+		}
+
+		@Override
+		public void setValue(MonthlyResult1 obj, ActiveCurrencyAndAmount value) {
+			obj.setAverageException(value);
 		}
 	};
 	@XmlElement(name = "LrgstXcptnId")
@@ -341,7 +392,7 @@ public class MonthlyResult1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLargestExceptionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MonthlyResult1, Optional<GenericIdentification165>> mmLargestExceptionIdentification = new MMMessageAssociationEnd<MonthlyResult1, Optional<GenericIdentification165>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MonthlyResult1.mmObject();
 			isDerived = false;
@@ -352,7 +403,17 @@ public class MonthlyResult1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification165.mmObject();
+			type_lazy = () -> GenericIdentification165.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification165> getValue(MonthlyResult1 obj) {
+			return obj.getLargestExceptionIdentification();
+		}
+
+		@Override
+		public void setValue(MonthlyResult1 obj, Optional<GenericIdentification165> value) {
+			obj.setLargestExceptionIdentification(value.orElse(null));
 		}
 	};
 
@@ -421,7 +482,7 @@ public class MonthlyResult1 {
 		return largestExceptionIdentification == null ? Optional.empty() : Optional.of(largestExceptionIdentification);
 	}
 
-	public MonthlyResult1 setLargestExceptionIdentification(com.tools20022.repository.msg.GenericIdentification165 largestExceptionIdentification) {
+	public MonthlyResult1 setLargestExceptionIdentification(GenericIdentification165 largestExceptionIdentification) {
 		this.largestExceptionIdentification = largestExceptionIdentification;
 		return this;
 	}

@@ -129,7 +129,7 @@ public class CapitalRequirement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmWindingDownOrRestructuringRisk = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CapitalRequirement1, ActiveCurrencyAndAmount> mmWindingDownOrRestructuringRisk = new MMMessageAttribute<CapitalRequirement1, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CapitalRequirement1.mmObject();
 			isDerived = false;
@@ -140,6 +140,16 @@ public class CapitalRequirement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(CapitalRequirement1 obj) {
+			return obj.getWindingDownOrRestructuringRisk();
+		}
+
+		@Override
+		public void setValue(CapitalRequirement1 obj, ActiveCurrencyAndAmount value) {
+			obj.setWindingDownOrRestructuringRisk(value);
 		}
 	};
 	@XmlElement(name = "OprlAndLglRsk", required = true)
@@ -174,7 +184,7 @@ public class CapitalRequirement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOperationalAndLegalRisk = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CapitalRequirement1, ActiveCurrencyAndAmount> mmOperationalAndLegalRisk = new MMMessageAttribute<CapitalRequirement1, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CapitalRequirement1.mmObject();
 			isDerived = false;
@@ -185,6 +195,16 @@ public class CapitalRequirement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(CapitalRequirement1 obj) {
+			return obj.getOperationalAndLegalRisk();
+		}
+
+		@Override
+		public void setValue(CapitalRequirement1 obj, ActiveCurrencyAndAmount value) {
+			obj.setOperationalAndLegalRisk(value);
 		}
 	};
 	@XmlElement(name = "CdtRsk", required = true)
@@ -219,7 +239,7 @@ public class CapitalRequirement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditRisk = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CapitalRequirement1, ActiveCurrencyAndAmount> mmCreditRisk = new MMMessageAttribute<CapitalRequirement1, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CapitalRequirement1.mmObject();
 			isDerived = false;
@@ -230,6 +250,16 @@ public class CapitalRequirement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(CapitalRequirement1 obj) {
+			return obj.getCreditRisk();
+		}
+
+		@Override
+		public void setValue(CapitalRequirement1 obj, ActiveCurrencyAndAmount value) {
+			obj.setCreditRisk(value);
 		}
 	};
 	@XmlElement(name = "CntrPtyRsk", required = true)
@@ -264,7 +294,7 @@ public class CapitalRequirement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCounterPartyRisk = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CapitalRequirement1, ActiveCurrencyAndAmount> mmCounterPartyRisk = new MMMessageAttribute<CapitalRequirement1, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CapitalRequirement1.mmObject();
 			isDerived = false;
@@ -275,6 +305,16 @@ public class CapitalRequirement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(CapitalRequirement1 obj) {
+			return obj.getCounterPartyRisk();
+		}
+
+		@Override
+		public void setValue(CapitalRequirement1 obj, ActiveCurrencyAndAmount value) {
+			obj.setCounterPartyRisk(value);
 		}
 	};
 	@XmlElement(name = "MktRsk", required = true)
@@ -309,7 +349,7 @@ public class CapitalRequirement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarketRisk = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CapitalRequirement1, ActiveCurrencyAndAmount> mmMarketRisk = new MMMessageAttribute<CapitalRequirement1, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CapitalRequirement1.mmObject();
 			isDerived = false;
@@ -320,6 +360,16 @@ public class CapitalRequirement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(CapitalRequirement1 obj) {
+			return obj.getMarketRisk();
+		}
+
+		@Override
+		public void setValue(CapitalRequirement1 obj, ActiveCurrencyAndAmount value) {
+			obj.setMarketRisk(value);
 		}
 	};
 	@XmlElement(name = "BizRsk", required = true)
@@ -353,7 +403,7 @@ public class CapitalRequirement1 {
 	 * "Indicates the capital necessary to cover business risk.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBusinessRisk = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CapitalRequirement1, ActiveCurrencyAndAmount> mmBusinessRisk = new MMMessageAttribute<CapitalRequirement1, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CapitalRequirement1.mmObject();
 			isDerived = false;
@@ -364,6 +414,16 @@ public class CapitalRequirement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(CapitalRequirement1 obj) {
+			return obj.getBusinessRisk();
+		}
+
+		@Override
+		public void setValue(CapitalRequirement1 obj, ActiveCurrencyAndAmount value) {
+			obj.setBusinessRisk(value);
 		}
 	};
 	@XmlElement(name = "NtfctnBffr")
@@ -397,7 +457,7 @@ public class CapitalRequirement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotificationBuffer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CapitalRequirement1, Optional<BaseOneRate>> mmNotificationBuffer = new MMMessageAttribute<CapitalRequirement1, Optional<BaseOneRate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CapitalRequirement1.mmObject();
 			isDerived = false;
@@ -408,6 +468,16 @@ public class CapitalRequirement1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		@Override
+		public Optional<BaseOneRate> getValue(CapitalRequirement1 obj) {
+			return obj.getNotificationBuffer();
+		}
+
+		@Override
+		public void setValue(CapitalRequirement1 obj, Optional<BaseOneRate> value) {
+			obj.setNotificationBuffer(value.orElse(null));
 		}
 	};
 

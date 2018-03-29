@@ -108,7 +108,7 @@ public class CorporateActionEventType1CodeChoice {
 	 * definition} = "Corporate action event type in a structured format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionEventType1CodeChoice, CorporateActionEventType1Code> mmStructured = new MMMessageAttribute<CorporateActionEventType1CodeChoice, CorporateActionEventType1Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionEventType1CodeChoice.mmObject();
@@ -120,6 +120,16 @@ public class CorporateActionEventType1CodeChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionEventType1Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionEventType1Code getValue(CorporateActionEventType1CodeChoice obj) {
+			return obj.getStructured();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventType1CodeChoice obj, CorporateActionEventType1Code value) {
+			obj.setStructured(value);
 		}
 	};
 	@XmlElement(name = "Ustrd", required = true)
@@ -156,7 +166,7 @@ public class CorporateActionEventType1CodeChoice {
 	 * definition} = "Corporate action event type in free text form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnstructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionEventType1CodeChoice, Max35Text> mmUnstructured = new MMMessageAttribute<CorporateActionEventType1CodeChoice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionEventType1CodeChoice.mmObject();
@@ -168,6 +178,16 @@ public class CorporateActionEventType1CodeChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CorporateActionEventType1CodeChoice obj) {
+			return obj.getUnstructured();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventType1CodeChoice obj, Max35Text value) {
+			obj.setUnstructured(value);
 		}
 	};
 

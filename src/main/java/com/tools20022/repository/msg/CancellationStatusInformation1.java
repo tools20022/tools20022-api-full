@@ -112,7 +112,7 @@ public class CancellationStatusInformation1 {
 	 * definition} = "Information on the business status of the cancellation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationStatusInformation1, CancellationStatus4Code> mmStatus = new MMMessageAttribute<CancellationStatusInformation1, CancellationStatus4Code>() {
 		{
 			businessElementTrace_lazy = () -> InvoiceFinancingStatus.mmCancellationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationStatusInformation1.mmObject();
@@ -124,6 +124,16 @@ public class CancellationStatusInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CancellationStatus4Code.mmObject();
+		}
+
+		@Override
+		public CancellationStatus4Code getValue(CancellationStatusInformation1 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(CancellationStatusInformation1 obj, CancellationStatus4Code value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "StsRsn")
@@ -161,7 +171,7 @@ public class CancellationStatusInformation1 {
 	 * definition} = "The reason for the cancellation status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatusReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationStatusInformation1, Optional<StatusReason4Choice>> mmStatusReason = new MMMessageAttribute<CancellationStatusInformation1, Optional<StatusReason4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> InvoiceFinancingStatus.mmCancellationStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationStatusInformation1.mmObject();
@@ -173,6 +183,16 @@ public class CancellationStatusInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> StatusReason4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<StatusReason4Choice> getValue(CancellationStatusInformation1 obj) {
+			return obj.getStatusReason();
+		}
+
+		@Override
+		public void setValue(CancellationStatusInformation1 obj, Optional<StatusReason4Choice> value) {
+			obj.setStatusReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlStsRsnInf")
@@ -209,7 +229,7 @@ public class CancellationStatusInformation1 {
 	 * definition} = "Further details on the cancellation status reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalStatusReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationStatusInformation1, List<Max105Text>> mmAdditionalStatusReasonInformation = new MMMessageAttribute<CancellationStatusInformation1, List<Max105Text>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusDescription;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationStatusInformation1.mmObject();
@@ -220,6 +240,16 @@ public class CancellationStatusInformation1 {
 			definition = "Further details on the cancellation status reason.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public List<Max105Text> getValue(CancellationStatusInformation1 obj) {
+			return obj.getAdditionalStatusReasonInformation();
+		}
+
+		@Override
+		public void setValue(CancellationStatusInformation1 obj, List<Max105Text> value) {
+			obj.setAdditionalStatusReasonInformation(value);
 		}
 	};
 

@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.UnderlyingGroupInformation1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -160,7 +161,7 @@ public class UnderlyingPaymentInstruction3 {
 	 * UnderlyingPaymentInstruction2.mmOriginalGroupInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalGroupInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnderlyingPaymentInstruction3, Optional<UnderlyingGroupInformation1>> mmOriginalGroupInformation = new MMMessageAssociationEnd<UnderlyingPaymentInstruction3, Optional<UnderlyingGroupInformation1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingPaymentInstruction3.mmObject();
 			isDerived = false;
@@ -173,7 +174,17 @@ public class UnderlyingPaymentInstruction3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UnderlyingGroupInformation1.mmObject();
+			type_lazy = () -> UnderlyingGroupInformation1.mmObject();
+		}
+
+		@Override
+		public Optional<UnderlyingGroupInformation1> getValue(UnderlyingPaymentInstruction3 obj) {
+			return obj.getOriginalGroupInformation();
+		}
+
+		@Override
+		public void setValue(UnderlyingPaymentInstruction3 obj, Optional<UnderlyingGroupInformation1> value) {
+			obj.setOriginalGroupInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlPmtInfId")
@@ -227,7 +238,7 @@ public class UnderlyingPaymentInstruction3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalPaymentInformationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingPaymentInstruction3, Optional<Max35Text>> mmOriginalPaymentInformationIdentification = new MMMessageAttribute<UnderlyingPaymentInstruction3, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingPaymentInstruction3.mmObject();
@@ -241,6 +252,16 @@ public class UnderlyingPaymentInstruction3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(UnderlyingPaymentInstruction3 obj) {
+			return obj.getOriginalPaymentInformationIdentification();
+		}
+
+		@Override
+		public void setValue(UnderlyingPaymentInstruction3 obj, Optional<Max35Text> value) {
+			obj.setOriginalPaymentInformationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlInstrId")
@@ -292,7 +313,7 @@ public class UnderlyingPaymentInstruction3 {
 	 * UnderlyingPaymentInstruction2.mmOriginalInstructionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalInstructionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingPaymentInstruction3, Optional<Max35Text>> mmOriginalInstructionIdentification = new MMMessageAttribute<UnderlyingPaymentInstruction3, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmInstructionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingPaymentInstruction3.mmObject();
@@ -306,6 +327,16 @@ public class UnderlyingPaymentInstruction3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(UnderlyingPaymentInstruction3 obj) {
+			return obj.getOriginalInstructionIdentification();
+		}
+
+		@Override
+		public void setValue(UnderlyingPaymentInstruction3 obj, Optional<Max35Text> value) {
+			obj.setOriginalInstructionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlEndToEndId")
@@ -357,7 +388,7 @@ public class UnderlyingPaymentInstruction3 {
 	 * UnderlyingPaymentInstruction2.mmOriginalEndToEndIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalEndToEndIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingPaymentInstruction3, Optional<Max35Text>> mmOriginalEndToEndIdentification = new MMMessageAttribute<UnderlyingPaymentInstruction3, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmEndToEndIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingPaymentInstruction3.mmObject();
@@ -371,6 +402,16 @@ public class UnderlyingPaymentInstruction3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(UnderlyingPaymentInstruction3 obj) {
+			return obj.getOriginalEndToEndIdentification();
+		}
+
+		@Override
+		public void setValue(UnderlyingPaymentInstruction3 obj, Optional<Max35Text> value) {
+			obj.setOriginalEndToEndIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlInstdAmt", required = true)
@@ -423,7 +464,7 @@ public class UnderlyingPaymentInstruction3 {
 	 * UnderlyingPaymentInstruction2.mmOriginalInstructedAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalInstructedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingPaymentInstruction3, ActiveOrHistoricCurrencyAndAmount> mmOriginalInstructedAmount = new MMMessageAttribute<UnderlyingPaymentInstruction3, ActiveOrHistoricCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingPaymentInstruction3.mmObject();
@@ -437,6 +478,16 @@ public class UnderlyingPaymentInstruction3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAndAmount getValue(UnderlyingPaymentInstruction3 obj) {
+			return obj.getOriginalInstructedAmount();
+		}
+
+		@Override
+		public void setValue(UnderlyingPaymentInstruction3 obj, ActiveOrHistoricCurrencyAndAmount value) {
+			obj.setOriginalInstructedAmount(value);
 		}
 	};
 	@XmlElement(name = "ReqdExctnDt")
@@ -489,7 +540,7 @@ public class UnderlyingPaymentInstruction3 {
 	 * UnderlyingPaymentInstruction2.mmRequestedExecutionDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestedExecutionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingPaymentInstruction3, Optional<DateAndDateTimeChoice>> mmRequestedExecutionDate = new MMMessageAttribute<UnderlyingPaymentInstruction3, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmRequestedExecutionDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingPaymentInstruction3.mmObject();
@@ -503,6 +554,16 @@ public class UnderlyingPaymentInstruction3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(UnderlyingPaymentInstruction3 obj) {
+			return obj.getRequestedExecutionDate();
+		}
+
+		@Override
+		public void setValue(UnderlyingPaymentInstruction3 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setRequestedExecutionDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReqdColltnDt")
@@ -554,7 +615,7 @@ public class UnderlyingPaymentInstruction3 {
 	 * UnderlyingPaymentInstruction2.mmRequestedCollectionDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestedCollectionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingPaymentInstruction3, Optional<ISODate>> mmRequestedCollectionDate = new MMMessageAttribute<UnderlyingPaymentInstruction3, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingPaymentInstruction3.mmObject();
@@ -568,6 +629,16 @@ public class UnderlyingPaymentInstruction3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(UnderlyingPaymentInstruction3 obj) {
+			return obj.getRequestedCollectionDate();
+		}
+
+		@Override
+		public void setValue(UnderlyingPaymentInstruction3 obj, Optional<ISODate> value) {
+			obj.setRequestedCollectionDate(value.orElse(null));
 		}
 	};
 
@@ -596,7 +667,7 @@ public class UnderlyingPaymentInstruction3 {
 		return originalGroupInformation == null ? Optional.empty() : Optional.of(originalGroupInformation);
 	}
 
-	public UnderlyingPaymentInstruction3 setOriginalGroupInformation(com.tools20022.repository.msg.UnderlyingGroupInformation1 originalGroupInformation) {
+	public UnderlyingPaymentInstruction3 setOriginalGroupInformation(UnderlyingGroupInformation1 originalGroupInformation) {
 		this.originalGroupInformation = originalGroupInformation;
 		return this;
 	}

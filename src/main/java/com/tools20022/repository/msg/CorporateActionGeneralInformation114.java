@@ -22,8 +22,8 @@ import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdvice002V06;
-import com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdvice002V07;
-import com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdvice002V08;
+import com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdvice002V08;
+import com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdvice002V09;
 import com.tools20022.repository.choice.CorporateActionEventType58Choice;
 import com.tools20022.repository.datatype.RestrictedFINXMax16Text;
 import com.tools20022.repository.entity.ClassAction;
@@ -75,12 +75,12 @@ import javax.xml.bind.annotation.XmlType;
  * CorporateActionEventProcessingStatusAdvice002V06.
  * mmCorporateActionGeneralInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdvice002V07#mmCorporateActionGeneralInformation
- * CorporateActionInstructionCancellationRequestStatusAdvice002V07.
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdvice002V08#mmCorporateActionGeneralInformation
+ * CorporateActionInstructionCancellationRequestStatusAdvice002V08.
  * mmCorporateActionGeneralInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdvice002V08#mmCorporateActionGeneralInformation
- * CorporateActionInstructionStatusAdvice002V08.
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdvice002V09#mmCorporateActionGeneralInformation
+ * CorporateActionInstructionStatusAdvice002V09.
  * mmCorporateActionGeneralInformation}</li>
  * </ul>
  * </li>
@@ -156,7 +156,7 @@ public class CorporateActionGeneralInformation114 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformation114, RestrictedFINXMax16Text> mmCorporateActionEventIdentification = new MMMessageAttribute<CorporateActionGeneralInformation114, RestrictedFINXMax16Text>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmCorporateActionEventIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformation114.mmObject();
@@ -169,6 +169,16 @@ public class CorporateActionGeneralInformation114 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(CorporateActionGeneralInformation114 obj) {
+			return obj.getCorporateActionEventIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformation114 obj, RestrictedFINXMax16Text value) {
+			obj.setCorporateActionEventIdentification(value);
 		}
 	};
 	@XmlElement(name = "OffclCorpActnEvtId")
@@ -212,7 +222,7 @@ public class CorporateActionGeneralInformation114 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOfficialCorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformation114, Optional<RestrictedFINXMax16Text>> mmOfficialCorporateActionEventIdentification = new MMMessageAttribute<CorporateActionGeneralInformation114, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmOfficialCorporateActionEventIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformation114.mmObject();
@@ -225,6 +235,16 @@ public class CorporateActionGeneralInformation114 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(CorporateActionGeneralInformation114 obj) {
+			return obj.getOfficialCorporateActionEventIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformation114 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setOfficialCorporateActionEventIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClssActnNb")
@@ -265,7 +285,7 @@ public class CorporateActionGeneralInformation114 {
 	 * definition} = "Reference assigned by a court to a class action."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClassActionNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformation114, Optional<RestrictedFINXMax16Text>> mmClassActionNumber = new MMMessageAttribute<CorporateActionGeneralInformation114, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> ClassAction.mmClassActionNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformation114.mmObject();
@@ -278,6 +298,16 @@ public class CorporateActionGeneralInformation114 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(CorporateActionGeneralInformation114 obj) {
+			return obj.getClassActionNumber();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformation114 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setClassActionNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EvtTp", required = true)
@@ -318,7 +348,7 @@ public class CorporateActionGeneralInformation114 {
 	 * definition} = "Type of corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformation114, CorporateActionEventType58Choice> mmEventType = new MMMessageAttribute<CorporateActionGeneralInformation114, CorporateActionEventType58Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformation114.mmObject();
@@ -332,6 +362,16 @@ public class CorporateActionGeneralInformation114 {
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionEventType58Choice.mmObject();
 		}
+
+		@Override
+		public CorporateActionEventType58Choice getValue(CorporateActionGeneralInformation114 obj) {
+			return obj.getEventType();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformation114 obj, CorporateActionEventType58Choice value) {
+			obj.setEventType(value);
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -341,7 +381,7 @@ public class CorporateActionGeneralInformation114 {
 						com.tools20022.repository.msg.CorporateActionGeneralInformation114.mmOfficialCorporateActionEventIdentification, com.tools20022.repository.msg.CorporateActionGeneralInformation114.mmClassActionNumber,
 						com.tools20022.repository.msg.CorporateActionGeneralInformation114.mmEventType);
 				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionEventProcessingStatusAdvice002V06.mmCorporateActionGeneralInformation,
-						CorporateActionInstructionCancellationRequestStatusAdvice002V07.mmCorporateActionGeneralInformation, CorporateActionInstructionStatusAdvice002V08.mmCorporateActionGeneralInformation);
+						CorporateActionInstructionCancellationRequestStatusAdvice002V08.mmCorporateActionGeneralInformation, CorporateActionInstructionStatusAdvice002V09.mmCorporateActionGeneralInformation);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionGeneralInformation114,

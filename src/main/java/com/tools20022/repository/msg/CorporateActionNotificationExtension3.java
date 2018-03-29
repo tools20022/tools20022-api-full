@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max16Text;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecurityIdentification7;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -106,7 +107,7 @@ public class CorporateActionNotificationExtension3 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationExtension3, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionNotificationExtension3, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationExtension3.mmObject();
 			isDerived = false;
@@ -117,6 +118,16 @@ public class CorporateActionNotificationExtension3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionNotificationExtension3 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationExtension3 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "CstmrIntlSctyId")
@@ -153,7 +164,7 @@ public class CorporateActionNotificationExtension3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCustomerInternalSecurityIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationExtension3, Optional<Max16Text>> mmCustomerInternalSecurityIdentification = new MMMessageAttribute<CorporateActionNotificationExtension3, Optional<Max16Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationExtension3.mmObject();
 			isDerived = false;
@@ -165,6 +176,16 @@ public class CorporateActionNotificationExtension3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max16Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max16Text> getValue(CorporateActionNotificationExtension3 obj) {
+			return obj.getCustomerInternalSecurityIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationExtension3 obj, Optional<Max16Text> value) {
+			obj.setCustomerInternalSecurityIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctyOfIntrstMtchgScty")
@@ -203,7 +224,7 @@ public class CorporateActionNotificationExtension3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecurityOfInterestMatchingSecurity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationExtension3, Optional<SecurityIdentification7>> mmSecurityOfInterestMatchingSecurity = new MMMessageAttribute<CorporateActionNotificationExtension3, Optional<SecurityIdentification7>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationExtension3.mmObject();
 			isDerived = false;
@@ -214,7 +235,17 @@ public class CorporateActionNotificationExtension3 {
 			definition = "Security identifier that is used to match the customer's SOI (Security of Interest) to the GCA VS Security Cross Reference.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
+			complexType_lazy = () -> SecurityIdentification7.mmObject();
+		}
+
+		@Override
+		public Optional<SecurityIdentification7> getValue(CorporateActionNotificationExtension3 obj) {
+			return obj.getSecurityOfInterestMatchingSecurity();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationExtension3 obj, Optional<SecurityIdentification7> value) {
+			obj.setSecurityOfInterestMatchingSecurity(value.orElse(null));
 		}
 	};
 
@@ -254,7 +285,7 @@ public class CorporateActionNotificationExtension3 {
 		return securityOfInterestMatchingSecurity == null ? Optional.empty() : Optional.of(securityOfInterestMatchingSecurity);
 	}
 
-	public CorporateActionNotificationExtension3 setSecurityOfInterestMatchingSecurity(com.tools20022.repository.msg.SecurityIdentification7 securityOfInterestMatchingSecurity) {
+	public CorporateActionNotificationExtension3 setSecurityOfInterestMatchingSecurity(SecurityIdentification7 securityOfInterestMatchingSecurity) {
 		this.securityOfInterestMatchingSecurity = securityOfInterestMatchingSecurity;
 		return this;
 	}

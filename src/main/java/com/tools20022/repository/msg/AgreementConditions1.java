@@ -111,7 +111,7 @@ public class AgreementConditions1 {
 	 * definition} = "Specifies the type of agreement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAgreementCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AgreementConditions1, Max6AlphaText> mmAgreementCode = new MMMessageAttribute<AgreementConditions1, Max6AlphaText>() {
 		{
 			businessElementTrace_lazy = () -> MasterAgreement.mmMasterAgreementType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AgreementConditions1.mmObject();
@@ -123,6 +123,16 @@ public class AgreementConditions1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max6AlphaText.mmObject();
+		}
+
+		@Override
+		public Max6AlphaText getValue(AgreementConditions1 obj) {
+			return obj.getAgreementCode();
+		}
+
+		@Override
+		public void setValue(AgreementConditions1 obj, Max6AlphaText value) {
+			obj.setAgreementCode(value);
 		}
 	};
 	@XmlElement(name = "Dt")
@@ -159,7 +169,7 @@ public class AgreementConditions1 {
 	 * definition} = "Specifies the date of the agreement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AgreementConditions1, Optional<ISODate>> mmDate = new MMMessageAttribute<AgreementConditions1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Agreement.mmDateSigned;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AgreementConditions1.mmObject();
@@ -171,6 +181,16 @@ public class AgreementConditions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(AgreementConditions1 obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(AgreementConditions1 obj, Optional<ISODate> value) {
+			obj.setDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Vrsn")
@@ -208,7 +228,7 @@ public class AgreementConditions1 {
 	 * definition} = "Specifies the version of the agreement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AgreementConditions1, Optional<Exact4NumericText>> mmVersion = new MMMessageAttribute<AgreementConditions1, Optional<Exact4NumericText>>() {
 		{
 			businessElementTrace_lazy = () -> Agreement.mmVersion;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AgreementConditions1.mmObject();
@@ -220,6 +240,16 @@ public class AgreementConditions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact4NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Exact4NumericText> getValue(AgreementConditions1 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(AgreementConditions1 obj, Optional<Exact4NumericText> value) {
+			obj.setVersion(value.orElse(null));
 		}
 	};
 

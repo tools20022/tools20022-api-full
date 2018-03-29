@@ -142,7 +142,7 @@ public class PartyDataReturnCriteria1 {
 	 * "Indicates whether the opening date of the party is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOpeningDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyDataReturnCriteria1, Optional<RequestedIndicator>> mmOpeningDate = new MMMessageAttribute<PartyDataReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
@@ -153,6 +153,16 @@ public class PartyDataReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(PartyDataReturnCriteria1 obj) {
+			return obj.getOpeningDate();
+		}
+
+		@Override
+		public void setValue(PartyDataReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setOpeningDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClsgDt")
@@ -186,7 +196,7 @@ public class PartyDataReturnCriteria1 {
 	 * "Indicates whether the closing date of the party is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClosingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyDataReturnCriteria1, Optional<RequestedIndicator>> mmClosingDate = new MMMessageAttribute<PartyDataReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
@@ -197,6 +207,16 @@ public class PartyDataReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(PartyDataReturnCriteria1 obj) {
+			return obj.getClosingDate();
+		}
+
+		@Override
+		public void setValue(PartyDataReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setClosingDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -229,7 +249,7 @@ public class PartyDataReturnCriteria1 {
 	 * definition} = "Indicates whether the type is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyDataReturnCriteria1, Optional<RequestedIndicator>> mmType = new MMMessageAttribute<PartyDataReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
@@ -240,6 +260,16 @@ public class PartyDataReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(PartyDataReturnCriteria1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(PartyDataReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PtyId")
@@ -274,7 +304,7 @@ public class PartyDataReturnCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyDataReturnCriteria1, Optional<RequestedIndicator>> mmPartyIdentification = new MMMessageAttribute<PartyDataReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
@@ -285,6 +315,16 @@ public class PartyDataReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(PartyDataReturnCriteria1 obj) {
+			return obj.getPartyIdentification();
+		}
+
+		@Override
+		public void setValue(PartyDataReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setPartyIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CSDOrNCB")
@@ -319,7 +359,7 @@ public class PartyDataReturnCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCSDOrNCB = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyDataReturnCriteria1, Optional<RequestedIndicator>> mmCSDOrNCB = new MMMessageAttribute<PartyDataReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
@@ -330,6 +370,16 @@ public class PartyDataReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(PartyDataReturnCriteria1 obj) {
+			return obj.getCSDOrNCB();
+		}
+
+		@Override
+		public void setValue(PartyDataReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setCSDOrNCB(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RstrctnId")
@@ -363,7 +413,7 @@ public class PartyDataReturnCriteria1 {
 	 * "Indicates whether the identification of the restriction is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRestrictionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyDataReturnCriteria1, Optional<RequestedIndicator>> mmRestrictionIdentification = new MMMessageAttribute<PartyDataReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
@@ -374,6 +424,16 @@ public class PartyDataReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(PartyDataReturnCriteria1 obj) {
+			return obj.getRestrictionIdentification();
+		}
+
+		@Override
+		public void setValue(PartyDataReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setRestrictionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RstrctdOnDt")
@@ -408,7 +468,7 @@ public class PartyDataReturnCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRestrictedOnDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyDataReturnCriteria1, Optional<RequestedIndicator>> mmRestrictedOnDate = new MMMessageAttribute<PartyDataReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
@@ -419,6 +479,16 @@ public class PartyDataReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(PartyDataReturnCriteria1 obj) {
+			return obj.getRestrictedOnDate();
+		}
+
+		@Override
+		public void setValue(PartyDataReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setRestrictedOnDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Nm")
@@ -451,7 +521,7 @@ public class PartyDataReturnCriteria1 {
 	 * definition} = "Indicates whether the name for the party is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyDataReturnCriteria1, Optional<RequestedIndicator>> mmName = new MMMessageAttribute<PartyDataReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
@@ -462,6 +532,16 @@ public class PartyDataReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(PartyDataReturnCriteria1 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(PartyDataReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ShrtNm")
@@ -495,7 +575,7 @@ public class PartyDataReturnCriteria1 {
 	 * "Indicates whether the short name for the party is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmShortName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyDataReturnCriteria1, Optional<RequestedIndicator>> mmShortName = new MMMessageAttribute<PartyDataReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
@@ -506,6 +586,16 @@ public class PartyDataReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(PartyDataReturnCriteria1 obj) {
+			return obj.getShortName();
+		}
+
+		@Override
+		public void setValue(PartyDataReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setShortName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Adr")
@@ -539,7 +629,7 @@ public class PartyDataReturnCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyDataReturnCriteria1, Optional<RequestedIndicator>> mmAddress = new MMMessageAttribute<PartyDataReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
@@ -550,6 +640,16 @@ public class PartyDataReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(PartyDataReturnCriteria1 obj) {
+			return obj.getAddress();
+		}
+
+		@Override
+		public void setValue(PartyDataReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TechAdr")
@@ -583,7 +683,7 @@ public class PartyDataReturnCriteria1 {
 	 * "Indicates whether the technical addresses for the party are requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTechnicalAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyDataReturnCriteria1, Optional<RequestedIndicator>> mmTechnicalAddress = new MMMessageAttribute<PartyDataReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
@@ -594,6 +694,16 @@ public class PartyDataReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(PartyDataReturnCriteria1 obj) {
+			return obj.getTechnicalAddress();
+		}
+
+		@Override
+		public void setValue(PartyDataReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setTechnicalAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MktSpcfcAttr")
@@ -628,7 +738,7 @@ public class PartyDataReturnCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarketSpecificAttribute = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyDataReturnCriteria1, Optional<RequestedIndicator>> mmMarketSpecificAttribute = new MMMessageAttribute<PartyDataReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyDataReturnCriteria1.mmObject();
 			isDerived = false;
@@ -639,6 +749,16 @@ public class PartyDataReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(PartyDataReturnCriteria1 obj) {
+			return obj.getMarketSpecificAttribute();
+		}
+
+		@Override
+		public void setValue(PartyDataReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setMarketSpecificAttribute(value.orElse(null));
 		}
 	};
 

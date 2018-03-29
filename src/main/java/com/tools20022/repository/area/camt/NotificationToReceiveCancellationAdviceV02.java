@@ -25,7 +25,6 @@ import com.tools20022.repository.area.CashManagementArchive;
 import com.tools20022.repository.msg.GroupHeader43;
 import com.tools20022.repository.msg.OriginalNotification4;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -124,7 +123,7 @@ public class NotificationToReceiveCancellationAdviceV02 {
 	 * "Set of elements used to provide further details on the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<NotificationToReceiveCancellationAdviceV02, GroupHeader43> mmGroupHeader = new MMMessageBuildingBlock<NotificationToReceiveCancellationAdviceV02, GroupHeader43>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -135,12 +134,14 @@ public class NotificationToReceiveCancellationAdviceV02 {
 			complexType_lazy = () -> GroupHeader43.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NotificationToReceiveCancellationAdviceV02.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader43 getValue(NotificationToReceiveCancellationAdviceV02 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(NotificationToReceiveCancellationAdviceV02 obj, GroupHeader43 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "OrgnlNtfctn", required = true)
@@ -170,7 +171,7 @@ public class NotificationToReceiveCancellationAdviceV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOriginalNotification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<NotificationToReceiveCancellationAdviceV02, OriginalNotification4> mmOriginalNotification = new MMMessageBuildingBlock<NotificationToReceiveCancellationAdviceV02, OriginalNotification4>() {
 		{
 			xmlTag = "OrgnlNtfctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,12 +182,14 @@ public class NotificationToReceiveCancellationAdviceV02 {
 			complexType_lazy = () -> OriginalNotification4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NotificationToReceiveCancellationAdviceV02.class.getMethod("getOriginalNotification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public OriginalNotification4 getValue(NotificationToReceiveCancellationAdviceV02 obj) {
+			return obj.getOriginalNotification();
+		}
+
+		@Override
+		public void setValue(NotificationToReceiveCancellationAdviceV02 obj, OriginalNotification4 value) {
+			obj.setOriginalNotification(value);
 		}
 	};
 

@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.BulkPayment;
 import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DetailedAmount6;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -129,7 +130,7 @@ public class AggregationTransaction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFirstPaymentDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AggregationTransaction1, Optional<ISODateTime>> mmFirstPaymentDateTime = new MMMessageAttribute<AggregationTransaction1, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmValueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AggregationTransaction1.mmObject();
@@ -142,6 +143,16 @@ public class AggregationTransaction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(AggregationTransaction1 obj) {
+			return obj.getFirstPaymentDateTime();
+		}
+
+		@Override
+		public void setValue(AggregationTransaction1 obj, Optional<ISODateTime> value) {
+			obj.setFirstPaymentDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LastPmtDtTm")
@@ -186,7 +197,7 @@ public class AggregationTransaction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLastPaymentDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AggregationTransaction1, Optional<ISODateTime>> mmLastPaymentDateTime = new MMMessageAttribute<AggregationTransaction1, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmValueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AggregationTransaction1.mmObject();
@@ -199,6 +210,16 @@ public class AggregationTransaction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(AggregationTransaction1 obj) {
+			return obj.getLastPaymentDateTime();
+		}
+
+		@Override
+		public void setValue(AggregationTransaction1 obj, Optional<ISODateTime> value) {
+			obj.setLastPaymentDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NbOfPmts")
@@ -238,7 +259,7 @@ public class AggregationTransaction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfPayments = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AggregationTransaction1, Optional<Number>> mmNumberOfPayments = new MMMessageAttribute<AggregationTransaction1, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AggregationTransaction1.mmObject();
 			isDerived = false;
@@ -251,9 +272,19 @@ public class AggregationTransaction1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
+
+		@Override
+		public Optional<Number> getValue(AggregationTransaction1 obj) {
+			return obj.getNumberOfPayments();
+		}
+
+		@Override
+		public void setValue(AggregationTransaction1 obj, Optional<Number> value) {
+			obj.setNumberOfPayments(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "IndvPmt")
-	protected List<com.tools20022.repository.msg.DetailedAmount6> individualPayment;
+	protected List<DetailedAmount6> individualPayment;
 	/**
 	 * 
 	 <p>
@@ -292,7 +323,7 @@ public class AggregationTransaction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIndividualPayment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AggregationTransaction1, List<DetailedAmount6>> mmIndividualPayment = new MMMessageAssociationEnd<AggregationTransaction1, List<DetailedAmount6>>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AggregationTransaction1.mmObject();
@@ -304,7 +335,17 @@ public class AggregationTransaction1 {
 			nextVersions_lazy = () -> Arrays.asList(AggregationTransaction2.mmIndividualPayment);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount6.mmObject();
+			type_lazy = () -> DetailedAmount6.mmObject();
+		}
+
+		@Override
+		public List<DetailedAmount6> getValue(AggregationTransaction1 obj) {
+			return obj.getIndividualPayment();
+		}
+
+		@Override
+		public void setValue(AggregationTransaction1 obj, List<DetailedAmount6> value) {
+			obj.setIndividualPayment(value);
 		}
 	};
 
@@ -355,7 +396,7 @@ public class AggregationTransaction1 {
 		return individualPayment == null ? individualPayment = new ArrayList<>() : individualPayment;
 	}
 
-	public AggregationTransaction1 setIndividualPayment(List<com.tools20022.repository.msg.DetailedAmount6> individualPayment) {
+	public AggregationTransaction1 setIndividualPayment(List<DetailedAmount6> individualPayment) {
 		this.individualPayment = Objects.requireNonNull(individualPayment);
 		return this;
 	}

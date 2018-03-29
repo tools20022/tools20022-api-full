@@ -25,7 +25,6 @@ import com.tools20022.repository.area.PaymentsClearingandSettlementArchive;
 import com.tools20022.repository.msg.CreditTransferTransactionInformation2;
 import com.tools20022.repository.msg.GroupHeader2;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -173,7 +172,7 @@ public class FIToFICustomerCreditTransferV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FIToFICustomerCreditTransferV01, GroupHeader2> mmGroupHeader = new MMMessageBuildingBlock<FIToFICustomerCreditTransferV01, GroupHeader2>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,12 +183,14 @@ public class FIToFICustomerCreditTransferV01 {
 			complexType_lazy = () -> GroupHeader2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FIToFICustomerCreditTransferV01.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader2 getValue(FIToFICustomerCreditTransferV01 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(FIToFICustomerCreditTransferV01 obj, GroupHeader2 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "CdtTrfTxInf", required = true)
@@ -219,7 +220,7 @@ public class FIToFICustomerCreditTransferV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCreditTransferTransactionInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FIToFICustomerCreditTransferV01, List<CreditTransferTransactionInformation2>> mmCreditTransferTransactionInformation = new MMMessageBuildingBlock<FIToFICustomerCreditTransferV01, List<CreditTransferTransactionInformation2>>() {
 		{
 			xmlTag = "CdtTrfTxInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -229,12 +230,14 @@ public class FIToFICustomerCreditTransferV01 {
 			complexType_lazy = () -> CreditTransferTransactionInformation2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FIToFICustomerCreditTransferV01.class.getMethod("getCreditTransferTransactionInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<CreditTransferTransactionInformation2> getValue(FIToFICustomerCreditTransferV01 obj) {
+			return obj.getCreditTransferTransactionInformation();
+		}
+
+		@Override
+		public void setValue(FIToFICustomerCreditTransferV01 obj, List<CreditTransferTransactionInformation2> value) {
+			obj.setCreditTransferTransactionInformation(value);
 		}
 	};
 

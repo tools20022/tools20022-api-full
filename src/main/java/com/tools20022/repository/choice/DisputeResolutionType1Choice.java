@@ -112,7 +112,7 @@ public class DisputeResolutionType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DisputeResolutionType1Choice, DisputeResolutionType1Code> mmCode = new MMMessageAttribute<DisputeResolutionType1Choice, DisputeResolutionType1Code>() {
 		{
 			businessElementTrace_lazy = () -> DisputeManagement.mmDisputeResolutionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DisputeResolutionType1Choice.mmObject();
@@ -124,6 +124,16 @@ public class DisputeResolutionType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DisputeResolutionType1Code.mmObject();
+		}
+
+		@Override
+		public DisputeResolutionType1Code getValue(DisputeResolutionType1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(DisputeResolutionType1Choice obj, DisputeResolutionType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "PrtryId", required = true)
@@ -163,7 +173,7 @@ public class DisputeResolutionType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DisputeResolutionType1Choice, GenericIdentification30> mmProprietaryIdentification = new MMMessageAttribute<DisputeResolutionType1Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> DisputeManagement.mmDisputeResolutionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DisputeResolutionType1Choice.mmObject();
@@ -175,6 +185,16 @@ public class DisputeResolutionType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(DisputeResolutionType1Choice obj) {
+			return obj.getProprietaryIdentification();
+		}
+
+		@Override
+		public void setValue(DisputeResolutionType1Choice obj, GenericIdentification30 value) {
+			obj.setProprietaryIdentification(value);
 		}
 	};
 

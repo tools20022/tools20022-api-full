@@ -25,7 +25,6 @@ import com.tools20022.repository.entity.PaymentPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PaymentInstructionReferenceDetails2;
 import com.tools20022.repository.msg.ShortPaymentIdentification1;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -110,7 +109,7 @@ public class InstructingAgentRole extends PaymentPartyRole {
 	 * definition} = "Agent immediately prior to the instructing agent."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPrevious = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<InstructingAgentRole, YesNoIndicator> mmPrevious = new MMBusinessAttribute<InstructingAgentRole, YesNoIndicator>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.InstructingAgentRole.mmObject();
@@ -122,12 +121,14 @@ public class InstructingAgentRole extends PaymentPartyRole {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InstructingAgentRole.class.getMethod("getPrevious", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(InstructingAgentRole obj) {
+			return obj.getPrevious();
+		}
+
+		@Override
+		public void setValue(InstructingAgentRole obj, YesNoIndicator value) {
+			obj.setPrevious(value);
 		}
 	};
 

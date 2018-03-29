@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.InvestmentFundClass;
 import com.tools20022.repository.entity.LocalName;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Account6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -147,7 +148,7 @@ public class FinancialInstrument27 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument27, SecurityIdentification3Choice> mmIdentification = new MMMessageAttribute<FinancialInstrument27, SecurityIdentification3Choice>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument27.mmObject();
@@ -160,6 +161,16 @@ public class FinancialInstrument27 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SecurityIdentification3Choice.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification3Choice getValue(FinancialInstrument27 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument27 obj, SecurityIdentification3Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Nm")
@@ -204,7 +215,7 @@ public class FinancialInstrument27 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument27, Optional<Max350Text>> mmName = new MMMessageAttribute<FinancialInstrument27, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> LocalName.mmFullName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument27.mmObject();
@@ -217,6 +228,16 @@ public class FinancialInstrument27 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(FinancialInstrument27 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument27 obj, Optional<Max350Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrfeeAcct")
@@ -263,7 +284,7 @@ public class FinancialInstrument27 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransfereeAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument27, Optional<Account6>> mmTransfereeAccount = new MMMessageAttribute<FinancialInstrument27, Optional<Account6>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmInvestmentAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument27.mmObject();
@@ -275,7 +296,17 @@ public class FinancialInstrument27 {
 			nextVersions_lazy = () -> Arrays.asList(FinancialInstrument36.mmTransfereeAccount);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Account6.mmObject();
+			complexType_lazy = () -> Account6.mmObject();
+		}
+
+		@Override
+		public Optional<Account6> getValue(FinancialInstrument27 obj) {
+			return obj.getTransfereeAccount();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument27 obj, Optional<Account6> value) {
+			obj.setTransfereeAccount(value.orElse(null));
 		}
 	};
 
@@ -319,7 +350,7 @@ public class FinancialInstrument27 {
 		return transfereeAccount == null ? Optional.empty() : Optional.of(transfereeAccount);
 	}
 
-	public FinancialInstrument27 setTransfereeAccount(com.tools20022.repository.msg.Account6 transfereeAccount) {
+	public FinancialInstrument27 setTransfereeAccount(Account6 transfereeAccount) {
 		this.transfereeAccount = transfereeAccount;
 		return this;
 	}

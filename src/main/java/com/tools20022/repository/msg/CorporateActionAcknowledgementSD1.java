@@ -133,7 +133,7 @@ public class CorporateActionAcknowledgementSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTermsAcknowledgementIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>> mmTermsAcknowledgementIndicator = new MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAcknowledgementSD1.mmObject();
 			isDerived = false;
@@ -144,6 +144,16 @@ public class CorporateActionAcknowledgementSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CorporateActionAcknowledgementSD1 obj) {
+			return obj.getTermsAcknowledgementIndicator();
+		}
+
+		@Override
+		public void setValue(CorporateActionAcknowledgementSD1 obj, Optional<YesNoIndicator> value) {
+			obj.setTermsAcknowledgementIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Cond1Ind")
@@ -178,7 +188,7 @@ public class CorporateActionAcknowledgementSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCondition1Indicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>> mmCondition1Indicator = new MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAcknowledgementSD1.mmObject();
 			isDerived = false;
@@ -189,6 +199,16 @@ public class CorporateActionAcknowledgementSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CorporateActionAcknowledgementSD1 obj) {
+			return obj.getCondition1Indicator();
+		}
+
+		@Override
+		public void setValue(CorporateActionAcknowledgementSD1 obj, Optional<YesNoIndicator> value) {
+			obj.setCondition1Indicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Cond2Ind")
@@ -223,7 +243,7 @@ public class CorporateActionAcknowledgementSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCondition2Indicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>> mmCondition2Indicator = new MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAcknowledgementSD1.mmObject();
 			isDerived = false;
@@ -234,6 +254,16 @@ public class CorporateActionAcknowledgementSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CorporateActionAcknowledgementSD1 obj) {
+			return obj.getCondition2Indicator();
+		}
+
+		@Override
+		public void setValue(CorporateActionAcknowledgementSD1 obj, Optional<YesNoIndicator> value) {
+			obj.setCondition2Indicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Cond3Ind")
@@ -268,7 +298,7 @@ public class CorporateActionAcknowledgementSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCondition3Indicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>> mmCondition3Indicator = new MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAcknowledgementSD1.mmObject();
 			isDerived = false;
@@ -279,6 +309,16 @@ public class CorporateActionAcknowledgementSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CorporateActionAcknowledgementSD1 obj) {
+			return obj.getCondition3Indicator();
+		}
+
+		@Override
+		public void setValue(CorporateActionAcknowledgementSD1 obj, Optional<YesNoIndicator> value) {
+			obj.setCondition3Indicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Cond4Ind")
@@ -313,7 +353,7 @@ public class CorporateActionAcknowledgementSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCondition4Indicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>> mmCondition4Indicator = new MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAcknowledgementSD1.mmObject();
 			isDerived = false;
@@ -324,6 +364,16 @@ public class CorporateActionAcknowledgementSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CorporateActionAcknowledgementSD1 obj) {
+			return obj.getCondition4Indicator();
+		}
+
+		@Override
+		public void setValue(CorporateActionAcknowledgementSD1 obj, Optional<YesNoIndicator> value) {
+			obj.setCondition4Indicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Cond5Ind")
@@ -358,7 +408,7 @@ public class CorporateActionAcknowledgementSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCondition5Indicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>> mmCondition5Indicator = new MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAcknowledgementSD1.mmObject();
 			isDerived = false;
@@ -369,6 +419,16 @@ public class CorporateActionAcknowledgementSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CorporateActionAcknowledgementSD1 obj) {
+			return obj.getCondition5Indicator();
+		}
+
+		@Override
+		public void setValue(CorporateActionAcknowledgementSD1 obj, Optional<YesNoIndicator> value) {
+			obj.setCondition5Indicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Cond6Ind")
@@ -403,7 +463,7 @@ public class CorporateActionAcknowledgementSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCondition6Indicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>> mmCondition6Indicator = new MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAcknowledgementSD1.mmObject();
 			isDerived = false;
@@ -414,6 +474,16 @@ public class CorporateActionAcknowledgementSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CorporateActionAcknowledgementSD1 obj) {
+			return obj.getCondition6Indicator();
+		}
+
+		@Override
+		public void setValue(CorporateActionAcknowledgementSD1 obj, Optional<YesNoIndicator> value) {
+			obj.setCondition6Indicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AdjdctnOfIncmptncyAckInd")
@@ -448,7 +518,7 @@ public class CorporateActionAcknowledgementSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdjudicationOfIncompetencyAcknowledgementIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>> mmAdjudicationOfIncompetencyAcknowledgementIndicator = new MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAcknowledgementSD1.mmObject();
 			isDerived = false;
@@ -459,6 +529,16 @@ public class CorporateActionAcknowledgementSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CorporateActionAcknowledgementSD1 obj) {
+			return obj.getAdjudicationOfIncompetencyAcknowledgementIndicator();
+		}
+
+		@Override
+		public void setValue(CorporateActionAcknowledgementSD1 obj, Optional<YesNoIndicator> value) {
+			obj.setAdjudicationOfIncompetencyAcknowledgementIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LglDcmnttnThrtyMnthsRtntnAckInd")
@@ -494,7 +574,7 @@ public class CorporateActionAcknowledgementSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLegalDocumentationThirtyMonthsRetentionAcknowledgementIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>> mmLegalDocumentationThirtyMonthsRetentionAcknowledgementIndicator = new MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAcknowledgementSD1.mmObject();
 			isDerived = false;
@@ -505,6 +585,16 @@ public class CorporateActionAcknowledgementSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CorporateActionAcknowledgementSD1 obj) {
+			return obj.getLegalDocumentationThirtyMonthsRetentionAcknowledgementIndicator();
+		}
+
+		@Override
+		public void setValue(CorporateActionAcknowledgementSD1 obj, Optional<YesNoIndicator> value) {
+			obj.setLegalDocumentationThirtyMonthsRetentionAcknowledgementIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstrDeltnAckInd")
@@ -539,7 +629,7 @@ public class CorporateActionAcknowledgementSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructionDeletionAcknowledgementIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>> mmInstructionDeletionAcknowledgementIndicator = new MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAcknowledgementSD1.mmObject();
 			isDerived = false;
@@ -550,6 +640,16 @@ public class CorporateActionAcknowledgementSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CorporateActionAcknowledgementSD1 obj) {
+			return obj.getInstructionDeletionAcknowledgementIndicator();
+		}
+
+		@Override
+		public void setValue(CorporateActionAcknowledgementSD1 obj, Optional<YesNoIndicator> value) {
+			obj.setInstructionDeletionAcknowledgementIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PotntlLossAckInd")
@@ -584,7 +684,7 @@ public class CorporateActionAcknowledgementSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPotentialLossAcknowledgementIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>> mmPotentialLossAcknowledgementIndicator = new MMMessageAttribute<CorporateActionAcknowledgementSD1, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAcknowledgementSD1.mmObject();
 			isDerived = false;
@@ -595,6 +695,16 @@ public class CorporateActionAcknowledgementSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CorporateActionAcknowledgementSD1 obj) {
+			return obj.getPotentialLossAcknowledgementIndicator();
+		}
+
+		@Override
+		public void setValue(CorporateActionAcknowledgementSD1 obj, Optional<YesNoIndicator> value) {
+			obj.setPotentialLossAcknowledgementIndicator(value.orElse(null));
 		}
 	};
 

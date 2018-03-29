@@ -32,6 +32,8 @@ import com.tools20022.repository.entity.Future;
 import com.tools20022.repository.entity.FutureRule;
 import com.tools20022.repository.entity.SecuritiesConversion;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Price1;
+import com.tools20022.repository.msg.UnderlyingAttributes3;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -125,7 +127,7 @@ public class Future3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContractSize = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Future3, Optional<BaseOneRate>> mmContractSize = new MMMessageAttribute<Future3, Optional<BaseOneRate>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesConversion.mmContractSize;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Future3.mmObject();
@@ -137,6 +139,16 @@ public class Future3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		@Override
+		public Optional<BaseOneRate> getValue(Future3 obj) {
+			return obj.getContractSize();
+		}
+
+		@Override
+		public void setValue(Future3 obj, Optional<BaseOneRate> value) {
+			obj.setContractSize(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ExrcPric")
@@ -173,7 +185,7 @@ public class Future3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExercisePrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Future3, Optional<Price1>> mmExercisePrice = new MMMessageAttribute<Future3, Optional<Price1>>() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmExercisePrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Future3.mmObject();
@@ -184,7 +196,17 @@ public class Future3 {
 			definition = "Predetermined price at which the holder of a Future will have to buy or sell the underlying instrument.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
+			complexType_lazy = () -> Price1.mmObject();
+		}
+
+		@Override
+		public Optional<Price1> getValue(Future3 obj) {
+			return obj.getExercisePrice();
+		}
+
+		@Override
+		public void setValue(Future3 obj, Optional<Price1> value) {
+			obj.setExercisePrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FutrDt")
@@ -220,7 +242,7 @@ public class Future3 {
 	 * definition} = "Date on which future contracts settle."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFutureDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Future3, Optional<ISODateTime>> mmFutureDate = new MMMessageAttribute<Future3, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> Future.mmFutureDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Future3.mmObject();
@@ -232,6 +254,16 @@ public class Future3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(Future3 obj) {
+			return obj.getFutureDate();
+		}
+
+		@Override
+		public void setValue(Future3 obj, Optional<ISODateTime> value) {
+			obj.setFutureDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinSz")
@@ -270,7 +302,7 @@ public class Future3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumSize = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Future3, Optional<ActiveCurrencyAndAmount>> mmMinimumSize = new MMMessageAttribute<Future3, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Future.mmMinimumSize;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Future3.mmObject();
@@ -282,6 +314,16 @@ public class Future3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(Future3 obj) {
+			return obj.getMinimumSize();
+		}
+
+		@Override
+		public void setValue(Future3 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setMinimumSize(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UnitOfMeasr")
@@ -323,7 +365,7 @@ public class Future3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnitOfMeasure = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Future3, Optional<UnitOfMeasure4Choice>> mmUnitOfMeasure = new MMMessageAttribute<Future3, Optional<UnitOfMeasure4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Future.mmUnitOfMeasure;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Future3.mmObject();
@@ -336,6 +378,16 @@ public class Future3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> UnitOfMeasure4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<UnitOfMeasure4Choice> getValue(Future3 obj) {
+			return obj.getUnitOfMeasure();
+		}
+
+		@Override
+		public void setValue(Future3 obj, Optional<UnitOfMeasure4Choice> value) {
+			obj.setUnitOfMeasure(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TmUnit")
@@ -377,7 +429,7 @@ public class Future3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTimeUnit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Future3, Optional<TimeUnit3Choice>> mmTimeUnit = new MMMessageAttribute<Future3, Optional<TimeUnit3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> FutureRule.mmTimeType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Future3.mmObject();
@@ -391,9 +443,19 @@ public class Future3 {
 			minOccurs = 0;
 			complexType_lazy = () -> TimeUnit3Choice.mmObject();
 		}
+
+		@Override
+		public Optional<TimeUnit3Choice> getValue(Future3 obj) {
+			return obj.getTimeUnit();
+		}
+
+		@Override
+		public void setValue(Future3 obj, Optional<TimeUnit3Choice> value) {
+			obj.setTimeUnit(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "AddtlUndrlygAttrbts")
-	protected List<com.tools20022.repository.msg.UnderlyingAttributes3> additionalUnderlyingAttributes;
+	protected List<UnderlyingAttributes3> additionalUnderlyingAttributes;
 	/**
 	 * 
 	 <p>
@@ -425,7 +487,7 @@ public class Future3 {
 	 * "Provides more information about the underlying instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdditionalUnderlyingAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Future3, List<UnderlyingAttributes3>> mmAdditionalUnderlyingAttributes = new MMMessageAssociationEnd<Future3, List<UnderlyingAttributes3>>() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmUnderlyingAsset;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Future3.mmObject();
@@ -436,7 +498,17 @@ public class Future3 {
 			definition = "Provides more information about the underlying instrument.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UnderlyingAttributes3.mmObject();
+			type_lazy = () -> UnderlyingAttributes3.mmObject();
+		}
+
+		@Override
+		public List<UnderlyingAttributes3> getValue(Future3 obj) {
+			return obj.getAdditionalUnderlyingAttributes();
+		}
+
+		@Override
+		public void setValue(Future3 obj, List<UnderlyingAttributes3> value) {
+			obj.setAdditionalUnderlyingAttributes(value);
 		}
 	};
 
@@ -469,7 +541,7 @@ public class Future3 {
 		return exercisePrice == null ? Optional.empty() : Optional.of(exercisePrice);
 	}
 
-	public Future3 setExercisePrice(com.tools20022.repository.msg.Price1 exercisePrice) {
+	public Future3 setExercisePrice(Price1 exercisePrice) {
 		this.exercisePrice = exercisePrice;
 		return this;
 	}
@@ -514,7 +586,7 @@ public class Future3 {
 		return additionalUnderlyingAttributes == null ? additionalUnderlyingAttributes = new ArrayList<>() : additionalUnderlyingAttributes;
 	}
 
-	public Future3 setAdditionalUnderlyingAttributes(List<com.tools20022.repository.msg.UnderlyingAttributes3> additionalUnderlyingAttributes) {
+	public Future3 setAdditionalUnderlyingAttributes(List<UnderlyingAttributes3> additionalUnderlyingAttributes) {
 		this.additionalUnderlyingAttributes = Objects.requireNonNull(additionalUnderlyingAttributes);
 		return this;
 	}

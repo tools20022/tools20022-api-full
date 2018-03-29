@@ -107,7 +107,7 @@ public class CurrencyDesignation1 {
 	 * "Specifies whether the currency is settled offshore or onshore."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrencyDesignation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyDesignation1, Optional<CurrencyDesignation1Code>> mmCurrencyDesignation = new MMMessageAttribute<CurrencyDesignation1, Optional<CurrencyDesignation1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyDesignation1.mmObject();
 			isDerived = false;
@@ -118,6 +118,16 @@ public class CurrencyDesignation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyDesignation1Code.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyDesignation1Code> getValue(CurrencyDesignation1 obj) {
+			return obj.getCurrencyDesignation();
+		}
+
+		@Override
+		public void setValue(CurrencyDesignation1 obj, Optional<CurrencyDesignation1Code> value) {
+			obj.setCurrencyDesignation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Lctn")
@@ -149,7 +159,7 @@ public class CurrencyDesignation1 {
 	 * definition} = "Offshore location of the currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLocation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyDesignation1, Optional<CountryCode>> mmLocation = new MMMessageAttribute<CurrencyDesignation1, Optional<CountryCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyDesignation1.mmObject();
 			isDerived = false;
@@ -160,6 +170,16 @@ public class CurrencyDesignation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(CurrencyDesignation1 obj) {
+			return obj.getLocation();
+		}
+
+		@Override
+		public void setValue(CurrencyDesignation1 obj, Optional<CountryCode> value) {
+			obj.setLocation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -191,7 +211,7 @@ public class CurrencyDesignation1 {
 	 * definition} = "Additional information about the off-shore currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyDesignation1, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<CurrencyDesignation1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyDesignation1.mmObject();
 			isDerived = false;
@@ -202,6 +222,16 @@ public class CurrencyDesignation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CurrencyDesignation1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(CurrencyDesignation1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

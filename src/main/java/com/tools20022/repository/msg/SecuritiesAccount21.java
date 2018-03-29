@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.CurrencyExchange;
 import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountIdentification5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -130,7 +131,7 @@ public class SecuritiesAccount21 {
 	 * definition} = "Account identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesAccount21, AccountIdentification5> mmAccount = new MMMessageAssociationEnd<SecuritiesAccount21, AccountIdentification5>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount21.mmObject();
@@ -142,7 +143,17 @@ public class SecuritiesAccount21 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AccountIdentification5.mmObject();
+			type_lazy = () -> AccountIdentification5.mmObject();
+		}
+
+		@Override
+		public AccountIdentification5 getValue(SecuritiesAccount21 obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount21 obj, AccountIdentification5 value) {
+			obj.setAccount(value);
 		}
 	};
 	@XmlElement(name = "SubAcct")
@@ -178,7 +189,7 @@ public class SecuritiesAccount21 {
 	 * definition} = "Sub-account identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSubAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesAccount21, Optional<AccountIdentification5>> mmSubAccount = new MMMessageAssociationEnd<SecuritiesAccount21, Optional<AccountIdentification5>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount21.mmObject();
@@ -190,7 +201,17 @@ public class SecuritiesAccount21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AccountIdentification5.mmObject();
+			type_lazy = () -> AccountIdentification5.mmObject();
+		}
+
+		@Override
+		public Optional<AccountIdentification5> getValue(SecuritiesAccount21 obj) {
+			return obj.getSubAccount();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount21 obj, Optional<AccountIdentification5> value) {
+			obj.setSubAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BaseCcy")
@@ -228,7 +249,7 @@ public class SecuritiesAccount21 {
 	 * definition} = "Base currency for the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBaseCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccount21, Optional<ActiveOrHistoricCurrencyCode>> mmBaseCurrency = new MMMessageAttribute<SecuritiesAccount21, Optional<ActiveOrHistoricCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmBaseCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount21.mmObject();
@@ -240,6 +261,16 @@ public class SecuritiesAccount21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyCode> getValue(SecuritiesAccount21 obj) {
+			return obj.getBaseCurrency();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount21 obj, Optional<ActiveOrHistoricCurrencyCode> value) {
+			obj.setBaseCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RptgCcy")
@@ -279,7 +310,7 @@ public class SecuritiesAccount21 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportingCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccount21, Optional<ActiveOrHistoricCurrencyCode>> mmReportingCurrency = new MMMessageAttribute<SecuritiesAccount21, Optional<ActiveOrHistoricCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmReportingCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount21.mmObject();
@@ -291,6 +322,16 @@ public class SecuritiesAccount21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyCode> getValue(SecuritiesAccount21 obj) {
+			return obj.getReportingCurrency();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount21 obj, Optional<ActiveOrHistoricCurrencyCode> value) {
+			obj.setReportingCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FXRate")
@@ -329,7 +370,7 @@ public class SecuritiesAccount21 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmForeignExchangeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccount21, Optional<BaseOneRate>> mmForeignExchangeRate = new MMMessageAttribute<SecuritiesAccount21, Optional<BaseOneRate>>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmExchangeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount21.mmObject();
@@ -341,6 +382,16 @@ public class SecuritiesAccount21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		@Override
+		public Optional<BaseOneRate> getValue(SecuritiesAccount21 obj) {
+			return obj.getForeignExchangeRate();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount21 obj, Optional<BaseOneRate> value) {
+			obj.setForeignExchangeRate(value.orElse(null));
 		}
 	};
 
@@ -364,7 +415,7 @@ public class SecuritiesAccount21 {
 		return account;
 	}
 
-	public SecuritiesAccount21 setAccount(com.tools20022.repository.msg.AccountIdentification5 account) {
+	public SecuritiesAccount21 setAccount(AccountIdentification5 account) {
 		this.account = Objects.requireNonNull(account);
 		return this;
 	}
@@ -373,7 +424,7 @@ public class SecuritiesAccount21 {
 		return subAccount == null ? Optional.empty() : Optional.of(subAccount);
 	}
 
-	public SecuritiesAccount21 setSubAccount(com.tools20022.repository.msg.AccountIdentification5 subAccount) {
+	public SecuritiesAccount21 setSubAccount(AccountIdentification5 subAccount) {
 		this.subAccount = subAccount;
 		return this;
 	}

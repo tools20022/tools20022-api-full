@@ -105,7 +105,7 @@ public class ReturnReason3Choice {
 	 * definition} = "Reason for the return in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReturnReason3Choice, TransactionRejectReason5Code> mmCode = new MMMessageAttribute<ReturnReason3Choice, TransactionRejectReason5Code>() {
 		{
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReturnReason3Choice.mmObject();
@@ -117,6 +117,16 @@ public class ReturnReason3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TransactionRejectReason5Code.mmObject();
+		}
+
+		@Override
+		public TransactionRejectReason5Code getValue(ReturnReason3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ReturnReason3Choice obj, TransactionRejectReason5Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -154,7 +164,7 @@ public class ReturnReason3Choice {
 	 * "Reason for the return not catered for by the available codes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReturnReason3Choice, RestrictedRR01CodeText> mmProprietary = new MMMessageAttribute<ReturnReason3Choice, RestrictedRR01CodeText>() {
 		{
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReturnReason3Choice.mmObject();
@@ -166,6 +176,16 @@ public class ReturnReason3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedRR01CodeText.mmObject();
+		}
+
+		@Override
+		public RestrictedRR01CodeText getValue(ReturnReason3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ReturnReason3Choice obj, RestrictedRR01CodeText value) {
+			obj.setProprietary(value);
 		}
 	};
 

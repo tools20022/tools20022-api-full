@@ -20,9 +20,9 @@ package com.tools20022.repository.entity;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.*;
+import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -760,7 +760,7 @@ public class CardPaymentAcquiring {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPointOfInteraction = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CardPaymentAcquiring, Optional<PointOfInteraction>> mmPointOfInteraction = new MMBusinessAssociationEnd<CardPaymentAcquiring, Optional<PointOfInteraction>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CardEntry1.mmPOI, CardTransaction1.mmPOI, TransactionData1.mmPointOfInteraction, CardPaymentEnvironment8.mmPOIIdentification, CardPaymentEnvironment17.mmPOIIdentification,
 					CardPaymentEnvironment5.mmPOI, CardPaymentEnvironment6.mmPOI, CardPaymentTransaction8.mmPOIIdentification, CardPaymentEnvironment13.mmPOI, CardPaymentEnvironment14.mmPOI, CardPaymentEnvironment3.mmPOIIdentification,
@@ -784,9 +784,19 @@ public class CardPaymentAcquiring {
 			definition = "Describes the Point of Interaction through which the payment by card was initiated.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmCardPaymentAcquiring;
+			opposite_lazy = () -> PointOfInteraction.mmCardPaymentAcquiring;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmObject();
+			type_lazy = () -> PointOfInteraction.mmObject();
+		}
+
+		@Override
+		public Optional<PointOfInteraction> getValue(CardPaymentAcquiring obj) {
+			return obj.getPointOfInteraction();
+		}
+
+		@Override
+		public void setValue(CardPaymentAcquiring obj, Optional<PointOfInteraction> value) {
+			obj.setPointOfInteraction(value.orElse(null));
 		}
 	};
 	protected CardPaymentServiceTypeCode cardPaymentService;
@@ -1250,7 +1260,7 @@ public class CardPaymentAcquiring {
 	 * definition} = "Type of service provided by the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCardPaymentService = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CardPaymentAcquiring, CardPaymentServiceTypeCode> mmCardPaymentService = new MMBusinessAttribute<CardPaymentAcquiring, CardPaymentServiceTypeCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CardAggregated1.mmAdditionalService, CardIndividualTransaction1.mmAdditionalService, CommonData1.mmTransactionType, CommonData1.mmAdditionalService, CommonData1.mmServiceAttribute,
 					CardPaymentTransaction8.mmTransactionType, CardPaymentTransaction8.mmAdditionalService, CardPaymentTransaction8.mmServiceAttribute, CardPaymentTransaction4.mmTransactionType, CardPaymentTransaction4.mmAdditionalService,
@@ -1295,12 +1305,14 @@ public class CardPaymentAcquiring {
 			simpleType_lazy = () -> CardPaymentServiceTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CardPaymentAcquiring.class.getMethod("getCardPaymentService", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CardPaymentServiceTypeCode getValue(CardPaymentAcquiring obj) {
+			return obj.getCardPaymentService();
+		}
+
+		@Override
+		public void setValue(CardPaymentAcquiring obj, CardPaymentServiceTypeCode value) {
+			obj.setCardPaymentService(value);
 		}
 	};
 	protected Max35Text transactionIdentification;
@@ -1639,7 +1651,7 @@ public class CardPaymentAcquiring {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmTransactionIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CardPaymentAcquiring, Max35Text> mmTransactionIdentification = new MMBusinessAttribute<CardPaymentAcquiring, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TransactionIdentifier1.mmTransactionReference, CardIndividualTransaction1.mmTransactionIdentification, CardPaymentTransactionDetails8.mmTransactionReference,
 					CardPaymentTransaction8.mmTransactionIdentification, CardPaymentTransaction4.mmTransactionIdentification, CardPaymentTransaction17.mmTransactionIdentification, CardPaymentTransaction14.mmTransactionIdentification,
@@ -1678,12 +1690,14 @@ public class CardPaymentAcquiring {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CardPaymentAcquiring.class.getMethod("getTransactionIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(CardPaymentAcquiring obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(CardPaymentAcquiring obj, Max35Text value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	protected ISODateTime transactionDateTime;
@@ -1746,7 +1760,7 @@ public class CardPaymentAcquiring {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmTransactionDateTime = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CardPaymentAcquiring, ISODateTime> mmTransactionDateTime = new MMBusinessAttribute<CardPaymentAcquiring, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TransactionIdentifier1.mmTransactionDateTime, CardPaymentTransactionDetails8.mmTransactionDateTime, CardTransaction4.mmAcceptorTransactionDateTime,
 					CardTransaction8.mmAcceptorTransactionDateTime, CardTransaction5.mmAcceptorTransactionDateTime, CardTransaction3.mmAcceptorTransactionDateTime, CardTransaction15.mmAcceptorTransactionDateTime,
@@ -1761,12 +1775,14 @@ public class CardPaymentAcquiring {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CardPaymentAcquiring.class.getMethod("getTransactionDateTime", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(CardPaymentAcquiring obj) {
+			return obj.getTransactionDateTime();
+		}
+
+		@Override
+		public void setValue(CardPaymentAcquiring obj, ISODateTime value) {
+			obj.setTransactionDateTime(value);
 		}
 	};
 	protected Max10000Binary iCCRelatedData;
@@ -1938,7 +1954,7 @@ public class CardPaymentAcquiring {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmICCRelatedData = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CardPaymentAcquiring, Max10000Binary> mmICCRelatedData = new MMBusinessAttribute<CardPaymentAcquiring, Max10000Binary>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CardPaymentTransactionDetails8.mmICCRelatedData, CardPaymentTransactionDetails4.mmICCRelatedData, CardPaymentTransactionDetails7.mmICCRelatedData,
 					CardPaymentTransactionDetails9.mmICCRelatedData, CardPaymentTransactionDetails1.mmICCRelatedData, CardPaymentTransactionDetails10.mmICCRelatedData, CardPaymentTransactionDetails2.mmICCRelatedData,
@@ -1962,12 +1978,14 @@ public class CardPaymentAcquiring {
 			simpleType_lazy = () -> Max10000Binary.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CardPaymentAcquiring.class.getMethod("getICCRelatedData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max10000Binary getValue(CardPaymentAcquiring obj) {
+			return obj.getICCRelatedData();
+		}
+
+		@Override
+		public void setValue(CardPaymentAcquiring obj, Max10000Binary value) {
+			obj.setICCRelatedData(value);
 		}
 	};
 	protected CardPayment relatedCardPayment;
@@ -2022,7 +2040,7 @@ public class CardPaymentAcquiring {
 	 * "Card payment which is at the origin of the acquiring process."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedCardPayment = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CardPaymentAcquiring, Optional<CardPayment>> mmRelatedCardPayment = new MMBusinessAssociationEnd<CardPaymentAcquiring, Optional<CardPayment>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(ATMCompletionAdvice1.mmTransaction, ATMCompletionAcknowledgement1.mmTransaction, ATMCompletionAdvice2.mmTransaction, ATMCompletionAcknowledgement2.mmTransaction);
 			isDerived = false;
@@ -2032,9 +2050,19 @@ public class CardPaymentAcquiring {
 			definition = "Card payment which is at the origin of the acquiring process.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.CardPayment.mmCardPaymentAcquiring;
+			opposite_lazy = () -> CardPayment.mmCardPaymentAcquiring;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.CardPayment.mmObject();
+			type_lazy = () -> CardPayment.mmObject();
+		}
+
+		@Override
+		public Optional<CardPayment> getValue(CardPaymentAcquiring obj) {
+			return obj.getRelatedCardPayment();
+		}
+
+		@Override
+		public void setValue(CardPaymentAcquiring obj, Optional<CardPayment> value) {
+			obj.setRelatedCardPayment(value.orElse(null));
 		}
 	};
 	protected TrueFalseIndicator cardPresent;
@@ -2149,7 +2177,7 @@ public class CardPaymentAcquiring {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCardPresent = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CardPaymentAcquiring, TrueFalseIndicator> mmCardPresent = new MMBusinessAttribute<CardPaymentAcquiring, TrueFalseIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentContext3.mmCardPresent, PaymentContext1.mmCardPresent, PaymentContext4.mmCardPresent, PaymentContext2.mmCardPresent, PaymentContext7.mmCardPresent, PaymentContext6.mmCardPresent,
 					PaymentContext5.mmCardPresent, PaymentContext10.mmCardPresent, PaymentContext8.mmCardPresent, PaymentContext11.mmCardPresent, PaymentContext13.mmCardPresent, PaymentContext9.mmCardPresent,
@@ -2166,12 +2194,14 @@ public class CardPaymentAcquiring {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CardPaymentAcquiring.class.getMethod("getCardPresent", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TrueFalseIndicator getValue(CardPaymentAcquiring obj) {
+			return obj.getCardPresent();
+		}
+
+		@Override
+		public void setValue(CardPaymentAcquiring obj, TrueFalseIndicator value) {
+			obj.setCardPresent(value);
 		}
 	};
 	protected TrueFalseIndicator cardholderPresent;
@@ -2286,7 +2316,7 @@ public class CardPaymentAcquiring {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCardholderPresent = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CardPaymentAcquiring, TrueFalseIndicator> mmCardholderPresent = new MMBusinessAttribute<CardPaymentAcquiring, TrueFalseIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentContext3.mmCardholderPresent, PaymentContext1.mmCardholderPresent, PaymentContext4.mmCardholderPresent, PaymentContext2.mmCardholderPresent, PaymentContext7.mmCardholderPresent,
 					PaymentContext6.mmCardholderPresent, PaymentContext5.mmCardholderPresent, PaymentContext10.mmCardholderPresent, PaymentContext8.mmCardholderPresent, PaymentContext11.mmCardholderPresent,
@@ -2304,12 +2334,14 @@ public class CardPaymentAcquiring {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CardPaymentAcquiring.class.getMethod("getCardholderPresent", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TrueFalseIndicator getValue(CardPaymentAcquiring obj) {
+			return obj.getCardholderPresent();
+		}
+
+		@Override
+		public void setValue(CardPaymentAcquiring obj, TrueFalseIndicator value) {
+			obj.setCardholderPresent(value);
 		}
 	};
 	protected TrueFalseIndicator onLineContext;
@@ -2395,7 +2427,7 @@ public class CardPaymentAcquiring {
 	 * definition} = "On-line or off-line context of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmOnLineContext = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CardPaymentAcquiring, TrueFalseIndicator> mmOnLineContext = new MMBusinessAttribute<CardPaymentAcquiring, TrueFalseIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentContext3.mmOnLineContext, PaymentContext1.mmOnLineContext, PaymentContext4.mmOnLineContext, PaymentContext2.mmOnLineContext, PaymentContext7.mmOnLineContext,
 					PaymentContext6.mmOnLineContext, PaymentContext10.mmOnLineContext, PaymentContext11.mmOnLineContext, PaymentContext13.mmOnLineContext, PaymentContext9.mmOnLineContext, PaymentContext12.mmOnLineContext,
@@ -2410,12 +2442,14 @@ public class CardPaymentAcquiring {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CardPaymentAcquiring.class.getMethod("getOnLineContext", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TrueFalseIndicator getValue(CardPaymentAcquiring obj) {
+			return obj.getOnLineContext();
+		}
+
+		@Override
+		public void setValue(CardPaymentAcquiring obj, TrueFalseIndicator value) {
+			obj.setOnLineContext(value);
 		}
 	};
 	protected AttendanceContextCode attendanceContext;
@@ -2550,7 +2584,7 @@ public class CardPaymentAcquiring {
 	 * "Human attendance at the POI location during the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmAttendanceContext = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CardPaymentAcquiring, AttendanceContextCode> mmAttendanceContext = new MMBusinessAttribute<CardPaymentAcquiring, AttendanceContextCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentContext3.mmAttendanceContext, StatusReportContent1.mmAttendanceContext, StatusReportContent2.mmAttendanceContext, PaymentContext1.mmAttendanceContext,
 					PaymentContext4.mmAttendanceContext, PaymentContext2.mmAttendanceContext, PaymentContext7.mmAttendanceContext, PaymentContext6.mmAttendanceContext, PaymentContext5.mmAttendanceContext,
@@ -2569,12 +2603,14 @@ public class CardPaymentAcquiring {
 			simpleType_lazy = () -> AttendanceContextCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CardPaymentAcquiring.class.getMethod("getAttendanceContext", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AttendanceContextCode getValue(CardPaymentAcquiring obj) {
+			return obj.getAttendanceContext();
+		}
+
+		@Override
+		public void setValue(CardPaymentAcquiring obj, AttendanceContextCode value) {
+			obj.setAttendanceContext(value);
 		}
 	};
 	protected TransactionEnvironmentCode transactionEnvironment;
@@ -2687,7 +2723,7 @@ public class CardPaymentAcquiring {
 	 * definition} = "Indicates the environment of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmTransactionEnvironment = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CardPaymentAcquiring, TransactionEnvironmentCode> mmTransactionEnvironment = new MMBusinessAttribute<CardPaymentAcquiring, TransactionEnvironmentCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentContext3.mmTransactionEnvironment, PaymentContext1.mmTransactionEnvironment, PaymentContext4.mmTransactionEnvironment, PaymentContext2.mmTransactionEnvironment,
 					PaymentContext7.mmTransactionEnvironment, PaymentContext6.mmTransactionEnvironment, PaymentContext5.mmTransactionEnvironment, PaymentContext10.mmTransactionEnvironment, PaymentContext8.mmTransactionEnvironment,
@@ -2705,12 +2741,14 @@ public class CardPaymentAcquiring {
 			simpleType_lazy = () -> TransactionEnvironmentCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CardPaymentAcquiring.class.getMethod("getTransactionEnvironment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TransactionEnvironmentCode getValue(CardPaymentAcquiring obj) {
+			return obj.getTransactionEnvironment();
+		}
+
+		@Override
+		public void setValue(CardPaymentAcquiring obj, TransactionEnvironmentCode value) {
+			obj.setTransactionEnvironment(value);
 		}
 	};
 	protected TransactionChannelCode transactionChannel;
@@ -2825,7 +2863,7 @@ public class CardPaymentAcquiring {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmTransactionChannel = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CardPaymentAcquiring, TransactionChannelCode> mmTransactionChannel = new MMBusinessAttribute<CardPaymentAcquiring, TransactionChannelCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentContext3.mmTransactionChannel, PaymentContext1.mmTransactionChannel, PaymentContext4.mmTransactionChannel, PaymentContext2.mmTransactionChannel, PaymentContext7.mmTransactionChannel,
 					PaymentContext6.mmTransactionChannel, PaymentContext5.mmTransactionChannel, PaymentContext10.mmTransactionChannel, PaymentContext8.mmTransactionChannel, PaymentContext11.mmTransactionChannel,
@@ -2843,12 +2881,14 @@ public class CardPaymentAcquiring {
 			simpleType_lazy = () -> TransactionChannelCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CardPaymentAcquiring.class.getMethod("getTransactionChannel", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TransactionChannelCode getValue(CardPaymentAcquiring obj) {
+			return obj.getTransactionChannel();
+		}
+
+		@Override
+		public void setValue(CardPaymentAcquiring obj, TransactionChannelCode value) {
+			obj.setTransactionChannel(value);
 		}
 	};
 	protected TrueFalseIndicator attendantMessageCapable;
@@ -2936,7 +2976,7 @@ public class CardPaymentAcquiring {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmAttendantMessageCapable = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CardPaymentAcquiring, TrueFalseIndicator> mmAttendantMessageCapable = new MMBusinessAttribute<CardPaymentAcquiring, TrueFalseIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentContext3.mmAttendantMessageCapable, PaymentContext1.mmAttendantMessageCapable, PaymentContext4.mmAttendantMessageCapable, PaymentContext7.mmAttendantMessageCapable,
 					PaymentContext5.mmAttendantMessageCapable, PaymentContext10.mmAttendantMessageCapable, PaymentContext8.mmAttendantMessageCapable, PaymentContext13.mmAttendantMessageCapable, PaymentContext12.mmAttendantMessageCapable,
@@ -2952,12 +2992,14 @@ public class CardPaymentAcquiring {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CardPaymentAcquiring.class.getMethod("getAttendantMessageCapable", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TrueFalseIndicator getValue(CardPaymentAcquiring obj) {
+			return obj.getAttendantMessageCapable();
+		}
+
+		@Override
+		public void setValue(CardPaymentAcquiring obj, TrueFalseIndicator value) {
+			obj.setAttendantMessageCapable(value);
 		}
 	};
 	protected ISO2ALanguageCode attendantLanguage;
@@ -3043,7 +3085,7 @@ public class CardPaymentAcquiring {
 	 * definition} = "Language used to display messages to the attendant."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmAttendantLanguage = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CardPaymentAcquiring, ISO2ALanguageCode> mmAttendantLanguage = new MMBusinessAttribute<CardPaymentAcquiring, ISO2ALanguageCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentContext3.mmAttendantLanguage, PaymentContext1.mmAttendantLanguage, PaymentContext4.mmAttendantLanguage, PaymentContext7.mmAttendantLanguage, PaymentContext5.mmAttendantLanguage,
 					PaymentContext10.mmAttendantLanguage, PaymentContext8.mmAttendantLanguage, PaymentContext13.mmAttendantLanguage, PaymentContext12.mmAttendantLanguage, PaymentContext14.mmAttendantLanguage,
@@ -3059,12 +3101,14 @@ public class CardPaymentAcquiring {
 			simpleType_lazy = () -> ISO2ALanguageCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CardPaymentAcquiring.class.getMethod("getAttendantLanguage", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISO2ALanguageCode getValue(CardPaymentAcquiring obj) {
+			return obj.getAttendantLanguage();
+		}
+
+		@Override
+		public void setValue(CardPaymentAcquiring obj, ISO2ALanguageCode value) {
+			obj.setAttendantLanguage(value);
 		}
 	};
 	protected CardDataReadingCode cardDataEntryMode;
@@ -3177,7 +3221,7 @@ public class CardPaymentAcquiring {
 	 * definition} = "Entry mode of the card data."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCardDataEntryMode = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CardPaymentAcquiring, CardDataReadingCode> mmCardDataEntryMode = new MMBusinessAttribute<CardPaymentAcquiring, CardDataReadingCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentContext3.mmCardDataEntryMode, PaymentContext1.mmCardDataEntryMode, PaymentContext4.mmCardDataEntryMode, PaymentContext2.mmCardDataEntryMode, PaymentContext7.mmCardDataEntryMode,
 					PaymentContext6.mmCardDataEntryMode, PaymentContext5.mmCardDataEntryMode, PaymentContext10.mmCardDataEntryMode, PaymentContext8.mmCardDataEntryMode, PaymentContext11.mmCardDataEntryMode,
@@ -3195,12 +3239,14 @@ public class CardPaymentAcquiring {
 			simpleType_lazy = () -> CardDataReadingCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CardPaymentAcquiring.class.getMethod("getCardDataEntryMode", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CardDataReadingCode getValue(CardPaymentAcquiring obj) {
+			return obj.getCardDataEntryMode();
+		}
+
+		@Override
+		public void setValue(CardPaymentAcquiring obj, CardDataReadingCode value) {
+			obj.setCardDataEntryMode(value);
 		}
 	};
 	protected TrueFalseIndicator fallbackIndicator;
@@ -3256,7 +3302,7 @@ public class CardPaymentAcquiring {
 	 * definition} = "Indicator of a transaction fallback."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmFallbackIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CardPaymentAcquiring, TrueFalseIndicator> mmFallbackIndicator = new MMBusinessAttribute<CardPaymentAcquiring, TrueFalseIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentContext3.mmFallbackIndicator, PaymentContext1.mmFallbackIndicator, PaymentContext4.mmFallbackIndicator, PaymentContext2.mmFallbackIndicator, PaymentContext7.mmFallbackIndicator,
 					PaymentContext6.mmFallbackIndicator, PaymentContext5.mmFallbackIndicator);
@@ -3270,15 +3316,17 @@ public class CardPaymentAcquiring {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CardPaymentAcquiring.class.getMethod("getFallbackIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TrueFalseIndicator getValue(CardPaymentAcquiring obj) {
+			return obj.getFallbackIndicator();
+		}
+
+		@Override
+		public void setValue(CardPaymentAcquiring obj, TrueFalseIndicator value) {
+			obj.setFallbackIndicator(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.TerminalManagementSystem> tMSTrigger;
+	protected List<TerminalManagementSystem> tMSTrigger;
 	/**
 	 * 
 	 <p>
@@ -3395,7 +3443,7 @@ public class CardPaymentAcquiring {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmTMSTrigger = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CardPaymentAcquiring, List<TerminalManagementSystem>> mmTMSTrigger = new MMBusinessAssociationEnd<CardPaymentAcquiring, List<TerminalManagementSystem>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AcceptorDiagnosticResponse1.mmTMSTrigger, AcceptorDiagnosticResponse2.mmTMSTrigger, AuthorisationResult1.mmTMSTrigger, AuthorisationResult3.mmTMSTrigger,
 					AcceptorCancellationAdviceResponse1.mmTMSTrigger, AcceptorCancellationAdviceResponse2.mmTMSTrigger, AcceptorCompletionAdviceResponse1.mmTMSTrigger, AcceptorCompletionAdviceResponse2.mmTMSTrigger,
@@ -3409,9 +3457,19 @@ public class CardPaymentAcquiring {
 			name = "TMSTrigger";
 			definition = "Instructs the POI (Point Of Interaction) how to contact the host of the terminal management system (TMS), to initiate the maintenance of the terminal.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.TerminalManagementSystem.mmCardPaymentAcquiring;
+			opposite_lazy = () -> TerminalManagementSystem.mmCardPaymentAcquiring;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.TerminalManagementSystem.mmObject();
+			type_lazy = () -> TerminalManagementSystem.mmObject();
+		}
+
+		@Override
+		public List<TerminalManagementSystem> getValue(CardPaymentAcquiring obj) {
+			return obj.getTMSTrigger();
+		}
+
+		@Override
+		public void setValue(CardPaymentAcquiring obj, List<TerminalManagementSystem> value) {
+			obj.setTMSTrigger(value);
 		}
 	};
 	protected Max35Text initiatorTransactionIdentifier;
@@ -3531,7 +3589,7 @@ public class CardPaymentAcquiring {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmInitiatorTransactionIdentifier = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CardPaymentAcquiring, Max35Text> mmInitiatorTransactionIdentifier = new MMBusinessAttribute<CardPaymentAcquiring, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CardPaymentTransaction8.mmInitiatorTransactionIdentification, CardPaymentTransaction4.mmInitiatorTransactionIdentification, CardPaymentTransaction17.mmInitiatorTransactionIdentification,
 					CardPaymentTransaction14.mmInitiatorTransactionIdentification, CardPaymentTransaction1.mmInitiatorTransactionIdentification, CardPaymentTransaction11.mmInitiatorTransactionIdentification,
@@ -3553,12 +3611,14 @@ public class CardPaymentAcquiring {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CardPaymentAcquiring.class.getMethod("getInitiatorTransactionIdentifier", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(CardPaymentAcquiring obj) {
+			return obj.getInitiatorTransactionIdentifier();
+		}
+
+		@Override
+		public void setValue(CardPaymentAcquiring obj, Max35Text value) {
+			obj.setInitiatorTransactionIdentifier(value);
 		}
 	};
 	protected TrueFalseIndicator reversal;
@@ -3667,7 +3727,7 @@ public class CardPaymentAcquiring {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmReversal = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CardPaymentAcquiring, TrueFalseIndicator> mmReversal = new MMBusinessAttribute<CardPaymentAcquiring, TrueFalseIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CardPaymentTransaction4.mmReversal, CardPaymentTransaction14.mmReversal, CardPaymentTransaction7.mmReversal, CardPaymentTransaction16.mmReversal, CardPaymentTransaction20.mmReversal,
 					CardPaymentTransaction3.mmReversal, CardPaymentTransaction13.mmReversal, CardPaymentTransaction28.mmReversal, CardPaymentTransaction29.mmReversal, CardPaymentTransaction25.mmReversal,
@@ -3684,12 +3744,14 @@ public class CardPaymentAcquiring {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CardPaymentAcquiring.class.getMethod("getReversal", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TrueFalseIndicator getValue(CardPaymentAcquiring obj) {
+			return obj.getReversal();
+		}
+
+		@Override
+		public void setValue(CardPaymentAcquiring obj, TrueFalseIndicator value) {
+			obj.setReversal(value);
 		}
 	};
 	protected Max35Text interchangeData;
@@ -3837,7 +3899,7 @@ public class CardPaymentAcquiring {
 	 * definition} = "Interchange information related to the card scheme."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmInterchangeData = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CardPaymentAcquiring, Max35Text> mmInterchangeData = new MMBusinessAttribute<CardPaymentAcquiring, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CardPaymentTransaction4.mmInterchangeData, CardPaymentTransaction14.mmInterchangeData, CardPaymentTransaction7.mmInterchangeData, CardPaymentTransaction16.mmInterchangeData,
 					CardPaymentTransaction20.mmInterchangeData, CardPaymentTransaction2.mmInterchangeData, CardPaymentTransaction12.mmInterchangeData, CardPaymentTransaction6.mmInterchangeData, CardPaymentTransaction3.mmInterchangeData,
@@ -3857,12 +3919,14 @@ public class CardPaymentAcquiring {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CardPaymentAcquiring.class.getMethod("getInterchangeData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(CardPaymentAcquiring obj) {
+			return obj.getInterchangeData();
+		}
+
+		@Override
+		public void setValue(CardPaymentAcquiring obj, Max35Text value) {
+			obj.setInterchangeData(value);
 		}
 	};
 	protected Max35NumericText unattendedLevelCategory;
@@ -3968,7 +4032,7 @@ public class CardPaymentAcquiring {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmUnattendedLevelCategory = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CardPaymentAcquiring, Max35NumericText> mmUnattendedLevelCategory = new MMBusinessAttribute<CardPaymentAcquiring, Max35NumericText>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CardPaymentTransactionDetails4.mmUnattendedLevelCategory, CardPaymentTransactionDetails1.mmUnattendedLevelCategory, CardPaymentTransactionDetails10.mmUnattendedLevelCategory,
 					CardPaymentTransactionDetails3.mmUnattendedLevelCategory, CardPaymentTransactionDetails12.mmUnattendedLevelCategory, CardPaymentTransactionDetails16.mmUnattendedLevelCategory,
@@ -3988,15 +4052,17 @@ public class CardPaymentAcquiring {
 			simpleType_lazy = () -> Max35NumericText.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CardPaymentAcquiring.class.getMethod("getUnattendedLevelCategory", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35NumericText getValue(CardPaymentAcquiring obj) {
+			return obj.getUnattendedLevelCategory();
+		}
+
+		@Override
+		public void setValue(CardPaymentAcquiring obj, Max35NumericText value) {
+			obj.setUnattendedLevelCategory(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.CardPaymentValidation> validation;
+	protected List<CardPaymentValidation> validation;
 	/**
 	 * 
 	 <p>
@@ -4168,7 +4234,7 @@ public class CardPaymentAcquiring {
 	 * definition} = "Results and parameters of the card payment verification."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmValidation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CardPaymentAcquiring, List<CardPaymentValidation>> mmValidation = new MMBusinessAssociationEnd<CardPaymentAcquiring, List<CardPaymentValidation>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CardPaymentTransaction4.mmAuthorisationResult, CardPaymentTransaction14.mmAuthorisationResult, CardPaymentTransaction7.mmAuthorisationResult, CardPaymentTransaction16.mmAuthorisationResult,
 					CardPaymentTransaction20.mmAuthorisationResult, CardPaymentTransaction9.mmAuthorisationResult, CardPaymentTransaction18.mmAuthorisationResult, CardPaymentTransaction10.mmAuthorisationResult,
@@ -4187,9 +4253,19 @@ public class CardPaymentAcquiring {
 			name = "Validation";
 			definition = "Results and parameters of the card payment verification.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmCardPayment;
+			opposite_lazy = () -> CardPaymentValidation.mmCardPayment;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.CardPaymentValidation.mmObject();
+			type_lazy = () -> CardPaymentValidation.mmObject();
+		}
+
+		@Override
+		public List<CardPaymentValidation> getValue(CardPaymentAcquiring obj) {
+			return obj.getValidation();
+		}
+
+		@Override
+		public void setValue(CardPaymentAcquiring obj, List<CardPaymentValidation> value) {
+			obj.setValidation(value);
 		}
 	};
 	protected TrueFalseIndicator completionRequired;
@@ -4235,7 +4311,7 @@ public class CardPaymentAcquiring {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCompletionRequired = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CardPaymentAcquiring, TrueFalseIndicator> mmCompletionRequired = new MMBusinessAttribute<CardPaymentAcquiring, TrueFalseIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AuthorisationResult1.mmCompletionRequired, AuthorisationResult4.mmCompletionRequired, AuthorisationResult10.mmCompletionRequired);
 			isDerived = false;
@@ -4248,12 +4324,14 @@ public class CardPaymentAcquiring {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CardPaymentAcquiring.class.getMethod("getCompletionRequired", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TrueFalseIndicator getValue(CardPaymentAcquiring obj) {
+			return obj.getCompletionRequired();
+		}
+
+		@Override
+		public void setValue(CardPaymentAcquiring obj, TrueFalseIndicator value) {
+			obj.setCompletionRequired(value);
 		}
 	};
 	protected ActionTypeCode actionType;
@@ -4306,7 +4384,7 @@ public class CardPaymentAcquiring {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmActionType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CardPaymentAcquiring, ActionTypeCode> mmActionType = new MMBusinessAttribute<CardPaymentAcquiring, ActionTypeCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Action1.mmActionType, Action2.mmActionType, Action3.mmActionType, Action4.mmActionType, Action5.mmActionType, Action6.mmActionType, Action7.mmActionType, Action8.mmActionType);
 			isDerived = false;
@@ -4319,12 +4397,14 @@ public class CardPaymentAcquiring {
 			simpleType_lazy = () -> ActionTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CardPaymentAcquiring.class.getMethod("getActionType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ActionTypeCode getValue(CardPaymentAcquiring obj) {
+			return obj.getActionType();
+		}
+
+		@Override
+		public void setValue(CardPaymentAcquiring obj, ActionTypeCode value) {
+			obj.setActionType(value);
 		}
 	};
 	protected Max256Text actionMessage;
@@ -4388,7 +4468,7 @@ public class CardPaymentAcquiring {
 	 * "Message to be displayed or printed to the cardholder or the cashier."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmActionMessage = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CardPaymentAcquiring, Max256Text> mmActionMessage = new MMBusinessAttribute<CardPaymentAcquiring, Max256Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(ActionMessage1.mmMessageContent, Action1.mmMessageToPresent, Action2.mmMessageToPresent, Action3.mmMessageToPresent, ActionMessage2.mmMessageContent, Action4.mmMessageToPresent,
 					Action5.mmMessageToPresent, ActionMessage4.mmMessage, ActionMessage3.mmContent, ActionMessage5.mmMessageContent, Action6.mmMessageToPresent, Action7.mmMessageToPresent, Action8.mmMessageToPresent);
@@ -4402,12 +4482,14 @@ public class CardPaymentAcquiring {
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CardPaymentAcquiring.class.getMethod("getActionMessage", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max256Text getValue(CardPaymentAcquiring obj) {
+			return obj.getActionMessage();
+		}
+
+		@Override
+		public void setValue(CardPaymentAcquiring obj, Max256Text value) {
+			obj.setActionMessage(value);
 		}
 	};
 	protected TrueFalseIndicator captureIndicator;
@@ -4437,7 +4519,7 @@ public class CardPaymentAcquiring {
 	 * definition} = "Indicates whether the transaction is captured or not."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCaptureIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CardPaymentAcquiring, TrueFalseIndicator> mmCaptureIndicator = new MMBusinessAttribute<CardPaymentAcquiring, TrueFalseIndicator>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
@@ -4449,12 +4531,14 @@ public class CardPaymentAcquiring {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CardPaymentAcquiring.class.getMethod("getCaptureIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TrueFalseIndicator getValue(CardPaymentAcquiring obj) {
+			return obj.getCaptureIndicator();
+		}
+
+		@Override
+		public void setValue(CardPaymentAcquiring obj, TrueFalseIndicator value) {
+			obj.setCaptureIndicator(value);
 		}
 	};
 	protected Max35Text recipientTransactionIdentification;
@@ -4485,7 +4569,7 @@ public class CardPaymentAcquiring {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmRecipientTransactionIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CardPaymentAcquiring, Max35Text> mmRecipientTransactionIdentification = new MMBusinessAttribute<CardPaymentAcquiring, Max35Text>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
@@ -4497,12 +4581,14 @@ public class CardPaymentAcquiring {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CardPaymentAcquiring.class.getMethod("getRecipientTransactionIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(CardPaymentAcquiring obj) {
+			return obj.getRecipientTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(CardPaymentAcquiring obj, Max35Text value) {
+			obj.setRecipientTransactionIdentification(value);
 		}
 	};
 	protected LocationCategoryCode location;
@@ -4542,7 +4628,7 @@ public class CardPaymentAcquiring {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmLocation = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CardPaymentAcquiring, LocationCategoryCode> mmLocation = new MMBusinessAttribute<CardPaymentAcquiring, LocationCategoryCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CardTransactionContext2.mmLocationCategory);
 			isDerived = false;
@@ -4555,12 +4641,14 @@ public class CardPaymentAcquiring {
 			simpleType_lazy = () -> LocationCategoryCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CardPaymentAcquiring.class.getMethod("getLocation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public LocationCategoryCode getValue(CardPaymentAcquiring obj) {
+			return obj.getLocation();
+		}
+
+		@Override
+		public void setValue(CardPaymentAcquiring obj, LocationCategoryCode value) {
+			obj.setLocation(value);
 		}
 	};
 	protected Country country;
@@ -4597,7 +4685,7 @@ public class CardPaymentAcquiring {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCountry = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CardPaymentAcquiring, Optional<Country>> mmCountry = new MMBusinessAssociationEnd<CardPaymentAcquiring, Optional<Country>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentAcquiring.mmObject();
@@ -4606,9 +4694,19 @@ public class CardPaymentAcquiring {
 			definition = "Country of the merchant where the transaction took place.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Country.mmRelatedCardPayment;
+			opposite_lazy = () -> Country.mmRelatedCardPayment;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Country.mmObject();
+			type_lazy = () -> Country.mmObject();
+		}
+
+		@Override
+		public Optional<Country> getValue(CardPaymentAcquiring obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(CardPaymentAcquiring obj, Optional<Country> value) {
+			obj.setCountry(value.orElse(null));
 		}
 	};
 
@@ -4619,9 +4717,8 @@ public class CardPaymentAcquiring {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentAcquiring";
 				definition = "Payment processes initiated by a payment card.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Country.mmRelatedCardPayment, com.tools20022.repository.entity.CardPayment.mmCardPaymentAcquiring,
-						com.tools20022.repository.entity.PointOfInteraction.mmCardPaymentAcquiring, com.tools20022.repository.entity.TerminalManagementSystem.mmCardPaymentAcquiring,
-						com.tools20022.repository.entity.CardPaymentValidation.mmCardPayment);
+				associationDomain_lazy = () -> Arrays.asList(Country.mmRelatedCardPayment, CardPayment.mmCardPaymentAcquiring, PointOfInteraction.mmCardPaymentAcquiring, TerminalManagementSystem.mmCardPaymentAcquiring,
+						CardPaymentValidation.mmCardPayment);
 				derivationElement_lazy = () -> Arrays.asList(CardPaymentContext3.mmPaymentContext, CardPaymentContext3.mmSaleContext, CardPaymentContext4.mmPaymentContext, CardPaymentContext4.mmSaleContext,
 						CardPaymentContext1.mmPaymentContext, CardPaymentContext1.mmSaleContext, CardPaymentContext2.mmPaymentContext, CardPaymentContext2.mmSaleContext, CardPaymentContext7.mmPaymentContext,
 						CardPaymentContext7.mmSaleContext, CardPaymentContext6.mmPaymentContext, CardPaymentContext6.mmSaleContext, CardPaymentContext5.mmPaymentContext, CardPaymentContext5.mmSaleContext,
@@ -4673,7 +4770,7 @@ public class CardPaymentAcquiring {
 		return pointOfInteraction == null ? Optional.empty() : Optional.of(pointOfInteraction);
 	}
 
-	public CardPaymentAcquiring setPointOfInteraction(com.tools20022.repository.entity.PointOfInteraction pointOfInteraction) {
+	public CardPaymentAcquiring setPointOfInteraction(PointOfInteraction pointOfInteraction) {
 		this.pointOfInteraction = pointOfInteraction;
 		return this;
 	}
@@ -4718,7 +4815,7 @@ public class CardPaymentAcquiring {
 		return relatedCardPayment == null ? Optional.empty() : Optional.of(relatedCardPayment);
 	}
 
-	public CardPaymentAcquiring setRelatedCardPayment(com.tools20022.repository.entity.CardPayment relatedCardPayment) {
+	public CardPaymentAcquiring setRelatedCardPayment(CardPayment relatedCardPayment) {
 		this.relatedCardPayment = relatedCardPayment;
 		return this;
 	}
@@ -4817,7 +4914,7 @@ public class CardPaymentAcquiring {
 		return tMSTrigger == null ? tMSTrigger = new ArrayList<>() : tMSTrigger;
 	}
 
-	public CardPaymentAcquiring setTMSTrigger(List<com.tools20022.repository.entity.TerminalManagementSystem> tMSTrigger) {
+	public CardPaymentAcquiring setTMSTrigger(List<TerminalManagementSystem> tMSTrigger) {
 		this.tMSTrigger = Objects.requireNonNull(tMSTrigger);
 		return this;
 	}
@@ -4862,7 +4959,7 @@ public class CardPaymentAcquiring {
 		return validation == null ? validation = new ArrayList<>() : validation;
 	}
 
-	public CardPaymentAcquiring setValidation(List<com.tools20022.repository.entity.CardPaymentValidation> validation) {
+	public CardPaymentAcquiring setValidation(List<CardPaymentValidation> validation) {
 		this.validation = Objects.requireNonNull(validation);
 		return this;
 	}
@@ -4925,7 +5022,7 @@ public class CardPaymentAcquiring {
 		return country == null ? Optional.empty() : Optional.of(country);
 	}
 
-	public CardPaymentAcquiring setCountry(com.tools20022.repository.entity.Country country) {
+	public CardPaymentAcquiring setCountry(Country country) {
 		this.country = country;
 		return this;
 	}

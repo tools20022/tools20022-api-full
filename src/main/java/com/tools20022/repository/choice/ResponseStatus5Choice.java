@@ -123,7 +123,7 @@ public class ResponseStatus5Choice {
 	 * ResponseStatus1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ResponseStatus5Choice, ResponseStatus1Code> mmCode = new MMMessageAttribute<ResponseStatus5Choice, ResponseStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> CollateralStatus.mmResponseStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ResponseStatus5Choice.mmObject();
@@ -137,6 +137,16 @@ public class ResponseStatus5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ResponseStatus1Code.mmObject();
+		}
+
+		@Override
+		public ResponseStatus1Code getValue(ResponseStatus5Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ResponseStatus5Choice obj, ResponseStatus1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -184,7 +194,7 @@ public class ResponseStatus5Choice {
 	 * ResponseStatus1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ResponseStatus5Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<ResponseStatus5Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatus.mmAgentStandingInstructionStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ResponseStatus5Choice.mmObject();
@@ -198,6 +208,16 @@ public class ResponseStatus5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(ResponseStatus5Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ResponseStatus5Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

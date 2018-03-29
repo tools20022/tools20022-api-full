@@ -105,7 +105,7 @@ public class MemberQueryDefinition {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MemberQueryDefinition, Optional<QueryType1Code>> mmQueryType = new MMMessageAttribute<MemberQueryDefinition, Optional<QueryType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MemberQueryDefinition.mmObject();
 			isDerived = false;
@@ -116,6 +116,16 @@ public class MemberQueryDefinition {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> QueryType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<QueryType1Code> getValue(MemberQueryDefinition obj) {
+			return obj.getQueryType();
+		}
+
+		@Override
+		public void setValue(MemberQueryDefinition obj, Optional<QueryType1Code> value) {
+			obj.setQueryType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MmbCrit")
@@ -147,7 +157,7 @@ public class MemberQueryDefinition {
 	 * definition} = "Defines the member query criteria."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMemberCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MemberQueryDefinition, Optional<MemberCriteriaDefinitionChoice>> mmMemberCriteria = new MMMessageAssociationEnd<MemberQueryDefinition, Optional<MemberCriteriaDefinitionChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MemberQueryDefinition.mmObject();
 			isDerived = false;
@@ -159,6 +169,16 @@ public class MemberQueryDefinition {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> MemberCriteriaDefinitionChoice.mmObject();
+		}
+
+		@Override
+		public Optional<MemberCriteriaDefinitionChoice> getValue(MemberQueryDefinition obj) {
+			return obj.getMemberCriteria();
+		}
+
+		@Override
+		public void setValue(MemberQueryDefinition obj, Optional<MemberCriteriaDefinitionChoice> value) {
+			obj.setMemberCriteria(value.orElse(null));
 		}
 	};
 

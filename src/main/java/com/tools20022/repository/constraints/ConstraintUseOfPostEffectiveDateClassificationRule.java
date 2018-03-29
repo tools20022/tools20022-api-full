@@ -50,11 +50,15 @@ public class ConstraintUseOfPostEffectiveDateClassificationRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes23SD1> forFinancialInstrumentAttributes23SD1 = new MMConstraint<FinancialInstrumentAttributes23SD1>() {
 		{
-			validator = ConstraintUseOfPostEffectiveDateClassificationRule::checkFinancialInstrumentAttributes23SD1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UseOfPostEffectiveDateClassificationRule";
 			definition = "PostEffectiveDateClassification can only be used with Event Type Code MRGR.";
 			owner_lazy = () -> FinancialInstrumentAttributes23SD1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes23SD1 obj) throws Exception {
+			checkFinancialInstrumentAttributes23SD1(obj);
 		}
 	};
 

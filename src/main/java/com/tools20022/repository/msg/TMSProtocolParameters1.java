@@ -25,6 +25,9 @@ import com.tools20022.repository.codeset.DataSetCategory5Code;
 import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification71;
+import com.tools20022.repository.msg.KEKIdentifier2;
+import com.tools20022.repository.msg.NetworkParameters3;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -139,7 +142,7 @@ public class TMSProtocolParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTerminalManagerIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TMSProtocolParameters1, GenericIdentification71> mmTerminalManagerIdentification = new MMMessageAssociationEnd<TMSProtocolParameters1, GenericIdentification71>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters1.mmObject();
 			isDerived = false;
@@ -151,7 +154,17 @@ public class TMSProtocolParameters1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification71.mmObject();
+			type_lazy = () -> GenericIdentification71.mmObject();
+		}
+
+		@Override
+		public GenericIdentification71 getValue(TMSProtocolParameters1 obj) {
+			return obj.getTerminalManagerIdentification();
+		}
+
+		@Override
+		public void setValue(TMSProtocolParameters1 obj, GenericIdentification71 value) {
+			obj.setTerminalManagerIdentification(value);
 		}
 	};
 	@XmlElement(name = "MntncSvc", required = true)
@@ -192,7 +205,7 @@ public class TMSProtocolParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaintenanceService = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSProtocolParameters1, List<DataSetCategory5Code>> mmMaintenanceService = new MMMessageAttribute<TMSProtocolParameters1, List<DataSetCategory5Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters1.mmObject();
 			isDerived = false;
@@ -203,6 +216,16 @@ public class TMSProtocolParameters1 {
 			nextVersions_lazy = () -> Arrays.asList(TMSProtocolParameters2.mmMaintenanceService);
 			minOccurs = 1;
 			simpleType_lazy = () -> DataSetCategory5Code.mmObject();
+		}
+
+		@Override
+		public List<DataSetCategory5Code> getValue(TMSProtocolParameters1 obj) {
+			return obj.getMaintenanceService();
+		}
+
+		@Override
+		public void setValue(TMSProtocolParameters1 obj, List<DataSetCategory5Code> value) {
+			obj.setMaintenanceService(value);
 		}
 	};
 	@XmlElement(name = "Vrsn", required = true)
@@ -242,7 +265,7 @@ public class TMSProtocolParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSProtocolParameters1, Max256Text> mmVersion = new MMMessageAttribute<TMSProtocolParameters1, Max256Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters1.mmObject();
 			isDerived = false;
@@ -254,6 +277,16 @@ public class TMSProtocolParameters1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Max256Text getValue(TMSProtocolParameters1 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(TMSProtocolParameters1 obj, Max256Text value) {
+			obj.setVersion(value);
 		}
 	};
 	@XmlElement(name = "ApplId")
@@ -295,7 +328,7 @@ public class TMSProtocolParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmApplicationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSProtocolParameters1, List<Max35Text>> mmApplicationIdentification = new MMMessageAttribute<TMSProtocolParameters1, List<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters1.mmObject();
 			isDerived = false;
@@ -306,6 +339,16 @@ public class TMSProtocolParameters1 {
 			nextVersions_lazy = () -> Arrays.asList(TMSProtocolParameters2.mmApplicationIdentification);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(TMSProtocolParameters1 obj) {
+			return obj.getApplicationIdentification();
+		}
+
+		@Override
+		public void setValue(TMSProtocolParameters1 obj, List<Max35Text> value) {
+			obj.setApplicationIdentification(value);
 		}
 	};
 	@XmlElement(name = "HstAdr")
@@ -336,7 +379,7 @@ public class TMSProtocolParameters1 {
 	 * definition} = "Addresses of the terminal manager host."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmHostAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TMSProtocolParameters1, Optional<NetworkParameters3>> mmHostAddress = new MMMessageAssociationEnd<TMSProtocolParameters1, Optional<NetworkParameters3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters1.mmObject();
 			isDerived = false;
@@ -347,11 +390,21 @@ public class TMSProtocolParameters1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NetworkParameters3.mmObject();
+			type_lazy = () -> NetworkParameters3.mmObject();
+		}
+
+		@Override
+		public Optional<NetworkParameters3> getValue(TMSProtocolParameters1 obj) {
+			return obj.getHostAddress();
+		}
+
+		@Override
+		public void setValue(TMSProtocolParameters1 obj, Optional<NetworkParameters3> value) {
+			obj.setHostAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "HstKey")
-	protected List<com.tools20022.repository.msg.KEKIdentifier2> hostKey;
+	protected List<KEKIdentifier2> hostKey;
 	/**
 	 * 
 	 <p>
@@ -379,7 +432,7 @@ public class TMSProtocolParameters1 {
 	 * "Cryptographic key used to communicate with the terminal manager host."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmHostKey = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TMSProtocolParameters1, List<KEKIdentifier2>> mmHostKey = new MMMessageAssociationEnd<TMSProtocolParameters1, List<KEKIdentifier2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters1.mmObject();
 			isDerived = false;
@@ -389,7 +442,17 @@ public class TMSProtocolParameters1 {
 			definition = "Cryptographic key used to communicate with the terminal manager host.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.KEKIdentifier2.mmObject();
+			type_lazy = () -> KEKIdentifier2.mmObject();
+		}
+
+		@Override
+		public List<KEKIdentifier2> getValue(TMSProtocolParameters1 obj) {
+			return obj.getHostKey();
+		}
+
+		@Override
+		public void setValue(TMSProtocolParameters1 obj, List<KEKIdentifier2> value) {
+			obj.setHostKey(value);
 		}
 	};
 	@XmlElement(name = "POIId")
@@ -429,7 +492,7 @@ public class TMSProtocolParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPOIIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSProtocolParameters1, Optional<Max35Text>> mmPOIIdentification = new MMMessageAttribute<TMSProtocolParameters1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters1.mmObject();
 			isDerived = false;
@@ -441,6 +504,16 @@ public class TMSProtocolParameters1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TMSProtocolParameters1 obj) {
+			return obj.getPOIIdentification();
+		}
+
+		@Override
+		public void setValue(TMSProtocolParameters1 obj, Optional<Max35Text> value) {
+			obj.setPOIIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InitgPtyId")
@@ -482,7 +555,7 @@ public class TMSProtocolParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInitiatingPartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSProtocolParameters1, Optional<Max35Text>> mmInitiatingPartyIdentification = new MMMessageAttribute<TMSProtocolParameters1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters1.mmObject();
 			isDerived = false;
@@ -494,6 +567,16 @@ public class TMSProtocolParameters1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TMSProtocolParameters1 obj) {
+			return obj.getInitiatingPartyIdentification();
+		}
+
+		@Override
+		public void setValue(TMSProtocolParameters1 obj, Optional<Max35Text> value) {
+			obj.setInitiatingPartyIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcptPtyId")
@@ -535,7 +618,7 @@ public class TMSProtocolParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRecipientPartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSProtocolParameters1, Optional<Max35Text>> mmRecipientPartyIdentification = new MMMessageAttribute<TMSProtocolParameters1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters1.mmObject();
 			isDerived = false;
@@ -547,6 +630,16 @@ public class TMSProtocolParameters1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TMSProtocolParameters1 obj) {
+			return obj.getRecipientPartyIdentification();
+		}
+
+		@Override
+		public void setValue(TMSProtocolParameters1 obj, Optional<Max35Text> value) {
+			obj.setRecipientPartyIdentification(value.orElse(null));
 		}
 	};
 
@@ -571,7 +664,7 @@ public class TMSProtocolParameters1 {
 		return terminalManagerIdentification;
 	}
 
-	public TMSProtocolParameters1 setTerminalManagerIdentification(com.tools20022.repository.msg.GenericIdentification71 terminalManagerIdentification) {
+	public TMSProtocolParameters1 setTerminalManagerIdentification(GenericIdentification71 terminalManagerIdentification) {
 		this.terminalManagerIdentification = Objects.requireNonNull(terminalManagerIdentification);
 		return this;
 	}
@@ -607,7 +700,7 @@ public class TMSProtocolParameters1 {
 		return hostAddress == null ? Optional.empty() : Optional.of(hostAddress);
 	}
 
-	public TMSProtocolParameters1 setHostAddress(com.tools20022.repository.msg.NetworkParameters3 hostAddress) {
+	public TMSProtocolParameters1 setHostAddress(NetworkParameters3 hostAddress) {
 		this.hostAddress = hostAddress;
 		return this;
 	}
@@ -616,7 +709,7 @@ public class TMSProtocolParameters1 {
 		return hostKey == null ? hostKey = new ArrayList<>() : hostKey;
 	}
 
-	public TMSProtocolParameters1 setHostKey(List<com.tools20022.repository.msg.KEKIdentifier2> hostKey) {
+	public TMSProtocolParameters1 setHostKey(List<KEKIdentifier2> hostKey) {
 		this.hostKey = Objects.requireNonNull(hostKey);
 		return this;
 	}

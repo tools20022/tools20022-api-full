@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.Role;
 import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TaxDetails;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -130,7 +131,7 @@ public class TaxInformation2 {
 	 * definition} = "Tax Identification Number of the creditor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditorTaxIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxInformation2, Optional<Max35Text>> mmCreditorTaxIdentification = new MMMessageAttribute<TaxInformation2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmTaxIdentificationNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxInformation2.mmObject();
@@ -142,6 +143,16 @@ public class TaxInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TaxInformation2 obj) {
+			return obj.getCreditorTaxIdentification();
+		}
+
+		@Override
+		public void setValue(TaxInformation2 obj, Optional<Max35Text> value) {
+			obj.setCreditorTaxIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtrTaxTp")
@@ -178,7 +189,7 @@ public class TaxInformation2 {
 	 * definition} = "Type of tax payer (creditor)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditorTaxType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxInformation2, Optional<Max35Text>> mmCreditorTaxType = new MMMessageAttribute<TaxInformation2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Role.mmPlayer;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxInformation2.mmObject();
@@ -190,6 +201,16 @@ public class TaxInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TaxInformation2 obj) {
+			return obj.getCreditorTaxType();
+		}
+
+		@Override
+		public void setValue(TaxInformation2 obj, Optional<Max35Text> value) {
+			obj.setCreditorTaxType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DbtrTaxId")
@@ -226,7 +247,7 @@ public class TaxInformation2 {
 	 * definition} = "Tax Identification Number of the debtor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDebtorTaxIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxInformation2, Optional<Max35Text>> mmDebtorTaxIdentification = new MMMessageAttribute<TaxInformation2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmTaxIdentificationNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxInformation2.mmObject();
@@ -238,6 +259,16 @@ public class TaxInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TaxInformation2 obj) {
+			return obj.getDebtorTaxIdentification();
+		}
+
+		@Override
+		public void setValue(TaxInformation2 obj, Optional<Max35Text> value) {
+			obj.setDebtorTaxIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxRefNb")
@@ -275,7 +306,7 @@ public class TaxInformation2 {
 	 * "Tax reference information that is specific to a taxing agency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxReferenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxInformation2, Optional<Max140Text>> mmTaxReferenceNumber = new MMMessageAttribute<TaxInformation2, Optional<Max140Text>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxInformation2.mmObject();
@@ -287,6 +318,16 @@ public class TaxInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(TaxInformation2 obj) {
+			return obj.getTaxReferenceNumber();
+		}
+
+		@Override
+		public void setValue(TaxInformation2 obj, Optional<Max140Text> value) {
+			obj.setTaxReferenceNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlTaxblBaseAmt")
@@ -324,7 +365,7 @@ public class TaxInformation2 {
 	 * definition} = "Total amount of money on which the tax is based."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalTaxableBaseAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxInformation2, Optional<CurrencyAndAmount>> mmTotalTaxableBaseAmount = new MMMessageAttribute<TaxInformation2, Optional<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmTaxableBaseAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxInformation2.mmObject();
@@ -336,6 +377,16 @@ public class TaxInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyAndAmount> getValue(TaxInformation2 obj) {
+			return obj.getTotalTaxableBaseAmount();
+		}
+
+		@Override
+		public void setValue(TaxInformation2 obj, Optional<CurrencyAndAmount> value) {
+			obj.setTotalTaxableBaseAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlTaxAmt")
@@ -373,7 +424,7 @@ public class TaxInformation2 {
 	 * "Amount of money resulting from the calculation of the tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalTaxAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxInformation2, Optional<CurrencyAndAmount>> mmTotalTaxAmount = new MMMessageAttribute<TaxInformation2, Optional<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxInformation2.mmObject();
@@ -385,6 +436,16 @@ public class TaxInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyAndAmount> getValue(TaxInformation2 obj) {
+			return obj.getTotalTaxAmount();
+		}
+
+		@Override
+		public void setValue(TaxInformation2 obj, Optional<CurrencyAndAmount> value) {
+			obj.setTotalTaxAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxDt")
@@ -421,7 +482,7 @@ public class TaxInformation2 {
 	 * definition} = "Date by which tax is due."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxInformation2, Optional<ISODate>> mmTaxDate = new MMMessageAttribute<TaxInformation2, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmTaxDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxInformation2.mmObject();
@@ -434,9 +495,19 @@ public class TaxInformation2 {
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
+
+		@Override
+		public Optional<ISODate> getValue(TaxInformation2 obj) {
+			return obj.getTaxDate();
+		}
+
+		@Override
+		public void setValue(TaxInformation2 obj, Optional<ISODate> value) {
+			obj.setTaxDate(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "TaxTpInf")
-	protected List<com.tools20022.repository.msg.TaxDetails> taxTypeInformation;
+	protected List<TaxDetails> taxTypeInformation;
 	/**
 	 * 
 	 <p>
@@ -466,7 +537,7 @@ public class TaxInformation2 {
 	 * definition} = "Set of characteristics defining the type of tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTaxTypeInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TaxInformation2, List<TaxDetails>> mmTaxTypeInformation = new MMMessageAssociationEnd<TaxInformation2, List<TaxDetails>>() {
 		{
 			businessComponentTrace_lazy = () -> Tax.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxInformation2.mmObject();
@@ -477,7 +548,17 @@ public class TaxInformation2 {
 			definition = "Set of characteristics defining the type of tax.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TaxDetails.mmObject();
+			type_lazy = () -> TaxDetails.mmObject();
+		}
+
+		@Override
+		public List<TaxDetails> getValue(TaxInformation2 obj) {
+			return obj.getTaxTypeInformation();
+		}
+
+		@Override
+		public void setValue(TaxInformation2 obj, List<TaxDetails> value) {
+			obj.setTaxTypeInformation(value);
 		}
 	};
 
@@ -564,7 +645,7 @@ public class TaxInformation2 {
 		return taxTypeInformation == null ? taxTypeInformation = new ArrayList<>() : taxTypeInformation;
 	}
 
-	public TaxInformation2 setTaxTypeInformation(List<com.tools20022.repository.msg.TaxDetails> taxTypeInformation) {
+	public TaxInformation2 setTaxTypeInformation(List<TaxDetails> taxTypeInformation) {
 		this.taxTypeInformation = Objects.requireNonNull(taxTypeInformation);
 		return this;
 	}

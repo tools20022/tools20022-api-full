@@ -103,7 +103,7 @@ public class ResponderDetails1 {
 	 * definition} = "Date and time at which the response was created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateTimeStamp = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ResponderDetails1, ISODateTime> mmDateTimeStamp = new MMMessageAttribute<ResponderDetails1, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> SystemEventInformation.mmTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ResponderDetails1.mmObject();
@@ -115,6 +115,16 @@ public class ResponderDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(ResponderDetails1 obj) {
+			return obj.getDateTimeStamp();
+		}
+
+		@Override
+		public void setValue(ResponderDetails1 obj, ISODateTime value) {
+			obj.setDateTimeStamp(value);
 		}
 	};
 	@XmlElement(name = "Rspndr", required = true)
@@ -147,7 +157,7 @@ public class ResponderDetails1 {
 	 * definition} = "Identification of the responder."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResponder = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ResponderDetails1, AnyBICIdentifier> mmResponder = new MMMessageAttribute<ResponderDetails1, AnyBICIdentifier>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ResponderDetails1.mmObject();
 			isDerived = false;
@@ -158,6 +168,16 @@ public class ResponderDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public AnyBICIdentifier getValue(ResponderDetails1 obj) {
+			return obj.getResponder();
+		}
+
+		@Override
+		public void setValue(ResponderDetails1 obj, AnyBICIdentifier value) {
+			obj.setResponder(value);
 		}
 	};
 

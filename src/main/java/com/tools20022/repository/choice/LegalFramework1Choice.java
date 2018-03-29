@@ -126,7 +126,7 @@ public class LegalFramework1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LegalFramework1Choice, LegalFramework1Code> mmCode = new MMMessageAttribute<LegalFramework1Choice, LegalFramework1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmLegalFramework;
 			componentContext_lazy = () -> com.tools20022.repository.choice.LegalFramework1Choice.mmObject();
@@ -140,6 +140,16 @@ public class LegalFramework1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LegalFramework1Code.mmObject();
+		}
+
+		@Override
+		public LegalFramework1Code getValue(LegalFramework1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(LegalFramework1Choice obj, LegalFramework1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -188,7 +198,7 @@ public class LegalFramework1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LegalFramework1Choice, GenericIdentification20> mmProprietary = new MMMessageAttribute<LegalFramework1Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmLegalFramework;
 			componentContext_lazy = () -> com.tools20022.repository.choice.LegalFramework1Choice.mmObject();
@@ -202,6 +212,16 @@ public class LegalFramework1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(LegalFramework1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(LegalFramework1Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

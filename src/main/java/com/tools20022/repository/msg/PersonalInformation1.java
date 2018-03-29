@@ -108,7 +108,7 @@ public class PersonalInformation1 {
 	 * definition} = "Name of the father of the individual person."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNameOfFather = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PersonalInformation1, Optional<Max35Text>> mmNameOfFather = new MMMessageAttribute<PersonalInformation1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PersonName.mmBirthName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PersonalInformation1.mmObject();
@@ -120,6 +120,16 @@ public class PersonalInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PersonalInformation1 obj) {
+			return obj.getNameOfFather();
+		}
+
+		@Override
+		public void setValue(PersonalInformation1 obj, Optional<Max35Text> value) {
+			obj.setNameOfFather(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MdnNmOfMthr")
@@ -157,7 +167,7 @@ public class PersonalInformation1 {
 	 * "Maiden (unmarried) name of the mother of the individual person."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaidenNameOfMother = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PersonalInformation1, Optional<Max35Text>> mmMaidenNameOfMother = new MMMessageAttribute<PersonalInformation1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PersonalInformation1.mmObject();
@@ -169,6 +179,16 @@ public class PersonalInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PersonalInformation1 obj) {
+			return obj.getMaidenNameOfMother();
+		}
+
+		@Override
+		public void setValue(PersonalInformation1 obj, Optional<Max35Text> value) {
+			obj.setMaidenNameOfMother(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NmOfPrtnr")
@@ -205,7 +225,7 @@ public class PersonalInformation1 {
 	 * definition} = "Name of the partner of the individual person."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNameOfPartner = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PersonalInformation1, Optional<Max35Text>> mmNameOfPartner = new MMMessageAttribute<PersonalInformation1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PersonName.mmGivenName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PersonalInformation1.mmObject();
@@ -217,6 +237,16 @@ public class PersonalInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PersonalInformation1 obj) {
+			return obj.getNameOfPartner();
+		}
+
+		@Override
+		public void setValue(PersonalInformation1 obj, Optional<Max35Text> value) {
+			obj.setNameOfPartner(value.orElse(null));
 		}
 	};
 

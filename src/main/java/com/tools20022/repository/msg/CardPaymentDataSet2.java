@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV01;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -124,7 +125,7 @@ public class CardPaymentDataSet2 {
 	 * definition} = "Identification of the data set."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSetIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentDataSet2, DataSetIdentification1> mmDataSetIdentification = new MMMessageAssociationEnd<CardPaymentDataSet2, DataSetIdentification1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSet2.mmObject();
 			isDerived = false;
@@ -135,7 +136,17 @@ public class CardPaymentDataSet2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DataSetIdentification1.mmObject();
+			type_lazy = () -> DataSetIdentification1.mmObject();
+		}
+
+		@Override
+		public DataSetIdentification1 getValue(CardPaymentDataSet2 obj) {
+			return obj.getDataSetIdentification();
+		}
+
+		@Override
+		public void setValue(CardPaymentDataSet2 obj, DataSetIdentification1 value) {
+			obj.setDataSetIdentification(value);
 		}
 	};
 	@XmlElement(name = "DataSetRslt", required = true)
@@ -166,7 +177,7 @@ public class CardPaymentDataSet2 {
 	 * definition} = "Result of the data set capture."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSetResult = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentDataSet2, ResponseType1> mmDataSetResult = new MMMessageAssociationEnd<CardPaymentDataSet2, ResponseType1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSet2.mmObject();
 			isDerived = false;
@@ -177,7 +188,17 @@ public class CardPaymentDataSet2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ResponseType1.mmObject();
+			type_lazy = () -> ResponseType1.mmObject();
+		}
+
+		@Override
+		public ResponseType1 getValue(CardPaymentDataSet2 obj) {
+			return obj.getDataSetResult();
+		}
+
+		@Override
+		public void setValue(CardPaymentDataSet2 obj, ResponseType1 value) {
+			obj.setDataSetResult(value);
 		}
 	};
 	@XmlElement(name = "RmvDataSet", required = true)
@@ -212,7 +233,7 @@ public class CardPaymentDataSet2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRemoveDataSet = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentDataSet2, TrueFalseIndicator> mmRemoveDataSet = new MMMessageAttribute<CardPaymentDataSet2, TrueFalseIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSet2.mmObject();
 			isDerived = false;
@@ -223,6 +244,16 @@ public class CardPaymentDataSet2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public TrueFalseIndicator getValue(CardPaymentDataSet2 obj) {
+			return obj.getRemoveDataSet();
+		}
+
+		@Override
+		public void setValue(CardPaymentDataSet2 obj, TrueFalseIndicator value) {
+			obj.setRemoveDataSet(value);
 		}
 	};
 	@XmlElement(name = "DataSetInitr")
@@ -254,7 +285,7 @@ public class CardPaymentDataSet2 {
 	 * definition} = "Initiator of the data set."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSetInitiator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentDataSet2, Optional<GenericIdentification32>> mmDataSetInitiator = new MMMessageAssociationEnd<CardPaymentDataSet2, Optional<GenericIdentification32>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSet2.mmObject();
 			isDerived = false;
@@ -265,11 +296,21 @@ public class CardPaymentDataSet2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
+			type_lazy = () -> GenericIdentification32.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification32> getValue(CardPaymentDataSet2 obj) {
+			return obj.getDataSetInitiator();
+		}
+
+		@Override
+		public void setValue(CardPaymentDataSet2 obj, Optional<GenericIdentification32> value) {
+			obj.setDataSetInitiator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxTtls", required = true)
-	protected List<com.tools20022.repository.msg.TransactionTotals1> transactionTotals;
+	protected List<TransactionTotals1> transactionTotals;
 	/**
 	 * 
 	 <p>
@@ -296,7 +337,7 @@ public class CardPaymentDataSet2 {
 	 * definition} = "Transaction totals of the batch."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionTotals = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentDataSet2, List<TransactionTotals1>> mmTransactionTotals = new MMMessageAssociationEnd<CardPaymentDataSet2, List<TransactionTotals1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSet2.mmObject();
 			isDerived = false;
@@ -306,11 +347,21 @@ public class CardPaymentDataSet2 {
 			definition = "Transaction totals of the batch.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransactionTotals1.mmObject();
+			type_lazy = () -> TransactionTotals1.mmObject();
+		}
+
+		@Override
+		public List<TransactionTotals1> getValue(CardPaymentDataSet2 obj) {
+			return obj.getTransactionTotals();
+		}
+
+		@Override
+		public void setValue(CardPaymentDataSet2 obj, List<TransactionTotals1> value) {
+			obj.setTransactionTotals(value);
 		}
 	};
 	@XmlElement(name = "RjctdTx")
-	protected List<com.tools20022.repository.msg.CardPaymentDataSet3> rejectedTransaction;
+	protected List<CardPaymentDataSet3> rejectedTransaction;
 	/**
 	 * 
 	 <p>
@@ -338,7 +389,7 @@ public class CardPaymentDataSet2 {
 	 * "Transaction in the batch, whose capture has been rejected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejectedTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentDataSet2, List<CardPaymentDataSet3>> mmRejectedTransaction = new MMMessageAssociationEnd<CardPaymentDataSet2, List<CardPaymentDataSet3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSet2.mmObject();
 			isDerived = false;
@@ -348,7 +399,17 @@ public class CardPaymentDataSet2 {
 			definition = "Transaction in the batch, whose capture has been rejected.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSet3.mmObject();
+			type_lazy = () -> CardPaymentDataSet3.mmObject();
+		}
+
+		@Override
+		public List<CardPaymentDataSet3> getValue(CardPaymentDataSet2 obj) {
+			return obj.getRejectedTransaction();
+		}
+
+		@Override
+		public void setValue(CardPaymentDataSet2 obj, List<CardPaymentDataSet3> value) {
+			obj.setRejectedTransaction(value);
 		}
 	};
 
@@ -373,7 +434,7 @@ public class CardPaymentDataSet2 {
 		return dataSetIdentification;
 	}
 
-	public CardPaymentDataSet2 setDataSetIdentification(com.tools20022.repository.msg.DataSetIdentification1 dataSetIdentification) {
+	public CardPaymentDataSet2 setDataSetIdentification(DataSetIdentification1 dataSetIdentification) {
 		this.dataSetIdentification = Objects.requireNonNull(dataSetIdentification);
 		return this;
 	}
@@ -382,7 +443,7 @@ public class CardPaymentDataSet2 {
 		return dataSetResult;
 	}
 
-	public CardPaymentDataSet2 setDataSetResult(com.tools20022.repository.msg.ResponseType1 dataSetResult) {
+	public CardPaymentDataSet2 setDataSetResult(ResponseType1 dataSetResult) {
 		this.dataSetResult = Objects.requireNonNull(dataSetResult);
 		return this;
 	}
@@ -400,7 +461,7 @@ public class CardPaymentDataSet2 {
 		return dataSetInitiator == null ? Optional.empty() : Optional.of(dataSetInitiator);
 	}
 
-	public CardPaymentDataSet2 setDataSetInitiator(com.tools20022.repository.msg.GenericIdentification32 dataSetInitiator) {
+	public CardPaymentDataSet2 setDataSetInitiator(GenericIdentification32 dataSetInitiator) {
 		this.dataSetInitiator = dataSetInitiator;
 		return this;
 	}
@@ -409,7 +470,7 @@ public class CardPaymentDataSet2 {
 		return transactionTotals == null ? transactionTotals = new ArrayList<>() : transactionTotals;
 	}
 
-	public CardPaymentDataSet2 setTransactionTotals(List<com.tools20022.repository.msg.TransactionTotals1> transactionTotals) {
+	public CardPaymentDataSet2 setTransactionTotals(List<TransactionTotals1> transactionTotals) {
 		this.transactionTotals = Objects.requireNonNull(transactionTotals);
 		return this;
 	}
@@ -418,7 +479,7 @@ public class CardPaymentDataSet2 {
 		return rejectedTransaction == null ? rejectedTransaction = new ArrayList<>() : rejectedTransaction;
 	}
 
-	public CardPaymentDataSet2 setRejectedTransaction(List<com.tools20022.repository.msg.CardPaymentDataSet3> rejectedTransaction) {
+	public CardPaymentDataSet2 setRejectedTransaction(List<CardPaymentDataSet3> rejectedTransaction) {
 		this.rejectedTransaction = Objects.requireNonNull(rejectedTransaction);
 		return this;
 	}

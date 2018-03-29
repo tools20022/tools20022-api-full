@@ -101,7 +101,7 @@ public class CustomerConductClassification1Choice {
 	 * definition} = "Conduct type expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerConductClassification1Choice, ConductClassification1Code> mmCode = new MMMessageAttribute<CustomerConductClassification1Choice, ConductClassification1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CustomerConductClassification1Choice.mmObject();
 			isDerived = false;
@@ -112,6 +112,16 @@ public class CustomerConductClassification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ConductClassification1Code.mmObject();
+		}
+
+		@Override
+		public ConductClassification1Code getValue(CustomerConductClassification1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CustomerConductClassification1Choice obj, ConductClassification1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -144,7 +154,7 @@ public class CustomerConductClassification1Choice {
 	 * definition} = "Conduct type expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerConductClassification1Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<CustomerConductClassification1Choice, GenericIdentification47>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CustomerConductClassification1Choice.mmObject();
 			isDerived = false;
@@ -155,6 +165,16 @@ public class CustomerConductClassification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(CustomerConductClassification1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CustomerConductClassification1Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

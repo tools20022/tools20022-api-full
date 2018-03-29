@@ -24,6 +24,7 @@ import com.tools20022.repository.choice.ProcessingType1Choice;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.AccountRestriction;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -112,7 +113,7 @@ public class BalanceRestrictionType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BalanceRestrictionType1, GenericIdentification1> mmType = new MMMessageAttribute<BalanceRestrictionType1, GenericIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> AccountRestriction.mmRestrictionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceRestrictionType1.mmObject();
@@ -123,7 +124,17 @@ public class BalanceRestrictionType1 {
 			definition = "Type of the restriction, for example, selling restriction, buying restriction, placing restriction.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
+			complexType_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(BalanceRestrictionType1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(BalanceRestrictionType1 obj, GenericIdentification1 value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Desc")
@@ -155,7 +166,7 @@ public class BalanceRestrictionType1 {
 	 * definition} = "Description of the restriction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BalanceRestrictionType1, Optional<Max140Text>> mmDescription = new MMMessageAttribute<BalanceRestrictionType1, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceRestrictionType1.mmObject();
 			isDerived = false;
@@ -166,6 +177,16 @@ public class BalanceRestrictionType1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(BalanceRestrictionType1 obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(BalanceRestrictionType1 obj, Optional<Max140Text> value) {
+			obj.setDescription(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcgTp")
@@ -205,7 +226,7 @@ public class BalanceRestrictionType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessingType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BalanceRestrictionType1, Optional<ProcessingType1Choice>> mmProcessingType = new MMMessageAttribute<BalanceRestrictionType1, Optional<ProcessingType1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> AccountRestriction.mmRestrictionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceRestrictionType1.mmObject();
@@ -217,6 +238,16 @@ public class BalanceRestrictionType1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ProcessingType1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ProcessingType1Choice> getValue(BalanceRestrictionType1 obj) {
+			return obj.getProcessingType();
+		}
+
+		@Override
+		public void setValue(BalanceRestrictionType1 obj, Optional<ProcessingType1Choice> value) {
+			obj.setProcessingType(value.orElse(null));
 		}
 	};
 
@@ -239,7 +270,7 @@ public class BalanceRestrictionType1 {
 		return type;
 	}
 
-	public BalanceRestrictionType1 setType(com.tools20022.repository.msg.GenericIdentification1 type) {
+	public BalanceRestrictionType1 setType(GenericIdentification1 type) {
 		this.type = Objects.requireNonNull(type);
 		return this;
 	}

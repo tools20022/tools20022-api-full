@@ -107,7 +107,7 @@ public class StampDutyType1FormatChoice {
 	 * definition} = "Standard code to specify the stamp duty information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StampDutyType1FormatChoice, StampDutyType1Code> mmCode = new MMMessageAttribute<StampDutyType1FormatChoice, StampDutyType1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmStampDutyType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.StampDutyType1FormatChoice.mmObject();
@@ -119,6 +119,16 @@ public class StampDutyType1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> StampDutyType1Code.mmObject();
+		}
+
+		@Override
+		public StampDutyType1Code getValue(StampDutyType1FormatChoice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(StampDutyType1FormatChoice obj, StampDutyType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -156,7 +166,7 @@ public class StampDutyType1FormatChoice {
 	 * definition} = "Proprietary code to express the stamp duty information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StampDutyType1FormatChoice, GenericIdentification13> mmProprietary = new MMMessageAttribute<StampDutyType1FormatChoice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmStampDutyType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.StampDutyType1FormatChoice.mmObject();
@@ -168,6 +178,16 @@ public class StampDutyType1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(StampDutyType1FormatChoice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(StampDutyType1FormatChoice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -25,6 +25,8 @@ import com.tools20022.repository.choice.Recipient4Choice;
 import com.tools20022.repository.datatype.Max140Binary;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AlgorithmIdentification15;
+import com.tools20022.repository.msg.EncapsulatedContent3;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -131,7 +133,7 @@ public class AuthenticatedData4 {
 	 * AuthenticatedData3.mmVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AuthenticatedData4, Optional<Number>> mmVersion = new MMMessageAttribute<AuthenticatedData4, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AuthenticatedData4.mmObject();
 			isDerived = false;
@@ -144,6 +146,16 @@ public class AuthenticatedData4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(AuthenticatedData4 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(AuthenticatedData4 obj, Optional<Number> value) {
+			obj.setVersion(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rcpt", required = true)
@@ -188,7 +200,7 @@ public class AuthenticatedData4 {
 	 * AuthenticatedData3.mmRecipient}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRecipient = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AuthenticatedData4, List<Recipient4Choice>> mmRecipient = new MMMessageAssociationEnd<AuthenticatedData4, List<Recipient4Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AuthenticatedData4.mmObject();
 			isDerived = false;
@@ -201,6 +213,16 @@ public class AuthenticatedData4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Recipient4Choice.mmObject();
+		}
+
+		@Override
+		public List<Recipient4Choice> getValue(AuthenticatedData4 obj) {
+			return obj.getRecipient();
+		}
+
+		@Override
+		public void setValue(AuthenticatedData4 obj, List<Recipient4Choice> value) {
+			obj.setRecipient(value);
 		}
 	};
 	@XmlElement(name = "MACAlgo", required = true)
@@ -245,7 +267,7 @@ public class AuthenticatedData4 {
 	 * AuthenticatedData3.mmMACAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMACAlgorithm = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AuthenticatedData4, AlgorithmIdentification15> mmMACAlgorithm = new MMMessageAssociationEnd<AuthenticatedData4, AlgorithmIdentification15>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AuthenticatedData4.mmObject();
 			isDerived = false;
@@ -258,7 +280,17 @@ public class AuthenticatedData4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification15.mmObject();
+			type_lazy = () -> AlgorithmIdentification15.mmObject();
+		}
+
+		@Override
+		public AlgorithmIdentification15 getValue(AuthenticatedData4 obj) {
+			return obj.getMACAlgorithm();
+		}
+
+		@Override
+		public void setValue(AuthenticatedData4 obj, AlgorithmIdentification15 value) {
+			obj.setMACAlgorithm(value);
 		}
 	};
 	@XmlElement(name = "NcpsltdCntt", required = true)
@@ -302,7 +334,7 @@ public class AuthenticatedData4 {
 	 * AuthenticatedData3.mmEncapsulatedContent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEncapsulatedContent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AuthenticatedData4, EncapsulatedContent3> mmEncapsulatedContent = new MMMessageAssociationEnd<AuthenticatedData4, EncapsulatedContent3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AuthenticatedData4.mmObject();
 			isDerived = false;
@@ -315,7 +347,17 @@ public class AuthenticatedData4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.EncapsulatedContent3.mmObject();
+			type_lazy = () -> EncapsulatedContent3.mmObject();
+		}
+
+		@Override
+		public EncapsulatedContent3 getValue(AuthenticatedData4 obj) {
+			return obj.getEncapsulatedContent();
+		}
+
+		@Override
+		public void setValue(AuthenticatedData4 obj, EncapsulatedContent3 value) {
+			obj.setEncapsulatedContent(value);
 		}
 	};
 	@XmlElement(name = "MAC", required = true)
@@ -360,7 +402,7 @@ public class AuthenticatedData4 {
 	 * AuthenticatedData3.mmMAC}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMAC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AuthenticatedData4, Max140Binary> mmMAC = new MMMessageAttribute<AuthenticatedData4, Max140Binary>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AuthenticatedData4.mmObject();
 			isDerived = false;
@@ -373,6 +415,16 @@ public class AuthenticatedData4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Binary.mmObject();
+		}
+
+		@Override
+		public Max140Binary getValue(AuthenticatedData4 obj) {
+			return obj.getMAC();
+		}
+
+		@Override
+		public void setValue(AuthenticatedData4 obj, Max140Binary value) {
+			obj.setMAC(value);
 		}
 	};
 
@@ -414,7 +466,7 @@ public class AuthenticatedData4 {
 		return mACAlgorithm;
 	}
 
-	public AuthenticatedData4 setMACAlgorithm(com.tools20022.repository.msg.AlgorithmIdentification15 mACAlgorithm) {
+	public AuthenticatedData4 setMACAlgorithm(AlgorithmIdentification15 mACAlgorithm) {
 		this.mACAlgorithm = Objects.requireNonNull(mACAlgorithm);
 		return this;
 	}
@@ -423,7 +475,7 @@ public class AuthenticatedData4 {
 		return encapsulatedContent;
 	}
 
-	public AuthenticatedData4 setEncapsulatedContent(com.tools20022.repository.msg.EncapsulatedContent3 encapsulatedContent) {
+	public AuthenticatedData4 setEncapsulatedContent(EncapsulatedContent3 encapsulatedContent) {
 		this.encapsulatedContent = Objects.requireNonNull(encapsulatedContent);
 		return this;
 	}

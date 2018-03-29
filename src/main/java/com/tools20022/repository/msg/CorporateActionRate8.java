@@ -131,7 +131,7 @@ public class CorporateActionRate8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProposedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionRate8, Optional<PercentageRate>> mmProposedRate = new MMMessageAttribute<CorporateActionRate8, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmProposedRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate8.mmObject();
@@ -145,6 +145,16 @@ public class CorporateActionRate8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(CorporateActionRate8 obj) {
+			return obj.getProposedRate();
+		}
+
+		@Override
+		public void setValue(CorporateActionRate8 obj, Optional<PercentageRate> value) {
+			obj.setProposedRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OvrsbcptRate")
@@ -193,7 +203,7 @@ public class CorporateActionRate8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOversubscriptionRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionRate8, Optional<RateAndAmountFormat12Choice>> mmOversubscriptionRate = new MMMessageAttribute<CorporateActionRate8, Optional<RateAndAmountFormat12Choice>>() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmOversubscriptionRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate8.mmObject();
@@ -207,6 +217,16 @@ public class CorporateActionRate8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RateAndAmountFormat12Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateAndAmountFormat12Choice> getValue(CorporateActionRate8 obj) {
+			return obj.getOversubscriptionRate();
+		}
+
+		@Override
+		public void setValue(CorporateActionRate8 obj, Optional<RateAndAmountFormat12Choice> value) {
+			obj.setOversubscriptionRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReqdTaxtnRate")
@@ -257,7 +277,7 @@ public class CorporateActionRate8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestedTaxationRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionRate8, Optional<PercentageRate>> mmRequestedTaxationRate = new MMMessageAttribute<CorporateActionRate8, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> TaxVoucher.mmRequestedTaxationRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate8.mmObject();
@@ -271,6 +291,16 @@ public class CorporateActionRate8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(CorporateActionRate8 obj) {
+			return obj.getRequestedTaxationRate();
+		}
+
+		@Override
+		public void setValue(CorporateActionRate8 obj, Optional<PercentageRate> value) {
+			obj.setRequestedTaxationRate(value.orElse(null));
 		}
 	};
 

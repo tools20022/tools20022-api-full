@@ -24,7 +24,6 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TreasuryArchive;
 import com.tools20022.repository.msg.TradeData1;
 import com.tools20022.repository.msgset.ForexNotificationsISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -110,7 +109,7 @@ public class StatusNotificationV02 {
 	 * "Provides information on the status of a trade in a system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTradeData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StatusNotificationV02, TradeData1> mmTradeData = new MMMessageBuildingBlock<StatusNotificationV02, TradeData1>() {
 		{
 			xmlTag = "TradData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,12 +120,14 @@ public class StatusNotificationV02 {
 			complexType_lazy = () -> TradeData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StatusNotificationV02.class.getMethod("getTradeData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TradeData1 getValue(StatusNotificationV02 obj) {
+			return obj.getTradeData();
+		}
+
+		@Override
+		public void setValue(StatusNotificationV02 obj, TradeData1 value) {
+			obj.setTradeData(value);
 		}
 	};
 

@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.PaymentExecution;
 import com.tools20022.repository.entity.PaymentIdentification;
 import com.tools20022.repository.entity.PaymentStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CancellationReasonInformation3;
+import com.tools20022.repository.msg.Case2;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -129,7 +131,7 @@ public class OriginalGroupInformation23 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGroupCancellationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupInformation23, Optional<Max35Text>> mmGroupCancellationIdentification = new MMMessageAttribute<OriginalGroupInformation23, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation23.mmObject();
 			isDerived = false;
@@ -140,6 +142,16 @@ public class OriginalGroupInformation23 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(OriginalGroupInformation23 obj) {
+			return obj.getGroupCancellationIdentification();
+		}
+
+		@Override
+		public void setValue(OriginalGroupInformation23 obj, Optional<Max35Text> value) {
+			obj.setGroupCancellationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Case")
@@ -176,7 +188,7 @@ public class OriginalGroupInformation23 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCase = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OriginalGroupInformation23, Optional<Case2>> mmCase = new MMMessageAssociationEnd<OriginalGroupInformation23, Optional<Case2>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmRelatedInvestigationCase;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation23.mmObject();
@@ -188,7 +200,17 @@ public class OriginalGroupInformation23 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Case2.mmObject();
+			type_lazy = () -> Case2.mmObject();
+		}
+
+		@Override
+		public Optional<Case2> getValue(OriginalGroupInformation23 obj) {
+			return obj.getCase();
+		}
+
+		@Override
+		public void setValue(OriginalGroupInformation23 obj, Optional<Case2> value) {
+			obj.setCase(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlMsgId", required = true)
@@ -227,7 +249,7 @@ public class OriginalGroupInformation23 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupInformation23, Max35Text> mmOriginalMessageIdentification = new MMMessageAttribute<OriginalGroupInformation23, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation23.mmObject();
@@ -239,6 +261,16 @@ public class OriginalGroupInformation23 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OriginalGroupInformation23 obj) {
+			return obj.getOriginalMessageIdentification();
+		}
+
+		@Override
+		public void setValue(OriginalGroupInformation23 obj, Max35Text value) {
+			obj.setOriginalMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "OrgnlMsgNmId", required = true)
@@ -272,7 +304,7 @@ public class OriginalGroupInformation23 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalMessageNameIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupInformation23, Max35Text> mmOriginalMessageNameIdentification = new MMMessageAttribute<OriginalGroupInformation23, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation23.mmObject();
 			isDerived = false;
@@ -283,6 +315,16 @@ public class OriginalGroupInformation23 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OriginalGroupInformation23 obj) {
+			return obj.getOriginalMessageNameIdentification();
+		}
+
+		@Override
+		public void setValue(OriginalGroupInformation23 obj, Max35Text value) {
+			obj.setOriginalMessageNameIdentification(value);
 		}
 	};
 	@XmlElement(name = "OrgnlCreDtTm")
@@ -319,7 +361,7 @@ public class OriginalGroupInformation23 {
 	 * definition} = "Date and time at which the original message was created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupInformation23, Optional<ISODateTime>> mmOriginalCreationDateTime = new MMMessageAttribute<OriginalGroupInformation23, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmCreationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation23.mmObject();
@@ -331,6 +373,16 @@ public class OriginalGroupInformation23 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(OriginalGroupInformation23 obj) {
+			return obj.getOriginalCreationDateTime();
+		}
+
+		@Override
+		public void setValue(OriginalGroupInformation23 obj, Optional<ISODateTime> value) {
+			obj.setOriginalCreationDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NbOfTxs")
@@ -364,7 +416,7 @@ public class OriginalGroupInformation23 {
 	 * "Number of individual transactions contained in the original message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfTransactions = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupInformation23, Optional<Max15NumericText>> mmNumberOfTransactions = new MMMessageAttribute<OriginalGroupInformation23, Optional<Max15NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation23.mmObject();
 			isDerived = false;
@@ -375,6 +427,16 @@ public class OriginalGroupInformation23 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max15NumericText> getValue(OriginalGroupInformation23 obj) {
+			return obj.getNumberOfTransactions();
+		}
+
+		@Override
+		public void setValue(OriginalGroupInformation23 obj, Optional<Max15NumericText> value) {
+			obj.setNumberOfTransactions(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtrlSum")
@@ -409,7 +471,7 @@ public class OriginalGroupInformation23 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmControlSum = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupInformation23, Optional<DecimalNumber>> mmControlSum = new MMMessageAttribute<OriginalGroupInformation23, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation23.mmObject();
 			isDerived = false;
@@ -420,6 +482,16 @@ public class OriginalGroupInformation23 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(OriginalGroupInformation23 obj) {
+			return obj.getControlSum();
+		}
+
+		@Override
+		public void setValue(OriginalGroupInformation23 obj, Optional<DecimalNumber> value) {
+			obj.setControlSum(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GrpCxl")
@@ -454,7 +526,7 @@ public class OriginalGroupInformation23 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGroupCancellation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupInformation23, Optional<GroupCancellationIndicator>> mmGroupCancellation = new MMMessageAttribute<OriginalGroupInformation23, Optional<GroupCancellationIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation23.mmObject();
 			isDerived = false;
@@ -466,9 +538,19 @@ public class OriginalGroupInformation23 {
 			minOccurs = 0;
 			simpleType_lazy = () -> GroupCancellationIndicator.mmObject();
 		}
+
+		@Override
+		public Optional<GroupCancellationIndicator> getValue(OriginalGroupInformation23 obj) {
+			return obj.getGroupCancellation();
+		}
+
+		@Override
+		public void setValue(OriginalGroupInformation23 obj, Optional<GroupCancellationIndicator> value) {
+			obj.setGroupCancellation(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "CxlRsnInf")
-	protected List<com.tools20022.repository.msg.CancellationReasonInformation3> cancellationReasonInformation;
+	protected List<CancellationReasonInformation3> cancellationReasonInformation;
 	/**
 	 * 
 	 <p>
@@ -503,7 +585,7 @@ public class OriginalGroupInformation23 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCancellationReasonInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OriginalGroupInformation23, List<CancellationReasonInformation3>> mmCancellationReasonInformation = new MMMessageAssociationEnd<OriginalGroupInformation23, List<CancellationReasonInformation3>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation23.mmObject();
@@ -514,7 +596,17 @@ public class OriginalGroupInformation23 {
 			definition = "Set of elements used to provide detailed information on the cancellation reason.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CancellationReasonInformation3.mmObject();
+			type_lazy = () -> CancellationReasonInformation3.mmObject();
+		}
+
+		@Override
+		public List<CancellationReasonInformation3> getValue(OriginalGroupInformation23 obj) {
+			return obj.getCancellationReasonInformation();
+		}
+
+		@Override
+		public void setValue(OriginalGroupInformation23 obj, List<CancellationReasonInformation3> value) {
+			obj.setCancellationReasonInformation(value);
 		}
 	};
 
@@ -549,7 +641,7 @@ public class OriginalGroupInformation23 {
 		return case_ == null ? Optional.empty() : Optional.of(case_);
 	}
 
-	public OriginalGroupInformation23 setCase(com.tools20022.repository.msg.Case2 case_) {
+	public OriginalGroupInformation23 setCase(Case2 case_) {
 		this.case_ = case_;
 		return this;
 	}
@@ -612,7 +704,7 @@ public class OriginalGroupInformation23 {
 		return cancellationReasonInformation == null ? cancellationReasonInformation = new ArrayList<>() : cancellationReasonInformation;
 	}
 
-	public OriginalGroupInformation23 setCancellationReasonInformation(List<com.tools20022.repository.msg.CancellationReasonInformation3> cancellationReasonInformation) {
+	public OriginalGroupInformation23 setCancellationReasonInformation(List<CancellationReasonInformation3> cancellationReasonInformation) {
 		this.cancellationReasonInformation = Objects.requireNonNull(cancellationReasonInformation);
 		return this;
 	}

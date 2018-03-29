@@ -128,7 +128,7 @@ public class UpdatedAdditionalInformation8 {
 	 * UpdatedAdditionalInformation2.mmUpdateDescription}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUpdateDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UpdatedAdditionalInformation8, Optional<Max140Text>> mmUpdateDescription = new MMMessageAttribute<UpdatedAdditionalInformation8, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation8.mmObject();
 			isDerived = false;
@@ -140,6 +140,16 @@ public class UpdatedAdditionalInformation8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(UpdatedAdditionalInformation8 obj) {
+			return obj.getUpdateDescription();
+		}
+
+		@Override
+		public void setValue(UpdatedAdditionalInformation8 obj, Optional<Max140Text> value) {
+			obj.setUpdateDescription(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UpdDt")
@@ -177,7 +187,7 @@ public class UpdatedAdditionalInformation8 {
 	 * UpdatedAdditionalInformation2.mmUpdateDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUpdateDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UpdatedAdditionalInformation8, Optional<ISODate>> mmUpdateDate = new MMMessageAttribute<UpdatedAdditionalInformation8, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation8.mmObject();
 			isDerived = false;
@@ -189,6 +199,16 @@ public class UpdatedAdditionalInformation8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(UpdatedAdditionalInformation8 obj) {
+			return obj.getUpdateDate();
+		}
+
+		@Override
+		public void setValue(UpdatedAdditionalInformation8 obj, Optional<ISODate> value) {
+			obj.setUpdateDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlInf", required = true)
@@ -225,7 +245,7 @@ public class UpdatedAdditionalInformation8 {
 	 * UpdatedAdditionalInformation2.mmAdditionalInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UpdatedAdditionalInformation8, List<Max8000Text>> mmAdditionalInformation = new MMMessageAttribute<UpdatedAdditionalInformation8, List<Max8000Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation8.mmObject();
 			isDerived = false;
@@ -236,6 +256,16 @@ public class UpdatedAdditionalInformation8 {
 			previousVersion_lazy = () -> UpdatedAdditionalInformation2.mmAdditionalInformation;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max8000Text.mmObject();
+		}
+
+		@Override
+		public List<Max8000Text> getValue(UpdatedAdditionalInformation8 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(UpdatedAdditionalInformation8 obj, List<Max8000Text> value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 

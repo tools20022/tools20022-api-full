@@ -120,7 +120,7 @@ public class CashAccountAuditTrailOrOperationalError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashAccountAuditTrailReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccountAuditTrailOrOperationalError1Choice, List<CashAccountAuditTrailReport1>> mmCashAccountAuditTrailReport = new MMMessageAssociationEnd<CashAccountAuditTrailOrOperationalError1Choice, List<CashAccountAuditTrailReport1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CashAccountAuditTrailOrOperationalError1Choice.mmObject();
 			isDerived = false;
@@ -132,6 +132,16 @@ public class CashAccountAuditTrailOrOperationalError1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CashAccountAuditTrailReport1.mmObject();
+		}
+
+		@Override
+		public List<CashAccountAuditTrailReport1> getValue(CashAccountAuditTrailOrOperationalError1Choice obj) {
+			return obj.getCashAccountAuditTrailReport();
+		}
+
+		@Override
+		public void setValue(CashAccountAuditTrailOrOperationalError1Choice obj, List<CashAccountAuditTrailReport1> value) {
+			obj.setCashAccountAuditTrailReport(value);
 		}
 	};
 	@XmlElement(name = "OprlErr", required = true)
@@ -170,7 +180,7 @@ public class CashAccountAuditTrailOrOperationalError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccountAuditTrailOrOperationalError1Choice, List<ErrorHandling3>> mmOperationalError = new MMMessageAssociationEnd<CashAccountAuditTrailOrOperationalError1Choice, List<ErrorHandling3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CashAccountAuditTrailOrOperationalError1Choice.mmObject();
 			isDerived = false;
@@ -182,6 +192,16 @@ public class CashAccountAuditTrailOrOperationalError1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling3> getValue(CashAccountAuditTrailOrOperationalError1Choice obj) {
+			return obj.getOperationalError();
+		}
+
+		@Override
+		public void setValue(CashAccountAuditTrailOrOperationalError1Choice obj, List<ErrorHandling3> value) {
+			obj.setOperationalError(value);
 		}
 	};
 

@@ -113,7 +113,7 @@ public class IdentificationSource4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IdentificationSource4Choice, ExternalFinancialInstrumentIdentificationType1Code> mmCode = new MMMessageAttribute<IdentificationSource4Choice, ExternalFinancialInstrumentIdentificationType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Scheme.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.choice.IdentificationSource4Choice.mmObject();
@@ -125,6 +125,16 @@ public class IdentificationSource4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalFinancialInstrumentIdentificationType1Code.mmObject();
+		}
+
+		@Override
+		public ExternalFinancialInstrumentIdentificationType1Code getValue(IdentificationSource4Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(IdentificationSource4Choice obj, ExternalFinancialInstrumentIdentificationType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -164,7 +174,7 @@ public class IdentificationSource4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IdentificationSource4Choice, RestrictedFINExact2Text> mmProprietary = new MMMessageAttribute<IdentificationSource4Choice, RestrictedFINExact2Text>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.choice.IdentificationSource4Choice.mmObject();
@@ -176,6 +186,16 @@ public class IdentificationSource4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINExact2Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINExact2Text getValue(IdentificationSource4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(IdentificationSource4Choice obj, RestrictedFINExact2Text value) {
+			obj.setProprietary(value);
 		}
 	};
 

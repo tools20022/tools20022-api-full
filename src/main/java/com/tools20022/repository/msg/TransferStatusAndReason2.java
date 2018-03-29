@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -193,7 +194,7 @@ public class TransferStatusAndReason2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferStatusAndReason2, Optional<Max35Text>> mmMasterReference = new MMMessageAttribute<TransferStatusAndReason2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason2.mmObject();
@@ -206,6 +207,16 @@ public class TransferStatusAndReason2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransferStatusAndReason2 obj) {
+			return obj.getMasterReference();
+		}
+
+		@Override
+		public void setValue(TransferStatusAndReason2 obj, Optional<Max35Text> value) {
+			obj.setMasterReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrfRef", required = true)
@@ -252,7 +263,7 @@ public class TransferStatusAndReason2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransferReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferStatusAndReason2, Max35Text> mmTransferReference = new MMMessageAttribute<TransferStatusAndReason2, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason2.mmObject();
@@ -265,6 +276,16 @@ public class TransferStatusAndReason2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(TransferStatusAndReason2 obj) {
+			return obj.getTransferReference();
+		}
+
+		@Override
+		public void setValue(TransferStatusAndReason2 obj, Max35Text value) {
+			obj.setTransferReference(value);
 		}
 	};
 	@XmlElement(name = "ClntRef")
@@ -311,7 +332,7 @@ public class TransferStatusAndReason2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferStatusAndReason2, Optional<Max35Text>> mmClientReference = new MMMessageAttribute<TransferStatusAndReason2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmClientOrderIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason2.mmObject();
@@ -324,6 +345,16 @@ public class TransferStatusAndReason2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransferStatusAndReason2 obj) {
+			return obj.getClientReference();
+		}
+
+		@Override
+		public void setValue(TransferStatusAndReason2 obj, Optional<Max35Text> value) {
+			obj.setClientReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CxlRef")
@@ -365,7 +396,7 @@ public class TransferStatusAndReason2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancellationReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferStatusAndReason2, Optional<Max35Text>> mmCancellationReference = new MMMessageAttribute<TransferStatusAndReason2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason2.mmObject();
 			isDerived = false;
@@ -377,6 +408,16 @@ public class TransferStatusAndReason2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransferStatusAndReason2 obj) {
+			return obj.getCancellationReference();
+		}
+
+		@Override
+		public void setValue(TransferStatusAndReason2 obj, Optional<Max35Text> value) {
+			obj.setCancellationReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sts", required = true)
@@ -415,7 +456,7 @@ public class TransferStatusAndReason2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferStatusAndReason2, TransferInstructionStatus2> mmStatus = new MMMessageAssociationEnd<TransferStatusAndReason2, TransferInstructionStatus2>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason2.mmObject();
@@ -427,7 +468,17 @@ public class TransferStatusAndReason2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransferInstructionStatus2.mmObject();
+			type_lazy = () -> TransferInstructionStatus2.mmObject();
+		}
+
+		@Override
+		public TransferInstructionStatus2 getValue(TransferStatusAndReason2 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(TransferStatusAndReason2 obj, TransferInstructionStatus2 value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "PdgSttlm", required = true)
@@ -464,7 +515,7 @@ public class TransferStatusAndReason2 {
 	 * definition} = "Status of the transfer is pending settlement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPendingSettlement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferStatusAndReason2, PendingSettlementStatus2> mmPendingSettlement = new MMMessageAssociationEnd<TransferStatusAndReason2, PendingSettlementStatus2>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason2.mmObject();
@@ -476,7 +527,17 @@ public class TransferStatusAndReason2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PendingSettlementStatus2.mmObject();
+			type_lazy = () -> PendingSettlementStatus2.mmObject();
+		}
+
+		@Override
+		public PendingSettlementStatus2 getValue(TransferStatusAndReason2 obj) {
+			return obj.getPendingSettlement();
+		}
+
+		@Override
+		public void setValue(TransferStatusAndReason2 obj, PendingSettlementStatus2 value) {
+			obj.setPendingSettlement(value);
 		}
 	};
 	@XmlElement(name = "Umtchd", required = true)
@@ -513,7 +574,7 @@ public class TransferStatusAndReason2 {
 	 * definition} = "Status of the transfer is unmatched."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnmatched = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferStatusAndReason2, TransferUnmatchedStatus2> mmUnmatched = new MMMessageAssociationEnd<TransferStatusAndReason2, TransferUnmatchedStatus2>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason2.mmObject();
@@ -525,7 +586,17 @@ public class TransferStatusAndReason2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransferUnmatchedStatus2.mmObject();
+			type_lazy = () -> TransferUnmatchedStatus2.mmObject();
+		}
+
+		@Override
+		public TransferUnmatchedStatus2 getValue(TransferStatusAndReason2 obj) {
+			return obj.getUnmatched();
+		}
+
+		@Override
+		public void setValue(TransferStatusAndReason2 obj, TransferUnmatchedStatus2 value) {
+			obj.setUnmatched(value);
 		}
 	};
 	@XmlElement(name = "InRpr", required = true)
@@ -561,7 +632,7 @@ public class TransferStatusAndReason2 {
 	 * definition} = "Status of the transfer is in repair."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInRepair = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferStatusAndReason2, InRepairStatus3> mmInRepair = new MMMessageAssociationEnd<TransferStatusAndReason2, InRepairStatus3>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason2.mmObject();
@@ -573,7 +644,17 @@ public class TransferStatusAndReason2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InRepairStatus3.mmObject();
+			type_lazy = () -> InRepairStatus3.mmObject();
+		}
+
+		@Override
+		public InRepairStatus3 getValue(TransferStatusAndReason2 obj) {
+			return obj.getInRepair();
+		}
+
+		@Override
+		public void setValue(TransferStatusAndReason2 obj, InRepairStatus3 value) {
+			obj.setInRepair(value);
 		}
 	};
 	@XmlElement(name = "Rjctd", required = true)
@@ -610,7 +691,7 @@ public class TransferStatusAndReason2 {
 	 * definition} = "Status of the transfer is rejected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferStatusAndReason2, RejectedStatus8Choice> mmRejected = new MMMessageAssociationEnd<TransferStatusAndReason2, RejectedStatus8Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason2.mmObject();
@@ -623,6 +704,16 @@ public class TransferStatusAndReason2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RejectedStatus8Choice.mmObject();
+		}
+
+		@Override
+		public RejectedStatus8Choice getValue(TransferStatusAndReason2 obj) {
+			return obj.getRejected();
+		}
+
+		@Override
+		public void setValue(TransferStatusAndReason2 obj, RejectedStatus8Choice value) {
+			obj.setRejected(value);
 		}
 	};
 	@XmlElement(name = "FaildSttlm", required = true)
@@ -661,7 +752,7 @@ public class TransferStatusAndReason2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFailedSettlement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferStatusAndReason2, FailedSettlementStatus1> mmFailedSettlement = new MMMessageAssociationEnd<TransferStatusAndReason2, FailedSettlementStatus1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason2.mmObject();
@@ -673,7 +764,17 @@ public class TransferStatusAndReason2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FailedSettlementStatus1.mmObject();
+			type_lazy = () -> FailedSettlementStatus1.mmObject();
+		}
+
+		@Override
+		public FailedSettlementStatus1 getValue(TransferStatusAndReason2 obj) {
+			return obj.getFailedSettlement();
+		}
+
+		@Override
+		public void setValue(TransferStatusAndReason2 obj, FailedSettlementStatus1 value) {
+			obj.setFailedSettlement(value);
 		}
 	};
 	@XmlElement(name = "Canc", required = true)
@@ -709,7 +810,7 @@ public class TransferStatusAndReason2 {
 	 * definition} = "Status of the transfer is cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCancelled = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferStatusAndReason2, CancelledStatus3> mmCancelled = new MMMessageAssociationEnd<TransferStatusAndReason2, CancelledStatus3>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason2.mmObject();
@@ -721,7 +822,17 @@ public class TransferStatusAndReason2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CancelledStatus3.mmObject();
+			type_lazy = () -> CancelledStatus3.mmObject();
+		}
+
+		@Override
+		public CancelledStatus3 getValue(TransferStatusAndReason2 obj) {
+			return obj.getCancelled();
+		}
+
+		@Override
+		public void setValue(TransferStatusAndReason2 obj, CancelledStatus3 value) {
+			obj.setCancelled(value);
 		}
 	};
 	@XmlElement(name = "Rvsd", required = true)
@@ -757,7 +868,7 @@ public class TransferStatusAndReason2 {
 	 * definition} = "Status of the transfer is reversed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReversed = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferStatusAndReason2, ReversedStatus1> mmReversed = new MMMessageAssociationEnd<TransferStatusAndReason2, ReversedStatus1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason2.mmObject();
@@ -769,7 +880,17 @@ public class TransferStatusAndReason2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ReversedStatus1.mmObject();
+			type_lazy = () -> ReversedStatus1.mmObject();
+		}
+
+		@Override
+		public ReversedStatus1 getValue(TransferStatusAndReason2 obj) {
+			return obj.getReversed();
+		}
+
+		@Override
+		public void setValue(TransferStatusAndReason2 obj, ReversedStatus1 value) {
+			obj.setReversed(value);
 		}
 	};
 	@XmlElement(name = "CxlPdg", required = true)
@@ -806,7 +927,7 @@ public class TransferStatusAndReason2 {
 	 * definition} = "Status of the transfer is cancellation pending."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCancellationPending = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferStatusAndReason2, CancellationPendingStatus1> mmCancellationPending = new MMMessageAssociationEnd<TransferStatusAndReason2, CancellationPendingStatus1>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason2.mmObject();
@@ -818,7 +939,17 @@ public class TransferStatusAndReason2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CancellationPendingStatus1.mmObject();
+			type_lazy = () -> CancellationPendingStatus1.mmObject();
+		}
+
+		@Override
+		public CancellationPendingStatus1 getValue(TransferStatusAndReason2 obj) {
+			return obj.getCancellationPending();
+		}
+
+		@Override
+		public void setValue(TransferStatusAndReason2 obj, CancellationPendingStatus1 value) {
+			obj.setCancellationPending(value);
 		}
 	};
 	@XmlElement(name = "TradDt")
@@ -863,7 +994,7 @@ public class TransferStatusAndReason2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferStatusAndReason2, Optional<ISODate>> mmTradeDate = new MMMessageAttribute<TransferStatusAndReason2, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason2.mmObject();
@@ -876,6 +1007,16 @@ public class TransferStatusAndReason2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(TransferStatusAndReason2 obj) {
+			return obj.getTradeDate();
+		}
+
+		@Override
+		public void setValue(TransferStatusAndReason2 obj, Optional<ISODate> value) {
+			obj.setTradeDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SndOutDt")
@@ -917,7 +1058,7 @@ public class TransferStatusAndReason2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSendOutDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferStatusAndReason2, Optional<ISODate>> mmSendOutDate = new MMMessageAttribute<TransferStatusAndReason2, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason2.mmObject();
 			isDerived = false;
@@ -929,6 +1070,16 @@ public class TransferStatusAndReason2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(TransferStatusAndReason2 obj) {
+			return obj.getSendOutDate();
+		}
+
+		@Override
+		public void setValue(TransferStatusAndReason2 obj, Optional<ISODate> value) {
+			obj.setSendOutDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StsInitr")
@@ -973,7 +1124,7 @@ public class TransferStatusAndReason2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusInitiator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferStatusAndReason2, Optional<PartyIdentification2Choice>> mmStatusInitiator = new MMMessageAssociationEnd<TransferStatusAndReason2, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason2.mmObject();
@@ -987,6 +1138,16 @@ public class TransferStatusAndReason2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(TransferStatusAndReason2 obj) {
+			return obj.getStatusInitiator();
+		}
+
+		@Override
+		public void setValue(TransferStatusAndReason2 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setStatusInitiator(value.orElse(null));
 		}
 	};
 	/**
@@ -1127,7 +1288,7 @@ public class TransferStatusAndReason2 {
 		return status;
 	}
 
-	public TransferStatusAndReason2 setStatus(com.tools20022.repository.msg.TransferInstructionStatus2 status) {
+	public TransferStatusAndReason2 setStatus(TransferInstructionStatus2 status) {
 		this.status = Objects.requireNonNull(status);
 		return this;
 	}
@@ -1136,7 +1297,7 @@ public class TransferStatusAndReason2 {
 		return pendingSettlement;
 	}
 
-	public TransferStatusAndReason2 setPendingSettlement(com.tools20022.repository.msg.PendingSettlementStatus2 pendingSettlement) {
+	public TransferStatusAndReason2 setPendingSettlement(PendingSettlementStatus2 pendingSettlement) {
 		this.pendingSettlement = Objects.requireNonNull(pendingSettlement);
 		return this;
 	}
@@ -1145,7 +1306,7 @@ public class TransferStatusAndReason2 {
 		return unmatched;
 	}
 
-	public TransferStatusAndReason2 setUnmatched(com.tools20022.repository.msg.TransferUnmatchedStatus2 unmatched) {
+	public TransferStatusAndReason2 setUnmatched(TransferUnmatchedStatus2 unmatched) {
 		this.unmatched = Objects.requireNonNull(unmatched);
 		return this;
 	}
@@ -1154,7 +1315,7 @@ public class TransferStatusAndReason2 {
 		return inRepair;
 	}
 
-	public TransferStatusAndReason2 setInRepair(com.tools20022.repository.msg.InRepairStatus3 inRepair) {
+	public TransferStatusAndReason2 setInRepair(InRepairStatus3 inRepair) {
 		this.inRepair = Objects.requireNonNull(inRepair);
 		return this;
 	}
@@ -1172,7 +1333,7 @@ public class TransferStatusAndReason2 {
 		return failedSettlement;
 	}
 
-	public TransferStatusAndReason2 setFailedSettlement(com.tools20022.repository.msg.FailedSettlementStatus1 failedSettlement) {
+	public TransferStatusAndReason2 setFailedSettlement(FailedSettlementStatus1 failedSettlement) {
 		this.failedSettlement = Objects.requireNonNull(failedSettlement);
 		return this;
 	}
@@ -1181,7 +1342,7 @@ public class TransferStatusAndReason2 {
 		return cancelled;
 	}
 
-	public TransferStatusAndReason2 setCancelled(com.tools20022.repository.msg.CancelledStatus3 cancelled) {
+	public TransferStatusAndReason2 setCancelled(CancelledStatus3 cancelled) {
 		this.cancelled = Objects.requireNonNull(cancelled);
 		return this;
 	}
@@ -1190,7 +1351,7 @@ public class TransferStatusAndReason2 {
 		return reversed;
 	}
 
-	public TransferStatusAndReason2 setReversed(com.tools20022.repository.msg.ReversedStatus1 reversed) {
+	public TransferStatusAndReason2 setReversed(ReversedStatus1 reversed) {
 		this.reversed = Objects.requireNonNull(reversed);
 		return this;
 	}
@@ -1199,7 +1360,7 @@ public class TransferStatusAndReason2 {
 		return cancellationPending;
 	}
 
-	public TransferStatusAndReason2 setCancellationPending(com.tools20022.repository.msg.CancellationPendingStatus1 cancellationPending) {
+	public TransferStatusAndReason2 setCancellationPending(CancellationPendingStatus1 cancellationPending) {
 		this.cancellationPending = Objects.requireNonNull(cancellationPending);
 		return this;
 	}

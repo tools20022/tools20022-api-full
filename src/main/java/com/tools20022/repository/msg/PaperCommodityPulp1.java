@@ -111,7 +111,7 @@ public class PaperCommodityPulp1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBaseProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaperCommodityPulp1, AssetClassProductType8Code> mmBaseProduct = new MMMessageAttribute<PaperCommodityPulp1, AssetClassProductType8Code>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaperCommodityPulp1.mmObject();
@@ -123,6 +123,16 @@ public class PaperCommodityPulp1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassProductType8Code.mmObject();
+		}
+
+		@Override
+		public AssetClassProductType8Code getValue(PaperCommodityPulp1 obj) {
+			return obj.getBaseProduct();
+		}
+
+		@Override
+		public void setValue(PaperCommodityPulp1 obj, AssetClassProductType8Code value) {
+			obj.setBaseProduct(value);
 		}
 	};
 	@XmlElement(name = "SubPdct")
@@ -160,7 +170,7 @@ public class PaperCommodityPulp1 {
 	 * definition} = "Sub-product for the underlying asset class."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaperCommodityPulp1, Optional<AssetClassSubProductType37Code>> mmSubProduct = new MMMessageAttribute<PaperCommodityPulp1, Optional<AssetClassSubProductType37Code>>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaperCommodityPulp1.mmObject();
@@ -172,6 +182,16 @@ public class PaperCommodityPulp1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AssetClassSubProductType37Code.mmObject();
+		}
+
+		@Override
+		public Optional<AssetClassSubProductType37Code> getValue(PaperCommodityPulp1 obj) {
+			return obj.getSubProduct();
+		}
+
+		@Override
+		public void setValue(PaperCommodityPulp1 obj, Optional<AssetClassSubProductType37Code> value) {
+			obj.setSubProduct(value.orElse(null));
 		}
 	};
 

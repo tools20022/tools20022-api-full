@@ -116,7 +116,7 @@ public class ModificationStatus3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ModificationStatus3Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<ModificationStatus3Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ModificationStatus3Choice.mmObject();
@@ -129,6 +129,16 @@ public class ModificationStatus3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(ModificationStatus3Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(ModificationStatus3Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn")
@@ -164,7 +174,7 @@ public class ModificationStatus3Choice {
 	 * definition} = "Specifies the reason of the modification status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ModificationStatus3Choice, List<ModificationReason3>> mmReason = new MMMessageAssociationEnd<ModificationStatus3Choice, List<ModificationReason3>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ModificationStatus3Choice.mmObject();
@@ -176,6 +186,16 @@ public class ModificationStatus3Choice {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ModificationReason3.mmObject();
+		}
+
+		@Override
+		public List<ModificationReason3> getValue(ModificationStatus3Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(ModificationStatus3Choice obj, List<ModificationReason3> value) {
+			obj.setReason(value);
 		}
 	};
 

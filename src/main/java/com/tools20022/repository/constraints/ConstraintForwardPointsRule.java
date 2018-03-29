@@ -55,12 +55,16 @@ public class ConstraintForwardPointsRule {
 	 */
 	public static final MMConstraint<Trade2> forTrade2 = new MMConstraint<Trade2>() {
 		{
-			validator = ConstraintForwardPointsRule::checkTrade2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForwardPointsRule";
 			definition = "If ForeignExchangeTradeProduct is equal to value 'NDFO' or 'FORW', then ForwardPoints Must be present.";
 			owner_lazy = () -> Trade2.mmObject();
 			expression = "On Condition\r\n\t/ForeignExchangeTradeProduct is equal to value 'NDFO' or 'FORW'\r\nFollowing Must be True\r\n\t/ForwardPoints Must be present";
+		}
+
+		@Override
+		public void executeValidator(Trade2 obj) throws Exception {
+			checkTrade2(obj);
 		}
 	};
 	/**
@@ -89,12 +93,16 @@ public class ConstraintForwardPointsRule {
 	 */
 	public static final MMConstraint<Trade1> forTrade1 = new MMConstraint<Trade1>() {
 		{
-			validator = ConstraintForwardPointsRule::checkTrade1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForwardPointsRule";
 			definition = "If ForeignExchangeTradeProduct is equal to value 'NDFO' or 'FORW', then ForwardPoints Must be present.";
 			owner_lazy = () -> Trade1.mmObject();
 			expression = "On Condition\r\n\t/ForeignExchangeTradeProduct is equal to value 'NDFO' or 'FORW'\r\nFollowing Must be True\r\n\t/ForwardPoints Must be present";
+		}
+
+		@Override
+		public void executeValidator(Trade1 obj) throws Exception {
+			checkTrade1(obj);
 		}
 	};
 

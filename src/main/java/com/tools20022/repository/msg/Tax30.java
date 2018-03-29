@@ -30,6 +30,8 @@ import com.tools20022.repository.entity.InvestmentFundTax;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification113;
+import com.tools20022.repository.msg.TaxCalculationInformation9;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -137,7 +139,7 @@ public class Tax30 {
 	 * {@linkplain com.tools20022.repository.msg.Tax31#mmType Tax31.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Tax30, TaxType3Choice> mmType = new MMMessageAttribute<Tax30, TaxType3Choice>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax30.mmObject();
@@ -151,6 +153,16 @@ public class Tax30 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TaxType3Choice.mmObject();
+		}
+
+		@Override
+		public TaxType3Choice getValue(Tax30 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Tax30 obj, TaxType3Choice value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Tax")
@@ -185,7 +197,7 @@ public class Tax30 {
 	 * definition} = "Tax to be applied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTax = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Tax30, Optional<TaxAmountOrRate4Choice>> mmTax = new MMMessageAssociationEnd<Tax30, Optional<TaxAmountOrRate4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax30.mmObject();
@@ -198,6 +210,16 @@ public class Tax30 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> TaxAmountOrRate4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<TaxAmountOrRate4Choice> getValue(Tax30 obj) {
+			return obj.getTax();
+		}
+
+		@Override
+		public void setValue(Tax30 obj, Optional<TaxAmountOrRate4Choice> value) {
+			obj.setTax(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ctry")
@@ -245,7 +267,7 @@ public class Tax30 {
 	 * Tax31.mmCountry}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Tax30, Optional<CountryCode>> mmCountry = new MMMessageAttribute<Tax30, Optional<CountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmTaxationConditions;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax30.mmObject();
@@ -259,6 +281,16 @@ public class Tax30 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(Tax30 obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(Tax30 obj, Optional<CountryCode> value) {
+			obj.setCountry(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XmptnInd", required = true)
@@ -302,7 +334,7 @@ public class Tax30 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExemptionIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Tax30, YesNoIndicator> mmExemptionIndicator = new MMMessageAttribute<Tax30, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTax.mmExemptionIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax30.mmObject();
@@ -315,6 +347,16 @@ public class Tax30 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(Tax30 obj) {
+			return obj.getExemptionIndicator();
+		}
+
+		@Override
+		public void setValue(Tax30 obj, YesNoIndicator value) {
+			obj.setExemptionIndicator(value);
 		}
 	};
 	@XmlElement(name = "XmptnRsn")
@@ -358,7 +400,7 @@ public class Tax30 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExemptionReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Tax30, Optional<ExemptionReason1Choice>> mmExemptionReason = new MMMessageAttribute<Tax30, Optional<ExemptionReason1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmExemptionReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax30.mmObject();
@@ -371,6 +413,16 @@ public class Tax30 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ExemptionReason1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ExemptionReason1Choice> getValue(Tax30 obj) {
+			return obj.getExemptionReason();
+		}
+
+		@Override
+		public void setValue(Tax30 obj, Optional<ExemptionReason1Choice> value) {
+			obj.setExemptionReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcptId")
@@ -417,7 +469,7 @@ public class Tax30 {
 	 * Tax31.mmRecipientIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRecipientIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Tax30, Optional<PartyIdentification113>> mmRecipientIdentification = new MMMessageAttribute<Tax30, Optional<PartyIdentification113>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax30.mmObject();
 			isDerived = false;
@@ -429,7 +481,17 @@ public class Tax30 {
 			previousVersion_lazy = () -> Tax31.mmRecipientIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification113.mmObject();
+			complexType_lazy = () -> PartyIdentification113.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification113> getValue(Tax30 obj) {
+			return obj.getRecipientIdentification();
+		}
+
+		@Override
+		public void setValue(Tax30 obj, Optional<PartyIdentification113> value) {
+			obj.setRecipientIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxClctnDtls")
@@ -478,7 +540,7 @@ public class Tax30 {
 	 * Tax31.mmTaxCalculationDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTaxCalculationDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Tax30, Optional<TaxCalculationInformation9>> mmTaxCalculationDetails = new MMMessageAssociationEnd<Tax30, Optional<TaxCalculationInformation9>>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundTax.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax30.mmObject();
@@ -492,7 +554,17 @@ public class Tax30 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation9.mmObject();
+			type_lazy = () -> TaxCalculationInformation9.mmObject();
+		}
+
+		@Override
+		public Optional<TaxCalculationInformation9> getValue(Tax30 obj) {
+			return obj.getTaxCalculationDetails();
+		}
+
+		@Override
+		public void setValue(Tax30 obj, Optional<TaxCalculationInformation9> value) {
+			obj.setTaxCalculationDetails(value.orElse(null));
 		}
 	};
 
@@ -563,7 +635,7 @@ public class Tax30 {
 		return recipientIdentification == null ? Optional.empty() : Optional.of(recipientIdentification);
 	}
 
-	public Tax30 setRecipientIdentification(com.tools20022.repository.msg.PartyIdentification113 recipientIdentification) {
+	public Tax30 setRecipientIdentification(PartyIdentification113 recipientIdentification) {
 		this.recipientIdentification = recipientIdentification;
 		return this;
 	}
@@ -572,7 +644,7 @@ public class Tax30 {
 		return taxCalculationDetails == null ? Optional.empty() : Optional.of(taxCalculationDetails);
 	}
 
-	public Tax30 setTaxCalculationDetails(com.tools20022.repository.msg.TaxCalculationInformation9 taxCalculationDetails) {
+	public Tax30 setTaxCalculationDetails(TaxCalculationInformation9 taxCalculationDetails) {
 		this.taxCalculationDetails = taxCalculationDetails;
 		return this;
 	}

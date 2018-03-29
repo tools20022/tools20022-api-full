@@ -110,7 +110,7 @@ public class TaxAmountOrRate4Choice {
 	 * Tax31.mmAppliedAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxAmountOrRate4Choice, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<TaxAmountOrRate4Choice, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TaxAmountOrRate4Choice.mmObject();
@@ -123,6 +123,16 @@ public class TaxAmountOrRate4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(TaxAmountOrRate4Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(TaxAmountOrRate4Choice obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "Rate", required = true)
@@ -164,7 +174,7 @@ public class TaxAmountOrRate4Choice {
 	 * Tax31.mmAppliedRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxAmountOrRate4Choice, PercentageRate> mmRate = new MMMessageAttribute<TaxAmountOrRate4Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TaxAmountOrRate4Choice.mmObject();
@@ -177,6 +187,16 @@ public class TaxAmountOrRate4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(TaxAmountOrRate4Choice obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(TaxAmountOrRate4Choice obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 

@@ -50,11 +50,15 @@ public class ConstraintCertificateIdentificationAndOrTaxTypeRule {
 	 */
 	public static final MMConstraint<TaxDetails> forTaxDetails = new MMConstraint<TaxDetails>() {
 		{
-			validator = ConstraintCertificateIdentificationAndOrTaxTypeRule::checkTaxDetails;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateIdentificationAndOrTaxTypeRule";
 			definition = "If CertificateIdentification is not present, then TaxType is mandatory.\nIf CertificateIdentification is present, then TaxType is optional.";
 			owner_lazy = () -> TaxDetails.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TaxDetails obj) throws Exception {
+			checkTaxDetails(obj);
 		}
 	};
 

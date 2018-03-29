@@ -28,7 +28,6 @@ import com.tools20022.repository.msg.ReportData5;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -121,7 +120,7 @@ public class PayInCallV02 {
 	 * definition} = "Party for which the PayInCall is generated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPartyIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PayInCallV02, PartyIdentification73Choice> mmPartyIdentification = new MMMessageBuildingBlock<PayInCallV02, PartyIdentification73Choice>() {
 		{
 			xmlTag = "PtyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,12 +131,14 @@ public class PayInCallV02 {
 			complexType_lazy = () -> PartyIdentification73Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PayInCallV02.class.getMethod("getPartyIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PartyIdentification73Choice getValue(PayInCallV02 obj) {
+			return obj.getPartyIdentification();
+		}
+
+		@Override
+		public void setValue(PayInCallV02 obj, PartyIdentification73Choice value) {
+			obj.setPartyIdentification(value);
 		}
 	};
 	@XmlElement(name = "RptData", required = true)
@@ -165,7 +166,7 @@ public class PayInCallV02 {
 	 * "Contains the report generation information and the report items."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PayInCallV02, ReportData5> mmReportData = new MMMessageBuildingBlock<PayInCallV02, ReportData5>() {
 		{
 			xmlTag = "RptData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,12 +177,14 @@ public class PayInCallV02 {
 			complexType_lazy = () -> ReportData5.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PayInCallV02.class.getMethod("getReportData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ReportData5 getValue(PayInCallV02 obj) {
+			return obj.getReportData();
+		}
+
+		@Override
+		public void setValue(PayInCallV02 obj, ReportData5 value) {
+			obj.setReportData(value);
 		}
 	};
 	@XmlElement(name = "SttlmSsnIdr")
@@ -211,7 +214,7 @@ public class PayInCallV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSettlementSessionIdentifier = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PayInCallV02, Optional<Exact4AlphaNumericText>> mmSettlementSessionIdentifier = new MMMessageBuildingBlock<PayInCallV02, Optional<Exact4AlphaNumericText>>() {
 		{
 			xmlTag = "SttlmSsnIdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -222,12 +225,14 @@ public class PayInCallV02 {
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PayInCallV02.class.getMethod("getSettlementSessionIdentifier", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Exact4AlphaNumericText> getValue(PayInCallV02 obj) {
+			return obj.getSettlementSessionIdentifier();
+		}
+
+		@Override
+		public void setValue(PayInCallV02 obj, Optional<Exact4AlphaNumericText> value) {
+			obj.setSettlementSessionIdentifier(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -257,7 +262,7 @@ public class PayInCallV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PayInCallV02, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<PayInCallV02, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -267,12 +272,14 @@ public class PayInCallV02 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PayInCallV02.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(PayInCallV02 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(PayInCallV02 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

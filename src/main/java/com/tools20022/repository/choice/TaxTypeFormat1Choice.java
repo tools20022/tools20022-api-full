@@ -104,7 +104,7 @@ public class TaxTypeFormat1Choice {
 	 * definition} = "Standard code to specify the type of taxes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxTypeFormat1Choice, TaxType15Code> mmCode = new MMMessageAttribute<TaxTypeFormat1Choice, TaxType15Code>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TaxTypeFormat1Choice.mmObject();
@@ -116,6 +116,16 @@ public class TaxTypeFormat1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TaxType15Code.mmObject();
+		}
+
+		@Override
+		public TaxType15Code getValue(TaxTypeFormat1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(TaxTypeFormat1Choice obj, TaxType15Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -152,7 +162,7 @@ public class TaxTypeFormat1Choice {
 	 * definition} = "Proprietary code to express the type of taxes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxTypeFormat1Choice, GenericIdentification13> mmProprietary = new MMMessageAttribute<TaxTypeFormat1Choice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TaxTypeFormat1Choice.mmObject();
@@ -164,6 +174,16 @@ public class TaxTypeFormat1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(TaxTypeFormat1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(TaxTypeFormat1Choice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

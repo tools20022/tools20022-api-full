@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.OptionNumber1Choice;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SignedQuantityFormat9;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -128,7 +129,7 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD2 {
 	 * CorporateActionInstructedBalanceOptionBalanceDetailsSD1.mmPlaceAndName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInstructedBalanceOptionBalanceDetailsSD2, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<CorporateActionInstructedBalanceOptionBalanceDetailsSD2, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionBalanceDetailsSD2.mmObject();
 			isDerived = false;
@@ -140,6 +141,16 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionInstructedBalanceOptionBalanceDetailsSD2 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructedBalanceOptionBalanceDetailsSD2 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OptnNb", required = true)
@@ -170,7 +181,7 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD2 {
 	 * definition} = "Option Number of the extended balances."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOptionNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionInstructedBalanceOptionBalanceDetailsSD2, OptionNumber1Choice> mmOptionNumber = new MMMessageAssociationEnd<CorporateActionInstructedBalanceOptionBalanceDetailsSD2, OptionNumber1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionBalanceDetailsSD2.mmObject();
 			isDerived = false;
@@ -182,6 +193,16 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OptionNumber1Choice.mmObject();
+		}
+
+		@Override
+		public OptionNumber1Choice getValue(CorporateActionInstructedBalanceOptionBalanceDetailsSD2 obj) {
+			return obj.getOptionNumber();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructedBalanceOptionBalanceDetailsSD2 obj, OptionNumber1Choice value) {
+			obj.setOptionNumber(value);
 		}
 	};
 	@XmlElement(name = "OptnUcvrdPrtctBal")
@@ -219,7 +240,7 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD2 {
 	 * mmOptionUncoveredProtectBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOptionUncoveredProtectBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionInstructedBalanceOptionBalanceDetailsSD2, Optional<SignedQuantityFormat9>> mmOptionUncoveredProtectBalance = new MMMessageAssociationEnd<CorporateActionInstructedBalanceOptionBalanceDetailsSD2, Optional<SignedQuantityFormat9>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionBalanceDetailsSD2.mmObject();
 			isDerived = false;
@@ -231,7 +252,17 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat9.mmObject();
+			type_lazy = () -> SignedQuantityFormat9.mmObject();
+		}
+
+		@Override
+		public Optional<SignedQuantityFormat9> getValue(CorporateActionInstructedBalanceOptionBalanceDetailsSD2 obj) {
+			return obj.getOptionUncoveredProtectBalance();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructedBalanceOptionBalanceDetailsSD2 obj, Optional<SignedQuantityFormat9> value) {
+			obj.setOptionUncoveredProtectBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OptnDalyInstdBal")
@@ -270,7 +301,7 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD2 {
 	 * mmOptionDailyInstructedBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOptionDailyInstructedBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionInstructedBalanceOptionBalanceDetailsSD2, Optional<SignedQuantityFormat9>> mmOptionDailyInstructedBalance = new MMMessageAssociationEnd<CorporateActionInstructedBalanceOptionBalanceDetailsSD2, Optional<SignedQuantityFormat9>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionBalanceDetailsSD2.mmObject();
 			isDerived = false;
@@ -282,7 +313,17 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat9.mmObject();
+			type_lazy = () -> SignedQuantityFormat9.mmObject();
+		}
+
+		@Override
+		public Optional<SignedQuantityFormat9> getValue(CorporateActionInstructedBalanceOptionBalanceDetailsSD2 obj) {
+			return obj.getOptionDailyInstructedBalance();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructedBalanceOptionBalanceDetailsSD2 obj, Optional<SignedQuantityFormat9> value) {
+			obj.setOptionDailyInstructedBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OptnOvrsbcptQty")
@@ -321,7 +362,7 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD2 {
 	 * mmOptionOversubscriptionQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOptionOversubscriptionQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionInstructedBalanceOptionBalanceDetailsSD2, Optional<SignedQuantityFormat9>> mmOptionOversubscriptionQuantity = new MMMessageAssociationEnd<CorporateActionInstructedBalanceOptionBalanceDetailsSD2, Optional<SignedQuantityFormat9>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionBalanceDetailsSD2.mmObject();
 			isDerived = false;
@@ -333,7 +374,17 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat9.mmObject();
+			type_lazy = () -> SignedQuantityFormat9.mmObject();
+		}
+
+		@Override
+		public Optional<SignedQuantityFormat9> getValue(CorporateActionInstructedBalanceOptionBalanceDetailsSD2 obj) {
+			return obj.getOptionOversubscriptionQuantity();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructedBalanceOptionBalanceDetailsSD2 obj, Optional<SignedQuantityFormat9> value) {
+			obj.setOptionOversubscriptionQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OptnUaccptdBal")
@@ -372,7 +423,7 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD2 {
 	 * mmOptionUnacceptedBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOptionUnacceptedBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionInstructedBalanceOptionBalanceDetailsSD2, Optional<SignedQuantityFormat9>> mmOptionUnacceptedBalance = new MMMessageAssociationEnd<CorporateActionInstructedBalanceOptionBalanceDetailsSD2, Optional<SignedQuantityFormat9>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionBalanceDetailsSD2.mmObject();
 			isDerived = false;
@@ -384,7 +435,17 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat9.mmObject();
+			type_lazy = () -> SignedQuantityFormat9.mmObject();
+		}
+
+		@Override
+		public Optional<SignedQuantityFormat9> getValue(CorporateActionInstructedBalanceOptionBalanceDetailsSD2 obj) {
+			return obj.getOptionUnacceptedBalance();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructedBalanceOptionBalanceDetailsSD2 obj, Optional<SignedQuantityFormat9> value) {
+			obj.setOptionUnacceptedBalance(value.orElse(null));
 		}
 	};
 
@@ -429,7 +490,7 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD2 {
 		return optionUncoveredProtectBalance == null ? Optional.empty() : Optional.of(optionUncoveredProtectBalance);
 	}
 
-	public CorporateActionInstructedBalanceOptionBalanceDetailsSD2 setOptionUncoveredProtectBalance(com.tools20022.repository.msg.SignedQuantityFormat9 optionUncoveredProtectBalance) {
+	public CorporateActionInstructedBalanceOptionBalanceDetailsSD2 setOptionUncoveredProtectBalance(SignedQuantityFormat9 optionUncoveredProtectBalance) {
 		this.optionUncoveredProtectBalance = optionUncoveredProtectBalance;
 		return this;
 	}
@@ -438,7 +499,7 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD2 {
 		return optionDailyInstructedBalance == null ? Optional.empty() : Optional.of(optionDailyInstructedBalance);
 	}
 
-	public CorporateActionInstructedBalanceOptionBalanceDetailsSD2 setOptionDailyInstructedBalance(com.tools20022.repository.msg.SignedQuantityFormat9 optionDailyInstructedBalance) {
+	public CorporateActionInstructedBalanceOptionBalanceDetailsSD2 setOptionDailyInstructedBalance(SignedQuantityFormat9 optionDailyInstructedBalance) {
 		this.optionDailyInstructedBalance = optionDailyInstructedBalance;
 		return this;
 	}
@@ -447,7 +508,7 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD2 {
 		return optionOversubscriptionQuantity == null ? Optional.empty() : Optional.of(optionOversubscriptionQuantity);
 	}
 
-	public CorporateActionInstructedBalanceOptionBalanceDetailsSD2 setOptionOversubscriptionQuantity(com.tools20022.repository.msg.SignedQuantityFormat9 optionOversubscriptionQuantity) {
+	public CorporateActionInstructedBalanceOptionBalanceDetailsSD2 setOptionOversubscriptionQuantity(SignedQuantityFormat9 optionOversubscriptionQuantity) {
 		this.optionOversubscriptionQuantity = optionOversubscriptionQuantity;
 		return this;
 	}
@@ -456,7 +517,7 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD2 {
 		return optionUnacceptedBalance == null ? Optional.empty() : Optional.of(optionUnacceptedBalance);
 	}
 
-	public CorporateActionInstructedBalanceOptionBalanceDetailsSD2 setOptionUnacceptedBalance(com.tools20022.repository.msg.SignedQuantityFormat9 optionUnacceptedBalance) {
+	public CorporateActionInstructedBalanceOptionBalanceDetailsSD2 setOptionUnacceptedBalance(SignedQuantityFormat9 optionUnacceptedBalance) {
 		this.optionUnacceptedBalance = optionUnacceptedBalance;
 		return this;
 	}

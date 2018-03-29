@@ -95,7 +95,7 @@ public class Cleared3Choice {
 	 * definition} = "Indicates that the contract has been cleared."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCleared = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Cleared3Choice, ClearingPartyAndTime3> mmCleared = new MMMessageAssociationEnd<Cleared3Choice, ClearingPartyAndTime3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Cleared3Choice.mmObject();
 			isDerived = false;
@@ -107,6 +107,16 @@ public class Cleared3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ClearingPartyAndTime3.mmObject();
+		}
+
+		@Override
+		public ClearingPartyAndTime3 getValue(Cleared3Choice obj) {
+			return obj.getCleared();
+		}
+
+		@Override
+		public void setValue(Cleared3Choice obj, ClearingPartyAndTime3 value) {
+			obj.setCleared(value);
 		}
 	};
 	@XmlElement(name = "NonClrd", required = true)
@@ -138,7 +148,7 @@ public class Cleared3Choice {
 	 * definition} = "Indicates that the contract has not been cleared."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNonCleared = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Cleared3Choice, NoReasonCode> mmNonCleared = new MMMessageAttribute<Cleared3Choice, NoReasonCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Cleared3Choice.mmObject();
 			isDerived = false;
@@ -149,6 +159,16 @@ public class Cleared3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(Cleared3Choice obj) {
+			return obj.getNonCleared();
+		}
+
+		@Override
+		public void setValue(Cleared3Choice obj, NoReasonCode value) {
+			obj.setNonCleared(value);
 		}
 	};
 

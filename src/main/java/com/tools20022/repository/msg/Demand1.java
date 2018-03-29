@@ -31,6 +31,7 @@ import com.tools20022.repository.entity.Demand;
 import com.tools20022.repository.entity.Expiry;
 import com.tools20022.repository.entity.Undertaking;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -150,7 +151,7 @@ public class Demand1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Demand1, Max35Text> mmIdentification = new MMMessageAttribute<Demand1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Demand1.mmObject();
 			isDerived = false;
@@ -161,6 +162,16 @@ public class Demand1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Demand1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Demand1 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -197,7 +208,7 @@ public class Demand1 {
 	 * definition} = "Type of demand."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Demand1, DemandType1Code> mmType = new MMMessageAttribute<Demand1, DemandType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Demand.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Demand1.mmObject();
@@ -209,6 +220,16 @@ public class Demand1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DemandType1Code.mmObject();
+		}
+
+		@Override
+		public DemandType1Code getValue(Demand1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Demand1 obj, DemandType1Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "UdrtkgId", required = true)
@@ -242,7 +263,7 @@ public class Demand1 {
 	 * definition} = "Details related to the undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUndertakingIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Demand1, Undertaking6> mmUndertakingIdentification = new MMMessageAssociationEnd<Demand1, Undertaking6>() {
 		{
 			businessComponentTrace_lazy = () -> Undertaking.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Demand1.mmObject();
@@ -254,7 +275,17 @@ public class Demand1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Undertaking6.mmObject();
+			type_lazy = () -> Undertaking6.mmObject();
+		}
+
+		@Override
+		public Undertaking6 getValue(Demand1 obj) {
+			return obj.getUndertakingIdentification();
+		}
+
+		@Override
+		public void setValue(Demand1 obj, Undertaking6 value) {
+			obj.setUndertakingIdentification(value);
 		}
 	};
 	@XmlElement(name = "DmndAmt", required = true)
@@ -289,7 +320,7 @@ public class Demand1 {
 	 * definition} = "Details related to the demand amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDemandAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Demand1, UndertakingAmount3> mmDemandAmount = new MMMessageAssociationEnd<Demand1, UndertakingAmount3>() {
 		{
 			businessElementTrace_lazy = () -> Demand.mmDemandAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Demand1.mmObject();
@@ -301,7 +332,17 @@ public class Demand1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UndertakingAmount3.mmObject();
+			type_lazy = () -> UndertakingAmount3.mmObject();
+		}
+
+		@Override
+		public UndertakingAmount3 getValue(Demand1 obj) {
+			return obj.getDemandAmount();
+		}
+
+		@Override
+		public void setValue(Demand1 obj, UndertakingAmount3 value) {
+			obj.setDemandAmount(value);
 		}
 	};
 	@XmlElement(name = "AdvsgPtyRefNb")
@@ -334,7 +375,7 @@ public class Demand1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdvisingPartyReferenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Demand1, Optional<Max35Text>> mmAdvisingPartyReferenceNumber = new MMMessageAttribute<Demand1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Demand1.mmObject();
 			isDerived = false;
@@ -345,6 +386,16 @@ public class Demand1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Demand1 obj) {
+			return obj.getAdvisingPartyReferenceNumber();
+		}
+
+		@Override
+		public void setValue(Demand1 obj, Optional<Max35Text> value) {
+			obj.setAdvisingPartyReferenceNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ScndAdvsgPtyRefNb")
@@ -377,7 +428,7 @@ public class Demand1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecondAdvisingPartyReferenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Demand1, Optional<Max35Text>> mmSecondAdvisingPartyReferenceNumber = new MMMessageAttribute<Demand1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Demand1.mmObject();
 			isDerived = false;
@@ -388,6 +439,16 @@ public class Demand1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Demand1 obj) {
+			return obj.getSecondAdvisingPartyReferenceNumber();
+		}
+
+		@Override
+		public void setValue(Demand1 obj, Optional<Max35Text> value) {
+			obj.setSecondAdvisingPartyReferenceNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CnfrmrRefNb")
@@ -420,7 +481,7 @@ public class Demand1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmConfirmerReferenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Demand1, Optional<Max35Text>> mmConfirmerReferenceNumber = new MMMessageAttribute<Demand1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Demand1.mmObject();
 			isDerived = false;
@@ -432,9 +493,19 @@ public class Demand1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max35Text> getValue(Demand1 obj) {
+			return obj.getConfirmerReferenceNumber();
+		}
+
+		@Override
+		public void setValue(Demand1 obj, Optional<Max35Text> value) {
+			obj.setConfirmerReferenceNumber(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "SttlmAcct")
-	protected List<com.tools20022.repository.msg.CashAccount27> settlementAccount;
+	protected List<CashAccount27> settlementAccount;
 	/**
 	 * 
 	 <p>
@@ -465,7 +536,7 @@ public class Demand1 {
 	 * definition} = "Details related to the settlement account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Demand1, List<CashAccount27>> mmSettlementAccount = new MMMessageAssociationEnd<Demand1, List<CashAccount27>>() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmSettlementAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Demand1.mmObject();
@@ -476,7 +547,17 @@ public class Demand1 {
 			definition = "Details related to the settlement account.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount27.mmObject();
+			type_lazy = () -> CashAccount27.mmObject();
+		}
+
+		@Override
+		public List<CashAccount27> getValue(Demand1 obj) {
+			return obj.getSettlementAccount();
+		}
+
+		@Override
+		public void setValue(Demand1 obj, List<CashAccount27> value) {
+			obj.setSettlementAccount(value);
 		}
 	};
 	@XmlElement(name = "PresntnDtls")
@@ -511,7 +592,7 @@ public class Demand1 {
 	 * definition} = "Details of the beneficiary's presentation of documents."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPresentationDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Demand1, Optional<Presentation2>> mmPresentationDetails = new MMMessageAssociationEnd<Demand1, Optional<Presentation2>>() {
 		{
 			businessElementTrace_lazy = () -> Undertaking.mmPresentation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Demand1.mmObject();
@@ -523,7 +604,17 @@ public class Demand1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Presentation2.mmObject();
+			type_lazy = () -> Presentation2.mmObject();
+		}
+
+		@Override
+		public Optional<Presentation2> getValue(Demand1 obj) {
+			return obj.getPresentationDetails();
+		}
+
+		@Override
+		public void setValue(Demand1 obj, Optional<Presentation2> value) {
+			obj.setPresentationDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReqdXpryDt")
@@ -560,7 +651,7 @@ public class Demand1 {
 	 * "Requested new expiry date as an alternative to payment of the demand."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestedExpiryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Demand1, Optional<ISODate>> mmRequestedExpiryDate = new MMMessageAttribute<Demand1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Expiry.mmExpiryDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Demand1.mmObject();
@@ -572,6 +663,16 @@ public class Demand1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(Demand1 obj) {
+			return obj.getRequestedExpiryDate();
+		}
+
+		@Override
+		public void setValue(Demand1 obj, Optional<ISODate> value) {
+			obj.setRequestedExpiryDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DmndDcmnttn")
@@ -601,7 +702,7 @@ public class Demand1 {
 	 * definition} = "Document(s) presented for examination."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDemandDocumentation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Demand1, Optional<DemandDocumentation1>> mmDemandDocumentation = new MMMessageAssociationEnd<Demand1, Optional<DemandDocumentation1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Demand1.mmObject();
 			isDerived = false;
@@ -612,7 +713,17 @@ public class Demand1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DemandDocumentation1.mmObject();
+			type_lazy = () -> DemandDocumentation1.mmObject();
+		}
+
+		@Override
+		public Optional<DemandDocumentation1> getValue(Demand1 obj) {
+			return obj.getDemandDocumentation();
+		}
+
+		@Override
+		public void setValue(Demand1 obj, Optional<DemandDocumentation1> value) {
+			obj.setDemandDocumentation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -643,7 +754,7 @@ public class Demand1 {
 	 * definition} = "Additional information related to the demand."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Demand1, List<Max2000Text>> mmAdditionalInformation = new MMMessageAttribute<Demand1, List<Max2000Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Demand1.mmObject();
 			isDerived = false;
@@ -654,6 +765,16 @@ public class Demand1 {
 			maxOccurs = 5;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
+		}
+
+		@Override
+		public List<Max2000Text> getValue(Demand1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(Demand1 obj, List<Max2000Text> value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 
@@ -698,7 +819,7 @@ public class Demand1 {
 		return undertakingIdentification;
 	}
 
-	public Demand1 setUndertakingIdentification(com.tools20022.repository.msg.Undertaking6 undertakingIdentification) {
+	public Demand1 setUndertakingIdentification(Undertaking6 undertakingIdentification) {
 		this.undertakingIdentification = Objects.requireNonNull(undertakingIdentification);
 		return this;
 	}
@@ -707,7 +828,7 @@ public class Demand1 {
 		return demandAmount;
 	}
 
-	public Demand1 setDemandAmount(com.tools20022.repository.msg.UndertakingAmount3 demandAmount) {
+	public Demand1 setDemandAmount(UndertakingAmount3 demandAmount) {
 		this.demandAmount = Objects.requireNonNull(demandAmount);
 		return this;
 	}
@@ -743,7 +864,7 @@ public class Demand1 {
 		return settlementAccount == null ? settlementAccount = new ArrayList<>() : settlementAccount;
 	}
 
-	public Demand1 setSettlementAccount(List<com.tools20022.repository.msg.CashAccount27> settlementAccount) {
+	public Demand1 setSettlementAccount(List<CashAccount27> settlementAccount) {
 		this.settlementAccount = Objects.requireNonNull(settlementAccount);
 		return this;
 	}
@@ -752,7 +873,7 @@ public class Demand1 {
 		return presentationDetails == null ? Optional.empty() : Optional.of(presentationDetails);
 	}
 
-	public Demand1 setPresentationDetails(com.tools20022.repository.msg.Presentation2 presentationDetails) {
+	public Demand1 setPresentationDetails(Presentation2 presentationDetails) {
 		this.presentationDetails = presentationDetails;
 		return this;
 	}
@@ -770,7 +891,7 @@ public class Demand1 {
 		return demandDocumentation == null ? Optional.empty() : Optional.of(demandDocumentation);
 	}
 
-	public Demand1 setDemandDocumentation(com.tools20022.repository.msg.DemandDocumentation1 demandDocumentation) {
+	public Demand1 setDemandDocumentation(DemandDocumentation1 demandDocumentation) {
 		this.demandDocumentation = demandDocumentation;
 		return this;
 	}

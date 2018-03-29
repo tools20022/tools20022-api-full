@@ -22,6 +22,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccount36;
+import com.tools20022.repository.msg.CashEntry2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -113,7 +115,7 @@ public class CashAccountAndEntry2 {
 	 * CashAccountAndEntry1.mmAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccountAndEntry2, CashAccount36> mmAccount = new MMMessageAssociationEnd<CashAccountAndEntry2, CashAccount36>() {
 		{
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountAndEntry2.mmObject();
@@ -126,7 +128,17 @@ public class CashAccountAndEntry2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount36.mmObject();
+			type_lazy = () -> CashAccount36.mmObject();
+		}
+
+		@Override
+		public CashAccount36 getValue(CashAccountAndEntry2 obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(CashAccountAndEntry2 obj, CashAccount36 value) {
+			obj.setAccount(value);
 		}
 	};
 	@XmlElement(name = "Ntry")
@@ -168,7 +180,7 @@ public class CashAccountAndEntry2 {
 	 * CashAccountAndEntry1.mmEntry}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEntry = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccountAndEntry2, Optional<CashEntry2>> mmEntry = new MMMessageAssociationEnd<CashAccountAndEntry2, Optional<CashEntry2>>() {
 		{
 			businessElementTrace_lazy = () -> CashAccount.mmCashEntry;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountAndEntry2.mmObject();
@@ -181,7 +193,17 @@ public class CashAccountAndEntry2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashEntry2.mmObject();
+			type_lazy = () -> CashEntry2.mmObject();
+		}
+
+		@Override
+		public Optional<CashEntry2> getValue(CashAccountAndEntry2 obj) {
+			return obj.getEntry();
+		}
+
+		@Override
+		public void setValue(CashAccountAndEntry2 obj, Optional<CashEntry2> value) {
+			obj.setEntry(value.orElse(null));
 		}
 	};
 
@@ -204,7 +226,7 @@ public class CashAccountAndEntry2 {
 		return account;
 	}
 
-	public CashAccountAndEntry2 setAccount(com.tools20022.repository.msg.CashAccount36 account) {
+	public CashAccountAndEntry2 setAccount(CashAccount36 account) {
 		this.account = Objects.requireNonNull(account);
 		return this;
 	}
@@ -213,7 +235,7 @@ public class CashAccountAndEntry2 {
 		return entry == null ? Optional.empty() : Optional.of(entry);
 	}
 
-	public CashAccountAndEntry2 setEntry(com.tools20022.repository.msg.CashEntry2 entry) {
+	public CashAccountAndEntry2 setEntry(CashEntry2 entry) {
 		this.entry = entry;
 		return this;
 	}

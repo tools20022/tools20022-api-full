@@ -119,7 +119,7 @@ public class DisplayInstruction1 {
 	 * definition} = "Indicates the quantity to be displayed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DisplayInstruction1, Optional<FinancialInstrumentQuantityChoice>> mmQuantity = new MMMessageAttribute<DisplayInstruction1, Optional<FinancialInstrumentQuantityChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DisplayInstruction1.mmObject();
 			isDerived = false;
@@ -131,6 +131,16 @@ public class DisplayInstruction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantityChoice> getValue(DisplayInstruction1 obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(DisplayInstruction1 obj, Optional<FinancialInstrumentQuantityChoice> value) {
+			obj.setQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ScndryQty")
@@ -168,7 +178,7 @@ public class DisplayInstruction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecondaryQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DisplayInstruction1, Optional<FinancialInstrumentQuantityChoice>> mmSecondaryQuantity = new MMMessageAttribute<DisplayInstruction1, Optional<FinancialInstrumentQuantityChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DisplayInstruction1.mmObject();
 			isDerived = false;
@@ -180,6 +190,16 @@ public class DisplayInstruction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantityChoice> getValue(DisplayInstruction1 obj) {
+			return obj.getSecondaryQuantity();
+		}
+
+		@Override
+		public void setValue(DisplayInstruction1 obj, Optional<FinancialInstrumentQuantityChoice> value) {
+			obj.setSecondaryQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Mtd")
@@ -215,7 +235,7 @@ public class DisplayInstruction1 {
 	 * definition} = "Instructions for the use of Quantity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DisplayInstruction1, Optional<DisplayMethod1Code>> mmMethod = new MMMessageAttribute<DisplayInstruction1, Optional<DisplayMethod1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DisplayInstruction1.mmObject();
 			isDerived = false;
@@ -227,6 +247,16 @@ public class DisplayInstruction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DisplayMethod1Code.mmObject();
+		}
+
+		@Override
+		public Optional<DisplayMethod1Code> getValue(DisplayInstruction1 obj) {
+			return obj.getMethod();
+		}
+
+		@Override
+		public void setValue(DisplayInstruction1 obj, Optional<DisplayMethod1Code> value) {
+			obj.setMethod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LwQty")
@@ -263,7 +293,7 @@ public class DisplayInstruction1 {
 	 * "Defines the lower quantity limit to a randomized refresh of Quantity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLowQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DisplayInstruction1, Optional<FinancialInstrumentQuantityChoice>> mmLowQuantity = new MMMessageAttribute<DisplayInstruction1, Optional<FinancialInstrumentQuantityChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DisplayInstruction1.mmObject();
 			isDerived = false;
@@ -275,6 +305,16 @@ public class DisplayInstruction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantityChoice> getValue(DisplayInstruction1 obj) {
+			return obj.getLowQuantity();
+		}
+
+		@Override
+		public void setValue(DisplayInstruction1 obj, Optional<FinancialInstrumentQuantityChoice> value) {
+			obj.setLowQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "HghQty")
@@ -311,7 +351,7 @@ public class DisplayInstruction1 {
 	 * "Defines the upper quantity limit to a randomized refresh of Quantity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHighQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DisplayInstruction1, Optional<FinancialInstrumentQuantityChoice>> mmHighQuantity = new MMMessageAttribute<DisplayInstruction1, Optional<FinancialInstrumentQuantityChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DisplayInstruction1.mmObject();
 			isDerived = false;
@@ -323,6 +363,16 @@ public class DisplayInstruction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantityChoice> getValue(DisplayInstruction1 obj) {
+			return obj.getHighQuantity();
+		}
+
+		@Override
+		public void setValue(DisplayInstruction1 obj, Optional<FinancialInstrumentQuantityChoice> value) {
+			obj.setHighQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinIncrmt")
@@ -360,7 +410,7 @@ public class DisplayInstruction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumIncrement = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DisplayInstruction1, Optional<FinancialInstrumentQuantityChoice>> mmMinimumIncrement = new MMMessageAttribute<DisplayInstruction1, Optional<FinancialInstrumentQuantityChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DisplayInstruction1.mmObject();
 			isDerived = false;
@@ -372,6 +422,16 @@ public class DisplayInstruction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantityChoice> getValue(DisplayInstruction1 obj) {
+			return obj.getMinimumIncrement();
+		}
+
+		@Override
+		public void setValue(DisplayInstruction1 obj, Optional<FinancialInstrumentQuantityChoice> value) {
+			obj.setMinimumIncrement(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RfrshQty")
@@ -407,7 +467,7 @@ public class DisplayInstruction1 {
 	 * definition} = "Defines the quantity used to refresh Quantity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRefreshQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DisplayInstruction1, Optional<FinancialInstrumentQuantityChoice>> mmRefreshQuantity = new MMMessageAttribute<DisplayInstruction1, Optional<FinancialInstrumentQuantityChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DisplayInstruction1.mmObject();
 			isDerived = false;
@@ -419,6 +479,16 @@ public class DisplayInstruction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantityChoice> getValue(DisplayInstruction1 obj) {
+			return obj.getRefreshQuantity();
+		}
+
+		@Override
+		public void setValue(DisplayInstruction1 obj, Optional<FinancialInstrumentQuantityChoice> value) {
+			obj.setRefreshQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RfrshTm")
@@ -454,7 +524,7 @@ public class DisplayInstruction1 {
 	 * definition} = "Defines when to refresh quantity (Immediate or Exhaust)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRefreshTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DisplayInstruction1, Optional<RefreshTime1Code>> mmRefreshTime = new MMMessageAttribute<DisplayInstruction1, Optional<RefreshTime1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DisplayInstruction1.mmObject();
 			isDerived = false;
@@ -466,6 +536,16 @@ public class DisplayInstruction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RefreshTime1Code.mmObject();
+		}
+
+		@Override
+		public Optional<RefreshTime1Code> getValue(DisplayInstruction1 obj) {
+			return obj.getRefreshTime();
+		}
+
+		@Override
+		public void setValue(DisplayInstruction1 obj, Optional<RefreshTime1Code> value) {
+			obj.setRefreshTime(value.orElse(null));
 		}
 	};
 

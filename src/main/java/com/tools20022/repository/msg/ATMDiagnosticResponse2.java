@@ -22,6 +22,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.caam.ATMDiagnosticResponseV02;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMCommand7;
+import com.tools20022.repository.msg.ATMEnvironment6;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -107,7 +109,7 @@ public class ATMDiagnosticResponse2 {
 	 * definition} = "Environment of the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMDiagnosticResponse2, ATMEnvironment6> mmEnvironment = new MMMessageAssociationEnd<ATMDiagnosticResponse2, ATMEnvironment6>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDiagnosticResponse2.mmObject();
 			isDerived = false;
@@ -118,11 +120,21 @@ public class ATMDiagnosticResponse2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMEnvironment6.mmObject();
+			type_lazy = () -> ATMEnvironment6.mmObject();
+		}
+
+		@Override
+		public ATMEnvironment6 getValue(ATMDiagnosticResponse2 obj) {
+			return obj.getEnvironment();
+		}
+
+		@Override
+		public void setValue(ATMDiagnosticResponse2 obj, ATMEnvironment6 value) {
+			obj.setEnvironment(value);
 		}
 	};
 	@XmlElement(name = "Cmd")
-	protected List<com.tools20022.repository.msg.ATMCommand7> command;
+	protected List<ATMCommand7> command;
 	/**
 	 * 
 	 <p>
@@ -149,7 +161,7 @@ public class ATMDiagnosticResponse2 {
 	 * definition} = "Maintenance command to perform on the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCommand = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMDiagnosticResponse2, List<ATMCommand7>> mmCommand = new MMMessageAssociationEnd<ATMDiagnosticResponse2, List<ATMCommand7>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDiagnosticResponse2.mmObject();
 			isDerived = false;
@@ -159,7 +171,17 @@ public class ATMDiagnosticResponse2 {
 			definition = "Maintenance command to perform on the ATM.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMCommand7.mmObject();
+			type_lazy = () -> ATMCommand7.mmObject();
+		}
+
+		@Override
+		public List<ATMCommand7> getValue(ATMDiagnosticResponse2 obj) {
+			return obj.getCommand();
+		}
+
+		@Override
+		public void setValue(ATMDiagnosticResponse2 obj, List<ATMCommand7> value) {
+			obj.setCommand(value);
 		}
 	};
 
@@ -181,7 +203,7 @@ public class ATMDiagnosticResponse2 {
 		return environment;
 	}
 
-	public ATMDiagnosticResponse2 setEnvironment(com.tools20022.repository.msg.ATMEnvironment6 environment) {
+	public ATMDiagnosticResponse2 setEnvironment(ATMEnvironment6 environment) {
 		this.environment = Objects.requireNonNull(environment);
 		return this;
 	}
@@ -190,7 +212,7 @@ public class ATMDiagnosticResponse2 {
 		return command == null ? command = new ArrayList<>() : command;
 	}
 
-	public ATMDiagnosticResponse2 setCommand(List<com.tools20022.repository.msg.ATMCommand7> command) {
+	public ATMDiagnosticResponse2 setCommand(List<ATMCommand7> command) {
 		this.command = Objects.requireNonNull(command);
 		return this;
 	}

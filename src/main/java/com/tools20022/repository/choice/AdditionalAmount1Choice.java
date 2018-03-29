@@ -105,7 +105,7 @@ public class AdditionalAmount1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalCashIn = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalAmount1Choice, ActiveOrHistoricCurrencyAndAmount> mmAdditionalCashIn = new MMMessageAttribute<AdditionalAmount1Choice, ActiveOrHistoricCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> SwitchOrder.mmAdditionalCashIn;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AdditionalAmount1Choice.mmObject();
@@ -117,6 +117,16 @@ public class AdditionalAmount1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAndAmount getValue(AdditionalAmount1Choice obj) {
+			return obj.getAdditionalCashIn();
+		}
+
+		@Override
+		public void setValue(AdditionalAmount1Choice obj, ActiveOrHistoricCurrencyAndAmount value) {
+			obj.setAdditionalCashIn(value);
 		}
 	};
 	@XmlElement(name = "RsltgCshOut", required = true)
@@ -156,7 +166,7 @@ public class AdditionalAmount1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResultingCashOut = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalAmount1Choice, ActiveOrHistoricCurrencyAndAmount> mmResultingCashOut = new MMMessageAttribute<AdditionalAmount1Choice, ActiveOrHistoricCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> SwitchOrder.mmResultingCashOut;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AdditionalAmount1Choice.mmObject();
@@ -168,6 +178,16 @@ public class AdditionalAmount1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAndAmount getValue(AdditionalAmount1Choice obj) {
+			return obj.getResultingCashOut();
+		}
+
+		@Override
+		public void setValue(AdditionalAmount1Choice obj, ActiveOrHistoricCurrencyAndAmount value) {
+			obj.setResultingCashOut(value);
 		}
 	};
 

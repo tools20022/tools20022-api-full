@@ -97,7 +97,7 @@ public class CustomerDevice1 {
 	 * definition} = "Identifier of the component."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerDevice1, Optional<Max35Text>> mmIdentification = new MMMessageAttribute<CustomerDevice1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerDevice1.mmObject();
 			isDerived = false;
@@ -108,6 +108,16 @@ public class CustomerDevice1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CustomerDevice1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(CustomerDevice1 obj, Optional<Max35Text> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -139,7 +149,7 @@ public class CustomerDevice1 {
 	 * definition} = "Type of component."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerDevice1, Optional<Max35Text>> mmType = new MMMessageAttribute<CustomerDevice1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerDevice1.mmObject();
 			isDerived = false;
@@ -150,6 +160,16 @@ public class CustomerDevice1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CustomerDevice1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(CustomerDevice1 obj, Optional<Max35Text> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Prvdr")
@@ -181,7 +201,7 @@ public class CustomerDevice1 {
 	 * definition} = "Provider of the component."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProvider = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerDevice1, Optional<Max35Text>> mmProvider = new MMMessageAttribute<CustomerDevice1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerDevice1.mmObject();
 			isDerived = false;
@@ -192,6 +212,16 @@ public class CustomerDevice1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CustomerDevice1 obj) {
+			return obj.getProvider();
+		}
+
+		@Override
+		public void setValue(CustomerDevice1 obj, Optional<Max35Text> value) {
+			obj.setProvider(value.orElse(null));
 		}
 	};
 

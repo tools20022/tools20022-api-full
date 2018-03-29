@@ -60,12 +60,16 @@ public class ConstraintEntitlementDate1Guideline {
 	 */
 	public static final MMConstraint<MeetingNotificationV05> forMeetingNotificationV05 = new MMConstraint<MeetingNotificationV05>() {
 		{
-			validator = ConstraintEntitlementDate1Guideline::checkMeetingNotificationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntitlementDate1Guideline";
 			definition = "If both EntitlementSpecification/EntitlementFixingDate and Security/Position/HoldingBalance/Date are present, it is recommended that both date values be identical.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEntitlementDate1Guideline.forMeetingNotificationV04;
 			owner_lazy = () -> MeetingNotificationV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MeetingNotificationV05 obj) throws Exception {
+			checkMeetingNotificationV05(obj);
 		}
 	};
 	/**
@@ -99,12 +103,16 @@ public class ConstraintEntitlementDate1Guideline {
 	 */
 	public static final MMConstraint<MeetingNotificationV04> forMeetingNotificationV04 = new MMConstraint<MeetingNotificationV04>() {
 		{
-			validator = ConstraintEntitlementDate1Guideline::checkMeetingNotificationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntitlementDate1Guideline";
 			definition = "If both EntitlementSpecification/EntitlementFixingDate and Security/Position/HoldingBalance/Date are present, it is recommended that both date values be identical.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEntitlementDate1Guideline.forMeetingNotificationV05);
 			owner_lazy = () -> MeetingNotificationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MeetingNotificationV04 obj) throws Exception {
+			checkMeetingNotificationV04(obj);
 		}
 	};
 	/**
@@ -130,11 +138,15 @@ public class ConstraintEntitlementDate1Guideline {
 	 */
 	public static final MMConstraint<MeetingNotificationV03> forMeetingNotificationV03 = new MMConstraint<MeetingNotificationV03>() {
 		{
-			validator = ConstraintEntitlementDate1Guideline::checkMeetingNotificationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntitlementDate1Guideline";
 			definition = "If both EntitlementSpecification/EntitlementFixingDate and Security/Position/HoldingBalance/Date are present, it is recommended that both date values be identical.";
 			owner_lazy = () -> MeetingNotificationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MeetingNotificationV03 obj) throws Exception {
+			checkMeetingNotificationV03(obj);
 		}
 	};
 

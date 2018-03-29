@@ -122,7 +122,7 @@ public class AssignmentMethod1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AssignmentMethod1Choice, AssignmentMethod1Code> mmCode = new MMMessageAttribute<AssignmentMethod1Choice, AssignmentMethod1Code>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmInstrumentAssignmentMethod;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssignmentMethod1Choice.mmObject();
@@ -135,6 +135,16 @@ public class AssignmentMethod1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssignmentMethod1Code.mmObject();
+		}
+
+		@Override
+		public AssignmentMethod1Code getValue(AssignmentMethod1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(AssignmentMethod1Choice obj, AssignmentMethod1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -179,7 +189,7 @@ public class AssignmentMethod1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssignmentMethod1Choice, GenericIdentification40> mmProprietary = new MMMessageAssociationEnd<AssignmentMethod1Choice, GenericIdentification40>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmInstrumentAssignmentMethod;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssignmentMethod1Choice.mmObject();
@@ -193,6 +203,16 @@ public class AssignmentMethod1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification40.mmObject();
+		}
+
+		@Override
+		public GenericIdentification40 getValue(AssignmentMethod1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(AssignmentMethod1Choice obj, GenericIdentification40 value) {
+			obj.setProprietary(value);
 		}
 	};
 

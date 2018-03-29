@@ -23,6 +23,9 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CardAggregated1;
+import com.tools20022.repository.msg.PaymentCard4;
+import com.tools20022.repository.msg.PointOfInteraction1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -118,7 +121,7 @@ public class CardEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCard = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardEntry1, Optional<PaymentCard4>> mmCard = new MMMessageAssociationEnd<CardEntry1, Optional<PaymentCard4>>() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmPaymentCard;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardEntry1.mmObject();
@@ -131,7 +134,17 @@ public class CardEntry1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentCard4.mmObject();
+			type_lazy = () -> PaymentCard4.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentCard4> getValue(CardEntry1 obj) {
+			return obj.getCard();
+		}
+
+		@Override
+		public void setValue(CardEntry1 obj, Optional<PaymentCard4> value) {
+			obj.setCard(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "POI")
@@ -175,7 +188,7 @@ public class CardEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPOI = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardEntry1, Optional<PointOfInteraction1>> mmPOI = new MMMessageAssociationEnd<CardEntry1, Optional<PointOfInteraction1>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmPointOfInteraction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardEntry1.mmObject();
@@ -188,7 +201,17 @@ public class CardEntry1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PointOfInteraction1.mmObject();
+			type_lazy = () -> PointOfInteraction1.mmObject();
+		}
+
+		@Override
+		public Optional<PointOfInteraction1> getValue(CardEntry1 obj) {
+			return obj.getPOI();
+		}
+
+		@Override
+		public void setValue(CardEntry1 obj, Optional<PointOfInteraction1> value) {
+			obj.setPOI(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AggtdNtry")
@@ -232,7 +255,7 @@ public class CardEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAggregatedEntry = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardEntry1, Optional<CardAggregated1>> mmAggregatedEntry = new MMMessageAssociationEnd<CardEntry1, Optional<CardAggregated1>>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardEntry1.mmObject();
@@ -245,7 +268,17 @@ public class CardEntry1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardAggregated1.mmObject();
+			type_lazy = () -> CardAggregated1.mmObject();
+		}
+
+		@Override
+		public Optional<CardAggregated1> getValue(CardEntry1 obj) {
+			return obj.getAggregatedEntry();
+		}
+
+		@Override
+		public void setValue(CardEntry1 obj, Optional<CardAggregated1> value) {
+			obj.setAggregatedEntry(value.orElse(null));
 		}
 	};
 
@@ -268,7 +301,7 @@ public class CardEntry1 {
 		return card == null ? Optional.empty() : Optional.of(card);
 	}
 
-	public CardEntry1 setCard(com.tools20022.repository.msg.PaymentCard4 card) {
+	public CardEntry1 setCard(PaymentCard4 card) {
 		this.card = card;
 		return this;
 	}
@@ -277,7 +310,7 @@ public class CardEntry1 {
 		return pOI == null ? Optional.empty() : Optional.of(pOI);
 	}
 
-	public CardEntry1 setPOI(com.tools20022.repository.msg.PointOfInteraction1 pOI) {
+	public CardEntry1 setPOI(PointOfInteraction1 pOI) {
 		this.pOI = pOI;
 		return this;
 	}
@@ -286,7 +319,7 @@ public class CardEntry1 {
 		return aggregatedEntry == null ? Optional.empty() : Optional.of(aggregatedEntry);
 	}
 
-	public CardEntry1 setAggregatedEntry(com.tools20022.repository.msg.CardAggregated1 aggregatedEntry) {
+	public CardEntry1 setAggregatedEntry(CardAggregated1 aggregatedEntry) {
 		this.aggregatedEntry = aggregatedEntry;
 		return this;
 	}

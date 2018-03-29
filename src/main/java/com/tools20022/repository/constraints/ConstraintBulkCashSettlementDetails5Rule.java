@@ -54,11 +54,15 @@ public class ConstraintBulkCashSettlementDetails5Rule {
 	 */
 	public static final MMConstraint<RedemptionBulkOrder2> forRedemptionBulkOrder2 = new MMConstraint<RedemptionBulkOrder2>() {
 		{
-			validator = ConstraintBulkCashSettlementDetails5Rule::checkRedemptionBulkOrder2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BulkCashSettlementDetails5Rule";
 			definition = "Either IndividualOrderDetails/CashSettlementDetails or BulkCashSettlementDetails may be present, but not both.";
 			owner_lazy = () -> RedemptionBulkOrder2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionBulkOrder2 obj) throws Exception {
+			checkRedemptionBulkOrder2(obj);
 		}
 	};
 	/**
@@ -84,11 +88,15 @@ public class ConstraintBulkCashSettlementDetails5Rule {
 	 */
 	public static final MMConstraint<RedemptionBulkOrder3> forRedemptionBulkOrder3 = new MMConstraint<RedemptionBulkOrder3>() {
 		{
-			validator = ConstraintBulkCashSettlementDetails5Rule::checkRedemptionBulkOrder3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BulkCashSettlementDetails5Rule";
 			definition = "Either IndividualOrderDetails/CashSettlementDetails or BulkCashSettlementDetails may be present, but not both.";
 			owner_lazy = () -> RedemptionBulkOrder3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionBulkOrder3 obj) throws Exception {
+			checkRedemptionBulkOrder3(obj);
 		}
 	};
 	/**
@@ -122,12 +130,16 @@ public class ConstraintBulkCashSettlementDetails5Rule {
 	 */
 	public static final MMConstraint<RedemptionBulkOrder4> forRedemptionBulkOrder4 = new MMConstraint<RedemptionBulkOrder4>() {
 		{
-			validator = ConstraintBulkCashSettlementDetails5Rule::checkRedemptionBulkOrder4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BulkCashSettlementDetails5Rule";
 			definition = "Either IndividualOrderDetails/CashSettlementDetails or BulkCashSettlementDetails may be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBulkCashSettlementDetailsRule.forRedemptionBulkOrder6);
 			owner_lazy = () -> RedemptionBulkOrder4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionBulkOrder4 obj) throws Exception {
+			checkRedemptionBulkOrder4(obj);
 		}
 	};
 

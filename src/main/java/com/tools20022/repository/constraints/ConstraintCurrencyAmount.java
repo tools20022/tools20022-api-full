@@ -54,11 +54,15 @@ public class ConstraintCurrencyAmount {
 	 */
 	public static final MMConstraint<ActiveCurrencyAndAmount> forActiveCurrencyAndAmount = new MMConstraint<ActiveCurrencyAndAmount>() {
 		{
-			validator = ConstraintCurrencyAmount::checkActiveCurrencyAndAmount;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyAmount";
 			definition = "The number of fractional digits (or minor unit of currency) must comply with ISO 4217.\nNote: The decimal separator is a dot.";
 			owner_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ActiveCurrencyAndAmount obj) throws Exception {
+			checkActiveCurrencyAndAmount(obj);
 		}
 	};
 	/**
@@ -84,11 +88,15 @@ public class ConstraintCurrencyAmount {
 	 */
 	public static final MMConstraint<ActiveOrHistoricCurrencyAndAmount> forActiveOrHistoricCurrencyAndAmount = new MMConstraint<ActiveOrHistoricCurrencyAndAmount>() {
 		{
-			validator = ConstraintCurrencyAmount::checkActiveOrHistoricCurrencyAndAmount;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyAmount";
 			definition = "The number of fractional digits (or minor unit of currency) must comply with ISO 4217.\nNote: The decimal separator is a dot.";
 			owner_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ActiveOrHistoricCurrencyAndAmount obj) throws Exception {
+			checkActiveOrHistoricCurrencyAndAmount(obj);
 		}
 	};
 	/**
@@ -114,11 +122,15 @@ public class ConstraintCurrencyAmount {
 	 */
 	public static final MMConstraint<RestrictedFINActiveCurrencyAndAmount> forRestrictedFINActiveCurrencyAndAmount = new MMConstraint<RestrictedFINActiveCurrencyAndAmount>() {
 		{
-			validator = ConstraintCurrencyAmount::checkRestrictedFINActiveCurrencyAndAmount;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyAmount";
 			definition = "The number of fractional digits (or minor unit of currency) must comply with ISO 4217.\nNote: The decimal separator is a dot.";
 			owner_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RestrictedFINActiveCurrencyAndAmount obj) throws Exception {
+			checkRestrictedFINActiveCurrencyAndAmount(obj);
 		}
 	};
 	/**
@@ -144,11 +156,15 @@ public class ConstraintCurrencyAmount {
 	 */
 	public static final MMConstraint<RestrictedFINActiveOrHistoricCurrencyAndAmount> forRestrictedFINActiveOrHistoricCurrencyAndAmount = new MMConstraint<RestrictedFINActiveOrHistoricCurrencyAndAmount>() {
 		{
-			validator = ConstraintCurrencyAmount::checkRestrictedFINActiveOrHistoricCurrencyAndAmount;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyAmount";
 			definition = "The number of fractional digits (or minor unit of currency) must comply with ISO 4217.\nNote: The decimal separator is a dot.";
 			owner_lazy = () -> RestrictedFINActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RestrictedFINActiveOrHistoricCurrencyAndAmount obj) throws Exception {
+			checkRestrictedFINActiveOrHistoricCurrencyAndAmount(obj);
 		}
 	};
 

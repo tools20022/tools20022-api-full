@@ -143,7 +143,7 @@ public class TaxCalculationInformation4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEUCapitalGain = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCalculationInformation4, Optional<EUCapitalGain2Code>> mmEUCapitalGain = new MMMessageAttribute<TaxCalculationInformation4, Optional<EUCapitalGain2Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmEUCapitalGain;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation4.mmObject();
@@ -155,6 +155,16 @@ public class TaxCalculationInformation4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> EUCapitalGain2Code.mmObject();
+		}
+
+		@Override
+		public Optional<EUCapitalGain2Code> getValue(TaxCalculationInformation4 obj) {
+			return obj.getEUCapitalGain();
+		}
+
+		@Override
+		public void setValue(TaxCalculationInformation4 obj, Optional<EUCapitalGain2Code> value) {
+			obj.setEUCapitalGain(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XtndedEUCptlGn")
@@ -194,7 +204,7 @@ public class TaxCalculationInformation4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedEUCapitalGain = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCalculationInformation4, Optional<Extended350Code>> mmExtendedEUCapitalGain = new MMMessageAttribute<TaxCalculationInformation4, Optional<Extended350Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmEUCapitalGain;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation4.mmObject();
@@ -206,6 +216,16 @@ public class TaxCalculationInformation4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Optional<Extended350Code> getValue(TaxCalculationInformation4 obj) {
+			return obj.getExtendedEUCapitalGain();
+		}
+
+		@Override
+		public void setValue(TaxCalculationInformation4 obj, Optional<Extended350Code> value) {
+			obj.setExtendedEUCapitalGain(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PctgOfDebtClm")
@@ -245,7 +265,7 @@ public class TaxCalculationInformation4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPercentageOfDebtClaim = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCalculationInformation4, Optional<PercentageRate>> mmPercentageOfDebtClaim = new MMMessageAttribute<TaxCalculationInformation4, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTax.mmPercentageOfDebtClaim;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation4.mmObject();
@@ -257,6 +277,16 @@ public class TaxCalculationInformation4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(TaxCalculationInformation4 obj) {
+			return obj.getPercentageOfDebtClaim();
+		}
+
+		@Override
+		public void setValue(TaxCalculationInformation4 obj, Optional<PercentageRate> value) {
+			obj.setPercentageOfDebtClaim(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PctgGrdfthdDebt")
@@ -294,7 +324,7 @@ public class TaxCalculationInformation4 {
 	 * definition} = "Percentage of grandfathered debt claim."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPercentageGrandfatheredDebt = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCalculationInformation4, Optional<PercentageRate>> mmPercentageGrandfatheredDebt = new MMMessageAttribute<TaxCalculationInformation4, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTax.mmPercentageGrandfatheredDebt;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation4.mmObject();
@@ -306,6 +336,16 @@ public class TaxCalculationInformation4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(TaxCalculationInformation4 obj) {
+			return obj.getPercentageGrandfatheredDebt();
+		}
+
+		@Override
+		public void setValue(TaxCalculationInformation4 obj, Optional<PercentageRate> value) {
+			obj.setPercentageGrandfatheredDebt(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxblIncmPerDvdd")
@@ -345,7 +385,7 @@ public class TaxCalculationInformation4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxableIncomePerDividend = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCalculationInformation4, Optional<ActiveOrHistoricCurrencyAnd13DecimalAmount>> mmTaxableIncomePerDividend = new MMMessageAttribute<TaxCalculationInformation4, Optional<ActiveOrHistoricCurrencyAnd13DecimalAmount>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmTaxableIncomePerDividend;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation4.mmObject();
@@ -357,6 +397,16 @@ public class TaxCalculationInformation4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAnd13DecimalAmount> getValue(TaxCalculationInformation4 obj) {
+			return obj.getTaxableIncomePerDividend();
+		}
+
+		@Override
+		public void setValue(TaxCalculationInformation4 obj, Optional<ActiveOrHistoricCurrencyAnd13DecimalAmount> value) {
+			obj.setTaxableIncomePerDividend(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EUDvddSts")
@@ -396,7 +446,7 @@ public class TaxCalculationInformation4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEUDividendStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCalculationInformation4, Optional<EUDividendStatus1Code>> mmEUDividendStatus = new MMMessageAttribute<TaxCalculationInformation4, Optional<EUDividendStatus1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmEUDividendStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation4.mmObject();
@@ -408,6 +458,16 @@ public class TaxCalculationInformation4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> EUDividendStatus1Code.mmObject();
+		}
+
+		@Override
+		public Optional<EUDividendStatus1Code> getValue(TaxCalculationInformation4 obj) {
+			return obj.getEUDividendStatus();
+		}
+
+		@Override
+		public void setValue(TaxCalculationInformation4 obj, Optional<EUDividendStatus1Code> value) {
+			obj.setEUDividendStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XtndedEUDvddSts")
@@ -447,7 +507,7 @@ public class TaxCalculationInformation4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedEUDividendStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCalculationInformation4, Optional<Extended350Code>> mmExtendedEUDividendStatus = new MMMessageAttribute<TaxCalculationInformation4, Optional<Extended350Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmEUDividendStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation4.mmObject();
@@ -459,6 +519,16 @@ public class TaxCalculationInformation4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Optional<Extended350Code> getValue(TaxCalculationInformation4 obj) {
+			return obj.getExtendedEUDividendStatus();
+		}
+
+		@Override
+		public void setValue(TaxCalculationInformation4 obj, Optional<Extended350Code> value) {
+			obj.setExtendedEUDividendStatus(value.orElse(null));
 		}
 	};
 	/**

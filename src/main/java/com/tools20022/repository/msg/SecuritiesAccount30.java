@@ -22,6 +22,7 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.*;
 import com.tools20022.repository.area.sese.*;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.datatype.RestrictedFINXMax35Text;
@@ -29,6 +30,7 @@ import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.AccountIdentification;
 import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification47;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -91,6 +93,24 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequest002V07#mmSafekeepingAccount
  * SecuritiesSettlementConditionsModificationRequest002V07.mmSafekeepingAccount}
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V07#mmSafekeepingAccount
+ * IntraPositionMovementConfirmation002V07.mmSafekeepingAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReport002V07#mmSafekeepingAccount
+ * IntraPositionMovementPostingReport002V07.mmSafekeepingAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotification002V05#mmSafekeepingAccount
+ * PortfolioTransferNotification002V05.mmSafekeepingAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReport002V07#mmSafekeepingAccount
+ * SecuritiesSettlementTransactionAllegementReport002V07.mmSafekeepingAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V09#mmSafekeepingAccount
+ * SecuritiesTransactionPendingReport002V09.mmSafekeepingAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReport002V08#mmSafekeepingAccount
+ * SecuritiesTransactionPostingReport002V08.mmSafekeepingAccount}</li>
  * </ul>
  * </li>
  * <li>
@@ -154,7 +174,7 @@ public class SecuritiesAccount30 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccount30, RestrictedFINXMax35Text> mmIdentification = new MMMessageAttribute<SecuritiesAccount30, RestrictedFINXMax35Text>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount30.mmObject();
@@ -167,6 +187,16 @@ public class SecuritiesAccount30 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax35Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax35Text getValue(SecuritiesAccount30 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount30 obj, RestrictedFINXMax35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -208,7 +238,7 @@ public class SecuritiesAccount30 {
 	 * definition} = "Specifies the type of securities account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccount30, Optional<GenericIdentification47>> mmType = new MMMessageAttribute<SecuritiesAccount30, Optional<GenericIdentification47>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesAccount.mmSecuritiesAccountType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount30.mmObject();
@@ -220,7 +250,17 @@ public class SecuritiesAccount30 {
 			definition = "Specifies the type of securities account.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification47.mmObject();
+			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification47> getValue(SecuritiesAccount30 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount30 obj, Optional<GenericIdentification47> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Nm")
@@ -260,7 +300,7 @@ public class SecuritiesAccount30 {
 	 * definition} = "Description of the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccount30, Optional<Max70Text>> mmName = new MMMessageAttribute<SecuritiesAccount30, Optional<Max70Text>>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount30.mmObject();
@@ -274,6 +314,16 @@ public class SecuritiesAccount30 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max70Text> getValue(SecuritiesAccount30 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount30 obj, Optional<Max70Text> value) {
+			obj.setName(value.orElse(null));
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -284,7 +334,9 @@ public class SecuritiesAccount30 {
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionModificationRequestStatusAdvice002V04.mmSafekeepingAccount, PortfolioTransferNotification002V04.mmSafekeepingAccount,
 						SecuritiesSettlementAllegementRemovalAdvice002V04.mmSafekeepingAccount, SecuritiesSettlementConditionsModificationRequest002V06.mmSafekeepingAccount,
 						SecuritiesStatusOrStatementQueryStatusAdvice002V04.mmSafekeepingAccount, SecuritiesTransactionCancellationRequest002V05.mmSafekeepingAccount,
-						SecuritiesSettlementConditionModificationStatusAdvice002V07.mmSafekeepingAccount, SecuritiesSettlementConditionsModificationRequest002V07.mmSafekeepingAccount);
+						SecuritiesSettlementConditionModificationStatusAdvice002V07.mmSafekeepingAccount, SecuritiesSettlementConditionsModificationRequest002V07.mmSafekeepingAccount,
+						IntraPositionMovementConfirmation002V07.mmSafekeepingAccount, IntraPositionMovementPostingReport002V07.mmSafekeepingAccount, PortfolioTransferNotification002V05.mmSafekeepingAccount,
+						SecuritiesSettlementTransactionAllegementReport002V07.mmSafekeepingAccount, SecuritiesTransactionPendingReport002V09.mmSafekeepingAccount, SecuritiesTransactionPostingReport002V08.mmSafekeepingAccount);
 				trace_lazy = () -> SecuritiesAccount.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -308,7 +360,7 @@ public class SecuritiesAccount30 {
 		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public SecuritiesAccount30 setType(com.tools20022.repository.msg.GenericIdentification47 type) {
+	public SecuritiesAccount30 setType(GenericIdentification47 type) {
 		this.type = type;
 		return this;
 	}

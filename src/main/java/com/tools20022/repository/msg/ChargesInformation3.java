@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.entity.Charges;
 import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3;
+import com.tools20022.repository.msg.TaxCharges1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -122,7 +124,7 @@ public class ChargesInformation3 {
 	 * definition} = "Total of all charges and taxes applied to the entry."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalChargesAndTaxAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ChargesInformation3, Optional<CurrencyAndAmount>> mmTotalChargesAndTaxAmount = new MMMessageAttribute<ChargesInformation3, Optional<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ChargesInformation3.mmObject();
@@ -134,6 +136,16 @@ public class ChargesInformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyAndAmount> getValue(ChargesInformation3 obj) {
+			return obj.getTotalChargesAndTaxAmount();
+		}
+
+		@Override
+		public void setValue(ChargesInformation3 obj, Optional<CurrencyAndAmount> value) {
+			obj.setTotalChargesAndTaxAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -171,7 +183,7 @@ public class ChargesInformation3 {
 	 * definition} = "Transaction charges to be paid by the charge bearer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ChargesInformation3, CurrencyAndAmount> mmAmount = new MMMessageAttribute<ChargesInformation3, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ChargesInformation3.mmObject();
@@ -183,6 +195,16 @@ public class ChargesInformation3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(ChargesInformation3 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(ChargesInformation3 obj, CurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -220,7 +242,7 @@ public class ChargesInformation3 {
 	 * definition} = "Identifies the type of charge."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ChargesInformation3, Optional<ChargeTypeChoice>> mmType = new MMMessageAttribute<ChargesInformation3, Optional<ChargeTypeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ChargesInformation3.mmObject();
@@ -232,6 +254,16 @@ public class ChargesInformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ChargeTypeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<ChargeTypeChoice> getValue(ChargesInformation3 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(ChargesInformation3 obj, Optional<ChargeTypeChoice> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rate")
@@ -269,7 +301,7 @@ public class ChargesInformation3 {
 	 * definition} = "Rate used to calculate the amount of the charge or fee."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ChargesInformation3, Optional<PercentageRate>> mmRate = new MMMessageAttribute<ChargesInformation3, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmChargeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ChargesInformation3.mmObject();
@@ -281,6 +313,16 @@ public class ChargesInformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(ChargesInformation3 obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(ChargesInformation3 obj, Optional<PercentageRate> value) {
+			obj.setRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Br")
@@ -320,7 +362,7 @@ public class ChargesInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBearer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ChargesInformation3, Optional<ChargeBearerType1Code>> mmBearer = new MMMessageAttribute<ChargesInformation3, Optional<ChargeBearerType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmBearerType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ChargesInformation3.mmObject();
@@ -332,6 +374,16 @@ public class ChargesInformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ChargeBearerType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ChargeBearerType1Code> getValue(ChargesInformation3 obj) {
+			return obj.getBearer();
+		}
+
+		@Override
+		public void setValue(ChargesInformation3 obj, Optional<ChargeBearerType1Code> value) {
+			obj.setBearer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Pty")
@@ -370,7 +422,7 @@ public class ChargesInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ChargesInformation3, Optional<BranchAndFinancialInstitutionIdentification3>> mmParty = new MMMessageAssociationEnd<ChargesInformation3, Optional<BranchAndFinancialInstitutionIdentification3>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ChargesInformation3.mmObject();
@@ -382,7 +434,17 @@ public class ChargesInformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification3.mmObject();
+		}
+
+		@Override
+		public Optional<BranchAndFinancialInstitutionIdentification3> getValue(ChargesInformation3 obj) {
+			return obj.getParty();
+		}
+
+		@Override
+		public void setValue(ChargesInformation3 obj, Optional<BranchAndFinancialInstitutionIdentification3> value) {
+			obj.setParty(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tax")
@@ -418,7 +480,7 @@ public class ChargesInformation3 {
 	 * definition} = "Specifies tax details applied to charges."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTax = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ChargesInformation3, Optional<TaxCharges1>> mmTax = new MMMessageAssociationEnd<ChargesInformation3, Optional<TaxCharges1>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmTax;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ChargesInformation3.mmObject();
@@ -430,7 +492,17 @@ public class ChargesInformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TaxCharges1.mmObject();
+			type_lazy = () -> TaxCharges1.mmObject();
+		}
+
+		@Override
+		public Optional<TaxCharges1> getValue(ChargesInformation3 obj) {
+			return obj.getTax();
+		}
+
+		@Override
+		public void setValue(ChargesInformation3 obj, Optional<TaxCharges1> value) {
+			obj.setTax(value.orElse(null));
 		}
 	};
 
@@ -499,7 +571,7 @@ public class ChargesInformation3 {
 		return party == null ? Optional.empty() : Optional.of(party);
 	}
 
-	public ChargesInformation3 setParty(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 party) {
+	public ChargesInformation3 setParty(BranchAndFinancialInstitutionIdentification3 party) {
 		this.party = party;
 		return this;
 	}
@@ -508,7 +580,7 @@ public class ChargesInformation3 {
 		return tax == null ? Optional.empty() : Optional.of(tax);
 	}
 
-	public ChargesInformation3 setTax(com.tools20022.repository.msg.TaxCharges1 tax) {
+	public ChargesInformation3 setTax(TaxCharges1 tax) {
 		this.tax = tax;
 		return this;
 	}

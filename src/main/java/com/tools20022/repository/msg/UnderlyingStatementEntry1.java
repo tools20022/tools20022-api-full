@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Entry;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.OriginalGroupInformation3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -122,7 +123,7 @@ public class UnderlyingStatementEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalGroupInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnderlyingStatementEntry1, Optional<OriginalGroupInformation3>> mmOriginalGroupInformation = new MMMessageAssociationEnd<UnderlyingStatementEntry1, Optional<OriginalGroupInformation3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingStatementEntry1.mmObject();
 			isDerived = false;
@@ -134,7 +135,17 @@ public class UnderlyingStatementEntry1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation3.mmObject();
+			type_lazy = () -> OriginalGroupInformation3.mmObject();
+		}
+
+		@Override
+		public Optional<OriginalGroupInformation3> getValue(UnderlyingStatementEntry1 obj) {
+			return obj.getOriginalGroupInformation();
+		}
+
+		@Override
+		public void setValue(UnderlyingStatementEntry1 obj, Optional<OriginalGroupInformation3> value) {
+			obj.setOriginalGroupInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlStmtId")
@@ -176,7 +187,7 @@ public class UnderlyingStatementEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalStatementIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingStatementEntry1, Optional<Max35Text>> mmOriginalStatementIdentification = new MMMessageAttribute<UnderlyingStatementEntry1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingStatementEntry1.mmObject();
 			isDerived = false;
@@ -188,6 +199,16 @@ public class UnderlyingStatementEntry1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(UnderlyingStatementEntry1 obj) {
+			return obj.getOriginalStatementIdentification();
+		}
+
+		@Override
+		public void setValue(UnderlyingStatementEntry1 obj, Optional<Max35Text> value) {
+			obj.setOriginalStatementIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlNtryId")
@@ -234,7 +255,7 @@ public class UnderlyingStatementEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalEntryIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingStatementEntry1, Optional<Max35Text>> mmOriginalEntryIdentification = new MMMessageAttribute<UnderlyingStatementEntry1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingStatementEntry1.mmObject();
@@ -247,6 +268,16 @@ public class UnderlyingStatementEntry1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(UnderlyingStatementEntry1 obj) {
+			return obj.getOriginalEntryIdentification();
+		}
+
+		@Override
+		public void setValue(UnderlyingStatementEntry1 obj, Optional<Max35Text> value) {
+			obj.setOriginalEntryIdentification(value.orElse(null));
 		}
 	};
 
@@ -270,7 +301,7 @@ public class UnderlyingStatementEntry1 {
 		return originalGroupInformation == null ? Optional.empty() : Optional.of(originalGroupInformation);
 	}
 
-	public UnderlyingStatementEntry1 setOriginalGroupInformation(com.tools20022.repository.msg.OriginalGroupInformation3 originalGroupInformation) {
+	public UnderlyingStatementEntry1 setOriginalGroupInformation(OriginalGroupInformation3 originalGroupInformation) {
 		this.originalGroupInformation = originalGroupInformation;
 		return this;
 	}

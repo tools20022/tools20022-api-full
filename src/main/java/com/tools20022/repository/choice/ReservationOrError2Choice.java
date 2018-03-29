@@ -126,7 +126,7 @@ public class ReservationOrError2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReservationOrError2Choice, CurrentAndDefaultReservation1> mmBusinessReport = new MMMessageAssociationEnd<ReservationOrError2Choice, CurrentAndDefaultReservation1>() {
 		{
 			businessComponentTrace_lazy = () -> Reservation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReservationOrError2Choice.mmObject();
@@ -140,6 +140,16 @@ public class ReservationOrError2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CurrentAndDefaultReservation1.mmObject();
+		}
+
+		@Override
+		public CurrentAndDefaultReservation1 getValue(ReservationOrError2Choice obj) {
+			return obj.getBusinessReport();
+		}
+
+		@Override
+		public void setValue(ReservationOrError2Choice obj, CurrentAndDefaultReservation1 value) {
+			obj.setBusinessReport(value);
 		}
 	};
 	@XmlElement(name = "OprlErr", required = true)
@@ -180,7 +190,7 @@ public class ReservationOrError2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReservationOrError2Choice, List<ErrorHandling3>> mmOperationalError = new MMMessageAssociationEnd<ReservationOrError2Choice, List<ErrorHandling3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReservationOrError2Choice.mmObject();
 			isDerived = false;
@@ -192,6 +202,16 @@ public class ReservationOrError2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling3> getValue(ReservationOrError2Choice obj) {
+			return obj.getOperationalError();
+		}
+
+		@Override
+		public void setValue(ReservationOrError2Choice obj, List<ErrorHandling3> value) {
+			obj.setOperationalError(value);
 		}
 	};
 

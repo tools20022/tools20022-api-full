@@ -112,7 +112,7 @@ public class LegalFramework2Choice {
 	 * definition} = "Legal framework expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LegalFramework2Choice, LegalFramework1Code> mmCode = new MMMessageAttribute<LegalFramework2Choice, LegalFramework1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmLegalFramework;
 			componentContext_lazy = () -> com.tools20022.repository.choice.LegalFramework2Choice.mmObject();
@@ -125,6 +125,16 @@ public class LegalFramework2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LegalFramework1Code.mmObject();
+		}
+
+		@Override
+		public LegalFramework1Code getValue(LegalFramework2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(LegalFramework2Choice obj, LegalFramework1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -164,7 +174,7 @@ public class LegalFramework2Choice {
 	 * definition} = "Legal framework expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LegalFramework2Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<LegalFramework2Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmLegalFramework;
 			componentContext_lazy = () -> com.tools20022.repository.choice.LegalFramework2Choice.mmObject();
@@ -178,6 +188,16 @@ public class LegalFramework2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(LegalFramework2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(LegalFramework2Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

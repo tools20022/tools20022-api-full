@@ -228,7 +228,7 @@ public class CorporateActionAmounts40 {
 	 * "Amount of money before any deductions and allowances have been made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGrossCashAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>> mmGrossCashAmount = new MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionCashEntitlement.mmGrossCashAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -241,6 +241,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getGrossCashAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setGrossCashAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NetCshAmt")
@@ -283,7 +293,7 @@ public class CorporateActionAmounts40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNetCashAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>> mmNetCashAmount = new MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionCashEntitlement.mmNetCashAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -296,6 +306,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getNetCashAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setNetCashAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SlctnFees")
@@ -338,7 +358,7 @@ public class CorporateActionAmounts40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSolicitationFees = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>> mmSolicitationFees = new MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionFeesAndCharges.mmSolicitationFee;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -351,6 +371,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getSolicitationFees();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setSolicitationFees(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CshInLieuOfShr")
@@ -393,7 +423,7 @@ public class CorporateActionAmounts40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashInLieuOfShare = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>> mmCashInLieuOfShare = new MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionCashEntitlement.mmCashInLieuOfShare;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -406,6 +436,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getCashInLieuOfShare();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setCashInLieuOfShare(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CptlGn")
@@ -447,7 +487,7 @@ public class CorporateActionAmounts40 {
 	 * "Amount of money distributed as the result of a capital gain."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCapitalGain = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>> mmCapitalGain = new MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionCashEntitlement.mmCapitalGain;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -460,6 +500,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getCapitalGain();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setCapitalGain(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrstAmt")
@@ -500,7 +550,7 @@ public class CorporateActionAmounts40 {
 	 * definition} = "Amount of money representing a coupon payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterestAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>> mmInterestAmount = new MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -513,6 +563,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getInterestAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setInterestAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MktClmAmt")
@@ -553,7 +613,7 @@ public class CorporateActionAmounts40 {
 	 * definition} = "Amount of money resulting from a market claim."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarketClaimAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>> mmMarketClaimAmount = new MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> MarketClaim.mmMarketClaimAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -566,6 +626,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getMarketClaimAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setMarketClaimAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IndmntyAmt")
@@ -608,7 +678,7 @@ public class CorporateActionAmounts40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndemnityAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>> mmIndemnityAmount = new MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CashProceedsDefinition.mmIndemnityAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -621,6 +691,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getIndemnityAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setIndemnityAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ManfctrdDvddPmtAmt")
@@ -660,7 +740,7 @@ public class CorporateActionAmounts40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmManufacturedDividendPaymentAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>> mmManufacturedDividendPaymentAmount = new MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmManufacturedDividendAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -672,6 +752,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getManufacturedDividendPaymentAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setManufacturedDividendPaymentAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RinvstmtAmt")
@@ -712,7 +802,7 @@ public class CorporateActionAmounts40 {
 	 * definition} = "Amount of money reinvested in additional securities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReinvestmentAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>> mmReinvestmentAmount = new MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmReinvestmentAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -725,6 +815,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getReinvestmentAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setReinvestmentAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FullyFrnkdAmt")
@@ -767,7 +867,7 @@ public class CorporateActionAmounts40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFullyFrankedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>> mmFullyFrankedAmount = new MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -780,6 +880,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getFullyFrankedAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setFullyFrankedAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UfrnkdAmt")
@@ -822,7 +932,7 @@ public class CorporateActionAmounts40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnfrankedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>> mmUnfrankedAmount = new MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmUnfrankedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -835,6 +945,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getUnfrankedAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setUnfrankedAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SndryOrOthrAmt")
@@ -876,7 +996,7 @@ public class CorporateActionAmounts40 {
 	 * "Amount of money related to taxable income that cannot be categorised."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSundryOrOtherAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>> mmSundryOrOtherAmount = new MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> TaxVoucher.mmSundryOrOtherAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -889,6 +1009,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getSundryOrOtherAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setSundryOrOtherAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxFreeAmt")
@@ -928,7 +1058,7 @@ public class CorporateActionAmounts40 {
 	 * definition} = "Amount of money that has not been subject to taxation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxFreeAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>> mmTaxFreeAmount = new MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -941,6 +1071,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getTaxFreeAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setTaxFreeAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxDfrrdAmt")
@@ -980,7 +1120,7 @@ public class CorporateActionAmounts40 {
 	 * definition} = "Amount of income eligible for deferred taxation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxDeferredAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>> mmTaxDeferredAmount = new MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -993,6 +1133,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getTaxDeferredAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setTaxDeferredAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ValAddedTaxAmt")
@@ -1032,7 +1182,7 @@ public class CorporateActionAmounts40 {
 	 * definition} = "Amount of value added tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValueAddedTaxAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>> mmValueAddedTaxAmount = new MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -1045,6 +1195,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getValueAddedTaxAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setValueAddedTaxAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StmpDtyAmt")
@@ -1084,7 +1244,7 @@ public class CorporateActionAmounts40 {
 	 * definition} = "Amount of stamp duty."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStampDutyAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>> mmStampDutyAmount = new MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -1097,6 +1257,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getStampDutyAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setStampDutyAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxRclmAmt")
@@ -1138,7 +1308,7 @@ public class CorporateActionAmounts40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxReclaimAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>> mmTaxReclaimAmount = new MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -1151,6 +1321,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getTaxReclaimAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setTaxReclaimAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxCdtAmt")
@@ -1193,7 +1373,7 @@ public class CorporateActionAmounts40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxCreditAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>> mmTaxCreditAmount = new MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> TaxVoucher.mmCreditAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -1206,6 +1386,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getTaxCreditAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setTaxCreditAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlTaxAmt")
@@ -1245,7 +1435,7 @@ public class CorporateActionAmounts40 {
 	 * definition} = "Amount of additional taxes that cannot be categorised."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalTaxAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>> mmAdditionalTaxAmount = new MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -1258,6 +1448,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getAdditionalTaxAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setAdditionalTaxAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "WhldgTaxAmt")
@@ -1299,7 +1499,7 @@ public class CorporateActionAmounts40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmWithholdingTaxAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>> mmWithholdingTaxAmount = new MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -1312,6 +1512,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getWithholdingTaxAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setWithholdingTaxAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ScndLvlTaxAmt")
@@ -1350,7 +1560,7 @@ public class CorporateActionAmounts40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecondLevelTaxAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<ActiveCurrencyAndAmount>> mmSecondLevelTaxAmount = new MMMessageAttribute<CorporateActionAmounts40, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -1362,6 +1572,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getSecondLevelTaxAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setSecondLevelTaxAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FsclStmpAmt")
@@ -1401,7 +1621,7 @@ public class CorporateActionAmounts40 {
 	 * definition} = "Amount of fiscal tax to apply."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFiscalStampAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>> mmFiscalStampAmount = new MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -1414,6 +1634,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getFiscalStampAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setFiscalStampAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ExctgBrkrAmt")
@@ -1455,7 +1685,7 @@ public class CorporateActionAmounts40 {
 	 * "Amount of money paid to an executing broker as a commission."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExecutingBrokerAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>> mmExecutingBrokerAmount = new MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -1468,6 +1698,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getExecutingBrokerAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setExecutingBrokerAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PngAgtComssnAmt")
@@ -1508,7 +1748,7 @@ public class CorporateActionAmounts40 {
 	 * definition} = "Amount of paying/sub-paying agent commission."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPayingAgentCommissionAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>> mmPayingAgentCommissionAmount = new MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -1521,6 +1761,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getPayingAgentCommissionAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setPayingAgentCommissionAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LclBrkrComssnAmt")
@@ -1561,7 +1811,7 @@ public class CorporateActionAmounts40 {
 	 * definition} = "Local broker's commission."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLocalBrokerCommissionAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>> mmLocalBrokerCommissionAmount = new MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -1574,6 +1824,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getLocalBrokerCommissionAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setLocalBrokerCommissionAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RgltryFeesAmt")
@@ -1616,7 +1876,7 @@ public class CorporateActionAmounts40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegulatoryFeesAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>> mmRegulatoryFeesAmount = new MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesRelatedFees.mmRegulatoryFeesAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -1629,6 +1889,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getRegulatoryFeesAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setRegulatoryFeesAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ShppgFeesAmt")
@@ -1671,7 +1941,7 @@ public class CorporateActionAmounts40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmShippingFeesAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>> mmShippingFeesAmount = new MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesRelatedFees.mmShippingFeesAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -1684,6 +1954,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getShippingFeesAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setShippingFeesAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ChrgsAmt")
@@ -1726,7 +2006,7 @@ public class CorporateActionAmounts40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmChargesAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>> mmChargesAmount = new MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -1739,6 +2019,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getChargesAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setChargesAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EntitldAmt")
@@ -1781,7 +2071,7 @@ public class CorporateActionAmounts40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEntitledAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>> mmEntitledAmount = new MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionCashEntitlement.mmEntitledCashAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -1794,6 +2084,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getEntitledAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setEntitledAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlAmt")
@@ -1836,7 +2136,7 @@ public class CorporateActionAmounts40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>> mmOriginalAmount = new MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmOriginalAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -1849,6 +2149,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getOriginalAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setOriginalAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcrdIntrstAmt")
@@ -1891,7 +2201,7 @@ public class CorporateActionAmounts40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccruedInterestAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>> mmAccruedInterestAmount = new MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmAccruedInterestAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -1904,6 +2214,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getAccruedInterestAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setAccruedInterestAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IncmPrtn")
@@ -1946,7 +2266,7 @@ public class CorporateActionAmounts40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIncomePortion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>> mmIncomePortion = new MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CashProceedsDefinition.mmIncomePortion;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -1959,6 +2279,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getIncomePortion();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setIncomePortion(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EqulstnAmt")
@@ -1998,7 +2328,7 @@ public class CorporateActionAmounts40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEqualisationAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>> mmEqualisationAmount = new MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Equalisation.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -2010,6 +2340,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getEqualisationAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setEqualisationAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FATCATaxAmt")
@@ -2047,7 +2387,7 @@ public class CorporateActionAmounts40 {
 	 * "FATCA (Foreign Account Tax Compliance Act) related tax amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFATCATaxAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>> mmFATCATaxAmount = new MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -2059,6 +2399,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getFATCATaxAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setFATCATaxAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NRATaxAmt")
@@ -2096,7 +2446,7 @@ public class CorporateActionAmounts40 {
 	 * "Amount of tax related income subject to NRA (Non Resident Alien)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNRATaxAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>> mmNRATaxAmount = new MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -2108,6 +2458,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getNRATaxAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setNRATaxAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BckUpWhldgTaxAmt")
@@ -2144,7 +2504,7 @@ public class CorporateActionAmounts40 {
 	 * definition} = "Amount of tax related to back up withholding."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBackUpWithholdingTaxAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>> mmBackUpWithholdingTaxAmount = new MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -2156,6 +2516,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getBackUpWithholdingTaxAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setBackUpWithholdingTaxAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxOnIncmAmt")
@@ -2194,7 +2564,7 @@ public class CorporateActionAmounts40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxOnIncomeAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>> mmTaxOnIncomeAmount = new MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -2206,6 +2576,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getTaxOnIncomeAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setTaxOnIncomeAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxTax")
@@ -2242,7 +2622,7 @@ public class CorporateActionAmounts40 {
 	 * definition} = "Amount of Transaction tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionTax = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>> mmTransactionTax = new MMMessageAttribute<CorporateActionAmounts40, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts40.mmObject();
@@ -2254,6 +2634,16 @@ public class CorporateActionAmounts40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionAmounts40 obj) {
+			return obj.getTransactionTax();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts40 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setTransactionTax(value.orElse(null));
 		}
 	};
 

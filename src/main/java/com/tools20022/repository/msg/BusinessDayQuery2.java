@@ -118,7 +118,7 @@ public class BusinessDayQuery2 {
 	 * BusinessDayQuery1.mmQueryType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BusinessDayQuery2, Optional<QueryType2Code>> mmQueryType = new MMMessageAttribute<BusinessDayQuery2, Optional<QueryType2Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDayQuery2.mmObject();
 			isDerived = false;
@@ -130,6 +130,16 @@ public class BusinessDayQuery2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> QueryType2Code.mmObject();
+		}
+
+		@Override
+		public Optional<QueryType2Code> getValue(BusinessDayQuery2 obj) {
+			return obj.getQueryType();
+		}
+
+		@Override
+		public void setValue(BusinessDayQuery2 obj, Optional<QueryType2Code> value) {
+			obj.setQueryType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Crit")
@@ -166,7 +176,7 @@ public class BusinessDayQuery2 {
 	 * BusinessDayQuery1.mmCriteria}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BusinessDayQuery2, Optional<BusinessDayCriteria3Choice>> mmCriteria = new MMMessageAssociationEnd<BusinessDayQuery2, Optional<BusinessDayCriteria3Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDayQuery2.mmObject();
 			isDerived = false;
@@ -179,6 +189,16 @@ public class BusinessDayQuery2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> BusinessDayCriteria3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<BusinessDayCriteria3Choice> getValue(BusinessDayQuery2 obj) {
+			return obj.getCriteria();
+		}
+
+		@Override
+		public void setValue(BusinessDayQuery2 obj, Optional<BusinessDayCriteria3Choice> value) {
+			obj.setCriteria(value.orElse(null));
 		}
 	};
 

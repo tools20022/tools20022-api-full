@@ -64,12 +64,16 @@ public class ConstraintSEPASequenceTypeRule {
 	 */
 	public static final MMConstraint<DirectDebitTransactionInformation5> forDirectDebitTransactionInformation5 = new MMConstraint<DirectDebitTransactionInformation5>() {
 		{
-			validator = ConstraintSEPASequenceTypeRule::checkDirectDebitTransactionInformation5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SEPASequenceTypeRule";
 			definition = "If DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentIndicator is equal to True and DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalDebtorAgent is present and is set to SMNDA, then DirectDebitTransactionInformation/PaymentTypeInformation/SequenceType must be equal to FRST.";
 			owner_lazy = () -> DirectDebitTransactionInformation5.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentTypeInformation/SequenceType</leftOperand><rightOperand>First</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalDebtorAgent/FinancialInstitutionIdentification/ProprietaryIdentification/Identification</leftOperand><rightOperand>SMNDA</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentTypeInformation</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(DirectDebitTransactionInformation5 obj) throws Exception {
+			checkDirectDebitTransactionInformation5(obj);
 		}
 	};
 	/**
@@ -99,12 +103,16 @@ public class ConstraintSEPASequenceTypeRule {
 	 */
 	public static final MMConstraint<DirectDebitTransactionInformation7> forDirectDebitTransactionInformation7 = new MMConstraint<DirectDebitTransactionInformation7>() {
 		{
-			validator = ConstraintSEPASequenceTypeRule::checkDirectDebitTransactionInformation7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SEPASequenceTypeRule";
 			definition = "SEPA TVS 3.x rule: \nIf DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentIndicator is equal to True and DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalDebtorAgent is present and is set to SMNDA, then DirectDebitTransactionInformation/PaymentTypeInformation/SequenceType must be equal to FRST.";
 			owner_lazy = () -> DirectDebitTransactionInformation7.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentTypeInformation/SequenceType</leftOperand><rightOperand>First</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalDebtorAgent/FinancialInstitutionIdentification/ProprietaryIdentification/Identification</leftOperand><rightOperand>SMNDA</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentTypeInformation</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(DirectDebitTransactionInformation7 obj) throws Exception {
+			checkDirectDebitTransactionInformation7(obj);
 		}
 	};
 	/**
@@ -134,12 +142,16 @@ public class ConstraintSEPASequenceTypeRule {
 	 */
 	public static final MMConstraint<DirectDebitTransactionInformation6> forDirectDebitTransactionInformation6 = new MMConstraint<DirectDebitTransactionInformation6>() {
 		{
-			validator = ConstraintSEPASequenceTypeRule::checkDirectDebitTransactionInformation6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SEPASequenceTypeRule";
 			definition = "SEPA TVS v3.x Rule: \nIf DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentIndicator is equal to True and DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalDebtorAgent is present and is set to SMNDA, then DirectDebitTransactionInformation/PaymentTypeInformation/SequenceType must be equal to FRST.";
 			owner_lazy = () -> DirectDebitTransactionInformation6.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentTypeInformation/SequenceType</leftOperand><rightOperand>First</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalDebtorAgent/FinancialInstitutionIdentification/ProprietaryIdentification/Identification</leftOperand><rightOperand>SMNDA</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentTypeInformation</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(DirectDebitTransactionInformation6 obj) throws Exception {
+			checkDirectDebitTransactionInformation6(obj);
 		}
 	};
 	/**
@@ -169,12 +181,16 @@ public class ConstraintSEPASequenceTypeRule {
 	 */
 	public static final MMConstraint<DirectDebitTransactionInformation8> forDirectDebitTransactionInformation8 = new MMConstraint<DirectDebitTransactionInformation8>() {
 		{
-			validator = ConstraintSEPASequenceTypeRule::checkDirectDebitTransactionInformation8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SEPASequenceTypeRule";
 			definition = "SEPA TVS v3.x Rule: \nIf DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentIndicator is equal to True and DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalDebtorAgent is present and is set to SMNDA, then DirectDebitTransactionInformation/PaymentTypeInformation/SequenceType must be equal to FRST.";
 			owner_lazy = () -> DirectDebitTransactionInformation8.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentTypeInformation/SequenceType</leftOperand><rightOperand>First</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalDebtorAgent/FinancialInstitutionIdentification/ProprietaryIdentification/Identification</leftOperand><rightOperand>SMNDA</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentTypeInformation</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(DirectDebitTransactionInformation8 obj) throws Exception {
+			checkDirectDebitTransactionInformation8(obj);
 		}
 	};
 

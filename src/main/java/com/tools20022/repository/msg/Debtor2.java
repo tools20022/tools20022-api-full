@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.DebtorRole;
 import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountIdentificationAndName3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -125,7 +126,7 @@ public class Debtor2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDebtor = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debtor2, Optional<PartyIdentification2Choice>> mmDebtor = new MMMessageAttribute<Debtor2, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debtor2.mmObject();
@@ -138,6 +139,16 @@ public class Debtor2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(Debtor2 obj) {
+			return obj.getDebtor();
+		}
+
+		@Override
+		public void setValue(Debtor2 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setDebtor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctId", required = true)
@@ -184,7 +195,7 @@ public class Debtor2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debtor2, AccountIdentificationAndName3> mmAccountIdentification = new MMMessageAttribute<Debtor2, AccountIdentificationAndName3>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debtor2.mmObject();
@@ -196,7 +207,17 @@ public class Debtor2 {
 			nextVersions_lazy = () -> Arrays.asList(Debtor3.mmAccountIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentificationAndName3.mmObject();
+			complexType_lazy = () -> AccountIdentificationAndName3.mmObject();
+		}
+
+		@Override
+		public AccountIdentificationAndName3 getValue(Debtor2 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(Debtor2 obj, AccountIdentificationAndName3 value) {
+			obj.setAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "FrstAgt", required = true)
@@ -235,7 +256,7 @@ public class Debtor2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFirstAgent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debtor2, FinancialInstitutionIdentification3Choice> mmFirstAgent = new MMMessageAttribute<Debtor2, FinancialInstitutionIdentification3Choice>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debtor2.mmObject();
@@ -247,6 +268,16 @@ public class Debtor2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstitutionIdentification3Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstitutionIdentification3Choice getValue(Debtor2 obj) {
+			return obj.getFirstAgent();
+		}
+
+		@Override
+		public void setValue(Debtor2 obj, FinancialInstitutionIdentification3Choice value) {
+			obj.setFirstAgent(value);
 		}
 	};
 
@@ -278,7 +309,7 @@ public class Debtor2 {
 		return accountIdentification;
 	}
 
-	public Debtor2 setAccountIdentification(com.tools20022.repository.msg.AccountIdentificationAndName3 accountIdentification) {
+	public Debtor2 setAccountIdentification(AccountIdentificationAndName3 accountIdentification) {
 		this.accountIdentification = Objects.requireNonNull(accountIdentification);
 		return this;
 	}

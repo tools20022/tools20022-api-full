@@ -53,11 +53,15 @@ public class ConstraintBlockTradeGuideline {
 	 */
 	public static final MMConstraint<TotalNumber1> forTotalNumber1 = new MMConstraint<TotalNumber1>() {
 		{
-			validator = ConstraintBlockTradeGuideline::checkTotalNumber1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockTradeGuideline";
 			definition = "In a block trade instruction, the total number of children must be provided using TotalOfLinkedInstructions.\r\nThe CurrentInstructionNumber of the parent must be 000. The children must have an incremental CurrentInstructionNumber from 001 to 999.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> TotalNumber1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TotalNumber1 obj) throws Exception {
+			checkTotalNumber1(obj);
 		}
 	};
 

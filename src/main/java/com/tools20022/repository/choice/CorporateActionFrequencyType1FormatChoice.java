@@ -107,7 +107,7 @@ public class CorporateActionFrequencyType1FormatChoice {
 	 * definition} = "Standard code to specify the frequency of a CA event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionFrequencyType1FormatChoice, CorporateActionFrequencyType1Code> mmCode = new MMMessageAttribute<CorporateActionFrequencyType1FormatChoice, CorporateActionFrequencyType1Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionFrequencyType1FormatChoice.mmObject();
@@ -119,6 +119,16 @@ public class CorporateActionFrequencyType1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionFrequencyType1Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionFrequencyType1Code getValue(CorporateActionFrequencyType1FormatChoice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CorporateActionFrequencyType1FormatChoice obj, CorporateActionFrequencyType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -156,7 +166,7 @@ public class CorporateActionFrequencyType1FormatChoice {
 	 * definition} = "Proprietary code to express the frequency of a CA event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionFrequencyType1FormatChoice, GenericIdentification13> mmProprietary = new MMMessageAttribute<CorporateActionFrequencyType1FormatChoice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionFrequencyType1FormatChoice.mmObject();
@@ -168,6 +178,16 @@ public class CorporateActionFrequencyType1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(CorporateActionFrequencyType1FormatChoice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CorporateActionFrequencyType1FormatChoice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -24,6 +24,8 @@ import com.tools20022.repository.area.caaa.AcceptorDiagnosticResponseV06;
 import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CardPaymentEnvironment71;
+import com.tools20022.repository.msg.TMSTrigger1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -70,7 +72,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "AcceptorDiagnosticResponse5"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -124,7 +126,7 @@ public class AcceptorDiagnosticResponse5 {
 	 * AcceptorDiagnosticResponse4.mmEnvironment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorDiagnosticResponse5, CardPaymentEnvironment71> mmEnvironment = new MMMessageAssociationEnd<AcceptorDiagnosticResponse5, CardPaymentEnvironment71>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorDiagnosticResponse5.mmObject();
@@ -137,7 +139,17 @@ public class AcceptorDiagnosticResponse5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment71.mmObject();
+			type_lazy = () -> CardPaymentEnvironment71.mmObject();
+		}
+
+		@Override
+		public CardPaymentEnvironment71 getValue(AcceptorDiagnosticResponse5 obj) {
+			return obj.getEnvironment();
+		}
+
+		@Override
+		public void setValue(AcceptorDiagnosticResponse5 obj, CardPaymentEnvironment71 value) {
+			obj.setEnvironment(value);
 		}
 	};
 	@XmlElement(name = "TMSTrggr")
@@ -179,7 +191,7 @@ public class AcceptorDiagnosticResponse5 {
 	 * AcceptorDiagnosticResponse4.mmTMSTrigger}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTMSTrigger = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorDiagnosticResponse5, Optional<TMSTrigger1>> mmTMSTrigger = new MMMessageAssociationEnd<AcceptorDiagnosticResponse5, Optional<TMSTrigger1>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmTMSTrigger;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorDiagnosticResponse5.mmObject();
@@ -192,7 +204,17 @@ public class AcceptorDiagnosticResponse5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TMSTrigger1.mmObject();
+			type_lazy = () -> TMSTrigger1.mmObject();
+		}
+
+		@Override
+		public Optional<TMSTrigger1> getValue(AcceptorDiagnosticResponse5 obj) {
+			return obj.getTMSTrigger();
+		}
+
+		@Override
+		public void setValue(AcceptorDiagnosticResponse5 obj, Optional<TMSTrigger1> value) {
+			obj.setTMSTrigger(value.orElse(null));
 		}
 	};
 
@@ -203,7 +225,7 @@ public class AcceptorDiagnosticResponse5 {
 				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorDiagnosticResponseV06.mmDiagnosticResponse);
 				trace_lazy = () -> CardPayment.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorDiagnosticResponse5";
 				definition = "Diagnostic response from the acquirer.";
 				previousVersion_lazy = () -> AcceptorDiagnosticResponse4.mmObject();
@@ -216,7 +238,7 @@ public class AcceptorDiagnosticResponse5 {
 		return environment;
 	}
 
-	public AcceptorDiagnosticResponse5 setEnvironment(com.tools20022.repository.msg.CardPaymentEnvironment71 environment) {
+	public AcceptorDiagnosticResponse5 setEnvironment(CardPaymentEnvironment71 environment) {
 		this.environment = Objects.requireNonNull(environment);
 		return this;
 	}
@@ -225,7 +247,7 @@ public class AcceptorDiagnosticResponse5 {
 		return tMSTrigger == null ? Optional.empty() : Optional.of(tMSTrigger);
 	}
 
-	public AcceptorDiagnosticResponse5 setTMSTrigger(com.tools20022.repository.msg.TMSTrigger1 tMSTrigger) {
+	public AcceptorDiagnosticResponse5 setTMSTrigger(TMSTrigger1 tMSTrigger) {
 		this.tMSTrigger = tMSTrigger;
 		return this;
 	}

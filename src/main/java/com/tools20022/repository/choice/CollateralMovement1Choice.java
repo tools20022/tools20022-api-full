@@ -110,7 +110,7 @@ public class CollateralMovement1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCollateralMovementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralMovement1Choice, CollateralMovement2> mmCollateralMovementDetails = new MMMessageAssociationEnd<CollateralMovement1Choice, CollateralMovement2>() {
 		{
 			businessElementTrace_lazy = () -> CollateralProposal.mmProposedCollateralMovement;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralMovement1Choice.mmObject();
@@ -123,6 +123,16 @@ public class CollateralMovement1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CollateralMovement2.mmObject();
+		}
+
+		@Override
+		public CollateralMovement2 getValue(CollateralMovement1Choice obj) {
+			return obj.getCollateralMovementDetails();
+		}
+
+		@Override
+		public void setValue(CollateralMovement1Choice obj, CollateralMovement2 value) {
+			obj.setCollateralMovementDetails(value);
 		}
 	};
 	@XmlElement(name = "Rtr", required = true)
@@ -159,7 +169,7 @@ public class CollateralMovement1Choice {
 	 * "Provides the collateral movement direction that is a return only."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReturn = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralMovement1Choice, Collateral2> mmReturn = new MMMessageAssociationEnd<CollateralMovement1Choice, Collateral2>() {
 		{
 			businessElementTrace_lazy = () -> CollateralProposal.mmProposedCollateralMovement;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralMovement1Choice.mmObject();
@@ -172,6 +182,16 @@ public class CollateralMovement1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Collateral2.mmObject();
+		}
+
+		@Override
+		public Collateral2 getValue(CollateralMovement1Choice obj) {
+			return obj.getReturn();
+		}
+
+		@Override
+		public void setValue(CollateralMovement1Choice obj, Collateral2 value) {
+			obj.setReturn(value);
 		}
 	};
 

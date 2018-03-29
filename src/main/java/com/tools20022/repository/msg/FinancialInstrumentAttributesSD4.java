@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecurityIdentification15;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -110,7 +111,7 @@ public class FinancialInstrumentAttributesSD4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCSDDisbursedSecurityIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributesSD4, Optional<SecurityIdentification15>> mmCSDDisbursedSecurityIdentification = new MMMessageAttribute<FinancialInstrumentAttributesSD4, Optional<SecurityIdentification15>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD4.mmObject();
 			isDerived = false;
@@ -121,7 +122,17 @@ public class FinancialInstrumentAttributesSD4 {
 			definition = "Security identification that a CSD (for example in the US - DTC, The Depository Trust Corporation) will distribute as part of the entitlement. This can be the DTC contra CUSIP in cases where the payout security is a contra CUSIP.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification15.mmObject();
+			complexType_lazy = () -> SecurityIdentification15.mmObject();
+		}
+
+		@Override
+		public Optional<SecurityIdentification15> getValue(FinancialInstrumentAttributesSD4 obj) {
+			return obj.getCSDDisbursedSecurityIdentification();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributesSD4 obj, Optional<SecurityIdentification15> value) {
+			obj.setCSDDisbursedSecurityIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CSDDsbrsdSctyDesc")
@@ -158,7 +169,7 @@ public class FinancialInstrumentAttributesSD4 {
 	 * "DTC (The Depository Trust Corporation) disbursed security description."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCSDDisbursedSecurityDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributesSD4, Optional<Max140Text>> mmCSDDisbursedSecurityDescription = new MMMessageAttribute<FinancialInstrumentAttributesSD4, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD4.mmObject();
 			isDerived = false;
@@ -170,6 +181,16 @@ public class FinancialInstrumentAttributesSD4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(FinancialInstrumentAttributesSD4 obj) {
+			return obj.getCSDDisbursedSecurityDescription();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributesSD4 obj, Optional<Max140Text> value) {
+			obj.setCSDDisbursedSecurityDescription(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CSDDsbrsdFrctnlSctyId")
@@ -207,7 +228,7 @@ public class FinancialInstrumentAttributesSD4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCSDDisbursedFractionalSecurityIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributesSD4, Optional<SecurityIdentification15>> mmCSDDisbursedFractionalSecurityIdentification = new MMMessageAttribute<FinancialInstrumentAttributesSD4, Optional<SecurityIdentification15>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD4.mmObject();
 			isDerived = false;
@@ -218,7 +239,17 @@ public class FinancialInstrumentAttributesSD4 {
 			definition = "Security identification of the security that will be distributed in fractions by the CSD (for example in the US - DTC, The Depository Trust Corporation) DTC (The Depository Trust Corporation) as a result of a corporate action.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification15.mmObject();
+			complexType_lazy = () -> SecurityIdentification15.mmObject();
+		}
+
+		@Override
+		public Optional<SecurityIdentification15> getValue(FinancialInstrumentAttributesSD4 obj) {
+			return obj.getCSDDisbursedFractionalSecurityIdentification();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributesSD4 obj, Optional<SecurityIdentification15> value) {
+			obj.setCSDDisbursedFractionalSecurityIdentification(value.orElse(null));
 		}
 	};
 
@@ -240,7 +271,7 @@ public class FinancialInstrumentAttributesSD4 {
 		return cSDDisbursedSecurityIdentification == null ? Optional.empty() : Optional.of(cSDDisbursedSecurityIdentification);
 	}
 
-	public FinancialInstrumentAttributesSD4 setCSDDisbursedSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification15 cSDDisbursedSecurityIdentification) {
+	public FinancialInstrumentAttributesSD4 setCSDDisbursedSecurityIdentification(SecurityIdentification15 cSDDisbursedSecurityIdentification) {
 		this.cSDDisbursedSecurityIdentification = cSDDisbursedSecurityIdentification;
 		return this;
 	}
@@ -258,7 +289,7 @@ public class FinancialInstrumentAttributesSD4 {
 		return cSDDisbursedFractionalSecurityIdentification == null ? Optional.empty() : Optional.of(cSDDisbursedFractionalSecurityIdentification);
 	}
 
-	public FinancialInstrumentAttributesSD4 setCSDDisbursedFractionalSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification15 cSDDisbursedFractionalSecurityIdentification) {
+	public FinancialInstrumentAttributesSD4 setCSDDisbursedFractionalSecurityIdentification(SecurityIdentification15 cSDDisbursedFractionalSecurityIdentification) {
 		this.cSDDisbursedFractionalSecurityIdentification = cSDDisbursedFractionalSecurityIdentification;
 		return this;
 	}

@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ProxyType2Code;
 import com.tools20022.repository.entity.ProxyAppointment;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.IndividualPerson14;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -106,7 +107,7 @@ public class Proxy1 {
 	 * definition} = "Specifies the type of proxy."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProxyType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Proxy1, List<ProxyType2Code>> mmProxyType = new MMMessageAttribute<Proxy1, List<ProxyType2Code>>() {
 		{
 			businessElementTrace_lazy = () -> ProxyAppointment.mmProxyType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Proxy1.mmObject();
@@ -118,6 +119,16 @@ public class Proxy1 {
 			maxOccurs = 2;
 			minOccurs = 1;
 			simpleType_lazy = () -> ProxyType2Code.mmObject();
+		}
+
+		@Override
+		public List<ProxyType2Code> getValue(Proxy1 obj) {
+			return obj.getProxyType();
+		}
+
+		@Override
+		public void setValue(Proxy1 obj, List<ProxyType2Code> value) {
+			obj.setProxyType(value);
 		}
 	};
 	@XmlElement(name = "PrssgndPrxy")
@@ -149,7 +160,7 @@ public class Proxy1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPreassignedProxy = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Proxy1, Optional<IndividualPerson14>> mmPreassignedProxy = new MMMessageAssociationEnd<Proxy1, Optional<IndividualPerson14>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Proxy1.mmObject();
 			isDerived = false;
@@ -160,7 +171,17 @@ public class Proxy1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IndividualPerson14.mmObject();
+			type_lazy = () -> IndividualPerson14.mmObject();
+		}
+
+		@Override
+		public Optional<IndividualPerson14> getValue(Proxy1 obj) {
+			return obj.getPreassignedProxy();
+		}
+
+		@Override
+		public void setValue(Proxy1 obj, Optional<IndividualPerson14> value) {
+			obj.setPreassignedProxy(value.orElse(null));
 		}
 	};
 
@@ -191,7 +212,7 @@ public class Proxy1 {
 		return preassignedProxy == null ? Optional.empty() : Optional.of(preassignedProxy);
 	}
 
-	public Proxy1 setPreassignedProxy(com.tools20022.repository.msg.IndividualPerson14 preassignedProxy) {
+	public Proxy1 setPreassignedProxy(IndividualPerson14 preassignedProxy) {
 		this.preassignedProxy = preassignedProxy;
 		return this;
 	}

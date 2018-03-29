@@ -117,7 +117,7 @@ public class ReturnInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReturnedInterbankSettlementAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReturnInformation1, Optional<CurrencyAndAmount>> mmReturnedInterbankSettlementAmount = new MMMessageAttribute<ReturnInformation1, Optional<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReturnInformation1.mmObject();
@@ -129,6 +129,16 @@ public class ReturnInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyAndAmount> getValue(ReturnInformation1 obj) {
+			return obj.getReturnedInterbankSettlementAmount();
+		}
+
+		@Override
+		public void setValue(ReturnInformation1 obj, Optional<CurrencyAndAmount> value) {
+			obj.setReturnedInterbankSettlementAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrBkSttlmDt")
@@ -167,7 +177,7 @@ public class ReturnInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterbankSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReturnInformation1, Optional<ISODate>> mmInterbankSettlementDate = new MMMessageAttribute<ReturnInformation1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReturnInformation1.mmObject();
@@ -179,6 +189,16 @@ public class ReturnInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(ReturnInformation1 obj) {
+			return obj.getInterbankSettlementDate();
+		}
+
+		@Override
+		public void setValue(ReturnInformation1 obj, Optional<ISODate> value) {
+			obj.setInterbankSettlementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClrChanl")
@@ -218,7 +238,7 @@ public class ReturnInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClearingChannel = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReturnInformation1, Optional<ClearingChannel2Code>> mmClearingChannel = new MMMessageAttribute<ReturnInformation1, Optional<ClearingChannel2Code>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmClearingChannel;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReturnInformation1.mmObject();
@@ -230,6 +250,16 @@ public class ReturnInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ClearingChannel2Code.mmObject();
+		}
+
+		@Override
+		public Optional<ClearingChannel2Code> getValue(ReturnInformation1 obj) {
+			return obj.getClearingChannel();
+		}
+
+		@Override
+		public void setValue(ReturnInformation1 obj, Optional<ClearingChannel2Code> value) {
+			obj.setClearingChannel(value.orElse(null));
 		}
 	};
 

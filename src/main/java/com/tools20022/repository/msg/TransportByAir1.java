@@ -107,7 +107,7 @@ public class TransportByAir1 {
 	 * definition} = "Place from where the goods must leave."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDepartureAirport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransportByAir1, List<AirportName1Choice>> mmDepartureAirport = new MMMessageAssociationEnd<TransportByAir1, List<AirportName1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDeparture;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportByAir1.mmObject();
@@ -119,6 +119,16 @@ public class TransportByAir1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AirportName1Choice.mmObject();
+		}
+
+		@Override
+		public List<AirportName1Choice> getValue(TransportByAir1 obj) {
+			return obj.getDepartureAirport();
+		}
+
+		@Override
+		public void setValue(TransportByAir1 obj, List<AirportName1Choice> value) {
+			obj.setDepartureAirport(value);
 		}
 	};
 	@XmlElement(name = "DstnAirprt", required = true)
@@ -154,7 +164,7 @@ public class TransportByAir1 {
 	 * definition} = "Place where the goods must arrive."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDestinationAirport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransportByAir1, List<AirportName1Choice>> mmDestinationAirport = new MMMessageAssociationEnd<TransportByAir1, List<AirportName1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDestination;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportByAir1.mmObject();
@@ -166,6 +176,16 @@ public class TransportByAir1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AirportName1Choice.mmObject();
+		}
+
+		@Override
+		public List<AirportName1Choice> getValue(TransportByAir1 obj) {
+			return obj.getDestinationAirport();
+		}
+
+		@Override
+		public void setValue(TransportByAir1 obj, List<AirportName1Choice> value) {
+			obj.setDestinationAirport(value);
 		}
 	};
 

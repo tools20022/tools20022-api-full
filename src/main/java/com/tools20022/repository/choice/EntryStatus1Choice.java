@@ -98,7 +98,7 @@ public class EntryStatus1Choice {
 	 * definition} = "Entry status, in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EntryStatus1Choice, ExternalEntryStatus1Code> mmCode = new MMMessageAttribute<EntryStatus1Choice, ExternalEntryStatus1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.EntryStatus1Choice.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class EntryStatus1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalEntryStatus1Code.mmObject();
+		}
+
+		@Override
+		public ExternalEntryStatus1Code getValue(EntryStatus1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(EntryStatus1Choice obj, ExternalEntryStatus1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -140,7 +150,7 @@ public class EntryStatus1Choice {
 	 * definition} = "Entry status, in a proprietary form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EntryStatus1Choice, Max35Text> mmProprietary = new MMMessageAttribute<EntryStatus1Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.EntryStatus1Choice.mmObject();
 			isDerived = false;
@@ -151,6 +161,16 @@ public class EntryStatus1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(EntryStatus1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(EntryStatus1Choice obj, Max35Text value) {
+			obj.setProprietary(value);
 		}
 	};
 

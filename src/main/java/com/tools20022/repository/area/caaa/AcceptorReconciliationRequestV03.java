@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.AcceptorReconciliationRequest3;
 import com.tools20022.repository.msg.ContentInformationType8;
 import com.tools20022.repository.msg.Header7;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -141,7 +140,7 @@ public class AcceptorReconciliationRequestV03 {
 	 * AcceptorReconciliationRequestV02.mmHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorReconciliationRequestV03, Header7> mmHeader = new MMMessageBuildingBlock<AcceptorReconciliationRequestV03, Header7>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,12 +153,14 @@ public class AcceptorReconciliationRequestV03 {
 			complexType_lazy = () -> Header7.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorReconciliationRequestV03.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header7 getValue(AcceptorReconciliationRequestV03 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(AcceptorReconciliationRequestV03 obj, Header7 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "RcncltnReq", required = true)
@@ -200,7 +201,7 @@ public class AcceptorReconciliationRequestV03 {
 	 * AcceptorReconciliationRequestV02.mmReconciliationRequest}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReconciliationRequest = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorReconciliationRequestV03, AcceptorReconciliationRequest3> mmReconciliationRequest = new MMMessageBuildingBlock<AcceptorReconciliationRequestV03, AcceptorReconciliationRequest3>() {
 		{
 			xmlTag = "RcncltnReq";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -213,12 +214,14 @@ public class AcceptorReconciliationRequestV03 {
 			complexType_lazy = () -> AcceptorReconciliationRequest3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorReconciliationRequestV03.class.getMethod("getReconciliationRequest", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AcceptorReconciliationRequest3 getValue(AcceptorReconciliationRequestV03 obj) {
+			return obj.getReconciliationRequest();
+		}
+
+		@Override
+		public void setValue(AcceptorReconciliationRequestV03 obj, AcceptorReconciliationRequest3 value) {
+			obj.setReconciliationRequest(value);
 		}
 	};
 	@XmlElement(name = "SctyTrlr", required = true)
@@ -259,7 +262,7 @@ public class AcceptorReconciliationRequestV03 {
 	 * AcceptorReconciliationRequestV02.mmSecurityTrailer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorReconciliationRequestV03, ContentInformationType8> mmSecurityTrailer = new MMMessageBuildingBlock<AcceptorReconciliationRequestV03, ContentInformationType8>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -272,12 +275,14 @@ public class AcceptorReconciliationRequestV03 {
 			complexType_lazy = () -> ContentInformationType8.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorReconciliationRequestV03.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ContentInformationType8 getValue(AcceptorReconciliationRequestV03 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(AcceptorReconciliationRequestV03 obj, ContentInformationType8 value) {
+			obj.setSecurityTrailer(value);
 		}
 	};
 

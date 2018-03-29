@@ -112,7 +112,7 @@ public class GenericIdentification5 {
 	 * definition} = "Entity that assigns the identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification5, Max8Text> mmIssuer = new MMMessageAttribute<GenericIdentification5, Max8Text>() {
 		{
 			businessComponentTrace_lazy = () -> IdentificationIssuerRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification5.mmObject();
@@ -124,6 +124,16 @@ public class GenericIdentification5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max8Text.mmObject();
+		}
+
+		@Override
+		public Max8Text getValue(GenericIdentification5 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(GenericIdentification5 obj, Max8Text value) {
+			obj.setIssuer(value);
 		}
 	};
 	@XmlElement(name = "Inf", required = true)
@@ -158,7 +168,7 @@ public class GenericIdentification5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification5, Exact4AlphaNumericText> mmInformation = new MMMessageAttribute<GenericIdentification5, Exact4AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification5.mmObject();
 			isDerived = false;
@@ -169,6 +179,16 @@ public class GenericIdentification5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Exact4AlphaNumericText getValue(GenericIdentification5 obj) {
+			return obj.getInformation();
+		}
+
+		@Override
+		public void setValue(GenericIdentification5 obj, Exact4AlphaNumericText value) {
+			obj.setInformation(value);
 		}
 	};
 	@XmlElement(name = "Nrrtv")
@@ -200,7 +220,7 @@ public class GenericIdentification5 {
 	 * definition} = "Additional information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNarrative = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification5, Optional<Max35Text>> mmNarrative = new MMMessageAttribute<GenericIdentification5, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification5.mmObject();
 			isDerived = false;
@@ -211,6 +231,16 @@ public class GenericIdentification5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(GenericIdentification5 obj) {
+			return obj.getNarrative();
+		}
+
+		@Override
+		public void setValue(GenericIdentification5 obj, Optional<Max35Text> value) {
+			obj.setNarrative(value.orElse(null));
 		}
 	};
 

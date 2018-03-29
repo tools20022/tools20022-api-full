@@ -106,7 +106,7 @@ public class ResponseType4 {
 	 * definition} = "Identification of the responder."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResponderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ResponseType4, Max35Text> mmResponderIdentification = new MMMessageAttribute<ResponseType4, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ResponseType4.mmObject();
 			isDerived = false;
@@ -117,6 +117,16 @@ public class ResponseType4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ResponseType4 obj) {
+			return obj.getResponderIdentification();
+		}
+
+		@Override
+		public void setValue(ResponseType4 obj, Max35Text value) {
+			obj.setResponderIdentification(value);
 		}
 	};
 	@XmlElement(name = "Cdfctn")
@@ -148,7 +158,7 @@ public class ResponseType4 {
 	 * "Codification of the response (for instance ISO 8583, IFX)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCodification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ResponseType4, Optional<Max35Text>> mmCodification = new MMMessageAttribute<ResponseType4, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ResponseType4.mmObject();
 			isDerived = false;
@@ -159,6 +169,16 @@ public class ResponseType4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ResponseType4 obj) {
+			return obj.getCodification();
+		}
+
+		@Override
+		public void setValue(ResponseType4 obj, Optional<Max35Text> value) {
+			obj.setCodification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rspn", required = true)
@@ -193,7 +213,7 @@ public class ResponseType4 {
 	 * definition} = "Result of the request withdrawal message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResponse = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ResponseType4, Max35Text> mmResponse = new MMMessageAttribute<ResponseType4, Max35Text>() {
 		{
 			businessComponentTrace_lazy = () -> Response.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ResponseType4.mmObject();
@@ -205,6 +225,16 @@ public class ResponseType4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ResponseType4 obj) {
+			return obj.getResponse();
+		}
+
+		@Override
+		public void setValue(ResponseType4 obj, Max35Text value) {
+			obj.setResponse(value);
 		}
 	};
 	@XmlElement(name = "RspnRsn")
@@ -240,7 +270,7 @@ public class ResponseType4 {
 	 * definition} = "Detail of the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResponseReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ResponseType4, Optional<Max35Text>> mmResponseReason = new MMMessageAttribute<ResponseType4, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Response.mmResponseReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ResponseType4.mmObject();
@@ -252,6 +282,16 @@ public class ResponseType4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ResponseType4 obj) {
+			return obj.getResponseReason();
+		}
+
+		@Override
+		public void setValue(ResponseType4 obj, Optional<Max35Text> value) {
+			obj.setResponseReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlRspnInf")
@@ -283,7 +323,7 @@ public class ResponseType4 {
 	 * "Additional information to be logged for further examination."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalResponseInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ResponseType4, Optional<Max35Text>> mmAdditionalResponseInformation = new MMMessageAttribute<ResponseType4, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ResponseType4.mmObject();
 			isDerived = false;
@@ -294,6 +334,16 @@ public class ResponseType4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ResponseType4 obj) {
+			return obj.getAdditionalResponseInformation();
+		}
+
+		@Override
+		public void setValue(ResponseType4 obj, Optional<Max35Text> value) {
+			obj.setAdditionalResponseInformation(value.orElse(null));
 		}
 	};
 

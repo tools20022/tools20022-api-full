@@ -21,6 +21,7 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice;
 import com.tools20022.repository.entity.PairOff;
 import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.GeneratedRepository;
@@ -124,7 +125,7 @@ public class PairedOrTurnedQuantity3Choice {
 	 * PairedOrTurnedQuantity1Choice.mmPairedOffQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPairedOffQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PairedOrTurnedQuantity3Choice, Optional<FinancialInstrumentQuantity1Choice>> mmPairedOffQuantity = new MMMessageAttribute<PairedOrTurnedQuantity3Choice, Optional<FinancialInstrumentQuantity1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> PairOff.mmPairedOffQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PairedOrTurnedQuantity3Choice.mmObject();
@@ -137,7 +138,17 @@ public class PairedOrTurnedQuantity3Choice {
 			previousVersion_lazy = () -> PairedOrTurnedQuantity1Choice.mmPairedOffQuantity;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice.mmObject();
+			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1Choice> getValue(PairedOrTurnedQuantity3Choice obj) {
+			return obj.getPairedOffQuantity();
+		}
+
+		@Override
+		public void setValue(PairedOrTurnedQuantity3Choice obj, Optional<FinancialInstrumentQuantity1Choice> value) {
+			obj.setPairedOffQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrndQty")
@@ -185,7 +196,7 @@ public class PairedOrTurnedQuantity3Choice {
 	 * PairedOrTurnedQuantity1Choice.mmTurnedQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTurnedQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PairedOrTurnedQuantity3Choice, Optional<FinancialInstrumentQuantity1Choice>> mmTurnedQuantity = new MMMessageAttribute<PairedOrTurnedQuantity3Choice, Optional<FinancialInstrumentQuantity1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmTurnedQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PairedOrTurnedQuantity3Choice.mmObject();
@@ -198,7 +209,17 @@ public class PairedOrTurnedQuantity3Choice {
 			previousVersion_lazy = () -> PairedOrTurnedQuantity1Choice.mmTurnedQuantity;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice.mmObject();
+			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1Choice> getValue(PairedOrTurnedQuantity3Choice obj) {
+			return obj.getTurnedQuantity();
+		}
+
+		@Override
+		public void setValue(PairedOrTurnedQuantity3Choice obj, Optional<FinancialInstrumentQuantity1Choice> value) {
+			obj.setTurnedQuantity(value.orElse(null));
 		}
 	};
 
@@ -221,7 +242,7 @@ public class PairedOrTurnedQuantity3Choice {
 		return pairedOffQuantity == null ? Optional.empty() : Optional.of(pairedOffQuantity);
 	}
 
-	public PairedOrTurnedQuantity3Choice setPairedOffQuantity(com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice pairedOffQuantity) {
+	public PairedOrTurnedQuantity3Choice setPairedOffQuantity(FinancialInstrumentQuantity1Choice pairedOffQuantity) {
 		this.pairedOffQuantity = pairedOffQuantity;
 		return this;
 	}
@@ -230,7 +251,7 @@ public class PairedOrTurnedQuantity3Choice {
 		return turnedQuantity == null ? Optional.empty() : Optional.of(turnedQuantity);
 	}
 
-	public PairedOrTurnedQuantity3Choice setTurnedQuantity(com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice turnedQuantity) {
+	public PairedOrTurnedQuantity3Choice setTurnedQuantity(FinancialInstrumentQuantity1Choice turnedQuantity) {
 		this.turnedQuantity = turnedQuantity;
 		return this;
 	}

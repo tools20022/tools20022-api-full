@@ -30,6 +30,7 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -200,7 +201,7 @@ public class EstimatedFundCashForecast5 {
 	 * EstimatedFundCashForecast4.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EstimatedFundCashForecast5, Max35Text> mmIdentification = new MMMessageAttribute<EstimatedFundCashForecast5, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EstimatedFundCashForecast5.mmObject();
 			isDerived = false;
@@ -212,6 +213,16 @@ public class EstimatedFundCashForecast5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(EstimatedFundCashForecast5 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(EstimatedFundCashForecast5 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "TradDtTm", required = true)
@@ -255,7 +266,7 @@ public class EstimatedFundCashForecast5 {
 	 * EstimatedFundCashForecast4.mmTradeDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EstimatedFundCashForecast5, DateAndDateTimeChoice> mmTradeDateTime = new MMMessageAttribute<EstimatedFundCashForecast5, DateAndDateTimeChoice>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EstimatedFundCashForecast5.mmObject();
@@ -268,6 +279,16 @@ public class EstimatedFundCashForecast5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(EstimatedFundCashForecast5 obj) {
+			return obj.getTradeDateTime();
+		}
+
+		@Override
+		public void setValue(EstimatedFundCashForecast5 obj, DateAndDateTimeChoice value) {
+			obj.setTradeDateTime(value);
 		}
 	};
 	@XmlElement(name = "PrvsTradDtTm")
@@ -310,7 +331,7 @@ public class EstimatedFundCashForecast5 {
 	 * EstimatedFundCashForecast4.mmPreviousTradeDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreviousTradeDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EstimatedFundCashForecast5, Optional<DateAndDateTimeChoice>> mmPreviousTradeDateTime = new MMMessageAttribute<EstimatedFundCashForecast5, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EstimatedFundCashForecast5.mmObject();
@@ -323,6 +344,16 @@ public class EstimatedFundCashForecast5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(EstimatedFundCashForecast5 obj) {
+			return obj.getPreviousTradeDateTime();
+		}
+
+		@Override
+		public void setValue(EstimatedFundCashForecast5 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setPreviousTradeDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FinInstrmDtls", required = true)
@@ -363,7 +394,7 @@ public class EstimatedFundCashForecast5 {
 	 * EstimatedFundCashForecast4.mmFinancialInstrumentDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EstimatedFundCashForecast5, FinancialInstrument9> mmFinancialInstrumentDetails = new MMMessageAssociationEnd<EstimatedFundCashForecast5, FinancialInstrument9>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmInvestmentFund;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EstimatedFundCashForecast5.mmObject();
@@ -376,7 +407,17 @@ public class EstimatedFundCashForecast5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument9.mmObject();
+			type_lazy = () -> FinancialInstrument9.mmObject();
+		}
+
+		@Override
+		public FinancialInstrument9 getValue(EstimatedFundCashForecast5 obj) {
+			return obj.getFinancialInstrumentDetails();
+		}
+
+		@Override
+		public void setValue(EstimatedFundCashForecast5 obj, FinancialInstrument9 value) {
+			obj.setFinancialInstrumentDetails(value);
 		}
 	};
 	@XmlElement(name = "EstmtdTtlNAV")
@@ -428,7 +469,7 @@ public class EstimatedFundCashForecast5 {
 	 * EstimatedFundCashForecast4.mmEstimatedTotalNAV}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEstimatedTotalNAV = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EstimatedFundCashForecast5, List<ActiveOrHistoricCurrencyAndAmount>> mmEstimatedTotalNAV = new MMMessageAttribute<EstimatedFundCashForecast5, List<ActiveOrHistoricCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmNetAssetValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EstimatedFundCashForecast5.mmObject();
@@ -441,6 +482,16 @@ public class EstimatedFundCashForecast5 {
 			previousVersion_lazy = () -> EstimatedFundCashForecast4.mmEstimatedTotalNAV;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public List<ActiveOrHistoricCurrencyAndAmount> getValue(EstimatedFundCashForecast5 obj) {
+			return obj.getEstimatedTotalNAV();
+		}
+
+		@Override
+		public void setValue(EstimatedFundCashForecast5 obj, List<ActiveOrHistoricCurrencyAndAmount> value) {
+			obj.setEstimatedTotalNAV(value);
 		}
 	};
 	@XmlElement(name = "PrvsTtlNAV")
@@ -492,7 +543,7 @@ public class EstimatedFundCashForecast5 {
 	 * EstimatedFundCashForecast4.mmPreviousTotalNAV}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreviousTotalNAV = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EstimatedFundCashForecast5, List<ActiveOrHistoricCurrencyAndAmount>> mmPreviousTotalNAV = new MMMessageAttribute<EstimatedFundCashForecast5, List<ActiveOrHistoricCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmNetAssetValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EstimatedFundCashForecast5.mmObject();
@@ -505,6 +556,16 @@ public class EstimatedFundCashForecast5 {
 			previousVersion_lazy = () -> EstimatedFundCashForecast4.mmPreviousTotalNAV;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public List<ActiveOrHistoricCurrencyAndAmount> getValue(EstimatedFundCashForecast5 obj) {
+			return obj.getPreviousTotalNAV();
+		}
+
+		@Override
+		public void setValue(EstimatedFundCashForecast5 obj, List<ActiveOrHistoricCurrencyAndAmount> value) {
+			obj.setPreviousTotalNAV(value);
 		}
 	};
 	@XmlElement(name = "EstmtdTtlUnitsNb")
@@ -557,7 +618,7 @@ public class EstimatedFundCashForecast5 {
 	 * EstimatedFundCashForecast4.mmEstimatedTotalUnitsNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEstimatedTotalUnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EstimatedFundCashForecast5, Optional<FinancialInstrumentQuantity1>> mmEstimatedTotalUnitsNumber = new MMMessageAttribute<EstimatedFundCashForecast5, Optional<FinancialInstrumentQuantity1>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmUnitsNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EstimatedFundCashForecast5.mmObject();
@@ -570,7 +631,17 @@ public class EstimatedFundCashForecast5 {
 			previousVersion_lazy = () -> EstimatedFundCashForecast4.mmEstimatedTotalUnitsNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
+			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1> getValue(EstimatedFundCashForecast5 obj) {
+			return obj.getEstimatedTotalUnitsNumber();
+		}
+
+		@Override
+		public void setValue(EstimatedFundCashForecast5 obj, Optional<FinancialInstrumentQuantity1> value) {
+			obj.setEstimatedTotalUnitsNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsTtlUnitsNb")
@@ -623,7 +694,7 @@ public class EstimatedFundCashForecast5 {
 	 * EstimatedFundCashForecast4.mmPreviousTotalUnitsNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreviousTotalUnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EstimatedFundCashForecast5, Optional<FinancialInstrumentQuantity1>> mmPreviousTotalUnitsNumber = new MMMessageAttribute<EstimatedFundCashForecast5, Optional<FinancialInstrumentQuantity1>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmUnitsNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EstimatedFundCashForecast5.mmObject();
@@ -636,7 +707,17 @@ public class EstimatedFundCashForecast5 {
 			previousVersion_lazy = () -> EstimatedFundCashForecast4.mmPreviousTotalUnitsNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
+			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1> getValue(EstimatedFundCashForecast5 obj) {
+			return obj.getPreviousTotalUnitsNumber();
+		}
+
+		@Override
+		public void setValue(EstimatedFundCashForecast5 obj, Optional<FinancialInstrumentQuantity1> value) {
+			obj.setPreviousTotalUnitsNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EstmtdTtlNAVChngRate")
@@ -679,7 +760,7 @@ public class EstimatedFundCashForecast5 {
 	 * EstimatedFundCashForecast4.mmEstimatedTotalNAVChangeRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEstimatedTotalNAVChangeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EstimatedFundCashForecast5, Optional<PercentageRate>> mmEstimatedTotalNAVChangeRate = new MMMessageAttribute<EstimatedFundCashForecast5, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> ValuationStatistics.mmNetAssetValueChangeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EstimatedFundCashForecast5.mmObject();
@@ -692,6 +773,16 @@ public class EstimatedFundCashForecast5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(EstimatedFundCashForecast5 obj) {
+			return obj.getEstimatedTotalNAVChangeRate();
+		}
+
+		@Override
+		public void setValue(EstimatedFundCashForecast5 obj, Optional<PercentageRate> value) {
+			obj.setEstimatedTotalNAVChangeRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InvstmtCcy")
@@ -741,7 +832,7 @@ public class EstimatedFundCashForecast5 {
 	 * EstimatedFundCashForecast4.mmInvestmentCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInvestmentCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EstimatedFundCashForecast5, List<ActiveOrHistoricCurrencyCode>> mmInvestmentCurrency = new MMMessageAttribute<EstimatedFundCashForecast5, List<ActiveOrHistoricCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmTradingCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EstimatedFundCashForecast5.mmObject();
@@ -754,6 +845,16 @@ public class EstimatedFundCashForecast5 {
 			previousVersion_lazy = () -> EstimatedFundCashForecast4.mmInvestmentCurrency;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public List<ActiveOrHistoricCurrencyCode> getValue(EstimatedFundCashForecast5 obj) {
+			return obj.getInvestmentCurrency();
+		}
+
+		@Override
+		public void setValue(EstimatedFundCashForecast5 obj, List<ActiveOrHistoricCurrencyCode> value) {
+			obj.setInvestmentCurrency(value);
 		}
 	};
 	@XmlElement(name = "CcySts")
@@ -791,7 +892,7 @@ public class EstimatedFundCashForecast5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCurrencyStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EstimatedFundCashForecast5, Optional<CurrencyDesignation1>> mmCurrencyStatus = new MMMessageAssociationEnd<EstimatedFundCashForecast5, Optional<CurrencyDesignation1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EstimatedFundCashForecast5.mmObject();
@@ -803,7 +904,17 @@ public class EstimatedFundCashForecast5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CurrencyDesignation1.mmObject();
+			type_lazy = () -> CurrencyDesignation1.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyDesignation1> getValue(EstimatedFundCashForecast5 obj) {
+			return obj.getCurrencyStatus();
+		}
+
+		@Override
+		public void setValue(EstimatedFundCashForecast5 obj, Optional<CurrencyDesignation1> value) {
+			obj.setCurrencyStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XcptnlNetCshFlowInd", required = true)
@@ -847,7 +958,7 @@ public class EstimatedFundCashForecast5 {
 	 * EstimatedFundCashForecast4.mmExceptionalNetCashFlowIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExceptionalNetCashFlowIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EstimatedFundCashForecast5, YesNoIndicator> mmExceptionalNetCashFlowIndicator = new MMMessageAttribute<EstimatedFundCashForecast5, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> FundsCashFlow.mmExceptionalCashFlowIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EstimatedFundCashForecast5.mmObject();
@@ -860,6 +971,16 @@ public class EstimatedFundCashForecast5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(EstimatedFundCashForecast5 obj) {
+			return obj.getExceptionalNetCashFlowIndicator();
+		}
+
+		@Override
+		public void setValue(EstimatedFundCashForecast5 obj, YesNoIndicator value) {
+			obj.setExceptionalNetCashFlowIndicator(value);
 		}
 	};
 	@XmlElement(name = "Pric")
@@ -895,7 +1016,7 @@ public class EstimatedFundCashForecast5 {
 	 * definition} = "Price per unit of the previous trade date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EstimatedFundCashForecast5, Optional<UnitPrice19>> mmPrice = new MMMessageAssociationEnd<EstimatedFundCashForecast5, Optional<UnitPrice19>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmExecutedTradePrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EstimatedFundCashForecast5.mmObject();
@@ -907,7 +1028,17 @@ public class EstimatedFundCashForecast5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UnitPrice19.mmObject();
+			type_lazy = () -> UnitPrice19.mmObject();
+		}
+
+		@Override
+		public Optional<UnitPrice19> getValue(EstimatedFundCashForecast5 obj) {
+			return obj.getPrice();
+		}
+
+		@Override
+		public void setValue(EstimatedFundCashForecast5 obj, Optional<UnitPrice19> value) {
+			obj.setPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FXRate")
@@ -945,7 +1076,7 @@ public class EstimatedFundCashForecast5 {
 	 * definition} = "Foreign exchange rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmForeignExchangeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EstimatedFundCashForecast5, Optional<ForeignExchangeTerms19>> mmForeignExchangeRate = new MMMessageAttribute<EstimatedFundCashForecast5, Optional<ForeignExchangeTerms19>>() {
 		{
 			businessElementTrace_lazy = () -> ForeignExchangeTrade.mmAgreedRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EstimatedFundCashForecast5.mmObject();
@@ -956,7 +1087,17 @@ public class EstimatedFundCashForecast5 {
 			definition = "Foreign exchange rate.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms19.mmObject();
+			complexType_lazy = () -> ForeignExchangeTerms19.mmObject();
+		}
+
+		@Override
+		public Optional<ForeignExchangeTerms19> getValue(EstimatedFundCashForecast5 obj) {
+			return obj.getForeignExchangeRate();
+		}
+
+		@Override
+		public void setValue(EstimatedFundCashForecast5 obj, Optional<ForeignExchangeTerms19> value) {
+			obj.setForeignExchangeRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EstmtdPctgOfShrClssTtlNAV")
@@ -991,7 +1132,7 @@ public class EstimatedFundCashForecast5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEstimatedPercentageOfShareClassTotalNAV = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EstimatedFundCashForecast5, Optional<PercentageRate>> mmEstimatedPercentageOfShareClassTotalNAV = new MMMessageAttribute<EstimatedFundCashForecast5, Optional<PercentageRate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EstimatedFundCashForecast5.mmObject();
 			isDerived = false;
@@ -1003,9 +1144,19 @@ public class EstimatedFundCashForecast5 {
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
+
+		@Override
+		public Optional<PercentageRate> getValue(EstimatedFundCashForecast5 obj) {
+			return obj.getEstimatedPercentageOfShareClassTotalNAV();
+		}
+
+		@Override
+		public void setValue(EstimatedFundCashForecast5 obj, Optional<PercentageRate> value) {
+			obj.setEstimatedPercentageOfShareClassTotalNAV(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "BrkdwnByPty")
-	protected List<com.tools20022.repository.msg.BreakdownByParty3> breakdownByParty;
+	protected List<BreakdownByParty3> breakdownByParty;
 	/**
 	 * 
 	 <p>
@@ -1037,7 +1188,7 @@ public class EstimatedFundCashForecast5 {
 	 * EstimatedFundCashForecast4.mmBreakdownByParty}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBreakdownByParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EstimatedFundCashForecast5, List<BreakdownByParty3>> mmBreakdownByParty = new MMMessageAssociationEnd<EstimatedFundCashForecast5, List<BreakdownByParty3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EstimatedFundCashForecast5.mmObject();
 			isDerived = false;
@@ -1048,11 +1199,21 @@ public class EstimatedFundCashForecast5 {
 			previousVersion_lazy = () -> EstimatedFundCashForecast4.mmBreakdownByParty;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BreakdownByParty3.mmObject();
+			type_lazy = () -> BreakdownByParty3.mmObject();
+		}
+
+		@Override
+		public List<BreakdownByParty3> getValue(EstimatedFundCashForecast5 obj) {
+			return obj.getBreakdownByParty();
+		}
+
+		@Override
+		public void setValue(EstimatedFundCashForecast5 obj, List<BreakdownByParty3> value) {
+			obj.setBreakdownByParty(value);
 		}
 	};
 	@XmlElement(name = "BrkdwnByCtry")
-	protected List<com.tools20022.repository.msg.BreakdownByCountry2> breakdownByCountry;
+	protected List<BreakdownByCountry2> breakdownByCountry;
 	/**
 	 * 
 	 <p>
@@ -1084,7 +1245,7 @@ public class EstimatedFundCashForecast5 {
 	 * EstimatedFundCashForecast4.mmBreakdownByCountry}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBreakdownByCountry = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EstimatedFundCashForecast5, List<BreakdownByCountry2>> mmBreakdownByCountry = new MMMessageAssociationEnd<EstimatedFundCashForecast5, List<BreakdownByCountry2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EstimatedFundCashForecast5.mmObject();
 			isDerived = false;
@@ -1095,11 +1256,21 @@ public class EstimatedFundCashForecast5 {
 			previousVersion_lazy = () -> EstimatedFundCashForecast4.mmBreakdownByCountry;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BreakdownByCountry2.mmObject();
+			type_lazy = () -> BreakdownByCountry2.mmObject();
+		}
+
+		@Override
+		public List<BreakdownByCountry2> getValue(EstimatedFundCashForecast5 obj) {
+			return obj.getBreakdownByCountry();
+		}
+
+		@Override
+		public void setValue(EstimatedFundCashForecast5 obj, List<BreakdownByCountry2> value) {
+			obj.setBreakdownByCountry(value);
 		}
 	};
 	@XmlElement(name = "BrkdwnByCcy")
-	protected List<com.tools20022.repository.msg.BreakdownByCurrency2> breakdownByCurrency;
+	protected List<BreakdownByCurrency2> breakdownByCurrency;
 	/**
 	 * 
 	 <p>
@@ -1131,7 +1302,7 @@ public class EstimatedFundCashForecast5 {
 	 * EstimatedFundCashForecast4.mmBreakdownByCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBreakdownByCurrency = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EstimatedFundCashForecast5, List<BreakdownByCurrency2>> mmBreakdownByCurrency = new MMMessageAssociationEnd<EstimatedFundCashForecast5, List<BreakdownByCurrency2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EstimatedFundCashForecast5.mmObject();
 			isDerived = false;
@@ -1142,11 +1313,21 @@ public class EstimatedFundCashForecast5 {
 			previousVersion_lazy = () -> EstimatedFundCashForecast4.mmBreakdownByCurrency;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BreakdownByCurrency2.mmObject();
+			type_lazy = () -> BreakdownByCurrency2.mmObject();
+		}
+
+		@Override
+		public List<BreakdownByCurrency2> getValue(EstimatedFundCashForecast5 obj) {
+			return obj.getBreakdownByCurrency();
+		}
+
+		@Override
+		public void setValue(EstimatedFundCashForecast5 obj, List<BreakdownByCurrency2> value) {
+			obj.setBreakdownByCurrency(value);
 		}
 	};
 	@XmlElement(name = "BrkdwnByUsrDfndParam")
-	protected List<com.tools20022.repository.msg.BreakdownByUserDefinedParameter3> breakdownByUserDefinedParameter;
+	protected List<BreakdownByUserDefinedParameter3> breakdownByUserDefinedParameter;
 	/**
 	 * 
 	 <p>
@@ -1179,7 +1360,7 @@ public class EstimatedFundCashForecast5 {
 	 * EstimatedFundCashForecast4.mmBreakdownByUserDefinedParameter}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBreakdownByUserDefinedParameter = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EstimatedFundCashForecast5, List<BreakdownByUserDefinedParameter3>> mmBreakdownByUserDefinedParameter = new MMMessageAssociationEnd<EstimatedFundCashForecast5, List<BreakdownByUserDefinedParameter3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EstimatedFundCashForecast5.mmObject();
 			isDerived = false;
@@ -1190,11 +1371,21 @@ public class EstimatedFundCashForecast5 {
 			previousVersion_lazy = () -> EstimatedFundCashForecast4.mmBreakdownByUserDefinedParameter;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.mmObject();
+			type_lazy = () -> BreakdownByUserDefinedParameter3.mmObject();
+		}
+
+		@Override
+		public List<BreakdownByUserDefinedParameter3> getValue(EstimatedFundCashForecast5 obj) {
+			return obj.getBreakdownByUserDefinedParameter();
+		}
+
+		@Override
+		public void setValue(EstimatedFundCashForecast5 obj, List<BreakdownByUserDefinedParameter3> value) {
+			obj.setBreakdownByUserDefinedParameter(value);
 		}
 	};
 	@XmlElement(name = "EstmtdNetCshFcstDtls")
-	protected List<com.tools20022.repository.msg.NetCashForecast4> estimatedNetCashForecastDetails;
+	protected List<NetCashForecast4> estimatedNetCashForecastDetails;
 	/**
 	 * 
 	 <p>
@@ -1231,7 +1422,7 @@ public class EstimatedFundCashForecast5 {
 	 * EstimatedFundCashForecast4.mmEstimatedNetCashForecastDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEstimatedNetCashForecastDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EstimatedFundCashForecast5, List<NetCashForecast4>> mmEstimatedNetCashForecastDetails = new MMMessageAssociationEnd<EstimatedFundCashForecast5, List<NetCashForecast4>>() {
 		{
 			businessComponentTrace_lazy = () -> FundsCashFlow.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.EstimatedFundCashForecast5.mmObject();
@@ -1243,7 +1434,17 @@ public class EstimatedFundCashForecast5 {
 			previousVersion_lazy = () -> EstimatedFundCashForecast4.mmEstimatedNetCashForecastDetails;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NetCashForecast4.mmObject();
+			type_lazy = () -> NetCashForecast4.mmObject();
+		}
+
+		@Override
+		public List<NetCashForecast4> getValue(EstimatedFundCashForecast5 obj) {
+			return obj.getEstimatedNetCashForecastDetails();
+		}
+
+		@Override
+		public void setValue(EstimatedFundCashForecast5 obj, List<NetCashForecast4> value) {
+			obj.setEstimatedNetCashForecastDetails(value);
 		}
 	};
 
@@ -1305,7 +1506,7 @@ public class EstimatedFundCashForecast5 {
 		return financialInstrumentDetails;
 	}
 
-	public EstimatedFundCashForecast5 setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument9 financialInstrumentDetails) {
+	public EstimatedFundCashForecast5 setFinancialInstrumentDetails(FinancialInstrument9 financialInstrumentDetails) {
 		this.financialInstrumentDetails = Objects.requireNonNull(financialInstrumentDetails);
 		return this;
 	}
@@ -1332,7 +1533,7 @@ public class EstimatedFundCashForecast5 {
 		return estimatedTotalUnitsNumber == null ? Optional.empty() : Optional.of(estimatedTotalUnitsNumber);
 	}
 
-	public EstimatedFundCashForecast5 setEstimatedTotalUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 estimatedTotalUnitsNumber) {
+	public EstimatedFundCashForecast5 setEstimatedTotalUnitsNumber(FinancialInstrumentQuantity1 estimatedTotalUnitsNumber) {
 		this.estimatedTotalUnitsNumber = estimatedTotalUnitsNumber;
 		return this;
 	}
@@ -1341,7 +1542,7 @@ public class EstimatedFundCashForecast5 {
 		return previousTotalUnitsNumber == null ? Optional.empty() : Optional.of(previousTotalUnitsNumber);
 	}
 
-	public EstimatedFundCashForecast5 setPreviousTotalUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 previousTotalUnitsNumber) {
+	public EstimatedFundCashForecast5 setPreviousTotalUnitsNumber(FinancialInstrumentQuantity1 previousTotalUnitsNumber) {
 		this.previousTotalUnitsNumber = previousTotalUnitsNumber;
 		return this;
 	}
@@ -1368,7 +1569,7 @@ public class EstimatedFundCashForecast5 {
 		return currencyStatus == null ? Optional.empty() : Optional.of(currencyStatus);
 	}
 
-	public EstimatedFundCashForecast5 setCurrencyStatus(com.tools20022.repository.msg.CurrencyDesignation1 currencyStatus) {
+	public EstimatedFundCashForecast5 setCurrencyStatus(CurrencyDesignation1 currencyStatus) {
 		this.currencyStatus = currencyStatus;
 		return this;
 	}
@@ -1386,7 +1587,7 @@ public class EstimatedFundCashForecast5 {
 		return price == null ? Optional.empty() : Optional.of(price);
 	}
 
-	public EstimatedFundCashForecast5 setPrice(com.tools20022.repository.msg.UnitPrice19 price) {
+	public EstimatedFundCashForecast5 setPrice(UnitPrice19 price) {
 		this.price = price;
 		return this;
 	}
@@ -1395,7 +1596,7 @@ public class EstimatedFundCashForecast5 {
 		return foreignExchangeRate == null ? Optional.empty() : Optional.of(foreignExchangeRate);
 	}
 
-	public EstimatedFundCashForecast5 setForeignExchangeRate(com.tools20022.repository.msg.ForeignExchangeTerms19 foreignExchangeRate) {
+	public EstimatedFundCashForecast5 setForeignExchangeRate(ForeignExchangeTerms19 foreignExchangeRate) {
 		this.foreignExchangeRate = foreignExchangeRate;
 		return this;
 	}
@@ -1413,7 +1614,7 @@ public class EstimatedFundCashForecast5 {
 		return breakdownByParty == null ? breakdownByParty = new ArrayList<>() : breakdownByParty;
 	}
 
-	public EstimatedFundCashForecast5 setBreakdownByParty(List<com.tools20022.repository.msg.BreakdownByParty3> breakdownByParty) {
+	public EstimatedFundCashForecast5 setBreakdownByParty(List<BreakdownByParty3> breakdownByParty) {
 		this.breakdownByParty = Objects.requireNonNull(breakdownByParty);
 		return this;
 	}
@@ -1422,7 +1623,7 @@ public class EstimatedFundCashForecast5 {
 		return breakdownByCountry == null ? breakdownByCountry = new ArrayList<>() : breakdownByCountry;
 	}
 
-	public EstimatedFundCashForecast5 setBreakdownByCountry(List<com.tools20022.repository.msg.BreakdownByCountry2> breakdownByCountry) {
+	public EstimatedFundCashForecast5 setBreakdownByCountry(List<BreakdownByCountry2> breakdownByCountry) {
 		this.breakdownByCountry = Objects.requireNonNull(breakdownByCountry);
 		return this;
 	}
@@ -1431,7 +1632,7 @@ public class EstimatedFundCashForecast5 {
 		return breakdownByCurrency == null ? breakdownByCurrency = new ArrayList<>() : breakdownByCurrency;
 	}
 
-	public EstimatedFundCashForecast5 setBreakdownByCurrency(List<com.tools20022.repository.msg.BreakdownByCurrency2> breakdownByCurrency) {
+	public EstimatedFundCashForecast5 setBreakdownByCurrency(List<BreakdownByCurrency2> breakdownByCurrency) {
 		this.breakdownByCurrency = Objects.requireNonNull(breakdownByCurrency);
 		return this;
 	}
@@ -1440,7 +1641,7 @@ public class EstimatedFundCashForecast5 {
 		return breakdownByUserDefinedParameter == null ? breakdownByUserDefinedParameter = new ArrayList<>() : breakdownByUserDefinedParameter;
 	}
 
-	public EstimatedFundCashForecast5 setBreakdownByUserDefinedParameter(List<com.tools20022.repository.msg.BreakdownByUserDefinedParameter3> breakdownByUserDefinedParameter) {
+	public EstimatedFundCashForecast5 setBreakdownByUserDefinedParameter(List<BreakdownByUserDefinedParameter3> breakdownByUserDefinedParameter) {
 		this.breakdownByUserDefinedParameter = Objects.requireNonNull(breakdownByUserDefinedParameter);
 		return this;
 	}
@@ -1449,7 +1650,7 @@ public class EstimatedFundCashForecast5 {
 		return estimatedNetCashForecastDetails == null ? estimatedNetCashForecastDetails = new ArrayList<>() : estimatedNetCashForecastDetails;
 	}
 
-	public EstimatedFundCashForecast5 setEstimatedNetCashForecastDetails(List<com.tools20022.repository.msg.NetCashForecast4> estimatedNetCashForecastDetails) {
+	public EstimatedFundCashForecast5 setEstimatedNetCashForecastDetails(List<NetCashForecast4> estimatedNetCashForecastDetails) {
 		this.estimatedNetCashForecastDetails = Objects.requireNonNull(estimatedNetCashForecastDetails);
 		return this;
 	}

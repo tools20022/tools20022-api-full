@@ -111,7 +111,7 @@ public class PreviousYear1Choice {
 	 * definition} = "Selection of all investment plans."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAllPreviousYears = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PreviousYear1Choice, PreviousAll> mmAllPreviousYears = new MMMessageAttribute<PreviousYear1Choice, PreviousAll>() {
 		{
 			businessComponentTrace_lazy = () -> PortfolioTransfer.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PreviousYear1Choice.mmObject();
@@ -123,6 +123,16 @@ public class PreviousYear1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PreviousAll.mmObject();
+		}
+
+		@Override
+		public PreviousAll getValue(PreviousYear1Choice obj) {
+			return obj.getAllPreviousYears();
+		}
+
+		@Override
+		public void setValue(PreviousYear1Choice obj, PreviousAll value) {
+			obj.setAllPreviousYears(value);
 		}
 	};
 	@XmlElement(name = "SpcfcPrvsYrs", required = true)
@@ -160,7 +170,7 @@ public class PreviousYear1Choice {
 	 * "Selection of investment plans issued during previous years."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSpecificPreviousYears = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PreviousYear1Choice, List<ISOYear>> mmSpecificPreviousYears = new MMMessageAttribute<PreviousYear1Choice, List<ISOYear>>() {
 		{
 			businessElementTrace_lazy = () -> PortfolioTransfer.mmTransferredYear;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PreviousYear1Choice.mmObject();
@@ -171,6 +181,16 @@ public class PreviousYear1Choice {
 			definition = "Selection of investment plans issued during previous years.";
 			minOccurs = 1;
 			simpleType_lazy = () -> ISOYear.mmObject();
+		}
+
+		@Override
+		public List<ISOYear> getValue(PreviousYear1Choice obj) {
+			return obj.getSpecificPreviousYears();
+		}
+
+		@Override
+		public void setValue(PreviousYear1Choice obj, List<ISOYear> value) {
+			obj.setSpecificPreviousYears(value);
 		}
 	};
 

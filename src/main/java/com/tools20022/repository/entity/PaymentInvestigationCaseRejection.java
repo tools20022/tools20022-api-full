@@ -25,9 +25,9 @@ import com.tools20022.repository.codeset.PaymentCancellationRejectionCode;
 import com.tools20022.repository.codeset.PaymentModificationRejectionV2Code;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.entity.PaymentInvestigationCaseResolution;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -107,7 +107,7 @@ import java.util.Objects;
  * "PaymentInvestigationCaseRejection"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Specifies the rejection of an activity linked to a payment. The rejected activity may be the assignment of an investigation case, the cancellation or the modification of a payment."
+ * "Specifies the rejection of an activity linked to a payment. The rejected activity may be the assignment of an investigation case, the cancellation or  the modification of a payment."
  * </li>
  * </ul>
  */
@@ -161,7 +161,7 @@ public class PaymentInvestigationCaseRejection {
 	 * definition} = "Reason for the rejection of a modification request."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmRejectedModification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<PaymentInvestigationCaseRejection, PaymentModificationRejectionV2Code> mmRejectedModification = new MMBusinessAttribute<PaymentInvestigationCaseRejection, PaymentModificationRejectionV2Code>() {
 		{
 			derivation_lazy = () -> Arrays.asList(InvestigationStatusChoice.mmRejectedModification, InvestigationStatus.mmRejectedModification, InvestigationStatus2Choice.mmRejectedModification,
 					InvestigationStatus3Choice.mmRejectedModification, InvestigationStatus4Choice.mmRejectedModification);
@@ -175,12 +175,14 @@ public class PaymentInvestigationCaseRejection {
 			simpleType_lazy = () -> PaymentModificationRejectionV2Code.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PaymentInvestigationCaseRejection.class.getMethod("getRejectedModification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PaymentModificationRejectionV2Code getValue(PaymentInvestigationCaseRejection obj) {
+			return obj.getRejectedModification();
+		}
+
+		@Override
+		public void setValue(PaymentInvestigationCaseRejection obj, PaymentModificationRejectionV2Code value) {
+			obj.setRejectedModification(value);
 		}
 	};
 	protected PaymentCancellationRejectionCode rejectedCancellation;
@@ -251,7 +253,7 @@ public class PaymentInvestigationCaseRejection {
 	 * definition} = "Justification for the rejection of the cancellation."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmRejectedCancellation = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<PaymentInvestigationCaseRejection, PaymentCancellationRejectionCode> mmRejectedCancellation = new MMBusinessAttribute<PaymentInvestigationCaseRejection, PaymentCancellationRejectionCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(RejectedCancellationJustification.mmReasonCode, InvestigationStatusChoice.mmRejectedCancellation, CancellationStatusReason1Choice.mmCode, CancellationStatusReason1Choice.mmProprietary,
 					CancellationStatusReasonInformation1.mmReason, OriginalGroupInformation24.mmCancellationStatusReasonInformation, CancellationStatusReason2Choice.mmCode, CancellationStatusReason2Choice.mmProprietary,
@@ -266,12 +268,14 @@ public class PaymentInvestigationCaseRejection {
 			simpleType_lazy = () -> PaymentCancellationRejectionCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PaymentInvestigationCaseRejection.class.getMethod("getRejectedCancellation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PaymentCancellationRejectionCode getValue(PaymentInvestigationCaseRejection obj) {
+			return obj.getRejectedCancellation();
+		}
+
+		@Override
+		public void setValue(PaymentInvestigationCaseRejection obj, PaymentCancellationRejectionCode value) {
+			obj.setRejectedCancellation(value);
 		}
 	};
 	protected Max140Text rejectedCancellationReason;
@@ -308,7 +312,7 @@ public class PaymentInvestigationCaseRejection {
 	 * definition} = "Free text justification for rejecting a cancellation."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmRejectedCancellationReason = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<PaymentInvestigationCaseRejection, Max140Text> mmRejectedCancellationReason = new MMBusinessAttribute<PaymentInvestigationCaseRejection, Max140Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(RejectedCancellationJustification.mmReason);
 			isDerived = false;
@@ -321,12 +325,14 @@ public class PaymentInvestigationCaseRejection {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PaymentInvestigationCaseRejection.class.getMethod("getRejectedCancellationReason", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max140Text getValue(PaymentInvestigationCaseRejection obj) {
+			return obj.getRejectedCancellationReason();
+		}
+
+		@Override
+		public void setValue(PaymentInvestigationCaseRejection obj, Max140Text value) {
+			obj.setRejectedCancellationReason(value);
 		}
 	};
 	protected YesNoIndicator assignmentCancellationConfirmation;
@@ -378,7 +384,7 @@ public class PaymentInvestigationCaseRejection {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmAssignmentCancellationConfirmation = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<PaymentInvestigationCaseRejection, YesNoIndicator> mmAssignmentCancellationConfirmation = new MMBusinessAttribute<PaymentInvestigationCaseRejection, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(InvestigationStatusChoice.mmAssignmentCancellationConfirmation, InvestigationStatus.mmAssignmentCancellationConfirmation, InvestigationStatus2Choice.mmAssignmentCancellationConfirmation,
 					InvestigationStatus3Choice.mmAssignmentCancellationConfirmation, InvestigationStatus4Choice.mmAssignmentCancellationConfirmation);
@@ -392,12 +398,14 @@ public class PaymentInvestigationCaseRejection {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PaymentInvestigationCaseRejection.class.getMethod("getAssignmentCancellationConfirmation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(PaymentInvestigationCaseRejection obj) {
+			return obj.getAssignmentCancellationConfirmation();
+		}
+
+		@Override
+		public void setValue(PaymentInvestigationCaseRejection obj, YesNoIndicator value) {
+			obj.setAssignmentCancellationConfirmation(value);
 		}
 	};
 	protected CaseAssignmentRejectionCode rejectionReason;
@@ -439,7 +447,7 @@ public class PaymentInvestigationCaseRejection {
 	 * "Reason for the rejection of a case assignment, in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmRejectionReason = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<PaymentInvestigationCaseRejection, CaseAssignmentRejectionCode> mmRejectionReason = new MMBusinessAttribute<PaymentInvestigationCaseRejection, CaseAssignmentRejectionCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CaseAssignmentRejectionJustification.mmRejectionReason, CaseAssignmentRejectionJustification2.mmRejectionReason);
 			isDerived = false;
@@ -452,12 +460,14 @@ public class PaymentInvestigationCaseRejection {
 			simpleType_lazy = () -> CaseAssignmentRejectionCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PaymentInvestigationCaseRejection.class.getMethod("getRejectionReason", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CaseAssignmentRejectionCode getValue(PaymentInvestigationCaseRejection obj) {
+			return obj.getRejectionReason();
+		}
+
+		@Override
+		public void setValue(PaymentInvestigationCaseRejection obj, CaseAssignmentRejectionCode value) {
+			obj.setRejectionReason(value);
 		}
 	};
 	protected PaymentInvestigationCaseResolution relatedInvestigationCaseResolution;
@@ -495,7 +505,7 @@ public class PaymentInvestigationCaseRejection {
 	 * definition} = "Resolution which consists in rejecting the case."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedInvestigationCaseResolution = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<PaymentInvestigationCaseRejection, PaymentInvestigationCaseResolution> mmRelatedInvestigationCaseResolution = new MMBusinessAssociationEnd<PaymentInvestigationCaseRejection, PaymentInvestigationCaseResolution>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseRejection.mmObject();
@@ -504,9 +514,19 @@ public class PaymentInvestigationCaseRejection {
 			definition = "Resolution which consists in rejecting the case.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmInvestigationCaseRejection;
+			opposite_lazy = () -> PaymentInvestigationCaseResolution.mmInvestigationCaseRejection;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmObject();
+			type_lazy = () -> PaymentInvestigationCaseResolution.mmObject();
+		}
+
+		@Override
+		public PaymentInvestigationCaseResolution getValue(PaymentInvestigationCaseRejection obj) {
+			return obj.getRelatedInvestigationCaseResolution();
+		}
+
+		@Override
+		public void setValue(PaymentInvestigationCaseRejection obj, PaymentInvestigationCaseResolution value) {
+			obj.setRelatedInvestigationCaseResolution(value);
 		}
 	};
 	protected InvestigationRejectionCode investigationRejection;
@@ -544,7 +564,7 @@ public class PaymentInvestigationCaseRejection {
 	 * definition} = "Reason for the rejection of a case assignment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmInvestigationRejection = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<PaymentInvestigationCaseRejection, InvestigationRejectionCode> mmInvestigationRejection = new MMBusinessAttribute<PaymentInvestigationCaseRejection, InvestigationRejectionCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(InvestigationRejectionJustification1.mmRejectionReason);
 			isDerived = false;
@@ -557,12 +577,14 @@ public class PaymentInvestigationCaseRejection {
 			simpleType_lazy = () -> InvestigationRejectionCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PaymentInvestigationCaseRejection.class.getMethod("getInvestigationRejection", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public InvestigationRejectionCode getValue(PaymentInvestigationCaseRejection obj) {
+			return obj.getInvestigationRejection();
+		}
+
+		@Override
+		public void setValue(PaymentInvestigationCaseRejection obj, InvestigationRejectionCode value) {
+			obj.setInvestigationRejection(value);
 		}
 	};
 
@@ -572,8 +594,8 @@ public class PaymentInvestigationCaseRejection {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentInvestigationCaseRejection";
-				definition = "Specifies the rejection of an activity linked to a payment. The rejected activity may be the assignment of an investigation case, the cancellation or the modification of a payment.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmInvestigationCaseRejection);
+				definition = "Specifies the rejection of an activity linked to a payment. The rejected activity may be the assignment of an investigation case, the cancellation or  the modification of a payment.";
+				associationDomain_lazy = () -> Arrays.asList(PaymentInvestigationCaseResolution.mmInvestigationCaseRejection);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentInvestigationCaseRejection.mmRejectedModification, com.tools20022.repository.entity.PaymentInvestigationCaseRejection.mmRejectedCancellation,
 						com.tools20022.repository.entity.PaymentInvestigationCaseRejection.mmRejectedCancellationReason, com.tools20022.repository.entity.PaymentInvestigationCaseRejection.mmAssignmentCancellationConfirmation,
 						com.tools20022.repository.entity.PaymentInvestigationCaseRejection.mmRejectionReason, com.tools20022.repository.entity.PaymentInvestigationCaseRejection.mmRelatedInvestigationCaseResolution,
@@ -638,7 +660,7 @@ public class PaymentInvestigationCaseRejection {
 		return relatedInvestigationCaseResolution;
 	}
 
-	public PaymentInvestigationCaseRejection setRelatedInvestigationCaseResolution(com.tools20022.repository.entity.PaymentInvestigationCaseResolution relatedInvestigationCaseResolution) {
+	public PaymentInvestigationCaseRejection setRelatedInvestigationCaseResolution(PaymentInvestigationCaseResolution relatedInvestigationCaseResolution) {
 		this.relatedInvestigationCaseResolution = Objects.requireNonNull(relatedInvestigationCaseResolution);
 		return this;
 	}

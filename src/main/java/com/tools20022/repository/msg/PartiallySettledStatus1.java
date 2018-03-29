@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.SecuritiesOrderStatus;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification1;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -135,7 +136,7 @@ public class PartiallySettledStatus1 {
 	 * definition} = "Reason for the partially settled status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartiallySettledStatus1, SettledStatusReason1Code> mmReason = new MMMessageAttribute<PartiallySettledStatus1, SettledStatusReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmPartiallySettledStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartiallySettledStatus1.mmObject();
@@ -147,6 +148,16 @@ public class PartiallySettledStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SettledStatusReason1Code.mmObject();
+		}
+
+		@Override
+		public SettledStatusReason1Code getValue(PartiallySettledStatus1 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(PartiallySettledStatus1 obj, SettledStatusReason1Code value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "XtndedRsn", required = true)
@@ -179,7 +190,7 @@ public class PartiallySettledStatus1 {
 	 * definition} = "Reason for the partially settled status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartiallySettledStatus1, Extended350Code> mmExtendedReason = new MMMessageAttribute<PartiallySettledStatus1, Extended350Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartiallySettledStatus1.mmObject();
 			isDerived = false;
@@ -190,6 +201,16 @@ public class PartiallySettledStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Extended350Code getValue(PartiallySettledStatus1 obj) {
+			return obj.getExtendedReason();
+		}
+
+		@Override
+		public void setValue(PartiallySettledStatus1 obj, Extended350Code value) {
+			obj.setExtendedReason(value);
 		}
 	};
 	@XmlElement(name = "DataSrcSchme", required = true)
@@ -227,7 +248,7 @@ public class PartiallySettledStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartiallySettledStatus1, GenericIdentification1> mmDataSourceScheme = new MMMessageAssociationEnd<PartiallySettledStatus1, GenericIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartiallySettledStatus1.mmObject();
@@ -239,7 +260,17 @@ public class PartiallySettledStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
+			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(PartiallySettledStatus1 obj) {
+			return obj.getDataSourceScheme();
+		}
+
+		@Override
+		public void setValue(PartiallySettledStatus1 obj, GenericIdentification1 value) {
+			obj.setDataSourceScheme(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -277,7 +308,7 @@ public class PartiallySettledStatus1 {
 	 * "Additional information about the partially settled status reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartiallySettledStatus1, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<PartiallySettledStatus1, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartiallySettledStatus1.mmObject();
@@ -289,6 +320,16 @@ public class PartiallySettledStatus1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(PartiallySettledStatus1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(PartiallySettledStatus1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 	/**
@@ -385,7 +426,7 @@ public class PartiallySettledStatus1 {
 		return dataSourceScheme;
 	}
 
-	public PartiallySettledStatus1 setDataSourceScheme(com.tools20022.repository.msg.GenericIdentification1 dataSourceScheme) {
+	public PartiallySettledStatus1 setDataSourceScheme(GenericIdentification1 dataSourceScheme) {
 		this.dataSourceScheme = Objects.requireNonNull(dataSourceScheme);
 		return this;
 	}

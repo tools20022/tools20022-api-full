@@ -111,7 +111,7 @@ public class EnergyCommodityLightEnd1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBaseProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EnergyCommodityLightEnd1, AssetClassProductType2Code> mmBaseProduct = new MMMessageAttribute<EnergyCommodityLightEnd1, AssetClassProductType2Code>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EnergyCommodityLightEnd1.mmObject();
@@ -123,6 +123,16 @@ public class EnergyCommodityLightEnd1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassProductType2Code.mmObject();
+		}
+
+		@Override
+		public AssetClassProductType2Code getValue(EnergyCommodityLightEnd1 obj) {
+			return obj.getBaseProduct();
+		}
+
+		@Override
+		public void setValue(EnergyCommodityLightEnd1 obj, AssetClassProductType2Code value) {
+			obj.setBaseProduct(value);
 		}
 	};
 	@XmlElement(name = "SubPdct", required = true)
@@ -160,7 +170,7 @@ public class EnergyCommodityLightEnd1 {
 	 * definition} = "Sub-product for the underlying asset class."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EnergyCommodityLightEnd1, AssetClassSubProductType27Code> mmSubProduct = new MMMessageAttribute<EnergyCommodityLightEnd1, AssetClassSubProductType27Code>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EnergyCommodityLightEnd1.mmObject();
@@ -172,6 +182,16 @@ public class EnergyCommodityLightEnd1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassSubProductType27Code.mmObject();
+		}
+
+		@Override
+		public AssetClassSubProductType27Code getValue(EnergyCommodityLightEnd1 obj) {
+			return obj.getSubProduct();
+		}
+
+		@Override
+		public void setValue(EnergyCommodityLightEnd1 obj, AssetClassSubProductType27Code value) {
+			obj.setSubProduct(value);
 		}
 	};
 

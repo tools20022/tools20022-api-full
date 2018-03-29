@@ -114,7 +114,7 @@ public class PendingReason37Choice {
 	 * "Specifies the reason code why the instruction or request is pending."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingReason37Choice, PendingReason6Code> mmCode = new MMMessageAttribute<PendingReason37Choice, PendingReason6Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingReason37Choice.mmObject();
@@ -127,6 +127,16 @@ public class PendingReason37Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PendingReason6Code.mmObject();
+		}
+
+		@Override
+		public PendingReason6Code getValue(PendingReason37Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(PendingReason37Choice obj, PendingReason6Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -169,7 +179,7 @@ public class PendingReason37Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingReason37Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<PendingReason37Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingReason37Choice.mmObject();
@@ -182,6 +192,16 @@ public class PendingReason37Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(PendingReason37Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(PendingReason37Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

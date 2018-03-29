@@ -29,6 +29,7 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -213,7 +214,7 @@ public class InvestmentAccountOwnershipInformation13 {
 	 * InvestmentAccountOwnershipInformation11.mmParty}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccountOwnershipInformation13, Party30Choice> mmParty = new MMMessageAttribute<InvestmentAccountOwnershipInformation13, Party30Choice>() {
 		{
 			businessComponentTrace_lazy = () -> Party.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.mmObject();
@@ -227,6 +228,16 @@ public class InvestmentAccountOwnershipInformation13 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Party30Choice.mmObject();
+		}
+
+		@Override
+		public Party30Choice getValue(InvestmentAccountOwnershipInformation13 obj) {
+			return obj.getParty();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountOwnershipInformation13 obj, Party30Choice value) {
+			obj.setParty(value);
 		}
 	};
 	@XmlElement(name = "MnyLndrgChck")
@@ -279,7 +290,7 @@ public class InvestmentAccountOwnershipInformation13 {
 	 * InvestmentAccountOwnershipInformation11.mmMoneyLaunderingCheck}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMoneyLaunderingCheck = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccountOwnershipInformation13, Optional<MoneyLaunderingCheck1Choice>> mmMoneyLaunderingCheck = new MMMessageAttribute<InvestmentAccountOwnershipInformation13, Optional<MoneyLaunderingCheck1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmMoneyLaunderingCheck;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.mmObject();
@@ -294,9 +305,19 @@ public class InvestmentAccountOwnershipInformation13 {
 			minOccurs = 0;
 			complexType_lazy = () -> MoneyLaunderingCheck1Choice.mmObject();
 		}
+
+		@Override
+		public Optional<MoneyLaunderingCheck1Choice> getValue(InvestmentAccountOwnershipInformation13 obj) {
+			return obj.getMoneyLaunderingCheck();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountOwnershipInformation13 obj, Optional<MoneyLaunderingCheck1Choice> value) {
+			obj.setMoneyLaunderingCheck(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "ModfdInvstrPrflVldtn")
-	protected List<com.tools20022.repository.msg.ModificationScope27> modifiedInvestorProfileValidation;
+	protected List<ModificationScope27> modifiedInvestorProfileValidation;
 	/**
 	 * 
 	 <p>
@@ -344,7 +365,7 @@ public class InvestmentAccountOwnershipInformation13 {
 	 * mmModifiedInvestorProfileValidation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmModifiedInvestorProfileValidation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccountOwnershipInformation13, List<ModificationScope27>> mmModifiedInvestorProfileValidation = new MMMessageAssociationEnd<InvestmentAccountOwnershipInformation13, List<ModificationScope27>>() {
 		{
 			businessElementTrace_lazy = () -> PersonProfile.mmProfileCertification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.mmObject();
@@ -357,7 +378,17 @@ public class InvestmentAccountOwnershipInformation13 {
 			previousVersion_lazy = () -> InvestmentAccountOwnershipInformation11.mmModifiedInvestorProfileValidation;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ModificationScope27.mmObject();
+			type_lazy = () -> ModificationScope27.mmObject();
+		}
+
+		@Override
+		public List<ModificationScope27> getValue(InvestmentAccountOwnershipInformation13 obj) {
+			return obj.getModifiedInvestorProfileValidation();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountOwnershipInformation13 obj, List<ModificationScope27> value) {
+			obj.setModifiedInvestorProfileValidation(value);
 		}
 	};
 	@XmlElement(name = "OwnrshBnfcryRate")
@@ -410,7 +441,7 @@ public class InvestmentAccountOwnershipInformation13 {
 	 * InvestmentAccountOwnershipInformation11.mmOwnershipBeneficiaryRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOwnershipBeneficiaryRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccountOwnershipInformation13, Optional<PercentageRate>> mmOwnershipBeneficiaryRate = new MMMessageAttribute<InvestmentAccountOwnershipInformation13, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccountPartyRole.mmOwnershipBeneficiaryRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.mmObject();
@@ -424,6 +455,16 @@ public class InvestmentAccountOwnershipInformation13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(InvestmentAccountOwnershipInformation13 obj) {
+			return obj.getOwnershipBeneficiaryRate();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountOwnershipInformation13 obj, Optional<PercentageRate> value) {
+			obj.setOwnershipBeneficiaryRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClntId")
@@ -475,7 +516,7 @@ public class InvestmentAccountOwnershipInformation13 {
 	 * InvestmentAccountOwnershipInformation11.mmClientIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClientIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccountOwnershipInformation13, Optional<Max35Text>> mmClientIdentification = new MMMessageAttribute<InvestmentAccountOwnershipInformation13, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.mmObject();
@@ -489,6 +530,16 @@ public class InvestmentAccountOwnershipInformation13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(InvestmentAccountOwnershipInformation13 obj) {
+			return obj.getClientIdentification();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountOwnershipInformation13 obj, Optional<Max35Text> value) {
+			obj.setClientIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FsclXmptn")
@@ -541,7 +592,7 @@ public class InvestmentAccountOwnershipInformation13 {
 	 * InvestmentAccountOwnershipInformation11.mmFiscalExemption}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFiscalExemption = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccountOwnershipInformation13, Optional<YesNoIndicator>> mmFiscalExemption = new MMMessageAttribute<InvestmentAccountOwnershipInformation13, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTax.mmFiscalExemption;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.mmObject();
@@ -555,6 +606,16 @@ public class InvestmentAccountOwnershipInformation13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(InvestmentAccountOwnershipInformation13 obj) {
+			return obj.getFiscalExemption();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountOwnershipInformation13 obj, Optional<YesNoIndicator> value) {
+			obj.setFiscalExemption(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SgntryRghtInd")
@@ -607,7 +668,7 @@ public class InvestmentAccountOwnershipInformation13 {
 	 * InvestmentAccountOwnershipInformation11.mmSignatoryRightIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSignatoryRightIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccountOwnershipInformation13, Optional<YesNoIndicator>> mmSignatoryRightIndicator = new MMMessageAttribute<InvestmentAccountOwnershipInformation13, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SignatureCondition.mmSignatoryRightIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.mmObject();
@@ -621,6 +682,16 @@ public class InvestmentAccountOwnershipInformation13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(InvestmentAccountOwnershipInformation13 obj) {
+			return obj.getSignatoryRightIndicator();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountOwnershipInformation13 obj, Optional<YesNoIndicator> value) {
+			obj.setSignatoryRightIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MiFIDClssfctn")
@@ -667,7 +738,7 @@ public class InvestmentAccountOwnershipInformation13 {
 	 * InvestmentAccountOwnershipInformation11.mmMiFIDClassification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMiFIDClassification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccountOwnershipInformation13, Optional<MiFIDClassification1>> mmMiFIDClassification = new MMMessageAttribute<InvestmentAccountOwnershipInformation13, Optional<MiFIDClassification1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.mmObject();
 			isDerived = false;
@@ -679,11 +750,21 @@ public class InvestmentAccountOwnershipInformation13 {
 			previousVersion_lazy = () -> InvestmentAccountOwnershipInformation11.mmMiFIDClassification;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.MiFIDClassification1.mmObject();
+			complexType_lazy = () -> MiFIDClassification1.mmObject();
+		}
+
+		@Override
+		public Optional<MiFIDClassification1> getValue(InvestmentAccountOwnershipInformation13 obj) {
+			return obj.getMiFIDClassification();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountOwnershipInformation13 obj, Optional<MiFIDClassification1> value) {
+			obj.setMiFIDClassification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ntfctn")
-	protected List<com.tools20022.repository.msg.Notification2> notification;
+	protected List<Notification2> notification;
 	/**
 	 * 
 	 <p>
@@ -725,7 +806,7 @@ public class InvestmentAccountOwnershipInformation13 {
 	 * InvestmentAccountOwnershipInformation11.mmInformationDistribution}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccountOwnershipInformation13, List<Notification2>> mmNotification = new MMMessageAttribute<InvestmentAccountOwnershipInformation13, List<Notification2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.mmObject();
 			isDerived = false;
@@ -736,7 +817,17 @@ public class InvestmentAccountOwnershipInformation13 {
 			nextVersions_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation15.mmNotification);
 			previousVersion_lazy = () -> InvestmentAccountOwnershipInformation11.mmInformationDistribution;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Notification2.mmObject();
+			complexType_lazy = () -> Notification2.mmObject();
+		}
+
+		@Override
+		public List<Notification2> getValue(InvestmentAccountOwnershipInformation13 obj) {
+			return obj.getNotification();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountOwnershipInformation13 obj, List<Notification2> value) {
+			obj.setNotification(value);
 		}
 	};
 	@XmlElement(name = "FATCAFormTp")
@@ -787,7 +878,7 @@ public class InvestmentAccountOwnershipInformation13 {
 	 * InvestmentAccountOwnershipInformation11.mmFATCAFormType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFATCAFormType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccountOwnershipInformation13, List<FATCAForm1Choice>> mmFATCAFormType = new MMMessageAssociationEnd<InvestmentAccountOwnershipInformation13, List<FATCAForm1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccountPartyRole.mmFATCAFormType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.mmObject();
@@ -802,9 +893,19 @@ public class InvestmentAccountOwnershipInformation13 {
 			isComposite = true;
 			type_lazy = () -> FATCAForm1Choice.mmObject();
 		}
+
+		@Override
+		public List<FATCAForm1Choice> getValue(InvestmentAccountOwnershipInformation13 obj) {
+			return obj.getFATCAFormType();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountOwnershipInformation13 obj, List<FATCAForm1Choice> value) {
+			obj.setFATCAFormType(value);
+		}
 	};
 	@XmlElement(name = "FATCASts")
-	protected List<com.tools20022.repository.msg.FATCAStatus2> fATCAStatus;
+	protected List<FATCAStatus2> fATCAStatus;
 	/**
 	 * 
 	 <p>
@@ -851,7 +952,7 @@ public class InvestmentAccountOwnershipInformation13 {
 	 * InvestmentAccountOwnershipInformation11.mmFATCAStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFATCAStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccountOwnershipInformation13, List<FATCAStatus2>> mmFATCAStatus = new MMMessageAssociationEnd<InvestmentAccountOwnershipInformation13, List<FATCAStatus2>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccountPartyRole.mmFATCAStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.mmObject();
@@ -864,11 +965,21 @@ public class InvestmentAccountOwnershipInformation13 {
 			previousVersion_lazy = () -> InvestmentAccountOwnershipInformation11.mmFATCAStatus;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FATCAStatus2.mmObject();
+			type_lazy = () -> FATCAStatus2.mmObject();
+		}
+
+		@Override
+		public List<FATCAStatus2> getValue(InvestmentAccountOwnershipInformation13 obj) {
+			return obj.getFATCAStatus();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountOwnershipInformation13 obj, List<FATCAStatus2> value) {
+			obj.setFATCAStatus(value);
 		}
 	};
 	@XmlElement(name = "OthrId")
-	protected List<com.tools20022.repository.msg.GenericIdentification82> otherIdentification;
+	protected List<GenericIdentification82> otherIdentification;
 	/**
 	 * 
 	 <p>
@@ -911,7 +1022,7 @@ public class InvestmentAccountOwnershipInformation13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccountOwnershipInformation13, List<GenericIdentification82>> mmOtherIdentification = new MMMessageAssociationEnd<InvestmentAccountOwnershipInformation13, List<GenericIdentification82>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.mmObject();
@@ -923,7 +1034,17 @@ public class InvestmentAccountOwnershipInformation13 {
 			nextVersions_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation15.mmOtherIdentification);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification82.mmObject();
+			type_lazy = () -> GenericIdentification82.mmObject();
+		}
+
+		@Override
+		public List<GenericIdentification82> getValue(InvestmentAccountOwnershipInformation13 obj) {
+			return obj.getOtherIdentification();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountOwnershipInformation13 obj, List<GenericIdentification82> value) {
+			obj.setOtherIdentification(value);
 		}
 	};
 	@XmlElement(name = "TaxXmptn")
@@ -969,7 +1090,7 @@ public class InvestmentAccountOwnershipInformation13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxExemption = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccountOwnershipInformation13, Optional<TaxExemptionReason2Choice>> mmTaxExemption = new MMMessageAttribute<InvestmentAccountOwnershipInformation13, Optional<TaxExemptionReason2Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundTax.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.mmObject();
@@ -983,9 +1104,19 @@ public class InvestmentAccountOwnershipInformation13 {
 			minOccurs = 0;
 			complexType_lazy = () -> TaxExemptionReason2Choice.mmObject();
 		}
+
+		@Override
+		public Optional<TaxExemptionReason2Choice> getValue(InvestmentAccountOwnershipInformation13 obj) {
+			return obj.getTaxExemption();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountOwnershipInformation13 obj, Optional<TaxExemptionReason2Choice> value) {
+			obj.setTaxExemption(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "TaxRptg")
-	protected List<com.tools20022.repository.msg.TaxReporting1> taxReporting;
+	protected List<TaxReporting1> taxReporting;
 	/**
 	 * 
 	 <p>
@@ -1027,7 +1158,7 @@ public class InvestmentAccountOwnershipInformation13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTaxReporting = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccountOwnershipInformation13, List<TaxReporting1>> mmTaxReporting = new MMMessageAssociationEnd<InvestmentAccountOwnershipInformation13, List<TaxReporting1>>() {
 		{
 			businessElementTrace_lazy = () -> TaxPartyRole.mmTax;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.mmObject();
@@ -1039,7 +1170,17 @@ public class InvestmentAccountOwnershipInformation13 {
 			nextVersions_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation15.mmTaxReporting);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TaxReporting1.mmObject();
+			type_lazy = () -> TaxReporting1.mmObject();
+		}
+
+		@Override
+		public List<TaxReporting1> getValue(InvestmentAccountOwnershipInformation13 obj) {
+			return obj.getTaxReporting();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountOwnershipInformation13 obj, List<TaxReporting1> value) {
+			obj.setTaxReporting(value);
 		}
 	};
 	@XmlElement(name = "Lang")
@@ -1085,7 +1226,7 @@ public class InvestmentAccountOwnershipInformation13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLanguage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccountOwnershipInformation13, Optional<LanguageCode>> mmLanguage = new MMMessageAttribute<InvestmentAccountOwnershipInformation13, Optional<LanguageCode>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmLanguage;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.mmObject();
@@ -1098,6 +1239,16 @@ public class InvestmentAccountOwnershipInformation13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LanguageCode.mmObject();
+		}
+
+		@Override
+		public Optional<LanguageCode> getValue(InvestmentAccountOwnershipInformation13 obj) {
+			return obj.getLanguage();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountOwnershipInformation13 obj, Optional<LanguageCode> value) {
+			obj.setLanguage(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MailTp")
@@ -1136,7 +1287,7 @@ public class InvestmentAccountOwnershipInformation13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMailType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccountOwnershipInformation13, Optional<MailType1Choice>> mmMailType = new MMMessageAssociationEnd<InvestmentAccountOwnershipInformation13, Optional<MailType1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.mmObject();
 			isDerived = false;
@@ -1149,6 +1300,16 @@ public class InvestmentAccountOwnershipInformation13 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> MailType1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<MailType1Choice> getValue(InvestmentAccountOwnershipInformation13 obj) {
+			return obj.getMailType();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountOwnershipInformation13 obj, Optional<MailType1Choice> value) {
+			obj.setMailType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtryAndResdtlSts")
@@ -1196,7 +1357,7 @@ public class InvestmentAccountOwnershipInformation13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountryAndResidentialStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccountOwnershipInformation13, Optional<CountryAndResidentialStatusType2>> mmCountryAndResidentialStatus = new MMMessageAttribute<InvestmentAccountOwnershipInformation13, Optional<CountryAndResidentialStatusType2>>() {
 		{
 			businessElementTrace_lazy = () -> Person.mmResidentialStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.mmObject();
@@ -1208,7 +1369,17 @@ public class InvestmentAccountOwnershipInformation13 {
 			nextVersions_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation15.mmCountryAndResidentialStatus);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.CountryAndResidentialStatusType2.mmObject();
+			complexType_lazy = () -> CountryAndResidentialStatusType2.mmObject();
+		}
+
+		@Override
+		public Optional<CountryAndResidentialStatusType2> getValue(InvestmentAccountOwnershipInformation13 obj) {
+			return obj.getCountryAndResidentialStatus();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountOwnershipInformation13 obj, Optional<CountryAndResidentialStatusType2> value) {
+			obj.setCountryAndResidentialStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MntryWlth")
@@ -1249,7 +1420,7 @@ public class InvestmentAccountOwnershipInformation13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMonetaryWealth = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccountOwnershipInformation13, Optional<DateAndAmount1>> mmMonetaryWealth = new MMMessageAssociationEnd<InvestmentAccountOwnershipInformation13, Optional<DateAndAmount1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.mmObject();
 			isDerived = false;
@@ -1261,7 +1432,17 @@ public class InvestmentAccountOwnershipInformation13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DateAndAmount1.mmObject();
+			type_lazy = () -> DateAndAmount1.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndAmount1> getValue(InvestmentAccountOwnershipInformation13 obj) {
+			return obj.getMonetaryWealth();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountOwnershipInformation13 obj, Optional<DateAndAmount1> value) {
+			obj.setMonetaryWealth(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EqtyVal")
@@ -1302,7 +1483,7 @@ public class InvestmentAccountOwnershipInformation13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEquityValue = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccountOwnershipInformation13, Optional<DateAndAmount1>> mmEquityValue = new MMMessageAssociationEnd<InvestmentAccountOwnershipInformation13, Optional<DateAndAmount1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.mmObject();
 			isDerived = false;
@@ -1314,7 +1495,17 @@ public class InvestmentAccountOwnershipInformation13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DateAndAmount1.mmObject();
+			type_lazy = () -> DateAndAmount1.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndAmount1> getValue(InvestmentAccountOwnershipInformation13 obj) {
+			return obj.getEquityValue();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountOwnershipInformation13 obj, Optional<DateAndAmount1> value) {
+			obj.setEquityValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "WorkgCptl")
@@ -1355,7 +1546,7 @@ public class InvestmentAccountOwnershipInformation13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmWorkingCapital = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccountOwnershipInformation13, Optional<DateAndAmount1>> mmWorkingCapital = new MMMessageAssociationEnd<InvestmentAccountOwnershipInformation13, Optional<DateAndAmount1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.mmObject();
 			isDerived = false;
@@ -1367,7 +1558,17 @@ public class InvestmentAccountOwnershipInformation13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DateAndAmount1.mmObject();
+			type_lazy = () -> DateAndAmount1.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndAmount1> getValue(InvestmentAccountOwnershipInformation13 obj) {
+			return obj.getWorkingCapital();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountOwnershipInformation13 obj, Optional<DateAndAmount1> value) {
+			obj.setWorkingCapital(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CpnyLk")
@@ -1412,7 +1613,7 @@ public class InvestmentAccountOwnershipInformation13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCompanyLink = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccountOwnershipInformation13, Optional<CompanyLink1Choice>> mmCompanyLink = new MMMessageAssociationEnd<InvestmentAccountOwnershipInformation13, Optional<CompanyLink1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Role.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.mmObject();
@@ -1426,6 +1627,16 @@ public class InvestmentAccountOwnershipInformation13 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CompanyLink1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CompanyLink1Choice> getValue(InvestmentAccountOwnershipInformation13 obj) {
+			return obj.getCompanyLink();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountOwnershipInformation13 obj, Optional<CompanyLink1Choice> value) {
+			obj.setCompanyLink(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ElctrncMlngSvcRef")
@@ -1468,7 +1679,7 @@ public class InvestmentAccountOwnershipInformation13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmElectronicMailingServiceReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccountOwnershipInformation13, Optional<Max350Text>> mmElectronicMailingServiceReference = new MMMessageAttribute<InvestmentAccountOwnershipInformation13, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.mmObject();
 			isDerived = false;
@@ -1481,9 +1692,19 @@ public class InvestmentAccountOwnershipInformation13 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max350Text> getValue(InvestmentAccountOwnershipInformation13 obj) {
+			return obj.getElectronicMailingServiceReference();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountOwnershipInformation13 obj, Optional<Max350Text> value) {
+			obj.setElectronicMailingServiceReference(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "PmryComAdr")
-	protected List<com.tools20022.repository.msg.CommunicationAddress6> primaryCommunicationAddress;
+	protected List<CommunicationAddress6> primaryCommunicationAddress;
 	/**
 	 * 
 	 <p>
@@ -1525,7 +1746,7 @@ public class InvestmentAccountOwnershipInformation13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPrimaryCommunicationAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccountOwnershipInformation13, List<CommunicationAddress6>> mmPrimaryCommunicationAddress = new MMMessageAssociationEnd<InvestmentAccountOwnershipInformation13, List<CommunicationAddress6>>() {
 		{
 			businessComponentTrace_lazy = () -> ElectronicAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.mmObject();
@@ -1537,11 +1758,21 @@ public class InvestmentAccountOwnershipInformation13 {
 			nextVersions_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation15.mmPrimaryCommunicationAddress);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CommunicationAddress6.mmObject();
+			type_lazy = () -> CommunicationAddress6.mmObject();
+		}
+
+		@Override
+		public List<CommunicationAddress6> getValue(InvestmentAccountOwnershipInformation13 obj) {
+			return obj.getPrimaryCommunicationAddress();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountOwnershipInformation13 obj, List<CommunicationAddress6> value) {
+			obj.setPrimaryCommunicationAddress(value);
 		}
 	};
 	@XmlElement(name = "ScndryComAdr")
-	protected List<com.tools20022.repository.msg.CommunicationAddress6> secondaryCommunicationAddress;
+	protected List<CommunicationAddress6> secondaryCommunicationAddress;
 	/**
 	 * 
 	 <p>
@@ -1583,7 +1814,7 @@ public class InvestmentAccountOwnershipInformation13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecondaryCommunicationAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccountOwnershipInformation13, List<CommunicationAddress6>> mmSecondaryCommunicationAddress = new MMMessageAssociationEnd<InvestmentAccountOwnershipInformation13, List<CommunicationAddress6>>() {
 		{
 			businessComponentTrace_lazy = () -> ElectronicAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.mmObject();
@@ -1595,7 +1826,17 @@ public class InvestmentAccountOwnershipInformation13 {
 			nextVersions_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation15.mmSecondaryCommunicationAddress);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CommunicationAddress6.mmObject();
+			type_lazy = () -> CommunicationAddress6.mmObject();
+		}
+
+		@Override
+		public List<CommunicationAddress6> getValue(InvestmentAccountOwnershipInformation13 obj) {
+			return obj.getSecondaryCommunicationAddress();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountOwnershipInformation13 obj, List<CommunicationAddress6> value) {
+			obj.setSecondaryCommunicationAddress(value);
 		}
 	};
 	@XmlElement(name = "AddtlRgltryInf")
@@ -1639,7 +1880,7 @@ public class InvestmentAccountOwnershipInformation13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalRegulatoryInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccountOwnershipInformation13, Optional<RegulatoryInformation1>> mmAdditionalRegulatoryInformation = new MMMessageAttribute<InvestmentAccountOwnershipInformation13, Optional<RegulatoryInformation1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.mmObject();
 			isDerived = false;
@@ -1650,7 +1891,17 @@ public class InvestmentAccountOwnershipInformation13 {
 			nextVersions_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation15.mmAdditionalRegulatoryInformation);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.RegulatoryInformation1.mmObject();
+			complexType_lazy = () -> RegulatoryInformation1.mmObject();
+		}
+
+		@Override
+		public Optional<RegulatoryInformation1> getValue(InvestmentAccountOwnershipInformation13 obj) {
+			return obj.getAdditionalRegulatoryInformation();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountOwnershipInformation13 obj, Optional<RegulatoryInformation1> value) {
+			obj.setAdditionalRegulatoryInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctgSts")
@@ -1692,7 +1943,7 @@ public class InvestmentAccountOwnershipInformation13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccountOwnershipInformation13, Optional<AccountingStatus1Choice>> mmAccountingStatus = new MMMessageAssociationEnd<InvestmentAccountOwnershipInformation13, Optional<AccountingStatus1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.mmObject();
 			isDerived = false;
@@ -1706,9 +1957,19 @@ public class InvestmentAccountOwnershipInformation13 {
 			isComposite = true;
 			type_lazy = () -> AccountingStatus1Choice.mmObject();
 		}
+
+		@Override
+		public Optional<AccountingStatus1Choice> getValue(InvestmentAccountOwnershipInformation13 obj) {
+			return obj.getAccountingStatus();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountOwnershipInformation13 obj, Optional<AccountingStatus1Choice> value) {
+			obj.setAccountingStatus(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "AddtlInf")
-	protected List<com.tools20022.repository.msg.AccountRestrictions1> additionalInformation;
+	protected List<AccountRestrictions1> additionalInformation;
 	/**
 	 * 
 	 <p>
@@ -1745,7 +2006,7 @@ public class InvestmentAccountOwnershipInformation13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdditionalInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccountOwnershipInformation13, List<AccountRestrictions1>> mmAdditionalInformation = new MMMessageAssociationEnd<InvestmentAccountOwnershipInformation13, List<AccountRestrictions1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13.mmObject();
 			isDerived = false;
@@ -1756,7 +2017,17 @@ public class InvestmentAccountOwnershipInformation13 {
 			nextVersions_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation15.mmAdditionalInformation);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AccountRestrictions1.mmObject();
+			type_lazy = () -> AccountRestrictions1.mmObject();
+		}
+
+		@Override
+		public List<AccountRestrictions1> getValue(InvestmentAccountOwnershipInformation13 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountOwnershipInformation13 obj, List<AccountRestrictions1> value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 
@@ -1811,7 +2082,7 @@ public class InvestmentAccountOwnershipInformation13 {
 		return modifiedInvestorProfileValidation == null ? modifiedInvestorProfileValidation = new ArrayList<>() : modifiedInvestorProfileValidation;
 	}
 
-	public InvestmentAccountOwnershipInformation13 setModifiedInvestorProfileValidation(List<com.tools20022.repository.msg.ModificationScope27> modifiedInvestorProfileValidation) {
+	public InvestmentAccountOwnershipInformation13 setModifiedInvestorProfileValidation(List<ModificationScope27> modifiedInvestorProfileValidation) {
 		this.modifiedInvestorProfileValidation = Objects.requireNonNull(modifiedInvestorProfileValidation);
 		return this;
 	}
@@ -1856,7 +2127,7 @@ public class InvestmentAccountOwnershipInformation13 {
 		return miFIDClassification == null ? Optional.empty() : Optional.of(miFIDClassification);
 	}
 
-	public InvestmentAccountOwnershipInformation13 setMiFIDClassification(com.tools20022.repository.msg.MiFIDClassification1 miFIDClassification) {
+	public InvestmentAccountOwnershipInformation13 setMiFIDClassification(MiFIDClassification1 miFIDClassification) {
 		this.miFIDClassification = miFIDClassification;
 		return this;
 	}
@@ -1865,7 +2136,7 @@ public class InvestmentAccountOwnershipInformation13 {
 		return notification == null ? notification = new ArrayList<>() : notification;
 	}
 
-	public InvestmentAccountOwnershipInformation13 setNotification(List<com.tools20022.repository.msg.Notification2> notification) {
+	public InvestmentAccountOwnershipInformation13 setNotification(List<Notification2> notification) {
 		this.notification = Objects.requireNonNull(notification);
 		return this;
 	}
@@ -1883,7 +2154,7 @@ public class InvestmentAccountOwnershipInformation13 {
 		return fATCAStatus == null ? fATCAStatus = new ArrayList<>() : fATCAStatus;
 	}
 
-	public InvestmentAccountOwnershipInformation13 setFATCAStatus(List<com.tools20022.repository.msg.FATCAStatus2> fATCAStatus) {
+	public InvestmentAccountOwnershipInformation13 setFATCAStatus(List<FATCAStatus2> fATCAStatus) {
 		this.fATCAStatus = Objects.requireNonNull(fATCAStatus);
 		return this;
 	}
@@ -1892,7 +2163,7 @@ public class InvestmentAccountOwnershipInformation13 {
 		return otherIdentification == null ? otherIdentification = new ArrayList<>() : otherIdentification;
 	}
 
-	public InvestmentAccountOwnershipInformation13 setOtherIdentification(List<com.tools20022.repository.msg.GenericIdentification82> otherIdentification) {
+	public InvestmentAccountOwnershipInformation13 setOtherIdentification(List<GenericIdentification82> otherIdentification) {
 		this.otherIdentification = Objects.requireNonNull(otherIdentification);
 		return this;
 	}
@@ -1910,7 +2181,7 @@ public class InvestmentAccountOwnershipInformation13 {
 		return taxReporting == null ? taxReporting = new ArrayList<>() : taxReporting;
 	}
 
-	public InvestmentAccountOwnershipInformation13 setTaxReporting(List<com.tools20022.repository.msg.TaxReporting1> taxReporting) {
+	public InvestmentAccountOwnershipInformation13 setTaxReporting(List<TaxReporting1> taxReporting) {
 		this.taxReporting = Objects.requireNonNull(taxReporting);
 		return this;
 	}
@@ -1937,7 +2208,7 @@ public class InvestmentAccountOwnershipInformation13 {
 		return countryAndResidentialStatus == null ? Optional.empty() : Optional.of(countryAndResidentialStatus);
 	}
 
-	public InvestmentAccountOwnershipInformation13 setCountryAndResidentialStatus(com.tools20022.repository.msg.CountryAndResidentialStatusType2 countryAndResidentialStatus) {
+	public InvestmentAccountOwnershipInformation13 setCountryAndResidentialStatus(CountryAndResidentialStatusType2 countryAndResidentialStatus) {
 		this.countryAndResidentialStatus = countryAndResidentialStatus;
 		return this;
 	}
@@ -1946,7 +2217,7 @@ public class InvestmentAccountOwnershipInformation13 {
 		return monetaryWealth == null ? Optional.empty() : Optional.of(monetaryWealth);
 	}
 
-	public InvestmentAccountOwnershipInformation13 setMonetaryWealth(com.tools20022.repository.msg.DateAndAmount1 monetaryWealth) {
+	public InvestmentAccountOwnershipInformation13 setMonetaryWealth(DateAndAmount1 monetaryWealth) {
 		this.monetaryWealth = monetaryWealth;
 		return this;
 	}
@@ -1955,7 +2226,7 @@ public class InvestmentAccountOwnershipInformation13 {
 		return equityValue == null ? Optional.empty() : Optional.of(equityValue);
 	}
 
-	public InvestmentAccountOwnershipInformation13 setEquityValue(com.tools20022.repository.msg.DateAndAmount1 equityValue) {
+	public InvestmentAccountOwnershipInformation13 setEquityValue(DateAndAmount1 equityValue) {
 		this.equityValue = equityValue;
 		return this;
 	}
@@ -1964,7 +2235,7 @@ public class InvestmentAccountOwnershipInformation13 {
 		return workingCapital == null ? Optional.empty() : Optional.of(workingCapital);
 	}
 
-	public InvestmentAccountOwnershipInformation13 setWorkingCapital(com.tools20022.repository.msg.DateAndAmount1 workingCapital) {
+	public InvestmentAccountOwnershipInformation13 setWorkingCapital(DateAndAmount1 workingCapital) {
 		this.workingCapital = workingCapital;
 		return this;
 	}
@@ -1991,7 +2262,7 @@ public class InvestmentAccountOwnershipInformation13 {
 		return primaryCommunicationAddress == null ? primaryCommunicationAddress = new ArrayList<>() : primaryCommunicationAddress;
 	}
 
-	public InvestmentAccountOwnershipInformation13 setPrimaryCommunicationAddress(List<com.tools20022.repository.msg.CommunicationAddress6> primaryCommunicationAddress) {
+	public InvestmentAccountOwnershipInformation13 setPrimaryCommunicationAddress(List<CommunicationAddress6> primaryCommunicationAddress) {
 		this.primaryCommunicationAddress = Objects.requireNonNull(primaryCommunicationAddress);
 		return this;
 	}
@@ -2000,7 +2271,7 @@ public class InvestmentAccountOwnershipInformation13 {
 		return secondaryCommunicationAddress == null ? secondaryCommunicationAddress = new ArrayList<>() : secondaryCommunicationAddress;
 	}
 
-	public InvestmentAccountOwnershipInformation13 setSecondaryCommunicationAddress(List<com.tools20022.repository.msg.CommunicationAddress6> secondaryCommunicationAddress) {
+	public InvestmentAccountOwnershipInformation13 setSecondaryCommunicationAddress(List<CommunicationAddress6> secondaryCommunicationAddress) {
 		this.secondaryCommunicationAddress = Objects.requireNonNull(secondaryCommunicationAddress);
 		return this;
 	}
@@ -2009,7 +2280,7 @@ public class InvestmentAccountOwnershipInformation13 {
 		return additionalRegulatoryInformation == null ? Optional.empty() : Optional.of(additionalRegulatoryInformation);
 	}
 
-	public InvestmentAccountOwnershipInformation13 setAdditionalRegulatoryInformation(com.tools20022.repository.msg.RegulatoryInformation1 additionalRegulatoryInformation) {
+	public InvestmentAccountOwnershipInformation13 setAdditionalRegulatoryInformation(RegulatoryInformation1 additionalRegulatoryInformation) {
 		this.additionalRegulatoryInformation = additionalRegulatoryInformation;
 		return this;
 	}
@@ -2027,7 +2298,7 @@ public class InvestmentAccountOwnershipInformation13 {
 		return additionalInformation == null ? additionalInformation = new ArrayList<>() : additionalInformation;
 	}
 
-	public InvestmentAccountOwnershipInformation13 setAdditionalInformation(List<com.tools20022.repository.msg.AccountRestrictions1> additionalInformation) {
+	public InvestmentAccountOwnershipInformation13 setAdditionalInformation(List<AccountRestrictions1> additionalInformation) {
 		this.additionalInformation = Objects.requireNonNull(additionalInformation);
 		return this;
 	}

@@ -25,6 +25,8 @@ import com.tools20022.repository.datatype.Min6Max8Text;
 import com.tools20022.repository.entity.CardPaymentValidation;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification90;
+import com.tools20022.repository.msg.ResponseType5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -122,7 +124,7 @@ public class AuthorisationResult11 {
 	 * AuthorisationResult5.mmAuthorisationEntity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAuthorisationEntity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AuthorisationResult11, Optional<GenericIdentification90>> mmAuthorisationEntity = new MMMessageAssociationEnd<AuthorisationResult11, Optional<GenericIdentification90>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AuthorisationResult11.mmObject();
@@ -135,7 +137,17 @@ public class AuthorisationResult11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification90.mmObject();
+			type_lazy = () -> GenericIdentification90.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification90> getValue(AuthorisationResult11 obj) {
+			return obj.getAuthorisationEntity();
+		}
+
+		@Override
+		public void setValue(AuthorisationResult11 obj, Optional<GenericIdentification90> value) {
+			obj.setAuthorisationEntity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RspnToAuthstn", required = true)
@@ -176,7 +188,7 @@ public class AuthorisationResult11 {
 	 * AuthorisationResult5.mmResponseToAuthorisation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmResponseToAuthorisation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AuthorisationResult11, ResponseType5> mmResponseToAuthorisation = new MMMessageAssociationEnd<AuthorisationResult11, ResponseType5>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentValidation.mmResponse;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AuthorisationResult11.mmObject();
@@ -189,7 +201,17 @@ public class AuthorisationResult11 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ResponseType5.mmObject();
+			type_lazy = () -> ResponseType5.mmObject();
+		}
+
+		@Override
+		public ResponseType5 getValue(AuthorisationResult11 obj) {
+			return obj.getResponseToAuthorisation();
+		}
+
+		@Override
+		public void setValue(AuthorisationResult11 obj, ResponseType5 value) {
+			obj.setResponseToAuthorisation(value);
 		}
 	};
 	@XmlElement(name = "AuthstnCd")
@@ -232,7 +254,7 @@ public class AuthorisationResult11 {
 	 * AuthorisationResult5.mmAuthorisationCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAuthorisationCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AuthorisationResult11, Optional<Min6Max8Text>> mmAuthorisationCode = new MMMessageAttribute<AuthorisationResult11, Optional<Min6Max8Text>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentValidation.mmAuthorisationCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AuthorisationResult11.mmObject();
@@ -245,6 +267,16 @@ public class AuthorisationResult11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Min6Max8Text.mmObject();
+		}
+
+		@Override
+		public Optional<Min6Max8Text> getValue(AuthorisationResult11 obj) {
+			return obj.getAuthorisationCode();
+		}
+
+		@Override
+		public void setValue(AuthorisationResult11 obj, Optional<Min6Max8Text> value) {
+			obj.setAuthorisationCode(value.orElse(null));
 		}
 	};
 
@@ -268,7 +300,7 @@ public class AuthorisationResult11 {
 		return authorisationEntity == null ? Optional.empty() : Optional.of(authorisationEntity);
 	}
 
-	public AuthorisationResult11 setAuthorisationEntity(com.tools20022.repository.msg.GenericIdentification90 authorisationEntity) {
+	public AuthorisationResult11 setAuthorisationEntity(GenericIdentification90 authorisationEntity) {
 		this.authorisationEntity = authorisationEntity;
 		return this;
 	}
@@ -277,7 +309,7 @@ public class AuthorisationResult11 {
 		return responseToAuthorisation;
 	}
 
-	public AuthorisationResult11 setResponseToAuthorisation(com.tools20022.repository.msg.ResponseType5 responseToAuthorisation) {
+	public AuthorisationResult11 setResponseToAuthorisation(ResponseType5 responseToAuthorisation) {
 		this.responseToAuthorisation = Objects.requireNonNull(responseToAuthorisation);
 		return this;
 	}

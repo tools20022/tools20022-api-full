@@ -101,7 +101,7 @@ public class StatementType6Choice {
 	 * definition} = "Statement type expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementType6Choice, SecuritiesStatementType1Code> mmCode = new MMMessageAttribute<StatementType6Choice, SecuritiesStatementType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.StatementType6Choice.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class StatementType6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesStatementType1Code.mmObject();
+		}
+
+		@Override
+		public SecuritiesStatementType1Code getValue(StatementType6Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(StatementType6Choice obj, SecuritiesStatementType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -148,7 +158,7 @@ public class StatementType6Choice {
 	 * definition} = "Statement type expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementType6Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<StatementType6Choice, GenericIdentification47>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.StatementType6Choice.mmObject();
 			isDerived = false;
@@ -160,6 +170,16 @@ public class StatementType6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(StatementType6Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(StatementType6Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

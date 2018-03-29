@@ -24,6 +24,8 @@ import com.tools20022.repository.datatype.ActiveCurrencyAnd13DecimalAmount;
 import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.entity.Charges;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CalculationBasis1;
+import com.tools20022.repository.msg.ChargeType2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -104,7 +106,7 @@ public class Charge9 {
 	 * definition} = "Type of service for which a charge is asked or paid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Charge9, ChargeType2> mmType = new MMMessageAttribute<Charge9, ChargeType2>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Charge9.mmObject();
@@ -115,7 +117,17 @@ public class Charge9 {
 			definition = "Type of service for which a charge is asked or paid.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.ChargeType2.mmObject();
+			complexType_lazy = () -> ChargeType2.mmObject();
+		}
+
+		@Override
+		public ChargeType2 getValue(Charge9 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Charge9 obj, ChargeType2 value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -152,7 +164,7 @@ public class Charge9 {
 	 * definition} = "Amount of money asked or paid for the charge."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Charge9, ActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<Charge9, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Charge9.mmObject();
@@ -164,6 +176,16 @@ public class Charge9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(Charge9 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Charge9 obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "ClctnBsis")
@@ -200,7 +222,7 @@ public class Charge9 {
 	 * definition} = "Calculation basis for the charge or fee."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCalculationBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Charge9, Optional<CalculationBasis1>> mmCalculationBasis = new MMMessageAttribute<Charge9, Optional<CalculationBasis1>>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmCalculationBasis;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Charge9.mmObject();
@@ -211,7 +233,17 @@ public class Charge9 {
 			definition = "Calculation basis for the charge or fee.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.CalculationBasis1.mmObject();
+			complexType_lazy = () -> CalculationBasis1.mmObject();
+		}
+
+		@Override
+		public Optional<CalculationBasis1> getValue(Charge9 obj) {
+			return obj.getCalculationBasis();
+		}
+
+		@Override
+		public void setValue(Charge9 obj, Optional<CalculationBasis1> value) {
+			obj.setCalculationBasis(value.orElse(null));
 		}
 	};
 
@@ -233,7 +265,7 @@ public class Charge9 {
 		return type;
 	}
 
-	public Charge9 setType(com.tools20022.repository.msg.ChargeType2 type) {
+	public Charge9 setType(ChargeType2 type) {
 		this.type = Objects.requireNonNull(type);
 		return this;
 	}
@@ -251,7 +283,7 @@ public class Charge9 {
 		return calculationBasis == null ? Optional.empty() : Optional.of(calculationBasis);
 	}
 
-	public Charge9 setCalculationBasis(com.tools20022.repository.msg.CalculationBasis1 calculationBasis) {
+	public Charge9 setCalculationBasis(CalculationBasis1 calculationBasis) {
 		this.calculationBasis = calculationBasis;
 		return this;
 	}

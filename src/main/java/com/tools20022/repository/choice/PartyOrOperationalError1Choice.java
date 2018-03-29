@@ -115,7 +115,7 @@ public class PartyOrOperationalError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPartyReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyOrOperationalError1Choice, List<PartyReport1>> mmPartyReport = new MMMessageAssociationEnd<PartyOrOperationalError1Choice, List<PartyReport1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyOrOperationalError1Choice.mmObject();
 			isDerived = false;
@@ -127,6 +127,16 @@ public class PartyOrOperationalError1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyReport1.mmObject();
+		}
+
+		@Override
+		public List<PartyReport1> getValue(PartyOrOperationalError1Choice obj) {
+			return obj.getPartyReport();
+		}
+
+		@Override
+		public void setValue(PartyOrOperationalError1Choice obj, List<PartyReport1> value) {
+			obj.setPartyReport(value);
 		}
 	};
 	@XmlElement(name = "OprlErr", required = true)
@@ -165,7 +175,7 @@ public class PartyOrOperationalError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyOrOperationalError1Choice, List<ErrorHandling3>> mmOperationalError = new MMMessageAssociationEnd<PartyOrOperationalError1Choice, List<ErrorHandling3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyOrOperationalError1Choice.mmObject();
 			isDerived = false;
@@ -177,6 +187,16 @@ public class PartyOrOperationalError1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling3> getValue(PartyOrOperationalError1Choice obj) {
+			return obj.getOperationalError();
+		}
+
+		@Override
+		public void setValue(PartyOrOperationalError1Choice obj, List<ErrorHandling3> value) {
+			obj.setOperationalError(value);
 		}
 	};
 

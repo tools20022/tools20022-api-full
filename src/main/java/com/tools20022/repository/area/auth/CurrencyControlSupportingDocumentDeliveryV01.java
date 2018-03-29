@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.CurrencyControlHeader3;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msg.SupportingDocument1;
 import com.tools20022.repository.msgset.CrossBorderTransactionsCurrencyControlReportingISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -120,7 +119,7 @@ public class CurrencyControlSupportingDocumentDeliveryV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CurrencyControlSupportingDocumentDeliveryV01, CurrencyControlHeader3> mmGroupHeader = new MMMessageBuildingBlock<CurrencyControlSupportingDocumentDeliveryV01, CurrencyControlHeader3>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,12 +130,14 @@ public class CurrencyControlSupportingDocumentDeliveryV01 {
 			complexType_lazy = () -> CurrencyControlHeader3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CurrencyControlSupportingDocumentDeliveryV01.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyControlHeader3 getValue(CurrencyControlSupportingDocumentDeliveryV01 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(CurrencyControlSupportingDocumentDeliveryV01 obj, CurrencyControlHeader3 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "SpprtgDoc", required = true)
@@ -166,7 +167,7 @@ public class CurrencyControlSupportingDocumentDeliveryV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupportingDocument = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CurrencyControlSupportingDocumentDeliveryV01, List<SupportingDocument1>> mmSupportingDocument = new MMMessageBuildingBlock<CurrencyControlSupportingDocumentDeliveryV01, List<SupportingDocument1>>() {
 		{
 			xmlTag = "SpprtgDoc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,12 +177,14 @@ public class CurrencyControlSupportingDocumentDeliveryV01 {
 			complexType_lazy = () -> SupportingDocument1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CurrencyControlSupportingDocumentDeliveryV01.class.getMethod("getSupportingDocument", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupportingDocument1> getValue(CurrencyControlSupportingDocumentDeliveryV01 obj) {
+			return obj.getSupportingDocument();
+		}
+
+		@Override
+		public void setValue(CurrencyControlSupportingDocumentDeliveryV01 obj, List<SupportingDocument1> value) {
+			obj.setSupportingDocument(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -211,7 +214,7 @@ public class CurrencyControlSupportingDocumentDeliveryV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CurrencyControlSupportingDocumentDeliveryV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<CurrencyControlSupportingDocumentDeliveryV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -221,12 +224,14 @@ public class CurrencyControlSupportingDocumentDeliveryV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CurrencyControlSupportingDocumentDeliveryV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(CurrencyControlSupportingDocumentDeliveryV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(CurrencyControlSupportingDocumentDeliveryV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

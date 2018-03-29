@@ -27,6 +27,8 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.entity.ReconciliationTransaction;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TransactionIdentifier1;
+import com.tools20022.repository.msg.TransactionTotals3;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -141,7 +143,7 @@ public class TransactionReconciliation3 {
 	 * TransactionReconciliation2.mmClosePeriod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClosePeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionReconciliation3, Optional<TrueFalseIndicator>> mmClosePeriod = new MMMessageAttribute<TransactionReconciliation3, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReconciliation3.mmObject();
 			isDerived = false;
@@ -154,6 +156,16 @@ public class TransactionReconciliation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(TransactionReconciliation3 obj) {
+			return obj.getClosePeriod();
+		}
+
+		@Override
+		public void setValue(TransactionReconciliation3 obj, Optional<TrueFalseIndicator> value) {
+			obj.setClosePeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcncltnTxId", required = true)
@@ -202,7 +214,7 @@ public class TransactionReconciliation3 {
 	 * TransactionReconciliation2.mmReconciliationTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReconciliationTransactionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionReconciliation3, TransactionIdentifier1> mmReconciliationTransactionIdentification = new MMMessageAssociationEnd<TransactionReconciliation3, TransactionIdentifier1>() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmCardPaymentAcquiring;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReconciliation3.mmObject();
@@ -216,7 +228,17 @@ public class TransactionReconciliation3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransactionIdentifier1.mmObject();
+			type_lazy = () -> TransactionIdentifier1.mmObject();
+		}
+
+		@Override
+		public TransactionIdentifier1 getValue(TransactionReconciliation3 obj) {
+			return obj.getReconciliationTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(TransactionReconciliation3 obj, TransactionIdentifier1 value) {
+			obj.setReconciliationTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "RcncltnId", required = true)
@@ -268,7 +290,7 @@ public class TransactionReconciliation3 {
 	 * TransactionReconciliation2.mmReconciliationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReconciliationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionReconciliation3, Max35Text> mmReconciliationIdentification = new MMMessageAttribute<TransactionReconciliation3, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> ReconciliationTransaction.mmReconciliationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReconciliation3.mmObject();
@@ -283,9 +305,19 @@ public class TransactionReconciliation3 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Max35Text getValue(TransactionReconciliation3 obj) {
+			return obj.getReconciliationIdentification();
+		}
+
+		@Override
+		public void setValue(TransactionReconciliation3 obj, Max35Text value) {
+			obj.setReconciliationIdentification(value);
+		}
 	};
 	@XmlElement(name = "TxTtls")
-	protected List<com.tools20022.repository.msg.TransactionTotals3> transactionTotals;
+	protected List<TransactionTotals3> transactionTotals;
 	/**
 	 * 
 	 <p>
@@ -327,7 +359,7 @@ public class TransactionReconciliation3 {
 	 * TransactionReconciliation2.mmTransactionTotals}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionTotals = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionReconciliation3, List<TransactionTotals3>> mmTransactionTotals = new MMMessageAssociationEnd<TransactionReconciliation3, List<TransactionTotals3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReconciliation3.mmObject();
 			isDerived = false;
@@ -339,7 +371,17 @@ public class TransactionReconciliation3 {
 			previousVersion_lazy = () -> TransactionReconciliation2.mmTransactionTotals;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransactionTotals3.mmObject();
+			type_lazy = () -> TransactionTotals3.mmObject();
+		}
+
+		@Override
+		public List<TransactionTotals3> getValue(TransactionReconciliation3 obj) {
+			return obj.getTransactionTotals();
+		}
+
+		@Override
+		public void setValue(TransactionReconciliation3 obj, List<TransactionTotals3> value) {
+			obj.setTransactionTotals(value);
 		}
 	};
 	@XmlElement(name = "AddtlTxData")
@@ -385,7 +427,7 @@ public class TransactionReconciliation3 {
 	 * TransactionReconciliation2.mmAdditionalTransactionData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalTransactionData = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionReconciliation3, Optional<Max70Text>> mmAdditionalTransactionData = new MMMessageAttribute<TransactionReconciliation3, Optional<Max70Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReconciliation3.mmObject();
 			isDerived = false;
@@ -398,6 +440,16 @@ public class TransactionReconciliation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(TransactionReconciliation3 obj) {
+			return obj.getAdditionalTransactionData();
+		}
+
+		@Override
+		public void setValue(TransactionReconciliation3 obj, Optional<Max70Text> value) {
+			obj.setAdditionalTransactionData(value.orElse(null));
 		}
 	};
 
@@ -432,7 +484,7 @@ public class TransactionReconciliation3 {
 		return reconciliationTransactionIdentification;
 	}
 
-	public TransactionReconciliation3 setReconciliationTransactionIdentification(com.tools20022.repository.msg.TransactionIdentifier1 reconciliationTransactionIdentification) {
+	public TransactionReconciliation3 setReconciliationTransactionIdentification(TransactionIdentifier1 reconciliationTransactionIdentification) {
 		this.reconciliationTransactionIdentification = Objects.requireNonNull(reconciliationTransactionIdentification);
 		return this;
 	}
@@ -450,7 +502,7 @@ public class TransactionReconciliation3 {
 		return transactionTotals == null ? transactionTotals = new ArrayList<>() : transactionTotals;
 	}
 
-	public TransactionReconciliation3 setTransactionTotals(List<com.tools20022.repository.msg.TransactionTotals3> transactionTotals) {
+	public TransactionReconciliation3 setTransactionTotals(List<TransactionTotals3> transactionTotals) {
 		this.transactionTotals = Objects.requireNonNull(transactionTotals);
 		return this;
 	}

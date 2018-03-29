@@ -98,7 +98,7 @@ public class OpeningBalance3Choice {
 	 * "Opening balance of the financial instrument in the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFirstOpeningBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OpeningBalance3Choice, FinancialInstrumentQuantity1> mmFirstOpeningBalance = new MMMessageAttribute<OpeningBalance3Choice, FinancialInstrumentQuantity1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.OpeningBalance3Choice.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class OpeningBalance3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity1 getValue(OpeningBalance3Choice obj) {
+			return obj.getFirstOpeningBalance();
+		}
+
+		@Override
+		public void setValue(OpeningBalance3Choice obj, FinancialInstrumentQuantity1 value) {
+			obj.setFirstOpeningBalance(value);
 		}
 	};
 	@XmlElement(name = "IntrmyOpngBal", required = true)
@@ -143,7 +153,7 @@ public class OpeningBalance3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIntermediaryOpeningBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OpeningBalance3Choice, FinancialInstrumentQuantity1> mmIntermediaryOpeningBalance = new MMMessageAttribute<OpeningBalance3Choice, FinancialInstrumentQuantity1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.OpeningBalance3Choice.mmObject();
 			isDerived = false;
@@ -154,6 +164,16 @@ public class OpeningBalance3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity1 getValue(OpeningBalance3Choice obj) {
+			return obj.getIntermediaryOpeningBalance();
+		}
+
+		@Override
+		public void setValue(OpeningBalance3Choice obj, FinancialInstrumentQuantity1 value) {
+			obj.setIntermediaryOpeningBalance(value);
 		}
 	};
 

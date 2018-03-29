@@ -111,7 +111,7 @@ public class TransactionStatus2 {
 	 * "Identifies the status of the transaction by means of a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionStatus2, BaselineStatus1Code> mmStatus = new MMMessageAttribute<TransactionStatus2, BaselineStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> BaselineStatus.mmStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionStatus2.mmObject();
@@ -123,6 +123,16 @@ public class TransactionStatus2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaselineStatus1Code.mmObject();
+		}
+
+		@Override
+		public BaselineStatus1Code getValue(TransactionStatus2 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(TransactionStatus2 obj, BaselineStatus1Code value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "ChngDtTm", required = true)
@@ -159,7 +169,7 @@ public class TransactionStatus2 {
 	 * definition} = "Date and time at which the current status will change."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmChangeDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionStatus2, ISODateTime> mmChangeDateTime = new MMMessageAttribute<TransactionStatus2, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionStatus2.mmObject();
@@ -171,6 +181,16 @@ public class TransactionStatus2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(TransactionStatus2 obj) {
+			return obj.getChangeDateTime();
+		}
+
+		@Override
+		public void setValue(TransactionStatus2 obj, ISODateTime value) {
+			obj.setChangeDateTime(value);
 		}
 	};
 

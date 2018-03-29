@@ -137,7 +137,7 @@ public class Quantity4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalAndCurrentFaceAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Quantity4Choice, OriginalAndCurrentQuantities2> mmOriginalAndCurrentFaceAmount = new MMMessageAssociationEnd<Quantity4Choice, OriginalAndCurrentQuantities2>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmFaceAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity4Choice.mmObject();
@@ -151,6 +151,16 @@ public class Quantity4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OriginalAndCurrentQuantities2.mmObject();
+		}
+
+		@Override
+		public OriginalAndCurrentQuantities2 getValue(Quantity4Choice obj) {
+			return obj.getOriginalAndCurrentFaceAmount();
+		}
+
+		@Override
+		public void setValue(Quantity4Choice obj, OriginalAndCurrentQuantities2 value) {
+			obj.setOriginalAndCurrentFaceAmount(value);
 		}
 	};
 	@XmlElement(name = "SgndQty", required = true)
@@ -189,7 +199,7 @@ public class Quantity4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSignedQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Quantity4Choice, SignedQuantityFormat2> mmSignedQuantity = new MMMessageAssociationEnd<Quantity4Choice, SignedQuantityFormat2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity4Choice.mmObject();
 			isDerived = false;
@@ -202,6 +212,16 @@ public class Quantity4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SignedQuantityFormat2.mmObject();
+		}
+
+		@Override
+		public SignedQuantityFormat2 getValue(Quantity4Choice obj) {
+			return obj.getSignedQuantity();
+		}
+
+		@Override
+		public void setValue(Quantity4Choice obj, SignedQuantityFormat2 value) {
+			obj.setSignedQuantity(value);
 		}
 	};
 

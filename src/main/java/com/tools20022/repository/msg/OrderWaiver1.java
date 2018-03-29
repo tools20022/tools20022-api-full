@@ -124,7 +124,7 @@ public class OrderWaiver1 {
 	 * AdditionalInformation2.mmOrderWaiverReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOrderWaiverReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OrderWaiver1, List<OrderWaiverReason3Choice>> mmOrderWaiverReason = new MMMessageAssociationEnd<OrderWaiver1, List<OrderWaiverReason3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderWaiverReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderWaiver1.mmObject();
@@ -137,6 +137,16 @@ public class OrderWaiver1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> OrderWaiverReason3Choice.mmObject();
+		}
+
+		@Override
+		public List<OrderWaiverReason3Choice> getValue(OrderWaiver1 obj) {
+			return obj.getOrderWaiverReason();
+		}
+
+		@Override
+		public void setValue(OrderWaiver1 obj, List<OrderWaiverReason3Choice> value) {
+			obj.setOrderWaiverReason(value);
 		}
 	};
 	@XmlElement(name = "InfVal")
@@ -172,7 +182,7 @@ public class OrderWaiver1 {
 	 * AdditionalInformation2.mmInformationValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInformationValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderWaiver1, Optional<Max350Text>> mmInformationValue = new MMMessageAttribute<OrderWaiver1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderWaiver1.mmObject();
 			isDerived = false;
@@ -184,6 +194,16 @@ public class OrderWaiver1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(OrderWaiver1 obj) {
+			return obj.getInformationValue();
+		}
+
+		@Override
+		public void setValue(OrderWaiver1 obj, Optional<Max350Text> value) {
+			obj.setInformationValue(value.orElse(null));
 		}
 	};
 

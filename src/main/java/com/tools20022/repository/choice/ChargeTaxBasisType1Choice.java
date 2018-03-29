@@ -126,7 +126,7 @@ public class ChargeTaxBasisType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ChargeTaxBasisType1Choice, ChargeTaxBasis1Code> mmCode = new MMMessageAttribute<ChargeTaxBasisType1Choice, ChargeTaxBasis1Code>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmBasis;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ChargeTaxBasisType1Choice.mmObject();
@@ -140,6 +140,16 @@ public class ChargeTaxBasisType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ChargeTaxBasis1Code.mmObject();
+		}
+
+		@Override
+		public ChargeTaxBasis1Code getValue(ChargeTaxBasisType1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ChargeTaxBasisType1Choice obj, ChargeTaxBasis1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -188,7 +198,7 @@ public class ChargeTaxBasisType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ChargeTaxBasisType1Choice, GenericIdentification38> mmProprietary = new MMMessageAttribute<ChargeTaxBasisType1Choice, GenericIdentification38>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmBasis;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ChargeTaxBasisType1Choice.mmObject();
@@ -202,6 +212,16 @@ public class ChargeTaxBasisType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification38.mmObject();
+		}
+
+		@Override
+		public GenericIdentification38 getValue(ChargeTaxBasisType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ChargeTaxBasisType1Choice obj, GenericIdentification38 value) {
+			obj.setProprietary(value);
 		}
 	};
 

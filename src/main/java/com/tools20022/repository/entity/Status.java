@@ -23,9 +23,11 @@ import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.entity.DateTimePeriod;
+import com.tools20022.repository.entity.InvestigationPartyRole;
+import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -651,7 +653,7 @@ import java.util.Objects;
 public class Status {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
-	protected List<com.tools20022.repository.entity.StatusReason> statusReason;
+	protected List<StatusReason> statusReason;
 	/**
 	 * 
 	 <p>
@@ -1182,7 +1184,7 @@ public class Status {
 	 * definition} = "Specifies the reasons for the status."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmStatusReason = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Status, List<StatusReason>> mmStatusReason = new MMBusinessAssociationEnd<Status, List<StatusReason>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Blocked1.mmReason, InstructionStatusSearch3.mmProprietaryStatusReason, PaymentStatusReasonCode3Choice.mmProprietaryRejectionReason, PaymentStatus1.mmReason,
 					ProprietaryStatusAndReason1.mmProprietaryReason, ProprietaryStatusAndReason2.mmProprietaryReason, DeliveryReturn1Choice.mmCode, DeliveryReturn1Choice.mmProprietary, DeliveryReturn2Choice.mmCode,
@@ -1228,9 +1230,19 @@ public class Status {
 			name = "StatusReason";
 			definition = "Specifies the reasons for the status.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.StatusReason.mmStatus;
+			opposite_lazy = () -> StatusReason.mmStatus;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.StatusReason.mmObject();
+			type_lazy = () -> StatusReason.mmObject();
+		}
+
+		@Override
+		public List<StatusReason> getValue(Status obj) {
+			return obj.getStatusReason();
+		}
+
+		@Override
+		public void setValue(Status obj, List<StatusReason> value) {
+			obj.setStatusReason(value);
 		}
 	};
 	protected ISODateTime statusDateTime;
@@ -1404,7 +1416,7 @@ public class Status {
 	 * definition} = "Date and time at which the status was assigned."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmStatusDateTime = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Status, ISODateTime> mmStatusDateTime = new MMBusinessAttribute<Status, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentInstructionReference2Details.mmStatusValueTime, InstructionStatusSearch2.mmPaymentInstructionStatusDateTime, InstructionStatusSearch3.mmPaymentInstructionStatusDateTime,
 					PaymentStatusDetails1.mmPaymentInstructionStatusDateTime, PaymentStatusDetails3.mmPaymentInstructionStatusDateTime, PaymentStatusDetails4.mmPaymentInstructionStatusDateTime, PaymentStatus1.mmDateTime,
@@ -1426,12 +1438,14 @@ public class Status {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Status.class.getMethod("getStatusDateTime", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(Status obj) {
+			return obj.getStatusDateTime();
+		}
+
+		@Override
+		public void setValue(Status obj, ISODateTime value) {
+			obj.setStatusDateTime(value);
 		}
 	};
 	protected DateTimePeriod validityTime;
@@ -1501,7 +1515,7 @@ public class Status {
 	 * definition} = "Period of time during which the status is valid."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmValidityTime = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Status, DateTimePeriod> mmValidityTime = new MMBusinessAssociationEnd<Status, DateTimePeriod>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SystemStatusDetails1.mmValidityTime, SystemStatus1.mmValidityTime, IntraPositionQueryStatus1.mmDatePeriod, SystemStatus2.mmValidityTime, IntraPositionQueryStatus2.mmDatePeriod,
 					SystemStatus3.mmValidityTime);
@@ -1519,9 +1533,19 @@ public class Status {
 			definition = "Period of time during which the status is valid.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmStatus;
+			opposite_lazy = () -> DateTimePeriod.mmStatus;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
+			type_lazy = () -> DateTimePeriod.mmObject();
+		}
+
+		@Override
+		public DateTimePeriod getValue(Status obj) {
+			return obj.getValidityTime();
+		}
+
+		@Override
+		public void setValue(Status obj, DateTimePeriod value) {
+			obj.setValidityTime(value);
 		}
 	};
 	protected Max350Text statusDescription;
@@ -1658,7 +1682,7 @@ public class Status {
 	 * definition} = "Specifies the state or the condition."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmStatusDescription = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Status, Max350Text> mmStatusDescription = new MMBusinessAttribute<Status, Max350Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(StatusReasonInformation9.mmAdditionalInformation, UndertakingTermination3.mmAdditionalInformation, CancellationRight1.mmAdditionalInformation,
 					CancellationProcessingStatus1.mmAdditionalInformation, CorporateActionInstructionProcessingStatus1.mmAdditionalInformation, CorporateActionInstructionRejectionStatus1.mmAdditionalInformation,
@@ -1681,12 +1705,14 @@ public class Status {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Status.class.getMethod("getStatusDescription", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max350Text getValue(Status obj) {
+			return obj.getStatusDescription();
+		}
+
+		@Override
+		public void setValue(Status obj, Max350Text value) {
+			obj.setStatusDescription(value);
 		}
 	};
 	protected StatusCode instructionProcessingStatus;
@@ -1800,7 +1826,7 @@ public class Status {
 	 * definition} = "Status of the processing of an instruction."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmInstructionProcessingStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Status, StatusCode> mmInstructionProcessingStatus = new MMBusinessAttribute<Status, StatusCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(MeetingInstructionGlobalStatus.mmProcessingStatus, MeetingInstructionStatusDetails.mmProcessingStatus, InstructionProcessingStatus1.mmStatus, InstructionStatus2Choice.mmProcessingStatus,
 					DetailedInstructionStatus1.mmInstructionStatus, InstructionStatus4Choice.mmProcessingStatus, DetailedInstructionStatus8.mmInstructionStatus, InstructionStatus3Choice.mmGlobalInstructionStatus,
@@ -1819,12 +1845,14 @@ public class Status {
 			simpleType_lazy = () -> StatusCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Status.class.getMethod("getInstructionProcessingStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public StatusCode getValue(Status obj) {
+			return obj.getInstructionProcessingStatus();
+		}
+
+		@Override
+		public void setValue(Status obj, StatusCode value) {
+			obj.setInstructionProcessingStatus(value);
 		}
 	};
 	protected InvestigationPartyRole partyRole;
@@ -1862,7 +1890,7 @@ public class Status {
 	 * "Role played by a party in the context of assigning a status."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPartyRole = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Status, InvestigationPartyRole> mmPartyRole = new MMBusinessAssociationEnd<Status, InvestigationPartyRole>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
@@ -1871,9 +1899,19 @@ public class Status {
 			definition = "Role played by a party in the context of assigning a status.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.InvestigationPartyRole.mmStatus;
+			opposite_lazy = () -> InvestigationPartyRole.mmStatus;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.InvestigationPartyRole.mmObject();
+			type_lazy = () -> InvestigationPartyRole.mmObject();
+		}
+
+		@Override
+		public InvestigationPartyRole getValue(Status obj) {
+			return obj.getPartyRole();
+		}
+
+		@Override
+		public void setValue(Status obj, InvestigationPartyRole value) {
+			obj.setPartyRole(value);
 		}
 	};
 	protected SecuritiesSettlementStatusCode settlementStatus;
@@ -2057,7 +2095,7 @@ public class Status {
 	 * definition} = "Status of settlement of a transaction."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSettlementStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Status, SecuritiesSettlementStatusCode> mmSettlementStatus = new MMBusinessAttribute<Status, SecuritiesSettlementStatusCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(StatusTrail2.mmSettlementStatus, StatusTrail3.mmSettlementStatus, StatusAndReason3.mmSettlementStatus, StatusAndReason6.mmSettlementStatus, StatusAndReason12.mmSettlementStatus,
 					StatusAndReason14.mmSettlementStatus, Status2Choice.mmSettlementStatus, Status4Choice.mmSettlementStatus, Status9Choice.mmSettlementStatus, Status11Choice.mmSettlementStatus, SettlementStatus1Choice.mmCode,
@@ -2079,12 +2117,14 @@ public class Status {
 			simpleType_lazy = () -> SecuritiesSettlementStatusCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Status.class.getMethod("getSettlementStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SecuritiesSettlementStatusCode getValue(Status obj) {
+			return obj.getSettlementStatus();
+		}
+
+		@Override
+		public void setValue(Status obj, SecuritiesSettlementStatusCode value) {
+			obj.setSettlementStatus(value);
 		}
 	};
 	protected CancellationProcessingStatusCode cancellationProcessingStatus;
@@ -2172,7 +2212,7 @@ public class Status {
 	 * definition} = "Specifies the status of a cancellation request."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCancellationProcessingStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Status, CancellationProcessingStatusCode> mmCancellationProcessingStatus = new MMBusinessAttribute<Status, CancellationProcessingStatusCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CancellationProcessingStatus1Choice.mmCode, CancellationProcessingStatus1Choice.mmProprietary, Status1Choice.mmCancellationProcessingStatus, Status8Choice.mmCancellationProcessingStatus,
 					CancellationProcessingStatus2Choice.mmCode, CancellationProcessingStatus2Choice.mmProprietary, Status3Choice.mmCancellationProcessingStatus, Status10Choice.mmCancellationProcessingStatus,
@@ -2189,12 +2229,14 @@ public class Status {
 			simpleType_lazy = () -> CancellationProcessingStatusCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Status.class.getMethod("getCancellationProcessingStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CancellationProcessingStatusCode getValue(Status obj) {
+			return obj.getCancellationProcessingStatus();
+		}
+
+		@Override
+		public void setValue(Status obj, CancellationProcessingStatusCode value) {
+			obj.setCancellationProcessingStatus(value);
 		}
 	};
 	protected InstructionProcessingStatusCode transactionProcessingStatus;
@@ -2433,7 +2475,7 @@ public class Status {
 	 * "Status of processing of a transaction at account servicer level."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmTransactionProcessingStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Status, InstructionProcessingStatusCode> mmTransactionProcessingStatus = new MMBusinessAttribute<Status, InstructionProcessingStatusCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Status2Choice.mmInstructionProcessingStatus, Status4Choice.mmInstructionProcessingStatus, Status9Choice.mmInstructionProcessingStatus, Status11Choice.mmInstructionProcessingStatus,
 					InstructionProcessingStatus2Choice.mmCode, InstructionProcessingStatus2Choice.mmProprietary, ReplacementProcessingStatus7Choice.mmAccepted, ReplacementProcessingStatus7Choice.mmCompleted,
@@ -2462,12 +2504,14 @@ public class Status {
 			simpleType_lazy = () -> InstructionProcessingStatusCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Status.class.getMethod("getTransactionProcessingStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public InstructionProcessingStatusCode getValue(Status obj) {
+			return obj.getTransactionProcessingStatus();
+		}
+
+		@Override
+		public void setValue(Status obj, InstructionProcessingStatusCode value) {
+			obj.setTransactionProcessingStatus(value);
 		}
 	};
 	protected ModificationProcessingStatusCode modificationProcessingStatus;
@@ -2513,7 +2557,7 @@ public class Status {
 	 * definition} = "Provides the status of a modification request."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmModificationProcessingStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Status, ModificationProcessingStatusCode> mmModificationProcessingStatus = new MMBusinessAttribute<Status, ModificationProcessingStatusCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(ModificationProcessingStatus1Choice.mmCode, ModificationProcessingStatus1Choice.mmProprietary, ModificationProcessingStatus9Choice.mmCode, ModificationProcessingStatus9Choice.mmProprietary);
 			isDerived = false;
@@ -2526,12 +2570,14 @@ public class Status {
 			simpleType_lazy = () -> ModificationProcessingStatusCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Status.class.getMethod("getModificationProcessingStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ModificationProcessingStatusCode getValue(Status obj) {
+			return obj.getModificationProcessingStatus();
+		}
+
+		@Override
+		public void setValue(Status obj, ModificationProcessingStatusCode value) {
+			obj.setModificationProcessingStatus(value);
 		}
 	};
 
@@ -2542,8 +2588,7 @@ public class Status {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Status";
 				definition = "The status of an instruction, advice or request.";
-				associationDomain_lazy = () -> Arrays
-						.asList(com.tools20022.repository.entity.DateTimePeriod.mmStatus, com.tools20022.repository.entity.StatusReason.mmStatus, com.tools20022.repository.entity.InvestigationPartyRole.mmStatus);
+				associationDomain_lazy = () -> Arrays.asList(DateTimePeriod.mmStatus, StatusReason.mmStatus, InvestigationPartyRole.mmStatus);
 				derivationElement_lazy = () -> Arrays.asList(ProprietaryStatusAndReason1.mmProprietaryStatus, ModificationProcessingStatus2Choice.mmProprietary, StatusTrail2.mmProcessingStatus, StatusTrail2.mmModificationProcessingStatus,
 						StatusTrail2.mmCancellationStatus, StatusTrail2.mmSettled, ProprietaryStatusAndReason2.mmProprietaryStatus, ModificationProcessingStatus3Choice.mmProprietary, StatusTrail3.mmProcessingStatus,
 						StatusTrail3.mmModificationProcessingStatus, StatusTrail3.mmCancellationStatus, StatusTrail3.mmSettled, StatusAndReason12.mmProcessingStatus, StatusAndReason14.mmProcessingStatus, StatusAndReason1.mmStatusAndReason,
@@ -2604,7 +2649,7 @@ public class Status {
 		return statusReason == null ? statusReason = new ArrayList<>() : statusReason;
 	}
 
-	public Status setStatusReason(List<com.tools20022.repository.entity.StatusReason> statusReason) {
+	public Status setStatusReason(List<StatusReason> statusReason) {
 		this.statusReason = Objects.requireNonNull(statusReason);
 		return this;
 	}
@@ -2622,7 +2667,7 @@ public class Status {
 		return validityTime;
 	}
 
-	public Status setValidityTime(com.tools20022.repository.entity.DateTimePeriod validityTime) {
+	public Status setValidityTime(DateTimePeriod validityTime) {
 		this.validityTime = Objects.requireNonNull(validityTime);
 		return this;
 	}
@@ -2649,7 +2694,7 @@ public class Status {
 		return partyRole;
 	}
 
-	public Status setPartyRole(com.tools20022.repository.entity.InvestigationPartyRole partyRole) {
+	public Status setPartyRole(InvestigationPartyRole partyRole) {
 		this.partyRole = Objects.requireNonNull(partyRole);
 		return this;
 	}

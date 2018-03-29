@@ -25,6 +25,9 @@ import com.tools20022.repository.entity.InvestigationResolution;
 import com.tools20022.repository.entity.PaymentInvestigationCaseRejection;
 import com.tools20022.repository.entity.PaymentInvestigationCaseResolution;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Case;
+import com.tools20022.repository.msg.RejectedCancellationJustification;
+import com.tools20022.repository.msg.ReturnInformation1;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -138,7 +141,7 @@ public class InvestigationStatus {
 	 * definition} = "Indicates the status of an investigation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmConfirmation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestigationStatus, InvestigationExecutionConfirmation2Code> mmConfirmation = new MMMessageAttribute<InvestigationStatus, InvestigationExecutionConfirmation2Code>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCaseResolution.mmInvestigationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestigationStatus.mmObject();
@@ -150,6 +153,16 @@ public class InvestigationStatus {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InvestigationExecutionConfirmation2Code.mmObject();
+		}
+
+		@Override
+		public InvestigationExecutionConfirmation2Code getValue(InvestigationStatus obj) {
+			return obj.getConfirmation();
+		}
+
+		@Override
+		public void setValue(InvestigationStatus obj, InvestigationExecutionConfirmation2Code value) {
+			obj.setConfirmation(value);
 		}
 	};
 	@XmlElement(name = "RjctdMod", required = true)
@@ -188,7 +201,7 @@ public class InvestigationStatus {
 	 * "Reason for the rejection of a modification request, in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRejectedModification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestigationStatus, List<PaymentModificationRejection1Code>> mmRejectedModification = new MMMessageAttribute<InvestigationStatus, List<PaymentModificationRejection1Code>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCaseRejection.mmRejectedModification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestigationStatus.mmObject();
@@ -200,6 +213,16 @@ public class InvestigationStatus {
 			maxOccurs = 14;
 			minOccurs = 1;
 			simpleType_lazy = () -> PaymentModificationRejection1Code.mmObject();
+		}
+
+		@Override
+		public List<PaymentModificationRejection1Code> getValue(InvestigationStatus obj) {
+			return obj.getRejectedModification();
+		}
+
+		@Override
+		public void setValue(InvestigationStatus obj, List<PaymentModificationRejection1Code> value) {
+			obj.setRejectedModification(value);
 		}
 	};
 	@XmlElement(name = "RjctdCxl", required = true)
@@ -232,7 +255,7 @@ public class InvestigationStatus {
 	 * "Explains the reason for rejecting a payment cancellation request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejectedCancellation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestigationStatus, RejectedCancellationJustification> mmRejectedCancellation = new MMMessageAssociationEnd<InvestigationStatus, RejectedCancellationJustification>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestigationStatus.mmObject();
 			isDerived = false;
@@ -243,7 +266,17 @@ public class InvestigationStatus {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RejectedCancellationJustification.mmObject();
+			type_lazy = () -> RejectedCancellationJustification.mmObject();
+		}
+
+		@Override
+		public RejectedCancellationJustification getValue(InvestigationStatus obj) {
+			return obj.getRejectedCancellation();
+		}
+
+		@Override
+		public void setValue(InvestigationStatus obj, RejectedCancellationJustification value) {
+			obj.setRejectedCancellation(value);
 		}
 	};
 	@XmlElement(name = "DplctOf", required = true)
@@ -280,7 +313,7 @@ public class InvestigationStatus {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDuplicateOf = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestigationStatus, Case> mmDuplicateOf = new MMMessageAssociationEnd<InvestigationStatus, Case>() {
 		{
 			businessElementTrace_lazy = () -> InvestigationResolution.mmInvestigationCase;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestigationStatus.mmObject();
@@ -292,7 +325,17 @@ public class InvestigationStatus {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Case.mmObject();
+			type_lazy = () -> Case.mmObject();
+		}
+
+		@Override
+		public Case getValue(InvestigationStatus obj) {
+			return obj.getDuplicateOf();
+		}
+
+		@Override
+		public void setValue(InvestigationStatus obj, Case value) {
+			obj.setDuplicateOf(value);
 		}
 	};
 	@XmlElement(name = "AssgnmtCxlConf", required = true)
@@ -332,7 +375,7 @@ public class InvestigationStatus {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAssignmentCancellationConfirmation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestigationStatus, YesNoIndicator> mmAssignmentCancellationConfirmation = new MMMessageAttribute<InvestigationStatus, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCaseRejection.mmAssignmentCancellationConfirmation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestigationStatus.mmObject();
@@ -344,6 +387,16 @@ public class InvestigationStatus {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(InvestigationStatus obj) {
+			return obj.getAssignmentCancellationConfirmation();
+		}
+
+		@Override
+		public void setValue(InvestigationStatus obj, YesNoIndicator value) {
+			obj.setAssignmentCancellationConfirmation(value);
 		}
 	};
 	@XmlElement(name = "RtrInf")
@@ -381,7 +434,7 @@ public class InvestigationStatus {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReturnInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestigationStatus, Optional<ReturnInformation1>> mmReturnInformation = new MMMessageAssociationEnd<InvestigationStatus, Optional<ReturnInformation1>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCaseResolution.mmPaymentCorrection;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestigationStatus.mmObject();
@@ -393,7 +446,17 @@ public class InvestigationStatus {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ReturnInformation1.mmObject();
+			type_lazy = () -> ReturnInformation1.mmObject();
+		}
+
+		@Override
+		public Optional<ReturnInformation1> getValue(InvestigationStatus obj) {
+			return obj.getReturnInformation();
+		}
+
+		@Override
+		public void setValue(InvestigationStatus obj, Optional<ReturnInformation1> value) {
+			obj.setReturnInformation(value.orElse(null));
 		}
 	};
 	/**
@@ -490,7 +553,7 @@ public class InvestigationStatus {
 		return rejectedCancellation;
 	}
 
-	public InvestigationStatus setRejectedCancellation(com.tools20022.repository.msg.RejectedCancellationJustification rejectedCancellation) {
+	public InvestigationStatus setRejectedCancellation(RejectedCancellationJustification rejectedCancellation) {
 		this.rejectedCancellation = Objects.requireNonNull(rejectedCancellation);
 		return this;
 	}
@@ -499,7 +562,7 @@ public class InvestigationStatus {
 		return duplicateOf;
 	}
 
-	public InvestigationStatus setDuplicateOf(com.tools20022.repository.msg.Case duplicateOf) {
+	public InvestigationStatus setDuplicateOf(Case duplicateOf) {
 		this.duplicateOf = Objects.requireNonNull(duplicateOf);
 		return this;
 	}
@@ -517,7 +580,7 @@ public class InvestigationStatus {
 		return returnInformation == null ? Optional.empty() : Optional.of(returnInformation);
 	}
 
-	public InvestigationStatus setReturnInformation(com.tools20022.repository.msg.ReturnInformation1 returnInformation) {
+	public InvestigationStatus setReturnInformation(ReturnInformation1 returnInformation) {
 		this.returnInformation = returnInformation;
 		return this;
 	}

@@ -22,6 +22,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CardholderRole;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMCustomerProfile2;
+import com.tools20022.repository.msg.TransactionVerificationResult5;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -117,7 +119,7 @@ public class ATMCustomer2 {
 	 * ATMCustomer1.mmProfile}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProfile = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMCustomer2, Optional<ATMCustomerProfile2>> mmProfile = new MMMessageAssociationEnd<ATMCustomer2, Optional<ATMCustomerProfile2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCustomer2.mmObject();
 			isDerived = false;
@@ -130,11 +132,21 @@ public class ATMCustomer2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMCustomerProfile2.mmObject();
+			type_lazy = () -> ATMCustomerProfile2.mmObject();
+		}
+
+		@Override
+		public Optional<ATMCustomerProfile2> getValue(ATMCustomer2 obj) {
+			return obj.getProfile();
+		}
+
+		@Override
+		public void setValue(ATMCustomer2 obj, Optional<ATMCustomerProfile2> value) {
+			obj.setProfile(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AuthntcnRslt")
-	protected List<com.tools20022.repository.msg.TransactionVerificationResult5> authenticationResult;
+	protected List<TransactionVerificationResult5> authenticationResult;
 	/**
 	 * 
 	 <p>
@@ -175,7 +187,7 @@ public class ATMCustomer2 {
 	 * ATMCustomer1.mmAuthenticationResult}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAuthenticationResult = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMCustomer2, List<TransactionVerificationResult5>> mmAuthenticationResult = new MMMessageAssociationEnd<ATMCustomer2, List<TransactionVerificationResult5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCustomer2.mmObject();
 			isDerived = false;
@@ -187,7 +199,17 @@ public class ATMCustomer2 {
 			previousVersion_lazy = () -> ATMCustomer1.mmAuthenticationResult;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult5.mmObject();
+			type_lazy = () -> TransactionVerificationResult5.mmObject();
+		}
+
+		@Override
+		public List<TransactionVerificationResult5> getValue(ATMCustomer2 obj) {
+			return obj.getAuthenticationResult();
+		}
+
+		@Override
+		public void setValue(ATMCustomer2 obj, List<TransactionVerificationResult5> value) {
+			obj.setAuthenticationResult(value);
 		}
 	};
 
@@ -211,7 +233,7 @@ public class ATMCustomer2 {
 		return profile == null ? Optional.empty() : Optional.of(profile);
 	}
 
-	public ATMCustomer2 setProfile(com.tools20022.repository.msg.ATMCustomerProfile2 profile) {
+	public ATMCustomer2 setProfile(ATMCustomerProfile2 profile) {
 		this.profile = profile;
 		return this;
 	}
@@ -220,7 +242,7 @@ public class ATMCustomer2 {
 		return authenticationResult == null ? authenticationResult = new ArrayList<>() : authenticationResult;
 	}
 
-	public ATMCustomer2 setAuthenticationResult(List<com.tools20022.repository.msg.TransactionVerificationResult5> authenticationResult) {
+	public ATMCustomer2 setAuthenticationResult(List<TransactionVerificationResult5> authenticationResult) {
 		this.authenticationResult = Objects.requireNonNull(authenticationResult);
 		return this;
 	}

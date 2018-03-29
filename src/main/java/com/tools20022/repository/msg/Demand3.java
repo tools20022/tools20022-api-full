@@ -102,7 +102,7 @@ public class Demand3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Demand3, Max35Text> mmIdentification = new MMMessageAttribute<Demand3, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Demand3.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class Demand3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Demand3 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Demand3 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "SubmissnDtTm", required = true)
@@ -148,7 +158,7 @@ public class Demand3 {
 	 * definition} = "Date and time of demand submission."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubmissionDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Demand3, ISODateTime> mmSubmissionDateTime = new MMMessageAttribute<Demand3, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> Demand.mmSubmissionDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Demand3.mmObject();
@@ -160,6 +170,16 @@ public class Demand3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(Demand3 obj) {
+			return obj.getSubmissionDateTime();
+		}
+
+		@Override
+		public void setValue(Demand3 obj, ISODateTime value) {
+			obj.setSubmissionDateTime(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -196,7 +216,7 @@ public class Demand3 {
 	 * definition} = "Amount and currency of the demand."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Demand3, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<Demand3, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Demand.mmDemandAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Demand3.mmObject();
@@ -208,6 +228,16 @@ public class Demand3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(Demand3 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Demand3 obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 

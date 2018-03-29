@@ -106,7 +106,7 @@ public class AssetClassCommodityMetal1Choice {
 	 * definition} = "Non-precious metal commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNonPrecious = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodityMetal1Choice, MetalCommodityNonPrecious1> mmNonPrecious = new MMMessageAssociationEnd<AssetClassCommodityMetal1Choice, MetalCommodityNonPrecious1>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityMetal1Choice.mmObject();
@@ -119,6 +119,16 @@ public class AssetClassCommodityMetal1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> MetalCommodityNonPrecious1.mmObject();
+		}
+
+		@Override
+		public MetalCommodityNonPrecious1 getValue(AssetClassCommodityMetal1Choice obj) {
+			return obj.getNonPrecious();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodityMetal1Choice obj, MetalCommodityNonPrecious1 value) {
+			obj.setNonPrecious(value);
 		}
 	};
 	@XmlElement(name = "Prcs", required = true)
@@ -155,7 +165,7 @@ public class AssetClassCommodityMetal1Choice {
 	 * definition} = "Precious metal commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPrecious = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodityMetal1Choice, MetalCommodityPrecious1> mmPrecious = new MMMessageAssociationEnd<AssetClassCommodityMetal1Choice, MetalCommodityPrecious1>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityMetal1Choice.mmObject();
@@ -168,6 +178,16 @@ public class AssetClassCommodityMetal1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> MetalCommodityPrecious1.mmObject();
+		}
+
+		@Override
+		public MetalCommodityPrecious1 getValue(AssetClassCommodityMetal1Choice obj) {
+			return obj.getPrecious();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodityMetal1Choice obj, MetalCommodityPrecious1 value) {
+			obj.setPrecious(value);
 		}
 	};
 

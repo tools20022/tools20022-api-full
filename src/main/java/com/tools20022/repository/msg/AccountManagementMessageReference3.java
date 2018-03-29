@@ -26,6 +26,7 @@ import com.tools20022.repository.choice.LinkedMessage3Choice;
 import com.tools20022.repository.codeset.AccountManagementType1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.InvestmentAccount53;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -162,7 +163,7 @@ public class AccountManagementMessageReference3 {
 	 * AccountManagementMessageReference2.mmLinkedReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLinkedReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountManagementMessageReference3, Optional<LinkedMessage3Choice>> mmLinkedReference = new MMMessageAssociationEnd<AccountManagementMessageReference3, Optional<LinkedMessage3Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementMessageReference3.mmObject();
 			isDerived = false;
@@ -176,6 +177,16 @@ public class AccountManagementMessageReference3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> LinkedMessage3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<LinkedMessage3Choice> getValue(AccountManagementMessageReference3 obj) {
+			return obj.getLinkedReference();
+		}
+
+		@Override
+		public void setValue(AccountManagementMessageReference3 obj, Optional<LinkedMessage3Choice> value) {
+			obj.setLinkedReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StsReqTp", required = true)
@@ -223,7 +234,7 @@ public class AccountManagementMessageReference3 {
 	 * AccountManagementMessageReference2.mmStatusRequestType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatusRequestType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountManagementMessageReference3, AccountManagementType1Code> mmStatusRequestType = new MMMessageAttribute<AccountManagementMessageReference3, AccountManagementType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementMessageReference3.mmObject();
 			isDerived = false;
@@ -236,6 +247,16 @@ public class AccountManagementMessageReference3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AccountManagementType1Code.mmObject();
+		}
+
+		@Override
+		public AccountManagementType1Code getValue(AccountManagementMessageReference3 obj) {
+			return obj.getStatusRequestType();
+		}
+
+		@Override
+		public void setValue(AccountManagementMessageReference3 obj, AccountManagementType1Code value) {
+			obj.setStatusRequestType(value);
 		}
 	};
 	@XmlElement(name = "AcctApplId")
@@ -282,7 +303,7 @@ public class AccountManagementMessageReference3 {
 	 * AccountManagementMessageReference2.mmAccountApplicationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountApplicationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountManagementMessageReference3, Optional<Max35Text>> mmAccountApplicationIdentification = new MMMessageAttribute<AccountManagementMessageReference3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementMessageReference3.mmObject();
 			isDerived = false;
@@ -295,6 +316,16 @@ public class AccountManagementMessageReference3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AccountManagementMessageReference3 obj) {
+			return obj.getAccountApplicationIdentification();
+		}
+
+		@Override
+		public void setValue(AccountManagementMessageReference3 obj, Optional<Max35Text> value) {
+			obj.setAccountApplicationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ExstgAcctId")
@@ -334,7 +365,7 @@ public class AccountManagementMessageReference3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExistingAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountManagementMessageReference3, Optional<Max35Text>> mmExistingAccountIdentification = new MMMessageAttribute<AccountManagementMessageReference3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementMessageReference3.mmObject();
 			isDerived = false;
@@ -346,6 +377,16 @@ public class AccountManagementMessageReference3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AccountManagementMessageReference3 obj) {
+			return obj.getExistingAccountIdentification();
+		}
+
+		@Override
+		public void setValue(AccountManagementMessageReference3 obj, Optional<Max35Text> value) {
+			obj.setExistingAccountIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InvstmtAcct")
@@ -391,7 +432,7 @@ public class AccountManagementMessageReference3 {
 	 * AccountManagementMessageReference2.mmInvestmentAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestmentAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountManagementMessageReference3, Optional<InvestmentAccount53>> mmInvestmentAccount = new MMMessageAssociationEnd<AccountManagementMessageReference3, Optional<InvestmentAccount53>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementMessageReference3.mmObject();
 			isDerived = false;
@@ -404,7 +445,17 @@ public class AccountManagementMessageReference3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount53.mmObject();
+			type_lazy = () -> InvestmentAccount53.mmObject();
+		}
+
+		@Override
+		public Optional<InvestmentAccount53> getValue(AccountManagementMessageReference3 obj) {
+			return obj.getInvestmentAccount();
+		}
+
+		@Override
+		public void setValue(AccountManagementMessageReference3 obj, Optional<InvestmentAccount53> value) {
+			obj.setInvestmentAccount(value.orElse(null));
 		}
 	};
 
@@ -469,7 +520,7 @@ public class AccountManagementMessageReference3 {
 		return investmentAccount == null ? Optional.empty() : Optional.of(investmentAccount);
 	}
 
-	public AccountManagementMessageReference3 setInvestmentAccount(com.tools20022.repository.msg.InvestmentAccount53 investmentAccount) {
+	public AccountManagementMessageReference3 setInvestmentAccount(InvestmentAccount53 investmentAccount) {
 		this.investmentAccount = investmentAccount;
 		return this;
 	}

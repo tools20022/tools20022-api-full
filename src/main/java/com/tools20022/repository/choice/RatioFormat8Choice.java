@@ -131,7 +131,7 @@ public class RatioFormat8Choice {
 	 * definition} = "Ratio expressed as a quotient of quantities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuantityToQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RatioFormat8Choice, QuantityToQuantityRatio2> mmQuantityToQuantity = new MMMessageAssociationEnd<RatioFormat8Choice, QuantityToQuantityRatio2>() {
 		{
 			businessComponentTrace_lazy = () -> QuantityRatio.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.RatioFormat8Choice.mmObject();
@@ -145,6 +145,16 @@ public class RatioFormat8Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> QuantityToQuantityRatio2.mmObject();
+		}
+
+		@Override
+		public QuantityToQuantityRatio2 getValue(RatioFormat8Choice obj) {
+			return obj.getQuantityToQuantity();
+		}
+
+		@Override
+		public void setValue(RatioFormat8Choice obj, QuantityToQuantityRatio2 value) {
+			obj.setQuantityToQuantity(value);
 		}
 	};
 	@XmlElement(name = "AmtToAmt", required = true)
@@ -182,7 +192,7 @@ public class RatioFormat8Choice {
 	 * definition} = "Ratio expressed as a quotient of amounts."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountToAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RatioFormat8Choice, AmountToAmountRatio3> mmAmountToAmount = new MMMessageAssociationEnd<RatioFormat8Choice, AmountToAmountRatio3>() {
 		{
 			businessComponentTrace_lazy = () -> AmountRatio.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.RatioFormat8Choice.mmObject();
@@ -196,6 +206,16 @@ public class RatioFormat8Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountToAmountRatio3.mmObject();
+		}
+
+		@Override
+		public AmountToAmountRatio3 getValue(RatioFormat8Choice obj) {
+			return obj.getAmountToAmount();
+		}
+
+		@Override
+		public void setValue(RatioFormat8Choice obj, AmountToAmountRatio3 value) {
+			obj.setAmountToAmount(value);
 		}
 	};
 	@XmlElement(name = "AmtToQty", required = true)
@@ -235,7 +255,7 @@ public class RatioFormat8Choice {
 	 * definition} = "Ratio expressed as an amount to quantity ratio."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountToQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RatioFormat8Choice, AmountAndQuantityRatio3> mmAmountToQuantity = new MMMessageAssociationEnd<RatioFormat8Choice, AmountAndQuantityRatio3>() {
 		{
 			businessComponentTrace_lazy = () -> AmountAndQuantity.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.RatioFormat8Choice.mmObject();
@@ -249,6 +269,16 @@ public class RatioFormat8Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountAndQuantityRatio3.mmObject();
+		}
+
+		@Override
+		public AmountAndQuantityRatio3 getValue(RatioFormat8Choice obj) {
+			return obj.getAmountToQuantity();
+		}
+
+		@Override
+		public void setValue(RatioFormat8Choice obj, AmountAndQuantityRatio3 value) {
+			obj.setAmountToQuantity(value);
 		}
 	};
 	@XmlElement(name = "QtyToAmt", required = true)
@@ -288,7 +318,7 @@ public class RatioFormat8Choice {
 	 * definition} = "Ratio expressed as a quantity to amount ratio."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuantityToAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RatioFormat8Choice, AmountAndQuantityRatio3> mmQuantityToAmount = new MMMessageAssociationEnd<RatioFormat8Choice, AmountAndQuantityRatio3>() {
 		{
 			businessComponentTrace_lazy = () -> AmountAndQuantity.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.RatioFormat8Choice.mmObject();
@@ -302,6 +332,16 @@ public class RatioFormat8Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountAndQuantityRatio3.mmObject();
+		}
+
+		@Override
+		public AmountAndQuantityRatio3 getValue(RatioFormat8Choice obj) {
+			return obj.getQuantityToAmount();
+		}
+
+		@Override
+		public void setValue(RatioFormat8Choice obj, AmountAndQuantityRatio3 value) {
+			obj.setQuantityToAmount(value);
 		}
 	};
 

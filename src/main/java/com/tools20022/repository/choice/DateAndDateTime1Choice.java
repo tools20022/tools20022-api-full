@@ -115,7 +115,7 @@ public class DateAndDateTime1Choice {
 	 * definition} = "Numeric representation of the day of the month and year."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateAndDateTime1Choice, ISODate> mmDate = new MMMessageAttribute<DateAndDateTime1Choice, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateAndDateTime1Choice.mmObject();
@@ -127,6 +127,16 @@ public class DateAndDateTime1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(DateAndDateTime1Choice obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(DateAndDateTime1Choice obj, ISODate value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "DtTm", required = true)
@@ -165,7 +175,7 @@ public class DateAndDateTime1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateAndDateTime1Choice, ISODateTime> mmDateTime = new MMMessageAttribute<DateAndDateTime1Choice, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateAndDateTime1Choice.mmObject();
@@ -177,6 +187,16 @@ public class DateAndDateTime1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(DateAndDateTime1Choice obj) {
+			return obj.getDateTime();
+		}
+
+		@Override
+		public void setValue(DateAndDateTime1Choice obj, ISODateTime value) {
+			obj.setDateTime(value);
 		}
 	};
 

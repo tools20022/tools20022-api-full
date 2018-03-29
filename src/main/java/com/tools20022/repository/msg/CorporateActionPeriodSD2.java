@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Period3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -116,7 +117,7 @@ public class CorporateActionPeriodSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPeriodSD2, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionPeriodSD2, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriodSD2.mmObject();
 			isDerived = false;
@@ -128,6 +129,16 @@ public class CorporateActionPeriodSD2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionPeriodSD2 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionPeriodSD2 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "DTCReorgDpstPrd")
@@ -173,7 +184,7 @@ public class CorporateActionPeriodSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCReorganisationDepositPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPeriodSD2, Optional<Period3>> mmDTCReorganisationDepositPeriod = new MMMessageAttribute<CorporateActionPeriodSD2, Optional<Period3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriodSD2.mmObject();
 			isDerived = false;
@@ -185,7 +196,17 @@ public class CorporateActionPeriodSD2 {
 			nextVersions_lazy = () -> Arrays.asList(CorporateActionPeriodSD3.mmDTCReorganisationDepositPeriod);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Period3.mmObject();
+			complexType_lazy = () -> Period3.mmObject();
+		}
+
+		@Override
+		public Optional<Period3> getValue(CorporateActionPeriodSD2 obj) {
+			return obj.getDTCReorganisationDepositPeriod();
+		}
+
+		@Override
+		public void setValue(CorporateActionPeriodSD2 obj, Optional<Period3> value) {
+			obj.setDTCReorganisationDepositPeriod(value.orElse(null));
 		}
 	};
 
@@ -216,7 +237,7 @@ public class CorporateActionPeriodSD2 {
 		return dTCReorganisationDepositPeriod == null ? Optional.empty() : Optional.of(dTCReorganisationDepositPeriod);
 	}
 
-	public CorporateActionPeriodSD2 setDTCReorganisationDepositPeriod(com.tools20022.repository.msg.Period3 dTCReorganisationDepositPeriod) {
+	public CorporateActionPeriodSD2 setDTCReorganisationDepositPeriod(Period3 dTCReorganisationDepositPeriod) {
 		this.dTCReorganisationDepositPeriod = dTCReorganisationDepositPeriod;
 		return this;
 	}

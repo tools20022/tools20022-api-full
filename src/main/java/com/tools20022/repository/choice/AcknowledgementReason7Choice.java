@@ -114,7 +114,7 @@ public class AcknowledgementReason7Choice {
 	 * "Specifies additional information about the processed instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcknowledgementReason7Choice, RepoCallAcknowledgementReason2Code> mmCode = new MMMessageAttribute<AcknowledgementReason7Choice, RepoCallAcknowledgementReason2Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmRepoCallAcknowledgementReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AcknowledgementReason7Choice.mmObject();
@@ -127,6 +127,16 @@ public class AcknowledgementReason7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RepoCallAcknowledgementReason2Code.mmObject();
+		}
+
+		@Override
+		public RepoCallAcknowledgementReason2Code getValue(AcknowledgementReason7Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(AcknowledgementReason7Choice obj, RepoCallAcknowledgementReason2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -167,7 +177,7 @@ public class AcknowledgementReason7Choice {
 	 * "Specifies additional information about the processed instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcknowledgementReason7Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<AcknowledgementReason7Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmRepoCallAcknowledgementReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AcknowledgementReason7Choice.mmObject();
@@ -181,6 +191,16 @@ public class AcknowledgementReason7Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(AcknowledgementReason7Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(AcknowledgementReason7Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

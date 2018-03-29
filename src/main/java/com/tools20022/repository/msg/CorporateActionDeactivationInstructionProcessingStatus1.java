@@ -111,7 +111,7 @@ public class CorporateActionDeactivationInstructionProcessingStatus1 {
 	 * definition} = "The processing status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDeactivationInstructionProcessingStatus1, ProcessedStatus6FormatChoice> mmStatus = new MMMessageAttribute<CorporateActionDeactivationInstructionProcessingStatus1, ProcessedStatus6FormatChoice>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDeactivationInstructionProcessingStatus1.mmObject();
@@ -123,6 +123,16 @@ public class CorporateActionDeactivationInstructionProcessingStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ProcessedStatus6FormatChoice.mmObject();
+		}
+
+		@Override
+		public ProcessedStatus6FormatChoice getValue(CorporateActionDeactivationInstructionProcessingStatus1 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(CorporateActionDeactivationInstructionProcessingStatus1 obj, ProcessedStatus6FormatChoice value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -159,7 +169,7 @@ public class CorporateActionDeactivationInstructionProcessingStatus1 {
 	 * definition} = "Additional information about the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDeactivationInstructionProcessingStatus1, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<CorporateActionDeactivationInstructionProcessingStatus1, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusDescription;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDeactivationInstructionProcessingStatus1.mmObject();
@@ -171,6 +181,16 @@ public class CorporateActionDeactivationInstructionProcessingStatus1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionDeactivationInstructionProcessingStatus1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(CorporateActionDeactivationInstructionProcessingStatus1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

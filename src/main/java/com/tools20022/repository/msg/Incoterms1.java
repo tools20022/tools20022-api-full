@@ -117,7 +117,7 @@ public class Incoterms1 {
 	 * definition} = "Specifies the applicable Incoterm by means of a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Incoterms1, Incoterms1Code> mmCode = new MMMessageAttribute<Incoterms1, Incoterms1Code>() {
 		{
 			businessElementTrace_lazy = () -> Incoterms.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Incoterms1.mmObject();
@@ -129,6 +129,16 @@ public class Incoterms1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Incoterms1Code.mmObject();
+		}
+
+		@Override
+		public Incoterms1Code getValue(Incoterms1 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(Incoterms1 obj, Incoterms1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Othr", required = true)
@@ -164,7 +174,7 @@ public class Incoterms1 {
 	 * definition} = "Specifies Incoterm not present in code list."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOther = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Incoterms1, Max35Text> mmOther = new MMMessageAttribute<Incoterms1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Incoterms.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Incoterms1.mmObject();
@@ -176,6 +186,16 @@ public class Incoterms1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Incoterms1 obj) {
+			return obj.getOther();
+		}
+
+		@Override
+		public void setValue(Incoterms1 obj, Max35Text value) {
+			obj.setOther(value);
 		}
 	};
 	@XmlElement(name = "Lctn")
@@ -211,7 +231,7 @@ public class Incoterms1 {
 	 * definition} = "Location where the Incoterms are actioned."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLocation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Incoterms1, Optional<Max35Text>> mmLocation = new MMMessageAttribute<Incoterms1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Incoterms.mmLocation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Incoterms1.mmObject();
@@ -223,6 +243,16 @@ public class Incoterms1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Incoterms1 obj) {
+			return obj.getLocation();
+		}
+
+		@Override
+		public void setValue(Incoterms1 obj, Optional<Max35Text> value) {
+			obj.setLocation(value.orElse(null));
 		}
 	};
 	/**

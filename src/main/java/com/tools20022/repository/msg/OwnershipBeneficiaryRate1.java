@@ -110,7 +110,7 @@ public class OwnershipBeneficiaryRate1 {
 	 * "Ownership or beneficial ownership expressed as a percentage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OwnershipBeneficiaryRate1, Optional<PercentageRate>> mmRate = new MMMessageAttribute<OwnershipBeneficiaryRate1, Optional<PercentageRate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OwnershipBeneficiaryRate1.mmObject();
 			isDerived = false;
@@ -121,6 +121,16 @@ public class OwnershipBeneficiaryRate1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(OwnershipBeneficiaryRate1 obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(OwnershipBeneficiaryRate1 obj, Optional<PercentageRate> value) {
+			obj.setRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Frctn")
@@ -154,7 +164,7 @@ public class OwnershipBeneficiaryRate1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFraction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OwnershipBeneficiaryRate1, Optional<Max35Text>> mmFraction = new MMMessageAttribute<OwnershipBeneficiaryRate1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OwnershipBeneficiaryRate1.mmObject();
 			isDerived = false;
@@ -165,6 +175,16 @@ public class OwnershipBeneficiaryRate1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(OwnershipBeneficiaryRate1 obj) {
+			return obj.getFraction();
+		}
+
+		@Override
+		public void setValue(OwnershipBeneficiaryRate1 obj, Optional<Max35Text> value) {
+			obj.setFraction(value.orElse(null));
 		}
 	};
 

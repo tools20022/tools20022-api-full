@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DataModification1Code;
 import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PostalAddress21;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -115,7 +116,7 @@ public class ModificationScope34 {
 	 * ModificationScope1.mmModificationScopeIndication}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmModificationScopeIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ModificationScope34, DataModification1Code> mmModificationScopeIndication = new MMMessageAttribute<ModificationScope34, DataModification1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope34.mmObject();
 			isDerived = false;
@@ -127,6 +128,16 @@ public class ModificationScope34 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DataModification1Code.mmObject();
+		}
+
+		@Override
+		public DataModification1Code getValue(ModificationScope34 obj) {
+			return obj.getModificationScopeIndication();
+		}
+
+		@Override
+		public void setValue(ModificationScope34 obj, DataModification1Code value) {
+			obj.setModificationScopeIndication(value);
 		}
 	};
 	@XmlElement(name = "PstlAdr", required = true)
@@ -167,7 +178,7 @@ public class ModificationScope34 {
 	 * ModificationScope1.mmPostalAddress}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPostalAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ModificationScope34, PostalAddress21> mmPostalAddress = new MMMessageAssociationEnd<ModificationScope34, PostalAddress21>() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope34.mmObject();
@@ -180,7 +191,17 @@ public class ModificationScope34 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
+			type_lazy = () -> PostalAddress21.mmObject();
+		}
+
+		@Override
+		public PostalAddress21 getValue(ModificationScope34 obj) {
+			return obj.getPostalAddress();
+		}
+
+		@Override
+		public void setValue(ModificationScope34 obj, PostalAddress21 value) {
+			obj.setPostalAddress(value);
 		}
 	};
 
@@ -212,7 +233,7 @@ public class ModificationScope34 {
 		return postalAddress;
 	}
 
-	public ModificationScope34 setPostalAddress(com.tools20022.repository.msg.PostalAddress21 postalAddress) {
+	public ModificationScope34 setPostalAddress(PostalAddress21 postalAddress) {
 		this.postalAddress = Objects.requireNonNull(postalAddress);
 		return this;
 	}

@@ -24,6 +24,8 @@ import com.tools20022.repository.area.caaa.AcceptorDiagnosticResponseV01;
 import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CardPaymentEnvironment8;
+import com.tools20022.repository.msg.TMSTrigger1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -122,7 +124,7 @@ public class AcceptorDiagnosticResponse1 {
 	 * definition} = "Environment of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorDiagnosticResponse1, CardPaymentEnvironment8> mmEnvironment = new MMMessageAssociationEnd<AcceptorDiagnosticResponse1, CardPaymentEnvironment8>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorDiagnosticResponse1.mmObject();
@@ -134,7 +136,17 @@ public class AcceptorDiagnosticResponse1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment8.mmObject();
+			type_lazy = () -> CardPaymentEnvironment8.mmObject();
+		}
+
+		@Override
+		public CardPaymentEnvironment8 getValue(AcceptorDiagnosticResponse1 obj) {
+			return obj.getEnvironment();
+		}
+
+		@Override
+		public void setValue(AcceptorDiagnosticResponse1 obj, CardPaymentEnvironment8 value) {
+			obj.setEnvironment(value);
 		}
 	};
 	@XmlElement(name = "TMSTrggr")
@@ -171,7 +183,7 @@ public class AcceptorDiagnosticResponse1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTMSTrigger = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorDiagnosticResponse1, Optional<TMSTrigger1>> mmTMSTrigger = new MMMessageAssociationEnd<AcceptorDiagnosticResponse1, Optional<TMSTrigger1>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmTMSTrigger;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorDiagnosticResponse1.mmObject();
@@ -183,7 +195,17 @@ public class AcceptorDiagnosticResponse1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TMSTrigger1.mmObject();
+			type_lazy = () -> TMSTrigger1.mmObject();
+		}
+
+		@Override
+		public Optional<TMSTrigger1> getValue(AcceptorDiagnosticResponse1 obj) {
+			return obj.getTMSTrigger();
+		}
+
+		@Override
+		public void setValue(AcceptorDiagnosticResponse1 obj, Optional<TMSTrigger1> value) {
+			obj.setTMSTrigger(value.orElse(null));
 		}
 	};
 
@@ -207,7 +229,7 @@ public class AcceptorDiagnosticResponse1 {
 		return environment;
 	}
 
-	public AcceptorDiagnosticResponse1 setEnvironment(com.tools20022.repository.msg.CardPaymentEnvironment8 environment) {
+	public AcceptorDiagnosticResponse1 setEnvironment(CardPaymentEnvironment8 environment) {
 		this.environment = Objects.requireNonNull(environment);
 		return this;
 	}
@@ -216,7 +238,7 @@ public class AcceptorDiagnosticResponse1 {
 		return tMSTrigger == null ? Optional.empty() : Optional.of(tMSTrigger);
 	}
 
-	public AcceptorDiagnosticResponse1 setTMSTrigger(com.tools20022.repository.msg.TMSTrigger1 tMSTrigger) {
+	public AcceptorDiagnosticResponse1 setTMSTrigger(TMSTrigger1 tMSTrigger) {
 		this.tMSTrigger = tMSTrigger;
 		return this;
 	}

@@ -21,6 +21,8 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.CorporateActionEventType2Choice;
+import com.tools20022.repository.choice.SecuritiesTransactionType5Choice;
 import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.entity.SecuritiesTrade;
 import com.tools20022.repository.GeneratedRepository;
@@ -108,7 +110,7 @@ public class SettlementOrCorporateActionEvent3Choice {
 	 * definition} = "Identifies the type of securities transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesTransactionType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementOrCorporateActionEvent3Choice, SecuritiesTransactionType5Choice> mmSecuritiesTransactionType = new MMMessageAssociationEnd<SettlementOrCorporateActionEvent3Choice, SecuritiesTransactionType5Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTransactionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementOrCorporateActionEvent3Choice.mmObject();
@@ -121,7 +123,17 @@ public class SettlementOrCorporateActionEvent3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.SecuritiesTransactionType5Choice.mmObject();
+			type_lazy = () -> SecuritiesTransactionType5Choice.mmObject();
+		}
+
+		@Override
+		public SecuritiesTransactionType5Choice getValue(SettlementOrCorporateActionEvent3Choice obj) {
+			return obj.getSecuritiesTransactionType();
+		}
+
+		@Override
+		public void setValue(SettlementOrCorporateActionEvent3Choice obj, SecuritiesTransactionType5Choice value) {
+			obj.setSecuritiesTransactionType(value);
 		}
 	};
 	@XmlElement(name = "CorpActnEvtTp", required = true)
@@ -161,7 +173,7 @@ public class SettlementOrCorporateActionEvent3Choice {
 	 * definition} = "Specifies the type of corporate event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCorporateActionEventType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementOrCorporateActionEvent3Choice, CorporateActionEventType2Choice> mmCorporateActionEventType = new MMMessageAssociationEnd<SettlementOrCorporateActionEvent3Choice, CorporateActionEventType2Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementOrCorporateActionEvent3Choice.mmObject();
@@ -174,7 +186,17 @@ public class SettlementOrCorporateActionEvent3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.CorporateActionEventType2Choice.mmObject();
+			type_lazy = () -> CorporateActionEventType2Choice.mmObject();
+		}
+
+		@Override
+		public CorporateActionEventType2Choice getValue(SettlementOrCorporateActionEvent3Choice obj) {
+			return obj.getCorporateActionEventType();
+		}
+
+		@Override
+		public void setValue(SettlementOrCorporateActionEvent3Choice obj, CorporateActionEventType2Choice value) {
+			obj.setCorporateActionEventType(value);
 		}
 	};
 
@@ -196,7 +218,7 @@ public class SettlementOrCorporateActionEvent3Choice {
 		return securitiesTransactionType;
 	}
 
-	public SettlementOrCorporateActionEvent3Choice setSecuritiesTransactionType(com.tools20022.repository.choice.SecuritiesTransactionType5Choice securitiesTransactionType) {
+	public SettlementOrCorporateActionEvent3Choice setSecuritiesTransactionType(SecuritiesTransactionType5Choice securitiesTransactionType) {
 		this.securitiesTransactionType = Objects.requireNonNull(securitiesTransactionType);
 		return this;
 	}
@@ -205,7 +227,7 @@ public class SettlementOrCorporateActionEvent3Choice {
 		return corporateActionEventType;
 	}
 
-	public SettlementOrCorporateActionEvent3Choice setCorporateActionEventType(com.tools20022.repository.choice.CorporateActionEventType2Choice corporateActionEventType) {
+	public SettlementOrCorporateActionEvent3Choice setCorporateActionEventType(CorporateActionEventType2Choice corporateActionEventType) {
 		this.corporateActionEventType = Objects.requireNonNull(corporateActionEventType);
 		return this;
 	}

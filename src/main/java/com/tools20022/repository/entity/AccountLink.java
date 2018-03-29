@@ -19,9 +19,12 @@ package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.entity.CashAccount;
+import com.tools20022.repository.entity.DateTimePeriod;
+import com.tools20022.repository.entity.MarketInfrastructure;
+import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -156,7 +159,7 @@ public class AccountLink {
 	 * definition} = "Cash account linked to a securities account."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCashAccount = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<AccountLink, CashAccount> mmCashAccount = new MMBusinessAssociationEnd<AccountLink, CashAccount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AccountLink1.mmCashAccount, AccountLink2.mmCashAccount, AccountLink3.mmCashAccount, AccountLink4.mmCashAccount);
 			isDerived = false;
@@ -166,12 +169,22 @@ public class AccountLink {
 			definition = "Cash account linked to a securities account.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.CashAccount.mmAccountLink;
+			opposite_lazy = () -> CashAccount.mmAccountLink;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
+			type_lazy = () -> CashAccount.mmObject();
+		}
+
+		@Override
+		public CashAccount getValue(AccountLink obj) {
+			return obj.getCashAccount();
+		}
+
+		@Override
+		public void setValue(AccountLink obj, CashAccount value) {
+			obj.setCashAccount(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.DateTimePeriod> validityPeriod;
+	protected List<DateTimePeriod> validityPeriod;
 	/**
 	 * 
 	 <p>
@@ -206,7 +219,7 @@ public class AccountLink {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmValidityPeriod = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<AccountLink, List<DateTimePeriod>> mmValidityPeriod = new MMBusinessAssociationEnd<AccountLink, List<DateTimePeriod>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AccountLink.mmObject();
@@ -214,12 +227,22 @@ public class AccountLink {
 			name = "ValidityPeriod";
 			definition = "Defines the period when the securities account is linked to the cash account.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmRelatedAccountLink;
+			opposite_lazy = () -> DateTimePeriod.mmRelatedAccountLink;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
+			type_lazy = () -> DateTimePeriod.mmObject();
+		}
+
+		@Override
+		public List<DateTimePeriod> getValue(AccountLink obj) {
+			return obj.getValidityPeriod();
+		}
+
+		@Override
+		public void setValue(AccountLink obj, List<DateTimePeriod> value) {
+			obj.setValidityPeriod(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.SecuritiesAccount> securitiesAccount;
+	protected List<SecuritiesAccount> securitiesAccount;
 	/**
 	 * 
 	 <p>
@@ -269,7 +292,7 @@ public class AccountLink {
 	 * definition} = "Securities account linked to a cash account."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSecuritiesAccount = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<AccountLink, List<SecuritiesAccount>> mmSecuritiesAccount = new MMBusinessAssociationEnd<AccountLink, List<SecuritiesAccount>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AccountLink1.mmSecuritiesAccount, AccountLink2.mmSecuritiesAccount, AccountLink3.mmSecuritiesAccount, AccountLink4.mmSecuritiesAccount);
 			isDerived = false;
@@ -278,12 +301,22 @@ public class AccountLink {
 			name = "SecuritiesAccount";
 			definition = "Securities account linked to a cash account.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmAccountLink;
+			opposite_lazy = () -> SecuritiesAccount.mmAccountLink;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
+			type_lazy = () -> SecuritiesAccount.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesAccount> getValue(AccountLink obj) {
+			return obj.getSecuritiesAccount();
+		}
+
+		@Override
+		public void setValue(AccountLink obj, List<SecuritiesAccount> value) {
+			obj.setSecuritiesAccount(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.MarketInfrastructure> marketInfrastructure;
+	protected List<MarketInfrastructure> marketInfrastructure;
 	/**
 	 * 
 	 <p>
@@ -318,7 +351,7 @@ public class AccountLink {
 	 * "Specifies the market infrastructure where the accounts are held."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmMarketInfrastructure = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<AccountLink, List<MarketInfrastructure>> mmMarketInfrastructure = new MMBusinessAssociationEnd<AccountLink, List<MarketInfrastructure>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AccountLink.mmObject();
@@ -326,9 +359,19 @@ public class AccountLink {
 			name = "MarketInfrastructure";
 			definition = "Specifies the market infrastructure where the accounts are held.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.MarketInfrastructure.mmAccountLink;
+			opposite_lazy = () -> MarketInfrastructure.mmAccountLink;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.MarketInfrastructure.mmObject();
+			type_lazy = () -> MarketInfrastructure.mmObject();
+		}
+
+		@Override
+		public List<MarketInfrastructure> getValue(AccountLink obj) {
+			return obj.getMarketInfrastructure();
+		}
+
+		@Override
+		public void setValue(AccountLink obj, List<MarketInfrastructure> value) {
+			obj.setMarketInfrastructure(value);
 		}
 	};
 	protected YesNoIndicator cashSettlementIndicator;
@@ -370,7 +413,7 @@ public class AccountLink {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCashSettlementIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<AccountLink, YesNoIndicator> mmCashSettlementIndicator = new MMBusinessAttribute<AccountLink, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AccountLink1.mmCashSettlementIndicator, AccountLink3.mmCashSettlementIndicator);
 			isDerived = false;
@@ -383,12 +426,14 @@ public class AccountLink {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountLink.class.getMethod("getCashSettlementIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(AccountLink obj) {
+			return obj.getCashSettlementIndicator();
+		}
+
+		@Override
+		public void setValue(AccountLink obj, YesNoIndicator value) {
+			obj.setCashSettlementIndicator(value);
 		}
 	};
 	protected YesNoIndicator collateralisationIndicator;
@@ -430,7 +475,7 @@ public class AccountLink {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCollateralisationIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<AccountLink, YesNoIndicator> mmCollateralisationIndicator = new MMBusinessAttribute<AccountLink, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AccountLink1.mmCollateralisationIndicator, AccountLink3.mmCollateralisationIndicator);
 			isDerived = false;
@@ -443,12 +488,14 @@ public class AccountLink {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountLink.class.getMethod("getCollateralisationIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(AccountLink obj) {
+			return obj.getCollateralisationIndicator();
+		}
+
+		@Override
+		public void setValue(AccountLink obj, YesNoIndicator value) {
+			obj.setCollateralisationIndicator(value);
 		}
 	};
 	protected YesNoIndicator defaultIndicator;
@@ -490,7 +537,7 @@ public class AccountLink {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmDefaultIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<AccountLink, YesNoIndicator> mmDefaultIndicator = new MMBusinessAttribute<AccountLink, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AccountLink1.mmDefaultIndicator, AccountLink3.mmDefaultIndicator);
 			isDerived = false;
@@ -503,12 +550,14 @@ public class AccountLink {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountLink.class.getMethod("getDefaultIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(AccountLink obj) {
+			return obj.getDefaultIndicator();
+		}
+
+		@Override
+		public void setValue(AccountLink obj, YesNoIndicator value) {
+			obj.setDefaultIndicator(value);
 		}
 	};
 
@@ -519,8 +568,7 @@ public class AccountLink {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountLink";
 				definition = "Defines the link between the accounts held with a market infrastructure.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashAccount.mmAccountLink, com.tools20022.repository.entity.DateTimePeriod.mmRelatedAccountLink,
-						com.tools20022.repository.entity.SecuritiesAccount.mmAccountLink, com.tools20022.repository.entity.MarketInfrastructure.mmAccountLink);
+				associationDomain_lazy = () -> Arrays.asList(CashAccount.mmAccountLink, DateTimePeriod.mmRelatedAccountLink, SecuritiesAccount.mmAccountLink, MarketInfrastructure.mmAccountLink);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AccountLink.mmCashAccount, com.tools20022.repository.entity.AccountLink.mmValidityPeriod, com.tools20022.repository.entity.AccountLink.mmSecuritiesAccount,
 						com.tools20022.repository.entity.AccountLink.mmMarketInfrastructure, com.tools20022.repository.entity.AccountLink.mmCashSettlementIndicator, com.tools20022.repository.entity.AccountLink.mmCollateralisationIndicator,
 						com.tools20022.repository.entity.AccountLink.mmDefaultIndicator);
@@ -539,7 +587,7 @@ public class AccountLink {
 		return cashAccount;
 	}
 
-	public AccountLink setCashAccount(com.tools20022.repository.entity.CashAccount cashAccount) {
+	public AccountLink setCashAccount(CashAccount cashAccount) {
 		this.cashAccount = Objects.requireNonNull(cashAccount);
 		return this;
 	}
@@ -548,7 +596,7 @@ public class AccountLink {
 		return validityPeriod == null ? validityPeriod = new ArrayList<>() : validityPeriod;
 	}
 
-	public AccountLink setValidityPeriod(List<com.tools20022.repository.entity.DateTimePeriod> validityPeriod) {
+	public AccountLink setValidityPeriod(List<DateTimePeriod> validityPeriod) {
 		this.validityPeriod = Objects.requireNonNull(validityPeriod);
 		return this;
 	}
@@ -557,7 +605,7 @@ public class AccountLink {
 		return securitiesAccount == null ? securitiesAccount = new ArrayList<>() : securitiesAccount;
 	}
 
-	public AccountLink setSecuritiesAccount(List<com.tools20022.repository.entity.SecuritiesAccount> securitiesAccount) {
+	public AccountLink setSecuritiesAccount(List<SecuritiesAccount> securitiesAccount) {
 		this.securitiesAccount = Objects.requireNonNull(securitiesAccount);
 		return this;
 	}
@@ -566,7 +614,7 @@ public class AccountLink {
 		return marketInfrastructure == null ? marketInfrastructure = new ArrayList<>() : marketInfrastructure;
 	}
 
-	public AccountLink setMarketInfrastructure(List<com.tools20022.repository.entity.MarketInfrastructure> marketInfrastructure) {
+	public AccountLink setMarketInfrastructure(List<MarketInfrastructure> marketInfrastructure) {
 		this.marketInfrastructure = Objects.requireNonNull(marketInfrastructure);
 		return this;
 	}

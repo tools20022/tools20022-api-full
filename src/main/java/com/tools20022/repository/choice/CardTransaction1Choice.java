@@ -124,7 +124,7 @@ public class CardTransaction1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAggregated = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardTransaction1Choice, CardAggregated1> mmAggregated = new MMMessageAssociationEnd<CardTransaction1Choice, CardAggregated1>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.CardTransaction1Choice.mmObject();
@@ -138,6 +138,16 @@ public class CardTransaction1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CardAggregated1.mmObject();
+		}
+
+		@Override
+		public CardAggregated1 getValue(CardTransaction1Choice obj) {
+			return obj.getAggregated();
+		}
+
+		@Override
+		public void setValue(CardTransaction1Choice obj, CardAggregated1 value) {
+			obj.setAggregated(value);
 		}
 	};
 	@XmlElement(name = "Indv", required = true)
@@ -183,7 +193,7 @@ public class CardTransaction1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIndividual = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardTransaction1Choice, CardIndividualTransaction1> mmIndividual = new MMMessageAssociationEnd<CardTransaction1Choice, CardIndividualTransaction1>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.CardTransaction1Choice.mmObject();
@@ -197,6 +207,16 @@ public class CardTransaction1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CardIndividualTransaction1.mmObject();
+		}
+
+		@Override
+		public CardIndividualTransaction1 getValue(CardTransaction1Choice obj) {
+			return obj.getIndividual();
+		}
+
+		@Override
+		public void setValue(CardTransaction1Choice obj, CardIndividualTransaction1 value) {
+			obj.setIndividual(value);
 		}
 	};
 

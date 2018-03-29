@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.RolePlayer;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TradeParty1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -120,7 +121,7 @@ public class SingleQualifiedPartyIdentification1 {
 	 * "Party identification recognisable by parties in the trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBaseParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SingleQualifiedPartyIdentification1, TradeParty1> mmBaseParty = new MMMessageAssociationEnd<SingleQualifiedPartyIdentification1, TradeParty1>() {
 		{
 			businessElementTrace_lazy = () -> RolePlayer.mmRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SingleQualifiedPartyIdentification1.mmObject();
@@ -132,7 +133,17 @@ public class SingleQualifiedPartyIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TradeParty1.mmObject();
+			type_lazy = () -> TradeParty1.mmObject();
+		}
+
+		@Override
+		public TradeParty1 getValue(SingleQualifiedPartyIdentification1 obj) {
+			return obj.getBaseParty();
+		}
+
+		@Override
+		public void setValue(SingleQualifiedPartyIdentification1 obj, TradeParty1 value) {
+			obj.setBaseParty(value);
 		}
 	};
 	@XmlElement(name = "RltvIdr")
@@ -166,7 +177,7 @@ public class SingleQualifiedPartyIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRelativeIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SingleQualifiedPartyIdentification1, List<Max35Text>> mmRelativeIdentifier = new MMMessageAttribute<SingleQualifiedPartyIdentification1, List<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SingleQualifiedPartyIdentification1.mmObject();
 			isDerived = false;
@@ -177,6 +188,16 @@ public class SingleQualifiedPartyIdentification1 {
 			maxOccurs = 5;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(SingleQualifiedPartyIdentification1 obj) {
+			return obj.getRelativeIdentifier();
+		}
+
+		@Override
+		public void setValue(SingleQualifiedPartyIdentification1 obj, List<Max35Text> value) {
+			obj.setRelativeIdentifier(value);
 		}
 	};
 
@@ -198,7 +219,7 @@ public class SingleQualifiedPartyIdentification1 {
 		return baseParty;
 	}
 
-	public SingleQualifiedPartyIdentification1 setBaseParty(com.tools20022.repository.msg.TradeParty1 baseParty) {
+	public SingleQualifiedPartyIdentification1 setBaseParty(TradeParty1 baseParty) {
 		this.baseParty = Objects.requireNonNull(baseParty);
 		return this;
 	}

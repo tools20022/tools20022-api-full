@@ -27,6 +27,10 @@ import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.entity.PointOfInteraction;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PointOfInteractionCapabilities1;
+import com.tools20022.repository.msg.PointOfInteractionComponent3;
+import com.tools20022.repository.msg.TerminalManagementDataSet7;
+import com.tools20022.repository.msg.TMSEvent2;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -137,7 +141,7 @@ public class StatusReportContent2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPOICapabilities = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusReportContent2, Optional<PointOfInteractionCapabilities1>> mmPOICapabilities = new MMMessageAssociationEnd<StatusReportContent2, Optional<PointOfInteractionCapabilities1>>() {
 		{
 			businessComponentTrace_lazy = () -> PointOfInteraction.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReportContent2.mmObject();
@@ -150,11 +154,21 @@ public class StatusReportContent2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities1.mmObject();
+			type_lazy = () -> PointOfInteractionCapabilities1.mmObject();
+		}
+
+		@Override
+		public Optional<PointOfInteractionCapabilities1> getValue(StatusReportContent2 obj) {
+			return obj.getPOICapabilities();
+		}
+
+		@Override
+		public void setValue(StatusReportContent2 obj, Optional<PointOfInteractionCapabilities1> value) {
+			obj.setPOICapabilities(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "POICmpnt")
-	protected List<com.tools20022.repository.msg.PointOfInteractionComponent3> pOIComponent;
+	protected List<PointOfInteractionComponent3> pOIComponent;
 	/**
 	 * 
 	 <p>
@@ -196,7 +210,7 @@ public class StatusReportContent2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPOIComponent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusReportContent2, List<PointOfInteractionComponent3>> mmPOIComponent = new MMMessageAssociationEnd<StatusReportContent2, List<PointOfInteractionComponent3>>() {
 		{
 			businessElementTrace_lazy = () -> PointOfInteraction.mmComponent;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReportContent2.mmObject();
@@ -208,7 +222,17 @@ public class StatusReportContent2 {
 			nextVersions_lazy = () -> Arrays.asList(StatusReportContent3.mmPOIComponent);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponent3.mmObject();
+			type_lazy = () -> PointOfInteractionComponent3.mmObject();
+		}
+
+		@Override
+		public List<PointOfInteractionComponent3> getValue(StatusReportContent2 obj) {
+			return obj.getPOIComponent();
+		}
+
+		@Override
+		public void setValue(StatusReportContent2 obj, List<PointOfInteractionComponent3> value) {
+			obj.setPOIComponent(value);
 		}
 	};
 	@XmlElement(name = "AttndncCntxt")
@@ -255,7 +279,7 @@ public class StatusReportContent2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAttendanceContext = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatusReportContent2, Optional<AttendanceContext1Code>> mmAttendanceContext = new MMMessageAttribute<StatusReportContent2, Optional<AttendanceContext1Code>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmAttendanceContext;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReportContent2.mmObject();
@@ -268,6 +292,16 @@ public class StatusReportContent2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AttendanceContext1Code.mmObject();
+		}
+
+		@Override
+		public Optional<AttendanceContext1Code> getValue(StatusReportContent2 obj) {
+			return obj.getAttendanceContext();
+		}
+
+		@Override
+		public void setValue(StatusReportContent2 obj, Optional<AttendanceContext1Code> value) {
+			obj.setAttendanceContext(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "POIDtTm", required = true)
@@ -309,7 +343,7 @@ public class StatusReportContent2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPOIDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatusReportContent2, ISODateTime> mmPOIDateTime = new MMMessageAttribute<StatusReportContent2, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReportContent2.mmObject();
 			isDerived = false;
@@ -321,6 +355,16 @@ public class StatusReportContent2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(StatusReportContent2 obj) {
+			return obj.getPOIDateTime();
+		}
+
+		@Override
+		public void setValue(StatusReportContent2 obj, ISODateTime value) {
+			obj.setPOIDateTime(value);
 		}
 	};
 	@XmlElement(name = "DataSetReqrd")
@@ -362,7 +406,7 @@ public class StatusReportContent2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSetRequired = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusReportContent2, Optional<TerminalManagementDataSet7>> mmDataSetRequired = new MMMessageAssociationEnd<StatusReportContent2, Optional<TerminalManagementDataSet7>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReportContent2.mmObject();
 			isDerived = false;
@@ -374,11 +418,21 @@ public class StatusReportContent2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet7.mmObject();
+			type_lazy = () -> TerminalManagementDataSet7.mmObject();
+		}
+
+		@Override
+		public Optional<TerminalManagementDataSet7> getValue(StatusReportContent2 obj) {
+			return obj.getDataSetRequired();
+		}
+
+		@Override
+		public void setValue(StatusReportContent2 obj, Optional<TerminalManagementDataSet7> value) {
+			obj.setDataSetRequired(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Evt")
-	protected List<com.tools20022.repository.msg.TMSEvent2> event;
+	protected List<TMSEvent2> event;
 	/**
 	 * 
 	 <p>
@@ -414,7 +468,7 @@ public class StatusReportContent2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEvent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusReportContent2, List<TMSEvent2>> mmEvent = new MMMessageAssociationEnd<StatusReportContent2, List<TMSEvent2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReportContent2.mmObject();
 			isDerived = false;
@@ -425,7 +479,17 @@ public class StatusReportContent2 {
 			nextVersions_lazy = () -> Arrays.asList(StatusReportContent3.mmEvent);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TMSEvent2.mmObject();
+			type_lazy = () -> TMSEvent2.mmObject();
+		}
+
+		@Override
+		public List<TMSEvent2> getValue(StatusReportContent2 obj) {
+			return obj.getEvent();
+		}
+
+		@Override
+		public void setValue(StatusReportContent2 obj, List<TMSEvent2> value) {
+			obj.setEvent(value);
 		}
 	};
 	@XmlElement(name = "Errs")
@@ -466,7 +530,7 @@ public class StatusReportContent2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmErrors = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatusReportContent2, Optional<Max140Text>> mmErrors = new MMMessageAttribute<StatusReportContent2, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReportContent2.mmObject();
 			isDerived = false;
@@ -478,6 +542,16 @@ public class StatusReportContent2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(StatusReportContent2 obj) {
+			return obj.getErrors();
+		}
+
+		@Override
+		public void setValue(StatusReportContent2 obj, Optional<Max140Text> value) {
+			obj.setErrors(value.orElse(null));
 		}
 	};
 
@@ -502,7 +576,7 @@ public class StatusReportContent2 {
 		return pOICapabilities == null ? Optional.empty() : Optional.of(pOICapabilities);
 	}
 
-	public StatusReportContent2 setPOICapabilities(com.tools20022.repository.msg.PointOfInteractionCapabilities1 pOICapabilities) {
+	public StatusReportContent2 setPOICapabilities(PointOfInteractionCapabilities1 pOICapabilities) {
 		this.pOICapabilities = pOICapabilities;
 		return this;
 	}
@@ -511,7 +585,7 @@ public class StatusReportContent2 {
 		return pOIComponent == null ? pOIComponent = new ArrayList<>() : pOIComponent;
 	}
 
-	public StatusReportContent2 setPOIComponent(List<com.tools20022.repository.msg.PointOfInteractionComponent3> pOIComponent) {
+	public StatusReportContent2 setPOIComponent(List<PointOfInteractionComponent3> pOIComponent) {
 		this.pOIComponent = Objects.requireNonNull(pOIComponent);
 		return this;
 	}
@@ -538,7 +612,7 @@ public class StatusReportContent2 {
 		return dataSetRequired == null ? Optional.empty() : Optional.of(dataSetRequired);
 	}
 
-	public StatusReportContent2 setDataSetRequired(com.tools20022.repository.msg.TerminalManagementDataSet7 dataSetRequired) {
+	public StatusReportContent2 setDataSetRequired(TerminalManagementDataSet7 dataSetRequired) {
 		this.dataSetRequired = dataSetRequired;
 		return this;
 	}
@@ -547,7 +621,7 @@ public class StatusReportContent2 {
 		return event == null ? event = new ArrayList<>() : event;
 	}
 
-	public StatusReportContent2 setEvent(List<com.tools20022.repository.msg.TMSEvent2> event) {
+	public StatusReportContent2 setEvent(List<TMSEvent2> event) {
 		this.event = Objects.requireNonNull(event);
 		return this;
 	}

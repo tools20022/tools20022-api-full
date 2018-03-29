@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification100;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -123,7 +124,7 @@ public class MessageReference1 {
 	 * AdditionalReferences.mmReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MessageReference1, Max35Text> mmReference = new MMMessageAttribute<MessageReference1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageReference1.mmObject();
@@ -136,6 +137,16 @@ public class MessageReference1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(MessageReference1 obj) {
+			return obj.getReference();
+		}
+
+		@Override
+		public void setValue(MessageReference1 obj, Max35Text value) {
+			obj.setReference(value);
 		}
 	};
 	@XmlElement(name = "MsgNm")
@@ -174,7 +185,7 @@ public class MessageReference1 {
 	 * AdditionalReferences.mmMessageName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MessageReference1, Optional<Max35Text>> mmMessageName = new MMMessageAttribute<MessageReference1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageReference1.mmObject();
 			isDerived = false;
@@ -186,6 +197,16 @@ public class MessageReference1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(MessageReference1 obj) {
+			return obj.getMessageName();
+		}
+
+		@Override
+		public void setValue(MessageReference1 obj, Optional<Max35Text> value) {
+			obj.setMessageName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RefIssr")
@@ -229,7 +250,7 @@ public class MessageReference1 {
 	 * AdditionalReferences.mmReferenceIssuer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReferenceIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MessageReference1, Optional<PartyIdentification100>> mmReferenceIssuer = new MMMessageAttribute<MessageReference1, Optional<PartyIdentification100>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageReference1.mmObject();
@@ -241,7 +262,17 @@ public class MessageReference1 {
 			previousVersion_lazy = () -> AdditionalReferences.mmReferenceIssuer;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification100.mmObject();
+			complexType_lazy = () -> PartyIdentification100.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification100> getValue(MessageReference1 obj) {
+			return obj.getReferenceIssuer();
+		}
+
+		@Override
+		public void setValue(MessageReference1 obj, Optional<PartyIdentification100> value) {
+			obj.setReferenceIssuer(value.orElse(null));
 		}
 	};
 
@@ -283,7 +314,7 @@ public class MessageReference1 {
 		return referenceIssuer == null ? Optional.empty() : Optional.of(referenceIssuer);
 	}
 
-	public MessageReference1 setReferenceIssuer(com.tools20022.repository.msg.PartyIdentification100 referenceIssuer) {
+	public MessageReference1 setReferenceIssuer(PartyIdentification100 referenceIssuer) {
 		this.referenceIssuer = referenceIssuer;
 		return this;
 	}

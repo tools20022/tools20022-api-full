@@ -29,6 +29,7 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -165,7 +166,7 @@ public class FundCashForecast1 {
 	 * "Date and, if required, the time, at which the price has been applied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundCashForecast1, DateAndDateTimeChoice> mmTradeDateTime = new MMMessageAttribute<FundCashForecast1, DateAndDateTimeChoice>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashForecast1.mmObject();
@@ -177,6 +178,16 @@ public class FundCashForecast1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(FundCashForecast1 obj) {
+			return obj.getTradeDateTime();
+		}
+
+		@Override
+		public void setValue(FundCashForecast1 obj, DateAndDateTimeChoice value) {
+			obj.setTradeDateTime(value);
 		}
 	};
 	@XmlElement(name = "PrvsTradDtTm")
@@ -214,7 +225,7 @@ public class FundCashForecast1 {
 	 * definition} = "Previous date and time at which a price was applied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreviousTradeDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundCashForecast1, Optional<DateAndDateTimeChoice>> mmPreviousTradeDateTime = new MMMessageAttribute<FundCashForecast1, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashForecast1.mmObject();
@@ -226,6 +237,16 @@ public class FundCashForecast1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(FundCashForecast1 obj) {
+			return obj.getPreviousTradeDateTime();
+		}
+
+		@Override
+		public void setValue(FundCashForecast1 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setPreviousTradeDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FinInstrmDtls", required = true)
@@ -261,7 +282,7 @@ public class FundCashForecast1 {
 	 * definition} = "Investment fund class to which a cash flow is related."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FundCashForecast1, FinancialInstrument5> mmFinancialInstrumentDetails = new MMMessageAssociationEnd<FundCashForecast1, FinancialInstrument5>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmInvestmentFund;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashForecast1.mmObject();
@@ -273,7 +294,17 @@ public class FundCashForecast1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument5.mmObject();
+			type_lazy = () -> FinancialInstrument5.mmObject();
+		}
+
+		@Override
+		public FinancialInstrument5 getValue(FundCashForecast1 obj) {
+			return obj.getFinancialInstrumentDetails();
+		}
+
+		@Override
+		public void setValue(FundCashForecast1 obj, FinancialInstrument5 value) {
+			obj.setFinancialInstrumentDetails(value);
 		}
 	};
 	@XmlElement(name = "TtlNAV")
@@ -313,7 +344,7 @@ public class FundCashForecast1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalNAV = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundCashForecast1, Optional<ActiveOrHistoricCurrencyAndAmount>> mmTotalNAV = new MMMessageAttribute<FundCashForecast1, Optional<ActiveOrHistoricCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmNetAssetValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashForecast1.mmObject();
@@ -325,6 +356,16 @@ public class FundCashForecast1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAndAmount> getValue(FundCashForecast1 obj) {
+			return obj.getTotalNAV();
+		}
+
+		@Override
+		public void setValue(FundCashForecast1 obj, Optional<ActiveOrHistoricCurrencyAndAmount> value) {
+			obj.setTotalNAV(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsTtlNAV")
@@ -364,7 +405,7 @@ public class FundCashForecast1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreviousTotalNAV = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundCashForecast1, Optional<ActiveOrHistoricCurrencyAndAmount>> mmPreviousTotalNAV = new MMMessageAttribute<FundCashForecast1, Optional<ActiveOrHistoricCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmNetAssetValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashForecast1.mmObject();
@@ -376,6 +417,16 @@ public class FundCashForecast1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAndAmount> getValue(FundCashForecast1 obj) {
+			return obj.getPreviousTotalNAV();
+		}
+
+		@Override
+		public void setValue(FundCashForecast1 obj, Optional<ActiveOrHistoricCurrencyAndAmount> value) {
+			obj.setPreviousTotalNAV(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlUnitsNb")
@@ -414,7 +465,7 @@ public class FundCashForecast1 {
 	 * "Total number of investment fund class units that have been issued."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalUnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundCashForecast1, Optional<FinancialInstrumentQuantity1>> mmTotalUnitsNumber = new MMMessageAttribute<FundCashForecast1, Optional<FinancialInstrumentQuantity1>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmOrder;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashForecast1.mmObject();
@@ -425,7 +476,17 @@ public class FundCashForecast1 {
 			definition = "Total number of investment fund class units that have been issued.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
+			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1> getValue(FundCashForecast1 obj) {
+			return obj.getTotalUnitsNumber();
+		}
+
+		@Override
+		public void setValue(FundCashForecast1 obj, Optional<FinancialInstrumentQuantity1> value) {
+			obj.setTotalUnitsNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsTtlUnitsNb")
@@ -465,7 +526,7 @@ public class FundCashForecast1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreviousTotalUnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundCashForecast1, Optional<FinancialInstrumentQuantity1>> mmPreviousTotalUnitsNumber = new MMMessageAttribute<FundCashForecast1, Optional<FinancialInstrumentQuantity1>>() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmRelatedFund;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashForecast1.mmObject();
@@ -476,7 +537,17 @@ public class FundCashForecast1 {
 			definition = "Previous total number of investment fund class units that have been issued.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
+			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1> getValue(FundCashForecast1 obj) {
+			return obj.getPreviousTotalUnitsNumber();
+		}
+
+		@Override
+		public void setValue(FundCashForecast1 obj, Optional<FinancialInstrumentQuantity1> value) {
+			obj.setPreviousTotalUnitsNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlNAVChngRate")
@@ -514,7 +585,7 @@ public class FundCashForecast1 {
 	 * definition} = "Rate of change of the net asset value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalNAVChangeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundCashForecast1, Optional<PercentageRate>> mmTotalNAVChangeRate = new MMMessageAttribute<FundCashForecast1, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> ValuationStatistics.mmNetAssetValueChangeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashForecast1.mmObject();
@@ -526,6 +597,16 @@ public class FundCashForecast1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(FundCashForecast1 obj) {
+			return obj.getTotalNAVChangeRate();
+		}
+
+		@Override
+		public void setValue(FundCashForecast1 obj, Optional<PercentageRate> value) {
+			obj.setTotalNAVChangeRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InvstmtCcy")
@@ -563,7 +644,7 @@ public class FundCashForecast1 {
 	 * definition} = "Currency of the investment fund class."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInvestmentCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundCashForecast1, List<ActiveOrHistoricCurrencyCode>> mmInvestmentCurrency = new MMMessageAttribute<FundCashForecast1, List<ActiveOrHistoricCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmTradingCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashForecast1.mmObject();
@@ -574,6 +655,16 @@ public class FundCashForecast1 {
 			definition = "Currency of the investment fund class.";
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public List<ActiveOrHistoricCurrencyCode> getValue(FundCashForecast1 obj) {
+			return obj.getInvestmentCurrency();
+		}
+
+		@Override
+		public void setValue(FundCashForecast1 obj, List<ActiveOrHistoricCurrencyCode> value) {
+			obj.setInvestmentCurrency(value);
 		}
 	};
 	@XmlElement(name = "XcptnlNetCshFlowInd", required = true)
@@ -611,7 +702,7 @@ public class FundCashForecast1 {
 	 * definition} = "Indicates whether the net cash flow is exceptional."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExceptionalNetCashFlowIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundCashForecast1, YesNoIndicator> mmExceptionalNetCashFlowIndicator = new MMMessageAttribute<FundCashForecast1, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> FundsCashFlow.mmExceptionalCashFlowIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashForecast1.mmObject();
@@ -624,9 +715,19 @@ public class FundCashForecast1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
+
+		@Override
+		public YesNoIndicator getValue(FundCashForecast1 obj) {
+			return obj.getExceptionalNetCashFlowIndicator();
+		}
+
+		@Override
+		public void setValue(FundCashForecast1 obj, YesNoIndicator value) {
+			obj.setExceptionalNetCashFlowIndicator(value);
+		}
 	};
 	@XmlElement(name = "CshInFcstDtls")
-	protected List<com.tools20022.repository.msg.CashInForecast2> cashInForecastDetails;
+	protected List<CashInForecast2> cashInForecastDetails;
 	/**
 	 * 
 	 <p>
@@ -660,7 +761,7 @@ public class FundCashForecast1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashInForecastDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FundCashForecast1, List<CashInForecast2>> mmCashInForecastDetails = new MMMessageAssociationEnd<FundCashForecast1, List<CashInForecast2>>() {
 		{
 			businessComponentTrace_lazy = () -> FundsCashFlow.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashForecast1.mmObject();
@@ -671,11 +772,21 @@ public class FundCashForecast1 {
 			definition = "Cash movements into a fund as a result of investment funds transactions, eg, subscriptions or switch-in.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashInForecast2.mmObject();
+			type_lazy = () -> CashInForecast2.mmObject();
+		}
+
+		@Override
+		public List<CashInForecast2> getValue(FundCashForecast1 obj) {
+			return obj.getCashInForecastDetails();
+		}
+
+		@Override
+		public void setValue(FundCashForecast1 obj, List<CashInForecast2> value) {
+			obj.setCashInForecastDetails(value);
 		}
 	};
 	@XmlElement(name = "CshOutFcstDtls")
-	protected List<com.tools20022.repository.msg.CashOutForecast2> cashOutForecastDetails;
+	protected List<CashOutForecast2> cashOutForecastDetails;
 	/**
 	 * 
 	 <p>
@@ -709,7 +820,7 @@ public class FundCashForecast1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashOutForecastDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FundCashForecast1, List<CashOutForecast2>> mmCashOutForecastDetails = new MMMessageAssociationEnd<FundCashForecast1, List<CashOutForecast2>>() {
 		{
 			businessComponentTrace_lazy = () -> FundsCashFlow.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashForecast1.mmObject();
@@ -720,11 +831,21 @@ public class FundCashForecast1 {
 			definition = "Cash movements out of a fund as a result of investment funds transactions, eg, redemptions or switch-out.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashOutForecast2.mmObject();
+			type_lazy = () -> CashOutForecast2.mmObject();
+		}
+
+		@Override
+		public List<CashOutForecast2> getValue(FundCashForecast1 obj) {
+			return obj.getCashOutForecastDetails();
+		}
+
+		@Override
+		public void setValue(FundCashForecast1 obj, List<CashOutForecast2> value) {
+			obj.setCashOutForecastDetails(value);
 		}
 	};
 	@XmlElement(name = "NetCshFcstDtls")
-	protected List<com.tools20022.repository.msg.NetCashForecast1> netCashForecastDetails;
+	protected List<NetCashForecast1> netCashForecastDetails;
 	/**
 	 * 
 	 <p>
@@ -758,7 +879,7 @@ public class FundCashForecast1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNetCashForecastDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FundCashForecast1, List<NetCashForecast1>> mmNetCashForecastDetails = new MMMessageAssociationEnd<FundCashForecast1, List<NetCashForecast1>>() {
 		{
 			businessComponentTrace_lazy = () -> FundsCashFlow.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashForecast1.mmObject();
@@ -769,7 +890,17 @@ public class FundCashForecast1 {
 			definition = "Cash movements from or to a fund as a result of investment funds transactions.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NetCashForecast1.mmObject();
+			type_lazy = () -> NetCashForecast1.mmObject();
+		}
+
+		@Override
+		public List<NetCashForecast1> getValue(FundCashForecast1 obj) {
+			return obj.getNetCashForecastDetails();
+		}
+
+		@Override
+		public void setValue(FundCashForecast1 obj, List<NetCashForecast1> value) {
+			obj.setNetCashForecastDetails(value);
 		}
 	};
 
@@ -816,7 +947,7 @@ public class FundCashForecast1 {
 		return financialInstrumentDetails;
 	}
 
-	public FundCashForecast1 setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument5 financialInstrumentDetails) {
+	public FundCashForecast1 setFinancialInstrumentDetails(FinancialInstrument5 financialInstrumentDetails) {
 		this.financialInstrumentDetails = Objects.requireNonNull(financialInstrumentDetails);
 		return this;
 	}
@@ -843,7 +974,7 @@ public class FundCashForecast1 {
 		return totalUnitsNumber == null ? Optional.empty() : Optional.of(totalUnitsNumber);
 	}
 
-	public FundCashForecast1 setTotalUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 totalUnitsNumber) {
+	public FundCashForecast1 setTotalUnitsNumber(FinancialInstrumentQuantity1 totalUnitsNumber) {
 		this.totalUnitsNumber = totalUnitsNumber;
 		return this;
 	}
@@ -852,7 +983,7 @@ public class FundCashForecast1 {
 		return previousTotalUnitsNumber == null ? Optional.empty() : Optional.of(previousTotalUnitsNumber);
 	}
 
-	public FundCashForecast1 setPreviousTotalUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 previousTotalUnitsNumber) {
+	public FundCashForecast1 setPreviousTotalUnitsNumber(FinancialInstrumentQuantity1 previousTotalUnitsNumber) {
 		this.previousTotalUnitsNumber = previousTotalUnitsNumber;
 		return this;
 	}
@@ -888,7 +1019,7 @@ public class FundCashForecast1 {
 		return cashInForecastDetails == null ? cashInForecastDetails = new ArrayList<>() : cashInForecastDetails;
 	}
 
-	public FundCashForecast1 setCashInForecastDetails(List<com.tools20022.repository.msg.CashInForecast2> cashInForecastDetails) {
+	public FundCashForecast1 setCashInForecastDetails(List<CashInForecast2> cashInForecastDetails) {
 		this.cashInForecastDetails = Objects.requireNonNull(cashInForecastDetails);
 		return this;
 	}
@@ -897,7 +1028,7 @@ public class FundCashForecast1 {
 		return cashOutForecastDetails == null ? cashOutForecastDetails = new ArrayList<>() : cashOutForecastDetails;
 	}
 
-	public FundCashForecast1 setCashOutForecastDetails(List<com.tools20022.repository.msg.CashOutForecast2> cashOutForecastDetails) {
+	public FundCashForecast1 setCashOutForecastDetails(List<CashOutForecast2> cashOutForecastDetails) {
 		this.cashOutForecastDetails = Objects.requireNonNull(cashOutForecastDetails);
 		return this;
 	}
@@ -906,7 +1037,7 @@ public class FundCashForecast1 {
 		return netCashForecastDetails == null ? netCashForecastDetails = new ArrayList<>() : netCashForecastDetails;
 	}
 
-	public FundCashForecast1 setNetCashForecastDetails(List<com.tools20022.repository.msg.NetCashForecast1> netCashForecastDetails) {
+	public FundCashForecast1 setNetCashForecastDetails(List<NetCashForecast1> netCashForecastDetails) {
 		this.netCashForecastDetails = Objects.requireNonNull(netCashForecastDetails);
 		return this;
 	}

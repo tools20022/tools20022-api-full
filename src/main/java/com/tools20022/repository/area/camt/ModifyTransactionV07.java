@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.MessageHeader1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msg.TransactionModification4;
 import com.tools20022.repository.msgset._SR2018_MX_CashManagement_Maintenance;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -108,7 +107,7 @@ import javax.xml.bind.annotation.*;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ModifyTransactionV07"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -146,7 +145,7 @@ public class ModifyTransactionV07 {
 	 * definition} = "Common business identification for the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ModifyTransactionV07, MessageHeader1> mmMessageHeader = new MMMessageBuildingBlock<ModifyTransactionV07, MessageHeader1>() {
 		{
 			xmlTag = "MsgHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,12 +156,14 @@ public class ModifyTransactionV07 {
 			complexType_lazy = () -> MessageHeader1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ModifyTransactionV07.class.getMethod("getMessageHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageHeader1 getValue(ModifyTransactionV07 obj) {
+			return obj.getMessageHeader();
+		}
+
+		@Override
+		public void setValue(ModifyTransactionV07 obj, MessageHeader1 value) {
+			obj.setMessageHeader(value);
 		}
 	};
 	@XmlElement(name = "Mod", required = true)
@@ -190,7 +191,7 @@ public class ModifyTransactionV07 {
 	 * definition} = "Identifies the list of modifications to be executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmModification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ModifyTransactionV07, List<TransactionModification4>> mmModification = new MMMessageBuildingBlock<ModifyTransactionV07, List<TransactionModification4>>() {
 		{
 			xmlTag = "Mod";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -200,12 +201,14 @@ public class ModifyTransactionV07 {
 			complexType_lazy = () -> TransactionModification4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ModifyTransactionV07.class.getMethod("getModification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<TransactionModification4> getValue(ModifyTransactionV07 obj) {
+			return obj.getModification();
+		}
+
+		@Override
+		public void setValue(ModifyTransactionV07 obj, List<TransactionModification4> value) {
+			obj.setModification(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -235,7 +238,7 @@ public class ModifyTransactionV07 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ModifyTransactionV07, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<ModifyTransactionV07, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -245,19 +248,21 @@ public class ModifyTransactionV07 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ModifyTransactionV07.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(ModifyTransactionV07 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(ModifyTransactionV07 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ModifyTransactionV07";
 				definition = "Scope\r\nThe ModifyTransaction message is sent by a member to the transaction administrator.\r\nIt is used to request one modification in one payment instruction held at the transaction administrator and sent by the member, debiting or crediting its account at the transaction administrator.\r\nUsage\r\nFollowing normal business flows, transactions registered by the transaction administrator may be queued for later settlement (because of insufficient funds available, or because of risk or liquidity limits, etc.). A transaction may have a series of statuses. These can be transient (such as pending or related types) and final (such as rejected, revoked and/or settled).\r\nMembers of a system need to have information about the payments queue(s) and must have the ability to take action (that is, to cancel or modify the transaction(s) to be settled). Note, however, that actions by a member will always concern transactions in a transient status.\r\nFor this reason, at any time during the operating hours of the system, the member can request modifications to the features of transient transactions.\r\nThe member will submit a message requesting modifications in one or more of the following criteria:\r\n- instruction given, related to the processing of the transaction\r\n- type of payment instructed\r\n- priority of payment period in which the payment instruction should be processed (processing validity time)\r\nThe ModifyTransaction message will contain the new values that the member wants to see applied to the features of the transaction identified in the message.\r\nBased on the criteria received within the ModifyTransaction message, the transaction administrator will execute or reject the requested modifications.\r\nThe transaction administrator may send a Receipt message as a reply to the ModifyTransaction request.\r\nTo verify the outcome of the request, the member may submit a GetTransaction message with the appropriate search criteria.";
 				messageSet_lazy = () -> Arrays.asList(_SR2018_MX_CashManagement_Maintenance.mmObject());

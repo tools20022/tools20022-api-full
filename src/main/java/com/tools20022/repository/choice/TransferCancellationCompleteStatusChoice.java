@@ -108,7 +108,7 @@ public class TransferCancellationCompleteStatusChoice {
 	 * definition} = "Reason of the complete status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferCancellationCompleteStatusChoice, TransferCancellationCompleteReason1> mmReason = new MMMessageAssociationEnd<TransferCancellationCompleteStatusChoice, TransferCancellationCompleteReason1>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransferCancellationCompleteStatusChoice.mmObject();
@@ -121,6 +121,16 @@ public class TransferCancellationCompleteStatusChoice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TransferCancellationCompleteReason1.mmObject();
+		}
+
+		@Override
+		public TransferCancellationCompleteReason1 getValue(TransferCancellationCompleteStatusChoice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(TransferCancellationCompleteStatusChoice obj, TransferCancellationCompleteReason1 value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "DataSrcSchme", required = true)
@@ -158,7 +168,7 @@ public class TransferCancellationCompleteStatusChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferCancellationCompleteStatusChoice, GenericIdentification1> mmDataSourceScheme = new MMMessageAssociationEnd<TransferCancellationCompleteStatusChoice, GenericIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransferCancellationCompleteStatusChoice.mmObject();
@@ -171,6 +181,16 @@ public class TransferCancellationCompleteStatusChoice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(TransferCancellationCompleteStatusChoice obj) {
+			return obj.getDataSourceScheme();
+		}
+
+		@Override
+		public void setValue(TransferCancellationCompleteStatusChoice obj, GenericIdentification1 value) {
+			obj.setDataSourceScheme(value);
 		}
 	};
 

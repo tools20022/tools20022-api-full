@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyIdentification2Choice;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -176,7 +177,7 @@ public class ISATransfer12 {
 	 * ISATransfer9.mmPrimaryIndividualInvestor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPrimaryIndividualInvestor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ISATransfer12, Optional<IndividualPerson8>> mmPrimaryIndividualInvestor = new MMMessageAssociationEnd<ISATransfer12, Optional<IndividualPerson8>>() {
 		{
 			businessComponentTrace_lazy = () -> Person.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer12.mmObject();
@@ -190,7 +191,17 @@ public class ISATransfer12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IndividualPerson8.mmObject();
+			type_lazy = () -> IndividualPerson8.mmObject();
+		}
+
+		@Override
+		public Optional<IndividualPerson8> getValue(ISATransfer12 obj) {
+			return obj.getPrimaryIndividualInvestor();
+		}
+
+		@Override
+		public void setValue(ISATransfer12 obj, Optional<IndividualPerson8> value) {
+			obj.setPrimaryIndividualInvestor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ScndryIndvInvstr")
@@ -239,7 +250,7 @@ public class ISATransfer12 {
 	 * ISATransfer9.mmSecondaryIndividualInvestor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecondaryIndividualInvestor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ISATransfer12, Optional<IndividualPerson8>> mmSecondaryIndividualInvestor = new MMMessageAssociationEnd<ISATransfer12, Optional<IndividualPerson8>>() {
 		{
 			businessComponentTrace_lazy = () -> Person.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer12.mmObject();
@@ -253,11 +264,21 @@ public class ISATransfer12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IndividualPerson8.mmObject();
+			type_lazy = () -> IndividualPerson8.mmObject();
+		}
+
+		@Override
+		public Optional<IndividualPerson8> getValue(ISATransfer12 obj) {
+			return obj.getSecondaryIndividualInvestor();
+		}
+
+		@Override
+		public void setValue(ISATransfer12 obj, Optional<IndividualPerson8> value) {
+			obj.setSecondaryIndividualInvestor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OthrIndvInvstr")
-	protected List<com.tools20022.repository.msg.IndividualPerson8> otherIndividualInvestor;
+	protected List<IndividualPerson8> otherIndividualInvestor;
 	/**
 	 * 
 	 <p>
@@ -302,7 +323,7 @@ public class ISATransfer12 {
 	 * ISATransfer9.mmOtherIndividualInvestor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherIndividualInvestor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ISATransfer12, List<IndividualPerson8>> mmOtherIndividualInvestor = new MMMessageAssociationEnd<ISATransfer12, List<IndividualPerson8>>() {
 		{
 			businessComponentTrace_lazy = () -> Person.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer12.mmObject();
@@ -315,7 +336,17 @@ public class ISATransfer12 {
 			previousVersion_lazy = () -> ISATransfer9.mmOtherIndividualInvestor;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IndividualPerson8.mmObject();
+			type_lazy = () -> IndividualPerson8.mmObject();
+		}
+
+		@Override
+		public List<IndividualPerson8> getValue(ISATransfer12 obj) {
+			return obj.getOtherIndividualInvestor();
+		}
+
+		@Override
+		public void setValue(ISATransfer12 obj, List<IndividualPerson8> value) {
+			obj.setOtherIndividualInvestor(value);
 		}
 	};
 	@XmlElement(name = "PmryCorpInvstr")
@@ -364,7 +395,7 @@ public class ISATransfer12 {
 	 * ISATransfer9.mmPrimaryCorporateInvestor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPrimaryCorporateInvestor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ISATransfer12, Optional<Organisation4>> mmPrimaryCorporateInvestor = new MMMessageAssociationEnd<ISATransfer12, Optional<Organisation4>>() {
 		{
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer12.mmObject();
@@ -378,7 +409,17 @@ public class ISATransfer12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Organisation4.mmObject();
+			type_lazy = () -> Organisation4.mmObject();
+		}
+
+		@Override
+		public Optional<Organisation4> getValue(ISATransfer12 obj) {
+			return obj.getPrimaryCorporateInvestor();
+		}
+
+		@Override
+		public void setValue(ISATransfer12 obj, Optional<Organisation4> value) {
+			obj.setPrimaryCorporateInvestor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ScndryCorpInvstr")
@@ -427,7 +468,7 @@ public class ISATransfer12 {
 	 * ISATransfer9.mmSecondaryCorporateInvestor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecondaryCorporateInvestor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ISATransfer12, Optional<Organisation4>> mmSecondaryCorporateInvestor = new MMMessageAssociationEnd<ISATransfer12, Optional<Organisation4>>() {
 		{
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer12.mmObject();
@@ -441,11 +482,21 @@ public class ISATransfer12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Organisation4.mmObject();
+			type_lazy = () -> Organisation4.mmObject();
+		}
+
+		@Override
+		public Optional<Organisation4> getValue(ISATransfer12 obj) {
+			return obj.getSecondaryCorporateInvestor();
+		}
+
+		@Override
+		public void setValue(ISATransfer12 obj, Optional<Organisation4> value) {
+			obj.setSecondaryCorporateInvestor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OthrCorpInvstr")
-	protected List<com.tools20022.repository.msg.Organisation4> otherCorporateInvestor;
+	protected List<Organisation4> otherCorporateInvestor;
 	/**
 	 * 
 	 <p>
@@ -490,7 +541,7 @@ public class ISATransfer12 {
 	 * ISATransfer9.mmOtherCorporateInvestor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherCorporateInvestor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ISATransfer12, List<Organisation4>> mmOtherCorporateInvestor = new MMMessageAssociationEnd<ISATransfer12, List<Organisation4>>() {
 		{
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer12.mmObject();
@@ -503,7 +554,17 @@ public class ISATransfer12 {
 			previousVersion_lazy = () -> ISATransfer9.mmOtherCorporateInvestor;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Organisation4.mmObject();
+			type_lazy = () -> Organisation4.mmObject();
+		}
+
+		@Override
+		public List<Organisation4> getValue(ISATransfer12 obj) {
+			return obj.getOtherCorporateInvestor();
+		}
+
+		@Override
+		public void setValue(ISATransfer12 obj, List<Organisation4> value) {
+			obj.setOtherCorporateInvestor(value);
 		}
 	};
 	@XmlElement(name = "TrfrAcct", required = true)
@@ -552,7 +613,7 @@ public class ISATransfer12 {
 	 * ISATransfer9.mmTransferorAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransferorAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ISATransfer12, Account15> mmTransferorAccount = new MMMessageAssociationEnd<ISATransfer12, Account15>() {
 		{
 			businessElementTrace_lazy = () -> PortfolioTransfer.mmAccountFrom;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer12.mmObject();
@@ -566,7 +627,17 @@ public class ISATransfer12 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Account15.mmObject();
+			type_lazy = () -> Account15.mmObject();
+		}
+
+		@Override
+		public Account15 getValue(ISATransfer12 obj) {
+			return obj.getTransferorAccount();
+		}
+
+		@Override
+		public void setValue(ISATransfer12 obj, Account15 value) {
+			obj.setTransferorAccount(value);
 		}
 	};
 	@XmlElement(name = "NmneeAcct")
@@ -615,7 +686,7 @@ public class ISATransfer12 {
 	 * ISATransfer9.mmNomineeAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNomineeAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ISATransfer12, Optional<Account16>> mmNomineeAccount = new MMMessageAssociationEnd<ISATransfer12, Optional<Account16>>() {
 		{
 			businessElementTrace_lazy = () -> PortfolioTransfer.mmNomineeAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer12.mmObject();
@@ -629,7 +700,17 @@ public class ISATransfer12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Account16.mmObject();
+			type_lazy = () -> Account16.mmObject();
+		}
+
+		@Override
+		public Optional<Account16> getValue(ISATransfer12 obj) {
+			return obj.getNomineeAccount();
+		}
+
+		@Override
+		public void setValue(ISATransfer12 obj, Optional<Account16> value) {
+			obj.setNomineeAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Trfee", required = true)
@@ -679,7 +760,7 @@ public class ISATransfer12 {
 	 * ISATransfer9.mmTransferee}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransferee = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ISATransfer12, PartyIdentification2Choice> mmTransferee = new MMMessageAssociationEnd<ISATransfer12, PartyIdentification2Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer12.mmObject();
@@ -694,6 +775,16 @@ public class ISATransfer12 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification2Choice getValue(ISATransfer12 obj) {
+			return obj.getTransferee();
+		}
+
+		@Override
+		public void setValue(ISATransfer12 obj, PartyIdentification2Choice value) {
+			obj.setTransferee(value);
 		}
 	};
 	@XmlElement(name = "CshAcct")
@@ -743,7 +834,7 @@ public class ISATransfer12 {
 	 * ISATransfer9.mmCashAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ISATransfer12, Optional<CashAccount29>> mmCashAccount = new MMMessageAssociationEnd<ISATransfer12, Optional<CashAccount29>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer12.mmObject();
@@ -757,7 +848,17 @@ public class ISATransfer12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount29.mmObject();
+			type_lazy = () -> CashAccount29.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount29> getValue(ISATransfer12 obj) {
+			return obj.getCashAccount();
+		}
+
+		@Override
+		public void setValue(ISATransfer12 obj, Optional<CashAccount29> value) {
+			obj.setCashAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PdctTrfAndRef", required = true)
@@ -800,7 +901,7 @@ public class ISATransfer12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProductTransferAndReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ISATransfer12, ISATransfer17> mmProductTransferAndReference = new MMMessageAssociationEnd<ISATransfer12, ISATransfer17>() {
 		{
 			businessComponentTrace_lazy = () -> PortfolioTransfer.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer12.mmObject();
@@ -813,11 +914,21 @@ public class ISATransfer12 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ISATransfer17.mmObject();
+			type_lazy = () -> ISATransfer17.mmObject();
+		}
+
+		@Override
+		public ISATransfer17 getValue(ISATransfer12 obj) {
+			return obj.getProductTransferAndReference();
+		}
+
+		@Override
+		public void setValue(ISATransfer12 obj, ISATransfer17 value) {
+			obj.setProductTransferAndReference(value);
 		}
 	};
 	@XmlElement(name = "Xtnsn")
-	protected List<com.tools20022.repository.msg.Extension1> extension;
+	protected List<Extension1> extension;
 	/**
 	 * 
 	 <p>
@@ -856,7 +967,7 @@ public class ISATransfer12 {
 	 * ISATransfer9.mmExtension}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ISATransfer12, List<Extension1>> mmExtension = new MMMessageAssociationEnd<ISATransfer12, List<Extension1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer12.mmObject();
 			isDerived = false;
@@ -868,7 +979,17 @@ public class ISATransfer12 {
 			previousVersion_lazy = () -> ISATransfer9.mmExtension;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Extension1.mmObject();
+			type_lazy = () -> Extension1.mmObject();
+		}
+
+		@Override
+		public List<Extension1> getValue(ISATransfer12 obj) {
+			return obj.getExtension();
+		}
+
+		@Override
+		public void setValue(ISATransfer12 obj, List<Extension1> value) {
+			obj.setExtension(value);
 		}
 	};
 
@@ -899,7 +1020,7 @@ public class ISATransfer12 {
 		return primaryIndividualInvestor == null ? Optional.empty() : Optional.of(primaryIndividualInvestor);
 	}
 
-	public ISATransfer12 setPrimaryIndividualInvestor(com.tools20022.repository.msg.IndividualPerson8 primaryIndividualInvestor) {
+	public ISATransfer12 setPrimaryIndividualInvestor(IndividualPerson8 primaryIndividualInvestor) {
 		this.primaryIndividualInvestor = primaryIndividualInvestor;
 		return this;
 	}
@@ -908,7 +1029,7 @@ public class ISATransfer12 {
 		return secondaryIndividualInvestor == null ? Optional.empty() : Optional.of(secondaryIndividualInvestor);
 	}
 
-	public ISATransfer12 setSecondaryIndividualInvestor(com.tools20022.repository.msg.IndividualPerson8 secondaryIndividualInvestor) {
+	public ISATransfer12 setSecondaryIndividualInvestor(IndividualPerson8 secondaryIndividualInvestor) {
 		this.secondaryIndividualInvestor = secondaryIndividualInvestor;
 		return this;
 	}
@@ -917,7 +1038,7 @@ public class ISATransfer12 {
 		return otherIndividualInvestor == null ? otherIndividualInvestor = new ArrayList<>() : otherIndividualInvestor;
 	}
 
-	public ISATransfer12 setOtherIndividualInvestor(List<com.tools20022.repository.msg.IndividualPerson8> otherIndividualInvestor) {
+	public ISATransfer12 setOtherIndividualInvestor(List<IndividualPerson8> otherIndividualInvestor) {
 		this.otherIndividualInvestor = Objects.requireNonNull(otherIndividualInvestor);
 		return this;
 	}
@@ -926,7 +1047,7 @@ public class ISATransfer12 {
 		return primaryCorporateInvestor == null ? Optional.empty() : Optional.of(primaryCorporateInvestor);
 	}
 
-	public ISATransfer12 setPrimaryCorporateInvestor(com.tools20022.repository.msg.Organisation4 primaryCorporateInvestor) {
+	public ISATransfer12 setPrimaryCorporateInvestor(Organisation4 primaryCorporateInvestor) {
 		this.primaryCorporateInvestor = primaryCorporateInvestor;
 		return this;
 	}
@@ -935,7 +1056,7 @@ public class ISATransfer12 {
 		return secondaryCorporateInvestor == null ? Optional.empty() : Optional.of(secondaryCorporateInvestor);
 	}
 
-	public ISATransfer12 setSecondaryCorporateInvestor(com.tools20022.repository.msg.Organisation4 secondaryCorporateInvestor) {
+	public ISATransfer12 setSecondaryCorporateInvestor(Organisation4 secondaryCorporateInvestor) {
 		this.secondaryCorporateInvestor = secondaryCorporateInvestor;
 		return this;
 	}
@@ -944,7 +1065,7 @@ public class ISATransfer12 {
 		return otherCorporateInvestor == null ? otherCorporateInvestor = new ArrayList<>() : otherCorporateInvestor;
 	}
 
-	public ISATransfer12 setOtherCorporateInvestor(List<com.tools20022.repository.msg.Organisation4> otherCorporateInvestor) {
+	public ISATransfer12 setOtherCorporateInvestor(List<Organisation4> otherCorporateInvestor) {
 		this.otherCorporateInvestor = Objects.requireNonNull(otherCorporateInvestor);
 		return this;
 	}
@@ -953,7 +1074,7 @@ public class ISATransfer12 {
 		return transferorAccount;
 	}
 
-	public ISATransfer12 setTransferorAccount(com.tools20022.repository.msg.Account15 transferorAccount) {
+	public ISATransfer12 setTransferorAccount(Account15 transferorAccount) {
 		this.transferorAccount = Objects.requireNonNull(transferorAccount);
 		return this;
 	}
@@ -962,7 +1083,7 @@ public class ISATransfer12 {
 		return nomineeAccount == null ? Optional.empty() : Optional.of(nomineeAccount);
 	}
 
-	public ISATransfer12 setNomineeAccount(com.tools20022.repository.msg.Account16 nomineeAccount) {
+	public ISATransfer12 setNomineeAccount(Account16 nomineeAccount) {
 		this.nomineeAccount = nomineeAccount;
 		return this;
 	}
@@ -980,7 +1101,7 @@ public class ISATransfer12 {
 		return cashAccount == null ? Optional.empty() : Optional.of(cashAccount);
 	}
 
-	public ISATransfer12 setCashAccount(com.tools20022.repository.msg.CashAccount29 cashAccount) {
+	public ISATransfer12 setCashAccount(CashAccount29 cashAccount) {
 		this.cashAccount = cashAccount;
 		return this;
 	}
@@ -989,7 +1110,7 @@ public class ISATransfer12 {
 		return productTransferAndReference;
 	}
 
-	public ISATransfer12 setProductTransferAndReference(com.tools20022.repository.msg.ISATransfer17 productTransferAndReference) {
+	public ISATransfer12 setProductTransferAndReference(ISATransfer17 productTransferAndReference) {
 		this.productTransferAndReference = Objects.requireNonNull(productTransferAndReference);
 		return this;
 	}
@@ -998,7 +1119,7 @@ public class ISATransfer12 {
 		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public ISATransfer12 setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+	public ISATransfer12 setExtension(List<Extension1> extension) {
 		this.extension = Objects.requireNonNull(extension);
 		return this;
 	}

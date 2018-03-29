@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.CorporateActionStatus;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FailedMovement1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -115,7 +116,7 @@ public class CorporateActionMovementFailedStatus1 {
 	 * definition} = "Identification of the agent account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAgentAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMovementFailedStatus1, Max35Text> mmAgentAccountIdentification = new MMMessageAttribute<CorporateActionMovementFailedStatus1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementFailedStatus1.mmObject();
@@ -127,6 +128,16 @@ public class CorporateActionMovementFailedStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CorporateActionMovementFailedStatus1 obj) {
+			return obj.getAgentAccountIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementFailedStatus1 obj, Max35Text value) {
+			obj.setAgentAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "ClntAcctId")
@@ -163,7 +174,7 @@ public class CorporateActionMovementFailedStatus1 {
 	 * definition} = "Identification of the client account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClientAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMovementFailedStatus1, Optional<Max35Text>> mmClientAccountIdentification = new MMMessageAttribute<CorporateActionMovementFailedStatus1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementFailedStatus1.mmObject();
@@ -175,6 +186,16 @@ public class CorporateActionMovementFailedStatus1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CorporateActionMovementFailedStatus1 obj) {
+			return obj.getClientAccountIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementFailedStatus1 obj, Optional<Max35Text> value) {
+			obj.setClientAccountIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctOwnrId")
@@ -213,7 +234,7 @@ public class CorporateActionMovementFailedStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwnerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMovementFailedStatus1, Optional<PartyIdentification2Choice>> mmAccountOwnerIdentification = new MMMessageAttribute<CorporateActionMovementFailedStatus1, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementFailedStatus1.mmObject();
@@ -226,9 +247,19 @@ public class CorporateActionMovementFailedStatus1 {
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(CorporateActionMovementFailedStatus1 obj) {
+			return obj.getAccountOwnerIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementFailedStatus1 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setAccountOwnerIdentification(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "RsrcDtls", required = true)
-	protected List<com.tools20022.repository.msg.FailedMovement1> resourceDetails;
+	protected List<FailedMovement1> resourceDetails;
 	/**
 	 * 
 	 <p>
@@ -262,7 +293,7 @@ public class CorporateActionMovementFailedStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmResourceDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionMovementFailedStatus1, List<FailedMovement1>> mmResourceDetails = new MMMessageAssociationEnd<CorporateActionMovementFailedStatus1, List<FailedMovement1>>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementFailedStatus1.mmObject();
@@ -273,7 +304,17 @@ public class CorporateActionMovementFailedStatus1 {
 			definition = "Provides information about the resource movement that failed and the reason of the failure.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FailedMovement1.mmObject();
+			type_lazy = () -> FailedMovement1.mmObject();
+		}
+
+		@Override
+		public List<FailedMovement1> getValue(CorporateActionMovementFailedStatus1 obj) {
+			return obj.getResourceDetails();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementFailedStatus1 obj, List<FailedMovement1> value) {
+			obj.setResourceDetails(value);
 		}
 	};
 
@@ -324,7 +365,7 @@ public class CorporateActionMovementFailedStatus1 {
 		return resourceDetails == null ? resourceDetails = new ArrayList<>() : resourceDetails;
 	}
 
-	public CorporateActionMovementFailedStatus1 setResourceDetails(List<com.tools20022.repository.msg.FailedMovement1> resourceDetails) {
+	public CorporateActionMovementFailedStatus1 setResourceDetails(List<FailedMovement1> resourceDetails) {
 		this.resourceDetails = Objects.requireNonNull(resourceDetails);
 		return this;
 	}

@@ -134,7 +134,7 @@ public class References17Choice {
 	 * "Unambiguous identification of the securities settlement transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesSettlementTransactionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<References17Choice, SettlementTypeAndIdentification7> mmSecuritiesSettlementTransactionIdentification = new MMMessageAssociationEnd<References17Choice, SettlementTypeAndIdentification7>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References17Choice.mmObject();
@@ -148,6 +148,16 @@ public class References17Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SettlementTypeAndIdentification7.mmObject();
+		}
+
+		@Override
+		public SettlementTypeAndIdentification7 getValue(References17Choice obj) {
+			return obj.getSecuritiesSettlementTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(References17Choice obj, SettlementTypeAndIdentification7 value) {
+			obj.setSecuritiesSettlementTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "SctiesFincgTxId", required = true)
@@ -189,7 +199,7 @@ public class References17Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesFinancingTransactionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<References17Choice, SettlementTypeAndIdentification7> mmSecuritiesFinancingTransactionIdentification = new MMMessageAssociationEnd<References17Choice, SettlementTypeAndIdentification7>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References17Choice.mmObject();
@@ -203,6 +213,16 @@ public class References17Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SettlementTypeAndIdentification7.mmObject();
+		}
+
+		@Override
+		public SettlementTypeAndIdentification7 getValue(References17Choice obj) {
+			return obj.getSecuritiesFinancingTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(References17Choice obj, SettlementTypeAndIdentification7 value) {
+			obj.setSecuritiesFinancingTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "IntraPosMvmntId", required = true)
@@ -240,7 +260,7 @@ public class References17Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIntraPositionMovementIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References17Choice, RestrictedFINXMax16Text> mmIntraPositionMovementIdentification = new MMMessageAttribute<References17Choice, RestrictedFINXMax16Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.References17Choice.mmObject();
 			isDerived = false;
@@ -252,6 +272,16 @@ public class References17Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(References17Choice obj) {
+			return obj.getIntraPositionMovementIdentification();
+		}
+
+		@Override
+		public void setValue(References17Choice obj, RestrictedFINXMax16Text value) {
+			obj.setIntraPositionMovementIdentification(value);
 		}
 	};
 	@XmlElement(name = "OthrTxId", required = true)
@@ -293,7 +323,7 @@ public class References17Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherTransactionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<References17Choice, GenericDocumentIdentification3> mmOtherTransactionIdentification = new MMMessageAssociationEnd<References17Choice, GenericDocumentIdentification3>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References17Choice.mmObject();
@@ -307,6 +337,16 @@ public class References17Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericDocumentIdentification3.mmObject();
+		}
+
+		@Override
+		public GenericDocumentIdentification3 getValue(References17Choice obj) {
+			return obj.getOtherTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(References17Choice obj, GenericDocumentIdentification3 value) {
+			obj.setOtherTransactionIdentification(value);
 		}
 	};
 

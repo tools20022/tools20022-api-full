@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DocumentIdentification5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -107,7 +108,7 @@ public class DataSetSubmissionReferences1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DataSetSubmissionReferences1, Max35Text> mmTransactionIdentification = new MMMessageAttribute<DataSetSubmissionReferences1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DataSetSubmissionReferences1.mmObject();
 			isDerived = false;
@@ -118,6 +119,16 @@ public class DataSetSubmissionReferences1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(DataSetSubmissionReferences1 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(DataSetSubmissionReferences1 obj, Max35Text value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "SubmitrTxRef", required = true)
@@ -151,7 +162,7 @@ public class DataSetSubmissionReferences1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSubmitterTransactionReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DataSetSubmissionReferences1, DocumentIdentification5> mmSubmitterTransactionReference = new MMMessageAssociationEnd<DataSetSubmissionReferences1, DocumentIdentification5>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DataSetSubmissionReferences1.mmObject();
 			isDerived = false;
@@ -162,7 +173,17 @@ public class DataSetSubmissionReferences1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DocumentIdentification5.mmObject();
+			type_lazy = () -> DocumentIdentification5.mmObject();
+		}
+
+		@Override
+		public DocumentIdentification5 getValue(DataSetSubmissionReferences1 obj) {
+			return obj.getSubmitterTransactionReference();
+		}
+
+		@Override
+		public void setValue(DataSetSubmissionReferences1 obj, DocumentIdentification5 value) {
+			obj.setSubmitterTransactionReference(value);
 		}
 	};
 	@XmlElement(name = "FnlSubmissn", required = true)
@@ -197,7 +218,7 @@ public class DataSetSubmissionReferences1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinalSubmission = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DataSetSubmissionReferences1, YesNoIndicator> mmFinalSubmission = new MMMessageAttribute<DataSetSubmissionReferences1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DataSetSubmissionReferences1.mmObject();
 			isDerived = false;
@@ -208,6 +229,16 @@ public class DataSetSubmissionReferences1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(DataSetSubmissionReferences1 obj) {
+			return obj.getFinalSubmission();
+		}
+
+		@Override
+		public void setValue(DataSetSubmissionReferences1 obj, YesNoIndicator value) {
+			obj.setFinalSubmission(value);
 		}
 	};
 
@@ -238,7 +269,7 @@ public class DataSetSubmissionReferences1 {
 		return submitterTransactionReference;
 	}
 
-	public DataSetSubmissionReferences1 setSubmitterTransactionReference(com.tools20022.repository.msg.DocumentIdentification5 submitterTransactionReference) {
+	public DataSetSubmissionReferences1 setSubmitterTransactionReference(DocumentIdentification5 submitterTransactionReference) {
 		this.submitterTransactionReference = Objects.requireNonNull(submitterTransactionReference);
 		return this;
 	}

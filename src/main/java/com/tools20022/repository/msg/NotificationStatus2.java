@@ -126,7 +126,7 @@ public class NotificationStatus2 {
 	 * NotificationStatus1.mmStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NotificationStatus2, NotificationStatus2Code> mmStatus = new MMMessageAttribute<NotificationStatus2, NotificationStatus2Code>() {
 		{
 			businessElementTrace_lazy = () -> MeetingStatus.mmNotificationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationStatus2.mmObject();
@@ -139,6 +139,16 @@ public class NotificationStatus2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NotificationStatus2Code.mmObject();
+		}
+
+		@Override
+		public NotificationStatus2Code getValue(NotificationStatus2 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(NotificationStatus2 obj, NotificationStatus2Code value) {
+			obj.setStatus(value);
 		}
 	};
 

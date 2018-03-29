@@ -128,7 +128,7 @@ public class AllocationSatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AllocationSatus1Choice, AllocationStatus1Code> mmCode = new MMMessageAttribute<AllocationSatus1Choice, AllocationStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmCollateralAllocationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AllocationSatus1Choice.mmObject();
@@ -142,6 +142,16 @@ public class AllocationSatus1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AllocationStatus1Code.mmObject();
+		}
+
+		@Override
+		public AllocationStatus1Code getValue(AllocationSatus1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(AllocationSatus1Choice obj, AllocationStatus1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -192,7 +202,7 @@ public class AllocationSatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AllocationSatus1Choice, GenericIdentification20> mmProprietary = new MMMessageAttribute<AllocationSatus1Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmCollateralAllocationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AllocationSatus1Choice.mmObject();
@@ -206,6 +216,16 @@ public class AllocationSatus1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(AllocationSatus1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(AllocationSatus1Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -140,7 +140,7 @@ public class ATMCommandParameters2Choice {
 	 * ATMCommandParameters1Choice.mmATMRequiredGlobalStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmATMRequiredGlobalStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMCommandParameters2Choice, ATMStatus1Code> mmATMRequiredGlobalStatus = new MMMessageAttribute<ATMCommandParameters2Choice, ATMStatus1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ATMCommandParameters2Choice.mmObject();
 			isDerived = false;
@@ -153,6 +153,16 @@ public class ATMCommandParameters2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ATMStatus1Code.mmObject();
+		}
+
+		@Override
+		public ATMStatus1Code getValue(ATMCommandParameters2Choice obj) {
+			return obj.getATMRequiredGlobalStatus();
+		}
+
+		@Override
+		public void setValue(ATMCommandParameters2Choice obj, ATMStatus1Code value) {
+			obj.setATMRequiredGlobalStatus(value);
 		}
 	};
 	@XmlElement(name = "XpctdMsgFctn", required = true)
@@ -198,7 +208,7 @@ public class ATMCommandParameters2Choice {
 	 * ATMCommandParameters1Choice.mmExpectedMessageFunction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpectedMessageFunction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMCommandParameters2Choice, MessageFunction8Code> mmExpectedMessageFunction = new MMMessageAttribute<ATMCommandParameters2Choice, MessageFunction8Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ATMCommandParameters2Choice.mmObject();
 			isDerived = false;
@@ -211,6 +221,16 @@ public class ATMCommandParameters2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MessageFunction8Code.mmObject();
+		}
+
+		@Override
+		public MessageFunction8Code getValue(ATMCommandParameters2Choice obj) {
+			return obj.getExpectedMessageFunction();
+		}
+
+		@Override
+		public void setValue(ATMCommandParameters2Choice obj, MessageFunction8Code value) {
+			obj.setExpectedMessageFunction(value);
 		}
 	};
 	@XmlElement(name = "ReqrdCfgtnParam", required = true)
@@ -256,7 +276,7 @@ public class ATMCommandParameters2Choice {
 	 * ATMCommandParameters1Choice.mmRequiredConfigurationParameter}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRequiredConfigurationParameter = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMCommandParameters2Choice, ATMConfigurationParameter1> mmRequiredConfigurationParameter = new MMMessageAssociationEnd<ATMCommandParameters2Choice, ATMConfigurationParameter1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ATMCommandParameters2Choice.mmObject();
 			isDerived = false;
@@ -270,6 +290,16 @@ public class ATMCommandParameters2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ATMConfigurationParameter1.mmObject();
+		}
+
+		@Override
+		public ATMConfigurationParameter1 getValue(ATMCommandParameters2Choice obj) {
+			return obj.getRequiredConfigurationParameter();
+		}
+
+		@Override
+		public void setValue(ATMCommandParameters2Choice obj, ATMConfigurationParameter1 value) {
+			obj.setRequiredConfigurationParameter(value);
 		}
 	};
 	@XmlElement(name = "ReqrdSctySchme", required = true)
@@ -311,7 +341,7 @@ public class ATMCommandParameters2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequiredSecurityScheme = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMCommandParameters2Choice, ATMSecurityScheme2Code> mmRequiredSecurityScheme = new MMMessageAttribute<ATMCommandParameters2Choice, ATMSecurityScheme2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ATMCommandParameters2Choice.mmObject();
 			isDerived = false;
@@ -323,6 +353,16 @@ public class ATMCommandParameters2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ATMSecurityScheme2Code.mmObject();
+		}
+
+		@Override
+		public ATMSecurityScheme2Code getValue(ATMCommandParameters2Choice obj) {
+			return obj.getRequiredSecurityScheme();
+		}
+
+		@Override
+		public void setValue(ATMCommandParameters2Choice obj, ATMSecurityScheme2Code value) {
+			obj.setRequiredSecurityScheme(value);
 		}
 	};
 	@XmlElement(name = "SctyDvc", required = true)
@@ -363,7 +403,7 @@ public class ATMCommandParameters2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecurityDevice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMCommandParameters2Choice, ATMCommandParameters1> mmSecurityDevice = new MMMessageAssociationEnd<ATMCommandParameters2Choice, ATMCommandParameters1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ATMCommandParameters2Choice.mmObject();
 			isDerived = false;
@@ -376,6 +416,16 @@ public class ATMCommandParameters2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ATMCommandParameters1.mmObject();
+		}
+
+		@Override
+		public ATMCommandParameters1 getValue(ATMCommandParameters2Choice obj) {
+			return obj.getSecurityDevice();
+		}
+
+		@Override
+		public void setValue(ATMCommandParameters2Choice obj, ATMCommandParameters1 value) {
+			obj.setSecurityDevice(value);
 		}
 	};
 	@XmlElement(name = "Key", required = true)
@@ -416,7 +466,7 @@ public class ATMCommandParameters2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmKey = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMCommandParameters2Choice, ATMConfigurationParameter2> mmKey = new MMMessageAssociationEnd<ATMCommandParameters2Choice, ATMConfigurationParameter2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ATMCommandParameters2Choice.mmObject();
 			isDerived = false;
@@ -429,6 +479,16 @@ public class ATMCommandParameters2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ATMConfigurationParameter2.mmObject();
+		}
+
+		@Override
+		public ATMConfigurationParameter2 getValue(ATMCommandParameters2Choice obj) {
+			return obj.getKey();
+		}
+
+		@Override
+		public void setValue(ATMCommandParameters2Choice obj, ATMConfigurationParameter2 value) {
+			obj.setKey(value);
 		}
 	};
 

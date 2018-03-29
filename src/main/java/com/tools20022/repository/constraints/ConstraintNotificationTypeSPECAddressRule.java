@@ -54,12 +54,16 @@ public class ConstraintNotificationTypeSPECAddressRule {
 	 */
 	public static final MMConstraint<NonExtension1> forNonExtension1 = new MMConstraint<NonExtension1>() {
 		{
-			validator = ConstraintNotificationTypeSPECAddressRule::checkNonExtension1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationTypeSPECAddressRule";
 			definition = "If NotificationRecipienType is \"SPEC\" (SpecifiedAddress), then NotificationRecipientAddress must be present.";
 			owner_lazy = () -> NonExtension1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/NotificationRecipientAddress</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/NotificationRecipientType/Code</leftOperand><rightOperand>SPEC</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(NonExtension1 obj) throws Exception {
+			checkNonExtension1(obj);
 		}
 	};
 

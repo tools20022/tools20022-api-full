@@ -23,7 +23,6 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max2NumericText;
 import com.tools20022.repository.entity.CardPaymentPartyRole;
 import com.tools20022.repository.GeneratedRepository;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -92,7 +91,7 @@ public class Cashier extends CardPaymentPartyRole {
 	 * definition} = "Identifies the shift of the cashier."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmShiftNumber = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Cashier, Optional<Max2NumericText>> mmShiftNumber = new MMBusinessAttribute<Cashier, Optional<Max2NumericText>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Cashier.mmObject();
@@ -104,12 +103,14 @@ public class Cashier extends CardPaymentPartyRole {
 			simpleType_lazy = () -> Max2NumericText.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Cashier.class.getMethod("getShiftNumber", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Max2NumericText> getValue(Cashier obj) {
+			return obj.getShiftNumber();
+		}
+
+		@Override
+		public void setValue(Cashier obj, Optional<Max2NumericText> value) {
+			obj.setShiftNumber(value.orElse(null));
 		}
 	};
 

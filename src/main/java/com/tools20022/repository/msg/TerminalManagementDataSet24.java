@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max9NumericText;
 import com.tools20022.repository.entity.TerminalManagementAction;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DataSetIdentification7;
+import com.tools20022.repository.msg.ManagementPlanContent7;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -65,7 +67,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "TerminalManagementDataSet24"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -116,7 +118,7 @@ public class TerminalManagementDataSet24 {
 	 * TerminalManagementDataSet22.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TerminalManagementDataSet24, DataSetIdentification7> mmIdentification = new MMMessageAssociationEnd<TerminalManagementDataSet24, DataSetIdentification7>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet24.mmObject();
 			isDerived = false;
@@ -128,7 +130,17 @@ public class TerminalManagementDataSet24 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DataSetIdentification7.mmObject();
+			type_lazy = () -> DataSetIdentification7.mmObject();
+		}
+
+		@Override
+		public DataSetIdentification7 getValue(TerminalManagementDataSet24 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(TerminalManagementDataSet24 obj, DataSetIdentification7 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "SeqCntr")
@@ -167,7 +179,7 @@ public class TerminalManagementDataSet24 {
 	 * TerminalManagementDataSet22.mmSequenceCounter}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSequenceCounter = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TerminalManagementDataSet24, Optional<Max9NumericText>> mmSequenceCounter = new MMMessageAttribute<TerminalManagementDataSet24, Optional<Max9NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet24.mmObject();
 			isDerived = false;
@@ -179,6 +191,16 @@ public class TerminalManagementDataSet24 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max9NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max9NumericText> getValue(TerminalManagementDataSet24 obj) {
+			return obj.getSequenceCounter();
+		}
+
+		@Override
+		public void setValue(TerminalManagementDataSet24 obj, Optional<Max9NumericText> value) {
+			obj.setSequenceCounter(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Cntt")
@@ -214,7 +236,7 @@ public class TerminalManagementDataSet24 {
 	 * TerminalManagementDataSet22.mmContent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TerminalManagementDataSet24, Optional<ManagementPlanContent7>> mmContent = new MMMessageAssociationEnd<TerminalManagementDataSet24, Optional<ManagementPlanContent7>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet24.mmObject();
 			isDerived = false;
@@ -226,7 +248,17 @@ public class TerminalManagementDataSet24 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ManagementPlanContent7.mmObject();
+			type_lazy = () -> ManagementPlanContent7.mmObject();
+		}
+
+		@Override
+		public Optional<ManagementPlanContent7> getValue(TerminalManagementDataSet24 obj) {
+			return obj.getContent();
+		}
+
+		@Override
+		public void setValue(TerminalManagementDataSet24 obj, Optional<ManagementPlanContent7> value) {
+			obj.setContent(value.orElse(null));
 		}
 	};
 
@@ -237,7 +269,7 @@ public class TerminalManagementDataSet24 {
 						com.tools20022.repository.msg.TerminalManagementDataSet24.mmContent);
 				trace_lazy = () -> TerminalManagementAction.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementDataSet24";
 				definition = "Data related to the management plan of a point of interaction (POI).";
 				previousVersion_lazy = () -> TerminalManagementDataSet22.mmObject();
@@ -250,7 +282,7 @@ public class TerminalManagementDataSet24 {
 		return identification;
 	}
 
-	public TerminalManagementDataSet24 setIdentification(com.tools20022.repository.msg.DataSetIdentification7 identification) {
+	public TerminalManagementDataSet24 setIdentification(DataSetIdentification7 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}
@@ -268,7 +300,7 @@ public class TerminalManagementDataSet24 {
 		return content == null ? Optional.empty() : Optional.of(content);
 	}
 
-	public TerminalManagementDataSet24 setContent(com.tools20022.repository.msg.ManagementPlanContent7 content) {
+	public TerminalManagementDataSet24 setContent(ManagementPlanContent7 content) {
 		this.content = content;
 		return this;
 	}

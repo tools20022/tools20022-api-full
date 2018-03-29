@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.NettingIdentification1Choice;
 import com.tools20022.repository.entity.Netting;
 import com.tools20022.repository.entity.SystemAvailability;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CutOff1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -113,7 +114,7 @@ public class NettingCutOff1 {
 	 * definition} = "Identifies the netting party or group."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNettingIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NettingCutOff1, NettingIdentification1Choice> mmNettingIdentification = new MMMessageAssociationEnd<NettingCutOff1, NettingIdentification1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NettingCutOff1.mmObject();
 			isDerived = false;
@@ -126,9 +127,19 @@ public class NettingCutOff1 {
 			isComposite = true;
 			type_lazy = () -> NettingIdentification1Choice.mmObject();
 		}
+
+		@Override
+		public NettingIdentification1Choice getValue(NettingCutOff1 obj) {
+			return obj.getNettingIdentification();
+		}
+
+		@Override
+		public void setValue(NettingCutOff1 obj, NettingIdentification1Choice value) {
+			obj.setNettingIdentification(value);
+		}
 	};
 	@XmlElement(name = "NewCutOff", required = true)
-	protected List<com.tools20022.repository.msg.CutOff1> newCutOff;
+	protected List<CutOff1> newCutOff;
 	/**
 	 * 
 	 <p>
@@ -159,7 +170,7 @@ public class NettingCutOff1 {
 	 * "Specifies the information regarding the updated netting cut off."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNewCutOff = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NettingCutOff1, List<CutOff1>> mmNewCutOff = new MMMessageAssociationEnd<NettingCutOff1, List<CutOff1>>() {
 		{
 			businessComponentTrace_lazy = () -> SystemAvailability.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.NettingCutOff1.mmObject();
@@ -170,7 +181,17 @@ public class NettingCutOff1 {
 			definition = "Specifies the information regarding the updated netting cut off.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CutOff1.mmObject();
+			type_lazy = () -> CutOff1.mmObject();
+		}
+
+		@Override
+		public List<CutOff1> getValue(NettingCutOff1 obj) {
+			return obj.getNewCutOff();
+		}
+
+		@Override
+		public void setValue(NettingCutOff1 obj, List<CutOff1> value) {
+			obj.setNewCutOff(value);
 		}
 	};
 
@@ -202,7 +223,7 @@ public class NettingCutOff1 {
 		return newCutOff == null ? newCutOff = new ArrayList<>() : newCutOff;
 	}
 
-	public NettingCutOff1 setNewCutOff(List<com.tools20022.repository.msg.CutOff1> newCutOff) {
+	public NettingCutOff1 setNewCutOff(List<CutOff1> newCutOff) {
 		this.newCutOff = Objects.requireNonNull(newCutOff);
 		return this;
 	}

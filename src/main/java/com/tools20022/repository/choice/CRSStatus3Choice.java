@@ -113,7 +113,7 @@ public class CRSStatus3Choice {
 	 * FATCAStatus2Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CRSStatus3Choice, CRSStatus1Code> mmCode = new MMMessageAttribute<CRSStatus3Choice, CRSStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> CRSStatus.mmCRSStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CRSStatus3Choice.mmObject();
@@ -126,6 +126,16 @@ public class CRSStatus3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CRSStatus1Code.mmObject();
+		}
+
+		@Override
+		public CRSStatus1Code getValue(CRSStatus3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CRSStatus3Choice obj, CRSStatus1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -164,7 +174,7 @@ public class CRSStatus3Choice {
 	 * FATCAStatus2Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CRSStatus3Choice, GenericIdentification47> mmProprietary = new MMMessageAssociationEnd<CRSStatus3Choice, GenericIdentification47>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CRSStatus3Choice.mmObject();
 			isDerived = false;
@@ -177,6 +187,16 @@ public class CRSStatus3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(CRSStatus3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CRSStatus3Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

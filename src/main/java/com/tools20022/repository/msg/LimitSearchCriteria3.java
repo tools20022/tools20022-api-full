@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -159,7 +160,7 @@ public class LimitSearchCriteria3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSystemIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitSearchCriteria3, Optional<SystemIdentification2Choice>> mmSystemIdentification = new MMMessageAssociationEnd<LimitSearchCriteria3, Optional<SystemIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> TransactionAdministrator.mmCashClearingSystem;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitSearchCriteria3.mmObject();
@@ -174,9 +175,19 @@ public class LimitSearchCriteria3 {
 			isComposite = true;
 			type_lazy = () -> SystemIdentification2Choice.mmObject();
 		}
+
+		@Override
+		public Optional<SystemIdentification2Choice> getValue(LimitSearchCriteria3 obj) {
+			return obj.getSystemIdentification();
+		}
+
+		@Override
+		public void setValue(LimitSearchCriteria3 obj, Optional<SystemIdentification2Choice> value) {
+			obj.setSystemIdentification(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "BilLmtCtrPtyId")
-	protected List<com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5> bilateralLimitCounterpartyIdentification;
+	protected List<BranchAndFinancialInstitutionIdentification5> bilateralLimitCounterpartyIdentification;
 	/**
 	 * 
 	 <p>
@@ -219,7 +230,7 @@ public class LimitSearchCriteria3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBilateralLimitCounterpartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitSearchCriteria3, List<BranchAndFinancialInstitutionIdentification5>> mmBilateralLimitCounterpartyIdentification = new MMMessageAssociationEnd<LimitSearchCriteria3, List<BranchAndFinancialInstitutionIdentification5>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitSearchCriteria3.mmObject();
@@ -231,7 +242,17 @@ public class LimitSearchCriteria3 {
 			nextVersions_lazy = () -> Arrays.asList(LimitSearchCriteria4.mmBilateralLimitCounterpartyIdentification);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+
+		@Override
+		public List<BranchAndFinancialInstitutionIdentification5> getValue(LimitSearchCriteria3 obj) {
+			return obj.getBilateralLimitCounterpartyIdentification();
+		}
+
+		@Override
+		public void setValue(LimitSearchCriteria3 obj, List<BranchAndFinancialInstitutionIdentification5> value) {
+			obj.setBilateralLimitCounterpartyIdentification(value);
 		}
 	};
 	@XmlElement(name = "DfltLmtTp")
@@ -278,7 +299,7 @@ public class LimitSearchCriteria3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDefaultLimitType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitSearchCriteria3, List<LimitType1Choice>> mmDefaultLimitType = new MMMessageAttribute<LimitSearchCriteria3, List<LimitType1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitSearchCriteria3.mmObject();
@@ -290,6 +311,16 @@ public class LimitSearchCriteria3 {
 			nextVersions_lazy = () -> Arrays.asList(LimitSearchCriteria4.mmDefaultLimitType);
 			minOccurs = 0;
 			complexType_lazy = () -> LimitType1Choice.mmObject();
+		}
+
+		@Override
+		public List<LimitType1Choice> getValue(LimitSearchCriteria3 obj) {
+			return obj.getDefaultLimitType();
+		}
+
+		@Override
+		public void setValue(LimitSearchCriteria3 obj, List<LimitType1Choice> value) {
+			obj.setDefaultLimitType(value);
 		}
 	};
 	@XmlElement(name = "CurLmtTp")
@@ -334,7 +365,7 @@ public class LimitSearchCriteria3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrentLimitType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitSearchCriteria3, List<LimitType1Choice>> mmCurrentLimitType = new MMMessageAttribute<LimitSearchCriteria3, List<LimitType1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitSearchCriteria3.mmObject();
@@ -346,6 +377,16 @@ public class LimitSearchCriteria3 {
 			nextVersions_lazy = () -> Arrays.asList(LimitSearchCriteria4.mmCurrentLimitType);
 			minOccurs = 0;
 			complexType_lazy = () -> LimitType1Choice.mmObject();
+		}
+
+		@Override
+		public List<LimitType1Choice> getValue(LimitSearchCriteria3 obj) {
+			return obj.getCurrentLimitType();
+		}
+
+		@Override
+		public void setValue(LimitSearchCriteria3 obj, List<LimitType1Choice> value) {
+			obj.setCurrentLimitType(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -390,7 +431,7 @@ public class LimitSearchCriteria3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitSearchCriteria3, Optional<BranchAndFinancialInstitutionIdentification5>> mmAccountOwner = new MMMessageAssociationEnd<LimitSearchCriteria3, Optional<BranchAndFinancialInstitutionIdentification5>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitSearchCriteria3.mmObject();
@@ -403,7 +444,17 @@ public class LimitSearchCriteria3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+
+		@Override
+		public Optional<BranchAndFinancialInstitutionIdentification5> getValue(LimitSearchCriteria3 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(LimitSearchCriteria3 obj, Optional<BranchAndFinancialInstitutionIdentification5> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctId")
@@ -450,7 +501,7 @@ public class LimitSearchCriteria3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitSearchCriteria3, Optional<AccountIdentification4Choice>> mmAccountIdentification = new MMMessageAssociationEnd<LimitSearchCriteria3, Optional<AccountIdentification4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitSearchCriteria3.mmObject();
@@ -464,6 +515,16 @@ public class LimitSearchCriteria3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AccountIdentification4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AccountIdentification4Choice> getValue(LimitSearchCriteria3 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(LimitSearchCriteria3 obj, Optional<AccountIdentification4Choice> value) {
+			obj.setAccountIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UsdAmt")
@@ -507,7 +568,7 @@ public class LimitSearchCriteria3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUsedAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitSearchCriteria3, Optional<AmountRange2Choice>> mmUsedAmount = new MMMessageAssociationEnd<LimitSearchCriteria3, Optional<AmountRange2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmUsedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitSearchCriteria3.mmObject();
@@ -521,6 +582,16 @@ public class LimitSearchCriteria3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AmountRange2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AmountRange2Choice> getValue(LimitSearchCriteria3 obj) {
+			return obj.getUsedAmount();
+		}
+
+		@Override
+		public void setValue(LimitSearchCriteria3 obj, Optional<AmountRange2Choice> value) {
+			obj.setUsedAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UsdPctg")
@@ -566,7 +637,7 @@ public class LimitSearchCriteria3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUsedPercentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitSearchCriteria3, Optional<PercentageRange1Choice>> mmUsedPercentage = new MMMessageAttribute<LimitSearchCriteria3, Optional<PercentageRange1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmUsedPercentage;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitSearchCriteria3.mmObject();
@@ -579,6 +650,16 @@ public class LimitSearchCriteria3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PercentageRange1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRange1Choice> getValue(LimitSearchCriteria3 obj) {
+			return obj.getUsedPercentage();
+		}
+
+		@Override
+		public void setValue(LimitSearchCriteria3 obj, Optional<PercentageRange1Choice> value) {
+			obj.setUsedPercentage(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LmtCcy")
@@ -624,7 +705,7 @@ public class LimitSearchCriteria3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLimitCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitSearchCriteria3, Optional<ActiveCurrencyCode>> mmLimitCurrency = new MMMessageAttribute<LimitSearchCriteria3, Optional<ActiveCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitSearchCriteria3.mmObject();
@@ -637,6 +718,16 @@ public class LimitSearchCriteria3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyCode> getValue(LimitSearchCriteria3 obj) {
+			return obj.getLimitCurrency();
+		}
+
+		@Override
+		public void setValue(LimitSearchCriteria3 obj, Optional<ActiveCurrencyCode> value) {
+			obj.setLimitCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LmtAmt")
@@ -681,7 +772,7 @@ public class LimitSearchCriteria3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLimitAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitSearchCriteria3, Optional<AmountRange2Choice>> mmLimitAmount = new MMMessageAssociationEnd<LimitSearchCriteria3, Optional<AmountRange2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitSearchCriteria3.mmObject();
@@ -695,6 +786,16 @@ public class LimitSearchCriteria3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AmountRange2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AmountRange2Choice> getValue(LimitSearchCriteria3 obj) {
+			return obj.getLimitAmount();
+		}
+
+		@Override
+		public void setValue(LimitSearchCriteria3 obj, Optional<AmountRange2Choice> value) {
+			obj.setLimitAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LmtVldAsOfDt")
@@ -740,7 +841,7 @@ public class LimitSearchCriteria3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLimitValidAsOfDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitSearchCriteria3, Optional<DateAndPeriod2Choice>> mmLimitValidAsOfDate = new MMMessageAttribute<LimitSearchCriteria3, Optional<DateAndPeriod2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitSearchCriteria3.mmObject();
@@ -753,6 +854,16 @@ public class LimitSearchCriteria3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndPeriod2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndPeriod2Choice> getValue(LimitSearchCriteria3 obj) {
+			return obj.getLimitValidAsOfDate();
+		}
+
+		@Override
+		public void setValue(LimitSearchCriteria3 obj, Optional<DateAndPeriod2Choice> value) {
+			obj.setLimitValidAsOfDate(value.orElse(null));
 		}
 	};
 
@@ -789,7 +900,7 @@ public class LimitSearchCriteria3 {
 		return bilateralLimitCounterpartyIdentification == null ? bilateralLimitCounterpartyIdentification = new ArrayList<>() : bilateralLimitCounterpartyIdentification;
 	}
 
-	public LimitSearchCriteria3 setBilateralLimitCounterpartyIdentification(List<com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5> bilateralLimitCounterpartyIdentification) {
+	public LimitSearchCriteria3 setBilateralLimitCounterpartyIdentification(List<BranchAndFinancialInstitutionIdentification5> bilateralLimitCounterpartyIdentification) {
 		this.bilateralLimitCounterpartyIdentification = Objects.requireNonNull(bilateralLimitCounterpartyIdentification);
 		return this;
 	}
@@ -816,7 +927,7 @@ public class LimitSearchCriteria3 {
 		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public LimitSearchCriteria3 setAccountOwner(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 accountOwner) {
+	public LimitSearchCriteria3 setAccountOwner(BranchAndFinancialInstitutionIdentification5 accountOwner) {
 		this.accountOwner = accountOwner;
 		return this;
 	}

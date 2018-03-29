@@ -22,6 +22,9 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.catp.ATMPINManagementRequestV02;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMContext16;
+import com.tools20022.repository.msg.ATMEnvironment11;
+import com.tools20022.repository.msg.ATMTransaction9;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -108,7 +111,7 @@ public class ATMPINManagementRequest2 {
 	 * definition} = "Environment in which the transaction is performed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMPINManagementRequest2, ATMEnvironment11> mmEnvironment = new MMMessageAssociationEnd<ATMPINManagementRequest2, ATMEnvironment11>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMPINManagementRequest2.mmObject();
 			isDerived = false;
@@ -119,7 +122,17 @@ public class ATMPINManagementRequest2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMEnvironment11.mmObject();
+			type_lazy = () -> ATMEnvironment11.mmObject();
+		}
+
+		@Override
+		public ATMEnvironment11 getValue(ATMPINManagementRequest2 obj) {
+			return obj.getEnvironment();
+		}
+
+		@Override
+		public void setValue(ATMPINManagementRequest2 obj, ATMEnvironment11 value) {
+			obj.setEnvironment(value);
 		}
 	};
 	@XmlElement(name = "Cntxt", required = true)
@@ -150,7 +163,7 @@ public class ATMPINManagementRequest2 {
 	 * definition} = "Context in which the transaction is performed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContext = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMPINManagementRequest2, ATMContext16> mmContext = new MMMessageAssociationEnd<ATMPINManagementRequest2, ATMContext16>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMPINManagementRequest2.mmObject();
 			isDerived = false;
@@ -161,7 +174,17 @@ public class ATMPINManagementRequest2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMContext16.mmObject();
+			type_lazy = () -> ATMContext16.mmObject();
+		}
+
+		@Override
+		public ATMContext16 getValue(ATMPINManagementRequest2 obj) {
+			return obj.getContext();
+		}
+
+		@Override
+		public void setValue(ATMPINManagementRequest2 obj, ATMContext16 value) {
+			obj.setContext(value);
 		}
 	};
 	@XmlElement(name = "Tx", required = true)
@@ -192,7 +215,7 @@ public class ATMPINManagementRequest2 {
 	 * definition} = "Transaction for which the service is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMPINManagementRequest2, ATMTransaction9> mmTransaction = new MMMessageAssociationEnd<ATMPINManagementRequest2, ATMTransaction9>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMPINManagementRequest2.mmObject();
 			isDerived = false;
@@ -203,7 +226,17 @@ public class ATMPINManagementRequest2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMTransaction9.mmObject();
+			type_lazy = () -> ATMTransaction9.mmObject();
+		}
+
+		@Override
+		public ATMTransaction9 getValue(ATMPINManagementRequest2 obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(ATMPINManagementRequest2 obj, ATMTransaction9 value) {
+			obj.setTransaction(value);
 		}
 	};
 
@@ -226,7 +259,7 @@ public class ATMPINManagementRequest2 {
 		return environment;
 	}
 
-	public ATMPINManagementRequest2 setEnvironment(com.tools20022.repository.msg.ATMEnvironment11 environment) {
+	public ATMPINManagementRequest2 setEnvironment(ATMEnvironment11 environment) {
 		this.environment = Objects.requireNonNull(environment);
 		return this;
 	}
@@ -235,7 +268,7 @@ public class ATMPINManagementRequest2 {
 		return context;
 	}
 
-	public ATMPINManagementRequest2 setContext(com.tools20022.repository.msg.ATMContext16 context) {
+	public ATMPINManagementRequest2 setContext(ATMContext16 context) {
 		this.context = Objects.requireNonNull(context);
 		return this;
 	}
@@ -244,7 +277,7 @@ public class ATMPINManagementRequest2 {
 		return transaction;
 	}
 
-	public ATMPINManagementRequest2 setTransaction(com.tools20022.repository.msg.ATMTransaction9 transaction) {
+	public ATMPINManagementRequest2 setTransaction(ATMTransaction9 transaction) {
 		this.transaction = Objects.requireNonNull(transaction);
 		return this;
 	}

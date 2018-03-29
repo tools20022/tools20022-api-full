@@ -25,6 +25,8 @@ import com.tools20022.repository.codeset.ATMSecurityScheme3Code;
 import com.tools20022.repository.codeset.ATMSecurityScheme4Code;
 import com.tools20022.repository.datatype.Max140Binary;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMSecurityDevice2;
+import com.tools20022.repository.msg.CryptographicKey11;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -118,7 +120,7 @@ public class ATMSecurityContext5 {
 	 * ATMSecurityContext4.mmCurrentSecurityScheme}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrentSecurityScheme = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMSecurityContext5, ATMSecurityScheme3Code> mmCurrentSecurityScheme = new MMMessageAttribute<ATMSecurityContext5, ATMSecurityScheme3Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityContext5.mmObject();
 			isDerived = false;
@@ -130,6 +132,16 @@ public class ATMSecurityContext5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ATMSecurityScheme3Code.mmObject();
+		}
+
+		@Override
+		public ATMSecurityScheme3Code getValue(ATMSecurityContext5 obj) {
+			return obj.getCurrentSecurityScheme();
+		}
+
+		@Override
+		public void setValue(ATMSecurityContext5 obj, ATMSecurityScheme3Code value) {
+			obj.setCurrentSecurityScheme(value);
 		}
 	};
 	@XmlElement(name = "SctySchmeCpblties")
@@ -169,7 +181,7 @@ public class ATMSecurityContext5 {
 	 * ATMSecurityContext4.mmSecuritySchemeCapabilities}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritySchemeCapabilities = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMSecurityContext5, List<ATMSecurityScheme4Code>> mmSecuritySchemeCapabilities = new MMMessageAttribute<ATMSecurityContext5, List<ATMSecurityScheme4Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityContext5.mmObject();
 			isDerived = false;
@@ -180,6 +192,16 @@ public class ATMSecurityContext5 {
 			previousVersion_lazy = () -> ATMSecurityContext4.mmSecuritySchemeCapabilities;
 			minOccurs = 0;
 			simpleType_lazy = () -> ATMSecurityScheme4Code.mmObject();
+		}
+
+		@Override
+		public List<ATMSecurityScheme4Code> getValue(ATMSecurityContext5 obj) {
+			return obj.getSecuritySchemeCapabilities();
+		}
+
+		@Override
+		public void setValue(ATMSecurityContext5 obj, List<ATMSecurityScheme4Code> value) {
+			obj.setSecuritySchemeCapabilities(value);
 		}
 	};
 	@XmlElement(name = "SctyDvc", required = true)
@@ -215,7 +237,7 @@ public class ATMSecurityContext5 {
 	 * ATMSecurityContext4.mmSecurityDevice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecurityDevice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMSecurityContext5, ATMSecurityDevice2> mmSecurityDevice = new MMMessageAssociationEnd<ATMSecurityContext5, ATMSecurityDevice2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityContext5.mmObject();
 			isDerived = false;
@@ -227,11 +249,21 @@ public class ATMSecurityContext5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMSecurityDevice2.mmObject();
+			type_lazy = () -> ATMSecurityDevice2.mmObject();
+		}
+
+		@Override
+		public ATMSecurityDevice2 getValue(ATMSecurityContext5 obj) {
+			return obj.getSecurityDevice();
+		}
+
+		@Override
+		public void setValue(ATMSecurityContext5 obj, ATMSecurityDevice2 value) {
+			obj.setSecurityDevice(value);
 		}
 	};
 	@XmlElement(name = "Key")
-	protected List<com.tools20022.repository.msg.CryptographicKey11> key;
+	protected List<CryptographicKey11> key;
 	/**
 	 * 
 	 <p>
@@ -264,7 +296,7 @@ public class ATMSecurityContext5 {
 	 * ATMSecurityContext4.mmKey}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmKey = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMSecurityContext5, List<CryptographicKey11>> mmKey = new MMMessageAssociationEnd<ATMSecurityContext5, List<CryptographicKey11>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityContext5.mmObject();
 			isDerived = false;
@@ -275,7 +307,17 @@ public class ATMSecurityContext5 {
 			previousVersion_lazy = () -> ATMSecurityContext4.mmKey;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CryptographicKey11.mmObject();
+			type_lazy = () -> CryptographicKey11.mmObject();
+		}
+
+		@Override
+		public List<CryptographicKey11> getValue(ATMSecurityContext5 obj) {
+			return obj.getKey();
+		}
+
+		@Override
+		public void setValue(ATMSecurityContext5 obj, List<CryptographicKey11> value) {
+			obj.setKey(value);
 		}
 	};
 	@XmlElement(name = "HstChllng")
@@ -314,7 +356,7 @@ public class ATMSecurityContext5 {
 	 * ATMSecurityContext4.mmHostChallenge}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHostChallenge = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMSecurityContext5, Optional<Max140Binary>> mmHostChallenge = new MMMessageAttribute<ATMSecurityContext5, Optional<Max140Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityContext5.mmObject();
 			isDerived = false;
@@ -326,6 +368,16 @@ public class ATMSecurityContext5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Binary.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Binary> getValue(ATMSecurityContext5 obj) {
+			return obj.getHostChallenge();
+		}
+
+		@Override
+		public void setValue(ATMSecurityContext5 obj, Optional<Max140Binary> value) {
+			obj.setHostChallenge(value.orElse(null));
 		}
 	};
 
@@ -366,7 +418,7 @@ public class ATMSecurityContext5 {
 		return securityDevice;
 	}
 
-	public ATMSecurityContext5 setSecurityDevice(com.tools20022.repository.msg.ATMSecurityDevice2 securityDevice) {
+	public ATMSecurityContext5 setSecurityDevice(ATMSecurityDevice2 securityDevice) {
 		this.securityDevice = Objects.requireNonNull(securityDevice);
 		return this;
 	}
@@ -375,7 +427,7 @@ public class ATMSecurityContext5 {
 		return key == null ? key = new ArrayList<>() : key;
 	}
 
-	public ATMSecurityContext5 setKey(List<com.tools20022.repository.msg.CryptographicKey11> key) {
+	public ATMSecurityContext5 setKey(List<CryptographicKey11> key) {
 		this.key = Objects.requireNonNull(key);
 		return this;
 	}

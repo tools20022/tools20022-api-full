@@ -115,7 +115,7 @@ public class SecuritiesTransactionPrice2Choice {
 	 * definition} = "Price expressed as a monetary value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMonetaryValue = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesTransactionPrice2Choice, AmountAndDirection61> mmMonetaryValue = new MMMessageAssociationEnd<SecuritiesTransactionPrice2Choice, AmountAndDirection61>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesTransactionPrice2Choice.mmObject();
@@ -128,6 +128,16 @@ public class SecuritiesTransactionPrice2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountAndDirection61.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection61 getValue(SecuritiesTransactionPrice2Choice obj) {
+			return obj.getMonetaryValue();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionPrice2Choice obj, AmountAndDirection61 value) {
+			obj.setMonetaryValue(value);
 		}
 	};
 	@XmlElement(name = "Pctg", required = true)
@@ -165,7 +175,7 @@ public class SecuritiesTransactionPrice2Choice {
 	 * definition} = "Price expressed as a rate, that is a percentage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPercentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTransactionPrice2Choice, PercentageRate> mmPercentage = new MMMessageAttribute<SecuritiesTransactionPrice2Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesTransactionPrice2Choice.mmObject();
@@ -177,6 +187,16 @@ public class SecuritiesTransactionPrice2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(SecuritiesTransactionPrice2Choice obj) {
+			return obj.getPercentage();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionPrice2Choice obj, PercentageRate value) {
+			obj.setPercentage(value);
 		}
 	};
 	@XmlElement(name = "Yld", required = true)
@@ -214,7 +234,7 @@ public class SecuritiesTransactionPrice2Choice {
 	 * definition} = "Price expressed as a yield."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmYield = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTransactionPrice2Choice, PercentageRate> mmYield = new MMMessageAttribute<SecuritiesTransactionPrice2Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> YieldCalculation.mmValue;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesTransactionPrice2Choice.mmObject();
@@ -226,6 +246,16 @@ public class SecuritiesTransactionPrice2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(SecuritiesTransactionPrice2Choice obj) {
+			return obj.getYield();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionPrice2Choice obj, PercentageRate value) {
+			obj.setYield(value);
 		}
 	};
 	@XmlElement(name = "BsisPts", required = true)
@@ -263,7 +293,7 @@ public class SecuritiesTransactionPrice2Choice {
 	 * definition} = "Price expressed as basis points."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBasisPoints = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTransactionPrice2Choice, DecimalNumber> mmBasisPoints = new MMMessageAttribute<SecuritiesTransactionPrice2Choice, DecimalNumber>() {
 		{
 			businessElementTrace_lazy = () -> Index.mmIndexPoints;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesTransactionPrice2Choice.mmObject();
@@ -275,6 +305,16 @@ public class SecuritiesTransactionPrice2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(SecuritiesTransactionPrice2Choice obj) {
+			return obj.getBasisPoints();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionPrice2Choice obj, DecimalNumber value) {
+			obj.setBasisPoints(value);
 		}
 	};
 

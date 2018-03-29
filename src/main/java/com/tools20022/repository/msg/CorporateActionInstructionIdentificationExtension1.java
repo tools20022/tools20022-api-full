@@ -101,7 +101,7 @@ public class CorporateActionInstructionIdentificationExtension1 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInstructionIdentificationExtension1, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionInstructionIdentificationExtension1, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionIdentificationExtension1.mmObject();
 			isDerived = false;
@@ -112,6 +112,16 @@ public class CorporateActionInstructionIdentificationExtension1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionInstructionIdentificationExtension1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionIdentificationExtension1 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "NtryDt", required = true)
@@ -146,7 +156,7 @@ public class CorporateActionInstructionIdentificationExtension1 {
 	 * definition} = "Date at which the transaction was submitted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEntryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInstructionIdentificationExtension1, ISODate> mmEntryDate = new MMMessageAttribute<CorporateActionInstructionIdentificationExtension1, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionIdentificationExtension1.mmObject();
 			isDerived = false;
@@ -158,6 +168,16 @@ public class CorporateActionInstructionIdentificationExtension1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(CorporateActionInstructionIdentificationExtension1 obj) {
+			return obj.getEntryDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionIdentificationExtension1 obj, ISODate value) {
+			obj.setEntryDate(value);
 		}
 	};
 

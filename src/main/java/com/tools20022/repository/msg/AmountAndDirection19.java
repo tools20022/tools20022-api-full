@@ -109,7 +109,7 @@ public class AmountAndDirection19 {
 	 * definition} = "Amount of money that is debited or credited."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndDirection19, RestrictedFINActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<AmountAndDirection19, RestrictedFINActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection19.mmObject();
@@ -121,6 +121,16 @@ public class AmountAndDirection19 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public RestrictedFINActiveCurrencyAndAmount getValue(AmountAndDirection19 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection19 obj, RestrictedFINActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "CdtDbt")
@@ -158,7 +168,7 @@ public class AmountAndDirection19 {
 	 * definition} = "Indicates if the amount is a debited or a credited."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndDirection19, Optional<CreditDebitCode>> mmCreditDebit = new MMMessageAttribute<AmountAndDirection19, Optional<CreditDebitCode>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection19.mmObject();
@@ -170,6 +180,16 @@ public class AmountAndDirection19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public Optional<CreditDebitCode> getValue(AmountAndDirection19 obj) {
+			return obj.getCreditDebit();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection19 obj, Optional<CreditDebitCode> value) {
+			obj.setCreditDebit(value.orElse(null));
 		}
 	};
 

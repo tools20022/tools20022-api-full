@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GeneralBusinessReport;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -66,7 +67,7 @@ public class BusinessInformation {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "GnlBizRpt", required = true)
-	protected List<com.tools20022.repository.msg.GeneralBusinessReport> generalBusinessReport;
+	protected List<GeneralBusinessReport> generalBusinessReport;
 	/**
 	 * 
 	 <p>
@@ -94,7 +95,7 @@ public class BusinessInformation {
 	 * "Reports either on the business information or on a business error."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGeneralBusinessReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BusinessInformation, List<GeneralBusinessReport>> mmGeneralBusinessReport = new MMMessageAssociationEnd<BusinessInformation, List<GeneralBusinessReport>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessInformation.mmObject();
 			isDerived = false;
@@ -104,7 +105,17 @@ public class BusinessInformation {
 			definition = "Reports either on the business information or on a business error.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GeneralBusinessReport.mmObject();
+			type_lazy = () -> GeneralBusinessReport.mmObject();
+		}
+
+		@Override
+		public List<GeneralBusinessReport> getValue(BusinessInformation obj) {
+			return obj.getGeneralBusinessReport();
+		}
+
+		@Override
+		public void setValue(BusinessInformation obj, List<GeneralBusinessReport> value) {
+			obj.setGeneralBusinessReport(value);
 		}
 	};
 
@@ -125,7 +136,7 @@ public class BusinessInformation {
 		return generalBusinessReport == null ? generalBusinessReport = new ArrayList<>() : generalBusinessReport;
 	}
 
-	public BusinessInformation setGeneralBusinessReport(List<com.tools20022.repository.msg.GeneralBusinessReport> generalBusinessReport) {
+	public BusinessInformation setGeneralBusinessReport(List<GeneralBusinessReport> generalBusinessReport) {
 		this.generalBusinessReport = Objects.requireNonNull(generalBusinessReport);
 		return this;
 	}

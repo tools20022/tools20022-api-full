@@ -110,7 +110,7 @@ public class MatchingSystemReference1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMatchingSystemUniqueReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MatchingSystemReference1Choice, Max35Text> mmMatchingSystemUniqueReference = new MMMessageAttribute<MatchingSystemReference1Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmMatchingReference;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingSystemReference1Choice.mmObject();
@@ -122,6 +122,16 @@ public class MatchingSystemReference1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(MatchingSystemReference1Choice obj) {
+			return obj.getMatchingSystemUniqueReference();
+		}
+
+		@Override
+		public void setValue(MatchingSystemReference1Choice obj, Max35Text value) {
+			obj.setMatchingSystemUniqueReference(value);
 		}
 	};
 	@XmlElement(name = "RltdRef", required = true)
@@ -160,7 +170,7 @@ public class MatchingSystemReference1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRelatedReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MatchingSystemReference1Choice, Max35Text> mmRelatedReference = new MMMessageAttribute<MatchingSystemReference1Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingSystemReference1Choice.mmObject();
@@ -172,6 +182,16 @@ public class MatchingSystemReference1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(MatchingSystemReference1Choice obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(MatchingSystemReference1Choice obj, Max35Text value) {
+			obj.setRelatedReference(value);
 		}
 	};
 

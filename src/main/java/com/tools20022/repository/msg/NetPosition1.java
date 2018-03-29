@@ -26,6 +26,7 @@ import com.tools20022.repository.choice.PartyIdentification34Choice;
 import com.tools20022.repository.codeset.ReceiveDelivery1Code;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -140,7 +141,7 @@ public class NetPosition1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmClearingAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NetPosition1, SecuritiesAccount18> mmClearingAccount = new MMMessageAssociationEnd<NetPosition1, SecuritiesAccount18>() {
 		{
 			businessElementTrace_lazy = () -> ClearingMemberRole.mmClearingAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetPosition1.mmObject();
@@ -152,7 +153,17 @@ public class NetPosition1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount18.mmObject();
+			type_lazy = () -> SecuritiesAccount18.mmObject();
+		}
+
+		@Override
+		public SecuritiesAccount18 getValue(NetPosition1 obj) {
+			return obj.getClearingAccount();
+		}
+
+		@Override
+		public void setValue(NetPosition1 obj, SecuritiesAccount18 value) {
+			obj.setClearingAccount(value);
 		}
 	};
 	@XmlElement(name = "DlvryAcct", required = true)
@@ -189,7 +200,7 @@ public class NetPosition1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDeliveryAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NetPosition1, SecuritiesAccount19> mmDeliveryAccount = new MMMessageAssociationEnd<NetPosition1, SecuritiesAccount19>() {
 		{
 			businessElementTrace_lazy = () -> ClearingMemberRole.mmDeliveryAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetPosition1.mmObject();
@@ -201,7 +212,17 @@ public class NetPosition1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount19.mmObject();
+			type_lazy = () -> SecuritiesAccount19.mmObject();
+		}
+
+		@Override
+		public SecuritiesAccount19 getValue(NetPosition1 obj) {
+			return obj.getDeliveryAccount();
+		}
+
+		@Override
+		public void setValue(NetPosition1 obj, SecuritiesAccount19 value) {
+			obj.setDeliveryAccount(value);
 		}
 	};
 	@XmlElement(name = "FinInstrmId", required = true)
@@ -237,7 +258,7 @@ public class NetPosition1 {
 	 * definition} = "Provides details about the security identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NetPosition1, SecurityIdentification14> mmFinancialInstrumentIdentification = new MMMessageAssociationEnd<NetPosition1, SecurityIdentification14>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetPosition1.mmObject();
@@ -249,7 +270,17 @@ public class NetPosition1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
+			type_lazy = () -> SecurityIdentification14.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification14 getValue(NetPosition1 obj) {
+			return obj.getFinancialInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(NetPosition1 obj, SecurityIdentification14 value) {
+			obj.setFinancialInstrumentIdentification(value);
 		}
 	};
 	@XmlElement(name = "InitlPosAmt")
@@ -284,7 +315,7 @@ public class NetPosition1 {
 	 * definition} = "Provides the intra position amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInitialPositionAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NetPosition1, Optional<AmountAndDirection21>> mmInitialPositionAmount = new MMMessageAssociationEnd<NetPosition1, Optional<AmountAndDirection21>>() {
 		{
 			businessElementTrace_lazy = () -> Position.mmInitialPositionAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetPosition1.mmObject();
@@ -296,7 +327,17 @@ public class NetPosition1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection21.mmObject();
+			type_lazy = () -> AmountAndDirection21.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection21> getValue(NetPosition1 obj) {
+			return obj.getInitialPositionAmount();
+		}
+
+		@Override
+		public void setValue(NetPosition1 obj, Optional<AmountAndDirection21> value) {
+			obj.setInitialPositionAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NetPosAmt", required = true)
@@ -331,7 +372,7 @@ public class NetPosition1 {
 	 * definition} = "Provides the net position amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNetPositionAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NetPosition1, AmountAndDirection21> mmNetPositionAmount = new MMMessageAssociationEnd<NetPosition1, AmountAndDirection21>() {
 		{
 			businessElementTrace_lazy = () -> Position.mmNetPositionAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetPosition1.mmObject();
@@ -343,7 +384,17 @@ public class NetPosition1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection21.mmObject();
+			type_lazy = () -> AmountAndDirection21.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection21 getValue(NetPosition1 obj) {
+			return obj.getNetPositionAmount();
+		}
+
+		@Override
+		public void setValue(NetPosition1 obj, AmountAndDirection21 value) {
+			obj.setNetPositionAmount(value);
 		}
 	};
 	@XmlElement(name = "AvrgDealPric")
@@ -377,7 +428,7 @@ public class NetPosition1 {
 	 * definition} = "This is the price of the trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAverageDealPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NetPosition1, Optional<Price4>> mmAverageDealPrice = new MMMessageAssociationEnd<NetPosition1, Optional<Price4>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTradePrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetPosition1.mmObject();
@@ -389,7 +440,17 @@ public class NetPosition1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
+			type_lazy = () -> Price4.mmObject();
+		}
+
+		@Override
+		public Optional<Price4> getValue(NetPosition1 obj) {
+			return obj.getAverageDealPrice();
+		}
+
+		@Override
+		public void setValue(NetPosition1 obj, Optional<Price4> value) {
+			obj.setAverageDealPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NetQty", required = true)
@@ -425,7 +486,7 @@ public class NetPosition1 {
 	 * definition} = "Identifies the quantity of the trade leg."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNetQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NetPosition1, FinancialInstrumentQuantity1Choice> mmNetQuantity = new MMMessageAssociationEnd<NetPosition1, FinancialInstrumentQuantity1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Position.mmNetQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetPosition1.mmObject();
@@ -438,6 +499,16 @@ public class NetPosition1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity1Choice getValue(NetPosition1 obj) {
+			return obj.getNetQuantity();
+		}
+
+		@Override
+		public void setValue(NetPosition1 obj, FinancialInstrumentQuantity1Choice value) {
+			obj.setNetQuantity(value);
 		}
 	};
 	@XmlElement(name = "SctiesMvmntTp", required = true)
@@ -476,7 +547,7 @@ public class NetPosition1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesMovementType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetPosition1, ReceiveDelivery1Code> mmSecuritiesMovementType = new MMMessageAttribute<NetPosition1, ReceiveDelivery1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSecuritiesMovementType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetPosition1.mmObject();
@@ -488,6 +559,16 @@ public class NetPosition1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ReceiveDelivery1Code.mmObject();
+		}
+
+		@Override
+		public ReceiveDelivery1Code getValue(NetPosition1 obj) {
+			return obj.getSecuritiesMovementType();
+		}
+
+		@Override
+		public void setValue(NetPosition1 obj, ReceiveDelivery1Code value) {
+			obj.setSecuritiesMovementType(value);
 		}
 	};
 	@XmlElement(name = "Dpstry", required = true)
@@ -522,7 +603,7 @@ public class NetPosition1 {
 	 * definition} = "Place at which a trade settles."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDepository = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NetPosition1, PartyIdentification34Choice> mmDepository = new MMMessageAssociationEnd<NetPosition1, PartyIdentification34Choice>() {
 		{
 			businessComponentTrace_lazy = () -> Party.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetPosition1.mmObject();
@@ -536,9 +617,19 @@ public class NetPosition1 {
 			isComposite = true;
 			type_lazy = () -> PartyIdentification34Choice.mmObject();
 		}
+
+		@Override
+		public PartyIdentification34Choice getValue(NetPosition1 obj) {
+			return obj.getDepository();
+		}
+
+		@Override
+		public void setValue(NetPosition1 obj, PartyIdentification34Choice value) {
+			obj.setDepository(value);
+		}
 	};
 	@XmlElement(name = "TradLegDtls")
-	protected List<com.tools20022.repository.msg.TradeLeg4> tradeLegDetails;
+	protected List<TradeLeg4> tradeLegDetails;
 	/**
 	 * 
 	 <p>
@@ -570,7 +661,7 @@ public class NetPosition1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradeLegDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NetPosition1, List<TradeLeg4>> mmTradeLegDetails = new MMMessageAssociationEnd<NetPosition1, List<TradeLeg4>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTrade.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetPosition1.mmObject();
@@ -581,7 +672,17 @@ public class NetPosition1 {
 			definition = "Provides the trade leg details such as trade leg identification and trade type.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TradeLeg4.mmObject();
+			type_lazy = () -> TradeLeg4.mmObject();
+		}
+
+		@Override
+		public List<TradeLeg4> getValue(NetPosition1 obj) {
+			return obj.getTradeLegDetails();
+		}
+
+		@Override
+		public void setValue(NetPosition1 obj, List<TradeLeg4> value) {
+			obj.setTradeLegDetails(value);
 		}
 	};
 	@XmlElement(name = "NonClrMmb")
@@ -617,7 +718,7 @@ public class NetPosition1 {
 	 * definition} = "Provides the identification for the non-clearing member."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNonClearingMember = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NetPosition1, Optional<PartyIdentificationAndAccount31>> mmNonClearingMember = new MMMessageAssociationEnd<NetPosition1, Optional<PartyIdentificationAndAccount31>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetPosition1.mmObject();
@@ -629,7 +730,17 @@ public class NetPosition1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount31.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount31.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount31> getValue(NetPosition1 obj) {
+			return obj.getNonClearingMember();
+		}
+
+		@Override
+		public void setValue(NetPosition1 obj, Optional<PartyIdentificationAndAccount31> value) {
+			obj.setNonClearingMember(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcrdIntrstAmt")
@@ -666,7 +777,7 @@ public class NetPosition1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccruedInterestAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NetPosition1, Optional<AmountAndDirection21>> mmAccruedInterestAmount = new MMMessageAssociationEnd<NetPosition1, Optional<AmountAndDirection21>>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetPosition1.mmObject();
@@ -678,7 +789,17 @@ public class NetPosition1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection21.mmObject();
+			type_lazy = () -> AmountAndDirection21.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection21> getValue(NetPosition1 obj) {
+			return obj.getAccruedInterestAmount();
+		}
+
+		@Override
+		public void setValue(NetPosition1 obj, Optional<AmountAndDirection21> value) {
+			obj.setAccruedInterestAmount(value.orElse(null));
 		}
 	};
 
@@ -705,7 +826,7 @@ public class NetPosition1 {
 		return clearingAccount;
 	}
 
-	public NetPosition1 setClearingAccount(com.tools20022.repository.msg.SecuritiesAccount18 clearingAccount) {
+	public NetPosition1 setClearingAccount(SecuritiesAccount18 clearingAccount) {
 		this.clearingAccount = Objects.requireNonNull(clearingAccount);
 		return this;
 	}
@@ -714,7 +835,7 @@ public class NetPosition1 {
 		return deliveryAccount;
 	}
 
-	public NetPosition1 setDeliveryAccount(com.tools20022.repository.msg.SecuritiesAccount19 deliveryAccount) {
+	public NetPosition1 setDeliveryAccount(SecuritiesAccount19 deliveryAccount) {
 		this.deliveryAccount = Objects.requireNonNull(deliveryAccount);
 		return this;
 	}
@@ -723,7 +844,7 @@ public class NetPosition1 {
 		return financialInstrumentIdentification;
 	}
 
-	public NetPosition1 setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
+	public NetPosition1 setFinancialInstrumentIdentification(SecurityIdentification14 financialInstrumentIdentification) {
 		this.financialInstrumentIdentification = Objects.requireNonNull(financialInstrumentIdentification);
 		return this;
 	}
@@ -732,7 +853,7 @@ public class NetPosition1 {
 		return initialPositionAmount == null ? Optional.empty() : Optional.of(initialPositionAmount);
 	}
 
-	public NetPosition1 setInitialPositionAmount(com.tools20022.repository.msg.AmountAndDirection21 initialPositionAmount) {
+	public NetPosition1 setInitialPositionAmount(AmountAndDirection21 initialPositionAmount) {
 		this.initialPositionAmount = initialPositionAmount;
 		return this;
 	}
@@ -741,7 +862,7 @@ public class NetPosition1 {
 		return netPositionAmount;
 	}
 
-	public NetPosition1 setNetPositionAmount(com.tools20022.repository.msg.AmountAndDirection21 netPositionAmount) {
+	public NetPosition1 setNetPositionAmount(AmountAndDirection21 netPositionAmount) {
 		this.netPositionAmount = Objects.requireNonNull(netPositionAmount);
 		return this;
 	}
@@ -750,7 +871,7 @@ public class NetPosition1 {
 		return averageDealPrice == null ? Optional.empty() : Optional.of(averageDealPrice);
 	}
 
-	public NetPosition1 setAverageDealPrice(com.tools20022.repository.msg.Price4 averageDealPrice) {
+	public NetPosition1 setAverageDealPrice(Price4 averageDealPrice) {
 		this.averageDealPrice = averageDealPrice;
 		return this;
 	}
@@ -786,7 +907,7 @@ public class NetPosition1 {
 		return tradeLegDetails == null ? tradeLegDetails = new ArrayList<>() : tradeLegDetails;
 	}
 
-	public NetPosition1 setTradeLegDetails(List<com.tools20022.repository.msg.TradeLeg4> tradeLegDetails) {
+	public NetPosition1 setTradeLegDetails(List<TradeLeg4> tradeLegDetails) {
 		this.tradeLegDetails = Objects.requireNonNull(tradeLegDetails);
 		return this;
 	}
@@ -795,7 +916,7 @@ public class NetPosition1 {
 		return nonClearingMember == null ? Optional.empty() : Optional.of(nonClearingMember);
 	}
 
-	public NetPosition1 setNonClearingMember(com.tools20022.repository.msg.PartyIdentificationAndAccount31 nonClearingMember) {
+	public NetPosition1 setNonClearingMember(PartyIdentificationAndAccount31 nonClearingMember) {
 		this.nonClearingMember = nonClearingMember;
 		return this;
 	}
@@ -804,7 +925,7 @@ public class NetPosition1 {
 		return accruedInterestAmount == null ? Optional.empty() : Optional.of(accruedInterestAmount);
 	}
 
-	public NetPosition1 setAccruedInterestAmount(com.tools20022.repository.msg.AmountAndDirection21 accruedInterestAmount) {
+	public NetPosition1 setAccruedInterestAmount(AmountAndDirection21 accruedInterestAmount) {
 		this.accruedInterestAmount = accruedInterestAmount;
 		return this;
 	}

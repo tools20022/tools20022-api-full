@@ -101,7 +101,7 @@ public class DataSetSubmissionReferences2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DataSetSubmissionReferences2, Max35Text> mmTransactionIdentification = new MMMessageAttribute<DataSetSubmissionReferences2, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DataSetSubmissionReferences2.mmObject();
 			isDerived = false;
@@ -112,6 +112,16 @@ public class DataSetSubmissionReferences2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(DataSetSubmissionReferences2 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(DataSetSubmissionReferences2 obj, Max35Text value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "SubmitrTxRef", required = true)
@@ -145,7 +155,7 @@ public class DataSetSubmissionReferences2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubmitterTransactionReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DataSetSubmissionReferences2, Max35Text> mmSubmitterTransactionReference = new MMMessageAttribute<DataSetSubmissionReferences2, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DataSetSubmissionReferences2.mmObject();
 			isDerived = false;
@@ -156,6 +166,16 @@ public class DataSetSubmissionReferences2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(DataSetSubmissionReferences2 obj) {
+			return obj.getSubmitterTransactionReference();
+		}
+
+		@Override
+		public void setValue(DataSetSubmissionReferences2 obj, Max35Text value) {
+			obj.setSubmitterTransactionReference(value);
 		}
 	};
 

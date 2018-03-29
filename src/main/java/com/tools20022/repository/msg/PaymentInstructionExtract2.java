@@ -148,7 +148,7 @@ public class PaymentInstructionExtract2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalMessageNameIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstructionExtract2, Optional<Max35Text>> mmOriginalMessageNameIdentification = new MMMessageAttribute<PaymentInstructionExtract2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionExtract2.mmObject();
 			isDerived = false;
@@ -159,6 +159,16 @@ public class PaymentInstructionExtract2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PaymentInstructionExtract2 obj) {
+			return obj.getOriginalMessageNameIdentification();
+		}
+
+		@Override
+		public void setValue(PaymentInstructionExtract2 obj, Optional<Max35Text> value) {
+			obj.setOriginalMessageNameIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlInstrId", required = true)
@@ -197,7 +207,7 @@ public class PaymentInstructionExtract2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalInstructionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstructionExtract2, Max35Text> mmOriginalInstructionIdentification = new MMMessageAttribute<PaymentInstructionExtract2, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionExtract2.mmObject();
@@ -209,6 +219,16 @@ public class PaymentInstructionExtract2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PaymentInstructionExtract2 obj) {
+			return obj.getOriginalInstructionIdentification();
+		}
+
+		@Override
+		public void setValue(PaymentInstructionExtract2 obj, Max35Text value) {
+			obj.setOriginalInstructionIdentification(value);
 		}
 	};
 	@XmlElement(name = "InstdAmt", required = true)
@@ -248,7 +268,7 @@ public class PaymentInstructionExtract2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstructionExtract2, CurrencyAndAmount> mmInstructedAmount = new MMMessageAttribute<PaymentInstructionExtract2, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionExtract2.mmObject();
@@ -260,6 +280,16 @@ public class PaymentInstructionExtract2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(PaymentInstructionExtract2 obj) {
+			return obj.getInstructedAmount();
+		}
+
+		@Override
+		public void setValue(PaymentInstructionExtract2 obj, CurrencyAndAmount value) {
+			obj.setInstructedAmount(value);
 		}
 	};
 	@XmlElement(name = "IntrBkSttlmAmt", required = true)
@@ -299,7 +329,7 @@ public class PaymentInstructionExtract2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterbankSettlementAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstructionExtract2, CurrencyAndAmount> mmInterbankSettlementAmount = new MMMessageAttribute<PaymentInstructionExtract2, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionExtract2.mmObject();
@@ -311,6 +341,16 @@ public class PaymentInstructionExtract2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(PaymentInstructionExtract2 obj) {
+			return obj.getInterbankSettlementAmount();
+		}
+
+		@Override
+		public void setValue(PaymentInstructionExtract2 obj, CurrencyAndAmount value) {
+			obj.setInterbankSettlementAmount(value);
 		}
 	};
 	@XmlElement(name = "ReqdExctnDt", required = true)
@@ -349,7 +389,7 @@ public class PaymentInstructionExtract2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestedExecutionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstructionExtract2, ISODate> mmRequestedExecutionDate = new MMMessageAttribute<PaymentInstructionExtract2, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmRequestedExecutionDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionExtract2.mmObject();
@@ -361,6 +401,16 @@ public class PaymentInstructionExtract2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(PaymentInstructionExtract2 obj) {
+			return obj.getRequestedExecutionDate();
+		}
+
+		@Override
+		public void setValue(PaymentInstructionExtract2 obj, ISODate value) {
+			obj.setRequestedExecutionDate(value);
 		}
 	};
 	@XmlElement(name = "IntrBkSttlmDt", required = true)
@@ -399,7 +449,7 @@ public class PaymentInstructionExtract2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterbankSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstructionExtract2, ISODate> mmInterbankSettlementDate = new MMMessageAttribute<PaymentInstructionExtract2, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionExtract2.mmObject();
@@ -411,6 +461,16 @@ public class PaymentInstructionExtract2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(PaymentInstructionExtract2 obj) {
+			return obj.getInterbankSettlementDate();
+		}
+
+		@Override
+		public void setValue(PaymentInstructionExtract2 obj, ISODate value) {
+			obj.setInterbankSettlementDate(value);
 		}
 	};
 	/**

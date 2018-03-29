@@ -58,7 +58,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "Parameter12"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -110,7 +110,7 @@ public class Parameter12 {
 	 * Parameter6.mmEncryptionFormat}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEncryptionFormat = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Parameter12, Optional<EncryptionFormat2Code>> mmEncryptionFormat = new MMMessageAttribute<Parameter12, Optional<EncryptionFormat2Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Parameter12.mmObject();
 			isDerived = false;
@@ -122,6 +122,16 @@ public class Parameter12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> EncryptionFormat2Code.mmObject();
+		}
+
+		@Override
+		public Optional<EncryptionFormat2Code> getValue(Parameter12 obj) {
+			return obj.getEncryptionFormat();
+		}
+
+		@Override
+		public void setValue(Parameter12 obj, Optional<EncryptionFormat2Code> value) {
+			obj.setEncryptionFormat(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InitlstnVctr")
@@ -160,7 +170,7 @@ public class Parameter12 {
 	 * Parameter6.mmInitialisationVector}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInitialisationVector = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Parameter12, Optional<Max500Binary>> mmInitialisationVector = new MMMessageAttribute<Parameter12, Optional<Max500Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Parameter12.mmObject();
 			isDerived = false;
@@ -172,6 +182,16 @@ public class Parameter12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max500Binary.mmObject();
+		}
+
+		@Override
+		public Optional<Max500Binary> getValue(Parameter12 obj) {
+			return obj.getInitialisationVector();
+		}
+
+		@Override
+		public void setValue(Parameter12 obj, Optional<Max500Binary> value) {
+			obj.setInitialisationVector(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BPddg")
@@ -210,7 +230,7 @@ public class Parameter12 {
 	 * Parameter6.mmBytePadding}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBytePadding = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Parameter12, Optional<BytePadding1Code>> mmBytePadding = new MMMessageAttribute<Parameter12, Optional<BytePadding1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Parameter12.mmObject();
 			isDerived = false;
@@ -223,6 +243,16 @@ public class Parameter12 {
 			minOccurs = 0;
 			simpleType_lazy = () -> BytePadding1Code.mmObject();
 		}
+
+		@Override
+		public Optional<BytePadding1Code> getValue(Parameter12 obj) {
+			return obj.getBytePadding();
+		}
+
+		@Override
+		public void setValue(Parameter12 obj, Optional<BytePadding1Code> value) {
+			obj.setBytePadding(value.orElse(null));
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -231,7 +261,7 @@ public class Parameter12 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Parameter12.mmEncryptionFormat, com.tools20022.repository.msg.Parameter12.mmInitialisationVector,
 						com.tools20022.repository.msg.Parameter12.mmBytePadding);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Parameter12";
 				definition = "Parameters associated to a cryptographic encryption algorithm.";
 				previousVersion_lazy = () -> Parameter6.mmObject();

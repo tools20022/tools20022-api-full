@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ValidationResult4;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -104,7 +105,7 @@ public class MisMatchReport2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfMisMatches = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MisMatchReport2, Number> mmNumberOfMisMatches = new MMMessageAttribute<MisMatchReport2, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MisMatchReport2.mmObject();
 			isDerived = false;
@@ -116,9 +117,19 @@ public class MisMatchReport2 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
+
+		@Override
+		public Number getValue(MisMatchReport2 obj) {
+			return obj.getNumberOfMisMatches();
+		}
+
+		@Override
+		public void setValue(MisMatchReport2 obj, Number value) {
+			obj.setNumberOfMisMatches(value);
+		}
 	};
 	@XmlElement(name = "MisMtchInf")
-	protected List<com.tools20022.repository.msg.ValidationResult4> misMatchInformation;
+	protected List<ValidationResult4> misMatchInformation;
 	/**
 	 * 
 	 <p>
@@ -145,7 +156,7 @@ public class MisMatchReport2 {
 	 * definition} = "Details of each mismatch occurrence."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMisMatchInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MisMatchReport2, List<ValidationResult4>> mmMisMatchInformation = new MMMessageAssociationEnd<MisMatchReport2, List<ValidationResult4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MisMatchReport2.mmObject();
 			isDerived = false;
@@ -155,7 +166,17 @@ public class MisMatchReport2 {
 			definition = "Details of each mismatch occurrence.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ValidationResult4.mmObject();
+			type_lazy = () -> ValidationResult4.mmObject();
+		}
+
+		@Override
+		public List<ValidationResult4> getValue(MisMatchReport2 obj) {
+			return obj.getMisMatchInformation();
+		}
+
+		@Override
+		public void setValue(MisMatchReport2 obj, List<ValidationResult4> value) {
+			obj.setMisMatchInformation(value);
 		}
 	};
 
@@ -185,7 +206,7 @@ public class MisMatchReport2 {
 		return misMatchInformation == null ? misMatchInformation = new ArrayList<>() : misMatchInformation;
 	}
 
-	public MisMatchReport2 setMisMatchInformation(List<com.tools20022.repository.msg.ValidationResult4> misMatchInformation) {
+	public MisMatchReport2 setMisMatchInformation(List<ValidationResult4> misMatchInformation) {
 		this.misMatchInformation = Objects.requireNonNull(misMatchInformation);
 		return this;
 	}

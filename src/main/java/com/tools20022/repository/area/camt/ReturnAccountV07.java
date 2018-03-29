@@ -26,7 +26,6 @@ import com.tools20022.repository.choice.AccountOrOperationalError3Choice;
 import com.tools20022.repository.msg.MessageHeader7;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset._SR2018_MX_CashManagement_Maintenance;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -108,7 +107,7 @@ import javax.xml.bind.annotation.*;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ReturnAccountV07"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -146,7 +145,7 @@ public class ReturnAccountV07 {
 	 * definition} = "Common business identification for the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ReturnAccountV07, MessageHeader7> mmMessageHeader = new MMMessageBuildingBlock<ReturnAccountV07, MessageHeader7>() {
 		{
 			xmlTag = "MsgHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,12 +156,14 @@ public class ReturnAccountV07 {
 			complexType_lazy = () -> MessageHeader7.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ReturnAccountV07.class.getMethod("getMessageHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageHeader7 getValue(ReturnAccountV07 obj) {
+			return obj.getMessageHeader();
+		}
+
+		@Override
+		public void setValue(ReturnAccountV07 obj, MessageHeader7 value) {
+			obj.setMessageHeader(value);
 		}
 	};
 	@XmlElement(name = "RptOrErr", required = true)
@@ -190,7 +191,7 @@ public class ReturnAccountV07 {
 	 * definition} = "Reports on accounts."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportOrError = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ReturnAccountV07, AccountOrOperationalError3Choice> mmReportOrError = new MMMessageBuildingBlock<ReturnAccountV07, AccountOrOperationalError3Choice>() {
 		{
 			xmlTag = "RptOrErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -201,12 +202,14 @@ public class ReturnAccountV07 {
 			complexType_lazy = () -> AccountOrOperationalError3Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ReturnAccountV07.class.getMethod("getReportOrError", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AccountOrOperationalError3Choice getValue(ReturnAccountV07 obj) {
+			return obj.getReportOrError();
+		}
+
+		@Override
+		public void setValue(ReturnAccountV07 obj, AccountOrOperationalError3Choice value) {
+			obj.setReportOrError(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -236,7 +239,7 @@ public class ReturnAccountV07 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ReturnAccountV07, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<ReturnAccountV07, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -246,19 +249,21 @@ public class ReturnAccountV07 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ReturnAccountV07.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(ReturnAccountV07 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(ReturnAccountV07 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReturnAccountV07";
 				definition = "Scope\nThe ReturnAccount message is sent by the transaction administrator to a member.\nIt is used to provide information on the details of one or more accounts held at the transaction administrator, including information on the balances.\nThe Return Account message can be sent as a response to a related GetAccount message (pull mode) or initiated by the transaction administrator (push mode). The push of information can take place either at prearranged times or as a warning or alarm when a problem has occurred.\nUsage\nAt any time during the operating hours of the system, the member can query the transaction administrator to get information about the account(s) that the transaction administrator maintains for the member.\nFor example, this may be necessary in order to perform the appropriate liquidity management and the necessary funds transfers between accounts.\nThe member can request information about accounts through a series of criteria, corresponding to the known information stored at the transaction administrator.\nThe query can concern one or more specific accounts, accounts of a particular identification, or a particular type. The purpose of the query may be to obtain one or more types of balance.\nThe transaction administrator may also send a ReturnAccount message with pre-defined information, at times previously agreed with the member, or to warn the member about a particular problem that may have arisen and which needs attention.\nThe message from the transaction administrator can contain information based on the following elements: \n- account identification\n- account name\n- account type (this is used when the account identification represents, for example, a group of accounts)\n- currency of the account (this is used for example when the account identification represents a group of account in various currencies, or when it is a multi-currency account with one single identifier)\n- type of balance (if not present in the GetAccount message, all balances will be reported)\n- bilateral or multilateral limits\n- related counterparty (when the limit or balance is bilateral)\n- balance value date (if not present in the GetAccount message, the ReturnAccount message will contain the latest available balance)\n- number of payments to the additional account information on the generic design of the Get/Return messages can be found in the section How to Use the Cash Management Messages.";
 				messageSet_lazy = () -> Arrays.asList(_SR2018_MX_CashManagement_Maintenance.mmObject());

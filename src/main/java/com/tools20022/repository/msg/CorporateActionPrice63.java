@@ -119,7 +119,7 @@ public class CorporateActionPrice63 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashInLieuOfSharePrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPrice63, Optional<PriceFormat52Choice>> mmCashInLieuOfSharePrice = new MMMessageAssociationEnd<CorporateActionPrice63, Optional<PriceFormat52Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmCashInLieuOfSharePrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice63.mmObject();
@@ -133,6 +133,16 @@ public class CorporateActionPrice63 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PriceFormat52Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat52Choice> getValue(CorporateActionPrice63 obj) {
+			return obj.getCashInLieuOfSharePrice();
+		}
+
+		@Override
+		public void setValue(CorporateActionPrice63 obj, Optional<PriceFormat52Choice> value) {
+			obj.setCashInLieuOfSharePrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OverSbcptDpstPric")
@@ -173,7 +183,7 @@ public class CorporateActionPrice63 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOverSubscriptionDepositPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPrice63, Optional<PriceFormat52Choice>> mmOverSubscriptionDepositPrice = new MMMessageAssociationEnd<CorporateActionPrice63, Optional<PriceFormat52Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmOverSubscriptionDepositPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice63.mmObject();
@@ -187,6 +197,16 @@ public class CorporateActionPrice63 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PriceFormat52Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat52Choice> getValue(CorporateActionPrice63 obj) {
+			return obj.getOverSubscriptionDepositPrice();
+		}
+
+		@Override
+		public void setValue(CorporateActionPrice63 obj, Optional<PriceFormat52Choice> value) {
+			obj.setOverSubscriptionDepositPrice(value.orElse(null));
 		}
 	};
 

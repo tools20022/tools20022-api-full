@@ -103,7 +103,7 @@ public class TradeRecurrentQuery2 {
 	 * definition} = "Defines the type of recurrent query which is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeRecurrentQuery2, TradeRecurrentQuery1Code> mmQueryType = new MMMessageAttribute<TradeRecurrentQuery2, TradeRecurrentQuery1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeRecurrentQuery2.mmObject();
 			isDerived = false;
@@ -114,6 +114,16 @@ public class TradeRecurrentQuery2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TradeRecurrentQuery1Code.mmObject();
+		}
+
+		@Override
+		public TradeRecurrentQuery1Code getValue(TradeRecurrentQuery2 obj) {
+			return obj.getQueryType();
+		}
+
+		@Override
+		public void setValue(TradeRecurrentQuery2 obj, TradeRecurrentQuery1Code value) {
+			obj.setQueryType(value);
 		}
 	};
 	@XmlElement(name = "Frqcy", required = true)
@@ -145,7 +155,7 @@ public class TradeRecurrentQuery2 {
 	 * definition} = "Defines the requested frequency of the recurrent query."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFrequency = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeRecurrentQuery2, TradeQueryExecutionFrequency1Choice> mmFrequency = new MMMessageAssociationEnd<TradeRecurrentQuery2, TradeQueryExecutionFrequency1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeRecurrentQuery2.mmObject();
 			isDerived = false;
@@ -157,6 +167,16 @@ public class TradeRecurrentQuery2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TradeQueryExecutionFrequency1Choice.mmObject();
+		}
+
+		@Override
+		public TradeQueryExecutionFrequency1Choice getValue(TradeRecurrentQuery2 obj) {
+			return obj.getFrequency();
+		}
+
+		@Override
+		public void setValue(TradeRecurrentQuery2 obj, TradeQueryExecutionFrequency1Choice value) {
+			obj.setFrequency(value);
 		}
 	};
 	@XmlElement(name = "VldUntil", required = true)
@@ -188,7 +208,7 @@ public class TradeRecurrentQuery2 {
 	 * definition} = "Defines the date until which the query will be executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValidUntil = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeRecurrentQuery2, ISODate> mmValidUntil = new MMMessageAttribute<TradeRecurrentQuery2, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeRecurrentQuery2.mmObject();
 			isDerived = false;
@@ -199,6 +219,16 @@ public class TradeRecurrentQuery2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(TradeRecurrentQuery2 obj) {
+			return obj.getValidUntil();
+		}
+
+		@Override
+		public void setValue(TradeRecurrentQuery2 obj, ISODate value) {
+			obj.setValidUntil(value);
 		}
 	};
 

@@ -111,7 +111,7 @@ public class InstructionProcessingReason1Choice {
 	 * definition} = "Specifies the reason of the RejectedStatus."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InstructionProcessingReason1Choice, List<RejectionReason9>> mmReason = new MMMessageAssociationEnd<InstructionProcessingReason1Choice, List<RejectionReason9>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InstructionProcessingReason1Choice.mmObject();
@@ -123,6 +123,16 @@ public class InstructionProcessingReason1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RejectionReason9.mmObject();
+		}
+
+		@Override
+		public List<RejectionReason9> getValue(InstructionProcessingReason1Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(InstructionProcessingReason1Choice obj, List<RejectionReason9> value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "NoSpcfdRsn", required = true)
@@ -163,7 +173,7 @@ public class InstructionProcessingReason1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstructionProcessingReason1Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<InstructionProcessingReason1Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InstructionProcessingReason1Choice.mmObject();
@@ -176,6 +186,16 @@ public class InstructionProcessingReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(InstructionProcessingReason1Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(InstructionProcessingReason1Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 

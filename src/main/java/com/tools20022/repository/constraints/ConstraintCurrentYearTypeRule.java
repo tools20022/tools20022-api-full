@@ -53,11 +53,15 @@ public class ConstraintCurrentYearTypeRule {
 	 */
 	public static final MMConstraint<ISAYearsOfIssue3> forISAYearsOfIssue3 = new MMConstraint<ISAYearsOfIssue3>() {
 		{
-			validator = ConstraintCurrentYearTypeRule::checkISAYearsOfIssue3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentYearTypeRule";
 			definition = "If CurrentYearType or ExtendedCurrentYearType is not present then PreviousYears is mandatory. If CurrentYearType or ExtendedCurrentYearType is present then PreviousYears is optional.";
 			owner_lazy = () -> ISAYearsOfIssue3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ISAYearsOfIssue3 obj) throws Exception {
+			checkISAYearsOfIssue3(obj);
 		}
 	};
 	/**
@@ -83,11 +87,15 @@ public class ConstraintCurrentYearTypeRule {
 	 */
 	public static final MMConstraint<ISAYearsOfIssue2> forISAYearsOfIssue2 = new MMConstraint<ISAYearsOfIssue2>() {
 		{
-			validator = ConstraintCurrentYearTypeRule::checkISAYearsOfIssue2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentYearTypeRule";
 			definition = "If CurrentYearType or ExtendedCurrentYearType is not present, then PreviousYears is mandatory. If CurrentYearType or ExtendedCurrentYearType is present then PreviousYears is optional.";
 			owner_lazy = () -> ISAYearsOfIssue2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ISAYearsOfIssue2 obj) throws Exception {
+			checkISAYearsOfIssue2(obj);
 		}
 	};
 

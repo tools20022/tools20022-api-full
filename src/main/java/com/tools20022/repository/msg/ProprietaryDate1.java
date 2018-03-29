@@ -110,7 +110,7 @@ public class ProprietaryDate1 {
 	 * definition} = "Identifies the type of date reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryDate1, Max35Text> mmType = new MMMessageAttribute<ProprietaryDate1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryDate1.mmObject();
 			isDerived = false;
@@ -121,6 +121,16 @@ public class ProprietaryDate1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ProprietaryDate1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(ProprietaryDate1 obj, Max35Text value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Dt", required = true)
@@ -152,7 +162,7 @@ public class ProprietaryDate1 {
 	 * definition} = "Date in ISO format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryDate1, ISODate> mmDate = new MMMessageAttribute<ProprietaryDate1, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryDate1.mmObject();
 			isDerived = false;
@@ -163,6 +173,16 @@ public class ProprietaryDate1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(ProprietaryDate1 obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(ProprietaryDate1 obj, ISODate value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "DtTm", required = true)
@@ -194,7 +214,7 @@ public class ProprietaryDate1 {
 	 * definition} = "Date and time in ISO format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryDate1, ISODateTime> mmDateTime = new MMMessageAttribute<ProprietaryDate1, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryDate1.mmObject();
 			isDerived = false;
@@ -205,6 +225,16 @@ public class ProprietaryDate1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(ProprietaryDate1 obj) {
+			return obj.getDateTime();
+		}
+
+		@Override
+		public void setValue(ProprietaryDate1 obj, ISODateTime value) {
+			obj.setDateTime(value);
 		}
 	};
 	/**

@@ -147,7 +147,7 @@ public class CorporateActionEventReference1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLinkedOfficialCorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionEventReference1Choice, Max35Text> mmLinkedOfficialCorporateActionEventIdentification = new MMMessageAttribute<CorporateActionEventReference1Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmOfficialCorporateActionEventIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionEventReference1Choice.mmObject();
@@ -161,6 +161,16 @@ public class CorporateActionEventReference1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CorporateActionEventReference1Choice obj) {
+			return obj.getLinkedOfficialCorporateActionEventIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventReference1Choice obj, Max35Text value) {
+			obj.setLinkedOfficialCorporateActionEventIdentification(value);
 		}
 	};
 	@XmlElement(name = "LkdCorpActnId", required = true)
@@ -211,7 +221,7 @@ public class CorporateActionEventReference1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLinkedCorporateActionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionEventReference1Choice, Max35Text> mmLinkedCorporateActionIdentification = new MMMessageAttribute<CorporateActionEventReference1Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmCorporateActionEventIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionEventReference1Choice.mmObject();
@@ -225,6 +235,16 @@ public class CorporateActionEventReference1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CorporateActionEventReference1Choice obj) {
+			return obj.getLinkedCorporateActionIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventReference1Choice obj, Max35Text value) {
+			obj.setLinkedCorporateActionIdentification(value);
 		}
 	};
 

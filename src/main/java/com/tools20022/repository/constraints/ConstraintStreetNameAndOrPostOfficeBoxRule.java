@@ -51,11 +51,15 @@ public class ConstraintStreetNameAndOrPostOfficeBoxRule {
 	 */
 	public static final MMConstraint<StructuredLongPostalAddress1> forStructuredLongPostalAddress1 = new MMConstraint<StructuredLongPostalAddress1>() {
 		{
-			validator = ConstraintStreetNameAndOrPostOfficeBoxRule::checkStructuredLongPostalAddress1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StreetNameAndOrPostOfficeBoxRule";
 			definition = "If StreetName is not present, then PostOfficeBox is mandatory. If StreetName is present, then PostOfficeBox is optional.";
 			owner_lazy = () -> StructuredLongPostalAddress1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(StructuredLongPostalAddress1 obj) throws Exception {
+			checkStructuredLongPostalAddress1(obj);
 		}
 	};
 

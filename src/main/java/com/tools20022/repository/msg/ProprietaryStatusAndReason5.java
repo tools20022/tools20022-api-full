@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ProprietaryReason1Choice;
 import com.tools20022.repository.datatype.Max210Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification36;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -124,7 +125,7 @@ public class ProprietaryStatusAndReason5 {
 	 * ProprietaryStatusAndReason3.mmProprietaryStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryStatusAndReason5, GenericIdentification36> mmStatus = new MMMessageAttribute<ProprietaryStatusAndReason5, GenericIdentification36>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryStatusAndReason5.mmObject();
 			isDerived = false;
@@ -135,7 +136,17 @@ public class ProprietaryStatusAndReason5 {
 			previousVersion_lazy = () -> ProprietaryStatusAndReason3.mmProprietaryStatus;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification36.mmObject();
+			complexType_lazy = () -> GenericIdentification36.mmObject();
+		}
+
+		@Override
+		public GenericIdentification36 getValue(ProprietaryStatusAndReason5 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(ProprietaryStatusAndReason5 obj, GenericIdentification36 value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -172,7 +183,7 @@ public class ProprietaryStatusAndReason5 {
 	 * ProprietaryStatusAndReason3.mmProprietaryReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProprietaryStatusAndReason5, ProprietaryReason1Choice> mmReason = new MMMessageAssociationEnd<ProprietaryStatusAndReason5, ProprietaryReason1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryStatusAndReason5.mmObject();
 			isDerived = false;
@@ -185,6 +196,16 @@ public class ProprietaryStatusAndReason5 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryReason1Choice.mmObject();
+		}
+
+		@Override
+		public ProprietaryReason1Choice getValue(ProprietaryStatusAndReason5 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(ProprietaryStatusAndReason5 obj, ProprietaryReason1Choice value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -216,7 +237,7 @@ public class ProprietaryStatusAndReason5 {
 	 * definition} = "Additional information about the processed instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryStatusAndReason5, Optional<Max210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<ProprietaryStatusAndReason5, Optional<Max210Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryStatusAndReason5.mmObject();
 			isDerived = false;
@@ -227,6 +248,16 @@ public class ProprietaryStatusAndReason5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max210Text> getValue(ProprietaryStatusAndReason5 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(ProprietaryStatusAndReason5 obj, Optional<Max210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 
@@ -250,7 +281,7 @@ public class ProprietaryStatusAndReason5 {
 		return status;
 	}
 
-	public ProprietaryStatusAndReason5 setStatus(com.tools20022.repository.msg.GenericIdentification36 status) {
+	public ProprietaryStatusAndReason5 setStatus(GenericIdentification36 status) {
 		this.status = Objects.requireNonNull(status);
 		return this;
 	}

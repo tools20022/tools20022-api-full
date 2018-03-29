@@ -140,7 +140,7 @@ public class PartyIdentification46 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification46, PartyIdentification44Choice> mmIdentification = new MMMessageAssociationEnd<PartyIdentification46, PartyIdentification44Choice>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification46.mmObject();
@@ -155,6 +155,16 @@ public class PartyIdentification46 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification44Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification44Choice getValue(PartyIdentification46 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification46 obj, PartyIdentification44Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "PrcgId")
@@ -199,7 +209,7 @@ public class PartyIdentification46 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessingIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification46, Optional<Max35Text>> mmProcessingIdentification = new MMMessageAttribute<PartyIdentification46, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification46.mmObject();
 			isDerived = false;
@@ -212,6 +222,16 @@ public class PartyIdentification46 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PartyIdentification46 obj) {
+			return obj.getProcessingIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification46 obj, Optional<Max35Text> value) {
+			obj.setProcessingIdentification(value.orElse(null));
 		}
 	};
 

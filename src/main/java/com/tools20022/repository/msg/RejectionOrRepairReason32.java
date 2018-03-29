@@ -123,7 +123,7 @@ public class RejectionOrRepairReason32 {
 	 * RejectionOrRepairReason20.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RejectionOrRepairReason32, List<RejectionAndRepairReason32Choice>> mmCode = new MMMessageAssociationEnd<RejectionOrRepairReason32, List<RejectionAndRepairReason32Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectionOrRepairReason32.mmObject();
@@ -137,6 +137,16 @@ public class RejectionOrRepairReason32 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> RejectionAndRepairReason32Choice.mmObject();
+		}
+
+		@Override
+		public List<RejectionAndRepairReason32Choice> getValue(RejectionOrRepairReason32 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RejectionOrRepairReason32 obj, List<RejectionAndRepairReason32Choice> value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -183,7 +193,7 @@ public class RejectionOrRepairReason32 {
 	 * RejectionOrRepairReason20.mmAdditionalReasonInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionOrRepairReason32, Optional<Max210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<RejectionOrRepairReason32, Optional<Max210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectionOrRepairReason32.mmObject();
@@ -197,6 +207,16 @@ public class RejectionOrRepairReason32 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max210Text> getValue(RejectionOrRepairReason32 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(RejectionOrRepairReason32 obj, Optional<Max210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

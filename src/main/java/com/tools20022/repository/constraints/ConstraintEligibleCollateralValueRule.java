@@ -52,11 +52,15 @@ public class ConstraintEligibleCollateralValueRule {
 	 */
 	public static final MMConstraint<BalanceAmounts3> forBalanceAmounts3 = new MMConstraint<BalanceAmounts3>() {
 		{
-			validator = ConstraintEligibleCollateralValueRule::checkBalanceAmounts3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EligibleCollateralValueRule";
 			definition = "EligibleCollateralValue is only to be used in (I)CSD-participant communication or if bilaterally agreed between the sender and receiver.";
 			owner_lazy = () -> BalanceAmounts3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BalanceAmounts3 obj) throws Exception {
+			checkBalanceAmounts3(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintEligibleCollateralValueRule {
 	 */
 	public static final MMConstraint<BalanceAmounts4> forBalanceAmounts4 = new MMConstraint<BalanceAmounts4>() {
 		{
-			validator = ConstraintEligibleCollateralValueRule::checkBalanceAmounts4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EligibleCollateralValueRule";
 			definition = "EligibleCollateralValue is only to be used in (I)CSD-participant communication or if bilaterally agreed between the sender and receiver.";
 			owner_lazy = () -> BalanceAmounts4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BalanceAmounts4 obj) throws Exception {
+			checkBalanceAmounts4(obj);
 		}
 	};
 

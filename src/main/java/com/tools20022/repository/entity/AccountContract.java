@@ -23,10 +23,9 @@ import com.tools20022.repository.codeset.TransactionChannelCode;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.datatype.YesNoIndicator;
-import com.tools20022.repository.entity.Contract;
+import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -173,7 +172,7 @@ public class AccountContract extends Contract {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmTargetClosingDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<AccountContract, ISODateTime> mmTargetClosingDate = new MMBusinessAttribute<AccountContract, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AccountContract4.mmTargetClosingDate, AccountContract2.mmTargetClosingDate, AccountContract3.mmTargetClosingDate);
 			isDerived = false;
@@ -186,12 +185,14 @@ public class AccountContract extends Contract {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountContract.class.getMethod("getTargetClosingDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(AccountContract obj) {
+			return obj.getTargetClosingDate();
+		}
+
+		@Override
+		public void setValue(AccountContract obj, ISODateTime value) {
+			obj.setTargetClosingDate(value);
 		}
 	};
 	protected TrueFalseIndicator urgencyFlag;
@@ -237,7 +238,7 @@ public class AccountContract extends Contract {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmUrgencyFlag = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<AccountContract, TrueFalseIndicator> mmUrgencyFlag = new MMBusinessAttribute<AccountContract, TrueFalseIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AccountContract4.mmUrgencyFlag, AccountContract2.mmUrgencyFlag, AccountContract3.mmUrgencyFlag);
 			isDerived = false;
@@ -250,12 +251,14 @@ public class AccountContract extends Contract {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountContract.class.getMethod("getUrgencyFlag", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TrueFalseIndicator getValue(AccountContract obj) {
+			return obj.getUrgencyFlag();
+		}
+
+		@Override
+		public void setValue(AccountContract obj, TrueFalseIndicator value) {
+			obj.setUrgencyFlag(value);
 		}
 	};
 	protected YesNoIndicator removalIndicator;
@@ -298,7 +301,7 @@ public class AccountContract extends Contract {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmRemovalIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<AccountContract, YesNoIndicator> mmRemovalIndicator = new MMBusinessAttribute<AccountContract, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AccountContract4.mmRemovalIndicator, AccountContract3.mmRemovalIndicator);
 			isDerived = false;
@@ -311,12 +314,14 @@ public class AccountContract extends Contract {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountContract.class.getMethod("getRemovalIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(AccountContract obj) {
+			return obj.getRemovalIndicator();
+		}
+
+		@Override
+		public void setValue(AccountContract obj, YesNoIndicator value) {
+			obj.setRemovalIndicator(value);
 		}
 	};
 	protected ISODateTime targetGoLiveDate;
@@ -358,7 +363,7 @@ public class AccountContract extends Contract {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmTargetGoLiveDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<AccountContract, ISODateTime> mmTargetGoLiveDate = new MMBusinessAttribute<AccountContract, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AccountContract2.mmTargetGoLiveDate, AccountContract3.mmTargetGoLiveDate);
 			isDerived = false;
@@ -371,12 +376,14 @@ public class AccountContract extends Contract {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountContract.class.getMethod("getTargetGoLiveDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(AccountContract obj) {
+			return obj.getTargetGoLiveDate();
+		}
+
+		@Override
+		public void setValue(AccountContract obj, ISODateTime value) {
+			obj.setTargetGoLiveDate(value);
 		}
 	};
 	protected AccountService accountService;
@@ -411,22 +418,32 @@ public class AccountContract extends Contract {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Operations on a bank account that are allowed as part of the services offered to the owners of a bank account."
+	 * "Operations on a bank account that are allowed as part of the services offered to the owners of a bank account,"
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmAccountService = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<AccountContract, com.tools20022.repository.entity.AccountService> mmAccountService = new MMBusinessAssociationEnd<AccountContract, com.tools20022.repository.entity.AccountService>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AccountContract.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AccountService";
-			definition = "Operations on a bank account that are allowed as part of the services offered to the owners of a bank account.";
+			definition = "Operations on a bank account that are allowed as part of the services offered to the owners of a bank account,";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.AccountService.mmAccountContract;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.AccountService.mmObject();
+		}
+
+		@Override
+		public com.tools20022.repository.entity.AccountService getValue(AccountContract obj) {
+			return obj.getAccountService();
+		}
+
+		@Override
+		public void setValue(AccountContract obj, com.tools20022.repository.entity.AccountService value) {
+			obj.setAccountService(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.Account> account;
@@ -462,7 +479,7 @@ public class AccountContract extends Contract {
 	 * definition} = "Specifies the account which is managed by a contract."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmAccount = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<AccountContract, List<Account>> mmAccount = new MMBusinessAssociationEnd<AccountContract, List<Account>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AccountContract.mmObject();
@@ -473,6 +490,16 @@ public class AccountContract extends Contract {
 			opposite_lazy = () -> com.tools20022.repository.entity.Account.mmAccountContract;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Account.mmObject();
+		}
+
+		@Override
+		public List<Account> getValue(AccountContract obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(AccountContract obj, List<Account> value) {
+			obj.setAccount(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.Interest> interest;
@@ -508,7 +535,7 @@ public class AccountContract extends Contract {
 	 * definition} = "Interest that applies to the account."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmInterest = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<AccountContract, List<Interest>> mmInterest = new MMBusinessAssociationEnd<AccountContract, List<Interest>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AccountContract.mmObject();
@@ -519,6 +546,16 @@ public class AccountContract extends Contract {
 			opposite_lazy = () -> com.tools20022.repository.entity.Interest.mmRelatedAccountContract;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
+		}
+
+		@Override
+		public List<Interest> getValue(AccountContract obj) {
+			return obj.getInterest();
+		}
+
+		@Override
+		public void setValue(AccountContract obj, List<Interest> value) {
+			obj.setInterest(value);
 		}
 	};
 	protected ISODateTime requestDate;
@@ -547,7 +584,7 @@ public class AccountContract extends Contract {
 	 * definition} = "Date of the request."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmRequestDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<AccountContract, ISODateTime> mmRequestDate = new MMBusinessAttribute<AccountContract, ISODateTime>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AccountContract.mmObject();
@@ -559,15 +596,17 @@ public class AccountContract extends Contract {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountContract.class.getMethod("getRequestDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(AccountContract obj) {
+			return obj.getRequestDate();
+		}
+
+		@Override
+		public void setValue(AccountContract obj, ISODateTime value) {
+			obj.setRequestDate(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.Mandate> accountAuthorisation;
+	protected List<Mandate> accountAuthorisation;
 	/**
 	 * 
 	 <p>
@@ -601,7 +640,7 @@ public class AccountContract extends Contract {
 	 * "Specifies the services which are assigned to another party."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmAccountAuthorisation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<AccountContract, List<Mandate>> mmAccountAuthorisation = new MMBusinessAssociationEnd<AccountContract, List<Mandate>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AccountContract.mmObject();
@@ -609,9 +648,19 @@ public class AccountContract extends Contract {
 			name = "AccountAuthorisation";
 			definition = "Specifies the services which are assigned to another party.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Mandate.mmAccountContract;
+			opposite_lazy = () -> Mandate.mmAccountContract;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Mandate.mmObject();
+			type_lazy = () -> Mandate.mmObject();
+		}
+
+		@Override
+		public List<Mandate> getValue(AccountContract obj) {
+			return obj.getAccountAuthorisation();
+		}
+
+		@Override
+		public void setValue(AccountContract obj, List<Mandate> value) {
+			obj.setAccountAuthorisation(value);
 		}
 	};
 	protected TransactionChannelCode transactionChannel;
@@ -713,11 +762,11 @@ public class AccountContract extends Contract {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies the means by which the account owner submits the open account form."
+	 * "Specifies the means by which the account owner submits the open account form. "
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmTransactionChannel = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<AccountContract, TransactionChannelCode> mmTransactionChannel = new MMBusinessAttribute<AccountContract, TransactionChannelCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(InvestmentAccount38.mmTransactionChannelType, InvestmentAccount37.mmTransactionChannelType, InvestmentAccount39.mmTransactionChannelType, TransactionChannelType1Choice.mmCode,
 					TransactionChannelType1Choice.mmProprietary, InvestmentAccount46.mmTransactionChannelType, InvestmentAccount47.mmTransactionChannelType, InvestmentAccount49.mmTransactionChannelType,
@@ -729,18 +778,20 @@ public class AccountContract extends Contract {
 			elementContext_lazy = () -> com.tools20022.repository.entity.AccountContract.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransactionChannel";
-			definition = "Specifies the means by which the account owner submits the open account form.";
+			definition = "Specifies the means by which the account owner submits the open account form. ";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TransactionChannelCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountContract.class.getMethod("getTransactionChannel", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TransactionChannelCode getValue(AccountContract obj) {
+			return obj.getTransactionChannel();
+		}
+
+		@Override
+		public void setValue(AccountContract obj, TransactionChannelCode value) {
+			obj.setTransactionChannel(value);
 		}
 	};
 
@@ -752,7 +803,7 @@ public class AccountContract extends Contract {
 				name = "AccountContract";
 				definition = "Agreement between an account servicer and an account owner about the services linked to an account.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Account.mmAccountContract, com.tools20022.repository.entity.AccountService.mmAccountContract,
-						com.tools20022.repository.entity.Interest.mmRelatedAccountContract, com.tools20022.repository.entity.Mandate.mmAccountContract);
+						com.tools20022.repository.entity.Interest.mmRelatedAccountContract, Mandate.mmAccountContract);
 				subType_lazy = () -> Arrays.asList(InvestmentAccountContract.mmObject(), CashAccountContract.mmObject());
 				superType_lazy = () -> Contract.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AccountContract.mmTargetClosingDate, com.tools20022.repository.entity.AccountContract.mmUrgencyFlag,
@@ -846,7 +897,7 @@ public class AccountContract extends Contract {
 		return accountAuthorisation == null ? accountAuthorisation = new ArrayList<>() : accountAuthorisation;
 	}
 
-	public AccountContract setAccountAuthorisation(List<com.tools20022.repository.entity.Mandate> accountAuthorisation) {
+	public AccountContract setAccountAuthorisation(List<Mandate> accountAuthorisation) {
 		this.accountAuthorisation = Objects.requireNonNull(accountAuthorisation);
 		return this;
 	}

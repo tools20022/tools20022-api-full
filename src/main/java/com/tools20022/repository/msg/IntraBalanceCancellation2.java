@@ -28,6 +28,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccount24;
+import com.tools20022.repository.msg.IntraBalance1;
+import com.tools20022.repository.msg.References14;
+import com.tools20022.repository.msg.SystemPartyIdentification5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -140,7 +144,7 @@ public class IntraBalanceCancellation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalanceCancellation2, Optional<SystemPartyIdentification5>> mmAccountOwner = new MMMessageAssociationEnd<IntraBalanceCancellation2, Optional<SystemPartyIdentification5>>() {
 		{
 			businessElementTrace_lazy = () -> System.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceCancellation2.mmObject();
@@ -153,7 +157,17 @@ public class IntraBalanceCancellation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification5.mmObject();
+			type_lazy = () -> SystemPartyIdentification5.mmObject();
+		}
+
+		@Override
+		public Optional<SystemPartyIdentification5> getValue(IntraBalanceCancellation2 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(IntraBalanceCancellation2 obj, Optional<SystemPartyIdentification5> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CshAcct")
@@ -197,7 +211,7 @@ public class IntraBalanceCancellation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalanceCancellation2, Optional<CashAccount24>> mmCashAccount = new MMMessageAssociationEnd<IntraBalanceCancellation2, Optional<CashAccount24>>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceCancellation2.mmObject();
@@ -210,7 +224,17 @@ public class IntraBalanceCancellation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
+			type_lazy = () -> CashAccount24.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount24> getValue(IntraBalanceCancellation2 obj) {
+			return obj.getCashAccount();
+		}
+
+		@Override
+		public void setValue(IntraBalanceCancellation2 obj, Optional<CashAccount24> value) {
+			obj.setCashAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcgSts")
@@ -258,7 +282,7 @@ public class IntraBalanceCancellation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalanceCancellation2, Optional<ProcessingStatus32Choice>> mmProcessingStatus = new MMMessageAssociationEnd<IntraBalanceCancellation2, Optional<ProcessingStatus32Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTradeStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceCancellation2.mmObject();
@@ -273,6 +297,16 @@ public class IntraBalanceCancellation2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ProcessingStatus32Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ProcessingStatus32Choice> getValue(IntraBalanceCancellation2 obj) {
+			return obj.getProcessingStatus();
+		}
+
+		@Override
+		public void setValue(IntraBalanceCancellation2 obj, Optional<ProcessingStatus32Choice> value) {
+			obj.setProcessingStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReqRef", required = true)
@@ -312,7 +346,7 @@ public class IntraBalanceCancellation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalanceCancellation2, Max35Text> mmRequestReference = new MMMessageAttribute<IntraBalanceCancellation2, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceCancellation2.mmObject();
 			isDerived = false;
@@ -324,6 +358,16 @@ public class IntraBalanceCancellation2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(IntraBalanceCancellation2 obj) {
+			return obj.getRequestReference();
+		}
+
+		@Override
+		public void setValue(IntraBalanceCancellation2 obj, Max35Text value) {
+			obj.setRequestReference(value);
 		}
 	};
 	@XmlElement(name = "StsDt")
@@ -371,7 +415,7 @@ public class IntraBalanceCancellation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatusDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalanceCancellation2, Optional<ISODateTime>> mmStatusDate = new MMMessageAttribute<IntraBalanceCancellation2, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceCancellation2.mmObject();
@@ -385,6 +429,16 @@ public class IntraBalanceCancellation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(IntraBalanceCancellation2 obj) {
+			return obj.getStatusDate();
+		}
+
+		@Override
+		public void setValue(IntraBalanceCancellation2 obj, Optional<ISODateTime> value) {
+			obj.setStatusDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxId")
@@ -434,7 +488,7 @@ public class IntraBalanceCancellation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalanceCancellation2, Optional<References14>> mmTransactionIdentification = new MMMessageAttribute<IntraBalanceCancellation2, Optional<References14>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeRelatedIdentifications;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceCancellation2.mmObject();
@@ -447,7 +501,17 @@ public class IntraBalanceCancellation2 {
 			nextVersions_lazy = () -> Arrays.asList(IntraBalanceCancellation4.mmTransactionIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.References14.mmObject();
+			complexType_lazy = () -> References14.mmObject();
+		}
+
+		@Override
+		public Optional<References14> getValue(IntraBalanceCancellation2 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(IntraBalanceCancellation2 obj, Optional<References14> value) {
+			obj.setTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UndrlygIntraBal")
@@ -494,7 +558,7 @@ public class IntraBalanceCancellation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnderlyingIntraBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalanceCancellation2, Optional<IntraBalance1>> mmUnderlyingIntraBalance = new MMMessageAttribute<IntraBalanceCancellation2, Optional<IntraBalance1>>() {
 		{
 			businessComponentTrace_lazy = () -> BookEntry.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceCancellation2.mmObject();
@@ -507,7 +571,17 @@ public class IntraBalanceCancellation2 {
 			nextVersions_lazy = () -> Arrays.asList(IntraBalanceCancellation4.mmUnderlyingIntraBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.IntraBalance1.mmObject();
+			complexType_lazy = () -> IntraBalance1.mmObject();
+		}
+
+		@Override
+		public Optional<IntraBalance1> getValue(IntraBalanceCancellation2 obj) {
+			return obj.getUnderlyingIntraBalance();
+		}
+
+		@Override
+		public void setValue(IntraBalanceCancellation2 obj, Optional<IntraBalance1> value) {
+			obj.setUnderlyingIntraBalance(value.orElse(null));
 		}
 	};
 
@@ -533,7 +607,7 @@ public class IntraBalanceCancellation2 {
 		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public IntraBalanceCancellation2 setAccountOwner(com.tools20022.repository.msg.SystemPartyIdentification5 accountOwner) {
+	public IntraBalanceCancellation2 setAccountOwner(SystemPartyIdentification5 accountOwner) {
 		this.accountOwner = accountOwner;
 		return this;
 	}
@@ -542,7 +616,7 @@ public class IntraBalanceCancellation2 {
 		return cashAccount == null ? Optional.empty() : Optional.of(cashAccount);
 	}
 
-	public IntraBalanceCancellation2 setCashAccount(com.tools20022.repository.msg.CashAccount24 cashAccount) {
+	public IntraBalanceCancellation2 setCashAccount(CashAccount24 cashAccount) {
 		this.cashAccount = cashAccount;
 		return this;
 	}
@@ -578,7 +652,7 @@ public class IntraBalanceCancellation2 {
 		return transactionIdentification == null ? Optional.empty() : Optional.of(transactionIdentification);
 	}
 
-	public IntraBalanceCancellation2 setTransactionIdentification(com.tools20022.repository.msg.References14 transactionIdentification) {
+	public IntraBalanceCancellation2 setTransactionIdentification(References14 transactionIdentification) {
 		this.transactionIdentification = transactionIdentification;
 		return this;
 	}
@@ -587,7 +661,7 @@ public class IntraBalanceCancellation2 {
 		return underlyingIntraBalance == null ? Optional.empty() : Optional.of(underlyingIntraBalance);
 	}
 
-	public IntraBalanceCancellation2 setUnderlyingIntraBalance(com.tools20022.repository.msg.IntraBalance1 underlyingIntraBalance) {
+	public IntraBalanceCancellation2 setUnderlyingIntraBalance(IntraBalance1 underlyingIntraBalance) {
 		this.underlyingIntraBalance = underlyingIntraBalance;
 		return this;
 	}

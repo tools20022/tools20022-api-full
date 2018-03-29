@@ -24,6 +24,9 @@ import com.tools20022.repository.area.auth.CCPMemberRequirementsReportV01;
 import com.tools20022.repository.entity.DefaultFundContribution;
 import com.tools20022.repository.entity.MarginCall;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountAndDirection6;
+import com.tools20022.repository.msg.GenericIdentification165;
+import com.tools20022.repository.msg.InitialMarginRequirement1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -122,7 +125,7 @@ public class EndOfDayRequirement2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInitialMarginRequirements = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EndOfDayRequirement2, InitialMarginRequirement1> mmInitialMarginRequirements = new MMMessageAssociationEnd<EndOfDayRequirement2, InitialMarginRequirement1>() {
 		{
 			businessElementTrace_lazy = () -> MarginCall.mmInitialMargin;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EndOfDayRequirement2.mmObject();
@@ -134,7 +137,17 @@ public class EndOfDayRequirement2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InitialMarginRequirement1.mmObject();
+			type_lazy = () -> InitialMarginRequirement1.mmObject();
+		}
+
+		@Override
+		public InitialMarginRequirement1 getValue(EndOfDayRequirement2 obj) {
+			return obj.getInitialMarginRequirements();
+		}
+
+		@Override
+		public void setValue(EndOfDayRequirement2 obj, InitialMarginRequirement1 value) {
+			obj.setInitialMarginRequirements(value);
 		}
 	};
 	@XmlElement(name = "VartnMrgnRqrmnts", required = true)
@@ -172,7 +185,7 @@ public class EndOfDayRequirement2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmVariationMarginRequirements = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EndOfDayRequirement2, AmountAndDirection6> mmVariationMarginRequirements = new MMMessageAssociationEnd<EndOfDayRequirement2, AmountAndDirection6>() {
 		{
 			businessElementTrace_lazy = () -> MarginCall.mmVariationMargin;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EndOfDayRequirement2.mmObject();
@@ -184,7 +197,17 @@ public class EndOfDayRequirement2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
+			type_lazy = () -> AmountAndDirection6.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection6 getValue(EndOfDayRequirement2 obj) {
+			return obj.getVariationMarginRequirements();
+		}
+
+		@Override
+		public void setValue(EndOfDayRequirement2 obj, AmountAndDirection6 value) {
+			obj.setVariationMarginRequirements(value);
 		}
 	};
 	@XmlElement(name = "MrgnAcctId", required = true)
@@ -223,7 +246,7 @@ public class EndOfDayRequirement2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMarginAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EndOfDayRequirement2, GenericIdentification165> mmMarginAccountIdentification = new MMMessageAssociationEnd<EndOfDayRequirement2, GenericIdentification165>() {
 		{
 			businessElementTrace_lazy = () -> DefaultFundContribution.mmContributionAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EndOfDayRequirement2.mmObject();
@@ -235,7 +258,17 @@ public class EndOfDayRequirement2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification165.mmObject();
+			type_lazy = () -> GenericIdentification165.mmObject();
+		}
+
+		@Override
+		public GenericIdentification165 getValue(EndOfDayRequirement2 obj) {
+			return obj.getMarginAccountIdentification();
+		}
+
+		@Override
+		public void setValue(EndOfDayRequirement2 obj, GenericIdentification165 value) {
+			obj.setMarginAccountIdentification(value);
 		}
 	};
 
@@ -259,7 +292,7 @@ public class EndOfDayRequirement2 {
 		return initialMarginRequirements;
 	}
 
-	public EndOfDayRequirement2 setInitialMarginRequirements(com.tools20022.repository.msg.InitialMarginRequirement1 initialMarginRequirements) {
+	public EndOfDayRequirement2 setInitialMarginRequirements(InitialMarginRequirement1 initialMarginRequirements) {
 		this.initialMarginRequirements = Objects.requireNonNull(initialMarginRequirements);
 		return this;
 	}
@@ -268,7 +301,7 @@ public class EndOfDayRequirement2 {
 		return variationMarginRequirements;
 	}
 
-	public EndOfDayRequirement2 setVariationMarginRequirements(com.tools20022.repository.msg.AmountAndDirection6 variationMarginRequirements) {
+	public EndOfDayRequirement2 setVariationMarginRequirements(AmountAndDirection6 variationMarginRequirements) {
 		this.variationMarginRequirements = Objects.requireNonNull(variationMarginRequirements);
 		return this;
 	}
@@ -277,7 +310,7 @@ public class EndOfDayRequirement2 {
 		return marginAccountIdentification;
 	}
 
-	public EndOfDayRequirement2 setMarginAccountIdentification(com.tools20022.repository.msg.GenericIdentification165 marginAccountIdentification) {
+	public EndOfDayRequirement2 setMarginAccountIdentification(GenericIdentification165 marginAccountIdentification) {
 		this.marginAccountIdentification = Objects.requireNonNull(marginAccountIdentification);
 		return this;
 	}

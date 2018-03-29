@@ -56,12 +56,16 @@ public class ConstraintSplitTradeTruePresenceRule {
 	 */
 	public static final MMConstraint<ForeignExchangeTradeStatusAndDetailsNotificationV02> forForeignExchangeTradeStatusAndDetailsNotificationV02 = new MMConstraint<ForeignExchangeTradeStatusAndDetailsNotificationV02>() {
 		{
-			validator = ConstraintSplitTradeTruePresenceRule::checkForeignExchangeTradeStatusAndDetailsNotificationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SplitTradeTruePresenceRule";
 			definition = "If TradeInformation\\SplitTradeIndicator is YES (‘true’ or 1), the SplitTradeInformation must be present.";
 			owner_lazy = () -> ForeignExchangeTradeStatusAndDetailsNotificationV02.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SplitTradeInformation[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TradeInformation/SplitTradeIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(ForeignExchangeTradeStatusAndDetailsNotificationV02 obj) throws Exception {
+			checkForeignExchangeTradeStatusAndDetailsNotificationV02(obj);
 		}
 	};
 	/**
@@ -91,12 +95,16 @@ public class ConstraintSplitTradeTruePresenceRule {
 	 */
 	public static final MMConstraint<ForeignExchangeTradeStatusAndDetailsNotificationV04> forForeignExchangeTradeStatusAndDetailsNotificationV04 = new MMConstraint<ForeignExchangeTradeStatusAndDetailsNotificationV04>() {
 		{
-			validator = ConstraintSplitTradeTruePresenceRule::checkForeignExchangeTradeStatusAndDetailsNotificationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SplitTradeTruePresenceRule";
 			definition = "If TradeInformation\\SplitTradeIndicator is YES (‘true’), the SplitTradeInformation must be present.";
 			owner_lazy = () -> ForeignExchangeTradeStatusAndDetailsNotificationV04.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SplitTradeInformation[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TradeInformation/SplitTradeIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(ForeignExchangeTradeStatusAndDetailsNotificationV04 obj) throws Exception {
+			checkForeignExchangeTradeStatusAndDetailsNotificationV04(obj);
 		}
 	};
 

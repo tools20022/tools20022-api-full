@@ -21,6 +21,8 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ProprietaryReportData;
+import com.tools20022.repository.msg.ReportHeader1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -95,7 +97,7 @@ public class BulkReportBody {
 	 * definition} = "General properties of the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReportHeader = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BulkReportBody, Optional<ReportHeader1>> mmReportHeader = new MMMessageAssociationEnd<BulkReportBody, Optional<ReportHeader1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BulkReportBody.mmObject();
 			isDerived = false;
@@ -106,7 +108,17 @@ public class BulkReportBody {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ReportHeader1.mmObject();
+			type_lazy = () -> ReportHeader1.mmObject();
+		}
+
+		@Override
+		public Optional<ReportHeader1> getValue(BulkReportBody obj) {
+			return obj.getReportHeader();
+		}
+
+		@Override
+		public void setValue(BulkReportBody obj, Optional<ReportHeader1> value) {
+			obj.setReportHeader(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RptData", required = true)
@@ -138,7 +150,7 @@ public class BulkReportBody {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReportData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BulkReportBody, ProprietaryReportData> mmReportData = new MMMessageAssociationEnd<BulkReportBody, ProprietaryReportData>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BulkReportBody.mmObject();
 			isDerived = false;
@@ -149,7 +161,17 @@ public class BulkReportBody {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ProprietaryReportData.mmObject();
+			type_lazy = () -> ProprietaryReportData.mmObject();
+		}
+
+		@Override
+		public ProprietaryReportData getValue(BulkReportBody obj) {
+			return obj.getReportData();
+		}
+
+		@Override
+		public void setValue(BulkReportBody obj, ProprietaryReportData value) {
+			obj.setReportData(value);
 		}
 	};
 
@@ -170,7 +192,7 @@ public class BulkReportBody {
 		return reportHeader == null ? Optional.empty() : Optional.of(reportHeader);
 	}
 
-	public BulkReportBody setReportHeader(com.tools20022.repository.msg.ReportHeader1 reportHeader) {
+	public BulkReportBody setReportHeader(ReportHeader1 reportHeader) {
 		this.reportHeader = reportHeader;
 		return this;
 	}
@@ -179,7 +201,7 @@ public class BulkReportBody {
 		return reportData;
 	}
 
-	public BulkReportBody setReportData(com.tools20022.repository.msg.ProprietaryReportData reportData) {
+	public BulkReportBody setReportData(ProprietaryReportData reportData) {
 		this.reportData = Objects.requireNonNull(reportData);
 		return this;
 	}

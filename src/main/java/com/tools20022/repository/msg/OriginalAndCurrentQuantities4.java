@@ -109,7 +109,7 @@ public class OriginalAndCurrentQuantities4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFaceAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalAndCurrentQuantities4, RestrictedFINImpliedCurrencyAndAmount> mmFaceAmount = new MMMessageAttribute<OriginalAndCurrentQuantities4, RestrictedFINImpliedCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmFaceAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalAndCurrentQuantities4.mmObject();
@@ -121,6 +121,16 @@ public class OriginalAndCurrentQuantities4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public RestrictedFINImpliedCurrencyAndAmount getValue(OriginalAndCurrentQuantities4 obj) {
+			return obj.getFaceAmount();
+		}
+
+		@Override
+		public void setValue(OriginalAndCurrentQuantities4 obj, RestrictedFINImpliedCurrencyAndAmount value) {
+			obj.setFaceAmount(value);
 		}
 	};
 	@XmlElement(name = "AmtsdVal", required = true)
@@ -160,7 +170,7 @@ public class OriginalAndCurrentQuantities4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmortisedValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalAndCurrentQuantities4, RestrictedFINImpliedCurrencyAndAmount> mmAmortisedValue = new MMMessageAttribute<OriginalAndCurrentQuantities4, RestrictedFINImpliedCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmAmortisedFaceValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalAndCurrentQuantities4.mmObject();
@@ -172,6 +182,16 @@ public class OriginalAndCurrentQuantities4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public RestrictedFINImpliedCurrencyAndAmount getValue(OriginalAndCurrentQuantities4 obj) {
+			return obj.getAmortisedValue();
+		}
+
+		@Override
+		public void setValue(OriginalAndCurrentQuantities4 obj, RestrictedFINImpliedCurrencyAndAmount value) {
+			obj.setAmortisedValue(value);
 		}
 	};
 

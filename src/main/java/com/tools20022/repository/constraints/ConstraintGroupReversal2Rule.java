@@ -52,11 +52,15 @@ public class ConstraintGroupReversal2Rule {
 	 */
 	public static final MMConstraint<CustomerPaymentReversalV01> forCustomerPaymentReversalV01 = new MMConstraint<CustomerPaymentReversalV01>() {
 		{
-			validator = ConstraintGroupReversal2Rule::checkCustomerPaymentReversalV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReversal2Rule";
 			definition = "If GroupHeader/GroupReversal is true, then OriginalGroupInformation/ReversalReasonInformation/ReversalReason must present.";
 			owner_lazy = () -> CustomerPaymentReversalV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CustomerPaymentReversalV01 obj) throws Exception {
+			checkCustomerPaymentReversalV01(obj);
 		}
 	};
 

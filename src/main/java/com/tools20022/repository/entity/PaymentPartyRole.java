@@ -21,6 +21,8 @@ import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.CashAccount;
+import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.entity.Role;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
@@ -222,22 +224,32 @@ public class PaymentPartyRole extends Role {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unambiguous identification of the account used in the context of the party role such as debtor account, instructing agent account."
+	 * "Unambiguous identification of the account used in the context of the party role such as debtor account, instructing agent account..."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCashAccount = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<PaymentPartyRole, List<CashAccount>> mmCashAccount = new MMBusinessAssociationEnd<PaymentPartyRole, List<CashAccount>>() {
 		{
 			derivation_lazy = () -> ListBuilderForPaymentPartyRole_00.addElems(new ArrayList<>());
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashAccount";
-			definition = "Unambiguous identification of the account used in the context of the party role such as debtor account, instructing agent account.";
+			definition = "Unambiguous identification of the account used in the context of the party role such as debtor account, instructing agent account...";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CashAccount.mmPaymentPartyRole;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
+		}
+
+		@Override
+		public List<CashAccount> getValue(PaymentPartyRole obj) {
+			return obj.getCashAccount();
+		}
+
+		@Override
+		public void setValue(PaymentPartyRole obj, List<CashAccount> value) {
+			obj.setCashAccount(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.Payment> payment;
@@ -273,7 +285,7 @@ public class PaymentPartyRole extends Role {
 	 * definition} = "Identifies the payment in which a party plays a role."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPayment = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<PaymentPartyRole, List<Payment>> mmPayment = new MMBusinessAssociationEnd<PaymentPartyRole, List<Payment>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmObject();
@@ -284,6 +296,16 @@ public class PaymentPartyRole extends Role {
 			opposite_lazy = () -> com.tools20022.repository.entity.Payment.mmPartyRole;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+		}
+
+		@Override
+		public List<Payment> getValue(PaymentPartyRole obj) {
+			return obj.getPayment();
+		}
+
+		@Override
+		public void setValue(PaymentPartyRole obj, List<Payment> value) {
+			obj.setPayment(value);
 		}
 	};
 

@@ -25,6 +25,10 @@ import com.tools20022.repository.codeset.Algorithm11Code;
 import com.tools20022.repository.codeset.Algorithm12Code;
 import com.tools20022.repository.codeset.MessageProtection1Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMSecurityConfiguration2;
+import com.tools20022.repository.msg.ATMSecurityConfiguration3;
+import com.tools20022.repository.msg.ATMSecurityConfiguration4;
+import com.tools20022.repository.msg.ATMSecurityConfiguration5;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -120,7 +124,7 @@ public class ATMSecurityConfiguration1 {
 	 * definition} = "Configuration of the cryptographic keys."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmKeys = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMSecurityConfiguration1, Optional<ATMSecurityConfiguration2>> mmKeys = new MMMessageAssociationEnd<ATMSecurityConfiguration1, Optional<ATMSecurityConfiguration2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration1.mmObject();
 			isDerived = false;
@@ -131,7 +135,17 @@ public class ATMSecurityConfiguration1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration2.mmObject();
+			type_lazy = () -> ATMSecurityConfiguration2.mmObject();
+		}
+
+		@Override
+		public Optional<ATMSecurityConfiguration2> getValue(ATMSecurityConfiguration1 obj) {
+			return obj.getKeys();
+		}
+
+		@Override
+		public void setValue(ATMSecurityConfiguration1 obj, Optional<ATMSecurityConfiguration2> value) {
+			obj.setKeys(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ncrptn")
@@ -165,7 +179,7 @@ public class ATMSecurityConfiguration1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEncryption = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMSecurityConfiguration1, Optional<ATMSecurityConfiguration3>> mmEncryption = new MMMessageAssociationEnd<ATMSecurityConfiguration1, Optional<ATMSecurityConfiguration3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration1.mmObject();
 			isDerived = false;
@@ -176,7 +190,17 @@ public class ATMSecurityConfiguration1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration3.mmObject();
+			type_lazy = () -> ATMSecurityConfiguration3.mmObject();
+		}
+
+		@Override
+		public Optional<ATMSecurityConfiguration3> getValue(ATMSecurityConfiguration1 obj) {
+			return obj.getEncryption();
+		}
+
+		@Override
+		public void setValue(ATMSecurityConfiguration1 obj, Optional<ATMSecurityConfiguration3> value) {
+			obj.setEncryption(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MACAlgo")
@@ -211,7 +235,7 @@ public class ATMSecurityConfiguration1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMACAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMSecurityConfiguration1, List<Algorithm12Code>> mmMACAlgorithm = new MMMessageAttribute<ATMSecurityConfiguration1, List<Algorithm12Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration1.mmObject();
 			isDerived = false;
@@ -221,6 +245,16 @@ public class ATMSecurityConfiguration1 {
 			definition = "MAC (Message Authentication Code) algorithm the security module is able to manage.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Algorithm12Code.mmObject();
+		}
+
+		@Override
+		public List<Algorithm12Code> getValue(ATMSecurityConfiguration1 obj) {
+			return obj.getMACAlgorithm();
+		}
+
+		@Override
+		public void setValue(ATMSecurityConfiguration1 obj, List<Algorithm12Code> value) {
+			obj.setMACAlgorithm(value);
 		}
 	};
 	@XmlElement(name = "DgstAlgo")
@@ -253,7 +287,7 @@ public class ATMSecurityConfiguration1 {
 	 * definition} = "Digest algorithm the security module is able to manage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDigestAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMSecurityConfiguration1, List<Algorithm11Code>> mmDigestAlgorithm = new MMMessageAttribute<ATMSecurityConfiguration1, List<Algorithm11Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration1.mmObject();
 			isDerived = false;
@@ -263,6 +297,16 @@ public class ATMSecurityConfiguration1 {
 			definition = "Digest algorithm the security module is able to manage.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Algorithm11Code.mmObject();
+		}
+
+		@Override
+		public List<Algorithm11Code> getValue(ATMSecurityConfiguration1 obj) {
+			return obj.getDigestAlgorithm();
+		}
+
+		@Override
+		public void setValue(ATMSecurityConfiguration1 obj, List<Algorithm11Code> value) {
+			obj.setDigestAlgorithm(value);
 		}
 	};
 	@XmlElement(name = "DgtlSgntr")
@@ -296,7 +340,7 @@ public class ATMSecurityConfiguration1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDigitalSignature = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMSecurityConfiguration1, Optional<ATMSecurityConfiguration4>> mmDigitalSignature = new MMMessageAssociationEnd<ATMSecurityConfiguration1, Optional<ATMSecurityConfiguration4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration1.mmObject();
 			isDerived = false;
@@ -307,7 +351,17 @@ public class ATMSecurityConfiguration1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration4.mmObject();
+			type_lazy = () -> ATMSecurityConfiguration4.mmObject();
+		}
+
+		@Override
+		public Optional<ATMSecurityConfiguration4> getValue(ATMSecurityConfiguration1 obj) {
+			return obj.getDigitalSignature();
+		}
+
+		@Override
+		public void setValue(ATMSecurityConfiguration1 obj, Optional<ATMSecurityConfiguration4> value) {
+			obj.setDigitalSignature(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PIN")
@@ -339,7 +393,7 @@ public class ATMSecurityConfiguration1 {
 	 * definition} = "Configuration of the PIN online verification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPIN = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMSecurityConfiguration1, Optional<ATMSecurityConfiguration5>> mmPIN = new MMMessageAssociationEnd<ATMSecurityConfiguration1, Optional<ATMSecurityConfiguration5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration1.mmObject();
 			isDerived = false;
@@ -350,7 +404,17 @@ public class ATMSecurityConfiguration1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration5.mmObject();
+			type_lazy = () -> ATMSecurityConfiguration5.mmObject();
+		}
+
+		@Override
+		public Optional<ATMSecurityConfiguration5> getValue(ATMSecurityConfiguration1 obj) {
+			return obj.getPIN();
+		}
+
+		@Override
+		public void setValue(ATMSecurityConfiguration1 obj, Optional<ATMSecurityConfiguration5> value) {
+			obj.setPIN(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MsgPrtcn")
@@ -384,7 +448,7 @@ public class ATMSecurityConfiguration1 {
 	 * "Mechanism used to protect the message of the ATM protocol."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageProtection = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMSecurityConfiguration1, List<MessageProtection1Code>> mmMessageProtection = new MMMessageAttribute<ATMSecurityConfiguration1, List<MessageProtection1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration1.mmObject();
 			isDerived = false;
@@ -394,6 +458,16 @@ public class ATMSecurityConfiguration1 {
 			definition = "Mechanism used to protect the message of the ATM protocol.";
 			minOccurs = 0;
 			simpleType_lazy = () -> MessageProtection1Code.mmObject();
+		}
+
+		@Override
+		public List<MessageProtection1Code> getValue(ATMSecurityConfiguration1 obj) {
+			return obj.getMessageProtection();
+		}
+
+		@Override
+		public void setValue(ATMSecurityConfiguration1 obj, List<MessageProtection1Code> value) {
+			obj.setMessageProtection(value);
 		}
 	};
 
@@ -407,7 +481,7 @@ public class ATMSecurityConfiguration1 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMSecurityConfiguration1";
 				definition = "Configuration parameters in use by the security device.";
-				nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMSecurityConfiguration2.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(ATMSecurityConfiguration2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
@@ -417,7 +491,7 @@ public class ATMSecurityConfiguration1 {
 		return keys == null ? Optional.empty() : Optional.of(keys);
 	}
 
-	public ATMSecurityConfiguration1 setKeys(com.tools20022.repository.msg.ATMSecurityConfiguration2 keys) {
+	public ATMSecurityConfiguration1 setKeys(ATMSecurityConfiguration2 keys) {
 		this.keys = keys;
 		return this;
 	}
@@ -426,7 +500,7 @@ public class ATMSecurityConfiguration1 {
 		return encryption == null ? Optional.empty() : Optional.of(encryption);
 	}
 
-	public ATMSecurityConfiguration1 setEncryption(com.tools20022.repository.msg.ATMSecurityConfiguration3 encryption) {
+	public ATMSecurityConfiguration1 setEncryption(ATMSecurityConfiguration3 encryption) {
 		this.encryption = encryption;
 		return this;
 	}
@@ -453,7 +527,7 @@ public class ATMSecurityConfiguration1 {
 		return digitalSignature == null ? Optional.empty() : Optional.of(digitalSignature);
 	}
 
-	public ATMSecurityConfiguration1 setDigitalSignature(com.tools20022.repository.msg.ATMSecurityConfiguration4 digitalSignature) {
+	public ATMSecurityConfiguration1 setDigitalSignature(ATMSecurityConfiguration4 digitalSignature) {
 		this.digitalSignature = digitalSignature;
 		return this;
 	}
@@ -462,7 +536,7 @@ public class ATMSecurityConfiguration1 {
 		return pIN == null ? Optional.empty() : Optional.of(pIN);
 	}
 
-	public ATMSecurityConfiguration1 setPIN(com.tools20022.repository.msg.ATMSecurityConfiguration5 pIN) {
+	public ATMSecurityConfiguration1 setPIN(ATMSecurityConfiguration5 pIN) {
 		this.pIN = pIN;
 		return this;
 	}

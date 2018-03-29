@@ -125,7 +125,7 @@ public class SystemPartyIdentification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRelatedPartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemPartyIdentification3, BICFIIdentifier> mmRelatedPartyIdentification = new MMMessageAttribute<SystemPartyIdentification3, BICFIIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification3.mmObject();
@@ -137,6 +137,16 @@ public class SystemPartyIdentification3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
+		}
+
+		@Override
+		public BICFIIdentifier getValue(SystemPartyIdentification3 obj) {
+			return obj.getRelatedPartyIdentification();
+		}
+
+		@Override
+		public void setValue(SystemPartyIdentification3 obj, BICFIIdentifier value) {
+			obj.setRelatedPartyIdentification(value);
 		}
 	};
 	@XmlElement(name = "RspnsblPtyId", required = true)
@@ -176,7 +186,7 @@ public class SystemPartyIdentification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResponsiblePartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemPartyIdentification3, BICFIIdentifier> mmResponsiblePartyIdentification = new MMMessageAttribute<SystemPartyIdentification3, BICFIIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification3.mmObject();
@@ -188,6 +198,16 @@ public class SystemPartyIdentification3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
+		}
+
+		@Override
+		public BICFIIdentifier getValue(SystemPartyIdentification3 obj) {
+			return obj.getResponsiblePartyIdentification();
+		}
+
+		@Override
+		public void setValue(SystemPartyIdentification3 obj, BICFIIdentifier value) {
+			obj.setResponsiblePartyIdentification(value);
 		}
 	};
 

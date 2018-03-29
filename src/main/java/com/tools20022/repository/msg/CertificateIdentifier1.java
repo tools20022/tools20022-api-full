@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.IssuerAndSerialNumber1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -93,7 +94,7 @@ public class CertificateIdentifier1 {
 	 * definition} = "Certificate issuer name and serial number (see X.509)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIssuerAndSerialNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CertificateIdentifier1, IssuerAndSerialNumber1> mmIssuerAndSerialNumber = new MMMessageAssociationEnd<CertificateIdentifier1, IssuerAndSerialNumber1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateIdentifier1.mmObject();
 			isDerived = false;
@@ -104,7 +105,17 @@ public class CertificateIdentifier1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IssuerAndSerialNumber1.mmObject();
+			type_lazy = () -> IssuerAndSerialNumber1.mmObject();
+		}
+
+		@Override
+		public IssuerAndSerialNumber1 getValue(CertificateIdentifier1 obj) {
+			return obj.getIssuerAndSerialNumber();
+		}
+
+		@Override
+		public void setValue(CertificateIdentifier1 obj, IssuerAndSerialNumber1 value) {
+			obj.setIssuerAndSerialNumber(value);
 		}
 	};
 
@@ -125,7 +136,7 @@ public class CertificateIdentifier1 {
 		return issuerAndSerialNumber;
 	}
 
-	public CertificateIdentifier1 setIssuerAndSerialNumber(com.tools20022.repository.msg.IssuerAndSerialNumber1 issuerAndSerialNumber) {
+	public CertificateIdentifier1 setIssuerAndSerialNumber(IssuerAndSerialNumber1 issuerAndSerialNumber) {
 		this.issuerAndSerialNumber = Objects.requireNonNull(issuerAndSerialNumber);
 		return this;
 	}

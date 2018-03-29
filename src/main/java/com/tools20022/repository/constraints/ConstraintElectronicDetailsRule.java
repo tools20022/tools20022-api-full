@@ -54,12 +54,16 @@ public class ConstraintElectronicDetailsRule {
 	 */
 	public static final MMConstraint<Presentation4> forPresentation4 = new MMConstraint<Presentation4>() {
 		{
-			validator = ConstraintElectronicDetailsRule::checkPresentation4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectronicDetailsRule";
 			definition = "If /Medium/Code is equal to 'PAPR', then /Document[*]/ElectronicDetails[*] must be absent.";
 			owner_lazy = () -> Presentation4.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Document[*]/ElectronicDetails[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/Medium/Code</leftOperand><rightOperand>Paper</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(Presentation4 obj) throws Exception {
+			checkPresentation4(obj);
 		}
 	};
 

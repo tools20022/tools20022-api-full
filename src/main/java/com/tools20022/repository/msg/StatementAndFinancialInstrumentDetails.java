@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.InvestmentAccount;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.ReportingService;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DatePeriodDetails;
+import com.tools20022.repository.msg.FinancialInstrument17;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -157,7 +159,7 @@ public class StatementAndFinancialInstrumentDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementAndFinancialInstrumentDetails, AccountIdentificationFormatChoice> mmAccountIdentification = new MMMessageAttribute<StatementAndFinancialInstrumentDetails, AccountIdentificationFormatChoice>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatementAndFinancialInstrumentDetails.mmObject();
@@ -169,6 +171,16 @@ public class StatementAndFinancialInstrumentDetails {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AccountIdentificationFormatChoice.mmObject();
+		}
+
+		@Override
+		public AccountIdentificationFormatChoice getValue(StatementAndFinancialInstrumentDetails obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(StatementAndFinancialInstrumentDetails obj, AccountIdentificationFormatChoice value) {
+			obj.setAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "SubAcctId")
@@ -208,7 +220,7 @@ public class StatementAndFinancialInstrumentDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementAndFinancialInstrumentDetails, Optional<AccountIdentificationFormatChoice>> mmSubAccountIdentification = new MMMessageAttribute<StatementAndFinancialInstrumentDetails, Optional<AccountIdentificationFormatChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatementAndFinancialInstrumentDetails.mmObject();
@@ -220,6 +232,16 @@ public class StatementAndFinancialInstrumentDetails {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AccountIdentificationFormatChoice.mmObject();
+		}
+
+		@Override
+		public Optional<AccountIdentificationFormatChoice> getValue(StatementAndFinancialInstrumentDetails obj) {
+			return obj.getSubAccountIdentification();
+		}
+
+		@Override
+		public void setValue(StatementAndFinancialInstrumentDetails obj, Optional<AccountIdentificationFormatChoice> value) {
+			obj.setSubAccountIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FinInstrmDtls", required = true)
@@ -256,7 +278,7 @@ public class StatementAndFinancialInstrumentDetails {
 	 * "Financial instrument for which the statement is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatementAndFinancialInstrumentDetails, FinancialInstrument17> mmFinancialInstrumentDetails = new MMMessageAssociationEnd<StatementAndFinancialInstrumentDetails, FinancialInstrument17>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmInvestmentFundClass;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatementAndFinancialInstrumentDetails.mmObject();
@@ -268,7 +290,17 @@ public class StatementAndFinancialInstrumentDetails {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument17.mmObject();
+			type_lazy = () -> FinancialInstrument17.mmObject();
+		}
+
+		@Override
+		public FinancialInstrument17 getValue(StatementAndFinancialInstrumentDetails obj) {
+			return obj.getFinancialInstrumentDetails();
+		}
+
+		@Override
+		public void setValue(StatementAndFinancialInstrumentDetails obj, FinancialInstrument17 value) {
+			obj.setFinancialInstrumentDetails(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -306,7 +338,7 @@ public class StatementAndFinancialInstrumentDetails {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementAndFinancialInstrumentDetails, Optional<PartyIdentification2Choice>> mmAccountOwner = new MMMessageAttribute<StatementAndFinancialInstrumentDetails, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatementAndFinancialInstrumentDetails.mmObject();
@@ -318,6 +350,16 @@ public class StatementAndFinancialInstrumentDetails {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(StatementAndFinancialInstrumentDetails obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(StatementAndFinancialInstrumentDetails obj, Optional<PartyIdentification2Choice> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StmtTp", required = true)
@@ -350,7 +392,7 @@ public class StatementAndFinancialInstrumentDetails {
 	 * definition} = "Specifes the statement message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementAndFinancialInstrumentDetails, StatementType1Code> mmStatementType = new MMMessageAttribute<StatementAndFinancialInstrumentDetails, StatementType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatementAndFinancialInstrumentDetails.mmObject();
 			isDerived = false;
@@ -361,6 +403,16 @@ public class StatementAndFinancialInstrumentDetails {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> StatementType1Code.mmObject();
+		}
+
+		@Override
+		public StatementType1Code getValue(StatementAndFinancialInstrumentDetails obj) {
+			return obj.getStatementType();
+		}
+
+		@Override
+		public void setValue(StatementAndFinancialInstrumentDetails obj, StatementType1Code value) {
+			obj.setStatementType(value);
 		}
 	};
 	@XmlElement(name = "XtndedStmtTp", required = true)
@@ -393,7 +445,7 @@ public class StatementAndFinancialInstrumentDetails {
 	 * definition} = "Specifes the statement message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedStatementType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementAndFinancialInstrumentDetails, Extended350Code> mmExtendedStatementType = new MMMessageAttribute<StatementAndFinancialInstrumentDetails, Extended350Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatementAndFinancialInstrumentDetails.mmObject();
 			isDerived = false;
@@ -404,6 +456,16 @@ public class StatementAndFinancialInstrumentDetails {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Extended350Code getValue(StatementAndFinancialInstrumentDetails obj) {
+			return obj.getExtendedStatementType();
+		}
+
+		@Override
+		public void setValue(StatementAndFinancialInstrumentDetails obj, Extended350Code value) {
+			obj.setExtendedStatementType(value);
 		}
 	};
 	@XmlElement(name = "StmtDt")
@@ -435,7 +497,7 @@ public class StatementAndFinancialInstrumentDetails {
 	 * definition} = "Date of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementAndFinancialInstrumentDetails, Optional<ISODate>> mmStatementDate = new MMMessageAttribute<StatementAndFinancialInstrumentDetails, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatementAndFinancialInstrumentDetails.mmObject();
 			isDerived = false;
@@ -446,6 +508,16 @@ public class StatementAndFinancialInstrumentDetails {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(StatementAndFinancialInstrumentDetails obj) {
+			return obj.getStatementDate();
+		}
+
+		@Override
+		public void setValue(StatementAndFinancialInstrumentDetails obj, Optional<ISODate> value) {
+			obj.setStatementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StmtPrd")
@@ -483,7 +555,7 @@ public class StatementAndFinancialInstrumentDetails {
 	 * definition} = "Period on which the statement is reporting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementAndFinancialInstrumentDetails, Optional<DatePeriodDetails>> mmStatementPeriod = new MMMessageAttribute<StatementAndFinancialInstrumentDetails, Optional<DatePeriodDetails>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmReportedPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatementAndFinancialInstrumentDetails.mmObject();
@@ -494,7 +566,17 @@ public class StatementAndFinancialInstrumentDetails {
 			definition = "Period on which the statement is reporting.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.DatePeriodDetails.mmObject();
+			complexType_lazy = () -> DatePeriodDetails.mmObject();
+		}
+
+		@Override
+		public Optional<DatePeriodDetails> getValue(StatementAndFinancialInstrumentDetails obj) {
+			return obj.getStatementPeriod();
+		}
+
+		@Override
+		public void setValue(StatementAndFinancialInstrumentDetails obj, Optional<DatePeriodDetails> value) {
+			obj.setStatementPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Frqcy")
@@ -532,7 +614,7 @@ public class StatementAndFinancialInstrumentDetails {
 	 * definition} = "Frequency of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementAndFinancialInstrumentDetails, Optional<FrequencyCodeAndDSSCode1Choice>> mmFrequency = new MMMessageAttribute<StatementAndFinancialInstrumentDetails, Optional<FrequencyCodeAndDSSCode1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> ReportingService.mmStatementFrequency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatementAndFinancialInstrumentDetails.mmObject();
@@ -544,6 +626,16 @@ public class StatementAndFinancialInstrumentDetails {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FrequencyCodeAndDSSCode1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FrequencyCodeAndDSSCode1Choice> getValue(StatementAndFinancialInstrumentDetails obj) {
+			return obj.getFrequency();
+		}
+
+		@Override
+		public void setValue(StatementAndFinancialInstrumentDetails obj, Optional<FrequencyCodeAndDSSCode1Choice> value) {
+			obj.setFrequency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UpdTp")
@@ -577,7 +669,7 @@ public class StatementAndFinancialInstrumentDetails {
 	 * "Indicates whether the report is complete or contains changes only."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUpdateType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementAndFinancialInstrumentDetails, Optional<StatementUpdateTypeCodeAndDSSCodeChoice>> mmUpdateType = new MMMessageAttribute<StatementAndFinancialInstrumentDetails, Optional<StatementUpdateTypeCodeAndDSSCodeChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatementAndFinancialInstrumentDetails.mmObject();
 			isDerived = false;
@@ -588,6 +680,16 @@ public class StatementAndFinancialInstrumentDetails {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> StatementUpdateTypeCodeAndDSSCodeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<StatementUpdateTypeCodeAndDSSCodeChoice> getValue(StatementAndFinancialInstrumentDetails obj) {
+			return obj.getUpdateType();
+		}
+
+		@Override
+		public void setValue(StatementAndFinancialInstrumentDetails obj, Optional<StatementUpdateTypeCodeAndDSSCodeChoice> value) {
+			obj.setUpdateType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StmtBsis")
@@ -620,7 +722,7 @@ public class StatementAndFinancialInstrumentDetails {
 	 * definition} = "Type of balance on which the statement is prepared."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementAndFinancialInstrumentDetails, Optional<StatementBasisCodeAndDSSCodeChoice>> mmStatementBasis = new MMMessageAttribute<StatementAndFinancialInstrumentDetails, Optional<StatementBasisCodeAndDSSCodeChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatementAndFinancialInstrumentDetails.mmObject();
 			isDerived = false;
@@ -631,6 +733,16 @@ public class StatementAndFinancialInstrumentDetails {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> StatementBasisCodeAndDSSCodeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<StatementBasisCodeAndDSSCodeChoice> getValue(StatementAndFinancialInstrumentDetails obj) {
+			return obj.getStatementBasis();
+		}
+
+		@Override
+		public void setValue(StatementAndFinancialInstrumentDetails obj, Optional<StatementBasisCodeAndDSSCodeChoice> value) {
+			obj.setStatementBasis(value.orElse(null));
 		}
 	};
 	/**
@@ -765,7 +877,7 @@ public class StatementAndFinancialInstrumentDetails {
 		return financialInstrumentDetails;
 	}
 
-	public StatementAndFinancialInstrumentDetails setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument17 financialInstrumentDetails) {
+	public StatementAndFinancialInstrumentDetails setFinancialInstrumentDetails(FinancialInstrument17 financialInstrumentDetails) {
 		this.financialInstrumentDetails = Objects.requireNonNull(financialInstrumentDetails);
 		return this;
 	}
@@ -810,7 +922,7 @@ public class StatementAndFinancialInstrumentDetails {
 		return statementPeriod == null ? Optional.empty() : Optional.of(statementPeriod);
 	}
 
-	public StatementAndFinancialInstrumentDetails setStatementPeriod(com.tools20022.repository.msg.DatePeriodDetails statementPeriod) {
+	public StatementAndFinancialInstrumentDetails setStatementPeriod(DatePeriodDetails statementPeriod) {
 		this.statementPeriod = statementPeriod;
 		return this;
 	}

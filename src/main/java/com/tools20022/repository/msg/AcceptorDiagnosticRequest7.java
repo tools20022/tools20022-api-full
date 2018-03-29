@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV07;
 import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CardPaymentEnvironment71;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -65,7 +66,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "AcceptorDiagnosticRequest7"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -119,7 +120,7 @@ public class AcceptorDiagnosticRequest7 {
 	 * AcceptorDiagnosticRequest6.mmEnvironment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorDiagnosticRequest7, CardPaymentEnvironment71> mmEnvironment = new MMMessageAssociationEnd<AcceptorDiagnosticRequest7, CardPaymentEnvironment71>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorDiagnosticRequest7.mmObject();
@@ -132,7 +133,17 @@ public class AcceptorDiagnosticRequest7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment71.mmObject();
+			type_lazy = () -> CardPaymentEnvironment71.mmObject();
+		}
+
+		@Override
+		public CardPaymentEnvironment71 getValue(AcceptorDiagnosticRequest7 obj) {
+			return obj.getEnvironment();
+		}
+
+		@Override
+		public void setValue(AcceptorDiagnosticRequest7 obj, CardPaymentEnvironment71 value) {
+			obj.setEnvironment(value);
 		}
 	};
 
@@ -143,7 +154,7 @@ public class AcceptorDiagnosticRequest7 {
 				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorDiagnosticRequestV07.mmDiagnosticRequest);
 				trace_lazy = () -> CardPayment.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorDiagnosticRequest7";
 				definition = "Diagnostic request from an acceptor.";
 				previousVersion_lazy = () -> AcceptorDiagnosticRequest6.mmObject();
@@ -156,7 +167,7 @@ public class AcceptorDiagnosticRequest7 {
 		return environment;
 	}
 
-	public AcceptorDiagnosticRequest7 setEnvironment(com.tools20022.repository.msg.CardPaymentEnvironment71 environment) {
+	public AcceptorDiagnosticRequest7 setEnvironment(CardPaymentEnvironment71 environment) {
 		this.environment = Objects.requireNonNull(environment);
 		return this;
 	}

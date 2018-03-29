@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification74;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -110,7 +111,7 @@ public class Traceability3 {
 	 * Traceability2.mmRelayIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRelayIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Traceability3, GenericIdentification74> mmRelayIdentification = new MMMessageAssociationEnd<Traceability3, GenericIdentification74>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Traceability3.mmObject();
 			isDerived = false;
@@ -122,7 +123,17 @@ public class Traceability3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification74.mmObject();
+			type_lazy = () -> GenericIdentification74.mmObject();
+		}
+
+		@Override
+		public GenericIdentification74 getValue(Traceability3 obj) {
+			return obj.getRelayIdentification();
+		}
+
+		@Override
+		public void setValue(Traceability3 obj, GenericIdentification74 value) {
+			obj.setRelayIdentification(value);
 		}
 	};
 	@XmlElement(name = "TracDtTmIn", required = true)
@@ -159,7 +170,7 @@ public class Traceability3 {
 	 * Traceability2.mmTraceDateTimeIn}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTraceDateTimeIn = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Traceability3, ISODateTime> mmTraceDateTimeIn = new MMMessageAttribute<Traceability3, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Traceability3.mmObject();
 			isDerived = false;
@@ -171,6 +182,16 @@ public class Traceability3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(Traceability3 obj) {
+			return obj.getTraceDateTimeIn();
+		}
+
+		@Override
+		public void setValue(Traceability3 obj, ISODateTime value) {
+			obj.setTraceDateTimeIn(value);
 		}
 	};
 	@XmlElement(name = "TracDtTmOut", required = true)
@@ -207,7 +228,7 @@ public class Traceability3 {
 	 * Traceability2.mmTraceDateTimeOut}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTraceDateTimeOut = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Traceability3, ISODateTime> mmTraceDateTimeOut = new MMMessageAttribute<Traceability3, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Traceability3.mmObject();
 			isDerived = false;
@@ -219,6 +240,16 @@ public class Traceability3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(Traceability3 obj) {
+			return obj.getTraceDateTimeOut();
+		}
+
+		@Override
+		public void setValue(Traceability3 obj, ISODateTime value) {
+			obj.setTraceDateTimeOut(value);
 		}
 	};
 
@@ -241,7 +272,7 @@ public class Traceability3 {
 		return relayIdentification;
 	}
 
-	public Traceability3 setRelayIdentification(com.tools20022.repository.msg.GenericIdentification74 relayIdentification) {
+	public Traceability3 setRelayIdentification(GenericIdentification74 relayIdentification) {
 		this.relayIdentification = Objects.requireNonNull(relayIdentification);
 		return this;
 	}

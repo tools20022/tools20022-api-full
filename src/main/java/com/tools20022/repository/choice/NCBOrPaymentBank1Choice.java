@@ -101,7 +101,7 @@ public class NCBOrPaymentBank1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNCBIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NCBOrPaymentBank1Choice, BICFIIdentifier> mmNCBIdentification = new MMMessageAttribute<NCBOrPaymentBank1Choice, BICFIIdentifier>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.NCBOrPaymentBank1Choice.mmObject();
 			isDerived = false;
@@ -112,6 +112,16 @@ public class NCBOrPaymentBank1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
+		}
+
+		@Override
+		public BICFIIdentifier getValue(NCBOrPaymentBank1Choice obj) {
+			return obj.getNCBIdentification();
+		}
+
+		@Override
+		public void setValue(NCBOrPaymentBank1Choice obj, BICFIIdentifier value) {
+			obj.setNCBIdentification(value);
 		}
 	};
 	@XmlElement(name = "PmtBkId", required = true)
@@ -145,7 +155,7 @@ public class NCBOrPaymentBank1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentBankIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NCBOrPaymentBank1Choice, SystemPartyIdentification3> mmPaymentBankIdentification = new MMMessageAssociationEnd<NCBOrPaymentBank1Choice, SystemPartyIdentification3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.NCBOrPaymentBank1Choice.mmObject();
 			isDerived = false;
@@ -157,6 +167,16 @@ public class NCBOrPaymentBank1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SystemPartyIdentification3.mmObject();
+		}
+
+		@Override
+		public SystemPartyIdentification3 getValue(NCBOrPaymentBank1Choice obj) {
+			return obj.getPaymentBankIdentification();
+		}
+
+		@Override
+		public void setValue(NCBOrPaymentBank1Choice obj, SystemPartyIdentification3 value) {
+			obj.setPaymentBankIdentification(value);
 		}
 	};
 

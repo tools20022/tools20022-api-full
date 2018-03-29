@@ -21,9 +21,9 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -1138,7 +1138,7 @@ public class CorporateActionEventRegistration {
 	 * definition} = "Identification given to the event."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCorporateActionEventIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CorporateActionEventRegistration, Max35Text> mmCorporateActionEventIdentification = new MMBusinessAttribute<CorporateActionEventRegistration, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementTypeAndAdditionalParameters6.mmCorporateActionEventIdentification, SettlementTypeAndAdditionalParameters5.mmCorporateActionEventIdentification,
 					SettlementTypeAndAdditionalParameters7.mmCorporateActionEventIdentification, SettlementTypeAndAdditionalParameters8.mmCorporateActionEventIdentification,
@@ -1256,12 +1256,14 @@ public class CorporateActionEventRegistration {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionEventRegistration.class.getMethod("getCorporateActionEventIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(CorporateActionEventRegistration obj) {
+			return obj.getCorporateActionEventIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventRegistration obj, Max35Text value) {
+			obj.setCorporateActionEventIdentification(value);
 		}
 	};
 	protected Max35Text officialCorporateActionEventIdentification;
@@ -1809,7 +1811,7 @@ public class CorporateActionEventRegistration {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmOfficialCorporateActionEventIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CorporateActionEventRegistration, Max35Text> mmOfficialCorporateActionEventIdentification = new MMBusinessAttribute<CorporateActionEventRegistration, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionGeneralInformation8.mmOfficialCorporateActionEventIdentification, CorporateActionGeneralInformation20.mmOfficialCorporateActionEventIdentification,
 					CorporateActionGeneralInformation25.mmOfficialCorporateActionEventIdentification, CorporateActionGeneralInformation32.mmOfficialCorporateActionEventIdentification,
@@ -1885,12 +1887,14 @@ public class CorporateActionEventRegistration {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionEventRegistration.class.getMethod("getOfficialCorporateActionEventIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(CorporateActionEventRegistration obj) {
+			return obj.getOfficialCorporateActionEventIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventRegistration obj, Max35Text value) {
+			obj.setOfficialCorporateActionEventIdentification(value);
 		}
 	};
 	protected ISODateTime officialAnnouncementPublicationDate;
@@ -1965,7 +1969,7 @@ public class CorporateActionEventRegistration {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmOfficialAnnouncementPublicationDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CorporateActionEventRegistration, ISODateTime> mmOfficialAnnouncementPublicationDate = new MMBusinessAttribute<CorporateActionEventRegistration, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmOfficialAnnouncementPublicationDate, CorporateActionDate13.mmOfficialAnnouncementPublicationDate, CorporateActionDate14.mmOfficialAnnouncementPublicationDate,
 					CorporateActionDate21.mmOfficialAnnouncementPublicationDate, CorporateActionDate22.mmOfficialAnnouncementPublicationDate, CorporateActionDate25.mmOfficialAnnouncementPublicationDate,
@@ -1982,12 +1986,14 @@ public class CorporateActionEventRegistration {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionEventRegistration.class.getMethod("getOfficialAnnouncementPublicationDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(CorporateActionEventRegistration obj) {
+			return obj.getOfficialAnnouncementPublicationDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventRegistration obj, ISODateTime value) {
+			obj.setOfficialAnnouncementPublicationDate(value);
 		}
 	};
 	protected CorporateActionEvent corporateActionEvent;
@@ -2025,7 +2031,7 @@ public class CorporateActionEventRegistration {
 	 * definition} = "Corporate event for which a registration is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCorporateActionEvent = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CorporateActionEventRegistration, Optional<CorporateActionEvent>> mmCorporateActionEvent = new MMBusinessAssociationEnd<CorporateActionEventRegistration, Optional<CorporateActionEvent>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.mmObject();
@@ -2034,9 +2040,19 @@ public class CorporateActionEventRegistration {
 			definition = "Corporate event for which a registration is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionEventRegistration;
+			opposite_lazy = () -> CorporateActionEvent.mmCorporateActionEventRegistration;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
+			type_lazy = () -> CorporateActionEvent.mmObject();
+		}
+
+		@Override
+		public Optional<CorporateActionEvent> getValue(CorporateActionEventRegistration obj) {
+			return obj.getCorporateActionEvent();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventRegistration obj, Optional<CorporateActionEvent> value) {
+			obj.setCorporateActionEvent(value.orElse(null));
 		}
 	};
 
@@ -2047,7 +2063,7 @@ public class CorporateActionEventRegistration {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionEventRegistration";
 				definition = "Specifies the official date and identification of the event.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionEventRegistration);
+				associationDomain_lazy = () -> Arrays.asList(CorporateActionEvent.mmCorporateActionEventRegistration);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionEventRegistration.mmCorporateActionEventIdentification,
 						com.tools20022.repository.entity.CorporateActionEventRegistration.mmOfficialCorporateActionEventIdentification,
 						com.tools20022.repository.entity.CorporateActionEventRegistration.mmOfficialAnnouncementPublicationDate, com.tools20022.repository.entity.CorporateActionEventRegistration.mmCorporateActionEvent);
@@ -2095,7 +2111,7 @@ public class CorporateActionEventRegistration {
 		return corporateActionEvent == null ? Optional.empty() : Optional.of(corporateActionEvent);
 	}
 
-	public CorporateActionEventRegistration setCorporateActionEvent(com.tools20022.repository.entity.CorporateActionEvent corporateActionEvent) {
+	public CorporateActionEventRegistration setCorporateActionEvent(CorporateActionEvent corporateActionEvent) {
 		this.corporateActionEvent = corporateActionEvent;
 		return this;
 	}

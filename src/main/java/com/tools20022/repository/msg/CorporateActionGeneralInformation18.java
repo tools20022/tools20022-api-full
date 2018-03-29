@@ -133,7 +133,7 @@ public class CorporateActionGeneralInformation18 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformation18, RestrictedFINXMax16Text> mmCorporateActionEventIdentification = new MMMessageAttribute<CorporateActionGeneralInformation18, RestrictedFINXMax16Text>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmCorporateActionEventIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformation18.mmObject();
@@ -146,6 +146,16 @@ public class CorporateActionGeneralInformation18 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(CorporateActionGeneralInformation18 obj) {
+			return obj.getCorporateActionEventIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformation18 obj, RestrictedFINXMax16Text value) {
+			obj.setCorporateActionEventIdentification(value);
 		}
 	};
 	@XmlElement(name = "OffclCorpActnEvtId")
@@ -189,7 +199,7 @@ public class CorporateActionGeneralInformation18 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOfficialCorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformation18, Optional<RestrictedFINXMax16Text>> mmOfficialCorporateActionEventIdentification = new MMMessageAttribute<CorporateActionGeneralInformation18, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmOfficialCorporateActionEventIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformation18.mmObject();
@@ -202,6 +212,16 @@ public class CorporateActionGeneralInformation18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(CorporateActionGeneralInformation18 obj) {
+			return obj.getOfficialCorporateActionEventIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformation18 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setOfficialCorporateActionEventIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NrrtvTp")
@@ -233,7 +253,7 @@ public class CorporateActionGeneralInformation18 {
 	 * definition} = "Specifies the type of narrative related to the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNarrativeType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionGeneralInformation18, Optional<CorporateActionNarrative2Choice>> mmNarrativeType = new MMMessageAssociationEnd<CorporateActionGeneralInformation18, Optional<CorporateActionNarrative2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformation18.mmObject();
 			isDerived = false;
@@ -245,6 +265,16 @@ public class CorporateActionGeneralInformation18 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CorporateActionNarrative2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CorporateActionNarrative2Choice> getValue(CorporateActionGeneralInformation18 obj) {
+			return obj.getNarrativeType();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformation18 obj, Optional<CorporateActionNarrative2Choice> value) {
+			obj.setNarrativeType(value.orElse(null));
 		}
 	};
 

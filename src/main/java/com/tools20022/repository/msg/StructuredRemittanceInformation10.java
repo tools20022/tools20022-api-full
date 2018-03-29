@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -106,7 +107,7 @@ public class StructuredRemittanceInformation10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "RfrdDocInf")
-	protected List<com.tools20022.repository.msg.ReferredDocumentInformation4> referredDocumentInformation;
+	protected List<ReferredDocumentInformation4> referredDocumentInformation;
 	/**
 	 * 
 	 <p>
@@ -144,7 +145,7 @@ public class StructuredRemittanceInformation10 {
 	 * StructuredRemittanceInformation9.mmReferredDocumentInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReferredDocumentInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StructuredRemittanceInformation10, List<ReferredDocumentInformation4>> mmReferredDocumentInformation = new MMMessageAssociationEnd<StructuredRemittanceInformation10, List<ReferredDocumentInformation4>>() {
 		{
 			businessComponentTrace_lazy = () -> Document.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.StructuredRemittanceInformation10.mmObject();
@@ -156,7 +157,17 @@ public class StructuredRemittanceInformation10 {
 			previousVersion_lazy = () -> StructuredRemittanceInformation9.mmReferredDocumentInformation;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ReferredDocumentInformation4.mmObject();
+			type_lazy = () -> ReferredDocumentInformation4.mmObject();
+		}
+
+		@Override
+		public List<ReferredDocumentInformation4> getValue(StructuredRemittanceInformation10 obj) {
+			return obj.getReferredDocumentInformation();
+		}
+
+		@Override
+		public void setValue(StructuredRemittanceInformation10 obj, List<ReferredDocumentInformation4> value) {
+			obj.setReferredDocumentInformation(value);
 		}
 	};
 	@XmlElement(name = "RfrdDocAmt")
@@ -198,7 +209,7 @@ public class StructuredRemittanceInformation10 {
 	 * StructuredRemittanceInformation9.mmReferredDocumentAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReferredDocumentAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StructuredRemittanceInformation10, Optional<RemittanceAmount2>> mmReferredDocumentAmount = new MMMessageAssociationEnd<StructuredRemittanceInformation10, Optional<RemittanceAmount2>>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmRemittedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StructuredRemittanceInformation10.mmObject();
@@ -211,7 +222,17 @@ public class StructuredRemittanceInformation10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RemittanceAmount2.mmObject();
+			type_lazy = () -> RemittanceAmount2.mmObject();
+		}
+
+		@Override
+		public Optional<RemittanceAmount2> getValue(StructuredRemittanceInformation10 obj) {
+			return obj.getReferredDocumentAmount();
+		}
+
+		@Override
+		public void setValue(StructuredRemittanceInformation10 obj, Optional<RemittanceAmount2> value) {
+			obj.setReferredDocumentAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtrRefInf")
@@ -255,7 +276,7 @@ public class StructuredRemittanceInformation10 {
 	 * StructuredRemittanceInformation9.mmCreditorReferenceInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditorReferenceInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StructuredRemittanceInformation10, Optional<CreditorReferenceInformation2>> mmCreditorReferenceInformation = new MMMessageAssociationEnd<StructuredRemittanceInformation10, Optional<CreditorReferenceInformation2>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmCreditorReference;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StructuredRemittanceInformation10.mmObject();
@@ -268,7 +289,17 @@ public class StructuredRemittanceInformation10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CreditorReferenceInformation2.mmObject();
+			type_lazy = () -> CreditorReferenceInformation2.mmObject();
+		}
+
+		@Override
+		public Optional<CreditorReferenceInformation2> getValue(StructuredRemittanceInformation10 obj) {
+			return obj.getCreditorReferenceInformation();
+		}
+
+		@Override
+		public void setValue(StructuredRemittanceInformation10 obj, Optional<CreditorReferenceInformation2> value) {
+			obj.setCreditorReferenceInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Invcr")
@@ -310,7 +341,7 @@ public class StructuredRemittanceInformation10 {
 	 * StructuredRemittanceInformation9.mmInvoicer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvoicer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StructuredRemittanceInformation10, Optional<PartyIdentification43>> mmInvoicer = new MMMessageAssociationEnd<StructuredRemittanceInformation10, Optional<PartyIdentification43>>() {
 		{
 			businessComponentTrace_lazy = () -> InvoicerRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.StructuredRemittanceInformation10.mmObject();
@@ -323,7 +354,17 @@ public class StructuredRemittanceInformation10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
+			type_lazy = () -> PartyIdentification43.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification43> getValue(StructuredRemittanceInformation10 obj) {
+			return obj.getInvoicer();
+		}
+
+		@Override
+		public void setValue(StructuredRemittanceInformation10 obj, Optional<PartyIdentification43> value) {
+			obj.setInvoicer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Invcee")
@@ -365,7 +406,7 @@ public class StructuredRemittanceInformation10 {
 	 * StructuredRemittanceInformation9.mmInvoicee}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvoicee = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StructuredRemittanceInformation10, Optional<PartyIdentification43>> mmInvoicee = new MMMessageAssociationEnd<StructuredRemittanceInformation10, Optional<PartyIdentification43>>() {
 		{
 			businessComponentTrace_lazy = () -> InvoiceeRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.StructuredRemittanceInformation10.mmObject();
@@ -378,7 +419,17 @@ public class StructuredRemittanceInformation10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
+			type_lazy = () -> PartyIdentification43.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification43> getValue(StructuredRemittanceInformation10 obj) {
+			return obj.getInvoicee();
+		}
+
+		@Override
+		public void setValue(StructuredRemittanceInformation10 obj, Optional<PartyIdentification43> value) {
+			obj.setInvoicee(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxRmt")
@@ -416,7 +467,7 @@ public class StructuredRemittanceInformation10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTaxRemittance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StructuredRemittanceInformation10, Optional<TaxInformation4>> mmTaxRemittance = new MMMessageAssociationEnd<StructuredRemittanceInformation10, Optional<TaxInformation4>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmTaxOnPayment;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StructuredRemittanceInformation10.mmObject();
@@ -428,7 +479,17 @@ public class StructuredRemittanceInformation10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TaxInformation4.mmObject();
+			type_lazy = () -> TaxInformation4.mmObject();
+		}
+
+		@Override
+		public Optional<TaxInformation4> getValue(StructuredRemittanceInformation10 obj) {
+			return obj.getTaxRemittance();
+		}
+
+		@Override
+		public void setValue(StructuredRemittanceInformation10 obj, Optional<TaxInformation4> value) {
+			obj.setTaxRemittance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GrnshmtRmt")
@@ -465,7 +526,7 @@ public class StructuredRemittanceInformation10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGarnishmentRemittance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StructuredRemittanceInformation10, Optional<Garnishment1>> mmGarnishmentRemittance = new MMMessageAssociationEnd<StructuredRemittanceInformation10, Optional<Garnishment1>>() {
 		{
 			businessComponentTrace_lazy = () -> Garnishment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.StructuredRemittanceInformation10.mmObject();
@@ -477,7 +538,17 @@ public class StructuredRemittanceInformation10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Garnishment1.mmObject();
+			type_lazy = () -> Garnishment1.mmObject();
+		}
+
+		@Override
+		public Optional<Garnishment1> getValue(StructuredRemittanceInformation10 obj) {
+			return obj.getGarnishmentRemittance();
+		}
+
+		@Override
+		public void setValue(StructuredRemittanceInformation10 obj, Optional<Garnishment1> value) {
+			obj.setGarnishmentRemittance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlRmtInf")
@@ -520,7 +591,7 @@ public class StructuredRemittanceInformation10 {
 	 * StructuredRemittanceInformation9.mmAdditionalRemittanceInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalRemittanceInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StructuredRemittanceInformation10, List<Max140Text>> mmAdditionalRemittanceInformation = new MMMessageAttribute<StructuredRemittanceInformation10, List<Max140Text>>() {
 		{
 			businessComponentTrace_lazy = () -> Document.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.StructuredRemittanceInformation10.mmObject();
@@ -533,6 +604,16 @@ public class StructuredRemittanceInformation10 {
 			maxOccurs = 3;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public List<Max140Text> getValue(StructuredRemittanceInformation10 obj) {
+			return obj.getAdditionalRemittanceInformation();
+		}
+
+		@Override
+		public void setValue(StructuredRemittanceInformation10 obj, List<Max140Text> value) {
+			obj.setAdditionalRemittanceInformation(value);
 		}
 	};
 
@@ -560,7 +641,7 @@ public class StructuredRemittanceInformation10 {
 		return referredDocumentInformation == null ? referredDocumentInformation = new ArrayList<>() : referredDocumentInformation;
 	}
 
-	public StructuredRemittanceInformation10 setReferredDocumentInformation(List<com.tools20022.repository.msg.ReferredDocumentInformation4> referredDocumentInformation) {
+	public StructuredRemittanceInformation10 setReferredDocumentInformation(List<ReferredDocumentInformation4> referredDocumentInformation) {
 		this.referredDocumentInformation = Objects.requireNonNull(referredDocumentInformation);
 		return this;
 	}
@@ -569,7 +650,7 @@ public class StructuredRemittanceInformation10 {
 		return referredDocumentAmount == null ? Optional.empty() : Optional.of(referredDocumentAmount);
 	}
 
-	public StructuredRemittanceInformation10 setReferredDocumentAmount(com.tools20022.repository.msg.RemittanceAmount2 referredDocumentAmount) {
+	public StructuredRemittanceInformation10 setReferredDocumentAmount(RemittanceAmount2 referredDocumentAmount) {
 		this.referredDocumentAmount = referredDocumentAmount;
 		return this;
 	}
@@ -578,7 +659,7 @@ public class StructuredRemittanceInformation10 {
 		return creditorReferenceInformation == null ? Optional.empty() : Optional.of(creditorReferenceInformation);
 	}
 
-	public StructuredRemittanceInformation10 setCreditorReferenceInformation(com.tools20022.repository.msg.CreditorReferenceInformation2 creditorReferenceInformation) {
+	public StructuredRemittanceInformation10 setCreditorReferenceInformation(CreditorReferenceInformation2 creditorReferenceInformation) {
 		this.creditorReferenceInformation = creditorReferenceInformation;
 		return this;
 	}
@@ -587,7 +668,7 @@ public class StructuredRemittanceInformation10 {
 		return invoicer == null ? Optional.empty() : Optional.of(invoicer);
 	}
 
-	public StructuredRemittanceInformation10 setInvoicer(com.tools20022.repository.msg.PartyIdentification43 invoicer) {
+	public StructuredRemittanceInformation10 setInvoicer(PartyIdentification43 invoicer) {
 		this.invoicer = invoicer;
 		return this;
 	}
@@ -596,7 +677,7 @@ public class StructuredRemittanceInformation10 {
 		return invoicee == null ? Optional.empty() : Optional.of(invoicee);
 	}
 
-	public StructuredRemittanceInformation10 setInvoicee(com.tools20022.repository.msg.PartyIdentification43 invoicee) {
+	public StructuredRemittanceInformation10 setInvoicee(PartyIdentification43 invoicee) {
 		this.invoicee = invoicee;
 		return this;
 	}
@@ -605,7 +686,7 @@ public class StructuredRemittanceInformation10 {
 		return taxRemittance == null ? Optional.empty() : Optional.of(taxRemittance);
 	}
 
-	public StructuredRemittanceInformation10 setTaxRemittance(com.tools20022.repository.msg.TaxInformation4 taxRemittance) {
+	public StructuredRemittanceInformation10 setTaxRemittance(TaxInformation4 taxRemittance) {
 		this.taxRemittance = taxRemittance;
 		return this;
 	}
@@ -614,7 +695,7 @@ public class StructuredRemittanceInformation10 {
 		return garnishmentRemittance == null ? Optional.empty() : Optional.of(garnishmentRemittance);
 	}
 
-	public StructuredRemittanceInformation10 setGarnishmentRemittance(com.tools20022.repository.msg.Garnishment1 garnishmentRemittance) {
+	public StructuredRemittanceInformation10 setGarnishmentRemittance(Garnishment1 garnishmentRemittance) {
 		this.garnishmentRemittance = garnishmentRemittance;
 		return this;
 	}

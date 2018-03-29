@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -135,7 +136,7 @@ public class FinancialItem1 {
 	 * definition} = "Parameters identifying the context of the item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmItemContext = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialItem1, FinancialItemParameters1> mmItemContext = new MMMessageAssociationEnd<FinancialItem1, FinancialItemParameters1>() {
 		{
 			businessComponentTrace_lazy = () -> Invoice.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialItem1.mmObject();
@@ -147,11 +148,21 @@ public class FinancialItem1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialItemParameters1.mmObject();
+			type_lazy = () -> FinancialItemParameters1.mmObject();
+		}
+
+		@Override
+		public FinancialItemParameters1 getValue(FinancialItem1 obj) {
+			return obj.getItemContext();
+		}
+
+		@Override
+		public void setValue(FinancialItem1 obj, FinancialItemParameters1 value) {
+			obj.setItemContext(value);
 		}
 	};
 	@XmlElement(name = "FinDocRef")
-	protected List<com.tools20022.repository.msg.QualifiedDocumentInformation1> financialDocumentReference;
+	protected List<QualifiedDocumentInformation1> financialDocumentReference;
 	/**
 	 * 
 	 <p>
@@ -184,7 +195,7 @@ public class FinancialItem1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialDocumentReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialItem1, List<QualifiedDocumentInformation1>> mmFinancialDocumentReference = new MMMessageAssociationEnd<FinancialItem1, List<QualifiedDocumentInformation1>>() {
 		{
 			businessComponentTrace_lazy = () -> Invoice.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialItem1.mmObject();
@@ -195,7 +206,17 @@ public class FinancialItem1 {
 			definition = "Identifier of financial document that is the base document for this item, for example an invoice number.";
 			minOccurs = 0;
 			isComposite = false;
-			type_lazy = () -> com.tools20022.repository.msg.QualifiedDocumentInformation1.mmObject();
+			type_lazy = () -> QualifiedDocumentInformation1.mmObject();
+		}
+
+		@Override
+		public List<QualifiedDocumentInformation1> getValue(FinancialItem1 obj) {
+			return obj.getFinancialDocumentReference();
+		}
+
+		@Override
+		public void setValue(FinancialItem1 obj, List<QualifiedDocumentInformation1> value) {
+			obj.setFinancialDocumentReference(value);
 		}
 	};
 	@XmlElement(name = "CdtDbtInd", required = true)
@@ -232,7 +253,7 @@ public class FinancialItem1 {
 	 * definition} = "Indicates whether the value is a debit or credit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialItem1, CreditDebitCode> mmCreditDebitIndicator = new MMMessageAttribute<FinancialItem1, CreditDebitCode>() {
 		{
 			businessElementTrace_lazy = () -> Invoice.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialItem1.mmObject();
@@ -244,6 +265,16 @@ public class FinancialItem1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public CreditDebitCode getValue(FinancialItem1 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(FinancialItem1 obj, CreditDebitCode value) {
+			obj.setCreditDebitIndicator(value);
 		}
 	};
 	@XmlElement(name = "TtlAmt", required = true)
@@ -279,7 +310,7 @@ public class FinancialItem1 {
 	 * "Specifies the total amount related to the financial document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTotalAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialItem1, InvoiceTotals1> mmTotalAmount = new MMMessageAssociationEnd<FinancialItem1, InvoiceTotals1>() {
 		{
 			businessElementTrace_lazy = () -> Invoice.mmTotalInvoiceAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialItem1.mmObject();
@@ -291,7 +322,17 @@ public class FinancialItem1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvoiceTotals1.mmObject();
+			type_lazy = () -> InvoiceTotals1.mmObject();
+		}
+
+		@Override
+		public InvoiceTotals1 getValue(FinancialItem1 obj) {
+			return obj.getTotalAmount();
+		}
+
+		@Override
+		public void setValue(FinancialItem1 obj, InvoiceTotals1 value) {
+			obj.setTotalAmount(value);
 		}
 	};
 	@XmlElement(name = "DueAmt")
@@ -328,7 +369,7 @@ public class FinancialItem1 {
 	 * definition} = "Specifies the remaining monetary amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDueAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialItem1, Optional<ActiveCurrencyAndAmount>> mmDueAmount = new MMMessageAttribute<FinancialItem1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialItem1.mmObject();
@@ -341,9 +382,19 @@ public class FinancialItem1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(FinancialItem1 obj) {
+			return obj.getDueAmount();
+		}
+
+		@Override
+		public void setValue(FinancialItem1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setDueAmount(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "InstlmtInf")
-	protected List<com.tools20022.repository.msg.Instalment2> instalmentInformation;
+	protected List<Instalment2> instalmentInformation;
 	/**
 	 * 
 	 <p>
@@ -373,7 +424,7 @@ public class FinancialItem1 {
 	 * definition} = "Instalment information for payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstalmentInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialItem1, List<Instalment2>> mmInstalmentInformation = new MMMessageAssociationEnd<FinancialItem1, List<Instalment2>>() {
 		{
 			businessComponentTrace_lazy = () -> Instalment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialItem1.mmObject();
@@ -384,7 +435,17 @@ public class FinancialItem1 {
 			definition = "Instalment information for payment.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Instalment2.mmObject();
+			type_lazy = () -> Instalment2.mmObject();
+		}
+
+		@Override
+		public List<Instalment2> getValue(FinancialItem1 obj) {
+			return obj.getInstalmentInformation();
+		}
+
+		@Override
+		public void setValue(FinancialItem1 obj, List<Instalment2> value) {
+			obj.setInstalmentInformation(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -416,7 +477,7 @@ public class FinancialItem1 {
 	 * "Additional proprietary textual information concerning the item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialItem1, Optional<Max2000Text>> mmAdditionalInformation = new MMMessageAttribute<FinancialItem1, Optional<Max2000Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialItem1.mmObject();
 			isDerived = false;
@@ -428,9 +489,19 @@ public class FinancialItem1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max2000Text> getValue(FinancialItem1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(FinancialItem1 obj, Optional<Max2000Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "AssoctdDoc")
-	protected List<com.tools20022.repository.msg.QualifiedDocumentInformation1> associatedDocument;
+	protected List<QualifiedDocumentInformation1> associatedDocument;
 	/**
 	 * 
 	 <p>
@@ -458,7 +529,7 @@ public class FinancialItem1 {
 	 * "Associated free form document, for example a delivery confirmation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAssociatedDocument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialItem1, List<QualifiedDocumentInformation1>> mmAssociatedDocument = new MMMessageAssociationEnd<FinancialItem1, List<QualifiedDocumentInformation1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialItem1.mmObject();
 			isDerived = false;
@@ -468,7 +539,17 @@ public class FinancialItem1 {
 			definition = "Associated free form document, for example a delivery confirmation.";
 			minOccurs = 0;
 			isComposite = false;
-			type_lazy = () -> com.tools20022.repository.msg.QualifiedDocumentInformation1.mmObject();
+			type_lazy = () -> QualifiedDocumentInformation1.mmObject();
+		}
+
+		@Override
+		public List<QualifiedDocumentInformation1> getValue(FinancialItem1 obj) {
+			return obj.getAssociatedDocument();
+		}
+
+		@Override
+		public void setValue(FinancialItem1 obj, List<QualifiedDocumentInformation1> value) {
+			obj.setAssociatedDocument(value);
 		}
 	};
 	@XmlElement(name = "VldtnStsInf")
@@ -504,7 +585,7 @@ public class FinancialItem1 {
 	 * definition} = "Validation status of the item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmValidationStatusInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialItem1, Optional<ValidationStatusInformation1>> mmValidationStatusInformation = new MMMessageAssociationEnd<FinancialItem1, Optional<ValidationStatusInformation1>>() {
 		{
 			businessElementTrace_lazy = () -> InvoiceFinancingAgreement.mmInvoiceFinancingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialItem1.mmObject();
@@ -516,7 +597,17 @@ public class FinancialItem1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ValidationStatusInformation1.mmObject();
+			type_lazy = () -> ValidationStatusInformation1.mmObject();
+		}
+
+		@Override
+		public Optional<ValidationStatusInformation1> getValue(FinancialItem1 obj) {
+			return obj.getValidationStatusInformation();
+		}
+
+		@Override
+		public void setValue(FinancialItem1 obj, Optional<ValidationStatusInformation1> value) {
+			obj.setValidationStatusInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FincgSts")
@@ -552,7 +643,7 @@ public class FinancialItem1 {
 	 * definition} = "Financing status if applicable for the item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialItem1, Optional<FinancingInformationAndStatus1>> mmFinancingStatus = new MMMessageAssociationEnd<FinancialItem1, Optional<FinancingInformationAndStatus1>>() {
 		{
 			businessElementTrace_lazy = () -> Invoice.mmInvoiceFinancingTransaction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialItem1.mmObject();
@@ -564,7 +655,17 @@ public class FinancialItem1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancingInformationAndStatus1.mmObject();
+			type_lazy = () -> FinancingInformationAndStatus1.mmObject();
+		}
+
+		@Override
+		public Optional<FinancingInformationAndStatus1> getValue(FinancialItem1 obj) {
+			return obj.getFinancingStatus();
+		}
+
+		@Override
+		public void setValue(FinancialItem1 obj, Optional<FinancingInformationAndStatus1> value) {
+			obj.setFinancingStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrtryDtls")
@@ -596,7 +697,7 @@ public class FinancialItem1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietaryDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialItem1, Optional<SupplementaryData1>> mmProprietaryDetails = new MMMessageAssociationEnd<FinancialItem1, Optional<SupplementaryData1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialItem1.mmObject();
 			isDerived = false;
@@ -607,7 +708,17 @@ public class FinancialItem1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
+			type_lazy = () -> SupplementaryData1.mmObject();
+		}
+
+		@Override
+		public Optional<SupplementaryData1> getValue(FinancialItem1 obj) {
+			return obj.getProprietaryDetails();
+		}
+
+		@Override
+		public void setValue(FinancialItem1 obj, Optional<SupplementaryData1> value) {
+			obj.setProprietaryDetails(value.orElse(null));
 		}
 	};
 
@@ -632,7 +743,7 @@ public class FinancialItem1 {
 		return itemContext;
 	}
 
-	public FinancialItem1 setItemContext(com.tools20022.repository.msg.FinancialItemParameters1 itemContext) {
+	public FinancialItem1 setItemContext(FinancialItemParameters1 itemContext) {
 		this.itemContext = Objects.requireNonNull(itemContext);
 		return this;
 	}
@@ -641,7 +752,7 @@ public class FinancialItem1 {
 		return financialDocumentReference == null ? financialDocumentReference = new ArrayList<>() : financialDocumentReference;
 	}
 
-	public FinancialItem1 setFinancialDocumentReference(List<com.tools20022.repository.msg.QualifiedDocumentInformation1> financialDocumentReference) {
+	public FinancialItem1 setFinancialDocumentReference(List<QualifiedDocumentInformation1> financialDocumentReference) {
 		this.financialDocumentReference = Objects.requireNonNull(financialDocumentReference);
 		return this;
 	}
@@ -659,7 +770,7 @@ public class FinancialItem1 {
 		return totalAmount;
 	}
 
-	public FinancialItem1 setTotalAmount(com.tools20022.repository.msg.InvoiceTotals1 totalAmount) {
+	public FinancialItem1 setTotalAmount(InvoiceTotals1 totalAmount) {
 		this.totalAmount = Objects.requireNonNull(totalAmount);
 		return this;
 	}
@@ -677,7 +788,7 @@ public class FinancialItem1 {
 		return instalmentInformation == null ? instalmentInformation = new ArrayList<>() : instalmentInformation;
 	}
 
-	public FinancialItem1 setInstalmentInformation(List<com.tools20022.repository.msg.Instalment2> instalmentInformation) {
+	public FinancialItem1 setInstalmentInformation(List<Instalment2> instalmentInformation) {
 		this.instalmentInformation = Objects.requireNonNull(instalmentInformation);
 		return this;
 	}
@@ -695,7 +806,7 @@ public class FinancialItem1 {
 		return associatedDocument == null ? associatedDocument = new ArrayList<>() : associatedDocument;
 	}
 
-	public FinancialItem1 setAssociatedDocument(List<com.tools20022.repository.msg.QualifiedDocumentInformation1> associatedDocument) {
+	public FinancialItem1 setAssociatedDocument(List<QualifiedDocumentInformation1> associatedDocument) {
 		this.associatedDocument = Objects.requireNonNull(associatedDocument);
 		return this;
 	}
@@ -704,7 +815,7 @@ public class FinancialItem1 {
 		return validationStatusInformation == null ? Optional.empty() : Optional.of(validationStatusInformation);
 	}
 
-	public FinancialItem1 setValidationStatusInformation(com.tools20022.repository.msg.ValidationStatusInformation1 validationStatusInformation) {
+	public FinancialItem1 setValidationStatusInformation(ValidationStatusInformation1 validationStatusInformation) {
 		this.validationStatusInformation = validationStatusInformation;
 		return this;
 	}
@@ -713,7 +824,7 @@ public class FinancialItem1 {
 		return financingStatus == null ? Optional.empty() : Optional.of(financingStatus);
 	}
 
-	public FinancialItem1 setFinancingStatus(com.tools20022.repository.msg.FinancingInformationAndStatus1 financingStatus) {
+	public FinancialItem1 setFinancingStatus(FinancingInformationAndStatus1 financingStatus) {
 		this.financingStatus = financingStatus;
 		return this;
 	}
@@ -722,7 +833,7 @@ public class FinancialItem1 {
 		return proprietaryDetails == null ? Optional.empty() : Optional.of(proprietaryDetails);
 	}
 
-	public FinancialItem1 setProprietaryDetails(com.tools20022.repository.msg.SupplementaryData1 proprietaryDetails) {
+	public FinancialItem1 setProprietaryDetails(SupplementaryData1 proprietaryDetails) {
 		this.proprietaryDetails = proprietaryDetails;
 		return this;
 	}

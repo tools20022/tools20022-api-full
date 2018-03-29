@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TerminalManagementAction1Code;
 import com.tools20022.repository.entity.TerminalManagementAction;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DataSetIdentification2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -121,7 +122,7 @@ public class TMSActionIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSActionIdentification1, TerminalManagementAction1Code> mmActionType = new MMMessageAttribute<TMSActionIdentification1, TerminalManagementAction1Code>() {
 		{
 			businessElementTrace_lazy = () -> TerminalManagementAction.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSActionIdentification1.mmObject();
@@ -133,6 +134,16 @@ public class TMSActionIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementAction1Code.mmObject();
+		}
+
+		@Override
+		public TerminalManagementAction1Code getValue(TMSActionIdentification1 obj) {
+			return obj.getActionType();
+		}
+
+		@Override
+		public void setValue(TMSActionIdentification1 obj, TerminalManagementAction1Code value) {
+			obj.setActionType(value);
 		}
 	};
 	@XmlElement(name = "DataSetId")
@@ -163,7 +174,7 @@ public class TMSActionIdentification1 {
 	 * definition} = "Data set on which the action has been performed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSetIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TMSActionIdentification1, Optional<DataSetIdentification2>> mmDataSetIdentification = new MMMessageAssociationEnd<TMSActionIdentification1, Optional<DataSetIdentification2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSActionIdentification1.mmObject();
 			isDerived = false;
@@ -174,7 +185,17 @@ public class TMSActionIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DataSetIdentification2.mmObject();
+			type_lazy = () -> DataSetIdentification2.mmObject();
+		}
+
+		@Override
+		public Optional<DataSetIdentification2> getValue(TMSActionIdentification1 obj) {
+			return obj.getDataSetIdentification();
+		}
+
+		@Override
+		public void setValue(TMSActionIdentification1 obj, Optional<DataSetIdentification2> value) {
+			obj.setDataSetIdentification(value.orElse(null));
 		}
 	};
 
@@ -206,7 +227,7 @@ public class TMSActionIdentification1 {
 		return dataSetIdentification == null ? Optional.empty() : Optional.of(dataSetIdentification);
 	}
 
-	public TMSActionIdentification1 setDataSetIdentification(com.tools20022.repository.msg.DataSetIdentification2 dataSetIdentification) {
+	public TMSActionIdentification1 setDataSetIdentification(DataSetIdentification2 dataSetIdentification) {
 		this.dataSetIdentification = dataSetIdentification;
 		return this;
 	}

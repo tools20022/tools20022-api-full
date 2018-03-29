@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.Person;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ContactIdentification1;
+import com.tools20022.repository.msg.PartyIdentification8;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -106,7 +108,7 @@ public class PartyIdentificationAndContactInformation1 {
 	 * definition} = "Identification of the party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentificationAndContactInformation1, PartyIdentification8> mmPartyIdentification = new MMMessageAssociationEnd<PartyIdentificationAndContactInformation1, PartyIdentification8>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndContactInformation1.mmObject();
@@ -118,7 +120,17 @@ public class PartyIdentificationAndContactInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification8.mmObject();
+			type_lazy = () -> PartyIdentification8.mmObject();
+		}
+
+		@Override
+		public PartyIdentification8 getValue(PartyIdentificationAndContactInformation1 obj) {
+			return obj.getPartyIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndContactInformation1 obj, PartyIdentification8 value) {
+			obj.setPartyIdentification(value);
 		}
 	};
 	@XmlElement(name = "CtctInf")
@@ -156,7 +168,7 @@ public class PartyIdentificationAndContactInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContactInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentificationAndContactInformation1, Optional<ContactIdentification1>> mmContactInformation = new MMMessageAssociationEnd<PartyIdentificationAndContactInformation1, Optional<ContactIdentification1>>() {
 		{
 			businessElementTrace_lazy = () -> Person.mmContactPersonRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndContactInformation1.mmObject();
@@ -168,7 +180,17 @@ public class PartyIdentificationAndContactInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContactIdentification1.mmObject();
+			type_lazy = () -> ContactIdentification1.mmObject();
+		}
+
+		@Override
+		public Optional<ContactIdentification1> getValue(PartyIdentificationAndContactInformation1 obj) {
+			return obj.getContactInformation();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndContactInformation1 obj, Optional<ContactIdentification1> value) {
+			obj.setContactInformation(value.orElse(null));
 		}
 	};
 
@@ -191,7 +213,7 @@ public class PartyIdentificationAndContactInformation1 {
 		return partyIdentification;
 	}
 
-	public PartyIdentificationAndContactInformation1 setPartyIdentification(com.tools20022.repository.msg.PartyIdentification8 partyIdentification) {
+	public PartyIdentificationAndContactInformation1 setPartyIdentification(PartyIdentification8 partyIdentification) {
 		this.partyIdentification = Objects.requireNonNull(partyIdentification);
 		return this;
 	}
@@ -200,7 +222,7 @@ public class PartyIdentificationAndContactInformation1 {
 		return contactInformation == null ? Optional.empty() : Optional.of(contactInformation);
 	}
 
-	public PartyIdentificationAndContactInformation1 setContactInformation(com.tools20022.repository.msg.ContactIdentification1 contactInformation) {
+	public PartyIdentificationAndContactInformation1 setContactInformation(ContactIdentification1 contactInformation) {
 		this.contactInformation = contactInformation;
 		return this;
 	}

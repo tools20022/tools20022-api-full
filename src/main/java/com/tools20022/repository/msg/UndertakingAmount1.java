@@ -109,7 +109,7 @@ public class UndertakingAmount1 {
 	 * definition} = "Amount and currency of the undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UndertakingAmount1, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<UndertakingAmount1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> UndertakingAmount.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingAmount1.mmObject();
@@ -121,6 +121,16 @@ public class UndertakingAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(UndertakingAmount1 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(UndertakingAmount1 obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "PlusTlrnce")
@@ -160,7 +170,7 @@ public class UndertakingAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlusTolerance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UndertakingAmount1, Optional<PercentageRate>> mmPlusTolerance = new MMMessageAttribute<UndertakingAmount1, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> UndertakingAmount.mmTolerance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingAmount1.mmObject();
@@ -172,6 +182,16 @@ public class UndertakingAmount1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(UndertakingAmount1 obj) {
+			return obj.getPlusTolerance();
+		}
+
+		@Override
+		public void setValue(UndertakingAmount1 obj, Optional<PercentageRate> value) {
+			obj.setPlusTolerance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -204,7 +224,7 @@ public class UndertakingAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UndertakingAmount1, List<Max2000Text>> mmAdditionalInformation = new MMMessageAttribute<UndertakingAmount1, List<Max2000Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingAmount1.mmObject();
 			isDerived = false;
@@ -215,6 +235,16 @@ public class UndertakingAmount1 {
 			maxOccurs = 5;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
+		}
+
+		@Override
+		public List<Max2000Text> getValue(UndertakingAmount1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(UndertakingAmount1 obj, List<Max2000Text> value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 

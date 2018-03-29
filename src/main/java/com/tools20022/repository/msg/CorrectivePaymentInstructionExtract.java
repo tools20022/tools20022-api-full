@@ -151,7 +151,7 @@ public class CorrectivePaymentInstructionExtract {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorrectivePaymentInstructionExtract, Max35Text> mmInstructionIdentification = new MMMessageAttribute<CorrectivePaymentInstructionExtract, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmInstructionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.mmObject();
@@ -163,6 +163,16 @@ public class CorrectivePaymentInstructionExtract {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CorrectivePaymentInstructionExtract obj) {
+			return obj.getInstructionIdentification();
+		}
+
+		@Override
+		public void setValue(CorrectivePaymentInstructionExtract obj, Max35Text value) {
+			obj.setInstructionIdentification(value);
 		}
 	};
 	@XmlElement(name = "InstdAmt", required = true)
@@ -202,7 +212,7 @@ public class CorrectivePaymentInstructionExtract {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorrectivePaymentInstructionExtract, CurrencyAndAmount> mmInstructedAmount = new MMMessageAttribute<CorrectivePaymentInstructionExtract, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.mmObject();
@@ -214,6 +224,16 @@ public class CorrectivePaymentInstructionExtract {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(CorrectivePaymentInstructionExtract obj) {
+			return obj.getInstructedAmount();
+		}
+
+		@Override
+		public void setValue(CorrectivePaymentInstructionExtract obj, CurrencyAndAmount value) {
+			obj.setInstructedAmount(value);
 		}
 	};
 	@XmlElement(name = "IntrBkSttlmAmt", required = true)
@@ -253,7 +273,7 @@ public class CorrectivePaymentInstructionExtract {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterbankSettlementAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorrectivePaymentInstructionExtract, CurrencyAndAmount> mmInterbankSettlementAmount = new MMMessageAttribute<CorrectivePaymentInstructionExtract, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.mmObject();
@@ -265,6 +285,16 @@ public class CorrectivePaymentInstructionExtract {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(CorrectivePaymentInstructionExtract obj) {
+			return obj.getInterbankSettlementAmount();
+		}
+
+		@Override
+		public void setValue(CorrectivePaymentInstructionExtract obj, CurrencyAndAmount value) {
+			obj.setInterbankSettlementAmount(value);
 		}
 	};
 	@XmlElement(name = "ReqdExctnDt", required = true)
@@ -303,7 +333,7 @@ public class CorrectivePaymentInstructionExtract {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestedExecutionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorrectivePaymentInstructionExtract, ISODate> mmRequestedExecutionDate = new MMMessageAttribute<CorrectivePaymentInstructionExtract, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmRequestedExecutionDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.mmObject();
@@ -315,6 +345,16 @@ public class CorrectivePaymentInstructionExtract {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(CorrectivePaymentInstructionExtract obj) {
+			return obj.getRequestedExecutionDate();
+		}
+
+		@Override
+		public void setValue(CorrectivePaymentInstructionExtract obj, ISODate value) {
+			obj.setRequestedExecutionDate(value);
 		}
 	};
 	@XmlElement(name = "IntrBkSttlmDt", required = true)
@@ -353,7 +393,7 @@ public class CorrectivePaymentInstructionExtract {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterbankSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorrectivePaymentInstructionExtract, ISODate> mmInterbankSettlementDate = new MMMessageAttribute<CorrectivePaymentInstructionExtract, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorrectivePaymentInstructionExtract.mmObject();
@@ -365,6 +405,16 @@ public class CorrectivePaymentInstructionExtract {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(CorrectivePaymentInstructionExtract obj) {
+			return obj.getInterbankSettlementDate();
+		}
+
+		@Override
+		public void setValue(CorrectivePaymentInstructionExtract obj, ISODate value) {
+			obj.setInterbankSettlementDate(value);
 		}
 	};
 	/**

@@ -145,7 +145,7 @@ public class PaymentCard2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCard2, CardType1Code> mmType = new MMMessageAttribute<PaymentCard2, CardType1Code>() {
 		{
 			businessElementTrace_lazy = () -> PaymentCard.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard2.mmObject();
@@ -158,6 +158,16 @@ public class PaymentCard2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CardType1Code.mmObject();
+		}
+
+		@Override
+		public CardType1Code getValue(PaymentCard2 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(PaymentCard2 obj, CardType1Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Nb", required = true)
@@ -204,7 +214,7 @@ public class PaymentCard2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCard2, Max35Text> mmNumber = new MMMessageAttribute<PaymentCard2, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PaymentCard.mmNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard2.mmObject();
@@ -217,6 +227,16 @@ public class PaymentCard2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PaymentCard2 obj) {
+			return obj.getNumber();
+		}
+
+		@Override
+		public void setValue(PaymentCard2 obj, Max35Text value) {
+			obj.setNumber(value);
 		}
 	};
 	@XmlElement(name = "HldrNm", required = true)
@@ -261,7 +281,7 @@ public class PaymentCard2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHolderName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCard2, Max35Text> mmHolderName = new MMMessageAttribute<PaymentCard2, Max35Text>() {
 		{
 			businessComponentTrace_lazy = () -> CardholderRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard2.mmObject();
@@ -274,6 +294,16 @@ public class PaymentCard2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PaymentCard2 obj) {
+			return obj.getHolderName();
+		}
+
+		@Override
+		public void setValue(PaymentCard2 obj, Max35Text value) {
+			obj.setHolderName(value);
 		}
 	};
 	@XmlElement(name = "StartDt")
@@ -319,7 +349,7 @@ public class PaymentCard2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCard2, Optional<ISOYearMonth>> mmStartDate = new MMMessageAttribute<PaymentCard2, Optional<ISOYearMonth>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentCard.mmStartDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard2.mmObject();
@@ -332,6 +362,16 @@ public class PaymentCard2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISOYearMonth.mmObject();
+		}
+
+		@Override
+		public Optional<ISOYearMonth> getValue(PaymentCard2 obj) {
+			return obj.getStartDate();
+		}
+
+		@Override
+		public void setValue(PaymentCard2 obj, Optional<ISOYearMonth> value) {
+			obj.setStartDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XpryDt", required = true)
@@ -377,7 +417,7 @@ public class PaymentCard2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpiryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCard2, ISOYearMonth> mmExpiryDate = new MMMessageAttribute<PaymentCard2, ISOYearMonth>() {
 		{
 			businessElementTrace_lazy = () -> PaymentCard.mmExpiryDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard2.mmObject();
@@ -390,6 +430,16 @@ public class PaymentCard2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISOYearMonth.mmObject();
+		}
+
+		@Override
+		public ISOYearMonth getValue(PaymentCard2 obj) {
+			return obj.getExpiryDate();
+		}
+
+		@Override
+		public void setValue(PaymentCard2 obj, ISOYearMonth value) {
+			obj.setExpiryDate(value);
 		}
 	};
 	@XmlElement(name = "CardIssrNm")
@@ -438,7 +488,7 @@ public class PaymentCard2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCardIssuerName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCard2, Optional<Max35Text>> mmCardIssuerName = new MMMessageAttribute<PaymentCard2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard2.mmObject();
@@ -451,6 +501,16 @@ public class PaymentCard2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PaymentCard2 obj) {
+			return obj.getCardIssuerName();
+		}
+
+		@Override
+		public void setValue(PaymentCard2 obj, Optional<Max35Text> value) {
+			obj.setCardIssuerName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CardIssrId")
@@ -500,7 +560,7 @@ public class PaymentCard2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCardIssuerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCard2, Optional<PartyIdentification2Choice>> mmCardIssuerIdentification = new MMMessageAttribute<PaymentCard2, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard2.mmObject();
@@ -513,6 +573,16 @@ public class PaymentCard2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(PaymentCard2 obj) {
+			return obj.getCardIssuerIdentification();
+		}
+
+		@Override
+		public void setValue(PaymentCard2 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setCardIssuerIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctyCd")
@@ -559,7 +629,7 @@ public class PaymentCard2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecurityCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCard2, Optional<Max35Text>> mmSecurityCode = new MMMessageAttribute<PaymentCard2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentCard.mmSecurityCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard2.mmObject();
@@ -572,6 +642,16 @@ public class PaymentCard2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PaymentCard2 obj) {
+			return obj.getSecurityCode();
+		}
+
+		@Override
+		public void setValue(PaymentCard2 obj, Optional<Max35Text> value) {
+			obj.setSecurityCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SeqNb")
@@ -620,7 +700,7 @@ public class PaymentCard2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCard2, Optional<Max3Text>> mmSequenceNumber = new MMMessageAttribute<PaymentCard2, Optional<Max3Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentCard.mmSequenceNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard2.mmObject();
@@ -633,6 +713,16 @@ public class PaymentCard2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max3Text> getValue(PaymentCard2 obj) {
+			return obj.getSequenceNumber();
+		}
+
+		@Override
+		public void setValue(PaymentCard2 obj, Optional<Max3Text> value) {
+			obj.setSequenceNumber(value.orElse(null));
 		}
 	};
 

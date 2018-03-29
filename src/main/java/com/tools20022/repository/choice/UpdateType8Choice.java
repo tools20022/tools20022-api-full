@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.UpdateType7Choice;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SecurityAttributes2;
 import java.util.ArrayList;
@@ -76,7 +77,7 @@ public class UpdateType8Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "UpdTp", required = true)
-	protected List<com.tools20022.repository.choice.UpdateType7Choice> updateType;
+	protected List<UpdateType7Choice> updateType;
 	/**
 	 * 
 	 <p>
@@ -111,7 +112,7 @@ public class UpdateType8Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUpdateType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UpdateType8Choice, List<UpdateType7Choice>> mmUpdateType = new MMMessageAssociationEnd<UpdateType8Choice, List<UpdateType7Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UpdateType8Choice.mmObject();
 			isDerived = false;
@@ -123,7 +124,17 @@ public class UpdateType8Choice {
 			maxOccurs = 3;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.UpdateType7Choice.mmObject();
+			type_lazy = () -> UpdateType7Choice.mmObject();
+		}
+
+		@Override
+		public List<UpdateType7Choice> getValue(UpdateType8Choice obj) {
+			return obj.getUpdateType();
+		}
+
+		@Override
+		public void setValue(UpdateType8Choice obj, List<UpdateType7Choice> value) {
+			obj.setUpdateType(value);
 		}
 	};
 	@XmlElement(name = "Rplc", required = true)
@@ -162,7 +173,7 @@ public class UpdateType8Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReplace = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UpdateType8Choice, SecurityAttributes2> mmReplace = new MMMessageAssociationEnd<UpdateType8Choice, SecurityAttributes2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UpdateType8Choice.mmObject();
 			isDerived = false;
@@ -175,6 +186,16 @@ public class UpdateType8Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecurityAttributes2.mmObject();
+		}
+
+		@Override
+		public SecurityAttributes2 getValue(UpdateType8Choice obj) {
+			return obj.getReplace();
+		}
+
+		@Override
+		public void setValue(UpdateType8Choice obj, SecurityAttributes2 value) {
+			obj.setReplace(value);
 		}
 	};
 
@@ -196,7 +217,7 @@ public class UpdateType8Choice {
 		return updateType == null ? updateType = new ArrayList<>() : updateType;
 	}
 
-	public UpdateType8Choice setUpdateType(List<com.tools20022.repository.choice.UpdateType7Choice> updateType) {
+	public UpdateType8Choice setUpdateType(List<UpdateType7Choice> updateType) {
 		this.updateType = Objects.requireNonNull(updateType);
 		return this;
 	}

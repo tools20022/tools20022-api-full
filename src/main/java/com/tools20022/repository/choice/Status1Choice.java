@@ -21,6 +21,7 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.*;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
@@ -153,7 +154,7 @@ public class Status1Choice {
 	 * definition} = "Status of affirmation of a trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAffirmationStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Status1Choice, AffirmationStatus1Choice> mmAffirmationStatus = new MMMessageAttribute<Status1Choice, AffirmationStatus1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmAffirmationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status1Choice.mmObject();
@@ -165,7 +166,17 @@ public class Status1Choice {
 			definition = "Status of affirmation of a trade.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.AffirmationStatus1Choice.mmObject();
+			complexType_lazy = () -> AffirmationStatus1Choice.mmObject();
+		}
+
+		@Override
+		public AffirmationStatus1Choice getValue(Status1Choice obj) {
+			return obj.getAffirmationStatus();
+		}
+
+		@Override
+		public void setValue(Status1Choice obj, AffirmationStatus1Choice value) {
+			obj.setAffirmationStatus(value);
 		}
 	};
 	@XmlElement(name = "AllcnSts", required = true)
@@ -208,7 +219,7 @@ public class Status1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAllocationStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Status1Choice, AllocationSatus1Choice> mmAllocationStatus = new MMMessageAttribute<Status1Choice, AllocationSatus1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmCollateralAllocationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status1Choice.mmObject();
@@ -220,7 +231,17 @@ public class Status1Choice {
 			definition = "Provides the status of allocation of collateral to cover the instruction.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.AllocationSatus1Choice.mmObject();
+			complexType_lazy = () -> AllocationSatus1Choice.mmObject();
+		}
+
+		@Override
+		public AllocationSatus1Choice getValue(Status1Choice obj) {
+			return obj.getAllocationStatus();
+		}
+
+		@Override
+		public void setValue(Status1Choice obj, AllocationSatus1Choice value) {
+			obj.setAllocationStatus(value);
 		}
 	};
 	@XmlElement(name = "RepoCallReqSts", required = true)
@@ -262,7 +283,7 @@ public class Status1Choice {
 	 * "Provides the status of the repurchase agreement call request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRepoCallRequestStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Status1Choice, RepoCallRequestStatus1Choice> mmRepoCallRequestStatus = new MMMessageAttribute<Status1Choice, RepoCallRequestStatus1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmRepoCallRequestStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status1Choice.mmObject();
@@ -274,7 +295,17 @@ public class Status1Choice {
 			definition = "Provides the status of the repurchase agreement call request.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.RepoCallRequestStatus1Choice.mmObject();
+			complexType_lazy = () -> RepoCallRequestStatus1Choice.mmObject();
+		}
+
+		@Override
+		public RepoCallRequestStatus1Choice getValue(Status1Choice obj) {
+			return obj.getRepoCallRequestStatus();
+		}
+
+		@Override
+		public void setValue(Status1Choice obj, RepoCallRequestStatus1Choice value) {
+			obj.setRepoCallRequestStatus(value);
 		}
 	};
 	@XmlElement(name = "CorpActnEvtPrcgSts", required = true)
@@ -316,7 +347,7 @@ public class Status1Choice {
 	 * "Provides the status of a corporate action or the status of a payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCorporateActionEventProcessingStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Status1Choice, CorporateActionEventProcessingStatus1Choice> mmCorporateActionEventProcessingStatus = new MMMessageAttribute<Status1Choice, CorporateActionEventProcessingStatus1Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatus.mmEventProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status1Choice.mmObject();
@@ -328,7 +359,17 @@ public class Status1Choice {
 			definition = "Provides the status of a corporate action or the status of a payment.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.CorporateActionEventProcessingStatus1Choice.mmObject();
+			complexType_lazy = () -> CorporateActionEventProcessingStatus1Choice.mmObject();
+		}
+
+		@Override
+		public CorporateActionEventProcessingStatus1Choice getValue(Status1Choice obj) {
+			return obj.getCorporateActionEventProcessingStatus();
+		}
+
+		@Override
+		public void setValue(Status1Choice obj, CorporateActionEventProcessingStatus1Choice value) {
+			obj.setCorporateActionEventProcessingStatus(value);
 		}
 	};
 	@XmlElement(name = "CorpActnEvtStag", required = true)
@@ -369,7 +410,7 @@ public class Status1Choice {
 	 * definition} = "Stage in the corporate action event life cycle."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCorporateActionEventStage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Status1Choice, CorporateActionEventStage1Choice> mmCorporateActionEventStage = new MMMessageAttribute<Status1Choice, CorporateActionEventStage1Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmEventStage;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status1Choice.mmObject();
@@ -381,7 +422,17 @@ public class Status1Choice {
 			definition = "Stage in the corporate action event life cycle.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.CorporateActionEventStage1Choice.mmObject();
+			complexType_lazy = () -> CorporateActionEventStage1Choice.mmObject();
+		}
+
+		@Override
+		public CorporateActionEventStage1Choice getValue(Status1Choice obj) {
+			return obj.getCorporateActionEventStage();
+		}
+
+		@Override
+		public void setValue(Status1Choice obj, CorporateActionEventStage1Choice value) {
+			obj.setCorporateActionEventStage(value);
 		}
 	};
 	@XmlElement(name = "IfrrdMtchgSts", required = true)
@@ -424,7 +475,7 @@ public class Status1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInferredMatchingStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Status1Choice, MatchingStatus1Choice> mmInferredMatchingStatus = new MMMessageAttribute<Status1Choice, MatchingStatus1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status1Choice.mmObject();
@@ -436,7 +487,17 @@ public class Status1Choice {
 			definition = "Provides the matching status of an instruction as known by the account servicer based on an allegement. At this time no matching took place on the market (at the CSD/ICSD).";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.MatchingStatus1Choice.mmObject();
+			complexType_lazy = () -> MatchingStatus1Choice.mmObject();
+		}
+
+		@Override
+		public MatchingStatus1Choice getValue(Status1Choice obj) {
+			return obj.getInferredMatchingStatus();
+		}
+
+		@Override
+		public void setValue(Status1Choice obj, MatchingStatus1Choice value) {
+			obj.setInferredMatchingStatus(value);
 		}
 	};
 	@XmlElement(name = "InstrPrcgSts", required = true)
@@ -477,7 +538,7 @@ public class Status1Choice {
 	 * definition} = "Provides the status of an instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructionProcessingStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Status1Choice, InstructionProcessingStatus2Choice> mmInstructionProcessingStatus = new MMMessageAttribute<Status1Choice, InstructionProcessingStatus2Choice>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status1Choice.mmObject();
@@ -489,7 +550,17 @@ public class Status1Choice {
 			definition = "Provides the status of an instruction.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.InstructionProcessingStatus2Choice.mmObject();
+			complexType_lazy = () -> InstructionProcessingStatus2Choice.mmObject();
+		}
+
+		@Override
+		public InstructionProcessingStatus2Choice getValue(Status1Choice obj) {
+			return obj.getInstructionProcessingStatus();
+		}
+
+		@Override
+		public void setValue(Status1Choice obj, InstructionProcessingStatus2Choice value) {
+			obj.setInstructionProcessingStatus(value);
 		}
 	};
 	@XmlElement(name = "MtchgSts", required = true)
@@ -530,7 +601,7 @@ public class Status1Choice {
 	 * definition} = "Provides the matching status of the instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMatchingStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Status1Choice, MatchingStatus1Choice> mmMatchingStatus = new MMMessageAttribute<Status1Choice, MatchingStatus1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status1Choice.mmObject();
@@ -542,7 +613,17 @@ public class Status1Choice {
 			definition = "Provides the matching status of the instruction.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.MatchingStatus1Choice.mmObject();
+			complexType_lazy = () -> MatchingStatus1Choice.mmObject();
+		}
+
+		@Override
+		public MatchingStatus1Choice getValue(Status1Choice obj) {
+			return obj.getMatchingStatus();
+		}
+
+		@Override
+		public void setValue(Status1Choice obj, MatchingStatus1Choice value) {
+			obj.setMatchingStatus(value);
 		}
 	};
 	@XmlElement(name = "RegnPrcgSts", required = true)
@@ -583,7 +664,7 @@ public class Status1Choice {
 	 * definition} = "Provides the status of the registration processing."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegistrationProcessingStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Status1Choice, RegistrationProcessingStatus1Choice> mmRegistrationProcessingStatus = new MMMessageAttribute<Status1Choice, RegistrationProcessingStatus1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status1Choice.mmObject();
@@ -595,7 +676,17 @@ public class Status1Choice {
 			definition = "Provides the status of the registration processing.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.RegistrationProcessingStatus1Choice.mmObject();
+			complexType_lazy = () -> RegistrationProcessingStatus1Choice.mmObject();
+		}
+
+		@Override
+		public RegistrationProcessingStatus1Choice getValue(Status1Choice obj) {
+			return obj.getRegistrationProcessingStatus();
+		}
+
+		@Override
+		public void setValue(Status1Choice obj, RegistrationProcessingStatus1Choice value) {
+			obj.setRegistrationProcessingStatus(value);
 		}
 	};
 	@XmlElement(name = "RspnSts", required = true)
@@ -638,7 +729,7 @@ public class Status1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResponseStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Status1Choice, ResponseStatus1Choice> mmResponseStatus = new MMMessageAttribute<Status1Choice, ResponseStatus1Choice>() {
 		{
 			businessElementTrace_lazy = () -> CollateralStatus.mmResponseStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status1Choice.mmObject();
@@ -650,7 +741,17 @@ public class Status1Choice {
 			definition = "Provides the status of the received collateral message (collateral claim, a collateral proposal or a proposal/request for collateral substitution) from a collateral management perspective.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.ResponseStatus1Choice.mmObject();
+			complexType_lazy = () -> ResponseStatus1Choice.mmObject();
+		}
+
+		@Override
+		public ResponseStatus1Choice getValue(Status1Choice obj) {
+			return obj.getResponseStatus();
+		}
+
+		@Override
+		public void setValue(Status1Choice obj, ResponseStatus1Choice value) {
+			obj.setResponseStatus(value);
 		}
 	};
 	@XmlElement(name = "RplcmntPrcgSts", required = true)
@@ -692,7 +793,7 @@ public class Status1Choice {
 	 * "Provides the processing status of the replacement request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReplacementProcessingStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Status1Choice, ReplacementProcessingStatus1Choice> mmReplacementProcessingStatus = new MMMessageAttribute<Status1Choice, ReplacementProcessingStatus1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status1Choice.mmObject();
@@ -704,7 +805,17 @@ public class Status1Choice {
 			definition = "Provides the processing status of the replacement request.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.ReplacementProcessingStatus1Choice.mmObject();
+			complexType_lazy = () -> ReplacementProcessingStatus1Choice.mmObject();
+		}
+
+		@Override
+		public ReplacementProcessingStatus1Choice getValue(Status1Choice obj) {
+			return obj.getReplacementProcessingStatus();
+		}
+
+		@Override
+		public void setValue(Status1Choice obj, ReplacementProcessingStatus1Choice value) {
+			obj.setReplacementProcessingStatus(value);
 		}
 	};
 	@XmlElement(name = "CxlPrcgSts", required = true)
@@ -745,7 +856,7 @@ public class Status1Choice {
 	 * definition} = "Provides the status of a cancellation request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancellationProcessingStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Status1Choice, CancellationProcessingStatus1Choice> mmCancellationProcessingStatus = new MMMessageAttribute<Status1Choice, CancellationProcessingStatus1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmCancellationProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status1Choice.mmObject();
@@ -757,7 +868,17 @@ public class Status1Choice {
 			definition = "Provides the status of a cancellation request.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.CancellationProcessingStatus1Choice.mmObject();
+			complexType_lazy = () -> CancellationProcessingStatus1Choice.mmObject();
+		}
+
+		@Override
+		public CancellationProcessingStatus1Choice getValue(Status1Choice obj) {
+			return obj.getCancellationProcessingStatus();
+		}
+
+		@Override
+		public void setValue(Status1Choice obj, CancellationProcessingStatus1Choice value) {
+			obj.setCancellationProcessingStatus(value);
 		}
 	};
 	@XmlElement(name = "SttlmSts", required = true)
@@ -798,7 +919,7 @@ public class Status1Choice {
 	 * definition} = "Provides the status of settlement of a transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Status1Choice, SettlementStatus1Choice> mmSettlementStatus = new MMMessageAttribute<Status1Choice, SettlementStatus1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmSettlementStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status1Choice.mmObject();
@@ -810,7 +931,17 @@ public class Status1Choice {
 			definition = "Provides the status of settlement of a transaction.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.SettlementStatus1Choice.mmObject();
+			complexType_lazy = () -> SettlementStatus1Choice.mmObject();
+		}
+
+		@Override
+		public SettlementStatus1Choice getValue(Status1Choice obj) {
+			return obj.getSettlementStatus();
+		}
+
+		@Override
+		public void setValue(Status1Choice obj, SettlementStatus1Choice value) {
+			obj.setSettlementStatus(value);
 		}
 	};
 	@XmlElement(name = "SttlmCondModSts", required = true)
@@ -853,7 +984,7 @@ public class Status1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementConditionModificationStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Status1Choice, SettlementConditionModificationStatus1Choice> mmSettlementConditionModificationStatus = new MMMessageAttribute<Status1Choice, SettlementConditionModificationStatus1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmSettlementConditionModificationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status1Choice.mmObject();
@@ -865,7 +996,17 @@ public class Status1Choice {
 			definition = "Provides the status of a securities settlement condition modification request.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.SettlementConditionModificationStatus1Choice.mmObject();
+			complexType_lazy = () -> SettlementConditionModificationStatus1Choice.mmObject();
+		}
+
+		@Override
+		public SettlementConditionModificationStatus1Choice getValue(Status1Choice obj) {
+			return obj.getSettlementConditionModificationStatus();
+		}
+
+		@Override
+		public void setValue(Status1Choice obj, SettlementConditionModificationStatus1Choice value) {
+			obj.setSettlementConditionModificationStatus(value);
 		}
 	};
 
@@ -894,7 +1035,7 @@ public class Status1Choice {
 		return affirmationStatus;
 	}
 
-	public Status1Choice setAffirmationStatus(com.tools20022.repository.choice.AffirmationStatus1Choice affirmationStatus) {
+	public Status1Choice setAffirmationStatus(AffirmationStatus1Choice affirmationStatus) {
 		this.affirmationStatus = Objects.requireNonNull(affirmationStatus);
 		return this;
 	}
@@ -903,7 +1044,7 @@ public class Status1Choice {
 		return allocationStatus;
 	}
 
-	public Status1Choice setAllocationStatus(com.tools20022.repository.choice.AllocationSatus1Choice allocationStatus) {
+	public Status1Choice setAllocationStatus(AllocationSatus1Choice allocationStatus) {
 		this.allocationStatus = Objects.requireNonNull(allocationStatus);
 		return this;
 	}
@@ -912,7 +1053,7 @@ public class Status1Choice {
 		return repoCallRequestStatus;
 	}
 
-	public Status1Choice setRepoCallRequestStatus(com.tools20022.repository.choice.RepoCallRequestStatus1Choice repoCallRequestStatus) {
+	public Status1Choice setRepoCallRequestStatus(RepoCallRequestStatus1Choice repoCallRequestStatus) {
 		this.repoCallRequestStatus = Objects.requireNonNull(repoCallRequestStatus);
 		return this;
 	}
@@ -921,7 +1062,7 @@ public class Status1Choice {
 		return corporateActionEventProcessingStatus;
 	}
 
-	public Status1Choice setCorporateActionEventProcessingStatus(com.tools20022.repository.choice.CorporateActionEventProcessingStatus1Choice corporateActionEventProcessingStatus) {
+	public Status1Choice setCorporateActionEventProcessingStatus(CorporateActionEventProcessingStatus1Choice corporateActionEventProcessingStatus) {
 		this.corporateActionEventProcessingStatus = Objects.requireNonNull(corporateActionEventProcessingStatus);
 		return this;
 	}
@@ -930,7 +1071,7 @@ public class Status1Choice {
 		return corporateActionEventStage;
 	}
 
-	public Status1Choice setCorporateActionEventStage(com.tools20022.repository.choice.CorporateActionEventStage1Choice corporateActionEventStage) {
+	public Status1Choice setCorporateActionEventStage(CorporateActionEventStage1Choice corporateActionEventStage) {
 		this.corporateActionEventStage = Objects.requireNonNull(corporateActionEventStage);
 		return this;
 	}
@@ -939,7 +1080,7 @@ public class Status1Choice {
 		return inferredMatchingStatus;
 	}
 
-	public Status1Choice setInferredMatchingStatus(com.tools20022.repository.choice.MatchingStatus1Choice inferredMatchingStatus) {
+	public Status1Choice setInferredMatchingStatus(MatchingStatus1Choice inferredMatchingStatus) {
 		this.inferredMatchingStatus = Objects.requireNonNull(inferredMatchingStatus);
 		return this;
 	}
@@ -948,7 +1089,7 @@ public class Status1Choice {
 		return instructionProcessingStatus;
 	}
 
-	public Status1Choice setInstructionProcessingStatus(com.tools20022.repository.choice.InstructionProcessingStatus2Choice instructionProcessingStatus) {
+	public Status1Choice setInstructionProcessingStatus(InstructionProcessingStatus2Choice instructionProcessingStatus) {
 		this.instructionProcessingStatus = Objects.requireNonNull(instructionProcessingStatus);
 		return this;
 	}
@@ -957,7 +1098,7 @@ public class Status1Choice {
 		return matchingStatus;
 	}
 
-	public Status1Choice setMatchingStatus(com.tools20022.repository.choice.MatchingStatus1Choice matchingStatus) {
+	public Status1Choice setMatchingStatus(MatchingStatus1Choice matchingStatus) {
 		this.matchingStatus = Objects.requireNonNull(matchingStatus);
 		return this;
 	}
@@ -966,7 +1107,7 @@ public class Status1Choice {
 		return registrationProcessingStatus;
 	}
 
-	public Status1Choice setRegistrationProcessingStatus(com.tools20022.repository.choice.RegistrationProcessingStatus1Choice registrationProcessingStatus) {
+	public Status1Choice setRegistrationProcessingStatus(RegistrationProcessingStatus1Choice registrationProcessingStatus) {
 		this.registrationProcessingStatus = Objects.requireNonNull(registrationProcessingStatus);
 		return this;
 	}
@@ -975,7 +1116,7 @@ public class Status1Choice {
 		return responseStatus;
 	}
 
-	public Status1Choice setResponseStatus(com.tools20022.repository.choice.ResponseStatus1Choice responseStatus) {
+	public Status1Choice setResponseStatus(ResponseStatus1Choice responseStatus) {
 		this.responseStatus = Objects.requireNonNull(responseStatus);
 		return this;
 	}
@@ -984,7 +1125,7 @@ public class Status1Choice {
 		return replacementProcessingStatus;
 	}
 
-	public Status1Choice setReplacementProcessingStatus(com.tools20022.repository.choice.ReplacementProcessingStatus1Choice replacementProcessingStatus) {
+	public Status1Choice setReplacementProcessingStatus(ReplacementProcessingStatus1Choice replacementProcessingStatus) {
 		this.replacementProcessingStatus = Objects.requireNonNull(replacementProcessingStatus);
 		return this;
 	}
@@ -993,7 +1134,7 @@ public class Status1Choice {
 		return cancellationProcessingStatus;
 	}
 
-	public Status1Choice setCancellationProcessingStatus(com.tools20022.repository.choice.CancellationProcessingStatus1Choice cancellationProcessingStatus) {
+	public Status1Choice setCancellationProcessingStatus(CancellationProcessingStatus1Choice cancellationProcessingStatus) {
 		this.cancellationProcessingStatus = Objects.requireNonNull(cancellationProcessingStatus);
 		return this;
 	}
@@ -1002,7 +1143,7 @@ public class Status1Choice {
 		return settlementStatus;
 	}
 
-	public Status1Choice setSettlementStatus(com.tools20022.repository.choice.SettlementStatus1Choice settlementStatus) {
+	public Status1Choice setSettlementStatus(SettlementStatus1Choice settlementStatus) {
 		this.settlementStatus = Objects.requireNonNull(settlementStatus);
 		return this;
 	}
@@ -1011,7 +1152,7 @@ public class Status1Choice {
 		return settlementConditionModificationStatus;
 	}
 
-	public Status1Choice setSettlementConditionModificationStatus(com.tools20022.repository.choice.SettlementConditionModificationStatus1Choice settlementConditionModificationStatus) {
+	public Status1Choice setSettlementConditionModificationStatus(SettlementConditionModificationStatus1Choice settlementConditionModificationStatus) {
 		this.settlementConditionModificationStatus = Objects.requireNonNull(settlementConditionModificationStatus);
 		return this;
 	}

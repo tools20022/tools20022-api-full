@@ -113,7 +113,7 @@ public class RepairReason4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RepairReason4, RepairReason5Choice> mmCode = new MMMessageAssociationEnd<RepairReason4, RepairReason5Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmRepairReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RepairReason4.mmObject();
@@ -127,6 +127,16 @@ public class RepairReason4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RepairReason5Choice.mmObject();
+		}
+
+		@Override
+		public RepairReason5Choice getValue(RepairReason4 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RepairReason4 obj, RepairReason5Choice value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -168,7 +178,7 @@ public class RepairReason4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RepairReason4, Optional<RestrictedFINXMax210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<RepairReason4, Optional<RestrictedFINXMax210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RepairReason4.mmObject();
@@ -181,6 +191,16 @@ public class RepairReason4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax210Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax210Text> getValue(RepairReason4 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(RepairReason4 obj, Optional<RestrictedFINXMax210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

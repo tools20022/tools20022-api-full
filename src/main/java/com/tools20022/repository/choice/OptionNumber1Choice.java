@@ -103,7 +103,7 @@ public class OptionNumber1Choice {
 	 * "Number identifying the available corporate action options."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionNumber1Choice, Exact3NumericText> mmNumber = new MMMessageAttribute<OptionNumber1Choice, Exact3NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.OptionNumber1Choice.mmObject();
 			isDerived = false;
@@ -115,6 +115,16 @@ public class OptionNumber1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
+		}
+
+		@Override
+		public Exact3NumericText getValue(OptionNumber1Choice obj) {
+			return obj.getNumber();
+		}
+
+		@Override
+		public void setValue(OptionNumber1Choice obj, Exact3NumericText value) {
+			obj.setNumber(value);
 		}
 	};
 	@XmlElement(name = "Cd", required = true)
@@ -148,7 +158,7 @@ public class OptionNumber1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionNumber1Choice, OptionNumber1Code> mmCode = new MMMessageAttribute<OptionNumber1Choice, OptionNumber1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.OptionNumber1Choice.mmObject();
 			isDerived = false;
@@ -159,6 +169,16 @@ public class OptionNumber1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OptionNumber1Code.mmObject();
+		}
+
+		@Override
+		public OptionNumber1Code getValue(OptionNumber1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(OptionNumber1Choice obj, OptionNumber1Code value) {
+			obj.setCode(value);
 		}
 	};
 

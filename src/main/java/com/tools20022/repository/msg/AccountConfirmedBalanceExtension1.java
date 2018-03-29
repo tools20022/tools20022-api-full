@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SignedQuantityFormat4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -99,7 +100,7 @@ public class AccountConfirmedBalanceExtension1 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountConfirmedBalanceExtension1, Max350Text> mmPlaceAndName = new MMMessageAttribute<AccountConfirmedBalanceExtension1, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountConfirmedBalanceExtension1.mmObject();
 			isDerived = false;
@@ -110,6 +111,16 @@ public class AccountConfirmedBalanceExtension1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(AccountConfirmedBalanceExtension1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(AccountConfirmedBalanceExtension1 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "FrctnlPos")
@@ -145,7 +156,7 @@ public class AccountConfirmedBalanceExtension1 {
 	 * definition} = "Partial shares of the entitlement (less than whole)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFractionalPosition = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountConfirmedBalanceExtension1, Optional<SignedQuantityFormat4>> mmFractionalPosition = new MMMessageAttribute<AccountConfirmedBalanceExtension1, Optional<SignedQuantityFormat4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountConfirmedBalanceExtension1.mmObject();
 			isDerived = false;
@@ -156,7 +167,17 @@ public class AccountConfirmedBalanceExtension1 {
 			definition = "Partial shares of the entitlement (less than whole).";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat4.mmObject();
+			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
+		}
+
+		@Override
+		public Optional<SignedQuantityFormat4> getValue(AccountConfirmedBalanceExtension1 obj) {
+			return obj.getFractionalPosition();
+		}
+
+		@Override
+		public void setValue(AccountConfirmedBalanceExtension1 obj, Optional<SignedQuantityFormat4> value) {
+			obj.setFractionalPosition(value.orElse(null));
 		}
 	};
 
@@ -186,7 +207,7 @@ public class AccountConfirmedBalanceExtension1 {
 		return fractionalPosition == null ? Optional.empty() : Optional.of(fractionalPosition);
 	}
 
-	public AccountConfirmedBalanceExtension1 setFractionalPosition(com.tools20022.repository.msg.SignedQuantityFormat4 fractionalPosition) {
+	public AccountConfirmedBalanceExtension1 setFractionalPosition(SignedQuantityFormat4 fractionalPosition) {
 		this.fractionalPosition = fractionalPosition;
 		return this;
 	}

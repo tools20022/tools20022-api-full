@@ -21,6 +21,9 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountReport19;
+import com.tools20022.repository.msg.GroupHeader58;
+import com.tools20022.repository.msg.SupplementaryData1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -99,7 +102,7 @@ public class BankToCustomerAccountReportCopy1 {
 	 * definition} = "Common information for the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGroupHeader = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BankToCustomerAccountReportCopy1, GroupHeader58> mmGroupHeader = new MMMessageAssociationEnd<BankToCustomerAccountReportCopy1, GroupHeader58>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BankToCustomerAccountReportCopy1.mmObject();
 			isDerived = false;
@@ -110,11 +113,21 @@ public class BankToCustomerAccountReportCopy1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GroupHeader58.mmObject();
+			type_lazy = () -> GroupHeader58.mmObject();
+		}
+
+		@Override
+		public GroupHeader58 getValue(BankToCustomerAccountReportCopy1 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(BankToCustomerAccountReportCopy1 obj, GroupHeader58 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "Rpt", required = true)
-	protected List<com.tools20022.repository.msg.AccountReport19> report;
+	protected List<AccountReport19> report;
 	/**
 	 * 
 	 <p>
@@ -141,7 +154,7 @@ public class BankToCustomerAccountReportCopy1 {
 	 * definition} = "Reports on a cash account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BankToCustomerAccountReportCopy1, List<AccountReport19>> mmReport = new MMMessageAssociationEnd<BankToCustomerAccountReportCopy1, List<AccountReport19>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BankToCustomerAccountReportCopy1.mmObject();
 			isDerived = false;
@@ -151,11 +164,21 @@ public class BankToCustomerAccountReportCopy1 {
 			definition = "Reports on a cash account.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AccountReport19.mmObject();
+			type_lazy = () -> AccountReport19.mmObject();
+		}
+
+		@Override
+		public List<AccountReport19> getValue(BankToCustomerAccountReportCopy1 obj) {
+			return obj.getReport();
+		}
+
+		@Override
+		public void setValue(BankToCustomerAccountReportCopy1 obj, List<AccountReport19> value) {
+			obj.setReport(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
-	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * 
 	 <p>
@@ -184,7 +207,7 @@ public class BankToCustomerAccountReportCopy1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BankToCustomerAccountReportCopy1, List<SupplementaryData1>> mmSupplementaryData = new MMMessageAssociationEnd<BankToCustomerAccountReportCopy1, List<SupplementaryData1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BankToCustomerAccountReportCopy1.mmObject();
 			isDerived = false;
@@ -194,7 +217,17 @@ public class BankToCustomerAccountReportCopy1 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
+			type_lazy = () -> SupplementaryData1.mmObject();
+		}
+
+		@Override
+		public List<SupplementaryData1> getValue(BankToCustomerAccountReportCopy1 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(BankToCustomerAccountReportCopy1 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -216,7 +249,7 @@ public class BankToCustomerAccountReportCopy1 {
 		return groupHeader;
 	}
 
-	public BankToCustomerAccountReportCopy1 setGroupHeader(com.tools20022.repository.msg.GroupHeader58 groupHeader) {
+	public BankToCustomerAccountReportCopy1 setGroupHeader(GroupHeader58 groupHeader) {
 		this.groupHeader = Objects.requireNonNull(groupHeader);
 		return this;
 	}
@@ -225,7 +258,7 @@ public class BankToCustomerAccountReportCopy1 {
 		return report == null ? report = new ArrayList<>() : report;
 	}
 
-	public BankToCustomerAccountReportCopy1 setReport(List<com.tools20022.repository.msg.AccountReport19> report) {
+	public BankToCustomerAccountReportCopy1 setReport(List<AccountReport19> report) {
 		this.report = Objects.requireNonNull(report);
 		return this;
 	}
@@ -234,7 +267,7 @@ public class BankToCustomerAccountReportCopy1 {
 		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public BankToCustomerAccountReportCopy1 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+	public BankToCustomerAccountReportCopy1 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = Objects.requireNonNull(supplementaryData);
 		return this;
 	}

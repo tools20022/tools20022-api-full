@@ -54,11 +54,15 @@ public class ConstraintOptionRule2 {
 	 */
 	public static final MMConstraint<AgentCAMovementInstructionV01> forAgentCAMovementInstructionV01 = new MMConstraint<AgentCAMovementInstructionV01>() {
 		{
-			validator = ConstraintOptionRule2::checkAgentCAMovementInstructionV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionRule2";
 			definition = "IF MovementGeneralInformation/OrderType is not CHAN (OptionChangeOrder), then OptionNumber and OptionType must be present in MovementGeneralInformation and cannot be present in any occurrence of UnderlyingSecuritiesMovementDetails/CreditAccountDetails neither in UnderlyingSecuritiesMovement/DebitAccountDetails.";
 			owner_lazy = () -> AgentCAMovementInstructionV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AgentCAMovementInstructionV01 obj) throws Exception {
+			checkAgentCAMovementInstructionV01(obj);
 		}
 	};
 

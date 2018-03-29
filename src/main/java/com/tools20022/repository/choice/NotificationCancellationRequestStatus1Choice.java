@@ -109,7 +109,7 @@ public class NotificationCancellationRequestStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NotificationCancellationRequestStatus1Choice, NotificationCancellationProcessingStatus1> mmProcessedStatus = new MMMessageAssociationEnd<NotificationCancellationRequestStatus1Choice, NotificationCancellationProcessingStatus1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.NotificationCancellationRequestStatus1Choice.mmObject();
 			isDerived = false;
@@ -121,6 +121,16 @@ public class NotificationCancellationRequestStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> NotificationCancellationProcessingStatus1.mmObject();
+		}
+
+		@Override
+		public NotificationCancellationProcessingStatus1 getValue(NotificationCancellationRequestStatus1Choice obj) {
+			return obj.getProcessedStatus();
+		}
+
+		@Override
+		public void setValue(NotificationCancellationRequestStatus1Choice obj, NotificationCancellationProcessingStatus1 value) {
+			obj.setProcessedStatus(value);
 		}
 	};
 	@XmlElement(name = "RjctdSts", required = true)
@@ -152,7 +162,7 @@ public class NotificationCancellationRequestStatus1Choice {
 	 * definition} = "Provides information about the rejection status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejectedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NotificationCancellationRequestStatus1Choice, NotificationCancellationRejectionReason1> mmRejectedStatus = new MMMessageAssociationEnd<NotificationCancellationRequestStatus1Choice, NotificationCancellationRejectionReason1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.NotificationCancellationRequestStatus1Choice.mmObject();
 			isDerived = false;
@@ -164,6 +174,16 @@ public class NotificationCancellationRequestStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> NotificationCancellationRejectionReason1.mmObject();
+		}
+
+		@Override
+		public NotificationCancellationRejectionReason1 getValue(NotificationCancellationRequestStatus1Choice obj) {
+			return obj.getRejectedStatus();
+		}
+
+		@Override
+		public void setValue(NotificationCancellationRequestStatus1Choice obj, NotificationCancellationRejectionReason1 value) {
+			obj.setRejectedStatus(value);
 		}
 	};
 

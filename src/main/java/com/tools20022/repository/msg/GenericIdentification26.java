@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.RestrictedFINXMax30Text;
 import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification25;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -121,7 +122,7 @@ public class GenericIdentification26 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GenericIdentification26, GenericIdentification25> mmType = new MMMessageAssociationEnd<GenericIdentification26, GenericIdentification25>() {
 		{
 			businessComponentTrace_lazy = () -> GenericIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification26.mmObject();
@@ -133,7 +134,17 @@ public class GenericIdentification26 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification25.mmObject();
+			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(GenericIdentification26 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(GenericIdentification26 obj, GenericIdentification25 value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Id")
@@ -173,7 +184,7 @@ public class GenericIdentification26 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification26, Optional<RestrictedFINXMax30Text>> mmIdentification = new MMMessageAttribute<GenericIdentification26, Optional<RestrictedFINXMax30Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification26.mmObject();
@@ -185,6 +196,16 @@ public class GenericIdentification26 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax30Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax30Text> getValue(GenericIdentification26 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(GenericIdentification26 obj, Optional<RestrictedFINXMax30Text> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 
@@ -214,7 +235,7 @@ public class GenericIdentification26 {
 		return type;
 	}
 
-	public GenericIdentification26 setType(com.tools20022.repository.msg.GenericIdentification25 type) {
+	public GenericIdentification26 setType(GenericIdentification25 type) {
 		this.type = Objects.requireNonNull(type);
 		return this;
 	}

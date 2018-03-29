@@ -104,7 +104,7 @@ public class DefaultProcessingOrStandingInstruction1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDefaultOptionIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DefaultProcessingOrStandingInstruction1Choice, YesNoIndicator> mmDefaultOptionIndicator = new MMMessageAttribute<DefaultProcessingOrStandingInstruction1Choice, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DefaultProcessingOrStandingInstruction1Choice.mmObject();
 			isDerived = false;
@@ -116,6 +116,16 @@ public class DefaultProcessingOrStandingInstruction1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(DefaultProcessingOrStandingInstruction1Choice obj) {
+			return obj.getDefaultOptionIndicator();
+		}
+
+		@Override
+		public void setValue(DefaultProcessingOrStandingInstruction1Choice obj, YesNoIndicator value) {
+			obj.setDefaultOptionIndicator(value);
 		}
 	};
 	@XmlElement(name = "StgInstrInd", required = true)
@@ -153,7 +163,7 @@ public class DefaultProcessingOrStandingInstruction1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStandingInstructionIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DefaultProcessingOrStandingInstruction1Choice, YesNoIndicator> mmStandingInstructionIndicator = new MMMessageAttribute<DefaultProcessingOrStandingInstruction1Choice, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DefaultProcessingOrStandingInstruction1Choice.mmObject();
 			isDerived = false;
@@ -165,6 +175,16 @@ public class DefaultProcessingOrStandingInstruction1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(DefaultProcessingOrStandingInstruction1Choice obj) {
+			return obj.getStandingInstructionIndicator();
+		}
+
+		@Override
+		public void setValue(DefaultProcessingOrStandingInstruction1Choice obj, YesNoIndicator value) {
+			obj.setStandingInstructionIndicator(value);
 		}
 	};
 

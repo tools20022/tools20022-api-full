@@ -23,9 +23,9 @@ import com.tools20022.repository.codeset.DeliveryTypeCode;
 import com.tools20022.repository.codeset.TerminationTypeCode;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.Agreement;
+import com.tools20022.repository.entity.SecuritiesFinancing;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -134,7 +134,7 @@ public class SecuritiesFinancingAgreement extends Agreement {
 	 * definition} = "Specifies a trade using the related financing agreement."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSecuritiesFinancingTrade = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesFinancingAgreement, Optional<SecuritiesFinancing>> mmSecuritiesFinancingTrade = new MMBusinessAssociationEnd<SecuritiesFinancingAgreement, Optional<SecuritiesFinancing>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancingAgreement.mmObject();
@@ -143,9 +143,19 @@ public class SecuritiesFinancingAgreement extends Agreement {
 			definition = "Specifies a trade using the related financing agreement.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmFinancingAgreement;
+			opposite_lazy = () -> SecuritiesFinancing.mmFinancingAgreement;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
+			type_lazy = () -> SecuritiesFinancing.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesFinancing> getValue(SecuritiesFinancingAgreement obj) {
+			return obj.getSecuritiesFinancingTrade();
+		}
+
+		@Override
+		public void setValue(SecuritiesFinancingAgreement obj, Optional<SecuritiesFinancing> value) {
+			obj.setSecuritiesFinancingTrade(value.orElse(null));
 		}
 	};
 	protected CurrencyCode currency;
@@ -185,7 +195,7 @@ public class SecuritiesFinancingAgreement extends Agreement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCurrency = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesFinancingAgreement, CurrencyCode> mmCurrency = new MMBusinessAttribute<SecuritiesFinancingAgreement, CurrencyCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Agreement3.mmCurrency, Agreement1.mmCurrency);
 			isDerived = false;
@@ -198,12 +208,14 @@ public class SecuritiesFinancingAgreement extends Agreement {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesFinancingAgreement.class.getMethod("getCurrency", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyCode getValue(SecuritiesFinancingAgreement obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(SecuritiesFinancingAgreement obj, CurrencyCode value) {
+			obj.setCurrency(value);
 		}
 	};
 	protected TerminationTypeCode terminationType;
@@ -243,7 +255,7 @@ public class SecuritiesFinancingAgreement extends Agreement {
 	 * definition} = "Type of financing termination."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmTerminationType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesFinancingAgreement, TerminationTypeCode> mmTerminationType = new MMBusinessAttribute<SecuritiesFinancingAgreement, TerminationTypeCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Agreement3.mmClosingType, Agreement1.mmTerminationType);
 			isDerived = false;
@@ -256,12 +268,14 @@ public class SecuritiesFinancingAgreement extends Agreement {
 			simpleType_lazy = () -> TerminationTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesFinancingAgreement.class.getMethod("getTerminationType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TerminationTypeCode getValue(SecuritiesFinancingAgreement obj) {
+			return obj.getTerminationType();
+		}
+
+		@Override
+		public void setValue(SecuritiesFinancingAgreement obj, TerminationTypeCode value) {
+			obj.setTerminationType(value);
 		}
 	};
 	protected DeliveryTypeCode deliveryType;
@@ -312,7 +326,7 @@ public class SecuritiesFinancingAgreement extends Agreement {
 	 * definition} = "Identifies type of settlement."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmDeliveryType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesFinancingAgreement, DeliveryTypeCode> mmDeliveryType = new MMBusinessAttribute<SecuritiesFinancingAgreement, DeliveryTypeCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Agreement3.mmDeliveryType, Agreement1.mmDeliveryType, TradeTransaction15.mmDeliveryType, TradeTransaction17.mmDeliveryType, TradeTransaction14.mmDeliveryType,
 					TradeTransaction16.mmDeliveryType);
@@ -326,12 +340,14 @@ public class SecuritiesFinancingAgreement extends Agreement {
 			simpleType_lazy = () -> DeliveryTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesFinancingAgreement.class.getMethod("getDeliveryType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DeliveryTypeCode getValue(SecuritiesFinancingAgreement obj) {
+			return obj.getDeliveryType();
+		}
+
+		@Override
+		public void setValue(SecuritiesFinancingAgreement obj, DeliveryTypeCode value) {
+			obj.setDeliveryType(value);
 		}
 	};
 	protected PercentageRate marginRatio;
@@ -372,7 +388,7 @@ public class SecuritiesFinancingAgreement extends Agreement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmMarginRatio = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesFinancingAgreement, PercentageRate> mmMarginRatio = new MMBusinessAttribute<SecuritiesFinancingAgreement, PercentageRate>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Agreement3.mmMarginRatio, Agreement1.mmMarginRatio);
 			isDerived = false;
@@ -385,12 +401,14 @@ public class SecuritiesFinancingAgreement extends Agreement {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesFinancingAgreement.class.getMethod("getMarginRatio", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PercentageRate getValue(SecuritiesFinancingAgreement obj) {
+			return obj.getMarginRatio();
+		}
+
+		@Override
+		public void setValue(SecuritiesFinancingAgreement obj, PercentageRate value) {
+			obj.setMarginRatio(value);
 		}
 	};
 
@@ -401,7 +419,7 @@ public class SecuritiesFinancingAgreement extends Agreement {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesFinancingAgreement";
 				definition = "Contractual details related to the agreement between parties.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesFinancing.mmFinancingAgreement);
+				associationDomain_lazy = () -> Arrays.asList(SecuritiesFinancing.mmFinancingAgreement);
 				superType_lazy = () -> Agreement.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesFinancingAgreement.mmSecuritiesFinancingTrade, com.tools20022.repository.entity.SecuritiesFinancingAgreement.mmCurrency,
 						com.tools20022.repository.entity.SecuritiesFinancingAgreement.mmTerminationType, com.tools20022.repository.entity.SecuritiesFinancingAgreement.mmDeliveryType,
@@ -421,7 +439,7 @@ public class SecuritiesFinancingAgreement extends Agreement {
 		return securitiesFinancingTrade == null ? Optional.empty() : Optional.of(securitiesFinancingTrade);
 	}
 
-	public SecuritiesFinancingAgreement setSecuritiesFinancingTrade(com.tools20022.repository.entity.SecuritiesFinancing securitiesFinancingTrade) {
+	public SecuritiesFinancingAgreement setSecuritiesFinancingTrade(SecuritiesFinancing securitiesFinancingTrade) {
 		this.securitiesFinancingTrade = securitiesFinancingTrade;
 		return this;
 	}

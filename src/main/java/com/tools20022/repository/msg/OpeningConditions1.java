@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.CurrencyExchange;
 import com.tools20022.repository.entity.FixingCondition;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SettlementRateSource1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -115,7 +116,7 @@ public class OpeningConditions1 {
 	 * "Specifies the settlement currency of the non deliverable trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OpeningConditions1, ActiveCurrencyCode> mmSettlementCurrency = new MMMessageAttribute<OpeningConditions1, ActiveCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmQuotedCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OpeningConditions1.mmObject();
@@ -127,6 +128,16 @@ public class OpeningConditions1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyCode getValue(OpeningConditions1 obj) {
+			return obj.getSettlementCurrency();
+		}
+
+		@Override
+		public void setValue(OpeningConditions1 obj, ActiveCurrencyCode value) {
+			obj.setSettlementCurrency(value);
 		}
 	};
 	@XmlElement(name = "ValtnDt", required = true)
@@ -164,7 +175,7 @@ public class OpeningConditions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValuationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OpeningConditions1, ISODate> mmValuationDate = new MMMessageAttribute<OpeningConditions1, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> FixingCondition.mmFixingDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OpeningConditions1.mmObject();
@@ -177,9 +188,19 @@ public class OpeningConditions1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
+
+		@Override
+		public ISODate getValue(OpeningConditions1 obj) {
+			return obj.getValuationDate();
+		}
+
+		@Override
+		public void setValue(OpeningConditions1 obj, ISODate value) {
+			obj.setValuationDate(value);
+		}
 	};
 	@XmlElement(name = "SttlmRateSrc", required = true)
-	protected List<com.tools20022.repository.msg.SettlementRateSource1> settlementRateSource;
+	protected List<SettlementRateSource1> settlementRateSource;
 	/**
 	 * 
 	 <p>
@@ -212,7 +233,7 @@ public class OpeningConditions1 {
 	 * "Specifies the rate source associated with the non deliverable trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementRateSource = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OpeningConditions1, List<SettlementRateSource1>> mmSettlementRateSource = new MMMessageAssociationEnd<OpeningConditions1, List<SettlementRateSource1>>() {
 		{
 			businessElementTrace_lazy = () -> FixingCondition.mmSettlementRateOption;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OpeningConditions1.mmObject();
@@ -224,7 +245,17 @@ public class OpeningConditions1 {
 			maxOccurs = 2;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SettlementRateSource1.mmObject();
+			type_lazy = () -> SettlementRateSource1.mmObject();
+		}
+
+		@Override
+		public List<SettlementRateSource1> getValue(OpeningConditions1 obj) {
+			return obj.getSettlementRateSource();
+		}
+
+		@Override
+		public void setValue(OpeningConditions1 obj, List<SettlementRateSource1> value) {
+			obj.setSettlementRateSource(value);
 		}
 	};
 
@@ -265,7 +296,7 @@ public class OpeningConditions1 {
 		return settlementRateSource == null ? settlementRateSource = new ArrayList<>() : settlementRateSource;
 	}
 
-	public OpeningConditions1 setSettlementRateSource(List<com.tools20022.repository.msg.SettlementRateSource1> settlementRateSource) {
+	public OpeningConditions1 setSettlementRateSource(List<SettlementRateSource1> settlementRateSource) {
 		this.settlementRateSource = Objects.requireNonNull(settlementRateSource);
 		return this;
 	}

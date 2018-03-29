@@ -119,7 +119,7 @@ public class TransactionAndDocumentIdentification5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionAndDocumentIdentification5, Max35Text> mmTransactionIdentification = new MMMessageAttribute<TransactionAndDocumentIdentification5, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionAndDocumentIdentification5.mmObject();
 			isDerived = false;
@@ -131,6 +131,16 @@ public class TransactionAndDocumentIdentification5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(TransactionAndDocumentIdentification5 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(TransactionAndDocumentIdentification5 obj, Max35Text value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "DocId")
@@ -164,7 +174,7 @@ public class TransactionAndDocumentIdentification5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDocumentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionAndDocumentIdentification5, Optional<Max35Text>> mmDocumentIdentification = new MMMessageAttribute<TransactionAndDocumentIdentification5, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionAndDocumentIdentification5.mmObject();
 			isDerived = false;
@@ -175,6 +185,16 @@ public class TransactionAndDocumentIdentification5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransactionAndDocumentIdentification5 obj) {
+			return obj.getDocumentIdentification();
+		}
+
+		@Override
+		public void setValue(TransactionAndDocumentIdentification5 obj, Optional<Max35Text> value) {
+			obj.setDocumentIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CreDtTm")
@@ -212,7 +232,7 @@ public class TransactionAndDocumentIdentification5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionAndDocumentIdentification5, Optional<DateAndDateTimeChoice>> mmCreationDateTime = new MMMessageAttribute<TransactionAndDocumentIdentification5, Optional<DateAndDateTimeChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionAndDocumentIdentification5.mmObject();
 			isDerived = false;
@@ -224,6 +244,16 @@ public class TransactionAndDocumentIdentification5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(TransactionAndDocumentIdentification5 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(TransactionAndDocumentIdentification5 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setCreationDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CpyDplct")
@@ -261,7 +291,7 @@ public class TransactionAndDocumentIdentification5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCopyDuplicate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionAndDocumentIdentification5, Optional<CopyDuplicate1Code>> mmCopyDuplicate = new MMMessageAttribute<TransactionAndDocumentIdentification5, Optional<CopyDuplicate1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionAndDocumentIdentification5.mmObject();
 			isDerived = false;
@@ -273,6 +303,16 @@ public class TransactionAndDocumentIdentification5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CopyDuplicate1Code.mmObject();
+		}
+
+		@Override
+		public Optional<CopyDuplicate1Code> getValue(TransactionAndDocumentIdentification5 obj) {
+			return obj.getCopyDuplicate();
+		}
+
+		@Override
+		public void setValue(TransactionAndDocumentIdentification5 obj, Optional<CopyDuplicate1Code> value) {
+			obj.setCopyDuplicate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MsgOrgtr")
@@ -305,7 +345,7 @@ public class TransactionAndDocumentIdentification5 {
 	 * "Party that originated the message, if other than the sender."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMessageOriginator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionAndDocumentIdentification5, Optional<PartyIdentification71Choice>> mmMessageOriginator = new MMMessageAssociationEnd<TransactionAndDocumentIdentification5, Optional<PartyIdentification71Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionAndDocumentIdentification5.mmObject();
 			isDerived = false;
@@ -317,6 +357,16 @@ public class TransactionAndDocumentIdentification5 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification71Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification71Choice> getValue(TransactionAndDocumentIdentification5 obj) {
+			return obj.getMessageOriginator();
+		}
+
+		@Override
+		public void setValue(TransactionAndDocumentIdentification5 obj, Optional<PartyIdentification71Choice> value) {
+			obj.setMessageOriginator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MsgRcpt")
@@ -350,7 +400,7 @@ public class TransactionAndDocumentIdentification5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMessageRecipient = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionAndDocumentIdentification5, Optional<PartyIdentification71Choice>> mmMessageRecipient = new MMMessageAssociationEnd<TransactionAndDocumentIdentification5, Optional<PartyIdentification71Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionAndDocumentIdentification5.mmObject();
 			isDerived = false;
@@ -362,6 +412,16 @@ public class TransactionAndDocumentIdentification5 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification71Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification71Choice> getValue(TransactionAndDocumentIdentification5 obj) {
+			return obj.getMessageRecipient();
+		}
+
+		@Override
+		public void setValue(TransactionAndDocumentIdentification5 obj, Optional<PartyIdentification71Choice> value) {
+			obj.setMessageRecipient(value.orElse(null));
 		}
 	};
 

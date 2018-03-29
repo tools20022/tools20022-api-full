@@ -49,11 +49,15 @@ public class ConstraintR6 {
 	 */
 	public static final MMConstraint<ExemptionReasonCode> forExemptionReasonCode = new MMConstraint<ExemptionReasonCode>() {
 		{
-			validator = ConstraintR6::checkTradeSettlement2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "R6";
 			definition = "Value according to external codelist.";
 			owner_lazy = () -> TradeSettlement2.mmExemptionReasonCode;
+		}
+
+		@Override
+		public void executeValidator(ExemptionReasonCode obj) throws Exception {
+			checkTradeSettlement2(obj);
 		}
 	};
 

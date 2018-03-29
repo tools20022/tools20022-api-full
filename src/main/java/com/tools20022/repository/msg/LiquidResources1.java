@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -117,7 +118,7 @@ public class LiquidResources1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCentralBankMoneyAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LiquidResources1, AmountAndDirection6> mmCentralBankMoneyAmount = new MMMessageAssociationEnd<LiquidResources1, AmountAndDirection6>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidResources1.mmObject();
 			isDerived = false;
@@ -128,7 +129,17 @@ public class LiquidResources1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
+			type_lazy = () -> AmountAndDirection6.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection6 getValue(LiquidResources1 obj) {
+			return obj.getCentralBankMoneyAmount();
+		}
+
+		@Override
+		public void setValue(LiquidResources1 obj, AmountAndDirection6 value) {
+			obj.setCentralBankMoneyAmount(value);
 		}
 	};
 	@XmlElement(name = "UscrdAmt", required = true)
@@ -159,7 +170,7 @@ public class LiquidResources1 {
 	 * definition} = "Liquid resources held unsecured at a commercial bank."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnsecuredAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LiquidResources1, UnsecuredAmount1> mmUnsecuredAmount = new MMMessageAssociationEnd<LiquidResources1, UnsecuredAmount1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidResources1.mmObject();
 			isDerived = false;
@@ -170,7 +181,17 @@ public class LiquidResources1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UnsecuredAmount1.mmObject();
+			type_lazy = () -> UnsecuredAmount1.mmObject();
+		}
+
+		@Override
+		public UnsecuredAmount1 getValue(LiquidResources1 obj) {
+			return obj.getUnsecuredAmount();
+		}
+
+		@Override
+		public void setValue(LiquidResources1 obj, UnsecuredAmount1 value) {
+			obj.setUnsecuredAmount(value);
 		}
 	};
 	@XmlElement(name = "DueAmt", required = true)
@@ -203,7 +224,7 @@ public class LiquidResources1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDueAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LiquidResources1, AmountAndDirection6> mmDueAmount = new MMMessageAssociationEnd<LiquidResources1, AmountAndDirection6>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidResources1.mmObject();
 			isDerived = false;
@@ -214,7 +235,17 @@ public class LiquidResources1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
+			type_lazy = () -> AmountAndDirection6.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection6 getValue(LiquidResources1 obj) {
+			return obj.getDueAmount();
+		}
+
+		@Override
+		public void setValue(LiquidResources1 obj, AmountAndDirection6 value) {
+			obj.setDueAmount(value);
 		}
 	};
 	@XmlElement(name = "RpAgrmtAmt", required = true)
@@ -248,7 +279,7 @@ public class LiquidResources1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRepurchaseAgreementAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LiquidResources1, RepurchaseAgreementAmount1> mmRepurchaseAgreementAmount = new MMMessageAssociationEnd<LiquidResources1, RepurchaseAgreementAmount1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidResources1.mmObject();
 			isDerived = false;
@@ -259,7 +290,17 @@ public class LiquidResources1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RepurchaseAgreementAmount1.mmObject();
+			type_lazy = () -> RepurchaseAgreementAmount1.mmObject();
+		}
+
+		@Override
+		public RepurchaseAgreementAmount1 getValue(LiquidResources1 obj) {
+			return obj.getRepurchaseAgreementAmount();
+		}
+
+		@Override
+		public void setValue(LiquidResources1 obj, RepurchaseAgreementAmount1 value) {
+			obj.setRepurchaseAgreementAmount(value);
 		}
 	};
 	@XmlElement(name = "CCPInvstmtInstrmAmt", required = true)
@@ -293,7 +334,7 @@ public class LiquidResources1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCCPInvestmentInstrumentAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LiquidResources1, InvestmentInstrumentAmount1> mmCCPInvestmentInstrumentAmount = new MMMessageAssociationEnd<LiquidResources1, InvestmentInstrumentAmount1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidResources1.mmObject();
 			isDerived = false;
@@ -304,7 +345,17 @@ public class LiquidResources1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvestmentInstrumentAmount1.mmObject();
+			type_lazy = () -> InvestmentInstrumentAmount1.mmObject();
+		}
+
+		@Override
+		public InvestmentInstrumentAmount1 getValue(LiquidResources1 obj) {
+			return obj.getCCPInvestmentInstrumentAmount();
+		}
+
+		@Override
+		public void setValue(LiquidResources1 obj, InvestmentInstrumentAmount1 value) {
+			obj.setCCPInvestmentInstrumentAmount(value);
 		}
 	};
 	@XmlElement(name = "OthrFinInvstmtsAmt", required = true)
@@ -338,7 +389,7 @@ public class LiquidResources1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherFinancialInvestmentsAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LiquidResources1, InvestmentInstrumentAmount1> mmOtherFinancialInvestmentsAmount = new MMMessageAssociationEnd<LiquidResources1, InvestmentInstrumentAmount1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidResources1.mmObject();
 			isDerived = false;
@@ -349,7 +400,17 @@ public class LiquidResources1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvestmentInstrumentAmount1.mmObject();
+			type_lazy = () -> InvestmentInstrumentAmount1.mmObject();
+		}
+
+		@Override
+		public InvestmentInstrumentAmount1 getValue(LiquidResources1 obj) {
+			return obj.getOtherFinancialInvestmentsAmount();
+		}
+
+		@Override
+		public void setValue(LiquidResources1 obj, InvestmentInstrumentAmount1 value) {
+			obj.setOtherFinancialInvestmentsAmount(value);
 		}
 	};
 	@XmlElement(name = "DfltrsNonCshCollAmt", required = true)
@@ -383,7 +444,7 @@ public class LiquidResources1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDefaultersNonCashCollateralAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LiquidResources1, InvestmentInstrumentAmount1> mmDefaultersNonCashCollateralAmount = new MMMessageAssociationEnd<LiquidResources1, InvestmentInstrumentAmount1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidResources1.mmObject();
 			isDerived = false;
@@ -394,7 +455,17 @@ public class LiquidResources1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvestmentInstrumentAmount1.mmObject();
+			type_lazy = () -> InvestmentInstrumentAmount1.mmObject();
+		}
+
+		@Override
+		public InvestmentInstrumentAmount1 getValue(LiquidResources1 obj) {
+			return obj.getDefaultersNonCashCollateralAmount();
+		}
+
+		@Override
+		public void setValue(LiquidResources1 obj, InvestmentInstrumentAmount1 value) {
+			obj.setDefaultersNonCashCollateralAmount(value);
 		}
 	};
 	@XmlElement(name = "OthrLqdtyFcltyAmt", required = true)
@@ -428,7 +499,7 @@ public class LiquidResources1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherLiquidityFacilityAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LiquidResources1, OtherLiquidityFacilityAmount1> mmOtherLiquidityFacilityAmount = new MMMessageAssociationEnd<LiquidResources1, OtherLiquidityFacilityAmount1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidResources1.mmObject();
 			isDerived = false;
@@ -439,7 +510,17 @@ public class LiquidResources1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OtherLiquidityFacilityAmount1.mmObject();
+			type_lazy = () -> OtherLiquidityFacilityAmount1.mmObject();
+		}
+
+		@Override
+		public OtherLiquidityFacilityAmount1 getValue(LiquidResources1 obj) {
+			return obj.getOtherLiquidityFacilityAmount();
+		}
+
+		@Override
+		public void setValue(LiquidResources1 obj, OtherLiquidityFacilityAmount1 value) {
+			obj.setOtherLiquidityFacilityAmount(value);
 		}
 	};
 
@@ -463,7 +544,7 @@ public class LiquidResources1 {
 		return centralBankMoneyAmount;
 	}
 
-	public LiquidResources1 setCentralBankMoneyAmount(com.tools20022.repository.msg.AmountAndDirection6 centralBankMoneyAmount) {
+	public LiquidResources1 setCentralBankMoneyAmount(AmountAndDirection6 centralBankMoneyAmount) {
 		this.centralBankMoneyAmount = Objects.requireNonNull(centralBankMoneyAmount);
 		return this;
 	}
@@ -472,7 +553,7 @@ public class LiquidResources1 {
 		return unsecuredAmount;
 	}
 
-	public LiquidResources1 setUnsecuredAmount(com.tools20022.repository.msg.UnsecuredAmount1 unsecuredAmount) {
+	public LiquidResources1 setUnsecuredAmount(UnsecuredAmount1 unsecuredAmount) {
 		this.unsecuredAmount = Objects.requireNonNull(unsecuredAmount);
 		return this;
 	}
@@ -481,7 +562,7 @@ public class LiquidResources1 {
 		return dueAmount;
 	}
 
-	public LiquidResources1 setDueAmount(com.tools20022.repository.msg.AmountAndDirection6 dueAmount) {
+	public LiquidResources1 setDueAmount(AmountAndDirection6 dueAmount) {
 		this.dueAmount = Objects.requireNonNull(dueAmount);
 		return this;
 	}
@@ -490,7 +571,7 @@ public class LiquidResources1 {
 		return repurchaseAgreementAmount;
 	}
 
-	public LiquidResources1 setRepurchaseAgreementAmount(com.tools20022.repository.msg.RepurchaseAgreementAmount1 repurchaseAgreementAmount) {
+	public LiquidResources1 setRepurchaseAgreementAmount(RepurchaseAgreementAmount1 repurchaseAgreementAmount) {
 		this.repurchaseAgreementAmount = Objects.requireNonNull(repurchaseAgreementAmount);
 		return this;
 	}
@@ -499,7 +580,7 @@ public class LiquidResources1 {
 		return cCPInvestmentInstrumentAmount;
 	}
 
-	public LiquidResources1 setCCPInvestmentInstrumentAmount(com.tools20022.repository.msg.InvestmentInstrumentAmount1 cCPInvestmentInstrumentAmount) {
+	public LiquidResources1 setCCPInvestmentInstrumentAmount(InvestmentInstrumentAmount1 cCPInvestmentInstrumentAmount) {
 		this.cCPInvestmentInstrumentAmount = Objects.requireNonNull(cCPInvestmentInstrumentAmount);
 		return this;
 	}
@@ -508,7 +589,7 @@ public class LiquidResources1 {
 		return otherFinancialInvestmentsAmount;
 	}
 
-	public LiquidResources1 setOtherFinancialInvestmentsAmount(com.tools20022.repository.msg.InvestmentInstrumentAmount1 otherFinancialInvestmentsAmount) {
+	public LiquidResources1 setOtherFinancialInvestmentsAmount(InvestmentInstrumentAmount1 otherFinancialInvestmentsAmount) {
 		this.otherFinancialInvestmentsAmount = Objects.requireNonNull(otherFinancialInvestmentsAmount);
 		return this;
 	}
@@ -517,7 +598,7 @@ public class LiquidResources1 {
 		return defaultersNonCashCollateralAmount;
 	}
 
-	public LiquidResources1 setDefaultersNonCashCollateralAmount(com.tools20022.repository.msg.InvestmentInstrumentAmount1 defaultersNonCashCollateralAmount) {
+	public LiquidResources1 setDefaultersNonCashCollateralAmount(InvestmentInstrumentAmount1 defaultersNonCashCollateralAmount) {
 		this.defaultersNonCashCollateralAmount = Objects.requireNonNull(defaultersNonCashCollateralAmount);
 		return this;
 	}
@@ -526,7 +607,7 @@ public class LiquidResources1 {
 		return otherLiquidityFacilityAmount;
 	}
 
-	public LiquidResources1 setOtherLiquidityFacilityAmount(com.tools20022.repository.msg.OtherLiquidityFacilityAmount1 otherLiquidityFacilityAmount) {
+	public LiquidResources1 setOtherLiquidityFacilityAmount(OtherLiquidityFacilityAmount1 otherLiquidityFacilityAmount) {
 		this.otherLiquidityFacilityAmount = Objects.requireNonNull(otherLiquidityFacilityAmount);
 		return this;
 	}

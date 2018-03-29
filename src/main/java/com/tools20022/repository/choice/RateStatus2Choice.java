@@ -112,7 +112,7 @@ public class RateStatus2Choice {
 	 * definition} = "Standard code to specify the status of the rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateStatus2Choice, RateStatus1Code> mmCode = new MMMessageAttribute<RateStatus2Choice, RateStatus1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateStatus2Choice.mmObject();
 			isDerived = false;
@@ -123,6 +123,16 @@ public class RateStatus2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RateStatus1Code.mmObject();
+		}
+
+		@Override
+		public RateStatus1Code getValue(RateStatus2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RateStatus2Choice obj, RateStatus1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -154,7 +164,7 @@ public class RateStatus2Choice {
 	 * definition} = "Proprietary identification of the status of the rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RateStatus2Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<RateStatus2Choice, GenericIdentification25>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateStatus2Choice.mmObject();
 			isDerived = false;
@@ -166,6 +176,16 @@ public class RateStatus2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(RateStatus2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RateStatus2Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

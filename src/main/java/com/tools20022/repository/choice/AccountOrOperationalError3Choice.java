@@ -121,7 +121,7 @@ public class AccountOrOperationalError3Choice {
 	 * AccountOrOperationalError2Choice.mmAccountReport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountOrOperationalError3Choice, List<AccountReport21>> mmAccountReport = new MMMessageAssociationEnd<AccountOrOperationalError3Choice, List<AccountReport21>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountOrOperationalError3Choice.mmObject();
 			isDerived = false;
@@ -133,6 +133,16 @@ public class AccountOrOperationalError3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AccountReport21.mmObject();
+		}
+
+		@Override
+		public List<AccountReport21> getValue(AccountOrOperationalError3Choice obj) {
+			return obj.getAccountReport();
+		}
+
+		@Override
+		public void setValue(AccountOrOperationalError3Choice obj, List<AccountReport21> value) {
+			obj.setAccountReport(value);
 		}
 	};
 	@XmlElement(name = "OprlErr", required = true)
@@ -170,7 +180,7 @@ public class AccountOrOperationalError3Choice {
 	 * AccountOrOperationalError2Choice.mmOperationalError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountOrOperationalError3Choice, List<ErrorHandling4>> mmOperationalError = new MMMessageAssociationEnd<AccountOrOperationalError3Choice, List<ErrorHandling4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountOrOperationalError3Choice.mmObject();
 			isDerived = false;
@@ -182,6 +192,16 @@ public class AccountOrOperationalError3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling4.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling4> getValue(AccountOrOperationalError3Choice obj) {
+			return obj.getOperationalError();
+		}
+
+		@Override
+		public void setValue(AccountOrOperationalError3Choice obj, List<ErrorHandling4> value) {
+			obj.setOperationalError(value);
 		}
 	};
 

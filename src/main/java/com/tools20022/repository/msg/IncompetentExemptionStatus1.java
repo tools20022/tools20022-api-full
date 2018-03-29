@@ -100,7 +100,7 @@ public class IncompetentExemptionStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDocumentationAcknowledgementOfExemption = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IncompetentExemptionStatus1, AcknowledgementOfExemption1Choice> mmDocumentationAcknowledgementOfExemption = new MMMessageAssociationEnd<IncompetentExemptionStatus1, AcknowledgementOfExemption1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IncompetentExemptionStatus1.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class IncompetentExemptionStatus1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AcknowledgementOfExemption1Choice.mmObject();
+		}
+
+		@Override
+		public AcknowledgementOfExemption1Choice getValue(IncompetentExemptionStatus1 obj) {
+			return obj.getDocumentationAcknowledgementOfExemption();
+		}
+
+		@Override
+		public void setValue(IncompetentExemptionStatus1 obj, AcknowledgementOfExemption1Choice value) {
+			obj.setDocumentationAcknowledgementOfExemption(value);
 		}
 	};
 

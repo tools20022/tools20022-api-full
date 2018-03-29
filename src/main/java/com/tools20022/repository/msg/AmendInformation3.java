@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.seev.MeetingResultDisseminationV05;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.MessageIdentification;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -111,7 +112,7 @@ public class AmendInformation3 {
 	 * AmendInformation2.mmPreviousReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPreviousReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AmendInformation3, MessageIdentification> mmPreviousReference = new MMMessageAssociationEnd<AmendInformation3, MessageIdentification>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmendInformation3.mmObject();
 			isDerived = false;
@@ -123,7 +124,17 @@ public class AmendInformation3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MessageIdentification.mmObject();
+			type_lazy = () -> MessageIdentification.mmObject();
+		}
+
+		@Override
+		public MessageIdentification getValue(AmendInformation3 obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(AmendInformation3 obj, MessageIdentification value) {
+			obj.setPreviousReference(value);
 		}
 	};
 
@@ -146,7 +157,7 @@ public class AmendInformation3 {
 		return previousReference;
 	}
 
-	public AmendInformation3 setPreviousReference(com.tools20022.repository.msg.MessageIdentification previousReference) {
+	public AmendInformation3 setPreviousReference(MessageIdentification previousReference) {
 		this.previousReference = Objects.requireNonNull(previousReference);
 		return this;
 	}

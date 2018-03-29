@@ -116,7 +116,7 @@ public class TransactionTotals5 {
 	 * definition} = "Cumulative amount of all financial transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTotals5, ImpliedCurrencyAndAmount> mmAmount = new MMMessageAttribute<TransactionTotals5, ImpliedCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals5.mmObject();
 			isDerived = false;
@@ -127,6 +127,16 @@ public class TransactionTotals5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(TransactionTotals5 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(TransactionTotals5 obj, ImpliedCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "Nb", required = true)
@@ -158,7 +168,7 @@ public class TransactionTotals5 {
 	 * definition} = "Number of all financial transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTotals5, Number> mmNumber = new MMMessageAttribute<TransactionTotals5, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals5.mmObject();
 			isDerived = false;
@@ -169,6 +179,16 @@ public class TransactionTotals5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(TransactionTotals5 obj) {
+			return obj.getNumber();
+		}
+
+		@Override
+		public void setValue(TransactionTotals5 obj, Number value) {
+			obj.setNumber(value);
 		}
 	};
 	@XmlElement(name = "ChrgBckAmt", required = true)
@@ -203,7 +223,7 @@ public class TransactionTotals5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmChargeBackAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTotals5, ImpliedCurrencyAndAmount> mmChargeBackAmount = new MMMessageAttribute<TransactionTotals5, ImpliedCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals5.mmObject();
 			isDerived = false;
@@ -214,6 +234,16 @@ public class TransactionTotals5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(TransactionTotals5 obj) {
+			return obj.getChargeBackAmount();
+		}
+
+		@Override
+		public void setValue(TransactionTotals5 obj, ImpliedCurrencyAndAmount value) {
+			obj.setChargeBackAmount(value);
 		}
 	};
 	@XmlElement(name = "ChrgBckNb", required = true)
@@ -245,7 +275,7 @@ public class TransactionTotals5 {
 	 * definition} = "Total number of chargeback transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmChargeBackNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTotals5, Number> mmChargeBackNumber = new MMMessageAttribute<TransactionTotals5, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals5.mmObject();
 			isDerived = false;
@@ -256,6 +286,16 @@ public class TransactionTotals5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(TransactionTotals5 obj) {
+			return obj.getChargeBackNumber();
+		}
+
+		@Override
+		public void setValue(TransactionTotals5 obj, Number value) {
+			obj.setChargeBackNumber(value);
 		}
 	};
 	@XmlElement(name = "RvslAmt", required = true)
@@ -289,7 +329,7 @@ public class TransactionTotals5 {
 	 * "Cumulative amount of all reversal transactions exclusive of any fees."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReversalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTotals5, ImpliedCurrencyAndAmount> mmReversalAmount = new MMMessageAttribute<TransactionTotals5, ImpliedCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals5.mmObject();
 			isDerived = false;
@@ -300,6 +340,16 @@ public class TransactionTotals5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(TransactionTotals5 obj) {
+			return obj.getReversalAmount();
+		}
+
+		@Override
+		public void setValue(TransactionTotals5 obj, ImpliedCurrencyAndAmount value) {
+			obj.setReversalAmount(value);
 		}
 	};
 	@XmlElement(name = "RvslNb", required = true)
@@ -331,7 +381,7 @@ public class TransactionTotals5 {
 	 * definition} = "Total number of reversal transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReversalNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTotals5, Number> mmReversalNumber = new MMMessageAttribute<TransactionTotals5, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals5.mmObject();
 			isDerived = false;
@@ -342,6 +392,16 @@ public class TransactionTotals5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(TransactionTotals5 obj) {
+			return obj.getReversalNumber();
+		}
+
+		@Override
+		public void setValue(TransactionTotals5 obj, Number value) {
+			obj.setReversalNumber(value);
 		}
 	};
 	@XmlElement(name = "FeeAmts")
@@ -374,7 +434,7 @@ public class TransactionTotals5 {
 	 * definition} = "Sum amount of all fees."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFeeAmounts = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTotals5, Optional<ImpliedCurrencyAndAmount>> mmFeeAmounts = new MMMessageAttribute<TransactionTotals5, Optional<ImpliedCurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals5.mmObject();
 			isDerived = false;
@@ -385,6 +445,16 @@ public class TransactionTotals5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ImpliedCurrencyAndAmount> getValue(TransactionTotals5 obj) {
+			return obj.getFeeAmounts();
+		}
+
+		@Override
+		public void setValue(TransactionTotals5 obj, Optional<ImpliedCurrencyAndAmount> value) {
+			obj.setFeeAmounts(value.orElse(null));
 		}
 	};
 

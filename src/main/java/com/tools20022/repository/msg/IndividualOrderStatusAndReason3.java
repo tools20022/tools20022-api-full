@@ -26,6 +26,8 @@ import com.tools20022.repository.choice.PartyIdentification2Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ExpectedExecutionDetails3;
+import com.tools20022.repository.msg.FundOrderData3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -135,7 +137,7 @@ public class IndividualOrderStatusAndReason3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualOrderStatusAndReason3, Optional<Max35Text>> mmMasterReference = new MMMessageAttribute<IndividualOrderStatusAndReason3, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason3.mmObject();
@@ -147,6 +149,16 @@ public class IndividualOrderStatusAndReason3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(IndividualOrderStatusAndReason3 obj) {
+			return obj.getMasterReference();
+		}
+
+		@Override
+		public void setValue(IndividualOrderStatusAndReason3 obj, Optional<Max35Text> value) {
+			obj.setMasterReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrdrRef", required = true)
@@ -185,7 +197,7 @@ public class IndividualOrderStatusAndReason3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualOrderStatusAndReason3, Max35Text> mmOrderReference = new MMMessageAttribute<IndividualOrderStatusAndReason3, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason3.mmObject();
@@ -197,6 +209,16 @@ public class IndividualOrderStatusAndReason3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(IndividualOrderStatusAndReason3 obj) {
+			return obj.getOrderReference();
+		}
+
+		@Override
+		public void setValue(IndividualOrderStatusAndReason3 obj, Max35Text value) {
+			obj.setOrderReference(value);
 		}
 	};
 	@XmlElement(name = "ClntRef")
@@ -235,7 +257,7 @@ public class IndividualOrderStatusAndReason3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualOrderStatusAndReason3, Optional<Max35Text>> mmClientReference = new MMMessageAttribute<IndividualOrderStatusAndReason3, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmClientOrderIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason3.mmObject();
@@ -247,6 +269,16 @@ public class IndividualOrderStatusAndReason3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(IndividualOrderStatusAndReason3 obj) {
+			return obj.getClientReference();
+		}
+
+		@Override
+		public void setValue(IndividualOrderStatusAndReason3 obj, Optional<Max35Text> value) {
+			obj.setClientReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DealRef")
@@ -285,7 +317,7 @@ public class IndividualOrderStatusAndReason3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDealReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualOrderStatusAndReason3, Optional<Max35Text>> mmDealReference = new MMMessageAttribute<IndividualOrderStatusAndReason3, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason3.mmObject();
@@ -297,6 +329,16 @@ public class IndividualOrderStatusAndReason3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(IndividualOrderStatusAndReason3 obj) {
+			return obj.getDealReference();
+		}
+
+		@Override
+		public void setValue(IndividualOrderStatusAndReason3 obj, Optional<Max35Text> value) {
+			obj.setDealReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CxlRef")
@@ -330,7 +372,7 @@ public class IndividualOrderStatusAndReason3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancellationReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualOrderStatusAndReason3, Optional<Max35Text>> mmCancellationReference = new MMMessageAttribute<IndividualOrderStatusAndReason3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason3.mmObject();
 			isDerived = false;
@@ -341,6 +383,16 @@ public class IndividualOrderStatusAndReason3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(IndividualOrderStatusAndReason3 obj) {
+			return obj.getCancellationReference();
+		}
+
+		@Override
+		public void setValue(IndividualOrderStatusAndReason3 obj, Optional<Max35Text> value) {
+			obj.setCancellationReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StsDtls", required = true)
@@ -376,7 +428,7 @@ public class IndividualOrderStatusAndReason3 {
 	 * definition} = "Choice of status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndividualOrderStatusAndReason3, OrderStatus1Choice> mmStatusDetails = new MMMessageAssociationEnd<IndividualOrderStatusAndReason3, OrderStatus1Choice>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesOrderStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason3.mmObject();
@@ -389,6 +441,16 @@ public class IndividualOrderStatusAndReason3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OrderStatus1Choice.mmObject();
+		}
+
+		@Override
+		public OrderStatus1Choice getValue(IndividualOrderStatusAndReason3 obj) {
+			return obj.getStatusDetails();
+		}
+
+		@Override
+		public void setValue(IndividualOrderStatusAndReason3 obj, OrderStatus1Choice value) {
+			obj.setStatusDetails(value);
 		}
 	};
 	@XmlElement(name = "OrdrData")
@@ -424,7 +486,7 @@ public class IndividualOrderStatusAndReason3 {
 	 * definition} = "Data from the original order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOrderData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndividualOrderStatusAndReason3, Optional<FundOrderData3>> mmOrderData = new MMMessageAssociationEnd<IndividualOrderStatusAndReason3, Optional<FundOrderData3>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmInvestmentFundOrder;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason3.mmObject();
@@ -436,7 +498,17 @@ public class IndividualOrderStatusAndReason3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FundOrderData3.mmObject();
+			type_lazy = () -> FundOrderData3.mmObject();
+		}
+
+		@Override
+		public Optional<FundOrderData3> getValue(IndividualOrderStatusAndReason3 obj) {
+			return obj.getOrderData();
+		}
+
+		@Override
+		public void setValue(IndividualOrderStatusAndReason3 obj, Optional<FundOrderData3> value) {
+			obj.setOrderData(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NewDtls")
@@ -473,7 +545,7 @@ public class IndividualOrderStatusAndReason3 {
 	 * definition} = "Information that has been added to the original order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNewDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndividualOrderStatusAndReason3, Optional<ExpectedExecutionDetails3>> mmNewDetails = new MMMessageAssociationEnd<IndividualOrderStatusAndReason3, Optional<ExpectedExecutionDetails3>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmInvestmentFundOrderExecution;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason3.mmObject();
@@ -485,7 +557,17 @@ public class IndividualOrderStatusAndReason3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ExpectedExecutionDetails3.mmObject();
+			type_lazy = () -> ExpectedExecutionDetails3.mmObject();
+		}
+
+		@Override
+		public Optional<ExpectedExecutionDetails3> getValue(IndividualOrderStatusAndReason3 obj) {
+			return obj.getNewDetails();
+		}
+
+		@Override
+		public void setValue(IndividualOrderStatusAndReason3 obj, Optional<ExpectedExecutionDetails3> value) {
+			obj.setNewDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StsInitr")
@@ -522,7 +604,7 @@ public class IndividualOrderStatusAndReason3 {
 	 * definition} = "Party that initiates the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusInitiator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndividualOrderStatusAndReason3, Optional<PartyIdentification2Choice>> mmStatusInitiator = new MMMessageAssociationEnd<IndividualOrderStatusAndReason3, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason3.mmObject();
@@ -535,6 +617,16 @@ public class IndividualOrderStatusAndReason3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(IndividualOrderStatusAndReason3 obj) {
+			return obj.getStatusInitiator();
+		}
+
+		@Override
+		public void setValue(IndividualOrderStatusAndReason3 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setStatusInitiator(value.orElse(null));
 		}
 	};
 
@@ -614,7 +706,7 @@ public class IndividualOrderStatusAndReason3 {
 		return orderData == null ? Optional.empty() : Optional.of(orderData);
 	}
 
-	public IndividualOrderStatusAndReason3 setOrderData(com.tools20022.repository.msg.FundOrderData3 orderData) {
+	public IndividualOrderStatusAndReason3 setOrderData(FundOrderData3 orderData) {
 		this.orderData = orderData;
 		return this;
 	}
@@ -623,7 +715,7 @@ public class IndividualOrderStatusAndReason3 {
 		return newDetails == null ? Optional.empty() : Optional.of(newDetails);
 	}
 
-	public IndividualOrderStatusAndReason3 setNewDetails(com.tools20022.repository.msg.ExpectedExecutionDetails3 newDetails) {
+	public IndividualOrderStatusAndReason3 setNewDetails(ExpectedExecutionDetails3 newDetails) {
 		this.newDetails = newDetails;
 		return this;
 	}

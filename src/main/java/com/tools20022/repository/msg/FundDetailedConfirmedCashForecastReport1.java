@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV01;
 import com.tools20022.repository.entity.FundsCashFlow;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Extension1;
+import com.tools20022.repository.msg.FundCashForecast2;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -84,7 +86,7 @@ public class FundDetailedConfirmedCashForecastReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "FndCshFcstDtls", required = true)
-	protected List<com.tools20022.repository.msg.FundCashForecast2> fundCashForecastDetails;
+	protected List<FundCashForecast2> fundCashForecastDetails;
 	/**
 	 * 
 	 <p>
@@ -118,7 +120,7 @@ public class FundDetailedConfirmedCashForecastReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFundCashForecastDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FundDetailedConfirmedCashForecastReport1, List<FundCashForecast2>> mmFundCashForecastDetails = new MMMessageAssociationEnd<FundDetailedConfirmedCashForecastReport1, List<FundCashForecast2>>() {
 		{
 			businessComponentTrace_lazy = () -> FundsCashFlow.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundDetailedConfirmedCashForecastReport1.mmObject();
@@ -129,11 +131,21 @@ public class FundDetailedConfirmedCashForecastReport1 {
 			definition = "Information related to the cash-in and cash-out flows for a specific trade date as a result of investment fund transactions, for example, subscriptions, redemptions or switches to/from a specified investment fund. The information provided is sorted by pre-defined criteria such as country, institution, currency or user defined criteria.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FundCashForecast2.mmObject();
+			type_lazy = () -> FundCashForecast2.mmObject();
+		}
+
+		@Override
+		public List<FundCashForecast2> getValue(FundDetailedConfirmedCashForecastReport1 obj) {
+			return obj.getFundCashForecastDetails();
+		}
+
+		@Override
+		public void setValue(FundDetailedConfirmedCashForecastReport1 obj, List<FundCashForecast2> value) {
+			obj.setFundCashForecastDetails(value);
 		}
 	};
 	@XmlElement(name = "Xtnsn")
-	protected List<com.tools20022.repository.msg.Extension1> extension;
+	protected List<Extension1> extension;
 	/**
 	 * 
 	 <p>
@@ -161,7 +173,7 @@ public class FundDetailedConfirmedCashForecastReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FundDetailedConfirmedCashForecastReport1, List<Extension1>> mmExtension = new MMMessageAssociationEnd<FundDetailedConfirmedCashForecastReport1, List<Extension1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundDetailedConfirmedCashForecastReport1.mmObject();
 			isDerived = false;
@@ -171,7 +183,17 @@ public class FundDetailedConfirmedCashForecastReport1 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Extension1.mmObject();
+			type_lazy = () -> Extension1.mmObject();
+		}
+
+		@Override
+		public List<Extension1> getValue(FundDetailedConfirmedCashForecastReport1 obj) {
+			return obj.getExtension();
+		}
+
+		@Override
+		public void setValue(FundDetailedConfirmedCashForecastReport1 obj, List<Extension1> value) {
+			obj.setExtension(value);
 		}
 	};
 
@@ -194,7 +216,7 @@ public class FundDetailedConfirmedCashForecastReport1 {
 		return fundCashForecastDetails == null ? fundCashForecastDetails = new ArrayList<>() : fundCashForecastDetails;
 	}
 
-	public FundDetailedConfirmedCashForecastReport1 setFundCashForecastDetails(List<com.tools20022.repository.msg.FundCashForecast2> fundCashForecastDetails) {
+	public FundDetailedConfirmedCashForecastReport1 setFundCashForecastDetails(List<FundCashForecast2> fundCashForecastDetails) {
 		this.fundCashForecastDetails = Objects.requireNonNull(fundCashForecastDetails);
 		return this;
 	}
@@ -203,7 +225,7 @@ public class FundDetailedConfirmedCashForecastReport1 {
 		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public FundDetailedConfirmedCashForecastReport1 setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+	public FundDetailedConfirmedCashForecastReport1 setExtension(List<Extension1> extension) {
 		this.extension = Objects.requireNonNull(extension);
 		return this;
 	}

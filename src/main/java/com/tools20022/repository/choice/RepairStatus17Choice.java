@@ -117,7 +117,7 @@ public class RepairStatus17Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RepairStatus17Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<RepairStatus17Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RepairStatus17Choice.mmObject();
@@ -130,6 +130,16 @@ public class RepairStatus17Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(RepairStatus17Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(RepairStatus17Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -168,7 +178,7 @@ public class RepairStatus17Choice {
 	 * definition} = "Specifies the reason of the repair status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RepairStatus17Choice, List<RepairReason13>> mmReason = new MMMessageAssociationEnd<RepairStatus17Choice, List<RepairReason13>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmRepairReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RepairStatus17Choice.mmObject();
@@ -181,6 +191,16 @@ public class RepairStatus17Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RepairReason13.mmObject();
+		}
+
+		@Override
+		public List<RepairReason13> getValue(RepairStatus17Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(RepairStatus17Choice obj, List<RepairReason13> value) {
+			obj.setReason(value);
 		}
 	};
 

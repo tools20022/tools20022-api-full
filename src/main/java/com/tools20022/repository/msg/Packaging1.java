@@ -102,7 +102,7 @@ public class Packaging1 {
 	 * definition} = "Specifies the type of packaging as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Packaging1, Optional<ExternalPackagingType1Code>> mmType = new MMMessageAttribute<Packaging1, Optional<ExternalPackagingType1Code>>() {
 		{
 			businessComponentTrace_lazy = () -> Packaging.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Packaging1.mmObject();
@@ -114,6 +114,16 @@ public class Packaging1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ExternalPackagingType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ExternalPackagingType1Code> getValue(Packaging1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Packaging1 obj, Optional<ExternalPackagingType1Code> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Nm")
@@ -151,7 +161,7 @@ public class Packaging1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Packaging1, Optional<Max35Text>> mmName = new MMMessageAttribute<Packaging1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Packaging.mmPackagingName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Packaging1.mmObject();
@@ -163,6 +173,16 @@ public class Packaging1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Packaging1 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(Packaging1 obj, Optional<Max35Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 

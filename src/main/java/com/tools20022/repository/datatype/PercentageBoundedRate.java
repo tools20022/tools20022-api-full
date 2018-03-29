@@ -19,13 +19,14 @@ package com.tools20022.repository.datatype;
 
 import com.tools20022.metamodel.MMRate;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.datatype.PercentageBoundedRate.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
 import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
-import javax.xml.bind.annotation.adapters.XmlAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.XmlValue;
 
 /**
  * Rate expressed as a percentage, ie, in hundredths, eg, 0.7 is 7/10 of a
@@ -60,10 +61,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * </li>
  * </ul>
  */
-@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType
 public class PercentageBoundedRate {
 
 	final static private AtomicReference<MMRate> mmObject_lazy = new AtomicReference<>();
+	@XmlValue
 	protected BigDecimal value;
 
 	final static public MMRate mmObject() {
@@ -84,23 +87,23 @@ public class PercentageBoundedRate {
 		return mmObject_lazy.get();
 	}
 
+	public PercentageBoundedRate() {
+	}
+
 	public PercentageBoundedRate(BigDecimal value) {
 		this.value = value;
 	}
 
-	public BigDecimal toBigDecimal() {
+	public BigDecimal getValue() {
 		return value;
 	}
 
-	protected static class InternalXmlAdapter extends XmlAdapter<BigDecimal, PercentageBoundedRate> {
-		@Override
-		public PercentageBoundedRate unmarshal(BigDecimal value) {
-			return new PercentageBoundedRate(value);
-		}
+	public void setValue(BigDecimal value) {
+		this.value = value;
+	}
 
-		@Override
-		public BigDecimal marshal(PercentageBoundedRate typedData) {
-			return typedData.value;
-		}
+	@Override
+	public String toString() {
+		return value == null ? null : value.toString();
 	}
 }

@@ -63,13 +63,17 @@ public class ConstraintSafekeepingPlaceFormatOrLEIRule {
 	 */
 	public static final MMConstraint<SafeKeepingPlace1> forSafeKeepingPlace1 = new MMConstraint<SafeKeepingPlace1>() {
 		{
-			validator = ConstraintSafekeepingPlaceFormatOrLEIRule::checkSafeKeepingPlace1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceFormatOrLEIRule";
 			definition = "SafekeepingPlaceFormat must be present or LEI must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceFormatOrLEIRule.forSafeKeepingPlace2);
 			owner_lazy = () -> SafeKeepingPlace1.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SafekeepingPlaceFormat</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/LEI</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SafeKeepingPlace1 obj) throws Exception {
+			checkSafeKeepingPlace1(obj);
 		}
 	};
 	/**
@@ -103,13 +107,17 @@ public class ConstraintSafekeepingPlaceFormatOrLEIRule {
 	 */
 	public static final MMConstraint<SafeKeepingPlace2> forSafeKeepingPlace2 = new MMConstraint<SafeKeepingPlace2>() {
 		{
-			validator = ConstraintSafekeepingPlaceFormatOrLEIRule::checkSafeKeepingPlace2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceFormatOrLEIRule";
 			definition = "SafekeepingPlaceFormat must be present or LEI must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceFormatOrLEIRule.forSafeKeepingPlace1;
 			owner_lazy = () -> SafeKeepingPlace2.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SafekeepingPlaceFormat</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/LEI</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SafeKeepingPlace2 obj) throws Exception {
+			checkSafeKeepingPlace2(obj);
 		}
 	};
 

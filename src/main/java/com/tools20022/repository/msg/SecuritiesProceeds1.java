@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstructi
 import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecuritiesAccount10;
+import com.tools20022.repository.msg.SecurityIdentification7;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -117,7 +119,7 @@ public class SecuritiesProceeds1 {
 	 * definition} = "Identification of the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesProceeds1, SecurityIdentification7> mmSecurityIdentification = new MMMessageAttribute<SecuritiesProceeds1, SecurityIdentification7>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesProceeds1.mmObject();
@@ -128,7 +130,17 @@ public class SecuritiesProceeds1 {
 			definition = "Identification of the financial instrument.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
+			complexType_lazy = () -> SecurityIdentification7.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification7 getValue(SecuritiesProceeds1 obj) {
+			return obj.getSecurityIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesProceeds1 obj, SecurityIdentification7 value) {
+			obj.setSecurityIdentification(value);
 		}
 	};
 	@XmlElement(name = "PstngQty", required = true)
@@ -166,7 +178,7 @@ public class SecuritiesProceeds1 {
 	 * definition} = "The quantity of financial instruments that is posted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPostingQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesProceeds1, UnitOrFaceAmount1Choice> mmPostingQuantity = new MMMessageAttribute<SecuritiesProceeds1, UnitOrFaceAmount1Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmPostingQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesProceeds1.mmObject();
@@ -179,9 +191,19 @@ public class SecuritiesProceeds1 {
 			minOccurs = 1;
 			complexType_lazy = () -> UnitOrFaceAmount1Choice.mmObject();
 		}
+
+		@Override
+		public UnitOrFaceAmount1Choice getValue(SecuritiesProceeds1 obj) {
+			return obj.getPostingQuantity();
+		}
+
+		@Override
+		public void setValue(SecuritiesProceeds1 obj, UnitOrFaceAmount1Choice value) {
+			obj.setPostingQuantity(value);
+		}
 	};
 	@XmlElement(name = "AcctDtls", required = true)
-	protected List<com.tools20022.repository.msg.SecuritiesAccount10> accountDetails;
+	protected List<SecuritiesAccount10> accountDetails;
 	/**
 	 * 
 	 <p>
@@ -214,7 +236,7 @@ public class SecuritiesProceeds1 {
 	 * "Provides information about the account that is debited/credited."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesProceeds1, List<SecuritiesAccount10>> mmAccountDetails = new MMMessageAssociationEnd<SecuritiesProceeds1, List<SecuritiesAccount10>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesProceeds1.mmObject();
@@ -226,7 +248,17 @@ public class SecuritiesProceeds1 {
 			maxOccurs = 2;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount10.mmObject();
+			type_lazy = () -> SecuritiesAccount10.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesAccount10> getValue(SecuritiesProceeds1 obj) {
+			return obj.getAccountDetails();
+		}
+
+		@Override
+		public void setValue(SecuritiesProceeds1 obj, List<SecuritiesAccount10> value) {
+			obj.setAccountDetails(value);
 		}
 	};
 	@XmlElement(name = "RcncltnDtls")
@@ -258,7 +290,7 @@ public class SecuritiesProceeds1 {
 	 * definition} = "Provides reconciliation information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReconciliationDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesProceeds1, Optional<Max350Text>> mmReconciliationDetails = new MMMessageAttribute<SecuritiesProceeds1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesProceeds1.mmObject();
 			isDerived = false;
@@ -269,6 +301,16 @@ public class SecuritiesProceeds1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(SecuritiesProceeds1 obj) {
+			return obj.getReconciliationDetails();
+		}
+
+		@Override
+		public void setValue(SecuritiesProceeds1 obj, Optional<Max350Text> value) {
+			obj.setReconciliationDetails(value.orElse(null));
 		}
 	};
 
@@ -291,7 +333,7 @@ public class SecuritiesProceeds1 {
 		return securityIdentification;
 	}
 
-	public SecuritiesProceeds1 setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification7 securityIdentification) {
+	public SecuritiesProceeds1 setSecurityIdentification(SecurityIdentification7 securityIdentification) {
 		this.securityIdentification = Objects.requireNonNull(securityIdentification);
 		return this;
 	}
@@ -309,7 +351,7 @@ public class SecuritiesProceeds1 {
 		return accountDetails == null ? accountDetails = new ArrayList<>() : accountDetails;
 	}
 
-	public SecuritiesProceeds1 setAccountDetails(List<com.tools20022.repository.msg.SecuritiesAccount10> accountDetails) {
+	public SecuritiesProceeds1 setAccountDetails(List<SecuritiesAccount10> accountDetails) {
 		this.accountDetails = Objects.requireNonNull(accountDetails);
 		return this;
 	}

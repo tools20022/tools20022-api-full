@@ -27,6 +27,9 @@ import com.tools20022.repository.datatype.MICIdentifier;
 import com.tools20022.repository.datatype.NonNegativeNumber;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification170;
+import com.tools20022.repository.msg.GenericIdentification172;
+import com.tools20022.repository.msg.OpenInterest1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -129,7 +132,7 @@ public class ClearedProduct1 {
 	 * "Exchange or trading venue where product is traded.\r\n\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradingVenue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClearedProduct1, MICIdentifier> mmTradingVenue = new MMMessageAttribute<ClearedProduct1, MICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmMIC;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ClearedProduct1.mmObject();
@@ -141,6 +144,16 @@ public class ClearedProduct1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
+		}
+
+		@Override
+		public MICIdentifier getValue(ClearedProduct1 obj) {
+			return obj.getTradingVenue();
+		}
+
+		@Override
+		public void setValue(ClearedProduct1 obj, MICIdentifier value) {
+			obj.setTradingVenue(value);
 		}
 	};
 	@XmlElement(name = "CCPPdctId", required = true)
@@ -172,7 +185,7 @@ public class ClearedProduct1 {
 	 * definition} = "CCP's unique identification for product cleared."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCCPProductIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ClearedProduct1, GenericIdentification172> mmCCPProductIdentification = new MMMessageAssociationEnd<ClearedProduct1, GenericIdentification172>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ClearedProduct1.mmObject();
 			isDerived = false;
@@ -183,7 +196,17 @@ public class ClearedProduct1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification172.mmObject();
+			type_lazy = () -> GenericIdentification172.mmObject();
+		}
+
+		@Override
+		public GenericIdentification172 getValue(ClearedProduct1 obj) {
+			return obj.getCCPProductIdentification();
+		}
+
+		@Override
+		public void setValue(ClearedProduct1 obj, GenericIdentification172 value) {
+			obj.setCCPProductIdentification(value);
 		}
 	};
 	@XmlElement(name = "UvrslPdctId")
@@ -220,7 +243,7 @@ public class ClearedProduct1 {
 	 * definition} = "Standard unique identification of product cleared."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUniversalProductIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ClearedProduct1, Optional<GenericIdentification170>> mmUniversalProductIdentification = new MMMessageAssociationEnd<ClearedProduct1, Optional<GenericIdentification170>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmUniqueTradeIdentifier;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ClearedProduct1.mmObject();
@@ -232,7 +255,17 @@ public class ClearedProduct1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification170.mmObject();
+			type_lazy = () -> GenericIdentification170.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification170> getValue(ClearedProduct1 obj) {
+			return obj.getUniversalProductIdentification();
+		}
+
+		@Override
+		public void setValue(ClearedProduct1 obj, Optional<GenericIdentification170> value) {
+			obj.setUniversalProductIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Pdct", required = true)
@@ -269,7 +302,7 @@ public class ClearedProduct1 {
 	 * "Choice between the major categories of financial instruments."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProduct = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ClearedProduct1, Product1Choice> mmProduct = new MMMessageAssociationEnd<ClearedProduct1, Product1Choice>() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmProductType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ClearedProduct1.mmObject();
@@ -282,6 +315,16 @@ public class ClearedProduct1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Product1Choice.mmObject();
+		}
+
+		@Override
+		public Product1Choice getValue(ClearedProduct1 obj) {
+			return obj.getProduct();
+		}
+
+		@Override
+		public void setValue(ClearedProduct1 obj, Product1Choice value) {
+			obj.setProduct(value);
 		}
 	};
 	@XmlElement(name = "OpnIntrst", required = true)
@@ -319,7 +362,7 @@ public class ClearedProduct1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOpenInterest = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ClearedProduct1, OpenInterest1> mmOpenInterest = new MMMessageAssociationEnd<ClearedProduct1, OpenInterest1>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmInterest;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ClearedProduct1.mmObject();
@@ -331,7 +374,17 @@ public class ClearedProduct1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OpenInterest1.mmObject();
+			type_lazy = () -> OpenInterest1.mmObject();
+		}
+
+		@Override
+		public OpenInterest1 getValue(ClearedProduct1 obj) {
+			return obj.getOpenInterest();
+		}
+
+		@Override
+		public void setValue(ClearedProduct1 obj, OpenInterest1 value) {
+			obj.setOpenInterest(value);
 		}
 	};
 	@XmlElement(name = "TrdsClrd")
@@ -364,7 +417,7 @@ public class ClearedProduct1 {
 	 * definition} = "Number of trades cleared over the reporting period."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradesCleared = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClearedProduct1, Optional<NonNegativeNumber>> mmTradesCleared = new MMMessageAttribute<ClearedProduct1, Optional<NonNegativeNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ClearedProduct1.mmObject();
 			isDerived = false;
@@ -375,6 +428,16 @@ public class ClearedProduct1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> NonNegativeNumber.mmObject();
+		}
+
+		@Override
+		public Optional<NonNegativeNumber> getValue(ClearedProduct1 obj) {
+			return obj.getTradesCleared();
+		}
+
+		@Override
+		public void setValue(ClearedProduct1 obj, Optional<NonNegativeNumber> value) {
+			obj.setTradesCleared(value.orElse(null));
 		}
 	};
 
@@ -408,7 +471,7 @@ public class ClearedProduct1 {
 		return cCPProductIdentification;
 	}
 
-	public ClearedProduct1 setCCPProductIdentification(com.tools20022.repository.msg.GenericIdentification172 cCPProductIdentification) {
+	public ClearedProduct1 setCCPProductIdentification(GenericIdentification172 cCPProductIdentification) {
 		this.cCPProductIdentification = Objects.requireNonNull(cCPProductIdentification);
 		return this;
 	}
@@ -417,7 +480,7 @@ public class ClearedProduct1 {
 		return universalProductIdentification == null ? Optional.empty() : Optional.of(universalProductIdentification);
 	}
 
-	public ClearedProduct1 setUniversalProductIdentification(com.tools20022.repository.msg.GenericIdentification170 universalProductIdentification) {
+	public ClearedProduct1 setUniversalProductIdentification(GenericIdentification170 universalProductIdentification) {
 		this.universalProductIdentification = universalProductIdentification;
 		return this;
 	}
@@ -435,7 +498,7 @@ public class ClearedProduct1 {
 		return openInterest;
 	}
 
-	public ClearedProduct1 setOpenInterest(com.tools20022.repository.msg.OpenInterest1 openInterest) {
+	public ClearedProduct1 setOpenInterest(OpenInterest1 openInterest) {
 		this.openInterest = Objects.requireNonNull(openInterest);
 		return this;
 	}

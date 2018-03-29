@@ -111,7 +111,7 @@ public class SubBalanceInformation3 {
 	 * definition} = "Quantity of securities in the sub-balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubBalanceInformation3, SubBalanceQuantity1Choice> mmQuantity = new MMMessageAttribute<SubBalanceInformation3, SubBalanceQuantity1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSubBalanceQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubBalanceInformation3.mmObject();
@@ -123,6 +123,16 @@ public class SubBalanceInformation3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SubBalanceQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public SubBalanceQuantity1Choice getValue(SubBalanceInformation3 obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(SubBalanceInformation3 obj, SubBalanceQuantity1Choice value) {
+			obj.setQuantity(value);
 		}
 	};
 	@XmlElement(name = "SubBalTp", required = true)
@@ -159,7 +169,7 @@ public class SubBalanceInformation3 {
 	 * definition} = "Type of subbalance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSubBalanceType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SubBalanceInformation3, SubBalanceType2Choice> mmSubBalanceType = new MMMessageAssociationEnd<SubBalanceInformation3, SubBalanceType2Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubBalanceInformation3.mmObject();
@@ -172,6 +182,16 @@ public class SubBalanceInformation3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SubBalanceType2Choice.mmObject();
+		}
+
+		@Override
+		public SubBalanceType2Choice getValue(SubBalanceInformation3 obj) {
+			return obj.getSubBalanceType();
+		}
+
+		@Override
+		public void setValue(SubBalanceInformation3 obj, SubBalanceType2Choice value) {
+			obj.setSubBalanceType(value);
 		}
 	};
 

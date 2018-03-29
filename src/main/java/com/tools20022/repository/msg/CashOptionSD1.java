@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max3Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Period3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -150,7 +151,7 @@ public class CashOptionSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashOptionSD1, Max350Text> mmPlaceAndName = new MMMessageAttribute<CashOptionSD1, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashOptionSD1.mmObject();
 			isDerived = false;
@@ -162,6 +163,16 @@ public class CashOptionSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CashOptionSD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CashOptionSD1 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "RinvstmtIncmClssfctn")
@@ -197,7 +208,7 @@ public class CashOptionSD1 {
 	 * "Income classification of the cash proceeds for dividend reinvestment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReinvestmentIncomeClassification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashOptionSD1, Optional<ReinvestmentIncomeClassification1Code>> mmReinvestmentIncomeClassification = new MMMessageAttribute<CashOptionSD1, Optional<ReinvestmentIncomeClassification1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashOptionSD1.mmObject();
 			isDerived = false;
@@ -209,6 +220,16 @@ public class CashOptionSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ReinvestmentIncomeClassification1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ReinvestmentIncomeClassification1Code> getValue(CashOptionSD1 obj) {
+			return obj.getReinvestmentIncomeClassification();
+		}
+
+		@Override
+		public void setValue(CashOptionSD1 obj, Optional<ReinvestmentIncomeClassification1Code> value) {
+			obj.setReinvestmentIncomeClassification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCPayMtd")
@@ -252,7 +273,7 @@ public class CashOptionSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCPayMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashOptionSD1, Optional<Max3Text>> mmDTCPayMethod = new MMMessageAttribute<CashOptionSD1, Optional<Max3Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashOptionSD1.mmObject();
 			isDerived = false;
@@ -265,6 +286,16 @@ public class CashOptionSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max3Text> getValue(CashOptionSD1 obj) {
+			return obj.getDTCPayMethod();
+		}
+
+		@Override
+		public void setValue(CashOptionSD1 obj, Optional<Max3Text> value) {
+			obj.setDTCPayMethod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCPayOrdr")
@@ -308,7 +339,7 @@ public class CashOptionSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCPayOrder = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashOptionSD1, Optional<Max3Text>> mmDTCPayOrder = new MMMessageAttribute<CashOptionSD1, Optional<Max3Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashOptionSD1.mmObject();
 			isDerived = false;
@@ -321,6 +352,16 @@ public class CashOptionSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max3Text> getValue(CashOptionSD1 obj) {
+			return obj.getDTCPayOrder();
+		}
+
+		@Override
+		public void setValue(CashOptionSD1 obj, Optional<Max3Text> value) {
+			obj.setDTCPayOrder(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EntitlmntClctnMtd")
@@ -364,7 +405,7 @@ public class CashOptionSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEntitlementCalculationMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashOptionSD1, Optional<DTCEntitlementCalculationMethod1Code>> mmEntitlementCalculationMethod = new MMMessageAttribute<CashOptionSD1, Optional<DTCEntitlementCalculationMethod1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashOptionSD1.mmObject();
 			isDerived = false;
@@ -377,6 +418,16 @@ public class CashOptionSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCEntitlementCalculationMethod1Code.mmObject();
+		}
+
+		@Override
+		public Optional<DTCEntitlementCalculationMethod1Code> getValue(CashOptionSD1 obj) {
+			return obj.getEntitlementCalculationMethod();
+		}
+
+		@Override
+		public void setValue(CashOptionSD1 obj, Optional<DTCEntitlementCalculationMethod1Code> value) {
+			obj.setEntitlementCalculationMethod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EstmtdRateFlg")
@@ -419,7 +470,7 @@ public class CashOptionSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEstimatedRateFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashOptionSD1, Optional<YesNoIndicator>> mmEstimatedRateFlag = new MMMessageAttribute<CashOptionSD1, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashOptionSD1.mmObject();
 			isDerived = false;
@@ -432,6 +483,16 @@ public class CashOptionSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CashOptionSD1 obj) {
+			return obj.getEstimatedRateFlag();
+		}
+
+		@Override
+		public void setValue(CashOptionSD1 obj, Optional<YesNoIndicator> value) {
+			obj.setEstimatedRateFlag(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NRATaxRptblFlg")
@@ -476,7 +537,7 @@ public class CashOptionSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNRATaxReportableFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashOptionSD1, Optional<YesNoIndicator>> mmNRATaxReportableFlag = new MMMessageAttribute<CashOptionSD1, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashOptionSD1.mmObject();
 			isDerived = false;
@@ -489,6 +550,16 @@ public class CashOptionSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CashOptionSD1 obj) {
+			return obj.getNRATaxReportableFlag();
+		}
+
+		@Override
+		public void setValue(CashOptionSD1 obj, Optional<YesNoIndicator> value) {
+			obj.setNRATaxReportableFlag(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrtctChrgFlg")
@@ -533,7 +604,7 @@ public class CashOptionSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProtectChargeFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashOptionSD1, Optional<YesNoIndicator>> mmProtectChargeFlag = new MMMessageAttribute<CashOptionSD1, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashOptionSD1.mmObject();
 			isDerived = false;
@@ -546,6 +617,16 @@ public class CashOptionSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CashOptionSD1 obj) {
+			return obj.getProtectChargeFlag();
+		}
+
+		@Override
+		public void setValue(CashOptionSD1 obj, Optional<YesNoIndicator> value) {
+			obj.setProtectChargeFlag(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DclrdCshRate")
@@ -590,7 +671,7 @@ public class CashOptionSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeclaredCashRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashOptionSD1, Optional<PriceFormatSD1Choice>> mmDeclaredCashRate = new MMMessageAttribute<CashOptionSD1, Optional<PriceFormatSD1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashOptionSD1.mmObject();
 			isDerived = false;
@@ -603,6 +684,16 @@ public class CashOptionSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PriceFormatSD1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormatSD1Choice> getValue(CashOptionSD1 obj) {
+			return obj.getDeclaredCashRate();
+		}
+
+		@Override
+		public void setValue(CashOptionSD1 obj, Optional<PriceFormatSD1Choice> value) {
+			obj.setDeclaredCashRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DclrdGrssRate")
@@ -647,7 +738,7 @@ public class CashOptionSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeclaredGrossRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashOptionSD1, Optional<PriceFormatSD1Choice>> mmDeclaredGrossRate = new MMMessageAttribute<CashOptionSD1, Optional<PriceFormatSD1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashOptionSD1.mmObject();
 			isDerived = false;
@@ -660,6 +751,16 @@ public class CashOptionSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PriceFormatSD1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormatSD1Choice> getValue(CashOptionSD1 obj) {
+			return obj.getDeclaredGrossRate();
+		}
+
+		@Override
+		public void setValue(CashOptionSD1 obj, Optional<PriceFormatSD1Choice> value) {
+			obj.setDeclaredGrossRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DclrdNetRate")
@@ -704,7 +805,7 @@ public class CashOptionSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeclaredNetRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashOptionSD1, Optional<PriceFormatSD1Choice>> mmDeclaredNetRate = new MMMessageAttribute<CashOptionSD1, Optional<PriceFormatSD1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashOptionSD1.mmObject();
 			isDerived = false;
@@ -717,6 +818,16 @@ public class CashOptionSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PriceFormatSD1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormatSD1Choice> getValue(CashOptionSD1 obj) {
+			return obj.getDeclaredNetRate();
+		}
+
+		@Override
+		public void setValue(CashOptionSD1 obj, Optional<PriceFormatSD1Choice> value) {
+			obj.setDeclaredNetRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DclrdFeeRate")
@@ -761,7 +872,7 @@ public class CashOptionSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeclaredFeeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashOptionSD1, Optional<PriceFormatSD1Choice>> mmDeclaredFeeRate = new MMMessageAttribute<CashOptionSD1, Optional<PriceFormatSD1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashOptionSD1.mmObject();
 			isDerived = false;
@@ -774,6 +885,16 @@ public class CashOptionSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PriceFormatSD1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormatSD1Choice> getValue(CashOptionSD1 obj) {
+			return obj.getDeclaredFeeRate();
+		}
+
+		@Override
+		public void setValue(CashOptionSD1 obj, Optional<PriceFormatSD1Choice> value) {
+			obj.setDeclaredFeeRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCUSTaxInstrPrd")
@@ -818,7 +939,7 @@ public class CashOptionSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCUSTaxInstructionPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashOptionSD1, Optional<Period3>> mmDTCUSTaxInstructionPeriod = new MMMessageAttribute<CashOptionSD1, Optional<Period3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashOptionSD1.mmObject();
 			isDerived = false;
@@ -830,7 +951,17 @@ public class CashOptionSD1 {
 			nextVersions_lazy = () -> Arrays.asList(CashOptionSD6.mmDTCUSTaxInstructionPeriod);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Period3.mmObject();
+			complexType_lazy = () -> Period3.mmObject();
+		}
+
+		@Override
+		public Optional<Period3> getValue(CashOptionSD1 obj) {
+			return obj.getDTCUSTaxInstructionPeriod();
+		}
+
+		@Override
+		public void setValue(CashOptionSD1 obj, Optional<Period3> value) {
+			obj.setDTCUSTaxInstructionPeriod(value.orElse(null));
 		}
 	};
 
@@ -964,7 +1095,7 @@ public class CashOptionSD1 {
 		return dTCUSTaxInstructionPeriod == null ? Optional.empty() : Optional.of(dTCUSTaxInstructionPeriod);
 	}
 
-	public CashOptionSD1 setDTCUSTaxInstructionPeriod(com.tools20022.repository.msg.Period3 dTCUSTaxInstructionPeriod) {
+	public CashOptionSD1 setDTCUSTaxInstructionPeriod(Period3 dTCUSTaxInstructionPeriod) {
 		this.dTCUSTaxInstructionPeriod = dTCUSTaxInstructionPeriod;
 		return this;
 	}

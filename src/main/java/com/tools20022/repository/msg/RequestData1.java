@@ -122,7 +122,7 @@ public class RequestData1 {
 	 * definition} = "Unique identification of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequestData1, Max35Text> mmMessageIdentification = new MMMessageAttribute<RequestData1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestData1.mmObject();
 			isDerived = false;
@@ -133,6 +133,16 @@ public class RequestData1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(RequestData1 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(RequestData1 obj, Max35Text value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "ReqTp", required = true)
@@ -163,7 +173,7 @@ public class RequestData1 {
 	 * definition} = "Description of the type of request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequestData1, Max4Text> mmRequestType = new MMMessageAttribute<RequestData1, Max4Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestData1.mmObject();
 			isDerived = false;
@@ -174,6 +184,16 @@ public class RequestData1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4Text.mmObject();
+		}
+
+		@Override
+		public Max4Text getValue(RequestData1 obj) {
+			return obj.getRequestType();
+		}
+
+		@Override
+		public void setValue(RequestData1 obj, Max4Text value) {
+			obj.setRequestType(value);
 		}
 	};
 	@XmlElement(name = "ReqdActvtnDt", required = true)
@@ -206,7 +226,7 @@ public class RequestData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestedActivationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequestData1, ISODate> mmRequestedActivationDate = new MMMessageAttribute<RequestData1, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestData1.mmObject();
 			isDerived = false;
@@ -217,6 +237,16 @@ public class RequestData1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(RequestData1 obj) {
+			return obj.getRequestedActivationDate();
+		}
+
+		@Override
+		public void setValue(RequestData1 obj, ISODate value) {
+			obj.setRequestedActivationDate(value);
 		}
 	};
 	@XmlElement(name = "ReqSvcr")
@@ -247,7 +277,7 @@ public class RequestData1 {
 	 * definition} = "Describes the central system servicing the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRequestServicer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RequestData1, Optional<PartyIdentification73Choice>> mmRequestServicer = new MMMessageAssociationEnd<RequestData1, Optional<PartyIdentification73Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestData1.mmObject();
 			isDerived = false;
@@ -259,6 +289,16 @@ public class RequestData1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification73Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification73Choice> getValue(RequestData1 obj) {
+			return obj.getRequestServicer();
+		}
+
+		@Override
+		public void setValue(RequestData1 obj, Optional<PartyIdentification73Choice> value) {
+			obj.setRequestServicer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NetSvcPtcptId", required = true)
@@ -289,7 +329,7 @@ public class RequestData1 {
 	 * definition} = "Describes the participant issuing the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNetServiceParticipantIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RequestData1, PartyIdentification73Choice> mmNetServiceParticipantIdentification = new MMMessageAssociationEnd<RequestData1, PartyIdentification73Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestData1.mmObject();
 			isDerived = false;
@@ -301,6 +341,16 @@ public class RequestData1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification73Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification73Choice getValue(RequestData1 obj) {
+			return obj.getNetServiceParticipantIdentification();
+		}
+
+		@Override
+		public void setValue(RequestData1 obj, PartyIdentification73Choice value) {
+			obj.setNetServiceParticipantIdentification(value);
 		}
 	};
 	@XmlElement(name = "NetSvcTp")
@@ -332,7 +382,7 @@ public class RequestData1 {
 	 * "Describes the type of netting service supporting the net report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNetServiceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequestData1, Optional<Max35Text>> mmNetServiceType = new MMMessageAttribute<RequestData1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestData1.mmObject();
 			isDerived = false;
@@ -343,6 +393,16 @@ public class RequestData1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(RequestData1 obj) {
+			return obj.getNetServiceType();
+		}
+
+		@Override
+		public void setValue(RequestData1 obj, Optional<Max35Text> value) {
+			obj.setNetServiceType(value.orElse(null));
 		}
 	};
 

@@ -27,6 +27,7 @@ import com.tools20022.repository.choice.PartyIdentification25Choice;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.Quote;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Price1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -133,7 +134,7 @@ public class QuoteSide1 {
 	 * "Indicates the price of the instrument, applicable to the quote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QuoteSide1, Price1> mmPrice = new MMMessageAttribute<QuoteSide1, Price1>() {
 		{
 			businessElementTrace_lazy = () -> Quote.mmPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteSide1.mmObject();
@@ -145,11 +146,21 @@ public class QuoteSide1 {
 			definition = "Indicates the price of the instrument, applicable to the quote.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
+			complexType_lazy = () -> Price1.mmObject();
+		}
+
+		@Override
+		public Price1 getValue(QuoteSide1 obj) {
+			return obj.getPrice();
+		}
+
+		@Override
+		public void setValue(QuoteSide1 obj, Price1 value) {
+			obj.setPrice(value);
 		}
 	};
 	@XmlElement(name = "MktPric")
-	protected List<com.tools20022.repository.msg.Price1> marketPrice;
+	protected List<Price1> marketPrice;
 	/**
 	 * 
 	 <p>
@@ -184,7 +195,7 @@ public class QuoteSide1 {
 	 * "Used by markets to indicate the current best bid and offer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarketPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QuoteSide1, List<Price1>> mmMarketPrice = new MMMessageAttribute<QuoteSide1, List<Price1>>() {
 		{
 			businessElementTrace_lazy = () -> Quote.mmMarketPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteSide1.mmObject();
@@ -195,7 +206,17 @@ public class QuoteSide1 {
 			name = "MarketPrice";
 			definition = "Used by markets to indicate the current best bid and offer.";
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
+			complexType_lazy = () -> Price1.mmObject();
+		}
+
+		@Override
+		public List<Price1> getValue(QuoteSide1 obj) {
+			return obj.getMarketPrice();
+		}
+
+		@Override
+		public void setValue(QuoteSide1 obj, List<Price1> value) {
+			obj.setMarketPrice(value);
 		}
 	};
 	@XmlElement(name = "MinQty")
@@ -236,7 +257,7 @@ public class QuoteSide1 {
 	 * "Specifies the minimal quantity of the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QuoteSide1, List<FinancialInstrumentQuantityChoice>> mmMinimumQuantity = new MMMessageAttribute<QuoteSide1, List<FinancialInstrumentQuantityChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Quote.mmMinimumQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteSide1.mmObject();
@@ -248,6 +269,16 @@ public class QuoteSide1 {
 			definition = "Specifies the minimal quantity of the financial instrument.";
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
+		}
+
+		@Override
+		public List<FinancialInstrumentQuantityChoice> getValue(QuoteSide1 obj) {
+			return obj.getMinimumQuantity();
+		}
+
+		@Override
+		public void setValue(QuoteSide1 obj, List<FinancialInstrumentQuantityChoice> value) {
+			obj.setMinimumQuantity(value);
 		}
 	};
 	@XmlElement(name = "Qty")
@@ -287,7 +318,7 @@ public class QuoteSide1 {
 	 * definition} = "Quantity of a Financial Instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QuoteSide1, Optional<FinancialInstrumentQuantityChoice>> mmQuantity = new MMMessageAttribute<QuoteSide1, Optional<FinancialInstrumentQuantityChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Quote.mmQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteSide1.mmObject();
@@ -300,6 +331,16 @@ public class QuoteSide1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantityChoice> getValue(QuoteSide1 obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(QuoteSide1 obj, Optional<FinancialInstrumentQuantityChoice> value) {
+			obj.setQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MaxQty")
@@ -340,7 +381,7 @@ public class QuoteSide1 {
 	 * "Specifies the maximum quantity of the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QuoteSide1, Optional<FinancialInstrumentQuantityChoice>> mmMaximumQuantity = new MMMessageAttribute<QuoteSide1, Optional<FinancialInstrumentQuantityChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Quote.mmMaximumQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteSide1.mmObject();
@@ -353,6 +394,16 @@ public class QuoteSide1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantityChoice> getValue(QuoteSide1 obj) {
+			return obj.getMaximumQuantity();
+		}
+
+		@Override
+		public void setValue(QuoteSide1 obj, Optional<FinancialInstrumentQuantityChoice> value) {
+			obj.setMaximumQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SrcOfQt")
@@ -388,7 +439,7 @@ public class QuoteSide1 {
 	 * definition} = "Source of the quote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSourceOfQuote = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<QuoteSide1, Optional<PartyIdentification25Choice>> mmSourceOfQuote = new MMMessageAssociationEnd<QuoteSide1, Optional<PartyIdentification25Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteSide1.mmObject();
@@ -401,6 +452,16 @@ public class QuoteSide1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification25Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification25Choice> getValue(QuoteSide1 obj) {
+			return obj.getSourceOfQuote();
+		}
+
+		@Override
+		public void setValue(QuoteSide1 obj, Optional<PartyIdentification25Choice> value) {
+			obj.setSourceOfQuote(value.orElse(null));
 		}
 	};
 
@@ -425,7 +486,7 @@ public class QuoteSide1 {
 		return price;
 	}
 
-	public QuoteSide1 setPrice(com.tools20022.repository.msg.Price1 price) {
+	public QuoteSide1 setPrice(Price1 price) {
 		this.price = Objects.requireNonNull(price);
 		return this;
 	}
@@ -434,7 +495,7 @@ public class QuoteSide1 {
 		return marketPrice == null ? marketPrice = new ArrayList<>() : marketPrice;
 	}
 
-	public QuoteSide1 setMarketPrice(List<com.tools20022.repository.msg.Price1> marketPrice) {
+	public QuoteSide1 setMarketPrice(List<Price1> marketPrice) {
 		this.marketPrice = Objects.requireNonNull(marketPrice);
 		return this;
 	}

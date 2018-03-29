@@ -105,7 +105,7 @@ public class ATMConfigurationParameter1 {
 	 * definition} = "Type of the ATM configuration."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMConfigurationParameter1, DataSetCategory7Code> mmType = new MMMessageAttribute<ATMConfigurationParameter1, DataSetCategory7Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMConfigurationParameter1.mmObject();
 			isDerived = false;
@@ -116,6 +116,16 @@ public class ATMConfigurationParameter1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DataSetCategory7Code.mmObject();
+		}
+
+		@Override
+		public DataSetCategory7Code getValue(ATMConfigurationParameter1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(ATMConfigurationParameter1 obj, DataSetCategory7Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Vrsn", required = true)
@@ -147,7 +157,7 @@ public class ATMConfigurationParameter1 {
 	 * definition} = "Active version of the configuration."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMConfigurationParameter1, Max35Text> mmVersion = new MMMessageAttribute<ATMConfigurationParameter1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMConfigurationParameter1.mmObject();
 			isDerived = false;
@@ -158,6 +168,16 @@ public class ATMConfigurationParameter1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ATMConfigurationParameter1 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(ATMConfigurationParameter1 obj, Max35Text value) {
+			obj.setVersion(value);
 		}
 	};
 

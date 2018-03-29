@@ -102,7 +102,7 @@ public class InRepairStatusReason1 {
 	 * definition} = "Reason for an in repair status in free format text."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InRepairStatusReason1, Max350Text> mmAdditionalInformation = new MMMessageAttribute<InRepairStatusReason1, Max350Text>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InRepairStatusReason1.mmObject();
@@ -114,6 +114,16 @@ public class InRepairStatusReason1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(InRepairStatusReason1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(InRepairStatusReason1 obj, Max350Text value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 

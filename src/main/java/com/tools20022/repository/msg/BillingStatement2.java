@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -147,7 +148,7 @@ public class BillingStatement2 {
 	 * BillingStatement1.mmStatementIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BillingStatement2, Max35Text> mmStatementIdentification = new MMMessageAttribute<BillingStatement2, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BillingStatement2.mmObject();
@@ -160,6 +161,16 @@ public class BillingStatement2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(BillingStatement2 obj) {
+			return obj.getStatementIdentification();
+		}
+
+		@Override
+		public void setValue(BillingStatement2 obj, Max35Text value) {
+			obj.setStatementIdentification(value);
 		}
 	};
 	@XmlElement(name = "FrToDt", required = true)
@@ -203,7 +214,7 @@ public class BillingStatement2 {
 	 * BillingStatement1.mmFromToDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFromToDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BillingStatement2, DatePeriod1> mmFromToDate = new MMMessageAttribute<BillingStatement2, DatePeriod1>() {
 		{
 			businessElementTrace_lazy = () -> Invoice.mmPeriodCovered;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BillingStatement2.mmObject();
@@ -215,7 +226,17 @@ public class BillingStatement2 {
 			previousVersion_lazy = () -> BillingStatement1.mmFromToDate;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.DatePeriod1.mmObject();
+			complexType_lazy = () -> DatePeriod1.mmObject();
+		}
+
+		@Override
+		public DatePeriod1 getValue(BillingStatement2 obj) {
+			return obj.getFromToDate();
+		}
+
+		@Override
+		public void setValue(BillingStatement2 obj, DatePeriod1 value) {
+			obj.setFromToDate(value);
 		}
 	};
 	@XmlElement(name = "CreDtTm", required = true)
@@ -257,7 +278,7 @@ public class BillingStatement2 {
 	 * BillingStatement1.mmCreationDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BillingStatement2, ISODateTime> mmCreationDateTime = new MMMessageAttribute<BillingStatement2, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BillingStatement2.mmObject();
@@ -270,6 +291,16 @@ public class BillingStatement2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(BillingStatement2 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(BillingStatement2 obj, ISODateTime value) {
+			obj.setCreationDateTime(value);
 		}
 	};
 	@XmlElement(name = "Sts", required = true)
@@ -312,7 +343,7 @@ public class BillingStatement2 {
 	 * BillingStatement1.mmStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BillingStatement2, BillingStatementStatus1Code> mmStatus = new MMMessageAttribute<BillingStatement2, BillingStatementStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BillingStatement2.mmObject();
@@ -325,6 +356,16 @@ public class BillingStatement2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BillingStatementStatus1Code.mmObject();
+		}
+
+		@Override
+		public BillingStatementStatus1Code getValue(BillingStatement2 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(BillingStatement2 obj, BillingStatementStatus1Code value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "AcctChrtcs", required = true)
@@ -366,7 +407,7 @@ public class BillingStatement2 {
 	 * BillingStatement1.mmAccountCharacteristics}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountCharacteristics = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BillingStatement2, CashAccountCharacteristics2> mmAccountCharacteristics = new MMMessageAssociationEnd<BillingStatement2, CashAccountCharacteristics2>() {
 		{
 			businessElementTrace_lazy = () -> CashAccountContract.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BillingStatement2.mmObject();
@@ -379,11 +420,21 @@ public class BillingStatement2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccountCharacteristics2.mmObject();
+			type_lazy = () -> CashAccountCharacteristics2.mmObject();
+		}
+
+		@Override
+		public CashAccountCharacteristics2 getValue(BillingStatement2 obj) {
+			return obj.getAccountCharacteristics();
+		}
+
+		@Override
+		public void setValue(BillingStatement2 obj, CashAccountCharacteristics2 value) {
+			obj.setAccountCharacteristics(value);
 		}
 	};
 	@XmlElement(name = "RateData")
-	protected List<com.tools20022.repository.msg.BillingRate1> rateData;
+	protected List<BillingRate1> rateData;
 	/**
 	 * 
 	 <p>
@@ -417,7 +468,7 @@ public class BillingStatement2 {
 	 * BillingStatement1.mmRateData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BillingStatement2, List<BillingRate1>> mmRateData = new MMMessageAssociationEnd<BillingStatement2, List<BillingRate1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BillingStatement2.mmObject();
 			isDerived = false;
@@ -428,11 +479,21 @@ public class BillingStatement2 {
 			previousVersion_lazy = () -> BillingStatement1.mmRateData;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BillingRate1.mmObject();
+			type_lazy = () -> BillingRate1.mmObject();
+		}
+
+		@Override
+		public List<BillingRate1> getValue(BillingStatement2 obj) {
+			return obj.getRateData();
+		}
+
+		@Override
+		public void setValue(BillingStatement2 obj, List<BillingRate1> value) {
+			obj.setRateData(value);
 		}
 	};
 	@XmlElement(name = "CcyXchg")
-	protected List<com.tools20022.repository.msg.CurrencyExchange6> currencyExchange;
+	protected List<CurrencyExchange6> currencyExchange;
 	/**
 	 * 
 	 <p>
@@ -469,7 +530,7 @@ public class BillingStatement2 {
 	 * BillingStatement1.mmCurrencyExchange}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCurrencyExchange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BillingStatement2, List<CurrencyExchange6>> mmCurrencyExchange = new MMMessageAssociationEnd<BillingStatement2, List<CurrencyExchange6>>() {
 		{
 			businessElementTrace_lazy = () -> Invoice.mmCurrencyExchange;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BillingStatement2.mmObject();
@@ -481,11 +542,21 @@ public class BillingStatement2 {
 			previousVersion_lazy = () -> BillingStatement1.mmCurrencyExchange;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CurrencyExchange6.mmObject();
+			type_lazy = () -> CurrencyExchange6.mmObject();
+		}
+
+		@Override
+		public List<CurrencyExchange6> getValue(BillingStatement2 obj) {
+			return obj.getCurrencyExchange();
+		}
+
+		@Override
+		public void setValue(BillingStatement2 obj, List<CurrencyExchange6> value) {
+			obj.setCurrencyExchange(value);
 		}
 	};
 	@XmlElement(name = "Bal")
-	protected List<com.tools20022.repository.msg.BillingBalance1> balance;
+	protected List<BillingBalance1> balance;
 	/**
 	 * 
 	 <p>
@@ -524,7 +595,7 @@ public class BillingStatement2 {
 	 * BillingStatement1.mmBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BillingStatement2, List<BillingBalance1>> mmBalance = new MMMessageAssociationEnd<BillingStatement2, List<BillingBalance1>>() {
 		{
 			businessElementTrace_lazy = () -> CashAccount.mmCashBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BillingStatement2.mmObject();
@@ -536,11 +607,21 @@ public class BillingStatement2 {
 			previousVersion_lazy = () -> BillingStatement1.mmBalance;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BillingBalance1.mmObject();
+			type_lazy = () -> BillingBalance1.mmObject();
+		}
+
+		@Override
+		public List<BillingBalance1> getValue(BillingStatement2 obj) {
+			return obj.getBalance();
+		}
+
+		@Override
+		public void setValue(BillingStatement2 obj, List<BillingBalance1> value) {
+			obj.setBalance(value);
 		}
 	};
 	@XmlElement(name = "Compstn")
-	protected List<com.tools20022.repository.msg.BillingCompensation1> compensation;
+	protected List<BillingCompensation1> compensation;
 	/**
 	 * 
 	 <p>
@@ -579,7 +660,7 @@ public class BillingStatement2 {
 	 * BillingStatement1.mmCompensation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCompensation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BillingStatement2, List<BillingCompensation1>> mmCompensation = new MMMessageAssociationEnd<BillingStatement2, List<BillingCompensation1>>() {
 		{
 			businessComponentTrace_lazy = () -> CashAccountService.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.BillingStatement2.mmObject();
@@ -591,11 +672,21 @@ public class BillingStatement2 {
 			previousVersion_lazy = () -> BillingStatement1.mmCompensation;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BillingCompensation1.mmObject();
+			type_lazy = () -> BillingCompensation1.mmObject();
+		}
+
+		@Override
+		public List<BillingCompensation1> getValue(BillingStatement2 obj) {
+			return obj.getCompensation();
+		}
+
+		@Override
+		public void setValue(BillingStatement2 obj, List<BillingCompensation1> value) {
+			obj.setCompensation(value);
 		}
 	};
 	@XmlElement(name = "Svc")
-	protected List<com.tools20022.repository.msg.BillingService2> service;
+	protected List<BillingService2> service;
 	/**
 	 * 
 	 <p>
@@ -634,7 +725,7 @@ public class BillingStatement2 {
 	 * BillingStatement1.mmService}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmService = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BillingStatement2, List<BillingService2>> mmService = new MMMessageAssociationEnd<BillingStatement2, List<BillingService2>>() {
 		{
 			businessComponentTrace_lazy = () -> CashAccountService.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.BillingStatement2.mmObject();
@@ -646,11 +737,21 @@ public class BillingStatement2 {
 			previousVersion_lazy = () -> BillingStatement1.mmService;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BillingService2.mmObject();
+			type_lazy = () -> BillingService2.mmObject();
+		}
+
+		@Override
+		public List<BillingService2> getValue(BillingStatement2 obj) {
+			return obj.getService();
+		}
+
+		@Override
+		public void setValue(BillingStatement2 obj, List<BillingService2> value) {
+			obj.setService(value);
 		}
 	};
 	@XmlElement(name = "TaxRgn")
-	protected List<com.tools20022.repository.msg.BillingTaxRegion1> taxRegion;
+	protected List<BillingTaxRegion1> taxRegion;
 	/**
 	 * 
 	 <p>
@@ -688,7 +789,7 @@ public class BillingStatement2 {
 	 * BillingStatement1.mmTaxRegion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTaxRegion = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BillingStatement2, List<BillingTaxRegion1>> mmTaxRegion = new MMMessageAssociationEnd<BillingStatement2, List<BillingTaxRegion1>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAdministrationZone;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BillingStatement2.mmObject();
@@ -700,11 +801,21 @@ public class BillingStatement2 {
 			previousVersion_lazy = () -> BillingStatement1.mmTaxRegion;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BillingTaxRegion1.mmObject();
+			type_lazy = () -> BillingTaxRegion1.mmObject();
+		}
+
+		@Override
+		public List<BillingTaxRegion1> getValue(BillingStatement2 obj) {
+			return obj.getTaxRegion();
+		}
+
+		@Override
+		public void setValue(BillingStatement2 obj, List<BillingTaxRegion1> value) {
+			obj.setTaxRegion(value);
 		}
 	};
 	@XmlElement(name = "BalAdjstmnt")
-	protected List<com.tools20022.repository.msg.BalanceAdjustment1> balanceAdjustment;
+	protected List<BalanceAdjustment1> balanceAdjustment;
 	/**
 	 * 
 	 <p>
@@ -743,7 +854,7 @@ public class BillingStatement2 {
 	 * BillingStatement1.mmBalanceAdjustment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalanceAdjustment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BillingStatement2, List<BalanceAdjustment1>> mmBalanceAdjustment = new MMMessageAssociationEnd<BillingStatement2, List<BalanceAdjustment1>>() {
 		{
 			businessElementTrace_lazy = () -> CashAccount.mmCashBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BillingStatement2.mmObject();
@@ -755,11 +866,21 @@ public class BillingStatement2 {
 			previousVersion_lazy = () -> BillingStatement1.mmBalanceAdjustment;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BalanceAdjustment1.mmObject();
+			type_lazy = () -> BalanceAdjustment1.mmObject();
+		}
+
+		@Override
+		public List<BalanceAdjustment1> getValue(BillingStatement2 obj) {
+			return obj.getBalanceAdjustment();
+		}
+
+		@Override
+		public void setValue(BillingStatement2 obj, List<BalanceAdjustment1> value) {
+			obj.setBalanceAdjustment(value);
 		}
 	};
 	@XmlElement(name = "SvcAdjstmnt")
-	protected List<com.tools20022.repository.msg.BillingServiceAdjustment1> serviceAdjustment;
+	protected List<BillingServiceAdjustment1> serviceAdjustment;
 	/**
 	 * 
 	 <p>
@@ -799,7 +920,7 @@ public class BillingStatement2 {
 	 * BillingStatement1.mmServiceAdjustment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmServiceAdjustment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BillingStatement2, List<BillingServiceAdjustment1>> mmServiceAdjustment = new MMMessageAssociationEnd<BillingStatement2, List<BillingServiceAdjustment1>>() {
 		{
 			businessComponentTrace_lazy = () -> CashAccountService.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.BillingStatement2.mmObject();
@@ -811,7 +932,17 @@ public class BillingStatement2 {
 			previousVersion_lazy = () -> BillingStatement1.mmServiceAdjustment;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BillingServiceAdjustment1.mmObject();
+			type_lazy = () -> BillingServiceAdjustment1.mmObject();
+		}
+
+		@Override
+		public List<BillingServiceAdjustment1> getValue(BillingStatement2 obj) {
+			return obj.getServiceAdjustment();
+		}
+
+		@Override
+		public void setValue(BillingStatement2 obj, List<BillingServiceAdjustment1> value) {
+			obj.setServiceAdjustment(value);
 		}
 	};
 
@@ -847,7 +978,7 @@ public class BillingStatement2 {
 		return fromToDate;
 	}
 
-	public BillingStatement2 setFromToDate(com.tools20022.repository.msg.DatePeriod1 fromToDate) {
+	public BillingStatement2 setFromToDate(DatePeriod1 fromToDate) {
 		this.fromToDate = Objects.requireNonNull(fromToDate);
 		return this;
 	}
@@ -874,7 +1005,7 @@ public class BillingStatement2 {
 		return accountCharacteristics;
 	}
 
-	public BillingStatement2 setAccountCharacteristics(com.tools20022.repository.msg.CashAccountCharacteristics2 accountCharacteristics) {
+	public BillingStatement2 setAccountCharacteristics(CashAccountCharacteristics2 accountCharacteristics) {
 		this.accountCharacteristics = Objects.requireNonNull(accountCharacteristics);
 		return this;
 	}
@@ -883,7 +1014,7 @@ public class BillingStatement2 {
 		return rateData == null ? rateData = new ArrayList<>() : rateData;
 	}
 
-	public BillingStatement2 setRateData(List<com.tools20022.repository.msg.BillingRate1> rateData) {
+	public BillingStatement2 setRateData(List<BillingRate1> rateData) {
 		this.rateData = Objects.requireNonNull(rateData);
 		return this;
 	}
@@ -892,7 +1023,7 @@ public class BillingStatement2 {
 		return currencyExchange == null ? currencyExchange = new ArrayList<>() : currencyExchange;
 	}
 
-	public BillingStatement2 setCurrencyExchange(List<com.tools20022.repository.msg.CurrencyExchange6> currencyExchange) {
+	public BillingStatement2 setCurrencyExchange(List<CurrencyExchange6> currencyExchange) {
 		this.currencyExchange = Objects.requireNonNull(currencyExchange);
 		return this;
 	}
@@ -901,7 +1032,7 @@ public class BillingStatement2 {
 		return balance == null ? balance = new ArrayList<>() : balance;
 	}
 
-	public BillingStatement2 setBalance(List<com.tools20022.repository.msg.BillingBalance1> balance) {
+	public BillingStatement2 setBalance(List<BillingBalance1> balance) {
 		this.balance = Objects.requireNonNull(balance);
 		return this;
 	}
@@ -910,7 +1041,7 @@ public class BillingStatement2 {
 		return compensation == null ? compensation = new ArrayList<>() : compensation;
 	}
 
-	public BillingStatement2 setCompensation(List<com.tools20022.repository.msg.BillingCompensation1> compensation) {
+	public BillingStatement2 setCompensation(List<BillingCompensation1> compensation) {
 		this.compensation = Objects.requireNonNull(compensation);
 		return this;
 	}
@@ -919,7 +1050,7 @@ public class BillingStatement2 {
 		return service == null ? service = new ArrayList<>() : service;
 	}
 
-	public BillingStatement2 setService(List<com.tools20022.repository.msg.BillingService2> service) {
+	public BillingStatement2 setService(List<BillingService2> service) {
 		this.service = Objects.requireNonNull(service);
 		return this;
 	}
@@ -928,7 +1059,7 @@ public class BillingStatement2 {
 		return taxRegion == null ? taxRegion = new ArrayList<>() : taxRegion;
 	}
 
-	public BillingStatement2 setTaxRegion(List<com.tools20022.repository.msg.BillingTaxRegion1> taxRegion) {
+	public BillingStatement2 setTaxRegion(List<BillingTaxRegion1> taxRegion) {
 		this.taxRegion = Objects.requireNonNull(taxRegion);
 		return this;
 	}
@@ -937,7 +1068,7 @@ public class BillingStatement2 {
 		return balanceAdjustment == null ? balanceAdjustment = new ArrayList<>() : balanceAdjustment;
 	}
 
-	public BillingStatement2 setBalanceAdjustment(List<com.tools20022.repository.msg.BalanceAdjustment1> balanceAdjustment) {
+	public BillingStatement2 setBalanceAdjustment(List<BalanceAdjustment1> balanceAdjustment) {
 		this.balanceAdjustment = Objects.requireNonNull(balanceAdjustment);
 		return this;
 	}
@@ -946,7 +1077,7 @@ public class BillingStatement2 {
 		return serviceAdjustment == null ? serviceAdjustment = new ArrayList<>() : serviceAdjustment;
 	}
 
-	public BillingStatement2 setServiceAdjustment(List<com.tools20022.repository.msg.BillingServiceAdjustment1> serviceAdjustment) {
+	public BillingStatement2 setServiceAdjustment(List<BillingServiceAdjustment1> serviceAdjustment) {
 		this.serviceAdjustment = Objects.requireNonNull(serviceAdjustment);
 		return this;
 	}

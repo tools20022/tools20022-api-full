@@ -95,7 +95,7 @@ public class CopyInformation3 {
 	 * definition} = "Indicates whether the message is a copy."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCopyIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CopyInformation3, YesNoIndicator> mmCopyIndicator = new MMMessageAttribute<CopyInformation3, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CopyInformation3.mmObject();
 			isDerived = false;
@@ -106,6 +106,16 @@ public class CopyInformation3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(CopyInformation3 obj) {
+			return obj.getCopyIndicator();
+		}
+
+		@Override
+		public void setValue(CopyInformation3 obj, YesNoIndicator value) {
+			obj.setCopyIndicator(value);
 		}
 	};
 

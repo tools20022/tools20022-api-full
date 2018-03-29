@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.entity.CurrencyExchange;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification113;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -132,7 +133,7 @@ public class ForeignExchangeTerms32 {
 	 * ForeignExchangeTerms6.mmUnitCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnitCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ForeignExchangeTerms32, ActiveCurrencyCode> mmUnitCurrency = new MMMessageAttribute<ForeignExchangeTerms32, ActiveCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmUnitCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms32.mmObject();
@@ -145,6 +146,16 @@ public class ForeignExchangeTerms32 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyCode getValue(ForeignExchangeTerms32 obj) {
+			return obj.getUnitCurrency();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTerms32 obj, ActiveCurrencyCode value) {
+			obj.setUnitCurrency(value);
 		}
 	};
 	@XmlElement(name = "QtdCcy", required = true)
@@ -189,7 +200,7 @@ public class ForeignExchangeTerms32 {
 	 * ForeignExchangeTerms6.mmQuotedCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuotedCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ForeignExchangeTerms32, ActiveCurrencyCode> mmQuotedCurrency = new MMMessageAttribute<ForeignExchangeTerms32, ActiveCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmQuotedCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms32.mmObject();
@@ -202,6 +213,16 @@ public class ForeignExchangeTerms32 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyCode getValue(ForeignExchangeTerms32 obj) {
+			return obj.getQuotedCurrency();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTerms32 obj, ActiveCurrencyCode value) {
+			obj.setQuotedCurrency(value);
 		}
 	};
 	@XmlElement(name = "XchgRate", required = true)
@@ -248,7 +269,7 @@ public class ForeignExchangeTerms32 {
 	 * ForeignExchangeTerms6.mmExchangeRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ForeignExchangeTerms32, BaseOneRate> mmExchangeRate = new MMMessageAttribute<ForeignExchangeTerms32, BaseOneRate>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmExchangeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms32.mmObject();
@@ -262,6 +283,16 @@ public class ForeignExchangeTerms32 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		@Override
+		public BaseOneRate getValue(ForeignExchangeTerms32 obj) {
+			return obj.getExchangeRate();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTerms32 obj, BaseOneRate value) {
+			obj.setExchangeRate(value);
 		}
 	};
 	@XmlElement(name = "QtnDt")
@@ -303,7 +334,7 @@ public class ForeignExchangeTerms32 {
 	 * ForeignExchangeTerms6.mmQuotationDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuotationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ForeignExchangeTerms32, Optional<ISODateTime>> mmQuotationDate = new MMMessageAttribute<ForeignExchangeTerms32, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmQuotationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms32.mmObject();
@@ -316,6 +347,16 @@ public class ForeignExchangeTerms32 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(ForeignExchangeTerms32 obj) {
+			return obj.getQuotationDate();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTerms32 obj, Optional<ISODateTime> value) {
+			obj.setQuotationDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "QtgInstn")
@@ -358,7 +399,7 @@ public class ForeignExchangeTerms32 {
 	 * ForeignExchangeTerms6.mmQuotingInstitution}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuotingInstitution = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ForeignExchangeTerms32, Optional<PartyIdentification113>> mmQuotingInstitution = new MMMessageAttribute<ForeignExchangeTerms32, Optional<PartyIdentification113>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms32.mmObject();
@@ -370,7 +411,17 @@ public class ForeignExchangeTerms32 {
 			previousVersion_lazy = () -> ForeignExchangeTerms6.mmQuotingInstitution;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification113.mmObject();
+			complexType_lazy = () -> PartyIdentification113.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification113> getValue(ForeignExchangeTerms32 obj) {
+			return obj.getQuotingInstitution();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTerms32 obj, Optional<PartyIdentification113> value) {
+			obj.setQuotingInstitution(value.orElse(null));
 		}
 	};
 
@@ -430,7 +481,7 @@ public class ForeignExchangeTerms32 {
 		return quotingInstitution == null ? Optional.empty() : Optional.of(quotingInstitution);
 	}
 
-	public ForeignExchangeTerms32 setQuotingInstitution(com.tools20022.repository.msg.PartyIdentification113 quotingInstitution) {
+	public ForeignExchangeTerms32 setQuotingInstitution(PartyIdentification113 quotingInstitution) {
 		this.quotingInstitution = quotingInstitution;
 		return this;
 	}

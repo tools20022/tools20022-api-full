@@ -133,7 +133,7 @@ public class RejectionOrRepairStatus26Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionOrRepairStatus26Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<RejectionOrRepairStatus26Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectionOrRepairStatus26Choice.mmObject();
@@ -147,6 +147,16 @@ public class RejectionOrRepairStatus26Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(RejectionOrRepairStatus26Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(RejectionOrRepairStatus26Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -194,7 +204,7 @@ public class RejectionOrRepairStatus26Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RejectionOrRepairStatus26Choice, List<RejectionOrRepairReason20>> mmReason = new MMMessageAssociationEnd<RejectionOrRepairStatus26Choice, List<RejectionOrRepairReason20>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectionOrRepairStatus26Choice.mmObject();
@@ -208,6 +218,16 @@ public class RejectionOrRepairStatus26Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RejectionOrRepairReason20.mmObject();
+		}
+
+		@Override
+		public List<RejectionOrRepairReason20> getValue(RejectionOrRepairStatus26Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(RejectionOrRepairStatus26Choice obj, List<RejectionOrRepairReason20> value) {
+			obj.setReason(value);
 		}
 	};
 

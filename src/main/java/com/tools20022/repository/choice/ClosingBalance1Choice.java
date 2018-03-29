@@ -21,6 +21,7 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.BalanceQuantity5Choice;
 import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
@@ -126,7 +127,7 @@ public class ClosingBalance1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinal = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClosingBalance1Choice, BalanceQuantity5Choice> mmFinal = new MMMessageAttribute<ClosingBalance1Choice, BalanceQuantity5Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmAggregateQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClosingBalance1Choice.mmObject();
@@ -139,7 +140,17 @@ public class ClosingBalance1Choice {
 			nextVersions_lazy = () -> Arrays.asList(ClosingBalance4Choice.mmFinal);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.BalanceQuantity5Choice.mmObject();
+			complexType_lazy = () -> BalanceQuantity5Choice.mmObject();
+		}
+
+		@Override
+		public BalanceQuantity5Choice getValue(ClosingBalance1Choice obj) {
+			return obj.getFinal();
+		}
+
+		@Override
+		public void setValue(ClosingBalance1Choice obj, BalanceQuantity5Choice value) {
+			obj.setFinal(value);
 		}
 	};
 	@XmlElement(name = "Intrmy", required = true)
@@ -190,7 +201,7 @@ public class ClosingBalance1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIntermediary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClosingBalance1Choice, BalanceQuantity5Choice> mmIntermediary = new MMMessageAttribute<ClosingBalance1Choice, BalanceQuantity5Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmAggregateQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClosingBalance1Choice.mmObject();
@@ -203,7 +214,17 @@ public class ClosingBalance1Choice {
 			nextVersions_lazy = () -> Arrays.asList(ClosingBalance4Choice.mmIntermediary);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.BalanceQuantity5Choice.mmObject();
+			complexType_lazy = () -> BalanceQuantity5Choice.mmObject();
+		}
+
+		@Override
+		public BalanceQuantity5Choice getValue(ClosingBalance1Choice obj) {
+			return obj.getIntermediary();
+		}
+
+		@Override
+		public void setValue(ClosingBalance1Choice obj, BalanceQuantity5Choice value) {
+			obj.setIntermediary(value);
 		}
 	};
 
@@ -226,7 +247,7 @@ public class ClosingBalance1Choice {
 		return final_;
 	}
 
-	public ClosingBalance1Choice setFinal(com.tools20022.repository.choice.BalanceQuantity5Choice final_) {
+	public ClosingBalance1Choice setFinal(BalanceQuantity5Choice final_) {
 		this.final_ = Objects.requireNonNull(final_);
 		return this;
 	}
@@ -235,7 +256,7 @@ public class ClosingBalance1Choice {
 		return intermediary;
 	}
 
-	public ClosingBalance1Choice setIntermediary(com.tools20022.repository.choice.BalanceQuantity5Choice intermediary) {
+	public ClosingBalance1Choice setIntermediary(BalanceQuantity5Choice intermediary) {
 		this.intermediary = Objects.requireNonNull(intermediary);
 		return this;
 	}

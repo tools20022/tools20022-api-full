@@ -109,7 +109,7 @@ public class SequenceRange1Choice {
 	 * definition} = "Start sequence of the range."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFromSequence = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SequenceRange1Choice, Max35Text> mmFromSequence = new MMMessageAttribute<SequenceRange1Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SequenceRange1Choice.mmObject();
 			isDerived = false;
@@ -120,6 +120,16 @@ public class SequenceRange1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(SequenceRange1Choice obj) {
+			return obj.getFromSequence();
+		}
+
+		@Override
+		public void setValue(SequenceRange1Choice obj, Max35Text value) {
+			obj.setFromSequence(value);
 		}
 	};
 	@XmlElement(name = "ToSeq", required = true)
@@ -151,7 +161,7 @@ public class SequenceRange1Choice {
 	 * definition} = "End sequence of the range."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmToSequence = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SequenceRange1Choice, Max35Text> mmToSequence = new MMMessageAttribute<SequenceRange1Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SequenceRange1Choice.mmObject();
 			isDerived = false;
@@ -162,6 +172,16 @@ public class SequenceRange1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(SequenceRange1Choice obj) {
+			return obj.getToSequence();
+		}
+
+		@Override
+		public void setValue(SequenceRange1Choice obj, Max35Text value) {
+			obj.setToSequence(value);
 		}
 	};
 	@XmlElement(name = "FrToSeq", required = true)
@@ -194,7 +214,7 @@ public class SequenceRange1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFromToSequence = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SequenceRange1Choice, List<SequenceRange1>> mmFromToSequence = new MMMessageAssociationEnd<SequenceRange1Choice, List<SequenceRange1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SequenceRange1Choice.mmObject();
 			isDerived = false;
@@ -205,6 +225,16 @@ public class SequenceRange1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SequenceRange1.mmObject();
+		}
+
+		@Override
+		public List<SequenceRange1> getValue(SequenceRange1Choice obj) {
+			return obj.getFromToSequence();
+		}
+
+		@Override
+		public void setValue(SequenceRange1Choice obj, List<SequenceRange1> value) {
+			obj.setFromToSequence(value);
 		}
 	};
 	@XmlElement(name = "EQSeq", required = true)
@@ -236,7 +266,7 @@ public class SequenceRange1Choice {
 	 * definition} = "Specified sequence to match."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEqualSequence = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SequenceRange1Choice, List<Max35Text>> mmEqualSequence = new MMMessageAttribute<SequenceRange1Choice, List<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SequenceRange1Choice.mmObject();
 			isDerived = false;
@@ -246,6 +276,16 @@ public class SequenceRange1Choice {
 			definition = "Specified sequence to match.";
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(SequenceRange1Choice obj) {
+			return obj.getEqualSequence();
+		}
+
+		@Override
+		public void setValue(SequenceRange1Choice obj, List<Max35Text> value) {
+			obj.setEqualSequence(value);
 		}
 	};
 	@XmlElement(name = "NEQSeq", required = true)
@@ -277,7 +317,7 @@ public class SequenceRange1Choice {
 	 * definition} = "Specified sequence to be excluded."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotEqualSequence = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SequenceRange1Choice, List<Max35Text>> mmNotEqualSequence = new MMMessageAttribute<SequenceRange1Choice, List<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SequenceRange1Choice.mmObject();
 			isDerived = false;
@@ -287,6 +327,16 @@ public class SequenceRange1Choice {
 			definition = "Specified sequence to be excluded.";
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(SequenceRange1Choice obj) {
+			return obj.getNotEqualSequence();
+		}
+
+		@Override
+		public void setValue(SequenceRange1Choice obj, List<Max35Text> value) {
+			obj.setNotEqualSequence(value);
 		}
 	};
 

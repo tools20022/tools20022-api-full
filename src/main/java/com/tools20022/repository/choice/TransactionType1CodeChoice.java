@@ -108,7 +108,7 @@ public class TransactionType1CodeChoice {
 	 * definition} = "Transaction type in a structured format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionType1CodeChoice, TransactionType2Code> mmStructured = new MMMessageAttribute<TransactionType1CodeChoice, TransactionType2Code>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransactionType1CodeChoice.mmObject();
@@ -120,6 +120,16 @@ public class TransactionType1CodeChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TransactionType2Code.mmObject();
+		}
+
+		@Override
+		public TransactionType2Code getValue(TransactionType1CodeChoice obj) {
+			return obj.getStructured();
+		}
+
+		@Override
+		public void setValue(TransactionType1CodeChoice obj, TransactionType2Code value) {
+			obj.setStructured(value);
 		}
 	};
 	@XmlElement(name = "Ustrd", required = true)
@@ -156,7 +166,7 @@ public class TransactionType1CodeChoice {
 	 * definition} = "Transaction type in free text form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnstructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionType1CodeChoice, Max35Text> mmUnstructured = new MMMessageAttribute<TransactionType1CodeChoice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransactionType1CodeChoice.mmObject();
@@ -168,6 +178,16 @@ public class TransactionType1CodeChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(TransactionType1CodeChoice obj) {
+			return obj.getUnstructured();
+		}
+
+		@Override
+		public void setValue(TransactionType1CodeChoice obj, Max35Text value) {
+			obj.setUnstructured(value);
 		}
 	};
 

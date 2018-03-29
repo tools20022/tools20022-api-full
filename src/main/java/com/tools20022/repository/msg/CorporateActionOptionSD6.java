@@ -127,7 +127,7 @@ public class CorporateActionOptionSD6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOptionSD6, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionOptionSD6, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSD6.mmObject();
 			isDerived = false;
@@ -139,6 +139,16 @@ public class CorporateActionOptionSD6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionOptionSD6 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionOptionSD6 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "XtndedOptnFeatrs")
@@ -184,7 +194,7 @@ public class CorporateActionOptionSD6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedOptionFeatures = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOptionSD6, Optional<ExtendedOptionFeature1Code>> mmExtendedOptionFeatures = new MMMessageAttribute<CorporateActionOptionSD6, Optional<ExtendedOptionFeature1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSD6.mmObject();
 			isDerived = false;
@@ -197,6 +207,16 @@ public class CorporateActionOptionSD6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ExtendedOptionFeature1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ExtendedOptionFeature1Code> getValue(CorporateActionOptionSD6 obj) {
+			return obj.getExtendedOptionFeatures();
+		}
+
+		@Override
+		public void setValue(CorporateActionOptionSD6 obj, Optional<ExtendedOptionFeature1Code> value) {
+			obj.setExtendedOptionFeatures(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DfltOptnFlg", required = true)
@@ -243,7 +263,7 @@ public class CorporateActionOptionSD6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDefaultOptionFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOptionSD6, YesNoIndicator> mmDefaultOptionFlag = new MMMessageAttribute<CorporateActionOptionSD6, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSD6.mmObject();
 			isDerived = false;
@@ -256,6 +276,16 @@ public class CorporateActionOptionSD6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(CorporateActionOptionSD6 obj) {
+			return obj.getDefaultOptionFlag();
+		}
+
+		@Override
+		public void setValue(CorporateActionOptionSD6 obj, YesNoIndicator value) {
+			obj.setDefaultOptionFlag(value);
 		}
 	};
 	@XmlElement(name = "OptnlDvddSplmtryDataReqrdFlg")
@@ -299,7 +329,7 @@ public class CorporateActionOptionSD6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOptionalDividendSupplementaryDataRequiredFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOptionSD6, Optional<YesNoIndicator>> mmOptionalDividendSupplementaryDataRequiredFlag = new MMMessageAttribute<CorporateActionOptionSD6, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSD6.mmObject();
 			isDerived = false;
@@ -311,6 +341,16 @@ public class CorporateActionOptionSD6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CorporateActionOptionSD6 obj) {
+			return obj.getOptionalDividendSupplementaryDataRequiredFlag();
+		}
+
+		@Override
+		public void setValue(CorporateActionOptionSD6 obj, Optional<YesNoIndicator> value) {
+			obj.setOptionalDividendSupplementaryDataRequiredFlag(value.orElse(null));
 		}
 	};
 

@@ -104,7 +104,7 @@ public class PaginationBalance2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOpeningBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaginationBalance2, Optional<OpeningBalance3Choice>> mmOpeningBalance = new MMMessageAssociationEnd<PaginationBalance2, Optional<OpeningBalance3Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaginationBalance2.mmObject();
 			isDerived = false;
@@ -116,6 +116,16 @@ public class PaginationBalance2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> OpeningBalance3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<OpeningBalance3Choice> getValue(PaginationBalance2 obj) {
+			return obj.getOpeningBalance();
+		}
+
+		@Override
+		public void setValue(PaginationBalance2 obj, Optional<OpeningBalance3Choice> value) {
+			obj.setOpeningBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClsgBal")
@@ -149,7 +159,7 @@ public class PaginationBalance2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmClosingBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaginationBalance2, Optional<ClosingBalance3Choice>> mmClosingBalance = new MMMessageAssociationEnd<PaginationBalance2, Optional<ClosingBalance3Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaginationBalance2.mmObject();
 			isDerived = false;
@@ -161,6 +171,16 @@ public class PaginationBalance2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ClosingBalance3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ClosingBalance3Choice> getValue(PaginationBalance2 obj) {
+			return obj.getClosingBalance();
+		}
+
+		@Override
+		public void setValue(PaginationBalance2 obj, Optional<ClosingBalance3Choice> value) {
+			obj.setClosingBalance(value.orElse(null));
 		}
 	};
 

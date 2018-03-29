@@ -28,7 +28,6 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -123,7 +122,7 @@ public class PayInEventAcknowledgementV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PayInEventAcknowledgementV02, Max35Text> mmMessageIdentification = new MMMessageBuildingBlock<PayInEventAcknowledgementV02, Max35Text>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,12 +133,14 @@ public class PayInEventAcknowledgementV02 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PayInEventAcknowledgementV02.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(PayInEventAcknowledgementV02 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(PayInEventAcknowledgementV02 obj, Max35Text value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "SttlmSsnIdr")
@@ -169,7 +170,7 @@ public class PayInEventAcknowledgementV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSettlementSessionIdentifier = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PayInEventAcknowledgementV02, Optional<Exact4AlphaNumericText>> mmSettlementSessionIdentifier = new MMMessageBuildingBlock<PayInEventAcknowledgementV02, Optional<Exact4AlphaNumericText>>() {
 		{
 			xmlTag = "SttlmSsnIdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,12 +181,14 @@ public class PayInEventAcknowledgementV02 {
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PayInEventAcknowledgementV02.class.getMethod("getSettlementSessionIdentifier", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Exact4AlphaNumericText> getValue(PayInEventAcknowledgementV02 obj) {
+			return obj.getSettlementSessionIdentifier();
+		}
+
+		@Override
+		public void setValue(PayInEventAcknowledgementV02 obj, Optional<Exact4AlphaNumericText> value) {
+			obj.setSettlementSessionIdentifier(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AckDtls", required = true)
@@ -214,7 +217,7 @@ public class PayInEventAcknowledgementV02 {
 	 * "Details of the pay in schedule or pay in call being acknowledged."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAcknowledgementDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PayInEventAcknowledgementV02, AcknowledgementDetails1Choice> mmAcknowledgementDetails = new MMMessageBuildingBlock<PayInEventAcknowledgementV02, AcknowledgementDetails1Choice>() {
 		{
 			xmlTag = "AckDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -225,12 +228,14 @@ public class PayInEventAcknowledgementV02 {
 			complexType_lazy = () -> AcknowledgementDetails1Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PayInEventAcknowledgementV02.class.getMethod("getAcknowledgementDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AcknowledgementDetails1Choice getValue(PayInEventAcknowledgementV02 obj) {
+			return obj.getAcknowledgementDetails();
+		}
+
+		@Override
+		public void setValue(PayInEventAcknowledgementV02 obj, AcknowledgementDetails1Choice value) {
+			obj.setAcknowledgementDetails(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -260,7 +265,7 @@ public class PayInEventAcknowledgementV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PayInEventAcknowledgementV02, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<PayInEventAcknowledgementV02, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -270,12 +275,14 @@ public class PayInEventAcknowledgementV02 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PayInEventAcknowledgementV02.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(PayInEventAcknowledgementV02 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(PayInEventAcknowledgementV02 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

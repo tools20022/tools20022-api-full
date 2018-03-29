@@ -110,7 +110,7 @@ public class Status26Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCancellationStatusReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Status26Choice, OrderStatusAndReason9> mmCancellationStatusReport = new MMMessageAssociationEnd<Status26Choice, OrderStatusAndReason9>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status26Choice.mmObject();
 			isDerived = false;
@@ -122,6 +122,16 @@ public class Status26Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OrderStatusAndReason9.mmObject();
+		}
+
+		@Override
+		public OrderStatusAndReason9 getValue(Status26Choice obj) {
+			return obj.getCancellationStatusReport();
+		}
+
+		@Override
+		public void setValue(Status26Choice obj, OrderStatusAndReason9 value) {
+			obj.setCancellationStatusReport(value);
 		}
 	};
 	@XmlElement(name = "IndvCxlStsRpt", required = true)
@@ -155,7 +165,7 @@ public class Status26Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIndividualCancellationStatusReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Status26Choice, List<IndividualOrderStatusAndReason8>> mmIndividualCancellationStatusReport = new MMMessageAssociationEnd<Status26Choice, List<IndividualOrderStatusAndReason8>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status26Choice.mmObject();
 			isDerived = false;
@@ -166,6 +176,16 @@ public class Status26Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> IndividualOrderStatusAndReason8.mmObject();
+		}
+
+		@Override
+		public List<IndividualOrderStatusAndReason8> getValue(Status26Choice obj) {
+			return obj.getIndividualCancellationStatusReport();
+		}
+
+		@Override
+		public void setValue(Status26Choice obj, List<IndividualOrderStatusAndReason8> value) {
+			obj.setIndividualCancellationStatusReport(value);
 		}
 	};
 

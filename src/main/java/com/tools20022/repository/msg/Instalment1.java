@@ -110,7 +110,7 @@ public class Instalment1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSequenceIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Instalment1, Max70Text> mmSequenceIdentification = new MMMessageAttribute<Instalment1, Max70Text>() {
 		{
 			businessElementTrace_lazy = () -> Instalment.mmSequenceIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Instalment1.mmObject();
@@ -122,6 +122,16 @@ public class Instalment1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Max70Text getValue(Instalment1 obj) {
+			return obj.getSequenceIdentification();
+		}
+
+		@Override
+		public void setValue(Instalment1 obj, Max70Text value) {
+			obj.setSequenceIdentification(value);
 		}
 	};
 	@XmlElement(name = "PmtDueDt", required = true)
@@ -157,7 +167,7 @@ public class Instalment1 {
 	 * definition} = "Due date for the payment of the invoice instalment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentDueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Instalment1, ISODate> mmPaymentDueDate = new MMMessageAttribute<Instalment1, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmPaymentDueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Instalment1.mmObject();
@@ -169,6 +179,16 @@ public class Instalment1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(Instalment1 obj) {
+			return obj.getPaymentDueDate();
+		}
+
+		@Override
+		public void setValue(Instalment1 obj, ISODate value) {
+			obj.setPaymentDueDate(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -205,7 +225,7 @@ public class Instalment1 {
 	 * definition} = "Amount of a single instalment related to an invoice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Instalment1, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<Instalment1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Instalment1.mmObject();
@@ -217,6 +237,16 @@ public class Instalment1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(Instalment1 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Instalment1 obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 

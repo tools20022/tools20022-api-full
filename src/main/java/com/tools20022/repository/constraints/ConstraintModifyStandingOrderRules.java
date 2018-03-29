@@ -52,11 +52,15 @@ public class ConstraintModifyStandingOrderRules {
 	 */
 	public static final MMConstraint<ModifyStandingOrderV05> forModifyStandingOrderV05 = new MMConstraint<ModifyStandingOrderV05>() {
 		{
-			validator = ConstraintModifyStandingOrderRules::checkModifyStandingOrderV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifyStandingOrderRules";
 			definition = "The NewStandingOrderValueSet can consist on an Amount, a DebitAccount, a CreditAccount, a ValidityPeriod or a Periodicity. At a minimum, one of these elements must be present.";
 			owner_lazy = () -> ModifyStandingOrderV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ModifyStandingOrderV05 obj) throws Exception {
+			checkModifyStandingOrderV05(obj);
 		}
 	};
 

@@ -112,7 +112,7 @@ public class PaperCommodityRecoveredPaper1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBaseProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaperCommodityRecoveredPaper1, AssetClassProductType8Code> mmBaseProduct = new MMMessageAttribute<PaperCommodityRecoveredPaper1, AssetClassProductType8Code>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaperCommodityRecoveredPaper1.mmObject();
@@ -124,6 +124,16 @@ public class PaperCommodityRecoveredPaper1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassProductType8Code.mmObject();
+		}
+
+		@Override
+		public AssetClassProductType8Code getValue(PaperCommodityRecoveredPaper1 obj) {
+			return obj.getBaseProduct();
+		}
+
+		@Override
+		public void setValue(PaperCommodityRecoveredPaper1 obj, AssetClassProductType8Code value) {
+			obj.setBaseProduct(value);
 		}
 	};
 	@XmlElement(name = "SubPdct")
@@ -161,7 +171,7 @@ public class PaperCommodityRecoveredPaper1 {
 	 * definition} = "Sub-product for the underlying asset class."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaperCommodityRecoveredPaper1, Optional<AssetClassSubProductType38Code>> mmSubProduct = new MMMessageAttribute<PaperCommodityRecoveredPaper1, Optional<AssetClassSubProductType38Code>>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaperCommodityRecoveredPaper1.mmObject();
@@ -173,6 +183,16 @@ public class PaperCommodityRecoveredPaper1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AssetClassSubProductType38Code.mmObject();
+		}
+
+		@Override
+		public Optional<AssetClassSubProductType38Code> getValue(PaperCommodityRecoveredPaper1 obj) {
+			return obj.getSubProduct();
+		}
+
+		@Override
+		public void setValue(PaperCommodityRecoveredPaper1 obj, Optional<AssetClassSubProductType38Code> value) {
+			obj.setSubProduct(value.orElse(null));
 		}
 	};
 

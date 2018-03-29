@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.IntermediaryRole;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Account20;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -122,7 +123,7 @@ public class Intermediary33 {
 	 * Intermediary7.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Intermediary33, PartyIdentification70Choice> mmIdentification = new MMMessageAttribute<Intermediary33, PartyIdentification70Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary33.mmObject();
@@ -135,6 +136,16 @@ public class Intermediary33 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification70Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification70Choice getValue(Intermediary33 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Intermediary33 obj, PartyIdentification70Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "LglNttyIdr")
@@ -173,7 +184,7 @@ public class Intermediary33 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLegalEntityIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Intermediary33, Optional<LEIIdentifier>> mmLegalEntityIdentifier = new MMMessageAttribute<Intermediary33, Optional<LEIIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary33.mmObject();
@@ -185,6 +196,16 @@ public class Intermediary33 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<LEIIdentifier> getValue(Intermediary33 obj) {
+			return obj.getLegalEntityIdentifier();
+		}
+
+		@Override
+		public void setValue(Intermediary33 obj, Optional<LEIIdentifier> value) {
+			obj.setLegalEntityIdentifier(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Acct")
@@ -227,7 +248,7 @@ public class Intermediary33 {
 	 * Intermediary7.mmAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Intermediary33, Optional<Account20>> mmAccount = new MMMessageAttribute<Intermediary33, Optional<Account20>>() {
 		{
 			businessElementTrace_lazy = () -> AccountPartyRole.mmAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary33.mmObject();
@@ -239,7 +260,17 @@ public class Intermediary33 {
 			previousVersion_lazy = () -> Intermediary7.mmAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Account20.mmObject();
+			complexType_lazy = () -> Account20.mmObject();
+		}
+
+		@Override
+		public Optional<Account20> getValue(Intermediary33 obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(Intermediary33 obj, Optional<Account20> value) {
+			obj.setAccount(value.orElse(null));
 		}
 	};
 
@@ -281,7 +312,7 @@ public class Intermediary33 {
 		return account == null ? Optional.empty() : Optional.of(account);
 	}
 
-	public Intermediary33 setAccount(com.tools20022.repository.msg.Account20 account) {
+	public Intermediary33 setAccount(Account20 account) {
 		this.account = account;
 		return this;
 	}

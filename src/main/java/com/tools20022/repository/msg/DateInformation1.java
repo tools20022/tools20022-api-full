@@ -98,7 +98,7 @@ public class DateInformation1 {
 	 * definition} = "Date on which a recurrent date will commence."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateInformation1, ISODate> mmStartDate = new MMMessageAttribute<DateInformation1, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateInformation1.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class DateInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(DateInformation1 obj) {
+			return obj.getStartDate();
+		}
+
+		@Override
+		public void setValue(DateInformation1 obj, ISODate value) {
+			obj.setStartDate(value);
 		}
 	};
 	@XmlElement(name = "Frqcy", required = true)
@@ -141,7 +151,7 @@ public class DateInformation1 {
 	 * definition} = "Specifies the regularity of the trigger date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateInformation1, ExternalDateFrequency1Code> mmFrequency = new MMMessageAttribute<DateInformation1, ExternalDateFrequency1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateInformation1.mmObject();
 			isDerived = false;
@@ -152,6 +162,16 @@ public class DateInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalDateFrequency1Code.mmObject();
+		}
+
+		@Override
+		public ExternalDateFrequency1Code getValue(DateInformation1 obj) {
+			return obj.getFrequency();
+		}
+
+		@Override
+		public void setValue(DateInformation1 obj, ExternalDateFrequency1Code value) {
+			obj.setFrequency(value);
 		}
 	};
 	@XmlElement(name = "Nb", required = true)
@@ -183,7 +203,7 @@ public class DateInformation1 {
 	 * definition} = "Maximum number of trigger date occurrence cycles."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateInformation1, Number> mmNumber = new MMMessageAttribute<DateInformation1, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateInformation1.mmObject();
 			isDerived = false;
@@ -194,6 +214,16 @@ public class DateInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(DateInformation1 obj) {
+			return obj.getNumber();
+		}
+
+		@Override
+		public void setValue(DateInformation1 obj, Number value) {
+			obj.setNumber(value);
 		}
 	};
 

@@ -57,12 +57,16 @@ public class ConstraintReportParameterRule1 {
 	 */
 	public static final MMConstraint<FundParameters3Choice> forFundParameters3Choice = new MMConstraint<FundParameters3Choice>() {
 		{
-			validator = ConstraintReportParameterRule1::checkFundParameters3Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportParameterRule#1";
 			definition = "At least one element in the list (FundManagementCompany, FinancialInstrumentDetails, DateFrom) must be present. More than\r\none element in the list (FundManagementCompany, FinancialInstrumentDetails, DateFrom) may be present.";
 			owner_lazy = () -> FundParameters3Choice.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Parameters/FinancialInstrumentDetails[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Parameters/FundManagementCompany[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Parameters/DateFrom</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Parameters</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(FundParameters3Choice obj) throws Exception {
+			checkFundParameters3Choice(obj);
 		}
 	};
 

@@ -32,6 +32,7 @@ import com.tools20022.repository.entity.CorporateActionNotification;
 import com.tools20022.repository.entity.CorporateActionStatus;
 import com.tools20022.repository.entity.CorporateActionStatusReason;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CorporateActionEventStatus1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -151,7 +152,7 @@ public class CorporateActionCancellation3 {
 	 * CorporateActionCancellation1.mmCancellationReasonCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancellationReasonCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionCancellation3, CorporateActionCancellationReason1Code> mmCancellationReasonCode = new MMMessageAttribute<CorporateActionCancellation3, CorporateActionCancellationReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatusReason.mmCorporateActionCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionCancellation3.mmObject();
@@ -165,6 +166,16 @@ public class CorporateActionCancellation3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionCancellationReason1Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionCancellationReason1Code getValue(CorporateActionCancellation3 obj) {
+			return obj.getCancellationReasonCode();
+		}
+
+		@Override
+		public void setValue(CorporateActionCancellation3 obj, CorporateActionCancellationReason1Code value) {
+			obj.setCancellationReasonCode(value);
 		}
 	};
 	@XmlElement(name = "CxlRsn")
@@ -210,7 +221,7 @@ public class CorporateActionCancellation3 {
 	 * CorporateActionCancellation1.mmCancellationReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancellationReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionCancellation3, Optional<Max140Text>> mmCancellationReason = new MMMessageAttribute<CorporateActionCancellation3, Optional<Max140Text>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatusReason.mmCorporateActionCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionCancellation3.mmObject();
@@ -224,6 +235,16 @@ public class CorporateActionCancellation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(CorporateActionCancellation3 obj) {
+			return obj.getCancellationReason();
+		}
+
+		@Override
+		public void setValue(CorporateActionCancellation3 obj, Optional<Max140Text> value) {
+			obj.setCancellationReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcgSts", required = true)
@@ -268,7 +289,7 @@ public class CorporateActionCancellation3 {
 	 * CorporateActionCancellation1.mmProcessingStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionCancellation3, CorporateActionEventStatus1> mmProcessingStatus = new MMMessageAssociationEnd<CorporateActionCancellation3, CorporateActionEventStatus1>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionCancellation3.mmObject();
@@ -282,7 +303,17 @@ public class CorporateActionCancellation3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CorporateActionEventStatus1.mmObject();
+			type_lazy = () -> CorporateActionEventStatus1.mmObject();
+		}
+
+		@Override
+		public CorporateActionEventStatus1 getValue(CorporateActionCancellation3 obj) {
+			return obj.getProcessingStatus();
+		}
+
+		@Override
+		public void setValue(CorporateActionCancellation3 obj, CorporateActionEventStatus1 value) {
+			obj.setProcessingStatus(value);
 		}
 	};
 
@@ -326,7 +357,7 @@ public class CorporateActionCancellation3 {
 		return processingStatus;
 	}
 
-	public CorporateActionCancellation3 setProcessingStatus(com.tools20022.repository.msg.CorporateActionEventStatus1 processingStatus) {
+	public CorporateActionCancellation3 setProcessingStatus(CorporateActionEventStatus1 processingStatus) {
 		this.processingStatus = Objects.requireNonNull(processingStatus);
 		return this;
 	}

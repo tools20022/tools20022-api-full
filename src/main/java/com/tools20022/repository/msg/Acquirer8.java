@@ -112,7 +112,7 @@ public class Acquirer8 {
 	 * Acquirer7.mmAcquiringInstitution}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Acquirer8, Max35Text> mmIdentification = new MMMessageAttribute<Acquirer8, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Acquirer8.mmObject();
@@ -125,6 +125,16 @@ public class Acquirer8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Acquirer8 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Acquirer8 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "ApplVrsn")
@@ -160,7 +170,7 @@ public class Acquirer8 {
 	 * Acquirer7.mmBranch}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmApplicationVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Acquirer8, Optional<Max35Text>> mmApplicationVersion = new MMMessageAttribute<Acquirer8, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Acquirer8.mmObject();
 			isDerived = false;
@@ -172,6 +182,16 @@ public class Acquirer8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Acquirer8 obj) {
+			return obj.getApplicationVersion();
+		}
+
+		@Override
+		public void setValue(Acquirer8 obj, Optional<Max35Text> value) {
+			obj.setApplicationVersion(value.orElse(null));
 		}
 	};
 

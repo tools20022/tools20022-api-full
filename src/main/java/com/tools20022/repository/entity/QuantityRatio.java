@@ -20,11 +20,12 @@ package com.tools20022.repository.entity;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.DecimalNumber;
+import com.tools20022.repository.entity.SecuritiesProceedsDefinition;
+import com.tools20022.repository.entity.Warrant;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.LongQuantityToQuantityRatio2;
 import com.tools20022.repository.msg.QuantityToQuantityRatio1;
 import com.tools20022.repository.msg.QuantityToQuantityRatio2;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -234,7 +235,7 @@ public class QuantityRatio {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmAdditionalQuantityForResultantSecuritiesProceedsDefinition = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<QuantityRatio, SecuritiesProceedsDefinition> mmAdditionalQuantityForResultantSecuritiesProceedsDefinition = new MMBusinessAssociationEnd<QuantityRatio, SecuritiesProceedsDefinition>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.QuantityRatio.mmObject();
@@ -243,9 +244,19 @@ public class QuantityRatio {
 			definition = "Securities proceeds for which an additional quantity for subscribed resultant securities is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmAdditionalQuantityForSubscribedResultantSecurities;
+			opposite_lazy = () -> SecuritiesProceedsDefinition.mmAdditionalQuantityForSubscribedResultantSecurities;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
+			type_lazy = () -> SecuritiesProceedsDefinition.mmObject();
+		}
+
+		@Override
+		public SecuritiesProceedsDefinition getValue(QuantityRatio obj) {
+			return obj.getAdditionalQuantityForResultantSecuritiesProceedsDefinition();
+		}
+
+		@Override
+		public void setValue(QuantityRatio obj, SecuritiesProceedsDefinition value) {
+			obj.setAdditionalQuantityForResultantSecuritiesProceedsDefinition(value);
 		}
 	};
 	protected DecimalNumber quantity1;
@@ -289,7 +300,7 @@ public class QuantityRatio {
 	 * definition} = "Numerator of the quotient of quantities."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmQuantity1 = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<QuantityRatio, DecimalNumber> mmQuantity1 = new MMBusinessAttribute<QuantityRatio, DecimalNumber>() {
 		{
 			derivation_lazy = () -> Arrays.asList(QuantityToQuantityRatio1.mmQuantity1, QuantityToQuantityRatio2.mmQuantity1, LongQuantityToQuantityRatio2.mmLongQuantity1);
 			isDerived = false;
@@ -302,12 +313,14 @@ public class QuantityRatio {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return QuantityRatio.class.getMethod("getQuantity1", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DecimalNumber getValue(QuantityRatio obj) {
+			return obj.getQuantity1();
+		}
+
+		@Override
+		public void setValue(QuantityRatio obj, DecimalNumber value) {
+			obj.setQuantity1(value);
 		}
 	};
 	protected DecimalNumber quantity2;
@@ -351,7 +364,7 @@ public class QuantityRatio {
 	 * definition} = "Denominator of the quotient of quantities."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmQuantity2 = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<QuantityRatio, DecimalNumber> mmQuantity2 = new MMBusinessAttribute<QuantityRatio, DecimalNumber>() {
 		{
 			derivation_lazy = () -> Arrays.asList(QuantityToQuantityRatio1.mmQuantity2, QuantityToQuantityRatio2.mmQuantity2, LongQuantityToQuantityRatio2.mmLongQuantity2);
 			isDerived = false;
@@ -364,12 +377,14 @@ public class QuantityRatio {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return QuantityRatio.class.getMethod("getQuantity2", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DecimalNumber getValue(QuantityRatio obj) {
+			return obj.getQuantity2();
+		}
+
+		@Override
+		public void setValue(QuantityRatio obj, DecimalNumber value) {
+			obj.setQuantity2(value);
 		}
 	};
 	protected SecuritiesProceedsDefinition additionalQuantityForSubscribedSecuritiesProceedsDefinition;
@@ -409,7 +424,7 @@ public class QuantityRatio {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmAdditionalQuantityForSubscribedSecuritiesProceedsDefinition = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<QuantityRatio, SecuritiesProceedsDefinition> mmAdditionalQuantityForSubscribedSecuritiesProceedsDefinition = new MMBusinessAssociationEnd<QuantityRatio, SecuritiesProceedsDefinition>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.QuantityRatio.mmObject();
@@ -418,9 +433,19 @@ public class QuantityRatio {
 			definition = "Securities proceeds for which an additional quantity for existing securities is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmAdditionalQuantityForExistingSecurities;
+			opposite_lazy = () -> SecuritiesProceedsDefinition.mmAdditionalQuantityForExistingSecurities;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
+			type_lazy = () -> SecuritiesProceedsDefinition.mmObject();
+		}
+
+		@Override
+		public SecuritiesProceedsDefinition getValue(QuantityRatio obj) {
+			return obj.getAdditionalQuantityForSubscribedSecuritiesProceedsDefinition();
+		}
+
+		@Override
+		public void setValue(QuantityRatio obj, SecuritiesProceedsDefinition value) {
+			obj.setAdditionalQuantityForSubscribedSecuritiesProceedsDefinition(value);
 		}
 	};
 	protected SecuritiesProceedsDefinition newToOldProceedsDefinition;
@@ -459,7 +484,7 @@ public class QuantityRatio {
 	 * "Securities procceds for which a nwe to old ratio is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmNewToOldProceedsDefinition = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<QuantityRatio, SecuritiesProceedsDefinition> mmNewToOldProceedsDefinition = new MMBusinessAssociationEnd<QuantityRatio, SecuritiesProceedsDefinition>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.QuantityRatio.mmObject();
@@ -468,9 +493,19 @@ public class QuantityRatio {
 			definition = "Securities procceds for which a nwe to old ratio is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmNewToOld;
+			opposite_lazy = () -> SecuritiesProceedsDefinition.mmNewToOld;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
+			type_lazy = () -> SecuritiesProceedsDefinition.mmObject();
+		}
+
+		@Override
+		public SecuritiesProceedsDefinition getValue(QuantityRatio obj) {
+			return obj.getNewToOldProceedsDefinition();
+		}
+
+		@Override
+		public void setValue(QuantityRatio obj, SecuritiesProceedsDefinition value) {
+			obj.setNewToOldProceedsDefinition(value);
 		}
 	};
 	protected SecuritiesProceedsDefinition newToUnderlyingProceedsDefinition;
@@ -509,7 +544,7 @@ public class QuantityRatio {
 	 * "Securities proceeds for which a new to underlying ratio is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmNewToUnderlyingProceedsDefinition = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<QuantityRatio, SecuritiesProceedsDefinition> mmNewToUnderlyingProceedsDefinition = new MMBusinessAssociationEnd<QuantityRatio, SecuritiesProceedsDefinition>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.QuantityRatio.mmObject();
@@ -518,9 +553,19 @@ public class QuantityRatio {
 			definition = "Securities proceeds for which a new to underlying ratio is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmNewSecuritiesToUnderlyingSecurities;
+			opposite_lazy = () -> SecuritiesProceedsDefinition.mmNewSecuritiesToUnderlyingSecurities;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
+			type_lazy = () -> SecuritiesProceedsDefinition.mmObject();
+		}
+
+		@Override
+		public SecuritiesProceedsDefinition getValue(QuantityRatio obj) {
+			return obj.getNewToUnderlyingProceedsDefinition();
+		}
+
+		@Override
+		public void setValue(QuantityRatio obj, SecuritiesProceedsDefinition value) {
+			obj.setNewToUnderlyingProceedsDefinition(value);
 		}
 	};
 	protected SecuritiesProceedsDefinition intermediateSecuritiesProceedsDefinition;
@@ -560,7 +605,7 @@ public class QuantityRatio {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmIntermediateSecuritiesProceedsDefinition = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<QuantityRatio, SecuritiesProceedsDefinition> mmIntermediateSecuritiesProceedsDefinition = new MMBusinessAssociationEnd<QuantityRatio, SecuritiesProceedsDefinition>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.QuantityRatio.mmObject();
@@ -569,9 +614,19 @@ public class QuantityRatio {
 			definition = "Securities proceeds for which a quantity of intermediate securities is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmIntermediateSecuritiesToUnderlyingRatio;
+			opposite_lazy = () -> SecuritiesProceedsDefinition.mmIntermediateSecuritiesToUnderlyingRatio;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
+			type_lazy = () -> SecuritiesProceedsDefinition.mmObject();
+		}
+
+		@Override
+		public SecuritiesProceedsDefinition getValue(QuantityRatio obj) {
+			return obj.getIntermediateSecuritiesProceedsDefinition();
+		}
+
+		@Override
+		public void setValue(QuantityRatio obj, SecuritiesProceedsDefinition value) {
+			obj.setIntermediateSecuritiesProceedsDefinition(value);
 		}
 	};
 	protected Warrant warrant;
@@ -605,22 +660,32 @@ public class QuantityRatio {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Provides the warrant for the related quantity or the underlying quantity."
+	 * "Provides the warrant for the related quantity or the underlying quantity. "
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmWarrant = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<QuantityRatio, Warrant> mmWarrant = new MMBusinessAssociationEnd<QuantityRatio, Warrant>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.QuantityRatio.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Warrant";
-			definition = "Provides the warrant for the related quantity or the underlying quantity.";
+			definition = "Provides the warrant for the related quantity or the underlying quantity. ";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.Warrant.mmWarrantParity;
+			opposite_lazy = () -> Warrant.mmWarrantParity;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Warrant.mmObject();
+			type_lazy = () -> Warrant.mmObject();
+		}
+
+		@Override
+		public Warrant getValue(QuantityRatio obj) {
+			return obj.getWarrant();
+		}
+
+		@Override
+		public void setValue(QuantityRatio obj, Warrant value) {
+			obj.setWarrant(value);
 		}
 	};
 
@@ -631,9 +696,9 @@ public class QuantityRatio {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QuantityRatio";
 				definition = "Ratio expressed as a quotient of quantities.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Warrant.mmWarrantParity, com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmAdditionalQuantityForSubscribedResultantSecurities,
-						com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmAdditionalQuantityForExistingSecurities, com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmNewToOld,
-						com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmNewSecuritiesToUnderlyingSecurities, com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmIntermediateSecuritiesToUnderlyingRatio);
+				associationDomain_lazy = () -> Arrays.asList(Warrant.mmWarrantParity, SecuritiesProceedsDefinition.mmAdditionalQuantityForSubscribedResultantSecurities,
+						SecuritiesProceedsDefinition.mmAdditionalQuantityForExistingSecurities, SecuritiesProceedsDefinition.mmNewToOld, SecuritiesProceedsDefinition.mmNewSecuritiesToUnderlyingSecurities,
+						SecuritiesProceedsDefinition.mmIntermediateSecuritiesToUnderlyingRatio);
 				derivationElement_lazy = () -> Arrays.asList(RatioFormat3Choice.mmQuantityToQuantity, RatioFormat4Choice.mmQuantityToQuantity, RatioFormat7Choice.mmQuantityToQuantity, RatioFormat8Choice.mmQuantityToQuantity,
 						RatioFormat15Choice.mmQuantityToQuantity, RatioFormat16Choice.mmQuantityToQuantity, RatioFormat5Choice.mmQuantityToQuantity, RatioFormat6Choice.mmQuantityToQuantity, RatioFormat9Choice.mmQuantityToQuantity,
 						RatioFormat10Choice.mmQuantityToQuantity, RatioFormat11Choice.mmQuantityToQuantity, RatioFormat12Choice.mmQuantityToQuantity, RatioFormat13Choice.mmQuantityToQuantity, RatioFormat14Choice.mmQuantityToQuantity,
@@ -658,7 +723,7 @@ public class QuantityRatio {
 		return additionalQuantityForResultantSecuritiesProceedsDefinition;
 	}
 
-	public QuantityRatio setAdditionalQuantityForResultantSecuritiesProceedsDefinition(com.tools20022.repository.entity.SecuritiesProceedsDefinition additionalQuantityForResultantSecuritiesProceedsDefinition) {
+	public QuantityRatio setAdditionalQuantityForResultantSecuritiesProceedsDefinition(SecuritiesProceedsDefinition additionalQuantityForResultantSecuritiesProceedsDefinition) {
 		this.additionalQuantityForResultantSecuritiesProceedsDefinition = Objects.requireNonNull(additionalQuantityForResultantSecuritiesProceedsDefinition);
 		return this;
 	}
@@ -685,7 +750,7 @@ public class QuantityRatio {
 		return additionalQuantityForSubscribedSecuritiesProceedsDefinition;
 	}
 
-	public QuantityRatio setAdditionalQuantityForSubscribedSecuritiesProceedsDefinition(com.tools20022.repository.entity.SecuritiesProceedsDefinition additionalQuantityForSubscribedSecuritiesProceedsDefinition) {
+	public QuantityRatio setAdditionalQuantityForSubscribedSecuritiesProceedsDefinition(SecuritiesProceedsDefinition additionalQuantityForSubscribedSecuritiesProceedsDefinition) {
 		this.additionalQuantityForSubscribedSecuritiesProceedsDefinition = Objects.requireNonNull(additionalQuantityForSubscribedSecuritiesProceedsDefinition);
 		return this;
 	}
@@ -694,7 +759,7 @@ public class QuantityRatio {
 		return newToOldProceedsDefinition;
 	}
 
-	public QuantityRatio setNewToOldProceedsDefinition(com.tools20022.repository.entity.SecuritiesProceedsDefinition newToOldProceedsDefinition) {
+	public QuantityRatio setNewToOldProceedsDefinition(SecuritiesProceedsDefinition newToOldProceedsDefinition) {
 		this.newToOldProceedsDefinition = Objects.requireNonNull(newToOldProceedsDefinition);
 		return this;
 	}
@@ -703,7 +768,7 @@ public class QuantityRatio {
 		return newToUnderlyingProceedsDefinition;
 	}
 
-	public QuantityRatio setNewToUnderlyingProceedsDefinition(com.tools20022.repository.entity.SecuritiesProceedsDefinition newToUnderlyingProceedsDefinition) {
+	public QuantityRatio setNewToUnderlyingProceedsDefinition(SecuritiesProceedsDefinition newToUnderlyingProceedsDefinition) {
 		this.newToUnderlyingProceedsDefinition = Objects.requireNonNull(newToUnderlyingProceedsDefinition);
 		return this;
 	}
@@ -712,7 +777,7 @@ public class QuantityRatio {
 		return intermediateSecuritiesProceedsDefinition;
 	}
 
-	public QuantityRatio setIntermediateSecuritiesProceedsDefinition(com.tools20022.repository.entity.SecuritiesProceedsDefinition intermediateSecuritiesProceedsDefinition) {
+	public QuantityRatio setIntermediateSecuritiesProceedsDefinition(SecuritiesProceedsDefinition intermediateSecuritiesProceedsDefinition) {
 		this.intermediateSecuritiesProceedsDefinition = Objects.requireNonNull(intermediateSecuritiesProceedsDefinition);
 		return this;
 	}
@@ -721,7 +786,7 @@ public class QuantityRatio {
 		return warrant;
 	}
 
-	public QuantityRatio setWarrant(com.tools20022.repository.entity.Warrant warrant) {
+	public QuantityRatio setWarrant(Warrant warrant) {
 		this.warrant = Objects.requireNonNull(warrant);
 		return this;
 	}

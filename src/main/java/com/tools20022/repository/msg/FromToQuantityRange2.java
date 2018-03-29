@@ -106,7 +106,7 @@ public class FromToQuantityRange2 {
 	 * FromToQuantityRange1.mmFromQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFromQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FromToQuantityRange2, DecimalNumber> mmFromQuantity = new MMMessageAttribute<FromToQuantityRange2, DecimalNumber>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FromToQuantityRange2.mmObject();
 			isDerived = false;
@@ -118,6 +118,16 @@ public class FromToQuantityRange2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(FromToQuantityRange2 obj) {
+			return obj.getFromQuantity();
+		}
+
+		@Override
+		public void setValue(FromToQuantityRange2 obj, DecimalNumber value) {
+			obj.setFromQuantity(value);
 		}
 	};
 	@XmlElement(name = "ToQty", required = true)
@@ -155,7 +165,7 @@ public class FromToQuantityRange2 {
 	 * FromToQuantityRange1.mmToQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmToQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FromToQuantityRange2, DecimalNumber> mmToQuantity = new MMMessageAttribute<FromToQuantityRange2, DecimalNumber>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FromToQuantityRange2.mmObject();
 			isDerived = false;
@@ -167,6 +177,16 @@ public class FromToQuantityRange2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(FromToQuantityRange2 obj) {
+			return obj.getToQuantity();
+		}
+
+		@Override
+		public void setValue(FromToQuantityRange2 obj, DecimalNumber value) {
+			obj.setToQuantity(value);
 		}
 	};
 

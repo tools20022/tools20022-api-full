@@ -26,6 +26,7 @@ import com.tools20022.repository.codeset.UndertakingStatus2Code;
 import com.tools20022.repository.entity.AmendmentOfUndertaking;
 import com.tools20022.repository.entity.Undertaking;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Amendment8;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -113,7 +114,7 @@ public class Amendment7 {
 	 * definition} = "Identification of the proposed amendment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmendmentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Amendment7, Amendment8> mmAmendmentIdentification = new MMMessageAssociationEnd<Amendment7, Amendment8>() {
 		{
 			businessElementTrace_lazy = () -> AmendmentOfUndertaking.mmAmendmentIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Amendment7.mmObject();
@@ -125,7 +126,17 @@ public class Amendment7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Amendment8.mmObject();
+			type_lazy = () -> Amendment8.mmObject();
+		}
+
+		@Override
+		public Amendment8 getValue(Amendment7 obj) {
+			return obj.getAmendmentIdentification();
+		}
+
+		@Override
+		public void setValue(Amendment7 obj, Amendment8 value) {
+			obj.setAmendmentIdentification(value);
 		}
 	};
 	@XmlElement(name = "AmdmntSts", required = true)
@@ -162,7 +173,7 @@ public class Amendment7 {
 	 * definition} = "Proposed undertaking amendment status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmendmentStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Amendment7, UndertakingStatus2Code> mmAmendmentStatus = new MMMessageAttribute<Amendment7, UndertakingStatus2Code>() {
 		{
 			businessElementTrace_lazy = () -> Undertaking.mmUndertakingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Amendment7.mmObject();
@@ -174,6 +185,16 @@ public class Amendment7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UndertakingStatus2Code.mmObject();
+		}
+
+		@Override
+		public UndertakingStatus2Code getValue(Amendment7 obj) {
+			return obj.getAmendmentStatus();
+		}
+
+		@Override
+		public void setValue(Amendment7 obj, UndertakingStatus2Code value) {
+			obj.setAmendmentStatus(value);
 		}
 	};
 
@@ -196,7 +217,7 @@ public class Amendment7 {
 		return amendmentIdentification;
 	}
 
-	public Amendment7 setAmendmentIdentification(com.tools20022.repository.msg.Amendment8 amendmentIdentification) {
+	public Amendment7 setAmendmentIdentification(Amendment8 amendmentIdentification) {
 		this.amendmentIdentification = Objects.requireNonNull(amendmentIdentification);
 		return this;
 	}

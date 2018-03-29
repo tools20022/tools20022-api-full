@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.SubmittingPartyRole;
 import com.tools20022.repository.entity.TradePartyRole;
 import com.tools20022.repository.entity.TreasuryTradingParty;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FundIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -116,7 +117,7 @@ public class TradePartyIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubmittingParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradePartyIdentification1, BICIdentifier> mmSubmittingParty = new MMMessageAttribute<TradePartyIdentification1, BICIdentifier>() {
 		{
 			businessComponentTrace_lazy = () -> SubmittingPartyRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradePartyIdentification1.mmObject();
@@ -128,6 +129,16 @@ public class TradePartyIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
+		}
+
+		@Override
+		public BICIdentifier getValue(TradePartyIdentification1 obj) {
+			return obj.getSubmittingParty();
+		}
+
+		@Override
+		public void setValue(TradePartyIdentification1 obj, BICIdentifier value) {
+			obj.setSubmittingParty(value);
 		}
 	};
 	@XmlElement(name = "TradPty", required = true)
@@ -166,7 +177,7 @@ public class TradePartyIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradeParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradePartyIdentification1, PartyIdentification7Choice> mmTradeParty = new MMMessageAssociationEnd<TradePartyIdentification1, PartyIdentification7Choice>() {
 		{
 			businessComponentTrace_lazy = () -> TreasuryTradingParty.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradePartyIdentification1.mmObject();
@@ -179,6 +190,16 @@ public class TradePartyIdentification1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification7Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification7Choice getValue(TradePartyIdentification1 obj) {
+			return obj.getTradeParty();
+		}
+
+		@Override
+		public void setValue(TradePartyIdentification1 obj, PartyIdentification7Choice value) {
+			obj.setTradeParty(value);
 		}
 	};
 	@XmlElement(name = "FndInf")
@@ -215,7 +236,7 @@ public class TradePartyIdentification1 {
 	 * "Identifies the fund which is one of the parties in a treasury trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFundInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradePartyIdentification1, Optional<FundIdentification1>> mmFundInformation = new MMMessageAssociationEnd<TradePartyIdentification1, Optional<FundIdentification1>>() {
 		{
 			businessElementTrace_lazy = () -> TreasuryTradingParty.mmInvestmentFund;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradePartyIdentification1.mmObject();
@@ -227,7 +248,17 @@ public class TradePartyIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FundIdentification1.mmObject();
+			type_lazy = () -> FundIdentification1.mmObject();
+		}
+
+		@Override
+		public Optional<FundIdentification1> getValue(TradePartyIdentification1 obj) {
+			return obj.getFundInformation();
+		}
+
+		@Override
+		public void setValue(TradePartyIdentification1 obj, Optional<FundIdentification1> value) {
+			obj.setFundInformation(value.orElse(null));
 		}
 	};
 
@@ -268,7 +299,7 @@ public class TradePartyIdentification1 {
 		return fundInformation == null ? Optional.empty() : Optional.of(fundInformation);
 	}
 
-	public TradePartyIdentification1 setFundInformation(com.tools20022.repository.msg.FundIdentification1 fundInformation) {
+	public TradePartyIdentification1 setFundInformation(FundIdentification1 fundInformation) {
 		this.fundInformation = fundInformation;
 		return this;
 	}

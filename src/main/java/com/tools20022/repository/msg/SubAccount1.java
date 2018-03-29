@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.AccountIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -129,7 +130,7 @@ public class SubAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubAccount1, AccountIdentification1> mmIdentification = new MMMessageAttribute<SubAccount1, AccountIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubAccount1.mmObject();
@@ -141,7 +142,17 @@ public class SubAccount1 {
 			nextVersions_lazy = () -> Arrays.asList(SubAccount4.mmIdentification, SubAccount5.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentification1.mmObject();
+			complexType_lazy = () -> AccountIdentification1.mmObject();
+		}
+
+		@Override
+		public AccountIdentification1 getValue(SubAccount1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SubAccount1 obj, AccountIdentification1 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Nm")
@@ -188,7 +199,7 @@ public class SubAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubAccount1, Optional<Max35Text>> mmName = new MMMessageAttribute<SubAccount1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubAccount1.mmObject();
@@ -201,6 +212,16 @@ public class SubAccount1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SubAccount1 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(SubAccount1 obj, Optional<Max35Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Chrtc")
@@ -246,7 +267,7 @@ public class SubAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCharacteristic = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubAccount1, Optional<Max35Text>> mmCharacteristic = new MMMessageAttribute<SubAccount1, Optional<Max35Text>>() {
 		{
 			businessComponentTrace_lazy = () -> Account.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubAccount1.mmObject();
@@ -259,6 +280,16 @@ public class SubAccount1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SubAccount1 obj) {
+			return obj.getCharacteristic();
+		}
+
+		@Override
+		public void setValue(SubAccount1 obj, Optional<Max35Text> value) {
+			obj.setCharacteristic(value.orElse(null));
 		}
 	};
 
@@ -281,7 +312,7 @@ public class SubAccount1 {
 		return identification;
 	}
 
-	public SubAccount1 setIdentification(com.tools20022.repository.msg.AccountIdentification1 identification) {
+	public SubAccount1 setIdentification(AccountIdentification1 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}

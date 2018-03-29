@@ -101,7 +101,7 @@ public class SystemParty2 {
 	 * definition} = "Specifies the opening date of the party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOpeningDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemParty2, Optional<ISODate>> mmOpeningDate = new MMMessageAttribute<SystemParty2, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemParty2.mmObject();
 			isDerived = false;
@@ -112,6 +112,16 @@ public class SystemParty2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(SystemParty2 obj) {
+			return obj.getOpeningDate();
+		}
+
+		@Override
+		public void setValue(SystemParty2 obj, Optional<ISODate> value) {
+			obj.setOpeningDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClsgDt")
@@ -142,7 +152,7 @@ public class SystemParty2 {
 	 * definition} = "Specifies the closing date of the party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClosingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemParty2, Optional<ISODate>> mmClosingDate = new MMMessageAttribute<SystemParty2, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemParty2.mmObject();
 			isDerived = false;
@@ -153,6 +163,16 @@ public class SystemParty2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(SystemParty2 obj) {
+			return obj.getClosingDate();
+		}
+
+		@Override
+		public void setValue(SystemParty2 obj, Optional<ISODate> value) {
+			obj.setClosingDate(value.orElse(null));
 		}
 	};
 

@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecuritiesAccount13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -115,7 +116,7 @@ public class IssuanceAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuanceAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IssuanceAccount1, SecuritiesAccount13> mmIssuanceAccount = new MMMessageAttribute<IssuanceAccount1, SecuritiesAccount13>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IssuanceAccount1.mmObject();
 			isDerived = false;
@@ -126,7 +127,17 @@ public class IssuanceAccount1 {
 			nextVersions_lazy = () -> Arrays.asList(IssuanceAccount2.mmIssuanceAccount);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
+			complexType_lazy = () -> SecuritiesAccount13.mmObject();
+		}
+
+		@Override
+		public SecuritiesAccount13 getValue(IssuanceAccount1 obj) {
+			return obj.getIssuanceAccount();
+		}
+
+		@Override
+		public void setValue(IssuanceAccount1 obj, SecuritiesAccount13 value) {
+			obj.setIssuanceAccount(value);
 		}
 	};
 	@XmlElement(name = "PmryAcctInd", required = true)
@@ -168,7 +179,7 @@ public class IssuanceAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPrimaryAccountIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IssuanceAccount1, YesNoIndicator> mmPrimaryAccountIndicator = new MMMessageAttribute<IssuanceAccount1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IssuanceAccount1.mmObject();
 			isDerived = false;
@@ -180,6 +191,16 @@ public class IssuanceAccount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(IssuanceAccount1 obj) {
+			return obj.getPrimaryAccountIndicator();
+		}
+
+		@Override
+		public void setValue(IssuanceAccount1 obj, YesNoIndicator value) {
+			obj.setPrimaryAccountIndicator(value);
 		}
 	};
 
@@ -201,7 +222,7 @@ public class IssuanceAccount1 {
 		return issuanceAccount;
 	}
 
-	public IssuanceAccount1 setIssuanceAccount(com.tools20022.repository.msg.SecuritiesAccount13 issuanceAccount) {
+	public IssuanceAccount1 setIssuanceAccount(SecuritiesAccount13 issuanceAccount) {
 		this.issuanceAccount = Objects.requireNonNull(issuanceAccount);
 		return this;
 	}

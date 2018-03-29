@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SignedQuantityFormat4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -127,7 +128,7 @@ public class CorporateActionBalanceSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionBalanceSD1, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionBalanceSD1, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceSD1.mmObject();
 			isDerived = false;
@@ -139,6 +140,16 @@ public class CorporateActionBalanceSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionBalanceSD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionBalanceSD1 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "OrgnlBal")
@@ -179,7 +190,7 @@ public class CorporateActionBalanceSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionBalanceSD1, Optional<SignedQuantityFormat4>> mmOriginalBalance = new MMMessageAssociationEnd<CorporateActionBalanceSD1, Optional<SignedQuantityFormat4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceSD1.mmObject();
 			isDerived = false;
@@ -191,7 +202,17 @@ public class CorporateActionBalanceSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat4.mmObject();
+			type_lazy = () -> SignedQuantityFormat4.mmObject();
+		}
+
+		@Override
+		public Optional<SignedQuantityFormat4> getValue(CorporateActionBalanceSD1 obj) {
+			return obj.getOriginalBalance();
+		}
+
+		@Override
+		public void setValue(CorporateActionBalanceSD1 obj, Optional<SignedQuantityFormat4> value) {
+			obj.setOriginalBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AdjstdBal")
@@ -232,7 +253,7 @@ public class CorporateActionBalanceSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdjustedBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionBalanceSD1, Optional<SignedQuantityFormat4>> mmAdjustedBalance = new MMMessageAssociationEnd<CorporateActionBalanceSD1, Optional<SignedQuantityFormat4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceSD1.mmObject();
 			isDerived = false;
@@ -244,7 +265,17 @@ public class CorporateActionBalanceSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat4.mmObject();
+			type_lazy = () -> SignedQuantityFormat4.mmObject();
+		}
+
+		@Override
+		public Optional<SignedQuantityFormat4> getValue(CorporateActionBalanceSD1 obj) {
+			return obj.getAdjustedBalance();
+		}
+
+		@Override
+		public void setValue(CorporateActionBalanceSD1 obj, Optional<SignedQuantityFormat4> value) {
+			obj.setAdjustedBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UpldgdBal")
@@ -285,7 +316,7 @@ public class CorporateActionBalanceSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnpledgedBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionBalanceSD1, Optional<SignedQuantityFormat4>> mmUnpledgedBalance = new MMMessageAssociationEnd<CorporateActionBalanceSD1, Optional<SignedQuantityFormat4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceSD1.mmObject();
 			isDerived = false;
@@ -297,7 +328,17 @@ public class CorporateActionBalanceSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat4.mmObject();
+			type_lazy = () -> SignedQuantityFormat4.mmObject();
+		}
+
+		@Override
+		public Optional<SignedQuantityFormat4> getValue(CorporateActionBalanceSD1 obj) {
+			return obj.getUnpledgedBalance();
+		}
+
+		@Override
+		public void setValue(CorporateActionBalanceSD1 obj, Optional<SignedQuantityFormat4> value) {
+			obj.setUnpledgedBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InvstmtUpldgdBal")
@@ -338,7 +379,7 @@ public class CorporateActionBalanceSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestmentUnpledgedBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionBalanceSD1, Optional<SignedQuantityFormat4>> mmInvestmentUnpledgedBalance = new MMMessageAssociationEnd<CorporateActionBalanceSD1, Optional<SignedQuantityFormat4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceSD1.mmObject();
 			isDerived = false;
@@ -350,7 +391,17 @@ public class CorporateActionBalanceSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat4.mmObject();
+			type_lazy = () -> SignedQuantityFormat4.mmObject();
+		}
+
+		@Override
+		public Optional<SignedQuantityFormat4> getValue(CorporateActionBalanceSD1 obj) {
+			return obj.getInvestmentUnpledgedBalance();
+		}
+
+		@Override
+		public void setValue(CorporateActionBalanceSD1 obj, Optional<SignedQuantityFormat4> value) {
+			obj.setInvestmentUnpledgedBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InvstmtPldgdBal")
@@ -391,7 +442,7 @@ public class CorporateActionBalanceSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestmentPledgedBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionBalanceSD1, Optional<SignedQuantityFormat4>> mmInvestmentPledgedBalance = new MMMessageAssociationEnd<CorporateActionBalanceSD1, Optional<SignedQuantityFormat4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceSD1.mmObject();
 			isDerived = false;
@@ -403,7 +454,17 @@ public class CorporateActionBalanceSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat4.mmObject();
+			type_lazy = () -> SignedQuantityFormat4.mmObject();
+		}
+
+		@Override
+		public Optional<SignedQuantityFormat4> getValue(CorporateActionBalanceSD1 obj) {
+			return obj.getInvestmentPledgedBalance();
+		}
+
+		@Override
+		public void setValue(CorporateActionBalanceSD1 obj, Optional<SignedQuantityFormat4> value) {
+			obj.setInvestmentPledgedBalance(value.orElse(null));
 		}
 	};
 
@@ -436,7 +497,7 @@ public class CorporateActionBalanceSD1 {
 		return originalBalance == null ? Optional.empty() : Optional.of(originalBalance);
 	}
 
-	public CorporateActionBalanceSD1 setOriginalBalance(com.tools20022.repository.msg.SignedQuantityFormat4 originalBalance) {
+	public CorporateActionBalanceSD1 setOriginalBalance(SignedQuantityFormat4 originalBalance) {
 		this.originalBalance = originalBalance;
 		return this;
 	}
@@ -445,7 +506,7 @@ public class CorporateActionBalanceSD1 {
 		return adjustedBalance == null ? Optional.empty() : Optional.of(adjustedBalance);
 	}
 
-	public CorporateActionBalanceSD1 setAdjustedBalance(com.tools20022.repository.msg.SignedQuantityFormat4 adjustedBalance) {
+	public CorporateActionBalanceSD1 setAdjustedBalance(SignedQuantityFormat4 adjustedBalance) {
 		this.adjustedBalance = adjustedBalance;
 		return this;
 	}
@@ -454,7 +515,7 @@ public class CorporateActionBalanceSD1 {
 		return unpledgedBalance == null ? Optional.empty() : Optional.of(unpledgedBalance);
 	}
 
-	public CorporateActionBalanceSD1 setUnpledgedBalance(com.tools20022.repository.msg.SignedQuantityFormat4 unpledgedBalance) {
+	public CorporateActionBalanceSD1 setUnpledgedBalance(SignedQuantityFormat4 unpledgedBalance) {
 		this.unpledgedBalance = unpledgedBalance;
 		return this;
 	}
@@ -463,7 +524,7 @@ public class CorporateActionBalanceSD1 {
 		return investmentUnpledgedBalance == null ? Optional.empty() : Optional.of(investmentUnpledgedBalance);
 	}
 
-	public CorporateActionBalanceSD1 setInvestmentUnpledgedBalance(com.tools20022.repository.msg.SignedQuantityFormat4 investmentUnpledgedBalance) {
+	public CorporateActionBalanceSD1 setInvestmentUnpledgedBalance(SignedQuantityFormat4 investmentUnpledgedBalance) {
 		this.investmentUnpledgedBalance = investmentUnpledgedBalance;
 		return this;
 	}
@@ -472,7 +533,7 @@ public class CorporateActionBalanceSD1 {
 		return investmentPledgedBalance == null ? Optional.empty() : Optional.of(investmentPledgedBalance);
 	}
 
-	public CorporateActionBalanceSD1 setInvestmentPledgedBalance(com.tools20022.repository.msg.SignedQuantityFormat4 investmentPledgedBalance) {
+	public CorporateActionBalanceSD1 setInvestmentPledgedBalance(SignedQuantityFormat4 investmentPledgedBalance) {
 		this.investmentPledgedBalance = investmentPledgedBalance;
 		return this;
 	}

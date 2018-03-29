@@ -30,6 +30,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.IsabelExtendedHeader1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -139,7 +140,7 @@ public class IsabelEnhancedHeader1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDebitType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelEnhancedHeader1, DebitType1Code> mmDebitType = new MMMessageAttribute<IsabelEnhancedHeader1, DebitType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
@@ -150,6 +151,16 @@ public class IsabelEnhancedHeader1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DebitType1Code.mmObject();
+		}
+
+		@Override
+		public DebitType1Code getValue(IsabelEnhancedHeader1 obj) {
+			return obj.getDebitType();
+		}
+
+		@Override
+		public void setValue(IsabelEnhancedHeader1 obj, DebitType1Code value) {
+			obj.setDebitType(value);
 		}
 	};
 	@XmlElement(name = "BkDbtTp", required = true)
@@ -184,7 +195,7 @@ public class IsabelEnhancedHeader1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBankDebitType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelEnhancedHeader1, DebitType1Code> mmBankDebitType = new MMMessageAttribute<IsabelEnhancedHeader1, DebitType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
@@ -195,6 +206,16 @@ public class IsabelEnhancedHeader1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DebitType1Code.mmObject();
+		}
+
+		@Override
+		public DebitType1Code getValue(IsabelEnhancedHeader1 obj) {
+			return obj.getBankDebitType();
+		}
+
+		@Override
+		public void setValue(IsabelEnhancedHeader1 obj, DebitType1Code value) {
+			obj.setBankDebitType(value);
 		}
 	};
 	@XmlElement(name = "AcctBasedCtrct", required = true)
@@ -227,7 +248,7 @@ public class IsabelEnhancedHeader1 {
 	 * definition} = "Contract is defined on a specific account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountBasedContract = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelEnhancedHeader1, TrueFalseIndicator> mmAccountBasedContract = new MMMessageAttribute<IsabelEnhancedHeader1, TrueFalseIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
@@ -238,6 +259,16 @@ public class IsabelEnhancedHeader1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public TrueFalseIndicator getValue(IsabelEnhancedHeader1 obj) {
+			return obj.getAccountBasedContract();
+		}
+
+		@Override
+		public void setValue(IsabelEnhancedHeader1 obj, TrueFalseIndicator value) {
+			obj.setAccountBasedContract(value);
 		}
 	};
 	@XmlElement(name = "VldtnRslts", required = true)
@@ -272,7 +303,7 @@ public class IsabelEnhancedHeader1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValidationResults = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelEnhancedHeader1, Validation1Code> mmValidationResults = new MMMessageAttribute<IsabelEnhancedHeader1, Validation1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
@@ -283,6 +314,16 @@ public class IsabelEnhancedHeader1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Validation1Code.mmObject();
+		}
+
+		@Override
+		public Validation1Code getValue(IsabelEnhancedHeader1 obj) {
+			return obj.getValidationResults();
+		}
+
+		@Override
+		public void setValue(IsabelEnhancedHeader1 obj, Validation1Code value) {
+			obj.setValidationResults(value);
 		}
 	};
 	@XmlElement(name = "PwrToSgnVldtnRslts", required = true)
@@ -317,7 +358,7 @@ public class IsabelEnhancedHeader1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPowerToSignValidationResults = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelEnhancedHeader1, Validation2Code> mmPowerToSignValidationResults = new MMMessageAttribute<IsabelEnhancedHeader1, Validation2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
@@ -328,6 +369,16 @@ public class IsabelEnhancedHeader1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Validation2Code.mmObject();
+		}
+
+		@Override
+		public Validation2Code getValue(IsabelEnhancedHeader1 obj) {
+			return obj.getPowerToSignValidationResults();
+		}
+
+		@Override
+		public void setValue(IsabelEnhancedHeader1 obj, Validation2Code value) {
+			obj.setPowerToSignValidationResults(value);
 		}
 	};
 	@XmlElement(name = "PwrToSgnVldtnTmStmp", required = true)
@@ -360,7 +411,7 @@ public class IsabelEnhancedHeader1 {
 	 * "Validation of the time stamp provided by the 'PowerToSign' user."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPowerToSignValidationTimeStamp = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelEnhancedHeader1, ISODateTime> mmPowerToSignValidationTimeStamp = new MMMessageAttribute<IsabelEnhancedHeader1, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
@@ -371,6 +422,16 @@ public class IsabelEnhancedHeader1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(IsabelEnhancedHeader1 obj) {
+			return obj.getPowerToSignValidationTimeStamp();
+		}
+
+		@Override
+		public void setValue(IsabelEnhancedHeader1 obj, ISODateTime value) {
+			obj.setPowerToSignValidationTimeStamp(value);
 		}
 	};
 	@XmlElement(name = "SndrTrggr", required = true)
@@ -402,7 +463,7 @@ public class IsabelEnhancedHeader1 {
 	 * definition} = "Trigger used by the sender to transfer the file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSenderTrigger = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IsabelEnhancedHeader1, IsabelSenderTrigger1Choice> mmSenderTrigger = new MMMessageAssociationEnd<IsabelEnhancedHeader1, IsabelSenderTrigger1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
@@ -414,6 +475,16 @@ public class IsabelEnhancedHeader1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> IsabelSenderTrigger1Choice.mmObject();
+		}
+
+		@Override
+		public IsabelSenderTrigger1Choice getValue(IsabelEnhancedHeader1 obj) {
+			return obj.getSenderTrigger();
+		}
+
+		@Override
+		public void setValue(IsabelEnhancedHeader1 obj, IsabelSenderTrigger1Choice value) {
+			obj.setSenderTrigger(value);
 		}
 	};
 	@XmlElement(name = "SndTmStmp", required = true)
@@ -445,7 +516,7 @@ public class IsabelEnhancedHeader1 {
 	 * definition} = "Time stamp on when the file is sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSendTimeStamp = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelEnhancedHeader1, ISODateTime> mmSendTimeStamp = new MMMessageAttribute<IsabelEnhancedHeader1, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
@@ -456,6 +527,16 @@ public class IsabelEnhancedHeader1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(IsabelEnhancedHeader1 obj) {
+			return obj.getSendTimeStamp();
+		}
+
+		@Override
+		public void setValue(IsabelEnhancedHeader1 obj, ISODateTime value) {
+			obj.setSendTimeStamp(value);
 		}
 	};
 	@XmlElement(name = "XtraCondsAccptd", required = true)
@@ -490,7 +571,7 @@ public class IsabelEnhancedHeader1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtraConditionsAccepted = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelEnhancedHeader1, TrueFalseIndicator> mmExtraConditionsAccepted = new MMMessageAttribute<IsabelEnhancedHeader1, TrueFalseIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
@@ -501,6 +582,16 @@ public class IsabelEnhancedHeader1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public TrueFalseIndicator getValue(IsabelEnhancedHeader1 obj) {
+			return obj.getExtraConditionsAccepted();
+		}
+
+		@Override
+		public void setValue(IsabelEnhancedHeader1 obj, TrueFalseIndicator value) {
+			obj.setExtraConditionsAccepted(value);
 		}
 	};
 	@XmlElement(name = "Src", required = true)
@@ -532,7 +623,7 @@ public class IsabelEnhancedHeader1 {
 	 * definition} = "Input source for the generation of the file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSource = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IsabelEnhancedHeader1, IsabelInputSource1Choice> mmSource = new MMMessageAssociationEnd<IsabelEnhancedHeader1, IsabelInputSource1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
@@ -544,6 +635,16 @@ public class IsabelEnhancedHeader1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> IsabelInputSource1Choice.mmObject();
+		}
+
+		@Override
+		public IsabelInputSource1Choice getValue(IsabelEnhancedHeader1 obj) {
+			return obj.getSource();
+		}
+
+		@Override
+		public void setValue(IsabelEnhancedHeader1 obj, IsabelInputSource1Choice value) {
+			obj.setSource(value);
 		}
 	};
 	@XmlElement(name = "NbOfReqrdSgntrs")
@@ -576,7 +677,7 @@ public class IsabelEnhancedHeader1 {
 	 * "Number of signatures required to validate the payments file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfRequiredSignatures = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelEnhancedHeader1, Optional<Number>> mmNumberOfRequiredSignatures = new MMMessageAttribute<IsabelEnhancedHeader1, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
@@ -587,6 +688,16 @@ public class IsabelEnhancedHeader1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(IsabelEnhancedHeader1 obj) {
+			return obj.getNumberOfRequiredSignatures();
+		}
+
+		@Override
+		public void setValue(IsabelEnhancedHeader1 obj, Optional<Number> value) {
+			obj.setNumberOfRequiredSignatures(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Xtnded")
@@ -618,7 +729,7 @@ public class IsabelEnhancedHeader1 {
 	 * "Extended parameters for an Isabel payment initiation file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExtended = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IsabelEnhancedHeader1, Optional<IsabelExtendedHeader1>> mmExtended = new MMMessageAssociationEnd<IsabelEnhancedHeader1, Optional<IsabelExtendedHeader1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelEnhancedHeader1.mmObject();
 			isDerived = false;
@@ -629,7 +740,17 @@ public class IsabelEnhancedHeader1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IsabelExtendedHeader1.mmObject();
+			type_lazy = () -> IsabelExtendedHeader1.mmObject();
+		}
+
+		@Override
+		public Optional<IsabelExtendedHeader1> getValue(IsabelEnhancedHeader1 obj) {
+			return obj.getExtended();
+		}
+
+		@Override
+		public void setValue(IsabelEnhancedHeader1 obj, Optional<IsabelExtendedHeader1> value) {
+			obj.setExtended(value.orElse(null));
 		}
 	};
 
@@ -754,7 +875,7 @@ public class IsabelEnhancedHeader1 {
 		return extended == null ? Optional.empty() : Optional.of(extended);
 	}
 
-	public IsabelEnhancedHeader1 setExtended(com.tools20022.repository.msg.IsabelExtendedHeader1 extended) {
+	public IsabelEnhancedHeader1 setExtended(IsabelExtendedHeader1 extended) {
 		this.extended = extended;
 		return this;
 	}

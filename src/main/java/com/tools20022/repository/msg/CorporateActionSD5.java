@@ -119,7 +119,7 @@ public class CorporateActionSD5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCertificateNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionSD5, Max15NumericText> mmCertificateNumber = new MMMessageAttribute<CorporateActionSD5, Max15NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionSD5.mmObject();
 			isDerived = false;
@@ -132,6 +132,16 @@ public class CorporateActionSD5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
+		}
+
+		@Override
+		public Max15NumericText getValue(CorporateActionSD5 obj) {
+			return obj.getCertificateNumber();
+		}
+
+		@Override
+		public void setValue(CorporateActionSD5 obj, Max15NumericText value) {
+			obj.setCertificateNumber(value);
 		}
 	};
 	@XmlElement(name = "CertClldAmt", required = true)
@@ -177,7 +187,7 @@ public class CorporateActionSD5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCertificateCalledAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionSD5, DecimalNumber> mmCertificateCalledAmount = new MMMessageAttribute<CorporateActionSD5, DecimalNumber>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionSD5.mmObject();
 			isDerived = false;
@@ -190,6 +200,16 @@ public class CorporateActionSD5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(CorporateActionSD5 obj) {
+			return obj.getCertificateCalledAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionSD5 obj, DecimalNumber value) {
+			obj.setCertificateCalledAmount(value);
 		}
 	};
 

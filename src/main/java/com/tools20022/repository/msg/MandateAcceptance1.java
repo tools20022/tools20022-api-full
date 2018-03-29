@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.DirectDebitMandate;
 import com.tools20022.repository.entity.Mandate;
 import com.tools20022.repository.entity.PaymentInstruction;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AcceptanceResult6;
+import com.tools20022.repository.msg.OriginalMessageInformation1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -122,7 +124,7 @@ public class MandateAcceptance1 {
 	 * "Set of elements used to provide information on the original messsage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalMessageInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateAcceptance1, Optional<OriginalMessageInformation1>> mmOriginalMessageInformation = new MMMessageAssociationEnd<MandateAcceptance1, Optional<OriginalMessageInformation1>>() {
 		{
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateAcceptance1.mmObject();
@@ -134,7 +136,17 @@ public class MandateAcceptance1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OriginalMessageInformation1.mmObject();
+			type_lazy = () -> OriginalMessageInformation1.mmObject();
+		}
+
+		@Override
+		public Optional<OriginalMessageInformation1> getValue(MandateAcceptance1 obj) {
+			return obj.getOriginalMessageInformation();
+		}
+
+		@Override
+		public void setValue(MandateAcceptance1 obj, Optional<OriginalMessageInformation1> value) {
+			obj.setOriginalMessageInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AccptncRslt", required = true)
@@ -172,7 +184,7 @@ public class MandateAcceptance1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAcceptanceResult = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateAcceptance1, AcceptanceResult6> mmAcceptanceResult = new MMMessageAssociationEnd<MandateAcceptance1, AcceptanceResult6>() {
 		{
 			businessElementTrace_lazy = () -> Mandate.mmMandateStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateAcceptance1.mmObject();
@@ -184,7 +196,17 @@ public class MandateAcceptance1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AcceptanceResult6.mmObject();
+			type_lazy = () -> AcceptanceResult6.mmObject();
+		}
+
+		@Override
+		public AcceptanceResult6 getValue(MandateAcceptance1 obj) {
+			return obj.getAcceptanceResult();
+		}
+
+		@Override
+		public void setValue(MandateAcceptance1 obj, AcceptanceResult6 value) {
+			obj.setAcceptanceResult(value);
 		}
 	};
 	@XmlElement(name = "OrgnlMndt", required = true)
@@ -222,7 +244,7 @@ public class MandateAcceptance1 {
 	 * "Set of elements used to provide the original mandate data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalMandate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateAcceptance1, OriginalMandate1Choice> mmOriginalMandate = new MMMessageAssociationEnd<MandateAcceptance1, OriginalMandate1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Mandate.mmOriginalMandate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateAcceptance1.mmObject();
@@ -235,6 +257,16 @@ public class MandateAcceptance1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OriginalMandate1Choice.mmObject();
+		}
+
+		@Override
+		public OriginalMandate1Choice getValue(MandateAcceptance1 obj) {
+			return obj.getOriginalMandate();
+		}
+
+		@Override
+		public void setValue(MandateAcceptance1 obj, OriginalMandate1Choice value) {
+			obj.setOriginalMandate(value);
 		}
 	};
 
@@ -258,7 +290,7 @@ public class MandateAcceptance1 {
 		return originalMessageInformation == null ? Optional.empty() : Optional.of(originalMessageInformation);
 	}
 
-	public MandateAcceptance1 setOriginalMessageInformation(com.tools20022.repository.msg.OriginalMessageInformation1 originalMessageInformation) {
+	public MandateAcceptance1 setOriginalMessageInformation(OriginalMessageInformation1 originalMessageInformation) {
 		this.originalMessageInformation = originalMessageInformation;
 		return this;
 	}
@@ -267,7 +299,7 @@ public class MandateAcceptance1 {
 		return acceptanceResult;
 	}
 
-	public MandateAcceptance1 setAcceptanceResult(com.tools20022.repository.msg.AcceptanceResult6 acceptanceResult) {
+	public MandateAcceptance1 setAcceptanceResult(AcceptanceResult6 acceptanceResult) {
 		this.acceptanceResult = Objects.requireNonNull(acceptanceResult);
 		return this;
 	}

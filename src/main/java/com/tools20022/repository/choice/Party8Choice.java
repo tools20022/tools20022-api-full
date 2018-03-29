@@ -108,7 +108,7 @@ public class Party8Choice {
 	 * definition} = "Unique and unambiguous way to identify an organisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOrganisationIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Party8Choice, OrganisationIdentification6> mmOrganisationIdentification = new MMMessageAssociationEnd<Party8Choice, OrganisationIdentification6>() {
 		{
 			businessComponentTrace_lazy = () -> OrganisationIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Party8Choice.mmObject();
@@ -121,6 +121,16 @@ public class Party8Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OrganisationIdentification6.mmObject();
+		}
+
+		@Override
+		public OrganisationIdentification6 getValue(Party8Choice obj) {
+			return obj.getOrganisationIdentification();
+		}
+
+		@Override
+		public void setValue(Party8Choice obj, OrganisationIdentification6 value) {
+			obj.setOrganisationIdentification(value);
 		}
 	};
 	@XmlElement(name = "PrvtId", required = true)
@@ -156,7 +166,7 @@ public class Party8Choice {
 	 * "Unique and unambiguous identification of a person, eg, passport."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPrivateIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Party8Choice, PersonIdentification5> mmPrivateIdentification = new MMMessageAssociationEnd<Party8Choice, PersonIdentification5>() {
 		{
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Party8Choice.mmObject();
@@ -169,6 +179,16 @@ public class Party8Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PersonIdentification5.mmObject();
+		}
+
+		@Override
+		public PersonIdentification5 getValue(Party8Choice obj) {
+			return obj.getPrivateIdentification();
+		}
+
+		@Override
+		public void setValue(Party8Choice obj, PersonIdentification5 value) {
+			obj.setPrivateIdentification(value);
 		}
 	};
 

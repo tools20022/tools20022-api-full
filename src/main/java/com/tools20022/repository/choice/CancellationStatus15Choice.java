@@ -126,7 +126,7 @@ public class CancellationStatus15Choice {
 	 * CancellationStatus9Choice.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationStatus15Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<CancellationStatus15Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationStatus15Choice.mmObject();
@@ -140,6 +140,16 @@ public class CancellationStatus15Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(CancellationStatus15Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(CancellationStatus15Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -183,7 +193,7 @@ public class CancellationStatus15Choice {
 	 * CancellationStatus9Choice.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CancellationStatus15Choice, List<CancellationReason10>> mmReason = new MMMessageAssociationEnd<CancellationStatus15Choice, List<CancellationReason10>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationStatus15Choice.mmObject();
@@ -197,6 +207,16 @@ public class CancellationStatus15Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CancellationReason10.mmObject();
+		}
+
+		@Override
+		public List<CancellationReason10> getValue(CancellationStatus15Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(CancellationStatus15Choice obj, List<CancellationReason10> value) {
+			obj.setReason(value);
 		}
 	};
 

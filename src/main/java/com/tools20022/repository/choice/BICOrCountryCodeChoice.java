@@ -115,7 +115,7 @@ public class BICOrCountryCodeChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BICOrCountryCodeChoice, BICIdentifier> mmBIC = new MMMessageAttribute<BICOrCountryCodeChoice, BICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BICOrCountryCodeChoice.mmObject();
@@ -127,6 +127,16 @@ public class BICOrCountryCodeChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
+		}
+
+		@Override
+		public BICIdentifier getValue(BICOrCountryCodeChoice obj) {
+			return obj.getBIC();
+		}
+
+		@Override
+		public void setValue(BICOrCountryCodeChoice obj, BICIdentifier value) {
+			obj.setBIC(value);
 		}
 	};
 	@XmlElement(name = "Ctry", required = true)
@@ -164,7 +174,7 @@ public class BICOrCountryCodeChoice {
 	 * "A code to identify a nation with its own government (ISO 3166)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BICOrCountryCodeChoice, CountryCode> mmCountry = new MMMessageAttribute<BICOrCountryCodeChoice, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BICOrCountryCodeChoice.mmObject();
@@ -176,6 +186,16 @@ public class BICOrCountryCodeChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(BICOrCountryCodeChoice obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(BICOrCountryCodeChoice obj, CountryCode value) {
+			obj.setCountry(value);
 		}
 	};
 

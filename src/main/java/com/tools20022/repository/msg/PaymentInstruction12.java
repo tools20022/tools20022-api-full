@@ -141,7 +141,7 @@ public class PaymentInstruction12 {
 	 * PaymentInstruction2.mmInstruction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstruction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstruction12, Optional<Instruction1Code>> mmInstruction = new MMMessageAttribute<PaymentInstruction12, Optional<Instruction1Code>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInstruction.mmInstructionForNextAgent;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction12.mmObject();
@@ -155,6 +155,16 @@ public class PaymentInstruction12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Instruction1Code.mmObject();
+		}
+
+		@Override
+		public Optional<Instruction1Code> getValue(PaymentInstruction12 obj) {
+			return obj.getInstruction();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction12 obj, Optional<Instruction1Code> value) {
+			obj.setInstruction(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -206,7 +216,7 @@ public class PaymentInstruction12 {
 	 * PaymentInstruction2.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstruction12, Optional<PaymentType4Choice>> mmType = new MMMessageAttribute<PaymentInstruction12, Optional<PaymentType4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction12.mmObject();
@@ -220,6 +230,16 @@ public class PaymentInstruction12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PaymentType4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentType4Choice> getValue(PaymentInstruction12 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction12 obj, Optional<PaymentType4Choice> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Prty")
@@ -272,7 +292,7 @@ public class PaymentInstruction12 {
 	 * PaymentInstruction2.mmPriority}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriority = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstruction12, Optional<PriorityCode3Choice>> mmPriority = new MMMessageAttribute<PaymentInstruction12, Optional<PriorityCode3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPriority;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction12.mmObject();
@@ -286,6 +306,16 @@ public class PaymentInstruction12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PriorityCode3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriorityCode3Choice> getValue(PaymentInstruction12 obj) {
+			return obj.getPriority();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction12 obj, Optional<PriorityCode3Choice> value) {
+			obj.setPriority(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcgVldtyTm")
@@ -338,7 +368,7 @@ public class PaymentInstruction12 {
 	 * PaymentInstruction2.mmProcessingValidityTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessingValidityTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstruction12, Optional<DateTimePeriodChoice>> mmProcessingValidityTime = new MMMessageAttribute<PaymentInstruction12, Optional<DateTimePeriodChoice>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInstruction.mmProcessingValidityTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction12.mmObject();
@@ -352,6 +382,16 @@ public class PaymentInstruction12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateTimePeriodChoice> getValue(PaymentInstruction12 obj) {
+			return obj.getProcessingValidityTime();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction12 obj, Optional<DateTimePeriodChoice> value) {
+			obj.setProcessingValidityTime(value.orElse(null));
 		}
 	};
 

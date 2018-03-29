@@ -120,7 +120,7 @@ public class SecuritiesBalanceType6Choice {
 	 * SecuritiesBalanceType3Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesBalanceType6Choice, SecuritiesBalanceType11Code> mmCode = new MMMessageAttribute<SecuritiesBalanceType6Choice, SecuritiesBalanceType11Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesBalanceType6Choice.mmObject();
@@ -134,6 +134,16 @@ public class SecuritiesBalanceType6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesBalanceType11Code.mmObject();
+		}
+
+		@Override
+		public SecuritiesBalanceType11Code getValue(SecuritiesBalanceType6Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(SecuritiesBalanceType6Choice obj, SecuritiesBalanceType11Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -179,7 +189,7 @@ public class SecuritiesBalanceType6Choice {
 	 * SecuritiesBalanceType3Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesBalanceType6Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<SecuritiesBalanceType6Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesBalanceType6Choice.mmObject();
@@ -193,6 +203,16 @@ public class SecuritiesBalanceType6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(SecuritiesBalanceType6Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SecuritiesBalanceType6Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -119,7 +119,7 @@ public class RejectedStatus5 {
 	 * definition} = "Reason for a rejected status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectedStatus5, RejectedStatusReason6Code> mmReason = new MMMessageAttribute<RejectedStatus5, RejectedStatusReason6Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectedStatus5.mmObject();
@@ -131,6 +131,16 @@ public class RejectedStatus5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RejectedStatusReason6Code.mmObject();
+		}
+
+		@Override
+		public RejectedStatusReason6Code getValue(RejectedStatus5 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(RejectedStatus5 obj, RejectedStatusReason6Code value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "XtndedRsn", required = true)
@@ -163,7 +173,7 @@ public class RejectedStatus5 {
 	 * definition} = "Reason for a rejected status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectedStatus5, Extended350Code> mmExtendedReason = new MMMessageAttribute<RejectedStatus5, Extended350Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectedStatus5.mmObject();
 			isDerived = false;
@@ -174,6 +184,16 @@ public class RejectedStatus5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Extended350Code getValue(RejectedStatus5 obj) {
+			return obj.getExtendedReason();
+		}
+
+		@Override
+		public void setValue(RejectedStatus5 obj, Extended350Code value) {
+			obj.setExtendedReason(value);
 		}
 	};
 	/**

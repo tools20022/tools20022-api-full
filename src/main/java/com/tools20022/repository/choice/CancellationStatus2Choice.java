@@ -108,7 +108,7 @@ public class CancellationStatus2Choice {
 	 * "Status advising on the processing of the cancellation request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CancellationStatus2Choice, CancellationProcessingStatus1> mmProcessingStatus = new MMMessageAssociationEnd<CancellationStatus2Choice, CancellationProcessingStatus1>() {
 		{
 			businessElementTrace_lazy = () -> MeetingStatus.mmInstructionCancellationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationStatus2Choice.mmObject();
@@ -121,6 +121,16 @@ public class CancellationStatus2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CancellationProcessingStatus1.mmObject();
+		}
+
+		@Override
+		public CancellationProcessingStatus1 getValue(CancellationStatus2Choice obj) {
+			return obj.getProcessingStatus();
+		}
+
+		@Override
+		public void setValue(CancellationStatus2Choice obj, CancellationProcessingStatus1 value) {
+			obj.setProcessingStatus(value);
 		}
 	};
 	@XmlElement(name = "RjctnSts", required = true)
@@ -157,7 +167,7 @@ public class CancellationStatus2Choice {
 	 * "Status advising on the rejection of the cancellation request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejectionStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CancellationStatus2Choice, AdditionalStatus2> mmRejectionStatus = new MMMessageAssociationEnd<CancellationStatus2Choice, AdditionalStatus2>() {
 		{
 			businessElementTrace_lazy = () -> MeetingStatus.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationStatus2Choice.mmObject();
@@ -170,6 +180,16 @@ public class CancellationStatus2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AdditionalStatus2.mmObject();
+		}
+
+		@Override
+		public AdditionalStatus2 getValue(CancellationStatus2Choice obj) {
+			return obj.getRejectionStatus();
+		}
+
+		@Override
+		public void setValue(CancellationStatus2Choice obj, AdditionalStatus2 value) {
+			obj.setRejectionStatus(value);
 		}
 	};
 

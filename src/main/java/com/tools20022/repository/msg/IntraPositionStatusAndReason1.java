@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.ProcessingStatus35Choice;
 import com.tools20022.repository.choice.SettlementStatus9Choice;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ProprietaryReason1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -126,7 +127,7 @@ public class IntraPositionStatusAndReason1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessingStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraPositionStatusAndReason1, List<ProcessingStatus35Choice>> mmProcessingStatus = new MMMessageAttribute<IntraPositionStatusAndReason1, List<ProcessingStatus35Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionStatusAndReason1.mmObject();
@@ -138,6 +139,16 @@ public class IntraPositionStatusAndReason1 {
 			nextVersions_lazy = () -> Arrays.asList(IntraPositionStatusAndReason2.mmProcessingStatus);
 			minOccurs = 0;
 			complexType_lazy = () -> ProcessingStatus35Choice.mmObject();
+		}
+
+		@Override
+		public List<ProcessingStatus35Choice> getValue(IntraPositionStatusAndReason1 obj) {
+			return obj.getProcessingStatus();
+		}
+
+		@Override
+		public void setValue(IntraPositionStatusAndReason1 obj, List<ProcessingStatus35Choice> value) {
+			obj.setProcessingStatus(value);
 		}
 	};
 	@XmlElement(name = "SttlmSts")
@@ -182,7 +193,7 @@ public class IntraPositionStatusAndReason1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionStatusAndReason1, List<SettlementStatus9Choice>> mmSettlementStatus = new MMMessageAssociationEnd<IntraPositionStatusAndReason1, List<SettlementStatus9Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionStatusAndReason1.mmObject();
@@ -195,6 +206,16 @@ public class IntraPositionStatusAndReason1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SettlementStatus9Choice.mmObject();
+		}
+
+		@Override
+		public List<SettlementStatus9Choice> getValue(IntraPositionStatusAndReason1 obj) {
+			return obj.getSettlementStatus();
+		}
+
+		@Override
+		public void setValue(IntraPositionStatusAndReason1 obj, List<SettlementStatus9Choice> value) {
+			obj.setSettlementStatus(value);
 		}
 	};
 	@XmlElement(name = "Sttld")
@@ -238,7 +259,7 @@ public class IntraPositionStatusAndReason1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettled = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionStatusAndReason1, Optional<ProprietaryReason1>> mmSettled = new MMMessageAssociationEnd<IntraPositionStatusAndReason1, Optional<ProprietaryReason1>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionStatusAndReason1.mmObject();
@@ -251,7 +272,17 @@ public class IntraPositionStatusAndReason1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ProprietaryReason1.mmObject();
+			type_lazy = () -> ProprietaryReason1.mmObject();
+		}
+
+		@Override
+		public Optional<ProprietaryReason1> getValue(IntraPositionStatusAndReason1 obj) {
+			return obj.getSettled();
+		}
+
+		@Override
+		public void setValue(IntraPositionStatusAndReason1 obj, Optional<ProprietaryReason1> value) {
+			obj.setSettled(value.orElse(null));
 		}
 	};
 
@@ -293,7 +324,7 @@ public class IntraPositionStatusAndReason1 {
 		return settled == null ? Optional.empty() : Optional.of(settled);
 	}
 
-	public IntraPositionStatusAndReason1 setSettled(com.tools20022.repository.msg.ProprietaryReason1 settled) {
+	public IntraPositionStatusAndReason1 setSettled(ProprietaryReason1 settled) {
 		this.settled = settled;
 		return this;
 	}

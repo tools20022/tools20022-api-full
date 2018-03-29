@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Country;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.TradingMarket;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.OrderDeskContactDetails;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -109,7 +110,7 @@ public class LocalMarketAnnex {
 	 * definition} = "Country in which the processing characteristic applies."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LocalMarketAnnex, List<CountryCode>> mmCountry = new MMMessageAttribute<LocalMarketAnnex, List<CountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LocalMarketAnnex.mmObject();
@@ -120,6 +121,16 @@ public class LocalMarketAnnex {
 			definition = "Country in which the processing characteristic applies.";
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public List<CountryCode> getValue(LocalMarketAnnex obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(LocalMarketAnnex obj, List<CountryCode> value) {
+			obj.setCountry(value);
 		}
 	};
 	@XmlElement(name = "LclOrdrDsk", required = true)
@@ -156,7 +167,7 @@ public class LocalMarketAnnex {
 	 * definition} = "Contact information for the local fund order desk."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLocalOrderDesk = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LocalMarketAnnex, OrderDeskContactDetails> mmLocalOrderDesk = new MMMessageAssociationEnd<LocalMarketAnnex, OrderDeskContactDetails>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmContactPoint;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LocalMarketAnnex.mmObject();
@@ -168,7 +179,17 @@ public class LocalMarketAnnex {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OrderDeskContactDetails.mmObject();
+			type_lazy = () -> OrderDeskContactDetails.mmObject();
+		}
+
+		@Override
+		public OrderDeskContactDetails getValue(LocalMarketAnnex obj) {
+			return obj.getLocalOrderDesk();
+		}
+
+		@Override
+		public void setValue(LocalMarketAnnex obj, OrderDeskContactDetails value) {
+			obj.setLocalOrderDesk(value);
 		}
 	};
 
@@ -199,7 +220,7 @@ public class LocalMarketAnnex {
 		return localOrderDesk;
 	}
 
-	public LocalMarketAnnex setLocalOrderDesk(com.tools20022.repository.msg.OrderDeskContactDetails localOrderDesk) {
+	public LocalMarketAnnex setLocalOrderDesk(OrderDeskContactDetails localOrderDesk) {
 		this.localOrderDesk = Objects.requireNonNull(localOrderDesk);
 		return this;
 	}

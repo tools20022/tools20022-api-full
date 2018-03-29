@@ -112,7 +112,7 @@ public class Registration8Choice {
 	 * definition} = "Registration information expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Registration8Choice, Registration2Code> mmCode = new MMMessageAttribute<Registration8Choice, Registration2Code>() {
 		{
 			businessElementTrace_lazy = () -> BasicSecuritiesRegistration.mmRegistrationInstruction;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Registration8Choice.mmObject();
@@ -124,6 +124,16 @@ public class Registration8Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Registration2Code.mmObject();
+		}
+
+		@Override
+		public Registration2Code getValue(Registration8Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(Registration8Choice obj, Registration2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -161,7 +171,7 @@ public class Registration8Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Registration8Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<Registration8Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> BasicSecuritiesRegistration.mmRegistrationInstruction;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Registration8Choice.mmObject();
@@ -174,6 +184,16 @@ public class Registration8Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(Registration8Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(Registration8Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

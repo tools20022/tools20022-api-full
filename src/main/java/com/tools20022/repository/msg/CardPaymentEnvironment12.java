@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.entity.MerchantRole;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Acquirer2;
+import com.tools20022.repository.msg.Organisation8;
+import com.tools20022.repository.msg.PaymentCard6;
+import com.tools20022.repository.msg.PointOfInteraction2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -130,7 +134,7 @@ public class CardPaymentEnvironment12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAcquirer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentEnvironment12, Optional<Acquirer2>> mmAcquirer = new MMMessageAssociationEnd<CardPaymentEnvironment12, Optional<Acquirer2>>() {
 		{
 			businessComponentTrace_lazy = () -> AcquirerRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment12.mmObject();
@@ -143,7 +147,17 @@ public class CardPaymentEnvironment12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Acquirer2.mmObject();
+			type_lazy = () -> Acquirer2.mmObject();
+		}
+
+		@Override
+		public Optional<Acquirer2> getValue(CardPaymentEnvironment12 obj) {
+			return obj.getAcquirer();
+		}
+
+		@Override
+		public void setValue(CardPaymentEnvironment12 obj, Optional<Acquirer2> value) {
+			obj.setAcquirer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Mrchnt")
@@ -188,7 +202,7 @@ public class CardPaymentEnvironment12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMerchant = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentEnvironment12, Optional<Organisation8>> mmMerchant = new MMMessageAssociationEnd<CardPaymentEnvironment12, Optional<Organisation8>>() {
 		{
 			businessComponentTrace_lazy = () -> MerchantRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment12.mmObject();
@@ -201,7 +215,17 @@ public class CardPaymentEnvironment12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Organisation8.mmObject();
+			type_lazy = () -> Organisation8.mmObject();
+		}
+
+		@Override
+		public Optional<Organisation8> getValue(CardPaymentEnvironment12 obj) {
+			return obj.getMerchant();
+		}
+
+		@Override
+		public void setValue(CardPaymentEnvironment12 obj, Optional<Organisation8> value) {
+			obj.setMerchant(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "POI", required = true)
@@ -247,7 +271,7 @@ public class CardPaymentEnvironment12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPOI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentEnvironment12, PointOfInteraction2> mmPOI = new MMMessageAttribute<CardPaymentEnvironment12, PointOfInteraction2>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmPointOfInteraction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment12.mmObject();
@@ -259,7 +283,17 @@ public class CardPaymentEnvironment12 {
 			nextVersions_lazy = () -> Arrays.asList(CardPaymentEnvironment23.mmPOI);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.PointOfInteraction2.mmObject();
+			complexType_lazy = () -> PointOfInteraction2.mmObject();
+		}
+
+		@Override
+		public PointOfInteraction2 getValue(CardPaymentEnvironment12 obj) {
+			return obj.getPOI();
+		}
+
+		@Override
+		public void setValue(CardPaymentEnvironment12 obj, PointOfInteraction2 value) {
+			obj.setPOI(value);
 		}
 	};
 	@XmlElement(name = "Card", required = true)
@@ -304,7 +338,7 @@ public class CardPaymentEnvironment12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCard = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentEnvironment12, PaymentCard6> mmCard = new MMMessageAttribute<CardPaymentEnvironment12, PaymentCard6>() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmPaymentCard;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment12.mmObject();
@@ -316,7 +350,17 @@ public class CardPaymentEnvironment12 {
 			nextVersions_lazy = () -> Arrays.asList(CardPaymentEnvironment23.mmCard);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.PaymentCard6.mmObject();
+			complexType_lazy = () -> PaymentCard6.mmObject();
+		}
+
+		@Override
+		public PaymentCard6 getValue(CardPaymentEnvironment12 obj) {
+			return obj.getCard();
+		}
+
+		@Override
+		public void setValue(CardPaymentEnvironment12 obj, PaymentCard6 value) {
+			obj.setCard(value);
 		}
 	};
 
@@ -341,7 +385,7 @@ public class CardPaymentEnvironment12 {
 		return acquirer == null ? Optional.empty() : Optional.of(acquirer);
 	}
 
-	public CardPaymentEnvironment12 setAcquirer(com.tools20022.repository.msg.Acquirer2 acquirer) {
+	public CardPaymentEnvironment12 setAcquirer(Acquirer2 acquirer) {
 		this.acquirer = acquirer;
 		return this;
 	}
@@ -350,7 +394,7 @@ public class CardPaymentEnvironment12 {
 		return merchant == null ? Optional.empty() : Optional.of(merchant);
 	}
 
-	public CardPaymentEnvironment12 setMerchant(com.tools20022.repository.msg.Organisation8 merchant) {
+	public CardPaymentEnvironment12 setMerchant(Organisation8 merchant) {
 		this.merchant = merchant;
 		return this;
 	}
@@ -359,7 +403,7 @@ public class CardPaymentEnvironment12 {
 		return pOI;
 	}
 
-	public CardPaymentEnvironment12 setPOI(com.tools20022.repository.msg.PointOfInteraction2 pOI) {
+	public CardPaymentEnvironment12 setPOI(PointOfInteraction2 pOI) {
 		this.pOI = Objects.requireNonNull(pOI);
 		return this;
 	}
@@ -368,7 +412,7 @@ public class CardPaymentEnvironment12 {
 		return card;
 	}
 
-	public CardPaymentEnvironment12 setCard(com.tools20022.repository.msg.PaymentCard6 card) {
+	public CardPaymentEnvironment12 setCard(PaymentCard6 card) {
 		this.card = Objects.requireNonNull(card);
 		return this;
 	}

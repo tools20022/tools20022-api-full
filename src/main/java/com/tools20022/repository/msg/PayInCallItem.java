@@ -109,7 +109,7 @@ public class PayInCallItem {
 	 * definition} = "Specifies the currency and amount of the called item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PayInCallItem, ActiveOrHistoricCurrencyAndAmount> mmAmount = new MMMessageAttribute<PayInCallItem, ActiveOrHistoricCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PayInCallItem.mmObject();
@@ -121,6 +121,16 @@ public class PayInCallItem {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAndAmount getValue(PayInCallItem obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(PayInCallItem obj, ActiveOrHistoricCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 

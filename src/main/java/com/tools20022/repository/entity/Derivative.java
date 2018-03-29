@@ -29,9 +29,9 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Asset;
+import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -208,6 +208,14 @@ import java.util.Objects;
  * UnsecuredMarketTransaction4}</li>
  * <li>{@linkplain com.tools20022.repository.msg.ContractType5 ContractType5}</li>
  * <li>{@linkplain com.tools20022.repository.msg.ContractType6 ContractType6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherLiquidityFacilityAmount1
+ * OtherLiquidityFacilityAmount1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes90
+ * FinancialInstrumentAttributes90}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes89
+ * FinancialInstrumentAttributes89}</li>
  * <li>{@linkplain com.tools20022.repository.msg.Derivative3 Derivative3}</li>
  * </ul>
  * </li>
@@ -313,7 +321,7 @@ public class Derivative extends Asset {
 	 * definition} = "Specifies the underlying asset of the derivative."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmUnderlyingAsset = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Derivative, List<Asset>> mmUnderlyingAsset = new MMBusinessAssociationEnd<Derivative, List<Asset>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Future2.mmAdditionalUnderlyingAttributes, Future3.mmAdditionalUnderlyingAttributes, TransparencyDataReport10.mmUnderlyingInstrumentAssetClass, DerivativeInstrument5.mmUnderlyingInstrument,
 					EquityDerivative2.mmUnderlyingType, ContractForDifference2.mmUnderlyingType, InterestRateDerivative5.mmUnderlyingType, DerivativeInstrument6.mmUnderlyingInstrument, Derivative2Choice.mmCommodity,
@@ -327,6 +335,16 @@ public class Derivative extends Asset {
 			opposite_lazy = () -> Asset.mmDerivative;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> Asset.mmObject();
+		}
+
+		@Override
+		public List<Asset> getValue(Derivative obj) {
+			return obj.getUnderlyingAsset();
+		}
+
+		@Override
+		public void setValue(Derivative obj, List<Asset> value) {
+			obj.setUnderlyingAsset(value);
 		}
 	};
 	protected CurrencyAndAmount notionalCurrencyAndAmount;
@@ -361,6 +379,13 @@ public class Derivative extends Asset {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.TradeTransaction18#mmNotionalAmount
 	 * TradeTransaction18.mmNotionalAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Position1#mmGrossNotional
+	 * Position1.mmGrossNotional}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Position1#mmNetNotional
+	 * Position1.mmNetNotional}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes90#mmNotional
+	 * FinancialInstrumentAttributes90.mmNotional}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -380,10 +405,10 @@ public class Derivative extends Asset {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmNotionalCurrencyAndAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Derivative, CurrencyAndAmount> mmNotionalCurrencyAndAmount = new MMBusinessAttribute<Derivative, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(DerivativeBasicAttributes1.mmNotionalCurrencyAndAmount, DerivativeBasicAttributes2.mmNotionalCurrencyAndAmount, UnderlyingAttributes.mmCashAmount, UnderlyingAttributes2.mmCashAmount,
-					UnderlyingAttributes3.mmCashAmount, TradeTransaction18.mmNotionalAmount);
+					UnderlyingAttributes3.mmCashAmount, TradeTransaction18.mmNotionalAmount, Position1.mmGrossNotional, Position1.mmNetNotional, FinancialInstrumentAttributes90.mmNotional);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Derivative.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -394,12 +419,14 @@ public class Derivative extends Asset {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Derivative.class.getMethod("getNotionalCurrencyAndAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(Derivative obj) {
+			return obj.getNotionalCurrencyAndAmount();
+		}
+
+		@Override
+		public void setValue(Derivative obj, CurrencyAndAmount value) {
+			obj.setNotionalCurrencyAndAmount(value);
 		}
 	};
 	protected YesNoIndicator derivativeCovered;
@@ -468,7 +495,7 @@ public class Derivative extends Asset {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmDerivativeCovered = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Derivative, YesNoIndicator> mmDerivativeCovered = new MMBusinessAttribute<Derivative, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes1.mmCoveredIndicator, Order3.mmDerivativeCovered, Order16.mmDerivativeCovered, Order14.mmDerivativeCovered, FinancialInstrumentAttributes31.mmCoveredIndicator,
 					Order9.mmDerivativeCovered, InstrumentLeg3.mmLegDerivativeCoveredIndicator, FinancialInstrumentAttributes2.mmCoveredIndicator, Order6.mmDerivativeCovered, Order17.mmDerivativeCovered, Order18.mmDerivativeCovered);
@@ -483,12 +510,14 @@ public class Derivative extends Asset {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Derivative.class.getMethod("getDerivativeCovered", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Derivative obj) {
+			return obj.getDerivativeCovered();
+		}
+
+		@Override
+		public void setValue(Derivative obj, YesNoIndicator value) {
+			obj.setDerivativeCovered(value);
 		}
 	};
 	protected ISODateTime exerciseDate;
@@ -533,7 +562,7 @@ public class Derivative extends Asset {
 	 * definition} = "Date on which the derivative is exercised."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmExerciseDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Derivative, ISODateTime> mmExerciseDate = new MMBusinessAttribute<Derivative, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SecurityInstrumentDescription1.mmExerciseDate, SecurityInstrumentDescription2.mmExerciseDate, DerivativeInstrument5.mmExpiryDate, DerivativeInstrument6.mmExpiryDate);
 			isDerived = false;
@@ -546,12 +575,14 @@ public class Derivative extends Asset {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Derivative.class.getMethod("getExerciseDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(Derivative obj) {
+			return obj.getExerciseDate();
+		}
+
+		@Override
+		public void setValue(Derivative obj, ISODateTime value) {
+			obj.setExerciseDate(value);
 		}
 	};
 	protected YesNoIndicator interestIncludedInPrice;
@@ -582,7 +613,7 @@ public class Derivative extends Asset {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmInterestIncludedInPrice = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Derivative, YesNoIndicator> mmInterestIncludedInPrice = new MMBusinessAttribute<Derivative, YesNoIndicator>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Derivative.mmObject();
@@ -594,12 +625,14 @@ public class Derivative extends Asset {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Derivative.class.getMethod("getInterestIncludedInPrice", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Derivative obj) {
+			return obj.getInterestIncludedInPrice();
+		}
+
+		@Override
+		public void setValue(Derivative obj, YesNoIndicator value) {
+			obj.setInterestIncludedInPrice(value);
 		}
 	};
 	protected SecuritiesPricing tick;
@@ -636,7 +669,7 @@ public class Derivative extends Asset {
 	 * "Minimum price increment with which the contract may be traded."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmTick = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Derivative, SecuritiesPricing> mmTick = new MMBusinessAssociationEnd<Derivative, SecuritiesPricing>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Derivative.mmObject();
@@ -645,9 +678,19 @@ public class Derivative extends Asset {
 			definition = "Minimum price increment with which the contract may be traded.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmRelatedFuture;
+			opposite_lazy = () -> SecuritiesPricing.mmRelatedFuture;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
+			type_lazy = () -> SecuritiesPricing.mmObject();
+		}
+
+		@Override
+		public SecuritiesPricing getValue(Derivative obj) {
+			return obj.getTick();
+		}
+
+		@Override
+		public void setValue(Derivative obj, SecuritiesPricing value) {
+			obj.setTick(value);
 		}
 	};
 	protected SecuritiesPricing exercisePrice;
@@ -789,7 +832,7 @@ public class Derivative extends Asset {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmExercisePrice = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Derivative, SecuritiesPricing> mmExercisePrice = new MMBusinessAssociationEnd<Derivative, SecuritiesPricing>() {
 		{
 			derivation_lazy = () -> Arrays
 					.asList(FinancialInstrumentAttributes8.mmExercisePrice, FinancialInstrumentAttributes20.mmExercisePrice, FinancialInstrumentAttributes35.mmExercisePrice, FinancialInstrumentAttributes41.mmExercisePrice,
@@ -808,9 +851,19 @@ public class Derivative extends Asset {
 			definition = "Predetermined price at which the holder of a derivative will have to buy or sell the underlying instrument.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmDerivative;
+			opposite_lazy = () -> SecuritiesPricing.mmDerivative;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
+			type_lazy = () -> SecuritiesPricing.mmObject();
+		}
+
+		@Override
+		public SecuritiesPricing getValue(Derivative obj) {
+			return obj.getExercisePrice();
+		}
+
+		@Override
+		public void setValue(Derivative obj, SecuritiesPricing value) {
+			obj.setExercisePrice(value);
 		}
 	};
 	protected CurrencyCode notionalCurrency;
@@ -872,7 +925,7 @@ public class Derivative extends Asset {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmNotionalCurrency = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Derivative, CurrencyCode> mmNotionalCurrency = new MMBusinessAttribute<Derivative, CurrencyCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SecurityInstrumentDescription9.mmNotionalCurrency, DerivativeInterest2.mmOtherNotionalCurrency, SecurityInstrumentDescription11.mmNotionalCurrency,
 					DerivativeForeignExchange2.mmOtherNotionalCurrency, DerivativeInterest3.mmOtherNotionalCurrency, DerivativeForeignExchange3.mmOtherNotionalCurrency, CreditDefaultSwapSingleName2.mmNotionalCurrency,
@@ -887,12 +940,14 @@ public class Derivative extends Asset {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Derivative.class.getMethod("getNotionalCurrency", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyCode getValue(Derivative obj) {
+			return obj.getNotionalCurrency();
+		}
+
+		@Override
+		public void setValue(Derivative obj, CurrencyCode value) {
+			obj.setNotionalCurrency(value);
 		}
 	};
 	protected Number versionNumber;
@@ -937,11 +992,11 @@ public class Derivative extends Asset {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Number allocated by options exchanges to record that an option has undergone a change in its contract specifications (particularly adjustment of the strike price)."
+	 * "Number allocated by options exchanges to record that an option has undergone a change in its contract specifications (particularly adjustment of the strike price)"
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmVersionNumber = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Derivative, Number> mmVersionNumber = new MMBusinessAttribute<Derivative, Number>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Option1.mmVersionNumber, FinancialInstrumentAttributes31.mmVersionNumber, FinancialInstrumentAttributes44.mmVersionNumber, FinancialInstrumentAttributes2.mmVersionNumber,
 					CreditDefaultSwapIndex2.mmVersion);
@@ -949,18 +1004,20 @@ public class Derivative extends Asset {
 			elementContext_lazy = () -> com.tools20022.repository.entity.Derivative.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VersionNumber";
-			definition = "Number allocated by options exchanges to record that an option has undergone a change in its contract specifications (particularly adjustment of the strike price).";
+			definition = "Number allocated by options exchanges to record that an option has undergone a change in its contract specifications (particularly adjustment of the strike price)";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Derivative.class.getMethod("getVersionNumber", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Number getValue(Derivative obj) {
+			return obj.getVersionNumber();
+		}
+
+		@Override
+		public void setValue(Derivative obj, Number value) {
+			obj.setVersionNumber(value);
 		}
 	};
 
@@ -971,7 +1028,7 @@ public class Derivative extends Asset {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Derivative";
 				definition = "Specifies the parameters of a derivative instrument based on a specific asset.";
-				associationDomain_lazy = () -> Arrays.asList(Asset.mmDerivative, com.tools20022.repository.entity.SecuritiesPricing.mmDerivative, com.tools20022.repository.entity.SecuritiesPricing.mmRelatedFuture);
+				associationDomain_lazy = () -> Arrays.asList(Asset.mmDerivative, SecuritiesPricing.mmDerivative, SecuritiesPricing.mmRelatedFuture);
 				derivationElement_lazy = () -> Arrays.asList(AssetClassAttributes1Choice.mmBoth, AssetClass2.mmCommodity, AssetClass2.mmInterest, AssetClass2.mmForeignExchange, DerivativeInstrument6.mmAssetClassSpecificAttributes,
 						Derivative2Choice.mmEmissionAllowance, CommonTradeDataReport21.mmContractData, CommonTradeDataReport20.mmContractData, TradeTransaction15.mmCredit, CommonTradeDataReport23.mmContractData,
 						CommonTradeDataReport22.mmContractData, CommonTradeDataReport24.mmContractData, TradeTransaction17.mmCredit, CommonTradeDataReport19.mmContractData, TradeTransaction14.mmCredit,
@@ -987,7 +1044,7 @@ public class Derivative extends Asset {
 						DerivativeForeignExchange2.mmObject(), DerivativeInterest3.mmObject(), DerivativeForeignExchange3.mmObject(), DerivativeInstrument5.mmObject(), EquityDerivative2.mmObject(), EquityDerivative3Choice.mmObject(),
 						ForeignExchangeDerivative2.mmObject(), ContractForDifference2.mmObject(), InterestRateDerivative5.mmObject(), BondDerivative2.mmObject(), CommodityDerivate4.mmObject(), CommodityDerivate2Choice.mmObject(),
 						DerivativeInstrument6.mmObject(), Derivative2Choice.mmObject(), TradeCounterpartyReport5.mmObject(), TradeCounterpartyReport6.mmObject(), UnsecuredMarketTransaction4.mmObject(), ContractType5.mmObject(),
-						ContractType6.mmObject(), Derivative3.mmObject());
+						ContractType6.mmObject(), OtherLiquidityFacilityAmount1.mmObject(), FinancialInstrumentAttributes90.mmObject(), FinancialInstrumentAttributes89.mmObject(), Derivative3.mmObject());
 			}
 
 			@Override
@@ -1047,7 +1104,7 @@ public class Derivative extends Asset {
 		return tick;
 	}
 
-	public Derivative setTick(com.tools20022.repository.entity.SecuritiesPricing tick) {
+	public Derivative setTick(SecuritiesPricing tick) {
 		this.tick = Objects.requireNonNull(tick);
 		return this;
 	}
@@ -1056,7 +1113,7 @@ public class Derivative extends Asset {
 		return exercisePrice;
 	}
 
-	public Derivative setExercisePrice(com.tools20022.repository.entity.SecuritiesPricing exercisePrice) {
+	public Derivative setExercisePrice(SecuritiesPricing exercisePrice) {
 		this.exercisePrice = Objects.requireNonNull(exercisePrice);
 		return this;
 	}

@@ -104,7 +104,7 @@ public class ResponseType1Choice {
 	 * "Provides a margin call response type using an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ResponseType1Choice, MarginCallResponse1Code> mmCode = new MMMessageAttribute<ResponseType1Choice, MarginCallResponse1Code>() {
 		{
 			businessElementTrace_lazy = () -> CollateralStatus.mmMarginCallResponse;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ResponseType1Choice.mmObject();
@@ -116,6 +116,16 @@ public class ResponseType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MarginCallResponse1Code.mmObject();
+		}
+
+		@Override
+		public MarginCallResponse1Code getValue(ResponseType1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ResponseType1Choice obj, MarginCallResponse1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -154,7 +164,7 @@ public class ResponseType1Choice {
 	 * "Provides a margin call response type using a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ResponseType1Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<ResponseType1Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> CollateralStatus.mmMarginCallResponse;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ResponseType1Choice.mmObject();
@@ -166,6 +176,16 @@ public class ResponseType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(ResponseType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ResponseType1Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

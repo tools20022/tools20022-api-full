@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.seev.AgentCAMovementStatusAdviceV01;
 import com.tools20022.repository.entity.CorporateActionStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CorporateActionMovementRejectionStatus2;
+import com.tools20022.repository.msg.CorporationActionMovementProcessingStatus2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -116,7 +118,7 @@ public class CorporateMovementStatus2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateMovementStatus2, CorporationActionMovementProcessingStatus2> mmProcessedStatus = new MMMessageAssociationEnd<CorporateMovementStatus2, CorporationActionMovementProcessingStatus2>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateMovementStatus2.mmObject();
@@ -128,7 +130,17 @@ public class CorporateMovementStatus2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CorporationActionMovementProcessingStatus2.mmObject();
+			type_lazy = () -> CorporationActionMovementProcessingStatus2.mmObject();
+		}
+
+		@Override
+		public CorporationActionMovementProcessingStatus2 getValue(CorporateMovementStatus2 obj) {
+			return obj.getProcessedStatus();
+		}
+
+		@Override
+		public void setValue(CorporateMovementStatus2 obj, CorporationActionMovementProcessingStatus2 value) {
+			obj.setProcessedStatus(value);
 		}
 	};
 	@XmlElement(name = "RjctdSts", required = true)
@@ -165,7 +177,7 @@ public class CorporateMovementStatus2 {
 	 * definition} = "Provides information about the rejection status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejectedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateMovementStatus2, CorporateActionMovementRejectionStatus2> mmRejectedStatus = new MMMessageAssociationEnd<CorporateMovementStatus2, CorporateActionMovementRejectionStatus2>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateMovementStatus2.mmObject();
@@ -177,7 +189,17 @@ public class CorporateMovementStatus2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementRejectionStatus2.mmObject();
+			type_lazy = () -> CorporateActionMovementRejectionStatus2.mmObject();
+		}
+
+		@Override
+		public CorporateActionMovementRejectionStatus2 getValue(CorporateMovementStatus2 obj) {
+			return obj.getRejectedStatus();
+		}
+
+		@Override
+		public void setValue(CorporateMovementStatus2 obj, CorporateActionMovementRejectionStatus2 value) {
+			obj.setRejectedStatus(value);
 		}
 	};
 
@@ -200,7 +222,7 @@ public class CorporateMovementStatus2 {
 		return processedStatus;
 	}
 
-	public CorporateMovementStatus2 setProcessedStatus(com.tools20022.repository.msg.CorporationActionMovementProcessingStatus2 processedStatus) {
+	public CorporateMovementStatus2 setProcessedStatus(CorporationActionMovementProcessingStatus2 processedStatus) {
 		this.processedStatus = Objects.requireNonNull(processedStatus);
 		return this;
 	}
@@ -209,7 +231,7 @@ public class CorporateMovementStatus2 {
 		return rejectedStatus;
 	}
 
-	public CorporateMovementStatus2 setRejectedStatus(com.tools20022.repository.msg.CorporateActionMovementRejectionStatus2 rejectedStatus) {
+	public CorporateMovementStatus2 setRejectedStatus(CorporateActionMovementRejectionStatus2 rejectedStatus) {
 		this.rejectedStatus = Objects.requireNonNull(rejectedStatus);
 		return this;
 	}

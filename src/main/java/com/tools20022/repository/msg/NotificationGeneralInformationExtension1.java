@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max4AlphaNumericText;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Period3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -131,7 +132,7 @@ public class NotificationGeneralInformationExtension1 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NotificationGeneralInformationExtension1, Max350Text> mmPlaceAndName = new MMMessageAttribute<NotificationGeneralInformationExtension1, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmObject();
 			isDerived = false;
@@ -142,6 +143,16 @@ public class NotificationGeneralInformationExtension1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(NotificationGeneralInformationExtension1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(NotificationGeneralInformationExtension1 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "EvtSts", required = true)
@@ -177,7 +188,7 @@ public class NotificationGeneralInformationExtension1 {
 	 * definition} = "Workflow status of the event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEventStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NotificationGeneralInformationExtension1, EventWorkflowStatus1Code> mmEventStatus = new MMMessageAttribute<NotificationGeneralInformationExtension1, EventWorkflowStatus1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmObject();
 			isDerived = false;
@@ -189,6 +200,16 @@ public class NotificationGeneralInformationExtension1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EventWorkflowStatus1Code.mmObject();
+		}
+
+		@Override
+		public EventWorkflowStatus1Code getValue(NotificationGeneralInformationExtension1 obj) {
+			return obj.getEventStatus();
+		}
+
+		@Override
+		public void setValue(NotificationGeneralInformationExtension1 obj, EventWorkflowStatus1Code value) {
+			obj.setEventStatus(value);
 		}
 	};
 	@XmlElement(name = "CretDtAndTm", required = true)
@@ -225,7 +246,7 @@ public class NotificationGeneralInformationExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreateDateAndTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NotificationGeneralInformationExtension1, ISODateTime> mmCreateDateAndTime = new MMMessageAttribute<NotificationGeneralInformationExtension1, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmObject();
 			isDerived = false;
@@ -237,6 +258,16 @@ public class NotificationGeneralInformationExtension1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(NotificationGeneralInformationExtension1 obj) {
+			return obj.getCreateDateAndTime();
+		}
+
+		@Override
+		public void setValue(NotificationGeneralInformationExtension1 obj, ISODateTime value) {
+			obj.setCreateDateAndTime(value);
 		}
 	};
 	@XmlElement(name = "UpdDtAndTm")
@@ -273,7 +304,7 @@ public class NotificationGeneralInformationExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUpdateDateAndTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NotificationGeneralInformationExtension1, Optional<ISODateTime>> mmUpdateDateAndTime = new MMMessageAttribute<NotificationGeneralInformationExtension1, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmObject();
 			isDerived = false;
@@ -285,6 +316,16 @@ public class NotificationGeneralInformationExtension1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(NotificationGeneralInformationExtension1 obj) {
+			return obj.getUpdateDateAndTime();
+		}
+
+		@Override
+		public void setValue(NotificationGeneralInformationExtension1 obj, Optional<ISODateTime> value) {
+			obj.setUpdateDateAndTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ApprvdDt")
@@ -320,7 +361,7 @@ public class NotificationGeneralInformationExtension1 {
 	 * "Date by which the announcement is set to approve event status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmApprovedDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NotificationGeneralInformationExtension1, Optional<ISODate>> mmApprovedDate = new MMMessageAttribute<NotificationGeneralInformationExtension1, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmObject();
 			isDerived = false;
@@ -332,6 +373,16 @@ public class NotificationGeneralInformationExtension1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(NotificationGeneralInformationExtension1 obj) {
+			return obj.getApprovedDate();
+		}
+
+		@Override
+		public void setValue(NotificationGeneralInformationExtension1 obj, Optional<ISODate> value) {
+			obj.setApprovedDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MtchDt")
@@ -368,7 +419,7 @@ public class NotificationGeneralInformationExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMatchDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NotificationGeneralInformationExtension1, Optional<ISODate>> mmMatchDate = new MMMessageAttribute<NotificationGeneralInformationExtension1, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmObject();
 			isDerived = false;
@@ -380,6 +431,16 @@ public class NotificationGeneralInformationExtension1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(NotificationGeneralInformationExtension1 obj) {
+			return obj.getMatchDate();
+		}
+
+		@Override
+		public void setValue(NotificationGeneralInformationExtension1 obj, Optional<ISODate> value) {
+			obj.setMatchDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ActvUntilDt")
@@ -416,7 +477,7 @@ public class NotificationGeneralInformationExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActiveUntilDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NotificationGeneralInformationExtension1, Optional<ISODate>> mmActiveUntilDate = new MMMessageAttribute<NotificationGeneralInformationExtension1, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmObject();
 			isDerived = false;
@@ -428,6 +489,16 @@ public class NotificationGeneralInformationExtension1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(NotificationGeneralInformationExtension1 obj) {
+			return obj.getActiveUntilDate();
+		}
+
+		@Override
+		public void setValue(NotificationGeneralInformationExtension1 obj, Optional<ISODate> value) {
+			obj.setActiveUntilDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SvcLvlAgrmtPrd")
@@ -462,7 +533,7 @@ public class NotificationGeneralInformationExtension1 {
 	 * definition} = "Start date and end date of the service level agreement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmServiceLevelAgreementPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NotificationGeneralInformationExtension1, Optional<Period3>> mmServiceLevelAgreementPeriod = new MMMessageAttribute<NotificationGeneralInformationExtension1, Optional<Period3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmObject();
 			isDerived = false;
@@ -473,7 +544,17 @@ public class NotificationGeneralInformationExtension1 {
 			definition = "Start date and end date of the service level agreement.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Period3.mmObject();
+			complexType_lazy = () -> Period3.mmObject();
+		}
+
+		@Override
+		public Optional<Period3> getValue(NotificationGeneralInformationExtension1 obj) {
+			return obj.getServiceLevelAgreementPeriod();
+		}
+
+		@Override
+		public void setValue(NotificationGeneralInformationExtension1 obj, Optional<Period3> value) {
+			obj.setServiceLevelAgreementPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IssrSts")
@@ -509,7 +590,7 @@ public class NotificationGeneralInformationExtension1 {
 	 * definition} = "Status of the event as announced by the issuer/offeror."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuerStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NotificationGeneralInformationExtension1, Optional<IssuerStatus1Code>> mmIssuerStatus = new MMMessageAttribute<NotificationGeneralInformationExtension1, Optional<IssuerStatus1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmObject();
 			isDerived = false;
@@ -521,6 +602,16 @@ public class NotificationGeneralInformationExtension1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> IssuerStatus1Code.mmObject();
+		}
+
+		@Override
+		public Optional<IssuerStatus1Code> getValue(NotificationGeneralInformationExtension1 obj) {
+			return obj.getIssuerStatus();
+		}
+
+		@Override
+		public void setValue(NotificationGeneralInformationExtension1 obj, Optional<IssuerStatus1Code> value) {
+			obj.setIssuerStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "VldtnNotSpprtdRsn")
@@ -558,7 +649,7 @@ public class NotificationGeneralInformationExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValidationNotSupportedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NotificationGeneralInformationExtension1, Optional<Max4AlphaNumericText>> mmValidationNotSupportedReason = new MMMessageAttribute<NotificationGeneralInformationExtension1, Optional<Max4AlphaNumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationGeneralInformationExtension1.mmObject();
 			isDerived = false;
@@ -570,6 +661,16 @@ public class NotificationGeneralInformationExtension1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max4AlphaNumericText> getValue(NotificationGeneralInformationExtension1 obj) {
+			return obj.getValidationNotSupportedReason();
+		}
+
+		@Override
+		public void setValue(NotificationGeneralInformationExtension1 obj, Optional<Max4AlphaNumericText> value) {
+			obj.setValidationNotSupportedReason(value.orElse(null));
 		}
 	};
 
@@ -657,7 +758,7 @@ public class NotificationGeneralInformationExtension1 {
 		return serviceLevelAgreementPeriod == null ? Optional.empty() : Optional.of(serviceLevelAgreementPeriod);
 	}
 
-	public NotificationGeneralInformationExtension1 setServiceLevelAgreementPeriod(com.tools20022.repository.msg.Period3 serviceLevelAgreementPeriod) {
+	public NotificationGeneralInformationExtension1 setServiceLevelAgreementPeriod(Period3 serviceLevelAgreementPeriod) {
 		this.serviceLevelAgreementPeriod = serviceLevelAgreementPeriod;
 		return this;
 	}

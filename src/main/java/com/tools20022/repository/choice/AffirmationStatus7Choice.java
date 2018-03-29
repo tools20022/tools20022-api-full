@@ -108,7 +108,7 @@ public class AffirmationStatus7Choice {
 	 * definition} = "Status of affirmation of a trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AffirmationStatus7Choice, AffirmationStatus1Code> mmCode = new MMMessageAttribute<AffirmationStatus7Choice, AffirmationStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmAffirmationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AffirmationStatus7Choice.mmObject();
@@ -120,6 +120,16 @@ public class AffirmationStatus7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AffirmationStatus1Code.mmObject();
+		}
+
+		@Override
+		public AffirmationStatus1Code getValue(AffirmationStatus7Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(AffirmationStatus7Choice obj, AffirmationStatus1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -156,7 +166,7 @@ public class AffirmationStatus7Choice {
 	 * definition} = "Trade has been unaffirmed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AffirmationStatus7Choice, GenericIdentification38> mmProprietary = new MMMessageAssociationEnd<AffirmationStatus7Choice, GenericIdentification38>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmAffirmationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AffirmationStatus7Choice.mmObject();
@@ -169,6 +179,16 @@ public class AffirmationStatus7Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification38.mmObject();
+		}
+
+		@Override
+		public GenericIdentification38 getValue(AffirmationStatus7Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(AffirmationStatus7Choice obj, GenericIdentification38 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -150,7 +150,7 @@ public class AccountAndBalance4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSafekeepingAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountAndBalance4, Max35Text> mmSafekeepingAccount = new MMMessageAttribute<AccountAndBalance4, Max35Text>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountAndBalance4.mmObject();
@@ -164,6 +164,16 @@ public class AccountAndBalance4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AccountAndBalance4 obj) {
+			return obj.getSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(AccountAndBalance4 obj, Max35Text value) {
+			obj.setSafekeepingAccount(value);
 		}
 	};
 	@XmlElement(name = "ConfdBal", required = true)
@@ -214,7 +224,7 @@ public class AccountAndBalance4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmConfirmedBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountAndBalance4, BalanceFormat1Choice> mmConfirmedBalance = new MMMessageAttribute<AccountAndBalance4, BalanceFormat1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesAccount.mmSecuritiesBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountAndBalance4.mmObject();
@@ -228,6 +238,16 @@ public class AccountAndBalance4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> BalanceFormat1Choice.mmObject();
+		}
+
+		@Override
+		public BalanceFormat1Choice getValue(AccountAndBalance4 obj) {
+			return obj.getConfirmedBalance();
+		}
+
+		@Override
+		public void setValue(AccountAndBalance4 obj, BalanceFormat1Choice value) {
+			obj.setConfirmedBalance(value);
 		}
 	};
 

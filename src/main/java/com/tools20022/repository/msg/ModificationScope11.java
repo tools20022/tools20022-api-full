@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DataModification2Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyProfileInformation1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -109,7 +110,7 @@ public class ModificationScope11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmModificationScopeIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ModificationScope11, DataModification2Code> mmModificationScopeIndication = new MMMessageAttribute<ModificationScope11, DataModification2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope11.mmObject();
 			isDerived = false;
@@ -120,6 +121,16 @@ public class ModificationScope11 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DataModification2Code.mmObject();
+		}
+
+		@Override
+		public DataModification2Code getValue(ModificationScope11 obj) {
+			return obj.getModificationScopeIndication();
+		}
+
+		@Override
+		public void setValue(ModificationScope11 obj, DataModification2Code value) {
+			obj.setModificationScopeIndication(value);
 		}
 	};
 	@XmlElement(name = "InvstrPrflVldtn", required = true)
@@ -152,7 +163,7 @@ public class ModificationScope11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestorProfileValidation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ModificationScope11, PartyProfileInformation1> mmInvestorProfileValidation = new MMMessageAssociationEnd<ModificationScope11, PartyProfileInformation1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope11.mmObject();
 			isDerived = false;
@@ -163,7 +174,17 @@ public class ModificationScope11 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation1.mmObject();
+			type_lazy = () -> PartyProfileInformation1.mmObject();
+		}
+
+		@Override
+		public PartyProfileInformation1 getValue(ModificationScope11 obj) {
+			return obj.getInvestorProfileValidation();
+		}
+
+		@Override
+		public void setValue(ModificationScope11 obj, PartyProfileInformation1 value) {
+			obj.setInvestorProfileValidation(value);
 		}
 	};
 
@@ -194,7 +215,7 @@ public class ModificationScope11 {
 		return investorProfileValidation;
 	}
 
-	public ModificationScope11 setInvestorProfileValidation(com.tools20022.repository.msg.PartyProfileInformation1 investorProfileValidation) {
+	public ModificationScope11 setInvestorProfileValidation(PartyProfileInformation1 investorProfileValidation) {
 		this.investorProfileValidation = Objects.requireNonNull(investorProfileValidation);
 		return this;
 	}

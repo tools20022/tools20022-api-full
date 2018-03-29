@@ -112,7 +112,7 @@ public class ContractSize1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLotSize = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContractSize1, PositiveNumber> mmLotSize = new MMMessageAttribute<ContractSize1, PositiveNumber>() {
 		{
 			businessElementTrace_lazy = () -> TradingMarket.mmTradeLotSize;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContractSize1.mmObject();
@@ -124,6 +124,16 @@ public class ContractSize1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PositiveNumber.mmObject();
+		}
+
+		@Override
+		public PositiveNumber getValue(ContractSize1 obj) {
+			return obj.getLotSize();
+		}
+
+		@Override
+		public void setValue(ContractSize1 obj, PositiveNumber value) {
+			obj.setLotSize(value);
 		}
 	};
 	@XmlElement(name = "Unit")
@@ -159,7 +169,7 @@ public class ContractSize1 {
 	 * definition} = "Specifies the unit of underlying.\r\n\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnit = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ContractSize1, Optional<UnitOfMeasure5Choice>> mmUnit = new MMMessageAssociationEnd<ContractSize1, Optional<UnitOfMeasure5Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Price.mmUnitOfMeasure;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContractSize1.mmObject();
@@ -172,6 +182,16 @@ public class ContractSize1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> UnitOfMeasure5Choice.mmObject();
+		}
+
+		@Override
+		public Optional<UnitOfMeasure5Choice> getValue(ContractSize1 obj) {
+			return obj.getUnit();
+		}
+
+		@Override
+		public void setValue(ContractSize1 obj, Optional<UnitOfMeasure5Choice> value) {
+			obj.setUnit(value.orElse(null));
 		}
 	};
 

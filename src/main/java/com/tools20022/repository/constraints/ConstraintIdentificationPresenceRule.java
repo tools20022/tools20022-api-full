@@ -58,12 +58,16 @@ public class ConstraintIdentificationPresenceRule {
 	 */
 	public static final MMConstraint<MarketIdentification77> forMarketIdentification77 = new MMConstraint<MarketIdentification77>() {
 		{
-			validator = ConstraintIdentificationPresenceRule::checkMarketIdentification77;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationPresenceRule";
 			definition = "If Type is not VARIOUS then Identification must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintIdentificationPresenceRule.forMarketIdentification79);
 			owner_lazy = () -> MarketIdentification77.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MarketIdentification77 obj) throws Exception {
+			checkMarketIdentification77(obj);
 		}
 	};
 	/**
@@ -96,12 +100,16 @@ public class ConstraintIdentificationPresenceRule {
 	 */
 	public static final MMConstraint<MarketIdentification13> forMarketIdentification13 = new MMConstraint<MarketIdentification13>() {
 		{
-			validator = ConstraintIdentificationPresenceRule::checkMarketIdentification13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationPresenceRule";
 			definition = "If Type is not VARIOUS then Identification must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintIdentificationPresenceRule.forMarketIdentification80);
 			owner_lazy = () -> MarketIdentification13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MarketIdentification13 obj) throws Exception {
+			checkMarketIdentification13(obj);
 		}
 	};
 	/**
@@ -132,12 +140,16 @@ public class ConstraintIdentificationPresenceRule {
 	 */
 	public static final MMConstraint<MarketIdentification79> forMarketIdentification79 = new MMConstraint<MarketIdentification79>() {
 		{
-			validator = ConstraintIdentificationPresenceRule::checkMarketIdentification79;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationPresenceRule";
 			definition = "If Type/Code is not Various (VARI) OR Over The Counter (OTCO) then Identification must be present.\r\n\r\n";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIdentificationPresenceRule.forMarketIdentification77;
 			owner_lazy = () -> MarketIdentification79.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MarketIdentification79 obj) throws Exception {
+			checkMarketIdentification79(obj);
 		}
 	};
 	/**
@@ -168,12 +180,16 @@ public class ConstraintIdentificationPresenceRule {
 	 */
 	public static final MMConstraint<MarketIdentification80> forMarketIdentification80 = new MMConstraint<MarketIdentification80>() {
 		{
-			validator = ConstraintIdentificationPresenceRule::checkMarketIdentification80;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationPresenceRule";
 			definition = "If Type/Code is not Various (VARI) OR Over The Counter (OTCO) then Identification must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIdentificationPresenceRule.forMarketIdentification13;
 			owner_lazy = () -> MarketIdentification80.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MarketIdentification80 obj) throws Exception {
+			checkMarketIdentification80(obj);
 		}
 	};
 	/**
@@ -211,13 +227,17 @@ public class ConstraintIdentificationPresenceRule {
 	 */
 	public static final MMConstraint<PartyIdentification62> forPartyIdentification62 = new MMConstraint<PartyIdentification62>() {
 		{
-			validator = ConstraintIdentificationPresenceRule::checkPartyIdentification62;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationPresenceRule";
 			definition = "If BICFI is absent or NameAndAddress is absent then ProprietaryIdentification must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintIdentificationPresenceRule.forPartyIdentification64);
 			owner_lazy = () -> PartyIdentification62.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ProprietaryIdentification</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/BICFI</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/NameAndAddress</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification62 obj) throws Exception {
+			checkPartyIdentification62(obj);
 		}
 	};
 	/**
@@ -252,13 +272,17 @@ public class ConstraintIdentificationPresenceRule {
 	 */
 	public static final MMConstraint<PartyIdentification64> forPartyIdentification64 = new MMConstraint<PartyIdentification64>() {
 		{
-			validator = ConstraintIdentificationPresenceRule::checkPartyIdentification64;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationPresenceRule";
 			definition = "If AnyBIC is absent or NameAndAddress is absent then ProprietaryIdentification must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIdentificationPresenceRule.forPartyIdentification62;
 			owner_lazy = () -> PartyIdentification64.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ProprietaryIdentification</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/AnyBIC</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/NameAndAddress</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification64 obj) throws Exception {
+			checkPartyIdentification64(obj);
 		}
 	};
 

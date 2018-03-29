@@ -59,12 +59,16 @@ public class ConstraintSwitchRule {
 	 */
 	public static final MMConstraint<SwitchOrderCancellationRequestV04> forSwitchOrderCancellationRequestV04 = new MMConstraint<SwitchOrderCancellationRequestV04>() {
 		{
-			validator = ConstraintSwitchRule::checkSwitchOrderCancellationRequestV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchRule";
 			definition = "The cancellation of a switch order must be a full cancellation. Partial cancellations are not allowed, for example, the cancellation of a given leg.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSwitchRule.forSwitchOrderCancellationRequestV03;
 			owner_lazy = () -> SwitchOrderCancellationRequestV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrderCancellationRequestV04 obj) throws Exception {
+			checkSwitchOrderCancellationRequestV04(obj);
 		}
 	};
 	/**
@@ -98,12 +102,16 @@ public class ConstraintSwitchRule {
 	 */
 	public static final MMConstraint<SwitchOrderCancellationRequestV03> forSwitchOrderCancellationRequestV03 = new MMConstraint<SwitchOrderCancellationRequestV03>() {
 		{
-			validator = ConstraintSwitchRule::checkSwitchOrderCancellationRequestV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchRule";
 			definition = "The cancellation of a switch order must be a full cancellation. Partial cancellations are not allowed e.g. cancellation of a given leg.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSwitchRule.forSwitchOrderCancellationRequestV04);
 			owner_lazy = () -> SwitchOrderCancellationRequestV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrderCancellationRequestV03 obj) throws Exception {
+			checkSwitchOrderCancellationRequestV03(obj);
 		}
 	};
 	/**
@@ -129,11 +137,15 @@ public class ConstraintSwitchRule {
 	 */
 	public static final MMConstraint<SwitchOrderCancellationInstructionV02> forSwitchOrderCancellationInstructionV02 = new MMConstraint<SwitchOrderCancellationInstructionV02>() {
 		{
-			validator = ConstraintSwitchRule::checkSwitchOrderCancellationInstructionV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchRule";
 			definition = "The cancellation of a switch order must be a full cancellation. Partial cancellations are not allowed e.g. cancellation of a given leg.";
 			owner_lazy = () -> SwitchOrderCancellationInstructionV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrderCancellationInstructionV02 obj) throws Exception {
+			checkSwitchOrderCancellationInstructionV02(obj);
 		}
 	};
 

@@ -126,7 +126,7 @@ public class Quote4 {
 	 * definition} = "Identifies the type of Quote Response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuoteResponseType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Quote4, Optional<QuoteResponseType1Code>> mmQuoteResponseType = new MMMessageAttribute<Quote4, Optional<QuoteResponseType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Quote4.mmObject();
 			isDerived = false;
@@ -138,6 +138,16 @@ public class Quote4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> QuoteResponseType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<QuoteResponseType1Code> getValue(Quote4 obj) {
+			return obj.getQuoteResponseType();
+		}
+
+		@Override
+		public void setValue(Quote4 obj, Optional<QuoteResponseType1Code> value) {
+			obj.setQuoteResponseType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RspnLvl")
@@ -174,7 +184,7 @@ public class Quote4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResponseLevel = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Quote4, Optional<ResponseLevel1Code>> mmResponseLevel = new MMMessageAttribute<Quote4, Optional<ResponseLevel1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Quote4.mmObject();
 			isDerived = false;
@@ -186,6 +196,16 @@ public class Quote4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ResponseLevel1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ResponseLevel1Code> getValue(Quote4 obj) {
+			return obj.getResponseLevel();
+		}
+
+		@Override
+		public void setValue(Quote4 obj, Optional<ResponseLevel1Code> value) {
+			obj.setResponseLevel(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -224,7 +244,7 @@ public class Quote4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Quote4, Optional<QuoteType1Code>> mmType = new MMMessageAttribute<Quote4, Optional<QuoteType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuoteVariable.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Quote4.mmObject();
@@ -236,6 +256,16 @@ public class Quote4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> QuoteType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<QuoteType1Code> getValue(Quote4 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Quote4 obj, Optional<QuoteType1Code> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "QtOrgtr")
@@ -267,7 +297,7 @@ public class Quote4 {
 	 * definition} = "Originator of the quote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuoteOriginator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Quote4, Optional<PartyIdentification24Choice>> mmQuoteOriginator = new MMMessageAttribute<Quote4, Optional<PartyIdentification24Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Quote4.mmObject();
 			isDerived = false;
@@ -278,6 +308,16 @@ public class Quote4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification24Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification24Choice> getValue(Quote4 obj) {
+			return obj.getQuoteOriginator();
+		}
+
+		@Override
+		public void setValue(Quote4 obj, Optional<PartyIdentification24Choice> value) {
+			obj.setQuoteOriginator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "QtOrgtrRole")
@@ -316,7 +356,7 @@ public class Quote4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuoteOriginatorRole = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Quote4, Optional<OriginatorRole1Code>> mmQuoteOriginatorRole = new MMMessageAttribute<Quote4, Optional<OriginatorRole1Code>>() {
 		{
 			businessElementTrace_lazy = () -> QuoteOriginator.mmQuoteOriginatorType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Quote4.mmObject();
@@ -328,6 +368,16 @@ public class Quote4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> OriginatorRole1Code.mmObject();
+		}
+
+		@Override
+		public Optional<OriginatorRole1Code> getValue(Quote4 obj) {
+			return obj.getQuoteOriginatorRole();
+		}
+
+		@Override
+		public void setValue(Quote4 obj, Optional<OriginatorRole1Code> value) {
+			obj.setQuoteOriginatorRole(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RqstrElgblty")
@@ -365,7 +415,7 @@ public class Quote4 {
 	 * "Identifies if the requestor of the quote is an elligible counterparty."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestorEligibility = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Quote4, Optional<Eligibility1Code>> mmRequestorEligibility = new MMMessageAttribute<Quote4, Optional<Eligibility1Code>>() {
 		{
 			businessElementTrace_lazy = () -> QuoteRequestor.mmRequestorEligibility;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Quote4.mmObject();
@@ -377,6 +427,16 @@ public class Quote4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Eligibility1Code.mmObject();
+		}
+
+		@Override
+		public Optional<Eligibility1Code> getValue(Quote4 obj) {
+			return obj.getRequestorEligibility();
+		}
+
+		@Override
+		public void setValue(Quote4 obj, Optional<Eligibility1Code> value) {
+			obj.setRequestorEligibility(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "QtChc", required = true)
@@ -409,7 +469,7 @@ public class Quote4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuoteChoice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Quote4, SingleOrMassQuote2Choice> mmQuoteChoice = new MMMessageAssociationEnd<Quote4, SingleOrMassQuote2Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Quote4.mmObject();
 			isDerived = false;
@@ -421,6 +481,16 @@ public class Quote4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SingleOrMassQuote2Choice.mmObject();
+		}
+
+		@Override
+		public SingleOrMassQuote2Choice getValue(Quote4 obj) {
+			return obj.getQuoteChoice();
+		}
+
+		@Override
+		public void setValue(Quote4 obj, SingleOrMassQuote2Choice value) {
+			obj.setQuoteChoice(value);
 		}
 	};
 

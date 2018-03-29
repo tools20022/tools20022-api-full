@@ -124,7 +124,7 @@ public class EUDividendStatusType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEUDividendStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EUDividendStatusType1Choice, EUDividendStatus1Code> mmEUDividendStatus = new MMMessageAttribute<EUDividendStatusType1Choice, EUDividendStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmEUDividendStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.EUDividendStatusType1Choice.mmObject();
@@ -137,6 +137,16 @@ public class EUDividendStatusType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EUDividendStatus1Code.mmObject();
+		}
+
+		@Override
+		public EUDividendStatus1Code getValue(EUDividendStatusType1Choice obj) {
+			return obj.getEUDividendStatus();
+		}
+
+		@Override
+		public void setValue(EUDividendStatusType1Choice obj, EUDividendStatus1Code value) {
+			obj.setEUDividendStatus(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -184,7 +194,7 @@ public class EUDividendStatusType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EUDividendStatusType1Choice, GenericIdentification13> mmProprietary = new MMMessageAttribute<EUDividendStatusType1Choice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmEUDividendStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.EUDividendStatusType1Choice.mmObject();
@@ -197,6 +207,16 @@ public class EUDividendStatusType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(EUDividendStatusType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(EUDividendStatusType1Choice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

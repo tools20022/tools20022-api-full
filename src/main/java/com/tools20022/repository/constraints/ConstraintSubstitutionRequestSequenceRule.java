@@ -64,13 +64,17 @@ public class ConstraintSubstitutionRequestSequenceRule {
 	 */
 	public static final MMConstraint<CollateralSubstitution1> forCollateralSubstitution1 = new MMConstraint<CollateralSubstitution1>() {
 		{
-			validator = ConstraintSubstitutionRequestSequenceRule::checkCollateralSubstitution1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubstitutionRequestSequenceRule";
 			definition = "If CollateralSubstitutionRequestSequence equals updated then Reference must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSubstitutionRequestSequenceRule.forCollateralSubstitution2);
 			owner_lazy = () -> CollateralSubstitution1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReferenceDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/CollateralSubstitutionSequence</leftOperand><rightOperand>Updated</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CollateralSubstitution1 obj) throws Exception {
+			checkCollateralSubstitution1(obj);
 		}
 	};
 	/**
@@ -116,7 +120,6 @@ public class ConstraintSubstitutionRequestSequenceRule {
 	 */
 	public static final MMConstraint<CollateralSubstitution2> forCollateralSubstitution2 = new MMConstraint<CollateralSubstitution2>() {
 		{
-			validator = ConstraintSubstitutionRequestSequenceRule::checkCollateralSubstitution2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubstitutionRequestSequenceRule";
 			definition = "If CollateralSubstitutionRequestSequence equals \"Updated\" (UPDD) then LinkedReferences must be present.";
@@ -125,6 +128,11 @@ public class ConstraintSubstitutionRequestSequenceRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSubstitutionRequestSequenceRule.forCollateralSubstitution1;
 			owner_lazy = () -> CollateralSubstitution2.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/LinkedReferences</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/CollateralSubstitutionSequence</leftOperand><rightOperand>Updated</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CollateralSubstitution2 obj) throws Exception {
+			checkCollateralSubstitution2(obj);
 		}
 	};
 	/**
@@ -167,7 +175,6 @@ public class ConstraintSubstitutionRequestSequenceRule {
 	 */
 	public static final MMConstraint<CollateralSubstitution3> forCollateralSubstitution3 = new MMConstraint<CollateralSubstitution3>() {
 		{
-			validator = ConstraintSubstitutionRequestSequenceRule::checkCollateralSubstitution3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubstitutionRequestSequenceRule";
 			definition = "If CollateralSubstitutionRequestSequence equals \"Updated\" (UPDD) then LinkedReferences must be present.";
@@ -175,6 +182,11 @@ public class ConstraintSubstitutionRequestSequenceRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSubstitutionRequestSequenceRule.forCollateralSubstitution2;
 			owner_lazy = () -> CollateralSubstitution3.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/LinkedReferences</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/CollateralSubstitutionSequence</leftOperand><rightOperand>Updated</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CollateralSubstitution3 obj) throws Exception {
+			checkCollateralSubstitution3(obj);
 		}
 	};
 	/**
@@ -209,13 +221,17 @@ public class ConstraintSubstitutionRequestSequenceRule {
 	 */
 	public static final MMConstraint<CollateralSubstitution5> forCollateralSubstitution5 = new MMConstraint<CollateralSubstitution5>() {
 		{
-			validator = ConstraintSubstitutionRequestSequenceRule::checkCollateralSubstitution5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubstitutionRequestSequenceRule";
 			definition = "If CollateralSubstitutionRequestSequence equals \"Updated\" (UPDD) then LinkedReferences must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSubstitutionRequestSequenceRule.forCollateralSubstitution2;
 			owner_lazy = () -> CollateralSubstitution5.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/LinkedReferences</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/CollateralSubstitutionSequence</leftOperand><rightOperand>Updated</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CollateralSubstitution5 obj) throws Exception {
+			checkCollateralSubstitution5(obj);
 		}
 	};
 	/**
@@ -250,13 +266,17 @@ public class ConstraintSubstitutionRequestSequenceRule {
 	 */
 	public static final MMConstraint<CollateralSubstitution4> forCollateralSubstitution4 = new MMConstraint<CollateralSubstitution4>() {
 		{
-			validator = ConstraintSubstitutionRequestSequenceRule::checkCollateralSubstitution4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubstitutionRequestSequenceRule";
 			definition = "If CollateralSubstitutionRequestSequence equals \"Updated\" (UPDD) then LinkedReferences must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSubstitutionRequestSequenceRule.forCollateralSubstitution3;
 			owner_lazy = () -> CollateralSubstitution4.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/LinkedReferences</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/CollateralSubstitutionSequence</leftOperand><rightOperand>Updated</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CollateralSubstitution4 obj) throws Exception {
+			checkCollateralSubstitution4(obj);
 		}
 	};
 

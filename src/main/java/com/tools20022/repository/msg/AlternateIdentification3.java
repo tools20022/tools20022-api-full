@@ -118,7 +118,7 @@ public class AlternateIdentification3 {
 	 * AlternateIdentification1.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AlternateIdentification3, Max70Text> mmIdentification = new MMMessageAttribute<AlternateIdentification3, Max70Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlternateIdentification3.mmObject();
@@ -131,6 +131,16 @@ public class AlternateIdentification3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Max70Text getValue(AlternateIdentification3 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(AlternateIdentification3 obj, Max70Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "IdSrc", required = true)
@@ -172,7 +182,7 @@ public class AlternateIdentification3 {
 	 * AlternateIdentification1.mmIdentificationSource}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentificationSource = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AlternateIdentification3, IdentificationSource1Choice> mmIdentificationSource = new MMMessageAssociationEnd<AlternateIdentification3, IdentificationSource1Choice>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlternateIdentification3.mmObject();
@@ -186,6 +196,16 @@ public class AlternateIdentification3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> IdentificationSource1Choice.mmObject();
+		}
+
+		@Override
+		public IdentificationSource1Choice getValue(AlternateIdentification3 obj) {
+			return obj.getIdentificationSource();
+		}
+
+		@Override
+		public void setValue(AlternateIdentification3 obj, IdentificationSource1Choice value) {
+			obj.setIdentificationSource(value);
 		}
 	};
 

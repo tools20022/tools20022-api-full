@@ -49,11 +49,15 @@ public class ConstraintCompressedFormatRule {
 	 */
 	public static final MMConstraint<QualifiedDocumentInformation1> forQualifiedDocumentInformation1 = new MMConstraint<QualifiedDocumentInformation1>() {
 		{
-			validator = ConstraintCompressedFormatRule::checkQualifiedDocumentInformation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompressedFormatRule";
 			definition = "An attached document MAY be compressed in a self-describing format.";
 			owner_lazy = () -> QualifiedDocumentInformation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QualifiedDocumentInformation1 obj) throws Exception {
+			checkQualifiedDocumentInformation1(obj);
 		}
 	};
 

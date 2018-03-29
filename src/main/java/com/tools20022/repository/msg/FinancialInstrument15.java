@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.SecurityIdentification6Choice;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecurityInstrumentDescription2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -125,7 +126,7 @@ public class FinancialInstrument15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrument15, SecurityIdentification6Choice> mmIdentification = new MMMessageAssociationEnd<FinancialInstrument15, SecurityIdentification6Choice>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument15.mmObject();
@@ -138,6 +139,16 @@ public class FinancialInstrument15 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecurityIdentification6Choice.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification6Choice getValue(FinancialInstrument15 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument15 obj, SecurityIdentification6Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "InstrmDesc")
@@ -175,7 +186,7 @@ public class FinancialInstrument15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstrumentDescription = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrument15, Optional<SecurityInstrumentDescription2>> mmInstrumentDescription = new MMMessageAssociationEnd<FinancialInstrument15, Optional<SecurityInstrumentDescription2>>() {
 		{
 			businessComponentTrace_lazy = () -> Security.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument15.mmObject();
@@ -187,7 +198,17 @@ public class FinancialInstrument15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription2.mmObject();
+			type_lazy = () -> SecurityInstrumentDescription2.mmObject();
+		}
+
+		@Override
+		public Optional<SecurityInstrumentDescription2> getValue(FinancialInstrument15 obj) {
+			return obj.getInstrumentDescription();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument15 obj, Optional<SecurityInstrumentDescription2> value) {
+			obj.setInstrumentDescription(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UndrlygInstrmId")
@@ -226,7 +247,7 @@ public class FinancialInstrument15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnderlyingInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrument15, Optional<SecurityIdentification6Choice>> mmUnderlyingInstrumentIdentification = new MMMessageAssociationEnd<FinancialInstrument15, Optional<SecurityIdentification6Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument15.mmObject();
@@ -239,6 +260,16 @@ public class FinancialInstrument15 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SecurityIdentification6Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SecurityIdentification6Choice> getValue(FinancialInstrument15 obj) {
+			return obj.getUnderlyingInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument15 obj, Optional<SecurityIdentification6Choice> value) {
+			obj.setUnderlyingInstrumentIdentification(value.orElse(null));
 		}
 	};
 
@@ -272,7 +303,7 @@ public class FinancialInstrument15 {
 		return instrumentDescription == null ? Optional.empty() : Optional.of(instrumentDescription);
 	}
 
-	public FinancialInstrument15 setInstrumentDescription(com.tools20022.repository.msg.SecurityInstrumentDescription2 instrumentDescription) {
+	public FinancialInstrument15 setInstrumentDescription(SecurityInstrumentDescription2 instrumentDescription) {
 		this.instrumentDescription = instrumentDescription;
 		return this;
 	}

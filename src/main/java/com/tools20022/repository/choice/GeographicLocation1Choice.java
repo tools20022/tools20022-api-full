@@ -101,7 +101,7 @@ public class GeographicLocation1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGeographicCoordinates = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GeographicLocation1Choice, GeographicCoordinates1> mmGeographicCoordinates = new MMMessageAssociationEnd<GeographicLocation1Choice, GeographicCoordinates1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.GeographicLocation1Choice.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class GeographicLocation1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GeographicCoordinates1.mmObject();
+		}
+
+		@Override
+		public GeographicCoordinates1 getValue(GeographicLocation1Choice obj) {
+			return obj.getGeographicCoordinates();
+		}
+
+		@Override
+		public void setValue(GeographicLocation1Choice obj, GeographicCoordinates1 value) {
+			obj.setGeographicCoordinates(value);
 		}
 	};
 	@XmlElement(name = "UTMCordints", required = true)
@@ -145,7 +155,7 @@ public class GeographicLocation1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUTMCoordinates = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GeographicLocation1Choice, UTMCoordinates1> mmUTMCoordinates = new MMMessageAssociationEnd<GeographicLocation1Choice, UTMCoordinates1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.GeographicLocation1Choice.mmObject();
 			isDerived = false;
@@ -157,6 +167,16 @@ public class GeographicLocation1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> UTMCoordinates1.mmObject();
+		}
+
+		@Override
+		public UTMCoordinates1 getValue(GeographicLocation1Choice obj) {
+			return obj.getUTMCoordinates();
+		}
+
+		@Override
+		public void setValue(GeographicLocation1Choice obj, UTMCoordinates1 value) {
+			obj.setUTMCoordinates(value);
 		}
 	};
 

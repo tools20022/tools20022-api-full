@@ -26,6 +26,9 @@ import com.tools20022.repository.choice.Amount2Choice;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5;
+import com.tools20022.repository.msg.CashAccount24;
+import com.tools20022.repository.msg.PaymentIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -138,7 +141,7 @@ public class LiquidityCreditTransfer1 {
 	 * definition} = "Used to uniquely identify the liquidity transfer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLiquidityTransferIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LiquidityCreditTransfer1, Optional<PaymentIdentification1>> mmLiquidityTransferIdentification = new MMMessageAssociationEnd<LiquidityCreditTransfer1, Optional<PaymentIdentification1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityCreditTransfer1.mmObject();
 			isDerived = false;
@@ -149,7 +152,17 @@ public class LiquidityCreditTransfer1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentIdentification1.mmObject();
+			type_lazy = () -> PaymentIdentification1.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentIdentification1> getValue(LiquidityCreditTransfer1 obj) {
+			return obj.getLiquidityTransferIdentification();
+		}
+
+		@Override
+		public void setValue(LiquidityCreditTransfer1 obj, Optional<PaymentIdentification1> value) {
+			obj.setLiquidityTransferIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Cdtr")
@@ -185,7 +198,7 @@ public class LiquidityCreditTransfer1 {
 	 * definition} = "Owner of the account to be credited."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LiquidityCreditTransfer1, Optional<BranchAndFinancialInstitutionIdentification5>> mmCreditor = new MMMessageAssociationEnd<LiquidityCreditTransfer1, Optional<BranchAndFinancialInstitutionIdentification5>>() {
 		{
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityCreditTransfer1.mmObject();
@@ -197,7 +210,17 @@ public class LiquidityCreditTransfer1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+
+		@Override
+		public Optional<BranchAndFinancialInstitutionIdentification5> getValue(LiquidityCreditTransfer1 obj) {
+			return obj.getCreditor();
+		}
+
+		@Override
+		public void setValue(LiquidityCreditTransfer1 obj, Optional<BranchAndFinancialInstitutionIdentification5> value) {
+			obj.setCreditor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtrAcct")
@@ -234,7 +257,7 @@ public class LiquidityCreditTransfer1 {
 	 * "Account to be credited as a result of a transfer of liquidity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditorAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LiquidityCreditTransfer1, Optional<CashAccount24>> mmCreditorAccount = new MMMessageAssociationEnd<LiquidityCreditTransfer1, Optional<CashAccount24>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityCreditTransfer1.mmObject();
@@ -246,7 +269,17 @@ public class LiquidityCreditTransfer1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
+			type_lazy = () -> CashAccount24.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount24> getValue(LiquidityCreditTransfer1 obj) {
+			return obj.getCreditorAccount();
+		}
+
+		@Override
+		public void setValue(LiquidityCreditTransfer1 obj, Optional<CashAccount24> value) {
+			obj.setCreditorAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrfdAmt", required = true)
@@ -284,7 +317,7 @@ public class LiquidityCreditTransfer1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransferredAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LiquidityCreditTransfer1, Amount2Choice> mmTransferredAmount = new MMMessageAssociationEnd<LiquidityCreditTransfer1, Amount2Choice>() {
 		{
 			businessElementTrace_lazy = () -> CreditInstrument.mmNetAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityCreditTransfer1.mmObject();
@@ -297,6 +330,16 @@ public class LiquidityCreditTransfer1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Amount2Choice.mmObject();
+		}
+
+		@Override
+		public Amount2Choice getValue(LiquidityCreditTransfer1 obj) {
+			return obj.getTransferredAmount();
+		}
+
+		@Override
+		public void setValue(LiquidityCreditTransfer1 obj, Amount2Choice value) {
+			obj.setTransferredAmount(value);
 		}
 	};
 	@XmlElement(name = "Dbtr")
@@ -332,7 +375,7 @@ public class LiquidityCreditTransfer1 {
 	 * definition} = "Owner of the account to be debited."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDebtor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LiquidityCreditTransfer1, Optional<BranchAndFinancialInstitutionIdentification5>> mmDebtor = new MMMessageAssociationEnd<LiquidityCreditTransfer1, Optional<BranchAndFinancialInstitutionIdentification5>>() {
 		{
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityCreditTransfer1.mmObject();
@@ -344,7 +387,17 @@ public class LiquidityCreditTransfer1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+
+		@Override
+		public Optional<BranchAndFinancialInstitutionIdentification5> getValue(LiquidityCreditTransfer1 obj) {
+			return obj.getDebtor();
+		}
+
+		@Override
+		public void setValue(LiquidityCreditTransfer1 obj, Optional<BranchAndFinancialInstitutionIdentification5> value) {
+			obj.setDebtor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DbtrAcct")
@@ -381,7 +434,7 @@ public class LiquidityCreditTransfer1 {
 	 * "Account to be debited as a result of a transfer of liquidity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDebtorAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LiquidityCreditTransfer1, Optional<CashAccount24>> mmDebtorAccount = new MMMessageAssociationEnd<LiquidityCreditTransfer1, Optional<CashAccount24>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityCreditTransfer1.mmObject();
@@ -393,7 +446,17 @@ public class LiquidityCreditTransfer1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
+			type_lazy = () -> CashAccount24.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount24> getValue(LiquidityCreditTransfer1 obj) {
+			return obj.getDebtorAccount();
+		}
+
+		@Override
+		public void setValue(LiquidityCreditTransfer1 obj, Optional<CashAccount24> value) {
+			obj.setDebtorAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmDt")
@@ -432,7 +495,7 @@ public class LiquidityCreditTransfer1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LiquidityCreditTransfer1, Optional<ISODate>> mmSettlementDate = new MMMessageAttribute<LiquidityCreditTransfer1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmValueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityCreditTransfer1.mmObject();
@@ -444,6 +507,16 @@ public class LiquidityCreditTransfer1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(LiquidityCreditTransfer1 obj) {
+			return obj.getSettlementDate();
+		}
+
+		@Override
+		public void setValue(LiquidityCreditTransfer1 obj, Optional<ISODate> value) {
+			obj.setSettlementDate(value.orElse(null));
 		}
 	};
 
@@ -469,7 +542,7 @@ public class LiquidityCreditTransfer1 {
 		return liquidityTransferIdentification == null ? Optional.empty() : Optional.of(liquidityTransferIdentification);
 	}
 
-	public LiquidityCreditTransfer1 setLiquidityTransferIdentification(com.tools20022.repository.msg.PaymentIdentification1 liquidityTransferIdentification) {
+	public LiquidityCreditTransfer1 setLiquidityTransferIdentification(PaymentIdentification1 liquidityTransferIdentification) {
 		this.liquidityTransferIdentification = liquidityTransferIdentification;
 		return this;
 	}
@@ -478,7 +551,7 @@ public class LiquidityCreditTransfer1 {
 		return creditor == null ? Optional.empty() : Optional.of(creditor);
 	}
 
-	public LiquidityCreditTransfer1 setCreditor(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 creditor) {
+	public LiquidityCreditTransfer1 setCreditor(BranchAndFinancialInstitutionIdentification5 creditor) {
 		this.creditor = creditor;
 		return this;
 	}
@@ -487,7 +560,7 @@ public class LiquidityCreditTransfer1 {
 		return creditorAccount == null ? Optional.empty() : Optional.of(creditorAccount);
 	}
 
-	public LiquidityCreditTransfer1 setCreditorAccount(com.tools20022.repository.msg.CashAccount24 creditorAccount) {
+	public LiquidityCreditTransfer1 setCreditorAccount(CashAccount24 creditorAccount) {
 		this.creditorAccount = creditorAccount;
 		return this;
 	}
@@ -505,7 +578,7 @@ public class LiquidityCreditTransfer1 {
 		return debtor == null ? Optional.empty() : Optional.of(debtor);
 	}
 
-	public LiquidityCreditTransfer1 setDebtor(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 debtor) {
+	public LiquidityCreditTransfer1 setDebtor(BranchAndFinancialInstitutionIdentification5 debtor) {
 		this.debtor = debtor;
 		return this;
 	}
@@ -514,7 +587,7 @@ public class LiquidityCreditTransfer1 {
 		return debtorAccount == null ? Optional.empty() : Optional.of(debtorAccount);
 	}
 
-	public LiquidityCreditTransfer1 setDebtorAccount(com.tools20022.repository.msg.CashAccount24 debtorAccount) {
+	public LiquidityCreditTransfer1 setDebtorAccount(CashAccount24 debtorAccount) {
 		this.debtorAccount = debtorAccount;
 		return this;
 	}

@@ -107,7 +107,7 @@ public class AmountRangeChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmImpliedCurrencyAndAmountRange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AmountRangeChoice, ImpliedCurrencyAndAmountRange> mmImpliedCurrencyAndAmountRange = new MMMessageAssociationEnd<AmountRangeChoice, ImpliedCurrencyAndAmountRange>() {
 		{
 			businessComponentTrace_lazy = () -> AmountRange.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AmountRangeChoice.mmObject();
@@ -120,6 +120,16 @@ public class AmountRangeChoice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ImpliedCurrencyAndAmountRange.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmountRange getValue(AmountRangeChoice obj) {
+			return obj.getImpliedCurrencyAndAmountRange();
+		}
+
+		@Override
+		public void setValue(AmountRangeChoice obj, ImpliedCurrencyAndAmountRange value) {
+			obj.setImpliedCurrencyAndAmountRange(value);
 		}
 	};
 	@XmlElement(name = "CcyAndAmtRg", required = true)
@@ -156,7 +166,7 @@ public class AmountRangeChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCurrencyAndAmountRange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AmountRangeChoice, CurrencyAndAmountRange> mmCurrencyAndAmountRange = new MMMessageAssociationEnd<AmountRangeChoice, CurrencyAndAmountRange>() {
 		{
 			businessComponentTrace_lazy = () -> AmountRange.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AmountRangeChoice.mmObject();
@@ -169,6 +179,16 @@ public class AmountRangeChoice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CurrencyAndAmountRange.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmountRange getValue(AmountRangeChoice obj) {
+			return obj.getCurrencyAndAmountRange();
+		}
+
+		@Override
+		public void setValue(AmountRangeChoice obj, CurrencyAndAmountRange value) {
+			obj.setCurrencyAndAmountRange(value);
 		}
 	};
 

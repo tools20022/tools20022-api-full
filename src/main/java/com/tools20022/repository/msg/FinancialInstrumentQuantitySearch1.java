@@ -109,7 +109,7 @@ public class FinancialInstrumentQuantitySearch1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFaceAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentQuantitySearch1, ImpliedCurrencyAmountRangeChoice> mmFaceAmount = new MMMessageAttribute<FinancialInstrumentQuantitySearch1, ImpliedCurrencyAmountRangeChoice>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmFaceAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantitySearch1.mmObject();
@@ -121,6 +121,16 @@ public class FinancialInstrumentQuantitySearch1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ImpliedCurrencyAmountRangeChoice.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAmountRangeChoice getValue(FinancialInstrumentQuantitySearch1 obj) {
+			return obj.getFaceAmount();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentQuantitySearch1 obj, ImpliedCurrencyAmountRangeChoice value) {
+			obj.setFaceAmount(value);
 		}
 	};
 	@XmlElement(name = "AmtsdVal", required = true)
@@ -160,7 +170,7 @@ public class FinancialInstrumentQuantitySearch1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmortisedValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentQuantitySearch1, ImpliedCurrencyAmountRangeChoice> mmAmortisedValue = new MMMessageAttribute<FinancialInstrumentQuantitySearch1, ImpliedCurrencyAmountRangeChoice>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmAmortisedFaceValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantitySearch1.mmObject();
@@ -172,6 +182,16 @@ public class FinancialInstrumentQuantitySearch1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ImpliedCurrencyAmountRangeChoice.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAmountRangeChoice getValue(FinancialInstrumentQuantitySearch1 obj) {
+			return obj.getAmortisedValue();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentQuantitySearch1 obj, ImpliedCurrencyAmountRangeChoice value) {
+			obj.setAmortisedValue(value);
 		}
 	};
 

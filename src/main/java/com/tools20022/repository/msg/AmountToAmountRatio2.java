@@ -104,7 +104,7 @@ public class AmountToAmountRatio2 {
 	 * definition} = "Numerator of the quotient of amounts."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount1 = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountToAmountRatio2, ActiveCurrencyAnd13DecimalAmount> mmAmount1 = new MMMessageAttribute<AmountToAmountRatio2, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> AmountRatio.mmAmount1;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountToAmountRatio2.mmObject();
@@ -116,6 +116,16 @@ public class AmountToAmountRatio2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(AmountToAmountRatio2 obj) {
+			return obj.getAmount1();
+		}
+
+		@Override
+		public void setValue(AmountToAmountRatio2 obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount1(value);
 		}
 	};
 	@XmlElement(name = "Amt2", required = true)
@@ -153,7 +163,7 @@ public class AmountToAmountRatio2 {
 	 * definition} = "Denominator of the quotient of amounts."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount2 = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountToAmountRatio2, ActiveCurrencyAnd13DecimalAmount> mmAmount2 = new MMMessageAttribute<AmountToAmountRatio2, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> AmountRatio.mmAmount2;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountToAmountRatio2.mmObject();
@@ -165,6 +175,16 @@ public class AmountToAmountRatio2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(AmountToAmountRatio2 obj) {
+			return obj.getAmount2();
+		}
+
+		@Override
+		public void setValue(AmountToAmountRatio2 obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount2(value);
 		}
 	};
 

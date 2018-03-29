@@ -27,6 +27,9 @@ import com.tools20022.repository.entity.Leg;
 import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrumentAttributes1;
+import com.tools20022.repository.msg.FinancialInstrumentStipulations;
+import com.tools20022.repository.msg.SecurityIdentification7;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -122,7 +125,7 @@ public class InstrumentLeg1 {
 	 * definition} = "Required for multileg IOIs and for each leg."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLegIOIQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstrumentLeg1, Quantity1Choice> mmLegIOIQuantity = new MMMessageAttribute<InstrumentLeg1, Quantity1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstrumentLeg1.mmObject();
@@ -135,6 +138,16 @@ public class InstrumentLeg1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Quantity1Choice.mmObject();
+		}
+
+		@Override
+		public Quantity1Choice getValue(InstrumentLeg1 obj) {
+			return obj.getLegIOIQuantity();
+		}
+
+		@Override
+		public void setValue(InstrumentLeg1 obj, Quantity1Choice value) {
+			obj.setLegIOIQuantity(value);
 		}
 	};
 	@XmlElement(name = "InstrmLegDtls")
@@ -171,7 +184,7 @@ public class InstrumentLeg1 {
 	 * "Provides details about the financial instrument of a particular leg."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstrumentLegDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InstrumentLeg1, Optional<SecurityIdentification7>> mmInstrumentLegDetails = new MMMessageAssociationEnd<InstrumentLeg1, Optional<SecurityIdentification7>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstrumentLeg1.mmObject();
@@ -183,7 +196,17 @@ public class InstrumentLeg1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
+			type_lazy = () -> SecurityIdentification7.mmObject();
+		}
+
+		@Override
+		public Optional<SecurityIdentification7> getValue(InstrumentLeg1 obj) {
+			return obj.getInstrumentLegDetails();
+		}
+
+		@Override
+		public void setValue(InstrumentLeg1 obj, Optional<SecurityIdentification7> value) {
+			obj.setInstrumentLegDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LegStiptns")
@@ -220,7 +243,7 @@ public class InstrumentLeg1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLegStipulations = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InstrumentLeg1, Optional<FinancialInstrumentStipulations>> mmLegStipulations = new MMMessageAssociationEnd<InstrumentLeg1, Optional<FinancialInstrumentStipulations>>() {
 		{
 			businessComponentTrace_lazy = () -> Security.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstrumentLeg1.mmObject();
@@ -232,11 +255,21 @@ public class InstrumentLeg1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentStipulations.mmObject();
+			type_lazy = () -> FinancialInstrumentStipulations.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentStipulations> getValue(InstrumentLeg1 obj) {
+			return obj.getLegStipulations();
+		}
+
+		@Override
+		public void setValue(InstrumentLeg1 obj, Optional<FinancialInstrumentStipulations> value) {
+			obj.setLegStipulations(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LegFinInstrmAttrbts")
-	protected List<com.tools20022.repository.msg.FinancialInstrumentAttributes1> legFinancialInstrumentAttributes;
+	protected List<FinancialInstrumentAttributes1> legFinancialInstrumentAttributes;
 	/**
 	 * 
 	 <p>
@@ -270,7 +303,7 @@ public class InstrumentLeg1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLegFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InstrumentLeg1, List<FinancialInstrumentAttributes1>> mmLegFinancialInstrumentAttributes = new MMMessageAssociationEnd<InstrumentLeg1, List<FinancialInstrumentAttributes1>>() {
 		{
 			businessElementTrace_lazy = () -> Leg.mmRelatedAsset;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstrumentLeg1.mmObject();
@@ -281,7 +314,17 @@ public class InstrumentLeg1 {
 			definition = "Provides details about the financial instrument attributes of a particular leg.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes1.mmObject();
+			type_lazy = () -> FinancialInstrumentAttributes1.mmObject();
+		}
+
+		@Override
+		public List<FinancialInstrumentAttributes1> getValue(InstrumentLeg1 obj) {
+			return obj.getLegFinancialInstrumentAttributes();
+		}
+
+		@Override
+		public void setValue(InstrumentLeg1 obj, List<FinancialInstrumentAttributes1> value) {
+			obj.setLegFinancialInstrumentAttributes(value);
 		}
 	};
 
@@ -314,7 +357,7 @@ public class InstrumentLeg1 {
 		return instrumentLegDetails == null ? Optional.empty() : Optional.of(instrumentLegDetails);
 	}
 
-	public InstrumentLeg1 setInstrumentLegDetails(com.tools20022.repository.msg.SecurityIdentification7 instrumentLegDetails) {
+	public InstrumentLeg1 setInstrumentLegDetails(SecurityIdentification7 instrumentLegDetails) {
 		this.instrumentLegDetails = instrumentLegDetails;
 		return this;
 	}
@@ -323,7 +366,7 @@ public class InstrumentLeg1 {
 		return legStipulations == null ? Optional.empty() : Optional.of(legStipulations);
 	}
 
-	public InstrumentLeg1 setLegStipulations(com.tools20022.repository.msg.FinancialInstrumentStipulations legStipulations) {
+	public InstrumentLeg1 setLegStipulations(FinancialInstrumentStipulations legStipulations) {
 		this.legStipulations = legStipulations;
 		return this;
 	}
@@ -332,7 +375,7 @@ public class InstrumentLeg1 {
 		return legFinancialInstrumentAttributes == null ? legFinancialInstrumentAttributes = new ArrayList<>() : legFinancialInstrumentAttributes;
 	}
 
-	public InstrumentLeg1 setLegFinancialInstrumentAttributes(List<com.tools20022.repository.msg.FinancialInstrumentAttributes1> legFinancialInstrumentAttributes) {
+	public InstrumentLeg1 setLegFinancialInstrumentAttributes(List<FinancialInstrumentAttributes1> legFinancialInstrumentAttributes) {
 		this.legFinancialInstrumentAttributes = Objects.requireNonNull(legFinancialInstrumentAttributes);
 		return this;
 	}

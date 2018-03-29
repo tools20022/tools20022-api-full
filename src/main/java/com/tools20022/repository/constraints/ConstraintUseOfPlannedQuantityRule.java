@@ -51,11 +51,15 @@ public class ConstraintUseOfPlannedQuantityRule {
 	 */
 	public static final MMConstraint<CorporateActionQuantity4SD2> forCorporateActionQuantity4SD2 = new MMConstraint<CorporateActionQuantity4SD2>() {
 		{
-			validator = ConstraintUseOfPlannedQuantityRule::checkCorporateActionQuantity4SD2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UseOfPlannedQuantityRule";
 			definition = "PlannedQuantityCode can only be used with corporate action event type codes TEND or BIDS.";
 			owner_lazy = () -> CorporateActionQuantity4SD2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionQuantity4SD2 obj) throws Exception {
+			checkCorporateActionQuantity4SD2(obj);
 		}
 	};
 

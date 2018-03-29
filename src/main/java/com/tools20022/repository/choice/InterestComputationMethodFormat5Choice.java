@@ -113,7 +113,7 @@ public class InterestComputationMethodFormat5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestComputationMethodFormat5Choice, InterestComputationMethod2Code> mmCode = new MMMessageAttribute<InterestComputationMethodFormat5Choice, InterestComputationMethod2Code>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmDayCountBasis;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InterestComputationMethodFormat5Choice.mmObject();
@@ -125,6 +125,16 @@ public class InterestComputationMethodFormat5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InterestComputationMethod2Code.mmObject();
+		}
+
+		@Override
+		public InterestComputationMethod2Code getValue(InterestComputationMethodFormat5Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(InterestComputationMethodFormat5Choice obj, InterestComputationMethod2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -163,7 +173,7 @@ public class InterestComputationMethodFormat5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InterestComputationMethodFormat5Choice, GenericIdentification47> mmProprietary = new MMMessageAssociationEnd<InterestComputationMethodFormat5Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmDayCountBasis;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InterestComputationMethodFormat5Choice.mmObject();
@@ -176,6 +186,16 @@ public class InterestComputationMethodFormat5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(InterestComputationMethodFormat5Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(InterestComputationMethodFormat5Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

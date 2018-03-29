@@ -25,7 +25,6 @@ import com.tools20022.repository.area.CashManagementArchive;
 import com.tools20022.repository.msg.AccountNotification1;
 import com.tools20022.repository.msg.GroupHeader23;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -136,7 +135,7 @@ public class BankToCustomerDebitCreditNotificationV01 {
 	 * definition} = "Common information for the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BankToCustomerDebitCreditNotificationV01, GroupHeader23> mmGroupHeader = new MMMessageBuildingBlock<BankToCustomerDebitCreditNotificationV01, GroupHeader23>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -147,12 +146,14 @@ public class BankToCustomerDebitCreditNotificationV01 {
 			complexType_lazy = () -> GroupHeader23.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BankToCustomerDebitCreditNotificationV01.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader23 getValue(BankToCustomerDebitCreditNotificationV01 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(BankToCustomerDebitCreditNotificationV01 obj, GroupHeader23 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "Ntfctn", required = true)
@@ -180,7 +181,7 @@ public class BankToCustomerDebitCreditNotificationV01 {
 	 * definition} = "Notifies debit and credit entries for the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmNotification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BankToCustomerDebitCreditNotificationV01, List<AccountNotification1>> mmNotification = new MMMessageBuildingBlock<BankToCustomerDebitCreditNotificationV01, List<AccountNotification1>>() {
 		{
 			xmlTag = "Ntfctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -190,12 +191,14 @@ public class BankToCustomerDebitCreditNotificationV01 {
 			complexType_lazy = () -> AccountNotification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BankToCustomerDebitCreditNotificationV01.class.getMethod("getNotification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<AccountNotification1> getValue(BankToCustomerDebitCreditNotificationV01 obj) {
+			return obj.getNotification();
+		}
+
+		@Override
+		public void setValue(BankToCustomerDebitCreditNotificationV01 obj, List<AccountNotification1> value) {
+			obj.setNotification(value);
 		}
 	};
 

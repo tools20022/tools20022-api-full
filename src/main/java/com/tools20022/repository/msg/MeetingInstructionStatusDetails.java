@@ -121,7 +121,7 @@ public class MeetingInstructionStatusDetails {
 	 * definition} = "Information on the processing of one instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessingStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingInstructionStatusDetails, Status1Code> mmProcessingStatus = new MMMessageAttribute<MeetingInstructionStatusDetails, Status1Code>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmInstructionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingInstructionStatusDetails.mmObject();
@@ -133,6 +133,16 @@ public class MeetingInstructionStatusDetails {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Status1Code.mmObject();
+		}
+
+		@Override
+		public Status1Code getValue(MeetingInstructionStatusDetails obj) {
+			return obj.getProcessingStatus();
+		}
+
+		@Override
+		public void setValue(MeetingInstructionStatusDetails obj, Status1Code value) {
+			obj.setProcessingStatus(value);
 		}
 	};
 	@XmlElement(name = "RjctnSts", required = true)
@@ -165,7 +175,7 @@ public class MeetingInstructionStatusDetails {
 	 * definition} = "Information on the rejection of one instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRejectionStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingInstructionStatusDetails, MeetingInstructionRejection1Code> mmRejectionStatus = new MMMessageAttribute<MeetingInstructionStatusDetails, MeetingInstructionRejection1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingInstructionStatusDetails.mmObject();
 			isDerived = false;
@@ -176,6 +186,16 @@ public class MeetingInstructionStatusDetails {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MeetingInstructionRejection1Code.mmObject();
+		}
+
+		@Override
+		public MeetingInstructionRejection1Code getValue(MeetingInstructionStatusDetails obj) {
+			return obj.getRejectionStatus();
+		}
+
+		@Override
+		public void setValue(MeetingInstructionStatusDetails obj, MeetingInstructionRejection1Code value) {
+			obj.setRejectionStatus(value);
 		}
 	};
 	@XmlElement(name = "StsRsn")
@@ -212,7 +232,7 @@ public class MeetingInstructionStatusDetails {
 	 * definition} = "Detailed information about the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatusReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingInstructionStatusDetails, Optional<Max350Text>> mmStatusReason = new MMMessageAttribute<MeetingInstructionStatusDetails, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingInstructionStatusDetails.mmObject();
@@ -224,6 +244,16 @@ public class MeetingInstructionStatusDetails {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(MeetingInstructionStatusDetails obj) {
+			return obj.getStatusReason();
+		}
+
+		@Override
+		public void setValue(MeetingInstructionStatusDetails obj, Optional<Max350Text> value) {
+			obj.setStatusReason(value.orElse(null));
 		}
 	};
 	/**

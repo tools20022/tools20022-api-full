@@ -108,7 +108,7 @@ public class ExposureType11Choice {
 	 * "Collateral movement exposure type expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExposureType11Choice, ExposureType4Code> mmCode = new MMMessageAttribute<ExposureType11Choice, ExposureType4Code>() {
 		{
 			businessElementTrace_lazy = () -> ExposureTerm.mmExposureType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ExposureType11Choice.mmObject();
@@ -120,6 +120,16 @@ public class ExposureType11Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExposureType4Code.mmObject();
+		}
+
+		@Override
+		public ExposureType4Code getValue(ExposureType11Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ExposureType11Choice obj, ExposureType4Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -157,7 +167,7 @@ public class ExposureType11Choice {
 	 * "Collateral movement exposure type expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ExposureType11Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<ExposureType11Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> ExposureTerm.mmExposureType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ExposureType11Choice.mmObject();
@@ -170,6 +180,16 @@ public class ExposureType11Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(ExposureType11Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ExposureType11Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

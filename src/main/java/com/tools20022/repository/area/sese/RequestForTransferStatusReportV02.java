@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.Extension1;
 import com.tools20022.repository.msg.MessageAndBusinessReference6;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -135,7 +134,7 @@ public class RequestForTransferStatusReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RequestForTransferStatusReportV02, MessageIdentification1> mmMessageIdentification = new MMMessageBuildingBlock<RequestForTransferStatusReportV02, MessageIdentification1>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -146,12 +145,14 @@ public class RequestForTransferStatusReportV02 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RequestForTransferStatusReportV02.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(RequestForTransferStatusReportV02 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(RequestForTransferStatusReportV02 obj, MessageIdentification1 value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "ReqDtls", required = true)
@@ -181,7 +182,7 @@ public class RequestForTransferStatusReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRequestDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RequestForTransferStatusReportV02, List<MessageAndBusinessReference6>> mmRequestDetails = new MMMessageBuildingBlock<RequestForTransferStatusReportV02, List<MessageAndBusinessReference6>>() {
 		{
 			xmlTag = "ReqDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -191,12 +192,14 @@ public class RequestForTransferStatusReportV02 {
 			complexType_lazy = () -> MessageAndBusinessReference6.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RequestForTransferStatusReportV02.class.getMethod("getRequestDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<MessageAndBusinessReference6> getValue(RequestForTransferStatusReportV02 obj) {
+			return obj.getRequestDetails();
+		}
+
+		@Override
+		public void setValue(RequestForTransferStatusReportV02 obj, List<MessageAndBusinessReference6> value) {
+			obj.setRequestDetails(value);
 		}
 	};
 	@XmlElement(name = "Xtnsn")
@@ -225,7 +228,7 @@ public class RequestForTransferStatusReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RequestForTransferStatusReportV02, List<Extension1>> mmExtension = new MMMessageBuildingBlock<RequestForTransferStatusReportV02, List<Extension1>>() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -235,12 +238,14 @@ public class RequestForTransferStatusReportV02 {
 			complexType_lazy = () -> Extension1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RequestForTransferStatusReportV02.class.getMethod("getExtension", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Extension1> getValue(RequestForTransferStatusReportV02 obj) {
+			return obj.getExtension();
+		}
+
+		@Override
+		public void setValue(RequestForTransferStatusReportV02 obj, List<Extension1> value) {
+			obj.setExtension(value);
 		}
 	};
 

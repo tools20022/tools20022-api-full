@@ -114,7 +114,7 @@ public class CorporateActionCancellationSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionCancellationSD2, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionCancellationSD2, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionCancellationSD2.mmObject();
 			isDerived = false;
@@ -126,6 +126,16 @@ public class CorporateActionCancellationSD2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionCancellationSD2 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionCancellationSD2 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "XtrnlCmnts")
@@ -166,7 +176,7 @@ public class CorporateActionCancellationSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExternalComments = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionCancellationSD2, Optional<Max8000Text>> mmExternalComments = new MMMessageAttribute<CorporateActionCancellationSD2, Optional<Max8000Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionCancellationSD2.mmObject();
 			isDerived = false;
@@ -178,6 +188,16 @@ public class CorporateActionCancellationSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max8000Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max8000Text> getValue(CorporateActionCancellationSD2 obj) {
+			return obj.getExternalComments();
+		}
+
+		@Override
+		public void setValue(CorporateActionCancellationSD2 obj, Optional<Max8000Text> value) {
+			obj.setExternalComments(value.orElse(null));
 		}
 	};
 

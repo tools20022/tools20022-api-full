@@ -111,7 +111,7 @@ public class CurrencyDetails2 {
 	 * CurrencyDetails1.mmAlphaCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAlphaCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyDetails2, Optional<ActiveCurrencyCode>> mmAlphaCode = new MMMessageAttribute<CurrencyDetails2, Optional<ActiveCurrencyCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyDetails2.mmObject();
 			isDerived = false;
@@ -123,6 +123,16 @@ public class CurrencyDetails2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyCode> getValue(CurrencyDetails2 obj) {
+			return obj.getAlphaCode();
+		}
+
+		@Override
+		public void setValue(CurrencyDetails2 obj, Optional<ActiveCurrencyCode> value) {
+			obj.setAlphaCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NmrcCd")
@@ -160,7 +170,7 @@ public class CurrencyDetails2 {
 	 * CurrencyDetails1.mmNumericCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumericCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyDetails2, Optional<Exact3NumericText>> mmNumericCode = new MMMessageAttribute<CurrencyDetails2, Optional<Exact3NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyDetails2.mmObject();
 			isDerived = false;
@@ -172,6 +182,16 @@ public class CurrencyDetails2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Exact3NumericText> getValue(CurrencyDetails2 obj) {
+			return obj.getNumericCode();
+		}
+
+		@Override
+		public void setValue(CurrencyDetails2 obj, Optional<Exact3NumericText> value) {
+			obj.setNumericCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Dcml")
@@ -209,7 +229,7 @@ public class CurrencyDetails2 {
 	 * CurrencyDetails1.mmDecimal}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDecimal = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyDetails2, Optional<Number>> mmDecimal = new MMMessageAttribute<CurrencyDetails2, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyDetails2.mmObject();
 			isDerived = false;
@@ -221,6 +241,16 @@ public class CurrencyDetails2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(CurrencyDetails2 obj) {
+			return obj.getDecimal();
+		}
+
+		@Override
+		public void setValue(CurrencyDetails2 obj, Optional<Number> value) {
+			obj.setDecimal(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Nm")
@@ -257,7 +287,7 @@ public class CurrencyDetails2 {
 	 * CurrencyDetails1.mmName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyDetails2, Optional<Max35Text>> mmName = new MMMessageAttribute<CurrencyDetails2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyDetails2.mmObject();
 			isDerived = false;
@@ -269,6 +299,16 @@ public class CurrencyDetails2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CurrencyDetails2 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(CurrencyDetails2 obj, Optional<Max35Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 

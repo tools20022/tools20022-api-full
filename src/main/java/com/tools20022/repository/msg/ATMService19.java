@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMServiceType8Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMService18;
+import com.tools20022.repository.msg.ATMTransactionAmounts6;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -108,7 +110,7 @@ public class ATMService19 {
 	 * ATMService17.mmServiceType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmServiceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMService19, ATMServiceType8Code> mmServiceType = new MMMessageAttribute<ATMService19, ATMServiceType8Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMService19.mmObject();
 			isDerived = false;
@@ -121,9 +123,19 @@ public class ATMService19 {
 			minOccurs = 1;
 			simpleType_lazy = () -> ATMServiceType8Code.mmObject();
 		}
+
+		@Override
+		public ATMServiceType8Code getValue(ATMService19 obj) {
+			return obj.getServiceType();
+		}
+
+		@Override
+		public void setValue(ATMService19 obj, ATMServiceType8Code value) {
+			obj.setServiceType(value);
+		}
 	};
 	@XmlElement(name = "SvcVarnt")
-	protected List<com.tools20022.repository.msg.ATMService18> serviceVariant;
+	protected List<ATMService18> serviceVariant;
 	/**
 	 * 
 	 <p>
@@ -154,7 +166,7 @@ public class ATMService19 {
 	 * ATMService17.mmServiceVariant}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmServiceVariant = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMService19, List<ATMService18>> mmServiceVariant = new MMMessageAssociationEnd<ATMService19, List<ATMService18>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMService19.mmObject();
 			isDerived = false;
@@ -165,11 +177,21 @@ public class ATMService19 {
 			previousVersion_lazy = () -> ATMService17.mmServiceVariant;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMService18.mmObject();
+			type_lazy = () -> ATMService18.mmObject();
+		}
+
+		@Override
+		public List<ATMService18> getValue(ATMService19 obj) {
+			return obj.getServiceVariant();
+		}
+
+		@Override
+		public void setValue(ATMService19 obj, List<ATMService18> value) {
+			obj.setServiceVariant(value);
 		}
 	};
 	@XmlElement(name = "Lmts")
-	protected List<com.tools20022.repository.msg.ATMTransactionAmounts6> limits;
+	protected List<ATMTransactionAmounts6> limits;
 	/**
 	 * 
 	 <p>
@@ -200,7 +222,7 @@ public class ATMService19 {
 	 * ATMService17.mmLimits}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLimits = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMService19, List<ATMTransactionAmounts6>> mmLimits = new MMMessageAssociationEnd<ATMService19, List<ATMTransactionAmounts6>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMService19.mmObject();
 			isDerived = false;
@@ -211,7 +233,17 @@ public class ATMService19 {
 			previousVersion_lazy = () -> ATMService17.mmLimits;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts6.mmObject();
+			type_lazy = () -> ATMTransactionAmounts6.mmObject();
+		}
+
+		@Override
+		public List<ATMTransactionAmounts6> getValue(ATMService19 obj) {
+			return obj.getLimits();
+		}
+
+		@Override
+		public void setValue(ATMService19 obj, List<ATMTransactionAmounts6> value) {
+			obj.setLimits(value);
 		}
 	};
 
@@ -242,7 +274,7 @@ public class ATMService19 {
 		return serviceVariant == null ? serviceVariant = new ArrayList<>() : serviceVariant;
 	}
 
-	public ATMService19 setServiceVariant(List<com.tools20022.repository.msg.ATMService18> serviceVariant) {
+	public ATMService19 setServiceVariant(List<ATMService18> serviceVariant) {
 		this.serviceVariant = Objects.requireNonNull(serviceVariant);
 		return this;
 	}
@@ -251,7 +283,7 @@ public class ATMService19 {
 		return limits == null ? limits = new ArrayList<>() : limits;
 	}
 
-	public ATMService19 setLimits(List<com.tools20022.repository.msg.ATMTransactionAmounts6> limits) {
+	public ATMService19 setLimits(List<ATMTransactionAmounts6> limits) {
 		this.limits = Objects.requireNonNull(limits);
 		return this;
 	}

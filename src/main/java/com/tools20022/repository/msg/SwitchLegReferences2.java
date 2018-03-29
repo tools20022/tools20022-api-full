@@ -25,6 +25,9 @@ import com.tools20022.repository.choice.LegIdentification1Choice;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Fee3;
+import com.tools20022.repository.msg.FinancialInstrument57;
+import com.tools20022.repository.msg.InvestmentAccount58;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -119,7 +122,7 @@ public class SwitchLegReferences2 {
 	 * definition} = "Identification of a switch leg."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLegIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchLegReferences2, LegIdentification1Choice> mmLegIdentification = new MMMessageAssociationEnd<SwitchLegReferences2, LegIdentification1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchLegReferences2.mmObject();
@@ -132,6 +135,16 @@ public class SwitchLegReferences2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> LegIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public LegIdentification1Choice getValue(SwitchLegReferences2 obj) {
+			return obj.getLegIdentification();
+		}
+
+		@Override
+		public void setValue(SwitchLegReferences2 obj, LegIdentification1Choice value) {
+			obj.setLegIdentification(value);
 		}
 	};
 	@XmlElement(name = "LegRjctnRsn")
@@ -174,7 +187,7 @@ public class SwitchLegReferences2 {
 	 * SwitchLegReferences1.mmLegRejectionReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLegRejectionReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SwitchLegReferences2, Optional<Max350Text>> mmLegRejectionReason = new MMMessageAttribute<SwitchLegReferences2, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchLegReferences2.mmObject();
@@ -188,9 +201,19 @@ public class SwitchLegReferences2 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max350Text> getValue(SwitchLegReferences2 obj) {
+			return obj.getLegRejectionReason();
+		}
+
+		@Override
+		public void setValue(SwitchLegReferences2 obj, Optional<Max350Text> value) {
+			obj.setLegRejectionReason(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "RprdFee")
-	protected List<com.tools20022.repository.msg.Fee3> repairedFee;
+	protected List<Fee3> repairedFee;
 	/**
 	 * 
 	 <p>
@@ -222,7 +245,7 @@ public class SwitchLegReferences2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRepairedFee = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchLegReferences2, List<Fee3>> mmRepairedFee = new MMMessageAssociationEnd<SwitchLegReferences2, List<Fee3>>() {
 		{
 			businessComponentTrace_lazy = () -> Charges.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchLegReferences2.mmObject();
@@ -234,7 +257,17 @@ public class SwitchLegReferences2 {
 			maxOccurs = 10;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Fee3.mmObject();
+			type_lazy = () -> Fee3.mmObject();
+		}
+
+		@Override
+		public List<Fee3> getValue(SwitchLegReferences2 obj) {
+			return obj.getRepairedFee();
+		}
+
+		@Override
+		public void setValue(SwitchLegReferences2 obj, List<Fee3> value) {
+			obj.setRepairedFee(value);
 		}
 	};
 	@XmlElement(name = "InvstmtAcctDtls")
@@ -276,7 +309,7 @@ public class SwitchLegReferences2 {
 	 * SwitchLegReferences1.mmInvestmentAccountDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchLegReferences2, Optional<InvestmentAccount58>> mmInvestmentAccountDetails = new MMMessageAssociationEnd<SwitchLegReferences2, Optional<InvestmentAccount58>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchLegReferences2.mmObject();
@@ -289,7 +322,17 @@ public class SwitchLegReferences2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount58.mmObject();
+			type_lazy = () -> InvestmentAccount58.mmObject();
+		}
+
+		@Override
+		public Optional<InvestmentAccount58> getValue(SwitchLegReferences2 obj) {
+			return obj.getInvestmentAccountDetails();
+		}
+
+		@Override
+		public void setValue(SwitchLegReferences2 obj, Optional<InvestmentAccount58> value) {
+			obj.setInvestmentAccountDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FinInstrmDtls")
@@ -332,7 +375,7 @@ public class SwitchLegReferences2 {
 	 * SwitchLegReferences1.mmFinancialInstrumentDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchLegReferences2, Optional<FinancialInstrument57>> mmFinancialInstrumentDetails = new MMMessageAssociationEnd<SwitchLegReferences2, Optional<FinancialInstrument57>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentFundClass;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchLegReferences2.mmObject();
@@ -345,7 +388,17 @@ public class SwitchLegReferences2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument57.mmObject();
+			type_lazy = () -> FinancialInstrument57.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrument57> getValue(SwitchLegReferences2 obj) {
+			return obj.getFinancialInstrumentDetails();
+		}
+
+		@Override
+		public void setValue(SwitchLegReferences2 obj, Optional<FinancialInstrument57> value) {
+			obj.setFinancialInstrumentDetails(value.orElse(null));
 		}
 	};
 
@@ -388,7 +441,7 @@ public class SwitchLegReferences2 {
 		return repairedFee == null ? repairedFee = new ArrayList<>() : repairedFee;
 	}
 
-	public SwitchLegReferences2 setRepairedFee(List<com.tools20022.repository.msg.Fee3> repairedFee) {
+	public SwitchLegReferences2 setRepairedFee(List<Fee3> repairedFee) {
 		this.repairedFee = Objects.requireNonNull(repairedFee);
 		return this;
 	}
@@ -397,7 +450,7 @@ public class SwitchLegReferences2 {
 		return investmentAccountDetails == null ? Optional.empty() : Optional.of(investmentAccountDetails);
 	}
 
-	public SwitchLegReferences2 setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount58 investmentAccountDetails) {
+	public SwitchLegReferences2 setInvestmentAccountDetails(InvestmentAccount58 investmentAccountDetails) {
 		this.investmentAccountDetails = investmentAccountDetails;
 		return this;
 	}
@@ -406,7 +459,7 @@ public class SwitchLegReferences2 {
 		return financialInstrumentDetails == null ? Optional.empty() : Optional.of(financialInstrumentDetails);
 	}
 
-	public SwitchLegReferences2 setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument57 financialInstrumentDetails) {
+	public SwitchLegReferences2 setFinancialInstrumentDetails(FinancialInstrument57 financialInstrumentDetails) {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 		return this;
 	}

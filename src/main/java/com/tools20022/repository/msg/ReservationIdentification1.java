@@ -31,6 +31,7 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.Reservation;
 import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -132,7 +133,7 @@ public class ReservationIdentification1 {
 	 * definition} = "Unique identification of the reservation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReservationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReservationIdentification1, Optional<Max35Text>> mmReservationIdentification = new MMMessageAttribute<ReservationIdentification1, Optional<Max35Text>>() {
 		{
 			businessComponentTrace_lazy = () -> Reservation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationIdentification1.mmObject();
@@ -144,6 +145,16 @@ public class ReservationIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ReservationIdentification1 obj) {
+			return obj.getReservationIdentification();
+		}
+
+		@Override
+		public void setValue(ReservationIdentification1 obj, Optional<Max35Text> value) {
+			obj.setReservationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SysId")
@@ -181,7 +192,7 @@ public class ReservationIdentification1 {
 	 * definition} = "Identification of a particular cash clearing system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSystemIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReservationIdentification1, Optional<SystemIdentification2Choice>> mmSystemIdentification = new MMMessageAttribute<ReservationIdentification1, Optional<SystemIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> System.mmSystemIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationIdentification1.mmObject();
@@ -193,6 +204,16 @@ public class ReservationIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SystemIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SystemIdentification2Choice> getValue(ReservationIdentification1 obj) {
+			return obj.getSystemIdentification();
+		}
+
+		@Override
+		public void setValue(ReservationIdentification1 obj, Optional<SystemIdentification2Choice> value) {
+			obj.setSystemIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -230,7 +251,7 @@ public class ReservationIdentification1 {
 	 * definition} = "Nature of the reservation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReservationIdentification1, ReservationType1Choice> mmType = new MMMessageAttribute<ReservationIdentification1, ReservationType1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Reservation.mmReservationType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationIdentification1.mmObject();
@@ -242,6 +263,16 @@ public class ReservationIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ReservationType1Choice.mmObject();
+		}
+
+		@Override
+		public ReservationType1Choice getValue(ReservationIdentification1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(ReservationIdentification1 obj, ReservationType1Choice value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -278,7 +309,7 @@ public class ReservationIdentification1 {
 	 * definition} = "Owner of the account which is being queried."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReservationIdentification1, Optional<BranchAndFinancialInstitutionIdentification5>> mmAccountOwner = new MMMessageAssociationEnd<ReservationIdentification1, Optional<BranchAndFinancialInstitutionIdentification5>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationIdentification1.mmObject();
@@ -290,7 +321,17 @@ public class ReservationIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+
+		@Override
+		public Optional<BranchAndFinancialInstitutionIdentification5> getValue(ReservationIdentification1 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(ReservationIdentification1 obj, Optional<BranchAndFinancialInstitutionIdentification5> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctId")
@@ -329,7 +370,7 @@ public class ReservationIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReservationIdentification1, Optional<AccountIdentification4Choice>> mmAccountIdentification = new MMMessageAssociationEnd<ReservationIdentification1, Optional<AccountIdentification4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationIdentification1.mmObject();
@@ -342,6 +383,16 @@ public class ReservationIdentification1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AccountIdentification4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AccountIdentification4Choice> getValue(ReservationIdentification1 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(ReservationIdentification1 obj, Optional<AccountIdentification4Choice> value) {
+			obj.setAccountIdentification(value.orElse(null));
 		}
 	};
 
@@ -393,7 +444,7 @@ public class ReservationIdentification1 {
 		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public ReservationIdentification1 setAccountOwner(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 accountOwner) {
+	public ReservationIdentification1 setAccountOwner(BranchAndFinancialInstitutionIdentification5 accountOwner) {
 		this.accountOwner = accountOwner;
 		return this;
 	}

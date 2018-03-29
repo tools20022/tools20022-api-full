@@ -130,7 +130,7 @@ public class CorporateActionDate62 {
 	 * CorporateActionDate47.mmPaymentDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionDate62, DateFormat43Choice> mmPaymentDate = new MMMessageAssociationEnd<CorporateActionDate62, DateFormat43Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmMovementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate62.mmObject();
@@ -145,6 +145,16 @@ public class CorporateActionDate62 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DateFormat43Choice.mmObject();
+		}
+
+		@Override
+		public DateFormat43Choice getValue(CorporateActionDate62 obj) {
+			return obj.getPaymentDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate62 obj, DateFormat43Choice value) {
+			obj.setPaymentDate(value);
 		}
 	};
 	@XmlElement(name = "ValDt")
@@ -189,7 +199,7 @@ public class CorporateActionDate62 {
 	 * CorporateActionDate47.mmValueDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmValueDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionDate62, Optional<DateFormat46Choice>> mmValueDate = new MMMessageAssociationEnd<CorporateActionDate62, Optional<DateFormat46Choice>>() {
 		{
 			businessElementTrace_lazy = () -> ProceedsDefinition.mmValueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate62.mmObject();
@@ -204,6 +214,16 @@ public class CorporateActionDate62 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat46Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat46Choice> getValue(CorporateActionDate62 obj) {
+			return obj.getValueDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate62 obj, Optional<DateFormat46Choice> value) {
+			obj.setValueDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FXRateFxgDt")
@@ -248,7 +268,7 @@ public class CorporateActionDate62 {
 	 * CorporateActionDate47.mmForeignExchangeRateFixingDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmForeignExchangeRateFixingDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionDate62, Optional<DateFormat43Choice>> mmForeignExchangeRateFixingDate = new MMMessageAssociationEnd<CorporateActionDate62, Optional<DateFormat43Choice>>() {
 		{
 			businessElementTrace_lazy = () -> FixingCondition.mmFixingDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate62.mmObject();
@@ -263,6 +283,16 @@ public class CorporateActionDate62 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat43Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat43Choice> getValue(CorporateActionDate62 obj) {
+			return obj.getForeignExchangeRateFixingDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate62 obj, Optional<DateFormat43Choice> value) {
+			obj.setForeignExchangeRateFixingDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EarlstPmtDt")
@@ -308,7 +338,7 @@ public class CorporateActionDate62 {
 	 * CorporateActionDate47.mmEarliestPaymentDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEarliestPaymentDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionDate62, Optional<DateFormat43Choice>> mmEarliestPaymentDate = new MMMessageAssociationEnd<CorporateActionDate62, Optional<DateFormat43Choice>>() {
 		{
 			businessElementTrace_lazy = () -> ProceedsDefinition.mmEarliestPaymentDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate62.mmObject();
@@ -323,6 +353,16 @@ public class CorporateActionDate62 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat43Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat43Choice> getValue(CorporateActionDate62 obj) {
+			return obj.getEarliestPaymentDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate62 obj, Optional<DateFormat43Choice> value) {
+			obj.setEarliestPaymentDate(value.orElse(null));
 		}
 	};
 

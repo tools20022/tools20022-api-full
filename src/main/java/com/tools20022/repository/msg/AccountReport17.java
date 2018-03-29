@@ -135,7 +135,7 @@ public class AccountReport17 {
 	 * AccountReport13.mmAccountIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountReport17, AccountIdentification4Choice> mmAccountIdentification = new MMMessageAttribute<AccountReport17, AccountIdentification4Choice>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountReport17.mmObject();
@@ -149,6 +149,16 @@ public class AccountReport17 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AccountIdentification4Choice.mmObject();
+		}
+
+		@Override
+		public AccountIdentification4Choice getValue(AccountReport17 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(AccountReport17 obj, AccountIdentification4Choice value) {
+			obj.setAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctOrErr", required = true)
@@ -200,7 +210,7 @@ public class AccountReport17 {
 	 * AccountReport13.mmAccountOrError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOrError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountReport17, AccountOrBusinessError2Choice> mmAccountOrError = new MMMessageAssociationEnd<AccountReport17, AccountOrBusinessError2Choice>() {
 		{
 			businessElementTrace_lazy = () -> CashAccountContract.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountReport17.mmObject();
@@ -215,6 +225,16 @@ public class AccountReport17 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AccountOrBusinessError2Choice.mmObject();
+		}
+
+		@Override
+		public AccountOrBusinessError2Choice getValue(AccountReport17 obj) {
+			return obj.getAccountOrError();
+		}
+
+		@Override
+		public void setValue(AccountReport17 obj, AccountOrBusinessError2Choice value) {
+			obj.setAccountOrError(value);
 		}
 	};
 

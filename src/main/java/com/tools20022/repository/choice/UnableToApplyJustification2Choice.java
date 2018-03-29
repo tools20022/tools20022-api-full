@@ -138,7 +138,7 @@ public class UnableToApplyJustification2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAnyInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnableToApplyJustification2Choice, YesNoIndicator> mmAnyInformation = new MMMessageAttribute<UnableToApplyJustification2Choice, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnableToApplyJustification2Choice.mmObject();
 			isDerived = false;
@@ -150,6 +150,16 @@ public class UnableToApplyJustification2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(UnableToApplyJustification2Choice obj) {
+			return obj.getAnyInformation();
+		}
+
+		@Override
+		public void setValue(UnableToApplyJustification2Choice obj, YesNoIndicator value) {
+			obj.setAnyInformation(value);
 		}
 	};
 	@XmlElement(name = "MssngOrIncrrctInf", required = true)
@@ -191,7 +201,7 @@ public class UnableToApplyJustification2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMissingOrIncorrectInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnableToApplyJustification2Choice, MissingOrIncorrectInformation2> mmMissingOrIncorrectInformation = new MMMessageAssociationEnd<UnableToApplyJustification2Choice, MissingOrIncorrectInformation2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnableToApplyJustification2Choice.mmObject();
 			isDerived = false;
@@ -204,6 +214,16 @@ public class UnableToApplyJustification2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> MissingOrIncorrectInformation2.mmObject();
+		}
+
+		@Override
+		public MissingOrIncorrectInformation2 getValue(UnableToApplyJustification2Choice obj) {
+			return obj.getMissingOrIncorrectInformation();
+		}
+
+		@Override
+		public void setValue(UnableToApplyJustification2Choice obj, MissingOrIncorrectInformation2 value) {
+			obj.setMissingOrIncorrectInformation(value);
 		}
 	};
 	@XmlElement(name = "PssblDplctInstr", required = true)
@@ -246,7 +266,7 @@ public class UnableToApplyJustification2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPossibleDuplicateInstruction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnableToApplyJustification2Choice, TrueFalseIndicator> mmPossibleDuplicateInstruction = new MMMessageAttribute<UnableToApplyJustification2Choice, TrueFalseIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnableToApplyJustification2Choice.mmObject();
 			isDerived = false;
@@ -258,6 +278,16 @@ public class UnableToApplyJustification2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public TrueFalseIndicator getValue(UnableToApplyJustification2Choice obj) {
+			return obj.getPossibleDuplicateInstruction();
+		}
+
+		@Override
+		public void setValue(UnableToApplyJustification2Choice obj, TrueFalseIndicator value) {
+			obj.setPossibleDuplicateInstruction(value);
 		}
 	};
 

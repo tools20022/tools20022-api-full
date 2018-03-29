@@ -122,7 +122,7 @@ public class OpeningClosing3Choice {
 	 * OpeningClosing1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OpeningClosing3Choice, OpeningClosing1Code> mmCode = new MMMessageAttribute<OpeningClosing3Choice, OpeningClosing1Code>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmOpeningClosingCode;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OpeningClosing3Choice.mmObject();
@@ -136,6 +136,16 @@ public class OpeningClosing3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OpeningClosing1Code.mmObject();
+		}
+
+		@Override
+		public OpeningClosing1Code getValue(OpeningClosing3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(OpeningClosing3Choice obj, OpeningClosing1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -182,7 +192,7 @@ public class OpeningClosing3Choice {
 	 * OpeningClosing1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OpeningClosing3Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<OpeningClosing3Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmOpeningClosingCode;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OpeningClosing3Choice.mmObject();
@@ -196,6 +206,16 @@ public class OpeningClosing3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(OpeningClosing3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(OpeningClosing3Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

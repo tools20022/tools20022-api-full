@@ -25,6 +25,7 @@ import com.tools20022.repository.codeset.CollateralProposalResponse1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.CollateralProposal;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CollateralResponse2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -114,7 +115,7 @@ public class CollateralProposalResponseType3 {
 	 * CollateralProposalResponseType2.mmCollateralProposalIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralProposalIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralProposalResponseType3, Max35Text> mmCollateralProposalIdentification = new MMMessageAttribute<CollateralProposalResponseType3, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralProposalResponseType3.mmObject();
 			isDerived = false;
@@ -126,6 +127,16 @@ public class CollateralProposalResponseType3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CollateralProposalResponseType3 obj) {
+			return obj.getCollateralProposalIdentification();
+		}
+
+		@Override
+		public void setValue(CollateralProposalResponseType3 obj, Max35Text value) {
+			obj.setCollateralProposalIdentification(value);
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -170,7 +181,7 @@ public class CollateralProposalResponseType3 {
 	 * CollateralProposalResponseType2.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralProposalResponseType3, CollateralProposalResponse1Code> mmType = new MMMessageAttribute<CollateralProposalResponseType3, CollateralProposalResponse1Code>() {
 		{
 			businessElementTrace_lazy = () -> CollateralProposal.mmResponseType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralProposalResponseType3.mmObject();
@@ -183,6 +194,16 @@ public class CollateralProposalResponseType3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CollateralProposalResponse1Code.mmObject();
+		}
+
+		@Override
+		public CollateralProposalResponse1Code getValue(CollateralProposalResponseType3 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(CollateralProposalResponseType3 obj, CollateralProposalResponse1Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Rspn", required = true)
@@ -224,7 +245,7 @@ public class CollateralProposalResponseType3 {
 	 * CollateralProposalResponseType2.mmResponse}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmResponse = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralProposalResponseType3, CollateralResponse2> mmResponse = new MMMessageAssociationEnd<CollateralProposalResponseType3, CollateralResponse2>() {
 		{
 			businessElementTrace_lazy = () -> CollateralProposal.mmProposedCollateralMovement;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralProposalResponseType3.mmObject();
@@ -237,7 +258,17 @@ public class CollateralProposalResponseType3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CollateralResponse2.mmObject();
+			type_lazy = () -> CollateralResponse2.mmObject();
+		}
+
+		@Override
+		public CollateralResponse2 getValue(CollateralProposalResponseType3 obj) {
+			return obj.getResponse();
+		}
+
+		@Override
+		public void setValue(CollateralProposalResponseType3 obj, CollateralResponse2 value) {
+			obj.setResponse(value);
 		}
 	};
 
@@ -279,7 +310,7 @@ public class CollateralProposalResponseType3 {
 		return response;
 	}
 
-	public CollateralProposalResponseType3 setResponse(com.tools20022.repository.msg.CollateralResponse2 response) {
+	public CollateralProposalResponseType3 setResponse(CollateralResponse2 response) {
 		this.response = Objects.requireNonNull(response);
 		return this;
 	}

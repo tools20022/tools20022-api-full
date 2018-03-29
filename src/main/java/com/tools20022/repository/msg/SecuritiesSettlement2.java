@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.Obligation;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification23;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -124,7 +125,7 @@ public class SecuritiesSettlement2 {
 	 * "Date and time at which the securities are to be delivered or received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesSettlement2, Optional<ISODate>> mmDate = new MMMessageAttribute<SecuritiesSettlement2, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSettlement2.mmObject();
@@ -137,6 +138,16 @@ public class SecuritiesSettlement2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(SecuritiesSettlement2 obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement2 obj, Optional<ISODate> value) {
+			obj.setDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DtCd")
@@ -174,7 +185,7 @@ public class SecuritiesSettlement2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesSettlement2, Optional<DateType1Choice>> mmDateCode = new MMMessageAttribute<SecuritiesSettlement2, Optional<DateType1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSettlement2.mmObject();
 			isDerived = false;
@@ -186,6 +197,16 @@ public class SecuritiesSettlement2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateType1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateType1Choice> getValue(SecuritiesSettlement2 obj) {
+			return obj.getDateCode();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement2 obj, Optional<DateType1Choice> value) {
+			obj.setDateCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PlcOfSttlm")
@@ -221,7 +242,7 @@ public class SecuritiesSettlement2 {
 	 * definition} = "Place where settlement of the securities takes place."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPlaceOfSettlement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesSettlement2, Optional<PartyIdentification23>> mmPlaceOfSettlement = new MMMessageAssociationEnd<SecuritiesSettlement2, Optional<PartyIdentification23>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSettlement2.mmObject();
@@ -233,7 +254,17 @@ public class SecuritiesSettlement2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification23.mmObject();
+			type_lazy = () -> PartyIdentification23.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification23> getValue(SecuritiesSettlement2 obj) {
+			return obj.getPlaceOfSettlement();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement2 obj, Optional<PartyIdentification23> value) {
+			obj.setPlaceOfSettlement(value.orElse(null));
 		}
 	};
 
@@ -275,7 +306,7 @@ public class SecuritiesSettlement2 {
 		return placeOfSettlement == null ? Optional.empty() : Optional.of(placeOfSettlement);
 	}
 
-	public SecuritiesSettlement2 setPlaceOfSettlement(com.tools20022.repository.msg.PartyIdentification23 placeOfSettlement) {
+	public SecuritiesSettlement2 setPlaceOfSettlement(PartyIdentification23 placeOfSettlement) {
 		this.placeOfSettlement = placeOfSettlement;
 		return this;
 	}

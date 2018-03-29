@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.SecuritiesEntry;
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrumentQuantity1;
+import com.tools20022.repository.msg.UnitPrice12;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -127,7 +129,7 @@ public class Unit3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Unit3, FinancialInstrumentQuantity1> mmUnitsNumber = new MMMessageAttribute<Unit3, FinancialInstrumentQuantity1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Unit3.mmObject();
@@ -139,7 +141,17 @@ public class Unit3 {
 			nextVersions_lazy = () -> Arrays.asList(Unit6.mmUnitsNumber);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
+			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity1 getValue(Unit3 obj) {
+			return obj.getUnitsNumber();
+		}
+
+		@Override
+		public void setValue(Unit3 obj, FinancialInstrumentQuantity1 value) {
+			obj.setUnitsNumber(value);
 		}
 	};
 	@XmlElement(name = "AcqstnDt")
@@ -183,7 +195,7 @@ public class Unit3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAcquisitionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Unit3, Optional<ISODate>> mmAcquisitionDate = new MMMessageAttribute<Unit3, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesEntry.mmAcquisitionDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Unit3.mmObject();
@@ -196,6 +208,16 @@ public class Unit3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(Unit3 obj) {
+			return obj.getAcquisitionDate();
+		}
+
+		@Override
+		public void setValue(Unit3 obj, Optional<ISODate> value) {
+			obj.setAcquisitionDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CertNb")
@@ -238,7 +260,7 @@ public class Unit3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCertificateNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Unit3, List<Max35Text>> mmCertificateNumber = new MMMessageAttribute<Unit3, List<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesCertificate.mmNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Unit3.mmObject();
@@ -250,6 +272,16 @@ public class Unit3 {
 			nextVersions_lazy = () -> Arrays.asList(Unit6.mmCertificateNumber);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(Unit3 obj) {
+			return obj.getCertificateNumber();
+		}
+
+		@Override
+		public void setValue(Unit3 obj, List<Max35Text> value) {
+			obj.setCertificateNumber(value);
 		}
 	};
 	@XmlElement(name = "Grp1Or2Units")
@@ -295,7 +327,7 @@ public class Unit3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGroup1Or2Units = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Unit3, Optional<UKTaxGroupUnitCode>> mmGroup1Or2Units = new MMMessageAttribute<Unit3, Optional<UKTaxGroupUnitCode>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmGroup1Or2Units;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Unit3.mmObject();
@@ -308,6 +340,16 @@ public class Unit3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> UKTaxGroupUnitCode.mmObject();
+		}
+
+		@Override
+		public Optional<UKTaxGroupUnitCode> getValue(Unit3 obj) {
+			return obj.getGroup1Or2Units();
+		}
+
+		@Override
+		public void setValue(Unit3 obj, Optional<UKTaxGroupUnitCode> value) {
+			obj.setGroup1Or2Units(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PricDtls")
@@ -350,7 +392,7 @@ public class Unit3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPriceDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Unit3, Optional<UnitPrice12>> mmPriceDetails = new MMMessageAssociationEnd<Unit3, Optional<UnitPrice12>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmPricing;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Unit3.mmObject();
@@ -363,7 +405,17 @@ public class Unit3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UnitPrice12.mmObject();
+			type_lazy = () -> UnitPrice12.mmObject();
+		}
+
+		@Override
+		public Optional<UnitPrice12> getValue(Unit3 obj) {
+			return obj.getPriceDetails();
+		}
+
+		@Override
+		public void setValue(Unit3 obj, Optional<UnitPrice12> value) {
+			obj.setPriceDetails(value.orElse(null));
 		}
 	};
 
@@ -387,7 +439,7 @@ public class Unit3 {
 		return unitsNumber;
 	}
 
-	public Unit3 setUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 unitsNumber) {
+	public Unit3 setUnitsNumber(FinancialInstrumentQuantity1 unitsNumber) {
 		this.unitsNumber = Objects.requireNonNull(unitsNumber);
 		return this;
 	}
@@ -423,7 +475,7 @@ public class Unit3 {
 		return priceDetails == null ? Optional.empty() : Optional.of(priceDetails);
 	}
 
-	public Unit3 setPriceDetails(com.tools20022.repository.msg.UnitPrice12 priceDetails) {
+	public Unit3 setPriceDetails(UnitPrice12 priceDetails) {
 		this.priceDetails = priceDetails;
 		return this;
 	}

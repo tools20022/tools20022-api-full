@@ -53,12 +53,16 @@ public class ConstraintPartyNameOrLEIRule {
 	 */
 	public static final MMConstraint<PartyIdentification59> forPartyIdentification59 = new MMConstraint<PartyIdentification59>() {
 		{
-			validator = ConstraintPartyNameOrLEIRule::checkPartyIdentification59;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyNameOrLEIRule";
 			definition = "PartyName must be present or LegalEntityIdentifier must be present.";
 			owner_lazy = () -> PartyIdentification59.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PartyName</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/LegalEntityIdentifier</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification59 obj) throws Exception {
+			checkPartyIdentification59(obj);
 		}
 	};
 

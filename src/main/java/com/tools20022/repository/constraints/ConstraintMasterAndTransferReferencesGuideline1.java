@@ -56,11 +56,15 @@ public class ConstraintMasterAndTransferReferencesGuideline1 {
 	 */
 	public static final MMConstraint<Transfer15> forTransfer15 = new MMConstraint<Transfer15>() {
 		{
-			validator = ConstraintMasterAndTransferReferencesGuideline1::checkTransfer15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterAndTransferReferencesGuideline1";
 			definition = "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction. Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference.";
 			owner_lazy = () -> Transfer15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer15 obj) throws Exception {
+			checkTransfer15(obj);
 		}
 	};
 	/**
@@ -93,12 +97,16 @@ public class ConstraintMasterAndTransferReferencesGuideline1 {
 	 */
 	public static final MMConstraint<Transfer21> forTransfer21 = new MMConstraint<Transfer21>() {
 		{
-			validator = ConstraintMasterAndTransferReferencesGuideline1::checkTransfer21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterAndTransferReferencesGuideline1";
 			definition = "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction. Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMasterAndTransferReferencesGuideline1.forTransfer32);
 			owner_lazy = () -> Transfer21.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer21 obj) throws Exception {
+			checkTransfer21(obj);
 		}
 	};
 	/**
@@ -123,11 +131,15 @@ public class ConstraintMasterAndTransferReferencesGuideline1 {
 	 */
 	public static final MMConstraint<Transfer11> forTransfer11 = new MMConstraint<Transfer11>() {
 		{
-			validator = ConstraintMasterAndTransferReferencesGuideline1::checkTransfer11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterAndTransferReferencesGuideline1";
 			definition = "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction. Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference.";
 			owner_lazy = () -> Transfer11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer11 obj) throws Exception {
+			checkTransfer11(obj);
 		}
 	};
 	/**
@@ -160,12 +172,16 @@ public class ConstraintMasterAndTransferReferencesGuideline1 {
 	 */
 	public static final MMConstraint<Transfer19> forTransfer19 = new MMConstraint<Transfer19>() {
 		{
-			validator = ConstraintMasterAndTransferReferencesGuideline1::checkTransfer19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterAndTransferReferencesGuideline1";
 			definition = "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction. Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMasterAndTransferReferencesGuideline1.forTransfer27);
 			owner_lazy = () -> Transfer19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer19 obj) throws Exception {
+			checkTransfer19(obj);
 		}
 	};
 	/**
@@ -203,13 +219,17 @@ public class ConstraintMasterAndTransferReferencesGuideline1 {
 	 */
 	public static final MMConstraint<Transfer27> forTransfer27 = new MMConstraint<Transfer27>() {
 		{
-			validator = ConstraintMasterAndTransferReferencesGuideline1::checkTransfer27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterAndTransferReferencesGuideline1";
 			definition = "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction. Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMasterAndTransferReferencesGuideline1.forTransfer30);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMasterAndTransferReferencesGuideline1.forTransfer19;
 			owner_lazy = () -> Transfer27.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer27 obj) throws Exception {
+			checkTransfer27(obj);
 		}
 	};
 	/**
@@ -239,12 +259,16 @@ public class ConstraintMasterAndTransferReferencesGuideline1 {
 	 */
 	public static final MMConstraint<Transfer30> forTransfer30 = new MMConstraint<Transfer30>() {
 		{
-			validator = ConstraintMasterAndTransferReferencesGuideline1::checkTransfer30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterAndTransferReferencesGuideline1";
 			definition = "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction. Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMasterAndTransferReferencesGuideline1.forTransfer27;
 			owner_lazy = () -> Transfer30.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer30 obj) throws Exception {
+			checkTransfer30(obj);
 		}
 	};
 	/**
@@ -274,12 +298,16 @@ public class ConstraintMasterAndTransferReferencesGuideline1 {
 	 */
 	public static final MMConstraint<Transfer32> forTransfer32 = new MMConstraint<Transfer32>() {
 		{
-			validator = ConstraintMasterAndTransferReferencesGuideline1::checkTransfer32;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterAndTransferReferencesGuideline1";
 			definition = "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction. Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMasterAndTransferReferencesGuideline1.forTransfer21;
 			owner_lazy = () -> Transfer32.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer32 obj) throws Exception {
+			checkTransfer32(obj);
 		}
 	};
 

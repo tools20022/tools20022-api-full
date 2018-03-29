@@ -25,6 +25,9 @@ import com.tools20022.repository.area.tsmt.ForwardDataSetSubmissionReportV03;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.Transport;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DocumentIdentification1;
+import com.tools20022.repository.msg.PartyIdentification26;
+import com.tools20022.repository.msg.TransportDetails2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -142,7 +145,7 @@ public class TransportDataSet3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSetIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransportDataSet3, DocumentIdentification1> mmDataSetIdentification = new MMMessageAssociationEnd<TransportDataSet3, DocumentIdentification1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportDataSet3.mmObject();
 			isDerived = false;
@@ -154,7 +157,17 @@ public class TransportDataSet3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DocumentIdentification1.mmObject();
+			type_lazy = () -> DocumentIdentification1.mmObject();
+		}
+
+		@Override
+		public DocumentIdentification1 getValue(TransportDataSet3 obj) {
+			return obj.getDataSetIdentification();
+		}
+
+		@Override
+		public void setValue(TransportDataSet3 obj, DocumentIdentification1 value) {
+			obj.setDataSetIdentification(value);
 		}
 	};
 	@XmlElement(name = "Buyr")
@@ -198,7 +211,7 @@ public class TransportDataSet3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBuyer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransportDataSet3, Optional<PartyIdentification26>> mmBuyer = new MMMessageAssociationEnd<TransportDataSet3, Optional<PartyIdentification26>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportDataSet3.mmObject();
@@ -211,7 +224,17 @@ public class TransportDataSet3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification26.mmObject();
+			type_lazy = () -> PartyIdentification26.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification26> getValue(TransportDataSet3 obj) {
+			return obj.getBuyer();
+		}
+
+		@Override
+		public void setValue(TransportDataSet3 obj, Optional<PartyIdentification26> value) {
+			obj.setBuyer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sellr")
@@ -255,7 +278,7 @@ public class TransportDataSet3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSeller = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransportDataSet3, Optional<PartyIdentification26>> mmSeller = new MMMessageAssociationEnd<TransportDataSet3, Optional<PartyIdentification26>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportDataSet3.mmObject();
@@ -268,7 +291,17 @@ public class TransportDataSet3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification26.mmObject();
+			type_lazy = () -> PartyIdentification26.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification26> getValue(TransportDataSet3 obj) {
+			return obj.getSeller();
+		}
+
+		@Override
+		public void setValue(TransportDataSet3 obj, Optional<PartyIdentification26> value) {
+			obj.setSeller(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Consgnr", required = true)
@@ -312,7 +345,7 @@ public class TransportDataSet3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmConsignor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransportDataSet3, PartyIdentification26> mmConsignor = new MMMessageAssociationEnd<TransportDataSet3, PartyIdentification26>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportDataSet3.mmObject();
@@ -325,7 +358,17 @@ public class TransportDataSet3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification26.mmObject();
+			type_lazy = () -> PartyIdentification26.mmObject();
+		}
+
+		@Override
+		public PartyIdentification26 getValue(TransportDataSet3 obj) {
+			return obj.getConsignor();
+		}
+
+		@Override
+		public void setValue(TransportDataSet3 obj, PartyIdentification26 value) {
+			obj.setConsignor(value);
 		}
 	};
 	@XmlElement(name = "Consgn")
@@ -369,7 +412,7 @@ public class TransportDataSet3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmConsignee = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransportDataSet3, Optional<PartyIdentification26>> mmConsignee = new MMMessageAssociationEnd<TransportDataSet3, Optional<PartyIdentification26>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportDataSet3.mmObject();
@@ -382,7 +425,17 @@ public class TransportDataSet3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification26.mmObject();
+			type_lazy = () -> PartyIdentification26.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification26> getValue(TransportDataSet3 obj) {
+			return obj.getConsignee();
+		}
+
+		@Override
+		public void setValue(TransportDataSet3 obj, Optional<PartyIdentification26> value) {
+			obj.setConsignee(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ShipTo")
@@ -425,7 +478,7 @@ public class TransportDataSet3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmShipTo = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransportDataSet3, Optional<PartyIdentification26>> mmShipTo = new MMMessageAssociationEnd<TransportDataSet3, Optional<PartyIdentification26>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportDataSet3.mmObject();
@@ -438,7 +491,17 @@ public class TransportDataSet3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification26.mmObject();
+			type_lazy = () -> PartyIdentification26.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification26> getValue(TransportDataSet3 obj) {
+			return obj.getShipTo();
+		}
+
+		@Override
+		public void setValue(TransportDataSet3 obj, Optional<PartyIdentification26> value) {
+			obj.setShipTo(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrnsprtInf", required = true)
@@ -483,7 +546,7 @@ public class TransportDataSet3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransportInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransportDataSet3, TransportDetails2> mmTransportInformation = new MMMessageAssociationEnd<TransportDataSet3, TransportDetails2>() {
 		{
 			businessComponentTrace_lazy = () -> Transport.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportDataSet3.mmObject();
@@ -496,7 +559,17 @@ public class TransportDataSet3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransportDetails2.mmObject();
+			type_lazy = () -> TransportDetails2.mmObject();
+		}
+
+		@Override
+		public TransportDetails2 getValue(TransportDataSet3 obj) {
+			return obj.getTransportInformation();
+		}
+
+		@Override
+		public void setValue(TransportDataSet3 obj, TransportDetails2 value) {
+			obj.setTransportInformation(value);
 		}
 	};
 
@@ -522,7 +595,7 @@ public class TransportDataSet3 {
 		return dataSetIdentification;
 	}
 
-	public TransportDataSet3 setDataSetIdentification(com.tools20022.repository.msg.DocumentIdentification1 dataSetIdentification) {
+	public TransportDataSet3 setDataSetIdentification(DocumentIdentification1 dataSetIdentification) {
 		this.dataSetIdentification = Objects.requireNonNull(dataSetIdentification);
 		return this;
 	}
@@ -531,7 +604,7 @@ public class TransportDataSet3 {
 		return buyer == null ? Optional.empty() : Optional.of(buyer);
 	}
 
-	public TransportDataSet3 setBuyer(com.tools20022.repository.msg.PartyIdentification26 buyer) {
+	public TransportDataSet3 setBuyer(PartyIdentification26 buyer) {
 		this.buyer = buyer;
 		return this;
 	}
@@ -540,7 +613,7 @@ public class TransportDataSet3 {
 		return seller == null ? Optional.empty() : Optional.of(seller);
 	}
 
-	public TransportDataSet3 setSeller(com.tools20022.repository.msg.PartyIdentification26 seller) {
+	public TransportDataSet3 setSeller(PartyIdentification26 seller) {
 		this.seller = seller;
 		return this;
 	}
@@ -549,7 +622,7 @@ public class TransportDataSet3 {
 		return consignor;
 	}
 
-	public TransportDataSet3 setConsignor(com.tools20022.repository.msg.PartyIdentification26 consignor) {
+	public TransportDataSet3 setConsignor(PartyIdentification26 consignor) {
 		this.consignor = Objects.requireNonNull(consignor);
 		return this;
 	}
@@ -558,7 +631,7 @@ public class TransportDataSet3 {
 		return consignee == null ? Optional.empty() : Optional.of(consignee);
 	}
 
-	public TransportDataSet3 setConsignee(com.tools20022.repository.msg.PartyIdentification26 consignee) {
+	public TransportDataSet3 setConsignee(PartyIdentification26 consignee) {
 		this.consignee = consignee;
 		return this;
 	}
@@ -567,7 +640,7 @@ public class TransportDataSet3 {
 		return shipTo == null ? Optional.empty() : Optional.of(shipTo);
 	}
 
-	public TransportDataSet3 setShipTo(com.tools20022.repository.msg.PartyIdentification26 shipTo) {
+	public TransportDataSet3 setShipTo(PartyIdentification26 shipTo) {
 		this.shipTo = shipTo;
 		return this;
 	}
@@ -576,7 +649,7 @@ public class TransportDataSet3 {
 		return transportInformation;
 	}
 
-	public TransportDataSet3 setTransportInformation(com.tools20022.repository.msg.TransportDetails2 transportInformation) {
+	public TransportDataSet3 setTransportInformation(TransportDetails2 transportInformation) {
 		this.transportInformation = Objects.requireNonNull(transportInformation);
 		return this;
 	}

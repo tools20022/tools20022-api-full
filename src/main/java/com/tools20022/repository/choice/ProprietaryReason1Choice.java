@@ -117,7 +117,7 @@ public class ProprietaryReason1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryReason1Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<ProprietaryReason1Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProprietaryReason1Choice.mmObject();
@@ -129,6 +129,16 @@ public class ProprietaryReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(ProprietaryReason1Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(ProprietaryReason1Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -166,7 +176,7 @@ public class ProprietaryReason1Choice {
 	 * ProprietaryReason3.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryReason1Choice, List<GenericIdentification36>> mmReason = new MMMessageAttribute<ProprietaryReason1Choice, List<GenericIdentification36>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProprietaryReason1Choice.mmObject();
 			isDerived = false;
@@ -177,6 +187,16 @@ public class ProprietaryReason1Choice {
 			previousVersion_lazy = () -> ProprietaryReason3.mmReason;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification36.mmObject();
+		}
+
+		@Override
+		public List<GenericIdentification36> getValue(ProprietaryReason1Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(ProprietaryReason1Choice obj, List<GenericIdentification36> value) {
+			obj.setReason(value);
 		}
 	};
 

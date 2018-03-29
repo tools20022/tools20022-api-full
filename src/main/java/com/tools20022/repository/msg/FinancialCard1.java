@@ -114,7 +114,7 @@ public class FinancialCard1 {
 	 * "Monetary value of the credit limit for this financial card."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditLimitAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialCard1, List<CurrencyAndAmount>> mmCreditLimitAmount = new MMMessageAttribute<FinancialCard1, List<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialCard1.mmObject();
@@ -125,6 +125,16 @@ public class FinancialCard1 {
 			definition = "Monetary value of the credit limit for this financial card.";
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public List<CurrencyAndAmount> getValue(FinancialCard1 obj) {
+			return obj.getCreditLimitAmount();
+		}
+
+		@Override
+		public void setValue(FinancialCard1 obj, List<CurrencyAndAmount> value) {
+			obj.setCreditLimitAmount(value);
 		}
 	};
 	@XmlElement(name = "CdtAvlblAmt")
@@ -162,7 +172,7 @@ public class FinancialCard1 {
 	 * "Monetary value of the credit available for this financial card."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditAvailableAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialCard1, List<CurrencyAndAmount>> mmCreditAvailableAmount = new MMMessageAttribute<FinancialCard1, List<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentCard.mmCreditAvailableAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialCard1.mmObject();
@@ -173,6 +183,16 @@ public class FinancialCard1 {
 			definition = "Monetary value of the credit available for this financial card.";
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public List<CurrencyAndAmount> getValue(FinancialCard1 obj) {
+			return obj.getCreditAvailableAmount();
+		}
+
+		@Override
+		public void setValue(FinancialCard1 obj, List<CurrencyAndAmount> value) {
+			obj.setCreditAvailableAmount(value);
 		}
 	};
 	@XmlElement(name = "IntrstRatePct")
@@ -210,7 +230,7 @@ public class FinancialCard1 {
 	 * "Interest rate expressed as a percentage for this financial card."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterestRatePercent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialCard1, Optional<PercentageRate>> mmInterestRatePercent = new MMMessageAttribute<FinancialCard1, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialCard1.mmObject();
@@ -222,6 +242,16 @@ public class FinancialCard1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(FinancialCard1 obj) {
+			return obj.getInterestRatePercent();
+		}
+
+		@Override
+		public void setValue(FinancialCard1 obj, Optional<PercentageRate> value) {
+			obj.setInterestRatePercent(value.orElse(null));
 		}
 	};
 

@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.HoldingBalance6;
+import com.tools20022.repository.msg.PartyIdentification39;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -136,7 +138,7 @@ public class EligiblePosition4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EligiblePosition4, Optional<Max35Text>> mmAccountIdentification = new MMMessageAttribute<EligiblePosition4, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EligiblePosition4.mmObject();
@@ -149,6 +151,16 @@ public class EligiblePosition4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(EligiblePosition4 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(EligiblePosition4 obj, Optional<Max35Text> value) {
+			obj.setAccountIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -192,7 +204,7 @@ public class EligiblePosition4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EligiblePosition4, Optional<PartyIdentification39>> mmAccountOwner = new MMMessageAssociationEnd<EligiblePosition4, Optional<PartyIdentification39>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EligiblePosition4.mmObject();
@@ -205,11 +217,21 @@ public class EligiblePosition4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification39.mmObject();
+			type_lazy = () -> PartyIdentification39.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification39> getValue(EligiblePosition4 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(EligiblePosition4 obj, Optional<PartyIdentification39> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "HldgBal")
-	protected List<com.tools20022.repository.msg.HoldingBalance6> holdingBalance;
+	protected List<HoldingBalance6> holdingBalance;
 	/**
 	 * 
 	 <p>
@@ -251,7 +273,7 @@ public class EligiblePosition4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmHoldingBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EligiblePosition4, List<HoldingBalance6>> mmHoldingBalance = new MMMessageAssociationEnd<EligiblePosition4, List<HoldingBalance6>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesSubBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EligiblePosition4.mmObject();
@@ -264,11 +286,21 @@ public class EligiblePosition4 {
 			maxOccurs = 10;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.HoldingBalance6.mmObject();
+			type_lazy = () -> HoldingBalance6.mmObject();
+		}
+
+		@Override
+		public List<HoldingBalance6> getValue(EligiblePosition4 obj) {
+			return obj.getHoldingBalance();
+		}
+
+		@Override
+		public void setValue(EligiblePosition4 obj, List<HoldingBalance6> value) {
+			obj.setHoldingBalance(value);
 		}
 	};
 	@XmlElement(name = "RghtsHldr")
-	protected List<com.tools20022.repository.msg.PartyIdentification39> rightsHolder;
+	protected List<PartyIdentification39> rightsHolder;
 	/**
 	 * 
 	 <p>
@@ -308,7 +340,7 @@ public class EligiblePosition4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRightsHolder = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EligiblePosition4, List<PartyIdentification39>> mmRightsHolder = new MMMessageAssociationEnd<EligiblePosition4, List<PartyIdentification39>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EligiblePosition4.mmObject();
@@ -321,7 +353,17 @@ public class EligiblePosition4 {
 			maxOccurs = 10;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification39.mmObject();
+			type_lazy = () -> PartyIdentification39.mmObject();
+		}
+
+		@Override
+		public List<PartyIdentification39> getValue(EligiblePosition4 obj) {
+			return obj.getRightsHolder();
+		}
+
+		@Override
+		public void setValue(EligiblePosition4 obj, List<PartyIdentification39> value) {
+			obj.setRightsHolder(value);
 		}
 	};
 
@@ -355,7 +397,7 @@ public class EligiblePosition4 {
 		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public EligiblePosition4 setAccountOwner(com.tools20022.repository.msg.PartyIdentification39 accountOwner) {
+	public EligiblePosition4 setAccountOwner(PartyIdentification39 accountOwner) {
 		this.accountOwner = accountOwner;
 		return this;
 	}
@@ -364,7 +406,7 @@ public class EligiblePosition4 {
 		return holdingBalance == null ? holdingBalance = new ArrayList<>() : holdingBalance;
 	}
 
-	public EligiblePosition4 setHoldingBalance(List<com.tools20022.repository.msg.HoldingBalance6> holdingBalance) {
+	public EligiblePosition4 setHoldingBalance(List<HoldingBalance6> holdingBalance) {
 		this.holdingBalance = Objects.requireNonNull(holdingBalance);
 		return this;
 	}
@@ -373,7 +415,7 @@ public class EligiblePosition4 {
 		return rightsHolder == null ? rightsHolder = new ArrayList<>() : rightsHolder;
 	}
 
-	public EligiblePosition4 setRightsHolder(List<com.tools20022.repository.msg.PartyIdentification39> rightsHolder) {
+	public EligiblePosition4 setRightsHolder(List<PartyIdentification39> rightsHolder) {
 		this.rightsHolder = Objects.requireNonNull(rightsHolder);
 		return this;
 	}

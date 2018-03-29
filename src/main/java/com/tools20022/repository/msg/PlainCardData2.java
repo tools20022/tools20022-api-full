@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Min2Max3NumericText;
 import com.tools20022.repository.datatype.Min8Max28NumericText;
 import com.tools20022.repository.entity.PaymentCard;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TrackData1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -133,7 +134,7 @@ public class PlainCardData2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPAN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PlainCardData2, Min8Max28NumericText> mmPAN = new MMMessageAttribute<PlainCardData2, Min8Max28NumericText>() {
 		{
 			businessElementTrace_lazy = () -> PaymentCard.mmNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PlainCardData2.mmObject();
@@ -146,6 +147,16 @@ public class PlainCardData2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Min8Max28NumericText.mmObject();
+		}
+
+		@Override
+		public Min8Max28NumericText getValue(PlainCardData2 obj) {
+			return obj.getPAN();
+		}
+
+		@Override
+		public void setValue(PlainCardData2 obj, Min8Max28NumericText value) {
+			obj.setPAN(value);
 		}
 	};
 	@XmlElement(name = "CardSeqNb")
@@ -194,7 +205,7 @@ public class PlainCardData2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCardSequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PlainCardData2, Optional<Min2Max3NumericText>> mmCardSequenceNumber = new MMMessageAttribute<PlainCardData2, Optional<Min2Max3NumericText>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentCard.mmSequenceNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PlainCardData2.mmObject();
@@ -207,6 +218,16 @@ public class PlainCardData2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Min2Max3NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Min2Max3NumericText> getValue(PlainCardData2 obj) {
+			return obj.getCardSequenceNumber();
+		}
+
+		@Override
+		public void setValue(PlainCardData2 obj, Optional<Min2Max3NumericText> value) {
+			obj.setCardSequenceNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FctvDt")
@@ -254,7 +275,7 @@ public class PlainCardData2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEffectiveDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PlainCardData2, Optional<ISOYearMonth>> mmEffectiveDate = new MMMessageAttribute<PlainCardData2, Optional<ISOYearMonth>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentCard.mmStartDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PlainCardData2.mmObject();
@@ -267,6 +288,16 @@ public class PlainCardData2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISOYearMonth.mmObject();
+		}
+
+		@Override
+		public Optional<ISOYearMonth> getValue(PlainCardData2 obj) {
+			return obj.getEffectiveDate();
+		}
+
+		@Override
+		public void setValue(PlainCardData2 obj, Optional<ISOYearMonth> value) {
+			obj.setEffectiveDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XpryDt", required = true)
@@ -314,7 +345,7 @@ public class PlainCardData2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpiryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PlainCardData2, ISOYearMonth> mmExpiryDate = new MMMessageAttribute<PlainCardData2, ISOYearMonth>() {
 		{
 			businessElementTrace_lazy = () -> PaymentCard.mmExpiryDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PlainCardData2.mmObject();
@@ -327,6 +358,16 @@ public class PlainCardData2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISOYearMonth.mmObject();
+		}
+
+		@Override
+		public ISOYearMonth getValue(PlainCardData2 obj) {
+			return obj.getExpiryDate();
+		}
+
+		@Override
+		public void setValue(PlainCardData2 obj, ISOYearMonth value) {
+			obj.setExpiryDate(value);
 		}
 	};
 	@XmlElement(name = "SvcCd")
@@ -371,7 +412,7 @@ public class PlainCardData2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmServiceCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PlainCardData2, Optional<Exact3NumericText>> mmServiceCode = new MMMessageAttribute<PlainCardData2, Optional<Exact3NumericText>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentCard.mmServiceCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PlainCardData2.mmObject();
@@ -385,9 +426,19 @@ public class PlainCardData2 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
+
+		@Override
+		public Optional<Exact3NumericText> getValue(PlainCardData2 obj) {
+			return obj.getServiceCode();
+		}
+
+		@Override
+		public void setValue(PlainCardData2 obj, Optional<Exact3NumericText> value) {
+			obj.setServiceCode(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "TrckData")
-	protected List<com.tools20022.repository.msg.TrackData1> trackData;
+	protected List<TrackData1> trackData;
 	/**
 	 * 
 	 <p>
@@ -423,7 +474,7 @@ public class PlainCardData2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTrackData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PlainCardData2, List<TrackData1>> mmTrackData = new MMMessageAssociationEnd<PlainCardData2, List<TrackData1>>() {
 		{
 			businessComponentTrace_lazy = () -> PaymentCard.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PlainCardData2.mmObject();
@@ -435,7 +486,17 @@ public class PlainCardData2 {
 			nextVersions_lazy = () -> Arrays.asList(PlainCardData6.mmTrackData);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TrackData1.mmObject();
+			type_lazy = () -> TrackData1.mmObject();
+		}
+
+		@Override
+		public List<TrackData1> getValue(PlainCardData2 obj) {
+			return obj.getTrackData();
+		}
+
+		@Override
+		public void setValue(PlainCardData2 obj, List<TrackData1> value) {
+			obj.setTrackData(value);
 		}
 	};
 
@@ -504,7 +565,7 @@ public class PlainCardData2 {
 		return trackData == null ? trackData = new ArrayList<>() : trackData;
 	}
 
-	public PlainCardData2 setTrackData(List<com.tools20022.repository.msg.TrackData1> trackData) {
+	public PlainCardData2 setTrackData(List<TrackData1> trackData) {
 		this.trackData = Objects.requireNonNull(trackData);
 		return this;
 	}

@@ -128,7 +128,7 @@ public class PendingCancellationStatusReason4 {
 	 * "Specifies the reason why the cancellation request is pending."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReasonCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PendingCancellationStatusReason4, PendingCancellationReason2Choice> mmReasonCode = new MMMessageAssociationEnd<PendingCancellationStatusReason4, PendingCancellationReason2Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PendingCancellationStatusReason4.mmObject();
@@ -142,6 +142,16 @@ public class PendingCancellationStatusReason4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PendingCancellationReason2Choice.mmObject();
+		}
+
+		@Override
+		public PendingCancellationReason2Choice getValue(PendingCancellationStatusReason4 obj) {
+			return obj.getReasonCode();
+		}
+
+		@Override
+		public void setValue(PendingCancellationStatusReason4 obj, PendingCancellationReason2Choice value) {
+			obj.setReasonCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -183,7 +193,7 @@ public class PendingCancellationStatusReason4 {
 	 * "Provides additional information about the processed instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingCancellationStatusReason4, Optional<RestrictedFINXMax210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<PendingCancellationStatusReason4, Optional<RestrictedFINXMax210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PendingCancellationStatusReason4.mmObject();
@@ -196,6 +206,16 @@ public class PendingCancellationStatusReason4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax210Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax210Text> getValue(PendingCancellationStatusReason4 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(PendingCancellationStatusReason4 obj, Optional<RestrictedFINXMax210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

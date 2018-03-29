@@ -23,6 +23,9 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.Transport;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DocumentIdentification1;
+import com.tools20022.repository.msg.PartyIdentification9;
+import com.tools20022.repository.msg.TransportDetails1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -109,7 +112,7 @@ public class TransportDataSet2 {
 	 * definition} = "Identifies the submitted transport data set."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSetIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransportDataSet2, DocumentIdentification1> mmDataSetIdentification = new MMMessageAssociationEnd<TransportDataSet2, DocumentIdentification1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportDataSet2.mmObject();
 			isDerived = false;
@@ -120,7 +123,17 @@ public class TransportDataSet2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DocumentIdentification1.mmObject();
+			type_lazy = () -> DocumentIdentification1.mmObject();
+		}
+
+		@Override
+		public DocumentIdentification1 getValue(TransportDataSet2 obj) {
+			return obj.getDataSetIdentification();
+		}
+
+		@Override
+		public void setValue(TransportDataSet2 obj, DocumentIdentification1 value) {
+			obj.setDataSetIdentification(value);
 		}
 	};
 	@XmlElement(name = "Buyr", required = true)
@@ -157,7 +170,7 @@ public class TransportDataSet2 {
 	 * "Party that buys goods or services, or a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBuyer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransportDataSet2, PartyIdentification9> mmBuyer = new MMMessageAssociationEnd<TransportDataSet2, PartyIdentification9>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportDataSet2.mmObject();
@@ -169,7 +182,17 @@ public class TransportDataSet2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification9.mmObject();
+			type_lazy = () -> PartyIdentification9.mmObject();
+		}
+
+		@Override
+		public PartyIdentification9 getValue(TransportDataSet2 obj) {
+			return obj.getBuyer();
+		}
+
+		@Override
+		public void setValue(TransportDataSet2 obj, PartyIdentification9 value) {
+			obj.setBuyer(value);
 		}
 	};
 	@XmlElement(name = "Sellr", required = true)
@@ -206,7 +229,7 @@ public class TransportDataSet2 {
 	 * "Party that sells goods or services, or a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSeller = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransportDataSet2, PartyIdentification9> mmSeller = new MMMessageAssociationEnd<TransportDataSet2, PartyIdentification9>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportDataSet2.mmObject();
@@ -218,7 +241,17 @@ public class TransportDataSet2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification9.mmObject();
+			type_lazy = () -> PartyIdentification9.mmObject();
+		}
+
+		@Override
+		public PartyIdentification9 getValue(TransportDataSet2 obj) {
+			return obj.getSeller();
+		}
+
+		@Override
+		public void setValue(TransportDataSet2 obj, PartyIdentification9 value) {
+			obj.setSeller(value);
 		}
 	};
 	@XmlElement(name = "ShipTo")
@@ -254,7 +287,7 @@ public class TransportDataSet2 {
 	 * definition} = "Party to whom the goods must be delivered in the end."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmShipTo = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransportDataSet2, Optional<PartyIdentification9>> mmShipTo = new MMMessageAssociationEnd<TransportDataSet2, Optional<PartyIdentification9>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportDataSet2.mmObject();
@@ -266,7 +299,17 @@ public class TransportDataSet2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification9.mmObject();
+			type_lazy = () -> PartyIdentification9.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification9> getValue(TransportDataSet2 obj) {
+			return obj.getShipTo();
+		}
+
+		@Override
+		public void setValue(TransportDataSet2 obj, Optional<PartyIdentification9> value) {
+			obj.setShipTo(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Consgn")
@@ -302,7 +345,7 @@ public class TransportDataSet2 {
 	 * definition} = "Party to whom the goods must be delivered."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmConsignee = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransportDataSet2, Optional<PartyIdentification9>> mmConsignee = new MMMessageAssociationEnd<TransportDataSet2, Optional<PartyIdentification9>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportDataSet2.mmObject();
@@ -314,11 +357,21 @@ public class TransportDataSet2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification9.mmObject();
+			type_lazy = () -> PartyIdentification9.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification9> getValue(TransportDataSet2 obj) {
+			return obj.getConsignee();
+		}
+
+		@Override
+		public void setValue(TransportDataSet2 obj, Optional<PartyIdentification9> value) {
+			obj.setConsignee(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrnsprtInf", required = true)
-	protected List<com.tools20022.repository.msg.TransportDetails1> transportInformation;
+	protected List<TransportDetails1> transportInformation;
 	/**
 	 * 
 	 <p>
@@ -351,7 +404,7 @@ public class TransportDataSet2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransportInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransportDataSet2, List<TransportDetails1>> mmTransportInformation = new MMMessageAssociationEnd<TransportDataSet2, List<TransportDetails1>>() {
 		{
 			businessComponentTrace_lazy = () -> Transport.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportDataSet2.mmObject();
@@ -362,7 +415,17 @@ public class TransportDataSet2 {
 			definition = "Specifies the shipment date, the charges, the routing and the goods that are described in the transport document.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransportDetails1.mmObject();
+			type_lazy = () -> TransportDetails1.mmObject();
+		}
+
+		@Override
+		public List<TransportDetails1> getValue(TransportDataSet2 obj) {
+			return obj.getTransportInformation();
+		}
+
+		@Override
+		public void setValue(TransportDataSet2 obj, List<TransportDetails1> value) {
+			obj.setTransportInformation(value);
 		}
 	};
 
@@ -386,7 +449,7 @@ public class TransportDataSet2 {
 		return dataSetIdentification;
 	}
 
-	public TransportDataSet2 setDataSetIdentification(com.tools20022.repository.msg.DocumentIdentification1 dataSetIdentification) {
+	public TransportDataSet2 setDataSetIdentification(DocumentIdentification1 dataSetIdentification) {
 		this.dataSetIdentification = Objects.requireNonNull(dataSetIdentification);
 		return this;
 	}
@@ -395,7 +458,7 @@ public class TransportDataSet2 {
 		return buyer;
 	}
 
-	public TransportDataSet2 setBuyer(com.tools20022.repository.msg.PartyIdentification9 buyer) {
+	public TransportDataSet2 setBuyer(PartyIdentification9 buyer) {
 		this.buyer = Objects.requireNonNull(buyer);
 		return this;
 	}
@@ -404,7 +467,7 @@ public class TransportDataSet2 {
 		return seller;
 	}
 
-	public TransportDataSet2 setSeller(com.tools20022.repository.msg.PartyIdentification9 seller) {
+	public TransportDataSet2 setSeller(PartyIdentification9 seller) {
 		this.seller = Objects.requireNonNull(seller);
 		return this;
 	}
@@ -413,7 +476,7 @@ public class TransportDataSet2 {
 		return shipTo == null ? Optional.empty() : Optional.of(shipTo);
 	}
 
-	public TransportDataSet2 setShipTo(com.tools20022.repository.msg.PartyIdentification9 shipTo) {
+	public TransportDataSet2 setShipTo(PartyIdentification9 shipTo) {
 		this.shipTo = shipTo;
 		return this;
 	}
@@ -422,7 +485,7 @@ public class TransportDataSet2 {
 		return consignee == null ? Optional.empty() : Optional.of(consignee);
 	}
 
-	public TransportDataSet2 setConsignee(com.tools20022.repository.msg.PartyIdentification9 consignee) {
+	public TransportDataSet2 setConsignee(PartyIdentification9 consignee) {
 		this.consignee = consignee;
 		return this;
 	}
@@ -431,7 +494,7 @@ public class TransportDataSet2 {
 		return transportInformation == null ? transportInformation = new ArrayList<>() : transportInformation;
 	}
 
-	public TransportDataSet2 setTransportInformation(List<com.tools20022.repository.msg.TransportDetails1> transportInformation) {
+	public TransportDataSet2 setTransportInformation(List<TransportDetails1> transportInformation) {
 		this.transportInformation = Objects.requireNonNull(transportInformation);
 		return this;
 	}

@@ -116,7 +116,7 @@ public class SecurityRestrictionType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietaryRestriction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityRestrictionType1Choice, GenericIdentification40> mmProprietaryRestriction = new MMMessageAttribute<SecurityRestrictionType1Choice, GenericIdentification40>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityRestrictionType1Choice.mmObject();
 			isDerived = false;
@@ -128,6 +128,16 @@ public class SecurityRestrictionType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification40.mmObject();
+		}
+
+		@Override
+		public GenericIdentification40 getValue(SecurityRestrictionType1Choice obj) {
+			return obj.getProprietaryRestriction();
+		}
+
+		@Override
+		public void setValue(SecurityRestrictionType1Choice obj, GenericIdentification40 value) {
+			obj.setProprietaryRestriction(value);
 		}
 	};
 	@XmlElement(name = "RstrctnTp", required = true)
@@ -170,7 +180,7 @@ public class SecurityRestrictionType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRestrictionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityRestrictionType1Choice, RestrictionType1Code> mmRestrictionType = new MMMessageAttribute<SecurityRestrictionType1Choice, RestrictionType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityRestrictionType1Choice.mmObject();
 			isDerived = false;
@@ -182,6 +192,16 @@ public class SecurityRestrictionType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictionType1Code.mmObject();
+		}
+
+		@Override
+		public RestrictionType1Code getValue(SecurityRestrictionType1Choice obj) {
+			return obj.getRestrictionType();
+		}
+
+		@Override
+		public void setValue(SecurityRestrictionType1Choice obj, RestrictionType1Code value) {
+			obj.setRestrictionType(value);
 		}
 	};
 

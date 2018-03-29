@@ -63,12 +63,16 @@ public class ConstraintStatementTypeRule {
 	 */
 	public static final MMConstraint<Statement16> forStatement16 = new MMConstraint<Statement16>() {
 		{
-			validator = ConstraintStatementTypeRule::checkStatement16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementTypeRule";
 			definition = "If StatementType is used, then the statement requested must be a SecuritiesBalanceAccountingReport, a SecuritiesBalanceCustodyReport or a SecuritiesTransactionPostingReport.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStatementTypeRule.forStatement42);
 			owner_lazy = () -> Statement16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Statement16 obj) throws Exception {
+			checkStatement16(obj);
 		}
 	};
 	/**
@@ -93,11 +97,15 @@ public class ConstraintStatementTypeRule {
 	 */
 	public static final MMConstraint<Statement29> forStatement29 = new MMConstraint<Statement29>() {
 		{
-			validator = ConstraintStatementTypeRule::checkStatement29;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementTypeRule";
 			definition = "If StatementType is used, then the statement requested must be a SecuritiesBalanceAccountingReport, a SecuritiesBalanceCustodyReport or a SecuritiesTransactionPostingReport.";
 			owner_lazy = () -> Statement29.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Statement29 obj) throws Exception {
+			checkStatement29(obj);
 		}
 	};
 	/**
@@ -127,12 +135,16 @@ public class ConstraintStatementTypeRule {
 	 */
 	public static final MMConstraint<Statement42> forStatement42 = new MMConstraint<Statement42>() {
 		{
-			validator = ConstraintStatementTypeRule::checkStatement42;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementTypeRule";
 			definition = "If StatementType is used, then the statement requested must be a SecuritiesBalanceAccountingReport, a SecuritiesBalanceCustodyReport or a SecuritiesTransactionPostingReport.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintStatementTypeRule.forStatement16;
 			owner_lazy = () -> Statement42.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Statement42 obj) throws Exception {
+			checkStatement42(obj);
 		}
 	};
 	/**
@@ -157,11 +169,15 @@ public class ConstraintStatementTypeRule {
 	 */
 	public static final MMConstraint<Statement54> forStatement54 = new MMConstraint<Statement54>() {
 		{
-			validator = ConstraintStatementTypeRule::checkStatement54;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementTypeRule";
 			definition = "If StatementType is used, then the statement requested must be a SecuritiesBalanceAccountingReport, a SecuritiesBalanceCustodyReport or a SecuritiesTransactionPostingReport.";
 			owner_lazy = () -> Statement54.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Statement54 obj) throws Exception {
+			checkStatement54(obj);
 		}
 	};
 

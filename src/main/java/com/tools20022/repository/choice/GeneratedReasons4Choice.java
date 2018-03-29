@@ -108,7 +108,7 @@ public class GeneratedReasons4Choice {
 	 * definition} = "Specifies the reason why the transaction was generated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GeneratedReasons4Choice, GeneratedReason3Code> mmCode = new MMMessageAttribute<GeneratedReasons4Choice, GeneratedReason3Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmGeneratedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.GeneratedReasons4Choice.mmObject();
@@ -120,6 +120,16 @@ public class GeneratedReasons4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> GeneratedReason3Code.mmObject();
+		}
+
+		@Override
+		public GeneratedReason3Code getValue(GeneratedReasons4Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(GeneratedReasons4Choice obj, GeneratedReason3Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -157,7 +167,7 @@ public class GeneratedReasons4Choice {
 	 * definition} = "Specifies the reason why the transaction was generated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GeneratedReasons4Choice, GenericIdentification25> mmProprietary = new MMMessageAttribute<GeneratedReasons4Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmGeneratedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.GeneratedReasons4Choice.mmObject();
@@ -169,6 +179,16 @@ public class GeneratedReasons4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(GeneratedReasons4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(GeneratedReasons4Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

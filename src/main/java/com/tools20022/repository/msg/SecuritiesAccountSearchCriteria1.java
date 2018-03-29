@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.BICFIIdentifier;
 import com.tools20022.repository.datatype.Exact4AlphaNumericText;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SystemPartyIdentification3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -37,7 +38,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Set of search criteria for querying securties account reference data.
+ * Set of search criteria for querying securities account reference data.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -87,7 +88,7 @@ import javax.xml.bind.annotation.XmlType;
  * "SecuritiesAccountSearchCriteria1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Set of search criteria for querying securties account reference data."</li>
+ * "Set of search criteria for querying securities account reference data."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.SecuritiesAccountSearchCriteria
@@ -135,7 +136,7 @@ public class SecuritiesAccountSearchCriteria1 {
 	 * SecuritiesAccountSearchCriteria.mmAccountIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccountSearchCriteria1, Optional<Max35Text>> mmAccountIdentification = new MMMessageAttribute<SecuritiesAccountSearchCriteria1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountSearchCriteria1.mmObject();
 			isDerived = false;
@@ -147,6 +148,16 @@ public class SecuritiesAccountSearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SecuritiesAccountSearchCriteria1 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountSearchCriteria1 obj, Optional<Max35Text> value) {
+			obj.setAccountIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctSvcr")
@@ -184,7 +195,7 @@ public class SecuritiesAccountSearchCriteria1 {
 	 * SecuritiesAccountSearchCriteria.mmAccountServicer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccountSearchCriteria1, Optional<BICFIIdentifier>> mmAccountServicer = new MMMessageAttribute<SecuritiesAccountSearchCriteria1, Optional<BICFIIdentifier>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountSearchCriteria1.mmObject();
 			isDerived = false;
@@ -196,6 +207,16 @@ public class SecuritiesAccountSearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<BICFIIdentifier> getValue(SecuritiesAccountSearchCriteria1 obj) {
+			return obj.getAccountServicer();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountSearchCriteria1 obj, Optional<BICFIIdentifier> value) {
+			obj.setAccountServicer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -232,7 +253,7 @@ public class SecuritiesAccountSearchCriteria1 {
 	 * SecuritiesAccountSearchCriteria.mmAccountOwner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesAccountSearchCriteria1, Optional<SystemPartyIdentification3>> mmAccountOwner = new MMMessageAssociationEnd<SecuritiesAccountSearchCriteria1, Optional<SystemPartyIdentification3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountSearchCriteria1.mmObject();
 			isDerived = false;
@@ -244,7 +265,17 @@ public class SecuritiesAccountSearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification3.mmObject();
+			type_lazy = () -> SystemPartyIdentification3.mmObject();
+		}
+
+		@Override
+		public Optional<SystemPartyIdentification3> getValue(SecuritiesAccountSearchCriteria1 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountSearchCriteria1 obj, Optional<SystemPartyIdentification3> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PtyTp")
@@ -284,7 +315,7 @@ public class SecuritiesAccountSearchCriteria1 {
 	 * SecuritiesAccountSearchCriteria.mmPartyType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartyType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccountSearchCriteria1, Optional<SystemPartyType1Code>> mmPartyType = new MMMessageAttribute<SecuritiesAccountSearchCriteria1, Optional<SystemPartyType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountSearchCriteria1.mmObject();
 			isDerived = false;
@@ -296,6 +327,16 @@ public class SecuritiesAccountSearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> SystemPartyType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<SystemPartyType1Code> getValue(SecuritiesAccountSearchCriteria1 obj) {
+			return obj.getPartyType();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountSearchCriteria1 obj, Optional<SystemPartyType1Code> value) {
+			obj.setPartyType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OpngDt")
@@ -333,7 +374,7 @@ public class SecuritiesAccountSearchCriteria1 {
 	 * SecuritiesAccountSearchCriteria.mmOpeningDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOpeningDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccountSearchCriteria1, Optional<DateSearchChoice>> mmOpeningDate = new MMMessageAttribute<SecuritiesAccountSearchCriteria1, Optional<DateSearchChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountSearchCriteria1.mmObject();
 			isDerived = false;
@@ -345,6 +386,16 @@ public class SecuritiesAccountSearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateSearchChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateSearchChoice> getValue(SecuritiesAccountSearchCriteria1 obj) {
+			return obj.getOpeningDate();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountSearchCriteria1 obj, Optional<DateSearchChoice> value) {
+			obj.setOpeningDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClsgDt")
@@ -382,7 +433,7 @@ public class SecuritiesAccountSearchCriteria1 {
 	 * SecuritiesAccountSearchCriteria.mmClosingDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClosingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccountSearchCriteria1, Optional<DateSearchChoice>> mmClosingDate = new MMMessageAttribute<SecuritiesAccountSearchCriteria1, Optional<DateSearchChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountSearchCriteria1.mmObject();
 			isDerived = false;
@@ -394,6 +445,16 @@ public class SecuritiesAccountSearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateSearchChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateSearchChoice> getValue(SecuritiesAccountSearchCriteria1 obj) {
+			return obj.getClosingDate();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountSearchCriteria1 obj, Optional<DateSearchChoice> value) {
+			obj.setClosingDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctTp")
@@ -431,7 +492,7 @@ public class SecuritiesAccountSearchCriteria1 {
 	 * SecuritiesAccountSearchCriteria.mmAccountType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccountSearchCriteria1, Optional<SystemSecuritiesAccountType1Code>> mmAccountType = new MMMessageAttribute<SecuritiesAccountSearchCriteria1, Optional<SystemSecuritiesAccountType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountSearchCriteria1.mmObject();
 			isDerived = false;
@@ -443,6 +504,16 @@ public class SecuritiesAccountSearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> SystemSecuritiesAccountType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<SystemSecuritiesAccountType1Code> getValue(SecuritiesAccountSearchCriteria1 obj) {
+			return obj.getAccountType();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountSearchCriteria1 obj, Optional<SystemSecuritiesAccountType1Code> value) {
+			obj.setAccountType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EndInvstrFlg")
@@ -482,7 +553,7 @@ public class SecuritiesAccountSearchCriteria1 {
 	 * SecuritiesAccountSearchCriteria.mmEndInvestorFlag}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEndInvestorFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccountSearchCriteria1, Optional<Exact4AlphaNumericText>> mmEndInvestorFlag = new MMMessageAttribute<SecuritiesAccountSearchCriteria1, Optional<Exact4AlphaNumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountSearchCriteria1.mmObject();
 			isDerived = false;
@@ -494,6 +565,16 @@ public class SecuritiesAccountSearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Exact4AlphaNumericText> getValue(SecuritiesAccountSearchCriteria1 obj) {
+			return obj.getEndInvestorFlag();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountSearchCriteria1 obj, Optional<Exact4AlphaNumericText> value) {
+			obj.setEndInvestorFlag(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PricgSchme")
@@ -532,7 +613,7 @@ public class SecuritiesAccountSearchCriteria1 {
 	 * SecuritiesAccountSearchCriteria.mmPricingScheme}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPricingScheme = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccountSearchCriteria1, Optional<Exact4AlphaNumericText>> mmPricingScheme = new MMMessageAttribute<SecuritiesAccountSearchCriteria1, Optional<Exact4AlphaNumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountSearchCriteria1.mmObject();
 			isDerived = false;
@@ -544,6 +625,16 @@ public class SecuritiesAccountSearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Exact4AlphaNumericText> getValue(SecuritiesAccountSearchCriteria1 obj) {
+			return obj.getPricingScheme();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountSearchCriteria1 obj, Optional<Exact4AlphaNumericText> value) {
+			obj.setPricingScheme(value.orElse(null));
 		}
 	};
 
@@ -558,7 +649,7 @@ public class SecuritiesAccountSearchCriteria1 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccountSearchCriteria1";
-				definition = "Set of search criteria for querying securties account reference data.";
+				definition = "Set of search criteria for querying securities account reference data.";
 				previousVersion_lazy = () -> SecuritiesAccountSearchCriteria.mmObject();
 			}
 		});
@@ -587,7 +678,7 @@ public class SecuritiesAccountSearchCriteria1 {
 		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public SecuritiesAccountSearchCriteria1 setAccountOwner(com.tools20022.repository.msg.SystemPartyIdentification3 accountOwner) {
+	public SecuritiesAccountSearchCriteria1 setAccountOwner(SystemPartyIdentification3 accountOwner) {
 		this.accountOwner = accountOwner;
 		return this;
 	}

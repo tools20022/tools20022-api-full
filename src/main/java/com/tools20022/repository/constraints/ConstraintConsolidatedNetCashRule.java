@@ -58,12 +58,16 @@ public class ConstraintConsolidatedNetCashRule {
 	 */
 	public static final MMConstraint<FundConfirmedCashForecastReportV04> forFundConfirmedCashForecastReportV04 = new MMConstraint<FundConfirmedCashForecastReportV04>() {
 		{
-			validator = ConstraintConsolidatedNetCashRule::checkFundConfirmedCashForecastReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsolidatedNetCashRule";
 			definition = "If ConsolidatedNetCashForecast is present, then at least one occurrence of either FundOrSubFundDetails or FundCashForecastDetails must be present. Both FundOrSubFundDetails and FundCashForecastDetails may be present.";
 			owner_lazy = () -> FundConfirmedCashForecastReportV04.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/FundOrSubFundDetails[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/FundCashForecastDetails[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ConsolidatedNetCashForecast</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(FundConfirmedCashForecastReportV04 obj) throws Exception {
+			checkFundConfirmedCashForecastReportV04(obj);
 		}
 	};
 	/**
@@ -93,12 +97,16 @@ public class ConstraintConsolidatedNetCashRule {
 	 */
 	public static final MMConstraint<FundEstimatedCashForecastReportV04> forFundEstimatedCashForecastReportV04 = new MMConstraint<FundEstimatedCashForecastReportV04>() {
 		{
-			validator = ConstraintConsolidatedNetCashRule::checkFundEstimatedCashForecastReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsolidatedNetCashRule";
 			definition = "If ConsolidatedNetCashForecast is present, then at least one occurrence of either FundOrSubFundDetails or EstimatedFundCashForecastDetails must be present. Both FundOrSubFundDetails and EstimatedFundCashForecastDetails may be present.";
 			owner_lazy = () -> FundEstimatedCashForecastReportV04.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/FundOrSubFundDetails[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/EstimatedFundCashForecastDetails[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ConsolidatedNetCashForecast</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(FundEstimatedCashForecastReportV04 obj) throws Exception {
+			checkFundEstimatedCashForecastReportV04(obj);
 		}
 	};
 	/**
@@ -128,12 +136,16 @@ public class ConstraintConsolidatedNetCashRule {
 	 */
 	public static final MMConstraint<FundConfirmedCashForecastReport3> forFundConfirmedCashForecastReport3 = new MMConstraint<FundConfirmedCashForecastReport3>() {
 		{
-			validator = ConstraintConsolidatedNetCashRule::checkFundConfirmedCashForecastReport3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsolidatedNetCashRule";
 			definition = "If ConsolidatedNetCashForecast is present, then at least one occurrence of either FundOrSubFundDetails or FundCashForecastDetails must be present. Both FundOrSubFundDetails and FundCashForecastDetails may be present.";
 			owner_lazy = () -> FundConfirmedCashForecastReport3.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/FundOrSubFundDetails[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/FundCashForecastDetails[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ConsolidatedNetCashForecast</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(FundConfirmedCashForecastReport3 obj) throws Exception {
+			checkFundConfirmedCashForecastReport3(obj);
 		}
 	};
 

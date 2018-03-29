@@ -27,6 +27,8 @@ import com.tools20022.repository.codeset.ProductType4Code;
 import com.tools20022.repository.codeset.TransactionOperationType3Code;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CorporateSectorCriteria3;
+import com.tools20022.repository.msg.ProductClassificationCriteria1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -126,7 +128,7 @@ public class TradeAdditionalQueryCriteria3 {
 	 * definition} = "Code list of the action types allowed as query criteria."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeAdditionalQueryCriteria3, List<TransactionOperationType3Code>> mmActionType = new MMMessageAttribute<TradeAdditionalQueryCriteria3, List<TransactionOperationType3Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAdditionalQueryCriteria3.mmObject();
 			isDerived = false;
@@ -136,6 +138,16 @@ public class TradeAdditionalQueryCriteria3 {
 			definition = "Code list of the action types allowed as query criteria.";
 			minOccurs = 0;
 			simpleType_lazy = () -> TransactionOperationType3Code.mmObject();
+		}
+
+		@Override
+		public List<TransactionOperationType3Code> getValue(TradeAdditionalQueryCriteria3 obj) {
+			return obj.getActionType();
+		}
+
+		@Override
+		public void setValue(TradeAdditionalQueryCriteria3 obj, List<TransactionOperationType3Code> value) {
+			obj.setActionType(value);
 		}
 	};
 	@XmlElement(name = "ExctnVn")
@@ -173,7 +185,7 @@ public class TradeAdditionalQueryCriteria3 {
 	 * "Indicates the execution venue of the reported transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExecutionVenue = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeAdditionalQueryCriteria3, Optional<SecuritiesTradeVenueCriteria1Choice>> mmExecutionVenue = new MMMessageAssociationEnd<TradeAdditionalQueryCriteria3, Optional<SecuritiesTradeVenueCriteria1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmMarket;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAdditionalQueryCriteria3.mmObject();
@@ -186,6 +198,16 @@ public class TradeAdditionalQueryCriteria3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SecuritiesTradeVenueCriteria1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesTradeVenueCriteria1Choice> getValue(TradeAdditionalQueryCriteria3 obj) {
+			return obj.getExecutionVenue();
+		}
+
+		@Override
+		public void setValue(TradeAdditionalQueryCriteria3 obj, Optional<SecuritiesTradeVenueCriteria1Choice> value) {
+			obj.setExecutionVenue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NtrOfCtrPty")
@@ -224,7 +246,7 @@ public class TradeAdditionalQueryCriteria3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNatureOfCounterparty = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeAdditionalQueryCriteria3, Optional<PartyNatureType1Code>> mmNatureOfCounterparty = new MMMessageAttribute<TradeAdditionalQueryCriteria3, Optional<PartyNatureType1Code>>() {
 		{
 			businessComponentTrace_lazy = () -> RolePlayer.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAdditionalQueryCriteria3.mmObject();
@@ -236,6 +258,16 @@ public class TradeAdditionalQueryCriteria3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PartyNatureType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<PartyNatureType1Code> getValue(TradeAdditionalQueryCriteria3 obj) {
+			return obj.getNatureOfCounterparty();
+		}
+
+		@Override
+		public void setValue(TradeAdditionalQueryCriteria3 obj, Optional<PartyNatureType1Code> value) {
+			obj.setNatureOfCounterparty(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CorpSctr")
@@ -273,7 +305,7 @@ public class TradeAdditionalQueryCriteria3 {
 	 * "Specifies the corporate sector of the reporting counterparty.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCorporateSector = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeAdditionalQueryCriteria3, Optional<CorporateSectorCriteria3>> mmCorporateSector = new MMMessageAssociationEnd<TradeAdditionalQueryCriteria3, Optional<CorporateSectorCriteria3>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmSector;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAdditionalQueryCriteria3.mmObject();
@@ -285,7 +317,17 @@ public class TradeAdditionalQueryCriteria3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CorporateSectorCriteria3.mmObject();
+			type_lazy = () -> CorporateSectorCriteria3.mmObject();
+		}
+
+		@Override
+		public Optional<CorporateSectorCriteria3> getValue(TradeAdditionalQueryCriteria3 obj) {
+			return obj.getCorporateSector();
+		}
+
+		@Override
+		public void setValue(TradeAdditionalQueryCriteria3 obj, Optional<CorporateSectorCriteria3> value) {
+			obj.setCorporateSector(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AsstClss")
@@ -324,7 +366,7 @@ public class TradeAdditionalQueryCriteria3 {
 	 * "Code list of available values for asset class criteria.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAssetClass = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeAdditionalQueryCriteria3, List<ProductType4Code>> mmAssetClass = new MMMessageAttribute<TradeAdditionalQueryCriteria3, List<ProductType4Code>>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmAssetClassification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAdditionalQueryCriteria3.mmObject();
@@ -335,6 +377,16 @@ public class TradeAdditionalQueryCriteria3 {
 			definition = "Code list of available values for asset class criteria.\r\n";
 			minOccurs = 0;
 			simpleType_lazy = () -> ProductType4Code.mmObject();
+		}
+
+		@Override
+		public List<ProductType4Code> getValue(TradeAdditionalQueryCriteria3 obj) {
+			return obj.getAssetClass();
+		}
+
+		@Override
+		public void setValue(TradeAdditionalQueryCriteria3 obj, List<ProductType4Code> value) {
+			obj.setAssetClass(value);
 		}
 	};
 	@XmlElement(name = "PdctClssfctn")
@@ -372,7 +424,7 @@ public class TradeAdditionalQueryCriteria3 {
 	 * "Indicates the product classification of the reported transaction.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProductClassification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeAdditionalQueryCriteria3, Optional<ProductClassificationCriteria1>> mmProductClassification = new MMMessageAssociationEnd<TradeAdditionalQueryCriteria3, Optional<ProductClassificationCriteria1>>() {
 		{
 			businessElementTrace_lazy = () -> Product.mmProductCategory;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAdditionalQueryCriteria3.mmObject();
@@ -384,7 +436,17 @@ public class TradeAdditionalQueryCriteria3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ProductClassificationCriteria1.mmObject();
+			type_lazy = () -> ProductClassificationCriteria1.mmObject();
+		}
+
+		@Override
+		public Optional<ProductClassificationCriteria1> getValue(TradeAdditionalQueryCriteria3 obj) {
+			return obj.getProductClassification();
+		}
+
+		@Override
+		public void setValue(TradeAdditionalQueryCriteria3 obj, Optional<ProductClassificationCriteria1> value) {
+			obj.setProductClassification(value.orElse(null));
 		}
 	};
 
@@ -436,7 +498,7 @@ public class TradeAdditionalQueryCriteria3 {
 		return corporateSector == null ? Optional.empty() : Optional.of(corporateSector);
 	}
 
-	public TradeAdditionalQueryCriteria3 setCorporateSector(com.tools20022.repository.msg.CorporateSectorCriteria3 corporateSector) {
+	public TradeAdditionalQueryCriteria3 setCorporateSector(CorporateSectorCriteria3 corporateSector) {
 		this.corporateSector = corporateSector;
 		return this;
 	}
@@ -454,7 +516,7 @@ public class TradeAdditionalQueryCriteria3 {
 		return productClassification == null ? Optional.empty() : Optional.of(productClassification);
 	}
 
-	public TradeAdditionalQueryCriteria3 setProductClassification(com.tools20022.repository.msg.ProductClassificationCriteria1 productClassification) {
+	public TradeAdditionalQueryCriteria3 setProductClassification(ProductClassificationCriteria1 productClassification) {
 		this.productClassification = productClassification;
 		return this;
 	}

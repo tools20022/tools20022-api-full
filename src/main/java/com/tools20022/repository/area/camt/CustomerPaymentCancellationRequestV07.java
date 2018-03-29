@@ -24,7 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.CashManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset._SR2018_MX_Payments_Maintenance;
-import java.lang.reflect.Method;
+import com.tools20022.repository.msgset.ExceptionsandInvestigationsISOLatestversion;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -124,6 +124,9 @@ import javax.xml.bind.annotation.*;
  * messageSet} =
  * <ul>
  * <li>
+ * {@linkplain com.tools20022.repository.msgset.ExceptionsandInvestigationsISOLatestversion
+ * ExceptionsandInvestigationsISOLatestversion}</li>
+ * <li>
  * {@linkplain com.tools20022.repository.msgset._SR2018_MX_Payments_Maintenance
  * _SR2018_MX_Payments_Maintenance}</li>
  * </ul>
@@ -210,7 +213,7 @@ public class CustomerPaymentCancellationRequestV07 {
 	 * CustomerPaymentCancellationRequestV06.mmAssignment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CustomerPaymentCancellationRequestV07, CaseAssignment4> mmAssignment = new MMMessageBuildingBlock<CustomerPaymentCancellationRequestV07, CaseAssignment4>() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -222,12 +225,14 @@ public class CustomerPaymentCancellationRequestV07 {
 			complexType_lazy = () -> CaseAssignment4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CustomerPaymentCancellationRequestV07.class.getMethod("getAssignment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CaseAssignment4 getValue(CustomerPaymentCancellationRequestV07 obj) {
+			return obj.getAssignment();
+		}
+
+		@Override
+		public void setValue(CustomerPaymentCancellationRequestV07 obj, CaseAssignment4 value) {
+			obj.setAssignment(value);
 		}
 	};
 	@XmlElement(name = "Case")
@@ -258,7 +263,7 @@ public class CustomerPaymentCancellationRequestV07 {
 	 * CustomerPaymentCancellationRequestV06.mmCase}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CustomerPaymentCancellationRequestV07, Optional<Case4>> mmCase = new MMMessageBuildingBlock<CustomerPaymentCancellationRequestV07, Optional<Case4>>() {
 		{
 			xmlTag = "Case";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -270,12 +275,14 @@ public class CustomerPaymentCancellationRequestV07 {
 			complexType_lazy = () -> Case4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CustomerPaymentCancellationRequestV07.class.getMethod("getCase", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Case4> getValue(CustomerPaymentCancellationRequestV07 obj) {
+			return obj.getCase();
+		}
+
+		@Override
+		public void setValue(CustomerPaymentCancellationRequestV07 obj, Optional<Case4> value) {
+			obj.setCase(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtrlData")
@@ -309,7 +316,7 @@ public class CustomerPaymentCancellationRequestV07 {
 	 * CustomerPaymentCancellationRequestV06.mmControlData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmControlData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CustomerPaymentCancellationRequestV07, Optional<ControlData1>> mmControlData = new MMMessageBuildingBlock<CustomerPaymentCancellationRequestV07, Optional<ControlData1>>() {
 		{
 			xmlTag = "CtrlData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -321,12 +328,14 @@ public class CustomerPaymentCancellationRequestV07 {
 			complexType_lazy = () -> ControlData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CustomerPaymentCancellationRequestV07.class.getMethod("getControlData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ControlData1> getValue(CustomerPaymentCancellationRequestV07 obj) {
+			return obj.getControlData();
+		}
+
+		@Override
+		public void setValue(CustomerPaymentCancellationRequestV07 obj, Optional<ControlData1> value) {
+			obj.setControlData(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Undrlyg", required = true)
@@ -359,7 +368,7 @@ public class CustomerPaymentCancellationRequestV07 {
 	 * CustomerPaymentCancellationRequestV06.mmUnderlying}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUnderlying = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CustomerPaymentCancellationRequestV07, List<UnderlyingTransaction21>> mmUnderlying = new MMMessageBuildingBlock<CustomerPaymentCancellationRequestV07, List<UnderlyingTransaction21>>() {
 		{
 			xmlTag = "Undrlyg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -370,12 +379,14 @@ public class CustomerPaymentCancellationRequestV07 {
 			complexType_lazy = () -> UnderlyingTransaction21.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CustomerPaymentCancellationRequestV07.class.getMethod("getUnderlying", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<UnderlyingTransaction21> getValue(CustomerPaymentCancellationRequestV07 obj) {
+			return obj.getUnderlying();
+		}
+
+		@Override
+		public void setValue(CustomerPaymentCancellationRequestV07 obj, List<UnderlyingTransaction21> value) {
+			obj.setUnderlying(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -410,7 +421,7 @@ public class CustomerPaymentCancellationRequestV07 {
 	 * CustomerPaymentCancellationRequestV06.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CustomerPaymentCancellationRequestV07, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<CustomerPaymentCancellationRequestV07, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -421,12 +432,14 @@ public class CustomerPaymentCancellationRequestV07 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CustomerPaymentCancellationRequestV07.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(CustomerPaymentCancellationRequestV07 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(CustomerPaymentCancellationRequestV07 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -441,7 +454,7 @@ public class CustomerPaymentCancellationRequestV07 {
 				name = "CustomerPaymentCancellationRequestV07";
 				definition = "Scope\r\nThe CustomerPaymentCancellationRequest message is sent by a case creator/case assigner to a case assignee.\r\nThis message is used to request the cancellation of an original payment instruction. The CustomerPaymentCancellationRequest message is issued by the initiating party to request the cancellation of an initiation payment message previously sent (such as CustomerCreditTransferInitiation or CustomerDirectDebitInitiation).\r\nUsage\r\nThe CustomerPaymentCancellationRequest message must be answered with a:\r\n- ResolutionOfInvestigation message with a positive final outcome when the case assignee can perform the requested cancellation\r\n- ResolutionOfInvestigation message with a negative final outcome when the case assignee may perform the requested cancellation but fails to do so (too late, irrevocable instruction.)\r\n- RejectInvestigation message when the case assignee is unable or not authorised to perform the requested cancellation\r\n- NotificationOfCaseAssignment message to indicate whether the case assignee will take on the case himself or reassign the case to a subsequent party in the payment processing chain.\r\nA CustomerPaymentCancellationRequest message concerns one and only one original payment instruction at a time.\r\nWhen a case assignee successfully performs a cancellation, it must return the corresponding funds to the case assigner. It may provide some details about the return in the ResolutionOfInvestigation message.\r\nThe processing of a CustomerPaymentCancellationRequest message case may lead to a DebitAuthorisationRequest message sent to the creditor by its account servicing institution.\r\nThe CustomerPaymentCancellationRequest message may be used to escalate a case after an unsuccessful request to modify the payment. In this scenario, the case identification remains the same as in the original CustomerPaymentCancellationRequest message and the element ReopenCaseIndication is set to 'Yes' or 'true'.\r\nThe CustomerPaymentCancellationRequest message has the following main characteristics:\r\nThe case creator assigns a unique case identification and the reason code for the cancellation request. This information will be passed unchanged to all subsequent case assignee(s). For the CustomerPaymentCancellationRequest message has been made optional, as the message might be used outside of a case management environment where the case identification is not relevant.\r\nMoreover, the case identification may be present at different levels:\r\n- One unique case is defined per cancellation request message: If multiple underlying groups, payment information blocks or transactions are present in the message and the case assignee has already forwarded the transaction for which the cancellation is requested, the case cannot be forwarded to the next party in the chain (see rule on uniqueness of the case) and the case creator will have to issue individual cancellation requests for each underlying individual transaction. In response to this cancellation request, the case must also be present at the message level in the Resolution of Investigation message.\r\n- One case per original group, payment information or transaction present in the cancellation request: For each group, payment information block or transaction within the payment information, a unique case has been assigned. This means, when a payment instruction has already been forwarded by the case assignee, the cancellation request may be forwarded to next party in the payment chain, with the unique case assigned to the transaction. When the group can only be cancelled partially, new cancellation requests need however to be issued for the individual transactions within the group for which the cancellation request has not been successful. In response to this cancellation request, the case must be present in the cancellation details identifying the original group or transaction in the Resolution of Investigation message.\r\n- No case used in cancellation request message:\r\nThe cancellation of a payment instruction can be initiated by either the debtor/creditor or any subsequent agent in the payment instruction processing chain.";
 				previousVersion_lazy = () -> CustomerPaymentCancellationRequestV06.mmObject();
-				messageSet_lazy = () -> Arrays.asList(_SR2018_MX_Payments_Maintenance.mmObject());
+				messageSet_lazy = () -> Arrays.asList(ExceptionsandInvestigationsISOLatestversion.mmObject(), _SR2018_MX_Payments_Maintenance.mmObject());
 				rootElement = "Document";
 				xmlTag = "CstmrPmtCxlReq";
 				businessArea_lazy = () -> CashManagementLatestVersion.mmObject();

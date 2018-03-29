@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.acmt.AccountModificationInstructionV06;
 import com.tools20022.repository.codeset.DataModification1Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountRestrictions1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -136,7 +137,7 @@ public class ModificationScope30 {
 	 * ModificationScope26.mmModificationScopeIndication}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmModificationScopeIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ModificationScope30, DataModification1Code> mmModificationScopeIndication = new MMMessageAttribute<ModificationScope30, DataModification1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope30.mmObject();
 			isDerived = false;
@@ -150,9 +151,19 @@ public class ModificationScope30 {
 			minOccurs = 1;
 			simpleType_lazy = () -> DataModification1Code.mmObject();
 		}
+
+		@Override
+		public DataModification1Code getValue(ModificationScope30 obj) {
+			return obj.getModificationScopeIndication();
+		}
+
+		@Override
+		public void setValue(ModificationScope30 obj, DataModification1Code value) {
+			obj.setModificationScopeIndication(value);
+		}
 	};
 	@XmlElement(name = "AddtlInf", required = true)
-	protected List<com.tools20022.repository.msg.AccountRestrictions1> additionalInformation;
+	protected List<AccountRestrictions1> additionalInformation;
 	/**
 	 * 
 	 <p>
@@ -189,7 +200,7 @@ public class ModificationScope30 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdditionalInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ModificationScope30, List<AccountRestrictions1>> mmAdditionalInformation = new MMMessageAssociationEnd<ModificationScope30, List<AccountRestrictions1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope30.mmObject();
 			isDerived = false;
@@ -200,7 +211,17 @@ public class ModificationScope30 {
 			nextVersions_lazy = () -> Arrays.asList(ModificationScope35.mmAdditionalInformation);
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AccountRestrictions1.mmObject();
+			type_lazy = () -> AccountRestrictions1.mmObject();
+		}
+
+		@Override
+		public List<AccountRestrictions1> getValue(ModificationScope30 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(ModificationScope30 obj, List<AccountRestrictions1> value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 
@@ -233,7 +254,7 @@ public class ModificationScope30 {
 		return additionalInformation == null ? additionalInformation = new ArrayList<>() : additionalInformation;
 	}
 
-	public ModificationScope30 setAdditionalInformation(List<com.tools20022.repository.msg.AccountRestrictions1> additionalInformation) {
+	public ModificationScope30 setAdditionalInformation(List<AccountRestrictions1> additionalInformation) {
 		this.additionalInformation = Objects.requireNonNull(additionalInformation);
 		return this;
 	}

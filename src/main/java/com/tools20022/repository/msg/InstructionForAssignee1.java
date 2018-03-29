@@ -134,7 +134,7 @@ public class InstructionForAssignee1 {
 	 * InstructionForNextAgent1.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstructionForAssignee1, Optional<ExternalAgentInstruction1Code>> mmCode = new MMMessageAttribute<InstructionForAssignee1, Optional<ExternalAgentInstruction1Code>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInstruction.mmInstructionForNextAgent;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstructionForAssignee1.mmObject();
@@ -147,6 +147,16 @@ public class InstructionForAssignee1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ExternalAgentInstruction1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ExternalAgentInstruction1Code> getValue(InstructionForAssignee1 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(InstructionForAssignee1 obj, Optional<ExternalAgentInstruction1Code> value) {
+			obj.setCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstrInf")
@@ -185,7 +195,7 @@ public class InstructionForAssignee1 {
 	 * InstructionForNextAgent1.mmInstructionInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructionInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstructionForAssignee1, Optional<Max140Text>> mmInstructionInformation = new MMMessageAttribute<InstructionForAssignee1, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstructionForAssignee1.mmObject();
 			isDerived = false;
@@ -197,6 +207,16 @@ public class InstructionForAssignee1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(InstructionForAssignee1 obj) {
+			return obj.getInstructionInformation();
+		}
+
+		@Override
+		public void setValue(InstructionForAssignee1 obj, Optional<Max140Text> value) {
+			obj.setInstructionInformation(value.orElse(null));
 		}
 	};
 

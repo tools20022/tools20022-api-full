@@ -52,11 +52,15 @@ public class ConstraintRightsHolderMultiplicty1Guideline {
 	 */
 	public static final MMConstraint<EligiblePosition2> forEligiblePosition2 = new MMConstraint<EligiblePosition2>() {
 		{
-			validator = ConstraintRightsHolderMultiplicty1Guideline::checkEligiblePosition2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsHolderMultiplicty1Guideline";
 			definition = "It is recommended that RightsHolder can only be repetitive in case of joint ownership.";
 			owner_lazy = () -> EligiblePosition2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(EligiblePosition2 obj) throws Exception {
+			checkEligiblePosition2(obj);
 		}
 	};
 	/**
@@ -90,12 +94,16 @@ public class ConstraintRightsHolderMultiplicty1Guideline {
 	 */
 	public static final MMConstraint<EligiblePosition3> forEligiblePosition3 = new MMConstraint<EligiblePosition3>() {
 		{
-			validator = ConstraintRightsHolderMultiplicty1Guideline::checkEligiblePosition3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsHolderMultiplicty1Guideline";
 			definition = "It is recommended that RightsHolder can only be repetitive in case of joint ownership.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRightsHolderMultiplicty1Guideline.forEligiblePosition5);
 			owner_lazy = () -> EligiblePosition3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(EligiblePosition3 obj) throws Exception {
+			checkEligiblePosition3(obj);
 		}
 	};
 	/**
@@ -129,12 +137,16 @@ public class ConstraintRightsHolderMultiplicty1Guideline {
 	 */
 	public static final MMConstraint<EligiblePosition4> forEligiblePosition4 = new MMConstraint<EligiblePosition4>() {
 		{
-			validator = ConstraintRightsHolderMultiplicty1Guideline::checkEligiblePosition4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsHolderMultiplicty1Guideline";
 			definition = "It is recommended that RightsHolder can only be repetitive in case of joint ownership.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRightsHolderMultiplicty1Guideline.forEligiblePosition6);
 			owner_lazy = () -> EligiblePosition4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(EligiblePosition4 obj) throws Exception {
+			checkEligiblePosition4(obj);
 		}
 	};
 	/**
@@ -160,11 +172,15 @@ public class ConstraintRightsHolderMultiplicty1Guideline {
 	 */
 	public static final MMConstraint<SafekeepingAccount3> forSafekeepingAccount3 = new MMConstraint<SafekeepingAccount3>() {
 		{
-			validator = ConstraintRightsHolderMultiplicty1Guideline::checkSafekeepingAccount3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsHolderMultiplicty1Guideline";
 			definition = "It is recommended that RightsHolder can only be repetitive in case of joint ownership.";
 			owner_lazy = () -> SafekeepingAccount3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SafekeepingAccount3 obj) throws Exception {
+			checkSafekeepingAccount3(obj);
 		}
 	};
 	/**
@@ -198,12 +214,16 @@ public class ConstraintRightsHolderMultiplicty1Guideline {
 	 */
 	public static final MMConstraint<SafekeepingAccount4> forSafekeepingAccount4 = new MMConstraint<SafekeepingAccount4>() {
 		{
-			validator = ConstraintRightsHolderMultiplicty1Guideline::checkSafekeepingAccount4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsHolderMultiplicty1Guideline";
 			definition = "It is recommended that RightsHolder can only be repetitive in case of joint ownership.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRightsHolderMultiplicty1Guideline.forSafekeepingAccount6);
 			owner_lazy = () -> SafekeepingAccount4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SafekeepingAccount4 obj) throws Exception {
+			checkSafekeepingAccount4(obj);
 		}
 	};
 	/**
@@ -229,11 +249,15 @@ public class ConstraintRightsHolderMultiplicty1Guideline {
 	 */
 	public static final MMConstraint<DetailedInstructionStatus2> forDetailedInstructionStatus2 = new MMConstraint<DetailedInstructionStatus2>() {
 		{
-			validator = ConstraintRightsHolderMultiplicty1Guideline::checkDetailedInstructionStatus2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsHolderMultiplicty1Guideline";
 			definition = "It is recommended that RightsHolder can only be repetitive in case of joint ownership.";
 			owner_lazy = () -> DetailedInstructionStatus2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DetailedInstructionStatus2 obj) throws Exception {
+			checkDetailedInstructionStatus2(obj);
 		}
 	};
 	/**
@@ -268,12 +292,16 @@ public class ConstraintRightsHolderMultiplicty1Guideline {
 	 */
 	public static final MMConstraint<DetailedInstructionStatus9> forDetailedInstructionStatus9 = new MMConstraint<DetailedInstructionStatus9>() {
 		{
-			validator = ConstraintRightsHolderMultiplicty1Guideline::checkDetailedInstructionStatus9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsHolderMultiplicty1Guideline";
 			definition = "It is recommended that RightsHolder can only be repetitive in case of joint ownership.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRightsHolderMultiplicty1Guideline.forDetailedInstructionStatus10);
 			owner_lazy = () -> DetailedInstructionStatus9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DetailedInstructionStatus9 obj) throws Exception {
+			checkDetailedInstructionStatus9(obj);
 		}
 	};
 	/**
@@ -305,12 +333,16 @@ public class ConstraintRightsHolderMultiplicty1Guideline {
 	 */
 	public static final MMConstraint<DetailedInstructionStatus10> forDetailedInstructionStatus10 = new MMConstraint<DetailedInstructionStatus10>() {
 		{
-			validator = ConstraintRightsHolderMultiplicty1Guideline::checkDetailedInstructionStatus10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsHolderMultiplicty1Guideline";
 			definition = "It is recommended that RightsHolder can only be repetitive in the case of joint ownership.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRightsHolderMultiplicty1Guideline.forDetailedInstructionStatus9;
 			owner_lazy = () -> DetailedInstructionStatus10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DetailedInstructionStatus10 obj) throws Exception {
+			checkDetailedInstructionStatus10(obj);
 		}
 	};
 	/**
@@ -341,12 +373,16 @@ public class ConstraintRightsHolderMultiplicty1Guideline {
 	 */
 	public static final MMConstraint<SafekeepingAccount6> forSafekeepingAccount6 = new MMConstraint<SafekeepingAccount6>() {
 		{
-			validator = ConstraintRightsHolderMultiplicty1Guideline::checkSafekeepingAccount6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsHolderMultiplicty1Guideline";
 			definition = "It is recommended that RightsHolder can only be repetitive in case of joint ownership.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRightsHolderMultiplicty1Guideline.forSafekeepingAccount4;
 			owner_lazy = () -> SafekeepingAccount6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SafekeepingAccount6 obj) throws Exception {
+			checkSafekeepingAccount6(obj);
 		}
 	};
 	/**
@@ -377,12 +413,16 @@ public class ConstraintRightsHolderMultiplicty1Guideline {
 	 */
 	public static final MMConstraint<EligiblePosition5> forEligiblePosition5 = new MMConstraint<EligiblePosition5>() {
 		{
-			validator = ConstraintRightsHolderMultiplicty1Guideline::checkEligiblePosition5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsHolderMultiplicty1Guideline";
 			definition = "It is recommended that RightsHolder can only be repetitive in the case of joint ownership.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRightsHolderMultiplicty1Guideline.forEligiblePosition3;
 			owner_lazy = () -> EligiblePosition5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(EligiblePosition5 obj) throws Exception {
+			checkEligiblePosition5(obj);
 		}
 	};
 	/**
@@ -413,12 +453,16 @@ public class ConstraintRightsHolderMultiplicty1Guideline {
 	 */
 	public static final MMConstraint<EligiblePosition6> forEligiblePosition6 = new MMConstraint<EligiblePosition6>() {
 		{
-			validator = ConstraintRightsHolderMultiplicty1Guideline::checkEligiblePosition6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsHolderMultiplicty1Guideline";
 			definition = "It is recommended that RightsHolder can only be repetitive in the case of joint ownership.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRightsHolderMultiplicty1Guideline.forEligiblePosition4;
 			owner_lazy = () -> EligiblePosition6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(EligiblePosition6 obj) throws Exception {
+			checkEligiblePosition6(obj);
 		}
 	};
 

@@ -22,10 +22,11 @@ import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max350Text;
+import com.tools20022.repository.entity.CorporateActionEvent;
+import com.tools20022.repository.entity.CorporateActionStatusReason;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -612,7 +613,7 @@ public class CorporateActionStatus extends Status {
 	 * definition} = "Specifies the state or the condition."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmAgentStandingInstructionStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CorporateActionStatus, Max350Text> mmAgentStandingInstructionStatus = new MMBusinessAttribute<CorporateActionStatus, Max350Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Status2Choice.mmProprietary, Status4Choice.mmProprietary, RegistrationProcessingStatus1Choice.mmProprietary, ResponseStatus1Choice.mmProprietary,
 					ReplacementProcessingStatus1Choice.mmProprietary, RegistrationProcessingStatus2Choice.mmProprietary, ResponseStatus2Choice.mmProprietary, ReplacementProcessingStatus2Choice.mmProprietary,
@@ -628,12 +629,14 @@ public class CorporateActionStatus extends Status {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionStatus.class.getMethod("getAgentStandingInstructionStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max350Text getValue(CorporateActionStatus obj) {
+			return obj.getAgentStandingInstructionStatus();
+		}
+
+		@Override
+		public void setValue(CorporateActionStatus obj, Max350Text value) {
+			obj.setAgentStandingInstructionStatus(value);
 		}
 	};
 	protected ProcessingStatusCode processingStatus;
@@ -710,7 +713,7 @@ public class CorporateActionStatus extends Status {
 	 * definition} = "Specifies the status of the details of the event."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmProcessingStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CorporateActionStatus, ProcessingStatusCode> mmProcessingStatus = new MMBusinessAttribute<CorporateActionStatus, ProcessingStatusCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionEventStatus1.mmEventCompletenessStatus, CorporateActionEventStatus1.mmEventConfirmationStatus, CorporateActionProcessingStatus1Choice.mmEventStatus,
 					CorporateActionPreliminaryAdviceType1.mmProcessingStatus, CorporateActionProcessingStatus2Choice.mmCode, CorporateActionProcessingStatus2Choice.mmProprietary, CorporateActionProcessingStatus3Choice.mmCode,
@@ -726,12 +729,14 @@ public class CorporateActionStatus extends Status {
 			simpleType_lazy = () -> ProcessingStatusCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionStatus.class.getMethod("getProcessingStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ProcessingStatusCode getValue(CorporateActionStatus obj) {
+			return obj.getProcessingStatus();
+		}
+
+		@Override
+		public void setValue(CorporateActionStatus obj, ProcessingStatusCode value) {
+			obj.setProcessingStatus(value);
 		}
 	};
 	protected CorporateActionEventProcessingStatusCode eventProcessingStatus;
@@ -808,7 +813,7 @@ public class CorporateActionStatus extends Status {
 	 * definition} = "Processing status of the corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmEventProcessingStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CorporateActionStatus, CorporateActionEventProcessingStatusCode> mmEventProcessingStatus = new MMBusinessAttribute<CorporateActionStatus, CorporateActionEventProcessingStatusCode>() {
 		{
 			derivation_lazy = () -> Arrays
 					.asList(CorporateActionEventProcessingStatus1Choice.mmCode, CorporateActionEventProcessingStatus1Choice.mmProprietary, Status1Choice.mmCorporateActionEventProcessingStatus,
@@ -826,12 +831,14 @@ public class CorporateActionStatus extends Status {
 			simpleType_lazy = () -> CorporateActionEventProcessingStatusCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionStatus.class.getMethod("getEventProcessingStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CorporateActionEventProcessingStatusCode getValue(CorporateActionStatus obj) {
+			return obj.getEventProcessingStatus();
+		}
+
+		@Override
+		public void setValue(CorporateActionStatus obj, CorporateActionEventProcessingStatusCode value) {
+			obj.setEventProcessingStatus(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.CorporateActionStatusReason> corporateActionStatusReason;
@@ -891,7 +898,7 @@ public class CorporateActionStatus extends Status {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCorporateActionStatusReason = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CorporateActionStatus, List<CorporateActionStatusReason>> mmCorporateActionStatusReason = new MMBusinessAssociationEnd<CorporateActionStatus, List<CorporateActionStatusReason>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(InstructionCancellationRequestStatus1Choice.mmCancellationCompleted, InstructionCancellationRequestStatus2Choice.mmCancellationCompleted,
 					CorporateActionCancellationRejectionStatus1.mmReason, CorporateActionInformationRejectedStatus1.mmReason, CorporateActionStandingInstructionCancellationRejectionStatus1.mmReason);
@@ -904,6 +911,16 @@ public class CorporateActionStatus extends Status {
 			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.mmCorporateActionStatus;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.mmObject();
+		}
+
+		@Override
+		public List<CorporateActionStatusReason> getValue(CorporateActionStatus obj) {
+			return obj.getCorporateActionStatusReason();
+		}
+
+		@Override
+		public void setValue(CorporateActionStatus obj, List<CorporateActionStatusReason> value) {
+			obj.setCorporateActionStatusReason(value);
 		}
 	};
 	protected CorporateActionInstructionCancellationProcessingStatusCode instructionCancellationStatus;
@@ -933,7 +950,7 @@ public class CorporateActionStatus extends Status {
 	 * definition} = "Status of the instruction cancellation process."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmInstructionCancellationStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CorporateActionStatus, CorporateActionInstructionCancellationProcessingStatusCode> mmInstructionCancellationStatus = new MMBusinessAttribute<CorporateActionStatus, CorporateActionInstructionCancellationProcessingStatusCode>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.mmObject();
@@ -945,12 +962,14 @@ public class CorporateActionStatus extends Status {
 			simpleType_lazy = () -> CorporateActionInstructionCancellationProcessingStatusCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionStatus.class.getMethod("getInstructionCancellationStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CorporateActionInstructionCancellationProcessingStatusCode getValue(CorporateActionStatus obj) {
+			return obj.getInstructionCancellationStatus();
+		}
+
+		@Override
+		public void setValue(CorporateActionStatus obj, CorporateActionInstructionCancellationProcessingStatusCode value) {
+			obj.setInstructionCancellationStatus(value);
 		}
 	};
 	protected CorporateActionInstructionProcessingStatusCode corporateActionInstructionProcessingStatus;
@@ -988,7 +1007,7 @@ public class CorporateActionStatus extends Status {
 	 * definition} = "Status of the corporate action instruction process."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCorporateActionInstructionProcessingStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CorporateActionStatus, CorporateActionInstructionProcessingStatusCode> mmCorporateActionInstructionProcessingStatus = new MMBusinessAttribute<CorporateActionStatus, CorporateActionInstructionProcessingStatusCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(ProcessingStatus43Choice.mmReceived);
 			isDerived = false;
@@ -1001,12 +1020,14 @@ public class CorporateActionStatus extends Status {
 			simpleType_lazy = () -> CorporateActionInstructionProcessingStatusCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionStatus.class.getMethod("getCorporateActionInstructionProcessingStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CorporateActionInstructionProcessingStatusCode getValue(CorporateActionStatus obj) {
+			return obj.getCorporateActionInstructionProcessingStatus();
+		}
+
+		@Override
+		public void setValue(CorporateActionStatus obj, CorporateActionInstructionProcessingStatusCode value) {
+			obj.setCorporateActionInstructionProcessingStatus(value);
 		}
 	};
 	protected RateStatusCode rateStatus;
@@ -1176,7 +1197,7 @@ public class CorporateActionStatus extends Status {
 	 * definition} = "Specifies whether the rate is indicative or actual."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmRateStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CorporateActionStatus, RateStatusCode> mmRateStatus = new MMBusinessAttribute<CorporateActionStatus, RateStatusCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(RateTypeAndAmountAndStatus1.mmRateStatus, RateTypeAndAmountAndStatus3.mmRateStatus, RateTypeAndAmountAndStatus4.mmRateStatus, RateTypeAndAmountAndStatus5.mmRateStatus,
 					RateTypeAndAmountAndStatus6.mmRateStatus, RateTypeAndAmountAndStatus2.mmRateStatus, RateTypeAndAmountAndStatus7.mmRateStatus, RateTypeAndAmountAndStatus8.mmRateStatus, RateTypeAndAmountAndStatus9.mmRateStatus,
@@ -1198,12 +1219,14 @@ public class CorporateActionStatus extends Status {
 			simpleType_lazy = () -> RateStatusCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionStatus.class.getMethod("getRateStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public RateStatusCode getValue(CorporateActionStatus obj) {
+			return obj.getRateStatus();
+		}
+
+		@Override
+		public void setValue(CorporateActionStatus obj, RateStatusCode value) {
+			obj.setRateStatus(value);
 		}
 	};
 	protected OptionAvailabilityStatusCode optionAvailabilityStatus;
@@ -1337,7 +1360,7 @@ public class CorporateActionStatus extends Status {
 	 * definition} = "Availability status of the option."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmOptionAvailabilityStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CorporateActionStatus, OptionAvailabilityStatusCode> mmOptionAvailabilityStatus = new MMBusinessAttribute<CorporateActionStatus, OptionAvailabilityStatusCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionOption10.mmOptionAvailabilityStatus, CorporateActionOption15.mmOptionAvailabilityStatus, CorporateActionOption20.mmOptionAvailabilityStatus,
 					CorporateActionOption32.mmOptionAvailabilityStatus, CorporateActionOption35.mmOptionAvailabilityStatus, CorporateActionOption44.mmOptionAvailabilityStatus, CorporateActionOption52.mmOptionAvailabilityStatus,
@@ -1358,12 +1381,14 @@ public class CorporateActionStatus extends Status {
 			simpleType_lazy = () -> OptionAvailabilityStatusCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionStatus.class.getMethod("getOptionAvailabilityStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public OptionAvailabilityStatusCode getValue(CorporateActionStatus obj) {
+			return obj.getOptionAvailabilityStatus();
+		}
+
+		@Override
+		public void setValue(CorporateActionStatus obj, OptionAvailabilityStatusCode value) {
+			obj.setOptionAvailabilityStatus(value);
 		}
 	};
 	protected CorporateActionEvent corporateActionEvent;
@@ -1401,7 +1426,7 @@ public class CorporateActionStatus extends Status {
 	 * definition} = "Corporate event for which a status is provided."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCorporateActionEvent = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CorporateActionStatus, Optional<CorporateActionEvent>> mmCorporateActionEvent = new MMBusinessAssociationEnd<CorporateActionStatus, Optional<CorporateActionEvent>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.mmObject();
@@ -1413,6 +1438,16 @@ public class CorporateActionStatus extends Status {
 			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionStatus;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
+		}
+
+		@Override
+		public Optional<CorporateActionEvent> getValue(CorporateActionStatus obj) {
+			return obj.getCorporateActionEvent();
+		}
+
+		@Override
+		public void setValue(CorporateActionStatus obj, Optional<CorporateActionEvent> value) {
+			obj.setCorporateActionEvent(value.orElse(null));
 		}
 	};
 	protected CorporateActionEventStatusCode eventStatus;
@@ -1465,7 +1500,7 @@ public class CorporateActionStatus extends Status {
 	 * definition} = "Status of the corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmEventStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CorporateActionStatus, CorporateActionEventStatusCode> mmEventStatus = new MMBusinessAttribute<CorporateActionStatus, CorporateActionEventStatusCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionEventStatus2FormatChoice.mmCode, CorporateActionEventStatus2FormatChoice.mmProprietary, CorporateActionEventStatus1FormatChoice.mmCode,
 					CorporateActionEventStatus1FormatChoice.mmProprietary, CorporateActionEventStatus3FormatChoice.mmCode, CorporateActionEventStatus3FormatChoice.mmProprietary);
@@ -1479,12 +1514,14 @@ public class CorporateActionStatus extends Status {
 			simpleType_lazy = () -> CorporateActionEventStatusCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionStatus.class.getMethod("getEventStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CorporateActionEventStatusCode getValue(CorporateActionStatus obj) {
+			return obj.getEventStatus();
+		}
+
+		@Override
+		public void setValue(CorporateActionStatus obj, CorporateActionEventStatusCode value) {
+			obj.setEventStatus(value);
 		}
 	};
 	protected CorporateActionProcessedStatusCode relatedInstructionProcessedStatus;
@@ -1560,7 +1597,7 @@ public class CorporateActionStatus extends Status {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmRelatedInstructionProcessedStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CorporateActionStatus, CorporateActionProcessedStatusCode> mmRelatedInstructionProcessedStatus = new MMBusinessAttribute<CorporateActionStatus, CorporateActionProcessedStatusCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(ProcessedStatus2FormatChoice.mmCode, ProcessedStatus2FormatChoice.mmProprietary, ProcessedStatus1FormatChoice.mmCode, ProcessedStatus1FormatChoice.mmProprietary,
 					ProcessedStatus3FormatChoice.mmCode, ProcessedStatus3FormatChoice.mmProprietary, ProcessedStatus5FormatChoice.mmCode, ProcessedStatus5FormatChoice.mmProprietary,
@@ -1576,12 +1613,14 @@ public class CorporateActionStatus extends Status {
 			simpleType_lazy = () -> CorporateActionProcessedStatusCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionStatus.class.getMethod("getRelatedInstructionProcessedStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CorporateActionProcessedStatusCode getValue(CorporateActionStatus obj) {
+			return obj.getRelatedInstructionProcessedStatus();
+		}
+
+		@Override
+		public void setValue(CorporateActionStatus obj, CorporateActionProcessedStatusCode value) {
+			obj.setRelatedInstructionProcessedStatus(value);
 		}
 	};
 	protected ISODateTime deactivationDateAndTime;
@@ -1620,7 +1659,7 @@ public class CorporateActionStatus extends Status {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmDeactivationDateAndTime = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CorporateActionStatus, ISODateTime> mmDeactivationDateAndTime = new MMBusinessAttribute<CorporateActionStatus, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDeactivationInstruction1.mmDeactivationDateAndTime);
 			isDerived = false;
@@ -1633,12 +1672,14 @@ public class CorporateActionStatus extends Status {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionStatus.class.getMethod("getDeactivationDateAndTime", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(CorporateActionStatus obj) {
+			return obj.getDeactivationDateAndTime();
+		}
+
+		@Override
+		public void setValue(CorporateActionStatus obj, ISODateTime value) {
+			obj.setDeactivationDateAndTime(value);
 		}
 	};
 	protected EventConfirmationStatusCode eventConfirmationStatus;
@@ -1668,7 +1709,7 @@ public class CorporateActionStatus extends Status {
 	 * definition} = "Indicates the status of the occurrence of an event."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmEventConfirmationStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CorporateActionStatus, EventConfirmationStatusCode> mmEventConfirmationStatus = new MMBusinessAttribute<CorporateActionStatus, EventConfirmationStatusCode>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.mmObject();
@@ -1680,12 +1721,14 @@ public class CorporateActionStatus extends Status {
 			simpleType_lazy = () -> EventConfirmationStatusCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionStatus.class.getMethod("getEventConfirmationStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public EventConfirmationStatusCode getValue(CorporateActionStatus obj) {
+			return obj.getEventConfirmationStatus();
+		}
+
+		@Override
+		public void setValue(CorporateActionStatus obj, EventConfirmationStatusCode value) {
+			obj.setEventConfirmationStatus(value);
 		}
 	};
 	protected EventCompletenessStatusCode eventCompletenessStatus;
@@ -1717,7 +1760,7 @@ public class CorporateActionStatus extends Status {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmEventCompletenessStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CorporateActionStatus, EventCompletenessStatusCode> mmEventCompletenessStatus = new MMBusinessAttribute<CorporateActionStatus, EventCompletenessStatusCode>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.mmObject();
@@ -1729,12 +1772,14 @@ public class CorporateActionStatus extends Status {
 			simpleType_lazy = () -> EventCompletenessStatusCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionStatus.class.getMethod("getEventCompletenessStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public EventCompletenessStatusCode getValue(CorporateActionStatus obj) {
+			return obj.getEventCompletenessStatus();
+		}
+
+		@Override
+		public void setValue(CorporateActionStatus obj, EventCompletenessStatusCode value) {
+			obj.setEventCompletenessStatus(value);
 		}
 	};
 

@@ -111,7 +111,7 @@ public class ResponseType6 {
 	 * ResponseType5.mmResponse}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResponse = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ResponseType6, Response2Code> mmResponse = new MMMessageAttribute<ResponseType6, Response2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ResponseType6.mmObject();
 			isDerived = false;
@@ -123,6 +123,16 @@ public class ResponseType6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Response2Code.mmObject();
+		}
+
+		@Override
+		public Response2Code getValue(ResponseType6 obj) {
+			return obj.getResponse();
+		}
+
+		@Override
+		public void setValue(ResponseType6 obj, Response2Code value) {
+			obj.setResponse(value);
 		}
 	};
 	@XmlElement(name = "RspnDtl")
@@ -164,7 +174,7 @@ public class ResponseType6 {
 	 * ResponseType5.mmResponseReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResponseDetail = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ResponseType6, Optional<ResultDetail3Code>> mmResponseDetail = new MMMessageAttribute<ResponseType6, Optional<ResultDetail3Code>>() {
 		{
 			businessElementTrace_lazy = () -> Response.mmResponseReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ResponseType6.mmObject();
@@ -177,6 +187,16 @@ public class ResponseType6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ResultDetail3Code.mmObject();
+		}
+
+		@Override
+		public Optional<ResultDetail3Code> getValue(ResponseType6 obj) {
+			return obj.getResponseDetail();
+		}
+
+		@Override
+		public void setValue(ResponseType6 obj, Optional<ResultDetail3Code> value) {
+			obj.setResponseDetail(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlRspn")
@@ -213,7 +233,7 @@ public class ResponseType6 {
 	 * ResponseType5.mmAdditionalResponseInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalResponse = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ResponseType6, Optional<Max140Text>> mmAdditionalResponse = new MMMessageAttribute<ResponseType6, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ResponseType6.mmObject();
 			isDerived = false;
@@ -225,6 +245,16 @@ public class ResponseType6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(ResponseType6 obj) {
+			return obj.getAdditionalResponse();
+		}
+
+		@Override
+		public void setValue(ResponseType6 obj, Optional<Max140Text> value) {
+			obj.setAdditionalResponse(value.orElse(null));
 		}
 	};
 

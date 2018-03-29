@@ -111,7 +111,7 @@ public class DocumentLineType1Choice {
 	 * ReferredDocumentType1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentLineType1Choice, ExternalDocumentLineType1Code> mmCode = new MMMessageAttribute<DocumentLineType1Choice, ExternalDocumentLineType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DocumentLineType1Choice.mmObject();
@@ -124,6 +124,16 @@ public class DocumentLineType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalDocumentLineType1Code.mmObject();
+		}
+
+		@Override
+		public ExternalDocumentLineType1Code getValue(DocumentLineType1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(DocumentLineType1Choice obj, ExternalDocumentLineType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -166,7 +176,7 @@ public class DocumentLineType1Choice {
 	 * ReferredDocumentType1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentLineType1Choice, Max35Text> mmProprietary = new MMMessageAttribute<DocumentLineType1Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DocumentLineType1Choice.mmObject();
@@ -179,6 +189,16 @@ public class DocumentLineType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(DocumentLineType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(DocumentLineType1Choice obj, Max35Text value) {
+			obj.setProprietary(value);
 		}
 	};
 

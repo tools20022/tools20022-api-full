@@ -114,7 +114,7 @@ public class Role5Choice {
 	 * Role2Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Role5Choice, InvestmentFundRole2Code> mmCode = new MMMessageAttribute<Role5Choice, InvestmentFundRole2Code>() {
 		{
 			businessElementTrace_lazy = () -> Role.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Role5Choice.mmObject();
@@ -127,6 +127,16 @@ public class Role5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InvestmentFundRole2Code.mmObject();
+		}
+
+		@Override
+		public InvestmentFundRole2Code getValue(Role5Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(Role5Choice obj, InvestmentFundRole2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -168,7 +178,7 @@ public class Role5Choice {
 	 * Role2Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Role5Choice, GenericIdentification36> mmProprietary = new MMMessageAttribute<Role5Choice, GenericIdentification36>() {
 		{
 			businessElementTrace_lazy = () -> Role.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Role5Choice.mmObject();
@@ -181,6 +191,16 @@ public class Role5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification36.mmObject();
+		}
+
+		@Override
+		public GenericIdentification36 getValue(Role5Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(Role5Choice obj, GenericIdentification36 value) {
+			obj.setProprietary(value);
 		}
 	};
 

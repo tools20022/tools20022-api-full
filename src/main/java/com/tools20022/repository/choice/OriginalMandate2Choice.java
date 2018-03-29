@@ -124,7 +124,7 @@ public class OriginalMandate2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalMandateIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalMandate2Choice, Max35Text> mmOriginalMandateIdentification = new MMMessageAttribute<OriginalMandate2Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Mandate.mmMandateIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OriginalMandate2Choice.mmObject();
@@ -137,6 +137,16 @@ public class OriginalMandate2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OriginalMandate2Choice obj) {
+			return obj.getOriginalMandateIdentification();
+		}
+
+		@Override
+		public void setValue(OriginalMandate2Choice obj, Max35Text value) {
+			obj.setOriginalMandateIdentification(value);
 		}
 	};
 	@XmlElement(name = "OrgnlMndt", required = true)
@@ -179,7 +189,7 @@ public class OriginalMandate2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalMandate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OriginalMandate2Choice, Mandate1> mmOriginalMandate = new MMMessageAssociationEnd<OriginalMandate2Choice, Mandate1>() {
 		{
 			businessComponentTrace_lazy = () -> DirectDebitMandate.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.OriginalMandate2Choice.mmObject();
@@ -193,6 +203,16 @@ public class OriginalMandate2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Mandate1.mmObject();
+		}
+
+		@Override
+		public Mandate1 getValue(OriginalMandate2Choice obj) {
+			return obj.getOriginalMandate();
+		}
+
+		@Override
+		public void setValue(OriginalMandate2Choice obj, Mandate1 value) {
+			obj.setOriginalMandate(value);
 		}
 	};
 

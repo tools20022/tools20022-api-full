@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max105Text;
 import com.tools20022.repository.entity.AttendanceCard;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.NameAndAddress9;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -119,7 +120,7 @@ public class AttendanceCard2 {
 	 * definition} = "Information to be indicated on the attendance card."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAttendanceCardLabelling = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AttendanceCard2, Optional<Max105Text>> mmAttendanceCardLabelling = new MMMessageAttribute<AttendanceCard2, Optional<Max105Text>>() {
 		{
 			businessElementTrace_lazy = () -> AttendanceCard.mmAttendanceCardLabelling;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AttendanceCard2.mmObject();
@@ -131,6 +132,16 @@ public class AttendanceCard2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max105Text> getValue(AttendanceCard2 obj) {
+			return obj.getAttendanceCardLabelling();
+		}
+
+		@Override
+		public void setValue(AttendanceCard2 obj, Optional<Max105Text> value) {
+			obj.setAttendanceCardLabelling(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DlvryMtd", required = true)
@@ -168,7 +179,7 @@ public class AttendanceCard2 {
 	 * definition} = "Specifies where the attendance card must be delivered."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeliveryMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AttendanceCard2, DeliveryPlace1Code> mmDeliveryMethod = new MMMessageAttribute<AttendanceCard2, DeliveryPlace1Code>() {
 		{
 			businessElementTrace_lazy = () -> AttendanceCard.mmDeliveryMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AttendanceCard2.mmObject();
@@ -180,6 +191,16 @@ public class AttendanceCard2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DeliveryPlace1Code.mmObject();
+		}
+
+		@Override
+		public DeliveryPlace1Code getValue(AttendanceCard2 obj) {
+			return obj.getDeliveryMethod();
+		}
+
+		@Override
+		public void setValue(AttendanceCard2 obj, DeliveryPlace1Code value) {
+			obj.setDeliveryMethod(value);
 		}
 	};
 	@XmlElement(name = "OthrAdr")
@@ -215,7 +236,7 @@ public class AttendanceCard2 {
 	 * definition} = "Name and address of a party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AttendanceCard2, Optional<NameAndAddress9>> mmOtherAddress = new MMMessageAssociationEnd<AttendanceCard2, Optional<NameAndAddress9>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AttendanceCard2.mmObject();
@@ -227,7 +248,17 @@ public class AttendanceCard2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NameAndAddress9.mmObject();
+			type_lazy = () -> NameAndAddress9.mmObject();
+		}
+
+		@Override
+		public Optional<NameAndAddress9> getValue(AttendanceCard2 obj) {
+			return obj.getOtherAddress();
+		}
+
+		@Override
+		public void setValue(AttendanceCard2 obj, Optional<NameAndAddress9> value) {
+			obj.setOtherAddress(value.orElse(null));
 		}
 	};
 
@@ -269,7 +300,7 @@ public class AttendanceCard2 {
 		return otherAddress == null ? Optional.empty() : Optional.of(otherAddress);
 	}
 
-	public AttendanceCard2 setOtherAddress(com.tools20022.repository.msg.NameAndAddress9 otherAddress) {
+	public AttendanceCard2 setOtherAddress(NameAndAddress9 otherAddress) {
 		this.otherAddress = otherAddress;
 		return this;
 	}

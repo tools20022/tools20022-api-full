@@ -117,7 +117,7 @@ public class RecordTechnicalData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReceiptDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RecordTechnicalData1, ISODateTime> mmReceiptDateTime = new MMMessageAttribute<RecordTechnicalData1, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RecordTechnicalData1.mmObject();
 			isDerived = false;
@@ -129,6 +129,16 @@ public class RecordTechnicalData1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(RecordTechnicalData1 obj) {
+			return obj.getReceiptDateTime();
+		}
+
+		@Override
+		public void setValue(RecordTechnicalData1 obj, ISODateTime value) {
+			obj.setReceiptDateTime(value);
 		}
 	};
 	@XmlElement(name = "XchgRsn", required = true)
@@ -163,7 +173,7 @@ public class RecordTechnicalData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExchangeReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RecordTechnicalData1, List<AuthorityExchangeReason1Code>> mmExchangeReason = new MMMessageAttribute<RecordTechnicalData1, List<AuthorityExchangeReason1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RecordTechnicalData1.mmObject();
 			isDerived = false;
@@ -173,6 +183,16 @@ public class RecordTechnicalData1 {
 			definition = "Describes the reason for the exchange of the transaction report between the competent authorities.";
 			minOccurs = 1;
 			simpleType_lazy = () -> AuthorityExchangeReason1Code.mmObject();
+		}
+
+		@Override
+		public List<AuthorityExchangeReason1Code> getValue(RecordTechnicalData1 obj) {
+			return obj.getExchangeReason();
+		}
+
+		@Override
+		public void setValue(RecordTechnicalData1 obj, List<AuthorityExchangeReason1Code> value) {
+			obj.setExchangeReason(value);
 		}
 	};
 

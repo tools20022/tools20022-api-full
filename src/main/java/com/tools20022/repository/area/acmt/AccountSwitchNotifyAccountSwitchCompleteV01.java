@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.AccountSwitchDetails1;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.AccountSwitching;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -37,7 +36,7 @@ import javax.xml.bind.annotation.*;
 
 /**
  * The AccountSwitchNotifyAccountSwitchComplete message is sent by the new
- * account servicer to the account switch servicer to signal that it has
+ * account servicer to a central account switch servicer to signal that it has
  * completed the account switch.
  * <p>
  * <strong>Constant fields:</strong>
@@ -86,7 +85,7 @@ import javax.xml.bind.annotation.*;
  * "AccountSwitchNotifyAccountSwitchCompleteV01"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "The AccountSwitchNotifyAccountSwitchComplete message is sent by the new account servicer to the account switch servicer to signal that it has completed the account switch."
+ * "The AccountSwitchNotifyAccountSwitchComplete message is sent by the new account servicer to a central account switch servicer to signal that it has completed the account switch. "
  * </li>
  * </ul>
  */
@@ -120,7 +119,7 @@ public class AccountSwitchNotifyAccountSwitchCompleteV01 {
 	 * definition} = "Unique identification for the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountSwitchNotifyAccountSwitchCompleteV01, MessageIdentification1> mmMessageIdentification = new MMMessageBuildingBlock<AccountSwitchNotifyAccountSwitchCompleteV01, MessageIdentification1>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,12 +130,14 @@ public class AccountSwitchNotifyAccountSwitchCompleteV01 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountSwitchNotifyAccountSwitchCompleteV01.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(AccountSwitchNotifyAccountSwitchCompleteV01 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(AccountSwitchNotifyAccountSwitchCompleteV01 obj, MessageIdentification1 value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctSwtchDtls", required = true)
@@ -162,26 +163,29 @@ public class AccountSwitchNotifyAccountSwitchCompleteV01 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Contains information about the details of the account switch."</li>
+	 * "Contains information about the account switch.\r\n\r\nUsage: This element is used to communicate confirmation of the account switch."
+	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAccountSwitchDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountSwitchNotifyAccountSwitchCompleteV01, AccountSwitchDetails1> mmAccountSwitchDetails = new MMMessageBuildingBlock<AccountSwitchNotifyAccountSwitchCompleteV01, AccountSwitchDetails1>() {
 		{
 			xmlTag = "AcctSwtchDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountSwitchDetails";
-			definition = "Contains information about the details of the account switch.";
+			definition = "Contains information about the account switch.\r\n\r\nUsage: This element is used to communicate confirmation of the account switch.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AccountSwitchDetails1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountSwitchNotifyAccountSwitchCompleteV01.class.getMethod("getAccountSwitchDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AccountSwitchDetails1 getValue(AccountSwitchNotifyAccountSwitchCompleteV01 obj) {
+			return obj.getAccountSwitchDetails();
+		}
+
+		@Override
+		public void setValue(AccountSwitchNotifyAccountSwitchCompleteV01 obj, AccountSwitchDetails1 value) {
+			obj.setAccountSwitchDetails(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -211,7 +215,7 @@ public class AccountSwitchNotifyAccountSwitchCompleteV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountSwitchNotifyAccountSwitchCompleteV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<AccountSwitchNotifyAccountSwitchCompleteV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -221,12 +225,14 @@ public class AccountSwitchNotifyAccountSwitchCompleteV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountSwitchNotifyAccountSwitchCompleteV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(AccountSwitchNotifyAccountSwitchCompleteV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(AccountSwitchNotifyAccountSwitchCompleteV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -236,7 +242,7 @@ public class AccountSwitchNotifyAccountSwitchCompleteV01 {
 				semanticMarkup_lazy = () -> Arrays.asList(new OtherSemanticMarkup(this, "prefix", new String[]{"prefix", "DRAFT3"}));
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountSwitchNotifyAccountSwitchCompleteV01";
-				definition = "The AccountSwitchNotifyAccountSwitchComplete message is sent by the new account servicer to the account switch servicer to signal that it has completed the account switch.";
+				definition = "The AccountSwitchNotifyAccountSwitchComplete message is sent by the new account servicer to a central account switch servicer to signal that it has completed the account switch. ";
 				messageSet_lazy = () -> Arrays.asList(AccountSwitching.mmObject());
 				rootElement = "Document";
 				xmlTag = "AcctSwtchNtfyAcctSwtchCmplt";

@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.auth.InvoiceTaxReportV01;
 import com.tools20022.repository.entity.BuyerRole;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -129,7 +130,7 @@ public class TaxReport1 {
 	 * definition} = "Basic report details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTaxReportHeader = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TaxReport1, GroupHeader69> mmTaxReportHeader = new MMMessageAssociationEnd<TaxReport1, GroupHeader69>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxReport1.mmObject();
 			isDerived = false;
@@ -140,7 +141,17 @@ public class TaxReport1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GroupHeader69.mmObject();
+			type_lazy = () -> GroupHeader69.mmObject();
+		}
+
+		@Override
+		public GroupHeader69 getValue(TaxReport1 obj) {
+			return obj.getTaxReportHeader();
+		}
+
+		@Override
+		public void setValue(TaxReport1 obj, GroupHeader69 value) {
+			obj.setTaxReportHeader(value);
 		}
 	};
 	@XmlElement(name = "Sellr", required = true)
@@ -172,7 +183,7 @@ public class TaxReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSeller = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TaxReport1, PartyIdentification72> mmSeller = new MMMessageAssociationEnd<TaxReport1, PartyIdentification72>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxReport1.mmObject();
 			isDerived = false;
@@ -183,7 +194,17 @@ public class TaxReport1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification72.mmObject();
+			type_lazy = () -> PartyIdentification72.mmObject();
+		}
+
+		@Override
+		public PartyIdentification72 getValue(TaxReport1 obj) {
+			return obj.getSeller();
+		}
+
+		@Override
+		public void setValue(TaxReport1 obj, PartyIdentification72 value) {
+			obj.setSeller(value);
 		}
 	};
 	@XmlElement(name = "Buyr")
@@ -218,7 +239,7 @@ public class TaxReport1 {
 	 * "Specifies the buyer of goods/service reported in this message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBuyer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TaxReport1, Optional<PartyIdentification72>> mmBuyer = new MMMessageAssociationEnd<TaxReport1, Optional<PartyIdentification72>>() {
 		{
 			businessComponentTrace_lazy = () -> BuyerRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxReport1.mmObject();
@@ -230,7 +251,17 @@ public class TaxReport1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification72.mmObject();
+			type_lazy = () -> PartyIdentification72.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification72> getValue(TaxReport1 obj) {
+			return obj.getBuyer();
+		}
+
+		@Override
+		public void setValue(TaxReport1 obj, Optional<PartyIdentification72> value) {
+			obj.setBuyer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradSttlm", required = true)
@@ -262,7 +293,7 @@ public class TaxReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradeSettlement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TaxReport1, TradeSettlement2> mmTradeSettlement = new MMMessageAssociationEnd<TaxReport1, TradeSettlement2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxReport1.mmObject();
 			isDerived = false;
@@ -273,11 +304,21 @@ public class TaxReport1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TradeSettlement2.mmObject();
+			type_lazy = () -> TradeSettlement2.mmObject();
+		}
+
+		@Override
+		public TradeSettlement2 getValue(TaxReport1 obj) {
+			return obj.getTradeSettlement();
+		}
+
+		@Override
+		public void setValue(TaxReport1 obj, TradeSettlement2 value) {
+			obj.setTradeSettlement(value);
 		}
 	};
 	@XmlElement(name = "OthrPty")
-	protected List<com.tools20022.repository.msg.PartyIdentification72> otherParty;
+	protected List<PartyIdentification72> otherParty;
 	/**
 	 * 
 	 <p>
@@ -304,7 +345,7 @@ public class TaxReport1 {
 	 * "Reserved for parties that may be required by a specific tax authority."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TaxReport1, List<PartyIdentification72>> mmOtherParty = new MMMessageAssociationEnd<TaxReport1, List<PartyIdentification72>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxReport1.mmObject();
 			isDerived = false;
@@ -314,11 +355,21 @@ public class TaxReport1 {
 			definition = "Reserved for parties that may be required by a specific tax authority.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification72.mmObject();
+			type_lazy = () -> PartyIdentification72.mmObject();
+		}
+
+		@Override
+		public List<PartyIdentification72> getValue(TaxReport1 obj) {
+			return obj.getOtherParty();
+		}
+
+		@Override
+		public void setValue(TaxReport1 obj, List<PartyIdentification72> value) {
+			obj.setOtherParty(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
-	protected List<com.tools20022.repository.msg.AdditionalInformation1> additionalInformation;
+	protected List<AdditionalInformation1> additionalInformation;
 	/**
 	 * 
 	 <p>
@@ -344,7 +395,7 @@ public class TaxReport1 {
 	 * definition} = "Additional reference like site key or identifier."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdditionalInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TaxReport1, List<AdditionalInformation1>> mmAdditionalInformation = new MMMessageAssociationEnd<TaxReport1, List<AdditionalInformation1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxReport1.mmObject();
 			isDerived = false;
@@ -354,11 +405,21 @@ public class TaxReport1 {
 			definition = "Additional reference like site key or identifier.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AdditionalInformation1.mmObject();
+			type_lazy = () -> AdditionalInformation1.mmObject();
+		}
+
+		@Override
+		public List<AdditionalInformation1> getValue(TaxReport1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(TaxReport1 obj, List<AdditionalInformation1> value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 	@XmlElement(name = "AddtlRef")
-	protected List<com.tools20022.repository.msg.DocumentGeneralInformation2> additionalReference;
+	protected List<DocumentGeneralInformation2> additionalReference;
 	/**
 	 * 
 	 <p>
@@ -387,7 +448,7 @@ public class TaxReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdditionalReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TaxReport1, List<DocumentGeneralInformation2>> mmAdditionalReference = new MMMessageAssociationEnd<TaxReport1, List<DocumentGeneralInformation2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxReport1.mmObject();
 			isDerived = false;
@@ -397,11 +458,21 @@ public class TaxReport1 {
 			definition = "Structure to deliver link to external attachment or deliver base64-coded attachment inside message.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation2.mmObject();
+			type_lazy = () -> DocumentGeneralInformation2.mmObject();
+		}
+
+		@Override
+		public List<DocumentGeneralInformation2> getValue(TaxReport1 obj) {
+			return obj.getAdditionalReference();
+		}
+
+		@Override
+		public void setValue(TaxReport1 obj, List<DocumentGeneralInformation2> value) {
+			obj.setAdditionalReference(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
-	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * 
 	 <p>
@@ -429,7 +500,7 @@ public class TaxReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TaxReport1, List<SupplementaryData1>> mmSupplementaryData = new MMMessageAssociationEnd<TaxReport1, List<SupplementaryData1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxReport1.mmObject();
 			isDerived = false;
@@ -439,7 +510,17 @@ public class TaxReport1 {
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
+			type_lazy = () -> SupplementaryData1.mmObject();
+		}
+
+		@Override
+		public List<SupplementaryData1> getValue(TaxReport1 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(TaxReport1 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -465,7 +546,7 @@ public class TaxReport1 {
 		return taxReportHeader;
 	}
 
-	public TaxReport1 setTaxReportHeader(com.tools20022.repository.msg.GroupHeader69 taxReportHeader) {
+	public TaxReport1 setTaxReportHeader(GroupHeader69 taxReportHeader) {
 		this.taxReportHeader = Objects.requireNonNull(taxReportHeader);
 		return this;
 	}
@@ -474,7 +555,7 @@ public class TaxReport1 {
 		return seller;
 	}
 
-	public TaxReport1 setSeller(com.tools20022.repository.msg.PartyIdentification72 seller) {
+	public TaxReport1 setSeller(PartyIdentification72 seller) {
 		this.seller = Objects.requireNonNull(seller);
 		return this;
 	}
@@ -483,7 +564,7 @@ public class TaxReport1 {
 		return buyer == null ? Optional.empty() : Optional.of(buyer);
 	}
 
-	public TaxReport1 setBuyer(com.tools20022.repository.msg.PartyIdentification72 buyer) {
+	public TaxReport1 setBuyer(PartyIdentification72 buyer) {
 		this.buyer = buyer;
 		return this;
 	}
@@ -492,7 +573,7 @@ public class TaxReport1 {
 		return tradeSettlement;
 	}
 
-	public TaxReport1 setTradeSettlement(com.tools20022.repository.msg.TradeSettlement2 tradeSettlement) {
+	public TaxReport1 setTradeSettlement(TradeSettlement2 tradeSettlement) {
 		this.tradeSettlement = Objects.requireNonNull(tradeSettlement);
 		return this;
 	}
@@ -501,7 +582,7 @@ public class TaxReport1 {
 		return otherParty == null ? otherParty = new ArrayList<>() : otherParty;
 	}
 
-	public TaxReport1 setOtherParty(List<com.tools20022.repository.msg.PartyIdentification72> otherParty) {
+	public TaxReport1 setOtherParty(List<PartyIdentification72> otherParty) {
 		this.otherParty = Objects.requireNonNull(otherParty);
 		return this;
 	}
@@ -510,7 +591,7 @@ public class TaxReport1 {
 		return additionalInformation == null ? additionalInformation = new ArrayList<>() : additionalInformation;
 	}
 
-	public TaxReport1 setAdditionalInformation(List<com.tools20022.repository.msg.AdditionalInformation1> additionalInformation) {
+	public TaxReport1 setAdditionalInformation(List<AdditionalInformation1> additionalInformation) {
 		this.additionalInformation = Objects.requireNonNull(additionalInformation);
 		return this;
 	}
@@ -519,7 +600,7 @@ public class TaxReport1 {
 		return additionalReference == null ? additionalReference = new ArrayList<>() : additionalReference;
 	}
 
-	public TaxReport1 setAdditionalReference(List<com.tools20022.repository.msg.DocumentGeneralInformation2> additionalReference) {
+	public TaxReport1 setAdditionalReference(List<DocumentGeneralInformation2> additionalReference) {
 		this.additionalReference = Objects.requireNonNull(additionalReference);
 		return this;
 	}
@@ -528,7 +609,7 @@ public class TaxReport1 {
 		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public TaxReport1 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+	public TaxReport1 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = Objects.requireNonNull(supplementaryData);
 		return this;
 	}

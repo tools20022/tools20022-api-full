@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AccountInformationType1Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountIdentification26;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -99,7 +100,7 @@ public class AccountIdentification30 {
 	 * definition} = "Specifies the type of account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentification30, AccountInformationType1Code> mmAccountType = new MMMessageAttribute<AccountIdentification30, AccountInformationType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentification30.mmObject();
 			isDerived = false;
@@ -110,6 +111,16 @@ public class AccountIdentification30 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AccountInformationType1Code.mmObject();
+		}
+
+		@Override
+		public AccountInformationType1Code getValue(AccountIdentification30 obj) {
+			return obj.getAccountType();
+		}
+
+		@Override
+		public void setValue(AccountIdentification30 obj, AccountInformationType1Code value) {
+			obj.setAccountType(value);
 		}
 	};
 	@XmlElement(name = "Id", required = true)
@@ -143,7 +154,7 @@ public class AccountIdentification30 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountIdentification30, AccountIdentification26> mmIdentification = new MMMessageAssociationEnd<AccountIdentification30, AccountIdentification26>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentification30.mmObject();
 			isDerived = false;
@@ -154,7 +165,17 @@ public class AccountIdentification30 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AccountIdentification26.mmObject();
+			type_lazy = () -> AccountIdentification26.mmObject();
+		}
+
+		@Override
+		public AccountIdentification26 getValue(AccountIdentification30 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(AccountIdentification30 obj, AccountIdentification26 value) {
+			obj.setIdentification(value);
 		}
 	};
 
@@ -184,7 +205,7 @@ public class AccountIdentification30 {
 		return identification;
 	}
 
-	public AccountIdentification30 setIdentification(com.tools20022.repository.msg.AccountIdentification26 identification) {
+	public AccountIdentification30 setIdentification(AccountIdentification26 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}

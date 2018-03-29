@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMService9;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -110,7 +111,7 @@ public class ATMContext8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSessionReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMContext8, Optional<Max35Text>> mmSessionReference = new MMMessageAttribute<ATMContext8, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMContext8.mmObject();
 			isDerived = false;
@@ -122,6 +123,16 @@ public class ATMContext8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMContext8 obj) {
+			return obj.getSessionReference();
+		}
+
+		@Override
+		public void setValue(ATMContext8 obj, Optional<Max35Text> value) {
+			obj.setSessionReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Svc")
@@ -159,7 +170,7 @@ public class ATMContext8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmService = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMContext8, Optional<ATMService9>> mmService = new MMMessageAssociationEnd<ATMContext8, Optional<ATMService9>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMContext8.mmObject();
 			isDerived = false;
@@ -171,7 +182,17 @@ public class ATMContext8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMService9.mmObject();
+			type_lazy = () -> ATMService9.mmObject();
+		}
+
+		@Override
+		public Optional<ATMService9> getValue(ATMContext8 obj) {
+			return obj.getService();
+		}
+
+		@Override
+		public void setValue(ATMContext8 obj, Optional<ATMService9> value) {
+			obj.setService(value.orElse(null));
 		}
 	};
 
@@ -202,7 +223,7 @@ public class ATMContext8 {
 		return service == null ? Optional.empty() : Optional.of(service);
 	}
 
-	public ATMContext8 setService(com.tools20022.repository.msg.ATMService9 service) {
+	public ATMContext8 setService(ATMService9 service) {
 		this.service = service;
 		return this;
 	}

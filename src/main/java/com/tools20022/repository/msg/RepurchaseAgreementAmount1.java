@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountAndDirection6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -106,7 +107,7 @@ public class RepurchaseAgreementAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmHighlyLiquidDefaultedCounterpartyAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RepurchaseAgreementAmount1, AmountAndDirection6> mmHighlyLiquidDefaultedCounterpartyAmount = new MMMessageAssociationEnd<RepurchaseAgreementAmount1, AmountAndDirection6>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RepurchaseAgreementAmount1.mmObject();
 			isDerived = false;
@@ -117,7 +118,17 @@ public class RepurchaseAgreementAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
+			type_lazy = () -> AmountAndDirection6.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection6 getValue(RepurchaseAgreementAmount1 obj) {
+			return obj.getHighlyLiquidDefaultedCounterpartyAmount();
+		}
+
+		@Override
+		public void setValue(RepurchaseAgreementAmount1 obj, AmountAndDirection6 value) {
+			obj.setHighlyLiquidDefaultedCounterpartyAmount(value);
 		}
 	};
 	@XmlElement(name = "NonHghlyLqdDfltdCtrPtyAmt", required = true)
@@ -150,7 +161,7 @@ public class RepurchaseAgreementAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNonHighlyLiquidDefaultedCounterpartyAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RepurchaseAgreementAmount1, AmountAndDirection6> mmNonHighlyLiquidDefaultedCounterpartyAmount = new MMMessageAssociationEnd<RepurchaseAgreementAmount1, AmountAndDirection6>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RepurchaseAgreementAmount1.mmObject();
 			isDerived = false;
@@ -161,7 +172,17 @@ public class RepurchaseAgreementAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
+			type_lazy = () -> AmountAndDirection6.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection6 getValue(RepurchaseAgreementAmount1 obj) {
+			return obj.getNonHighlyLiquidDefaultedCounterpartyAmount();
+		}
+
+		@Override
+		public void setValue(RepurchaseAgreementAmount1 obj, AmountAndDirection6 value) {
+			obj.setNonHighlyLiquidDefaultedCounterpartyAmount(value);
 		}
 	};
 	@XmlElement(name = "HghlyLqdNonDfltdCtrPtyAmt", required = true)
@@ -194,7 +215,7 @@ public class RepurchaseAgreementAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmHighlyLiquidNonDefaultedCounterpartyAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RepurchaseAgreementAmount1, AmountAndDirection6> mmHighlyLiquidNonDefaultedCounterpartyAmount = new MMMessageAssociationEnd<RepurchaseAgreementAmount1, AmountAndDirection6>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RepurchaseAgreementAmount1.mmObject();
 			isDerived = false;
@@ -205,7 +226,17 @@ public class RepurchaseAgreementAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
+			type_lazy = () -> AmountAndDirection6.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection6 getValue(RepurchaseAgreementAmount1 obj) {
+			return obj.getHighlyLiquidNonDefaultedCounterpartyAmount();
+		}
+
+		@Override
+		public void setValue(RepurchaseAgreementAmount1 obj, AmountAndDirection6 value) {
+			obj.setHighlyLiquidNonDefaultedCounterpartyAmount(value);
 		}
 	};
 	@XmlElement(name = "NonHghlyLqdNonDfltdCtrPtyAmt", required = true)
@@ -238,7 +269,7 @@ public class RepurchaseAgreementAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNonHighlyLiquidNonDefaultedCounterpartyAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RepurchaseAgreementAmount1, AmountAndDirection6> mmNonHighlyLiquidNonDefaultedCounterpartyAmount = new MMMessageAssociationEnd<RepurchaseAgreementAmount1, AmountAndDirection6>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RepurchaseAgreementAmount1.mmObject();
 			isDerived = false;
@@ -249,7 +280,17 @@ public class RepurchaseAgreementAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
+			type_lazy = () -> AmountAndDirection6.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection6 getValue(RepurchaseAgreementAmount1 obj) {
+			return obj.getNonHighlyLiquidNonDefaultedCounterpartyAmount();
+		}
+
+		@Override
+		public void setValue(RepurchaseAgreementAmount1 obj, AmountAndDirection6 value) {
+			obj.setNonHighlyLiquidNonDefaultedCounterpartyAmount(value);
 		}
 	};
 
@@ -272,7 +313,7 @@ public class RepurchaseAgreementAmount1 {
 		return highlyLiquidDefaultedCounterpartyAmount;
 	}
 
-	public RepurchaseAgreementAmount1 setHighlyLiquidDefaultedCounterpartyAmount(com.tools20022.repository.msg.AmountAndDirection6 highlyLiquidDefaultedCounterpartyAmount) {
+	public RepurchaseAgreementAmount1 setHighlyLiquidDefaultedCounterpartyAmount(AmountAndDirection6 highlyLiquidDefaultedCounterpartyAmount) {
 		this.highlyLiquidDefaultedCounterpartyAmount = Objects.requireNonNull(highlyLiquidDefaultedCounterpartyAmount);
 		return this;
 	}
@@ -281,7 +322,7 @@ public class RepurchaseAgreementAmount1 {
 		return nonHighlyLiquidDefaultedCounterpartyAmount;
 	}
 
-	public RepurchaseAgreementAmount1 setNonHighlyLiquidDefaultedCounterpartyAmount(com.tools20022.repository.msg.AmountAndDirection6 nonHighlyLiquidDefaultedCounterpartyAmount) {
+	public RepurchaseAgreementAmount1 setNonHighlyLiquidDefaultedCounterpartyAmount(AmountAndDirection6 nonHighlyLiquidDefaultedCounterpartyAmount) {
 		this.nonHighlyLiquidDefaultedCounterpartyAmount = Objects.requireNonNull(nonHighlyLiquidDefaultedCounterpartyAmount);
 		return this;
 	}
@@ -290,7 +331,7 @@ public class RepurchaseAgreementAmount1 {
 		return highlyLiquidNonDefaultedCounterpartyAmount;
 	}
 
-	public RepurchaseAgreementAmount1 setHighlyLiquidNonDefaultedCounterpartyAmount(com.tools20022.repository.msg.AmountAndDirection6 highlyLiquidNonDefaultedCounterpartyAmount) {
+	public RepurchaseAgreementAmount1 setHighlyLiquidNonDefaultedCounterpartyAmount(AmountAndDirection6 highlyLiquidNonDefaultedCounterpartyAmount) {
 		this.highlyLiquidNonDefaultedCounterpartyAmount = Objects.requireNonNull(highlyLiquidNonDefaultedCounterpartyAmount);
 		return this;
 	}
@@ -299,7 +340,7 @@ public class RepurchaseAgreementAmount1 {
 		return nonHighlyLiquidNonDefaultedCounterpartyAmount;
 	}
 
-	public RepurchaseAgreementAmount1 setNonHighlyLiquidNonDefaultedCounterpartyAmount(com.tools20022.repository.msg.AmountAndDirection6 nonHighlyLiquidNonDefaultedCounterpartyAmount) {
+	public RepurchaseAgreementAmount1 setNonHighlyLiquidNonDefaultedCounterpartyAmount(AmountAndDirection6 nonHighlyLiquidNonDefaultedCounterpartyAmount) {
 		this.nonHighlyLiquidNonDefaultedCounterpartyAmount = Objects.requireNonNull(nonHighlyLiquidNonDefaultedCounterpartyAmount);
 		return this;
 	}

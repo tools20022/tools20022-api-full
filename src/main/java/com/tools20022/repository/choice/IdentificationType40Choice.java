@@ -127,7 +127,7 @@ public class IdentificationType40Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IdentificationType40Choice, TypeOfIdentification2Code> mmCode = new MMMessageAttribute<IdentificationType40Choice, TypeOfIdentification2Code>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmTypeOfIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.IdentificationType40Choice.mmObject();
@@ -140,6 +140,16 @@ public class IdentificationType40Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TypeOfIdentification2Code.mmObject();
+		}
+
+		@Override
+		public TypeOfIdentification2Code getValue(IdentificationType40Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(IdentificationType40Choice obj, TypeOfIdentification2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -185,7 +195,7 @@ public class IdentificationType40Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IdentificationType40Choice, GenericIdentification29> mmProprietary = new MMMessageAssociationEnd<IdentificationType40Choice, GenericIdentification29>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmTypeOfIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.IdentificationType40Choice.mmObject();
@@ -199,6 +209,16 @@ public class IdentificationType40Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification29.mmObject();
+		}
+
+		@Override
+		public GenericIdentification29 getValue(IdentificationType40Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(IdentificationType40Choice obj, GenericIdentification29 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.PaymentObligation;
 import com.tools20022.repository.entity.PaymentTerms;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PaymentPeriod1;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -122,7 +123,7 @@ public class PaymentTerms1 {
 	 * definition} = "Specifies payment terms not present in a code list."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherPaymentTerms = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTerms1, Max140Text> mmOtherPaymentTerms = new MMMessageAttribute<PaymentTerms1, Max140Text>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmPaymentTerms;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTerms1.mmObject();
@@ -134,6 +135,16 @@ public class PaymentTerms1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Max140Text getValue(PaymentTerms1 obj) {
+			return obj.getOtherPaymentTerms();
+		}
+
+		@Override
+		public void setValue(PaymentTerms1 obj, Max140Text value) {
+			obj.setOtherPaymentTerms(value);
 		}
 	};
 	@XmlElement(name = "PmtCd", required = true)
@@ -169,7 +180,7 @@ public class PaymentTerms1 {
 	 * "Specifies the payment period in coded form and a number of days."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentTerms1, PaymentPeriod1> mmPaymentCode = new MMMessageAssociationEnd<PaymentTerms1, PaymentPeriod1>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmPaymentTerms;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTerms1.mmObject();
@@ -181,7 +192,17 @@ public class PaymentTerms1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentPeriod1.mmObject();
+			type_lazy = () -> PaymentPeriod1.mmObject();
+		}
+
+		@Override
+		public PaymentPeriod1 getValue(PaymentTerms1 obj) {
+			return obj.getPaymentCode();
+		}
+
+		@Override
+		public void setValue(PaymentTerms1 obj, PaymentPeriod1 value) {
+			obj.setPaymentCode(value);
 		}
 	};
 	@XmlElement(name = "Pctg", required = true)
@@ -220,7 +241,7 @@ public class PaymentTerms1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPercentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTerms1, PercentageRate> mmPercentage = new MMMessageAttribute<PaymentTerms1, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> PaymentTerms.mmPercentage;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTerms1.mmObject();
@@ -232,6 +253,16 @@ public class PaymentTerms1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(PaymentTerms1 obj) {
+			return obj.getPercentage();
+		}
+
+		@Override
+		public void setValue(PaymentTerms1 obj, PercentageRate value) {
+			obj.setPercentage(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -270,7 +301,7 @@ public class PaymentTerms1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTerms1, CurrencyAndAmount> mmAmount = new MMMessageAttribute<PaymentTerms1, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> PaymentTerms.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTerms1.mmObject();
@@ -282,6 +313,16 @@ public class PaymentTerms1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(PaymentTerms1 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(PaymentTerms1 obj, CurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	/**
@@ -403,7 +444,7 @@ public class PaymentTerms1 {
 		return paymentCode;
 	}
 
-	public PaymentTerms1 setPaymentCode(com.tools20022.repository.msg.PaymentPeriod1 paymentCode) {
+	public PaymentTerms1 setPaymentCode(PaymentPeriod1 paymentCode) {
 		this.paymentCode = Objects.requireNonNull(paymentCode);
 		return this;
 	}

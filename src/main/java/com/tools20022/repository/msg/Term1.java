@@ -97,7 +97,7 @@ public class Term1 {
 	 * "Provides the relationship between a variable and a fixed value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOperator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Term1, Operator1Code> mmOperator = new MMMessageAttribute<Term1, Operator1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Term1.mmObject();
 			isDerived = false;
@@ -108,6 +108,16 @@ public class Term1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Operator1Code.mmObject();
+		}
+
+		@Override
+		public Operator1Code getValue(Term1 obj) {
+			return obj.getOperator();
+		}
+
+		@Override
+		public void setValue(Term1 obj, Operator1Code value) {
+			obj.setOperator(value);
 		}
 	};
 	@XmlElement(name = "Val", required = true)
@@ -138,7 +148,7 @@ public class Term1 {
 	 * definition} = "Indicates the value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmValue = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Term1, RateOrAbsoluteValue1Choice> mmValue = new MMMessageAssociationEnd<Term1, RateOrAbsoluteValue1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Term1.mmObject();
 			isDerived = false;
@@ -150,6 +160,16 @@ public class Term1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RateOrAbsoluteValue1Choice.mmObject();
+		}
+
+		@Override
+		public RateOrAbsoluteValue1Choice getValue(Term1 obj) {
+			return obj.getValue();
+		}
+
+		@Override
+		public void setValue(Term1 obj, RateOrAbsoluteValue1Choice value) {
+			obj.setValue(value);
 		}
 	};
 

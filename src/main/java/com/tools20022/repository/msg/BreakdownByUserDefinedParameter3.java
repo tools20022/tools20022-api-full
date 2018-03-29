@@ -25,6 +25,10 @@ import com.tools20022.repository.choice.DataFormat2Choice;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashInForecast5;
+import com.tools20022.repository.msg.CashOutForecast5;
+import com.tools20022.repository.msg.InvestmentAccount42;
+import com.tools20022.repository.msg.NetCashForecast4;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -132,7 +136,7 @@ public class BreakdownByUserDefinedParameter3 {
 	 * BreakdownByUserDefinedParameter1.mmParty}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BreakdownByUserDefinedParameter3, Optional<InvestmentAccount42>> mmParty = new MMMessageAttribute<BreakdownByUserDefinedParameter3, Optional<InvestmentAccount42>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.mmObject();
 			isDerived = false;
@@ -143,7 +147,17 @@ public class BreakdownByUserDefinedParameter3 {
 			previousVersion_lazy = () -> BreakdownByUserDefinedParameter1.mmParty;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.InvestmentAccount42.mmObject();
+			complexType_lazy = () -> InvestmentAccount42.mmObject();
+		}
+
+		@Override
+		public Optional<InvestmentAccount42> getValue(BreakdownByUserDefinedParameter3 obj) {
+			return obj.getParty();
+		}
+
+		@Override
+		public void setValue(BreakdownByUserDefinedParameter3 obj, Optional<InvestmentAccount42> value) {
+			obj.setParty(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ctry")
@@ -180,7 +194,7 @@ public class BreakdownByUserDefinedParameter3 {
 	 * BreakdownByUserDefinedParameter1.mmCountry}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BreakdownByUserDefinedParameter3, Optional<CountryCode>> mmCountry = new MMMessageAttribute<BreakdownByUserDefinedParameter3, Optional<CountryCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.mmObject();
 			isDerived = false;
@@ -192,6 +206,16 @@ public class BreakdownByUserDefinedParameter3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(BreakdownByUserDefinedParameter3 obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(BreakdownByUserDefinedParameter3 obj, Optional<CountryCode> value) {
+			obj.setCountry(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ccy")
@@ -229,7 +253,7 @@ public class BreakdownByUserDefinedParameter3 {
 	 * BreakdownByUserDefinedParameter1.mmCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BreakdownByUserDefinedParameter3, Optional<ActiveOrHistoricCurrencyCode>> mmCurrency = new MMMessageAttribute<BreakdownByUserDefinedParameter3, Optional<ActiveOrHistoricCurrencyCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.mmObject();
 			isDerived = false;
@@ -241,6 +265,16 @@ public class BreakdownByUserDefinedParameter3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyCode> getValue(BreakdownByUserDefinedParameter3 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(BreakdownByUserDefinedParameter3 obj, Optional<ActiveOrHistoricCurrencyCode> value) {
+			obj.setCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UsrDfnd")
@@ -278,7 +312,7 @@ public class BreakdownByUserDefinedParameter3 {
 	 * BreakdownByUserDefinedParameter1.mmUserDefined}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUserDefined = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BreakdownByUserDefinedParameter3, Optional<DataFormat2Choice>> mmUserDefined = new MMMessageAttribute<BreakdownByUserDefinedParameter3, Optional<DataFormat2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.mmObject();
 			isDerived = false;
@@ -291,9 +325,19 @@ public class BreakdownByUserDefinedParameter3 {
 			minOccurs = 0;
 			complexType_lazy = () -> DataFormat2Choice.mmObject();
 		}
+
+		@Override
+		public Optional<DataFormat2Choice> getValue(BreakdownByUserDefinedParameter3 obj) {
+			return obj.getUserDefined();
+		}
+
+		@Override
+		public void setValue(BreakdownByUserDefinedParameter3 obj, Optional<DataFormat2Choice> value) {
+			obj.setUserDefined(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "CshInFcst")
-	protected List<com.tools20022.repository.msg.CashInForecast5> cashInForecast;
+	protected List<CashInForecast5> cashInForecast;
 	/**
 	 * 
 	 <p>
@@ -327,7 +371,7 @@ public class BreakdownByUserDefinedParameter3 {
 	 * BreakdownByUserDefinedParameter1.mmCashInForecast}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashInForecast = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BreakdownByUserDefinedParameter3, List<CashInForecast5>> mmCashInForecast = new MMMessageAssociationEnd<BreakdownByUserDefinedParameter3, List<CashInForecast5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.mmObject();
 			isDerived = false;
@@ -338,11 +382,21 @@ public class BreakdownByUserDefinedParameter3 {
 			previousVersion_lazy = () -> BreakdownByUserDefinedParameter1.mmCashInForecast;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashInForecast5.mmObject();
+			type_lazy = () -> CashInForecast5.mmObject();
+		}
+
+		@Override
+		public List<CashInForecast5> getValue(BreakdownByUserDefinedParameter3 obj) {
+			return obj.getCashInForecast();
+		}
+
+		@Override
+		public void setValue(BreakdownByUserDefinedParameter3 obj, List<CashInForecast5> value) {
+			obj.setCashInForecast(value);
 		}
 	};
 	@XmlElement(name = "CshOutFcst")
-	protected List<com.tools20022.repository.msg.CashOutForecast5> cashOutForecast;
+	protected List<CashOutForecast5> cashOutForecast;
 	/**
 	 * 
 	 <p>
@@ -376,7 +430,7 @@ public class BreakdownByUserDefinedParameter3 {
 	 * BreakdownByUserDefinedParameter1.mmCashOutForecast}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashOutForecast = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BreakdownByUserDefinedParameter3, List<CashOutForecast5>> mmCashOutForecast = new MMMessageAssociationEnd<BreakdownByUserDefinedParameter3, List<CashOutForecast5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.mmObject();
 			isDerived = false;
@@ -387,11 +441,21 @@ public class BreakdownByUserDefinedParameter3 {
 			previousVersion_lazy = () -> BreakdownByUserDefinedParameter1.mmCashOutForecast;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashOutForecast5.mmObject();
+			type_lazy = () -> CashOutForecast5.mmObject();
+		}
+
+		@Override
+		public List<CashOutForecast5> getValue(BreakdownByUserDefinedParameter3 obj) {
+			return obj.getCashOutForecast();
+		}
+
+		@Override
+		public void setValue(BreakdownByUserDefinedParameter3 obj, List<CashOutForecast5> value) {
+			obj.setCashOutForecast(value);
 		}
 	};
 	@XmlElement(name = "NetCshFcst")
-	protected List<com.tools20022.repository.msg.NetCashForecast4> netCashForecast;
+	protected List<NetCashForecast4> netCashForecast;
 	/**
 	 * 
 	 <p>
@@ -425,7 +489,7 @@ public class BreakdownByUserDefinedParameter3 {
 	 * BreakdownByUserDefinedParameter1.mmNetCashForecast}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNetCashForecast = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BreakdownByUserDefinedParameter3, List<NetCashForecast4>> mmNetCashForecast = new MMMessageAssociationEnd<BreakdownByUserDefinedParameter3, List<NetCashForecast4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter3.mmObject();
 			isDerived = false;
@@ -436,7 +500,17 @@ public class BreakdownByUserDefinedParameter3 {
 			previousVersion_lazy = () -> BreakdownByUserDefinedParameter1.mmNetCashForecast;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NetCashForecast4.mmObject();
+			type_lazy = () -> NetCashForecast4.mmObject();
+		}
+
+		@Override
+		public List<NetCashForecast4> getValue(BreakdownByUserDefinedParameter3 obj) {
+			return obj.getNetCashForecast();
+		}
+
+		@Override
+		public void setValue(BreakdownByUserDefinedParameter3 obj, List<NetCashForecast4> value) {
+			obj.setNetCashForecast(value);
 		}
 	};
 
@@ -462,7 +536,7 @@ public class BreakdownByUserDefinedParameter3 {
 		return party == null ? Optional.empty() : Optional.of(party);
 	}
 
-	public BreakdownByUserDefinedParameter3 setParty(com.tools20022.repository.msg.InvestmentAccount42 party) {
+	public BreakdownByUserDefinedParameter3 setParty(InvestmentAccount42 party) {
 		this.party = party;
 		return this;
 	}
@@ -498,7 +572,7 @@ public class BreakdownByUserDefinedParameter3 {
 		return cashInForecast == null ? cashInForecast = new ArrayList<>() : cashInForecast;
 	}
 
-	public BreakdownByUserDefinedParameter3 setCashInForecast(List<com.tools20022.repository.msg.CashInForecast5> cashInForecast) {
+	public BreakdownByUserDefinedParameter3 setCashInForecast(List<CashInForecast5> cashInForecast) {
 		this.cashInForecast = Objects.requireNonNull(cashInForecast);
 		return this;
 	}
@@ -507,7 +581,7 @@ public class BreakdownByUserDefinedParameter3 {
 		return cashOutForecast == null ? cashOutForecast = new ArrayList<>() : cashOutForecast;
 	}
 
-	public BreakdownByUserDefinedParameter3 setCashOutForecast(List<com.tools20022.repository.msg.CashOutForecast5> cashOutForecast) {
+	public BreakdownByUserDefinedParameter3 setCashOutForecast(List<CashOutForecast5> cashOutForecast) {
 		this.cashOutForecast = Objects.requireNonNull(cashOutForecast);
 		return this;
 	}
@@ -516,7 +590,7 @@ public class BreakdownByUserDefinedParameter3 {
 		return netCashForecast == null ? netCashForecast = new ArrayList<>() : netCashForecast;
 	}
 
-	public BreakdownByUserDefinedParameter3 setNetCashForecast(List<com.tools20022.repository.msg.NetCashForecast4> netCashForecast) {
+	public BreakdownByUserDefinedParameter3 setNetCashForecast(List<NetCashForecast4> netCashForecast) {
 		this.netCashForecast = Objects.requireNonNull(netCashForecast);
 		return this;
 	}

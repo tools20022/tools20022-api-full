@@ -125,7 +125,7 @@ public class BuyIn3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBuyInNotificationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BuyIn3, Max35Text> mmBuyInNotificationIdentification = new MMMessageAttribute<BuyIn3, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BuyIn3.mmObject();
 			isDerived = false;
@@ -136,6 +136,16 @@ public class BuyIn3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(BuyIn3 obj) {
+			return obj.getBuyInNotificationIdentification();
+		}
+
+		@Override
+		public void setValue(BuyIn3 obj, Max35Text value) {
+			obj.setBuyInNotificationIdentification(value);
 		}
 	};
 	@XmlElement(name = "ReqForDelyInd", required = true)
@@ -169,7 +179,7 @@ public class BuyIn3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestForDelayIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BuyIn3, YesNoIndicator> mmRequestForDelayIndicator = new MMMessageAttribute<BuyIn3, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BuyIn3.mmObject();
 			isDerived = false;
@@ -180,6 +190,16 @@ public class BuyIn3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(BuyIn3 obj) {
+			return obj.getRequestForDelayIndicator();
+		}
+
+		@Override
+		public void setValue(BuyIn3 obj, YesNoIndicator value) {
+			obj.setRequestForDelayIndicator(value);
 		}
 	};
 	@XmlElement(name = "NbOfDays", required = true)
@@ -210,7 +230,7 @@ public class BuyIn3 {
 	 * definition} = "Number of days associated to the request for delay."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfDays = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BuyIn3, Number> mmNumberOfDays = new MMMessageAttribute<BuyIn3, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BuyIn3.mmObject();
 			isDerived = false;
@@ -221,6 +241,16 @@ public class BuyIn3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(BuyIn3 obj) {
+			return obj.getNumberOfDays();
+		}
+
+		@Override
+		public void setValue(BuyIn3 obj, Number value) {
+			obj.setNumberOfDays(value);
 		}
 	};
 	@XmlElement(name = "InitlQty", required = true)
@@ -257,7 +287,7 @@ public class BuyIn3 {
 	 * "Buy in quantity called initially by the central counterparty."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInitialQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BuyIn3, FinancialInstrumentQuantity1Choice> mmInitialQuantity = new MMMessageAssociationEnd<BuyIn3, FinancialInstrumentQuantity1Choice>() {
 		{
 			businessElementTrace_lazy = () -> BuyIn.mmSecuritiesCompensation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BuyIn3.mmObject();
@@ -270,6 +300,16 @@ public class BuyIn3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity1Choice getValue(BuyIn3 obj) {
+			return obj.getInitialQuantity();
+		}
+
+		@Override
+		public void setValue(BuyIn3 obj, FinancialInstrumentQuantity1Choice value) {
+			obj.setInitialQuantity(value);
 		}
 	};
 	@XmlElement(name = "CvrdQty", required = true)
@@ -306,7 +346,7 @@ public class BuyIn3 {
 	 * "Quantity amount covered by the clearing member after notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCoveredQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BuyIn3, FinancialInstrumentQuantity1Choice> mmCoveredQuantity = new MMMessageAssociationEnd<BuyIn3, FinancialInstrumentQuantity1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferredQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BuyIn3.mmObject();
@@ -319,6 +359,16 @@ public class BuyIn3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity1Choice getValue(BuyIn3 obj) {
+			return obj.getCoveredQuantity();
+		}
+
+		@Override
+		public void setValue(BuyIn3 obj, FinancialInstrumentQuantity1Choice value) {
+			obj.setCoveredQuantity(value);
 		}
 	};
 	@XmlElement(name = "UcvrdQty", required = true)
@@ -356,7 +406,7 @@ public class BuyIn3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUncoveredQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BuyIn3, FinancialInstrumentQuantity1Choice> mmUncoveredQuantity = new MMMessageAssociationEnd<BuyIn3, FinancialInstrumentQuantity1Choice>() {
 		{
 			businessElementTrace_lazy = () -> BuyIn.mmSecuritiesCompensation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BuyIn3.mmObject();
@@ -369,6 +419,16 @@ public class BuyIn3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity1Choice getValue(BuyIn3 obj) {
+			return obj.getUncoveredQuantity();
+		}
+
+		@Override
+		public void setValue(BuyIn3 obj, FinancialInstrumentQuantity1Choice value) {
+			obj.setUncoveredQuantity(value);
 		}
 	};
 

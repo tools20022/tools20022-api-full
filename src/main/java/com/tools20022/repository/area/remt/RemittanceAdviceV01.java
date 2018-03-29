@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.GroupHeader62;
 import com.tools20022.repository.msg.RemittanceInformation8;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -130,7 +129,7 @@ public class RemittanceAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RemittanceAdviceV01, GroupHeader62> mmGroupHeader = new MMMessageBuildingBlock<RemittanceAdviceV01, GroupHeader62>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -142,12 +141,14 @@ public class RemittanceAdviceV01 {
 			complexType_lazy = () -> GroupHeader62.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RemittanceAdviceV01.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader62 getValue(RemittanceAdviceV01 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(RemittanceAdviceV01 obj, GroupHeader62 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "RmtInf", required = true)
@@ -185,7 +186,7 @@ public class RemittanceAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRemittanceInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RemittanceAdviceV01, List<RemittanceInformation8>> mmRemittanceInformation = new MMMessageBuildingBlock<RemittanceAdviceV01, List<RemittanceInformation8>>() {
 		{
 			xmlTag = "RmtInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -196,12 +197,14 @@ public class RemittanceAdviceV01 {
 			complexType_lazy = () -> RemittanceInformation8.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RemittanceAdviceV01.class.getMethod("getRemittanceInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<RemittanceInformation8> getValue(RemittanceAdviceV01 obj) {
+			return obj.getRemittanceInformation();
+		}
+
+		@Override
+		public void setValue(RemittanceAdviceV01 obj, List<RemittanceInformation8> value) {
+			obj.setRemittanceInformation(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -239,7 +242,7 @@ public class RemittanceAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RemittanceAdviceV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<RemittanceAdviceV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -250,12 +253,14 @@ public class RemittanceAdviceV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RemittanceAdviceV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(RemittanceAdviceV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(RemittanceAdviceV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

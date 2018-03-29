@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.*;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
 import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
 import com.tools20022.repository.entity.Status;
@@ -143,7 +144,7 @@ public class TransferStatus2Choice {
 	 * TransferStatus1Choice.mmStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferStatus2Choice, TransferInstructionStatus4> mmStatus = new MMMessageAssociationEnd<TransferStatus2Choice, TransferInstructionStatus4>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransferStatus2Choice.mmObject();
@@ -157,6 +158,16 @@ public class TransferStatus2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TransferInstructionStatus4.mmObject();
+		}
+
+		@Override
+		public TransferInstructionStatus4 getValue(TransferStatus2Choice obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(TransferStatus2Choice obj, TransferInstructionStatus4 value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "PdgSttlm", required = true)
@@ -198,7 +209,7 @@ public class TransferStatus2Choice {
 	 * TransferStatus1Choice.mmPendingSettlement}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPendingSettlement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferStatus2Choice, PendingSettlementStatus3Choice> mmPendingSettlement = new MMMessageAssociationEnd<TransferStatus2Choice, PendingSettlementStatus3Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmPendingSettlementReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransferStatus2Choice.mmObject();
@@ -211,7 +222,17 @@ public class TransferStatus2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.PendingSettlementStatus3Choice.mmObject();
+			type_lazy = () -> PendingSettlementStatus3Choice.mmObject();
+		}
+
+		@Override
+		public PendingSettlementStatus3Choice getValue(TransferStatus2Choice obj) {
+			return obj.getPendingSettlement();
+		}
+
+		@Override
+		public void setValue(TransferStatus2Choice obj, PendingSettlementStatus3Choice value) {
+			obj.setPendingSettlement(value);
 		}
 	};
 	@XmlElement(name = "Umtchd", required = true)
@@ -253,7 +274,7 @@ public class TransferStatus2Choice {
 	 * TransferStatus1Choice.mmUnmatched}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnmatched = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferStatus2Choice, TransferUnmatchedStatus3Choice> mmUnmatched = new MMMessageAssociationEnd<TransferStatus2Choice, TransferUnmatchedStatus3Choice>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransferStatus2Choice.mmObject();
@@ -266,7 +287,17 @@ public class TransferStatus2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.TransferUnmatchedStatus3Choice.mmObject();
+			type_lazy = () -> TransferUnmatchedStatus3Choice.mmObject();
+		}
+
+		@Override
+		public TransferUnmatchedStatus3Choice getValue(TransferStatus2Choice obj) {
+			return obj.getUnmatched();
+		}
+
+		@Override
+		public void setValue(TransferStatus2Choice obj, TransferUnmatchedStatus3Choice value) {
+			obj.setUnmatched(value);
 		}
 	};
 	@XmlElement(name = "InRpr", required = true)
@@ -308,7 +339,7 @@ public class TransferStatus2Choice {
 	 * TransferStatus1Choice.mmInRepair}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInRepair = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferStatus2Choice, InRepairStatus4Choice> mmInRepair = new MMMessageAssociationEnd<TransferStatus2Choice, InRepairStatus4Choice>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransferStatus2Choice.mmObject();
@@ -321,7 +352,17 @@ public class TransferStatus2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.InRepairStatus4Choice.mmObject();
+			type_lazy = () -> InRepairStatus4Choice.mmObject();
+		}
+
+		@Override
+		public InRepairStatus4Choice getValue(TransferStatus2Choice obj) {
+			return obj.getInRepair();
+		}
+
+		@Override
+		public void setValue(TransferStatus2Choice obj, InRepairStatus4Choice value) {
+			obj.setInRepair(value);
 		}
 	};
 	@XmlElement(name = "Rjctd", required = true)
@@ -362,7 +403,7 @@ public class TransferStatus2Choice {
 	 * TransferStatus1Choice.mmRejected}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferStatus2Choice, List<RejectionReason32>> mmRejected = new MMMessageAssociationEnd<TransferStatus2Choice, List<RejectionReason32>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransferStatus2Choice.mmObject();
@@ -376,6 +417,16 @@ public class TransferStatus2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RejectionReason32.mmObject();
+		}
+
+		@Override
+		public List<RejectionReason32> getValue(TransferStatus2Choice obj) {
+			return obj.getRejected();
+		}
+
+		@Override
+		public void setValue(TransferStatus2Choice obj, List<RejectionReason32> value) {
+			obj.setRejected(value);
 		}
 	};
 	@XmlElement(name = "FaildSttlm", required = true)
@@ -419,7 +470,7 @@ public class TransferStatus2Choice {
 	 * TransferStatus1Choice.mmFailedSettlement}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFailedSettlement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferStatus2Choice, FailedSettlementStatus2Choice> mmFailedSettlement = new MMMessageAssociationEnd<TransferStatus2Choice, FailedSettlementStatus2Choice>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransferStatus2Choice.mmObject();
@@ -432,7 +483,17 @@ public class TransferStatus2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.FailedSettlementStatus2Choice.mmObject();
+			type_lazy = () -> FailedSettlementStatus2Choice.mmObject();
+		}
+
+		@Override
+		public FailedSettlementStatus2Choice getValue(TransferStatus2Choice obj) {
+			return obj.getFailedSettlement();
+		}
+
+		@Override
+		public void setValue(TransferStatus2Choice obj, FailedSettlementStatus2Choice value) {
+			obj.setFailedSettlement(value);
 		}
 	};
 	@XmlElement(name = "Canc", required = true)
@@ -474,7 +535,7 @@ public class TransferStatus2Choice {
 	 * TransferStatus1Choice.mmCancelled}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCancelled = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferStatus2Choice, CancelledStatus13Choice> mmCancelled = new MMMessageAssociationEnd<TransferStatus2Choice, CancelledStatus13Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransferStatus2Choice.mmObject();
@@ -487,7 +548,17 @@ public class TransferStatus2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.CancelledStatus13Choice.mmObject();
+			type_lazy = () -> CancelledStatus13Choice.mmObject();
+		}
+
+		@Override
+		public CancelledStatus13Choice getValue(TransferStatus2Choice obj) {
+			return obj.getCancelled();
+		}
+
+		@Override
+		public void setValue(TransferStatus2Choice obj, CancelledStatus13Choice value) {
+			obj.setCancelled(value);
 		}
 	};
 	@XmlElement(name = "Rvsd", required = true)
@@ -529,7 +600,7 @@ public class TransferStatus2Choice {
 	 * TransferStatus1Choice.mmReversed}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReversed = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferStatus2Choice, ReversedStatus2Choice> mmReversed = new MMMessageAssociationEnd<TransferStatus2Choice, ReversedStatus2Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransferStatus2Choice.mmObject();
@@ -542,7 +613,17 @@ public class TransferStatus2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.ReversedStatus2Choice.mmObject();
+			type_lazy = () -> ReversedStatus2Choice.mmObject();
+		}
+
+		@Override
+		public ReversedStatus2Choice getValue(TransferStatus2Choice obj) {
+			return obj.getReversed();
+		}
+
+		@Override
+		public void setValue(TransferStatus2Choice obj, ReversedStatus2Choice value) {
+			obj.setReversed(value);
 		}
 	};
 	@XmlElement(name = "CxlPdg", required = true)
@@ -584,7 +665,7 @@ public class TransferStatus2Choice {
 	 * TransferStatus1Choice.mmCancellationPending}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCancellationPending = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferStatus2Choice, CancellationPendingStatus7Choice> mmCancellationPending = new MMMessageAssociationEnd<TransferStatus2Choice, CancellationPendingStatus7Choice>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransferStatus2Choice.mmObject();
@@ -597,7 +678,17 @@ public class TransferStatus2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.CancellationPendingStatus7Choice.mmObject();
+			type_lazy = () -> CancellationPendingStatus7Choice.mmObject();
+		}
+
+		@Override
+		public CancellationPendingStatus7Choice getValue(TransferStatus2Choice obj) {
+			return obj.getCancellationPending();
+		}
+
+		@Override
+		public void setValue(TransferStatus2Choice obj, CancellationPendingStatus7Choice value) {
+			obj.setCancellationPending(value);
 		}
 	};
 
@@ -632,7 +723,7 @@ public class TransferStatus2Choice {
 		return pendingSettlement;
 	}
 
-	public TransferStatus2Choice setPendingSettlement(com.tools20022.repository.choice.PendingSettlementStatus3Choice pendingSettlement) {
+	public TransferStatus2Choice setPendingSettlement(PendingSettlementStatus3Choice pendingSettlement) {
 		this.pendingSettlement = Objects.requireNonNull(pendingSettlement);
 		return this;
 	}
@@ -641,7 +732,7 @@ public class TransferStatus2Choice {
 		return unmatched;
 	}
 
-	public TransferStatus2Choice setUnmatched(com.tools20022.repository.choice.TransferUnmatchedStatus3Choice unmatched) {
+	public TransferStatus2Choice setUnmatched(TransferUnmatchedStatus3Choice unmatched) {
 		this.unmatched = Objects.requireNonNull(unmatched);
 		return this;
 	}
@@ -650,7 +741,7 @@ public class TransferStatus2Choice {
 		return inRepair;
 	}
 
-	public TransferStatus2Choice setInRepair(com.tools20022.repository.choice.InRepairStatus4Choice inRepair) {
+	public TransferStatus2Choice setInRepair(InRepairStatus4Choice inRepair) {
 		this.inRepair = Objects.requireNonNull(inRepair);
 		return this;
 	}
@@ -668,7 +759,7 @@ public class TransferStatus2Choice {
 		return failedSettlement;
 	}
 
-	public TransferStatus2Choice setFailedSettlement(com.tools20022.repository.choice.FailedSettlementStatus2Choice failedSettlement) {
+	public TransferStatus2Choice setFailedSettlement(FailedSettlementStatus2Choice failedSettlement) {
 		this.failedSettlement = Objects.requireNonNull(failedSettlement);
 		return this;
 	}
@@ -677,7 +768,7 @@ public class TransferStatus2Choice {
 		return cancelled;
 	}
 
-	public TransferStatus2Choice setCancelled(com.tools20022.repository.choice.CancelledStatus13Choice cancelled) {
+	public TransferStatus2Choice setCancelled(CancelledStatus13Choice cancelled) {
 		this.cancelled = Objects.requireNonNull(cancelled);
 		return this;
 	}
@@ -686,7 +777,7 @@ public class TransferStatus2Choice {
 		return reversed;
 	}
 
-	public TransferStatus2Choice setReversed(com.tools20022.repository.choice.ReversedStatus2Choice reversed) {
+	public TransferStatus2Choice setReversed(ReversedStatus2Choice reversed) {
 		this.reversed = Objects.requireNonNull(reversed);
 		return this;
 	}
@@ -695,7 +786,7 @@ public class TransferStatus2Choice {
 		return cancellationPending;
 	}
 
-	public TransferStatus2Choice setCancellationPending(com.tools20022.repository.choice.CancellationPendingStatus7Choice cancellationPending) {
+	public TransferStatus2Choice setCancellationPending(CancellationPendingStatus7Choice cancellationPending) {
 		this.cancellationPending = Objects.requireNonNull(cancellationPending);
 		return this;
 	}

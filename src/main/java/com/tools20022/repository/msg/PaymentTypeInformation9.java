@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SequenceType1Code;
 import com.tools20022.repository.entity.PaymentProcessing;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ServiceLevel4;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -115,7 +116,7 @@ public class PaymentTypeInformation9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmServiceLevel = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentTypeInformation9, ServiceLevel4> mmServiceLevel = new MMMessageAssociationEnd<PaymentTypeInformation9, ServiceLevel4>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmServiceLevel;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation9.mmObject();
@@ -127,7 +128,17 @@ public class PaymentTypeInformation9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ServiceLevel4.mmObject();
+			type_lazy = () -> ServiceLevel4.mmObject();
+		}
+
+		@Override
+		public ServiceLevel4 getValue(PaymentTypeInformation9 obj) {
+			return obj.getServiceLevel();
+		}
+
+		@Override
+		public void setValue(PaymentTypeInformation9 obj, ServiceLevel4 value) {
+			obj.setServiceLevel(value);
 		}
 	};
 	@XmlElement(name = "SeqTp")
@@ -167,7 +178,7 @@ public class PaymentTypeInformation9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSequenceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTypeInformation9, Optional<SequenceType1Code>> mmSequenceType = new MMMessageAttribute<PaymentTypeInformation9, Optional<SequenceType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmSequenceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation9.mmObject();
@@ -179,6 +190,16 @@ public class PaymentTypeInformation9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> SequenceType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<SequenceType1Code> getValue(PaymentTypeInformation9 obj) {
+			return obj.getSequenceType();
+		}
+
+		@Override
+		public void setValue(PaymentTypeInformation9 obj, Optional<SequenceType1Code> value) {
+			obj.setSequenceType(value.orElse(null));
 		}
 	};
 
@@ -207,7 +228,7 @@ public class PaymentTypeInformation9 {
 		return serviceLevel;
 	}
 
-	public PaymentTypeInformation9 setServiceLevel(com.tools20022.repository.msg.ServiceLevel4 serviceLevel) {
+	public PaymentTypeInformation9 setServiceLevel(ServiceLevel4 serviceLevel) {
 		this.serviceLevel = Objects.requireNonNull(serviceLevel);
 		return this;
 	}

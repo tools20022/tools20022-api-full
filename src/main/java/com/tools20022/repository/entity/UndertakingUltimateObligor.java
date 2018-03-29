@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.entity.UndertakingPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Undertaking1;
@@ -134,23 +135,33 @@ public class UndertakingUltimateObligor extends UndertakingPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Accounts nominated by the obligor for the settlement of the amount claimed, or for the settlement of charges or to record the liability amount related to the undertaking."
+	 * "Accounts nominated by the obligor for the settlement of the amount claimed, or for the settlement of charges or to record the liability amount related to the undertaking. "
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCashAccount = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<UndertakingUltimateObligor, Optional<CashAccount>> mmCashAccount = new MMBusinessAssociationEnd<UndertakingUltimateObligor, Optional<CashAccount>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Undertaking1.mmObligorLiabilityAccount, Undertaking1.mmObligorChargeAccount, Undertaking1.mmObligorSettlementAccount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingUltimateObligor.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashAccount";
-			definition = "Accounts nominated by the obligor for the settlement of the amount claimed, or for the settlement of charges or to record the liability amount related to the undertaking.";
+			definition = "Accounts nominated by the obligor for the settlement of the amount claimed, or for the settlement of charges or to record the liability amount related to the undertaking. ";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CashAccount.mmUltimateObligor;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount> getValue(UndertakingUltimateObligor obj) {
+			return obj.getCashAccount();
+		}
+
+		@Override
+		public void setValue(UndertakingUltimateObligor obj, Optional<CashAccount> value) {
+			obj.setCashAccount(value.orElse(null));
 		}
 	};
 

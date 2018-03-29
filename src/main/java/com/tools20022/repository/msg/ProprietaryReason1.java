@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max210Text;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification20;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -133,7 +134,7 @@ public class ProprietaryReason1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryReason1, Optional<GenericIdentification20>> mmReason = new MMMessageAttribute<ProprietaryReason1, Optional<GenericIdentification20>>() {
 		{
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryReason1.mmObject();
@@ -146,7 +147,17 @@ public class ProprietaryReason1 {
 			nextVersions_lazy = () -> Arrays.asList(ProprietaryReason4.mmReason);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification20.mmObject();
+			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification20> getValue(ProprietaryReason1 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(ProprietaryReason1 obj, Optional<GenericIdentification20> value) {
+			obj.setReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -195,7 +206,7 @@ public class ProprietaryReason1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryReason1, Optional<Max210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<ProprietaryReason1, Optional<Max210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryReason1.mmObject();
@@ -209,6 +220,16 @@ public class ProprietaryReason1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max210Text> getValue(ProprietaryReason1 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(ProprietaryReason1 obj, Optional<Max210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 
@@ -232,7 +253,7 @@ public class ProprietaryReason1 {
 		return reason == null ? Optional.empty() : Optional.of(reason);
 	}
 
-	public ProprietaryReason1 setReason(com.tools20022.repository.msg.GenericIdentification20 reason) {
+	public ProprietaryReason1 setReason(GenericIdentification20 reason) {
 		this.reason = reason;
 		return this;
 	}

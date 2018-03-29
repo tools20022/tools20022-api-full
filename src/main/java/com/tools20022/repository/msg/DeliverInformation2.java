@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.entity.SecuritiesTransfer;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Charge4;
+import com.tools20022.repository.msg.DeliveringPartiesAndAccount1;
+import com.tools20022.repository.msg.DeliveryParameters2;
+import com.tools20022.repository.msg.Tax3;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -112,7 +116,7 @@ public class DeliverInformation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "ChrgDtls")
-	protected List<com.tools20022.repository.msg.Charge4> chargeDetails;
+	protected List<Charge4> chargeDetails;
 	/**
 	 * 
 	 <p>
@@ -144,7 +148,7 @@ public class DeliverInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmChargeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DeliverInformation2, List<Charge4>> mmChargeDetails = new MMMessageAssociationEnd<DeliverInformation2, List<Charge4>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmFees;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeliverInformation2.mmObject();
@@ -155,11 +159,21 @@ public class DeliverInformation2 {
 			definition = "Charge related to the transfer of a financial instrument.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Charge4.mmObject();
+			type_lazy = () -> Charge4.mmObject();
+		}
+
+		@Override
+		public List<Charge4> getValue(DeliverInformation2 obj) {
+			return obj.getChargeDetails();
+		}
+
+		@Override
+		public void setValue(DeliverInformation2 obj, List<Charge4> value) {
+			obj.setChargeDetails(value);
 		}
 	};
 	@XmlElement(name = "TaxDtls")
-	protected List<com.tools20022.repository.msg.Tax3> taxDetails;
+	protected List<Tax3> taxDetails;
 	/**
 	 * 
 	 <p>
@@ -190,7 +204,7 @@ public class DeliverInformation2 {
 	 * definition} = "Tax related to the transfer of a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTaxDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DeliverInformation2, List<Tax3>> mmTaxDetails = new MMMessageAssociationEnd<DeliverInformation2, List<Tax3>>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundTax.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeliverInformation2.mmObject();
@@ -201,7 +215,17 @@ public class DeliverInformation2 {
 			definition = "Tax related to the transfer of a financial instrument.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Tax3.mmObject();
+			type_lazy = () -> Tax3.mmObject();
+		}
+
+		@Override
+		public List<Tax3> getValue(DeliverInformation2 obj) {
+			return obj.getTaxDetails();
+		}
+
+		@Override
+		public void setValue(DeliverInformation2 obj, List<Tax3> value) {
+			obj.setTaxDetails(value);
 		}
 	};
 	@XmlElement(name = "SttlmPtiesDtls", required = true)
@@ -239,7 +263,7 @@ public class DeliverInformation2 {
 	 * "Chain of parties involved in the settlement of a transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementPartiesDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DeliverInformation2, DeliveringPartiesAndAccount1> mmSettlementPartiesDetails = new MMMessageAssociationEnd<DeliverInformation2, DeliveringPartiesAndAccount1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeliverInformation2.mmObject();
@@ -251,7 +275,17 @@ public class DeliverInformation2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DeliveringPartiesAndAccount1.mmObject();
+			type_lazy = () -> DeliveringPartiesAndAccount1.mmObject();
+		}
+
+		@Override
+		public DeliveringPartiesAndAccount1 getValue(DeliverInformation2 obj) {
+			return obj.getSettlementPartiesDetails();
+		}
+
+		@Override
+		public void setValue(DeliverInformation2 obj, DeliveringPartiesAndAccount1 value) {
+			obj.setSettlementPartiesDetails(value);
 		}
 	};
 	@XmlElement(name = "PhysTrfInd", required = true)
@@ -291,7 +325,7 @@ public class DeliverInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPhysicalTransferIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DeliverInformation2, YesNoIndicator> mmPhysicalTransferIndicator = new MMMessageAttribute<DeliverInformation2, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmPhysicalDelivery;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeliverInformation2.mmObject();
@@ -303,6 +337,16 @@ public class DeliverInformation2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(DeliverInformation2 obj) {
+			return obj.getPhysicalTransferIndicator();
+		}
+
+		@Override
+		public void setValue(DeliverInformation2 obj, YesNoIndicator value) {
+			obj.setPhysicalTransferIndicator(value);
 		}
 	};
 	@XmlElement(name = "PhysTrfDtls")
@@ -338,7 +382,7 @@ public class DeliverInformation2 {
 	 * definition} = "Parameters of a physical delivery."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPhysicalTransferDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DeliverInformation2, Optional<DeliveryParameters2>> mmPhysicalTransferDetails = new MMMessageAssociationEnd<DeliverInformation2, Optional<DeliveryParameters2>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmPhysicalDelivery;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeliverInformation2.mmObject();
@@ -350,7 +394,17 @@ public class DeliverInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DeliveryParameters2.mmObject();
+			type_lazy = () -> DeliveryParameters2.mmObject();
+		}
+
+		@Override
+		public Optional<DeliveryParameters2> getValue(DeliverInformation2 obj) {
+			return obj.getPhysicalTransferDetails();
+		}
+
+		@Override
+		public void setValue(DeliverInformation2 obj, Optional<DeliveryParameters2> value) {
+			obj.setPhysicalTransferDetails(value.orElse(null));
 		}
 	};
 
@@ -377,7 +431,7 @@ public class DeliverInformation2 {
 		return chargeDetails == null ? chargeDetails = new ArrayList<>() : chargeDetails;
 	}
 
-	public DeliverInformation2 setChargeDetails(List<com.tools20022.repository.msg.Charge4> chargeDetails) {
+	public DeliverInformation2 setChargeDetails(List<Charge4> chargeDetails) {
 		this.chargeDetails = Objects.requireNonNull(chargeDetails);
 		return this;
 	}
@@ -386,7 +440,7 @@ public class DeliverInformation2 {
 		return taxDetails == null ? taxDetails = new ArrayList<>() : taxDetails;
 	}
 
-	public DeliverInformation2 setTaxDetails(List<com.tools20022.repository.msg.Tax3> taxDetails) {
+	public DeliverInformation2 setTaxDetails(List<Tax3> taxDetails) {
 		this.taxDetails = Objects.requireNonNull(taxDetails);
 		return this;
 	}
@@ -395,7 +449,7 @@ public class DeliverInformation2 {
 		return settlementPartiesDetails;
 	}
 
-	public DeliverInformation2 setSettlementPartiesDetails(com.tools20022.repository.msg.DeliveringPartiesAndAccount1 settlementPartiesDetails) {
+	public DeliverInformation2 setSettlementPartiesDetails(DeliveringPartiesAndAccount1 settlementPartiesDetails) {
 		this.settlementPartiesDetails = Objects.requireNonNull(settlementPartiesDetails);
 		return this;
 	}
@@ -413,7 +467,7 @@ public class DeliverInformation2 {
 		return physicalTransferDetails == null ? Optional.empty() : Optional.of(physicalTransferDetails);
 	}
 
-	public DeliverInformation2 setPhysicalTransferDetails(com.tools20022.repository.msg.DeliveryParameters2 physicalTransferDetails) {
+	public DeliverInformation2 setPhysicalTransferDetails(DeliveryParameters2 physicalTransferDetails) {
 		this.physicalTransferDetails = physicalTransferDetails;
 		return this;
 	}

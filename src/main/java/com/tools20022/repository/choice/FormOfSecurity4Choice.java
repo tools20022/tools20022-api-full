@@ -110,7 +110,7 @@ public class FormOfSecurity4Choice {
 	 * definition} = "Form of the security expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FormOfSecurity4Choice, FormOfSecurity1Code> mmCode = new MMMessageAttribute<FormOfSecurity4Choice, FormOfSecurity1Code>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmRegistrationForm;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FormOfSecurity4Choice.mmObject();
@@ -123,6 +123,16 @@ public class FormOfSecurity4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FormOfSecurity1Code.mmObject();
+		}
+
+		@Override
+		public FormOfSecurity1Code getValue(FormOfSecurity4Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(FormOfSecurity4Choice obj, FormOfSecurity1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -163,7 +173,7 @@ public class FormOfSecurity4Choice {
 	 * definition} = "Form of the security expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FormOfSecurity4Choice, GenericIdentification38> mmProprietary = new MMMessageAttribute<FormOfSecurity4Choice, GenericIdentification38>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmRegistrationForm;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FormOfSecurity4Choice.mmObject();
@@ -176,6 +186,16 @@ public class FormOfSecurity4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification38.mmObject();
+		}
+
+		@Override
+		public GenericIdentification38 getValue(FormOfSecurity4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(FormOfSecurity4Choice obj, GenericIdentification38 value) {
+			obj.setProprietary(value);
 		}
 	};
 

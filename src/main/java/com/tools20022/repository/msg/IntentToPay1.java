@@ -25,6 +25,9 @@ import com.tools20022.repository.entity.ObligationFulfilment;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.entity.PaymentInstruction;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ReportLine3;
+import com.tools20022.repository.msg.ReportLine4;
+import com.tools20022.repository.msg.SettlementTerms2;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -136,7 +139,7 @@ public class IntentToPay1 {
 	 * definition} = "The intention to pay is based on a purchase order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmByPurchaseOrder = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntentToPay1, ReportLine3> mmByPurchaseOrder = new MMMessageAssociationEnd<IntentToPay1, ReportLine3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntentToPay1.mmObject();
 			isDerived = false;
@@ -147,7 +150,17 @@ public class IntentToPay1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ReportLine3.mmObject();
+			type_lazy = () -> ReportLine3.mmObject();
+		}
+
+		@Override
+		public ReportLine3 getValue(IntentToPay1 obj) {
+			return obj.getByPurchaseOrder();
+		}
+
+		@Override
+		public void setValue(IntentToPay1 obj, ReportLine3 value) {
+			obj.setByPurchaseOrder(value);
 		}
 	};
 	@XmlElement(name = "ByComrclInvc", required = true)
@@ -177,7 +190,7 @@ public class IntentToPay1 {
 	 * definition} = "The intention to pay is based on a commercial invoice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmByCommercialInvoice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntentToPay1, ReportLine4> mmByCommercialInvoice = new MMMessageAssociationEnd<IntentToPay1, ReportLine4>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntentToPay1.mmObject();
 			isDerived = false;
@@ -188,7 +201,17 @@ public class IntentToPay1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ReportLine4.mmObject();
+			type_lazy = () -> ReportLine4.mmObject();
+		}
+
+		@Override
+		public ReportLine4 getValue(IntentToPay1 obj) {
+			return obj.getByCommercialInvoice();
+		}
+
+		@Override
+		public void setValue(IntentToPay1 obj, ReportLine4 value) {
+			obj.setByCommercialInvoice(value);
 		}
 	};
 	@XmlElement(name = "XpctdPmtDt", required = true)
@@ -232,7 +255,7 @@ public class IntentToPay1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpectedPaymentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntentToPay1, ISODate> mmExpectedPaymentDate = new MMMessageAttribute<IntentToPay1, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> ObligationFulfilment.mmDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntentToPay1.mmObject();
@@ -245,6 +268,16 @@ public class IntentToPay1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(IntentToPay1 obj) {
+			return obj.getExpectedPaymentDate();
+		}
+
+		@Override
+		public void setValue(IntentToPay1 obj, ISODate value) {
+			obj.setExpectedPaymentDate(value);
 		}
 	};
 	@XmlElement(name = "SttlmTerms")
@@ -287,7 +320,7 @@ public class IntentToPay1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementTerms = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntentToPay1, Optional<SettlementTerms2>> mmSettlementTerms = new MMMessageAssociationEnd<IntentToPay1, Optional<SettlementTerms2>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInstruction.mmSettlementInstruction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntentToPay1.mmObject();
@@ -300,7 +333,17 @@ public class IntentToPay1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SettlementTerms2.mmObject();
+			type_lazy = () -> SettlementTerms2.mmObject();
+		}
+
+		@Override
+		public Optional<SettlementTerms2> getValue(IntentToPay1 obj) {
+			return obj.getSettlementTerms();
+		}
+
+		@Override
+		public void setValue(IntentToPay1 obj, Optional<SettlementTerms2> value) {
+			obj.setSettlementTerms(value.orElse(null));
 		}
 	};
 	/**
@@ -368,7 +411,7 @@ public class IntentToPay1 {
 		return byPurchaseOrder;
 	}
 
-	public IntentToPay1 setByPurchaseOrder(com.tools20022.repository.msg.ReportLine3 byPurchaseOrder) {
+	public IntentToPay1 setByPurchaseOrder(ReportLine3 byPurchaseOrder) {
 		this.byPurchaseOrder = Objects.requireNonNull(byPurchaseOrder);
 		return this;
 	}
@@ -377,7 +420,7 @@ public class IntentToPay1 {
 		return byCommercialInvoice;
 	}
 
-	public IntentToPay1 setByCommercialInvoice(com.tools20022.repository.msg.ReportLine4 byCommercialInvoice) {
+	public IntentToPay1 setByCommercialInvoice(ReportLine4 byCommercialInvoice) {
 		this.byCommercialInvoice = Objects.requireNonNull(byCommercialInvoice);
 		return this;
 	}
@@ -395,7 +438,7 @@ public class IntentToPay1 {
 		return settlementTerms == null ? Optional.empty() : Optional.of(settlementTerms);
 	}
 
-	public IntentToPay1 setSettlementTerms(com.tools20022.repository.msg.SettlementTerms2 settlementTerms) {
+	public IntentToPay1 setSettlementTerms(SettlementTerms2 settlementTerms) {
 		this.settlementTerms = settlementTerms;
 		return this;
 	}

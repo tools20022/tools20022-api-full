@@ -114,7 +114,7 @@ public class SecuritiesAccountAuditTrailOrOperationalError2Choice {
 	 * mmSecuritiesAccountAuditTrailReport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesAccountAuditTrailReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesAccountAuditTrailOrOperationalError2Choice, List<SecuritiesAccountAuditTrailReport2>> mmSecuritiesAccountAuditTrailReport = new MMMessageAssociationEnd<SecuritiesAccountAuditTrailOrOperationalError2Choice, List<SecuritiesAccountAuditTrailReport2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesAccountAuditTrailOrOperationalError2Choice.mmObject();
 			isDerived = false;
@@ -126,6 +126,16 @@ public class SecuritiesAccountAuditTrailOrOperationalError2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecuritiesAccountAuditTrailReport2.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesAccountAuditTrailReport2> getValue(SecuritiesAccountAuditTrailOrOperationalError2Choice obj) {
+			return obj.getSecuritiesAccountAuditTrailReport();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountAuditTrailOrOperationalError2Choice obj, List<SecuritiesAccountAuditTrailReport2> value) {
+			obj.setSecuritiesAccountAuditTrailReport(value);
 		}
 	};
 	@XmlElement(name = "OprlErr", required = true)
@@ -161,7 +171,7 @@ public class SecuritiesAccountAuditTrailOrOperationalError2Choice {
 	 * SecuritiesAccountAuditTrailOrOperationalError1Choice.mmOperationalError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesAccountAuditTrailOrOperationalError2Choice, List<ErrorHandling4>> mmOperationalError = new MMMessageAssociationEnd<SecuritiesAccountAuditTrailOrOperationalError2Choice, List<ErrorHandling4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesAccountAuditTrailOrOperationalError2Choice.mmObject();
 			isDerived = false;
@@ -173,6 +183,16 @@ public class SecuritiesAccountAuditTrailOrOperationalError2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling4.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling4> getValue(SecuritiesAccountAuditTrailOrOperationalError2Choice obj) {
+			return obj.getOperationalError();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountAuditTrailOrOperationalError2Choice obj, List<ErrorHandling4> value) {
+			obj.setOperationalError(value);
 		}
 	};
 

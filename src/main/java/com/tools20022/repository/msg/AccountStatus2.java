@@ -24,6 +24,7 @@ import com.tools20022.repository.choice.*;
 import com.tools20022.repository.entity.AccountStatus;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.OtherAccountStatus1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -152,7 +153,7 @@ public class AccountStatus2 {
 	 * definition} = "Account can be used for its intended purpose."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnabled = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountStatus2, Optional<EnabledStatusReason1Choice>> mmEnabled = new MMMessageAssociationEnd<AccountStatus2, Optional<EnabledStatusReason1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountStatus2.mmObject();
@@ -165,6 +166,16 @@ public class AccountStatus2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> EnabledStatusReason1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<EnabledStatusReason1Choice> getValue(AccountStatus2 obj) {
+			return obj.getEnabled();
+		}
+
+		@Override
+		public void setValue(AccountStatus2 obj, Optional<EnabledStatusReason1Choice> value) {
+			obj.setEnabled(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Dsbld")
@@ -201,7 +212,7 @@ public class AccountStatus2 {
 	 * "Account cannot temporarily be used for its intended purpose."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDisabled = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountStatus2, Optional<DisabledStatusReason1Choice>> mmDisabled = new MMMessageAssociationEnd<AccountStatus2, Optional<DisabledStatusReason1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountStatus2.mmObject();
@@ -214,6 +225,16 @@ public class AccountStatus2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DisabledStatusReason1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DisabledStatusReason1Choice> getValue(AccountStatus2 obj) {
+			return obj.getDisabled();
+		}
+
+		@Override
+		public void setValue(AccountStatus2 obj, Optional<DisabledStatusReason1Choice> value) {
+			obj.setDisabled(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Pdg")
@@ -249,7 +270,7 @@ public class AccountStatus2 {
 	 * definition} = "Account change is pending approval."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPending = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountStatus2, Optional<PendingStatusReason1Choice>> mmPending = new MMMessageAssociationEnd<AccountStatus2, Optional<PendingStatusReason1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountStatus2.mmObject();
@@ -262,6 +283,16 @@ public class AccountStatus2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PendingStatusReason1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PendingStatusReason1Choice> getValue(AccountStatus2 obj) {
+			return obj.getPending();
+		}
+
+		@Override
+		public void setValue(AccountStatus2 obj, Optional<PendingStatusReason1Choice> value) {
+			obj.setPending(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PdgOpng")
@@ -297,7 +328,7 @@ public class AccountStatus2 {
 	 * definition} = "Account opening is pending."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPendingOpening = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountStatus2, Optional<PendingOpeningStatusReason1Choice>> mmPendingOpening = new MMMessageAssociationEnd<AccountStatus2, Optional<PendingOpeningStatusReason1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountStatus2.mmObject();
@@ -310,6 +341,16 @@ public class AccountStatus2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PendingOpeningStatusReason1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PendingOpeningStatusReason1Choice> getValue(AccountStatus2 obj) {
+			return obj.getPendingOpening();
+		}
+
+		@Override
+		public void setValue(AccountStatus2 obj, Optional<PendingOpeningStatusReason1Choice> value) {
+			obj.setPendingOpening(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Profrm")
@@ -347,7 +388,7 @@ public class AccountStatus2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProforma = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountStatus2, Optional<ProformaStatusReason1Choice>> mmProforma = new MMMessageAssociationEnd<AccountStatus2, Optional<ProformaStatusReason1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountStatus2.mmObject();
@@ -360,6 +401,16 @@ public class AccountStatus2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ProformaStatusReason1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ProformaStatusReason1Choice> getValue(AccountStatus2 obj) {
+			return obj.getProforma();
+		}
+
+		@Override
+		public void setValue(AccountStatus2 obj, Optional<ProformaStatusReason1Choice> value) {
+			obj.setProforma(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Clsd")
@@ -395,7 +446,7 @@ public class AccountStatus2 {
 	 * definition} = "Account is closed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmClosed = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountStatus2, Optional<ClosedStatusReason1Choice>> mmClosed = new MMMessageAssociationEnd<AccountStatus2, Optional<ClosedStatusReason1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountStatus2.mmObject();
@@ -408,6 +459,16 @@ public class AccountStatus2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ClosedStatusReason1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ClosedStatusReason1Choice> getValue(AccountStatus2 obj) {
+			return obj.getClosed();
+		}
+
+		@Override
+		public void setValue(AccountStatus2 obj, Optional<ClosedStatusReason1Choice> value) {
+			obj.setClosed(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClsrPdg")
@@ -443,7 +504,7 @@ public class AccountStatus2 {
 	 * definition} = "Account closure is pending."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmClosurePending = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountStatus2, Optional<ClosurePendingStatusReason1Choice>> mmClosurePending = new MMMessageAssociationEnd<AccountStatus2, Optional<ClosurePendingStatusReason1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountStatus2.mmObject();
@@ -457,9 +518,19 @@ public class AccountStatus2 {
 			isComposite = true;
 			type_lazy = () -> ClosurePendingStatusReason1Choice.mmObject();
 		}
+
+		@Override
+		public Optional<ClosurePendingStatusReason1Choice> getValue(AccountStatus2 obj) {
+			return obj.getClosurePending();
+		}
+
+		@Override
+		public void setValue(AccountStatus2 obj, Optional<ClosurePendingStatusReason1Choice> value) {
+			obj.setClosurePending(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "Othr")
-	protected List<com.tools20022.repository.msg.OtherAccountStatus1> other;
+	protected List<OtherAccountStatus1> other;
 	/**
 	 * 
 	 <p>
@@ -490,7 +561,7 @@ public class AccountStatus2 {
 	 * definition} = "Status is a bilaterally agreed status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOther = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountStatus2, List<OtherAccountStatus1>> mmOther = new MMMessageAssociationEnd<AccountStatus2, List<OtherAccountStatus1>>() {
 		{
 			businessComponentTrace_lazy = () -> AccountStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountStatus2.mmObject();
@@ -501,7 +572,17 @@ public class AccountStatus2 {
 			definition = "Status is a bilaterally agreed status.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OtherAccountStatus1.mmObject();
+			type_lazy = () -> OtherAccountStatus1.mmObject();
+		}
+
+		@Override
+		public List<OtherAccountStatus1> getValue(AccountStatus2 obj) {
+			return obj.getOther();
+		}
+
+		@Override
+		public void setValue(AccountStatus2 obj, List<OtherAccountStatus1> value) {
+			obj.setOther(value);
 		}
 	};
 
@@ -594,7 +675,7 @@ public class AccountStatus2 {
 		return other == null ? other = new ArrayList<>() : other;
 	}
 
-	public AccountStatus2 setOther(List<com.tools20022.repository.msg.OtherAccountStatus1> other) {
+	public AccountStatus2 setOther(List<OtherAccountStatus1> other) {
 		this.other = Objects.requireNonNull(other);
 		return this;
 	}

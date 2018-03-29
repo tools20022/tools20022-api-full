@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.IndividualPerson7;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -122,7 +123,7 @@ public class VotingPartyAndInstruction {
 	 * definition} = "Identifies the detailed instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<VotingPartyAndInstruction, Max35Text> mmIdentification = new MMMessageAttribute<VotingPartyAndInstruction, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.VotingPartyAndInstruction.mmObject();
 			isDerived = false;
@@ -133,6 +134,16 @@ public class VotingPartyAndInstruction {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(VotingPartyAndInstruction obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(VotingPartyAndInstruction obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "ReqdExctnDt")
@@ -169,7 +180,7 @@ public class VotingPartyAndInstruction {
 	 * definition} = "Date at which the instruction must b e executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestedExecutionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<VotingPartyAndInstruction, Optional<ISODateTime>> mmRequestedExecutionDate = new MMMessageAttribute<VotingPartyAndInstruction, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> InstructionForMeeting.mmRequestedExecutionDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.VotingPartyAndInstruction.mmObject();
@@ -181,6 +192,16 @@ public class VotingPartyAndInstruction {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(VotingPartyAndInstruction obj) {
+			return obj.getRequestedExecutionDate();
+		}
+
+		@Override
+		public void setValue(VotingPartyAndInstruction obj, Optional<ISODateTime> value) {
+			obj.setRequestedExecutionDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrsnDtl", required = true)
@@ -215,7 +236,7 @@ public class VotingPartyAndInstruction {
 	 * definition} = "Person attending the meeting or assigned as proxy."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPersonDetail = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<VotingPartyAndInstruction, IndividualPerson7> mmPersonDetail = new MMMessageAssociationEnd<VotingPartyAndInstruction, IndividualPerson7>() {
 		{
 			businessComponentTrace_lazy = () -> Person.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.VotingPartyAndInstruction.mmObject();
@@ -227,7 +248,17 @@ public class VotingPartyAndInstruction {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IndividualPerson7.mmObject();
+			type_lazy = () -> IndividualPerson7.mmObject();
+		}
+
+		@Override
+		public IndividualPerson7 getValue(VotingPartyAndInstruction obj) {
+			return obj.getPersonDetail();
+		}
+
+		@Override
+		public void setValue(VotingPartyAndInstruction obj, IndividualPerson7 value) {
+			obj.setPersonDetail(value);
 		}
 	};
 	@XmlElement(name = "QtyOfScty")
@@ -264,7 +295,7 @@ public class VotingPartyAndInstruction {
 	 * definition} = "Quantity expressed as a number, eg, a number of shares."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantityOfSecurity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<VotingPartyAndInstruction, Optional<Number>> mmQuantityOfSecurity = new MMMessageAttribute<VotingPartyAndInstruction, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> com.tools20022.repository.msg.VotingPartyAndInstruction.mmObject();
@@ -276,6 +307,16 @@ public class VotingPartyAndInstruction {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(VotingPartyAndInstruction obj) {
+			return obj.getQuantityOfSecurity();
+		}
+
+		@Override
+		public void setValue(VotingPartyAndInstruction obj, Optional<Number> value) {
+			obj.setQuantityOfSecurity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "VotePerRsltn", required = true)
@@ -311,7 +352,7 @@ public class VotingPartyAndInstruction {
 	 * definition} = "Details of the vote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmVotePerResolution = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<VotingPartyAndInstruction, VoteChoice> mmVotePerResolution = new MMMessageAssociationEnd<VotingPartyAndInstruction, VoteChoice>() {
 		{
 			businessComponentTrace_lazy = () -> VoteInstructionRequest.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.VotingPartyAndInstruction.mmObject();
@@ -324,6 +365,16 @@ public class VotingPartyAndInstruction {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> VoteChoice.mmObject();
+		}
+
+		@Override
+		public VoteChoice getValue(VotingPartyAndInstruction obj) {
+			return obj.getVotePerResolution();
+		}
+
+		@Override
+		public void setValue(VotingPartyAndInstruction obj, VoteChoice value) {
+			obj.setVotePerResolution(value);
 		}
 	};
 	@XmlElement(name = "AttndncCardLbllg")
@@ -360,7 +411,7 @@ public class VotingPartyAndInstruction {
 	 * definition} = "Information to be indicated on the attendance card."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAttendanceCardLabelling = new MMMessageAttribute() {
+	public static final MMMessageAttribute<VotingPartyAndInstruction, Optional<Max105Text>> mmAttendanceCardLabelling = new MMMessageAttribute<VotingPartyAndInstruction, Optional<Max105Text>>() {
 		{
 			businessElementTrace_lazy = () -> AttendanceCard.mmAttendanceCardLabelling;
 			componentContext_lazy = () -> com.tools20022.repository.msg.VotingPartyAndInstruction.mmObject();
@@ -372,6 +423,16 @@ public class VotingPartyAndInstruction {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max105Text> getValue(VotingPartyAndInstruction obj) {
+			return obj.getAttendanceCardLabelling();
+		}
+
+		@Override
+		public void setValue(VotingPartyAndInstruction obj, Optional<Max105Text> value) {
+			obj.setAttendanceCardLabelling(value.orElse(null));
 		}
 	};
 	/**
@@ -450,7 +511,7 @@ public class VotingPartyAndInstruction {
 		return personDetail;
 	}
 
-	public VotingPartyAndInstruction setPersonDetail(com.tools20022.repository.msg.IndividualPerson7 personDetail) {
+	public VotingPartyAndInstruction setPersonDetail(IndividualPerson7 personDetail) {
 		this.personDetail = Objects.requireNonNull(personDetail);
 		return this;
 	}

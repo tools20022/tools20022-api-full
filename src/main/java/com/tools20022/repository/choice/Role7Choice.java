@@ -110,7 +110,7 @@ public class Role7Choice {
 	 * "Role of the party in the activity expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Role7Choice, InvestmentFundRole2Code> mmCode = new MMMessageAttribute<Role7Choice, InvestmentFundRole2Code>() {
 		{
 			businessElementTrace_lazy = () -> Role.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Role7Choice.mmObject();
@@ -122,6 +122,16 @@ public class Role7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InvestmentFundRole2Code.mmObject();
+		}
+
+		@Override
+		public InvestmentFundRole2Code getValue(Role7Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(Role7Choice obj, InvestmentFundRole2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -159,7 +169,7 @@ public class Role7Choice {
 	 * "Role of the party in the activity expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Role7Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<Role7Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> Role.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Role7Choice.mmObject();
@@ -171,6 +181,16 @@ public class Role7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(Role7Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(Role7Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 	@XmlElement(name = "Txt", required = true)
@@ -202,7 +222,7 @@ public class Role7Choice {
 	 * definition} = "Role of the party in the activity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmText = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Role7Choice, RestrictedFINXMax350Text> mmText = new MMMessageAttribute<Role7Choice, RestrictedFINXMax350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Role7Choice.mmObject();
 			isDerived = false;
@@ -213,6 +233,16 @@ public class Role7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax350Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax350Text getValue(Role7Choice obj) {
+			return obj.getText();
+		}
+
+		@Override
+		public void setValue(Role7Choice obj, RestrictedFINXMax350Text value) {
+			obj.setText(value);
 		}
 	};
 

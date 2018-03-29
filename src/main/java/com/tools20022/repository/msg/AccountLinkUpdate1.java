@@ -108,7 +108,7 @@ public class AccountLinkUpdate1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValidTo = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountLinkUpdate1, DateAndDateTimeChoice> mmValidTo = new MMMessageAttribute<AccountLinkUpdate1, DateAndDateTimeChoice>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmToDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLinkUpdate1.mmObject();
@@ -120,6 +120,16 @@ public class AccountLinkUpdate1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(AccountLinkUpdate1 obj) {
+			return obj.getValidTo();
+		}
+
+		@Override
+		public void setValue(AccountLinkUpdate1 obj, DateAndDateTimeChoice value) {
+			obj.setValidTo(value);
 		}
 	};
 

@@ -25,6 +25,7 @@ import com.tools20022.repository.codeset.ATMStatus2Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.TerminalManagementSystem;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMSecurityConfiguration1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -109,7 +110,7 @@ public class ATMCommandParameters1 {
 	 * definition} = "Serial number of the device."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSerialNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMCommandParameters1, Optional<Max35Text>> mmSerialNumber = new MMMessageAttribute<ATMCommandParameters1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCommandParameters1.mmObject();
 			isDerived = false;
@@ -120,6 +121,16 @@ public class ATMCommandParameters1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMCommandParameters1 obj) {
+			return obj.getSerialNumber();
+		}
+
+		@Override
+		public void setValue(ATMCommandParameters1 obj, Optional<Max35Text> value) {
+			obj.setSerialNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReqrdCfgtn")
@@ -153,7 +164,7 @@ public class ATMCommandParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRequiredConfiguration = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMCommandParameters1, Optional<ATMSecurityConfiguration1>> mmRequiredConfiguration = new MMMessageAssociationEnd<ATMCommandParameters1, Optional<ATMSecurityConfiguration1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCommandParameters1.mmObject();
 			isDerived = false;
@@ -164,7 +175,17 @@ public class ATMCommandParameters1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration1.mmObject();
+			type_lazy = () -> ATMSecurityConfiguration1.mmObject();
+		}
+
+		@Override
+		public Optional<ATMSecurityConfiguration1> getValue(ATMCommandParameters1 obj) {
+			return obj.getRequiredConfiguration();
+		}
+
+		@Override
+		public void setValue(ATMCommandParameters1 obj, Optional<ATMSecurityConfiguration1> value) {
+			obj.setRequiredConfiguration(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReqrdSts")
@@ -197,7 +218,7 @@ public class ATMCommandParameters1 {
 	 * definition} = "New status to apply on the security module of the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequiredStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMCommandParameters1, Optional<ATMStatus2Code>> mmRequiredStatus = new MMMessageAttribute<ATMCommandParameters1, Optional<ATMStatus2Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCommandParameters1.mmObject();
 			isDerived = false;
@@ -208,6 +229,16 @@ public class ATMCommandParameters1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ATMStatus2Code.mmObject();
+		}
+
+		@Override
+		public Optional<ATMStatus2Code> getValue(ATMCommandParameters1 obj) {
+			return obj.getRequiredStatus();
+		}
+
+		@Override
+		public void setValue(ATMCommandParameters1 obj, Optional<ATMStatus2Code> value) {
+			obj.setRequiredStatus(value.orElse(null));
 		}
 	};
 
@@ -239,7 +270,7 @@ public class ATMCommandParameters1 {
 		return requiredConfiguration == null ? Optional.empty() : Optional.of(requiredConfiguration);
 	}
 
-	public ATMCommandParameters1 setRequiredConfiguration(com.tools20022.repository.msg.ATMSecurityConfiguration1 requiredConfiguration) {
+	public ATMCommandParameters1 setRequiredConfiguration(ATMSecurityConfiguration1 requiredConfiguration) {
 		this.requiredConfiguration = requiredConfiguration;
 		return this;
 	}

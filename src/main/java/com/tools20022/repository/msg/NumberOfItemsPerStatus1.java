@@ -122,7 +122,7 @@ public class NumberOfItemsPerStatus1 {
 	 * NumberOfTransactionsPerStatus3.mmDetailedStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NumberOfItemsPerStatus1, ReportItemStatus1Code> mmStatus = new MMMessageAttribute<NumberOfItemsPerStatus1, ReportItemStatus1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NumberOfItemsPerStatus1.mmObject();
 			isDerived = false;
@@ -134,6 +134,16 @@ public class NumberOfItemsPerStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ReportItemStatus1Code.mmObject();
+		}
+
+		@Override
+		public ReportItemStatus1Code getValue(NumberOfItemsPerStatus1 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(NumberOfItemsPerStatus1 obj, ReportItemStatus1Code value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "NbOfItms", required = true)
@@ -171,7 +181,7 @@ public class NumberOfItemsPerStatus1 {
 	 * NumberOfTransactionsPerStatus3.mmDetailedNumberOfTransactions}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfItems = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NumberOfItemsPerStatus1, Max15NumericText> mmNumberOfItems = new MMMessageAttribute<NumberOfItemsPerStatus1, Max15NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NumberOfItemsPerStatus1.mmObject();
 			isDerived = false;
@@ -183,6 +193,16 @@ public class NumberOfItemsPerStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
+		}
+
+		@Override
+		public Max15NumericText getValue(NumberOfItemsPerStatus1 obj) {
+			return obj.getNumberOfItems();
+		}
+
+		@Override
+		public void setValue(NumberOfItemsPerStatus1 obj, Max15NumericText value) {
+			obj.setNumberOfItems(value);
 		}
 	};
 

@@ -24,6 +24,8 @@ import com.tools20022.repository.entity.Charges;
 import com.tools20022.repository.entity.Commission;
 import com.tools20022.repository.entity.SecuritiesOrderStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Charge11;
+import com.tools20022.repository.msg.Commission7;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -78,7 +80,7 @@ public class RepairedConditions2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "RprdChrg")
-	protected List<com.tools20022.repository.msg.Charge11> repairedCharge;
+	protected List<Charge11> repairedCharge;
 	/**
 	 * 
 	 <p>
@@ -110,7 +112,7 @@ public class RepairedConditions2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRepairedCharge = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RepairedConditions2, List<Charge11>> mmRepairedCharge = new MMMessageAssociationEnd<RepairedConditions2, List<Charge11>>() {
 		{
 			businessComponentTrace_lazy = () -> Charges.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.RepairedConditions2.mmObject();
@@ -122,11 +124,21 @@ public class RepairedConditions2 {
 			maxOccurs = 10;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Charge11.mmObject();
+			type_lazy = () -> Charge11.mmObject();
+		}
+
+		@Override
+		public List<Charge11> getValue(RepairedConditions2 obj) {
+			return obj.getRepairedCharge();
+		}
+
+		@Override
+		public void setValue(RepairedConditions2 obj, List<Charge11> value) {
+			obj.setRepairedCharge(value);
 		}
 	};
 	@XmlElement(name = "RprdComssn")
-	protected List<com.tools20022.repository.msg.Commission7> repairedCommission;
+	protected List<Commission7> repairedCommission;
 	/**
 	 * 
 	 <p>
@@ -159,7 +171,7 @@ public class RepairedConditions2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRepairedCommission = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RepairedConditions2, List<Commission7>> mmRepairedCommission = new MMMessageAssociationEnd<RepairedConditions2, List<Commission7>>() {
 		{
 			businessComponentTrace_lazy = () -> Commission.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.RepairedConditions2.mmObject();
@@ -171,7 +183,17 @@ public class RepairedConditions2 {
 			maxOccurs = 10;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Commission7.mmObject();
+			type_lazy = () -> Commission7.mmObject();
+		}
+
+		@Override
+		public List<Commission7> getValue(RepairedConditions2 obj) {
+			return obj.getRepairedCommission();
+		}
+
+		@Override
+		public void setValue(RepairedConditions2 obj, List<Commission7> value) {
+			obj.setRepairedCommission(value);
 		}
 	};
 
@@ -193,7 +215,7 @@ public class RepairedConditions2 {
 		return repairedCharge == null ? repairedCharge = new ArrayList<>() : repairedCharge;
 	}
 
-	public RepairedConditions2 setRepairedCharge(List<com.tools20022.repository.msg.Charge11> repairedCharge) {
+	public RepairedConditions2 setRepairedCharge(List<Charge11> repairedCharge) {
 		this.repairedCharge = Objects.requireNonNull(repairedCharge);
 		return this;
 	}
@@ -202,7 +224,7 @@ public class RepairedConditions2 {
 		return repairedCommission == null ? repairedCommission = new ArrayList<>() : repairedCommission;
 	}
 
-	public RepairedConditions2 setRepairedCommission(List<com.tools20022.repository.msg.Commission7> repairedCommission) {
+	public RepairedConditions2 setRepairedCommission(List<Commission7> repairedCommission) {
 		this.repairedCommission = Objects.requireNonNull(repairedCommission);
 		return this;
 	}

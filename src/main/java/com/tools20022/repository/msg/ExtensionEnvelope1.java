@@ -98,7 +98,7 @@ public class ExtensionEnvelope1 {
 	 * definition} = "Technical element that specifies the extension."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtensionContents = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExtensionEnvelope1, ExtensionContents1> mmExtensionContents = new MMMessageAttribute<ExtensionEnvelope1, ExtensionContents1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExtensionEnvelope1.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class ExtensionEnvelope1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ExtensionContents1.mmObject();
+		}
+
+		@Override
+		public ExtensionContents1 getValue(ExtensionEnvelope1 obj) {
+			return obj.getExtensionContents();
+		}
+
+		@Override
+		public void setValue(ExtensionEnvelope1 obj, ExtensionContents1 value) {
+			obj.setExtensionContents(value);
 		}
 	};
 

@@ -28,6 +28,8 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max3NumericText;
 import com.tools20022.repository.datatype.Max6Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification73;
+import com.tools20022.repository.msg.Traceability3;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -149,7 +151,7 @@ public class Header18 {
 	 * Header17.mmMessageFunction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageFunction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Header18, MessageFunction6Code> mmMessageFunction = new MMMessageAttribute<Header18, MessageFunction6Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header18.mmObject();
 			isDerived = false;
@@ -162,6 +164,16 @@ public class Header18 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MessageFunction6Code.mmObject();
+		}
+
+		@Override
+		public MessageFunction6Code getValue(Header18 obj) {
+			return obj.getMessageFunction();
+		}
+
+		@Override
+		public void setValue(Header18 obj, MessageFunction6Code value) {
+			obj.setMessageFunction(value);
 		}
 	};
 	@XmlElement(name = "OrgnlMsgFctn", required = true)
@@ -203,7 +215,7 @@ public class Header18 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalMessageFunction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Header18, MessageFunction6Code> mmOriginalMessageFunction = new MMMessageAttribute<Header18, MessageFunction6Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header18.mmObject();
 			isDerived = false;
@@ -215,6 +227,16 @@ public class Header18 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MessageFunction6Code.mmObject();
+		}
+
+		@Override
+		public MessageFunction6Code getValue(Header18 obj) {
+			return obj.getOriginalMessageFunction();
+		}
+
+		@Override
+		public void setValue(Header18 obj, MessageFunction6Code value) {
+			obj.setOriginalMessageFunction(value);
 		}
 	};
 	@XmlElement(name = "PrtcolVrsn", required = true)
@@ -258,7 +280,7 @@ public class Header18 {
 	 * Header17.mmProtocolVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProtocolVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Header18, Max6Text> mmProtocolVersion = new MMMessageAttribute<Header18, Max6Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header18.mmObject();
 			isDerived = false;
@@ -271,6 +293,16 @@ public class Header18 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max6Text.mmObject();
+		}
+
+		@Override
+		public Max6Text getValue(Header18 obj) {
+			return obj.getProtocolVersion();
+		}
+
+		@Override
+		public void setValue(Header18 obj, Max6Text value) {
+			obj.setProtocolVersion(value);
 		}
 	};
 	@XmlElement(name = "XchgId", required = true)
@@ -315,7 +347,7 @@ public class Header18 {
 	 * Header17.mmExchangeIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExchangeIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Header18, Max3NumericText> mmExchangeIdentification = new MMMessageAttribute<Header18, Max3NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header18.mmObject();
 			isDerived = false;
@@ -328,6 +360,16 @@ public class Header18 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
+		}
+
+		@Override
+		public Max3NumericText getValue(Header18 obj) {
+			return obj.getExchangeIdentification();
+		}
+
+		@Override
+		public void setValue(Header18 obj, Max3NumericText value) {
+			obj.setExchangeIdentification(value);
 		}
 	};
 	@XmlElement(name = "ReTrnsmssnCntr")
@@ -374,7 +416,7 @@ public class Header18 {
 	 * Header17.mmReTransmissionCounter}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReTransmissionCounter = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Header18, Optional<Max3NumericText>> mmReTransmissionCounter = new MMMessageAttribute<Header18, Optional<Max3NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header18.mmObject();
 			isDerived = false;
@@ -387,6 +429,16 @@ public class Header18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max3NumericText> getValue(Header18 obj) {
+			return obj.getReTransmissionCounter();
+		}
+
+		@Override
+		public void setValue(Header18 obj, Optional<Max3NumericText> value) {
+			obj.setReTransmissionCounter(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CreDtTm", required = true)
@@ -430,7 +482,7 @@ public class Header18 {
 	 * Header17.mmCreationDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Header18, ISODateTime> mmCreationDateTime = new MMMessageAttribute<Header18, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header18.mmObject();
 			isDerived = false;
@@ -443,6 +495,16 @@ public class Header18 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(Header18 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(Header18 obj, ISODateTime value) {
+			obj.setCreationDateTime(value);
 		}
 	};
 	@XmlElement(name = "InitgPty", required = true)
@@ -486,7 +548,7 @@ public class Header18 {
 	 * Header17.mmInitiatingParty}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInitiatingParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Header18, GenericIdentification73> mmInitiatingParty = new MMMessageAssociationEnd<Header18, GenericIdentification73>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header18.mmObject();
 			isDerived = false;
@@ -499,7 +561,17 @@ public class Header18 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification73.mmObject();
+			type_lazy = () -> GenericIdentification73.mmObject();
+		}
+
+		@Override
+		public GenericIdentification73 getValue(Header18 obj) {
+			return obj.getInitiatingParty();
+		}
+
+		@Override
+		public void setValue(Header18 obj, GenericIdentification73 value) {
+			obj.setInitiatingParty(value);
 		}
 	};
 	@XmlElement(name = "RcptPty")
@@ -544,7 +616,7 @@ public class Header18 {
 	 * Header17.mmRecipientParty}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRecipientParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Header18, Optional<GenericIdentification73>> mmRecipientParty = new MMMessageAssociationEnd<Header18, Optional<GenericIdentification73>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header18.mmObject();
 			isDerived = false;
@@ -557,11 +629,21 @@ public class Header18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification73.mmObject();
+			type_lazy = () -> GenericIdentification73.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification73> getValue(Header18 obj) {
+			return obj.getRecipientParty();
+		}
+
+		@Override
+		public void setValue(Header18 obj, Optional<GenericIdentification73> value) {
+			obj.setRecipientParty(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tracblt")
-	protected List<com.tools20022.repository.msg.Traceability3> traceability;
+	protected List<Traceability3> traceability;
 	/**
 	 * 
 	 <p>
@@ -602,7 +684,7 @@ public class Header18 {
 	 * Header17.mmTraceability}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTraceability = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Header18, List<Traceability3>> mmTraceability = new MMMessageAttribute<Header18, List<Traceability3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header18.mmObject();
 			isDerived = false;
@@ -613,7 +695,17 @@ public class Header18 {
 			nextVersions_lazy = () -> Arrays.asList(Header19.mmTraceability);
 			previousVersion_lazy = () -> Header17.mmTraceability;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Traceability3.mmObject();
+			complexType_lazy = () -> Traceability3.mmObject();
+		}
+
+		@Override
+		public List<Traceability3> getValue(Header18 obj) {
+			return obj.getTraceability();
+		}
+
+		@Override
+		public void setValue(Header18 obj, List<Traceability3> value) {
+			obj.setTraceability(value);
 		}
 	};
 
@@ -693,7 +785,7 @@ public class Header18 {
 		return initiatingParty;
 	}
 
-	public Header18 setInitiatingParty(com.tools20022.repository.msg.GenericIdentification73 initiatingParty) {
+	public Header18 setInitiatingParty(GenericIdentification73 initiatingParty) {
 		this.initiatingParty = Objects.requireNonNull(initiatingParty);
 		return this;
 	}
@@ -702,7 +794,7 @@ public class Header18 {
 		return recipientParty == null ? Optional.empty() : Optional.of(recipientParty);
 	}
 
-	public Header18 setRecipientParty(com.tools20022.repository.msg.GenericIdentification73 recipientParty) {
+	public Header18 setRecipientParty(GenericIdentification73 recipientParty) {
 		this.recipientParty = recipientParty;
 		return this;
 	}
@@ -711,7 +803,7 @@ public class Header18 {
 		return traceability == null ? traceability = new ArrayList<>() : traceability;
 	}
 
-	public Header18 setTraceability(List<com.tools20022.repository.msg.Traceability3> traceability) {
+	public Header18 setTraceability(List<Traceability3> traceability) {
 		this.traceability = Objects.requireNonNull(traceability);
 		return this;
 	}

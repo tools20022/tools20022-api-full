@@ -25,7 +25,6 @@ import com.tools20022.repository.area.SecuritiesEventsArchive;
 import com.tools20022.repository.choice.PartyIdentification9Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -141,7 +140,7 @@ public class MeetingVoteExecutionConfirmationV02 {
 	 * definition} = "Identifies the vote execution confirmation message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmVoteExecutionConfirmationIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingVoteExecutionConfirmationV02, MessageIdentification1> mmVoteExecutionConfirmationIdentification = new MMMessageBuildingBlock<MeetingVoteExecutionConfirmationV02, MessageIdentification1>() {
 		{
 			xmlTag = "VoteExctnConfId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -152,12 +151,14 @@ public class MeetingVoteExecutionConfirmationV02 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingVoteExecutionConfirmationV02.class.getMethod("getVoteExecutionConfirmationIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(MeetingVoteExecutionConfirmationV02 obj) {
+			return obj.getVoteExecutionConfirmationIdentification();
+		}
+
+		@Override
+		public void setValue(MeetingVoteExecutionConfirmationV02 obj, MessageIdentification1 value) {
+			obj.setVoteExecutionConfirmationIdentification(value);
 		}
 	};
 	@XmlElement(name = "RltdRef", required = true)
@@ -185,7 +186,7 @@ public class MeetingVoteExecutionConfirmationV02 {
 	 * definition} = "Identifies the meeting instruction message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingVoteExecutionConfirmationV02, MessageIdentification> mmRelatedReference = new MMMessageBuildingBlock<MeetingVoteExecutionConfirmationV02, MessageIdentification>() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -196,12 +197,14 @@ public class MeetingVoteExecutionConfirmationV02 {
 			complexType_lazy = () -> MessageIdentification.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingVoteExecutionConfirmationV02.class.getMethod("getRelatedReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification getValue(MeetingVoteExecutionConfirmationV02 obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(MeetingVoteExecutionConfirmationV02 obj, MessageIdentification value) {
+			obj.setRelatedReference(value);
 		}
 	};
 	@XmlElement(name = "MtgRef", required = true)
@@ -229,7 +232,7 @@ public class MeetingVoteExecutionConfirmationV02 {
 	 * definition} = "Series of elements which allow to identify a meeting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMeetingReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingVoteExecutionConfirmationV02, MeetingReference3> mmMeetingReference = new MMMessageBuildingBlock<MeetingVoteExecutionConfirmationV02, MeetingReference3>() {
 		{
 			xmlTag = "MtgRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -240,12 +243,14 @@ public class MeetingVoteExecutionConfirmationV02 {
 			complexType_lazy = () -> MeetingReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingVoteExecutionConfirmationV02.class.getMethod("getMeetingReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MeetingReference3 getValue(MeetingVoteExecutionConfirmationV02 obj) {
+			return obj.getMeetingReference();
+		}
+
+		@Override
+		public void setValue(MeetingVoteExecutionConfirmationV02 obj, MeetingReference3 value) {
+			obj.setMeetingReference(value);
 		}
 	};
 	@XmlElement(name = "RptgPty", required = true)
@@ -273,7 +278,7 @@ public class MeetingVoteExecutionConfirmationV02 {
 	 * definition} = "Party confirming the votes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportingParty = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingVoteExecutionConfirmationV02, PartyIdentification9Choice> mmReportingParty = new MMMessageBuildingBlock<MeetingVoteExecutionConfirmationV02, PartyIdentification9Choice>() {
 		{
 			xmlTag = "RptgPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -284,12 +289,14 @@ public class MeetingVoteExecutionConfirmationV02 {
 			complexType_lazy = () -> PartyIdentification9Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingVoteExecutionConfirmationV02.class.getMethod("getReportingParty", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PartyIdentification9Choice getValue(MeetingVoteExecutionConfirmationV02 obj) {
+			return obj.getReportingParty();
+		}
+
+		@Override
+		public void setValue(MeetingVoteExecutionConfirmationV02 obj, PartyIdentification9Choice value) {
+			obj.setReportingParty(value);
 		}
 	};
 	@XmlElement(name = "SctyId", required = true)
@@ -318,7 +325,7 @@ public class MeetingVoteExecutionConfirmationV02 {
 	 * "Identifies the securities for which the meeting is organised."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingVoteExecutionConfirmationV02, SecurityIdentification3> mmSecurityIdentification = new MMMessageBuildingBlock<MeetingVoteExecutionConfirmationV02, SecurityIdentification3>() {
 		{
 			xmlTag = "SctyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -329,12 +336,14 @@ public class MeetingVoteExecutionConfirmationV02 {
 			complexType_lazy = () -> SecurityIdentification3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingVoteExecutionConfirmationV02.class.getMethod("getSecurityIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SecurityIdentification3 getValue(MeetingVoteExecutionConfirmationV02 obj) {
+			return obj.getSecurityIdentification();
+		}
+
+		@Override
+		public void setValue(MeetingVoteExecutionConfirmationV02 obj, SecurityIdentification3 value) {
+			obj.setSecurityIdentification(value);
 		}
 	};
 	@XmlElement(name = "VoteInstr", required = true)
@@ -362,7 +371,7 @@ public class MeetingVoteExecutionConfirmationV02 {
 	 * definition} = "Specifies how a party has voted for each agenda item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmVoteInstruction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingVoteExecutionConfirmationV02, List<DetailedInstructionStatus2>> mmVoteInstruction = new MMMessageBuildingBlock<MeetingVoteExecutionConfirmationV02, List<DetailedInstructionStatus2>>() {
 		{
 			xmlTag = "VoteInstr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -372,12 +381,14 @@ public class MeetingVoteExecutionConfirmationV02 {
 			complexType_lazy = () -> DetailedInstructionStatus2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingVoteExecutionConfirmationV02.class.getMethod("getVoteInstruction", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<DetailedInstructionStatus2> getValue(MeetingVoteExecutionConfirmationV02 obj) {
+			return obj.getVoteInstruction();
+		}
+
+		@Override
+		public void setValue(MeetingVoteExecutionConfirmationV02 obj, List<DetailedInstructionStatus2> value) {
+			obj.setVoteInstruction(value);
 		}
 	};
 

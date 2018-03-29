@@ -111,7 +111,7 @@ public class ConsentTypeFormat5Choice {
 	 * definition} = "Standard code to specify the consent type required."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConsentTypeFormat5Choice, ConsentType1Code> mmCode = new MMMessageAttribute<ConsentTypeFormat5Choice, ConsentType1Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmConsentType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ConsentTypeFormat5Choice.mmObject();
@@ -123,6 +123,16 @@ public class ConsentTypeFormat5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ConsentType1Code.mmObject();
+		}
+
+		@Override
+		public ConsentType1Code getValue(ConsentTypeFormat5Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ConsentTypeFormat5Choice obj, ConsentType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -159,7 +169,7 @@ public class ConsentTypeFormat5Choice {
 	 * definition} = "Proprietary identification of the consent type."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ConsentTypeFormat5Choice, GenericIdentification47> mmProprietary = new MMMessageAssociationEnd<ConsentTypeFormat5Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmConsentType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ConsentTypeFormat5Choice.mmObject();
@@ -172,6 +182,16 @@ public class ConsentTypeFormat5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(ConsentTypeFormat5Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ConsentTypeFormat5Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

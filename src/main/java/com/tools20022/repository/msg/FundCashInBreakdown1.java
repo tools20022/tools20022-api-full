@@ -25,6 +25,10 @@ import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Commission4;
+import com.tools20022.repository.msg.FinancialInstrumentQuantity1;
+import com.tools20022.repository.msg.InvestmentFundTransactionInType1;
+import com.tools20022.repository.msg.OriginalOrderQuantityType1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -121,7 +125,7 @@ public class FundCashInBreakdown1 {
 	 * definition} = "Amount of cash flow in, expressed as an amount of money."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundCashInBreakdown1, Optional<ActiveOrHistoricCurrencyAndAmount>> mmAmount = new MMMessageAttribute<FundCashInBreakdown1, Optional<ActiveOrHistoricCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashInBreakdown1.mmObject();
@@ -133,6 +137,16 @@ public class FundCashInBreakdown1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAndAmount> getValue(FundCashInBreakdown1 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(FundCashInBreakdown1 obj, Optional<ActiveOrHistoricCurrencyAndAmount> value) {
+			obj.setAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UnitsNb")
@@ -171,7 +185,7 @@ public class FundCashInBreakdown1 {
 	 * "Amount of the cash flow in, expressed as a number of units."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundCashInBreakdown1, Optional<FinancialInstrumentQuantity1>> mmUnitsNumber = new MMMessageAttribute<FundCashInBreakdown1, Optional<FinancialInstrumentQuantity1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashInBreakdown1.mmObject();
@@ -182,7 +196,17 @@ public class FundCashInBreakdown1 {
 			definition = "Amount of the cash flow in, expressed as a number of units.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
+			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1> getValue(FundCashInBreakdown1 obj) {
+			return obj.getUnitsNumber();
+		}
+
+		@Override
+		public void setValue(FundCashInBreakdown1 obj, Optional<FinancialInstrumentQuantity1> value) {
+			obj.setUnitsNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NewAmtInd")
@@ -217,7 +241,7 @@ public class FundCashInBreakdown1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewAmountIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundCashInBreakdown1, Optional<YesNoIndicator>> mmNewAmountIndicator = new MMMessageAttribute<FundCashInBreakdown1, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashInBreakdown1.mmObject();
 			isDerived = false;
@@ -228,6 +252,16 @@ public class FundCashInBreakdown1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(FundCashInBreakdown1 obj) {
+			return obj.getNewAmountIndicator();
+		}
+
+		@Override
+		public void setValue(FundCashInBreakdown1 obj, Optional<YesNoIndicator> value) {
+			obj.setNewAmountIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InvstmtFndTxInTpDtls")
@@ -266,7 +300,7 @@ public class FundCashInBreakdown1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestmentFundTransactionInTypeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FundCashInBreakdown1, Optional<InvestmentFundTransactionInType1>> mmInvestmentFundTransactionInTypeDetails = new MMMessageAssociationEnd<FundCashInBreakdown1, Optional<InvestmentFundTransactionInType1>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashInBreakdown1.mmObject();
@@ -278,7 +312,17 @@ public class FundCashInBreakdown1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransactionInType1.mmObject();
+			type_lazy = () -> InvestmentFundTransactionInType1.mmObject();
+		}
+
+		@Override
+		public Optional<InvestmentFundTransactionInType1> getValue(FundCashInBreakdown1 obj) {
+			return obj.getInvestmentFundTransactionInTypeDetails();
+		}
+
+		@Override
+		public void setValue(FundCashInBreakdown1 obj, Optional<InvestmentFundTransactionInType1> value) {
+			obj.setInvestmentFundTransactionInTypeDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlOrdrQtyDtls")
@@ -317,7 +361,7 @@ public class FundCashInBreakdown1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalOrderQuantityDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FundCashInBreakdown1, Optional<OriginalOrderQuantityType1>> mmOriginalOrderQuantityDetails = new MMMessageAssociationEnd<FundCashInBreakdown1, Optional<OriginalOrderQuantityType1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmQuantityType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashInBreakdown1.mmObject();
@@ -329,11 +373,21 @@ public class FundCashInBreakdown1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OriginalOrderQuantityType1.mmObject();
+			type_lazy = () -> OriginalOrderQuantityType1.mmObject();
+		}
+
+		@Override
+		public Optional<OriginalOrderQuantityType1> getValue(FundCashInBreakdown1 obj) {
+			return obj.getOriginalOrderQuantityDetails();
+		}
+
+		@Override
+		public void setValue(FundCashInBreakdown1 obj, Optional<OriginalOrderQuantityType1> value) {
+			obj.setOriginalOrderQuantityDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ComssnDtls")
-	protected List<com.tools20022.repository.msg.Commission4> commissionDetails;
+	protected List<Commission4> commissionDetails;
 	/**
 	 * 
 	 <p>
@@ -367,7 +421,7 @@ public class FundCashInBreakdown1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCommissionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FundCashInBreakdown1, List<Commission4>> mmCommissionDetails = new MMMessageAssociationEnd<FundCashInBreakdown1, List<Commission4>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeCommission;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashInBreakdown1.mmObject();
@@ -378,7 +432,17 @@ public class FundCashInBreakdown1 {
 			definition = "Information related to the commission applied to an order, eg, back-end or front-end commission.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Commission4.mmObject();
+			type_lazy = () -> Commission4.mmObject();
+		}
+
+		@Override
+		public List<Commission4> getValue(FundCashInBreakdown1 obj) {
+			return obj.getCommissionDetails();
+		}
+
+		@Override
+		public void setValue(FundCashInBreakdown1 obj, List<Commission4> value) {
+			obj.setCommissionDetails(value);
 		}
 	};
 
@@ -411,7 +475,7 @@ public class FundCashInBreakdown1 {
 		return unitsNumber == null ? Optional.empty() : Optional.of(unitsNumber);
 	}
 
-	public FundCashInBreakdown1 setUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 unitsNumber) {
+	public FundCashInBreakdown1 setUnitsNumber(FinancialInstrumentQuantity1 unitsNumber) {
 		this.unitsNumber = unitsNumber;
 		return this;
 	}
@@ -429,7 +493,7 @@ public class FundCashInBreakdown1 {
 		return investmentFundTransactionInTypeDetails == null ? Optional.empty() : Optional.of(investmentFundTransactionInTypeDetails);
 	}
 
-	public FundCashInBreakdown1 setInvestmentFundTransactionInTypeDetails(com.tools20022.repository.msg.InvestmentFundTransactionInType1 investmentFundTransactionInTypeDetails) {
+	public FundCashInBreakdown1 setInvestmentFundTransactionInTypeDetails(InvestmentFundTransactionInType1 investmentFundTransactionInTypeDetails) {
 		this.investmentFundTransactionInTypeDetails = investmentFundTransactionInTypeDetails;
 		return this;
 	}
@@ -438,7 +502,7 @@ public class FundCashInBreakdown1 {
 		return originalOrderQuantityDetails == null ? Optional.empty() : Optional.of(originalOrderQuantityDetails);
 	}
 
-	public FundCashInBreakdown1 setOriginalOrderQuantityDetails(com.tools20022.repository.msg.OriginalOrderQuantityType1 originalOrderQuantityDetails) {
+	public FundCashInBreakdown1 setOriginalOrderQuantityDetails(OriginalOrderQuantityType1 originalOrderQuantityDetails) {
 		this.originalOrderQuantityDetails = originalOrderQuantityDetails;
 		return this;
 	}
@@ -447,7 +511,7 @@ public class FundCashInBreakdown1 {
 		return commissionDetails == null ? commissionDetails = new ArrayList<>() : commissionDetails;
 	}
 
-	public FundCashInBreakdown1 setCommissionDetails(List<com.tools20022.repository.msg.Commission4> commissionDetails) {
+	public FundCashInBreakdown1 setCommissionDetails(List<Commission4> commissionDetails) {
 		this.commissionDetails = Objects.requireNonNull(commissionDetails);
 		return this;
 	}

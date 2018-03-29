@@ -136,7 +136,7 @@ public class DetailedInstructionStatus8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DetailedInstructionStatus8, Max35Text> mmInstructionIdentification = new MMMessageAttribute<DetailedInstructionStatus8, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedInstructionStatus8.mmObject();
 			isDerived = false;
@@ -148,6 +148,16 @@ public class DetailedInstructionStatus8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(DetailedInstructionStatus8 obj) {
+			return obj.getInstructionIdentification();
+		}
+
+		@Override
+		public void setValue(DetailedInstructionStatus8 obj, Max35Text value) {
+			obj.setInstructionIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctId")
@@ -192,7 +202,7 @@ public class DetailedInstructionStatus8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DetailedInstructionStatus8, Optional<Max35Text>> mmAccountIdentification = new MMMessageAttribute<DetailedInstructionStatus8, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedInstructionStatus8.mmObject();
@@ -205,6 +215,16 @@ public class DetailedInstructionStatus8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(DetailedInstructionStatus8 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(DetailedInstructionStatus8 obj, Optional<Max35Text> value) {
+			obj.setAccountIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SubAcctId")
@@ -249,7 +269,7 @@ public class DetailedInstructionStatus8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DetailedInstructionStatus8, Optional<Max35Text>> mmSubAccountIdentification = new MMMessageAttribute<DetailedInstructionStatus8, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedInstructionStatus8.mmObject();
@@ -262,6 +282,16 @@ public class DetailedInstructionStatus8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(DetailedInstructionStatus8 obj) {
+			return obj.getSubAccountIdentification();
+		}
+
+		@Override
+		public void setValue(DetailedInstructionStatus8 obj, Optional<Max35Text> value) {
+			obj.setSubAccountIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstrSts", required = true)
@@ -307,7 +337,7 @@ public class DetailedInstructionStatus8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstructionStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DetailedInstructionStatus8, InstructionStatus4Choice> mmInstructionStatus = new MMMessageAssociationEnd<DetailedInstructionStatus8, InstructionStatus4Choice>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmInstructionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedInstructionStatus8.mmObject();
@@ -321,6 +351,16 @@ public class DetailedInstructionStatus8 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> InstructionStatus4Choice.mmObject();
+		}
+
+		@Override
+		public InstructionStatus4Choice getValue(DetailedInstructionStatus8 obj) {
+			return obj.getInstructionStatus();
+		}
+
+		@Override
+		public void setValue(DetailedInstructionStatus8 obj, InstructionStatus4Choice value) {
+			obj.setInstructionStatus(value);
 		}
 	};
 

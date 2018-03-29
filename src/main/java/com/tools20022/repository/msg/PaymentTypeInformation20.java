@@ -123,7 +123,7 @@ public class PaymentTypeInformation20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructionPriority = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTypeInformation20, Optional<Priority2Code>> mmInstructionPriority = new MMMessageAttribute<PaymentTypeInformation20, Optional<Priority2Code>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmPriority;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation20.mmObject();
@@ -135,6 +135,16 @@ public class PaymentTypeInformation20 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Priority2Code.mmObject();
+		}
+
+		@Override
+		public Optional<Priority2Code> getValue(PaymentTypeInformation20 obj) {
+			return obj.getInstructionPriority();
+		}
+
+		@Override
+		public void setValue(PaymentTypeInformation20 obj, Optional<Priority2Code> value) {
+			obj.setInstructionPriority(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SvcLvl")
@@ -172,7 +182,7 @@ public class PaymentTypeInformation20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmServiceLevel = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentTypeInformation20, Optional<ServiceLevel8Choice>> mmServiceLevel = new MMMessageAssociationEnd<PaymentTypeInformation20, Optional<ServiceLevel8Choice>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmServiceLevel;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation20.mmObject();
@@ -185,6 +195,16 @@ public class PaymentTypeInformation20 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ServiceLevel8Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ServiceLevel8Choice> getValue(PaymentTypeInformation20 obj) {
+			return obj.getServiceLevel();
+		}
+
+		@Override
+		public void setValue(PaymentTypeInformation20 obj, Optional<ServiceLevel8Choice> value) {
+			obj.setServiceLevel(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LclInstrm")
@@ -223,7 +243,7 @@ public class PaymentTypeInformation20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLocalInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentTypeInformation20, Optional<LocalInstrument2Choice>> mmLocalInstrument = new MMMessageAssociationEnd<PaymentTypeInformation20, Optional<LocalInstrument2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmLocalInstrument;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation20.mmObject();
@@ -236,6 +256,16 @@ public class PaymentTypeInformation20 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> LocalInstrument2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<LocalInstrument2Choice> getValue(PaymentTypeInformation20 obj) {
+			return obj.getLocalInstrument();
+		}
+
+		@Override
+		public void setValue(PaymentTypeInformation20 obj, Optional<LocalInstrument2Choice> value) {
+			obj.setLocalInstrument(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SeqTp")
@@ -275,7 +305,7 @@ public class PaymentTypeInformation20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSequenceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTypeInformation20, Optional<SequenceType1Code>> mmSequenceType = new MMMessageAttribute<PaymentTypeInformation20, Optional<SequenceType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmSequenceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation20.mmObject();
@@ -287,6 +317,16 @@ public class PaymentTypeInformation20 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> SequenceType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<SequenceType1Code> getValue(PaymentTypeInformation20 obj) {
+			return obj.getSequenceType();
+		}
+
+		@Override
+		public void setValue(PaymentTypeInformation20 obj, Optional<SequenceType1Code> value) {
+			obj.setSequenceType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtgyPurp")
@@ -325,7 +365,7 @@ public class PaymentTypeInformation20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCategoryPurpose = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentTypeInformation20, Optional<CategoryPurpose1Choice>> mmCategoryPurpose = new MMMessageAssociationEnd<PaymentTypeInformation20, Optional<CategoryPurpose1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmCategoryPurpose;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation20.mmObject();
@@ -338,6 +378,16 @@ public class PaymentTypeInformation20 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CategoryPurpose1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CategoryPurpose1Choice> getValue(PaymentTypeInformation20 obj) {
+			return obj.getCategoryPurpose();
+		}
+
+		@Override
+		public void setValue(PaymentTypeInformation20 obj, Optional<CategoryPurpose1Choice> value) {
+			obj.setCategoryPurpose(value.orElse(null));
 		}
 	};
 

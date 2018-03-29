@@ -25,10 +25,9 @@ import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
-import com.tools20022.repository.entity.Settlement;
+import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -761,7 +760,7 @@ public class SecuritiesSettlement extends Settlement {
 	 * definition} = "Set of processes resulting in a securities transfer."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmTransferOperation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesSettlement, SecuritiesTransfer> mmTransferOperation = new MMBusinessAssociationEnd<SecuritiesSettlement, SecuritiesTransfer>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Cancellation3Choice.mmCancellationByTransferInstructionDetails, Cancellation6Choice.mmCancellationByTransferInstructionDetails,
 					Cancellation7Choice.mmCancellationByTransferInstructionDetails, Cancellation11Choice.mmCancellationByTransferInstructionDetails);
@@ -772,9 +771,19 @@ public class SecuritiesSettlement extends Settlement {
 			definition = "Set of processes resulting in a securities transfer.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmRelatedSettlement;
+			opposite_lazy = () -> SecuritiesTransfer.mmRelatedSettlement;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
+			type_lazy = () -> SecuritiesTransfer.mmObject();
+		}
+
+		@Override
+		public SecuritiesTransfer getValue(SecuritiesSettlement obj) {
+			return obj.getTransferOperation();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement obj, SecuritiesTransfer value) {
+			obj.setTransferOperation(value);
 		}
 	};
 	protected ISODateTime settlementDate;
@@ -1233,7 +1242,7 @@ public class SecuritiesSettlement extends Settlement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSettlementDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesSettlement, ISODateTime> mmSettlementDate = new MMBusinessAttribute<SecuritiesSettlement, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(DeliverInformation4.mmEffectiveSettlementDate, DeliverInformation7.mmEffectiveSettlementDate, ReceiveInformation4.mmEffectiveSettlementDate, ReceiveInformation8.mmEffectiveSettlementDate,
 					Transfer24.mmEffectiveSettlementDate, ReceiveInformation6.mmEffectiveSettlementDate, ReceiveInformation11.mmEffectiveSettlementDate, Transfer25.mmEffectiveSettlementDate, DeliverInformation11.mmEffectiveSettlementDate,
@@ -1278,15 +1287,17 @@ public class SecuritiesSettlement extends Settlement {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlement.class.getMethod("getSettlementDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(SecuritiesSettlement obj) {
+			return obj.getSettlementDate();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement obj, ISODateTime value) {
+			obj.setSettlementDate(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.SecuritiesSettlementPartyRole> partyRole;
+	protected List<SecuritiesSettlementPartyRole> partyRole;
 	/**
 	 * 
 	 <p>
@@ -2189,7 +2200,7 @@ public class SecuritiesSettlement extends Settlement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPartyRole = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesSettlement, List<SecuritiesSettlementPartyRole>> mmPartyRole = new MMBusinessAssociationEnd<SecuritiesSettlement, List<SecuritiesSettlementPartyRole>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(DeliverInformation2.mmSettlementPartiesDetails, DeliverInformation4.mmSettlementPartiesDetails, DeliverInformation7.mmSettlementPartiesDetails,
 					ReceiveInformation2.mmSettlementPartiesDetails, ReceiveInformation4.mmSettlementPartiesDetails, ReceiveInformation8.mmSettlementPartiesDetails, ReceiveInformation6.mmSettlementPartiesDetails,
@@ -2271,9 +2282,19 @@ public class SecuritiesSettlement extends Settlement {
 			name = "PartyRole";
 			definition = "Specifies each role linked to the settlement of securities and played by a party at that step in a securities transaction flow.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlementPartyRole.mmSecuritiesSettlement;
+			opposite_lazy = () -> SecuritiesSettlementPartyRole.mmSecuritiesSettlement;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlementPartyRole.mmObject();
+			type_lazy = () -> SecuritiesSettlementPartyRole.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesSettlementPartyRole> getValue(SecuritiesSettlement obj) {
+			return obj.getPartyRole();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement obj, List<SecuritiesSettlementPartyRole> value) {
+			obj.setPartyRole(value);
 		}
 	};
 	protected ActiveCurrencyAndAmount settlementAmount;
@@ -3247,7 +3268,7 @@ public class SecuritiesSettlement extends Settlement {
 	 * definition} = "Amount of money settled or to be settled."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSettlementAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesSettlement, ActiveCurrencyAndAmount> mmSettlementAmount = new MMBusinessAttribute<SecuritiesSettlement, ActiveCurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(DeliverInformation4.mmSettlementAmount, DeliverInformation7.mmSettlementAmount, ReceiveInformation4.mmSettlementAmount, ReceiveInformation8.mmSettlementAmount,
 					ReceiveInformation6.mmSettlementAmount, ReceiveInformation11.mmSettlementAmount, DeliverInformation11.mmSettlementAmount, AmountAndDirection8.mmAmount, TransactionDetails10.mmSettlementAmount,
@@ -3328,12 +3349,14 @@ public class SecuritiesSettlement extends Settlement {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlement.class.getMethod("getSettlementAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ActiveCurrencyAndAmount getValue(SecuritiesSettlement obj) {
+			return obj.getSettlementAmount();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement obj, ActiveCurrencyAndAmount value) {
+			obj.setSettlementAmount(value);
 		}
 	};
 	protected Max35Text holdingsPlanType;
@@ -3444,7 +3467,7 @@ public class SecuritiesSettlement extends Settlement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmHoldingsPlanType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesSettlement, Max35Text> mmHoldingsPlanType = new MMBusinessAttribute<SecuritiesSettlement, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Transfer17.mmHoldingsPlanType, Transfer14.mmHoldingsPlanType, Transfer24.mmHoldingsPlanType, Transfer25.mmHoldingsPlanType, Transfer16.mmHoldingsPlanType, Transfer12.mmHoldingsPlanType,
 					Transfer20.mmHoldingsPlanType, Transfer22.mmHoldingsPlanType, Transfer18.mmHoldingsPlanType, Transfer26.mmHoldingsPlanType, Transfer15.mmHoldingsPlanType, Transfer21.mmHoldingsPlanType, Transfer13.mmHoldingsPlanType,
@@ -3460,12 +3483,14 @@ public class SecuritiesSettlement extends Settlement {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlement.class.getMethod("getHoldingsPlanType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(SecuritiesSettlement obj) {
+			return obj.getHoldingsPlanType();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement obj, Max35Text value) {
+			obj.setHoldingsPlanType(value);
 		}
 	};
 	protected ReceiveDeliveryCode securitiesMovementType;
@@ -3962,7 +3987,7 @@ public class SecuritiesSettlement extends Settlement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSecuritiesMovementType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesSettlement, ReceiveDeliveryCode> mmSecuritiesMovementType = new MMBusinessAttribute<SecuritiesSettlement, ReceiveDeliveryCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementTypeAndIdentification3.mmSecuritiesMovementType, SettlementTypeAndAdditionalParameters5.mmSecuritiesMovementType, SettlementTypeAndIdentification13.mmSecuritiesMovementType,
 					SettlementTypeAndIdentification7.mmSecuritiesMovementType, SettlementTypeAndAdditionalParameters8.mmSecuritiesMovementType, TransactionTypeAndAdditionalParameters3.mmSecuritiesMovementType,
@@ -4019,12 +4044,14 @@ public class SecuritiesSettlement extends Settlement {
 			simpleType_lazy = () -> ReceiveDeliveryCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlement.class.getMethod("getSecuritiesMovementType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ReceiveDeliveryCode getValue(SecuritiesSettlement obj) {
+			return obj.getSecuritiesMovementType();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement obj, ReceiveDeliveryCode value) {
+			obj.setSecuritiesMovementType(value);
 		}
 	};
 	protected SecuritiesQuantity settlementQuantity;
@@ -4771,7 +4798,7 @@ public class SecuritiesSettlement extends Settlement {
 	 * definition} = "Total quantity of securities to be settled."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSettlementQuantity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesSettlement, SecuritiesQuantity> mmSettlementQuantity = new MMBusinessAssociationEnd<SecuritiesSettlement, SecuritiesQuantity>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TransactionDetails10.mmSettlementQuantity, TransactionDetails29.mmSettlementQuantity, QuantityAndAccount30.mmSettlementQuantity, TransactionDetails28.mmSettlementQuantity,
 					TransactionDetails31.mmSettlementQuantity, TransactionDetails44.mmSettlementQuantity, QuantityAndAccount33.mmSettlementQuantity, IntraPositionMovementDetails1.mmRemainingToBeSettledQuantity,
@@ -4837,9 +4864,19 @@ public class SecuritiesSettlement extends Settlement {
 			definition = "Total quantity of securities to be settled.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmSecuritiesSettlement;
+			opposite_lazy = () -> SecuritiesQuantity.mmSecuritiesSettlement;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
+			type_lazy = () -> SecuritiesQuantity.mmObject();
+		}
+
+		@Override
+		public SecuritiesQuantity getValue(SecuritiesSettlement obj) {
+			return obj.getSettlementQuantity();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement obj, SecuritiesQuantity value) {
+			obj.setSettlementQuantity(value);
 		}
 	};
 	protected SecuritiesTradeExecution securitiesTradeExecution;
@@ -4878,7 +4915,7 @@ public class SecuritiesSettlement extends Settlement {
 	 * "Specifies the trade which originates the settlement process."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSecuritiesTradeExecution = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesSettlement, com.tools20022.repository.entity.SecuritiesTradeExecution> mmSecuritiesTradeExecution = new MMBusinessAssociationEnd<SecuritiesSettlement, com.tools20022.repository.entity.SecuritiesTradeExecution>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
@@ -4890,6 +4927,16 @@ public class SecuritiesSettlement extends Settlement {
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmSecuritiesSettlement;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeExecution.mmObject();
+		}
+
+		@Override
+		public com.tools20022.repository.entity.SecuritiesTradeExecution getValue(SecuritiesSettlement obj) {
+			return obj.getSecuritiesTradeExecution();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement obj, com.tools20022.repository.entity.SecuritiesTradeExecution value) {
+			obj.setSecuritiesTradeExecution(value);
 		}
 	};
 	protected CurrencyCode currencyToBuy;
@@ -4976,7 +5023,7 @@ public class SecuritiesSettlement extends Settlement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCurrencyToBuy = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesSettlement, CurrencyCode> mmCurrencyToBuy = new MMBusinessAttribute<SecuritiesSettlement, CurrencyCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CurrencyToBuyOrSell1Choice.mmCurrencyToBuy, CorporateActionOption5.mmCurrencyToBuy, CorporateActionOption13.mmCurrencyToBuy, CorporateActionOption25.mmCurrencyToBuy,
 					CorporateActionOption30.mmCurrencyToBuy, CorporateActionOption38.mmCurrencyToBuy, CorporateActionOption47.mmCurrencyToBuy, CorporateActionOption57.mmCurrencyToBuy, CorporateActionOption58.mmCurrencyToBuy,
@@ -4992,12 +5039,14 @@ public class SecuritiesSettlement extends Settlement {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlement.class.getMethod("getCurrencyToBuy", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyCode getValue(SecuritiesSettlement obj) {
+			return obj.getCurrencyToBuy();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement obj, CurrencyCode value) {
+			obj.setCurrencyToBuy(value);
 		}
 	};
 	protected CurrencyCode currencyToSell;
@@ -5084,7 +5133,7 @@ public class SecuritiesSettlement extends Settlement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCurrencyToSell = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesSettlement, CurrencyCode> mmCurrencyToSell = new MMBusinessAttribute<SecuritiesSettlement, CurrencyCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CurrencyToBuyOrSell1Choice.mmCurrencyToSell, CorporateActionOption5.mmCurrencyToSell, CorporateActionOption13.mmCurrencyToSell, CorporateActionOption25.mmCurrencyToSell,
 					CorporateActionOption30.mmCurrencyToSell, CorporateActionOption38.mmCurrencyToSell, CorporateActionOption47.mmCurrencyToSell, CorporateActionOption57.mmCurrencyToSell, CorporateActionOption58.mmCurrencyToSell,
@@ -5100,12 +5149,14 @@ public class SecuritiesSettlement extends Settlement {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlement.class.getMethod("getCurrencyToSell", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyCode getValue(SecuritiesSettlement obj) {
+			return obj.getCurrencyToSell();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement obj, CurrencyCode value) {
+			obj.setCurrencyToSell(value);
 		}
 	};
 	protected Max35Text denominationChoice;
@@ -5339,7 +5390,7 @@ public class SecuritiesSettlement extends Settlement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmDenominationChoice = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesSettlement, Max35Text> mmDenominationChoice = new MMBusinessAttribute<SecuritiesSettlement, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(QuantityAndAccount29.mmDenominationChoice, QuantityAndAccount30.mmDenominationChoice, QuantityAndAccount32.mmDenominationChoice, QuantityAndAccount33.mmDenominationChoice,
 					QuantityAndAccount1.mmDenominationChoice, QuantityAndAccount5.mmDenominationChoice, QuantityAndAccount17.mmDenominationChoice, QuantityAndAccount24.mmDenominationChoice, QuantityAndAccount25.mmDenominationChoice,
@@ -5366,12 +5417,14 @@ public class SecuritiesSettlement extends Settlement {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlement.class.getMethod("getDenominationChoice", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(SecuritiesSettlement obj) {
+			return obj.getDenominationChoice();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement obj, Max35Text value) {
+			obj.setDenominationChoice(value);
 		}
 	};
 	protected SettlementTransactionConditionCode settlementTransactionCondition;
@@ -6345,7 +6398,7 @@ public class SecuritiesSettlement extends Settlement {
 	 * definition} = "Conditions under which the order/trade is to be settled."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSettlementTransactionCondition = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesSettlement, SettlementTransactionConditionCode> mmSettlementTransactionCondition = new MMBusinessAttribute<SecuritiesSettlement, SettlementTransactionConditionCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementTransactionCondition1Choice.mmCode, SettlementTransactionCondition1Choice.mmProprietary, SettlementTransactionCondition6Choice.mmCode,
 					SettlementTransactionCondition6Choice.mmProprietary, SettlementTransactionCondition12Choice.mmCode, SettlementTransactionCondition12Choice.mmProprietary, SettlementDetails50.mmSettlementTransactionCondition,
@@ -6437,12 +6490,14 @@ public class SecuritiesSettlement extends Settlement {
 			simpleType_lazy = () -> SettlementTransactionConditionCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlement.class.getMethod("getSettlementTransactionCondition", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SettlementTransactionConditionCode getValue(SecuritiesSettlement obj) {
+			return obj.getSettlementTransactionCondition();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement obj, SettlementTransactionConditionCode value) {
+			obj.setSettlementTransactionCondition(value);
 		}
 	};
 	protected YesNoIndicator beneficialOwnershipIndicator;
@@ -6928,7 +6983,7 @@ public class SecuritiesSettlement extends Settlement {
 	 * "Specifies whether there is change of beneficial ownership."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmBeneficialOwnershipIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesSettlement, YesNoIndicator> mmBeneficialOwnershipIndicator = new MMBusinessAttribute<SecuritiesSettlement, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(BeneficialOwnership1Choice.mmIndicator, BeneficialOwnership1Choice.mmProprietary, SettlementDetails50.mmBeneficialOwnership, BeneficialOwnership2Choice.mmIndicator,
 					BeneficialOwnership2Choice.mmProprietary, SettlementDetails51.mmBeneficialOwnership, SettlementDetails9.mmBeneficialOwnership, SettlementDetails17.mmBeneficialOwnership, SettlementDetails30.mmBeneficialOwnership,
@@ -6971,12 +7026,14 @@ public class SecuritiesSettlement extends Settlement {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlement.class.getMethod("getBeneficialOwnershipIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(SecuritiesSettlement obj) {
+			return obj.getBeneficialOwnershipIndicator();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement obj, YesNoIndicator value) {
+			obj.setBeneficialOwnershipIndicator(value);
 		}
 	};
 	protected MarketClientSideCode marketClientSide;
@@ -7475,7 +7532,7 @@ public class SecuritiesSettlement extends Settlement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmMarketClientSide = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesSettlement, MarketClientSideCode> mmMarketClientSide = new MMBusinessAttribute<SecuritiesSettlement, MarketClientSideCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(MarketClientSide1Choice.mmCode, MarketClientSide1Choice.mmProprietary, SettlementDetails50.mmMarketClientSide, MarketClientSide2Choice.mmCode, MarketClientSide2Choice.mmProprietary,
 					SettlementDetails51.mmMarketClientSide, SettlementDetails9.mmMarketClientSide, SettlementDetails17.mmMarketClientSide, SettlementDetails30.mmMarketClientSide, SettlementDetails32.mmMarketClientSide,
@@ -7519,12 +7576,14 @@ public class SecuritiesSettlement extends Settlement {
 			simpleType_lazy = () -> MarketClientSideCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlement.class.getMethod("getMarketClientSide", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MarketClientSideCode getValue(SecuritiesSettlement obj) {
+			return obj.getMarketClientSide();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement obj, MarketClientSideCode value) {
+			obj.setMarketClientSide(value);
 		}
 	};
 	protected YesNoIndicator tracking;
@@ -7700,7 +7759,7 @@ public class SecuritiesSettlement extends Settlement {
 	 * definition} = "Specifies whether the loan and/or collateral is tracked."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmTracking = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesSettlement, YesNoIndicator> mmTracking = new MMBusinessAttribute<SecuritiesSettlement, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementDetails50.mmTracking, SettlementDetails51.mmTracking, SettlementDetails3.mmTracking, SettlementDetails16.mmTracking, SettlementDetails31.mmTracking,
 					SettlementDetails40.mmTracking, SettlementDetails62.mmTracking, SettlementDetails63.mmTracking, SettlementDetails1.mmTracking, SettlementDetails19.mmTracking, SettlementDetails22.mmTracking,
@@ -7720,12 +7779,14 @@ public class SecuritiesSettlement extends Settlement {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlement.class.getMethod("getTracking", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(SecuritiesSettlement obj) {
+			return obj.getTracking();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement obj, YesNoIndicator value) {
+			obj.setTracking(value);
 		}
 	};
 	protected YesNoIndicator letterOfGuarantee;
@@ -8071,7 +8132,7 @@ public class SecuritiesSettlement extends Settlement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmLetterOfGuarantee = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesSettlement, YesNoIndicator> mmLetterOfGuarantee = new MMBusinessAttribute<SecuritiesSettlement, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(LetterOfGuarantee1Choice.mmIndicator, LetterOfGuarantee1Choice.mmProprietary, SettlementDetails50.mmLetterOfGuarantee, LetterOfGuarantee2Choice.mmIndicator,
 					LetterOfGuarantee2Choice.mmProprietary, SettlementDetails51.mmLetterOfGuarantee, SettlementDetails6.mmLetterOfGuarantee, SettlementDetails20.mmLetterOfGuarantee, SettlementDetails24.mmLetterOfGuarantee,
@@ -8104,12 +8165,14 @@ public class SecuritiesSettlement extends Settlement {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlement.class.getMethod("getLetterOfGuarantee", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(SecuritiesSettlement obj) {
+			return obj.getLetterOfGuarantee();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement obj, YesNoIndicator value) {
+			obj.setLetterOfGuarantee(value);
 		}
 	};
 	protected YesNoIndicator eligibleForCollateral;
@@ -8491,7 +8554,7 @@ public class SecuritiesSettlement extends Settlement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmEligibleForCollateral = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesSettlement, YesNoIndicator> mmEligibleForCollateral = new MMBusinessAttribute<SecuritiesSettlement, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementDetails50.mmEligibleForCollateral, SettlementDetails51.mmEligibleForCollateral, CorporateActionOption5.mmEligibleForCollateralIndicator,
 					CorporateActionOption13.mmEligibleForCollateralIndicator, CorporateActionOption25.mmEligibleForCollateralIndicator, CorporateActionOption30.mmEligibleForCollateralIndicator,
@@ -8533,12 +8596,14 @@ public class SecuritiesSettlement extends Settlement {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlement.class.getMethod("getEligibleForCollateral", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(SecuritiesSettlement obj) {
+			return obj.getEligibleForCollateral();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement obj, YesNoIndicator value) {
+			obj.setEligibleForCollateral(value);
 		}
 	};
 	protected YesNoIndicator accruedInterestIndicator;
@@ -8671,7 +8736,7 @@ public class SecuritiesSettlement extends Settlement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmAccruedInterestIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesSettlement, YesNoIndicator> mmAccruedInterestIndicator = new MMBusinessAttribute<SecuritiesSettlement, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AmountAndDirection32.mmAccruedInterestIndicator, AmountAndDirection33.mmAccruedInterestIndicator, CorporateAction3.mmAccruedInterestIndicator, CorporateAction4.mmAccruedInterestIndicator,
 					CorporateAction5.mmAccruedInterestIndicator, CorporateAction6.mmAccruedInterestIndicator, CorporateAction7.mmAccruedInterestIndicator, CorporateAction8.mmAccruedInterestIndicator,
@@ -8692,12 +8757,14 @@ public class SecuritiesSettlement extends Settlement {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlement.class.getMethod("getAccruedInterestIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(SecuritiesSettlement obj) {
+			return obj.getAccruedInterestIndicator();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement obj, YesNoIndicator value) {
+			obj.setAccruedInterestIndicator(value);
 		}
 	};
 	protected PreConfirmationCode preConfirmation;
@@ -8803,7 +8870,7 @@ public class SecuritiesSettlement extends Settlement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPreConfirmation = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesSettlement, PreConfirmationCode> mmPreConfirmation = new MMBusinessAttribute<SecuritiesSettlement, PreConfirmationCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AdditionalParameters2.mmPreConfirmation, AdditionalParameters6.mmPreConfirmation, AdditionalParameters12.mmPreConfirmation, AdditionalParameters13.mmPreConfirmation,
 					AdditionalParameters18.mmPreConfirmation, AdditionalParameters19.mmPreConfirmation, AdditionalParameters17.mmPreConfirmation, AdditionalParameters20.mmPreConfirmation, AdditionalParameters4.mmPreConfirmation,
@@ -8821,12 +8888,14 @@ public class SecuritiesSettlement extends Settlement {
 			simpleType_lazy = () -> PreConfirmationCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlement.class.getMethod("getPreConfirmation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PreConfirmationCode getValue(SecuritiesSettlement obj) {
+			return obj.getPreConfirmation();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement obj, PreConfirmationCode value) {
+			obj.setPreConfirmation(value);
 		}
 	};
 	protected YesNoIndicator securitiesRealTimeGrossSettlement;
@@ -9337,7 +9406,7 @@ public class SecuritiesSettlement extends Settlement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSecuritiesRealTimeGrossSettlement = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesSettlement, YesNoIndicator> mmSecuritiesRealTimeGrossSettlement = new MMBusinessAttribute<SecuritiesSettlement, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SecuritiesRTGS1Choice.mmIndicator, SecuritiesRTGS1Choice.mmProprietary, SettlementDetails9.mmSecuritiesRTGS, SecuritiesRTGS2Choice.mmIndicator, SecuritiesRTGS2Choice.mmProprietary,
 					SettlementDetails17.mmSecuritiesRTGS, SettlementDetails30.mmSecuritiesRTGS, SettlementDetails32.mmSecuritiesRTGS, SettlementDetails60.mmSecuritiesRTGS, SettlementDetails64.mmSecuritiesRTGS,
@@ -9381,12 +9450,14 @@ public class SecuritiesSettlement extends Settlement {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlement.class.getMethod("getSecuritiesRealTimeGrossSettlement", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(SecuritiesSettlement obj) {
+			return obj.getSecuritiesRealTimeGrossSettlement();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement obj, YesNoIndicator value) {
+			obj.setSecuritiesRealTimeGrossSettlement(value);
 		}
 	};
 	protected BlockTradeCode blockTrade;
@@ -9807,7 +9878,7 @@ public class SecuritiesSettlement extends Settlement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmBlockTrade = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesSettlement, BlockTradeCode> mmBlockTrade = new MMBusinessAttribute<SecuritiesSettlement, BlockTradeCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(BlockTrade1Choice.mmCode, BlockTrade1Choice.mmProprietary, SettlementDetails9.mmBlockTrade, BlockTrade2Choice.mmCode, BlockTrade2Choice.mmProprietary, SettlementDetails17.mmBlockTrade,
 					SettlementDetails30.mmBlockTrade, SettlementDetails32.mmBlockTrade, SettlementDetails60.mmBlockTrade, SettlementDetails64.mmBlockTrade, SettlementDetails3.mmBlockTrade, SettlementDetails16.mmBlockTrade,
@@ -9841,12 +9912,14 @@ public class SecuritiesSettlement extends Settlement {
 			simpleType_lazy = () -> BlockTradeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlement.class.getMethod("getBlockTrade", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public BlockTradeCode getValue(SecuritiesSettlement obj) {
+			return obj.getBlockTrade();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement obj, BlockTradeCode value) {
+			obj.setBlockTrade(value);
 		}
 	};
 	protected SettlementSystemMethodCode settlementSystemMethod;
@@ -10285,7 +10358,7 @@ public class SecuritiesSettlement extends Settlement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSettlementSystemMethod = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesSettlement, SettlementSystemMethodCode> mmSettlementSystemMethod = new MMBusinessAttribute<SecuritiesSettlement, SettlementSystemMethodCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementSystemMethod1Choice.mmCode, SettlementSystemMethod1Choice.mmProprietary, SettlementDetails9.mmSettlementSystemMethod, SettlementSystemMethod2Choice.mmCode,
 					SettlementSystemMethod2Choice.mmProprietary, SettlementDetails17.mmSettlementSystemMethod, SettlementDetails30.mmSettlementSystemMethod, SettlementDetails32.mmSettlementSystemMethod,
@@ -10331,12 +10404,14 @@ public class SecuritiesSettlement extends Settlement {
 			simpleType_lazy = () -> SettlementSystemMethodCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlement.class.getMethod("getSettlementSystemMethod", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SettlementSystemMethodCode getValue(SecuritiesSettlement obj) {
+			return obj.getSettlementSystemMethod();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement obj, SettlementSystemMethodCode value) {
+			obj.setSettlementSystemMethod(value);
 		}
 	};
 	protected AutoBorrowingCode automaticBorrowing;
@@ -10665,7 +10740,7 @@ public class SecuritiesSettlement extends Settlement {
 	 * definition} = "Condition for automatic borrowing."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmAutomaticBorrowing = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesSettlement, AutoBorrowingCode> mmAutomaticBorrowing = new MMBusinessAttribute<SecuritiesSettlement, AutoBorrowingCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AutomaticBorrowing1Choice.mmCode, AutomaticBorrowing1Choice.mmProprietary, SettlementDetails9.mmAutomaticBorrowing, AutomaticBorrowing4Choice.mmCode,
 					AutomaticBorrowing4Choice.mmProprietary, SettlementDetails17.mmAutomaticBorrowing, SettlementDetails30.mmAutomaticBorrowing, SettlementDetails32.mmAutomaticBorrowing, SettlementDetails60.mmAutomaticBorrowing,
@@ -10698,12 +10773,14 @@ public class SecuritiesSettlement extends Settlement {
 			simpleType_lazy = () -> AutoBorrowingCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlement.class.getMethod("getAutomaticBorrowing", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AutoBorrowingCode getValue(SecuritiesSettlement obj) {
+			return obj.getAutomaticBorrowing();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement obj, AutoBorrowingCode value) {
+			obj.setAutomaticBorrowing(value);
 		}
 	};
 	protected YesNoIndicator partialSettlementIndicator;
@@ -10831,7 +10908,7 @@ public class SecuritiesSettlement extends Settlement {
 	 * definition} = "Specifies whether partial settlement is allowed."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPartialSettlementIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesSettlement, YesNoIndicator> mmPartialSettlementIndicator = new MMBusinessAttribute<SecuritiesSettlement, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementDetails9.mmPartialSettlementIndicator, SettlementDetails17.mmPartialSettlementIndicator, SettlementDetails30.mmPartialSettlementIndicator,
 					SettlementDetails32.mmPartialSettlementIndicator, SettlementDetails3.mmPartialSettlementIndicator, SettlementDetails16.mmPartialSettlementIndicator, SettlementDetails31.mmPartialSettlementIndicator,
@@ -10851,12 +10928,14 @@ public class SecuritiesSettlement extends Settlement {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlement.class.getMethod("getPartialSettlementIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(SecuritiesSettlement obj) {
+			return obj.getPartialSettlementIndicator();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement obj, YesNoIndicator value) {
+			obj.setPartialSettlementIndicator(value);
 		}
 	};
 	protected YesNoIndicator holdIndicator;
@@ -11207,7 +11286,7 @@ public class SecuritiesSettlement extends Settlement {
 	 * "Specifies whether the transaction is on hold/blocked/frozen."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmHoldIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesSettlement, YesNoIndicator> mmHoldIndicator = new MMBusinessAttribute<SecuritiesSettlement, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementDetails3.mmHoldIndicator, SettlementDetails16.mmHoldIndicator, SettlementDetails31.mmHoldIndicator, SettlementDetails40.mmHoldIndicator, SettlementDetails62.mmHoldIndicator,
 					SettlementDetails63.mmHoldIndicator, RequestDetails1.mmHoldIndicator, RequestDetails2.mmHoldIndicator, HoldIndicator2.mmIndicator, RequestDetails6.mmHoldIndicator, HoldIndicator3.mmIndicator,
@@ -11239,12 +11318,14 @@ public class SecuritiesSettlement extends Settlement {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlement.class.getMethod("getHoldIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(SecuritiesSettlement obj) {
+			return obj.getHoldIndicator();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement obj, YesNoIndicator value) {
+			obj.setHoldIndicator(value);
 		}
 	};
 	protected SafekeepingPlace requestedSafekeepingPlace;
@@ -11284,7 +11365,7 @@ public class SecuritiesSettlement extends Settlement {
 	 * definition} = "Place requested as the place of safekeeping."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRequestedSafekeepingPlace = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesSettlement, SafekeepingPlace> mmRequestedSafekeepingPlace = new MMBusinessAssociationEnd<SecuritiesSettlement, SafekeepingPlace>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
@@ -11294,9 +11375,19 @@ public class SecuritiesSettlement extends Settlement {
 			definition = "Place requested as the place of safekeeping.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.SafekeepingPlace.mmSecuritiesSettlement;
+			opposite_lazy = () -> SafekeepingPlace.mmSecuritiesSettlement;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SafekeepingPlace.mmObject();
+			type_lazy = () -> SafekeepingPlace.mmObject();
+		}
+
+		@Override
+		public SafekeepingPlace getValue(SecuritiesSettlement obj) {
+			return obj.getRequestedSafekeepingPlace();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement obj, SafekeepingPlace value) {
+			obj.setRequestedSafekeepingPlace(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.PairOff> pairOff;
@@ -11334,7 +11425,7 @@ public class SecuritiesSettlement extends Settlement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPairOff = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesSettlement, List<PairOff>> mmPairOff = new MMBusinessAssociationEnd<SecuritiesSettlement, List<PairOff>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
@@ -11346,8 +11437,18 @@ public class SecuritiesSettlement extends Settlement {
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PairOff.mmObject();
 		}
+
+		@Override
+		public List<PairOff> getValue(SecuritiesSettlement obj) {
+			return obj.getPairOff();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement obj, List<PairOff> value) {
+			obj.setPairOff(value);
+		}
 	};
-	protected List<com.tools20022.repository.entity.Interest> accruedInterest;
+	protected List<Interest> accruedInterest;
 	/**
 	 * 
 	 <p>
@@ -11380,7 +11481,7 @@ public class SecuritiesSettlement extends Settlement {
 	 * definition} = "Interest included in the settlement."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmAccruedInterest = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesSettlement, List<Interest>> mmAccruedInterest = new MMBusinessAssociationEnd<SecuritiesSettlement, List<Interest>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
@@ -11388,9 +11489,19 @@ public class SecuritiesSettlement extends Settlement {
 			name = "AccruedInterest";
 			definition = "Interest included in the settlement.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Interest.mmSecuritiesSettlement;
+			opposite_lazy = () -> Interest.mmSecuritiesSettlement;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Interest.mmObject();
+			type_lazy = () -> Interest.mmObject();
+		}
+
+		@Override
+		public List<Interest> getValue(SecuritiesSettlement obj) {
+			return obj.getAccruedInterest();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement obj, List<Interest> value) {
+			obj.setAccruedInterest(value);
 		}
 	};
 	protected SecuritiesClearing securitiesClearing;
@@ -11427,7 +11538,7 @@ public class SecuritiesSettlement extends Settlement {
 	 * definition} = "Clearing process which triggers the settlement process."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSecuritiesClearing = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesSettlement, com.tools20022.repository.entity.SecuritiesClearing> mmSecuritiesClearing = new MMBusinessAssociationEnd<SecuritiesSettlement, com.tools20022.repository.entity.SecuritiesClearing>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
@@ -11439,6 +11550,16 @@ public class SecuritiesSettlement extends Settlement {
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesClearing.mmSecuritiesSettlement;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesClearing.mmObject();
+		}
+
+		@Override
+		public com.tools20022.repository.entity.SecuritiesClearing getValue(SecuritiesSettlement obj) {
+			return obj.getSecuritiesClearing();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement obj, com.tools20022.repository.entity.SecuritiesClearing value) {
+			obj.setSecuritiesClearing(value);
 		}
 	};
 	protected Payment payment;
@@ -11475,7 +11596,7 @@ public class SecuritiesSettlement extends Settlement {
 	 * "Specifies the cash payment information of a securities settlement."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPayment = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesSettlement, Optional<Payment>> mmPayment = new MMBusinessAssociationEnd<SecuritiesSettlement, Optional<Payment>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
@@ -11487,6 +11608,16 @@ public class SecuritiesSettlement extends Settlement {
 			opposite_lazy = () -> com.tools20022.repository.entity.Payment.mmRelatedSecuritiesSettlement;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+		}
+
+		@Override
+		public Optional<Payment> getValue(SecuritiesSettlement obj) {
+			return obj.getPayment();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement obj, Optional<Payment> value) {
+			obj.setPayment(value.orElse(null));
 		}
 	};
 	protected Allocation settledAllocation;
@@ -11523,7 +11654,7 @@ public class SecuritiesSettlement extends Settlement {
 	 * definition} = "Allocation which is settled."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSettledAllocation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesSettlement, Optional<Allocation>> mmSettledAllocation = new MMBusinessAssociationEnd<SecuritiesSettlement, Optional<Allocation>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
@@ -11532,12 +11663,22 @@ public class SecuritiesSettlement extends Settlement {
 			definition = "Allocation which is settled.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Allocation.mmSettlementExecutionParameters;
+			opposite_lazy = () -> Allocation.mmSettlementExecutionParameters;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
+			type_lazy = () -> Allocation.mmObject();
+		}
+
+		@Override
+		public Optional<Allocation> getValue(SecuritiesSettlement obj) {
+			return obj.getSettledAllocation();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement obj, Optional<Allocation> value) {
+			obj.setSettledAllocation(value.orElse(null));
 		}
 	};
-	protected List<com.tools20022.repository.entity.ForeignExchangeTrade> relatedForeignExchangeOperation;
+	protected List<ForeignExchangeTrade> relatedForeignExchangeOperation;
 	/**
 	 * 
 	 <p>
@@ -11572,7 +11713,7 @@ public class SecuritiesSettlement extends Settlement {
 	 * definition} = "Entry details related to currency exchange information."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedForeignExchangeOperation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesSettlement, List<ForeignExchangeTrade>> mmRelatedForeignExchangeOperation = new MMBusinessAssociationEnd<SecuritiesSettlement, List<ForeignExchangeTrade>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
@@ -11580,9 +11721,19 @@ public class SecuritiesSettlement extends Settlement {
 			name = "RelatedForeignExchangeOperation";
 			definition = "Entry details related to currency exchange information.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmCurrencyExchangeForSecuritiesSettlement;
+			opposite_lazy = () -> ForeignExchangeTrade.mmCurrencyExchangeForSecuritiesSettlement;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmObject();
+			type_lazy = () -> ForeignExchangeTrade.mmObject();
+		}
+
+		@Override
+		public List<ForeignExchangeTrade> getValue(SecuritiesSettlement obj) {
+			return obj.getRelatedForeignExchangeOperation();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement obj, List<ForeignExchangeTrade> value) {
+			obj.setRelatedForeignExchangeOperation(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.Security> security;
@@ -11759,7 +11910,7 @@ public class SecuritiesSettlement extends Settlement {
 	 * definition} = "Security which is settled."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSecurity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesSettlement, List<Security>> mmSecurity = new MMBusinessAssociationEnd<SecuritiesSettlement, List<Security>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionDetails3.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionDetails4.mmFinancialInstrumentAttributes,
 					SecuritiesSettlementTransactionDetails2.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionDetails5.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionDetails6.mmFinancialInstrumentAttributes,
@@ -11787,6 +11938,16 @@ public class SecuritiesSettlement extends Settlement {
 			opposite_lazy = () -> com.tools20022.repository.entity.Security.mmSecuritiesSettlement;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
+		}
+
+		@Override
+		public List<Security> getValue(SecuritiesSettlement obj) {
+			return obj.getSecurity();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement obj, List<Security> value) {
+			obj.setSecurity(value);
 		}
 	};
 	protected Position position;
@@ -11823,7 +11984,7 @@ public class SecuritiesSettlement extends Settlement {
 	 * "Information on the quantities and amounts to be settled in a position."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPosition = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesSettlement, com.tools20022.repository.entity.Position> mmPosition = new MMBusinessAssociationEnd<SecuritiesSettlement, com.tools20022.repository.entity.Position>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
@@ -11835,6 +11996,16 @@ public class SecuritiesSettlement extends Settlement {
 			opposite_lazy = () -> com.tools20022.repository.entity.Position.mmSecuritiesSettlement;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Position.mmObject();
+		}
+
+		@Override
+		public com.tools20022.repository.entity.Position getValue(SecuritiesSettlement obj) {
+			return obj.getPosition();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement obj, com.tools20022.repository.entity.Position value) {
+			obj.setPosition(value);
 		}
 	};
 	protected Rollover rollover;
@@ -11871,7 +12042,7 @@ public class SecuritiesSettlement extends Settlement {
 	 * "Process whereby a financial instrument is reinvested at maturity."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRollover = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesSettlement, Optional<Rollover>> mmRollover = new MMBusinessAssociationEnd<SecuritiesSettlement, Optional<Rollover>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
@@ -11883,6 +12054,16 @@ public class SecuritiesSettlement extends Settlement {
 			opposite_lazy = () -> com.tools20022.repository.entity.Rollover.mmSecuritiesSettlement;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Rollover.mmObject();
+		}
+
+		@Override
+		public Optional<Rollover> getValue(SecuritiesSettlement obj) {
+			return obj.getRollover();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement obj, Optional<Rollover> value) {
+			obj.setRollover(value.orElse(null));
 		}
 	};
 	protected SecuritiesQuantity turnedQuantity;
@@ -11938,7 +12119,7 @@ public class SecuritiesSettlement extends Settlement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmTurnedQuantity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesSettlement, SecuritiesQuantity> mmTurnedQuantity = new MMBusinessAssociationEnd<SecuritiesSettlement, SecuritiesQuantity>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PairedOrTurnedQuantity1Choice.mmTurnedQuantity, PairedOrTurnedQuantity2Choice.mmTurnedQuantity, PairedOrTurnedQuantity3Choice.mmTurnedQuantity,
 					PairedOrTurnedQuantity4Choice.mmTurnedQuantity);
@@ -11949,9 +12130,19 @@ public class SecuritiesSettlement extends Settlement {
 			definition = "Relates to a turnaround: the same security is bought and sold to settle the same day, to or from different brokers.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmRelatedTurnaroundSettlement;
+			opposite_lazy = () -> SecuritiesQuantity.mmRelatedTurnaroundSettlement;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
+			type_lazy = () -> SecuritiesQuantity.mmObject();
+		}
+
+		@Override
+		public SecuritiesQuantity getValue(SecuritiesSettlement obj) {
+			return obj.getTurnedQuantity();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement obj, SecuritiesQuantity value) {
+			obj.setTurnedQuantity(value);
 		}
 	};
 	protected ObligationTypeCode settlementReason;
@@ -12000,7 +12191,7 @@ public class SecuritiesSettlement extends Settlement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSettlementReason = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesSettlement, ObligationTypeCode> mmSettlementReason = new MMBusinessAttribute<SecuritiesSettlement, ObligationTypeCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(ObligationType1Choice.mmCode, ObligationType1Choice.mmProprietary, SettlementObligation3.mmObligationType, SettlementObligation5.mmObligationType);
 			isDerived = false;
@@ -12013,12 +12204,14 @@ public class SecuritiesSettlement extends Settlement {
 			simpleType_lazy = () -> ObligationTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlement.class.getMethod("getSettlementReason", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ObligationTypeCode getValue(SecuritiesSettlement obj) {
+			return obj.getSettlementReason();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement obj, ObligationTypeCode value) {
+			obj.setSettlementReason(value);
 		}
 	};
 	protected DeliveryReceiptTypeCode settlementType;
@@ -12663,7 +12856,7 @@ public class SecuritiesSettlement extends Settlement {
 	 * "Specifies how the transaction is to be settled, eg, against payment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSettlementType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesSettlement, DeliveryReceiptTypeCode> mmSettlementType = new MMBusinessAttribute<SecuritiesSettlement, DeliveryReceiptTypeCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementTypeAndIdentification3.mmPayment, SettlementTypeAndAdditionalParameters5.mmPayment, SettlementTypeAndIdentification13.mmPayment, SettlementTypeAndIdentification7.mmPayment,
 					SettlementTypeAndAdditionalParameters8.mmPayment, SettlementTypeAndIdentification2.mmPayment, SettlementTypeAndIdentification5.mmPayment, TransactionTypeAndAdditionalParameters3.mmPayment,
@@ -12717,12 +12910,14 @@ public class SecuritiesSettlement extends Settlement {
 			simpleType_lazy = () -> DeliveryReceiptTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlement.class.getMethod("getSettlementType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DeliveryReceiptTypeCode getValue(SecuritiesSettlement obj) {
+			return obj.getSettlementType();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlement obj, DeliveryReceiptTypeCode value) {
+			obj.setSettlementType(value);
 		}
 	};
 
@@ -12734,12 +12929,10 @@ public class SecuritiesSettlement extends Settlement {
 				name = "SecuritiesSettlement";
 				definition = "Settlement of the securities in a securities transaction, that is, the instruction to deliver or receive securities, involving the payment of an amount of money or not.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.mmSecuritiesSettlement, com.tools20022.repository.entity.Payment.mmRelatedSecuritiesSettlement,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmSecuritiesSettlement, com.tools20022.repository.entity.SecuritiesQuantity.mmRelatedTurnaroundSettlement,
-						com.tools20022.repository.entity.SecuritiesTransfer.mmRelatedSettlement, com.tools20022.repository.entity.SecuritiesSettlementPartyRole.mmSecuritiesSettlement,
-						com.tools20022.repository.entity.Interest.mmSecuritiesSettlement, com.tools20022.repository.entity.SafekeepingPlace.mmSecuritiesSettlement,
-						com.tools20022.repository.entity.SecuritiesTradeExecution.mmSecuritiesSettlement, com.tools20022.repository.entity.ForeignExchangeTrade.mmCurrencyExchangeForSecuritiesSettlement,
-						com.tools20022.repository.entity.Allocation.mmSettlementExecutionParameters, com.tools20022.repository.entity.PairOff.mmRelatedSecuritiesSettlement, com.tools20022.repository.entity.Rollover.mmSecuritiesSettlement,
-						com.tools20022.repository.entity.SecuritiesClearing.mmSecuritiesSettlement, com.tools20022.repository.entity.Position.mmSecuritiesSettlement);
+						SecuritiesQuantity.mmSecuritiesSettlement, SecuritiesQuantity.mmRelatedTurnaroundSettlement, SecuritiesTransfer.mmRelatedSettlement, SecuritiesSettlementPartyRole.mmSecuritiesSettlement,
+						Interest.mmSecuritiesSettlement, SafekeepingPlace.mmSecuritiesSettlement, com.tools20022.repository.entity.SecuritiesTradeExecution.mmSecuritiesSettlement,
+						ForeignExchangeTrade.mmCurrencyExchangeForSecuritiesSettlement, Allocation.mmSettlementExecutionParameters, com.tools20022.repository.entity.PairOff.mmRelatedSecuritiesSettlement,
+						com.tools20022.repository.entity.Rollover.mmSecuritiesSettlement, com.tools20022.repository.entity.SecuritiesClearing.mmSecuritiesSettlement, com.tools20022.repository.entity.Position.mmSecuritiesSettlement);
 				derivationElement_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionDetails3.mmSettlementTypeAndAdditionalParameters, SecuritiesSettlementTransactionDetails3.mmQuantityAndAccountDetails,
 						SecuritiesSettlementTransactionDetails3.mmSettlementParameters, SecuritiesSettlementTransactionDetails4.mmSettlementTypeAndAdditionalParameters, SecuritiesSettlementTransactionDetails4.mmQuantityAndAccountDetails,
 						SecuritiesSettlementTransactionDetails4.mmSettlementParameters, SecuritiesSettlementTransactionDetails2.mmSettlementTypeAndAdditionalParameters, SecuritiesSettlementTransactionDetails2.mmQuantityAndAccountDetails,
@@ -12830,7 +13023,7 @@ public class SecuritiesSettlement extends Settlement {
 		return transferOperation;
 	}
 
-	public SecuritiesSettlement setTransferOperation(com.tools20022.repository.entity.SecuritiesTransfer transferOperation) {
+	public SecuritiesSettlement setTransferOperation(SecuritiesTransfer transferOperation) {
 		this.transferOperation = Objects.requireNonNull(transferOperation);
 		return this;
 	}
@@ -12848,7 +13041,7 @@ public class SecuritiesSettlement extends Settlement {
 		return partyRole == null ? partyRole = new ArrayList<>() : partyRole;
 	}
 
-	public SecuritiesSettlement setPartyRole(List<com.tools20022.repository.entity.SecuritiesSettlementPartyRole> partyRole) {
+	public SecuritiesSettlement setPartyRole(List<SecuritiesSettlementPartyRole> partyRole) {
 		this.partyRole = Objects.requireNonNull(partyRole);
 		return this;
 	}
@@ -12884,7 +13077,7 @@ public class SecuritiesSettlement extends Settlement {
 		return settlementQuantity;
 	}
 
-	public SecuritiesSettlement setSettlementQuantity(com.tools20022.repository.entity.SecuritiesQuantity settlementQuantity) {
+	public SecuritiesSettlement setSettlementQuantity(SecuritiesQuantity settlementQuantity) {
 		this.settlementQuantity = Objects.requireNonNull(settlementQuantity);
 		return this;
 	}
@@ -13055,7 +13248,7 @@ public class SecuritiesSettlement extends Settlement {
 		return requestedSafekeepingPlace;
 	}
 
-	public SecuritiesSettlement setRequestedSafekeepingPlace(com.tools20022.repository.entity.SafekeepingPlace requestedSafekeepingPlace) {
+	public SecuritiesSettlement setRequestedSafekeepingPlace(SafekeepingPlace requestedSafekeepingPlace) {
 		this.requestedSafekeepingPlace = Objects.requireNonNull(requestedSafekeepingPlace);
 		return this;
 	}
@@ -13073,7 +13266,7 @@ public class SecuritiesSettlement extends Settlement {
 		return accruedInterest == null ? accruedInterest = new ArrayList<>() : accruedInterest;
 	}
 
-	public SecuritiesSettlement setAccruedInterest(List<com.tools20022.repository.entity.Interest> accruedInterest) {
+	public SecuritiesSettlement setAccruedInterest(List<Interest> accruedInterest) {
 		this.accruedInterest = Objects.requireNonNull(accruedInterest);
 		return this;
 	}
@@ -13100,7 +13293,7 @@ public class SecuritiesSettlement extends Settlement {
 		return settledAllocation == null ? Optional.empty() : Optional.of(settledAllocation);
 	}
 
-	public SecuritiesSettlement setSettledAllocation(com.tools20022.repository.entity.Allocation settledAllocation) {
+	public SecuritiesSettlement setSettledAllocation(Allocation settledAllocation) {
 		this.settledAllocation = settledAllocation;
 		return this;
 	}
@@ -13109,7 +13302,7 @@ public class SecuritiesSettlement extends Settlement {
 		return relatedForeignExchangeOperation == null ? relatedForeignExchangeOperation = new ArrayList<>() : relatedForeignExchangeOperation;
 	}
 
-	public SecuritiesSettlement setRelatedForeignExchangeOperation(List<com.tools20022.repository.entity.ForeignExchangeTrade> relatedForeignExchangeOperation) {
+	public SecuritiesSettlement setRelatedForeignExchangeOperation(List<ForeignExchangeTrade> relatedForeignExchangeOperation) {
 		this.relatedForeignExchangeOperation = Objects.requireNonNull(relatedForeignExchangeOperation);
 		return this;
 	}
@@ -13145,7 +13338,7 @@ public class SecuritiesSettlement extends Settlement {
 		return turnedQuantity;
 	}
 
-	public SecuritiesSettlement setTurnedQuantity(com.tools20022.repository.entity.SecuritiesQuantity turnedQuantity) {
+	public SecuritiesSettlement setTurnedQuantity(SecuritiesQuantity turnedQuantity) {
 		this.turnedQuantity = Objects.requireNonNull(turnedQuantity);
 		return this;
 	}

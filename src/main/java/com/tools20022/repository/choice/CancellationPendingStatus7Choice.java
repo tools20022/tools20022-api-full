@@ -121,7 +121,7 @@ public class CancellationPendingStatus7Choice {
 	 * CancellationPendingStatus1.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationPendingStatus7Choice, Max350Text> mmReason = new MMMessageAttribute<CancellationPendingStatus7Choice, Max350Text>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationPendingStatus7Choice.mmObject();
@@ -134,6 +134,16 @@ public class CancellationPendingStatus7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CancellationPendingStatus7Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(CancellationPendingStatus7Choice obj, Max350Text value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "DataSrcSchme", required = true)
@@ -176,7 +186,7 @@ public class CancellationPendingStatus7Choice {
 	 * CancellationPendingStatus1.mmDataSourceScheme}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CancellationPendingStatus7Choice, GenericIdentification1> mmDataSourceScheme = new MMMessageAssociationEnd<CancellationPendingStatus7Choice, GenericIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationPendingStatus7Choice.mmObject();
@@ -190,6 +200,16 @@ public class CancellationPendingStatus7Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(CancellationPendingStatus7Choice obj) {
+			return obj.getDataSourceScheme();
+		}
+
+		@Override
+		public void setValue(CancellationPendingStatus7Choice obj, GenericIdentification1 value) {
+			obj.setDataSourceScheme(value);
 		}
 	};
 	@XmlElement(name = "NoSpcfdRsn", required = true)
@@ -232,7 +252,7 @@ public class CancellationPendingStatus7Choice {
 	 * CancellationPendingStatus1.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationPendingStatus7Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<CancellationPendingStatus7Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationPendingStatus7Choice.mmObject();
@@ -245,6 +265,16 @@ public class CancellationPendingStatus7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(CancellationPendingStatus7Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(CancellationPendingStatus7Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 

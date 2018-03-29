@@ -114,7 +114,7 @@ public class FinancialInstrumentForm1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBookingAppearance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentForm1, Optional<Appearance2Choice>> mmBookingAppearance = new MMMessageAttribute<FinancialInstrumentForm1, Optional<Appearance2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentForm1.mmObject();
 			isDerived = false;
@@ -126,6 +126,16 @@ public class FinancialInstrumentForm1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Appearance2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Appearance2Choice> getValue(FinancialInstrumentForm1 obj) {
+			return obj.getBookingAppearance();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentForm1 obj, Optional<Appearance2Choice> value) {
+			obj.setBookingAppearance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LglForm")
@@ -166,7 +176,7 @@ public class FinancialInstrumentForm1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLegalForm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentForm1, Optional<FormOfSecurity5Choice>> mmLegalForm = new MMMessageAttribute<FinancialInstrumentForm1, Optional<FormOfSecurity5Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentForm1.mmObject();
 			isDerived = false;
@@ -178,6 +188,16 @@ public class FinancialInstrumentForm1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FormOfSecurity5Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FormOfSecurity5Choice> getValue(FinancialInstrumentForm1 obj) {
+			return obj.getLegalForm();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentForm1 obj, Optional<FormOfSecurity5Choice> value) {
+			obj.setLegalForm(value.orElse(null));
 		}
 	};
 

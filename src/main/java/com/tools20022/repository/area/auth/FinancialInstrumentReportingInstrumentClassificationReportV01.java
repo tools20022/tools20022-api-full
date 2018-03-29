@@ -25,7 +25,6 @@ import com.tools20022.repository.area.AuthoritiesLatestVersion;
 import com.tools20022.repository.msg.SecuritiesInstrumentClassification2;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.FinancialInstrumentsandTransactionsRegulatoryReportingTransactionsandFinancialInstrumentsDataReporting;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -119,7 +118,7 @@ public class FinancialInstrumentReportingInstrumentClassificationReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmInstrumentClassification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FinancialInstrumentReportingInstrumentClassificationReportV01, List<SecuritiesInstrumentClassification2>> mmInstrumentClassification = new MMMessageBuildingBlock<FinancialInstrumentReportingInstrumentClassificationReportV01, List<SecuritiesInstrumentClassification2>>() {
 		{
 			xmlTag = "InstrmClssfctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -129,12 +128,14 @@ public class FinancialInstrumentReportingInstrumentClassificationReportV01 {
 			complexType_lazy = () -> SecuritiesInstrumentClassification2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FinancialInstrumentReportingInstrumentClassificationReportV01.class.getMethod("getInstrumentClassification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SecuritiesInstrumentClassification2> getValue(FinancialInstrumentReportingInstrumentClassificationReportV01 obj) {
+			return obj.getInstrumentClassification();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentReportingInstrumentClassificationReportV01 obj, List<SecuritiesInstrumentClassification2> value) {
+			obj.setInstrumentClassification(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -164,7 +165,7 @@ public class FinancialInstrumentReportingInstrumentClassificationReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FinancialInstrumentReportingInstrumentClassificationReportV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<FinancialInstrumentReportingInstrumentClassificationReportV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,12 +175,14 @@ public class FinancialInstrumentReportingInstrumentClassificationReportV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FinancialInstrumentReportingInstrumentClassificationReportV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(FinancialInstrumentReportingInstrumentClassificationReportV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentReportingInstrumentClassificationReportV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

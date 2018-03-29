@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.LimitIdentification1Choice;
 import com.tools20022.repository.entity.RiskManagementLimit;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Limit6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -123,7 +124,7 @@ public class LimitStructure1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLimitIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitStructure1, LimitIdentification1Choice> mmLimitIdentification = new MMMessageAssociationEnd<LimitStructure1, LimitIdentification1Choice>() {
 		{
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitStructure1.mmObject();
@@ -137,6 +138,16 @@ public class LimitStructure1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> LimitIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public LimitIdentification1Choice getValue(LimitStructure1 obj) {
+			return obj.getLimitIdentification();
+		}
+
+		@Override
+		public void setValue(LimitStructure1 obj, LimitIdentification1Choice value) {
+			obj.setLimitIdentification(value);
 		}
 	};
 	@XmlElement(name = "NewLmtValSet", required = true)
@@ -179,7 +190,7 @@ public class LimitStructure1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNewLimitValueSet = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitStructure1, Limit6> mmNewLimitValueSet = new MMMessageAssociationEnd<LimitStructure1, Limit6>() {
 		{
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitStructure1.mmObject();
@@ -192,7 +203,17 @@ public class LimitStructure1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Limit6.mmObject();
+			type_lazy = () -> Limit6.mmObject();
+		}
+
+		@Override
+		public Limit6 getValue(LimitStructure1 obj) {
+			return obj.getNewLimitValueSet();
+		}
+
+		@Override
+		public void setValue(LimitStructure1 obj, Limit6 value) {
+			obj.setNewLimitValueSet(value);
 		}
 	};
 
@@ -224,7 +245,7 @@ public class LimitStructure1 {
 		return newLimitValueSet;
 	}
 
-	public LimitStructure1 setNewLimitValueSet(com.tools20022.repository.msg.Limit6 newLimitValueSet) {
+	public LimitStructure1 setNewLimitValueSet(Limit6 newLimitValueSet) {
 		this.newLimitValueSet = Objects.requireNonNull(newLimitValueSet);
 		return this;
 	}

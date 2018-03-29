@@ -25,6 +25,9 @@ import com.tools20022.repository.codeset.TransactionIndividualStatus2Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstitution2;
+import com.tools20022.repository.msg.OriginalTransactionReference8;
+import com.tools20022.repository.msg.StatusReasonInformation4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -129,7 +132,7 @@ public class PaymentTransactionInformation12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatusIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTransactionInformation12, Max35Text> mmStatusIdentification = new MMMessageAttribute<PaymentTransactionInformation12, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionInformation12.mmObject();
 			isDerived = false;
@@ -140,6 +143,16 @@ public class PaymentTransactionInformation12 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PaymentTransactionInformation12 obj) {
+			return obj.getStatusIdentification();
+		}
+
+		@Override
+		public void setValue(PaymentTransactionInformation12 obj, Max35Text value) {
+			obj.setStatusIdentification(value);
 		}
 	};
 	@XmlElement(name = "OrgnlInstrId")
@@ -178,7 +191,7 @@ public class PaymentTransactionInformation12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalInstructionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTransactionInformation12, Optional<Max35Text>> mmOriginalInstructionIdentification = new MMMessageAttribute<PaymentTransactionInformation12, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmInstructionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionInformation12.mmObject();
@@ -190,6 +203,16 @@ public class PaymentTransactionInformation12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PaymentTransactionInformation12 obj) {
+			return obj.getOriginalInstructionIdentification();
+		}
+
+		@Override
+		public void setValue(PaymentTransactionInformation12 obj, Optional<Max35Text> value) {
+			obj.setOriginalInstructionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlEndToEndId", required = true)
@@ -228,7 +251,7 @@ public class PaymentTransactionInformation12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalEndToEndIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTransactionInformation12, Max35Text> mmOriginalEndToEndIdentification = new MMMessageAttribute<PaymentTransactionInformation12, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmEndToEndIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionInformation12.mmObject();
@@ -240,6 +263,16 @@ public class PaymentTransactionInformation12 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PaymentTransactionInformation12 obj) {
+			return obj.getOriginalEndToEndIdentification();
+		}
+
+		@Override
+		public void setValue(PaymentTransactionInformation12 obj, Max35Text value) {
+			obj.setOriginalEndToEndIdentification(value);
 		}
 	};
 	@XmlElement(name = "OrgnlTxId", required = true)
@@ -278,7 +311,7 @@ public class PaymentTransactionInformation12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTransactionInformation12, Max35Text> mmOriginalTransactionIdentification = new MMMessageAttribute<PaymentTransactionInformation12, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionInformation12.mmObject();
@@ -290,6 +323,16 @@ public class PaymentTransactionInformation12 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PaymentTransactionInformation12 obj) {
+			return obj.getOriginalTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(PaymentTransactionInformation12 obj, Max35Text value) {
+			obj.setOriginalTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "TxSts")
@@ -327,7 +370,7 @@ public class PaymentTransactionInformation12 {
 	 * definition} = "Specifies the status of a transaction, in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTransactionInformation12, Optional<TransactionIndividualStatus2Code>> mmTransactionStatus = new MMMessageAttribute<PaymentTransactionInformation12, Optional<TransactionIndividualStatus2Code>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionInformation12.mmObject();
@@ -339,6 +382,16 @@ public class PaymentTransactionInformation12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TransactionIndividualStatus2Code.mmObject();
+		}
+
+		@Override
+		public Optional<TransactionIndividualStatus2Code> getValue(PaymentTransactionInformation12 obj) {
+			return obj.getTransactionStatus();
+		}
+
+		@Override
+		public void setValue(PaymentTransactionInformation12 obj, Optional<TransactionIndividualStatus2Code> value) {
+			obj.setTransactionStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StsRsnInf")
@@ -375,7 +428,7 @@ public class PaymentTransactionInformation12 {
 	 * definition} = "Detailed information on the status reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusReasonInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentTransactionInformation12, Optional<StatusReasonInformation4>> mmStatusReasonInformation = new MMMessageAssociationEnd<PaymentTransactionInformation12, Optional<StatusReasonInformation4>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionInformation12.mmObject();
@@ -387,7 +440,17 @@ public class PaymentTransactionInformation12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation4.mmObject();
+			type_lazy = () -> StatusReasonInformation4.mmObject();
+		}
+
+		@Override
+		public Optional<StatusReasonInformation4> getValue(PaymentTransactionInformation12 obj) {
+			return obj.getStatusReasonInformation();
+		}
+
+		@Override
+		public void setValue(PaymentTransactionInformation12 obj, Optional<StatusReasonInformation4> value) {
+			obj.setStatusReasonInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstgAgt")
@@ -425,7 +488,7 @@ public class PaymentTransactionInformation12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstructingAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentTransactionInformation12, Optional<FinancialInstitution2>> mmInstructingAgent = new MMMessageAssociationEnd<PaymentTransactionInformation12, Optional<FinancialInstitution2>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionInformation12.mmObject();
@@ -437,7 +500,17 @@ public class PaymentTransactionInformation12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitution2.mmObject();
+			type_lazy = () -> FinancialInstitution2.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstitution2> getValue(PaymentTransactionInformation12 obj) {
+			return obj.getInstructingAgent();
+		}
+
+		@Override
+		public void setValue(PaymentTransactionInformation12 obj, Optional<FinancialInstitution2> value) {
+			obj.setInstructingAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstdAgt")
@@ -475,7 +548,7 @@ public class PaymentTransactionInformation12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstructedAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentTransactionInformation12, Optional<FinancialInstitution2>> mmInstructedAgent = new MMMessageAssociationEnd<PaymentTransactionInformation12, Optional<FinancialInstitution2>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionInformation12.mmObject();
@@ -487,7 +560,17 @@ public class PaymentTransactionInformation12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitution2.mmObject();
+			type_lazy = () -> FinancialInstitution2.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstitution2> getValue(PaymentTransactionInformation12 obj) {
+			return obj.getInstructedAgent();
+		}
+
+		@Override
+		public void setValue(PaymentTransactionInformation12 obj, Optional<FinancialInstitution2> value) {
+			obj.setInstructedAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlTxRef", required = true)
@@ -524,7 +607,7 @@ public class PaymentTransactionInformation12 {
 	 * "Set of key elements of the original transaction being referred to."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalTransactionReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentTransactionInformation12, OriginalTransactionReference8> mmOriginalTransactionReference = new MMMessageAssociationEnd<PaymentTransactionInformation12, OriginalTransactionReference8>() {
 		{
 			businessComponentTrace_lazy = () -> Payment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionInformation12.mmObject();
@@ -536,7 +619,17 @@ public class PaymentTransactionInformation12 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OriginalTransactionReference8.mmObject();
+			type_lazy = () -> OriginalTransactionReference8.mmObject();
+		}
+
+		@Override
+		public OriginalTransactionReference8 getValue(PaymentTransactionInformation12 obj) {
+			return obj.getOriginalTransactionReference();
+		}
+
+		@Override
+		public void setValue(PaymentTransactionInformation12 obj, OriginalTransactionReference8 value) {
+			obj.setOriginalTransactionReference(value);
 		}
 	};
 
@@ -607,7 +700,7 @@ public class PaymentTransactionInformation12 {
 		return statusReasonInformation == null ? Optional.empty() : Optional.of(statusReasonInformation);
 	}
 
-	public PaymentTransactionInformation12 setStatusReasonInformation(com.tools20022.repository.msg.StatusReasonInformation4 statusReasonInformation) {
+	public PaymentTransactionInformation12 setStatusReasonInformation(StatusReasonInformation4 statusReasonInformation) {
 		this.statusReasonInformation = statusReasonInformation;
 		return this;
 	}
@@ -616,7 +709,7 @@ public class PaymentTransactionInformation12 {
 		return instructingAgent == null ? Optional.empty() : Optional.of(instructingAgent);
 	}
 
-	public PaymentTransactionInformation12 setInstructingAgent(com.tools20022.repository.msg.FinancialInstitution2 instructingAgent) {
+	public PaymentTransactionInformation12 setInstructingAgent(FinancialInstitution2 instructingAgent) {
 		this.instructingAgent = instructingAgent;
 		return this;
 	}
@@ -625,7 +718,7 @@ public class PaymentTransactionInformation12 {
 		return instructedAgent == null ? Optional.empty() : Optional.of(instructedAgent);
 	}
 
-	public PaymentTransactionInformation12 setInstructedAgent(com.tools20022.repository.msg.FinancialInstitution2 instructedAgent) {
+	public PaymentTransactionInformation12 setInstructedAgent(FinancialInstitution2 instructedAgent) {
 		this.instructedAgent = instructedAgent;
 		return this;
 	}
@@ -634,7 +727,7 @@ public class PaymentTransactionInformation12 {
 		return originalTransactionReference;
 	}
 
-	public PaymentTransactionInformation12 setOriginalTransactionReference(com.tools20022.repository.msg.OriginalTransactionReference8 originalTransactionReference) {
+	public PaymentTransactionInformation12 setOriginalTransactionReference(OriginalTransactionReference8 originalTransactionReference) {
 		this.originalTransactionReference = Objects.requireNonNull(originalTransactionReference);
 		return this;
 	}

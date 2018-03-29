@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.EncryptedContent2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -107,7 +108,7 @@ public class NamedKeyEncryptedData2 {
 	 * definition} = "Version of the data structure."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NamedKeyEncryptedData2, Optional<Number>> mmVersion = new MMMessageAttribute<NamedKeyEncryptedData2, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NamedKeyEncryptedData2.mmObject();
 			isDerived = false;
@@ -118,6 +119,16 @@ public class NamedKeyEncryptedData2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(NamedKeyEncryptedData2 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(NamedKeyEncryptedData2 obj, Optional<Number> value) {
+			obj.setVersion(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "KeyNm")
@@ -149,7 +160,7 @@ public class NamedKeyEncryptedData2 {
 	 * definition} = "Name of the key encryption key (KEK)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmKeyName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NamedKeyEncryptedData2, Optional<Max140Text>> mmKeyName = new MMMessageAttribute<NamedKeyEncryptedData2, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NamedKeyEncryptedData2.mmObject();
 			isDerived = false;
@@ -160,6 +171,16 @@ public class NamedKeyEncryptedData2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(NamedKeyEncryptedData2 obj) {
+			return obj.getKeyName();
+		}
+
+		@Override
+		public void setValue(NamedKeyEncryptedData2 obj, Optional<Max140Text> value) {
+			obj.setKeyName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NcrptdCntt", required = true)
@@ -190,7 +211,7 @@ public class NamedKeyEncryptedData2 {
 	 * definition} = "Encrypted data with an encryption key."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEncryptedContent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NamedKeyEncryptedData2, EncryptedContent2> mmEncryptedContent = new MMMessageAssociationEnd<NamedKeyEncryptedData2, EncryptedContent2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NamedKeyEncryptedData2.mmObject();
 			isDerived = false;
@@ -201,7 +222,17 @@ public class NamedKeyEncryptedData2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.EncryptedContent2.mmObject();
+			type_lazy = () -> EncryptedContent2.mmObject();
+		}
+
+		@Override
+		public EncryptedContent2 getValue(NamedKeyEncryptedData2 obj) {
+			return obj.getEncryptedContent();
+		}
+
+		@Override
+		public void setValue(NamedKeyEncryptedData2 obj, EncryptedContent2 value) {
+			obj.setEncryptedContent(value);
 		}
 	};
 
@@ -242,7 +273,7 @@ public class NamedKeyEncryptedData2 {
 		return encryptedContent;
 	}
 
-	public NamedKeyEncryptedData2 setEncryptedContent(com.tools20022.repository.msg.EncryptedContent2 encryptedContent) {
+	public NamedKeyEncryptedData2 setEncryptedContent(EncryptedContent2 encryptedContent) {
 		this.encryptedContent = Objects.requireNonNull(encryptedContent);
 		return this;
 	}

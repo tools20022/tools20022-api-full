@@ -100,7 +100,7 @@ public class ExchangeRateBasis2Choice {
 	 * definition} = "Exchange rate basis expressed as a currency pair."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCurrencyPair = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ExchangeRateBasis2Choice, ExchangeRateBasis2> mmCurrencyPair = new MMMessageAssociationEnd<ExchangeRateBasis2Choice, ExchangeRateBasis2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ExchangeRateBasis2Choice.mmObject();
 			isDerived = false;
@@ -112,6 +112,16 @@ public class ExchangeRateBasis2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ExchangeRateBasis2.mmObject();
+		}
+
+		@Override
+		public ExchangeRateBasis2 getValue(ExchangeRateBasis2Choice obj) {
+			return obj.getCurrencyPair();
+		}
+
+		@Override
+		public void setValue(ExchangeRateBasis2Choice obj, ExchangeRateBasis2 value) {
+			obj.setCurrencyPair(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -143,7 +153,7 @@ public class ExchangeRateBasis2Choice {
 	 * definition} = "Exchange rate basis expressed in a proprietary notation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExchangeRateBasis2Choice, Max52Text> mmProprietary = new MMMessageAttribute<ExchangeRateBasis2Choice, Max52Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ExchangeRateBasis2Choice.mmObject();
 			isDerived = false;
@@ -154,6 +164,16 @@ public class ExchangeRateBasis2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max52Text.mmObject();
+		}
+
+		@Override
+		public Max52Text getValue(ExchangeRateBasis2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ExchangeRateBasis2Choice obj, Max52Text value) {
+			obj.setProprietary(value);
 		}
 	};
 

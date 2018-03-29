@@ -127,7 +127,7 @@ public class CorporateActionEventReference3Choice {
 	 * mmLinkedOfficialCorporateActionEventIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLinkedOfficialCorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionEventReference3Choice, Max35Text> mmLinkedOfficialCorporateActionEventIdentification = new MMMessageAttribute<CorporateActionEventReference3Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmOfficialCorporateActionEventIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionEventReference3Choice.mmObject();
@@ -141,6 +141,16 @@ public class CorporateActionEventReference3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CorporateActionEventReference3Choice obj) {
+			return obj.getLinkedOfficialCorporateActionEventIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventReference3Choice obj, Max35Text value) {
+			obj.setLinkedOfficialCorporateActionEventIdentification(value);
 		}
 	};
 	@XmlElement(name = "LkdCorpActnId", required = true)
@@ -188,7 +198,7 @@ public class CorporateActionEventReference3Choice {
 	 * mmLinkedCorporateActionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLinkedCorporateActionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionEventReference3Choice, Max35Text> mmLinkedCorporateActionIdentification = new MMMessageAttribute<CorporateActionEventReference3Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmCorporateActionEventIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionEventReference3Choice.mmObject();
@@ -202,6 +212,16 @@ public class CorporateActionEventReference3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CorporateActionEventReference3Choice obj) {
+			return obj.getLinkedCorporateActionIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventReference3Choice obj, Max35Text value) {
+			obj.setLinkedCorporateActionIdentification(value);
 		}
 	};
 

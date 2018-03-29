@@ -51,11 +51,15 @@ public class ConstraintPreviousOrOtherReferenceOrAccountApplicationIdentificatio
 	 */
 	public static final MMConstraint<AccountManagementMessageReference1> forAccountManagementMessageReference1 = new MMConstraint<AccountManagementMessageReference1>() {
 		{
-			validator = ConstraintPreviousOrOtherReferenceOrAccountApplicationIdentificationRule::checkAccountManagementMessageReference1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousOrOtherReferenceOrAccountApplicationIdentificationRule";
 			definition = "At least one message element in the list (PreviousReference, OtherReference, AccountApplicationIdentification) must be present.";
 			owner_lazy = () -> AccountManagementMessageReference1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountManagementMessageReference1 obj) throws Exception {
+			checkAccountManagementMessageReference1(obj);
 		}
 	};
 

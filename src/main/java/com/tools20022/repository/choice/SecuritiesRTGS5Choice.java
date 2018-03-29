@@ -110,7 +110,7 @@ public class SecuritiesRTGS5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesRTGS5Choice, YesNoIndicator> mmIndicator = new MMMessageAttribute<SecuritiesRTGS5Choice, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSecuritiesRealTimeGrossSettlement;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesRTGS5Choice.mmObject();
@@ -123,6 +123,16 @@ public class SecuritiesRTGS5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(SecuritiesRTGS5Choice obj) {
+			return obj.getIndicator();
+		}
+
+		@Override
+		public void setValue(SecuritiesRTGS5Choice obj, YesNoIndicator value) {
+			obj.setIndicator(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -164,7 +174,7 @@ public class SecuritiesRTGS5Choice {
 	 * "Securities RTGS information expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesRTGS5Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<SecuritiesRTGS5Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSecuritiesRealTimeGrossSettlement;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesRTGS5Choice.mmObject();
@@ -177,6 +187,16 @@ public class SecuritiesRTGS5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(SecuritiesRTGS5Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SecuritiesRTGS5Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

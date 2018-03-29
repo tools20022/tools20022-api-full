@@ -102,7 +102,7 @@ public class Reference14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalCrossOrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference14, Max35Text> mmOriginalCrossOrderIdentification = new MMMessageAttribute<Reference14, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reference14.mmObject();
 			isDerived = false;
@@ -114,6 +114,16 @@ public class Reference14 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Reference14 obj) {
+			return obj.getOriginalCrossOrderIdentification();
+		}
+
+		@Override
+		public void setValue(Reference14 obj, Max35Text value) {
+			obj.setOriginalCrossOrderIdentification(value);
 		}
 	};
 	@XmlElement(name = "HstCrossId", required = true)
@@ -149,7 +159,7 @@ public class Reference14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHostCrossIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference14, Max35Text> mmHostCrossIdentification = new MMMessageAttribute<Reference14, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reference14.mmObject();
 			isDerived = false;
@@ -161,6 +171,16 @@ public class Reference14 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Reference14 obj) {
+			return obj.getHostCrossIdentification();
+		}
+
+		@Override
+		public void setValue(Reference14 obj, Max35Text value) {
+			obj.setHostCrossIdentification(value);
 		}
 	};
 

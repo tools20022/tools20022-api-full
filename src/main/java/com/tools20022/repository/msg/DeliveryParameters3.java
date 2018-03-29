@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.PhysicalDelivery;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.NameAndAddress4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -105,7 +106,7 @@ public class DeliveryParameters3 {
 	 * definition} = "Address for physical delivery."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DeliveryParameters3, NameAndAddress4> mmAddress = new MMMessageAttribute<DeliveryParameters3, NameAndAddress4>() {
 		{
 			businessElementTrace_lazy = () -> PhysicalDelivery.mmAddress;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeliveryParameters3.mmObject();
@@ -116,7 +117,17 @@ public class DeliveryParameters3 {
 			definition = "Address for physical delivery.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.NameAndAddress4.mmObject();
+			complexType_lazy = () -> NameAndAddress4.mmObject();
+		}
+
+		@Override
+		public NameAndAddress4 getValue(DeliveryParameters3 obj) {
+			return obj.getAddress();
+		}
+
+		@Override
+		public void setValue(DeliveryParameters3 obj, NameAndAddress4 value) {
+			obj.setAddress(value);
 		}
 	};
 	@XmlElement(name = "IssdCertNb")
@@ -153,7 +164,7 @@ public class DeliveryParameters3 {
 	 * definition} = "Certificate representing a security that is delivered."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuedCertificateNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DeliveryParameters3, Optional<Max35Text>> mmIssuedCertificateNumber = new MMMessageAttribute<DeliveryParameters3, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PhysicalDelivery.mmIssuedCertificateNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeliveryParameters3.mmObject();
@@ -165,6 +176,16 @@ public class DeliveryParameters3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(DeliveryParameters3 obj) {
+			return obj.getIssuedCertificateNumber();
+		}
+
+		@Override
+		public void setValue(DeliveryParameters3 obj, Optional<Max35Text> value) {
+			obj.setIssuedCertificateNumber(value.orElse(null));
 		}
 	};
 
@@ -186,7 +207,7 @@ public class DeliveryParameters3 {
 		return address;
 	}
 
-	public DeliveryParameters3 setAddress(com.tools20022.repository.msg.NameAndAddress4 address) {
+	public DeliveryParameters3 setAddress(NameAndAddress4 address) {
 		this.address = Objects.requireNonNull(address);
 		return this;
 	}

@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.RestrictedFINXMax210Text;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification47;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -118,7 +119,7 @@ public class ProprietaryReason5 {
 	 * "Proprietary identification of the reason related to a status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryReason5, Optional<GenericIdentification47>> mmReason = new MMMessageAttribute<ProprietaryReason5, Optional<GenericIdentification47>>() {
 		{
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryReason5.mmObject();
@@ -130,7 +131,17 @@ public class ProprietaryReason5 {
 			definition = "Proprietary identification of the reason related to a status.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification47.mmObject();
+			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification47> getValue(ProprietaryReason5 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(ProprietaryReason5 obj, Optional<GenericIdentification47> value) {
+			obj.setReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -172,7 +183,7 @@ public class ProprietaryReason5 {
 	 * "Provides additional information about the processed instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryReason5, Optional<RestrictedFINXMax210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<ProprietaryReason5, Optional<RestrictedFINXMax210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryReason5.mmObject();
@@ -185,6 +196,16 @@ public class ProprietaryReason5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax210Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax210Text> getValue(ProprietaryReason5 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(ProprietaryReason5 obj, Optional<RestrictedFINXMax210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 
@@ -207,7 +228,7 @@ public class ProprietaryReason5 {
 		return reason == null ? Optional.empty() : Optional.of(reason);
 	}
 
-	public ProprietaryReason5 setReason(com.tools20022.repository.msg.GenericIdentification47 reason) {
+	public ProprietaryReason5 setReason(GenericIdentification47 reason) {
 		this.reason = reason;
 		return this;
 	}

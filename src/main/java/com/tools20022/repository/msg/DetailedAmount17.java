@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DetailedAmount18;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -121,7 +122,7 @@ public class DetailedAmount17 {
 	 * DetailedAmount16.mmAmountToDeposit}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmountToTransfer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DetailedAmount17, ImpliedCurrencyAndAmount> mmAmountToTransfer = new MMMessageAttribute<DetailedAmount17, ImpliedCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount17.mmObject();
@@ -134,6 +135,16 @@ public class DetailedAmount17 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(DetailedAmount17 obj) {
+			return obj.getAmountToTransfer();
+		}
+
+		@Override
+		public void setValue(DetailedAmount17 obj, ImpliedCurrencyAndAmount value) {
+			obj.setAmountToTransfer(value);
 		}
 	};
 	@XmlElement(name = "Ccy")
@@ -176,7 +187,7 @@ public class DetailedAmount17 {
 	 * DetailedAmount16.mmCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DetailedAmount17, Optional<ActiveCurrencyCode>> mmCurrency = new MMMessageAttribute<DetailedAmount17, Optional<ActiveCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmCurrencyExchange;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount17.mmObject();
@@ -190,9 +201,19 @@ public class DetailedAmount17 {
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
+
+		@Override
+		public Optional<ActiveCurrencyCode> getValue(DetailedAmount17 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(DetailedAmount17 obj, Optional<ActiveCurrencyCode> value) {
+			obj.setCurrency(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "Fees")
-	protected List<com.tools20022.repository.msg.DetailedAmount18> fees;
+	protected List<DetailedAmount18> fees;
 	/**
 	 * 
 	 <p>
@@ -228,7 +249,7 @@ public class DetailedAmount17 {
 	 * DetailedAmount16.mmFees}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFees = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DetailedAmount17, List<DetailedAmount18>> mmFees = new MMMessageAssociationEnd<DetailedAmount17, List<DetailedAmount18>>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount17.mmObject();
@@ -240,11 +261,21 @@ public class DetailedAmount17 {
 			previousVersion_lazy = () -> DetailedAmount16.mmFees;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount18.mmObject();
+			type_lazy = () -> DetailedAmount18.mmObject();
+		}
+
+		@Override
+		public List<DetailedAmount18> getValue(DetailedAmount17 obj) {
+			return obj.getFees();
+		}
+
+		@Override
+		public void setValue(DetailedAmount17 obj, List<DetailedAmount18> value) {
+			obj.setFees(value);
 		}
 	};
 	@XmlElement(name = "Dontn")
-	protected List<com.tools20022.repository.msg.DetailedAmount18> donation;
+	protected List<DetailedAmount18> donation;
 	/**
 	 * 
 	 <p>
@@ -280,7 +311,7 @@ public class DetailedAmount17 {
 	 * DetailedAmount16.mmDonation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDonation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DetailedAmount17, List<DetailedAmount18>> mmDonation = new MMMessageAssociationEnd<DetailedAmount17, List<DetailedAmount18>>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount17.mmObject();
@@ -292,7 +323,17 @@ public class DetailedAmount17 {
 			previousVersion_lazy = () -> DetailedAmount16.mmDonation;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount18.mmObject();
+			type_lazy = () -> DetailedAmount18.mmObject();
+		}
+
+		@Override
+		public List<DetailedAmount18> getValue(DetailedAmount17 obj) {
+			return obj.getDonation();
+		}
+
+		@Override
+		public void setValue(DetailedAmount17 obj, List<DetailedAmount18> value) {
+			obj.setDonation(value);
 		}
 	};
 
@@ -334,7 +375,7 @@ public class DetailedAmount17 {
 		return fees == null ? fees = new ArrayList<>() : fees;
 	}
 
-	public DetailedAmount17 setFees(List<com.tools20022.repository.msg.DetailedAmount18> fees) {
+	public DetailedAmount17 setFees(List<DetailedAmount18> fees) {
 		this.fees = Objects.requireNonNull(fees);
 		return this;
 	}
@@ -343,7 +384,7 @@ public class DetailedAmount17 {
 		return donation == null ? donation = new ArrayList<>() : donation;
 	}
 
-	public DetailedAmount17 setDonation(List<com.tools20022.repository.msg.DetailedAmount18> donation) {
+	public DetailedAmount17 setDonation(List<DetailedAmount18> donation) {
 		this.donation = Objects.requireNonNull(donation);
 		return this;
 	}

@@ -22,9 +22,9 @@ import com.tools20022.repository.codeset.PaymentMethodCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -94,7 +94,7 @@ import java.util.Objects;
 public class CreditInstrument {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
-	protected List<com.tools20022.repository.entity.Payment> relatedPayment;
+	protected List<Payment> relatedPayment;
 	/**
 	 * 
 	 <p>
@@ -127,7 +127,7 @@ public class CreditInstrument {
 	 * definition} = "Payment which uses the credit instrument."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedPayment = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CreditInstrument, List<Payment>> mmRelatedPayment = new MMBusinessAssociationEnd<CreditInstrument, List<Payment>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CreditInstrument.mmObject();
@@ -135,9 +135,19 @@ public class CreditInstrument {
 			name = "RelatedPayment";
 			definition = "Payment which uses the credit instrument.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Payment.mmCreditMethod;
+			opposite_lazy = () -> Payment.mmCreditMethod;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+			type_lazy = () -> Payment.mmObject();
+		}
+
+		@Override
+		public List<Payment> getValue(CreditInstrument obj) {
+			return obj.getRelatedPayment();
+		}
+
+		@Override
+		public void setValue(CreditInstrument obj, List<Payment> value) {
+			obj.setRelatedPayment(value);
 		}
 	};
 	protected PaymentMethodCode method;
@@ -271,7 +281,7 @@ public class CreditInstrument {
 	 * definition} = "Transfer method to be used for the transfer."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmMethod = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CreditInstrument, PaymentMethodCode> mmMethod = new MMBusinessAttribute<CreditInstrument, PaymentMethodCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentInstruction1.mmPaymentMethod, PaymentInstruction6.mmPaymentMethod, PaymentInstruction9.mmPaymentMethod, PaymentInstruction7.mmPaymentMethod, PaymentInstruction10.mmPaymentMethod,
 					OriginalTransactionReference1.mmPaymentMethod, OriginalTransactionReference13.mmPaymentMethod, OriginalTransactionReference16.mmPaymentMethod, OriginalTransactionReference15.mmPaymentMethod,
@@ -290,12 +300,14 @@ public class CreditInstrument {
 			simpleType_lazy = () -> PaymentMethodCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CreditInstrument.class.getMethod("getMethod", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PaymentMethodCode getValue(CreditInstrument obj) {
+			return obj.getMethod();
+		}
+
+		@Override
+		public void setValue(CreditInstrument obj, PaymentMethodCode value) {
+			obj.setMethod(value);
 		}
 	};
 	protected Max35Text creditInstrumentIdentification;
@@ -339,7 +351,7 @@ public class CreditInstrument {
 	 * definition} = "Identifies the credit instrument."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCreditInstrumentIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CreditInstrument, Max35Text> mmCreditInstrumentIdentification = new MMBusinessAttribute<CreditInstrument, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Cheque5.mmChequeNumber, Cheque6.mmChequeNumber, Cheque7.mmChequeNumber, Cheque3.mmNumber, Cheque9.mmNumber);
 			isDerived = false;
@@ -352,12 +364,14 @@ public class CreditInstrument {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CreditInstrument.class.getMethod("getCreditInstrumentIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(CreditInstrument obj) {
+			return obj.getCreditInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(CreditInstrument obj, Max35Text value) {
+			obj.setCreditInstrumentIdentification(value);
 		}
 	};
 	protected CurrencyAndAmount netAmount;
@@ -400,7 +414,7 @@ public class CreditInstrument {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmNetAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CreditInstrument, CurrencyAndAmount> mmNetAmount = new MMBusinessAttribute<CreditInstrument, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(LiquidityCreditTransfer1.mmTransferredAmount, LiquidityDebitTransfer1.mmTransferredAmount);
 			isDerived = false;
@@ -413,12 +427,14 @@ public class CreditInstrument {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CreditInstrument.class.getMethod("getNetAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(CreditInstrument obj) {
+			return obj.getNetAmount();
+		}
+
+		@Override
+		public void setValue(CreditInstrument obj, CurrencyAndAmount value) {
+			obj.setNetAmount(value);
 		}
 	};
 	protected ISODateTime deadline;
@@ -447,7 +463,7 @@ public class CreditInstrument {
 	 * definition} = "Time by which the amount must be paid in."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmDeadline = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CreditInstrument, ISODateTime> mmDeadline = new MMBusinessAttribute<CreditInstrument, ISODateTime>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CreditInstrument.mmObject();
@@ -459,12 +475,14 @@ public class CreditInstrument {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CreditInstrument.class.getMethod("getDeadline", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(CreditInstrument obj) {
+			return obj.getDeadline();
+		}
+
+		@Override
+		public void setValue(CreditInstrument obj, ISODateTime value) {
+			obj.setDeadline(value);
 		}
 	};
 
@@ -475,7 +493,7 @@ public class CreditInstrument {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CreditInstrument";
 				definition = "Specifies the instrument to be used for the credit of a payment.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Payment.mmCreditMethod);
+				associationDomain_lazy = () -> Arrays.asList(Payment.mmCreditMethod);
 				subType_lazy = () -> Arrays.asList(ChequeIssue.mmObject(), BookEntry.mmObject(), AccountEntry.mmObject(), CashDelivery.mmObject());
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CreditInstrument.mmRelatedPayment, com.tools20022.repository.entity.CreditInstrument.mmMethod,
 						com.tools20022.repository.entity.CreditInstrument.mmCreditInstrumentIdentification, com.tools20022.repository.entity.CreditInstrument.mmNetAmount, com.tools20022.repository.entity.CreditInstrument.mmDeadline);
@@ -493,7 +511,7 @@ public class CreditInstrument {
 		return relatedPayment == null ? relatedPayment = new ArrayList<>() : relatedPayment;
 	}
 
-	public CreditInstrument setRelatedPayment(List<com.tools20022.repository.entity.Payment> relatedPayment) {
+	public CreditInstrument setRelatedPayment(List<Payment> relatedPayment) {
 		this.relatedPayment = Objects.requireNonNull(relatedPayment);
 		return this;
 	}

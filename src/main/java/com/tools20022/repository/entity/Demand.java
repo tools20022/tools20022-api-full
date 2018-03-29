@@ -21,9 +21,11 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.DemandTypeCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODateTime;
+import com.tools20022.repository.entity.PaymentObligation;
+import com.tools20022.repository.entity.Undertaking;
+import com.tools20022.repository.entity.UndertakingDocument;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -156,7 +158,7 @@ public class Demand {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmUndertaking = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Demand, Undertaking> mmUndertaking = new MMBusinessAssociationEnd<Demand, Undertaking>() {
 		{
 			derivation_lazy = () -> Arrays.asList(UndertakingDemandWithdrawal1.mmUndertakingIdentification);
 			isDerived = false;
@@ -166,9 +168,19 @@ public class Demand {
 			definition = "Undertaking for which a document signed by the beneficiary demanding payment is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.Undertaking.mmDemand;
+			opposite_lazy = () -> Undertaking.mmDemand;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
+			type_lazy = () -> Undertaking.mmObject();
+		}
+
+		@Override
+		public Undertaking getValue(Demand obj) {
+			return obj.getUndertaking();
+		}
+
+		@Override
+		public void setValue(Demand obj, Undertaking value) {
+			obj.setUndertaking(value);
 		}
 	};
 	protected ISODateTime submissionDateTime;
@@ -207,7 +219,7 @@ public class Demand {
 	 * definition} = "Date and time the demand is submitted."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSubmissionDateTime = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Demand, ISODateTime> mmSubmissionDateTime = new MMBusinessAttribute<Demand, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Demand2.mmSubmissionDateTime, Demand3.mmSubmissionDateTime);
 			isDerived = false;
@@ -220,12 +232,14 @@ public class Demand {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Demand.class.getMethod("getSubmissionDateTime", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(Demand obj) {
+			return obj.getSubmissionDateTime();
+		}
+
+		@Override
+		public void setValue(Demand obj, ISODateTime value) {
+			obj.setSubmissionDateTime(value);
 		}
 	};
 	protected CurrencyAndAmount demandAmount;
@@ -267,7 +281,7 @@ public class Demand {
 	 * definition} = "Amount to be paid."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmDemandAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Demand, CurrencyAndAmount> mmDemandAmount = new MMBusinessAttribute<Demand, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Demand2.mmAmount, Demand3.mmAmount, Demand4.mmAmount, Demand1.mmDemandAmount);
 			isDerived = false;
@@ -280,12 +294,14 @@ public class Demand {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Demand.class.getMethod("getDemandAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(Demand obj) {
+			return obj.getDemandAmount();
+		}
+
+		@Override
+		public void setValue(Demand obj, CurrencyAndAmount value) {
+			obj.setDemandAmount(value);
 		}
 	};
 	protected DemandTypeCode type;
@@ -321,7 +337,7 @@ public class Demand {
 	 * definition} = "Type of demand, for example, pay or extend."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Demand, DemandTypeCode> mmType = new MMBusinessAttribute<Demand, DemandTypeCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Demand1.mmType);
 			isDerived = false;
@@ -334,12 +350,14 @@ public class Demand {
 			simpleType_lazy = () -> DemandTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Demand.class.getMethod("getType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DemandTypeCode getValue(Demand obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Demand obj, DemandTypeCode value) {
+			obj.setType(value);
 		}
 	};
 	protected CurrencyAndAmount totalClaimAmount;
@@ -370,7 +388,7 @@ public class Demand {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmTotalClaimAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Demand, CurrencyAndAmount> mmTotalClaimAmount = new MMBusinessAttribute<Demand, CurrencyAndAmount>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Demand.mmObject();
@@ -382,12 +400,14 @@ public class Demand {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Demand.class.getMethod("getTotalClaimAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(Demand obj) {
+			return obj.getTotalClaimAmount();
+		}
+
+		@Override
+		public void setValue(Demand obj, CurrencyAndAmount value) {
+			obj.setTotalClaimAmount(value);
 		}
 	};
 	protected PaymentObligation payment;
@@ -423,7 +443,7 @@ public class Demand {
 	 * definition} = "Payment of the demand."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPayment = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Demand, Optional<PaymentObligation>> mmPayment = new MMBusinessAssociationEnd<Demand, Optional<PaymentObligation>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Demand.mmObject();
@@ -432,9 +452,19 @@ public class Demand {
 			definition = "Payment of the demand.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmPaymentSourceUndertakingDemand;
+			opposite_lazy = () -> PaymentObligation.mmPaymentSourceUndertakingDemand;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmObject();
+			type_lazy = () -> PaymentObligation.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentObligation> getValue(Demand obj) {
+			return obj.getPayment();
+		}
+
+		@Override
+		public void setValue(Demand obj, Optional<PaymentObligation> value) {
+			obj.setPayment(value.orElse(null));
 		}
 	};
 	protected UndertakingDocument associatedDocument;
@@ -470,7 +500,7 @@ public class Demand {
 	 * definition} = "Documents which are associated with a demand."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmAssociatedDocument = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Demand, UndertakingDocument> mmAssociatedDocument = new MMBusinessAssociationEnd<Demand, UndertakingDocument>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Demand.mmObject();
@@ -479,9 +509,19 @@ public class Demand {
 			definition = "Documents which are associated with a demand.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.UndertakingDocument.mmDemand;
+			opposite_lazy = () -> UndertakingDocument.mmDemand;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.UndertakingDocument.mmObject();
+			type_lazy = () -> UndertakingDocument.mmObject();
+		}
+
+		@Override
+		public UndertakingDocument getValue(Demand obj) {
+			return obj.getAssociatedDocument();
+		}
+
+		@Override
+		public void setValue(Demand obj, UndertakingDocument value) {
+			obj.setAssociatedDocument(value);
 		}
 	};
 
@@ -492,8 +532,7 @@ public class Demand {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Demand";
 				definition = "Document signed by the beneficiary demanding payment under a demand guarantee or standby letter of credit.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentObligation.mmPaymentSourceUndertakingDemand, com.tools20022.repository.entity.Undertaking.mmDemand,
-						com.tools20022.repository.entity.UndertakingDocument.mmDemand);
+				associationDomain_lazy = () -> Arrays.asList(PaymentObligation.mmPaymentSourceUndertakingDemand, Undertaking.mmDemand, UndertakingDocument.mmDemand);
 				derivationElement_lazy = () -> Arrays.asList(UndertakingDemandWithdrawal1.mmDemandDetails);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Demand.mmUndertaking, com.tools20022.repository.entity.Demand.mmSubmissionDateTime, com.tools20022.repository.entity.Demand.mmDemandAmount,
 						com.tools20022.repository.entity.Demand.mmType, com.tools20022.repository.entity.Demand.mmTotalClaimAmount, com.tools20022.repository.entity.Demand.mmPayment,
@@ -513,7 +552,7 @@ public class Demand {
 		return undertaking;
 	}
 
-	public Demand setUndertaking(com.tools20022.repository.entity.Undertaking undertaking) {
+	public Demand setUndertaking(Undertaking undertaking) {
 		this.undertaking = Objects.requireNonNull(undertaking);
 		return this;
 	}
@@ -558,7 +597,7 @@ public class Demand {
 		return payment == null ? Optional.empty() : Optional.of(payment);
 	}
 
-	public Demand setPayment(com.tools20022.repository.entity.PaymentObligation payment) {
+	public Demand setPayment(PaymentObligation payment) {
 		this.payment = payment;
 		return this;
 	}
@@ -567,7 +606,7 @@ public class Demand {
 		return associatedDocument;
 	}
 
-	public Demand setAssociatedDocument(com.tools20022.repository.entity.UndertakingDocument associatedDocument) {
+	public Demand setAssociatedDocument(UndertakingDocument associatedDocument) {
 		this.associatedDocument = Objects.requireNonNull(associatedDocument);
 		return this;
 	}

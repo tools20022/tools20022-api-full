@@ -110,7 +110,7 @@ public class DerivativeForeignExchange3 {
 	 * definition} = "Type of the underlying currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFXType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DerivativeForeignExchange3, Optional<AssetFXSubProductType1Code>> mmFXType = new MMMessageAttribute<DerivativeForeignExchange3, Optional<AssetFXSubProductType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmFinancialAssetCategory;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeForeignExchange3.mmObject();
@@ -122,6 +122,16 @@ public class DerivativeForeignExchange3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AssetFXSubProductType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<AssetFXSubProductType1Code> getValue(DerivativeForeignExchange3 obj) {
+			return obj.getFXType();
+		}
+
+		@Override
+		public void setValue(DerivativeForeignExchange3 obj, Optional<AssetFXSubProductType1Code> value) {
+			obj.setFXType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OthrNtnlCcy")
@@ -161,7 +171,7 @@ public class DerivativeForeignExchange3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherNotionalCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DerivativeForeignExchange3, Optional<ActiveOrHistoricCurrencyCode>> mmOtherNotionalCurrency = new MMMessageAttribute<DerivativeForeignExchange3, Optional<ActiveOrHistoricCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmNotionalCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeForeignExchange3.mmObject();
@@ -173,6 +183,16 @@ public class DerivativeForeignExchange3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyCode> getValue(DerivativeForeignExchange3 obj) {
+			return obj.getOtherNotionalCurrency();
+		}
+
+		@Override
+		public void setValue(DerivativeForeignExchange3 obj, Optional<ActiveOrHistoricCurrencyCode> value) {
+			obj.setOtherNotionalCurrency(value.orElse(null));
 		}
 	};
 

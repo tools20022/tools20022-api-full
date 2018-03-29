@@ -25,6 +25,8 @@ import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.entity.SecuritiesTradeIdentification;
 import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AdditionalReference3;
+import com.tools20022.repository.msg.InvestmentAccount13;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -147,7 +149,7 @@ public class MessageAndBusinessReference2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MessageAndBusinessReference2, AdditionalReference3> mmOtherReference = new MMMessageAssociationEnd<MessageAndBusinessReference2, AdditionalReference3>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageAndBusinessReference2.mmObject();
@@ -159,7 +161,17 @@ public class MessageAndBusinessReference2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AdditionalReference3.mmObject();
+			type_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		@Override
+		public AdditionalReference3 getValue(MessageAndBusinessReference2 obj) {
+			return obj.getOtherReference();
+		}
+
+		@Override
+		public void setValue(MessageAndBusinessReference2 obj, AdditionalReference3 value) {
+			obj.setOtherReference(value);
 		}
 	};
 	@XmlElement(name = "PrvsRef", required = true)
@@ -195,7 +207,7 @@ public class MessageAndBusinessReference2 {
 	 * definition} = "Reference to a linked message that was previously sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPreviousReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MessageAndBusinessReference2, AdditionalReference3> mmPreviousReference = new MMMessageAssociationEnd<MessageAndBusinessReference2, AdditionalReference3>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageAndBusinessReference2.mmObject();
@@ -207,7 +219,17 @@ public class MessageAndBusinessReference2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AdditionalReference3.mmObject();
+			type_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		@Override
+		public AdditionalReference3 getValue(MessageAndBusinessReference2 obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(MessageAndBusinessReference2 obj, AdditionalReference3 value) {
+			obj.setPreviousReference(value);
 		}
 	};
 	@XmlElement(name = "IndvOrdrRef")
@@ -246,7 +268,7 @@ public class MessageAndBusinessReference2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndividualOrderReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MessageAndBusinessReference2, List<Max35Text>> mmIndividualOrderReference = new MMMessageAttribute<MessageAndBusinessReference2, List<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageAndBusinessReference2.mmObject();
@@ -257,6 +279,16 @@ public class MessageAndBusinessReference2 {
 			definition = "Unique and unambiguous identifier for an order, as assigned by the instructing party.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(MessageAndBusinessReference2 obj) {
+			return obj.getIndividualOrderReference();
+		}
+
+		@Override
+		public void setValue(MessageAndBusinessReference2 obj, List<Max35Text> value) {
+			obj.setIndividualOrderReference(value);
 		}
 	};
 	@XmlElement(name = "InvstmtAcct")
@@ -294,7 +326,7 @@ public class MessageAndBusinessReference2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestmentAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MessageAndBusinessReference2, Optional<InvestmentAccount13>> mmInvestmentAccount = new MMMessageAssociationEnd<MessageAndBusinessReference2, Optional<InvestmentAccount13>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageAndBusinessReference2.mmObject();
@@ -306,7 +338,17 @@ public class MessageAndBusinessReference2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount13.mmObject();
+			type_lazy = () -> InvestmentAccount13.mmObject();
+		}
+
+		@Override
+		public Optional<InvestmentAccount13> getValue(MessageAndBusinessReference2 obj) {
+			return obj.getInvestmentAccount();
+		}
+
+		@Override
+		public void setValue(MessageAndBusinessReference2 obj, Optional<InvestmentAccount13> value) {
+			obj.setInvestmentAccount(value.orElse(null));
 		}
 	};
 	/**
@@ -383,7 +425,7 @@ public class MessageAndBusinessReference2 {
 		return otherReference;
 	}
 
-	public MessageAndBusinessReference2 setOtherReference(com.tools20022.repository.msg.AdditionalReference3 otherReference) {
+	public MessageAndBusinessReference2 setOtherReference(AdditionalReference3 otherReference) {
 		this.otherReference = Objects.requireNonNull(otherReference);
 		return this;
 	}
@@ -392,7 +434,7 @@ public class MessageAndBusinessReference2 {
 		return previousReference;
 	}
 
-	public MessageAndBusinessReference2 setPreviousReference(com.tools20022.repository.msg.AdditionalReference3 previousReference) {
+	public MessageAndBusinessReference2 setPreviousReference(AdditionalReference3 previousReference) {
 		this.previousReference = Objects.requireNonNull(previousReference);
 		return this;
 	}
@@ -410,7 +452,7 @@ public class MessageAndBusinessReference2 {
 		return investmentAccount == null ? Optional.empty() : Optional.of(investmentAccount);
 	}
 
-	public MessageAndBusinessReference2 setInvestmentAccount(com.tools20022.repository.msg.InvestmentAccount13 investmentAccount) {
+	public MessageAndBusinessReference2 setInvestmentAccount(InvestmentAccount13 investmentAccount) {
 		this.investmentAccount = investmentAccount;
 		return this;
 	}

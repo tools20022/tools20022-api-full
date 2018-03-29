@@ -130,7 +130,7 @@ public class MarketIdentification8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarketIdentification8, Optional<MarketIdentification2Choice>> mmIdentification = new MMMessageAssociationEnd<MarketIdentification8, Optional<MarketIdentification2Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> TradingMarket.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification8.mmObject();
@@ -144,6 +144,16 @@ public class MarketIdentification8 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> MarketIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<MarketIdentification2Choice> getValue(MarketIdentification8 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(MarketIdentification8 obj, Optional<MarketIdentification2Choice> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -182,7 +192,7 @@ public class MarketIdentification8 {
 	 * definition} = "Nature of a market in which transactions take place."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarketIdentification8, MarketType6Choice> mmType = new MMMessageAssociationEnd<MarketIdentification8, MarketType6Choice>() {
 		{
 			businessElementTrace_lazy = () -> TradingMarket.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification8.mmObject();
@@ -196,6 +206,16 @@ public class MarketIdentification8 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> MarketType6Choice.mmObject();
+		}
+
+		@Override
+		public MarketType6Choice getValue(MarketIdentification8 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(MarketIdentification8 obj, MarketType6Choice value) {
+			obj.setType(value);
 		}
 	};
 

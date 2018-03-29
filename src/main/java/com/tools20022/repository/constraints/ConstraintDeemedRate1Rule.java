@@ -56,11 +56,15 @@ public class ConstraintDeemedRate1Rule {
 	 */
 	public static final MMConstraint<RateDetails31> forRateDetails31 = new MMConstraint<RateDetails31>() {
 		{
-			validator = ConstraintDeemedRate1Rule::checkRateDetails31;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeemedRate1Rule";
 			definition = "If DeemedRate is repeated, then DeemedRate/RateTypeAndAmountAndRateStatus/RateType/Code values and DeemedRate/RateTypeAndRate/RateType/Code values must all be different in each occurrence of DeemedRate. \r\n(MT 564 NVR C8).";
 			owner_lazy = () -> RateDetails31.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateDetails31 obj) throws Exception {
+			checkRateDetails31(obj);
 		}
 	};
 	/**
@@ -85,11 +89,15 @@ public class ConstraintDeemedRate1Rule {
 	 */
 	public static final MMConstraint<RateDetails32> forRateDetails32 = new MMConstraint<RateDetails32>() {
 		{
-			validator = ConstraintDeemedRate1Rule::checkRateDetails32;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeemedRate1Rule";
 			definition = "If DeemedRate is repeated, then DeemedRate/RateTypeAndAmountAndRateStatus/RateType/Code values and DeemedRate/RateTypeAndRate/RateType/Code values must all be different in each occurrence of DeemedRate. \r\n(MT 566 NVR C4).";
 			owner_lazy = () -> RateDetails32.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateDetails32 obj) throws Exception {
+			checkRateDetails32(obj);
 		}
 	};
 	/**
@@ -114,11 +122,15 @@ public class ConstraintDeemedRate1Rule {
 	 */
 	public static final MMConstraint<RateDetails33> forRateDetails33 = new MMConstraint<RateDetails33>() {
 		{
-			validator = ConstraintDeemedRate1Rule::checkRateDetails33;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeemedRate1Rule";
 			definition = "If DeemedRate is repeated, then DeemedRate/RateTypeAndAmountAndRateStatus/RateType/Code values and DeemedRate/RateTypeAndRate/RateType/Code values must all be different in each occurrence of DeemedRate. \r\n(MT 566 NVR C4).";
 			owner_lazy = () -> RateDetails33.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateDetails33 obj) throws Exception {
+			checkRateDetails33(obj);
 		}
 	};
 	/**
@@ -143,11 +155,15 @@ public class ConstraintDeemedRate1Rule {
 	 */
 	public static final MMConstraint<RateDetails34> forRateDetails34 = new MMConstraint<RateDetails34>() {
 		{
-			validator = ConstraintDeemedRate1Rule::checkRateDetails34;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeemedRate1Rule";
 			definition = "If DeemedRate is repeated, then DeemedRate/RateTypeAndAmountAndRateStatus/RateType/Code values and DeemedRate/RateTypeAndRate/RateType/Code values must all be different in each occurrence of DeemedRate. \r\n(MT 564 NVR C8).";
 			owner_lazy = () -> RateDetails34.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateDetails34 obj) throws Exception {
+			checkRateDetails34(obj);
 		}
 	};
 

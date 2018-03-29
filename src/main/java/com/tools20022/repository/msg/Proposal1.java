@@ -110,7 +110,7 @@ public class Proposal1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProposalType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Proposal1, ProposalType1Code> mmProposalType = new MMMessageAttribute<Proposal1, ProposalType1Code>() {
 		{
 			businessElementTrace_lazy = () -> CollateralProposal.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Proposal1.mmObject();
@@ -122,6 +122,16 @@ public class Proposal1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ProposalType1Code.mmObject();
+		}
+
+		@Override
+		public ProposalType1Code getValue(Proposal1 obj) {
+			return obj.getProposalType();
+		}
+
+		@Override
+		public void setValue(Proposal1 obj, ProposalType1Code value) {
+			obj.setProposalType(value);
 		}
 	};
 	@XmlElement(name = "PrpslDtls", required = true)
@@ -159,7 +169,7 @@ public class Proposal1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProposalDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Proposal1, CollateralProposal1Choice> mmProposalDetails = new MMMessageAssociationEnd<Proposal1, CollateralProposal1Choice>() {
 		{
 			businessComponentTrace_lazy = () -> CollateralProposal.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Proposal1.mmObject();
@@ -172,6 +182,16 @@ public class Proposal1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CollateralProposal1Choice.mmObject();
+		}
+
+		@Override
+		public CollateralProposal1Choice getValue(Proposal1 obj) {
+			return obj.getProposalDetails();
+		}
+
+		@Override
+		public void setValue(Proposal1 obj, CollateralProposal1Choice value) {
+			obj.setProposalDetails(value);
 		}
 	};
 

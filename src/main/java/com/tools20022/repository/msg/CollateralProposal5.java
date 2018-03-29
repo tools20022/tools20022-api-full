@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CollateralMovement;
 import com.tools20022.repository.entity.CollateralProposal;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CollateralMovement7;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -133,7 +134,7 @@ public class CollateralProposal5 {
 	 * CollateralProposal4.mmVariationMargin}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmVariationMargin = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralProposal5, CollateralMovement7> mmVariationMargin = new MMMessageAssociationEnd<CollateralProposal5, CollateralMovement7>() {
 		{
 			businessElementTrace_lazy = () -> CollateralMovement.mmVariationMargin;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralProposal5.mmObject();
@@ -147,7 +148,17 @@ public class CollateralProposal5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CollateralMovement7.mmObject();
+			type_lazy = () -> CollateralMovement7.mmObject();
+		}
+
+		@Override
+		public CollateralMovement7 getValue(CollateralProposal5 obj) {
+			return obj.getVariationMargin();
+		}
+
+		@Override
+		public void setValue(CollateralProposal5 obj, CollateralMovement7 value) {
+			obj.setVariationMargin(value);
 		}
 	};
 	@XmlElement(name = "SgrtdIndpdntAmt")
@@ -198,7 +209,7 @@ public class CollateralProposal5 {
 	 * CollateralProposal4.mmSegregatedIndependentAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSegregatedIndependentAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralProposal5, Optional<CollateralMovement7>> mmSegregatedIndependentAmount = new MMMessageAssociationEnd<CollateralProposal5, Optional<CollateralMovement7>>() {
 		{
 			businessElementTrace_lazy = () -> CollateralMovement.mmSegregatedIndependentAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralProposal5.mmObject();
@@ -212,7 +223,17 @@ public class CollateralProposal5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CollateralMovement7.mmObject();
+			type_lazy = () -> CollateralMovement7.mmObject();
+		}
+
+		@Override
+		public Optional<CollateralMovement7> getValue(CollateralProposal5 obj) {
+			return obj.getSegregatedIndependentAmount();
+		}
+
+		@Override
+		public void setValue(CollateralProposal5 obj, Optional<CollateralMovement7> value) {
+			obj.setSegregatedIndependentAmount(value.orElse(null));
 		}
 	};
 
@@ -236,7 +257,7 @@ public class CollateralProposal5 {
 		return variationMargin;
 	}
 
-	public CollateralProposal5 setVariationMargin(com.tools20022.repository.msg.CollateralMovement7 variationMargin) {
+	public CollateralProposal5 setVariationMargin(CollateralMovement7 variationMargin) {
 		this.variationMargin = Objects.requireNonNull(variationMargin);
 		return this;
 	}
@@ -245,7 +266,7 @@ public class CollateralProposal5 {
 		return segregatedIndependentAmount == null ? Optional.empty() : Optional.of(segregatedIndependentAmount);
 	}
 
-	public CollateralProposal5 setSegregatedIndependentAmount(com.tools20022.repository.msg.CollateralMovement7 segregatedIndependentAmount) {
+	public CollateralProposal5 setSegregatedIndependentAmount(CollateralMovement7 segregatedIndependentAmount) {
 		this.segregatedIndependentAmount = segregatedIndependentAmount;
 		return this;
 	}

@@ -118,7 +118,7 @@ public class CancelledReason10Choice {
 	 * "Standard code to specify the reason why the instruction is cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancelledReason10Choice, CancelledStatusReason5Code> mmCode = new MMMessageAttribute<CancelledReason10Choice, CancelledStatusReason5Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancelledReason10Choice.mmObject();
@@ -131,6 +131,16 @@ public class CancelledReason10Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CancelledStatusReason5Code.mmObject();
+		}
+
+		@Override
+		public CancelledStatusReason5Code getValue(CancelledReason10Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CancelledReason10Choice obj, CancelledStatusReason5Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -172,7 +182,7 @@ public class CancelledReason10Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CancelledReason10Choice, GenericIdentification47> mmProprietary = new MMMessageAssociationEnd<CancelledReason10Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancelledReason10Choice.mmObject();
@@ -186,6 +196,16 @@ public class CancelledReason10Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(CancelledReason10Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CancelledReason10Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

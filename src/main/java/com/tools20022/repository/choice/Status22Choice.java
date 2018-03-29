@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.*;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
@@ -148,7 +149,7 @@ public class Status22Choice {
 	 * definition} = "Status of affirmation of a trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAffirmationStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Status22Choice, AffirmationStatus9Choice> mmAffirmationStatus = new MMMessageAssociationEnd<Status22Choice, AffirmationStatus9Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmAffirmationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status22Choice.mmObject();
@@ -160,7 +161,17 @@ public class Status22Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.AffirmationStatus9Choice.mmObject();
+			type_lazy = () -> AffirmationStatus9Choice.mmObject();
+		}
+
+		@Override
+		public AffirmationStatus9Choice getValue(Status22Choice obj) {
+			return obj.getAffirmationStatus();
+		}
+
+		@Override
+		public void setValue(Status22Choice obj, AffirmationStatus9Choice value) {
+			obj.setAffirmationStatus(value);
 		}
 	};
 	@XmlElement(name = "AllcnSts", required = true)
@@ -199,7 +210,7 @@ public class Status22Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAllocationStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Status22Choice, AllocationSatus4Choice> mmAllocationStatus = new MMMessageAssociationEnd<Status22Choice, AllocationSatus4Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmCollateralAllocationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status22Choice.mmObject();
@@ -211,7 +222,17 @@ public class Status22Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.AllocationSatus4Choice.mmObject();
+			type_lazy = () -> AllocationSatus4Choice.mmObject();
+		}
+
+		@Override
+		public AllocationSatus4Choice getValue(Status22Choice obj) {
+			return obj.getAllocationStatus();
+		}
+
+		@Override
+		public void setValue(Status22Choice obj, AllocationSatus4Choice value) {
+			obj.setAllocationStatus(value);
 		}
 	};
 	@XmlElement(name = "RepoCallReqSts", required = true)
@@ -249,7 +270,7 @@ public class Status22Choice {
 	 * "Provides the status of the repurchase agreement call request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRepoCallRequestStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Status22Choice, RepoCallRequestStatus10Choice> mmRepoCallRequestStatus = new MMMessageAssociationEnd<Status22Choice, RepoCallRequestStatus10Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmRepoCallRequestStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status22Choice.mmObject();
@@ -261,7 +282,17 @@ public class Status22Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.RepoCallRequestStatus10Choice.mmObject();
+			type_lazy = () -> RepoCallRequestStatus10Choice.mmObject();
+		}
+
+		@Override
+		public RepoCallRequestStatus10Choice getValue(Status22Choice obj) {
+			return obj.getRepoCallRequestStatus();
+		}
+
+		@Override
+		public void setValue(Status22Choice obj, RepoCallRequestStatus10Choice value) {
+			obj.setRepoCallRequestStatus(value);
 		}
 	};
 	@XmlElement(name = "CorpActnEvtPrcgSts", required = true)
@@ -299,7 +330,7 @@ public class Status22Choice {
 	 * "Provides the status of a corporate action or the status of a payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCorporateActionEventProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Status22Choice, CorporateActionEventProcessingStatus4Choice> mmCorporateActionEventProcessingStatus = new MMMessageAssociationEnd<Status22Choice, CorporateActionEventProcessingStatus4Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatus.mmEventProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status22Choice.mmObject();
@@ -311,7 +342,17 @@ public class Status22Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.CorporateActionEventProcessingStatus4Choice.mmObject();
+			type_lazy = () -> CorporateActionEventProcessingStatus4Choice.mmObject();
+		}
+
+		@Override
+		public CorporateActionEventProcessingStatus4Choice getValue(Status22Choice obj) {
+			return obj.getCorporateActionEventProcessingStatus();
+		}
+
+		@Override
+		public void setValue(Status22Choice obj, CorporateActionEventProcessingStatus4Choice value) {
+			obj.setCorporateActionEventProcessingStatus(value);
 		}
 	};
 	@XmlElement(name = "CorpActnEvtStag", required = true)
@@ -348,7 +389,7 @@ public class Status22Choice {
 	 * definition} = "Stage in the corporate action event life cycle."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCorporateActionEventStage = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Status22Choice, CorporateActionEventStage4Choice> mmCorporateActionEventStage = new MMMessageAssociationEnd<Status22Choice, CorporateActionEventStage4Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmEventStage;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status22Choice.mmObject();
@@ -360,7 +401,17 @@ public class Status22Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.CorporateActionEventStage4Choice.mmObject();
+			type_lazy = () -> CorporateActionEventStage4Choice.mmObject();
+		}
+
+		@Override
+		public CorporateActionEventStage4Choice getValue(Status22Choice obj) {
+			return obj.getCorporateActionEventStage();
+		}
+
+		@Override
+		public void setValue(Status22Choice obj, CorporateActionEventStage4Choice value) {
+			obj.setCorporateActionEventStage(value);
 		}
 	};
 	@XmlElement(name = "IfrrdMtchgSts", required = true)
@@ -399,7 +450,7 @@ public class Status22Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInferredMatchingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Status22Choice, MatchingStatus28Choice> mmInferredMatchingStatus = new MMMessageAssociationEnd<Status22Choice, MatchingStatus28Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status22Choice.mmObject();
@@ -411,7 +462,17 @@ public class Status22Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.MatchingStatus28Choice.mmObject();
+			type_lazy = () -> MatchingStatus28Choice.mmObject();
+		}
+
+		@Override
+		public MatchingStatus28Choice getValue(Status22Choice obj) {
+			return obj.getInferredMatchingStatus();
+		}
+
+		@Override
+		public void setValue(Status22Choice obj, MatchingStatus28Choice value) {
+			obj.setInferredMatchingStatus(value);
 		}
 	};
 	@XmlElement(name = "InstrPrcgSts", required = true)
@@ -448,7 +509,7 @@ public class Status22Choice {
 	 * definition} = "Provides the status of an instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstructionProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Status22Choice, InstructionProcessingStatus26Choice> mmInstructionProcessingStatus = new MMMessageAssociationEnd<Status22Choice, InstructionProcessingStatus26Choice>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status22Choice.mmObject();
@@ -460,7 +521,17 @@ public class Status22Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.InstructionProcessingStatus26Choice.mmObject();
+			type_lazy = () -> InstructionProcessingStatus26Choice.mmObject();
+		}
+
+		@Override
+		public InstructionProcessingStatus26Choice getValue(Status22Choice obj) {
+			return obj.getInstructionProcessingStatus();
+		}
+
+		@Override
+		public void setValue(Status22Choice obj, InstructionProcessingStatus26Choice value) {
+			obj.setInstructionProcessingStatus(value);
 		}
 	};
 	@XmlElement(name = "MtchgSts", required = true)
@@ -497,7 +568,7 @@ public class Status22Choice {
 	 * definition} = "Provides the matching status of the instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMatchingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Status22Choice, MatchingStatus28Choice> mmMatchingStatus = new MMMessageAssociationEnd<Status22Choice, MatchingStatus28Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status22Choice.mmObject();
@@ -509,7 +580,17 @@ public class Status22Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.MatchingStatus28Choice.mmObject();
+			type_lazy = () -> MatchingStatus28Choice.mmObject();
+		}
+
+		@Override
+		public MatchingStatus28Choice getValue(Status22Choice obj) {
+			return obj.getMatchingStatus();
+		}
+
+		@Override
+		public void setValue(Status22Choice obj, MatchingStatus28Choice value) {
+			obj.setMatchingStatus(value);
 		}
 	};
 	@XmlElement(name = "RegnPrcgSts", required = true)
@@ -546,7 +627,7 @@ public class Status22Choice {
 	 * definition} = "Provides the status of the registration processing."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRegistrationProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Status22Choice, RegistrationProcessingStatus4Choice> mmRegistrationProcessingStatus = new MMMessageAssociationEnd<Status22Choice, RegistrationProcessingStatus4Choice>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status22Choice.mmObject();
@@ -558,7 +639,17 @@ public class Status22Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.RegistrationProcessingStatus4Choice.mmObject();
+			type_lazy = () -> RegistrationProcessingStatus4Choice.mmObject();
+		}
+
+		@Override
+		public RegistrationProcessingStatus4Choice getValue(Status22Choice obj) {
+			return obj.getRegistrationProcessingStatus();
+		}
+
+		@Override
+		public void setValue(Status22Choice obj, RegistrationProcessingStatus4Choice value) {
+			obj.setRegistrationProcessingStatus(value);
 		}
 	};
 	@XmlElement(name = "RspnSts", required = true)
@@ -597,7 +688,7 @@ public class Status22Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmResponseStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Status22Choice, ResponseStatus7Choice> mmResponseStatus = new MMMessageAssociationEnd<Status22Choice, ResponseStatus7Choice>() {
 		{
 			businessElementTrace_lazy = () -> CollateralStatus.mmResponseStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status22Choice.mmObject();
@@ -609,7 +700,17 @@ public class Status22Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.ResponseStatus7Choice.mmObject();
+			type_lazy = () -> ResponseStatus7Choice.mmObject();
+		}
+
+		@Override
+		public ResponseStatus7Choice getValue(Status22Choice obj) {
+			return obj.getResponseStatus();
+		}
+
+		@Override
+		public void setValue(Status22Choice obj, ResponseStatus7Choice value) {
+			obj.setResponseStatus(value);
 		}
 	};
 	@XmlElement(name = "RplcmntPrcgSts", required = true)
@@ -647,7 +748,7 @@ public class Status22Choice {
 	 * "Provides the processing status of the replacement request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReplacementProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Status22Choice, ReplacementProcessingStatus9Choice> mmReplacementProcessingStatus = new MMMessageAssociationEnd<Status22Choice, ReplacementProcessingStatus9Choice>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status22Choice.mmObject();
@@ -659,7 +760,17 @@ public class Status22Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.ReplacementProcessingStatus9Choice.mmObject();
+			type_lazy = () -> ReplacementProcessingStatus9Choice.mmObject();
+		}
+
+		@Override
+		public ReplacementProcessingStatus9Choice getValue(Status22Choice obj) {
+			return obj.getReplacementProcessingStatus();
+		}
+
+		@Override
+		public void setValue(Status22Choice obj, ReplacementProcessingStatus9Choice value) {
+			obj.setReplacementProcessingStatus(value);
 		}
 	};
 	@XmlElement(name = "CxlPrcgSts", required = true)
@@ -696,7 +807,7 @@ public class Status22Choice {
 	 * definition} = "Provides the status of a cancellation request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCancellationProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Status22Choice, CancellationProcessingStatus8Choice> mmCancellationProcessingStatus = new MMMessageAssociationEnd<Status22Choice, CancellationProcessingStatus8Choice>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmCancellationProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status22Choice.mmObject();
@@ -708,7 +819,17 @@ public class Status22Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.CancellationProcessingStatus8Choice.mmObject();
+			type_lazy = () -> CancellationProcessingStatus8Choice.mmObject();
+		}
+
+		@Override
+		public CancellationProcessingStatus8Choice getValue(Status22Choice obj) {
+			return obj.getCancellationProcessingStatus();
+		}
+
+		@Override
+		public void setValue(Status22Choice obj, CancellationProcessingStatus8Choice value) {
+			obj.setCancellationProcessingStatus(value);
 		}
 	};
 	@XmlElement(name = "SttlmSts", required = true)
@@ -745,7 +866,7 @@ public class Status22Choice {
 	 * definition} = "Provides the status of settlement of a transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Status22Choice, SettlementStatus25Choice> mmSettlementStatus = new MMMessageAssociationEnd<Status22Choice, SettlementStatus25Choice>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmSettlementStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status22Choice.mmObject();
@@ -757,7 +878,17 @@ public class Status22Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.SettlementStatus25Choice.mmObject();
+			type_lazy = () -> SettlementStatus25Choice.mmObject();
+		}
+
+		@Override
+		public SettlementStatus25Choice getValue(Status22Choice obj) {
+			return obj.getSettlementStatus();
+		}
+
+		@Override
+		public void setValue(Status22Choice obj, SettlementStatus25Choice value) {
+			obj.setSettlementStatus(value);
 		}
 	};
 	@XmlElement(name = "SttlmCondModSts", required = true)
@@ -796,7 +927,7 @@ public class Status22Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementConditionModificationStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Status22Choice, SettlementConditionModificationStatus4Choice> mmSettlementConditionModificationStatus = new MMMessageAssociationEnd<Status22Choice, SettlementConditionModificationStatus4Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmSettlementConditionModificationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status22Choice.mmObject();
@@ -808,7 +939,17 @@ public class Status22Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.SettlementConditionModificationStatus4Choice.mmObject();
+			type_lazy = () -> SettlementConditionModificationStatus4Choice.mmObject();
+		}
+
+		@Override
+		public SettlementConditionModificationStatus4Choice getValue(Status22Choice obj) {
+			return obj.getSettlementConditionModificationStatus();
+		}
+
+		@Override
+		public void setValue(Status22Choice obj, SettlementConditionModificationStatus4Choice value) {
+			obj.setSettlementConditionModificationStatus(value);
 		}
 	};
 
@@ -837,7 +978,7 @@ public class Status22Choice {
 		return affirmationStatus;
 	}
 
-	public Status22Choice setAffirmationStatus(com.tools20022.repository.choice.AffirmationStatus9Choice affirmationStatus) {
+	public Status22Choice setAffirmationStatus(AffirmationStatus9Choice affirmationStatus) {
 		this.affirmationStatus = Objects.requireNonNull(affirmationStatus);
 		return this;
 	}
@@ -846,7 +987,7 @@ public class Status22Choice {
 		return allocationStatus;
 	}
 
-	public Status22Choice setAllocationStatus(com.tools20022.repository.choice.AllocationSatus4Choice allocationStatus) {
+	public Status22Choice setAllocationStatus(AllocationSatus4Choice allocationStatus) {
 		this.allocationStatus = Objects.requireNonNull(allocationStatus);
 		return this;
 	}
@@ -855,7 +996,7 @@ public class Status22Choice {
 		return repoCallRequestStatus;
 	}
 
-	public Status22Choice setRepoCallRequestStatus(com.tools20022.repository.choice.RepoCallRequestStatus10Choice repoCallRequestStatus) {
+	public Status22Choice setRepoCallRequestStatus(RepoCallRequestStatus10Choice repoCallRequestStatus) {
 		this.repoCallRequestStatus = Objects.requireNonNull(repoCallRequestStatus);
 		return this;
 	}
@@ -864,7 +1005,7 @@ public class Status22Choice {
 		return corporateActionEventProcessingStatus;
 	}
 
-	public Status22Choice setCorporateActionEventProcessingStatus(com.tools20022.repository.choice.CorporateActionEventProcessingStatus4Choice corporateActionEventProcessingStatus) {
+	public Status22Choice setCorporateActionEventProcessingStatus(CorporateActionEventProcessingStatus4Choice corporateActionEventProcessingStatus) {
 		this.corporateActionEventProcessingStatus = Objects.requireNonNull(corporateActionEventProcessingStatus);
 		return this;
 	}
@@ -873,7 +1014,7 @@ public class Status22Choice {
 		return corporateActionEventStage;
 	}
 
-	public Status22Choice setCorporateActionEventStage(com.tools20022.repository.choice.CorporateActionEventStage4Choice corporateActionEventStage) {
+	public Status22Choice setCorporateActionEventStage(CorporateActionEventStage4Choice corporateActionEventStage) {
 		this.corporateActionEventStage = Objects.requireNonNull(corporateActionEventStage);
 		return this;
 	}
@@ -882,7 +1023,7 @@ public class Status22Choice {
 		return inferredMatchingStatus;
 	}
 
-	public Status22Choice setInferredMatchingStatus(com.tools20022.repository.choice.MatchingStatus28Choice inferredMatchingStatus) {
+	public Status22Choice setInferredMatchingStatus(MatchingStatus28Choice inferredMatchingStatus) {
 		this.inferredMatchingStatus = Objects.requireNonNull(inferredMatchingStatus);
 		return this;
 	}
@@ -891,7 +1032,7 @@ public class Status22Choice {
 		return instructionProcessingStatus;
 	}
 
-	public Status22Choice setInstructionProcessingStatus(com.tools20022.repository.choice.InstructionProcessingStatus26Choice instructionProcessingStatus) {
+	public Status22Choice setInstructionProcessingStatus(InstructionProcessingStatus26Choice instructionProcessingStatus) {
 		this.instructionProcessingStatus = Objects.requireNonNull(instructionProcessingStatus);
 		return this;
 	}
@@ -900,7 +1041,7 @@ public class Status22Choice {
 		return matchingStatus;
 	}
 
-	public Status22Choice setMatchingStatus(com.tools20022.repository.choice.MatchingStatus28Choice matchingStatus) {
+	public Status22Choice setMatchingStatus(MatchingStatus28Choice matchingStatus) {
 		this.matchingStatus = Objects.requireNonNull(matchingStatus);
 		return this;
 	}
@@ -909,7 +1050,7 @@ public class Status22Choice {
 		return registrationProcessingStatus;
 	}
 
-	public Status22Choice setRegistrationProcessingStatus(com.tools20022.repository.choice.RegistrationProcessingStatus4Choice registrationProcessingStatus) {
+	public Status22Choice setRegistrationProcessingStatus(RegistrationProcessingStatus4Choice registrationProcessingStatus) {
 		this.registrationProcessingStatus = Objects.requireNonNull(registrationProcessingStatus);
 		return this;
 	}
@@ -918,7 +1059,7 @@ public class Status22Choice {
 		return responseStatus;
 	}
 
-	public Status22Choice setResponseStatus(com.tools20022.repository.choice.ResponseStatus7Choice responseStatus) {
+	public Status22Choice setResponseStatus(ResponseStatus7Choice responseStatus) {
 		this.responseStatus = Objects.requireNonNull(responseStatus);
 		return this;
 	}
@@ -927,7 +1068,7 @@ public class Status22Choice {
 		return replacementProcessingStatus;
 	}
 
-	public Status22Choice setReplacementProcessingStatus(com.tools20022.repository.choice.ReplacementProcessingStatus9Choice replacementProcessingStatus) {
+	public Status22Choice setReplacementProcessingStatus(ReplacementProcessingStatus9Choice replacementProcessingStatus) {
 		this.replacementProcessingStatus = Objects.requireNonNull(replacementProcessingStatus);
 		return this;
 	}
@@ -936,7 +1077,7 @@ public class Status22Choice {
 		return cancellationProcessingStatus;
 	}
 
-	public Status22Choice setCancellationProcessingStatus(com.tools20022.repository.choice.CancellationProcessingStatus8Choice cancellationProcessingStatus) {
+	public Status22Choice setCancellationProcessingStatus(CancellationProcessingStatus8Choice cancellationProcessingStatus) {
 		this.cancellationProcessingStatus = Objects.requireNonNull(cancellationProcessingStatus);
 		return this;
 	}
@@ -945,7 +1086,7 @@ public class Status22Choice {
 		return settlementStatus;
 	}
 
-	public Status22Choice setSettlementStatus(com.tools20022.repository.choice.SettlementStatus25Choice settlementStatus) {
+	public Status22Choice setSettlementStatus(SettlementStatus25Choice settlementStatus) {
 		this.settlementStatus = Objects.requireNonNull(settlementStatus);
 		return this;
 	}
@@ -954,7 +1095,7 @@ public class Status22Choice {
 		return settlementConditionModificationStatus;
 	}
 
-	public Status22Choice setSettlementConditionModificationStatus(com.tools20022.repository.choice.SettlementConditionModificationStatus4Choice settlementConditionModificationStatus) {
+	public Status22Choice setSettlementConditionModificationStatus(SettlementConditionModificationStatus4Choice settlementConditionModificationStatus) {
 		this.settlementConditionModificationStatus = Objects.requireNonNull(settlementConditionModificationStatus);
 		return this;
 	}

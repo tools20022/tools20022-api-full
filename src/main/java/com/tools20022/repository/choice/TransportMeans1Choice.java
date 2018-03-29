@@ -105,7 +105,7 @@ public class TransportMeans1Choice {
 	 * "Moving of goods or people from one place to another by vehicle."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIndividualTransport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransportMeans1Choice, SingleTransport1> mmIndividualTransport = new MMMessageAssociationEnd<TransportMeans1Choice, SingleTransport1>() {
 		{
 			businessComponentTrace_lazy = () -> Transport.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransportMeans1Choice.mmObject();
@@ -118,6 +118,16 @@ public class TransportMeans1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SingleTransport1.mmObject();
+		}
+
+		@Override
+		public SingleTransport1 getValue(TransportMeans1Choice obj) {
+			return obj.getIndividualTransport();
+		}
+
+		@Override
+		public void setValue(TransportMeans1Choice obj, SingleTransport1 value) {
+			obj.setIndividualTransport(value);
 		}
 	};
 	@XmlElement(name = "MltmdlTrnsprt", required = true)
@@ -154,7 +164,7 @@ public class TransportMeans1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMultimodalTransport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransportMeans1Choice, MultimodalTransport1> mmMultimodalTransport = new MMMessageAssociationEnd<TransportMeans1Choice, MultimodalTransport1>() {
 		{
 			businessComponentTrace_lazy = () -> Transport.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransportMeans1Choice.mmObject();
@@ -167,6 +177,16 @@ public class TransportMeans1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> MultimodalTransport1.mmObject();
+		}
+
+		@Override
+		public MultimodalTransport1 getValue(TransportMeans1Choice obj) {
+			return obj.getMultimodalTransport();
+		}
+
+		@Override
+		public void setValue(TransportMeans1Choice obj, MultimodalTransport1 value) {
+			obj.setMultimodalTransport(value);
 		}
 	};
 

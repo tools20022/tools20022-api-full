@@ -112,7 +112,7 @@ public class TaxationBasis1 {
 	 * definition} = "Structured format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxationBasis1, TaxationBasis3Code> mmStructured = new MMMessageAttribute<TaxationBasis1, TaxationBasis3Code>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmBasis;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxationBasis1.mmObject();
@@ -124,6 +124,16 @@ public class TaxationBasis1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TaxationBasis3Code.mmObject();
+		}
+
+		@Override
+		public TaxationBasis3Code getValue(TaxationBasis1 obj) {
+			return obj.getStructured();
+		}
+
+		@Override
+		public void setValue(TaxationBasis1 obj, TaxationBasis3Code value) {
+			obj.setStructured(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -158,7 +168,7 @@ public class TaxationBasis1 {
 	 * definition} = "Additional information about the type of taxation basis."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxationBasis1, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<TaxationBasis1, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmBasis;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxationBasis1.mmObject();
@@ -170,6 +180,16 @@ public class TaxationBasis1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(TaxationBasis1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(TaxationBasis1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

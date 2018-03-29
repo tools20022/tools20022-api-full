@@ -24,7 +24,6 @@ import com.tools20022.repository.msg.DocumentIdentification8;
 import com.tools20022.repository.msg.GlobalDistributionStatus1;
 import com.tools20022.repository.msg.IndividualMovementStatus1;
 import com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -191,7 +190,7 @@ public class AgentCAGlobalDistributionStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCAGlobalDistributionStatusAdviceV01, DocumentIdentification8> mmIdentification = new MMMessageBuildingBlock<AgentCAGlobalDistributionStatusAdviceV01, DocumentIdentification8>() {
 		{
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -202,12 +201,14 @@ public class AgentCAGlobalDistributionStatusAdviceV01 {
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCAGlobalDistributionStatusAdviceV01.class.getMethod("getIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DocumentIdentification8 getValue(AgentCAGlobalDistributionStatusAdviceV01 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(AgentCAGlobalDistributionStatusAdviceV01 obj, DocumentIdentification8 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "AgtCAGblDstrbtnAuthstnReqId", required = true)
@@ -237,7 +238,7 @@ public class AgentCAGlobalDistributionStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAgentCAGlobalDistributionAuthorisationRequestIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCAGlobalDistributionStatusAdviceV01, DocumentIdentification8> mmAgentCAGlobalDistributionAuthorisationRequestIdentification = new MMMessageBuildingBlock<AgentCAGlobalDistributionStatusAdviceV01, DocumentIdentification8>() {
 		{
 			xmlTag = "AgtCAGblDstrbtnAuthstnReqId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -248,12 +249,14 @@ public class AgentCAGlobalDistributionStatusAdviceV01 {
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCAGlobalDistributionStatusAdviceV01.class.getMethod("getAgentCAGlobalDistributionAuthorisationRequestIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DocumentIdentification8 getValue(AgentCAGlobalDistributionStatusAdviceV01 obj) {
+			return obj.getAgentCAGlobalDistributionAuthorisationRequestIdentification();
+		}
+
+		@Override
+		public void setValue(AgentCAGlobalDistributionStatusAdviceV01 obj, DocumentIdentification8 value) {
+			obj.setAgentCAGlobalDistributionAuthorisationRequestIdentification(value);
 		}
 	};
 	@XmlElement(name = "CorpActnGnlInf", required = true)
@@ -281,7 +284,7 @@ public class AgentCAGlobalDistributionStatusAdviceV01 {
 	 * definition} = "General information about the corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCorporateActionGeneralInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCAGlobalDistributionStatusAdviceV01, CorporateActionInformation1> mmCorporateActionGeneralInformation = new MMMessageBuildingBlock<AgentCAGlobalDistributionStatusAdviceV01, CorporateActionInformation1>() {
 		{
 			xmlTag = "CorpActnGnlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -292,12 +295,14 @@ public class AgentCAGlobalDistributionStatusAdviceV01 {
 			complexType_lazy = () -> CorporateActionInformation1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCAGlobalDistributionStatusAdviceV01.class.getMethod("getCorporateActionGeneralInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CorporateActionInformation1 getValue(AgentCAGlobalDistributionStatusAdviceV01 obj) {
+			return obj.getCorporateActionGeneralInformation();
+		}
+
+		@Override
+		public void setValue(AgentCAGlobalDistributionStatusAdviceV01 obj, CorporateActionInformation1 value) {
+			obj.setCorporateActionGeneralInformation(value);
 		}
 	};
 	@XmlElement(name = "GblMvmntSts", required = true)
@@ -326,7 +331,7 @@ public class AgentCAGlobalDistributionStatusAdviceV01 {
 	 * "Provides information about the status of the global movement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGlobalMovementStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCAGlobalDistributionStatusAdviceV01, GlobalDistributionStatus1> mmGlobalMovementStatus = new MMMessageBuildingBlock<AgentCAGlobalDistributionStatusAdviceV01, GlobalDistributionStatus1>() {
 		{
 			xmlTag = "GblMvmntSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -337,12 +342,14 @@ public class AgentCAGlobalDistributionStatusAdviceV01 {
 			complexType_lazy = () -> GlobalDistributionStatus1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCAGlobalDistributionStatusAdviceV01.class.getMethod("getGlobalMovementStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GlobalDistributionStatus1 getValue(AgentCAGlobalDistributionStatusAdviceV01 obj) {
+			return obj.getGlobalMovementStatus();
+		}
+
+		@Override
+		public void setValue(AgentCAGlobalDistributionStatusAdviceV01 obj, GlobalDistributionStatus1 value) {
+			obj.setGlobalMovementStatus(value);
 		}
 	};
 	@XmlElement(name = "IndvMvmntSts", required = true)
@@ -371,7 +378,7 @@ public class AgentCAGlobalDistributionStatusAdviceV01 {
 	 * "Provides information about the status of an individual movement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmIndividualMovementStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCAGlobalDistributionStatusAdviceV01, List<IndividualMovementStatus1>> mmIndividualMovementStatus = new MMMessageBuildingBlock<AgentCAGlobalDistributionStatusAdviceV01, List<IndividualMovementStatus1>>() {
 		{
 			xmlTag = "IndvMvmntSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -381,12 +388,14 @@ public class AgentCAGlobalDistributionStatusAdviceV01 {
 			complexType_lazy = () -> IndividualMovementStatus1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCAGlobalDistributionStatusAdviceV01.class.getMethod("getIndividualMovementStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<IndividualMovementStatus1> getValue(AgentCAGlobalDistributionStatusAdviceV01 obj) {
+			return obj.getIndividualMovementStatus();
+		}
+
+		@Override
+		public void setValue(AgentCAGlobalDistributionStatusAdviceV01 obj, List<IndividualMovementStatus1> value) {
+			obj.setIndividualMovementStatus(value);
 		}
 	};
 

@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Entry;
 import com.tools20022.repository.entity.PaymentIdentification;
 import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ProprietaryReference1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -126,7 +127,7 @@ public class CertificateIdentification1 {
 	 * TransactionReferences2.mmMessageIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CertificateIdentification1, Optional<Max35Text>> mmMessageIdentification = new MMMessageAttribute<CertificateIdentification1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateIdentification1.mmObject();
 			isDerived = false;
@@ -138,6 +139,16 @@ public class CertificateIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CertificateIdentification1 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(CertificateIdentification1 obj, Optional<Max35Text> value) {
+			obj.setMessageIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctSvcrRef")
@@ -181,7 +192,7 @@ public class CertificateIdentification1 {
 	 * TransactionReferences2.mmAccountServicerReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicerReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CertificateIdentification1, Optional<Max35Text>> mmAccountServicerReference = new MMMessageAttribute<CertificateIdentification1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateIdentification1.mmObject();
@@ -194,6 +205,16 @@ public class CertificateIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CertificateIdentification1 obj) {
+			return obj.getAccountServicerReference();
+		}
+
+		@Override
+		public void setValue(CertificateIdentification1 obj, Optional<Max35Text> value) {
+			obj.setAccountServicerReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtInfId")
@@ -237,7 +258,7 @@ public class CertificateIdentification1 {
 	 * TransactionReferences2.mmPaymentInformationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentInformationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CertificateIdentification1, Optional<Max35Text>> mmPaymentInformationIdentification = new MMMessageAttribute<CertificateIdentification1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateIdentification1.mmObject();
@@ -250,6 +271,16 @@ public class CertificateIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CertificateIdentification1 obj) {
+			return obj.getPaymentInformationIdentification();
+		}
+
+		@Override
+		public void setValue(CertificateIdentification1 obj, Optional<Max35Text> value) {
+			obj.setPaymentInformationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstrId")
@@ -293,7 +324,7 @@ public class CertificateIdentification1 {
 	 * TransactionReferences2.mmInstructionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CertificateIdentification1, Optional<Max35Text>> mmInstructionIdentification = new MMMessageAttribute<CertificateIdentification1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmInstructionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateIdentification1.mmObject();
@@ -306,6 +337,16 @@ public class CertificateIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CertificateIdentification1 obj) {
+			return obj.getInstructionIdentification();
+		}
+
+		@Override
+		public void setValue(CertificateIdentification1 obj, Optional<Max35Text> value) {
+			obj.setInstructionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EndToEndId")
@@ -349,7 +390,7 @@ public class CertificateIdentification1 {
 	 * TransactionReferences2.mmEndToEndIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEndToEndIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CertificateIdentification1, Optional<Max35Text>> mmEndToEndIdentification = new MMMessageAttribute<CertificateIdentification1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmEndToEndIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateIdentification1.mmObject();
@@ -362,6 +403,16 @@ public class CertificateIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CertificateIdentification1 obj) {
+			return obj.getEndToEndIdentification();
+		}
+
+		@Override
+		public void setValue(CertificateIdentification1 obj, Optional<Max35Text> value) {
+			obj.setEndToEndIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Prtry")
@@ -398,7 +449,7 @@ public class CertificateIdentification1 {
 	 * TransactionReferences2.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CertificateIdentification1, Optional<ProprietaryReference1>> mmProprietary = new MMMessageAssociationEnd<CertificateIdentification1, Optional<ProprietaryReference1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateIdentification1.mmObject();
 			isDerived = false;
@@ -410,7 +461,17 @@ public class CertificateIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ProprietaryReference1.mmObject();
+			type_lazy = () -> ProprietaryReference1.mmObject();
+		}
+
+		@Override
+		public Optional<ProprietaryReference1> getValue(CertificateIdentification1 obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CertificateIdentification1 obj, Optional<ProprietaryReference1> value) {
+			obj.setProprietary(value.orElse(null));
 		}
 	};
 
@@ -480,7 +541,7 @@ public class CertificateIdentification1 {
 		return proprietary == null ? Optional.empty() : Optional.of(proprietary);
 	}
 
-	public CertificateIdentification1 setProprietary(com.tools20022.repository.msg.ProprietaryReference1 proprietary) {
+	public CertificateIdentification1 setProprietary(ProprietaryReference1 proprietary) {
 		this.proprietary = proprietary;
 		return this;
 	}

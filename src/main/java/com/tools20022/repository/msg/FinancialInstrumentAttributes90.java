@@ -24,7 +24,13 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DayCountFraction1Code;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.AssetHolding;
+import com.tools20022.repository.entity.Derivative;
+import com.tools20022.repository.entity.Interest;
+import com.tools20022.repository.entity.InterestCalculation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountAndCurrency2;
+import com.tools20022.repository.msg.GenericIdentification169;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -60,6 +66,8 @@ import javax.xml.bind.annotation.XmlType;
  * FinancialInstrumentAttributes90.mmInterestRateTerms}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
+ * trace} = {@linkplain com.tools20022.repository.entity.Derivative Derivative}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -93,6 +101,11 @@ public class FinancialInstrumentAttributes90 {
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Derivative#mmNotionalCurrencyAndAmount
+	 * Derivative.mmNotionalCurrencyAndAmount}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes90
@@ -110,8 +123,9 @@ public class FinancialInstrumentAttributes90 {
 	 * definition} = "Reference notional amount of the contract.\r\n\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotional = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributes90, Optional<ActiveCurrencyAndAmount>> mmNotional = new MMMessageAttribute<FinancialInstrumentAttributes90, Optional<ActiveCurrencyAndAmount>>() {
 		{
+			businessElementTrace_lazy = () -> Derivative.mmNotionalCurrencyAndAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes90.mmObject();
 			isDerived = false;
 			xmlTag = "Ntnl";
@@ -121,6 +135,16 @@ public class FinancialInstrumentAttributes90 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(FinancialInstrumentAttributes90 obj) {
+			return obj.getNotional();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes90 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setNotional(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UnitVal", required = true)
@@ -133,6 +157,11 @@ public class FinancialInstrumentAttributes90 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.msg.AmountAndCurrency2
 	 * AmountAndCurrency2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmBookValue
+	 * AssetHolding.mmBookValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -153,8 +182,9 @@ public class FinancialInstrumentAttributes90 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnitValue = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentAttributes90, AmountAndCurrency2> mmUnitValue = new MMMessageAssociationEnd<FinancialInstrumentAttributes90, AmountAndCurrency2>() {
 		{
+			businessElementTrace_lazy = () -> AssetHolding.mmBookValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes90.mmObject();
 			isDerived = false;
 			xmlTag = "UnitVal";
@@ -164,7 +194,17 @@ public class FinancialInstrumentAttributes90 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndCurrency2.mmObject();
+			type_lazy = () -> AmountAndCurrency2.mmObject();
+		}
+
+		@Override
+		public AmountAndCurrency2 getValue(FinancialInstrumentAttributes90 obj) {
+			return obj.getUnitValue();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes90 obj, AmountAndCurrency2 value) {
+			obj.setUnitValue(value);
 		}
 	};
 	@XmlElement(name = "IndxId", required = true)
@@ -178,6 +218,11 @@ public class FinancialInstrumentAttributes90 {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.msg.GenericIdentification169
 	 * GenericIdentification169}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Interest#mmInterestName
+	 * Interest.mmInterestName}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -198,8 +243,9 @@ public class FinancialInstrumentAttributes90 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIndexIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentAttributes90, GenericIdentification169> mmIndexIdentification = new MMMessageAssociationEnd<FinancialInstrumentAttributes90, GenericIdentification169>() {
 		{
+			businessElementTrace_lazy = () -> Interest.mmInterestName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes90.mmObject();
 			isDerived = false;
 			xmlTag = "IndxId";
@@ -209,7 +255,17 @@ public class FinancialInstrumentAttributes90 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification169.mmObject();
+			type_lazy = () -> GenericIdentification169.mmObject();
+		}
+
+		@Override
+		public GenericIdentification169 getValue(FinancialInstrumentAttributes90 obj) {
+			return obj.getIndexIdentification();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes90 obj, GenericIdentification169 value) {
+			obj.setIndexIdentification(value);
 		}
 	};
 	@XmlElement(name = "IndxUnit", required = true)
@@ -243,7 +299,7 @@ public class FinancialInstrumentAttributes90 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndexUnit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributes90, Max35Text> mmIndexUnit = new MMMessageAttribute<FinancialInstrumentAttributes90, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes90.mmObject();
 			isDerived = false;
@@ -254,6 +310,16 @@ public class FinancialInstrumentAttributes90 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(FinancialInstrumentAttributes90 obj) {
+			return obj.getIndexUnit();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes90 obj, Max35Text value) {
+			obj.setIndexUnit(value);
 		}
 	};
 	@XmlElement(name = "IntrstRateTerms")
@@ -268,6 +334,11 @@ public class FinancialInstrumentAttributes90 {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.DayCountFraction1Code
 	 * DayCountFraction1Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.InterestCalculation#mmDayCountBasis
+	 * InterestCalculation.mmDayCountBasis}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -288,8 +359,9 @@ public class FinancialInstrumentAttributes90 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterestRateTerms = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributes90, Optional<DayCountFraction1Code>> mmInterestRateTerms = new MMMessageAttribute<FinancialInstrumentAttributes90, Optional<DayCountFraction1Code>>() {
 		{
+			businessElementTrace_lazy = () -> InterestCalculation.mmDayCountBasis;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes90.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstRateTerms";
@@ -300,6 +372,16 @@ public class FinancialInstrumentAttributes90 {
 			minOccurs = 0;
 			simpleType_lazy = () -> DayCountFraction1Code.mmObject();
 		}
+
+		@Override
+		public Optional<DayCountFraction1Code> getValue(FinancialInstrumentAttributes90 obj) {
+			return obj.getInterestRateTerms();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes90 obj, Optional<DayCountFraction1Code> value) {
+			obj.setInterestRateTerms(value.orElse(null));
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -308,6 +390,7 @@ public class FinancialInstrumentAttributes90 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes90.mmNotional, com.tools20022.repository.msg.FinancialInstrumentAttributes90.mmUnitValue,
 						com.tools20022.repository.msg.FinancialInstrumentAttributes90.mmIndexIdentification, com.tools20022.repository.msg.FinancialInstrumentAttributes90.mmIndexUnit,
 						com.tools20022.repository.msg.FinancialInstrumentAttributes90.mmInterestRateTerms);
+				trace_lazy = () -> Derivative.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrumentAttributes90";
@@ -330,7 +413,7 @@ public class FinancialInstrumentAttributes90 {
 		return unitValue;
 	}
 
-	public FinancialInstrumentAttributes90 setUnitValue(com.tools20022.repository.msg.AmountAndCurrency2 unitValue) {
+	public FinancialInstrumentAttributes90 setUnitValue(AmountAndCurrency2 unitValue) {
 		this.unitValue = Objects.requireNonNull(unitValue);
 		return this;
 	}
@@ -339,7 +422,7 @@ public class FinancialInstrumentAttributes90 {
 		return indexIdentification;
 	}
 
-	public FinancialInstrumentAttributes90 setIndexIdentification(com.tools20022.repository.msg.GenericIdentification169 indexIdentification) {
+	public FinancialInstrumentAttributes90 setIndexIdentification(GenericIdentification169 indexIdentification) {
 		this.indexIdentification = Objects.requireNonNull(indexIdentification);
 		return this;
 	}

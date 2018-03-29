@@ -119,7 +119,7 @@ public class PriceDetails2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExercisePrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceDetails2, Optional<PriceFormat6Choice>> mmExercisePrice = new MMMessageAssociationEnd<PriceDetails2, Optional<PriceFormat6Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmExercisePrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceDetails2.mmObject();
@@ -132,6 +132,16 @@ public class PriceDetails2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PriceFormat6Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat6Choice> getValue(PriceDetails2 obj) {
+			return obj.getExercisePrice();
+		}
+
+		@Override
+		public void setValue(PriceDetails2 obj, Optional<PriceFormat6Choice> value) {
+			obj.setExercisePrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GncCshPricPdPerPdct")
@@ -168,7 +178,7 @@ public class PriceDetails2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGenericCashPricePaidPerProduct = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceDetails2, Optional<PriceFormat5Choice>> mmGenericCashPricePaidPerProduct = new MMMessageAssociationEnd<PriceDetails2, Optional<PriceFormat5Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmGenericCashPricePaidPerProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceDetails2.mmObject();
@@ -181,6 +191,16 @@ public class PriceDetails2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PriceFormat5Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat5Choice> getValue(PriceDetails2 obj) {
+			return obj.getGenericCashPricePaidPerProduct();
+		}
+
+		@Override
+		public void setValue(PriceDetails2 obj, Optional<PriceFormat5Choice> value) {
+			obj.setGenericCashPricePaidPerProduct(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GncCshPricRcvdPerPdct")
@@ -217,7 +237,7 @@ public class PriceDetails2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGenericCashPriceReceivedPerProduct = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceDetails2, Optional<PriceFormat7Choice>> mmGenericCashPriceReceivedPerProduct = new MMMessageAssociationEnd<PriceDetails2, Optional<PriceFormat7Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmGenericCashPriceReceivedPerProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceDetails2.mmObject();
@@ -230,6 +250,16 @@ public class PriceDetails2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PriceFormat7Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat7Choice> getValue(PriceDetails2 obj) {
+			return obj.getGenericCashPriceReceivedPerProduct();
+		}
+
+		@Override
+		public void setValue(PriceDetails2 obj, Optional<PriceFormat7Choice> value) {
+			obj.setGenericCashPriceReceivedPerProduct(value.orElse(null));
 		}
 	};
 

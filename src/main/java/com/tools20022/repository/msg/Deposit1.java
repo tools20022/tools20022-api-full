@@ -123,7 +123,7 @@ public class Deposit1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Deposit1, ISODate> mmMaturityDate = new MMMessageAttribute<Deposit1, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> CashAvailability.mmDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Deposit1.mmObject();
@@ -136,6 +136,16 @@ public class Deposit1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(Deposit1 obj) {
+			return obj.getMaturityDate();
+		}
+
+		@Override
+		public void setValue(Deposit1 obj, ISODate value) {
+			obj.setMaturityDate(value);
 		}
 	};
 	@XmlElement(name = "Val", required = true)
@@ -180,7 +190,7 @@ public class Deposit1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Deposit1, ActiveCurrencyAndAmount> mmValue = new MMMessageAttribute<Deposit1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Deposit1.mmObject();
@@ -193,6 +203,16 @@ public class Deposit1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(Deposit1 obj) {
+			return obj.getValue();
+		}
+
+		@Override
+		public void setValue(Deposit1 obj, ActiveCurrencyAndAmount value) {
+			obj.setValue(value);
 		}
 	};
 	@XmlElement(name = "CtrPtyId", required = true)
@@ -237,7 +257,7 @@ public class Deposit1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCounterpartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Deposit1, LEIIdentifier> mmCounterpartyIdentification = new MMMessageAttribute<Deposit1, LEIIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Deposit1.mmObject();
@@ -250,6 +270,16 @@ public class Deposit1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public LEIIdentifier getValue(Deposit1 obj) {
+			return obj.getCounterpartyIdentification();
+		}
+
+		@Override
+		public void setValue(Deposit1 obj, LEIIdentifier value) {
+			obj.setCounterpartyIdentification(value);
 		}
 	};
 

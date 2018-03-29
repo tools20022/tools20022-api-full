@@ -111,7 +111,7 @@ public class InformationTypeFormat4Choice {
 	 * InformationTypeFormat1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InformationTypeFormat4Choice, CorporateActionInformationType1Code> mmCode = new MMMessageAttribute<InformationTypeFormat4Choice, CorporateActionInformationType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.InformationTypeFormat4Choice.mmObject();
 			isDerived = false;
@@ -123,6 +123,16 @@ public class InformationTypeFormat4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionInformationType1Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionInformationType1Code getValue(InformationTypeFormat4Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(InformationTypeFormat4Choice obj, CorporateActionInformationType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -159,7 +169,7 @@ public class InformationTypeFormat4Choice {
 	 * InformationTypeFormat1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InformationTypeFormat4Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<InformationTypeFormat4Choice, GenericIdentification30>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.InformationTypeFormat4Choice.mmObject();
 			isDerived = false;
@@ -172,6 +182,16 @@ public class InformationTypeFormat4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(InformationTypeFormat4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(InformationTypeFormat4Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

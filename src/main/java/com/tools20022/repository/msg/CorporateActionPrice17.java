@@ -126,7 +126,7 @@ public class CorporateActionPrice17 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMaximumPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPrice17, Optional<PriceFormat19Choice>> mmMaximumPrice = new MMMessageAssociationEnd<CorporateActionPrice17, Optional<PriceFormat19Choice>>() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmMaximumPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice17.mmObject();
@@ -141,6 +141,16 @@ public class CorporateActionPrice17 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PriceFormat19Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat19Choice> getValue(CorporateActionPrice17 obj) {
+			return obj.getMaximumPrice();
+		}
+
+		@Override
+		public void setValue(CorporateActionPrice17 obj, Optional<PriceFormat19Choice> value) {
+			obj.setMaximumPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinPric")
@@ -189,7 +199,7 @@ public class CorporateActionPrice17 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMinimumPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPrice17, Optional<PriceFormat19Choice>> mmMinimumPrice = new MMMessageAssociationEnd<CorporateActionPrice17, Optional<PriceFormat19Choice>>() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmMinimumPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice17.mmObject();
@@ -204,6 +214,16 @@ public class CorporateActionPrice17 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PriceFormat19Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat19Choice> getValue(CorporateActionPrice17 obj) {
+			return obj.getMinimumPrice();
+		}
+
+		@Override
+		public void setValue(CorporateActionPrice17 obj, Optional<PriceFormat19Choice> value) {
+			obj.setMinimumPrice(value.orElse(null));
 		}
 	};
 

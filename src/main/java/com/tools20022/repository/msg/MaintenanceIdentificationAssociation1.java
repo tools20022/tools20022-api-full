@@ -97,7 +97,7 @@ public class MaintenanceIdentificationAssociation1 {
 	 * definition} = "Identifier for the master terminal manager."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMasterTMIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MaintenanceIdentificationAssociation1, Max35Text> mmMasterTMIdentification = new MMMessageAttribute<MaintenanceIdentificationAssociation1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MaintenanceIdentificationAssociation1.mmObject();
 			isDerived = false;
@@ -108,6 +108,16 @@ public class MaintenanceIdentificationAssociation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(MaintenanceIdentificationAssociation1 obj) {
+			return obj.getMasterTMIdentification();
+		}
+
+		@Override
+		public void setValue(MaintenanceIdentificationAssociation1 obj, Max35Text value) {
+			obj.setMasterTMIdentification(value);
 		}
 	};
 	@XmlElement(name = "TMId", required = true)
@@ -140,7 +150,7 @@ public class MaintenanceIdentificationAssociation1 {
 	 * "Identifier for the terminal manager requesting the delegation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTMIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MaintenanceIdentificationAssociation1, Max35Text> mmTMIdentification = new MMMessageAttribute<MaintenanceIdentificationAssociation1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MaintenanceIdentificationAssociation1.mmObject();
 			isDerived = false;
@@ -151,6 +161,16 @@ public class MaintenanceIdentificationAssociation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(MaintenanceIdentificationAssociation1 obj) {
+			return obj.getTMIdentification();
+		}
+
+		@Override
+		public void setValue(MaintenanceIdentificationAssociation1 obj, Max35Text value) {
+			obj.setTMIdentification(value);
 		}
 	};
 

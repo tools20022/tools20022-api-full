@@ -125,7 +125,7 @@ public class TaxCreditRateFormat7Choice {
 	 * TaxCreditRateFormat2Choice.mmRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCreditRateFormat7Choice, PercentageRate> mmRate = new MMMessageAttribute<TaxCreditRateFormat7Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TaxCreditRateFormat7Choice.mmObject();
@@ -139,6 +139,16 @@ public class TaxCreditRateFormat7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(TaxCreditRateFormat7Choice obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(TaxCreditRateFormat7Choice obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -184,7 +194,7 @@ public class TaxCreditRateFormat7Choice {
 	 * TaxCreditRateFormat2Choice.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCreditRateFormat7Choice, ActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<TaxCreditRateFormat7Choice, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TaxCreditRateFormat7Choice.mmObject();
@@ -198,6 +208,16 @@ public class TaxCreditRateFormat7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(TaxCreditRateFormat7Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(TaxCreditRateFormat7Choice obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "RateTpAndAmtAndRateSts", required = true)
@@ -237,7 +257,7 @@ public class TaxCreditRateFormat7Choice {
 	 * TaxCreditRateFormat2Choice.mmRateTypeAndAmountAndRateStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TaxCreditRateFormat7Choice, RateTypeAndAmountAndStatus27> mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd<TaxCreditRateFormat7Choice, RateTypeAndAmountAndStatus27>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TaxCreditRateFormat7Choice.mmObject();
 			isDerived = false;
@@ -251,6 +271,16 @@ public class TaxCreditRateFormat7Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RateTypeAndAmountAndStatus27.mmObject();
+		}
+
+		@Override
+		public RateTypeAndAmountAndStatus27 getValue(TaxCreditRateFormat7Choice obj) {
+			return obj.getRateTypeAndAmountAndRateStatus();
+		}
+
+		@Override
+		public void setValue(TaxCreditRateFormat7Choice obj, RateTypeAndAmountAndStatus27 value) {
+			obj.setRateTypeAndAmountAndRateStatus(value);
 		}
 	};
 

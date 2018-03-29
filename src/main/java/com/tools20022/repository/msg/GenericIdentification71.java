@@ -148,7 +148,7 @@ public class GenericIdentification71 {
 	 * GenericIdentification35.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification71, Max35Text> mmIdentification = new MMMessageAttribute<GenericIdentification71, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification71.mmObject();
@@ -162,6 +162,16 @@ public class GenericIdentification71 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(GenericIdentification71 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(GenericIdentification71 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -212,7 +222,7 @@ public class GenericIdentification71 {
 	 * GenericIdentification35.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification71, Optional<PartyType5Code>> mmType = new MMMessageAttribute<GenericIdentification71, Optional<PartyType5Code>>() {
 		{
 			businessComponentTrace_lazy = () -> GenericIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification71.mmObject();
@@ -226,6 +236,16 @@ public class GenericIdentification71 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PartyType5Code.mmObject();
+		}
+
+		@Override
+		public Optional<PartyType5Code> getValue(GenericIdentification71 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(GenericIdentification71 obj, Optional<PartyType5Code> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Issr")
@@ -281,7 +301,7 @@ public class GenericIdentification71 {
 	 * GenericIdentification35.mmIssuer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification71, Optional<PartyType6Code>> mmIssuer = new MMMessageAttribute<GenericIdentification71, Optional<PartyType6Code>>() {
 		{
 			businessComponentTrace_lazy = () -> IdentificationIssuerRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification71.mmObject();
@@ -295,6 +315,16 @@ public class GenericIdentification71 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PartyType6Code.mmObject();
+		}
+
+		@Override
+		public Optional<PartyType6Code> getValue(GenericIdentification71 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(GenericIdentification71 obj, Optional<PartyType6Code> value) {
+			obj.setIssuer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ctry")
@@ -338,7 +368,7 @@ public class GenericIdentification71 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification71, Optional<Min2Max3AlphaText>> mmCountry = new MMMessageAttribute<GenericIdentification71, Optional<Min2Max3AlphaText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification71.mmObject();
 			isDerived = false;
@@ -350,6 +380,16 @@ public class GenericIdentification71 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Min2Max3AlphaText.mmObject();
+		}
+
+		@Override
+		public Optional<Min2Max3AlphaText> getValue(GenericIdentification71 obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(GenericIdentification71 obj, Optional<Min2Max3AlphaText> value) {
+			obj.setCountry(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ShrtNm")
@@ -402,7 +442,7 @@ public class GenericIdentification71 {
 	 * GenericIdentification35.mmShortName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmShortName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification71, Optional<Max35Text>> mmShortName = new MMMessageAttribute<GenericIdentification71, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationName.mmShortName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification71.mmObject();
@@ -416,6 +456,16 @@ public class GenericIdentification71 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(GenericIdentification71 obj) {
+			return obj.getShortName();
+		}
+
+		@Override
+		public void setValue(GenericIdentification71 obj, Optional<Max35Text> value) {
+			obj.setShortName(value.orElse(null));
 		}
 	};
 

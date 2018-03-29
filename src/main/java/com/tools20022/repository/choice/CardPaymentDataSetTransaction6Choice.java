@@ -65,7 +65,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CardPaymentDataSetTransaction6Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -118,7 +118,7 @@ public class CardPaymentDataSetTransaction6Choice {
 	 * CardPaymentDataSetTransaction5Choice.mmCompletion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCompletion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentDataSetTransaction6Choice, CardPaymentDataSetTransaction24> mmCompletion = new MMMessageAttribute<CardPaymentDataSetTransaction6Choice, CardPaymentDataSetTransaction24>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CardPaymentDataSetTransaction6Choice.mmObject();
 			isDerived = false;
@@ -130,6 +130,16 @@ public class CardPaymentDataSetTransaction6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CardPaymentDataSetTransaction24.mmObject();
+		}
+
+		@Override
+		public CardPaymentDataSetTransaction24 getValue(CardPaymentDataSetTransaction6Choice obj) {
+			return obj.getCompletion();
+		}
+
+		@Override
+		public void setValue(CardPaymentDataSetTransaction6Choice obj, CardPaymentDataSetTransaction24 value) {
+			obj.setCompletion(value);
 		}
 	};
 	@XmlElement(name = "Cxl", required = true)
@@ -167,7 +177,7 @@ public class CardPaymentDataSetTransaction6Choice {
 	 * CardPaymentDataSetTransaction5Choice.mmCancellation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancellation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentDataSetTransaction6Choice, CardPaymentDataSetTransaction23> mmCancellation = new MMMessageAttribute<CardPaymentDataSetTransaction6Choice, CardPaymentDataSetTransaction23>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CardPaymentDataSetTransaction6Choice.mmObject();
 			isDerived = false;
@@ -179,6 +189,16 @@ public class CardPaymentDataSetTransaction6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CardPaymentDataSetTransaction23.mmObject();
+		}
+
+		@Override
+		public CardPaymentDataSetTransaction23 getValue(CardPaymentDataSetTransaction6Choice obj) {
+			return obj.getCancellation();
+		}
+
+		@Override
+		public void setValue(CardPaymentDataSetTransaction6Choice obj, CardPaymentDataSetTransaction23 value) {
+			obj.setCancellation(value);
 		}
 	};
 	@XmlElement(name = "AuthstnReq", required = true)
@@ -217,7 +237,7 @@ public class CardPaymentDataSetTransaction6Choice {
 	 * CardPaymentDataSetTransaction5Choice.mmAuthorisationRequest}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAuthorisationRequest = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentDataSetTransaction6Choice, CardPaymentDataSetTransaction22> mmAuthorisationRequest = new MMMessageAttribute<CardPaymentDataSetTransaction6Choice, CardPaymentDataSetTransaction22>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CardPaymentDataSetTransaction6Choice.mmObject();
 			isDerived = false;
@@ -229,6 +249,16 @@ public class CardPaymentDataSetTransaction6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CardPaymentDataSetTransaction22.mmObject();
+		}
+
+		@Override
+		public CardPaymentDataSetTransaction22 getValue(CardPaymentDataSetTransaction6Choice obj) {
+			return obj.getAuthorisationRequest();
+		}
+
+		@Override
+		public void setValue(CardPaymentDataSetTransaction6Choice obj, CardPaymentDataSetTransaction22 value) {
+			obj.setAuthorisationRequest(value);
 		}
 	};
 	@XmlElement(name = "AuthstnRspn", required = true)
@@ -267,7 +297,7 @@ public class CardPaymentDataSetTransaction6Choice {
 	 * CardPaymentDataSetTransaction5Choice.mmAuthorisationResponse}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAuthorisationResponse = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentDataSetTransaction6Choice, CardPaymentDataSetTransaction25> mmAuthorisationResponse = new MMMessageAttribute<CardPaymentDataSetTransaction6Choice, CardPaymentDataSetTransaction25>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CardPaymentDataSetTransaction6Choice.mmObject();
 			isDerived = false;
@@ -280,6 +310,16 @@ public class CardPaymentDataSetTransaction6Choice {
 			minOccurs = 1;
 			complexType_lazy = () -> CardPaymentDataSetTransaction25.mmObject();
 		}
+
+		@Override
+		public CardPaymentDataSetTransaction25 getValue(CardPaymentDataSetTransaction6Choice obj) {
+			return obj.getAuthorisationResponse();
+		}
+
+		@Override
+		public void setValue(CardPaymentDataSetTransaction6Choice obj, CardPaymentDataSetTransaction25 value) {
+			obj.setAuthorisationResponse(value);
+		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
@@ -288,7 +328,7 @@ public class CardPaymentDataSetTransaction6Choice {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CardPaymentDataSetTransaction6Choice.mmCompletion, com.tools20022.repository.choice.CardPaymentDataSetTransaction6Choice.mmCancellation,
 						com.tools20022.repository.choice.CardPaymentDataSetTransaction6Choice.mmAuthorisationRequest, com.tools20022.repository.choice.CardPaymentDataSetTransaction6Choice.mmAuthorisationResponse);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentDataSetTransaction6Choice";
 				definition = "Card payment transaction choice between cancellation, authorisation request and authorisation response.";
 				previousVersion_lazy = () -> CardPaymentDataSetTransaction5Choice.mmObject();

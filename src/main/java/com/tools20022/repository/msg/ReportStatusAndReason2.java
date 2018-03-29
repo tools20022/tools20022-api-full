@@ -126,7 +126,7 @@ public class ReportStatusAndReason2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRelatedReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportStatusAndReason2, Max35Text> mmRelatedReference = new MMMessageAttribute<ReportStatusAndReason2, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportStatusAndReason2.mmObject();
 			isDerived = false;
@@ -137,6 +137,16 @@ public class ReportStatusAndReason2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ReportStatusAndReason2 obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(ReportStatusAndReason2 obj, Max35Text value) {
+			obj.setRelatedReference(value);
 		}
 	};
 	@XmlElement(name = "Sts", required = true)
@@ -169,7 +179,7 @@ public class ReportStatusAndReason2 {
 	 * "Indicates the status of a report cancellation request message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportStatusAndReason2, Status2Code> mmStatus = new MMMessageAttribute<ReportStatusAndReason2, Status2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportStatusAndReason2.mmObject();
 			isDerived = false;
@@ -180,6 +190,16 @@ public class ReportStatusAndReason2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Status2Code.mmObject();
+		}
+
+		@Override
+		public Status2Code getValue(ReportStatusAndReason2 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(ReportStatusAndReason2 obj, Status2Code value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "Rjctd", required = true)
@@ -217,7 +237,7 @@ public class ReportStatusAndReason2 {
 	 * "Indicates that the cancellation is rejected and provides a reason why."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportStatusAndReason2, List<RejectedCancellationStatusReason1Choice>> mmRejected = new MMMessageAssociationEnd<ReportStatusAndReason2, List<RejectedCancellationStatusReason1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportStatusAndReason2.mmObject();
@@ -230,6 +250,16 @@ public class ReportStatusAndReason2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RejectedCancellationStatusReason1Choice.mmObject();
+		}
+
+		@Override
+		public List<RejectedCancellationStatusReason1Choice> getValue(ReportStatusAndReason2 obj) {
+			return obj.getRejected();
+		}
+
+		@Override
+		public void setValue(ReportStatusAndReason2 obj, List<RejectedCancellationStatusReason1Choice> value) {
+			obj.setRejected(value);
 		}
 	};
 	/**

@@ -112,7 +112,7 @@ public class RestrictedIdentification2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RestrictedIdentification2, Max35Text> mmIdentification = new MMMessageAttribute<RestrictedIdentification2, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RestrictedIdentification2.mmObject();
@@ -124,6 +124,16 @@ public class RestrictedIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(RestrictedIdentification2 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(RestrictedIdentification2 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "IdTp", required = true)
@@ -163,7 +173,7 @@ public class RestrictedIdentification2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentificationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RestrictedIdentification2, RestrictedSEPACodeText> mmIdentificationType = new MMMessageAttribute<RestrictedIdentification2, RestrictedSEPACodeText>() {
 		{
 			businessElementTrace_lazy = () -> Scheme.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RestrictedIdentification2.mmObject();
@@ -175,6 +185,16 @@ public class RestrictedIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedSEPACodeText.mmObject();
+		}
+
+		@Override
+		public RestrictedSEPACodeText getValue(RestrictedIdentification2 obj) {
+			return obj.getIdentificationType();
+		}
+
+		@Override
+		public void setValue(RestrictedIdentification2 obj, RestrictedSEPACodeText value) {
+			obj.setIdentificationType(value);
 		}
 	};
 

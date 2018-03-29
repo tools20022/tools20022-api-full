@@ -56,12 +56,16 @@ public class ConstraintBalanceFromToRule2 {
 	 */
 	public static final MMConstraint<IntraPositionDetails3> forIntraPositionDetails3 = new MMConstraint<IntraPositionDetails3>() {
 		{
-			validator = ConstraintBalanceFromToRule2::checkIntraPositionDetails3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceFromToRule2";
 			definition = "The SecuritiesBalanceType of BalanceFrom must be different from the IntraPositionMovement BalanceTo SecuritiesBalanceType.";
 			owner_lazy = () -> IntraPositionDetails3.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromNode\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand><rightOperand>/BalanceFrom/Code</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/BalanceFrom/Code</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails3 obj) throws Exception {
+			checkIntraPositionDetails3(obj);
 		}
 	};
 	/**
@@ -91,12 +95,16 @@ public class ConstraintBalanceFromToRule2 {
 	 */
 	public static final MMConstraint<IntraPositionDetails6> forIntraPositionDetails6 = new MMConstraint<IntraPositionDetails6>() {
 		{
-			validator = ConstraintBalanceFromToRule2::checkIntraPositionDetails6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceFromToRule2";
 			definition = "The SecuritiesBalanceType of BalanceFrom must be different from the IntraPositionMovement BalanceTo SecuritiesBalanceType.";
 			owner_lazy = () -> IntraPositionDetails6.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromNode\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand><rightOperand>/BalanceFrom/Code</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/BalanceFrom/Code</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails6 obj) throws Exception {
+			checkIntraPositionDetails6(obj);
 		}
 	};
 	/**
@@ -126,12 +134,16 @@ public class ConstraintBalanceFromToRule2 {
 	 */
 	public static final MMConstraint<IntraPositionDetails17> forIntraPositionDetails17 = new MMConstraint<IntraPositionDetails17>() {
 		{
-			validator = ConstraintBalanceFromToRule2::checkIntraPositionDetails17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceFromToRule2";
 			definition = "The SecuritiesBalanceType of BalanceFrom must be different from the SecuritiesBalanceType of BalanceTo.";
 			owner_lazy = () -> IntraPositionDetails17.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromNode\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand><rightOperand>/BalanceFrom/Code</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/BalanceFrom/Code</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails17 obj) throws Exception {
+			checkIntraPositionDetails17(obj);
 		}
 	};
 	/**
@@ -161,12 +173,16 @@ public class ConstraintBalanceFromToRule2 {
 	 */
 	public static final MMConstraint<IntraPositionDetails18> forIntraPositionDetails18 = new MMConstraint<IntraPositionDetails18>() {
 		{
-			validator = ConstraintBalanceFromToRule2::checkIntraPositionDetails18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceFromToRule2";
 			definition = "The SecuritiesBalanceType of BalanceFrom must be different from the SecuritiesBalanceType of BalanceTo.";
 			owner_lazy = () -> IntraPositionDetails18.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromNode\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand><rightOperand>/BalanceFrom/Code</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/BalanceFrom/Code</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails18 obj) throws Exception {
+			checkIntraPositionDetails18(obj);
 		}
 	};
 	/**
@@ -196,12 +212,16 @@ public class ConstraintBalanceFromToRule2 {
 	 */
 	public static final MMConstraint<IntraPositionDetails20> forIntraPositionDetails20 = new MMConstraint<IntraPositionDetails20>() {
 		{
-			validator = ConstraintBalanceFromToRule2::checkIntraPositionDetails20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceFromToRule2";
 			definition = "The SecuritiesBalanceType of BalanceFrom must be different from the SecuritiesBalanceType of BalanceTo.";
 			owner_lazy = () -> IntraPositionDetails20.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromNode\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand><rightOperand>/BalanceFrom/Code</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/BalanceFrom/Code</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails20 obj) throws Exception {
+			checkIntraPositionDetails20(obj);
 		}
 	};
 	/**
@@ -231,12 +251,16 @@ public class ConstraintBalanceFromToRule2 {
 	 */
 	public static final MMConstraint<IntraPositionDetails24> forIntraPositionDetails24 = new MMConstraint<IntraPositionDetails24>() {
 		{
-			validator = ConstraintBalanceFromToRule2::checkIntraPositionDetails24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceFromToRule2";
 			definition = "The SecuritiesBalanceType of BalanceFrom must be different from the SecuritiesBalanceType of BalanceTo.";
 			owner_lazy = () -> IntraPositionDetails24.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromNode\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand><rightOperand>/BalanceFrom/Code</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/BalanceFrom/Code</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails24 obj) throws Exception {
+			checkIntraPositionDetails24(obj);
 		}
 	};
 	/**
@@ -274,13 +298,17 @@ public class ConstraintBalanceFromToRule2 {
 	 */
 	public static final MMConstraint<IntraPositionDetails28> forIntraPositionDetails28 = new MMConstraint<IntraPositionDetails28>() {
 		{
-			validator = ConstraintBalanceFromToRule2::checkIntraPositionDetails28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceFromToRule2";
 			definition = "The SecuritiesBalanceType of BalanceFrom must be different from the SecuritiesBalanceType of BalanceTo.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBalanceFromToRule2.forIntraPositionDetails32);
 			owner_lazy = () -> IntraPositionDetails28.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromNode\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand><rightOperand>/BalanceFrom/Code</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/BalanceFrom/Code</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails28 obj) throws Exception {
+			checkIntraPositionDetails28(obj);
 		}
 	};
 	/**
@@ -310,12 +338,16 @@ public class ConstraintBalanceFromToRule2 {
 	 */
 	public static final MMConstraint<IntraPositionDetails30> forIntraPositionDetails30 = new MMConstraint<IntraPositionDetails30>() {
 		{
-			validator = ConstraintBalanceFromToRule2::checkIntraPositionDetails30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceFromToRule2";
 			definition = "The SecuritiesBalanceType of BalanceFrom must be different from the SecuritiesBalanceType of BalanceTo.";
 			owner_lazy = () -> IntraPositionDetails30.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromNode\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand><rightOperand>/BalanceFrom/Code</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/BalanceFrom/Code</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails30 obj) throws Exception {
+			checkIntraPositionDetails30(obj);
 		}
 	};
 	/**
@@ -345,12 +377,16 @@ public class ConstraintBalanceFromToRule2 {
 	 */
 	public static final MMConstraint<IntraPositionDetails10> forIntraPositionDetails10 = new MMConstraint<IntraPositionDetails10>() {
 		{
-			validator = ConstraintBalanceFromToRule2::checkIntraPositionDetails10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceFromToRule2";
 			definition = "The SecuritiesBalanceType of BalanceFrom must be different from the IntraPositionMovement BalanceTo SecuritiesBalanceType.";
 			owner_lazy = () -> IntraPositionDetails10.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromNode\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand><rightOperand>/BalanceFrom/Code</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/BalanceFrom/Code</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails10 obj) throws Exception {
+			checkIntraPositionDetails10(obj);
 		}
 	};
 	/**
@@ -380,12 +416,16 @@ public class ConstraintBalanceFromToRule2 {
 	 */
 	public static final MMConstraint<IntraPositionDetails14> forIntraPositionDetails14 = new MMConstraint<IntraPositionDetails14>() {
 		{
-			validator = ConstraintBalanceFromToRule2::checkIntraPositionDetails14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceFromToRule2";
 			definition = "The SecuritiesBalanceType of BalanceFrom must be different from the IntraPositionMovement BalanceTo SecuritiesBalanceType.";
 			owner_lazy = () -> IntraPositionDetails14.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromNode\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand><rightOperand>/BalanceFrom/Code</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/BalanceFrom/Code</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails14 obj) throws Exception {
+			checkIntraPositionDetails14(obj);
 		}
 	};
 	/**
@@ -428,7 +468,6 @@ public class ConstraintBalanceFromToRule2 {
 	 */
 	public static final MMConstraint<IntraPositionDetails32> forIntraPositionDetails32 = new MMConstraint<IntraPositionDetails32>() {
 		{
-			validator = ConstraintBalanceFromToRule2::checkIntraPositionDetails32;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceFromToRule2";
 			definition = "The SecuritiesBalanceType of BalanceFrom must be different from the SecuritiesBalanceType of BalanceTo.";
@@ -436,6 +475,11 @@ public class ConstraintBalanceFromToRule2 {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBalanceFromToRule2.forIntraPositionDetails28;
 			owner_lazy = () -> IntraPositionDetails32.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromNode\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand><rightOperand>/BalanceFrom/Code</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/BalanceFrom/Code</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails32 obj) throws Exception {
+			checkIntraPositionDetails32(obj);
 		}
 	};
 	/**
@@ -465,12 +509,16 @@ public class ConstraintBalanceFromToRule2 {
 	 */
 	public static final MMConstraint<IntraPositionDetails37> forIntraPositionDetails37 = new MMConstraint<IntraPositionDetails37>() {
 		{
-			validator = ConstraintBalanceFromToRule2::checkIntraPositionDetails37;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceFromToRule2";
 			definition = "The SecuritiesBalanceType of BalanceFrom must be different from the SecuritiesBalanceType of BalanceTo.";
 			owner_lazy = () -> IntraPositionDetails37.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromNode\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand><rightOperand>/BalanceFrom/Code</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/BalanceFrom/Code</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails37 obj) throws Exception {
+			checkIntraPositionDetails37(obj);
 		}
 	};
 	/**
@@ -513,7 +561,6 @@ public class ConstraintBalanceFromToRule2 {
 	 */
 	public static final MMConstraint<IntraPositionDetails40> forIntraPositionDetails40 = new MMConstraint<IntraPositionDetails40>() {
 		{
-			validator = ConstraintBalanceFromToRule2::checkIntraPositionDetails40;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceFromToRule2";
 			definition = "BalanceFrom/Code must be different from the IntraPositionMovement/BalanceTo/Code.";
@@ -521,6 +568,11 @@ public class ConstraintBalanceFromToRule2 {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBalanceFromToRule2.forIntraPositionDetails32;
 			owner_lazy = () -> IntraPositionDetails40.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromNode\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand><rightOperand>/BalanceFrom/Code</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/BalanceFrom/Code</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails40 obj) throws Exception {
+			checkIntraPositionDetails40(obj);
 		}
 	};
 	/**
@@ -550,12 +602,16 @@ public class ConstraintBalanceFromToRule2 {
 	 */
 	public static final MMConstraint<IntraPositionDetails44> forIntraPositionDetails44 = new MMConstraint<IntraPositionDetails44>() {
 		{
-			validator = ConstraintBalanceFromToRule2::checkIntraPositionDetails44;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceFromToRule2";
 			definition = "The SecuritiesBalanceType of BalanceFrom must be different from the SecuritiesBalanceType of BalanceTo.";
 			owner_lazy = () -> IntraPositionDetails44.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromNode\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand><rightOperand>/BalanceFrom/Code</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/BalanceFrom/Code</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails44 obj) throws Exception {
+			checkIntraPositionDetails44(obj);
 		}
 	};
 	/**
@@ -590,13 +646,17 @@ public class ConstraintBalanceFromToRule2 {
 	 */
 	public static final MMConstraint<IntraPositionDetails45> forIntraPositionDetails45 = new MMConstraint<IntraPositionDetails45>() {
 		{
-			validator = ConstraintBalanceFromToRule2::checkIntraPositionDetails45;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceFromToRule2";
 			definition = "BalanceFrom/Code must be different from the IntraPositionMovement/BalanceTo/Code.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBalanceFromToRule2.forIntraPositionDetails40;
 			owner_lazy = () -> IntraPositionDetails45.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromNode\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand><rightOperand>/BalanceFrom/Code</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/BalanceFrom/Code</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails45 obj) throws Exception {
+			checkIntraPositionDetails45(obj);
 		}
 	};
 	/**
@@ -626,12 +686,16 @@ public class ConstraintBalanceFromToRule2 {
 	 */
 	public static final MMConstraint<IntraPositionDetails48> forIntraPositionDetails48 = new MMConstraint<IntraPositionDetails48>() {
 		{
-			validator = ConstraintBalanceFromToRule2::checkIntraPositionDetails48;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceFromToRule2";
 			definition = "The SecuritiesBalanceType of BalanceFrom must be different from the SecuritiesBalanceType of BalanceTo.";
 			owner_lazy = () -> IntraPositionDetails48.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromNode\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand><rightOperand>/BalanceFrom/Code</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/BalanceFrom/Code</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails48 obj) throws Exception {
+			checkIntraPositionDetails48(obj);
 		}
 	};
 

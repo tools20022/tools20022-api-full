@@ -115,7 +115,7 @@ public class CaseAssignmentRejectionJustification {
 	 * "Reason for the rejection of a case assignment, in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRejectionReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CaseAssignmentRejectionJustification, CaseAssignmentRejection1Code> mmRejectionReason = new MMMessageAttribute<CaseAssignmentRejectionJustification, CaseAssignmentRejection1Code>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCaseRejection.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CaseAssignmentRejectionJustification.mmObject();
@@ -127,6 +127,16 @@ public class CaseAssignmentRejectionJustification {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CaseAssignmentRejection1Code.mmObject();
+		}
+
+		@Override
+		public CaseAssignmentRejection1Code getValue(CaseAssignmentRejectionJustification obj) {
+			return obj.getRejectionReason();
+		}
+
+		@Override
+		public void setValue(CaseAssignmentRejectionJustification obj, CaseAssignmentRejection1Code value) {
+			obj.setRejectionReason(value);
 		}
 	};
 

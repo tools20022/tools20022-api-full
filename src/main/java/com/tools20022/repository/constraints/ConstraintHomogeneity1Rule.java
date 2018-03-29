@@ -51,11 +51,15 @@ public class ConstraintHomogeneity1Rule {
 	 */
 	public static final MMConstraint<InvoiceFinancingRequestV01> forInvoiceFinancingRequestV01 = new MMConstraint<InvoiceFinancingRequestV01>() {
 		{
-			validator = ConstraintHomogeneity1Rule::checkInvoiceFinancingRequestV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Homogeneity1Rule";
 			definition = "The bulk invoice financing request must be homogeneous for account IBAN identifier.";
 			owner_lazy = () -> InvoiceFinancingRequestV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvoiceFinancingRequestV01 obj) throws Exception {
+			checkInvoiceFinancingRequestV01(obj);
 		}
 	};
 

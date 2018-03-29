@@ -122,7 +122,7 @@ public class LineItemMonetarySummation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLineTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItemMonetarySummation1, List<CurrencyAndAmount>> mmLineTotalAmount = new MMMessageAttribute<LineItemMonetarySummation1, List<CurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemMonetarySummation1.mmObject();
 			isDerived = false;
@@ -132,6 +132,16 @@ public class LineItemMonetarySummation1 {
 			definition = "Monetary value of the line amount total being reported in this trade settlement monetary summation.";
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public List<CurrencyAndAmount> getValue(LineItemMonetarySummation1 obj) {
+			return obj.getLineTotalAmount();
+		}
+
+		@Override
+		public void setValue(LineItemMonetarySummation1 obj, List<CurrencyAndAmount> value) {
+			obj.setLineTotalAmount(value);
 		}
 	};
 	@XmlElement(name = "AllwncTtlAmt")
@@ -171,7 +181,7 @@ public class LineItemMonetarySummation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAllowanceTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItemMonetarySummation1, List<CurrencyAndAmount>> mmAllowanceTotalAmount = new MMMessageAttribute<LineItemMonetarySummation1, List<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Allowance.mmTotalAllowance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemMonetarySummation1.mmObject();
@@ -182,6 +192,16 @@ public class LineItemMonetarySummation1 {
 			definition = "Monetary value of the total of all allowance amounts being reported in this line item monetary summation.";
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public List<CurrencyAndAmount> getValue(LineItemMonetarySummation1 obj) {
+			return obj.getAllowanceTotalAmount();
+		}
+
+		@Override
+		public void setValue(LineItemMonetarySummation1 obj, List<CurrencyAndAmount> value) {
+			obj.setAllowanceTotalAmount(value);
 		}
 	};
 	@XmlElement(name = "ChrgTtlAmt")
@@ -221,7 +241,7 @@ public class LineItemMonetarySummation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmChargeTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItemMonetarySummation1, List<CurrencyAndAmount>> mmChargeTotalAmount = new MMMessageAttribute<LineItemMonetarySummation1, List<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemMonetarySummation1.mmObject();
@@ -232,6 +252,16 @@ public class LineItemMonetarySummation1 {
 			definition = "Monetary value of the total of all charge amounts being reported in this line item monetary summation.";
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public List<CurrencyAndAmount> getValue(LineItemMonetarySummation1 obj) {
+			return obj.getChargeTotalAmount();
+		}
+
+		@Override
+		public void setValue(LineItemMonetarySummation1 obj, List<CurrencyAndAmount> value) {
+			obj.setChargeTotalAmount(value);
 		}
 	};
 	@XmlElement(name = "TaxTtlAmt")
@@ -270,7 +300,7 @@ public class LineItemMonetarySummation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItemMonetarySummation1, List<CurrencyAndAmount>> mmTaxTotalAmount = new MMMessageAttribute<LineItemMonetarySummation1, List<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemMonetarySummation1.mmObject();
@@ -281,6 +311,16 @@ public class LineItemMonetarySummation1 {
 			definition = "Monetary value of the total of all tax amounts being reported in this line item monetary summation.";
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public List<CurrencyAndAmount> getValue(LineItemMonetarySummation1 obj) {
+			return obj.getTaxTotalAmount();
+		}
+
+		@Override
+		public void setValue(LineItemMonetarySummation1 obj, List<CurrencyAndAmount> value) {
+			obj.setTaxTotalAmount(value);
 		}
 	};
 	@XmlElement(name = "TaxBsisTtlAmt")
@@ -320,7 +360,7 @@ public class LineItemMonetarySummation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxBasisTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItemMonetarySummation1, List<CurrencyAndAmount>> mmTaxBasisTotalAmount = new MMMessageAttribute<LineItemMonetarySummation1, List<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmTaxableBaseAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemMonetarySummation1.mmObject();
@@ -331,6 +371,16 @@ public class LineItemMonetarySummation1 {
 			definition = "Monetary value of the total of all tax basis amounts being reported in this line item monetary summation.";
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public List<CurrencyAndAmount> getValue(LineItemMonetarySummation1 obj) {
+			return obj.getTaxBasisTotalAmount();
+		}
+
+		@Override
+		public void setValue(LineItemMonetarySummation1 obj, List<CurrencyAndAmount> value) {
+			obj.setTaxBasisTotalAmount(value);
 		}
 	};
 	@XmlElement(name = "InfAmt")
@@ -365,7 +415,7 @@ public class LineItemMonetarySummation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInformationAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItemMonetarySummation1, List<CurrencyAndAmount>> mmInformationAmount = new MMMessageAttribute<LineItemMonetarySummation1, List<CurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemMonetarySummation1.mmObject();
 			isDerived = false;
@@ -375,6 +425,16 @@ public class LineItemMonetarySummation1 {
 			definition = "Monetary value of an amount being reported for information in this line item monetary summation.";
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public List<CurrencyAndAmount> getValue(LineItemMonetarySummation1 obj) {
+			return obj.getInformationAmount();
+		}
+
+		@Override
+		public void setValue(LineItemMonetarySummation1 obj, List<CurrencyAndAmount> value) {
+			obj.setInformationAmount(value);
 		}
 	};
 

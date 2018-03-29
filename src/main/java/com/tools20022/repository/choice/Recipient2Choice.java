@@ -115,7 +115,7 @@ public class Recipient2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmKeyTransport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Recipient2Choice, Optional<KeyTransport2>> mmKeyTransport = new MMMessageAssociationEnd<Recipient2Choice, Optional<KeyTransport2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Recipient2Choice.mmObject();
 			isDerived = false;
@@ -128,6 +128,16 @@ public class Recipient2Choice {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> KeyTransport2.mmObject();
+		}
+
+		@Override
+		public Optional<KeyTransport2> getValue(Recipient2Choice obj) {
+			return obj.getKeyTransport();
+		}
+
+		@Override
+		public void setValue(Recipient2Choice obj, Optional<KeyTransport2> value) {
+			obj.setKeyTransport(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "KEK")
@@ -165,7 +175,7 @@ public class Recipient2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmKEK = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Recipient2Choice, Optional<KEK2>> mmKEK = new MMMessageAssociationEnd<Recipient2Choice, Optional<KEK2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Recipient2Choice.mmObject();
 			isDerived = false;
@@ -178,6 +188,16 @@ public class Recipient2Choice {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> KEK2.mmObject();
+		}
+
+		@Override
+		public Optional<KEK2> getValue(Recipient2Choice obj) {
+			return obj.getKEK();
+		}
+
+		@Override
+		public void setValue(Recipient2Choice obj, Optional<KEK2> value) {
+			obj.setKEK(value.orElse(null));
 		}
 	};
 

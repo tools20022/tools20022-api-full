@@ -99,7 +99,7 @@ public class ConfirmationType {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConfirmationType, ConfirmationType1Code> mmIdentification = new MMMessageAttribute<ConfirmationType, ConfirmationType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConfirmationType.mmObject();
 			isDerived = false;
@@ -110,6 +110,16 @@ public class ConfirmationType {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ConfirmationType1Code.mmObject();
+		}
+
+		@Override
+		public ConfirmationType1Code getValue(ConfirmationType obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(ConfirmationType obj, ConfirmationType1Code value) {
+			obj.setIdentification(value);
 		}
 	};
 

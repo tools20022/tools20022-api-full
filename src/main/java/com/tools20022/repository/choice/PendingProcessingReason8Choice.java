@@ -111,7 +111,7 @@ public class PendingProcessingReason8Choice {
 	 * "Reason for the pending status expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingProcessingReason8Choice, ExternalPendingProcessingReason1Code> mmCode = new MMMessageAttribute<PendingProcessingReason8Choice, ExternalPendingProcessingReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingProcessingReason8Choice.mmObject();
@@ -123,6 +123,16 @@ public class PendingProcessingReason8Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalPendingProcessingReason1Code.mmObject();
+		}
+
+		@Override
+		public ExternalPendingProcessingReason1Code getValue(PendingProcessingReason8Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(PendingProcessingReason8Choice obj, ExternalPendingProcessingReason1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -155,7 +165,7 @@ public class PendingProcessingReason8Choice {
 	 * "Reason for the pending status expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PendingProcessingReason8Choice, GenericIdentification36> mmProprietary = new MMMessageAssociationEnd<PendingProcessingReason8Choice, GenericIdentification36>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingProcessingReason8Choice.mmObject();
 			isDerived = false;
@@ -167,6 +177,16 @@ public class PendingProcessingReason8Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification36.mmObject();
+		}
+
+		@Override
+		public GenericIdentification36 getValue(PendingProcessingReason8Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(PendingProcessingReason8Choice obj, GenericIdentification36 value) {
+			obj.setProprietary(value);
 		}
 	};
 

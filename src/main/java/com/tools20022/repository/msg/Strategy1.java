@@ -98,7 +98,7 @@ public class Strategy1 {
 	 * definition} = "Unique identifier for the strategy."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Strategy1, Max35Text> mmIdentification = new MMMessageAttribute<Strategy1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Strategy1.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class Strategy1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Strategy1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Strategy1 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "StrssSz", required = true)
@@ -139,7 +149,7 @@ public class Strategy1 {
 	 * "Assumed stress move of the associated stress item under the scenario."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStressSize = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Strategy1, StressSize1Choice> mmStressSize = new MMMessageAssociationEnd<Strategy1, StressSize1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Strategy1.mmObject();
 			isDerived = false;
@@ -151,6 +161,16 @@ public class Strategy1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> StressSize1Choice.mmObject();
+		}
+
+		@Override
+		public StressSize1Choice getValue(Strategy1 obj) {
+			return obj.getStressSize();
+		}
+
+		@Override
+		public void setValue(Strategy1 obj, StressSize1Choice value) {
+			obj.setStressSize(value);
 		}
 	};
 

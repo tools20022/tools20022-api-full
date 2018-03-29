@@ -27,7 +27,6 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -169,7 +168,7 @@ public class PriceReportV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PriceReportV04, MessageIdentification1> mmMessageIdentification = new MMMessageBuildingBlock<PriceReportV04, MessageIdentification1>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,12 +179,14 @@ public class PriceReportV04 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PriceReportV04.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(PriceReportV04 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(PriceReportV04 obj, MessageIdentification1 value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "PoolRef")
@@ -213,7 +214,7 @@ public class PriceReportV04 {
 	 * definition} = "Collective reference identifying a set of messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PriceReportV04, Optional<AdditionalReference3>> mmPoolReference = new MMMessageBuildingBlock<PriceReportV04, Optional<AdditionalReference3>>() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -224,12 +225,14 @@ public class PriceReportV04 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PriceReportV04.class.getMethod("getPoolReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference3> getValue(PriceReportV04 obj) {
+			return obj.getPoolReference();
+		}
+
+		@Override
+		public void setValue(PriceReportV04 obj, Optional<AdditionalReference3> value) {
+			obj.setPoolReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsRef")
@@ -257,7 +260,7 @@ public class PriceReportV04 {
 	 * definition} = "Reference to a linked message that was previously sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PriceReportV04, List<AdditionalReference3>> mmPreviousReference = new MMMessageBuildingBlock<PriceReportV04, List<AdditionalReference3>>() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -267,12 +270,14 @@ public class PriceReportV04 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PriceReportV04.class.getMethod("getPreviousReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<AdditionalReference3> getValue(PriceReportV04 obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(PriceReportV04 obj, List<AdditionalReference3> value) {
+			obj.setPreviousReference(value);
 		}
 	};
 	@XmlElement(name = "RltdRef")
@@ -301,7 +306,7 @@ public class PriceReportV04 {
 	 * "Reference to a linked message that was previously received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PriceReportV04, Optional<AdditionalReference3>> mmRelatedReference = new MMMessageBuildingBlock<PriceReportV04, Optional<AdditionalReference3>>() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -312,12 +317,14 @@ public class PriceReportV04 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PriceReportV04.class.getMethod("getRelatedReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference3> getValue(PriceReportV04 obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(PriceReportV04 obj, Optional<AdditionalReference3> value) {
+			obj.setRelatedReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MsgPgntn", required = true)
@@ -344,7 +351,7 @@ public class PriceReportV04 {
 	 * definition} = "Pagination of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessagePagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PriceReportV04, Pagination> mmMessagePagination = new MMMessageBuildingBlock<PriceReportV04, Pagination>() {
 		{
 			xmlTag = "MsgPgntn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -355,12 +362,14 @@ public class PriceReportV04 {
 			complexType_lazy = () -> Pagination.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PriceReportV04.class.getMethod("getMessagePagination", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Pagination getValue(PriceReportV04 obj) {
+			return obj.getMessagePagination();
+		}
+
+		@Override
+		public void setValue(PriceReportV04 obj, Pagination value) {
+			obj.setMessagePagination(value);
 		}
 	};
 	@XmlElement(name = "PricRptId", required = true)
@@ -389,7 +398,7 @@ public class PriceReportV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPriceReportIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PriceReportV04, Max35Text> mmPriceReportIdentification = new MMMessageBuildingBlock<PriceReportV04, Max35Text>() {
 		{
 			xmlTag = "PricRptId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -400,12 +409,14 @@ public class PriceReportV04 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PriceReportV04.class.getMethod("getPriceReportIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(PriceReportV04 obj) {
+			return obj.getPriceReportIdentification();
+		}
+
+		@Override
+		public void setValue(PriceReportV04 obj, Max35Text value) {
+			obj.setPriceReportIdentification(value);
 		}
 	};
 	@XmlElement(name = "Fctn", required = true)
@@ -435,7 +446,7 @@ public class PriceReportV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmFunction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PriceReportV04, PriceReportFunction1Code> mmFunction = new MMMessageBuildingBlock<PriceReportV04, PriceReportFunction1Code>() {
 		{
 			xmlTag = "Fctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -446,12 +457,14 @@ public class PriceReportV04 {
 			simpleType_lazy = () -> PriceReportFunction1Code.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PriceReportV04.class.getMethod("getFunction", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PriceReportFunction1Code getValue(PriceReportV04 obj) {
+			return obj.getFunction();
+		}
+
+		@Override
+		public void setValue(PriceReportV04 obj, PriceReportFunction1Code value) {
+			obj.setFunction(value);
 		}
 	};
 	@XmlElement(name = "CxlId")
@@ -480,7 +493,7 @@ public class PriceReportV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCancellationIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PriceReportV04, Optional<Max35Text>> mmCancellationIdentification = new MMMessageBuildingBlock<PriceReportV04, Optional<Max35Text>>() {
 		{
 			xmlTag = "CxlId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -491,12 +504,14 @@ public class PriceReportV04 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PriceReportV04.class.getMethod("getCancellationIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Max35Text> getValue(PriceReportV04 obj) {
+			return obj.getCancellationIdentification();
+		}
+
+		@Override
+		public void setValue(PriceReportV04 obj, Optional<Max35Text> value) {
+			obj.setCancellationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PricValtnDtls", required = true)
@@ -524,7 +539,7 @@ public class PriceReportV04 {
 	 * "Information related to the price valuation of a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPriceValuationDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PriceReportV04, List<PriceValuation4>> mmPriceValuationDetails = new MMMessageBuildingBlock<PriceReportV04, List<PriceValuation4>>() {
 		{
 			xmlTag = "PricValtnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -534,12 +549,14 @@ public class PriceReportV04 {
 			complexType_lazy = () -> PriceValuation4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PriceReportV04.class.getMethod("getPriceValuationDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<PriceValuation4> getValue(PriceReportV04 obj) {
+			return obj.getPriceValuationDetails();
+		}
+
+		@Override
+		public void setValue(PriceReportV04 obj, List<PriceValuation4> value) {
+			obj.setPriceValuationDetails(value);
 		}
 	};
 	@XmlElement(name = "Xtnsn")
@@ -568,7 +585,7 @@ public class PriceReportV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PriceReportV04, List<Extension1>> mmExtension = new MMMessageBuildingBlock<PriceReportV04, List<Extension1>>() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -578,12 +595,14 @@ public class PriceReportV04 {
 			complexType_lazy = () -> Extension1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PriceReportV04.class.getMethod("getExtension", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Extension1> getValue(PriceReportV04 obj) {
+			return obj.getExtension();
+		}
+
+		@Override
+		public void setValue(PriceReportV04 obj, List<Extension1> value) {
+			obj.setExtension(value);
 		}
 	};
 

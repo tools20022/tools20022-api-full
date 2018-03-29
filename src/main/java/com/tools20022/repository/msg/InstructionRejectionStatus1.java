@@ -126,7 +126,7 @@ public class InstructionRejectionStatus1 {
 	 * definition} = "Reason advising the rejection of the instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstructionRejectionStatus1, RejectionReason1Code> mmReason = new MMMessageAttribute<InstructionRejectionStatus1, RejectionReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstructionRejectionStatus1.mmObject();
@@ -138,6 +138,16 @@ public class InstructionRejectionStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RejectionReason1Code.mmObject();
+		}
+
+		@Override
+		public RejectionReason1Code getValue(InstructionRejectionStatus1 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(InstructionRejectionStatus1 obj, RejectionReason1Code value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "XtndedRsn", required = true)
@@ -176,7 +186,7 @@ public class InstructionRejectionStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstructionRejectionStatus1, Extended350Code> mmExtendedReason = new MMMessageAttribute<InstructionRejectionStatus1, Extended350Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstructionRejectionStatus1.mmObject();
@@ -188,6 +198,16 @@ public class InstructionRejectionStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Extended350Code getValue(InstructionRejectionStatus1 obj) {
+			return obj.getExtendedReason();
+		}
+
+		@Override
+		public void setValue(InstructionRejectionStatus1 obj, Extended350Code value) {
+			obj.setExtendedReason(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -219,7 +239,7 @@ public class InstructionRejectionStatus1 {
 	 * definition} = "Additional information about the reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstructionRejectionStatus1, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<InstructionRejectionStatus1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstructionRejectionStatus1.mmObject();
 			isDerived = false;
@@ -230,6 +250,16 @@ public class InstructionRejectionStatus1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(InstructionRejectionStatus1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(InstructionRejectionStatus1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 	/**

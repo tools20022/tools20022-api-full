@@ -105,7 +105,7 @@ public class ProcessTiming4 {
 	 * ProcessTiming3.mmStartTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStartTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProcessTiming4, Optional<ISODateTime>> mmStartTime = new MMMessageAttribute<ProcessTiming4, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProcessTiming4.mmObject();
 			isDerived = false;
@@ -117,6 +117,16 @@ public class ProcessTiming4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(ProcessTiming4 obj) {
+			return obj.getStartTime();
+		}
+
+		@Override
+		public void setValue(ProcessTiming4 obj, Optional<ISODateTime> value) {
+			obj.setStartTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EndTm")
@@ -153,7 +163,7 @@ public class ProcessTiming4 {
 	 * ProcessTiming3.mmEndTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEndTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProcessTiming4, Optional<ISODateTime>> mmEndTime = new MMMessageAttribute<ProcessTiming4, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProcessTiming4.mmObject();
 			isDerived = false;
@@ -165,6 +175,16 @@ public class ProcessTiming4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(ProcessTiming4 obj) {
+			return obj.getEndTime();
+		}
+
+		@Override
+		public void setValue(ProcessTiming4 obj, Optional<ISODateTime> value) {
+			obj.setEndTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Prd")
@@ -203,7 +223,7 @@ public class ProcessTiming4 {
 	 * ProcessTiming3.mmPeriod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProcessTiming4, Optional<Max9NumericText>> mmPeriod = new MMMessageAttribute<ProcessTiming4, Optional<Max9NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProcessTiming4.mmObject();
 			isDerived = false;
@@ -215,6 +235,16 @@ public class ProcessTiming4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max9NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max9NumericText> getValue(ProcessTiming4 obj) {
+			return obj.getPeriod();
+		}
+
+		@Override
+		public void setValue(ProcessTiming4 obj, Optional<Max9NumericText> value) {
+			obj.setPeriod(value.orElse(null));
 		}
 	};
 

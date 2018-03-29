@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.RateValueType6FormatChoice;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
@@ -97,7 +98,7 @@ public class AmountAndRateFormat3Choice {
 	 * definition} = "Number of monetary units specified in a currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndRateFormat3Choice, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<AmountAndRateFormat3Choice, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AmountAndRateFormat3Choice.mmObject();
 			isDerived = false;
@@ -108,6 +109,16 @@ public class AmountAndRateFormat3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(AmountAndRateFormat3Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(AmountAndRateFormat3Choice obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "NotSpcfdRate", required = true)
@@ -140,7 +151,7 @@ public class AmountAndRateFormat3Choice {
 	 * definition} = "The rate is not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndRateFormat3Choice, RateValueType6FormatChoice> mmNotSpecifiedRate = new MMMessageAttribute<AmountAndRateFormat3Choice, RateValueType6FormatChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AmountAndRateFormat3Choice.mmObject();
 			isDerived = false;
@@ -150,7 +161,17 @@ public class AmountAndRateFormat3Choice {
 			definition = "The rate is not specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.RateValueType6FormatChoice.mmObject();
+			complexType_lazy = () -> RateValueType6FormatChoice.mmObject();
+		}
+
+		@Override
+		public RateValueType6FormatChoice getValue(AmountAndRateFormat3Choice obj) {
+			return obj.getNotSpecifiedRate();
+		}
+
+		@Override
+		public void setValue(AmountAndRateFormat3Choice obj, RateValueType6FormatChoice value) {
+			obj.setNotSpecifiedRate(value);
 		}
 	};
 
@@ -180,7 +201,7 @@ public class AmountAndRateFormat3Choice {
 		return notSpecifiedRate;
 	}
 
-	public AmountAndRateFormat3Choice setNotSpecifiedRate(com.tools20022.repository.choice.RateValueType6FormatChoice notSpecifiedRate) {
+	public AmountAndRateFormat3Choice setNotSpecifiedRate(RateValueType6FormatChoice notSpecifiedRate) {
 		this.notSpecifiedRate = Objects.requireNonNull(notSpecifiedRate);
 		return this;
 	}

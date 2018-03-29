@@ -115,7 +115,7 @@ public class Vote3Choice {
 	 * Vote2Choice.mmVoteInstruction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmVoteInstruction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Vote3Choice, List<Vote8>> mmVoteInstruction = new MMMessageAssociationEnd<Vote3Choice, List<Vote8>>() {
 		{
 			businessElementTrace_lazy = () -> VoteInstructionRequest.mmVotePerResolution;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Vote3Choice.mmObject();
@@ -129,6 +129,16 @@ public class Vote3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Vote8.mmObject();
+		}
+
+		@Override
+		public List<Vote8> getValue(Vote3Choice obj) {
+			return obj.getVoteInstruction();
+		}
+
+		@Override
+		public void setValue(Vote3Choice obj, List<Vote8> value) {
+			obj.setVoteInstruction(value);
 		}
 	};
 	@XmlElement(name = "GblVoteInstr", required = true)
@@ -169,7 +179,7 @@ public class Vote3Choice {
 	 * Vote2Choice.mmGlobalVoteInstruction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGlobalVoteInstruction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Vote3Choice, List<Vote9>> mmGlobalVoteInstruction = new MMMessageAssociationEnd<Vote3Choice, List<Vote9>>() {
 		{
 			businessElementTrace_lazy = () -> VoteInstructionRequest.mmGlobalVoteInstruction;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Vote3Choice.mmObject();
@@ -183,6 +193,16 @@ public class Vote3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Vote9.mmObject();
+		}
+
+		@Override
+		public List<Vote9> getValue(Vote3Choice obj) {
+			return obj.getGlobalVoteInstruction();
+		}
+
+		@Override
+		public void setValue(Vote3Choice obj, List<Vote9> value) {
+			obj.setGlobalVoteInstruction(value);
 		}
 	};
 

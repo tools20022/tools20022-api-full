@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.GroupHeader63;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.PaymentsClearingandSettlementISOLatestversion;
 import com.tools20022.repository.msgset.PaymentsClearingandSettlementMaintenance20162017;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -139,7 +138,7 @@ public class FinancialInstitutionDirectDebitV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FinancialInstitutionDirectDebitV02, GroupHeader63> mmGroupHeader = new MMMessageBuildingBlock<FinancialInstitutionDirectDebitV02, GroupHeader63>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -150,12 +149,14 @@ public class FinancialInstitutionDirectDebitV02 {
 			complexType_lazy = () -> GroupHeader63.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FinancialInstitutionDirectDebitV02.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader63 getValue(FinancialInstitutionDirectDebitV02 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(FinancialInstitutionDirectDebitV02 obj, GroupHeader63 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "CdtInstr", required = true)
@@ -185,7 +186,7 @@ public class FinancialInstitutionDirectDebitV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCreditInstruction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FinancialInstitutionDirectDebitV02, List<CreditTransferTransaction9>> mmCreditInstruction = new MMMessageBuildingBlock<FinancialInstitutionDirectDebitV02, List<CreditTransferTransaction9>>() {
 		{
 			xmlTag = "CdtInstr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -195,12 +196,14 @@ public class FinancialInstitutionDirectDebitV02 {
 			complexType_lazy = () -> CreditTransferTransaction9.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FinancialInstitutionDirectDebitV02.class.getMethod("getCreditInstruction", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<CreditTransferTransaction9> getValue(FinancialInstitutionDirectDebitV02 obj) {
+			return obj.getCreditInstruction();
+		}
+
+		@Override
+		public void setValue(FinancialInstitutionDirectDebitV02 obj, List<CreditTransferTransaction9> value) {
+			obj.setCreditInstruction(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -230,7 +233,7 @@ public class FinancialInstitutionDirectDebitV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FinancialInstitutionDirectDebitV02, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<FinancialInstitutionDirectDebitV02, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -240,12 +243,14 @@ public class FinancialInstitutionDirectDebitV02 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FinancialInstitutionDirectDebitV02.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(FinancialInstitutionDirectDebitV02 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(FinancialInstitutionDirectDebitV02 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SignedQuantityFormat9;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -108,7 +109,7 @@ public class CorporateActionBalanceSD5 {
 	 * CorporateActionBalanceSD2.mmPlaceAndName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionBalanceSD5, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<CorporateActionBalanceSD5, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceSD5.mmObject();
 			isDerived = false;
@@ -120,6 +121,16 @@ public class CorporateActionBalanceSD5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionBalanceSD5 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionBalanceSD5 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlUcvrdPrtctBal")
@@ -156,7 +167,7 @@ public class CorporateActionBalanceSD5 {
 	 * CorporateActionBalanceSD2.mmTotalUncoveredProtectBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTotalUncoveredProtectBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionBalanceSD5, Optional<SignedQuantityFormat9>> mmTotalUncoveredProtectBalance = new MMMessageAssociationEnd<CorporateActionBalanceSD5, Optional<SignedQuantityFormat9>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceSD5.mmObject();
 			isDerived = false;
@@ -168,7 +179,17 @@ public class CorporateActionBalanceSD5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat9.mmObject();
+			type_lazy = () -> SignedQuantityFormat9.mmObject();
+		}
+
+		@Override
+		public Optional<SignedQuantityFormat9> getValue(CorporateActionBalanceSD5 obj) {
+			return obj.getTotalUncoveredProtectBalance();
+		}
+
+		@Override
+		public void setValue(CorporateActionBalanceSD5 obj, Optional<SignedQuantityFormat9> value) {
+			obj.setTotalUncoveredProtectBalance(value.orElse(null));
 		}
 	};
 
@@ -199,7 +220,7 @@ public class CorporateActionBalanceSD5 {
 		return totalUncoveredProtectBalance == null ? Optional.empty() : Optional.of(totalUncoveredProtectBalance);
 	}
 
-	public CorporateActionBalanceSD5 setTotalUncoveredProtectBalance(com.tools20022.repository.msg.SignedQuantityFormat9 totalUncoveredProtectBalance) {
+	public CorporateActionBalanceSD5 setTotalUncoveredProtectBalance(SignedQuantityFormat9 totalUncoveredProtectBalance) {
 		this.totalUncoveredProtectBalance = totalUncoveredProtectBalance;
 		return this;
 	}

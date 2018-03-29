@@ -50,11 +50,15 @@ public class ConstraintForeignExchangeDetailsRule {
 	 */
 	public static final MMConstraint<Trade1> forTrade1 = new MMConstraint<Trade1>() {
 		{
-			validator = ConstraintForeignExchangeDetailsRule::checkTrade1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeDetailsRule";
 			definition = "If Foreign ExchangeTradeProduct is equal to 'FORW'or'NDFO'or'SPOT', then ForeignExchangeDetails must be present.";
 			owner_lazy = () -> Trade1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Trade1 obj) throws Exception {
+			checkTrade1(obj);
 		}
 	};
 

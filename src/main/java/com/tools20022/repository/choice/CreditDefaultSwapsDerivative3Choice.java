@@ -115,7 +115,7 @@ public class CreditDefaultSwapsDerivative3Choice {
 	 * definition} = "A credit default swap on a single name instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSingleNameCreditDefaultSwap = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditDefaultSwapsDerivative3Choice, CreditDefaultSwapSingleName2> mmSingleNameCreditDefaultSwap = new MMMessageAssociationEnd<CreditDefaultSwapsDerivative3Choice, CreditDefaultSwapSingleName2>() {
 		{
 			businessComponentTrace_lazy = () -> CreditDefaultSwap.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.CreditDefaultSwapsDerivative3Choice.mmObject();
@@ -128,6 +128,16 @@ public class CreditDefaultSwapsDerivative3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CreditDefaultSwapSingleName2.mmObject();
+		}
+
+		@Override
+		public CreditDefaultSwapSingleName2 getValue(CreditDefaultSwapsDerivative3Choice obj) {
+			return obj.getSingleNameCreditDefaultSwap();
+		}
+
+		@Override
+		public void setValue(CreditDefaultSwapsDerivative3Choice obj, CreditDefaultSwapSingleName2 value) {
+			obj.setSingleNameCreditDefaultSwap(value);
 		}
 	};
 	@XmlElement(name = "CdtDfltSwpIndx", required = true)
@@ -164,7 +174,7 @@ public class CreditDefaultSwapsDerivative3Choice {
 	 * definition} = "A credit default swap on an index."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditDefaultSwapIndex = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditDefaultSwapsDerivative3Choice, CreditDefaultSwapIndex2> mmCreditDefaultSwapIndex = new MMMessageAssociationEnd<CreditDefaultSwapsDerivative3Choice, CreditDefaultSwapIndex2>() {
 		{
 			businessComponentTrace_lazy = () -> CreditDefaultSwap.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.CreditDefaultSwapsDerivative3Choice.mmObject();
@@ -177,6 +187,16 @@ public class CreditDefaultSwapsDerivative3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CreditDefaultSwapIndex2.mmObject();
+		}
+
+		@Override
+		public CreditDefaultSwapIndex2 getValue(CreditDefaultSwapsDerivative3Choice obj) {
+			return obj.getCreditDefaultSwapIndex();
+		}
+
+		@Override
+		public void setValue(CreditDefaultSwapsDerivative3Choice obj, CreditDefaultSwapIndex2 value) {
+			obj.setCreditDefaultSwapIndex(value);
 		}
 	};
 	@XmlElement(name = "SnglNmCdtDfltSwpDeriv", required = true)
@@ -213,7 +233,7 @@ public class CreditDefaultSwapsDerivative3Choice {
 	 * definition} = "A credit default swap derivative on a single name."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSingleNameCreditDefaultSwapDerivative = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditDefaultSwapsDerivative3Choice, CreditDefaultSwapDerivative4> mmSingleNameCreditDefaultSwapDerivative = new MMMessageAssociationEnd<CreditDefaultSwapsDerivative3Choice, CreditDefaultSwapDerivative4>() {
 		{
 			businessComponentTrace_lazy = () -> CreditDefaultSwap.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.CreditDefaultSwapsDerivative3Choice.mmObject();
@@ -226,6 +246,16 @@ public class CreditDefaultSwapsDerivative3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CreditDefaultSwapDerivative4.mmObject();
+		}
+
+		@Override
+		public CreditDefaultSwapDerivative4 getValue(CreditDefaultSwapsDerivative3Choice obj) {
+			return obj.getSingleNameCreditDefaultSwapDerivative();
+		}
+
+		@Override
+		public void setValue(CreditDefaultSwapsDerivative3Choice obj, CreditDefaultSwapDerivative4 value) {
+			obj.setSingleNameCreditDefaultSwapDerivative(value);
 		}
 	};
 	@XmlElement(name = "CdtDfltSwpIndxDeriv", required = true)
@@ -262,7 +292,7 @@ public class CreditDefaultSwapsDerivative3Choice {
 	 * definition} = "A credit default swap derivative on an index."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditDefaultSwapIndexDerivative = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditDefaultSwapsDerivative3Choice, CreditDefaultSwapDerivative3> mmCreditDefaultSwapIndexDerivative = new MMMessageAssociationEnd<CreditDefaultSwapsDerivative3Choice, CreditDefaultSwapDerivative3>() {
 		{
 			businessComponentTrace_lazy = () -> CreditDefaultSwap.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.CreditDefaultSwapsDerivative3Choice.mmObject();
@@ -275,6 +305,16 @@ public class CreditDefaultSwapsDerivative3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CreditDefaultSwapDerivative3.mmObject();
+		}
+
+		@Override
+		public CreditDefaultSwapDerivative3 getValue(CreditDefaultSwapsDerivative3Choice obj) {
+			return obj.getCreditDefaultSwapIndexDerivative();
+		}
+
+		@Override
+		public void setValue(CreditDefaultSwapsDerivative3Choice obj, CreditDefaultSwapDerivative3 value) {
+			obj.setCreditDefaultSwapIndexDerivative(value);
 		}
 	};
 

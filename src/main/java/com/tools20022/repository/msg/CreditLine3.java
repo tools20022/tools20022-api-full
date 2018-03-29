@@ -117,7 +117,7 @@ public class CreditLine3 {
 	 * CreditLine2.mmIncluded}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIncluded = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CreditLine3, TrueFalseIndicator> mmIncluded = new MMMessageAttribute<CreditLine3, TrueFalseIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditLine3.mmObject();
 			isDerived = false;
@@ -129,6 +129,16 @@ public class CreditLine3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public TrueFalseIndicator getValue(CreditLine3 obj) {
+			return obj.getIncluded();
+		}
+
+		@Override
+		public void setValue(CreditLine3 obj, TrueFalseIndicator value) {
+			obj.setIncluded(value);
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -166,7 +176,7 @@ public class CreditLine3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditLine3, Optional<CreditLineType1Choice>> mmType = new MMMessageAssociationEnd<CreditLine3, Optional<CreditLineType1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditLine3.mmObject();
@@ -179,6 +189,16 @@ public class CreditLine3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CreditLineType1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CreditLineType1Choice> getValue(CreditLine3 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(CreditLine3 obj, Optional<CreditLineType1Choice> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Amt")
@@ -220,7 +240,7 @@ public class CreditLine3 {
 	 * CreditLine2.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CreditLine3, Optional<ActiveOrHistoricCurrencyAndAmount>> mmAmount = new MMMessageAttribute<CreditLine3, Optional<ActiveOrHistoricCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditLine3.mmObject();
@@ -233,6 +253,16 @@ public class CreditLine3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAndAmount> getValue(CreditLine3 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(CreditLine3 obj, Optional<ActiveOrHistoricCurrencyAndAmount> value) {
+			obj.setAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Dt")
@@ -270,7 +300,7 @@ public class CreditLine3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditLine3, Optional<DateAndDateTime2Choice>> mmDate = new MMMessageAssociationEnd<CreditLine3, Optional<DateAndDateTime2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditLine3.mmObject();
@@ -283,6 +313,16 @@ public class CreditLine3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateAndDateTime2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTime2Choice> getValue(CreditLine3 obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(CreditLine3 obj, Optional<DateAndDateTime2Choice> value) {
+			obj.setDate(value.orElse(null));
 		}
 	};
 

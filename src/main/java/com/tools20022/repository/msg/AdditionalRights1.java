@@ -143,7 +143,7 @@ public class AdditionalRights1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalRight = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalRights1, AdditionalRightCode1Choice> mmAdditionalRight = new MMMessageAttribute<AdditionalRights1, AdditionalRightCode1Choice>() {
 		{
 			businessElementTrace_lazy = () -> AdditionalRight.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalRights1.mmObject();
@@ -156,6 +156,16 @@ public class AdditionalRights1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AdditionalRightCode1Choice.mmObject();
+		}
+
+		@Override
+		public AdditionalRightCode1Choice getValue(AdditionalRights1 obj) {
+			return obj.getAdditionalRight();
+		}
+
+		@Override
+		public void setValue(AdditionalRights1 obj, AdditionalRightCode1Choice value) {
+			obj.setAdditionalRight(value);
 		}
 	};
 	@XmlElement(name = "AddtlRghtInfURLAdr")
@@ -202,7 +212,7 @@ public class AdditionalRights1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalRightInformationURLAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalRights1, Optional<Max256Text>> mmAdditionalRightInformationURLAddress = new MMMessageAttribute<AdditionalRights1, Optional<Max256Text>>() {
 		{
 			businessElementTrace_lazy = () -> ElectronicAddress.mmURLAddress;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalRights1.mmObject();
@@ -215,6 +225,16 @@ public class AdditionalRights1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max256Text> getValue(AdditionalRights1 obj) {
+			return obj.getAdditionalRightInformationURLAddress();
+		}
+
+		@Override
+		public void setValue(AdditionalRights1 obj, Optional<Max256Text> value) {
+			obj.setAdditionalRightInformationURLAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlRghtDdln")
@@ -262,7 +282,7 @@ public class AdditionalRights1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalRightDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalRights1, Optional<DateFormat2Choice>> mmAdditionalRightDeadline = new MMMessageAttribute<AdditionalRights1, Optional<DateFormat2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Meeting.mmDeadline;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalRights1.mmObject();
@@ -275,6 +295,16 @@ public class AdditionalRights1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat2Choice> getValue(AdditionalRights1 obj) {
+			return obj.getAdditionalRightDeadline();
+		}
+
+		@Override
+		public void setValue(AdditionalRights1 obj, Optional<DateFormat2Choice> value) {
+			obj.setAdditionalRightDeadline(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlRghtMktDdln")
@@ -322,7 +352,7 @@ public class AdditionalRights1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalRightMarketDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalRights1, Optional<DateFormat2Choice>> mmAdditionalRightMarketDeadline = new MMMessageAttribute<AdditionalRights1, Optional<DateFormat2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmMarketDeadline;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalRights1.mmObject();
@@ -335,6 +365,16 @@ public class AdditionalRights1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat2Choice> getValue(AdditionalRights1 obj) {
+			return obj.getAdditionalRightMarketDeadline();
+		}
+
+		@Override
+		public void setValue(AdditionalRights1 obj, Optional<DateFormat2Choice> value) {
+			obj.setAdditionalRightMarketDeadline(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlRghtThrshld")
@@ -382,7 +422,7 @@ public class AdditionalRights1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalRightThreshold = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalRights1, Optional<AdditionalRightThreshold1Choice>> mmAdditionalRightThreshold = new MMMessageAttribute<AdditionalRights1, Optional<AdditionalRightThreshold1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> AdditionalRight.mmAdditionalRightThreshold;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalRights1.mmObject();
@@ -395,6 +435,16 @@ public class AdditionalRights1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalRightThreshold1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AdditionalRightThreshold1Choice> getValue(AdditionalRights1 obj) {
+			return obj.getAdditionalRightThreshold();
+		}
+
+		@Override
+		public void setValue(AdditionalRights1 obj, Optional<AdditionalRightThreshold1Choice> value) {
+			obj.setAdditionalRightThreshold(value.orElse(null));
 		}
 	};
 

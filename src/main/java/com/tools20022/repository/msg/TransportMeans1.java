@@ -22,6 +22,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Transport;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.MultimodalTransport3;
+import com.tools20022.repository.msg.SingleTransport4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -119,7 +121,7 @@ public class TransportMeans1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIndividualTransport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransportMeans1, SingleTransport4> mmIndividualTransport = new MMMessageAssociationEnd<TransportMeans1, SingleTransport4>() {
 		{
 			businessComponentTrace_lazy = () -> Transport.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportMeans1.mmObject();
@@ -132,7 +134,17 @@ public class TransportMeans1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SingleTransport4.mmObject();
+			type_lazy = () -> SingleTransport4.mmObject();
+		}
+
+		@Override
+		public SingleTransport4 getValue(TransportMeans1 obj) {
+			return obj.getIndividualTransport();
+		}
+
+		@Override
+		public void setValue(TransportMeans1 obj, SingleTransport4 value) {
+			obj.setIndividualTransport(value);
 		}
 	};
 	@XmlElement(name = "MltmdlTrnsprt")
@@ -177,7 +189,7 @@ public class TransportMeans1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMultimodalTransport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransportMeans1, Optional<MultimodalTransport3>> mmMultimodalTransport = new MMMessageAssociationEnd<TransportMeans1, Optional<MultimodalTransport3>>() {
 		{
 			businessComponentTrace_lazy = () -> Transport.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportMeans1.mmObject();
@@ -190,7 +202,17 @@ public class TransportMeans1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MultimodalTransport3.mmObject();
+			type_lazy = () -> MultimodalTransport3.mmObject();
+		}
+
+		@Override
+		public Optional<MultimodalTransport3> getValue(TransportMeans1 obj) {
+			return obj.getMultimodalTransport();
+		}
+
+		@Override
+		public void setValue(TransportMeans1 obj, Optional<MultimodalTransport3> value) {
+			obj.setMultimodalTransport(value.orElse(null));
 		}
 	};
 
@@ -213,7 +235,7 @@ public class TransportMeans1 {
 		return individualTransport;
 	}
 
-	public TransportMeans1 setIndividualTransport(com.tools20022.repository.msg.SingleTransport4 individualTransport) {
+	public TransportMeans1 setIndividualTransport(SingleTransport4 individualTransport) {
 		this.individualTransport = Objects.requireNonNull(individualTransport);
 		return this;
 	}
@@ -222,7 +244,7 @@ public class TransportMeans1 {
 		return multimodalTransport == null ? Optional.empty() : Optional.of(multimodalTransport);
 	}
 
-	public TransportMeans1 setMultimodalTransport(com.tools20022.repository.msg.MultimodalTransport3 multimodalTransport) {
+	public TransportMeans1 setMultimodalTransport(MultimodalTransport3 multimodalTransport) {
 		this.multimodalTransport = multimodalTransport;
 		return this;
 	}

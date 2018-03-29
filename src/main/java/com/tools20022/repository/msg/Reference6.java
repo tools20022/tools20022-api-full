@@ -96,7 +96,7 @@ public class Reference6 {
 	 * definition} = "Unique identifier for quote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuoteIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference6, Optional<Max35Text>> mmQuoteIdentification = new MMMessageAttribute<Reference6, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reference6.mmObject();
 			isDerived = false;
@@ -108,6 +108,16 @@ public class Reference6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Reference6 obj) {
+			return obj.getQuoteIdentification();
+		}
+
+		@Override
+		public void setValue(Reference6 obj, Optional<Max35Text> value) {
+			obj.setQuoteIdentification(value.orElse(null));
 		}
 	};
 

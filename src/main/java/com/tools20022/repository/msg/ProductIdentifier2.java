@@ -107,7 +107,7 @@ public class ProductIdentifier2 {
 	 * "Specifies the type of product identifier by means of a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProductIdentifier2, ProductIdentifier2Code> mmType = new MMMessageAttribute<ProductIdentifier2, ProductIdentifier2Code>() {
 		{
 			businessElementTrace_lazy = () -> ProductIdentification.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProductIdentifier2.mmObject();
@@ -119,6 +119,16 @@ public class ProductIdentifier2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ProductIdentifier2Code.mmObject();
+		}
+
+		@Override
+		public ProductIdentifier2Code getValue(ProductIdentifier2 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(ProductIdentifier2 obj, ProductIdentifier2Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Idr", required = true)
@@ -155,7 +165,7 @@ public class ProductIdentifier2 {
 	 * definition} = "Specifies the product identifier."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProductIdentifier2, Max35Text> mmIdentifier = new MMMessageAttribute<ProductIdentifier2, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> ProductIdentification.mmIdentifier;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProductIdentifier2.mmObject();
@@ -167,6 +177,16 @@ public class ProductIdentifier2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ProductIdentifier2 obj) {
+			return obj.getIdentifier();
+		}
+
+		@Override
+		public void setValue(ProductIdentifier2 obj, Max35Text value) {
+			obj.setIdentifier(value);
 		}
 	};
 

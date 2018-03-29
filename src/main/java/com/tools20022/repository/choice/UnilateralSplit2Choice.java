@@ -112,7 +112,7 @@ public class UnilateralSplit2Choice {
 	 * definition} = "Unilateral split expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnilateralSplit2Choice, SecuritiesTransactionType5Code> mmCode = new MMMessageAttribute<UnilateralSplit2Choice, SecuritiesTransactionType5Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTransactionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnilateralSplit2Choice.mmObject();
@@ -125,6 +125,16 @@ public class UnilateralSplit2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesTransactionType5Code.mmObject();
+		}
+
+		@Override
+		public SecuritiesTransactionType5Code getValue(UnilateralSplit2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(UnilateralSplit2Choice obj, SecuritiesTransactionType5Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -164,7 +174,7 @@ public class UnilateralSplit2Choice {
 	 * definition} = "Unilateral split expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnilateralSplit2Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<UnilateralSplit2Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTransactionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnilateralSplit2Choice.mmObject();
@@ -178,6 +188,16 @@ public class UnilateralSplit2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(UnilateralSplit2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(UnilateralSplit2Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

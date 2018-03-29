@@ -113,7 +113,7 @@ public class RepairReason13 {
 	 * "Specifies the reason why the instruction/request has a repair status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RepairReason13, RepairReason14Choice> mmCode = new MMMessageAssociationEnd<RepairReason13, RepairReason14Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmRepairReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RepairReason13.mmObject();
@@ -127,6 +127,16 @@ public class RepairReason13 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RepairReason14Choice.mmObject();
+		}
+
+		@Override
+		public RepairReason14Choice getValue(RepairReason13 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RepairReason13 obj, RepairReason14Choice value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -168,7 +178,7 @@ public class RepairReason13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RepairReason13, Optional<RestrictedFINXMax210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<RepairReason13, Optional<RestrictedFINXMax210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RepairReason13.mmObject();
@@ -181,6 +191,16 @@ public class RepairReason13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax210Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax210Text> getValue(RepairReason13 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(RepairReason13 obj, Optional<RestrictedFINXMax210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

@@ -113,7 +113,7 @@ public class ExchangeRateReportOrError1Choice {
 	 * definition} = "Reports on currency exchange information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCurrencyExchangeReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ExchangeRateReportOrError1Choice, List<CurrencyExchangeReport3>> mmCurrencyExchangeReport = new MMMessageAssociationEnd<ExchangeRateReportOrError1Choice, List<CurrencyExchangeReport3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ExchangeRateReportOrError1Choice.mmObject();
 			isDerived = false;
@@ -124,6 +124,16 @@ public class ExchangeRateReportOrError1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CurrencyExchangeReport3.mmObject();
+		}
+
+		@Override
+		public List<CurrencyExchangeReport3> getValue(ExchangeRateReportOrError1Choice obj) {
+			return obj.getCurrencyExchangeReport();
+		}
+
+		@Override
+		public void setValue(ExchangeRateReportOrError1Choice obj, List<CurrencyExchangeReport3> value) {
+			obj.setCurrencyExchangeReport(value);
 		}
 	};
 	@XmlElement(name = "OprlErr", required = true)
@@ -156,7 +166,7 @@ public class ExchangeRateReportOrError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ExchangeRateReportOrError1Choice, List<ErrorHandling3>> mmOperationalError = new MMMessageAssociationEnd<ExchangeRateReportOrError1Choice, List<ErrorHandling3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ExchangeRateReportOrError1Choice.mmObject();
 			isDerived = false;
@@ -167,6 +177,16 @@ public class ExchangeRateReportOrError1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling3> getValue(ExchangeRateReportOrError1Choice obj) {
+			return obj.getOperationalError();
+		}
+
+		@Override
+		public void setValue(ExchangeRateReportOrError1Choice obj, List<ErrorHandling3> value) {
+			obj.setOperationalError(value);
 		}
 	};
 

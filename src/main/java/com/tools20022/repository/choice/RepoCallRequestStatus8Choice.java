@@ -122,7 +122,7 @@ public class RepoCallRequestStatus8Choice {
 	 * RepoCallRequestStatus1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RepoCallRequestStatus8Choice, RepoCallRequestStatus1Code> mmCode = new MMMessageAttribute<RepoCallRequestStatus8Choice, RepoCallRequestStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmRepoCallRequestStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RepoCallRequestStatus8Choice.mmObject();
@@ -136,6 +136,16 @@ public class RepoCallRequestStatus8Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RepoCallRequestStatus1Code.mmObject();
+		}
+
+		@Override
+		public RepoCallRequestStatus1Code getValue(RepoCallRequestStatus8Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RepoCallRequestStatus8Choice obj, RepoCallRequestStatus1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -182,7 +192,7 @@ public class RepoCallRequestStatus8Choice {
 	 * RepoCallRequestStatus1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RepoCallRequestStatus8Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<RepoCallRequestStatus8Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmRepoCallRequestStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RepoCallRequestStatus8Choice.mmObject();
@@ -196,6 +206,16 @@ public class RepoCallRequestStatus8Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(RepoCallRequestStatus8Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RepoCallRequestStatus8Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

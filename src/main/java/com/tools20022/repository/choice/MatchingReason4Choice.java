@@ -121,7 +121,7 @@ public class MatchingReason4Choice {
 	 * MatchingReason3Choice.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MatchingReason4Choice, List<AllegementMatchingReason1>> mmReason = new MMMessageAssociationEnd<MatchingReason4Choice, List<AllegementMatchingReason1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmUnmatchedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingReason4Choice.mmObject();
@@ -134,6 +134,16 @@ public class MatchingReason4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AllegementMatchingReason1.mmObject();
+		}
+
+		@Override
+		public List<AllegementMatchingReason1> getValue(MatchingReason4Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(MatchingReason4Choice obj, List<AllegementMatchingReason1> value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "NoSpcfdRsn", required = true)
@@ -179,7 +189,7 @@ public class MatchingReason4Choice {
 	 * MatchingReason3Choice.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MatchingReason4Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<MatchingReason4Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingReason4Choice.mmObject();
@@ -193,6 +203,16 @@ public class MatchingReason4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(MatchingReason4Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(MatchingReason4Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 

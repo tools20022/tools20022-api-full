@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.entity.SecuritiesTradeIdentification;
 import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AdditionalReference3;
+import com.tools20022.repository.msg.InvestmentFundOrder2;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -152,7 +154,7 @@ public class MessageAndBusinessReference4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MessageAndBusinessReference4, Optional<AdditionalReference3>> mmOtherReference = new MMMessageAssociationEnd<MessageAndBusinessReference4, Optional<AdditionalReference3>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageAndBusinessReference4.mmObject();
@@ -164,7 +166,17 @@ public class MessageAndBusinessReference4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AdditionalReference3.mmObject();
+			type_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		@Override
+		public Optional<AdditionalReference3> getValue(MessageAndBusinessReference4 obj) {
+			return obj.getOtherReference();
+		}
+
+		@Override
+		public void setValue(MessageAndBusinessReference4 obj, Optional<AdditionalReference3> value) {
+			obj.setOtherReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsRef")
@@ -200,7 +212,7 @@ public class MessageAndBusinessReference4 {
 	 * definition} = "Reference to a linked message that was previously sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPreviousReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MessageAndBusinessReference4, Optional<AdditionalReference3>> mmPreviousReference = new MMMessageAssociationEnd<MessageAndBusinessReference4, Optional<AdditionalReference3>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageAndBusinessReference4.mmObject();
@@ -212,7 +224,17 @@ public class MessageAndBusinessReference4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AdditionalReference3.mmObject();
+			type_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		@Override
+		public Optional<AdditionalReference3> getValue(MessageAndBusinessReference4 obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(MessageAndBusinessReference4 obj, Optional<AdditionalReference3> value) {
+			obj.setPreviousReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RltdRef")
@@ -257,7 +279,7 @@ public class MessageAndBusinessReference4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRelatedReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MessageAndBusinessReference4, Optional<AdditionalReference3>> mmRelatedReference = new MMMessageAssociationEnd<MessageAndBusinessReference4, Optional<AdditionalReference3>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageAndBusinessReference4.mmObject();
@@ -270,11 +292,21 @@ public class MessageAndBusinessReference4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AdditionalReference3.mmObject();
+			type_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		@Override
+		public Optional<AdditionalReference3> getValue(MessageAndBusinessReference4 obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(MessageAndBusinessReference4 obj, Optional<AdditionalReference3> value) {
+			obj.setRelatedReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrdrRef")
-	protected List<com.tools20022.repository.msg.InvestmentFundOrder2> orderReference;
+	protected List<InvestmentFundOrder2> orderReference;
 	/**
 	 * 
 	 <p>
@@ -316,7 +348,7 @@ public class MessageAndBusinessReference4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOrderReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MessageAndBusinessReference4, List<InvestmentFundOrder2>> mmOrderReference = new MMMessageAssociationEnd<MessageAndBusinessReference4, List<InvestmentFundOrder2>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageAndBusinessReference4.mmObject();
@@ -328,7 +360,17 @@ public class MessageAndBusinessReference4 {
 			nextVersions_lazy = () -> Arrays.asList(MessageAndBusinessReference10.mmOrderReference);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvestmentFundOrder2.mmObject();
+			type_lazy = () -> InvestmentFundOrder2.mmObject();
+		}
+
+		@Override
+		public List<InvestmentFundOrder2> getValue(MessageAndBusinessReference4 obj) {
+			return obj.getOrderReference();
+		}
+
+		@Override
+		public void setValue(MessageAndBusinessReference4 obj, List<InvestmentFundOrder2> value) {
+			obj.setOrderReference(value);
 		}
 	};
 	/**
@@ -405,7 +447,7 @@ public class MessageAndBusinessReference4 {
 		return otherReference == null ? Optional.empty() : Optional.of(otherReference);
 	}
 
-	public MessageAndBusinessReference4 setOtherReference(com.tools20022.repository.msg.AdditionalReference3 otherReference) {
+	public MessageAndBusinessReference4 setOtherReference(AdditionalReference3 otherReference) {
 		this.otherReference = otherReference;
 		return this;
 	}
@@ -414,7 +456,7 @@ public class MessageAndBusinessReference4 {
 		return previousReference == null ? Optional.empty() : Optional.of(previousReference);
 	}
 
-	public MessageAndBusinessReference4 setPreviousReference(com.tools20022.repository.msg.AdditionalReference3 previousReference) {
+	public MessageAndBusinessReference4 setPreviousReference(AdditionalReference3 previousReference) {
 		this.previousReference = previousReference;
 		return this;
 	}
@@ -423,7 +465,7 @@ public class MessageAndBusinessReference4 {
 		return relatedReference == null ? Optional.empty() : Optional.of(relatedReference);
 	}
 
-	public MessageAndBusinessReference4 setRelatedReference(com.tools20022.repository.msg.AdditionalReference3 relatedReference) {
+	public MessageAndBusinessReference4 setRelatedReference(AdditionalReference3 relatedReference) {
 		this.relatedReference = relatedReference;
 		return this;
 	}
@@ -432,7 +474,7 @@ public class MessageAndBusinessReference4 {
 		return orderReference == null ? orderReference = new ArrayList<>() : orderReference;
 	}
 
-	public MessageAndBusinessReference4 setOrderReference(List<com.tools20022.repository.msg.InvestmentFundOrder2> orderReference) {
+	public MessageAndBusinessReference4 setOrderReference(List<InvestmentFundOrder2> orderReference) {
 		this.orderReference = Objects.requireNonNull(orderReference);
 		return this;
 	}

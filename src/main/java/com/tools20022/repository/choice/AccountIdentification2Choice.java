@@ -107,7 +107,7 @@ public class AccountIdentification2Choice {
 	 * definition} = "Identification of a cash account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentification2Choice, Max35Text> mmCashAccountIdentification = new MMMessageAttribute<AccountIdentification2Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification2Choice.mmObject();
@@ -119,6 +119,16 @@ public class AccountIdentification2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AccountIdentification2Choice obj) {
+			return obj.getCashAccountIdentification();
+		}
+
+		@Override
+		public void setValue(AccountIdentification2Choice obj, Max35Text value) {
+			obj.setCashAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "SctiesAcctId", required = true)
@@ -155,7 +165,7 @@ public class AccountIdentification2Choice {
 	 * definition} = "Identification of a securities account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentification2Choice, Max35Text> mmSecuritiesAccountIdentification = new MMMessageAttribute<AccountIdentification2Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification2Choice.mmObject();
@@ -167,6 +177,16 @@ public class AccountIdentification2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AccountIdentification2Choice obj) {
+			return obj.getSecuritiesAccountIdentification();
+		}
+
+		@Override
+		public void setValue(AccountIdentification2Choice obj, Max35Text value) {
+			obj.setSecuritiesAccountIdentification(value);
 		}
 	};
 

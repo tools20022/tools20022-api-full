@@ -50,11 +50,15 @@ public class ConstraintPlaceOfPresentation1Rule {
 	 */
 	public static final MMConstraint<Undertaking3> forUndertaking3 = new MMConstraint<Undertaking3>() {
 		{
-			validator = ConstraintPlaceOfPresentation1Rule::checkUndertaking3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfPresentation1Rule";
 			definition = "If PlaceOfPresentation is \"PRES\", then one occurrence of AdditionalParty/TypeCode must be \"PRES\".";
 			owner_lazy = () -> Undertaking3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Undertaking3 obj) throws Exception {
+			checkUndertaking3(obj);
 		}
 	};
 

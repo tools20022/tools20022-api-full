@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.MeetingReference6;
 import com.tools20022.repository.msg.SecurityPosition8;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ProxyVotingISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -148,7 +147,7 @@ public class MeetingCancellationV05 {
 	 * MeetingCancellationV04.mmMeetingReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMeetingReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingCancellationV05, MeetingReference6> mmMeetingReference = new MMMessageBuildingBlock<MeetingCancellationV05, MeetingReference6>() {
 		{
 			xmlTag = "MtgRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -160,12 +159,14 @@ public class MeetingCancellationV05 {
 			complexType_lazy = () -> MeetingReference6.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingCancellationV05.class.getMethod("getMeetingReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MeetingReference6 getValue(MeetingCancellationV05 obj) {
+			return obj.getMeetingReference();
+		}
+
+		@Override
+		public void setValue(MeetingCancellationV05 obj, MeetingReference6 value) {
+			obj.setMeetingReference(value);
 		}
 	};
 	@XmlElement(name = "Scty")
@@ -199,7 +200,7 @@ public class MeetingCancellationV05 {
 	 * MeetingCancellationV04.mmSecurity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurity = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingCancellationV05, List<SecurityPosition8>> mmSecurity = new MMMessageBuildingBlock<MeetingCancellationV05, List<SecurityPosition8>>() {
 		{
 			xmlTag = "Scty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -211,12 +212,14 @@ public class MeetingCancellationV05 {
 			complexType_lazy = () -> SecurityPosition8.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingCancellationV05.class.getMethod("getSecurity", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SecurityPosition8> getValue(MeetingCancellationV05 obj) {
+			return obj.getSecurity();
+		}
+
+		@Override
+		public void setValue(MeetingCancellationV05 obj, List<SecurityPosition8> value) {
+			obj.setSecurity(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -249,7 +252,7 @@ public class MeetingCancellationV05 {
 	 * MeetingCancellationV04.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReason = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingCancellationV05, MeetingCancellationReason2> mmReason = new MMMessageBuildingBlock<MeetingCancellationV05, MeetingCancellationReason2>() {
 		{
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -261,12 +264,14 @@ public class MeetingCancellationV05 {
 			complexType_lazy = () -> MeetingCancellationReason2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingCancellationV05.class.getMethod("getReason", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MeetingCancellationReason2 getValue(MeetingCancellationV05 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(MeetingCancellationV05 obj, MeetingCancellationReason2 value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -296,7 +301,7 @@ public class MeetingCancellationV05 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingCancellationV05, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<MeetingCancellationV05, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -306,12 +311,14 @@ public class MeetingCancellationV05 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingCancellationV05.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(MeetingCancellationV05 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(MeetingCancellationV05 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

@@ -73,16 +73,20 @@ import javax.xml.bind.annotation.XmlType;
  * CorporateActionMovementPreliminaryAdviceV07.
  * mmMovementPreliminaryAdviceGeneralInformation}</li>
  * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdvice002V07#mmMovementPreliminaryAdviceGeneralInformation
+ * CorporateActionMovementPreliminaryAdvice002V07.
+ * mmMovementPreliminaryAdviceGeneralInformation}</li>
+ * <li>
  * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08#mmMovementPreliminaryAdviceGeneralInformation
  * CorporateActionMovementPreliminaryAdviceV08.
  * mmMovementPreliminaryAdviceGeneralInformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdvice002V08#mmMovementPreliminaryAdviceGeneralInformation
- * CorporateActionMovementPreliminaryAdvice002V08.
- * mmMovementPreliminaryAdviceGeneralInformation}</li>
- * <li>
  * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV09#mmMovementPreliminaryAdviceGeneralInformation
  * CorporateActionMovementPreliminaryAdviceV09.
+ * mmMovementPreliminaryAdviceGeneralInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdvice002V09#mmMovementPreliminaryAdviceGeneralInformation
+ * CorporateActionMovementPreliminaryAdvice002V09.
  * mmMovementPreliminaryAdviceGeneralInformation}</li>
  * </ul>
  * </li>
@@ -154,7 +158,7 @@ public class CorporateActionPreliminaryAdviceType2 {
 	 * CorporateActionPreliminaryAdviceType1.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPreliminaryAdviceType2, CorporateActionPreliminaryAdviceType1Code> mmType = new MMMessageAttribute<CorporateActionPreliminaryAdviceType2, CorporateActionPreliminaryAdviceType1Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionNotification.mmNotificationType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType2.mmObject();
@@ -168,6 +172,16 @@ public class CorporateActionPreliminaryAdviceType2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionPreliminaryAdviceType1Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionPreliminaryAdviceType1Code getValue(CorporateActionPreliminaryAdviceType2 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(CorporateActionPreliminaryAdviceType2 obj, CorporateActionPreliminaryAdviceType1Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "ElgbltyInd")
@@ -207,7 +221,7 @@ public class CorporateActionPreliminaryAdviceType2 {
 	 * CorporateActionPreliminaryAdviceType1.mmEligibilityIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEligibilityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPreliminaryAdviceType2, Optional<YesNoIndicator>> mmEligibilityIndicator = new MMMessageAttribute<CorporateActionPreliminaryAdviceType2, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType2.mmObject();
 			isDerived = false;
@@ -220,6 +234,16 @@ public class CorporateActionPreliminaryAdviceType2 {
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CorporateActionPreliminaryAdviceType2 obj) {
+			return obj.getEligibilityIndicator();
+		}
+
+		@Override
+		public void setValue(CorporateActionPreliminaryAdviceType2 obj, Optional<YesNoIndicator> value) {
+			obj.setEligibilityIndicator(value.orElse(null));
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -228,8 +252,8 @@ public class CorporateActionPreliminaryAdviceType2 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType2.mmType, com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType2.mmEligibilityIndicator);
 				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionMovementPreliminaryAdviceV05.mmMovementPreliminaryAdviceGeneralInformation,
 						CorporateActionMovementPreliminaryAdviceV06.mmMovementPreliminaryAdviceGeneralInformation, CorporateActionMovementPreliminaryAdviceV07.mmMovementPreliminaryAdviceGeneralInformation,
-						CorporateActionMovementPreliminaryAdviceV08.mmMovementPreliminaryAdviceGeneralInformation, CorporateActionMovementPreliminaryAdvice002V08.mmMovementPreliminaryAdviceGeneralInformation,
-						CorporateActionMovementPreliminaryAdviceV09.mmMovementPreliminaryAdviceGeneralInformation);
+						CorporateActionMovementPreliminaryAdvice002V07.mmMovementPreliminaryAdviceGeneralInformation, CorporateActionMovementPreliminaryAdviceV08.mmMovementPreliminaryAdviceGeneralInformation,
+						CorporateActionMovementPreliminaryAdviceV09.mmMovementPreliminaryAdviceGeneralInformation, CorporateActionMovementPreliminaryAdvice002V09.mmMovementPreliminaryAdviceGeneralInformation);
 				trace_lazy = () -> CorporateActionNotification.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

@@ -99,7 +99,7 @@ public class CashAccountType3Choice {
 	 * definition} = "Type of cash account expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountType3Choice, CashAccountType5Code> mmCode = new MMMessageAttribute<CashAccountType3Choice, CashAccountType5Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CashAccountType3Choice.mmObject();
 			isDerived = false;
@@ -110,6 +110,16 @@ public class CashAccountType3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CashAccountType5Code.mmObject();
+		}
+
+		@Override
+		public CashAccountType5Code getValue(CashAccountType3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CashAccountType3Choice obj, CashAccountType5Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -141,7 +151,7 @@ public class CashAccountType3Choice {
 	 * definition} = "Type of cash account expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccountType3Choice, GenericIdentification47> mmProprietary = new MMMessageAssociationEnd<CashAccountType3Choice, GenericIdentification47>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CashAccountType3Choice.mmObject();
 			isDerived = false;
@@ -153,6 +163,16 @@ public class CashAccountType3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(CashAccountType3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CashAccountType3Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

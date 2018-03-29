@@ -113,7 +113,7 @@ public class UnmatchedReason12Choice {
 	 * "Specifies the reason why the instruction has an unmatched status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnmatchedReason12Choice, UnmatchedReason6Code> mmCode = new MMMessageAttribute<UnmatchedReason12Choice, UnmatchedReason6Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmUnmatchedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnmatchedReason12Choice.mmObject();
@@ -126,6 +126,16 @@ public class UnmatchedReason12Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UnmatchedReason6Code.mmObject();
+		}
+
+		@Override
+		public UnmatchedReason6Code getValue(UnmatchedReason12Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(UnmatchedReason12Choice obj, UnmatchedReason6Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -167,7 +177,7 @@ public class UnmatchedReason12Choice {
 	 * "Specifies the reason why the instruction has an unmatched status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnmatchedReason12Choice, GenericIdentification25> mmProprietary = new MMMessageAttribute<UnmatchedReason12Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmUnmatchedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnmatchedReason12Choice.mmObject();
@@ -180,6 +190,16 @@ public class UnmatchedReason12Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(UnmatchedReason12Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(UnmatchedReason12Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

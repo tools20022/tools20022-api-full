@@ -136,7 +136,7 @@ public class DeniedStatus5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DeniedStatus5Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<DeniedStatus5Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DeniedStatus5Choice.mmObject();
@@ -150,6 +150,16 @@ public class DeniedStatus5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(DeniedStatus5Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(DeniedStatus5Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -196,7 +206,7 @@ public class DeniedStatus5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DeniedStatus5Choice, List<DeniedReason1>> mmReason = new MMMessageAssociationEnd<DeniedStatus5Choice, List<DeniedReason1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmDeniedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DeniedStatus5Choice.mmObject();
@@ -210,6 +220,16 @@ public class DeniedStatus5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DeniedReason1.mmObject();
+		}
+
+		@Override
+		public List<DeniedReason1> getValue(DeniedStatus5Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(DeniedStatus5Choice obj, List<DeniedReason1> value) {
+			obj.setReason(value);
 		}
 	};
 

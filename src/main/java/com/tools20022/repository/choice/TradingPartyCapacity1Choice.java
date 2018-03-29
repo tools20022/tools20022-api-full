@@ -111,7 +111,7 @@ public class TradingPartyCapacity1Choice {
 	 * definition} = "Trading capacity expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradingPartyCapacity1Choice, TradingCapacity4Code> mmCode = new MMMessageAttribute<TradingPartyCapacity1Choice, TradingCapacity4Code>() {
 		{
 			businessElementTrace_lazy = () -> TradePartyRole.mmTradingPartyCapacity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradingPartyCapacity1Choice.mmObject();
@@ -124,6 +124,16 @@ public class TradingPartyCapacity1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TradingCapacity4Code.mmObject();
+		}
+
+		@Override
+		public TradingCapacity4Code getValue(TradingPartyCapacity1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(TradingPartyCapacity1Choice obj, TradingCapacity4Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -164,7 +174,7 @@ public class TradingPartyCapacity1Choice {
 	 * definition} = "Trading capacity expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradingPartyCapacity1Choice, GenericIdentification38> mmProprietary = new MMMessageAttribute<TradingPartyCapacity1Choice, GenericIdentification38>() {
 		{
 			businessElementTrace_lazy = () -> TradePartyRole.mmTradingPartyCapacity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradingPartyCapacity1Choice.mmObject();
@@ -177,6 +187,16 @@ public class TradingPartyCapacity1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification38.mmObject();
+		}
+
+		@Override
+		public GenericIdentification38 getValue(TradingPartyCapacity1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(TradingPartyCapacity1Choice obj, GenericIdentification38 value) {
+			obj.setProprietary(value);
 		}
 	};
 

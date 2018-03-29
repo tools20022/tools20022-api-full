@@ -49,11 +49,15 @@ public class ConstraintOwnershipBeneficiaryRateRule {
 	 */
 	public static final MMConstraint<OwnershipBeneficiaryRate1> forOwnershipBeneficiaryRate1 = new MMConstraint<OwnershipBeneficiaryRate1>() {
 		{
-			validator = ConstraintOwnershipBeneficiaryRateRule::checkOwnershipBeneficiaryRate1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OwnershipBeneficiaryRateRule";
 			definition = "Either Rate or Fraction must be present. Both may be present.";
 			owner_lazy = () -> OwnershipBeneficiaryRate1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OwnershipBeneficiaryRate1 obj) throws Exception {
+			checkOwnershipBeneficiaryRate1(obj);
 		}
 	};
 

@@ -113,7 +113,7 @@ public class PartyOrBusinessError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyOrBusinessError1Choice, List<ErrorHandling3>> mmBusinessError = new MMMessageAssociationEnd<PartyOrBusinessError1Choice, List<ErrorHandling3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyOrBusinessError1Choice.mmObject();
 			isDerived = false;
@@ -125,6 +125,16 @@ public class PartyOrBusinessError1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling3> getValue(PartyOrBusinessError1Choice obj) {
+			return obj.getBusinessError();
+		}
+
+		@Override
+		public void setValue(PartyOrBusinessError1Choice obj, List<ErrorHandling3> value) {
+			obj.setBusinessError(value);
 		}
 	};
 	@XmlElement(name = "SysPty", required = true)
@@ -163,7 +173,7 @@ public class PartyOrBusinessError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSystemParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyOrBusinessError1Choice, SystemParty3> mmSystemParty = new MMMessageAssociationEnd<PartyOrBusinessError1Choice, SystemParty3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyOrBusinessError1Choice.mmObject();
 			isDerived = false;
@@ -176,6 +186,16 @@ public class PartyOrBusinessError1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SystemParty3.mmObject();
+		}
+
+		@Override
+		public SystemParty3 getValue(PartyOrBusinessError1Choice obj) {
+			return obj.getSystemParty();
+		}
+
+		@Override
+		public void setValue(PartyOrBusinessError1Choice obj, SystemParty3 value) {
+			obj.setSystemParty(value);
 		}
 	};
 

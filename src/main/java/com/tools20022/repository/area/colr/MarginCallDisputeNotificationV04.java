@@ -28,7 +28,6 @@ import com.tools20022.repository.msg.Obligation4;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CollateralManagementISOLatestversion;
 import com.tools20022.repository.msgset.CollateralManagementMaintenance20162017;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -146,7 +145,7 @@ public class MarginCallDisputeNotificationV04 {
 	 * MarginCallDisputeNotificationV03.mmTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MarginCallDisputeNotificationV04, Max35Text> mmTransactionIdentification = new MMMessageBuildingBlock<MarginCallDisputeNotificationV04, Max35Text>() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -158,12 +157,14 @@ public class MarginCallDisputeNotificationV04 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MarginCallDisputeNotificationV04.class.getMethod("getTransactionIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(MarginCallDisputeNotificationV04 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(MarginCallDisputeNotificationV04 obj, Max35Text value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "Oblgtn", required = true)
@@ -197,7 +198,7 @@ public class MarginCallDisputeNotificationV04 {
 	 * MarginCallDisputeNotificationV03.mmObligation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmObligation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MarginCallDisputeNotificationV04, Obligation4> mmObligation = new MMMessageBuildingBlock<MarginCallDisputeNotificationV04, Obligation4>() {
 		{
 			xmlTag = "Oblgtn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -209,12 +210,14 @@ public class MarginCallDisputeNotificationV04 {
 			complexType_lazy = () -> Obligation4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MarginCallDisputeNotificationV04.class.getMethod("getObligation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Obligation4 getValue(MarginCallDisputeNotificationV04 obj) {
+			return obj.getObligation();
+		}
+
+		@Override
+		public void setValue(MarginCallDisputeNotificationV04 obj, Obligation4 value) {
+			obj.setObligation(value);
 		}
 	};
 	@XmlElement(name = "DsptNtfctn", required = true)
@@ -247,7 +250,7 @@ public class MarginCallDisputeNotificationV04 {
 	 * MarginCallDisputeNotificationV03.mmDisputeNotification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmDisputeNotification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MarginCallDisputeNotificationV04, DisputeNotification1Choice> mmDisputeNotification = new MMMessageBuildingBlock<MarginCallDisputeNotificationV04, DisputeNotification1Choice>() {
 		{
 			xmlTag = "DsptNtfctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -259,12 +262,14 @@ public class MarginCallDisputeNotificationV04 {
 			complexType_lazy = () -> DisputeNotification1Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MarginCallDisputeNotificationV04.class.getMethod("getDisputeNotification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DisputeNotification1Choice getValue(MarginCallDisputeNotificationV04 obj) {
+			return obj.getDisputeNotification();
+		}
+
+		@Override
+		public void setValue(MarginCallDisputeNotificationV04 obj, DisputeNotification1Choice value) {
+			obj.setDisputeNotification(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -299,7 +304,7 @@ public class MarginCallDisputeNotificationV04 {
 	 * MarginCallDisputeNotificationV03.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MarginCallDisputeNotificationV04, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<MarginCallDisputeNotificationV04, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -310,12 +315,14 @@ public class MarginCallDisputeNotificationV04 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MarginCallDisputeNotificationV04.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(MarginCallDisputeNotificationV04 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(MarginCallDisputeNotificationV04 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Algorithm7Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Parameter10;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -58,7 +59,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "AlgorithmIdentification19"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -111,7 +112,7 @@ public class AlgorithmIdentification19 {
 	 * AlgorithmIdentification11.mmAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AlgorithmIdentification19, Algorithm7Code> mmAlgorithm = new MMMessageAttribute<AlgorithmIdentification19, Algorithm7Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification19.mmObject();
 			isDerived = false;
@@ -123,6 +124,16 @@ public class AlgorithmIdentification19 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Algorithm7Code.mmObject();
+		}
+
+		@Override
+		public Algorithm7Code getValue(AlgorithmIdentification19 obj) {
+			return obj.getAlgorithm();
+		}
+
+		@Override
+		public void setValue(AlgorithmIdentification19 obj, Algorithm7Code value) {
+			obj.setAlgorithm(value);
 		}
 	};
 	@XmlElement(name = "Param")
@@ -158,7 +169,7 @@ public class AlgorithmIdentification19 {
 	 * AlgorithmIdentification11.mmParameter}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParameter = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AlgorithmIdentification19, Optional<Parameter10>> mmParameter = new MMMessageAssociationEnd<AlgorithmIdentification19, Optional<Parameter10>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification19.mmObject();
 			isDerived = false;
@@ -170,7 +181,17 @@ public class AlgorithmIdentification19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Parameter10.mmObject();
+			type_lazy = () -> Parameter10.mmObject();
+		}
+
+		@Override
+		public Optional<Parameter10> getValue(AlgorithmIdentification19 obj) {
+			return obj.getParameter();
+		}
+
+		@Override
+		public void setValue(AlgorithmIdentification19 obj, Optional<Parameter10> value) {
+			obj.setParameter(value.orElse(null));
 		}
 	};
 
@@ -179,7 +200,7 @@ public class AlgorithmIdentification19 {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlgorithmIdentification19.mmAlgorithm, com.tools20022.repository.msg.AlgorithmIdentification19.mmParameter);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AlgorithmIdentification19";
 				definition = "Cryptographic algorithms and parameters for the protection of transported keys by an asymmetric key.";
 				previousVersion_lazy = () -> AlgorithmIdentification11.mmObject();
@@ -201,7 +222,7 @@ public class AlgorithmIdentification19 {
 		return parameter == null ? Optional.empty() : Optional.of(parameter);
 	}
 
-	public AlgorithmIdentification19 setParameter(com.tools20022.repository.msg.Parameter10 parameter) {
+	public AlgorithmIdentification19 setParameter(Parameter10 parameter) {
 		this.parameter = parameter;
 		return this;
 	}

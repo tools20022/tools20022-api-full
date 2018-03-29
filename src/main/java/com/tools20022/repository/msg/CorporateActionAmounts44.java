@@ -270,7 +270,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmPostingAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPostingAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, ActiveCurrencyAndAmount> mmPostingAmount = new MMMessageAttribute<CorporateActionAmounts44, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmPostingAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -284,6 +284,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(CorporateActionAmounts44 obj) {
+			return obj.getPostingAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, ActiveCurrencyAndAmount value) {
+			obj.setPostingAmount(value);
 		}
 	};
 	@XmlElement(name = "GrssCshAmt")
@@ -330,7 +340,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmGrossCashAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGrossCashAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmGrossCashAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionCashEntitlement.mmGrossCashAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -344,6 +354,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getGrossCashAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setGrossCashAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NetCshAmt")
@@ -391,7 +411,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmNetCashAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNetCashAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmNetCashAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionCashEntitlement.mmNetCashAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -405,6 +425,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getNetCashAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setNetCashAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SlctnFees")
@@ -452,7 +482,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmSolicitationFees}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSolicitationFees = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmSolicitationFees = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionFeesAndCharges.mmSolicitationFee;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -466,6 +496,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getSolicitationFees();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setSolicitationFees(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CshInLieuOfShr")
@@ -513,7 +553,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmCashInLieuOfShare}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashInLieuOfShare = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmCashInLieuOfShare = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionCashEntitlement.mmCashInLieuOfShare;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -527,6 +567,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getCashInLieuOfShare();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setCashInLieuOfShare(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CptlGn")
@@ -573,7 +623,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmCapitalGain}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCapitalGain = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmCapitalGain = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionCashEntitlement.mmCapitalGain;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -587,6 +637,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getCapitalGain();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setCapitalGain(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrstAmt")
@@ -632,7 +692,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmInterestAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterestAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmInterestAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -646,6 +706,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getInterestAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setInterestAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MktClmAmt")
@@ -691,7 +761,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmMarketClaimAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarketClaimAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmMarketClaimAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> MarketClaim.mmMarketClaimAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -705,6 +775,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getMarketClaimAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setMarketClaimAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IndmntyAmt")
@@ -752,7 +832,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmIndemnityAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndemnityAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmIndemnityAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CashProceedsDefinition.mmIndemnityAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -766,6 +846,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getIndemnityAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setIndemnityAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ManfctrdDvddPmtAmt")
@@ -810,7 +900,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmManufacturedDividendPaymentAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmManufacturedDividendPaymentAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmManufacturedDividendPaymentAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmManufacturedDividendAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -823,6 +913,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getManufacturedDividendPaymentAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setManufacturedDividendPaymentAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RinvstmtAmt")
@@ -868,7 +968,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmReinvestmentAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReinvestmentAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmReinvestmentAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmReinvestmentAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -882,6 +982,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getReinvestmentAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setReinvestmentAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FullyFrnkdAmt")
@@ -929,7 +1039,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmFullyFrankedAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFullyFrankedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmFullyFrankedAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -943,6 +1053,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getFullyFrankedAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setFullyFrankedAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UfrnkdAmt")
@@ -990,7 +1110,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmUnfrankedAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnfrankedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmUnfrankedAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmUnfrankedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -1004,6 +1124,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getUnfrankedAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setUnfrankedAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SndryOrOthrAmt")
@@ -1050,7 +1180,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmSundryOrOtherAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSundryOrOtherAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmSundryOrOtherAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> TaxVoucher.mmSundryOrOtherAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -1064,6 +1194,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getSundryOrOtherAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setSundryOrOtherAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxFreeAmt")
@@ -1108,7 +1248,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmTaxFreeAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxFreeAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmTaxFreeAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -1122,6 +1262,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getTaxFreeAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setTaxFreeAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxDfrrdAmt")
@@ -1166,7 +1316,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmTaxDeferredAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxDeferredAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmTaxDeferredAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -1180,6 +1330,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getTaxDeferredAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setTaxDeferredAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ValAddedTaxAmt")
@@ -1224,7 +1384,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmValueAddedTaxAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValueAddedTaxAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmValueAddedTaxAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -1238,6 +1398,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getValueAddedTaxAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setValueAddedTaxAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StmpDtyAmt")
@@ -1282,7 +1452,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmStampDutyAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStampDutyAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmStampDutyAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -1296,6 +1466,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getStampDutyAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setStampDutyAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxRclmAmt")
@@ -1342,7 +1522,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmTaxReclaimAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxReclaimAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmTaxReclaimAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -1356,6 +1536,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getTaxReclaimAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setTaxReclaimAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxCdtAmt")
@@ -1403,7 +1593,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmTaxCreditAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxCreditAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmTaxCreditAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> TaxVoucher.mmCreditAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -1417,6 +1607,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getTaxCreditAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setTaxCreditAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlTaxAmt")
@@ -1461,7 +1661,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmAdditionalTaxAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalTaxAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmAdditionalTaxAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -1475,6 +1675,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getAdditionalTaxAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setAdditionalTaxAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "WhldgTaxAmt")
@@ -1521,7 +1731,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmWithholdingTaxAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmWithholdingTaxAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmWithholdingTaxAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -1535,6 +1745,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getWithholdingTaxAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setWithholdingTaxAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ScndLvlTaxAmt")
@@ -1578,7 +1798,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmSecondLevelTaxAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecondLevelTaxAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmSecondLevelTaxAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -1591,6 +1811,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getSecondLevelTaxAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setSecondLevelTaxAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FsclStmpAmt")
@@ -1635,7 +1865,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmFiscalStampAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFiscalStampAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmFiscalStampAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -1649,6 +1879,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getFiscalStampAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setFiscalStampAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ExctgBrkrAmt")
@@ -1695,7 +1935,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmExecutingBrokerAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExecutingBrokerAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmExecutingBrokerAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -1709,6 +1949,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getExecutingBrokerAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setExecutingBrokerAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PngAgtComssnAmt")
@@ -1754,7 +2004,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmPayingAgentCommissionAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPayingAgentCommissionAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmPayingAgentCommissionAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -1768,6 +2018,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getPayingAgentCommissionAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setPayingAgentCommissionAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LclBrkrComssnAmt")
@@ -1813,7 +2073,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmLocalBrokerCommissionAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLocalBrokerCommissionAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmLocalBrokerCommissionAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -1827,6 +2087,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getLocalBrokerCommissionAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setLocalBrokerCommissionAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RgltryFeesAmt")
@@ -1874,7 +2144,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmRegulatoryFeesAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegulatoryFeesAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmRegulatoryFeesAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesRelatedFees.mmRegulatoryFeesAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -1888,6 +2158,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getRegulatoryFeesAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setRegulatoryFeesAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ShppgFeesAmt")
@@ -1935,7 +2215,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmShippingFeesAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmShippingFeesAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmShippingFeesAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesRelatedFees.mmShippingFeesAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -1949,6 +2229,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getShippingFeesAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setShippingFeesAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ChrgsAmt")
@@ -1996,7 +2286,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmChargesAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmChargesAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmChargesAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -2010,6 +2300,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getChargesAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setChargesAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CshAmtBrghtFwd")
@@ -2055,7 +2355,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmCashAmountBroughtForward}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashAmountBroughtForward = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmCashAmountBroughtForward = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> TaxVoucher.mmCashAmountBroughtForward;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -2069,6 +2369,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getCashAmountBroughtForward();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setCashAmountBroughtForward(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CshAmtCrrdFwd")
@@ -2114,7 +2424,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmCashAmountCarriedForward}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashAmountCarriedForward = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmCashAmountCarriedForward = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> TaxVoucher.mmCashAmountCarriedForward;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -2128,6 +2438,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getCashAmountCarriedForward();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setCashAmountCarriedForward(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NtnlDvddPyblAmt")
@@ -2175,7 +2495,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmNotionalDividendPayableAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotionalDividendPayableAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmNotionalDividendPayableAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmNotionalDividendPayableAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -2189,6 +2509,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getNotionalDividendPayableAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setNotionalDividendPayableAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NtnlTaxAmt")
@@ -2236,7 +2566,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmNotionalTaxAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotionalTaxAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmNotionalTaxAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> TaxVoucher.mmNotionalTaxAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -2250,6 +2580,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getNotionalTaxAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setNotionalTaxAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxArrearsAmt")
@@ -2296,7 +2636,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmTaxArrearsAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxArrearsAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmTaxArrearsAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -2310,6 +2650,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getTaxArrearsAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setTaxArrearsAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlAmt")
@@ -2357,7 +2707,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmOriginalAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmOriginalAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmOriginalAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -2371,6 +2721,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getOriginalAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setOriginalAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrncplOrCrps")
@@ -2418,7 +2778,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmPrincipalOrCorpus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPrincipalOrCorpus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmPrincipalOrCorpus = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CashProceedsDefinition.mmPrincipalOrCorpus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -2432,6 +2792,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getPrincipalOrCorpus();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setPrincipalOrCorpus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RedPrmAmt")
@@ -2479,7 +2849,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmRedemptionPremiumAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRedemptionPremiumAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmRedemptionPremiumAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CashProceedsDefinition.mmRedemptionPremiumAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -2493,6 +2863,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getRedemptionPremiumAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setRedemptionPremiumAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IncmPrtn")
@@ -2540,7 +2920,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmIncomePortion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIncomePortion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmIncomePortion = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CashProceedsDefinition.mmIncomePortion;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -2554,6 +2934,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getIncomePortion();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setIncomePortion(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StockXchgTax")
@@ -2598,7 +2988,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmStockExchangeTax}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStockExchangeTax = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmStockExchangeTax = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -2612,6 +3002,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getStockExchangeTax();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setStockExchangeTax(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EUTaxRtntnAmt")
@@ -2658,7 +3058,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmEUTaxRetentionAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEUTaxRetentionAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmEUTaxRetentionAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -2672,6 +3072,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getEUTaxRetentionAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setEUTaxRetentionAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcrdIntrstAmt")
@@ -2719,7 +3129,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmAccruedInterestAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccruedInterestAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmAccruedInterestAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmAccruedInterestAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -2733,6 +3143,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getAccruedInterestAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setAccruedInterestAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EqulstnAmt")
@@ -2777,7 +3197,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmEqualisationAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEqualisationAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmEqualisationAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Equalisation.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -2790,6 +3210,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getEqualisationAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setEqualisationAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FATCATaxAmt")
@@ -2832,7 +3262,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmFATCATaxAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFATCATaxAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmFATCATaxAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -2845,6 +3275,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getFATCATaxAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setFATCATaxAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NRATaxAmt")
@@ -2887,7 +3327,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmNRATaxAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNRATaxAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmNRATaxAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -2900,6 +3340,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getNRATaxAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setNRATaxAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BckUpWhldgTaxAmt")
@@ -2941,7 +3391,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmBackUpWithholdingTaxAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBackUpWithholdingTaxAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmBackUpWithholdingTaxAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -2954,6 +3404,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getBackUpWithholdingTaxAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setBackUpWithholdingTaxAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxOnIncmAmt")
@@ -2997,7 +3457,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmTaxOnIncomeAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxOnIncomeAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmTaxOnIncomeAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -3010,6 +3470,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getTaxOnIncomeAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setTaxOnIncomeAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxTax")
@@ -3051,7 +3521,7 @@ public class CorporateActionAmounts44 {
 	 * CorporateActionAmounts37.mmTransactionTax}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionTax = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmTransactionTax = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -3064,6 +3534,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getTransactionTax();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setTransactionTax(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DmdAmt")
@@ -3103,7 +3583,7 @@ public class CorporateActionAmounts44 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeemedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmDeemedAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmDeemedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -3115,6 +3595,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getDeemedAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setDeemedAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CndtFrgnIncmAmt")
@@ -3152,7 +3642,7 @@ public class CorporateActionAmounts44 {
 	 * definition} = "Amount relating to a conduit foreign income."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmConduitForeignIncomeAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>> mmConduitForeignIncomeAmount = new MMMessageAttribute<CorporateActionAmounts44, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmConduitForeignIncomeAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts44.mmObject();
@@ -3164,6 +3654,16 @@ public class CorporateActionAmounts44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CorporateActionAmounts44 obj) {
+			return obj.getConduitForeignIncomeAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionAmounts44 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setConduitForeignIncomeAmount(value.orElse(null));
 		}
 	};
 

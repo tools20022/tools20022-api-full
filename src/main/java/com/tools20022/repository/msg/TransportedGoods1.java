@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.Goods;
 import com.tools20022.repository.entity.Product;
 import com.tools20022.repository.entity.PurchaseOrder;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DocumentIdentification7;
+import com.tools20022.repository.msg.UserDefinedInformation1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -114,7 +116,7 @@ public class TransportedGoods1 {
 	 * "Reference to the purchase order of the underlying transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPurchaseOrderReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransportedGoods1, DocumentIdentification7> mmPurchaseOrderReference = new MMMessageAssociationEnd<TransportedGoods1, DocumentIdentification7>() {
 		{
 			businessElementTrace_lazy = () -> PurchaseOrder.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportedGoods1.mmObject();
@@ -126,7 +128,17 @@ public class TransportedGoods1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DocumentIdentification7.mmObject();
+			type_lazy = () -> DocumentIdentification7.mmObject();
+		}
+
+		@Override
+		public DocumentIdentification7 getValue(TransportedGoods1 obj) {
+			return obj.getPurchaseOrderReference();
+		}
+
+		@Override
+		public void setValue(TransportedGoods1 obj, DocumentIdentification7 value) {
+			obj.setPurchaseOrderReference(value);
 		}
 	};
 	@XmlElement(name = "GoodsDesc")
@@ -164,7 +176,7 @@ public class TransportedGoods1 {
 	 * "Information about the goods and/or services of a trade transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGoodsDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransportedGoods1, Optional<Max70Text>> mmGoodsDescription = new MMMessageAttribute<TransportedGoods1, Optional<Max70Text>>() {
 		{
 			businessElementTrace_lazy = () -> Product.mmDescription;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportedGoods1.mmObject();
@@ -177,9 +189,19 @@ public class TransportedGoods1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max70Text> getValue(TransportedGoods1 obj) {
+			return obj.getGoodsDescription();
+		}
+
+		@Override
+		public void setValue(TransportedGoods1 obj, Optional<Max70Text> value) {
+			obj.setGoodsDescription(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "BuyrDfndInf")
-	protected List<com.tools20022.repository.msg.UserDefinedInformation1> buyerDefinedInformation;
+	protected List<UserDefinedInformation1> buyerDefinedInformation;
 	/**
 	 * 
 	 <p>
@@ -209,7 +231,7 @@ public class TransportedGoods1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBuyerDefinedInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransportedGoods1, List<UserDefinedInformation1>> mmBuyerDefinedInformation = new MMMessageAssociationEnd<TransportedGoods1, List<UserDefinedInformation1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportedGoods1.mmObject();
 			isDerived = false;
@@ -219,11 +241,21 @@ public class TransportedGoods1 {
 			definition = "Information important for the users of the message/service, which cannot be captured in any other message component/element. For example: Warehouse number.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UserDefinedInformation1.mmObject();
+			type_lazy = () -> UserDefinedInformation1.mmObject();
+		}
+
+		@Override
+		public List<UserDefinedInformation1> getValue(TransportedGoods1 obj) {
+			return obj.getBuyerDefinedInformation();
+		}
+
+		@Override
+		public void setValue(TransportedGoods1 obj, List<UserDefinedInformation1> value) {
+			obj.setBuyerDefinedInformation(value);
 		}
 	};
 	@XmlElement(name = "SellrDfndInf")
-	protected List<com.tools20022.repository.msg.UserDefinedInformation1> sellerDefinedInformation;
+	protected List<UserDefinedInformation1> sellerDefinedInformation;
 	/**
 	 * 
 	 <p>
@@ -253,7 +285,7 @@ public class TransportedGoods1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSellerDefinedInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransportedGoods1, List<UserDefinedInformation1>> mmSellerDefinedInformation = new MMMessageAssociationEnd<TransportedGoods1, List<UserDefinedInformation1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportedGoods1.mmObject();
 			isDerived = false;
@@ -263,7 +295,17 @@ public class TransportedGoods1 {
 			definition = "Information important for the users of the message/service, which cannot be captured in any other message component/element. For example: Warehouse number.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UserDefinedInformation1.mmObject();
+			type_lazy = () -> UserDefinedInformation1.mmObject();
+		}
+
+		@Override
+		public List<UserDefinedInformation1> getValue(TransportedGoods1 obj) {
+			return obj.getSellerDefinedInformation();
+		}
+
+		@Override
+		public void setValue(TransportedGoods1 obj, List<UserDefinedInformation1> value) {
+			obj.setSellerDefinedInformation(value);
 		}
 	};
 
@@ -286,7 +328,7 @@ public class TransportedGoods1 {
 		return purchaseOrderReference;
 	}
 
-	public TransportedGoods1 setPurchaseOrderReference(com.tools20022.repository.msg.DocumentIdentification7 purchaseOrderReference) {
+	public TransportedGoods1 setPurchaseOrderReference(DocumentIdentification7 purchaseOrderReference) {
 		this.purchaseOrderReference = Objects.requireNonNull(purchaseOrderReference);
 		return this;
 	}
@@ -304,7 +346,7 @@ public class TransportedGoods1 {
 		return buyerDefinedInformation == null ? buyerDefinedInformation = new ArrayList<>() : buyerDefinedInformation;
 	}
 
-	public TransportedGoods1 setBuyerDefinedInformation(List<com.tools20022.repository.msg.UserDefinedInformation1> buyerDefinedInformation) {
+	public TransportedGoods1 setBuyerDefinedInformation(List<UserDefinedInformation1> buyerDefinedInformation) {
 		this.buyerDefinedInformation = Objects.requireNonNull(buyerDefinedInformation);
 		return this;
 	}
@@ -313,7 +355,7 @@ public class TransportedGoods1 {
 		return sellerDefinedInformation == null ? sellerDefinedInformation = new ArrayList<>() : sellerDefinedInformation;
 	}
 
-	public TransportedGoods1 setSellerDefinedInformation(List<com.tools20022.repository.msg.UserDefinedInformation1> sellerDefinedInformation) {
+	public TransportedGoods1 setSellerDefinedInformation(List<UserDefinedInformation1> sellerDefinedInformation) {
 		this.sellerDefinedInformation = Objects.requireNonNull(sellerDefinedInformation);
 		return this;
 	}

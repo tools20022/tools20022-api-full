@@ -124,7 +124,7 @@ public class OtherIdentification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherIdentification1Choice, PersonIdentificationType5Code> mmCode = new MMMessageAttribute<OtherIdentification1Choice, PersonIdentificationType5Code>() {
 		{
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.OtherIdentification1Choice.mmObject();
@@ -137,6 +137,16 @@ public class OtherIdentification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PersonIdentificationType5Code.mmObject();
+		}
+
+		@Override
+		public PersonIdentificationType5Code getValue(OtherIdentification1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(OtherIdentification1Choice obj, PersonIdentificationType5Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -182,7 +192,7 @@ public class OtherIdentification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherIdentification1Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<OtherIdentification1Choice, GenericIdentification47>() {
 		{
 			businessComponentTrace_lazy = () -> GenericIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.OtherIdentification1Choice.mmObject();
@@ -195,6 +205,16 @@ public class OtherIdentification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(OtherIdentification1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(OtherIdentification1Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

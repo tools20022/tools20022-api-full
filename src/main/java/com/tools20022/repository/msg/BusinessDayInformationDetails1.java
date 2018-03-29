@@ -21,6 +21,8 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1;
+import com.tools20022.repository.msg.SystemStatusDetails1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -98,7 +100,7 @@ public class BusinessDayInformationDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSystemStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BusinessDayInformationDetails1, Optional<SystemStatusDetails1>> mmSystemStatus = new MMMessageAssociationEnd<BusinessDayInformationDetails1, Optional<SystemStatusDetails1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDayInformationDetails1.mmObject();
 			isDerived = false;
@@ -109,11 +111,21 @@ public class BusinessDayInformationDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemStatusDetails1.mmObject();
+			type_lazy = () -> SystemStatusDetails1.mmObject();
+		}
+
+		@Override
+		public Optional<SystemStatusDetails1> getValue(BusinessDayInformationDetails1 obj) {
+			return obj.getSystemStatus();
+		}
+
+		@Override
+		public void setValue(BusinessDayInformationDetails1 obj, Optional<SystemStatusDetails1> value) {
+			obj.setSystemStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SysInfPerCcy")
-	protected List<com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1> systemInformationPerCurrency;
+	protected List<SystemAvailabilityAndEventsDetails1> systemInformationPerCurrency;
 	/**
 	 * 
 	 <p>
@@ -143,7 +155,7 @@ public class BusinessDayInformationDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSystemInformationPerCurrency = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BusinessDayInformationDetails1, List<SystemAvailabilityAndEventsDetails1>> mmSystemInformationPerCurrency = new MMMessageAssociationEnd<BusinessDayInformationDetails1, List<SystemAvailabilityAndEventsDetails1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDayInformationDetails1.mmObject();
 			isDerived = false;
@@ -153,7 +165,17 @@ public class BusinessDayInformationDetails1 {
 			definition = "Information relating to system operations and foreseen events relating to the operation of the system.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1.mmObject();
+			type_lazy = () -> SystemAvailabilityAndEventsDetails1.mmObject();
+		}
+
+		@Override
+		public List<SystemAvailabilityAndEventsDetails1> getValue(BusinessDayInformationDetails1 obj) {
+			return obj.getSystemInformationPerCurrency();
+		}
+
+		@Override
+		public void setValue(BusinessDayInformationDetails1 obj, List<SystemAvailabilityAndEventsDetails1> value) {
+			obj.setSystemInformationPerCurrency(value);
 		}
 	};
 
@@ -174,7 +196,7 @@ public class BusinessDayInformationDetails1 {
 		return systemStatus == null ? Optional.empty() : Optional.of(systemStatus);
 	}
 
-	public BusinessDayInformationDetails1 setSystemStatus(com.tools20022.repository.msg.SystemStatusDetails1 systemStatus) {
+	public BusinessDayInformationDetails1 setSystemStatus(SystemStatusDetails1 systemStatus) {
 		this.systemStatus = systemStatus;
 		return this;
 	}
@@ -183,7 +205,7 @@ public class BusinessDayInformationDetails1 {
 		return systemInformationPerCurrency == null ? systemInformationPerCurrency = new ArrayList<>() : systemInformationPerCurrency;
 	}
 
-	public BusinessDayInformationDetails1 setSystemInformationPerCurrency(List<com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1> systemInformationPerCurrency) {
+	public BusinessDayInformationDetails1 setSystemInformationPerCurrency(List<SystemAvailabilityAndEventsDetails1> systemInformationPerCurrency) {
 		this.systemInformationPerCurrency = Objects.requireNonNull(systemInformationPerCurrency);
 		return this;
 	}

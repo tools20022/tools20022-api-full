@@ -32,6 +32,7 @@ import com.tools20022.repository.entity.Derivative;
 import com.tools20022.repository.entity.Option;
 import com.tools20022.repository.entity.SecuritiesTransfer;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AssetClass2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -139,7 +140,7 @@ public class DerivativeInstrument5 {
 	 * definition} = "Expiry date of the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpiryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DerivativeInstrument5, Optional<ISODate>> mmExpiryDate = new MMMessageAttribute<DerivativeInstrument5, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmExerciseDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeInstrument5.mmObject();
@@ -151,6 +152,16 @@ public class DerivativeInstrument5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(DerivativeInstrument5 obj) {
+			return obj.getExpiryDate();
+		}
+
+		@Override
+		public void setValue(DerivativeInstrument5 obj, Optional<ISODate> value) {
+			obj.setExpiryDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PricMltplr")
@@ -199,7 +210,7 @@ public class DerivativeInstrument5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriceMultiplier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DerivativeInstrument5, Optional<NonNegativeDecimalNumber>> mmPriceMultiplier = new MMMessageAttribute<DerivativeInstrument5, Optional<NonNegativeDecimalNumber>>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmStrikeMultiplier;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeInstrument5.mmObject();
@@ -212,6 +223,16 @@ public class DerivativeInstrument5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> NonNegativeDecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<NonNegativeDecimalNumber> getValue(DerivativeInstrument5 obj) {
+			return obj.getPriceMultiplier();
+		}
+
+		@Override
+		public void setValue(DerivativeInstrument5 obj, Optional<NonNegativeDecimalNumber> value) {
+			obj.setPriceMultiplier(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UndrlygInstrm")
@@ -250,7 +271,7 @@ public class DerivativeInstrument5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnderlyingInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DerivativeInstrument5, Optional<FinancialInstrumentIdentification5Choice>> mmUnderlyingInstrument = new MMMessageAssociationEnd<DerivativeInstrument5, Optional<FinancialInstrumentIdentification5Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmUnderlyingAsset;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeInstrument5.mmObject();
@@ -263,6 +284,16 @@ public class DerivativeInstrument5 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentIdentification5Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentIdentification5Choice> getValue(DerivativeInstrument5 obj) {
+			return obj.getUnderlyingInstrument();
+		}
+
+		@Override
+		public void setValue(DerivativeInstrument5 obj, Optional<FinancialInstrumentIdentification5Choice> value) {
+			obj.setUnderlyingInstrument(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OptnTp")
@@ -302,7 +333,7 @@ public class DerivativeInstrument5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOptionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DerivativeInstrument5, Optional<OptionType2Code>> mmOptionType = new MMMessageAttribute<DerivativeInstrument5, Optional<OptionType2Code>>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmOptionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeInstrument5.mmObject();
@@ -314,6 +345,16 @@ public class DerivativeInstrument5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> OptionType2Code.mmObject();
+		}
+
+		@Override
+		public Optional<OptionType2Code> getValue(DerivativeInstrument5 obj) {
+			return obj.getOptionType();
+		}
+
+		@Override
+		public void setValue(DerivativeInstrument5 obj, Optional<OptionType2Code> value) {
+			obj.setOptionType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StrkPric")
@@ -353,7 +394,7 @@ public class DerivativeInstrument5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStrikePrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DerivativeInstrument5, Optional<SecuritiesTransactionPrice4Choice>> mmStrikePrice = new MMMessageAttribute<DerivativeInstrument5, Optional<SecuritiesTransactionPrice4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmStrikePrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeInstrument5.mmObject();
@@ -365,6 +406,16 @@ public class DerivativeInstrument5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SecuritiesTransactionPrice4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesTransactionPrice4Choice> getValue(DerivativeInstrument5 obj) {
+			return obj.getStrikePrice();
+		}
+
+		@Override
+		public void setValue(DerivativeInstrument5 obj, Optional<SecuritiesTransactionPrice4Choice> value) {
+			obj.setStrikePrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OptnExrcStyle")
@@ -404,7 +455,7 @@ public class DerivativeInstrument5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOptionExerciseStyle = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DerivativeInstrument5, Optional<OptionStyle7Code>> mmOptionExerciseStyle = new MMMessageAttribute<DerivativeInstrument5, Optional<OptionStyle7Code>>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmOptionStyle;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeInstrument5.mmObject();
@@ -416,6 +467,16 @@ public class DerivativeInstrument5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> OptionStyle7Code.mmObject();
+		}
+
+		@Override
+		public Optional<OptionStyle7Code> getValue(DerivativeInstrument5 obj) {
+			return obj.getOptionExerciseStyle();
+		}
+
+		@Override
+		public void setValue(DerivativeInstrument5 obj, Optional<OptionStyle7Code> value) {
+			obj.setOptionExerciseStyle(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DlvryTp")
@@ -454,7 +515,7 @@ public class DerivativeInstrument5 {
 	 * "Indicates whether the transaction is settled physically or in cash."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeliveryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DerivativeInstrument5, Optional<PhysicalTransferType4Code>> mmDeliveryType = new MMMessageAttribute<DerivativeInstrument5, Optional<PhysicalTransferType4Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmPhysicalDelivery;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeInstrument5.mmObject();
@@ -466,6 +527,16 @@ public class DerivativeInstrument5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PhysicalTransferType4Code.mmObject();
+		}
+
+		@Override
+		public Optional<PhysicalTransferType4Code> getValue(DerivativeInstrument5 obj) {
+			return obj.getDeliveryType();
+		}
+
+		@Override
+		public void setValue(DerivativeInstrument5 obj, Optional<PhysicalTransferType4Code> value) {
+			obj.setDeliveryType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AsstClssSpcfcAttrbts")
@@ -498,7 +569,7 @@ public class DerivativeInstrument5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAssetClassSpecificAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DerivativeInstrument5, Optional<AssetClass2>> mmAssetClassSpecificAttributes = new MMMessageAssociationEnd<DerivativeInstrument5, Optional<AssetClass2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeInstrument5.mmObject();
 			isDerived = false;
@@ -509,7 +580,17 @@ public class DerivativeInstrument5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AssetClass2.mmObject();
+			type_lazy = () -> AssetClass2.mmObject();
+		}
+
+		@Override
+		public Optional<AssetClass2> getValue(DerivativeInstrument5 obj) {
+			return obj.getAssetClassSpecificAttributes();
+		}
+
+		@Override
+		public void setValue(DerivativeInstrument5 obj, Optional<AssetClass2> value) {
+			obj.setAssetClassSpecificAttributes(value.orElse(null));
 		}
 	};
 
@@ -598,7 +679,7 @@ public class DerivativeInstrument5 {
 		return assetClassSpecificAttributes == null ? Optional.empty() : Optional.of(assetClassSpecificAttributes);
 	}
 
-	public DerivativeInstrument5 setAssetClassSpecificAttributes(com.tools20022.repository.msg.AssetClass2 assetClassSpecificAttributes) {
+	public DerivativeInstrument5 setAssetClassSpecificAttributes(AssetClass2 assetClassSpecificAttributes) {
 		this.assetClassSpecificAttributes = assetClassSpecificAttributes;
 		return this;
 	}

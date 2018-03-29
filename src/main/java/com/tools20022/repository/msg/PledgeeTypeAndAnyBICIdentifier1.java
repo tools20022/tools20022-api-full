@@ -110,7 +110,7 @@ public class PledgeeTypeAndAnyBICIdentifier1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PledgeeTypeAndAnyBICIdentifier1, AnyBICIdentifier> mmIdentification = new MMMessageAttribute<PledgeeTypeAndAnyBICIdentifier1, AnyBICIdentifier>() {
 		{
 			businessComponentTrace_lazy = () -> Pledgee.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PledgeeTypeAndAnyBICIdentifier1.mmObject();
@@ -122,6 +122,16 @@ public class PledgeeTypeAndAnyBICIdentifier1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public AnyBICIdentifier getValue(PledgeeTypeAndAnyBICIdentifier1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(PledgeeTypeAndAnyBICIdentifier1 obj, AnyBICIdentifier value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "PldgeeTp", required = true)
@@ -161,7 +171,7 @@ public class PledgeeTypeAndAnyBICIdentifier1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPledgeeType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PledgeeTypeAndAnyBICIdentifier1, PledgeeType1Code> mmPledgeeType = new MMMessageAttribute<PledgeeTypeAndAnyBICIdentifier1, PledgeeType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Pledgee.mmPledgeeType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PledgeeTypeAndAnyBICIdentifier1.mmObject();
@@ -173,6 +183,16 @@ public class PledgeeTypeAndAnyBICIdentifier1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PledgeeType1Code.mmObject();
+		}
+
+		@Override
+		public PledgeeType1Code getValue(PledgeeTypeAndAnyBICIdentifier1 obj) {
+			return obj.getPledgeeType();
+		}
+
+		@Override
+		public void setValue(PledgeeTypeAndAnyBICIdentifier1 obj, PledgeeType1Code value) {
+			obj.setPledgeeType(value);
 		}
 	};
 

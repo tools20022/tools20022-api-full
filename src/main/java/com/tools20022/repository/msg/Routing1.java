@@ -25,6 +25,7 @@ import com.tools20022.repository.codeset.RoutingType1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification23;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -109,7 +110,7 @@ public class Routing1 {
 	 * definition} = "Identifies a list of firms or a vendor maintained list."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmList = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Routing1, List<Max35Text>> mmList = new MMMessageAttribute<Routing1, List<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Routing1.mmObject();
 			isDerived = false;
@@ -121,9 +122,19 @@ public class Routing1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public List<Max35Text> getValue(Routing1 obj) {
+			return obj.getList();
+		}
+
+		@Override
+		public void setValue(Routing1 obj, List<Max35Text> value) {
+			obj.setList(value);
+		}
 	};
 	@XmlElement(name = "Firm")
-	protected List<com.tools20022.repository.msg.PartyIdentification23> firm;
+	protected List<PartyIdentification23> firm;
 	/**
 	 * 
 	 <p>
@@ -160,7 +171,7 @@ public class Routing1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFirm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Routing1, List<PartyIdentification23>> mmFirm = new MMMessageAttribute<Routing1, List<PartyIdentification23>>() {
 		{
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Routing1.mmObject();
@@ -171,7 +182,17 @@ public class Routing1 {
 			name = "Firm";
 			definition = "Organised structure that is set up for a particular purpose, eg, a business, government body, department, charity, or financial institution.";
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification23.mmObject();
+			complexType_lazy = () -> PartyIdentification23.mmObject();
+		}
+
+		@Override
+		public List<PartyIdentification23> getValue(Routing1 obj) {
+			return obj.getFirm();
+		}
+
+		@Override
+		public void setValue(Routing1 obj, List<PartyIdentification23> value) {
+			obj.setFirm(value);
 		}
 	};
 	@XmlElement(name = "RtgTp", required = true)
@@ -206,7 +227,7 @@ public class Routing1 {
 	 * definition} = "Indicates if the type of routing is allowed or blocked."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRoutingType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Routing1, RoutingType1Code> mmRoutingType = new MMMessageAttribute<Routing1, RoutingType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Routing1.mmObject();
 			isDerived = false;
@@ -218,6 +239,16 @@ public class Routing1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RoutingType1Code.mmObject();
+		}
+
+		@Override
+		public RoutingType1Code getValue(Routing1 obj) {
+			return obj.getRoutingType();
+		}
+
+		@Override
+		public void setValue(Routing1 obj, RoutingType1Code value) {
+			obj.setRoutingType(value);
 		}
 	};
 
@@ -248,7 +279,7 @@ public class Routing1 {
 		return firm == null ? firm = new ArrayList<>() : firm;
 	}
 
-	public Routing1 setFirm(List<com.tools20022.repository.msg.PartyIdentification23> firm) {
+	public Routing1 setFirm(List<PartyIdentification23> firm) {
 		this.firm = Objects.requireNonNull(firm);
 		return this;
 	}

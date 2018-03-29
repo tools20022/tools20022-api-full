@@ -178,7 +178,7 @@ public class CorporateActionReversalReason1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionReversalReason1, CorporateActionReversalReason1Choice> mmReason = new MMMessageAssociationEnd<CorporateActionReversalReason1, CorporateActionReversalReason1Choice>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionReversalReason1.mmObject();
@@ -192,6 +192,16 @@ public class CorporateActionReversalReason1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CorporateActionReversalReason1Choice.mmObject();
+		}
+
+		@Override
+		public CorporateActionReversalReason1Choice getValue(CorporateActionReversalReason1 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(CorporateActionReversalReason1 obj, CorporateActionReversalReason1Choice value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -237,7 +247,7 @@ public class CorporateActionReversalReason1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionReversalReason1, Optional<Max256Text>> mmAdditionalReasonInformation = new MMMessageAttribute<CorporateActionReversalReason1, Optional<Max256Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionReversalReason1.mmObject();
@@ -250,6 +260,16 @@ public class CorporateActionReversalReason1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max256Text> getValue(CorporateActionReversalReason1 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(CorporateActionReversalReason1 obj, Optional<Max256Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

@@ -59,12 +59,16 @@ public class ConstraintReferenceRule {
 	 */
 	public static final MMConstraint<TransferReference2> forTransferReference2 = new MMConstraint<TransferReference2>() {
 		{
-			validator = ConstraintReferenceRule::checkTransferReference2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceRule";
 			definition = "At least TransferReference or TransferConfirmationReference must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReferenceRule.forTransferReference6);
 			owner_lazy = () -> TransferReference2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferReference2 obj) throws Exception {
+			checkTransferReference2(obj);
 		}
 	};
 	/**
@@ -89,11 +93,15 @@ public class ConstraintReferenceRule {
 	 */
 	public static final MMConstraint<InvestmentFundOrderExecution2> forInvestmentFundOrderExecution2 = new MMConstraint<InvestmentFundOrderExecution2>() {
 		{
-			validator = ConstraintReferenceRule::checkInvestmentFundOrderExecution2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceRule";
 			definition = "At least OrderReference or DealReference must be present.";
 			owner_lazy = () -> InvestmentFundOrderExecution2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentFundOrderExecution2 obj) throws Exception {
+			checkInvestmentFundOrderExecution2(obj);
 		}
 	};
 	/**
@@ -119,11 +127,15 @@ public class ConstraintReferenceRule {
 	 */
 	public static final MMConstraint<DocumentNumber2> forDocumentNumber2 = new MMConstraint<DocumentNumber2>() {
 		{
-			validator = ConstraintReferenceRule::checkDocumentNumber2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceRule";
 			definition = "The reference used to identify the transaction must be in line with the identification available for the status advice requested by the SecuritiesTransactionStatusQuery. For example, a SecuritiesTransactionStatusQuery must not request a SecuritiesSettlementTransactionStatusAdvice using a CorporateActionEventIdentification.";
 			owner_lazy = () -> DocumentNumber2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DocumentNumber2 obj) throws Exception {
+			checkDocumentNumber2(obj);
 		}
 	};
 	/**
@@ -149,11 +161,15 @@ public class ConstraintReferenceRule {
 	 */
 	public static final MMConstraint<DocumentNumber6> forDocumentNumber6 = new MMConstraint<DocumentNumber6>() {
 		{
-			validator = ConstraintReferenceRule::checkDocumentNumber6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceRule";
 			definition = "The reference used to identify the transaction must be in line with the identification available for the status advice requested by the SecuritiesTransactionStatusQuery. For example, a SecuritiesTransactionStatusQuery must not request a SecuritiesSettlementTransactionStatusAdvice using a CorporateActionEventIdentification.";
 			owner_lazy = () -> DocumentNumber6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DocumentNumber6 obj) throws Exception {
+			checkDocumentNumber6(obj);
 		}
 	};
 	/**
@@ -179,11 +195,15 @@ public class ConstraintReferenceRule {
 	 */
 	public static final MMConstraint<DocumentNumber5> forDocumentNumber5 = new MMConstraint<DocumentNumber5>() {
 		{
-			validator = ConstraintReferenceRule::checkDocumentNumber5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceRule";
 			definition = "The reference used to identify the transaction must be in line with the identification available for the status advice requested by the SecuritiesTransactionStatusQuery. For example, a SecuritiesTransactionStatusQuery must not request a SecuritiesSettlementTransactionStatusAdvice using a CorporateActionEventIdentification.";
 			owner_lazy = () -> DocumentNumber5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DocumentNumber5 obj) throws Exception {
+			checkDocumentNumber5(obj);
 		}
 	};
 	/**
@@ -209,11 +229,15 @@ public class ConstraintReferenceRule {
 	 */
 	public static final MMConstraint<DocumentNumber4> forDocumentNumber4 = new MMConstraint<DocumentNumber4>() {
 		{
-			validator = ConstraintReferenceRule::checkDocumentNumber4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceRule";
 			definition = "The reference used to identify the transaction must be in line with the identification available for the status advice requested by the SecuritiesTransactionStatusQuery. For example, a SecuritiesTransactionStatusQuery must not request a SecuritiesSettlementTransactionStatusAdvice using a CorporateActionEventIdentification.";
 			owner_lazy = () -> DocumentNumber4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DocumentNumber4 obj) throws Exception {
+			checkDocumentNumber4(obj);
 		}
 	};
 	/**
@@ -239,11 +263,15 @@ public class ConstraintReferenceRule {
 	 */
 	public static final MMConstraint<DocumentNumber7> forDocumentNumber7 = new MMConstraint<DocumentNumber7>() {
 		{
-			validator = ConstraintReferenceRule::checkDocumentNumber7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceRule";
 			definition = "The reference used to identify the transaction must be in line with the identification available for the status advice requested by the SecuritiesTransactionStatusQuery. For example, a SecuritiesTransactionStatusQuery must not request a SecuritiesSettlementTransactionStatusAdvice using a CorporateActionEventIdentification.";
 			owner_lazy = () -> DocumentNumber7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DocumentNumber7 obj) throws Exception {
+			checkDocumentNumber7(obj);
 		}
 	};
 	/**
@@ -277,12 +305,16 @@ public class ConstraintReferenceRule {
 	 */
 	public static final MMConstraint<DocumentNumber9> forDocumentNumber9 = new MMConstraint<DocumentNumber9>() {
 		{
-			validator = ConstraintReferenceRule::checkDocumentNumber9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceRule";
 			definition = "The reference used to identify the transaction must be in line with the identification available for the status advice requested by the SecuritiesTransactionStatusQuery. For example, a SecuritiesTransactionStatusQuery must not request a SecuritiesSettlementTransactionStatusAdvice using a CorporateActionEventIdentification.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReferenceRule.forDocumentNumber12);
 			owner_lazy = () -> DocumentNumber9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DocumentNumber9 obj) throws Exception {
+			checkDocumentNumber9(obj);
 		}
 	};
 	/**
@@ -308,11 +340,15 @@ public class ConstraintReferenceRule {
 	 */
 	public static final MMConstraint<DocumentNumber11> forDocumentNumber11 = new MMConstraint<DocumentNumber11>() {
 		{
-			validator = ConstraintReferenceRule::checkDocumentNumber11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceRule";
 			definition = "The reference used to identify the transaction must be in line with the identification available for the status advice requested by the SecuritiesTransactionStatusQuery. For example, a SecuritiesTransactionStatusQuery must not request a SecuritiesSettlementTransactionStatusAdvice using a CorporateActionEventIdentification.";
 			owner_lazy = () -> DocumentNumber11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DocumentNumber11 obj) throws Exception {
+			checkDocumentNumber11(obj);
 		}
 	};
 	/**
@@ -338,11 +374,15 @@ public class ConstraintReferenceRule {
 	 */
 	public static final MMConstraint<DocumentNumber8> forDocumentNumber8 = new MMConstraint<DocumentNumber8>() {
 		{
-			validator = ConstraintReferenceRule::checkDocumentNumber8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceRule";
 			definition = "The reference used to identify the transaction must be in line with the identification available for the status advice requested by the SecuritiesTransactionStatusQuery. For example, a SecuritiesTransactionStatusQuery must not request a SecuritiesSettlementTransactionStatusAdvice using a CorporateActionEventIdentification.";
 			owner_lazy = () -> DocumentNumber8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DocumentNumber8 obj) throws Exception {
+			checkDocumentNumber8(obj);
 		}
 	};
 	/**
@@ -381,13 +421,17 @@ public class ConstraintReferenceRule {
 	 */
 	public static final MMConstraint<TransferReference6> forTransferReference6 = new MMConstraint<TransferReference6>() {
 		{
-			validator = ConstraintReferenceRule::checkTransferReference6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceRule";
 			definition = "At least TransferReference or TransferConfirmationReference must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReferenceRule.forTransferReference10);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReferenceRule.forTransferReference2;
 			owner_lazy = () -> TransferReference6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferReference6 obj) throws Exception {
+			checkTransferReference6(obj);
 		}
 	};
 	/**
@@ -418,12 +462,16 @@ public class ConstraintReferenceRule {
 	 */
 	public static final MMConstraint<DocumentNumber12> forDocumentNumber12 = new MMConstraint<DocumentNumber12>() {
 		{
-			validator = ConstraintReferenceRule::checkDocumentNumber12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceRule";
 			definition = "The reference used to identify the transaction must be in line with the identification available for the status advice requested by the SecuritiesTransactionStatusQuery. For example, a SecuritiesTransactionStatusQuery must not request a SecuritiesSettlementTransactionStatusAdvice using a CorporateActionEventIdentification.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReferenceRule.forDocumentNumber9;
 			owner_lazy = () -> DocumentNumber12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DocumentNumber12 obj) throws Exception {
+			checkDocumentNumber12(obj);
 		}
 	};
 	/**
@@ -454,12 +502,16 @@ public class ConstraintReferenceRule {
 	 */
 	public static final MMConstraint<TransferReference10> forTransferReference10 = new MMConstraint<TransferReference10>() {
 		{
-			validator = ConstraintReferenceRule::checkTransferReference10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceRule";
 			definition = "At least TransferReference or TransferConfirmationReference must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReferenceRule.forTransferReference6;
 			owner_lazy = () -> TransferReference10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferReference10 obj) throws Exception {
+			checkTransferReference10(obj);
 		}
 	};
 	/**
@@ -485,11 +537,15 @@ public class ConstraintReferenceRule {
 	 */
 	public static final MMConstraint<DocumentNumber15> forDocumentNumber15 = new MMConstraint<DocumentNumber15>() {
 		{
-			validator = ConstraintReferenceRule::checkDocumentNumber15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceRule";
 			definition = "The reference used to identify the transaction must be in line with the identification available for the status advice requested by the SecuritiesTransactionStatusQuery. For example, a SecuritiesTransactionStatusQuery must not request a SecuritiesSettlementTransactionStatusAdvice using a CorporateActionEventIdentification.";
 			owner_lazy = () -> DocumentNumber15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DocumentNumber15 obj) throws Exception {
+			checkDocumentNumber15(obj);
 		}
 	};
 

@@ -111,7 +111,7 @@ public class PaymentStatusCode4Choice {
 	 * definition} = "Qualifies further the pending status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPendingStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentStatusCode4Choice, PendingStatus4Code> mmPendingStatus = new MMMessageAttribute<PaymentStatusCode4Choice, PendingStatus4Code>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmInstructionStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentStatusCode4Choice.mmObject();
@@ -123,6 +123,16 @@ public class PaymentStatusCode4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PendingStatus4Code.mmObject();
+		}
+
+		@Override
+		public PendingStatus4Code getValue(PaymentStatusCode4Choice obj) {
+			return obj.getPendingStatus();
+		}
+
+		@Override
+		public void setValue(PaymentStatusCode4Choice obj, PendingStatus4Code value) {
+			obj.setPendingStatus(value);
 		}
 	};
 	@XmlElement(name = "FnlSts", required = true)
@@ -160,7 +170,7 @@ public class PaymentStatusCode4Choice {
 	 * definition} = "Qualifies further the final status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinalStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentStatusCode4Choice, FinalStatusCode> mmFinalStatus = new MMMessageAttribute<PaymentStatusCode4Choice, FinalStatusCode>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmInstructionStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentStatusCode4Choice.mmObject();
@@ -172,6 +182,16 @@ public class PaymentStatusCode4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FinalStatusCode.mmObject();
+		}
+
+		@Override
+		public FinalStatusCode getValue(PaymentStatusCode4Choice obj) {
+			return obj.getFinalStatus();
+		}
+
+		@Override
+		public void setValue(PaymentStatusCode4Choice obj, FinalStatusCode value) {
+			obj.setFinalStatus(value);
 		}
 	};
 	@XmlElement(name = "PrtrySts", required = true)
@@ -209,7 +229,7 @@ public class PaymentStatusCode4Choice {
 	 * definition} = "Qualifies further the proprietary status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietaryStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentStatusCode4Choice, Max4AlphaNumericText> mmProprietaryStatus = new MMMessageAttribute<PaymentStatusCode4Choice, Max4AlphaNumericText>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmInstructionStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentStatusCode4Choice.mmObject();
@@ -221,6 +241,16 @@ public class PaymentStatusCode4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max4AlphaNumericText getValue(PaymentStatusCode4Choice obj) {
+			return obj.getProprietaryStatus();
+		}
+
+		@Override
+		public void setValue(PaymentStatusCode4Choice obj, Max4AlphaNumericText value) {
+			obj.setProprietaryStatus(value);
 		}
 	};
 

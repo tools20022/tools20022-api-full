@@ -24,6 +24,7 @@ import com.tools20022.repository.choice.AssetClassCommodity2Choice;
 import com.tools20022.repository.entity.Asset;
 import com.tools20022.repository.entity.Commodity;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.EnergySpecificAttribute4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -110,7 +111,7 @@ public class AssetClassCommodity1 {
 	 * definition} = "Classification of a commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmClassification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodity1, AssetClassCommodity2Choice> mmClassification = new MMMessageAssociationEnd<AssetClassCommodity1, AssetClassCommodity2Choice>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmAssetClassification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AssetClassCommodity1.mmObject();
@@ -123,6 +124,16 @@ public class AssetClassCommodity1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AssetClassCommodity2Choice.mmObject();
+		}
+
+		@Override
+		public AssetClassCommodity2Choice getValue(AssetClassCommodity1 obj) {
+			return obj.getClassification();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodity1 obj, AssetClassCommodity2Choice value) {
+			obj.setClassification(value);
 		}
 	};
 	@XmlElement(name = "NrgySpcfcAttrbts")
@@ -156,7 +167,7 @@ public class AssetClassCommodity1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnergySpecificAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodity1, Optional<EnergySpecificAttribute4>> mmEnergySpecificAttributes = new MMMessageAssociationEnd<AssetClassCommodity1, Optional<EnergySpecificAttribute4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AssetClassCommodity1.mmObject();
 			isDerived = false;
@@ -167,7 +178,17 @@ public class AssetClassCommodity1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.EnergySpecificAttribute4.mmObject();
+			type_lazy = () -> EnergySpecificAttribute4.mmObject();
+		}
+
+		@Override
+		public Optional<EnergySpecificAttribute4> getValue(AssetClassCommodity1 obj) {
+			return obj.getEnergySpecificAttributes();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodity1 obj, Optional<EnergySpecificAttribute4> value) {
+			obj.setEnergySpecificAttributes(value.orElse(null));
 		}
 	};
 
@@ -199,7 +220,7 @@ public class AssetClassCommodity1 {
 		return energySpecificAttributes == null ? Optional.empty() : Optional.of(energySpecificAttributes);
 	}
 
-	public AssetClassCommodity1 setEnergySpecificAttributes(com.tools20022.repository.msg.EnergySpecificAttribute4 energySpecificAttributes) {
+	public AssetClassCommodity1 setEnergySpecificAttributes(EnergySpecificAttribute4 energySpecificAttributes) {
 		this.energySpecificAttributes = energySpecificAttributes;
 		return this;
 	}

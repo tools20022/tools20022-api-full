@@ -51,12 +51,16 @@ public class ConstraintSEPAGroupReversalRule {
 	 */
 	public static final MMConstraint<GroupHeader28> forGroupHeader28 = new MMConstraint<GroupHeader28>() {
 		{
-			validator = ConstraintSEPAGroupReversalRule::checkGroupHeader28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SEPAGroupReversalRule";
 			definition = "SEPA TVS 3.x Rule: \nGroup Reversal must be false.";
 			owner_lazy = () -> GroupHeader28.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><SimpleRule xsi:type=\"SimpleRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupReversal</leftOperand><rightOperand>false</rightOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(GroupHeader28 obj) throws Exception {
+			checkGroupHeader28(obj);
 		}
 	};
 

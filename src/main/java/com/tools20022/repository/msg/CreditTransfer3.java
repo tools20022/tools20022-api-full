@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.CreditTransfer;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PaymentIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Creditor2;
+import com.tools20022.repository.msg.Debtor2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -116,7 +118,7 @@ public class CreditTransfer3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CreditTransfer3, Optional<Max35Text>> mmReference = new MMMessageAttribute<CreditTransfer3, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmCreditorReference;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransfer3.mmObject();
@@ -128,6 +130,16 @@ public class CreditTransfer3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CreditTransfer3 obj) {
+			return obj.getReference();
+		}
+
+		@Override
+		public void setValue(CreditTransfer3 obj, Optional<Max35Text> value) {
+			obj.setReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtrDtls", required = true)
@@ -164,7 +176,7 @@ public class CreditTransfer3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditorDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditTransfer3, Creditor2> mmCreditorDetails = new MMMessageAssociationEnd<CreditTransfer3, Creditor2>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransfer3.mmObject();
@@ -176,7 +188,17 @@ public class CreditTransfer3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Creditor2.mmObject();
+			type_lazy = () -> Creditor2.mmObject();
+		}
+
+		@Override
+		public Creditor2 getValue(CreditTransfer3 obj) {
+			return obj.getCreditorDetails();
+		}
+
+		@Override
+		public void setValue(CreditTransfer3 obj, Creditor2 value) {
+			obj.setCreditorDetails(value);
 		}
 	};
 	@XmlElement(name = "DbtrDtls")
@@ -213,7 +235,7 @@ public class CreditTransfer3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDebtorDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditTransfer3, Optional<Debtor2>> mmDebtorDetails = new MMMessageAssociationEnd<CreditTransfer3, Optional<Debtor2>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransfer3.mmObject();
@@ -225,7 +247,17 @@ public class CreditTransfer3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Debtor2.mmObject();
+			type_lazy = () -> Debtor2.mmObject();
+		}
+
+		@Override
+		public Optional<Debtor2> getValue(CreditTransfer3 obj) {
+			return obj.getDebtorDetails();
+		}
+
+		@Override
+		public void setValue(CreditTransfer3 obj, Optional<Debtor2> value) {
+			obj.setDebtorDetails(value.orElse(null));
 		}
 	};
 
@@ -257,7 +289,7 @@ public class CreditTransfer3 {
 		return creditorDetails;
 	}
 
-	public CreditTransfer3 setCreditorDetails(com.tools20022.repository.msg.Creditor2 creditorDetails) {
+	public CreditTransfer3 setCreditorDetails(Creditor2 creditorDetails) {
 		this.creditorDetails = Objects.requireNonNull(creditorDetails);
 		return this;
 	}
@@ -266,7 +298,7 @@ public class CreditTransfer3 {
 		return debtorDetails == null ? Optional.empty() : Optional.of(debtorDetails);
 	}
 
-	public CreditTransfer3 setDebtorDetails(com.tools20022.repository.msg.Debtor2 debtorDetails) {
+	public CreditTransfer3 setDebtorDetails(Debtor2 debtorDetails) {
 		this.debtorDetails = debtorDetails;
 		return this;
 	}

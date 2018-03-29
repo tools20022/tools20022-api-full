@@ -124,7 +124,7 @@ public class PartyIdentification39 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification39, PartyIdentification9Choice> mmIdentification = new MMMessageAssociationEnd<PartyIdentification39, PartyIdentification9Choice>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification39.mmObject();
@@ -138,6 +138,16 @@ public class PartyIdentification39 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification9Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification9Choice getValue(PartyIdentification39 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification39 obj, PartyIdentification9Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "AddtlIdInf")
@@ -177,7 +187,7 @@ public class PartyIdentification39 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdditionalIdentificationInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification39, Optional<PartyAdditionalIdentification2Choice>> mmAdditionalIdentificationInformation = new MMMessageAssociationEnd<PartyIdentification39, Optional<PartyAdditionalIdentification2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification39.mmObject();
 			isDerived = false;
@@ -190,6 +200,16 @@ public class PartyIdentification39 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyAdditionalIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyAdditionalIdentification2Choice> getValue(PartyIdentification39 obj) {
+			return obj.getAdditionalIdentificationInformation();
+		}
+
+		@Override
+		public void setValue(PartyIdentification39 obj, Optional<PartyAdditionalIdentification2Choice> value) {
+			obj.setAdditionalIdentificationInformation(value.orElse(null));
 		}
 	};
 

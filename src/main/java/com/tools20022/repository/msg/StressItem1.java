@@ -95,7 +95,7 @@ public class StressItem1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStressProduct = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StressItem1, StressItem1Choice> mmStressProduct = new MMMessageAssociationEnd<StressItem1, StressItem1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StressItem1.mmObject();
 			isDerived = false;
@@ -107,6 +107,16 @@ public class StressItem1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> StressItem1Choice.mmObject();
+		}
+
+		@Override
+		public StressItem1Choice getValue(StressItem1 obj) {
+			return obj.getStressProduct();
+		}
+
+		@Override
+		public void setValue(StressItem1 obj, StressItem1Choice value) {
+			obj.setStressProduct(value);
 		}
 	};
 

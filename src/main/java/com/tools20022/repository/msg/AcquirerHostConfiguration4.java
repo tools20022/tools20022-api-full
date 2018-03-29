@@ -134,7 +134,7 @@ public class AcquirerHostConfiguration4 {
 	 * AcquirerHostConfiguration3.mmHostIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHostIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcquirerHostConfiguration4, Max35Text> mmHostIdentification = new MMMessageAttribute<AcquirerHostConfiguration4, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> System.mmSystemIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerHostConfiguration4.mmObject();
@@ -148,6 +148,16 @@ public class AcquirerHostConfiguration4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AcquirerHostConfiguration4 obj) {
+			return obj.getHostIdentification();
+		}
+
+		@Override
+		public void setValue(AcquirerHostConfiguration4 obj, Max35Text value) {
+			obj.setHostIdentification(value);
 		}
 	};
 	@XmlElement(name = "MsgToSnd")
@@ -193,7 +203,7 @@ public class AcquirerHostConfiguration4 {
 	 * AcquirerHostConfiguration3.mmMessageToSend}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageToSend = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcquirerHostConfiguration4, List<MessageFunction12Code>> mmMessageToSend = new MMMessageAttribute<AcquirerHostConfiguration4, List<MessageFunction12Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerHostConfiguration4.mmObject();
 			isDerived = false;
@@ -205,6 +215,16 @@ public class AcquirerHostConfiguration4 {
 			previousVersion_lazy = () -> AcquirerHostConfiguration3.mmMessageToSend;
 			minOccurs = 0;
 			simpleType_lazy = () -> MessageFunction12Code.mmObject();
+		}
+
+		@Override
+		public List<MessageFunction12Code> getValue(AcquirerHostConfiguration4 obj) {
+			return obj.getMessageToSend();
+		}
+
+		@Override
+		public void setValue(AcquirerHostConfiguration4 obj, List<MessageFunction12Code> value) {
+			obj.setMessageToSend(value);
 		}
 	};
 

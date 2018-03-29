@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.PriceValueType6FormatChoice;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.Price;
 import com.tools20022.repository.entity.SecuritiesPricing;
@@ -116,7 +117,7 @@ public class PriceFormat1Choice {
 	 * definition} = "Price expressed as a currency and amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceFormat1Choice, AmountPrice1> mmAmount = new MMMessageAttribute<PriceFormat1Choice, AmountPrice1>() {
 		{
 			businessElementTrace_lazy = () -> Price.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat1Choice.mmObject();
@@ -128,6 +129,16 @@ public class PriceFormat1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AmountPrice1.mmObject();
+		}
+
+		@Override
+		public AmountPrice1 getValue(PriceFormat1Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(PriceFormat1Choice obj, AmountPrice1 value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "Rate", required = true)
@@ -165,7 +176,7 @@ public class PriceFormat1Choice {
 	 * definition} = "Price expressed as a rate, ie, percentage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceFormat1Choice, PercentageRate> mmRate = new MMMessageAttribute<PriceFormat1Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat1Choice.mmObject();
@@ -177,6 +188,16 @@ public class PriceFormat1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(PriceFormat1Choice obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(PriceFormat1Choice obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "AmtPricPerFinInstrmQty", required = true)
@@ -215,7 +236,7 @@ public class PriceFormat1Choice {
 	 * "Price expressed as an amount per a quantity of financial instruments."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmountPricePerFinancialInstrumentQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceFormat1Choice, AmountPricePerFinancialInstrumentQuantity1> mmAmountPricePerFinancialInstrumentQuantity = new MMMessageAttribute<PriceFormat1Choice, AmountPricePerFinancialInstrumentQuantity1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmAmountPricePerFinancialInstrumentQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat1Choice.mmObject();
@@ -227,6 +248,16 @@ public class PriceFormat1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AmountPricePerFinancialInstrumentQuantity1.mmObject();
+		}
+
+		@Override
+		public AmountPricePerFinancialInstrumentQuantity1 getValue(PriceFormat1Choice obj) {
+			return obj.getAmountPricePerFinancialInstrumentQuantity();
+		}
+
+		@Override
+		public void setValue(PriceFormat1Choice obj, AmountPricePerFinancialInstrumentQuantity1 value) {
+			obj.setAmountPricePerFinancialInstrumentQuantity(value);
 		}
 	};
 	@XmlElement(name = "AmtPricPerAmt", required = true)
@@ -264,7 +295,7 @@ public class PriceFormat1Choice {
 	 * definition} = "Price expressed as an amount per another amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmountPricePerAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceFormat1Choice, AmountPricePerAmount1> mmAmountPricePerAmount = new MMMessageAttribute<PriceFormat1Choice, AmountPricePerAmount1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmAmountPricePerAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat1Choice.mmObject();
@@ -276,6 +307,16 @@ public class PriceFormat1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AmountPricePerAmount1.mmObject();
+		}
+
+		@Override
+		public AmountPricePerAmount1 getValue(PriceFormat1Choice obj) {
+			return obj.getAmountPricePerAmount();
+		}
+
+		@Override
+		public void setValue(PriceFormat1Choice obj, AmountPricePerAmount1 value) {
+			obj.setAmountPricePerAmount(value);
 		}
 	};
 	@XmlElement(name = "NotSpcfd", required = true)
@@ -308,7 +349,7 @@ public class PriceFormat1Choice {
 	 * definition} = "The value of the price is not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecified = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceFormat1Choice, PriceValueType6FormatChoice> mmNotSpecified = new MMMessageAttribute<PriceFormat1Choice, PriceValueType6FormatChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat1Choice.mmObject();
 			isDerived = false;
@@ -318,7 +359,17 @@ public class PriceFormat1Choice {
 			definition = "The value of the price is not specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.PriceValueType6FormatChoice.mmObject();
+			complexType_lazy = () -> PriceValueType6FormatChoice.mmObject();
+		}
+
+		@Override
+		public PriceValueType6FormatChoice getValue(PriceFormat1Choice obj) {
+			return obj.getNotSpecified();
+		}
+
+		@Override
+		public void setValue(PriceFormat1Choice obj, PriceValueType6FormatChoice value) {
+			obj.setNotSpecified(value);
 		}
 	};
 
@@ -378,7 +429,7 @@ public class PriceFormat1Choice {
 		return notSpecified;
 	}
 
-	public PriceFormat1Choice setNotSpecified(com.tools20022.repository.choice.PriceValueType6FormatChoice notSpecified) {
+	public PriceFormat1Choice setNotSpecified(PriceValueType6FormatChoice notSpecified) {
 		this.notSpecified = Objects.requireNonNull(notSpecified);
 		return this;
 	}

@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountIdentificationAndName5;
+import com.tools20022.repository.msg.FinancialInstitutionIdentification15;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -131,7 +133,7 @@ public class CashAccount201 {
 	 * CashAccount34.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount201, AccountIdentificationAndName5> mmIdentification = new MMMessageAttribute<CashAccount201, AccountIdentificationAndName5>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount201.mmObject();
@@ -143,7 +145,17 @@ public class CashAccount201 {
 			previousVersion_lazy = () -> CashAccount34.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentificationAndName5.mmObject();
+			complexType_lazy = () -> AccountIdentificationAndName5.mmObject();
+		}
+
+		@Override
+		public AccountIdentificationAndName5 getValue(CashAccount201 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(CashAccount201 obj, AccountIdentificationAndName5 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctSvcr")
@@ -186,7 +198,7 @@ public class CashAccount201 {
 	 * CashAccount34.mmAccountServicer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount201, Optional<FinancialInstitutionIdentification15>> mmAccountServicer = new MMMessageAttribute<CashAccount201, Optional<FinancialInstitutionIdentification15>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount201.mmObject();
@@ -198,7 +210,17 @@ public class CashAccount201 {
 			previousVersion_lazy = () -> CashAccount34.mmAccountServicer;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification15.mmObject();
+			complexType_lazy = () -> FinancialInstitutionIdentification15.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstitutionIdentification15> getValue(CashAccount201 obj) {
+			return obj.getAccountServicer();
+		}
+
+		@Override
+		public void setValue(CashAccount201 obj, Optional<FinancialInstitutionIdentification15> value) {
+			obj.setAccountServicer(value.orElse(null));
 		}
 	};
 
@@ -222,7 +244,7 @@ public class CashAccount201 {
 		return identification;
 	}
 
-	public CashAccount201 setIdentification(com.tools20022.repository.msg.AccountIdentificationAndName5 identification) {
+	public CashAccount201 setIdentification(AccountIdentificationAndName5 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}
@@ -231,7 +253,7 @@ public class CashAccount201 {
 		return accountServicer == null ? Optional.empty() : Optional.of(accountServicer);
 	}
 
-	public CashAccount201 setAccountServicer(com.tools20022.repository.msg.FinancialInstitutionIdentification15 accountServicer) {
+	public CashAccount201 setAccountServicer(FinancialInstitutionIdentification15 accountServicer) {
 		this.accountServicer = accountServicer;
 		return this;
 	}

@@ -52,11 +52,15 @@ public class ConstraintGroupReturnAndTransactionInformationRule {
 	 */
 	public static final MMConstraint<PaymentReturnV01> forPaymentReturnV01 = new MMConstraint<PaymentReturnV01>() {
 		{
-			validator = ConstraintGroupReturnAndTransactionInformationRule::checkPaymentReturnV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReturnAndTransactionInformationRule";
 			definition = "If GroupHeader/GroupReturn is true, then TransactionInformation is not allowed.\nIf GroupHeader/GroupReturn is false, then at least one occurrence of TransactionInformation must be present.";
 			owner_lazy = () -> PaymentReturnV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentReturnV01 obj) throws Exception {
+			checkPaymentReturnV01(obj);
 		}
 	};
 

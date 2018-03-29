@@ -52,11 +52,15 @@ public class ConstraintAggregateQuantityGuideline {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace1> forAggregateBalancePerSafekeepingPlace1 = new MMConstraint<AggregateBalancePerSafekeepingPlace1>() {
 		{
-			validator = ConstraintAggregateQuantityGuideline::checkAggregateBalancePerSafekeepingPlace1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AggregateQuantityGuideline";
 			definition = "The AggregateQuantity should be the sum of AvailableQuantity and NonAvailableQuantity if AvailableQuantityand NonAvailableQuantity are both present.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace1 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace1(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintAggregateQuantityGuideline {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation1> forAggregateBalanceInformation1 = new MMConstraint<AggregateBalanceInformation1>() {
 		{
-			validator = ConstraintAggregateQuantityGuideline::checkAggregateBalanceInformation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AggregateQuantityGuideline";
 			definition = "The AggregateQuantity should be the sum of AvailableQuantity and NonAvailableQuantity, if AvailableQuantity and NonAvailableQuantity are both present.";
 			owner_lazy = () -> AggregateBalanceInformation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation1 obj) throws Exception {
+			checkAggregateBalanceInformation1(obj);
 		}
 	};
 	/**
@@ -112,11 +120,15 @@ public class ConstraintAggregateQuantityGuideline {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace3> forAggregateBalancePerSafekeepingPlace3 = new MMConstraint<AggregateBalancePerSafekeepingPlace3>() {
 		{
-			validator = ConstraintAggregateQuantityGuideline::checkAggregateBalancePerSafekeepingPlace3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AggregateQuantityGuideline";
 			definition = "The AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity if AvailableQuantityand NotAvailableQuantity are both present.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace3 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace3(obj);
 		}
 	};
 	/**
@@ -142,11 +154,15 @@ public class ConstraintAggregateQuantityGuideline {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation4> forAggregateBalanceInformation4 = new MMConstraint<AggregateBalanceInformation4>() {
 		{
-			validator = ConstraintAggregateQuantityGuideline::checkAggregateBalanceInformation4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AggregateQuantityGuideline";
 			definition = "The AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity if AvailableQuantity and NotAvailableQuantity are both present.";
 			owner_lazy = () -> AggregateBalanceInformation4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation4 obj) throws Exception {
+			checkAggregateBalanceInformation4(obj);
 		}
 	};
 	/**
@@ -172,11 +188,15 @@ public class ConstraintAggregateQuantityGuideline {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation5> forAggregateBalanceInformation5 = new MMConstraint<AggregateBalanceInformation5>() {
 		{
-			validator = ConstraintAggregateQuantityGuideline::checkAggregateBalanceInformation5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AggregateQuantityGuideline";
 			definition = "The AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity if AvailableQuantity and NotAvailableQuantity are both present.";
 			owner_lazy = () -> AggregateBalanceInformation5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation5 obj) throws Exception {
+			checkAggregateBalanceInformation5(obj);
 		}
 	};
 	/**
@@ -202,11 +222,15 @@ public class ConstraintAggregateQuantityGuideline {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation7> forAggregateBalanceInformation7 = new MMConstraint<AggregateBalanceInformation7>() {
 		{
-			validator = ConstraintAggregateQuantityGuideline::checkAggregateBalanceInformation7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AggregateQuantityGuideline";
 			definition = "The AggregateQuantity should be the sum of AvailableQuantity and NotAvailableQuantity if AvailableQuantity and NotAvailableQuantity are both present.";
 			owner_lazy = () -> AggregateBalanceInformation7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation7 obj) throws Exception {
+			checkAggregateBalanceInformation7(obj);
 		}
 	};
 

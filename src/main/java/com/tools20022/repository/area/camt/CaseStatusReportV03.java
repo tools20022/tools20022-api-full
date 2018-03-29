@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.CaseAssignment2;
 import com.tools20022.repository.msg.CaseStatus2;
 import com.tools20022.repository.msg.ReportHeader2;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -142,7 +141,7 @@ public class CaseStatusReportV03 {
 	 * "Specifies generic information about an investigation report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CaseStatusReportV03, ReportHeader2> mmHeader = new MMMessageBuildingBlock<CaseStatusReportV03, ReportHeader2>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,12 +152,14 @@ public class CaseStatusReportV03 {
 			complexType_lazy = () -> ReportHeader2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CaseStatusReportV03.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ReportHeader2 getValue(CaseStatusReportV03 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(CaseStatusReportV03 obj, ReportHeader2 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "Case", required = true)
@@ -184,7 +185,7 @@ public class CaseStatusReportV03 {
 	 * definition} = "Identifies the investigation case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CaseStatusReportV03, Case2> mmCase = new MMMessageBuildingBlock<CaseStatusReportV03, Case2>() {
 		{
 			xmlTag = "Case";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -195,12 +196,14 @@ public class CaseStatusReportV03 {
 			complexType_lazy = () -> Case2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CaseStatusReportV03.class.getMethod("getCase", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Case2 getValue(CaseStatusReportV03 obj) {
+			return obj.getCase();
+		}
+
+		@Override
+		public void setValue(CaseStatusReportV03 obj, Case2 value) {
+			obj.setCase(value);
 		}
 	};
 	@XmlElement(name = "Sts", required = true)
@@ -227,7 +230,7 @@ public class CaseStatusReportV03 {
 	 * definition} = "Defines the status of the case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CaseStatusReportV03, CaseStatus2> mmStatus = new MMMessageBuildingBlock<CaseStatusReportV03, CaseStatus2>() {
 		{
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -238,12 +241,14 @@ public class CaseStatusReportV03 {
 			complexType_lazy = () -> CaseStatus2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CaseStatusReportV03.class.getMethod("getStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CaseStatus2 getValue(CaseStatusReportV03 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(CaseStatusReportV03 obj, CaseStatus2 value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "NewAssgnmt")
@@ -272,7 +277,7 @@ public class CaseStatusReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmNewAssignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CaseStatusReportV03, Optional<CaseAssignment2>> mmNewAssignment = new MMMessageBuildingBlock<CaseStatusReportV03, Optional<CaseAssignment2>>() {
 		{
 			xmlTag = "NewAssgnmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -283,12 +288,14 @@ public class CaseStatusReportV03 {
 			complexType_lazy = () -> CaseAssignment2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CaseStatusReportV03.class.getMethod("getNewAssignment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<CaseAssignment2> getValue(CaseStatusReportV03 obj) {
+			return obj.getNewAssignment();
+		}
+
+		@Override
+		public void setValue(CaseStatusReportV03 obj, Optional<CaseAssignment2> value) {
+			obj.setNewAssignment(value.orElse(null));
 		}
 	};
 

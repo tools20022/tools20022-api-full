@@ -109,7 +109,7 @@ public class CashOptionSD5 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashOptionSD5, Max350Text> mmPlaceAndName = new MMMessageAttribute<CashOptionSD5, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashOptionSD5.mmObject();
 			isDerived = false;
@@ -120,6 +120,16 @@ public class CashOptionSD5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CashOptionSD5 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CashOptionSD5 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "PyoutNb", required = true)
@@ -154,7 +164,7 @@ public class CashOptionSD5 {
 	 * definition} = "Unique number associated with a payout within an option."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPayoutNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashOptionSD5, Exact3NumericText> mmPayoutNumber = new MMMessageAttribute<CashOptionSD5, Exact3NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashOptionSD5.mmObject();
 			isDerived = false;
@@ -166,6 +176,16 @@ public class CashOptionSD5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
+		}
+
+		@Override
+		public Exact3NumericText getValue(CashOptionSD5 obj) {
+			return obj.getPayoutNumber();
+		}
+
+		@Override
+		public void setValue(CashOptionSD5 obj, Exact3NumericText value) {
+			obj.setPayoutNumber(value);
 		}
 	};
 	@XmlElement(name = "PyoutTp", required = true)
@@ -200,7 +220,7 @@ public class CashOptionSD5 {
 	 * definition} = "Describes the type of payout associated with the event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPayoutType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashOptionSD5, DTCCPayoutType1Code> mmPayoutType = new MMMessageAttribute<CashOptionSD5, DTCCPayoutType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashOptionSD5.mmObject();
 			isDerived = false;
@@ -212,6 +232,16 @@ public class CashOptionSD5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DTCCPayoutType1Code.mmObject();
+		}
+
+		@Override
+		public DTCCPayoutType1Code getValue(CashOptionSD5 obj) {
+			return obj.getPayoutType();
+		}
+
+		@Override
+		public void setValue(CashOptionSD5 obj, DTCCPayoutType1Code value) {
+			obj.setPayoutType(value);
 		}
 	};
 	@XmlElement(name = "PyoutSts", required = true)
@@ -246,7 +276,7 @@ public class CashOptionSD5 {
 	 * definition} = "Workflow status of the payout."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPayoutStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashOptionSD5, WorkflowStatus1Code> mmPayoutStatus = new MMMessageAttribute<CashOptionSD5, WorkflowStatus1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashOptionSD5.mmObject();
 			isDerived = false;
@@ -258,6 +288,16 @@ public class CashOptionSD5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> WorkflowStatus1Code.mmObject();
+		}
+
+		@Override
+		public WorkflowStatus1Code getValue(CashOptionSD5 obj) {
+			return obj.getPayoutStatus();
+		}
+
+		@Override
+		public void setValue(CashOptionSD5 obj, WorkflowStatus1Code value) {
+			obj.setPayoutStatus(value);
 		}
 	};
 	@XmlElement(name = "MaxWhldgTaxPctg")
@@ -293,7 +333,7 @@ public class CashOptionSD5 {
 	 * "Maximum withholding rate based on the country of the sourced income."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumWithholdingTaxPercentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashOptionSD5, Optional<PercentageRate>> mmMaximumWithholdingTaxPercentage = new MMMessageAttribute<CashOptionSD5, Optional<PercentageRate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashOptionSD5.mmObject();
 			isDerived = false;
@@ -305,6 +345,16 @@ public class CashOptionSD5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(CashOptionSD5 obj) {
+			return obj.getMaximumWithholdingTaxPercentage();
+		}
+
+		@Override
+		public void setValue(CashOptionSD5 obj, Optional<PercentageRate> value) {
+			obj.setMaximumWithholdingTaxPercentage(value.orElse(null));
 		}
 	};
 

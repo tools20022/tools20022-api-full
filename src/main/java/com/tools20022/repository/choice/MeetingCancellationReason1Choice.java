@@ -108,7 +108,7 @@ public class MeetingCancellationReason1Choice {
 	 * "Specifies the reason for cancelling a meeting in coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingCancellationReason1Choice, MeetingCancellationReason2Code> mmCode = new MMMessageAttribute<MeetingCancellationReason1Choice, MeetingCancellationReason2Code>() {
 		{
 			businessElementTrace_lazy = () -> MeetingStatusReason.mmMeetingCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MeetingCancellationReason1Choice.mmObject();
@@ -120,6 +120,16 @@ public class MeetingCancellationReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MeetingCancellationReason2Code.mmObject();
+		}
+
+		@Override
+		public MeetingCancellationReason2Code getValue(MeetingCancellationReason1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(MeetingCancellationReason1Choice obj, MeetingCancellationReason2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -158,7 +168,7 @@ public class MeetingCancellationReason1Choice {
 	 * "Specifies the reason for cancelling a meeting in free text form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingCancellationReason1Choice, GenericIdentification13> mmProprietary = new MMMessageAttribute<MeetingCancellationReason1Choice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> MeetingStatusReason.mmMeetingCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MeetingCancellationReason1Choice.mmObject();
@@ -170,6 +180,16 @@ public class MeetingCancellationReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(MeetingCancellationReason1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(MeetingCancellationReason1Choice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

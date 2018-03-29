@@ -50,11 +50,15 @@ public class ConstraintValidationByTable {
 	 */
 	public static final MMConstraint<CurrencyCode> forCurrencyCode = new MMConstraint<CurrencyCode>() {
 		{
-			validator = ConstraintValidationByTable::checkCurrencyCode;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationByTable";
 			definition = "Must be a valid currency code which is registered with the ISO 4217 Maintenance Agency, and consist of three contiguous letters.";
 			owner_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CurrencyCode obj) throws Exception {
+			checkCurrencyCode(obj);
 		}
 	};
 	/**
@@ -77,11 +81,15 @@ public class ConstraintValidationByTable {
 	 */
 	public static final MMConstraint<LanguageCode> forLanguageCode = new MMConstraint<LanguageCode>() {
 		{
-			validator = ConstraintValidationByTable::checkLanguageCode;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationByTable";
 			definition = "Must be a valid terrestrial language.";
 			owner_lazy = () -> LanguageCode.mmObject();
+		}
+
+		@Override
+		public void executeValidator(LanguageCode obj) throws Exception {
+			checkLanguageCode(obj);
 		}
 	};
 	/**
@@ -105,11 +113,15 @@ public class ConstraintValidationByTable {
 	 */
 	public static final MMConstraint<NationalityCode> forNationalityCode = new MMConstraint<NationalityCode>() {
 		{
-			validator = ConstraintValidationByTable::checkNationalityCode;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationByTable";
 			definition = "Must be a valid nationality.";
 			owner_lazy = () -> NationalityCode.mmObject();
+		}
+
+		@Override
+		public void executeValidator(NationalityCode obj) throws Exception {
+			checkNationalityCode(obj);
 		}
 	};
 	/**
@@ -130,10 +142,14 @@ public class ConstraintValidationByTable {
 	 */
 	public static final MMConstraint<UnicodeChartsCode> forUnicodeChartsCode = new MMConstraint<UnicodeChartsCode>() {
 		{
-			validator = ConstraintValidationByTable::checkUnicodeChartsCode;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationByTable";
 			owner_lazy = () -> UnicodeChartsCode.mmObject();
+		}
+
+		@Override
+		public void executeValidator(UnicodeChartsCode obj) throws Exception {
+			checkUnicodeChartsCode(obj);
 		}
 	};
 	/**
@@ -154,10 +170,14 @@ public class ConstraintValidationByTable {
 	 */
 	public static final MMConstraint<BusinessMessagePriorityCode> forBusinessMessagePriorityCode = new MMConstraint<BusinessMessagePriorityCode>() {
 		{
-			validator = ConstraintValidationByTable::checkBusinessMessagePriorityCode;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationByTable";
 			owner_lazy = () -> BusinessMessagePriorityCode.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BusinessMessagePriorityCode obj) throws Exception {
+			checkBusinessMessagePriorityCode(obj);
 		}
 	};
 

@@ -113,7 +113,7 @@ public class DocumentIdentification49 {
 	 * definition} = "Identifies the document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentIdentification49, RestrictedFINXMax16Text> mmIdentification = new MMMessageAttribute<DocumentIdentification49, RestrictedFINXMax16Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification49.mmObject();
@@ -126,6 +126,16 @@ public class DocumentIdentification49 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(DocumentIdentification49 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification49 obj, RestrictedFINXMax16Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "LkgTp")
@@ -162,7 +172,7 @@ public class DocumentIdentification49 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLinkageType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DocumentIdentification49, Optional<ProcessingPosition22Choice>> mmLinkageType = new MMMessageAssociationEnd<DocumentIdentification49, Optional<ProcessingPosition22Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification49.mmObject();
 			isDerived = false;
@@ -175,6 +185,16 @@ public class DocumentIdentification49 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ProcessingPosition22Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ProcessingPosition22Choice> getValue(DocumentIdentification49 obj) {
+			return obj.getLinkageType();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification49 obj, Optional<ProcessingPosition22Choice> value) {
+			obj.setLinkageType(value.orElse(null));
 		}
 	};
 

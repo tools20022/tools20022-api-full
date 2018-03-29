@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.Quantity3Choice;
 import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SignedQuantityFormat2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -127,7 +128,7 @@ public class TotalEligibleBalanceFormat1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TotalEligibleBalanceFormat1, Optional<Quantity3Choice>> mmBalance = new MMMessageAssociationEnd<TotalEligibleBalanceFormat1, Optional<Quantity3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmAggregateQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalEligibleBalanceFormat1.mmObject();
@@ -141,6 +142,16 @@ public class TotalEligibleBalanceFormat1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Quantity3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Quantity3Choice> getValue(TotalEligibleBalanceFormat1 obj) {
+			return obj.getBalance();
+		}
+
+		@Override
+		public void setValue(TotalEligibleBalanceFormat1 obj, Optional<Quantity3Choice> value) {
+			obj.setBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FullPrdUnits")
@@ -188,7 +199,7 @@ public class TotalEligibleBalanceFormat1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFullPeriodUnits = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalEligibleBalanceFormat1, Optional<SignedQuantityFormat2>> mmFullPeriodUnits = new MMMessageAttribute<TotalEligibleBalanceFormat1, Optional<SignedQuantityFormat2>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalEligibleBalanceFormat1.mmObject();
@@ -200,7 +211,17 @@ public class TotalEligibleBalanceFormat1 {
 			nextVersions_lazy = () -> Arrays.asList(TotalEligibleBalanceFormat8.mmFullPeriodUnits);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat2.mmObject();
+			complexType_lazy = () -> SignedQuantityFormat2.mmObject();
+		}
+
+		@Override
+		public Optional<SignedQuantityFormat2> getValue(TotalEligibleBalanceFormat1 obj) {
+			return obj.getFullPeriodUnits();
+		}
+
+		@Override
+		public void setValue(TotalEligibleBalanceFormat1 obj, Optional<SignedQuantityFormat2> value) {
+			obj.setFullPeriodUnits(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PartWayPrdUnits")
@@ -248,7 +269,7 @@ public class TotalEligibleBalanceFormat1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartWayPeriodUnits = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalEligibleBalanceFormat1, Optional<SignedQuantityFormat2>> mmPartWayPeriodUnits = new MMMessageAttribute<TotalEligibleBalanceFormat1, Optional<SignedQuantityFormat2>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalEligibleBalanceFormat1.mmObject();
@@ -260,7 +281,17 @@ public class TotalEligibleBalanceFormat1 {
 			nextVersions_lazy = () -> Arrays.asList(TotalEligibleBalanceFormat8.mmPartWayPeriodUnits);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat2.mmObject();
+			complexType_lazy = () -> SignedQuantityFormat2.mmObject();
+		}
+
+		@Override
+		public Optional<SignedQuantityFormat2> getValue(TotalEligibleBalanceFormat1 obj) {
+			return obj.getPartWayPeriodUnits();
+		}
+
+		@Override
+		public void setValue(TotalEligibleBalanceFormat1 obj, Optional<SignedQuantityFormat2> value) {
+			obj.setPartWayPeriodUnits(value.orElse(null));
 		}
 	};
 
@@ -293,7 +324,7 @@ public class TotalEligibleBalanceFormat1 {
 		return fullPeriodUnits == null ? Optional.empty() : Optional.of(fullPeriodUnits);
 	}
 
-	public TotalEligibleBalanceFormat1 setFullPeriodUnits(com.tools20022.repository.msg.SignedQuantityFormat2 fullPeriodUnits) {
+	public TotalEligibleBalanceFormat1 setFullPeriodUnits(SignedQuantityFormat2 fullPeriodUnits) {
 		this.fullPeriodUnits = fullPeriodUnits;
 		return this;
 	}
@@ -302,7 +333,7 @@ public class TotalEligibleBalanceFormat1 {
 		return partWayPeriodUnits == null ? Optional.empty() : Optional.of(partWayPeriodUnits);
 	}
 
-	public TotalEligibleBalanceFormat1 setPartWayPeriodUnits(com.tools20022.repository.msg.SignedQuantityFormat2 partWayPeriodUnits) {
+	public TotalEligibleBalanceFormat1 setPartWayPeriodUnits(SignedQuantityFormat2 partWayPeriodUnits) {
 		this.partWayPeriodUnits = partWayPeriodUnits;
 		return this;
 	}

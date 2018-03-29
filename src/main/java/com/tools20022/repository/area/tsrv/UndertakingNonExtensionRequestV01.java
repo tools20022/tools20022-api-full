@@ -25,7 +25,6 @@ import com.tools20022.repository.area.TradeServicesLatestVersion;
 import com.tools20022.repository.msg.PartyAndSignature2;
 import com.tools20022.repository.msg.UndertakingNonExtensionRequest1;
 import com.tools20022.repository.msgset.DemandGuaranteesandStandbyLettersofCreditISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -113,7 +112,7 @@ public class UndertakingNonExtensionRequestV01 {
 	 * definition} = "Details of the non extension request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUndertakingNonExtensionRequestDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<UndertakingNonExtensionRequestV01, UndertakingNonExtensionRequest1> mmUndertakingNonExtensionRequestDetails = new MMMessageBuildingBlock<UndertakingNonExtensionRequestV01, UndertakingNonExtensionRequest1>() {
 		{
 			xmlTag = "UdrtkgNonXtnsnReqDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,12 +123,14 @@ public class UndertakingNonExtensionRequestV01 {
 			complexType_lazy = () -> UndertakingNonExtensionRequest1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return UndertakingNonExtensionRequestV01.class.getMethod("getUndertakingNonExtensionRequestDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public UndertakingNonExtensionRequest1 getValue(UndertakingNonExtensionRequestV01 obj) {
+			return obj.getUndertakingNonExtensionRequestDetails();
+		}
+
+		@Override
+		public void setValue(UndertakingNonExtensionRequestV01 obj, UndertakingNonExtensionRequest1 value) {
+			obj.setUndertakingNonExtensionRequestDetails(value);
 		}
 	};
 	@XmlElement(name = "DgtlSgntr")
@@ -157,7 +158,7 @@ public class UndertakingNonExtensionRequestV01 {
 	 * definition} = "Digital signature of the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmDigitalSignature = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<UndertakingNonExtensionRequestV01, Optional<PartyAndSignature2>> mmDigitalSignature = new MMMessageBuildingBlock<UndertakingNonExtensionRequestV01, Optional<PartyAndSignature2>>() {
 		{
 			xmlTag = "DgtlSgntr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,12 +169,14 @@ public class UndertakingNonExtensionRequestV01 {
 			complexType_lazy = () -> PartyAndSignature2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return UndertakingNonExtensionRequestV01.class.getMethod("getDigitalSignature", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyAndSignature2> getValue(UndertakingNonExtensionRequestV01 obj) {
+			return obj.getDigitalSignature();
+		}
+
+		@Override
+		public void setValue(UndertakingNonExtensionRequestV01 obj, Optional<PartyAndSignature2> value) {
+			obj.setDigitalSignature(value.orElse(null));
 		}
 	};
 

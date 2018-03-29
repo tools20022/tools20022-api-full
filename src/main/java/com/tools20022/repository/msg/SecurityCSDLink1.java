@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.choice.SystemPartyIdentification1Choice;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.IssuanceAccount1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -126,7 +127,7 @@ public class SecurityCSDLink1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValidFrom = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityCSDLink1, DateAndDateTimeChoice> mmValidFrom = new MMMessageAttribute<SecurityCSDLink1, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityCSDLink1.mmObject();
 			isDerived = false;
@@ -138,6 +139,16 @@ public class SecurityCSDLink1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(SecurityCSDLink1 obj) {
+			return obj.getValidFrom();
+		}
+
+		@Override
+		public void setValue(SecurityCSDLink1 obj, DateAndDateTimeChoice value) {
+			obj.setValidFrom(value);
 		}
 	};
 	@XmlElement(name = "VldTo")
@@ -178,7 +189,7 @@ public class SecurityCSDLink1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValidTo = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityCSDLink1, Optional<DateAndDateTimeChoice>> mmValidTo = new MMMessageAttribute<SecurityCSDLink1, Optional<DateAndDateTimeChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityCSDLink1.mmObject();
 			isDerived = false;
@@ -190,6 +201,16 @@ public class SecurityCSDLink1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(SecurityCSDLink1 obj) {
+			return obj.getValidTo();
+		}
+
+		@Override
+		public void setValue(SecurityCSDLink1 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setValidTo(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctyMntnc")
@@ -232,7 +253,7 @@ public class SecurityCSDLink1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecurityMaintenance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityCSDLink1, Optional<YesNoIndicator>> mmSecurityMaintenance = new MMMessageAttribute<SecurityCSDLink1, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityCSDLink1.mmObject();
 			isDerived = false;
@@ -244,6 +265,16 @@ public class SecurityCSDLink1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SecurityCSDLink1 obj) {
+			return obj.getSecurityMaintenance();
+		}
+
+		@Override
+		public void setValue(SecurityCSDLink1 obj, Optional<YesNoIndicator> value) {
+			obj.setSecurityMaintenance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IssrCSD")
@@ -283,7 +314,7 @@ public class SecurityCSDLink1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIssuerCSD = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityCSDLink1, Optional<SystemPartyIdentification1Choice>> mmIssuerCSD = new MMMessageAssociationEnd<SecurityCSDLink1, Optional<SystemPartyIdentification1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityCSDLink1.mmObject();
 			isDerived = false;
@@ -296,6 +327,16 @@ public class SecurityCSDLink1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SystemPartyIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SystemPartyIdentification1Choice> getValue(SecurityCSDLink1 obj) {
+			return obj.getIssuerCSD();
+		}
+
+		@Override
+		public void setValue(SecurityCSDLink1 obj, Optional<SystemPartyIdentification1Choice> value) {
+			obj.setIssuerCSD(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InvstrCSD")
@@ -335,7 +376,7 @@ public class SecurityCSDLink1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestorCSD = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityCSDLink1, Optional<SystemPartyIdentification1Choice>> mmInvestorCSD = new MMMessageAssociationEnd<SecurityCSDLink1, Optional<SystemPartyIdentification1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityCSDLink1.mmObject();
 			isDerived = false;
@@ -348,6 +389,16 @@ public class SecurityCSDLink1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SystemPartyIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SystemPartyIdentification1Choice> getValue(SecurityCSDLink1 obj) {
+			return obj.getInvestorCSD();
+		}
+
+		@Override
+		public void setValue(SecurityCSDLink1 obj, Optional<SystemPartyIdentification1Choice> value) {
+			obj.setInvestorCSD(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TechIssrCSD")
@@ -387,7 +438,7 @@ public class SecurityCSDLink1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTechnicalIssuerCSD = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityCSDLink1, Optional<SystemPartyIdentification1Choice>> mmTechnicalIssuerCSD = new MMMessageAssociationEnd<SecurityCSDLink1, Optional<SystemPartyIdentification1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityCSDLink1.mmObject();
 			isDerived = false;
@@ -401,9 +452,19 @@ public class SecurityCSDLink1 {
 			isComposite = true;
 			type_lazy = () -> SystemPartyIdentification1Choice.mmObject();
 		}
+
+		@Override
+		public Optional<SystemPartyIdentification1Choice> getValue(SecurityCSDLink1 obj) {
+			return obj.getTechnicalIssuerCSD();
+		}
+
+		@Override
+		public void setValue(SecurityCSDLink1 obj, Optional<SystemPartyIdentification1Choice> value) {
+			obj.setTechnicalIssuerCSD(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "IssncAcct")
-	protected List<com.tools20022.repository.msg.IssuanceAccount1> issuanceAccount;
+	protected List<IssuanceAccount1> issuanceAccount;
 	/**
 	 * 
 	 <p>
@@ -440,7 +501,7 @@ public class SecurityCSDLink1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuanceAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityCSDLink1, List<IssuanceAccount1>> mmIssuanceAccount = new MMMessageAttribute<SecurityCSDLink1, List<IssuanceAccount1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityCSDLink1.mmObject();
 			isDerived = false;
@@ -450,7 +511,17 @@ public class SecurityCSDLink1 {
 			definition = "Account to or from which a securities entry is made.";
 			nextVersions_lazy = () -> Arrays.asList(SecurityCSDLink5.mmIssuanceAccount);
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.IssuanceAccount1.mmObject();
+			complexType_lazy = () -> IssuanceAccount1.mmObject();
+		}
+
+		@Override
+		public List<IssuanceAccount1> getValue(SecurityCSDLink1 obj) {
+			return obj.getIssuanceAccount();
+		}
+
+		@Override
+		public void setValue(SecurityCSDLink1 obj, List<IssuanceAccount1> value) {
+			obj.setIssuanceAccount(value);
 		}
 	};
 
@@ -528,7 +599,7 @@ public class SecurityCSDLink1 {
 		return issuanceAccount == null ? issuanceAccount = new ArrayList<>() : issuanceAccount;
 	}
 
-	public SecurityCSDLink1 setIssuanceAccount(List<com.tools20022.repository.msg.IssuanceAccount1> issuanceAccount) {
+	public SecurityCSDLink1 setIssuanceAccount(List<IssuanceAccount1> issuanceAccount) {
 		this.issuanceAccount = Objects.requireNonNull(issuanceAccount);
 		return this;
 	}

@@ -98,7 +98,7 @@ public class RateValueType6FormatChoice {
 	 * definition} = "Standard code to specify the value of a rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateValueType6FormatChoice, RateValueType6Code> mmCode = new MMMessageAttribute<RateValueType6FormatChoice, RateValueType6Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateValueType6FormatChoice.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class RateValueType6FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RateValueType6Code.mmObject();
+		}
+
+		@Override
+		public RateValueType6Code getValue(RateValueType6FormatChoice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RateValueType6FormatChoice obj, RateValueType6Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -141,7 +151,7 @@ public class RateValueType6FormatChoice {
 	 * definition} = "Proprietary code to express the value of a rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateValueType6FormatChoice, GenericIdentification13> mmProprietary = new MMMessageAttribute<RateValueType6FormatChoice, GenericIdentification13>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateValueType6FormatChoice.mmObject();
 			isDerived = false;
@@ -152,6 +162,16 @@ public class RateValueType6FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(RateValueType6FormatChoice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RateValueType6FormatChoice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

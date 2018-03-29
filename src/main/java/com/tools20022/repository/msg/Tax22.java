@@ -108,7 +108,7 @@ public class Tax22 {
 	 * {@linkplain com.tools20022.repository.msg.Tax23#mmType Tax23.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Tax22, TaxType2Choice> mmType = new MMMessageAssociationEnd<Tax22, TaxType2Choice>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax22.mmObject();
@@ -122,6 +122,16 @@ public class Tax22 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TaxType2Choice.mmObject();
+		}
+
+		@Override
+		public TaxType2Choice getValue(Tax22 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Tax22 obj, TaxType2Choice value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -157,7 +167,7 @@ public class Tax22 {
 	 * definition} = "Specifies the tax as an amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Tax22, CurrencyAndAmount> mmAmount = new MMMessageAttribute<Tax22, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax22.mmObject();
@@ -169,6 +179,16 @@ public class Tax22 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(Tax22 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Tax22 obj, CurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 

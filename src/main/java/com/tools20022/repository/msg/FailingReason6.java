@@ -116,7 +116,7 @@ public class FailingReason6 {
 	 * "Specifies the reason why the instruction has a failing status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FailingReason6, FailingReason6Choice> mmCode = new MMMessageAssociationEnd<FailingReason6, FailingReason6Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmFailingReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FailingReason6.mmObject();
@@ -130,6 +130,16 @@ public class FailingReason6 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FailingReason6Choice.mmObject();
+		}
+
+		@Override
+		public FailingReason6Choice getValue(FailingReason6 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(FailingReason6 obj, FailingReason6Choice value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -171,7 +181,7 @@ public class FailingReason6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FailingReason6, Optional<RestrictedFINXMax210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<FailingReason6, Optional<RestrictedFINXMax210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FailingReason6.mmObject();
@@ -184,6 +194,16 @@ public class FailingReason6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax210Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax210Text> getValue(FailingReason6 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(FailingReason6 obj, Optional<RestrictedFINXMax210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

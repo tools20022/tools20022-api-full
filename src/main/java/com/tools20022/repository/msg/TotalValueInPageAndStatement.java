@@ -120,7 +120,7 @@ public class TotalValueInPageAndStatement {
 	 * definition} = "Total value of positions reported in this message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalHoldingsValueOfPage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalValueInPageAndStatement, Optional<ActiveCurrencyAndAmount>> mmTotalHoldingsValueOfPage = new MMMessageAttribute<TotalValueInPageAndStatement, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalValueInPageAndStatement.mmObject();
 			isDerived = false;
@@ -131,6 +131,16 @@ public class TotalValueInPageAndStatement {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(TotalValueInPageAndStatement obj) {
+			return obj.getTotalHoldingsValueOfPage();
+		}
+
+		@Override
+		public void setValue(TotalValueInPageAndStatement obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setTotalHoldingsValueOfPage(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlHldgsValOfStmt", required = true)
@@ -165,7 +175,7 @@ public class TotalValueInPageAndStatement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalHoldingsValueOfStatement = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalValueInPageAndStatement, ActiveCurrencyAndAmount> mmTotalHoldingsValueOfStatement = new MMMessageAttribute<TotalValueInPageAndStatement, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalValueInPageAndStatement.mmObject();
 			isDerived = false;
@@ -176,6 +186,16 @@ public class TotalValueInPageAndStatement {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(TotalValueInPageAndStatement obj) {
+			return obj.getTotalHoldingsValueOfStatement();
+		}
+
+		@Override
+		public void setValue(TotalValueInPageAndStatement obj, ActiveCurrencyAndAmount value) {
+			obj.setTotalHoldingsValueOfStatement(value);
 		}
 	};
 

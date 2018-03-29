@@ -133,7 +133,7 @@ public class QuantityBreakdown5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLotNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QuantityBreakdown5, Number2Choice> mmLotNumber = new MMMessageAttribute<QuantityBreakdown5, Number2Choice>() {
 		{
 			businessElementTrace_lazy = () -> LotBreakdown.mmLotNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityBreakdown5.mmObject();
@@ -146,6 +146,16 @@ public class QuantityBreakdown5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Number2Choice.mmObject();
+		}
+
+		@Override
+		public Number2Choice getValue(QuantityBreakdown5 obj) {
+			return obj.getLotNumber();
+		}
+
+		@Override
+		public void setValue(QuantityBreakdown5 obj, Number2Choice value) {
+			obj.setLotNumber(value);
 		}
 	};
 	@XmlElement(name = "LotQty")
@@ -186,7 +196,7 @@ public class QuantityBreakdown5 {
 	 * "Quantity of financial instruments that is part of the lot described."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLotQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<QuantityBreakdown5, Optional<FinancialInstrumentQuantity1Choice>> mmLotQuantity = new MMMessageAssociationEnd<QuantityBreakdown5, Optional<FinancialInstrumentQuantity1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> LotBreakdown.mmSecuritiesQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityBreakdown5.mmObject();
@@ -200,6 +210,16 @@ public class QuantityBreakdown5 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1Choice> getValue(QuantityBreakdown5 obj) {
+			return obj.getLotQuantity();
+		}
+
+		@Override
+		public void setValue(QuantityBreakdown5 obj, Optional<FinancialInstrumentQuantity1Choice> value) {
+			obj.setLotQuantity(value.orElse(null));
 		}
 	};
 

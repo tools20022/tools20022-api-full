@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.FinancialInstrumentQuantity31Choice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrumentQuantity4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -104,7 +105,7 @@ public class SecuritiesQuantityDetailsSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOversubscriptionQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesQuantityDetailsSD3, Optional<FinancialInstrumentQuantity4>> mmOversubscriptionQuantity = new MMMessageAssociationEnd<SecuritiesQuantityDetailsSD3, Optional<FinancialInstrumentQuantity4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesQuantityDetailsSD3.mmObject();
 			isDerived = false;
@@ -115,7 +116,17 @@ public class SecuritiesQuantityDetailsSD3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity4.mmObject();
+			type_lazy = () -> FinancialInstrumentQuantity4.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity4> getValue(SecuritiesQuantityDetailsSD3 obj) {
+			return obj.getOversubscriptionQuantity();
+		}
+
+		@Override
+		public void setValue(SecuritiesQuantityDetailsSD3 obj, Optional<FinancialInstrumentQuantity4> value) {
+			obj.setOversubscriptionQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlOvrsbcptQty")
@@ -149,7 +160,7 @@ public class SecuritiesQuantityDetailsSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTotalOversubscriptionQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesQuantityDetailsSD3, Optional<FinancialInstrumentQuantity4>> mmTotalOversubscriptionQuantity = new MMMessageAssociationEnd<SecuritiesQuantityDetailsSD3, Optional<FinancialInstrumentQuantity4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesQuantityDetailsSD3.mmObject();
 			isDerived = false;
@@ -160,7 +171,17 @@ public class SecuritiesQuantityDetailsSD3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity4.mmObject();
+			type_lazy = () -> FinancialInstrumentQuantity4.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity4> getValue(SecuritiesQuantityDetailsSD3 obj) {
+			return obj.getTotalOversubscriptionQuantity();
+		}
+
+		@Override
+		public void setValue(SecuritiesQuantityDetailsSD3 obj, Optional<FinancialInstrumentQuantity4> value) {
+			obj.setTotalOversubscriptionQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstrQty")
@@ -193,7 +214,7 @@ public class SecuritiesQuantityDetailsSD3 {
 	 * "Instruction quantity for a given transaction sequence number."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstructionQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesQuantityDetailsSD3, Optional<FinancialInstrumentQuantity31Choice>> mmInstructionQuantity = new MMMessageAssociationEnd<SecuritiesQuantityDetailsSD3, Optional<FinancialInstrumentQuantity31Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesQuantityDetailsSD3.mmObject();
 			isDerived = false;
@@ -205,6 +226,16 @@ public class SecuritiesQuantityDetailsSD3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity31Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity31Choice> getValue(SecuritiesQuantityDetailsSD3 obj) {
+			return obj.getInstructionQuantity();
+		}
+
+		@Override
+		public void setValue(SecuritiesQuantityDetailsSD3 obj, Optional<FinancialInstrumentQuantity31Choice> value) {
+			obj.setInstructionQuantity(value.orElse(null));
 		}
 	};
 
@@ -226,7 +257,7 @@ public class SecuritiesQuantityDetailsSD3 {
 		return oversubscriptionQuantity == null ? Optional.empty() : Optional.of(oversubscriptionQuantity);
 	}
 
-	public SecuritiesQuantityDetailsSD3 setOversubscriptionQuantity(com.tools20022.repository.msg.FinancialInstrumentQuantity4 oversubscriptionQuantity) {
+	public SecuritiesQuantityDetailsSD3 setOversubscriptionQuantity(FinancialInstrumentQuantity4 oversubscriptionQuantity) {
 		this.oversubscriptionQuantity = oversubscriptionQuantity;
 		return this;
 	}
@@ -235,7 +266,7 @@ public class SecuritiesQuantityDetailsSD3 {
 		return totalOversubscriptionQuantity == null ? Optional.empty() : Optional.of(totalOversubscriptionQuantity);
 	}
 
-	public SecuritiesQuantityDetailsSD3 setTotalOversubscriptionQuantity(com.tools20022.repository.msg.FinancialInstrumentQuantity4 totalOversubscriptionQuantity) {
+	public SecuritiesQuantityDetailsSD3 setTotalOversubscriptionQuantity(FinancialInstrumentQuantity4 totalOversubscriptionQuantity) {
 		this.totalOversubscriptionQuantity = totalOversubscriptionQuantity;
 		return this;
 	}

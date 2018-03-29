@@ -26,8 +26,11 @@ import com.tools20022.repository.codeset.CreditQuality1Code;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.ClearingMemberRole;
+import com.tools20022.repository.entity.DateTimePeriod;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ClearingAccount1;
+import com.tools20022.repository.msg.PartyIdentification121;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -137,7 +140,7 @@ public class ClearingMember1 {
 	 * definition} = "Identification of the clearing member."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ClearingMember1, PartyIdentification121> mmIdentification = new MMMessageAssociationEnd<ClearingMember1, PartyIdentification121>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ClearingMember1.mmObject();
@@ -149,7 +152,17 @@ public class ClearingMember1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification121.mmObject();
+			type_lazy = () -> PartyIdentification121.mmObject();
+		}
+
+		@Override
+		public PartyIdentification121 getValue(ClearingMember1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(ClearingMember1 obj, PartyIdentification121 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "CdtQlty", required = true)
@@ -164,6 +177,11 @@ public class ClearingMember1 {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.CreditQuality1Code
 	 * CreditQuality1Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Party#mmCreditQuality
+	 * Party.mmCreditQuality}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -182,8 +200,9 @@ public class ClearingMember1 {
 	 * definition} = "Credit quality for the clearing member."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditQuality = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClearingMember1, CreditQuality1Code> mmCreditQuality = new MMMessageAttribute<ClearingMember1, CreditQuality1Code>() {
 		{
+			businessElementTrace_lazy = () -> Party.mmCreditQuality;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ClearingMember1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtQlty";
@@ -193,6 +212,16 @@ public class ClearingMember1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditQuality1Code.mmObject();
+		}
+
+		@Override
+		public CreditQuality1Code getValue(ClearingMember1 obj) {
+			return obj.getCreditQuality();
+		}
+
+		@Override
+		public void setValue(ClearingMember1 obj, CreditQuality1Code value) {
+			obj.setCreditQuality(value);
 		}
 	};
 	@XmlElement(name = "UltmtPrntId")
@@ -230,7 +259,7 @@ public class ClearingMember1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUltimateParentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ClearingMember1, Optional<PartyIdentification121>> mmUltimateParentIdentification = new MMMessageAssociationEnd<ClearingMember1, Optional<PartyIdentification121>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ClearingMember1.mmObject();
@@ -242,7 +271,17 @@ public class ClearingMember1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification121.mmObject();
+			type_lazy = () -> PartyIdentification121.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification121> getValue(ClearingMember1 obj) {
+			return obj.getUltimateParentIdentification();
+		}
+
+		@Override
+		public void setValue(ClearingMember1 obj, Optional<PartyIdentification121> value) {
+			obj.setUltimateParentIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FutrsComssnMrchntInd", required = true)
@@ -277,7 +316,7 @@ public class ClearingMember1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFuturesCommissionMerchantIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClearingMember1, YesNoIndicator> mmFuturesCommissionMerchantIndicator = new MMMessageAttribute<ClearingMember1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ClearingMember1.mmObject();
 			isDerived = false;
@@ -288,6 +327,16 @@ public class ClearingMember1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(ClearingMember1 obj) {
+			return obj.getFuturesCommissionMerchantIndicator();
+		}
+
+		@Override
+		public void setValue(ClearingMember1 obj, YesNoIndicator value) {
+			obj.setFuturesCommissionMerchantIndicator(value);
 		}
 	};
 	@XmlElement(name = "MmbshVldFr", required = true)
@@ -301,6 +350,11 @@ public class ClearingMember1 {
 	 * {@linkplain com.tools20022.metamodel.MMMessageAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmFromDateTime
+	 * DateTimePeriod.mmFromDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -321,8 +375,9 @@ public class ClearingMember1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMembershipValidFrom = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClearingMember1, ISODate> mmMembershipValidFrom = new MMMessageAttribute<ClearingMember1, ISODate>() {
 		{
+			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ClearingMember1.mmObject();
 			isDerived = false;
 			xmlTag = "MmbshVldFr";
@@ -332,6 +387,16 @@ public class ClearingMember1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(ClearingMember1 obj) {
+			return obj.getMembershipValidFrom();
+		}
+
+		@Override
+		public void setValue(ClearingMember1 obj, ISODate value) {
+			obj.setMembershipValidFrom(value);
 		}
 	};
 	@XmlElement(name = "MmbshVldTo")
@@ -345,6 +410,11 @@ public class ClearingMember1 {
 	 * {@linkplain com.tools20022.metamodel.MMMessageAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmToDateTime
+	 * DateTimePeriod.mmToDateTime}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -365,8 +435,9 @@ public class ClearingMember1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMembershipValidTo = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClearingMember1, Optional<ISODate>> mmMembershipValidTo = new MMMessageAttribute<ClearingMember1, Optional<ISODate>>() {
 		{
+			businessElementTrace_lazy = () -> DateTimePeriod.mmToDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ClearingMember1.mmObject();
 			isDerived = false;
 			xmlTag = "MmbshVldTo";
@@ -376,6 +447,16 @@ public class ClearingMember1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(ClearingMember1 obj) {
+			return obj.getMembershipValidTo();
+		}
+
+		@Override
+		public void setValue(ClearingMember1 obj, Optional<ISODate> value) {
+			obj.setMembershipValidTo(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SpnsrgClrMmbId")
@@ -413,7 +494,7 @@ public class ClearingMember1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSponsoringClearingMemberIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ClearingMember1, Optional<PartyIdentification121>> mmSponsoringClearingMemberIdentification = new MMMessageAssociationEnd<ClearingMember1, Optional<PartyIdentification121>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ClearingMember1.mmObject();
@@ -425,11 +506,21 @@ public class ClearingMember1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification121.mmObject();
+			type_lazy = () -> PartyIdentification121.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification121> getValue(ClearingMember1 obj) {
+			return obj.getSponsoringClearingMemberIdentification();
+		}
+
+		@Override
+		public void setValue(ClearingMember1 obj, Optional<PartyIdentification121> value) {
+			obj.setSponsoringClearingMemberIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClrAcctOwnr", required = true)
-	protected List<com.tools20022.repository.msg.ClearingAccount1> clearingAccountOwner;
+	protected List<ClearingAccount1> clearingAccountOwner;
 	/**
 	 * 
 	 <p>
@@ -463,7 +554,7 @@ public class ClearingMember1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmClearingAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ClearingMember1, List<ClearingAccount1>> mmClearingAccountOwner = new MMMessageAssociationEnd<ClearingMember1, List<ClearingAccount1>>() {
 		{
 			businessElementTrace_lazy = () -> ClearingMemberRole.mmClearingAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ClearingMember1.mmObject();
@@ -474,7 +565,17 @@ public class ClearingMember1 {
 			definition = "Operational construct of a central counterparty that defines the relationship between collateral, margin and position accounts and upon default of a clearing member defines the segregation of losses on positions and assets held in that account.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ClearingAccount1.mmObject();
+			type_lazy = () -> ClearingAccount1.mmObject();
+		}
+
+		@Override
+		public List<ClearingAccount1> getValue(ClearingMember1 obj) {
+			return obj.getClearingAccountOwner();
+		}
+
+		@Override
+		public void setValue(ClearingMember1 obj, List<ClearingAccount1> value) {
+			obj.setClearingAccountOwner(value);
 		}
 	};
 
@@ -500,7 +601,7 @@ public class ClearingMember1 {
 		return identification;
 	}
 
-	public ClearingMember1 setIdentification(com.tools20022.repository.msg.PartyIdentification121 identification) {
+	public ClearingMember1 setIdentification(PartyIdentification121 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}
@@ -518,7 +619,7 @@ public class ClearingMember1 {
 		return ultimateParentIdentification == null ? Optional.empty() : Optional.of(ultimateParentIdentification);
 	}
 
-	public ClearingMember1 setUltimateParentIdentification(com.tools20022.repository.msg.PartyIdentification121 ultimateParentIdentification) {
+	public ClearingMember1 setUltimateParentIdentification(PartyIdentification121 ultimateParentIdentification) {
 		this.ultimateParentIdentification = ultimateParentIdentification;
 		return this;
 	}
@@ -554,7 +655,7 @@ public class ClearingMember1 {
 		return sponsoringClearingMemberIdentification == null ? Optional.empty() : Optional.of(sponsoringClearingMemberIdentification);
 	}
 
-	public ClearingMember1 setSponsoringClearingMemberIdentification(com.tools20022.repository.msg.PartyIdentification121 sponsoringClearingMemberIdentification) {
+	public ClearingMember1 setSponsoringClearingMemberIdentification(PartyIdentification121 sponsoringClearingMemberIdentification) {
 		this.sponsoringClearingMemberIdentification = sponsoringClearingMemberIdentification;
 		return this;
 	}
@@ -563,7 +664,7 @@ public class ClearingMember1 {
 		return clearingAccountOwner == null ? clearingAccountOwner = new ArrayList<>() : clearingAccountOwner;
 	}
 
-	public ClearingMember1 setClearingAccountOwner(List<com.tools20022.repository.msg.ClearingAccount1> clearingAccountOwner) {
+	public ClearingMember1 setClearingAccountOwner(List<ClearingAccount1> clearingAccountOwner) {
 		this.clearingAccountOwner = Objects.requireNonNull(clearingAccountOwner);
 		return this;
 	}

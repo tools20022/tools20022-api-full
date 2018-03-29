@@ -106,7 +106,7 @@ public class MatchingDenied2Choice {
 	 * definition} = "Specifies the execution of a matching denial process."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MatchingDenied2Choice, MatchingProcess1Code> mmCode = new MMMessageAttribute<MatchingDenied2Choice, MatchingProcess1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingDenied2Choice.mmObject();
 			isDerived = false;
@@ -118,6 +118,16 @@ public class MatchingDenied2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MatchingProcess1Code.mmObject();
+		}
+
+		@Override
+		public MatchingProcess1Code getValue(MatchingDenied2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(MatchingDenied2Choice obj, MatchingProcess1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -152,7 +162,7 @@ public class MatchingDenied2Choice {
 	 * definition} = "Specifies the execution of a matching denial process."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MatchingDenied2Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<MatchingDenied2Choice, GenericIdentification25>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingDenied2Choice.mmObject();
 			isDerived = false;
@@ -165,6 +175,16 @@ public class MatchingDenied2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(MatchingDenied2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(MatchingDenied2Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

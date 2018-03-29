@@ -99,7 +99,7 @@ public class ElectronicMessageDetails1 {
 	 * "Information about separate electronic system information message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmElectronicSystemInformationMessageIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ElectronicMessageDetails1, Max35Text> mmElectronicSystemInformationMessageIdentifier = new MMMessageAttribute<ElectronicMessageDetails1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ElectronicMessageDetails1.mmObject();
 			isDerived = false;
@@ -110,6 +110,16 @@ public class ElectronicMessageDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ElectronicMessageDetails1 obj) {
+			return obj.getElectronicSystemInformationMessageIdentifier();
+		}
+
+		@Override
+		public void setValue(ElectronicMessageDetails1 obj, Max35Text value) {
+			obj.setElectronicSystemInformationMessageIdentifier(value);
 		}
 	};
 	@XmlElement(name = "ElctrncSysInfMsgPacketIdr")
@@ -141,7 +151,7 @@ public class ElectronicMessageDetails1 {
 	 * definition} = "Information about packet of electronic system messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmElectronicSystemInformationMessagePacketIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ElectronicMessageDetails1, Optional<Max35Text>> mmElectronicSystemInformationMessagePacketIdentifier = new MMMessageAttribute<ElectronicMessageDetails1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ElectronicMessageDetails1.mmObject();
 			isDerived = false;
@@ -152,6 +162,16 @@ public class ElectronicMessageDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ElectronicMessageDetails1 obj) {
+			return obj.getElectronicSystemInformationMessagePacketIdentifier();
+		}
+
+		@Override
+		public void setValue(ElectronicMessageDetails1 obj, Optional<Max35Text> value) {
+			obj.setElectronicSystemInformationMessagePacketIdentifier(value.orElse(null));
 		}
 	};
 

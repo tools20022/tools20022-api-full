@@ -60,12 +60,16 @@ public class ConstraintExemptionTypeUsageRule {
 	 */
 	public static final MMConstraint<CashOption44> forCashOption44 = new MMConstraint<CashOption44>() {
 		{
-			validator = ConstraintExemptionTypeUsageRule::checkCashOption44;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionTypeUsageRule";
 			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document titled \"ETYP-ITYP Exemption & Income Type Codes\" that is available on the SMPG website at www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule.forCashOption52);
 			owner_lazy = () -> CashOption44.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption44 obj) throws Exception {
+			checkCashOption44(obj);
 		}
 	};
 	/**
@@ -99,12 +103,16 @@ public class ConstraintExemptionTypeUsageRule {
 	 */
 	public static final MMConstraint<SecuritiesOption49> forSecuritiesOption49 = new MMConstraint<SecuritiesOption49>() {
 		{
-			validator = ConstraintExemptionTypeUsageRule::checkSecuritiesOption49;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionTypeUsageRule";
 			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document titled \"ETYP-ITYP Exemption & Income Type Codes\" that is available on the SMPG website at www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule.forSecuritiesOption59);
 			owner_lazy = () -> SecuritiesOption49.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesOption49 obj) throws Exception {
+			checkSecuritiesOption49(obj);
 		}
 	};
 	/**
@@ -137,12 +145,16 @@ public class ConstraintExemptionTypeUsageRule {
 	 */
 	public static final MMConstraint<CashOption42> forCashOption42 = new MMConstraint<CashOption42>() {
 		{
-			validator = ConstraintExemptionTypeUsageRule::checkCashOption42;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionTypeUsageRule";
 			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document titled \"ETYP-ITYP Exemption & Income Type Codes\" that is available on the SMPG website at www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule.forCashOption51);
 			owner_lazy = () -> CashOption42.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption42 obj) throws Exception {
+			checkCashOption42(obj);
 		}
 	};
 	/**
@@ -175,12 +187,16 @@ public class ConstraintExemptionTypeUsageRule {
 	 */
 	public static final MMConstraint<CashOption43> forCashOption43 = new MMConstraint<CashOption43>() {
 		{
-			validator = ConstraintExemptionTypeUsageRule::checkCashOption43;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionTypeUsageRule";
 			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document titled \"ETYP-ITYP Exemption & Income Type Codes\" that is available on the SMPG website at www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule.forCashOption50);
 			owner_lazy = () -> CashOption43.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption43 obj) throws Exception {
+			checkCashOption43(obj);
 		}
 	};
 	/**
@@ -214,12 +230,16 @@ public class ConstraintExemptionTypeUsageRule {
 	 */
 	public static final MMConstraint<SecuritiesOption50> forSecuritiesOption50 = new MMConstraint<SecuritiesOption50>() {
 		{
-			validator = ConstraintExemptionTypeUsageRule::checkSecuritiesOption50;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionTypeUsageRule";
 			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document titled \"ETYP-ITYP Exemption & Income Type Codes\" that is available on the SMPG website at www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule.forSecuritiesOption60);
 			owner_lazy = () -> SecuritiesOption50.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesOption50 obj) throws Exception {
+			checkSecuritiesOption50(obj);
 		}
 	};
 	/**
@@ -244,11 +264,15 @@ public class ConstraintExemptionTypeUsageRule {
 	 */
 	public static final MMConstraint<CashOption46> forCashOption46 = new MMConstraint<CashOption46>() {
 		{
-			validator = ConstraintExemptionTypeUsageRule::checkCashOption46;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionTypeUsageRule";
 			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document titled \"ETYP-ITYP Exemption & Income Type Codes\" that is available on the SMPG website at www.smpg.info.";
 			owner_lazy = () -> CashOption46.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption46 obj) throws Exception {
+			checkCashOption46(obj);
 		}
 	};
 	/**
@@ -274,11 +298,15 @@ public class ConstraintExemptionTypeUsageRule {
 	 */
 	public static final MMConstraint<SecuritiesOption55> forSecuritiesOption55 = new MMConstraint<SecuritiesOption55>() {
 		{
-			validator = ConstraintExemptionTypeUsageRule::checkSecuritiesOption55;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionTypeUsageRule";
 			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document titled \"ETYP-ITYP Exemption & Income Type Codes\" that is available on the SMPG website at www.smpg.info.";
 			owner_lazy = () -> SecuritiesOption55.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesOption55 obj) throws Exception {
+			checkSecuritiesOption55(obj);
 		}
 	};
 	/**
@@ -303,11 +331,15 @@ public class ConstraintExemptionTypeUsageRule {
 	 */
 	public static final MMConstraint<CashOption49> forCashOption49 = new MMConstraint<CashOption49>() {
 		{
-			validator = ConstraintExemptionTypeUsageRule::checkCashOption49;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionTypeUsageRule";
 			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document titled \"ETYP-ITYP Exemption & Income Type Codes\" that is available on the SMPG website at www.smpg.info.";
 			owner_lazy = () -> CashOption49.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption49 obj) throws Exception {
+			checkCashOption49(obj);
 		}
 	};
 	/**
@@ -332,11 +364,15 @@ public class ConstraintExemptionTypeUsageRule {
 	 */
 	public static final MMConstraint<CashOption47> forCashOption47 = new MMConstraint<CashOption47>() {
 		{
-			validator = ConstraintExemptionTypeUsageRule::checkCashOption47;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionTypeUsageRule";
 			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document titled \"ETYP-ITYP Exemption & Income Type Codes\" that is available on the SMPG website at www.smpg.info.";
 			owner_lazy = () -> CashOption47.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption47 obj) throws Exception {
+			checkCashOption47(obj);
 		}
 	};
 	/**
@@ -362,11 +398,15 @@ public class ConstraintExemptionTypeUsageRule {
 	 */
 	public static final MMConstraint<SecuritiesOption57> forSecuritiesOption57 = new MMConstraint<SecuritiesOption57>() {
 		{
-			validator = ConstraintExemptionTypeUsageRule::checkSecuritiesOption57;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionTypeUsageRule";
 			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document titled \"ETYP-ITYP Exemption & Income Type Codes\" that is available on the SMPG website at www.smpg.info.";
 			owner_lazy = () -> SecuritiesOption57.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesOption57 obj) throws Exception {
+			checkSecuritiesOption57(obj);
 		}
 	};
 	/**
@@ -404,13 +444,17 @@ public class ConstraintExemptionTypeUsageRule {
 	 */
 	public static final MMConstraint<CashOption52> forCashOption52 = new MMConstraint<CashOption52>() {
 		{
-			validator = ConstraintExemptionTypeUsageRule::checkCashOption52;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionTypeUsageRule";
 			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document titled \"ETYP-ITYP Exemption & Income Type Codes\" that is available on the SMPG website at www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule.forCashOption58);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule.forCashOption44;
 			owner_lazy = () -> CashOption52.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption52 obj) throws Exception {
+			checkCashOption52(obj);
 		}
 	};
 	/**
@@ -449,13 +493,17 @@ public class ConstraintExemptionTypeUsageRule {
 	 */
 	public static final MMConstraint<SecuritiesOption60> forSecuritiesOption60 = new MMConstraint<SecuritiesOption60>() {
 		{
-			validator = ConstraintExemptionTypeUsageRule::checkSecuritiesOption60;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionTypeUsageRule";
 			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document titled \"ETYP-ITYP Exemption & Income Type Codes\" that is available on the SMPG website at www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule.forSecuritiesOption65);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule.forSecuritiesOption50;
 			owner_lazy = () -> SecuritiesOption60.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesOption60 obj) throws Exception {
+			checkSecuritiesOption60(obj);
 		}
 	};
 	/**
@@ -493,13 +541,17 @@ public class ConstraintExemptionTypeUsageRule {
 	 */
 	public static final MMConstraint<CashOption51> forCashOption51 = new MMConstraint<CashOption51>() {
 		{
-			validator = ConstraintExemptionTypeUsageRule::checkCashOption51;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionTypeUsageRule";
 			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document titled \"ETYP-ITYP Exemption & Income Type Codes\" that is available on the SMPG website at www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule.forCashOption57);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule.forCashOption42;
 			owner_lazy = () -> CashOption51.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption51 obj) throws Exception {
+			checkCashOption51(obj);
 		}
 	};
 	/**
@@ -538,13 +590,17 @@ public class ConstraintExemptionTypeUsageRule {
 	 */
 	public static final MMConstraint<SecuritiesOption59> forSecuritiesOption59 = new MMConstraint<SecuritiesOption59>() {
 		{
-			validator = ConstraintExemptionTypeUsageRule::checkSecuritiesOption59;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionTypeUsageRule";
 			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document titled \"ETYP-ITYP Exemption & Income Type Codes\" that is available on the SMPG website at www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule.forSecuritiesOption64);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule.forSecuritiesOption49;
 			owner_lazy = () -> SecuritiesOption59.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesOption59 obj) throws Exception {
+			checkSecuritiesOption59(obj);
 		}
 	};
 	/**
@@ -582,13 +638,17 @@ public class ConstraintExemptionTypeUsageRule {
 	 */
 	public static final MMConstraint<CashOption50> forCashOption50 = new MMConstraint<CashOption50>() {
 		{
-			validator = ConstraintExemptionTypeUsageRule::checkCashOption50;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionTypeUsageRule";
 			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document titled \"ETYP-ITYP Exemption & Income Type Codes\" that is available on the SMPG website at www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule.forCashOption56);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule.forCashOption43;
 			owner_lazy = () -> CashOption50.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption50 obj) throws Exception {
+			checkCashOption50(obj);
 		}
 	};
 	/**
@@ -613,11 +673,15 @@ public class ConstraintExemptionTypeUsageRule {
 	 */
 	public static final MMConstraint<CashOption53> forCashOption53 = new MMConstraint<CashOption53>() {
 		{
-			validator = ConstraintExemptionTypeUsageRule::checkCashOption53;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionTypeUsageRule";
 			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document titled \"ETYP-ITYP Exemption & Income Type Codes\" that is available on the SMPG website at www.smpg.info.";
 			owner_lazy = () -> CashOption53.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption53 obj) throws Exception {
+			checkCashOption53(obj);
 		}
 	};
 	/**
@@ -643,11 +707,15 @@ public class ConstraintExemptionTypeUsageRule {
 	 */
 	public static final MMConstraint<SecuritiesOption61> forSecuritiesOption61 = new MMConstraint<SecuritiesOption61>() {
 		{
-			validator = ConstraintExemptionTypeUsageRule::checkSecuritiesOption61;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionTypeUsageRule";
 			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document titled \"ETYP-ITYP Exemption & Income Type Codes\" that is available on the SMPG website at www.smpg.info.";
 			owner_lazy = () -> SecuritiesOption61.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesOption61 obj) throws Exception {
+			checkSecuritiesOption61(obj);
 		}
 	};
 	/**
@@ -673,11 +741,15 @@ public class ConstraintExemptionTypeUsageRule {
 	 */
 	public static final MMConstraint<SecuritiesOption63> forSecuritiesOption63 = new MMConstraint<SecuritiesOption63>() {
 		{
-			validator = ConstraintExemptionTypeUsageRule::checkSecuritiesOption63;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionTypeUsageRule";
 			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document titled \"ETYP-ITYP Exemption & Income Type Codes\" that is available on the SMPG website at www.smpg.info.";
 			owner_lazy = () -> SecuritiesOption63.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesOption63 obj) throws Exception {
+			checkSecuritiesOption63(obj);
 		}
 	};
 	/**
@@ -702,11 +774,15 @@ public class ConstraintExemptionTypeUsageRule {
 	 */
 	public static final MMConstraint<CashOption54> forCashOption54 = new MMConstraint<CashOption54>() {
 		{
-			validator = ConstraintExemptionTypeUsageRule::checkCashOption54;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionTypeUsageRule";
 			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document titled \"ETYP-ITYP Exemption & Income Type Codes\" that is available on the SMPG website at www.smpg.info.";
 			owner_lazy = () -> CashOption54.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption54 obj) throws Exception {
+			checkCashOption54(obj);
 		}
 	};
 	/**
@@ -731,11 +807,15 @@ public class ConstraintExemptionTypeUsageRule {
 	 */
 	public static final MMConstraint<CashOption55> forCashOption55 = new MMConstraint<CashOption55>() {
 		{
-			validator = ConstraintExemptionTypeUsageRule::checkCashOption55;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionTypeUsageRule";
 			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document titled \"ETYP-ITYP Exemption & Income Type Codes\" that is available on the SMPG website at www.smpg.info.";
 			owner_lazy = () -> CashOption55.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption55 obj) throws Exception {
+			checkCashOption55(obj);
 		}
 	};
 	/**
@@ -765,12 +845,16 @@ public class ConstraintExemptionTypeUsageRule {
 	 */
 	public static final MMConstraint<CashOption56> forCashOption56 = new MMConstraint<CashOption56>() {
 		{
-			validator = ConstraintExemptionTypeUsageRule::checkCashOption56;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionTypeUsageRule";
 			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document \"ETYP-ITYP Exemption & Income Type Codes\" available on the SMPG website at www.smpg.info.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule.forCashOption50;
 			owner_lazy = () -> CashOption56.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption56 obj) throws Exception {
+			checkCashOption56(obj);
 		}
 	};
 	/**
@@ -800,12 +884,16 @@ public class ConstraintExemptionTypeUsageRule {
 	 */
 	public static final MMConstraint<CashOption57> forCashOption57 = new MMConstraint<CashOption57>() {
 		{
-			validator = ConstraintExemptionTypeUsageRule::checkCashOption57;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionTypeUsageRule";
 			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document \"ETYP-ITYP Exemption & Income Type Codes\" available on the SMPG website at www.smpg.info.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule.forCashOption51;
 			owner_lazy = () -> CashOption57.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption57 obj) throws Exception {
+			checkCashOption57(obj);
 		}
 	};
 	/**
@@ -836,12 +924,16 @@ public class ConstraintExemptionTypeUsageRule {
 	 */
 	public static final MMConstraint<SecuritiesOption64> forSecuritiesOption64 = new MMConstraint<SecuritiesOption64>() {
 		{
-			validator = ConstraintExemptionTypeUsageRule::checkSecuritiesOption64;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionTypeUsageRule";
 			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document \"ETYP-ITYP Exemption & Income Type Codes\" available on the SMPG website at www.smpg.info.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule.forSecuritiesOption59;
 			owner_lazy = () -> SecuritiesOption64.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesOption64 obj) throws Exception {
+			checkSecuritiesOption64(obj);
 		}
 	};
 	/**
@@ -872,12 +964,16 @@ public class ConstraintExemptionTypeUsageRule {
 	 */
 	public static final MMConstraint<SecuritiesOption65> forSecuritiesOption65 = new MMConstraint<SecuritiesOption65>() {
 		{
-			validator = ConstraintExemptionTypeUsageRule::checkSecuritiesOption65;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionTypeUsageRule";
 			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document \"ETYP-ITYP Exemption & Income Type Codes\" available on the SMPG website at www.smpg.info.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule.forSecuritiesOption60;
 			owner_lazy = () -> SecuritiesOption65.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesOption65 obj) throws Exception {
+			checkSecuritiesOption65(obj);
 		}
 	};
 	/**
@@ -907,12 +1003,16 @@ public class ConstraintExemptionTypeUsageRule {
 	 */
 	public static final MMConstraint<CashOption58> forCashOption58 = new MMConstraint<CashOption58>() {
 		{
-			validator = ConstraintExemptionTypeUsageRule::checkCashOption58;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionTypeUsageRule";
 			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document \"ETYP-ITYP Exemption & Income Type Codes\" available on the SMPG website at www.smpg.info.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule.forCashOption52;
 			owner_lazy = () -> CashOption58.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption58 obj) throws Exception {
+			checkCashOption58(obj);
 		}
 	};
 	/**
@@ -938,11 +1038,15 @@ public class ConstraintExemptionTypeUsageRule {
 	 */
 	public static final MMConstraint<SecuritiesOption67> forSecuritiesOption67 = new MMConstraint<SecuritiesOption67>() {
 		{
-			validator = ConstraintExemptionTypeUsageRule::checkSecuritiesOption67;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionTypeUsageRule";
 			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document \"ETYP-ITYP Exemption & Income Type Codes\" available on the SMPG website at www.smpg.info.";
 			owner_lazy = () -> SecuritiesOption67.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesOption67 obj) throws Exception {
+			checkSecuritiesOption67(obj);
 		}
 	};
 	/**
@@ -967,11 +1071,15 @@ public class ConstraintExemptionTypeUsageRule {
 	 */
 	public static final MMConstraint<CashOption60> forCashOption60 = new MMConstraint<CashOption60>() {
 		{
-			validator = ConstraintExemptionTypeUsageRule::checkCashOption60;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionTypeUsageRule";
 			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document \"ETYP-ITYP Exemption & Income Type Codes\" available on the SMPG website at www.smpg.info.";
 			owner_lazy = () -> CashOption60.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption60 obj) throws Exception {
+			checkCashOption60(obj);
 		}
 	};
 	/**
@@ -997,11 +1105,15 @@ public class ConstraintExemptionTypeUsageRule {
 	 */
 	public static final MMConstraint<SecuritiesOption68> forSecuritiesOption68 = new MMConstraint<SecuritiesOption68>() {
 		{
-			validator = ConstraintExemptionTypeUsageRule::checkSecuritiesOption68;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionTypeUsageRule";
 			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document \"ETYP-ITYP Exemption & Income Type Codes\" available on the SMPG website at www.smpg.info.";
 			owner_lazy = () -> SecuritiesOption68.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesOption68 obj) throws Exception {
+			checkSecuritiesOption68(obj);
 		}
 	};
 	/**
@@ -1026,11 +1138,15 @@ public class ConstraintExemptionTypeUsageRule {
 	 */
 	public static final MMConstraint<CashOption61> forCashOption61 = new MMConstraint<CashOption61>() {
 		{
-			validator = ConstraintExemptionTypeUsageRule::checkCashOption61;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionTypeUsageRule";
 			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document \"ETYP-ITYP Exemption & Income Type Codes\" available on the SMPG website at www.smpg.info.";
 			owner_lazy = () -> CashOption61.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption61 obj) throws Exception {
+			checkCashOption61(obj);
 		}
 	};
 	/**
@@ -1055,11 +1171,15 @@ public class ConstraintExemptionTypeUsageRule {
 	 */
 	public static final MMConstraint<CashOption63> forCashOption63 = new MMConstraint<CashOption63>() {
 		{
-			validator = ConstraintExemptionTypeUsageRule::checkCashOption63;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionTypeUsageRule";
 			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document \"ETYP-ITYP Exemption & Income Type Codes\" available on the SMPG website at www.smpg.info.";
 			owner_lazy = () -> CashOption63.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashOption63 obj) throws Exception {
+			checkCashOption63(obj);
 		}
 	};
 

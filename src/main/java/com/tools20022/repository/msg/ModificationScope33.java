@@ -25,6 +25,7 @@ import com.tools20022.repository.area.acmt.AccountModificationInstructionV06;
 import com.tools20022.repository.area.acmt.AccountModificationInstructionV07;
 import com.tools20022.repository.codeset.DataModification1Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ReferredAgent2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -123,7 +124,7 @@ public class ModificationScope33 {
 	 * ModificationScope26.mmModificationScopeIndication}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmModificationScopeIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ModificationScope33, DataModification1Code> mmModificationScopeIndication = new MMMessageAttribute<ModificationScope33, DataModification1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope33.mmObject();
 			isDerived = false;
@@ -135,6 +136,16 @@ public class ModificationScope33 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DataModification1Code.mmObject();
+		}
+
+		@Override
+		public DataModification1Code getValue(ModificationScope33 obj) {
+			return obj.getModificationScopeIndication();
+		}
+
+		@Override
+		public void setValue(ModificationScope33 obj, DataModification1Code value) {
+			obj.setModificationScopeIndication(value);
 		}
 	};
 	@XmlElement(name = "Plcmnt", required = true)
@@ -165,7 +176,7 @@ public class ModificationScope33 {
 	 * definition} = "Referral information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPlacement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ModificationScope33, ReferredAgent2> mmPlacement = new MMMessageAssociationEnd<ModificationScope33, ReferredAgent2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope33.mmObject();
 			isDerived = false;
@@ -176,7 +187,17 @@ public class ModificationScope33 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ReferredAgent2.mmObject();
+			type_lazy = () -> ReferredAgent2.mmObject();
+		}
+
+		@Override
+		public ReferredAgent2 getValue(ModificationScope33 obj) {
+			return obj.getPlacement();
+		}
+
+		@Override
+		public void setValue(ModificationScope33 obj, ReferredAgent2 value) {
+			obj.setPlacement(value);
 		}
 	};
 
@@ -208,7 +229,7 @@ public class ModificationScope33 {
 		return placement;
 	}
 
-	public ModificationScope33 setPlacement(com.tools20022.repository.msg.ReferredAgent2 placement) {
+	public ModificationScope33 setPlacement(ReferredAgent2 placement) {
 		this.placement = Objects.requireNonNull(placement);
 		return this;
 	}

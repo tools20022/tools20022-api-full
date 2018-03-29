@@ -50,11 +50,15 @@ public class ConstraintTimeCountryLocationRule {
 	 */
 	public static final MMConstraint<SettlementRateSource1> forSettlementRateSource1 = new MMConstraint<SettlementRateSource1>() {
 		{
-			validator = ConstraintTimeCountryLocationRule::checkSettlementRateSource1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TimeCountryLocationRule";
 			definition = "Time, Country and Location must be present together or not present at all.";
 			owner_lazy = () -> SettlementRateSource1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementRateSource1 obj) throws Exception {
+			checkSettlementRateSource1(obj);
 		}
 	};
 

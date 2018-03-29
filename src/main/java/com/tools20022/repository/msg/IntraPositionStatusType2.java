@@ -26,6 +26,7 @@ import com.tools20022.repository.choice.SettlementStatus26Choice;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ProprietaryReason4;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -121,7 +122,7 @@ public class IntraPositionStatusType2 {
 	 * IntraPositionStatusType1.mmProcessingStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessingStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraPositionStatusType2, List<ProcessingStatus68Choice>> mmProcessingStatus = new MMMessageAttribute<IntraPositionStatusType2, List<ProcessingStatus68Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionStatusType2.mmObject();
@@ -133,6 +134,16 @@ public class IntraPositionStatusType2 {
 			previousVersion_lazy = () -> IntraPositionStatusType1.mmProcessingStatus;
 			minOccurs = 0;
 			complexType_lazy = () -> ProcessingStatus68Choice.mmObject();
+		}
+
+		@Override
+		public List<ProcessingStatus68Choice> getValue(IntraPositionStatusType2 obj) {
+			return obj.getProcessingStatus();
+		}
+
+		@Override
+		public void setValue(IntraPositionStatusType2 obj, List<ProcessingStatus68Choice> value) {
+			obj.setProcessingStatus(value);
 		}
 	};
 	@XmlElement(name = "SttlmSts")
@@ -175,7 +186,7 @@ public class IntraPositionStatusType2 {
 	 * IntraPositionStatusType1.mmSettlementStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraPositionStatusType2, List<SettlementStatus26Choice>> mmSettlementStatus = new MMMessageAttribute<IntraPositionStatusType2, List<SettlementStatus26Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmSettlementStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionStatusType2.mmObject();
@@ -187,6 +198,16 @@ public class IntraPositionStatusType2 {
 			previousVersion_lazy = () -> IntraPositionStatusType1.mmSettlementStatus;
 			minOccurs = 0;
 			complexType_lazy = () -> SettlementStatus26Choice.mmObject();
+		}
+
+		@Override
+		public List<SettlementStatus26Choice> getValue(IntraPositionStatusType2 obj) {
+			return obj.getSettlementStatus();
+		}
+
+		@Override
+		public void setValue(IntraPositionStatusType2 obj, List<SettlementStatus26Choice> value) {
+			obj.setSettlementStatus(value);
 		}
 	};
 	@XmlElement(name = "Sttld")
@@ -227,7 +248,7 @@ public class IntraPositionStatusType2 {
 	 * IntraPositionStatusType1.mmSettled}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettled = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionStatusType2, Optional<ProprietaryReason4>> mmSettled = new MMMessageAssociationEnd<IntraPositionStatusType2, Optional<ProprietaryReason4>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionStatusType2.mmObject();
@@ -240,7 +261,17 @@ public class IntraPositionStatusType2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ProprietaryReason4.mmObject();
+			type_lazy = () -> ProprietaryReason4.mmObject();
+		}
+
+		@Override
+		public Optional<ProprietaryReason4> getValue(IntraPositionStatusType2 obj) {
+			return obj.getSettled();
+		}
+
+		@Override
+		public void setValue(IntraPositionStatusType2 obj, Optional<ProprietaryReason4> value) {
+			obj.setSettled(value.orElse(null));
 		}
 	};
 
@@ -282,7 +313,7 @@ public class IntraPositionStatusType2 {
 		return settled == null ? Optional.empty() : Optional.of(settled);
 	}
 
-	public IntraPositionStatusType2 setSettled(com.tools20022.repository.msg.ProprietaryReason4 settled) {
+	public IntraPositionStatusType2 setSettled(ProprietaryReason4 settled) {
 		this.settled = settled;
 		return this;
 	}

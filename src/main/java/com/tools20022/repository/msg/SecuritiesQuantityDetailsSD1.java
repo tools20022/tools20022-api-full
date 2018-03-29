@@ -102,7 +102,7 @@ public class SecuritiesQuantityDetailsSD1 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesQuantityDetailsSD1, Max350Text> mmPlaceAndName = new MMMessageAttribute<SecuritiesQuantityDetailsSD1, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesQuantityDetailsSD1.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class SecuritiesQuantityDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(SecuritiesQuantityDetailsSD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(SecuritiesQuantityDetailsSD1 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "OvrsbcptQty")
@@ -145,7 +155,7 @@ public class SecuritiesQuantityDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOversubscriptionQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesQuantityDetailsSD1, Optional<Quantity40Choice>> mmOversubscriptionQuantity = new MMMessageAssociationEnd<SecuritiesQuantityDetailsSD1, Optional<Quantity40Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesQuantityDetailsSD1.mmObject();
 			isDerived = false;
@@ -157,6 +167,16 @@ public class SecuritiesQuantityDetailsSD1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Quantity40Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Quantity40Choice> getValue(SecuritiesQuantityDetailsSD1 obj) {
+			return obj.getOversubscriptionQuantity();
+		}
+
+		@Override
+		public void setValue(SecuritiesQuantityDetailsSD1 obj, Optional<Quantity40Choice> value) {
+			obj.setOversubscriptionQuantity(value.orElse(null));
 		}
 	};
 

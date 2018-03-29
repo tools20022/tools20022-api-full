@@ -108,7 +108,7 @@ public class Demand2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Demand2, Max35Text> mmIdentification = new MMMessageAttribute<Demand2, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Demand2.mmObject();
 			isDerived = false;
@@ -119,6 +119,16 @@ public class Demand2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Demand2 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Demand2 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "SubmissnDtTm", required = true)
@@ -154,7 +164,7 @@ public class Demand2 {
 	 * definition} = "Date and time the demand is submitted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubmissionDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Demand2, ISODateTime> mmSubmissionDateTime = new MMMessageAttribute<Demand2, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> Demand.mmSubmissionDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Demand2.mmObject();
@@ -166,6 +176,16 @@ public class Demand2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(Demand2 obj) {
+			return obj.getSubmissionDateTime();
+		}
+
+		@Override
+		public void setValue(Demand2 obj, ISODateTime value) {
+			obj.setSubmissionDateTime(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -202,7 +222,7 @@ public class Demand2 {
 	 * definition} = "Amount and currency of the demand."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Demand2, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<Demand2, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Demand.mmDemandAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Demand2.mmObject();
@@ -214,6 +234,16 @@ public class Demand2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(Demand2 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Demand2 obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -244,7 +274,7 @@ public class Demand2 {
 	 * definition} = "Additional information related to the demand."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Demand2, List<Max2000Text>> mmAdditionalInformation = new MMMessageAttribute<Demand2, List<Max2000Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Demand2.mmObject();
 			isDerived = false;
@@ -255,6 +285,16 @@ public class Demand2 {
 			maxOccurs = 5;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
+		}
+
+		@Override
+		public List<Max2000Text> getValue(Demand2 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(Demand2 obj, List<Max2000Text> value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 

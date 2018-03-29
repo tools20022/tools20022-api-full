@@ -131,7 +131,7 @@ public class AccountBalanceSD7 {
 	 * AccountBalanceSD5.mmPlaceAndName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountBalanceSD7, Max350Text> mmPlaceAndName = new MMMessageAttribute<AccountBalanceSD7, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountBalanceSD7.mmObject();
 			isDerived = false;
@@ -144,6 +144,16 @@ public class AccountBalanceSD7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(AccountBalanceSD7 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(AccountBalanceSD7 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "TxPos")
@@ -192,7 +202,7 @@ public class AccountBalanceSD7 {
 	 * AccountBalanceSD5.mmTransactionPosition}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionPosition = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountBalanceSD7, Optional<AdjustedBalanceTypeSD3Choice>> mmTransactionPosition = new MMMessageAttribute<AccountBalanceSD7, Optional<AdjustedBalanceTypeSD3Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountBalanceSD7.mmObject();
 			isDerived = false;
@@ -206,6 +216,16 @@ public class AccountBalanceSD7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdjustedBalanceTypeSD3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AdjustedBalanceTypeSD3Choice> getValue(AccountBalanceSD7 obj) {
+			return obj.getTransactionPosition();
+		}
+
+		@Override
+		public void setValue(AccountBalanceSD7 obj, Optional<AdjustedBalanceTypeSD3Choice> value) {
+			obj.setTransactionPosition(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ContraPtcptNb")
@@ -255,7 +275,7 @@ public class AccountBalanceSD7 {
 	 * AccountBalanceSD5.mmContraParticipantNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContraParticipantNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountBalanceSD7, Optional<Max8Text>> mmContraParticipantNumber = new MMMessageAttribute<AccountBalanceSD7, Optional<Max8Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountBalanceSD7.mmObject();
 			isDerived = false;
@@ -269,6 +289,16 @@ public class AccountBalanceSD7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max8Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max8Text> getValue(AccountBalanceSD7 obj) {
+			return obj.getContraParticipantNumber();
+		}
+
+		@Override
+		public void setValue(AccountBalanceSD7 obj, Optional<Max8Text> value) {
+			obj.setContraParticipantNumber(value.orElse(null));
 		}
 	};
 

@@ -109,7 +109,7 @@ public class CorporateActionPriceSD5 {
 	 * CorporateActionPriceSD1.mmPlaceAndName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPriceSD5, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<CorporateActionPriceSD5, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPriceSD5.mmObject();
 			isDerived = false;
@@ -121,6 +121,16 @@ public class CorporateActionPriceSD5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionPriceSD5 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionPriceSD5 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DclrdCshInLieuPric")
@@ -160,7 +170,7 @@ public class CorporateActionPriceSD5 {
 	 * CorporateActionPriceSD1.mmDeclaredCashInLieuPrice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeclaredCashInLieuPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPriceSD5, Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount>> mmDeclaredCashInLieuPrice = new MMMessageAttribute<CorporateActionPriceSD5, Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPriceSD5.mmObject();
 			isDerived = false;
@@ -172,6 +182,16 @@ public class CorporateActionPriceSD5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount> getValue(CorporateActionPriceSD5 obj) {
+			return obj.getDeclaredCashInLieuPrice();
+		}
+
+		@Override
+		public void setValue(CorporateActionPriceSD5 obj, Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount> value) {
+			obj.setDeclaredCashInLieuPrice(value.orElse(null));
 		}
 	};
 

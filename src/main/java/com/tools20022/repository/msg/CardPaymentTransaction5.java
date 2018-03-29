@@ -30,6 +30,9 @@ import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.entity.MerchantRole;
 import com.tools20022.repository.entity.ReconciliationTransaction;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CardPaymentTransaction8;
+import com.tools20022.repository.msg.CardPaymentTransactionDetails5;
+import com.tools20022.repository.msg.TransactionIdentifier1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -133,7 +136,7 @@ public class CardPaymentTransaction5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionCapture = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentTransaction5, TrueFalseIndicator> mmTransactionCapture = new MMMessageAttribute<CardPaymentTransaction5, TrueFalseIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction5.mmObject();
 			isDerived = false;
@@ -144,6 +147,16 @@ public class CardPaymentTransaction5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public TrueFalseIndicator getValue(CardPaymentTransaction5 obj) {
+			return obj.getTransactionCapture();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransaction5 obj, TrueFalseIndicator value) {
+			obj.setTransactionCapture(value);
 		}
 	};
 	@XmlElement(name = "MrchntCtgyCd", required = true)
@@ -183,7 +196,7 @@ public class CardPaymentTransaction5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMerchantCategoryCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentTransaction5, Min3Max4Text> mmMerchantCategoryCode = new MMMessageAttribute<CardPaymentTransaction5, Min3Max4Text>() {
 		{
 			businessElementTrace_lazy = () -> MerchantRole.mmMerchantCategoryCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction5.mmObject();
@@ -195,6 +208,16 @@ public class CardPaymentTransaction5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Min3Max4Text.mmObject();
+		}
+
+		@Override
+		public Min3Max4Text getValue(CardPaymentTransaction5 obj) {
+			return obj.getMerchantCategoryCode();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransaction5 obj, Min3Max4Text value) {
+			obj.setMerchantCategoryCode(value);
 		}
 	};
 	@XmlElement(name = "TxId", required = true)
@@ -232,7 +255,7 @@ public class CardPaymentTransaction5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentTransaction5, TransactionIdentifier1> mmTransactionIdentification = new MMMessageAssociationEnd<CardPaymentTransaction5, TransactionIdentifier1>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction5.mmObject();
@@ -244,7 +267,17 @@ public class CardPaymentTransaction5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransactionIdentifier1.mmObject();
+			type_lazy = () -> TransactionIdentifier1.mmObject();
+		}
+
+		@Override
+		public TransactionIdentifier1 getValue(CardPaymentTransaction5 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransaction5 obj, TransactionIdentifier1 value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "OrgnlTx", required = true)
@@ -280,7 +313,7 @@ public class CardPaymentTransaction5 {
 	 * definition} = "Identification of the original transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentTransaction5, CardPaymentTransaction8> mmOriginalTransaction = new MMMessageAssociationEnd<CardPaymentTransaction5, CardPaymentTransaction8>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction5.mmObject();
@@ -292,7 +325,17 @@ public class CardPaymentTransaction5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction8.mmObject();
+			type_lazy = () -> CardPaymentTransaction8.mmObject();
+		}
+
+		@Override
+		public CardPaymentTransaction8 getValue(CardPaymentTransaction5 obj) {
+			return obj.getOriginalTransaction();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransaction5 obj, CardPaymentTransaction8 value) {
+			obj.setOriginalTransaction(value);
 		}
 	};
 	@XmlElement(name = "RcncltnId")
@@ -331,7 +374,7 @@ public class CardPaymentTransaction5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReconciliationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentTransaction5, Optional<Max35Text>> mmReconciliationIdentification = new MMMessageAttribute<CardPaymentTransaction5, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> ReconciliationTransaction.mmReconciliationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction5.mmObject();
@@ -343,6 +386,16 @@ public class CardPaymentTransaction5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CardPaymentTransaction5 obj) {
+			return obj.getReconciliationIdentification();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransaction5 obj, Optional<Max35Text> value) {
+			obj.setReconciliationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxDtls", required = true)
@@ -378,7 +431,7 @@ public class CardPaymentTransaction5 {
 	 * definition} = "Details of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentTransaction5, CardPaymentTransactionDetails5> mmTransactionDetails = new MMMessageAssociationEnd<CardPaymentTransaction5, CardPaymentTransactionDetails5>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction5.mmObject();
@@ -390,7 +443,17 @@ public class CardPaymentTransaction5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails5.mmObject();
+			type_lazy = () -> CardPaymentTransactionDetails5.mmObject();
+		}
+
+		@Override
+		public CardPaymentTransactionDetails5 getValue(CardPaymentTransaction5 obj) {
+			return obj.getTransactionDetails();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransaction5 obj, CardPaymentTransactionDetails5 value) {
+			obj.setTransactionDetails(value);
 		}
 	};
 	@XmlElement(name = "AddtlTxData")
@@ -422,7 +485,7 @@ public class CardPaymentTransaction5 {
 	 * definition} = "Additional information related to the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalTransactionData = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentTransaction5, Optional<Max70Text>> mmAdditionalTransactionData = new MMMessageAttribute<CardPaymentTransaction5, Optional<Max70Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction5.mmObject();
 			isDerived = false;
@@ -433,6 +496,16 @@ public class CardPaymentTransaction5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(CardPaymentTransaction5 obj) {
+			return obj.getAdditionalTransactionData();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransaction5 obj, Optional<Max70Text> value) {
+			obj.setAdditionalTransactionData(value.orElse(null));
 		}
 	};
 
@@ -476,7 +549,7 @@ public class CardPaymentTransaction5 {
 		return transactionIdentification;
 	}
 
-	public CardPaymentTransaction5 setTransactionIdentification(com.tools20022.repository.msg.TransactionIdentifier1 transactionIdentification) {
+	public CardPaymentTransaction5 setTransactionIdentification(TransactionIdentifier1 transactionIdentification) {
 		this.transactionIdentification = Objects.requireNonNull(transactionIdentification);
 		return this;
 	}
@@ -485,7 +558,7 @@ public class CardPaymentTransaction5 {
 		return originalTransaction;
 	}
 
-	public CardPaymentTransaction5 setOriginalTransaction(com.tools20022.repository.msg.CardPaymentTransaction8 originalTransaction) {
+	public CardPaymentTransaction5 setOriginalTransaction(CardPaymentTransaction8 originalTransaction) {
 		this.originalTransaction = Objects.requireNonNull(originalTransaction);
 		return this;
 	}
@@ -503,7 +576,7 @@ public class CardPaymentTransaction5 {
 		return transactionDetails;
 	}
 
-	public CardPaymentTransaction5 setTransactionDetails(com.tools20022.repository.msg.CardPaymentTransactionDetails5 transactionDetails) {
+	public CardPaymentTransaction5 setTransactionDetails(CardPaymentTransactionDetails5 transactionDetails) {
 		this.transactionDetails = Objects.requireNonNull(transactionDetails);
 		return this;
 	}

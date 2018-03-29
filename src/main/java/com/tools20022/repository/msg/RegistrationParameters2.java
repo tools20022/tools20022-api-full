@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.BasicSecuritiesRegistration;
 import com.tools20022.repository.entity.RegistrarRole;
 import com.tools20022.repository.entity.SecuritiesCertificate;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecuritiesCertificate2;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -132,7 +133,7 @@ public class RegistrationParameters2 {
 	 * definition} = "Identification assigned to a deposit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCertificationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RegistrationParameters2, Optional<RestrictedFINXMax16Text>> mmCertificationIdentification = new MMMessageAttribute<RegistrationParameters2, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> BasicSecuritiesRegistration.mmCertificationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RegistrationParameters2.mmObject();
@@ -145,6 +146,16 @@ public class RegistrationParameters2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(RegistrationParameters2 obj) {
+			return obj.getCertificationIdentification();
+		}
+
+		@Override
+		public void setValue(RegistrationParameters2 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setCertificationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CertfctnDtTm")
@@ -186,7 +197,7 @@ public class RegistrationParameters2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCertificationDateTime = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RegistrationParameters2, Optional<DateAndDateTimeChoice>> mmCertificationDateTime = new MMMessageAssociationEnd<RegistrationParameters2, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> BasicSecuritiesRegistration.mmCertificationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RegistrationParameters2.mmObject();
@@ -200,6 +211,16 @@ public class RegistrationParameters2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(RegistrationParameters2 obj) {
+			return obj.getCertificationDateTime();
+		}
+
+		@Override
+		public void setValue(RegistrationParameters2 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setCertificationDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RegarAcct")
@@ -241,7 +262,7 @@ public class RegistrationParameters2 {
 	 * "Account at the registrar where financial instruments are registered."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegistrarAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RegistrationParameters2, Optional<RestrictedFINXMax35Text>> mmRegistrarAccount = new MMMessageAttribute<RegistrationParameters2, Optional<RestrictedFINXMax35Text>>() {
 		{
 			businessElementTrace_lazy = () -> RegistrarRole.mmRegistrarAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RegistrationParameters2.mmObject();
@@ -255,9 +276,19 @@ public class RegistrationParameters2 {
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax35Text.mmObject();
 		}
+
+		@Override
+		public Optional<RestrictedFINXMax35Text> getValue(RegistrationParameters2 obj) {
+			return obj.getRegistrarAccount();
+		}
+
+		@Override
+		public void setValue(RegistrationParameters2 obj, Optional<RestrictedFINXMax35Text> value) {
+			obj.setRegistrarAccount(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "CertNb")
-	protected List<com.tools20022.repository.msg.SecuritiesCertificate2> certificateNumber;
+	protected List<SecuritiesCertificate2> certificateNumber;
 	/**
 	 * 
 	 <p>
@@ -294,7 +325,7 @@ public class RegistrationParameters2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCertificateNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RegistrationParameters2, List<SecuritiesCertificate2>> mmCertificateNumber = new MMMessageAssociationEnd<RegistrationParameters2, List<SecuritiesCertificate2>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesCertificate.mmNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RegistrationParameters2.mmObject();
@@ -306,7 +337,17 @@ public class RegistrationParameters2 {
 			definition = "Unique and unambiguous identifier of a certificate assigned by the issuer.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesCertificate2.mmObject();
+			type_lazy = () -> SecuritiesCertificate2.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesCertificate2> getValue(RegistrationParameters2 obj) {
+			return obj.getCertificateNumber();
+		}
+
+		@Override
+		public void setValue(RegistrationParameters2 obj, List<SecuritiesCertificate2> value) {
+			obj.setCertificateNumber(value);
 		}
 	};
 
@@ -364,7 +405,7 @@ public class RegistrationParameters2 {
 		return certificateNumber == null ? certificateNumber = new ArrayList<>() : certificateNumber;
 	}
 
-	public RegistrationParameters2 setCertificateNumber(List<com.tools20022.repository.msg.SecuritiesCertificate2> certificateNumber) {
+	public RegistrationParameters2 setCertificateNumber(List<SecuritiesCertificate2> certificateNumber) {
 		this.certificateNumber = Objects.requireNonNull(certificateNumber);
 		return this;
 	}

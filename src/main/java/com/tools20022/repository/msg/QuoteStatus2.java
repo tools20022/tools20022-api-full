@@ -26,6 +26,8 @@ import com.tools20022.repository.codeset.QuoteStatus1Code;
 import com.tools20022.repository.codeset.RejectionReason3Code;
 import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Intermediary14;
+import com.tools20022.repository.msg.QuoteSet2;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -107,7 +109,7 @@ public class QuoteStatus2 {
 	 * definition} = "Provides information related to the status of a quote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuoteStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QuoteStatus2, QuoteStatus1Code> mmQuoteStatus = new MMMessageAttribute<QuoteStatus2, QuoteStatus1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteStatus2.mmObject();
 			isDerived = false;
@@ -119,6 +121,16 @@ public class QuoteStatus2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> QuoteStatus1Code.mmObject();
+		}
+
+		@Override
+		public QuoteStatus1Code getValue(QuoteStatus2 obj) {
+			return obj.getQuoteStatus();
+		}
+
+		@Override
+		public void setValue(QuoteStatus2 obj, QuoteStatus1Code value) {
+			obj.setQuoteStatus(value);
 		}
 	};
 	@XmlElement(name = "RjctnRsn")
@@ -151,7 +163,7 @@ public class QuoteStatus2 {
 	 * "Provides information related to the rejection of the quote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRejectionReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QuoteStatus2, Optional<RejectionReason3Code>> mmRejectionReason = new MMMessageAttribute<QuoteStatus2, Optional<RejectionReason3Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteStatus2.mmObject();
 			isDerived = false;
@@ -163,9 +175,19 @@ public class QuoteStatus2 {
 			minOccurs = 0;
 			simpleType_lazy = () -> RejectionReason3Code.mmObject();
 		}
+
+		@Override
+		public Optional<RejectionReason3Code> getValue(QuoteStatus2 obj) {
+			return obj.getRejectionReason();
+		}
+
+		@Override
+		public void setValue(QuoteStatus2 obj, Optional<RejectionReason3Code> value) {
+			obj.setRejectionReason(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "QtSetDtls")
-	protected List<com.tools20022.repository.msg.QuoteSet2> quoteSetDetails;
+	protected List<QuoteSet2> quoteSetDetails;
 	/**
 	 * 
 	 <p>
@@ -190,7 +212,7 @@ public class QuoteStatus2 {
 	 * definition} = "Provides details about a group of related quotes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuoteSetDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<QuoteStatus2, List<QuoteSet2>> mmQuoteSetDetails = new MMMessageAssociationEnd<QuoteStatus2, List<QuoteSet2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteStatus2.mmObject();
 			isDerived = false;
@@ -200,11 +222,21 @@ public class QuoteStatus2 {
 			definition = "Provides details about a group of related quotes.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.QuoteSet2.mmObject();
+			type_lazy = () -> QuoteSet2.mmObject();
+		}
+
+		@Override
+		public List<QuoteSet2> getValue(QuoteStatus2 obj) {
+			return obj.getQuoteSetDetails();
+		}
+
+		@Override
+		public void setValue(QuoteStatus2 obj, List<QuoteSet2> value) {
+			obj.setQuoteSetDetails(value);
 		}
 	};
 	@XmlElement(name = "RltdPties")
-	protected List<com.tools20022.repository.msg.Intermediary14> relatedParties;
+	protected List<Intermediary14> relatedParties;
 	/**
 	 * 
 	 <p>
@@ -236,7 +268,7 @@ public class QuoteStatus2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRelatedParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<QuoteStatus2, List<Intermediary14>> mmRelatedParties = new MMMessageAssociationEnd<QuoteStatus2, List<Intermediary14>>() {
 		{
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteStatus2.mmObject();
@@ -247,7 +279,17 @@ public class QuoteStatus2 {
 			definition = "Parties used for acting parties that applies either to the whole message or to individual sides.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Intermediary14.mmObject();
+			type_lazy = () -> Intermediary14.mmObject();
+		}
+
+		@Override
+		public List<Intermediary14> getValue(QuoteStatus2 obj) {
+			return obj.getRelatedParties();
+		}
+
+		@Override
+		public void setValue(QuoteStatus2 obj, List<Intermediary14> value) {
+			obj.setRelatedParties(value);
 		}
 	};
 
@@ -287,7 +329,7 @@ public class QuoteStatus2 {
 		return quoteSetDetails == null ? quoteSetDetails = new ArrayList<>() : quoteSetDetails;
 	}
 
-	public QuoteStatus2 setQuoteSetDetails(List<com.tools20022.repository.msg.QuoteSet2> quoteSetDetails) {
+	public QuoteStatus2 setQuoteSetDetails(List<QuoteSet2> quoteSetDetails) {
 		this.quoteSetDetails = Objects.requireNonNull(quoteSetDetails);
 		return this;
 	}
@@ -296,7 +338,7 @@ public class QuoteStatus2 {
 		return relatedParties == null ? relatedParties = new ArrayList<>() : relatedParties;
 	}
 
-	public QuoteStatus2 setRelatedParties(List<com.tools20022.repository.msg.Intermediary14> relatedParties) {
+	public QuoteStatus2 setRelatedParties(List<Intermediary14> relatedParties) {
 		this.relatedParties = Objects.requireNonNull(relatedParties);
 		return this;
 	}

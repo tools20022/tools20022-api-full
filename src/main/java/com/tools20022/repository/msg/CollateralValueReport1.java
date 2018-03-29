@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.CollateralValueReportOrError2Choice;
 import com.tools20022.repository.choice.PartyIdentification71Choice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccount25;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -119,7 +120,7 @@ public class CollateralValueReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralValueReport1, CashAccount25> mmAccount = new MMMessageAssociationEnd<CollateralValueReport1, CashAccount25>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValueReport1.mmObject();
 			isDerived = false;
@@ -131,7 +132,17 @@ public class CollateralValueReport1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount25.mmObject();
+			type_lazy = () -> CashAccount25.mmObject();
+		}
+
+		@Override
+		public CashAccount25 getValue(CollateralValueReport1 obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(CollateralValueReport1 obj, CashAccount25 value) {
+			obj.setAccount(value);
 		}
 	};
 	@XmlElement(name = "SctiesAcctOwnr")
@@ -172,7 +183,7 @@ public class CollateralValueReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralValueReport1, Optional<PartyIdentification71Choice>> mmSecuritiesAccountOwner = new MMMessageAssociationEnd<CollateralValueReport1, Optional<PartyIdentification71Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValueReport1.mmObject();
 			isDerived = false;
@@ -185,6 +196,16 @@ public class CollateralValueReport1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification71Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification71Choice> getValue(CollateralValueReport1 obj) {
+			return obj.getSecuritiesAccountOwner();
+		}
+
+		@Override
+		public void setValue(CollateralValueReport1 obj, Optional<PartyIdentification71Choice> value) {
+			obj.setSecuritiesAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctiesAcctSvcr")
@@ -226,7 +247,7 @@ public class CollateralValueReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesAccountServicer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralValueReport1, Optional<PartyIdentification71Choice>> mmSecuritiesAccountServicer = new MMMessageAssociationEnd<CollateralValueReport1, Optional<PartyIdentification71Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValueReport1.mmObject();
 			isDerived = false;
@@ -239,6 +260,16 @@ public class CollateralValueReport1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification71Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification71Choice> getValue(CollateralValueReport1 obj) {
+			return obj.getSecuritiesAccountServicer();
+		}
+
+		@Override
+		public void setValue(CollateralValueReport1 obj, Optional<PartyIdentification71Choice> value) {
+			obj.setSecuritiesAccountServicer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CollValRpt")
@@ -280,7 +311,7 @@ public class CollateralValueReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCollateralValueReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralValueReport1, List<CollateralValueReportOrError2Choice>> mmCollateralValueReport = new MMMessageAssociationEnd<CollateralValueReport1, List<CollateralValueReportOrError2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValueReport1.mmObject();
 			isDerived = false;
@@ -292,6 +323,16 @@ public class CollateralValueReport1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CollateralValueReportOrError2Choice.mmObject();
+		}
+
+		@Override
+		public List<CollateralValueReportOrError2Choice> getValue(CollateralValueReport1 obj) {
+			return obj.getCollateralValueReport();
+		}
+
+		@Override
+		public void setValue(CollateralValueReport1 obj, List<CollateralValueReportOrError2Choice> value) {
+			obj.setCollateralValueReport(value);
 		}
 	};
 
@@ -314,7 +355,7 @@ public class CollateralValueReport1 {
 		return account;
 	}
 
-	public CollateralValueReport1 setAccount(com.tools20022.repository.msg.CashAccount25 account) {
+	public CollateralValueReport1 setAccount(CashAccount25 account) {
 		this.account = Objects.requireNonNull(account);
 		return this;
 	}

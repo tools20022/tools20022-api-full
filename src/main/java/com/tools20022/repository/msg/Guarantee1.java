@@ -109,7 +109,7 @@ public class Guarantee1 {
 	 * definition} = "Identification of guarantee provider."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProvider = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Guarantee1, PartyIdentification118Choice> mmProvider = new MMMessageAssociationEnd<Guarantee1, PartyIdentification118Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Guarantee1.mmObject();
@@ -122,6 +122,16 @@ public class Guarantee1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification118Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification118Choice getValue(Guarantee1 obj) {
+			return obj.getProvider();
+		}
+
+		@Override
+		public void setValue(Guarantee1 obj, PartyIdentification118Choice value) {
+			obj.setProvider(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -158,7 +168,7 @@ public class Guarantee1 {
 	 * definition} = "Value of the collateral guarantee.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Guarantee1, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<Guarantee1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Guarantee.mmCoveredAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Guarantee1.mmObject();
@@ -170,6 +180,16 @@ public class Guarantee1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(Guarantee1 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Guarantee1 obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 

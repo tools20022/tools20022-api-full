@@ -22,6 +22,10 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V08;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V08;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V08;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V07;
 import com.tools20022.repository.choice.DateAndDateTime2Choice;
 import com.tools20022.repository.datatype.RestrictedFINXMax16Text;
 import com.tools20022.repository.datatype.RestrictedFINXMax35Text;
@@ -29,6 +33,7 @@ import com.tools20022.repository.entity.BasicSecuritiesRegistration;
 import com.tools20022.repository.entity.RegistrarRole;
 import com.tools20022.repository.entity.SecuritiesCertificate;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecuritiesCertificate5;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -63,6 +68,28 @@ import javax.xml.bind.annotation.XmlType;
  * trace} =
  * {@linkplain com.tools20022.repository.entity.BasicSecuritiesRegistration
  * BasicSecuritiesRegistration}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
+ * messageBuildingBlock} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V08#mmAdditionalPhysicalOrRegistrationDetails
+ * SecuritiesSettlementTransactionConfirmation002V08.
+ * mmAdditionalPhysicalOrRegistrationDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V08#mmAdditionalPhysicalOrRegistrationDetails
+ * SecuritiesSettlementTransactionGenerationNotification002V08.
+ * mmAdditionalPhysicalOrRegistrationDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V08#mmAdditionalPhysicalOrRegistrationDetails
+ * SecuritiesSettlementTransactionInstruction002V08.
+ * mmAdditionalPhysicalOrRegistrationDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V07#mmAdditionalPhysicalOrRegistrationDetails
+ * SecuritiesSettlementTransactionReversalAdvice002V07.
+ * mmAdditionalPhysicalOrRegistrationDetails}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -121,7 +148,7 @@ public class RegistrationParameters7 {
 	 * definition} = "Identification assigned to a deposit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCertificationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RegistrationParameters7, Optional<RestrictedFINXMax16Text>> mmCertificationIdentification = new MMMessageAttribute<RegistrationParameters7, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> BasicSecuritiesRegistration.mmCertificationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RegistrationParameters7.mmObject();
@@ -134,6 +161,16 @@ public class RegistrationParameters7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(RegistrationParameters7 obj) {
+			return obj.getCertificationIdentification();
+		}
+
+		@Override
+		public void setValue(RegistrationParameters7 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setCertificationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CertfctnDtTm")
@@ -176,7 +213,7 @@ public class RegistrationParameters7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCertificationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RegistrationParameters7, Optional<DateAndDateTime2Choice>> mmCertificationDateTime = new MMMessageAttribute<RegistrationParameters7, Optional<DateAndDateTime2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> BasicSecuritiesRegistration.mmCertificationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RegistrationParameters7.mmObject();
@@ -189,6 +226,16 @@ public class RegistrationParameters7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTime2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTime2Choice> getValue(RegistrationParameters7 obj) {
+			return obj.getCertificationDateTime();
+		}
+
+		@Override
+		public void setValue(RegistrationParameters7 obj, Optional<DateAndDateTime2Choice> value) {
+			obj.setCertificationDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RegarAcct")
@@ -230,7 +277,7 @@ public class RegistrationParameters7 {
 	 * "Account at the registrar where financial instruments are registered."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegistrarAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RegistrationParameters7, Optional<RestrictedFINXMax35Text>> mmRegistrarAccount = new MMMessageAttribute<RegistrationParameters7, Optional<RestrictedFINXMax35Text>>() {
 		{
 			businessElementTrace_lazy = () -> RegistrarRole.mmRegistrarAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RegistrationParameters7.mmObject();
@@ -244,9 +291,19 @@ public class RegistrationParameters7 {
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax35Text.mmObject();
 		}
+
+		@Override
+		public Optional<RestrictedFINXMax35Text> getValue(RegistrationParameters7 obj) {
+			return obj.getRegistrarAccount();
+		}
+
+		@Override
+		public void setValue(RegistrationParameters7 obj, Optional<RestrictedFINXMax35Text> value) {
+			obj.setRegistrarAccount(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "CertNb")
-	protected List<com.tools20022.repository.msg.SecuritiesCertificate5> certificateNumber;
+	protected List<SecuritiesCertificate5> certificateNumber;
 	/**
 	 * 
 	 <p>
@@ -283,7 +340,7 @@ public class RegistrationParameters7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCertificateNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RegistrationParameters7, List<SecuritiesCertificate5>> mmCertificateNumber = new MMMessageAssociationEnd<RegistrationParameters7, List<SecuritiesCertificate5>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesCertificate.mmNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RegistrationParameters7.mmObject();
@@ -295,7 +352,17 @@ public class RegistrationParameters7 {
 			definition = "Unique and unambiguous identifier of a certificate assigned by the issuer.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesCertificate5.mmObject();
+			type_lazy = () -> SecuritiesCertificate5.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesCertificate5> getValue(RegistrationParameters7 obj) {
+			return obj.getCertificateNumber();
+		}
+
+		@Override
+		public void setValue(RegistrationParameters7 obj, List<SecuritiesCertificate5> value) {
+			obj.setCertificateNumber(value);
 		}
 	};
 
@@ -304,6 +371,9 @@ public class RegistrationParameters7 {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegistrationParameters7.mmCertificationIdentification, com.tools20022.repository.msg.RegistrationParameters7.mmCertificationDateTime,
 						com.tools20022.repository.msg.RegistrationParameters7.mmRegistrarAccount, com.tools20022.repository.msg.RegistrationParameters7.mmCertificateNumber);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionConfirmation002V08.mmAdditionalPhysicalOrRegistrationDetails,
+						SecuritiesSettlementTransactionGenerationNotification002V08.mmAdditionalPhysicalOrRegistrationDetails, SecuritiesSettlementTransactionInstruction002V08.mmAdditionalPhysicalOrRegistrationDetails,
+						SecuritiesSettlementTransactionReversalAdvice002V07.mmAdditionalPhysicalOrRegistrationDetails);
 				trace_lazy = () -> BasicSecuritiesRegistration.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -345,7 +415,7 @@ public class RegistrationParameters7 {
 		return certificateNumber == null ? certificateNumber = new ArrayList<>() : certificateNumber;
 	}
 
-	public RegistrationParameters7 setCertificateNumber(List<com.tools20022.repository.msg.SecuritiesCertificate5> certificateNumber) {
+	public RegistrationParameters7 setCertificateNumber(List<SecuritiesCertificate5> certificateNumber) {
 		this.certificateNumber = Objects.requireNonNull(certificateNumber);
 		return this;
 	}

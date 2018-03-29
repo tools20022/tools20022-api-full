@@ -107,7 +107,7 @@ public class CorporateActionPrice4 {
 	 * definition} = "Estimated price, eg, for valuation purposes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndicativePrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPrice4, Optional<PriceFormat2Choice>> mmIndicativePrice = new MMMessageAttribute<CorporateActionPrice4, Optional<PriceFormat2Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionPrice.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice4.mmObject();
@@ -119,6 +119,16 @@ public class CorporateActionPrice4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PriceFormat2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat2Choice> getValue(CorporateActionPrice4 obj) {
+			return obj.getIndicativePrice();
+		}
+
+		@Override
+		public void setValue(CorporateActionPrice4 obj, Optional<PriceFormat2Choice> value) {
+			obj.setIndicativePrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MktPric")
@@ -160,7 +170,7 @@ public class CorporateActionPrice4 {
 	 * "Last reported/known price of a financial instrument in a market."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarketPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPrice4, Optional<PriceFormat2Choice>> mmMarketPrice = new MMMessageAttribute<CorporateActionPrice4, Optional<PriceFormat2Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionPrice.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice4.mmObject();
@@ -173,6 +183,16 @@ public class CorporateActionPrice4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PriceFormat2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat2Choice> getValue(CorporateActionPrice4 obj) {
+			return obj.getMarketPrice();
+		}
+
+		@Override
+		public void setValue(CorporateActionPrice4 obj, Optional<PriceFormat2Choice> value) {
+			obj.setMarketPrice(value.orElse(null));
 		}
 	};
 

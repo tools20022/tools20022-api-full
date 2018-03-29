@@ -63,12 +63,16 @@ public class ConstraintDeliverersCustodianRule {
 	 */
 	public static final MMConstraint<DeliveringPartiesAndAccount3> forDeliveringPartiesAndAccount3 = new MMConstraint<DeliveringPartiesAndAccount3>() {
 		{
-			validator = ConstraintDeliverersCustodianRule::checkDeliveringPartiesAndAccount3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersCustodianRule";
 			definition = "If DeliverersIntermediaryDetails is present, then DeliverersCustodianDetails must also be present. If DeliverersIntermediaryDetails is not present then DeliverersCustodianDetails is optional.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeliverersCustodianRule.forDeliveringPartiesAndAccount16);
 			owner_lazy = () -> DeliveringPartiesAndAccount3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliveringPartiesAndAccount3 obj) throws Exception {
+			checkDeliveringPartiesAndAccount3(obj);
 		}
 	};
 	/**
@@ -94,11 +98,15 @@ public class ConstraintDeliverersCustodianRule {
 	 */
 	public static final MMConstraint<DeliveringPartiesAndAccount6> forDeliveringPartiesAndAccount6 = new MMConstraint<DeliveringPartiesAndAccount6>() {
 		{
-			validator = ConstraintDeliverersCustodianRule::checkDeliveringPartiesAndAccount6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersCustodianRule";
 			definition = "If DeliverersIntermediaryDetails is present, then DeliverersCustodianDetails must also be present. If DeliverersIntermediaryDetails is not present then DeliverersCustodianDetails is optional.";
 			owner_lazy = () -> DeliveringPartiesAndAccount6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliveringPartiesAndAccount6 obj) throws Exception {
+			checkDeliveringPartiesAndAccount6(obj);
 		}
 	};
 	/**
@@ -133,13 +141,17 @@ public class ConstraintDeliverersCustodianRule {
 	 */
 	public static final MMConstraint<DeliveringPartiesAndAccount16> forDeliveringPartiesAndAccount16 = new MMConstraint<DeliveringPartiesAndAccount16>() {
 		{
-			validator = ConstraintDeliverersCustodianRule::checkDeliveringPartiesAndAccount16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersCustodianRule";
 			definition = "If DeliverersIntermediary1Details is present, then DeliverersCustodianDetails must be present. If DeliverersIntermediary1Details is not present then DeliverersCustodianDetails is optional.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeliverersCustodianRule.forDeliveringPartiesAndAccount3;
 			owner_lazy = () -> DeliveringPartiesAndAccount16.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DeliverersCustodianDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DeliverersIntermediary1Details</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(DeliveringPartiesAndAccount16 obj) throws Exception {
+			checkDeliveringPartiesAndAccount16(obj);
 		}
 	};
 

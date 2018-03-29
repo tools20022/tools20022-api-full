@@ -22,6 +22,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.caam.ATMReconciliationAcknowledgementV01;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMTransaction12;
+import com.tools20022.repository.msg.AutomatedTellerMachine3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -108,7 +110,7 @@ public class ATMReconciliationAcknowledgement1 {
 	 * definition} = "ATM information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmATM = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMReconciliationAcknowledgement1, AutomatedTellerMachine3> mmATM = new MMMessageAssociationEnd<ATMReconciliationAcknowledgement1, AutomatedTellerMachine3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMReconciliationAcknowledgement1.mmObject();
 			isDerived = false;
@@ -119,7 +121,17 @@ public class ATMReconciliationAcknowledgement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine3.mmObject();
+			type_lazy = () -> AutomatedTellerMachine3.mmObject();
+		}
+
+		@Override
+		public AutomatedTellerMachine3 getValue(ATMReconciliationAcknowledgement1 obj) {
+			return obj.getATM();
+		}
+
+		@Override
+		public void setValue(ATMReconciliationAcknowledgement1 obj, AutomatedTellerMachine3 value) {
+			obj.setATM(value);
 		}
 	};
 	@XmlElement(name = "Tx", required = true)
@@ -150,7 +162,7 @@ public class ATMReconciliationAcknowledgement1 {
 	 * definition} = "Information about the reconciliation response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMReconciliationAcknowledgement1, ATMTransaction12> mmTransaction = new MMMessageAssociationEnd<ATMReconciliationAcknowledgement1, ATMTransaction12>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMReconciliationAcknowledgement1.mmObject();
 			isDerived = false;
@@ -161,7 +173,17 @@ public class ATMReconciliationAcknowledgement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMTransaction12.mmObject();
+			type_lazy = () -> ATMTransaction12.mmObject();
+		}
+
+		@Override
+		public ATMTransaction12 getValue(ATMReconciliationAcknowledgement1 obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(ATMReconciliationAcknowledgement1 obj, ATMTransaction12 value) {
+			obj.setTransaction(value);
 		}
 	};
 
@@ -183,7 +205,7 @@ public class ATMReconciliationAcknowledgement1 {
 		return aTM;
 	}
 
-	public ATMReconciliationAcknowledgement1 setATM(com.tools20022.repository.msg.AutomatedTellerMachine3 aTM) {
+	public ATMReconciliationAcknowledgement1 setATM(AutomatedTellerMachine3 aTM) {
 		this.aTM = Objects.requireNonNull(aTM);
 		return this;
 	}
@@ -192,7 +214,7 @@ public class ATMReconciliationAcknowledgement1 {
 		return transaction;
 	}
 
-	public ATMReconciliationAcknowledgement1 setTransaction(com.tools20022.repository.msg.ATMTransaction12 transaction) {
+	public ATMReconciliationAcknowledgement1 setTransaction(ATMTransaction12 transaction) {
 		this.transaction = Objects.requireNonNull(transaction);
 		return this;
 	}

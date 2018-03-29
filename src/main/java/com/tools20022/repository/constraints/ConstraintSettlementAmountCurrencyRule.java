@@ -54,11 +54,15 @@ public class ConstraintSettlementAmountCurrencyRule {
 	 */
 	public static final MMConstraint<PaymentSearch2> forPaymentSearch2 = new MMConstraint<PaymentSearch2>() {
 		{
-			validator = ConstraintSettlementAmountCurrencyRule::checkPaymentSearch2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmountCurrencyRule";
 			definition = "If at least one occurrence of InterbankSettlementAmount/CurrencyAndAmountRange is present, then no occurrence of InterbankSettlementAmountCurrency is allowed.\nIf InterbankSettlementAmount/CurrencyAndAmountRange is not present, then any occurrence of InterbankSettlementAmountCurrency is optional.";
 			owner_lazy = () -> PaymentSearch2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentSearch2 obj) throws Exception {
+			checkPaymentSearch2(obj);
 		}
 	};
 	/**
@@ -83,11 +87,15 @@ public class ConstraintSettlementAmountCurrencyRule {
 	 */
 	public static final MMConstraint<PaymentSearch3> forPaymentSearch3 = new MMConstraint<PaymentSearch3>() {
 		{
-			validator = ConstraintSettlementAmountCurrencyRule::checkPaymentSearch3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmountCurrencyRule";
 			definition = "If at least one occurrence of InterbankSettlementAmount/CurrencyAndAmountRange is present, then no occurrence of InterbankSettlementAmountCurrency is allowed.\nIf InterbankSettlementAmount/CurrencyAndAmountRange is not present, then any occurrence of InterbankSettlementAmountCurrency is optional.";
 			owner_lazy = () -> PaymentSearch3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentSearch3 obj) throws Exception {
+			checkPaymentSearch3(obj);
 		}
 	};
 	/**
@@ -124,13 +132,17 @@ public class ConstraintSettlementAmountCurrencyRule {
 	 */
 	public static final MMConstraint<PaymentSearch4> forPaymentSearch4 = new MMConstraint<PaymentSearch4>() {
 		{
-			validator = ConstraintSettlementAmountCurrencyRule::checkPaymentSearch4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmountCurrencyRule";
 			definition = "If at least one occurrence of InterbankSettlementAmount/CurrencyAndAmountRange is present, then no occurrence of InterbankSettlementAmountCurrency is allowed.\nIf InterbankSettlementAmount/CurrencyAndAmountRange is not present, then any occurrence of InterbankSettlementAmountCurrency is optional.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementAmountCurrencyRule.forPaymentSearch5);
 			owner_lazy = () -> PaymentSearch4.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InterbankSettlementAmountCurrency[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InterbankSettlementAmount[*]/CurrencyAndAmountRange</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(PaymentSearch4 obj) throws Exception {
+			checkPaymentSearch4(obj);
 		}
 	};
 	/**
@@ -172,7 +184,6 @@ public class ConstraintSettlementAmountCurrencyRule {
 	 */
 	public static final MMConstraint<PaymentSearch5> forPaymentSearch5 = new MMConstraint<PaymentSearch5>() {
 		{
-			validator = ConstraintSettlementAmountCurrencyRule::checkPaymentSearch5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmountCurrencyRule";
 			definition = "If at least one occurrence of InterbankSettlementAmount/CurrencyAndAmountRange is present, then no occurrence of InterbankSettlementAmountCurrency is allowed.\nIf InterbankSettlementAmount/CurrencyAndAmountRange is not present, then any occurrence of InterbankSettlementAmountCurrency is optional.";
@@ -180,6 +191,11 @@ public class ConstraintSettlementAmountCurrencyRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementAmountCurrencyRule.forPaymentSearch4;
 			owner_lazy = () -> PaymentSearch5.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InterbankSettlementAmountCurrency[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InterbankSettlementAmount[*]/CurrencyAndAmountRange</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(PaymentSearch5 obj) throws Exception {
+			checkPaymentSearch5(obj);
 		}
 	};
 	/**
@@ -221,7 +237,6 @@ public class ConstraintSettlementAmountCurrencyRule {
 	 */
 	public static final MMConstraint<PaymentSearch6> forPaymentSearch6 = new MMConstraint<PaymentSearch6>() {
 		{
-			validator = ConstraintSettlementAmountCurrencyRule::checkPaymentSearch6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmountCurrencyRule";
 			definition = "If at least one occurrence of InterbankSettlementAmount/CurrencyAndAmountRange is present, then no occurrence of InterbankSettlementAmountCurrency is allowed.\nIf InterbankSettlementAmount/CurrencyAndAmountRange is not present, then any occurrence of InterbankSettlementAmountCurrency is optional.";
@@ -229,6 +244,11 @@ public class ConstraintSettlementAmountCurrencyRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementAmountCurrencyRule.forPaymentSearch5;
 			owner_lazy = () -> PaymentSearch6.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InterbankSettlementAmountCurrency[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InterbankSettlementAmount[*]/CurrencyAndAmountRange</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(PaymentSearch6 obj) throws Exception {
+			checkPaymentSearch6(obj);
 		}
 	};
 	/**
@@ -262,13 +282,17 @@ public class ConstraintSettlementAmountCurrencyRule {
 	 */
 	public static final MMConstraint<PaymentSearch7> forPaymentSearch7 = new MMConstraint<PaymentSearch7>() {
 		{
-			validator = ConstraintSettlementAmountCurrencyRule::checkPaymentSearch7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmountCurrencyRule";
 			definition = "If at least one occurrence of InterbankSettlementAmount/CurrencyAndAmountRange is present, then no occurrence of InterbankSettlementAmountCurrency is allowed.\nIf InterbankSettlementAmount/CurrencyAndAmountRange is not present, then any occurrence of InterbankSettlementAmountCurrency is optional.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementAmountCurrencyRule.forPaymentSearch6;
 			owner_lazy = () -> PaymentSearch7.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InterbankSettlementAmountCurrency[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InterbankSettlementAmount[*]/CurrencyAndAmountRange</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(PaymentSearch7 obj) throws Exception {
+			checkPaymentSearch7(obj);
 		}
 	};
 

@@ -114,7 +114,7 @@ public class LimitIdentification1Choice {
 	 * definition} = "Identification of the current limit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCurrent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitIdentification1Choice, LimitIdentification1> mmCurrent = new MMMessageAssociationEnd<LimitIdentification1Choice, LimitIdentification1>() {
 		{
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.LimitIdentification1Choice.mmObject();
@@ -127,6 +127,16 @@ public class LimitIdentification1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> LimitIdentification1.mmObject();
+		}
+
+		@Override
+		public LimitIdentification1 getValue(LimitIdentification1Choice obj) {
+			return obj.getCurrent();
+		}
+
+		@Override
+		public void setValue(LimitIdentification1Choice obj, LimitIdentification1 value) {
+			obj.setCurrent(value);
 		}
 	};
 	@XmlElement(name = "Dflt", required = true)
@@ -162,7 +172,7 @@ public class LimitIdentification1Choice {
 	 * definition} = "Identification of the default limit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDefault = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitIdentification1Choice, LimitIdentification1> mmDefault = new MMMessageAssociationEnd<LimitIdentification1Choice, LimitIdentification1>() {
 		{
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.LimitIdentification1Choice.mmObject();
@@ -175,6 +185,16 @@ public class LimitIdentification1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> LimitIdentification1.mmObject();
+		}
+
+		@Override
+		public LimitIdentification1 getValue(LimitIdentification1Choice obj) {
+			return obj.getDefault();
+		}
+
+		@Override
+		public void setValue(LimitIdentification1Choice obj, LimitIdentification1 value) {
+			obj.setDefault(value);
 		}
 	};
 	@XmlElement(name = "AllCur", required = true)
@@ -210,7 +230,7 @@ public class LimitIdentification1Choice {
 	 * definition} = "Identification of all current limits."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAllCurrent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitIdentification1Choice, LimitIdentification2> mmAllCurrent = new MMMessageAssociationEnd<LimitIdentification1Choice, LimitIdentification2>() {
 		{
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.LimitIdentification1Choice.mmObject();
@@ -223,6 +243,16 @@ public class LimitIdentification1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> LimitIdentification2.mmObject();
+		}
+
+		@Override
+		public LimitIdentification2 getValue(LimitIdentification1Choice obj) {
+			return obj.getAllCurrent();
+		}
+
+		@Override
+		public void setValue(LimitIdentification1Choice obj, LimitIdentification2 value) {
+			obj.setAllCurrent(value);
 		}
 	};
 	@XmlElement(name = "AllDflt", required = true)
@@ -258,7 +288,7 @@ public class LimitIdentification1Choice {
 	 * definition} = "Identification of all default limits."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAllDefault = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitIdentification1Choice, LimitIdentification2> mmAllDefault = new MMMessageAssociationEnd<LimitIdentification1Choice, LimitIdentification2>() {
 		{
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.LimitIdentification1Choice.mmObject();
@@ -271,6 +301,16 @@ public class LimitIdentification1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> LimitIdentification2.mmObject();
+		}
+
+		@Override
+		public LimitIdentification2 getValue(LimitIdentification1Choice obj) {
+			return obj.getAllDefault();
+		}
+
+		@Override
+		public void setValue(LimitIdentification1Choice obj, LimitIdentification2 value) {
+			obj.setAllDefault(value);
 		}
 	};
 

@@ -111,7 +111,7 @@ public class MarketType7Choice {
 	 * definition} = "Market type expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketType7Choice, MarketType4Code> mmCode = new MMMessageAttribute<MarketType7Choice, MarketType4Code>() {
 		{
 			businessElementTrace_lazy = () -> TradingMarket.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MarketType7Choice.mmObject();
@@ -124,6 +124,16 @@ public class MarketType7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MarketType4Code.mmObject();
+		}
+
+		@Override
+		public MarketType4Code getValue(MarketType7Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(MarketType7Choice obj, MarketType4Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -163,7 +173,7 @@ public class MarketType7Choice {
 	 * definition} = "Market type expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarketType7Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<MarketType7Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> TradingMarket.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MarketType7Choice.mmObject();
@@ -177,6 +187,16 @@ public class MarketType7Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(MarketType7Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(MarketType7Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

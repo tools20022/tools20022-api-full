@@ -109,7 +109,7 @@ public class ChargeType2FormatChoice {
 	 * definition} = "Standard code to specify the type of charge."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ChargeType2FormatChoice, ChargeType14Code> mmCode = new MMMessageAttribute<ChargeType2FormatChoice, ChargeType14Code>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ChargeType2FormatChoice.mmObject();
@@ -121,6 +121,16 @@ public class ChargeType2FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ChargeType14Code.mmObject();
+		}
+
+		@Override
+		public ChargeType14Code getValue(ChargeType2FormatChoice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ChargeType2FormatChoice obj, ChargeType14Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -158,7 +168,7 @@ public class ChargeType2FormatChoice {
 	 * definition} = "Proprietary code for specifying the type of charge."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ChargeType2FormatChoice, GenericIdentification13> mmProprietary = new MMMessageAttribute<ChargeType2FormatChoice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ChargeType2FormatChoice.mmObject();
@@ -170,6 +180,16 @@ public class ChargeType2FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(ChargeType2FormatChoice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ChargeType2FormatChoice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

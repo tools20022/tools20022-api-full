@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstitutionIdentification5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -107,7 +108,7 @@ public class FinancialInstitution3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstitutionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstitution3, FinancialInstitutionIdentification5> mmFinancialInstitutionIdentification = new MMMessageAssociationEnd<FinancialInstitution3, FinancialInstitutionIdentification5>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstitution3.mmObject();
@@ -119,7 +120,17 @@ public class FinancialInstitution3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification5.mmObject();
+			type_lazy = () -> FinancialInstitutionIdentification5.mmObject();
+		}
+
+		@Override
+		public FinancialInstitutionIdentification5 getValue(FinancialInstitution3 obj) {
+			return obj.getFinancialInstitutionIdentification();
+		}
+
+		@Override
+		public void setValue(FinancialInstitution3 obj, FinancialInstitutionIdentification5 value) {
+			obj.setFinancialInstitutionIdentification(value);
 		}
 	};
 
@@ -141,7 +152,7 @@ public class FinancialInstitution3 {
 		return financialInstitutionIdentification;
 	}
 
-	public FinancialInstitution3 setFinancialInstitutionIdentification(com.tools20022.repository.msg.FinancialInstitutionIdentification5 financialInstitutionIdentification) {
+	public FinancialInstitution3 setFinancialInstitutionIdentification(FinancialInstitutionIdentification5 financialInstitutionIdentification) {
 		this.financialInstitutionIdentification = Objects.requireNonNull(financialInstitutionIdentification);
 		return this;
 	}

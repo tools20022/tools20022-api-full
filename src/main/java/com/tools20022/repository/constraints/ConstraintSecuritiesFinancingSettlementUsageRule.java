@@ -59,12 +59,50 @@ public class ConstraintSecuritiesFinancingSettlementUsageRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionModificationRequestV06> forSecuritiesSettlementTransactionModificationRequestV06 = new MMConstraint<SecuritiesSettlementTransactionModificationRequestV06>() {
 		{
-			validator = ConstraintSecuritiesFinancingSettlementUsageRule::checkSecuritiesSettlementTransactionModificationRequestV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesFinancingSettlementUsageRule";
 			definition = "In the framework of Securities Financing (repo, reverse repo, sec lending, sec borrowing), the SettlementInstruction can only be used for the plain vanilla settlement of the opening leg and closing leg.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesFinancingSettlementUsageRule.forSecuritiesSettlementTransactionModificationRequestV05;
 			owner_lazy = () -> SecuritiesSettlementTransactionModificationRequestV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionModificationRequestV06 obj) throws Exception {
+			checkSecuritiesSettlementTransactionModificationRequestV06(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequest002V06
+	 * SecuritiesSettlementTransactionModificationRequest002V06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesFinancingSettlementUsageRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "In the framework of Securities Financing (repo, reverse repo, sec lending, sec borrowing), the SettlementInstruction can only be used for the plain vanilla settlement of the opening leg and closing leg."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionModificationRequest002V06> forSecuritiesSettlementTransactionModificationRequest002V06 = new MMConstraint<SecuritiesSettlementTransactionModificationRequest002V06>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesFinancingSettlementUsageRule";
+			definition = "In the framework of Securities Financing (repo, reverse repo, sec lending, sec borrowing), the SettlementInstruction can only be used for the plain vanilla settlement of the opening leg and closing leg.";
+			owner_lazy = () -> SecuritiesSettlementTransactionModificationRequest002V06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionModificationRequest002V06 obj) throws Exception {
+			checkSecuritiesSettlementTransactionModificationRequest002V06(obj);
 		}
 	};
 	/**
@@ -105,13 +143,17 @@ public class ConstraintSecuritiesFinancingSettlementUsageRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionModificationRequestV05> forSecuritiesSettlementTransactionModificationRequestV05 = new MMConstraint<SecuritiesSettlementTransactionModificationRequestV05>() {
 		{
-			validator = ConstraintSecuritiesFinancingSettlementUsageRule::checkSecuritiesSettlementTransactionModificationRequestV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesFinancingSettlementUsageRule";
 			definition = "In the framework of Securities Financing (repo, reverse repo, sec lending, sec borrowing), the SettlementInstruction can only be used for the plain vanilla settlement of the opening leg and closing leg.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesFinancingSettlementUsageRule.forSecuritiesSettlementTransactionModificationRequestV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesFinancingSettlementUsageRule.forSecuritiesSettlementTransactionModificationRequestV04;
 			owner_lazy = () -> SecuritiesSettlementTransactionModificationRequestV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionModificationRequestV05 obj) throws Exception {
+			checkSecuritiesSettlementTransactionModificationRequestV05(obj);
 		}
 	};
 	/**
@@ -137,11 +179,15 @@ public class ConstraintSecuritiesFinancingSettlementUsageRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionModificationRequest002V05> forSecuritiesSettlementTransactionModificationRequest002V05 = new MMConstraint<SecuritiesSettlementTransactionModificationRequest002V05>() {
 		{
-			validator = ConstraintSecuritiesFinancingSettlementUsageRule::checkSecuritiesSettlementTransactionModificationRequest002V05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesFinancingSettlementUsageRule";
 			definition = "In the framework of Securities Financing (repo, reverse repo, sec lending, sec borrowing), the SettlementInstruction can only be used for the plain vanilla settlement of the opening leg and closing leg.";
 			owner_lazy = () -> SecuritiesSettlementTransactionModificationRequest002V05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionModificationRequest002V05 obj) throws Exception {
+			checkSecuritiesSettlementTransactionModificationRequest002V05(obj);
 		}
 	};
 	/**
@@ -167,11 +213,15 @@ public class ConstraintSecuritiesFinancingSettlementUsageRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionModificationRequestV01> forSecuritiesSettlementTransactionModificationRequestV01 = new MMConstraint<SecuritiesSettlementTransactionModificationRequestV01>() {
 		{
-			validator = ConstraintSecuritiesFinancingSettlementUsageRule::checkSecuritiesSettlementTransactionModificationRequestV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesFinancingSettlementUsageRule";
 			definition = "In the framework of Securities Financing (repo, reverse repo, sec lending, sec borrowing), the SettlementInstruction can only be used for the plain vanilla settlement of the opening leg and closing leg.";
 			owner_lazy = () -> SecuritiesSettlementTransactionModificationRequestV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionModificationRequestV01 obj) throws Exception {
+			checkSecuritiesSettlementTransactionModificationRequestV01(obj);
 		}
 	};
 	/**
@@ -206,12 +256,16 @@ public class ConstraintSecuritiesFinancingSettlementUsageRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionModificationRequestV02> forSecuritiesSettlementTransactionModificationRequestV02 = new MMConstraint<SecuritiesSettlementTransactionModificationRequestV02>() {
 		{
-			validator = ConstraintSecuritiesFinancingSettlementUsageRule::checkSecuritiesSettlementTransactionModificationRequestV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesFinancingSettlementUsageRule";
 			definition = "In the framework of Securities Financing (repo, reverse repo, sec lending, sec borrowing), the SettlementInstruction can only be used for the plain vanilla settlement of the opening leg and closing leg.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesFinancingSettlementUsageRule.forSecuritiesSettlementTransactionModificationRequestV03);
 			owner_lazy = () -> SecuritiesSettlementTransactionModificationRequestV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionModificationRequestV02 obj) throws Exception {
+			checkSecuritiesSettlementTransactionModificationRequestV02(obj);
 		}
 	};
 	/**
@@ -252,13 +306,17 @@ public class ConstraintSecuritiesFinancingSettlementUsageRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionModificationRequestV03> forSecuritiesSettlementTransactionModificationRequestV03 = new MMConstraint<SecuritiesSettlementTransactionModificationRequestV03>() {
 		{
-			validator = ConstraintSecuritiesFinancingSettlementUsageRule::checkSecuritiesSettlementTransactionModificationRequestV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesFinancingSettlementUsageRule";
 			definition = "In the framework of Securities Financing (repo, reverse repo, sec lending, sec borrowing), the SettlementInstruction can only be used for the plain vanilla settlement of the opening leg and closing leg.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesFinancingSettlementUsageRule.forSecuritiesSettlementTransactionModificationRequestV04);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesFinancingSettlementUsageRule.forSecuritiesSettlementTransactionModificationRequestV02;
 			owner_lazy = () -> SecuritiesSettlementTransactionModificationRequestV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionModificationRequestV03 obj) throws Exception {
+			checkSecuritiesSettlementTransactionModificationRequestV03(obj);
 		}
 	};
 	/**
@@ -299,13 +357,17 @@ public class ConstraintSecuritiesFinancingSettlementUsageRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionModificationRequestV04> forSecuritiesSettlementTransactionModificationRequestV04 = new MMConstraint<SecuritiesSettlementTransactionModificationRequestV04>() {
 		{
-			validator = ConstraintSecuritiesFinancingSettlementUsageRule::checkSecuritiesSettlementTransactionModificationRequestV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesFinancingSettlementUsageRule";
 			definition = "In the framework of Securities Financing (repo, reverse repo, sec lending, sec borrowing), the SettlementInstruction can only be used for the plain vanilla settlement of the opening leg and closing leg.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesFinancingSettlementUsageRule.forSecuritiesSettlementTransactionModificationRequestV05);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesFinancingSettlementUsageRule.forSecuritiesSettlementTransactionModificationRequestV03;
 			owner_lazy = () -> SecuritiesSettlementTransactionModificationRequestV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionModificationRequestV04 obj) throws Exception {
+			checkSecuritiesSettlementTransactionModificationRequestV04(obj);
 		}
 	};
 	/**
@@ -331,11 +393,15 @@ public class ConstraintSecuritiesFinancingSettlementUsageRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionModificationRequest002V04> forSecuritiesSettlementTransactionModificationRequest002V04 = new MMConstraint<SecuritiesSettlementTransactionModificationRequest002V04>() {
 		{
-			validator = ConstraintSecuritiesFinancingSettlementUsageRule::checkSecuritiesSettlementTransactionModificationRequest002V04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesFinancingSettlementUsageRule";
 			definition = "In the framework of Securities Financing (repo, reverse repo, sec lending, sec borrowing), the SettlementInstruction can only be used for the plain vanilla settlement of the opening leg and closing leg.";
 			owner_lazy = () -> SecuritiesSettlementTransactionModificationRequest002V04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionModificationRequest002V04 obj) throws Exception {
+			checkSecuritiesSettlementTransactionModificationRequest002V04(obj);
 		}
 	};
 
@@ -345,6 +411,15 @@ public class ConstraintSecuritiesFinancingSettlementUsageRule {
 	 * the plain vanilla settlement of the opening leg and closing leg.
 	 */
 	public static void checkSecuritiesSettlementTransactionModificationRequestV06(SecuritiesSettlementTransactionModificationRequestV06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * In the framework of Securities Financing (repo, reverse repo, sec
+	 * lending, sec borrowing), the SettlementInstruction can only be used for
+	 * the plain vanilla settlement of the opening leg and closing leg.
+	 */
+	public static void checkSecuritiesSettlementTransactionModificationRequest002V06(SecuritiesSettlementTransactionModificationRequest002V06 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 

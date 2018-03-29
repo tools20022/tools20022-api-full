@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.InstructionStatus6Choice;
 import com.tools20022.repository.entity.MeetingStatus;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
@@ -119,7 +120,7 @@ public class InstructionStatus5Choice {
 	 * InstructionStatus3Choice.mmGlobalInstructionStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGlobalInstructionStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InstructionStatus5Choice, InstructionStatus6Choice> mmGlobalInstructionStatus = new MMMessageAssociationEnd<InstructionStatus5Choice, InstructionStatus6Choice>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmInstructionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InstructionStatus5Choice.mmObject();
@@ -132,7 +133,17 @@ public class InstructionStatus5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.InstructionStatus6Choice.mmObject();
+			type_lazy = () -> InstructionStatus6Choice.mmObject();
+		}
+
+		@Override
+		public InstructionStatus6Choice getValue(InstructionStatus5Choice obj) {
+			return obj.getGlobalInstructionStatus();
+		}
+
+		@Override
+		public void setValue(InstructionStatus5Choice obj, InstructionStatus6Choice value) {
+			obj.setGlobalInstructionStatus(value);
 		}
 	};
 	@XmlElement(name = "DtldInstrSts", required = true)
@@ -175,7 +186,7 @@ public class InstructionStatus5Choice {
 	 * InstructionStatus3Choice.mmDetailedInstructionStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDetailedInstructionStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InstructionStatus5Choice, List<DetailedInstructionStatus11>> mmDetailedInstructionStatus = new MMMessageAssociationEnd<InstructionStatus5Choice, List<DetailedInstructionStatus11>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmInstructionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InstructionStatus5Choice.mmObject();
@@ -188,6 +199,16 @@ public class InstructionStatus5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DetailedInstructionStatus11.mmObject();
+		}
+
+		@Override
+		public List<DetailedInstructionStatus11> getValue(InstructionStatus5Choice obj) {
+			return obj.getDetailedInstructionStatus();
+		}
+
+		@Override
+		public void setValue(InstructionStatus5Choice obj, List<DetailedInstructionStatus11> value) {
+			obj.setDetailedInstructionStatus(value);
 		}
 	};
 
@@ -210,7 +231,7 @@ public class InstructionStatus5Choice {
 		return globalInstructionStatus;
 	}
 
-	public InstructionStatus5Choice setGlobalInstructionStatus(com.tools20022.repository.choice.InstructionStatus6Choice globalInstructionStatus) {
+	public InstructionStatus5Choice setGlobalInstructionStatus(InstructionStatus6Choice globalInstructionStatus) {
 		this.globalInstructionStatus = Objects.requireNonNull(globalInstructionStatus);
 		return this;
 	}

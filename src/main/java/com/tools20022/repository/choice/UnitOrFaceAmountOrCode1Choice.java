@@ -115,7 +115,7 @@ public class UnitOrFaceAmountOrCode1Choice {
 	 * definition} = "Quantity expressed as a number, eg, a number of shares."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitOrFaceAmountOrCode1Choice, DecimalNumber> mmUnit = new MMMessageAttribute<UnitOrFaceAmountOrCode1Choice, DecimalNumber>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnitOrFaceAmountOrCode1Choice.mmObject();
@@ -127,6 +127,16 @@ public class UnitOrFaceAmountOrCode1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(UnitOrFaceAmountOrCode1Choice obj) {
+			return obj.getUnit();
+		}
+
+		@Override
+		public void setValue(UnitOrFaceAmountOrCode1Choice obj, DecimalNumber value) {
+			obj.setUnit(value);
 		}
 	};
 	@XmlElement(name = "FaceAmt", required = true)
@@ -166,7 +176,7 @@ public class UnitOrFaceAmountOrCode1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFaceAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitOrFaceAmountOrCode1Choice, ActiveCurrencyAndAmount> mmFaceAmount = new MMMessageAttribute<UnitOrFaceAmountOrCode1Choice, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmFaceAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnitOrFaceAmountOrCode1Choice.mmObject();
@@ -178,6 +188,16 @@ public class UnitOrFaceAmountOrCode1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(UnitOrFaceAmountOrCode1Choice obj) {
+			return obj.getFaceAmount();
+		}
+
+		@Override
+		public void setValue(UnitOrFaceAmountOrCode1Choice obj, ActiveCurrencyAndAmount value) {
+			obj.setFaceAmount(value);
 		}
 	};
 	@XmlElement(name = "Cd", required = true)
@@ -215,7 +235,7 @@ public class UnitOrFaceAmountOrCode1Choice {
 	 * definition} = "Quantity expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitOrFaceAmountOrCode1Choice, Quantity1Code> mmCode = new MMMessageAttribute<UnitOrFaceAmountOrCode1Choice, Quantity1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnitOrFaceAmountOrCode1Choice.mmObject();
@@ -227,6 +247,16 @@ public class UnitOrFaceAmountOrCode1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Quantity1Code.mmObject();
+		}
+
+		@Override
+		public Quantity1Code getValue(UnitOrFaceAmountOrCode1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(UnitOrFaceAmountOrCode1Choice obj, Quantity1Code value) {
+			obj.setCode(value);
 		}
 	};
 

@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.ChoiceCorporateAction;
 import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.entity.CorporateActionStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CorporateActionOption2;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -126,7 +127,7 @@ public class CorporateActionDeactivationInstruction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeactivationDateAndTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDeactivationInstruction1, ISODateTime> mmDeactivationDateAndTime = new MMMessageAttribute<CorporateActionDeactivationInstruction1, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatus.mmDeactivationDateAndTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDeactivationInstruction1.mmObject();
@@ -139,9 +140,19 @@ public class CorporateActionDeactivationInstruction1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
+
+		@Override
+		public ISODateTime getValue(CorporateActionDeactivationInstruction1 obj) {
+			return obj.getDeactivationDateAndTime();
+		}
+
+		@Override
+		public void setValue(CorporateActionDeactivationInstruction1 obj, ISODateTime value) {
+			obj.setDeactivationDateAndTime(value);
+		}
 	};
 	@XmlElement(name = "OptnDtls")
-	protected List<com.tools20022.repository.msg.CorporateActionOption2> optionDetails;
+	protected List<CorporateActionOption2> optionDetails;
 	/**
 	 * 
 	 <p>
@@ -175,7 +186,7 @@ public class CorporateActionDeactivationInstruction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOptionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionDeactivationInstruction1, List<CorporateActionOption2>> mmOptionDetails = new MMMessageAssociationEnd<CorporateActionDeactivationInstruction1, List<CorporateActionOption2>>() {
 		{
 			businessElementTrace_lazy = () -> ChoiceCorporateAction.mmCorporateActionOptionDefinition;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDeactivationInstruction1.mmObject();
@@ -186,7 +197,17 @@ public class CorporateActionDeactivationInstruction1 {
 			definition = "Provides information about the option, when the deactivation instruction applies at the level of a corporate action option.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CorporateActionOption2.mmObject();
+			type_lazy = () -> CorporateActionOption2.mmObject();
+		}
+
+		@Override
+		public List<CorporateActionOption2> getValue(CorporateActionDeactivationInstruction1 obj) {
+			return obj.getOptionDetails();
+		}
+
+		@Override
+		public void setValue(CorporateActionDeactivationInstruction1 obj, List<CorporateActionOption2> value) {
+			obj.setOptionDetails(value);
 		}
 	};
 
@@ -219,7 +240,7 @@ public class CorporateActionDeactivationInstruction1 {
 		return optionDetails == null ? optionDetails = new ArrayList<>() : optionDetails;
 	}
 
-	public CorporateActionDeactivationInstruction1 setOptionDetails(List<com.tools20022.repository.msg.CorporateActionOption2> optionDetails) {
+	public CorporateActionDeactivationInstruction1 setOptionDetails(List<CorporateActionOption2> optionDetails) {
 		this.optionDetails = Objects.requireNonNull(optionDetails);
 		return this;
 	}

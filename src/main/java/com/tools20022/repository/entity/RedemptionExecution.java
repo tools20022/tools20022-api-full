@@ -26,7 +26,6 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.InvestmentFundOrderExecution;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -225,7 +224,7 @@ public class RedemptionExecution extends InvestmentFundOrderExecution {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmRedeemedNetAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<RedemptionExecution, CurrencyAndAmount> mmRedeemedNetAmount = new MMBusinessAttribute<RedemptionExecution, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(RedemptionExecution3.mmNetAmount, RedemptionExecution5.mmNetAmount, RedemptionExecution4.mmNetAmount, RedemptionExecution6.mmNetAmount, SwitchRedemptionLegExecution2.mmNetAmount,
 					SwitchRedemptionLegExecution3.mmNetAmount, RedemptionExecution12.mmNetAmount, RedemptionExecution16.mmNetAmount, RedemptionExecution15.mmNetAmount, SwitchRedemptionLegExecution4.mmNetAmount);
@@ -239,12 +238,14 @@ public class RedemptionExecution extends InvestmentFundOrderExecution {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RedemptionExecution.class.getMethod("getRedeemedNetAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(RedemptionExecution obj) {
+			return obj.getRedeemedNetAmount();
+		}
+
+		@Override
+		public void setValue(RedemptionExecution obj, CurrencyAndAmount value) {
+			obj.setRedeemedNetAmount(value);
 		}
 	};
 	protected CurrencyAndAmount partialRedemptionWithholdingAmount;
@@ -296,7 +297,7 @@ public class RedemptionExecution extends InvestmentFundOrderExecution {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPartialRedemptionWithholdingAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<RedemptionExecution, CurrencyAndAmount> mmPartialRedemptionWithholdingAmount = new MMBusinessAttribute<RedemptionExecution, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(RedemptionExecution5.mmPartialRedemptionWithholdingAmount, RedemptionExecution6.mmPartialRedemptionWithholdingAmount, RedemptionExecution12.mmPartialRedemptionWithholdingAmount,
 					RedemptionExecution16.mmPartialRedemptionWithholdingAmount, RedemptionExecution15.mmPartialRedemptionWithholdingAmount);
@@ -310,12 +311,14 @@ public class RedemptionExecution extends InvestmentFundOrderExecution {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RedemptionExecution.class.getMethod("getPartialRedemptionWithholdingAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(RedemptionExecution obj) {
+			return obj.getPartialRedemptionWithholdingAmount();
+		}
+
+		@Override
+		public void setValue(RedemptionExecution obj, CurrencyAndAmount value) {
+			obj.setPartialRedemptionWithholdingAmount(value);
 		}
 	};
 	protected ISODate settlementDate;
@@ -345,7 +348,7 @@ public class RedemptionExecution extends InvestmentFundOrderExecution {
 	 * "Date on which the amount of money for the redemption is paid."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSettlementDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<RedemptionExecution, ISODate> mmSettlementDate = new MMBusinessAttribute<RedemptionExecution, ISODate>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.RedemptionExecution.mmObject();
@@ -357,12 +360,14 @@ public class RedemptionExecution extends InvestmentFundOrderExecution {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RedemptionExecution.class.getMethod("getSettlementDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODate getValue(RedemptionExecution obj) {
+			return obj.getSettlementDate();
+		}
+
+		@Override
+		public void setValue(RedemptionExecution obj, ISODate value) {
+			obj.setSettlementDate(value);
 		}
 	};
 

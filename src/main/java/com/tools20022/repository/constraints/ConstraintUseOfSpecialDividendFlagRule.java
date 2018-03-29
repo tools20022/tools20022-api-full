@@ -51,11 +51,15 @@ public class ConstraintUseOfSpecialDividendFlagRule {
 	 */
 	public static final MMConstraint<DividendTypeFormat4SD1> forDividendTypeFormat4SD1 = new MMConstraint<DividendTypeFormat4SD1>() {
 		{
-			validator = ConstraintUseOfSpecialDividendFlagRule::checkDividendTypeFormat4SD1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UseOfSpecialDividendFlagRule";
 			definition = "SpecialDividendFlag can only be used with corporate action event type code DVCA.";
 			owner_lazy = () -> DividendTypeFormat4SD1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DividendTypeFormat4SD1 obj) throws Exception {
+			checkDividendTypeFormat4SD1(obj);
 		}
 	};
 

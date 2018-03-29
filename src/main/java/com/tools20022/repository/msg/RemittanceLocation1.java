@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.ContactPoint;
 import com.tools20022.repository.entity.PaymentObligation;
 import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.NameAndAddress3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -117,7 +118,7 @@ public class RemittanceLocation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRemittanceIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RemittanceLocation1, Optional<Max35Text>> mmRemittanceIdentification = new MMMessageAttribute<RemittanceLocation1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RemittanceLocation1.mmObject();
 			isDerived = false;
@@ -128,6 +129,16 @@ public class RemittanceLocation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(RemittanceLocation1 obj) {
+			return obj.getRemittanceIdentification();
+		}
+
+		@Override
+		public void setValue(RemittanceLocation1 obj, Optional<Max35Text> value) {
+			obj.setRemittanceIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RmtLctnMtd")
@@ -167,7 +178,7 @@ public class RemittanceLocation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRemittanceLocationMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RemittanceLocation1, Optional<RemittanceLocationMethod1Code>> mmRemittanceLocationMethod = new MMMessageAttribute<RemittanceLocation1, Optional<RemittanceLocationMethod1Code>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmRemittanceDeliveryMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RemittanceLocation1.mmObject();
@@ -179,6 +190,16 @@ public class RemittanceLocation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RemittanceLocationMethod1Code.mmObject();
+		}
+
+		@Override
+		public Optional<RemittanceLocationMethod1Code> getValue(RemittanceLocation1 obj) {
+			return obj.getRemittanceLocationMethod();
+		}
+
+		@Override
+		public void setValue(RemittanceLocation1 obj, Optional<RemittanceLocationMethod1Code> value) {
+			obj.setRemittanceLocationMethod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RmtLctnElctrncAdr")
@@ -216,7 +237,7 @@ public class RemittanceLocation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRemittanceLocationElectronicAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RemittanceLocation1, Optional<Max256Text>> mmRemittanceLocationElectronicAddress = new MMMessageAttribute<RemittanceLocation1, Optional<Max256Text>>() {
 		{
 			businessComponentTrace_lazy = () -> ContactPoint.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.RemittanceLocation1.mmObject();
@@ -228,6 +249,16 @@ public class RemittanceLocation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max256Text> getValue(RemittanceLocation1 obj) {
+			return obj.getRemittanceLocationElectronicAddress();
+		}
+
+		@Override
+		public void setValue(RemittanceLocation1 obj, Optional<Max256Text> value) {
+			obj.setRemittanceLocationElectronicAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RmtLctnPstlAdr")
@@ -265,7 +296,7 @@ public class RemittanceLocation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRemittanceLocationPostalAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RemittanceLocation1, Optional<NameAndAddress3>> mmRemittanceLocationPostalAddress = new MMMessageAssociationEnd<RemittanceLocation1, Optional<NameAndAddress3>>() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.RemittanceLocation1.mmObject();
@@ -277,7 +308,17 @@ public class RemittanceLocation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NameAndAddress3.mmObject();
+			type_lazy = () -> NameAndAddress3.mmObject();
+		}
+
+		@Override
+		public Optional<NameAndAddress3> getValue(RemittanceLocation1 obj) {
+			return obj.getRemittanceLocationPostalAddress();
+		}
+
+		@Override
+		public void setValue(RemittanceLocation1 obj, Optional<NameAndAddress3> value) {
+			obj.setRemittanceLocationPostalAddress(value.orElse(null));
 		}
 	};
 
@@ -327,7 +368,7 @@ public class RemittanceLocation1 {
 		return remittanceLocationPostalAddress == null ? Optional.empty() : Optional.of(remittanceLocationPostalAddress);
 	}
 
-	public RemittanceLocation1 setRemittanceLocationPostalAddress(com.tools20022.repository.msg.NameAndAddress3 remittanceLocationPostalAddress) {
+	public RemittanceLocation1 setRemittanceLocationPostalAddress(NameAndAddress3 remittanceLocationPostalAddress) {
 		this.remittanceLocationPostalAddress = remittanceLocationPostalAddress;
 		return this;
 	}

@@ -132,7 +132,7 @@ public class AccountSelection1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountSelection1Choice, Max35Text> mmAccountIdentification = new MMMessageAttribute<AccountSelection1Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountSelection1Choice.mmObject();
@@ -145,6 +145,16 @@ public class AccountSelection1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AccountSelection1Choice obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(AccountSelection1Choice obj, Max35Text value) {
+			obj.setAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "OthrAcctSelctnData", required = true)
@@ -190,7 +200,7 @@ public class AccountSelection1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherAccountSelectionData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountSelection1Choice, InvestmentAccount52> mmOtherAccountSelectionData = new MMMessageAssociationEnd<AccountSelection1Choice, InvestmentAccount52>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountSelection1Choice.mmObject();
@@ -204,6 +214,16 @@ public class AccountSelection1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> InvestmentAccount52.mmObject();
+		}
+
+		@Override
+		public InvestmentAccount52 getValue(AccountSelection1Choice obj) {
+			return obj.getOtherAccountSelectionData();
+		}
+
+		@Override
+		public void setValue(AccountSelection1Choice obj, InvestmentAccount52 value) {
+			obj.setOtherAccountSelectionData(value);
 		}
 	};
 

@@ -140,7 +140,7 @@ public class SummaryAmounts1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmThresholdAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SummaryAmounts1, Optional<ActiveCurrencyAndAmount>> mmThresholdAmount = new MMMessageAttribute<SummaryAmounts1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> VariationMarginTerm.mmThresholdAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SummaryAmounts1.mmObject();
@@ -152,6 +152,16 @@ public class SummaryAmounts1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(SummaryAmounts1 obj) {
+			return obj.getThresholdAmount();
+		}
+
+		@Override
+		public void setValue(SummaryAmounts1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setThresholdAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ThrshldTp")
@@ -190,7 +200,7 @@ public class SummaryAmounts1 {
 	 * "Specifies if the threshold amount is secured or unsecured."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmThresholdType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SummaryAmounts1, Optional<ThresholdType1Code>> mmThresholdType = new MMMessageAttribute<SummaryAmounts1, Optional<ThresholdType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> VariationMarginTerm.mmThresholdType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SummaryAmounts1.mmObject();
@@ -202,6 +212,16 @@ public class SummaryAmounts1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ThresholdType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ThresholdType1Code> getValue(SummaryAmounts1 obj) {
+			return obj.getThresholdType();
+		}
+
+		@Override
+		public void setValue(SummaryAmounts1 obj, Optional<ThresholdType1Code> value) {
+			obj.setThresholdType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PreHrcutCollVal")
@@ -240,7 +260,7 @@ public class SummaryAmounts1 {
 	 * "Total value of posted collateral (pre-haircut) held by the taker."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreHaircutCollateralValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SummaryAmounts1, Optional<ActiveCurrencyAndAmount>> mmPreHaircutCollateralValue = new MMMessageAttribute<SummaryAmounts1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> ExposureCalculation.mmTotalCollateralCurrentValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SummaryAmounts1.mmObject();
@@ -252,6 +272,16 @@ public class SummaryAmounts1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(SummaryAmounts1 obj) {
+			return obj.getPreHaircutCollateralValue();
+		}
+
+		@Override
+		public void setValue(SummaryAmounts1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setPreHaircutCollateralValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AdjstdXpsr")
@@ -289,7 +319,7 @@ public class SummaryAmounts1 {
 	 * definition} = "Total amount of collateral required (unrounded)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdjustedExposure = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SummaryAmounts1, Optional<ActiveCurrencyAndAmount>> mmAdjustedExposure = new MMMessageAttribute<SummaryAmounts1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> ExposureCalculation.mmTotalExposedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SummaryAmounts1.mmObject();
@@ -301,6 +331,16 @@ public class SummaryAmounts1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(SummaryAmounts1 obj) {
+			return obj.getAdjustedExposure();
+		}
+
+		@Override
+		public void setValue(SummaryAmounts1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setAdjustedExposure(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CollReqrd")
@@ -337,7 +377,7 @@ public class SummaryAmounts1 {
 	 * definition} = "Total amount of collateral required (rounded)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralRequired = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SummaryAmounts1, Optional<ActiveCurrencyAndAmount>> mmCollateralRequired = new MMMessageAttribute<SummaryAmounts1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessComponentTrace_lazy = () -> MarginCall.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SummaryAmounts1.mmObject();
@@ -349,6 +389,16 @@ public class SummaryAmounts1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(SummaryAmounts1 obj) {
+			return obj.getCollateralRequired();
+		}
+
+		@Override
+		public void setValue(SummaryAmounts1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setCollateralRequired(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinTrfAmt")
@@ -388,7 +438,7 @@ public class SummaryAmounts1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumTransferAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SummaryAmounts1, Optional<ActiveCurrencyAndAmount>> mmMinimumTransferAmount = new MMMessageAttribute<SummaryAmounts1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> ExposureTerm.mmMinimumTransferAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SummaryAmounts1.mmObject();
@@ -400,6 +450,16 @@ public class SummaryAmounts1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(SummaryAmounts1 obj) {
+			return obj.getMinimumTransferAmount();
+		}
+
+		@Override
+		public void setValue(SummaryAmounts1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setMinimumTransferAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RndgAmt")
@@ -439,7 +499,7 @@ public class SummaryAmounts1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRoundingAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SummaryAmounts1, Optional<ActiveCurrencyAndAmount>> mmRoundingAmount = new MMMessageAttribute<SummaryAmounts1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> ExposureTerm.mmRoundingAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SummaryAmounts1.mmObject();
@@ -451,6 +511,16 @@ public class SummaryAmounts1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(SummaryAmounts1 obj) {
+			return obj.getRoundingAmount();
+		}
+
+		@Override
+		public void setValue(SummaryAmounts1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setRoundingAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsXpsrVal")
@@ -488,7 +558,7 @@ public class SummaryAmounts1 {
 	 * definition} = "Exposure value at previous valuation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreviousExposureValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SummaryAmounts1, Optional<ActiveCurrencyAndAmount>> mmPreviousExposureValue = new MMMessageAttribute<SummaryAmounts1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> ExposureCalculation.mmTotalExposedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SummaryAmounts1.mmObject();
@@ -500,6 +570,16 @@ public class SummaryAmounts1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(SummaryAmounts1 obj) {
+			return obj.getPreviousExposureValue();
+		}
+
+		@Override
+		public void setValue(SummaryAmounts1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setPreviousExposureValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsCollVal")
@@ -537,7 +617,7 @@ public class SummaryAmounts1 {
 	 * definition} = "Value of collateral at previous valuation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreviousCollateralValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SummaryAmounts1, Optional<ActiveCurrencyAndAmount>> mmPreviousCollateralValue = new MMMessageAttribute<SummaryAmounts1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> ExposureCalculation.mmTotalCollateralCurrentValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SummaryAmounts1.mmObject();
@@ -549,6 +629,16 @@ public class SummaryAmounts1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(SummaryAmounts1 obj) {
+			return obj.getPreviousCollateralValue();
+		}
+
+		@Override
+		public void setValue(SummaryAmounts1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setPreviousCollateralValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlPdgIncmgColl")
@@ -586,7 +676,7 @@ public class SummaryAmounts1 {
 	 * definition} = "Value of incoming collateral, to be settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalPendingIncomingCollateral = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SummaryAmounts1, Optional<ActiveCurrencyAndAmount>> mmTotalPendingIncomingCollateral = new MMMessageAttribute<SummaryAmounts1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CollateralBalance.mmInTransit;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SummaryAmounts1.mmObject();
@@ -598,6 +688,16 @@ public class SummaryAmounts1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(SummaryAmounts1 obj) {
+			return obj.getTotalPendingIncomingCollateral();
+		}
+
+		@Override
+		public void setValue(SummaryAmounts1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setTotalPendingIncomingCollateral(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlPdgOutgngColl")
@@ -635,7 +735,7 @@ public class SummaryAmounts1 {
 	 * definition} = "Value of outgoing collateral, to be settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalPendingOutgoingCollateral = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SummaryAmounts1, Optional<ActiveCurrencyAndAmount>> mmTotalPendingOutgoingCollateral = new MMMessageAttribute<SummaryAmounts1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CollateralBalance.mmInTransit;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SummaryAmounts1.mmObject();
@@ -647,6 +747,16 @@ public class SummaryAmounts1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(SummaryAmounts1 obj) {
+			return obj.getTotalPendingOutgoingCollateral();
+		}
+
+		@Override
+		public void setValue(SummaryAmounts1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setTotalPendingOutgoingCollateral(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlAcrdIntrstAmt")
@@ -684,7 +794,7 @@ public class SummaryAmounts1 {
 	 * definition} = "Sum of accrued interest."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalAccruedInterestAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SummaryAmounts1, Optional<ActiveCurrencyAndAmount>> mmTotalAccruedInterestAmount = new MMMessageAttribute<SummaryAmounts1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmAccruedInterestAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SummaryAmounts1.mmObject();
@@ -696,6 +806,16 @@ public class SummaryAmounts1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(SummaryAmounts1 obj) {
+			return obj.getTotalAccruedInterestAmount();
+		}
+
+		@Override
+		public void setValue(SummaryAmounts1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setTotalAccruedInterestAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlFees")
@@ -732,7 +852,7 @@ public class SummaryAmounts1 {
 	 * definition} = "Sum of fees/commissions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalFees = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SummaryAmounts1, Optional<ActiveCurrencyAndAmount>> mmTotalFees = new MMMessageAttribute<SummaryAmounts1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessComponentTrace_lazy = () -> Commission.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SummaryAmounts1.mmObject();
@@ -744,6 +864,16 @@ public class SummaryAmounts1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(SummaryAmounts1 obj) {
+			return obj.getTotalFees();
+		}
+
+		@Override
+		public void setValue(SummaryAmounts1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setTotalFees(value.orElse(null));
 		}
 	};
 

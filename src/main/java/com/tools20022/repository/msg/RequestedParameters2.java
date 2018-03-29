@@ -21,6 +21,8 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericReportParameters;
+import com.tools20022.repository.msg.StatementAttributes1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -95,7 +97,7 @@ public class RequestedParameters2 {
 	 * "Account and statement parameters for which the statement is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatementByAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RequestedParameters2, StatementAttributes1> mmStatementByAccount = new MMMessageAssociationEnd<RequestedParameters2, StatementAttributes1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestedParameters2.mmObject();
 			isDerived = false;
@@ -106,7 +108,17 @@ public class RequestedParameters2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.StatementAttributes1.mmObject();
+			type_lazy = () -> StatementAttributes1.mmObject();
+		}
+
+		@Override
+		public StatementAttributes1 getValue(RequestedParameters2 obj) {
+			return obj.getStatementByAccount();
+		}
+
+		@Override
+		public void setValue(RequestedParameters2 obj, StatementAttributes1 value) {
+			obj.setStatementByAccount(value);
 		}
 	};
 	@XmlElement(name = "StmtByAcctAndFinInstrm", required = true)
@@ -140,7 +152,7 @@ public class RequestedParameters2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatementByAccountAndFinancialInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RequestedParameters2, GenericReportParameters> mmStatementByAccountAndFinancialInstrument = new MMMessageAssociationEnd<RequestedParameters2, GenericReportParameters>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestedParameters2.mmObject();
 			isDerived = false;
@@ -151,7 +163,17 @@ public class RequestedParameters2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericReportParameters.mmObject();
+			type_lazy = () -> GenericReportParameters.mmObject();
+		}
+
+		@Override
+		public GenericReportParameters getValue(RequestedParameters2 obj) {
+			return obj.getStatementByAccountAndFinancialInstrument();
+		}
+
+		@Override
+		public void setValue(RequestedParameters2 obj, GenericReportParameters value) {
+			obj.setStatementByAccountAndFinancialInstrument(value);
 		}
 	};
 
@@ -172,7 +194,7 @@ public class RequestedParameters2 {
 		return statementByAccount;
 	}
 
-	public RequestedParameters2 setStatementByAccount(com.tools20022.repository.msg.StatementAttributes1 statementByAccount) {
+	public RequestedParameters2 setStatementByAccount(StatementAttributes1 statementByAccount) {
 		this.statementByAccount = Objects.requireNonNull(statementByAccount);
 		return this;
 	}
@@ -181,7 +203,7 @@ public class RequestedParameters2 {
 		return statementByAccountAndFinancialInstrument;
 	}
 
-	public RequestedParameters2 setStatementByAccountAndFinancialInstrument(com.tools20022.repository.msg.GenericReportParameters statementByAccountAndFinancialInstrument) {
+	public RequestedParameters2 setStatementByAccountAndFinancialInstrument(GenericReportParameters statementByAccountAndFinancialInstrument) {
 		this.statementByAccountAndFinancialInstrument = Objects.requireNonNull(statementByAccountAndFinancialInstrument);
 		return this;
 	}

@@ -135,7 +135,7 @@ public class LimitSearchCriteria1 {
 	 * definition} = "Identification of a particular cash clearing system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSystemIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitSearchCriteria1, Optional<SystemIdentificationChoice>> mmSystemIdentification = new MMMessageAttribute<LimitSearchCriteria1, Optional<SystemIdentificationChoice>>() {
 		{
 			businessElementTrace_lazy = () -> TransactionAdministrator.mmCashClearingSystem;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitSearchCriteria1.mmObject();
@@ -147,6 +147,16 @@ public class LimitSearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SystemIdentificationChoice.mmObject();
+		}
+
+		@Override
+		public Optional<SystemIdentificationChoice> getValue(LimitSearchCriteria1 obj) {
+			return obj.getSystemIdentification();
+		}
+
+		@Override
+		public void setValue(LimitSearchCriteria1 obj, Optional<SystemIdentificationChoice> value) {
+			obj.setSystemIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BilLmtCtrPtyId")
@@ -186,7 +196,7 @@ public class LimitSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBilateralLimitCounterpartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitSearchCriteria1, List<MemberIdentificationChoice>> mmBilateralLimitCounterpartyIdentification = new MMMessageAttribute<LimitSearchCriteria1, List<MemberIdentificationChoice>>() {
 		{
 			businessElementTrace_lazy = () -> RiskManagementLimit.mmCounterparty;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitSearchCriteria1.mmObject();
@@ -197,6 +207,16 @@ public class LimitSearchCriteria1 {
 			definition = "Unique and unambiguous identification of a member within a system, assigned using the member identification scheme of the system.";
 			minOccurs = 0;
 			complexType_lazy = () -> MemberIdentificationChoice.mmObject();
+		}
+
+		@Override
+		public List<MemberIdentificationChoice> getValue(LimitSearchCriteria1 obj) {
+			return obj.getBilateralLimitCounterpartyIdentification();
+		}
+
+		@Override
+		public void setValue(LimitSearchCriteria1 obj, List<MemberIdentificationChoice> value) {
+			obj.setBilateralLimitCounterpartyIdentification(value);
 		}
 	};
 	@XmlElement(name = "DfltLmtTp")
@@ -235,7 +255,7 @@ public class LimitSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDefaultLimitType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitSearchCriteria1, List<LimitType1Code>> mmDefaultLimitType = new MMMessageAttribute<LimitSearchCriteria1, List<LimitType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitSearchCriteria1.mmObject();
@@ -246,6 +266,16 @@ public class LimitSearchCriteria1 {
 			definition = "Type of limit as set by default in the system. The default limit is applicable by the system unless otherwise instructed.";
 			minOccurs = 0;
 			simpleType_lazy = () -> LimitType1Code.mmObject();
+		}
+
+		@Override
+		public List<LimitType1Code> getValue(LimitSearchCriteria1 obj) {
+			return obj.getDefaultLimitType();
+		}
+
+		@Override
+		public void setValue(LimitSearchCriteria1 obj, List<LimitType1Code> value) {
+			obj.setDefaultLimitType(value);
 		}
 	};
 	@XmlElement(name = "CurLmtTp")
@@ -282,7 +312,7 @@ public class LimitSearchCriteria1 {
 	 * definition} = "Type of limit applied by the system at the present time."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrentLimitType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitSearchCriteria1, List<LimitType1Code>> mmCurrentLimitType = new MMMessageAttribute<LimitSearchCriteria1, List<LimitType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitSearchCriteria1.mmObject();
@@ -293,6 +323,16 @@ public class LimitSearchCriteria1 {
 			definition = "Type of limit applied by the system at the present time.";
 			minOccurs = 0;
 			simpleType_lazy = () -> LimitType1Code.mmObject();
+		}
+
+		@Override
+		public List<LimitType1Code> getValue(LimitSearchCriteria1 obj) {
+			return obj.getCurrentLimitType();
+		}
+
+		@Override
+		public void setValue(LimitSearchCriteria1 obj, List<LimitType1Code> value) {
+			obj.setCurrentLimitType(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -330,7 +370,7 @@ public class LimitSearchCriteria1 {
 	 * definition} = "Owner of the account which is being queried."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitSearchCriteria1, Optional<BICIdentifier>> mmAccountOwner = new MMMessageAttribute<LimitSearchCriteria1, Optional<BICIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitSearchCriteria1.mmObject();
@@ -342,6 +382,16 @@ public class LimitSearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<BICIdentifier> getValue(LimitSearchCriteria1 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(LimitSearchCriteria1 obj, Optional<BICIdentifier> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctId")
@@ -375,7 +425,7 @@ public class LimitSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitSearchCriteria1, Optional<AccountIdentification1Choice>> mmAccountIdentification = new MMMessageAssociationEnd<LimitSearchCriteria1, Optional<AccountIdentification1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitSearchCriteria1.mmObject();
 			isDerived = false;
@@ -387,6 +437,16 @@ public class LimitSearchCriteria1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AccountIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AccountIdentification1Choice> getValue(LimitSearchCriteria1 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(LimitSearchCriteria1 obj, Optional<AccountIdentification1Choice> value) {
+			obj.setAccountIdentification(value.orElse(null));
 		}
 	};
 

@@ -104,7 +104,7 @@ public class TransferCancellationPendingStatus1 {
 	 * definition} = "Reason for the cancellation pending status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferCancellationPendingStatus1, Optional<Max350Text>> mmReason = new MMMessageAttribute<TransferCancellationPendingStatus1, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferCancellationPendingStatus1.mmObject();
@@ -116,6 +116,16 @@ public class TransferCancellationPendingStatus1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(TransferCancellationPendingStatus1 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(TransferCancellationPendingStatus1 obj, Optional<Max350Text> value) {
+			obj.setReason(value.orElse(null));
 		}
 	};
 

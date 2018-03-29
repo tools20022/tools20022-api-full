@@ -124,7 +124,7 @@ public class BusinessDayReportOrError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BusinessDayReportOrError1Choice, List<BusinessDay1>> mmBusinessReport = new MMMessageAssociationEnd<BusinessDayReportOrError1Choice, List<BusinessDay1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.BusinessDayReportOrError1Choice.mmObject();
 			isDerived = false;
@@ -136,6 +136,16 @@ public class BusinessDayReportOrError1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> BusinessDay1.mmObject();
+		}
+
+		@Override
+		public List<BusinessDay1> getValue(BusinessDayReportOrError1Choice obj) {
+			return obj.getBusinessReport();
+		}
+
+		@Override
+		public void setValue(BusinessDayReportOrError1Choice obj, List<BusinessDay1> value) {
+			obj.setBusinessReport(value);
 		}
 	};
 	@XmlElement(name = "OprlErr", required = true)
@@ -179,7 +189,7 @@ public class BusinessDayReportOrError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BusinessDayReportOrError1Choice, List<ErrorHandling3>> mmOperationalError = new MMMessageAssociationEnd<BusinessDayReportOrError1Choice, List<ErrorHandling3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.BusinessDayReportOrError1Choice.mmObject();
 			isDerived = false;
@@ -191,6 +201,16 @@ public class BusinessDayReportOrError1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling3> getValue(BusinessDayReportOrError1Choice obj) {
+			return obj.getOperationalError();
+		}
+
+		@Override
+		public void setValue(BusinessDayReportOrError1Choice obj, List<ErrorHandling3> value) {
+			obj.setOperationalError(value);
 		}
 	};
 

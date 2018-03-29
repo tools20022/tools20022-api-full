@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.SortCriteria1Choice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ForecastParameter2;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -102,7 +103,7 @@ public class CashSortingCriterion2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSortingCriterionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashSortingCriterion2, SortCriteria1Choice> mmSortingCriterionType = new MMMessageAttribute<CashSortingCriterion2, SortCriteria1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashSortingCriterion2.mmObject();
 			isDerived = false;
@@ -114,9 +115,19 @@ public class CashSortingCriterion2 {
 			minOccurs = 1;
 			complexType_lazy = () -> SortCriteria1Choice.mmObject();
 		}
+
+		@Override
+		public SortCriteria1Choice getValue(CashSortingCriterion2 obj) {
+			return obj.getSortingCriterionType();
+		}
+
+		@Override
+		public void setValue(CashSortingCriterion2 obj, SortCriteria1Choice value) {
+			obj.setSortingCriterionType(value);
+		}
 	};
 	@XmlElement(name = "FcstBrkdwnDtls", required = true)
-	protected List<com.tools20022.repository.msg.ForecastParameter2> forecastBreakdownDetails;
+	protected List<ForecastParameter2> forecastBreakdownDetails;
 	/**
 	 * 
 	 <p>
@@ -143,7 +154,7 @@ public class CashSortingCriterion2 {
 	 * definition} = "Parameter for which the cash movements are reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmForecastBreakdownDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashSortingCriterion2, List<ForecastParameter2>> mmForecastBreakdownDetails = new MMMessageAssociationEnd<CashSortingCriterion2, List<ForecastParameter2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashSortingCriterion2.mmObject();
 			isDerived = false;
@@ -153,7 +164,17 @@ public class CashSortingCriterion2 {
 			definition = "Parameter for which the cash movements are reported.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ForecastParameter2.mmObject();
+			type_lazy = () -> ForecastParameter2.mmObject();
+		}
+
+		@Override
+		public List<ForecastParameter2> getValue(CashSortingCriterion2 obj) {
+			return obj.getForecastBreakdownDetails();
+		}
+
+		@Override
+		public void setValue(CashSortingCriterion2 obj, List<ForecastParameter2> value) {
+			obj.setForecastBreakdownDetails(value);
 		}
 	};
 
@@ -183,7 +204,7 @@ public class CashSortingCriterion2 {
 		return forecastBreakdownDetails == null ? forecastBreakdownDetails = new ArrayList<>() : forecastBreakdownDetails;
 	}
 
-	public CashSortingCriterion2 setForecastBreakdownDetails(List<com.tools20022.repository.msg.ForecastParameter2> forecastBreakdownDetails) {
+	public CashSortingCriterion2 setForecastBreakdownDetails(List<ForecastParameter2> forecastBreakdownDetails) {
 		this.forecastBreakdownDetails = Objects.requireNonNull(forecastBreakdownDetails);
 		return this;
 	}

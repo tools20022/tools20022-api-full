@@ -244,7 +244,7 @@ public class DocumentIdentification31 {
 	 * DocumentIdentification15.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentIdentification31, Max35Text> mmIdentification = new MMMessageAttribute<DocumentIdentification31, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification31.mmObject();
@@ -258,6 +258,16 @@ public class DocumentIdentification31 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(DocumentIdentification31 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification31 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "LkgTp")
@@ -299,7 +309,7 @@ public class DocumentIdentification31 {
 	 * DocumentIdentification15.mmLinkageType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLinkageType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DocumentIdentification31, Optional<ProcessingPosition7Choice>> mmLinkageType = new MMMessageAssociationEnd<DocumentIdentification31, Optional<ProcessingPosition7Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification31.mmObject();
 			isDerived = false;
@@ -313,6 +323,16 @@ public class DocumentIdentification31 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ProcessingPosition7Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ProcessingPosition7Choice> getValue(DocumentIdentification31 obj) {
+			return obj.getLinkageType();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification31 obj, Optional<ProcessingPosition7Choice> value) {
+			obj.setLinkageType(value.orElse(null));
 		}
 	};
 

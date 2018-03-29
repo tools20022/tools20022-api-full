@@ -22,6 +22,9 @@ import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.AssetPartyRole;
+import com.tools20022.repository.entity.CashAccount;
+import com.tools20022.repository.entity.SecuritiesAccount;
+import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.RegistrationParameters3;
 import java.util.ArrayList;
@@ -168,22 +171,32 @@ public class SecuritiesPartyRole extends AssetPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unambiguous identification of the securities account used in the context of the securities party role (such as investor securities account used for a corporate action securities distribution)."
+	 * "Unambiguous identification of the securities account used in the context of the securities party role (such as investor securities account used for a corporate action securities distribution)"
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSecuritiesAccount = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesPartyRole, List<SecuritiesAccount>> mmSecuritiesAccount = new MMBusinessAssociationEnd<SecuritiesPartyRole, List<SecuritiesAccount>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(RegistrationParameters3.mmRegistrarAccount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPartyRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesAccount";
-			definition = "Unambiguous identification of the securities account used in the context of the securities party role (such as investor securities account used for a corporate action securities distribution).";
+			definition = "Unambiguous identification of the securities account used in the context of the securities party role (such as investor securities account used for a corporate action securities distribution)";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmSecuritiesPartyRole;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesAccount> getValue(SecuritiesPartyRole obj) {
+			return obj.getSecuritiesAccount();
+		}
+
+		@Override
+		public void setValue(SecuritiesPartyRole obj, List<SecuritiesAccount> value) {
+			obj.setSecuritiesAccount(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.CashAccount> cashAccount;
@@ -218,21 +231,31 @@ public class SecuritiesPartyRole extends AssetPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unambiguous identification of the cash account used in the context of the securities party role (such as investor cash account used for a corporate action cash distribution)."
+	 * "Unambiguous identification of the cash account used in the context of the securities party role (such as investor cash account used for a corporate action cash distribution)"
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCashAccount = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesPartyRole, List<CashAccount>> mmCashAccount = new MMBusinessAssociationEnd<SecuritiesPartyRole, List<CashAccount>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPartyRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashAccount";
-			definition = "Unambiguous identification of the cash account used in the context of the securities party role (such as investor cash account used for a corporate action cash distribution).";
+			definition = "Unambiguous identification of the cash account used in the context of the securities party role (such as investor cash account used for a corporate action cash distribution)";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CashAccount.mmSecuritiesPartyRole;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
+		}
+
+		@Override
+		public List<CashAccount> getValue(SecuritiesPartyRole obj) {
+			return obj.getCashAccount();
+		}
+
+		@Override
+		public void setValue(SecuritiesPartyRole obj, List<CashAccount> value) {
+			obj.setCashAccount(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.Security> security;
@@ -268,7 +291,7 @@ public class SecuritiesPartyRole extends AssetPartyRole {
 	 * definition} = "Specifies the security for which the party plays a role."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSecurity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesPartyRole, List<Security>> mmSecurity = new MMBusinessAssociationEnd<SecuritiesPartyRole, List<Security>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPartyRole.mmObject();
@@ -279,6 +302,16 @@ public class SecuritiesPartyRole extends AssetPartyRole {
 			opposite_lazy = () -> com.tools20022.repository.entity.Security.mmPartyRole;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
+		}
+
+		@Override
+		public List<Security> getValue(SecuritiesPartyRole obj) {
+			return obj.getSecurity();
+		}
+
+		@Override
+		public void setValue(SecuritiesPartyRole obj, List<Security> value) {
+			obj.setSecurity(value);
 		}
 	};
 

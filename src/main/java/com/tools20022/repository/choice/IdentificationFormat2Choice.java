@@ -109,7 +109,7 @@ public class IdentificationFormat2Choice {
 	 * definition} = "Format expressed as a short identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmShortIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IdentificationFormat2Choice, Exact3UpperCaseAlphaNumericText> mmShortIdentification = new MMMessageAttribute<IdentificationFormat2Choice, Exact3UpperCaseAlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.IdentificationFormat2Choice.mmObject();
 			isDerived = false;
@@ -121,6 +121,16 @@ public class IdentificationFormat2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact3UpperCaseAlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Exact3UpperCaseAlphaNumericText getValue(IdentificationFormat2Choice obj) {
+			return obj.getShortIdentification();
+		}
+
+		@Override
+		public void setValue(IdentificationFormat2Choice obj, Exact3UpperCaseAlphaNumericText value) {
+			obj.setShortIdentification(value);
 		}
 	};
 	@XmlElement(name = "LngId", required = true)
@@ -156,7 +166,7 @@ public class IdentificationFormat2Choice {
 	 * definition} = "Format expressed as a long identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLongIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IdentificationFormat2Choice, RestrictedFINXMax30Text> mmLongIdentification = new MMMessageAttribute<IdentificationFormat2Choice, RestrictedFINXMax30Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.IdentificationFormat2Choice.mmObject();
 			isDerived = false;
@@ -168,6 +178,16 @@ public class IdentificationFormat2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax30Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax30Text getValue(IdentificationFormat2Choice obj) {
+			return obj.getLongIdentification();
+		}
+
+		@Override
+		public void setValue(IdentificationFormat2Choice obj, RestrictedFINXMax30Text value) {
+			obj.setLongIdentification(value);
 		}
 	};
 	@XmlElement(name = "PrtryId", required = true)
@@ -199,7 +219,7 @@ public class IdentificationFormat2Choice {
 	 * definition} = "Format expressed as a proprietary identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietaryIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IdentificationFormat2Choice, GenericIdentification23> mmProprietaryIdentification = new MMMessageAssociationEnd<IdentificationFormat2Choice, GenericIdentification23>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.IdentificationFormat2Choice.mmObject();
 			isDerived = false;
@@ -211,6 +231,16 @@ public class IdentificationFormat2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification23.mmObject();
+		}
+
+		@Override
+		public GenericIdentification23 getValue(IdentificationFormat2Choice obj) {
+			return obj.getProprietaryIdentification();
+		}
+
+		@Override
+		public void setValue(IdentificationFormat2Choice obj, GenericIdentification23 value) {
+			obj.setProprietaryIdentification(value);
 		}
 	};
 

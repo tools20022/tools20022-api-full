@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.MandateCopy1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.PaymentsMandatesISOLatestversion;
 import com.tools20022.repository.msgset.PaymentsMandatesMaintenance20162017;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -143,7 +142,7 @@ public class MandateCopyRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MandateCopyRequestV01, GroupHeader47> mmGroupHeader = new MMMessageBuildingBlock<MandateCopyRequestV01, GroupHeader47>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,12 +153,14 @@ public class MandateCopyRequestV01 {
 			complexType_lazy = () -> GroupHeader47.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MandateCopyRequestV01.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader47 getValue(MandateCopyRequestV01 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(MandateCopyRequestV01 obj, GroupHeader47 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "UndrlygCpyReqDtls", required = true)
@@ -188,7 +189,7 @@ public class MandateCopyRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUnderlyingCopyRequestDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MandateCopyRequestV01, List<MandateCopy1>> mmUnderlyingCopyRequestDetails = new MMMessageBuildingBlock<MandateCopyRequestV01, List<MandateCopy1>>() {
 		{
 			xmlTag = "UndrlygCpyReqDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -198,12 +199,14 @@ public class MandateCopyRequestV01 {
 			complexType_lazy = () -> MandateCopy1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MandateCopyRequestV01.class.getMethod("getUnderlyingCopyRequestDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<MandateCopy1> getValue(MandateCopyRequestV01 obj) {
+			return obj.getUnderlyingCopyRequestDetails();
+		}
+
+		@Override
+		public void setValue(MandateCopyRequestV01 obj, List<MandateCopy1> value) {
+			obj.setUnderlyingCopyRequestDetails(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -233,7 +236,7 @@ public class MandateCopyRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MandateCopyRequestV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<MandateCopyRequestV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -243,12 +246,14 @@ public class MandateCopyRequestV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MandateCopyRequestV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(MandateCopyRequestV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(MandateCopyRequestV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

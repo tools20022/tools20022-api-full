@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.PartyIdentification49Choice;
 import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountIdentification1;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -121,7 +122,7 @@ public class Account11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Account11, AccountIdentification1> mmIdentification = new MMMessageAssociationEnd<Account11, AccountIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Account11.mmObject();
@@ -134,7 +135,17 @@ public class Account11 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AccountIdentification1.mmObject();
+			type_lazy = () -> AccountIdentification1.mmObject();
+		}
+
+		@Override
+		public AccountIdentification1 getValue(Account11 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Account11 obj, AccountIdentification1 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctSvcr")
@@ -172,7 +183,7 @@ public class Account11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountServicer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Account11, Optional<PartyIdentification49Choice>> mmAccountServicer = new MMMessageAssociationEnd<Account11, Optional<PartyIdentification49Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Account11.mmObject();
@@ -185,6 +196,16 @@ public class Account11 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification49Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification49Choice> getValue(Account11 obj) {
+			return obj.getAccountServicer();
+		}
+
+		@Override
+		public void setValue(Account11 obj, Optional<PartyIdentification49Choice> value) {
+			obj.setAccountServicer(value.orElse(null));
 		}
 	};
 
@@ -214,7 +235,7 @@ public class Account11 {
 		return identification;
 	}
 
-	public Account11 setIdentification(com.tools20022.repository.msg.AccountIdentification1 identification) {
+	public Account11 setIdentification(AccountIdentification1 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}

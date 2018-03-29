@@ -54,12 +54,16 @@ public class ConstraintDeliverToPartyTypeSPECAddressRule {
 	 */
 	public static final MMConstraint<CommunicationChannel1> forCommunicationChannel1 = new MMConstraint<CommunicationChannel1>() {
 		{
-			validator = ConstraintDeliverToPartyTypeSPECAddressRule::checkCommunicationChannel1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverToPartyTypeSPECAddressRule";
 			definition = "If DeliverToPartyType is \"SPEC\", then DeliverToAddress must be present.";
 			owner_lazy = () -> CommunicationChannel1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DeliverToAddress</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/DeliverToPartyType/Code</leftOperand><rightOperand>SPEC</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CommunicationChannel1 obj) throws Exception {
+			checkCommunicationChannel1(obj);
 		}
 	};
 

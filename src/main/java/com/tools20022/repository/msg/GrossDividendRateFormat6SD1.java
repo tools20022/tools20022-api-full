@@ -106,7 +106,7 @@ public class GrossDividendRateFormat6SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GrossDividendRateFormat6SD1, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<GrossDividendRateFormat6SD1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GrossDividendRateFormat6SD1.mmObject();
 			isDerived = false;
@@ -117,6 +117,16 @@ public class GrossDividendRateFormat6SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(GrossDividendRateFormat6SD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(GrossDividendRateFormat6SD1 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MaxDvddRate")
@@ -155,7 +165,7 @@ public class GrossDividendRateFormat6SD1 {
 	 * "Provides the maximum dividend rate as announced by the Issuer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumDividendRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GrossDividendRateFormat6SD1, Optional<RateAndAmountFormat16Choice>> mmMaximumDividendRate = new MMMessageAttribute<GrossDividendRateFormat6SD1, Optional<RateAndAmountFormat16Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmAnnualTotalDividendRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GrossDividendRateFormat6SD1.mmObject();
@@ -167,6 +177,16 @@ public class GrossDividendRateFormat6SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RateAndAmountFormat16Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateAndAmountFormat16Choice> getValue(GrossDividendRateFormat6SD1 obj) {
+			return obj.getMaximumDividendRate();
+		}
+
+		@Override
+		public void setValue(GrossDividendRateFormat6SD1 obj, Optional<RateAndAmountFormat16Choice> value) {
+			obj.setMaximumDividendRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinDvddRate")
@@ -205,7 +225,7 @@ public class GrossDividendRateFormat6SD1 {
 	 * "Provides the minimum dividend rate as announced by the Issuer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumDividendRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GrossDividendRateFormat6SD1, Optional<RateAndAmountFormat16Choice>> mmMinimumDividendRate = new MMMessageAttribute<GrossDividendRateFormat6SD1, Optional<RateAndAmountFormat16Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmAnnualTotalDividendRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GrossDividendRateFormat6SD1.mmObject();
@@ -217,6 +237,16 @@ public class GrossDividendRateFormat6SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RateAndAmountFormat16Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateAndAmountFormat16Choice> getValue(GrossDividendRateFormat6SD1 obj) {
+			return obj.getMinimumDividendRate();
+		}
+
+		@Override
+		public void setValue(GrossDividendRateFormat6SD1 obj, Optional<RateAndAmountFormat16Choice> value) {
+			obj.setMinimumDividendRate(value.orElse(null));
 		}
 	};
 

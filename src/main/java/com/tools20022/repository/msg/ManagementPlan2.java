@@ -24,6 +24,8 @@ import com.tools20022.repository.area.catm.ManagementPlanReplacementV02;
 import com.tools20022.repository.entity.SystemIdentification;
 import com.tools20022.repository.entity.TerminalManagementAction;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification35;
+import com.tools20022.repository.msg.TerminalManagementDataSet5;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -139,7 +141,7 @@ public class ManagementPlan2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPOIIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ManagementPlan2, Optional<GenericIdentification35>> mmPOIIdentification = new MMMessageAssociationEnd<ManagementPlan2, Optional<GenericIdentification35>>() {
 		{
 			businessElementTrace_lazy = () -> SystemIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ManagementPlan2.mmObject();
@@ -152,7 +154,17 @@ public class ManagementPlan2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification35.mmObject();
+			type_lazy = () -> GenericIdentification35.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification35> getValue(ManagementPlan2 obj) {
+			return obj.getPOIIdentification();
+		}
+
+		@Override
+		public void setValue(ManagementPlan2 obj, Optional<GenericIdentification35> value) {
+			obj.setPOIIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TermnlMgrId", required = true)
@@ -199,7 +211,7 @@ public class ManagementPlan2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTerminalManagerIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ManagementPlan2, GenericIdentification35> mmTerminalManagerIdentification = new MMMessageAssociationEnd<ManagementPlan2, GenericIdentification35>() {
 		{
 			businessElementTrace_lazy = () -> SystemIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ManagementPlan2.mmObject();
@@ -212,11 +224,21 @@ public class ManagementPlan2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification35.mmObject();
+			type_lazy = () -> GenericIdentification35.mmObject();
+		}
+
+		@Override
+		public GenericIdentification35 getValue(ManagementPlan2 obj) {
+			return obj.getTerminalManagerIdentification();
+		}
+
+		@Override
+		public void setValue(ManagementPlan2 obj, GenericIdentification35 value) {
+			obj.setTerminalManagerIdentification(value);
 		}
 	};
 	@XmlElement(name = "DataSet", required = true)
-	protected List<com.tools20022.repository.msg.TerminalManagementDataSet5> dataSet;
+	protected List<TerminalManagementDataSet5> dataSet;
 	/**
 	 * 
 	 <p>
@@ -258,7 +280,7 @@ public class ManagementPlan2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSet = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ManagementPlan2, List<TerminalManagementDataSet5>> mmDataSet = new MMMessageAssociationEnd<ManagementPlan2, List<TerminalManagementDataSet5>>() {
 		{
 			businessComponentTrace_lazy = () -> TerminalManagementAction.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ManagementPlan2.mmObject();
@@ -270,7 +292,17 @@ public class ManagementPlan2 {
 			nextVersions_lazy = () -> Arrays.asList(ManagementPlan3.mmDataSet);
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet5.mmObject();
+			type_lazy = () -> TerminalManagementDataSet5.mmObject();
+		}
+
+		@Override
+		public List<TerminalManagementDataSet5> getValue(ManagementPlan2 obj) {
+			return obj.getDataSet();
+		}
+
+		@Override
+		public void setValue(ManagementPlan2 obj, List<TerminalManagementDataSet5> value) {
+			obj.setDataSet(value);
 		}
 	};
 
@@ -296,7 +328,7 @@ public class ManagementPlan2 {
 		return pOIIdentification == null ? Optional.empty() : Optional.of(pOIIdentification);
 	}
 
-	public ManagementPlan2 setPOIIdentification(com.tools20022.repository.msg.GenericIdentification35 pOIIdentification) {
+	public ManagementPlan2 setPOIIdentification(GenericIdentification35 pOIIdentification) {
 		this.pOIIdentification = pOIIdentification;
 		return this;
 	}
@@ -305,7 +337,7 @@ public class ManagementPlan2 {
 		return terminalManagerIdentification;
 	}
 
-	public ManagementPlan2 setTerminalManagerIdentification(com.tools20022.repository.msg.GenericIdentification35 terminalManagerIdentification) {
+	public ManagementPlan2 setTerminalManagerIdentification(GenericIdentification35 terminalManagerIdentification) {
 		this.terminalManagerIdentification = Objects.requireNonNull(terminalManagerIdentification);
 		return this;
 	}
@@ -314,7 +346,7 @@ public class ManagementPlan2 {
 		return dataSet == null ? dataSet = new ArrayList<>() : dataSet;
 	}
 
-	public ManagementPlan2 setDataSet(List<com.tools20022.repository.msg.TerminalManagementDataSet5> dataSet) {
+	public ManagementPlan2 setDataSet(List<TerminalManagementDataSet5> dataSet) {
 		this.dataSet = Objects.requireNonNull(dataSet);
 		return this;
 	}

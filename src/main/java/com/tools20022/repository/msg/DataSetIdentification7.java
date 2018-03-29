@@ -62,7 +62,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "DataSetIdentification7"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -112,7 +112,7 @@ public class DataSetIdentification7 {
 	 * DataSetIdentification6.mmName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DataSetIdentification7, Optional<Max256Text>> mmName = new MMMessageAttribute<DataSetIdentification7, Optional<Max256Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DataSetIdentification7.mmObject();
 			isDerived = false;
@@ -124,6 +124,16 @@ public class DataSetIdentification7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max256Text> getValue(DataSetIdentification7 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(DataSetIdentification7 obj, Optional<Max256Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -161,7 +171,7 @@ public class DataSetIdentification7 {
 	 * DataSetIdentification6.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DataSetIdentification7, DataSetCategory12Code> mmType = new MMMessageAttribute<DataSetIdentification7, DataSetCategory12Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DataSetIdentification7.mmObject();
 			isDerived = false;
@@ -173,6 +183,16 @@ public class DataSetIdentification7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DataSetCategory12Code.mmObject();
+		}
+
+		@Override
+		public DataSetCategory12Code getValue(DataSetIdentification7 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(DataSetIdentification7 obj, DataSetCategory12Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Vrsn")
@@ -209,7 +229,7 @@ public class DataSetIdentification7 {
 	 * DataSetIdentification6.mmVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DataSetIdentification7, Optional<Max256Text>> mmVersion = new MMMessageAttribute<DataSetIdentification7, Optional<Max256Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DataSetIdentification7.mmObject();
 			isDerived = false;
@@ -221,6 +241,16 @@ public class DataSetIdentification7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max256Text> getValue(DataSetIdentification7 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(DataSetIdentification7 obj, Optional<Max256Text> value) {
+			obj.setVersion(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CreDtTm")
@@ -257,7 +287,7 @@ public class DataSetIdentification7 {
 	 * DataSetIdentification6.mmCreationDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DataSetIdentification7, Optional<ISODateTime>> mmCreationDateTime = new MMMessageAttribute<DataSetIdentification7, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DataSetIdentification7.mmObject();
 			isDerived = false;
@@ -270,6 +300,16 @@ public class DataSetIdentification7 {
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
+
+		@Override
+		public Optional<ISODateTime> getValue(DataSetIdentification7 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(DataSetIdentification7 obj, Optional<ISODateTime> value) {
+			obj.setCreationDateTime(value.orElse(null));
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -278,7 +318,7 @@ public class DataSetIdentification7 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DataSetIdentification7.mmName, com.tools20022.repository.msg.DataSetIdentification7.mmType,
 						com.tools20022.repository.msg.DataSetIdentification7.mmVersion, com.tools20022.repository.msg.DataSetIdentification7.mmCreationDateTime);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DataSetIdentification7";
 				definition = "Identification of a data set.";
 				previousVersion_lazy = () -> DataSetIdentification6.mmObject();

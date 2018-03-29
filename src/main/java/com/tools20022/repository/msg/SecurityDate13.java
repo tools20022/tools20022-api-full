@@ -118,7 +118,7 @@ public class SecurityDate13 {
 	 * definition} = "Date of the posting (credit or debit) to the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPostingDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityDate13, DateAndDateTimeChoice> mmPostingDate = new MMMessageAssociationEnd<SecurityDate13, DateAndDateTimeChoice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmPostingDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityDate13.mmObject();
@@ -132,6 +132,16 @@ public class SecurityDate13 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(SecurityDate13 obj) {
+			return obj.getPostingDate();
+		}
+
+		@Override
+		public void setValue(SecurityDate13 obj, DateAndDateTimeChoice value) {
+			obj.setPostingDate(value);
 		}
 	};
 	@XmlElement(name = "AvlblDt")
@@ -171,7 +181,7 @@ public class SecurityDate13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAvailableDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityDate13, Optional<DateFormat34Choice>> mmAvailableDate = new MMMessageAssociationEnd<SecurityDate13, Optional<DateFormat34Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmAvailableDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityDate13.mmObject();
@@ -185,6 +195,16 @@ public class SecurityDate13 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat34Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat34Choice> getValue(SecurityDate13 obj) {
+			return obj.getAvailableDate();
+		}
+
+		@Override
+		public void setValue(SecurityDate13 obj, Optional<DateFormat34Choice> value) {
+			obj.setAvailableDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrpssDt")
@@ -224,7 +244,7 @@ public class SecurityDate13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPariPassuDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityDate13, Optional<DateFormat34Choice>> mmPariPassuDate = new MMMessageAssociationEnd<SecurityDate13, Optional<DateFormat34Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmPariPassuDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityDate13.mmObject();
@@ -238,6 +258,16 @@ public class SecurityDate13 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat34Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat34Choice> getValue(SecurityDate13 obj) {
+			return obj.getPariPassuDate();
+		}
+
+		@Override
+		public void setValue(SecurityDate13 obj, Optional<DateFormat34Choice> value) {
+			obj.setPariPassuDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DvddRnkgDt")
@@ -276,7 +306,7 @@ public class SecurityDate13 {
 	 * "Date/time at which a security will be entitled to a dividend."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDividendRankingDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityDate13, Optional<DateFormat34Choice>> mmDividendRankingDate = new MMMessageAssociationEnd<SecurityDate13, Optional<DateFormat34Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmDividendRankingDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityDate13.mmObject();
@@ -290,6 +320,16 @@ public class SecurityDate13 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat34Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat34Choice> getValue(SecurityDate13 obj) {
+			return obj.getDividendRankingDate();
+		}
+
+		@Override
+		public void setValue(SecurityDate13 obj, Optional<DateFormat34Choice> value) {
+			obj.setDividendRankingDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EarlstPmtDt")
@@ -329,7 +369,7 @@ public class SecurityDate13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEarliestPaymentDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityDate13, Optional<DateFormat34Choice>> mmEarliestPaymentDate = new MMMessageAssociationEnd<SecurityDate13, Optional<DateFormat34Choice>>() {
 		{
 			businessElementTrace_lazy = () -> ProceedsDefinition.mmEarliestPaymentDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityDate13.mmObject();
@@ -343,6 +383,16 @@ public class SecurityDate13 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat34Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat34Choice> getValue(SecurityDate13 obj) {
+			return obj.getEarliestPaymentDate();
+		}
+
+		@Override
+		public void setValue(SecurityDate13 obj, Optional<DateFormat34Choice> value) {
+			obj.setEarliestPaymentDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtDt")
@@ -382,7 +432,7 @@ public class SecurityDate13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityDate13, Optional<DateFormat34Choice>> mmPaymentDate = new MMMessageAssociationEnd<SecurityDate13, Optional<DateFormat34Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmMovementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityDate13.mmObject();
@@ -396,6 +446,16 @@ public class SecurityDate13 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat34Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat34Choice> getValue(SecurityDate13 obj) {
+			return obj.getPaymentDate();
+		}
+
+		@Override
+		public void setValue(SecurityDate13 obj, Optional<DateFormat34Choice> value) {
+			obj.setPaymentDate(value.orElse(null));
 		}
 	};
 

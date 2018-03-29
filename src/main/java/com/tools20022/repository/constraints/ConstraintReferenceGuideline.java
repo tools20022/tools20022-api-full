@@ -51,11 +51,15 @@ public class ConstraintReferenceGuideline {
 	 */
 	public static final MMConstraint<ReportEntry1> forReportEntry1 = new MMConstraint<ReportEntry1>() {
 		{
-			validator = ConstraintReferenceGuideline::checkReportEntry1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceGuideline";
 			definition = "At least one reference should present to identify the underlying transaction(s).";
 			owner_lazy = () -> ReportEntry1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReportEntry1 obj) throws Exception {
+			checkReportEntry1(obj);
 		}
 	};
 	/**
@@ -80,11 +84,15 @@ public class ConstraintReferenceGuideline {
 	 */
 	public static final MMConstraint<ReportEntry2> forReportEntry2 = new MMConstraint<ReportEntry2>() {
 		{
-			validator = ConstraintReferenceGuideline::checkReportEntry2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceGuideline";
 			definition = "At least one reference should be present to identify the underlying transaction(s).";
 			owner_lazy = () -> ReportEntry2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReportEntry2 obj) throws Exception {
+			checkReportEntry2(obj);
 		}
 	};
 	/**
@@ -109,11 +117,15 @@ public class ConstraintReferenceGuideline {
 	 */
 	public static final MMConstraint<ReportEntry3> forReportEntry3 = new MMConstraint<ReportEntry3>() {
 		{
-			validator = ConstraintReferenceGuideline::checkReportEntry3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceGuideline";
 			definition = "At least one reference should be present to identify the underlying transaction(s).";
 			owner_lazy = () -> ReportEntry3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReportEntry3 obj) throws Exception {
+			checkReportEntry3(obj);
 		}
 	};
 	/**
@@ -146,12 +158,16 @@ public class ConstraintReferenceGuideline {
 	 */
 	public static final MMConstraint<ReportEntry4> forReportEntry4 = new MMConstraint<ReportEntry4>() {
 		{
-			validator = ConstraintReferenceGuideline::checkReportEntry4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceGuideline";
 			definition = "At least one reference should be present to identify the underlying transaction(s).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReferenceGuideline.forReportEntry7);
 			owner_lazy = () -> ReportEntry4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReportEntry4 obj) throws Exception {
+			checkReportEntry4(obj);
 		}
 	};
 	/**
@@ -177,11 +193,15 @@ public class ConstraintReferenceGuideline {
 	 */
 	public static final MMConstraint<NotificationEntry1> forNotificationEntry1 = new MMConstraint<NotificationEntry1>() {
 		{
-			validator = ConstraintReferenceGuideline::checkNotificationEntry1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceGuideline";
 			definition = "At least one reference should present to identify the underlying transaction(s).";
 			owner_lazy = () -> NotificationEntry1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(NotificationEntry1 obj) throws Exception {
+			checkNotificationEntry1(obj);
 		}
 	};
 	/**
@@ -207,11 +227,15 @@ public class ConstraintReferenceGuideline {
 	 */
 	public static final MMConstraint<StatementEntry1> forStatementEntry1 = new MMConstraint<StatementEntry1>() {
 		{
-			validator = ConstraintReferenceGuideline::checkStatementEntry1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceGuideline";
 			definition = "At least one reference should present to identify the underlying transaction(s).";
 			owner_lazy = () -> StatementEntry1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(StatementEntry1 obj) throws Exception {
+			checkStatementEntry1(obj);
 		}
 	};
 	/**
@@ -249,13 +273,17 @@ public class ConstraintReferenceGuideline {
 	 */
 	public static final MMConstraint<ReportEntry7> forReportEntry7 = new MMConstraint<ReportEntry7>() {
 		{
-			validator = ConstraintReferenceGuideline::checkReportEntry7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceGuideline";
 			definition = "At least one reference should be present to identify the underlying transaction(s).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReferenceGuideline.forReportEntry8);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReferenceGuideline.forReportEntry4;
 			owner_lazy = () -> ReportEntry7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReportEntry7 obj) throws Exception {
+			checkReportEntry7(obj);
 		}
 	};
 	/**
@@ -285,12 +313,16 @@ public class ConstraintReferenceGuideline {
 	 */
 	public static final MMConstraint<ReportEntry8> forReportEntry8 = new MMConstraint<ReportEntry8>() {
 		{
-			validator = ConstraintReferenceGuideline::checkReportEntry8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceGuideline";
 			definition = "At least one reference should be present to identify the underlying transaction(s).";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReferenceGuideline.forReportEntry7;
 			owner_lazy = () -> ReportEntry8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReportEntry8 obj) throws Exception {
+			checkReportEntry8(obj);
 		}
 	};
 	/**
@@ -315,11 +347,15 @@ public class ConstraintReferenceGuideline {
 	 */
 	public static final MMConstraint<ReportEntry9> forReportEntry9 = new MMConstraint<ReportEntry9>() {
 		{
-			validator = ConstraintReferenceGuideline::checkReportEntry9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceGuideline";
 			definition = "At least one reference should be present to identify the underlying transaction(s).";
 			owner_lazy = () -> ReportEntry9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReportEntry9 obj) throws Exception {
+			checkReportEntry9(obj);
 		}
 	};
 

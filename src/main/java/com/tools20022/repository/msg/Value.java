@@ -109,7 +109,7 @@ public class Value {
 	 * "Specifies the amount in the base currency of the receiver."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBaseCurrencyItem = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Value, ActiveOrHistoricCurrencyAndAmount> mmBaseCurrencyItem = new MMMessageAttribute<Value, ActiveOrHistoricCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Value.mmObject();
@@ -121,6 +121,16 @@ public class Value {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAndAmount getValue(Value obj) {
+			return obj.getBaseCurrencyItem();
+		}
+
+		@Override
+		public void setValue(Value obj, ActiveOrHistoricCurrencyAndAmount value) {
+			obj.setBaseCurrencyItem(value);
 		}
 	};
 	@XmlElement(name = "AltrnCcyItm", required = true)
@@ -157,7 +167,7 @@ public class Value {
 	 * definition} = "Specifies the amount in another currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAlternateCurrencyItem = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Value, List<ActiveOrHistoricCurrencyAndAmount>> mmAlternateCurrencyItem = new MMMessageAttribute<Value, List<ActiveOrHistoricCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmResultingAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Value.mmObject();
@@ -168,6 +178,16 @@ public class Value {
 			definition = "Specifies the amount in another currency.";
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public List<ActiveOrHistoricCurrencyAndAmount> getValue(Value obj) {
+			return obj.getAlternateCurrencyItem();
+		}
+
+		@Override
+		public void setValue(Value obj, List<ActiveOrHistoricCurrencyAndAmount> value) {
+			obj.setAlternateCurrencyItem(value);
 		}
 	};
 

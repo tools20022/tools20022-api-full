@@ -116,7 +116,7 @@ public class ConsentStatus5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConsentStatus5Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<ConsentStatus5Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ConsentStatus5Choice.mmObject();
@@ -129,6 +129,16 @@ public class ConsentStatus5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(ConsentStatus5Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(ConsentStatus5Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -164,7 +174,7 @@ public class ConsentStatus5Choice {
 	 * definition} = "Reason provided for the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ConsentStatus5Choice, List<ConsentReason5>> mmReason = new MMMessageAssociationEnd<ConsentStatus5Choice, List<ConsentReason5>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ConsentStatus5Choice.mmObject();
@@ -176,6 +186,16 @@ public class ConsentStatus5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ConsentReason5.mmObject();
+		}
+
+		@Override
+		public List<ConsentReason5> getValue(ConsentStatus5Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(ConsentStatus5Choice obj, List<ConsentReason5> value) {
+			obj.setReason(value);
 		}
 	};
 

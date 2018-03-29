@@ -110,7 +110,7 @@ public class IncludedAccount1 {
 	 * definition} = "Identification of the securities account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IncludedAccount1, Max35Text> mmSecuritiesAccountIdentification = new MMMessageAttribute<IncludedAccount1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IncludedAccount1.mmObject();
@@ -122,6 +122,16 @@ public class IncludedAccount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(IncludedAccount1 obj) {
+			return obj.getSecuritiesAccountIdentification();
+		}
+
+		@Override
+		public void setValue(IncludedAccount1 obj, Max35Text value) {
+			obj.setSecuritiesAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "InclInd", required = true)
@@ -156,7 +166,7 @@ public class IncludedAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIncludedIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IncludedAccount1, YesNoIndicator> mmIncludedIndicator = new MMMessageAttribute<IncludedAccount1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IncludedAccount1.mmObject();
 			isDerived = false;
@@ -167,6 +177,16 @@ public class IncludedAccount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(IncludedAccount1 obj) {
+			return obj.getIncludedIndicator();
+		}
+
+		@Override
+		public void setValue(IncludedAccount1 obj, YesNoIndicator value) {
+			obj.setIncludedIndicator(value);
 		}
 	};
 

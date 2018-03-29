@@ -52,11 +52,15 @@ public class ConstraintInvestorUsageRule {
 	 */
 	public static final MMConstraint<OtherParties18> forOtherParties18 = new MMConstraint<OtherParties18>() {
 		{
-			validator = ConstraintInvestorUsageRule::checkOtherParties18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorUsageRule";
 			definition = "When investor is used with a country code, the country code specifies the nationality of the investor, for the settlement of certain securities (i.e. airlines, defence manufacturers) under the EU legislation.";
 			owner_lazy = () -> OtherParties18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties18 obj) throws Exception {
+			checkOtherParties18(obj);
 		}
 	};
 	/**
@@ -81,11 +85,15 @@ public class ConstraintInvestorUsageRule {
 	 */
 	public static final MMConstraint<OtherParties1> forOtherParties1 = new MMConstraint<OtherParties1>() {
 		{
-			validator = ConstraintInvestorUsageRule::checkOtherParties1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorUsageRule";
 			definition = "When investor is used with a country code, the country code specifies the nationality of the investor, for the settlement of certain securities (i.e. airlines, defence manufacturers) under the EU legislation.";
 			owner_lazy = () -> OtherParties1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties1 obj) throws Exception {
+			checkOtherParties1(obj);
 		}
 	};
 

@@ -1026,7 +1026,7 @@ public class AdditionalReference3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalReference3, Max35Text> mmReference = new MMMessageAttribute<AdditionalReference3, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalReference3.mmObject();
@@ -1039,6 +1039,16 @@ public class AdditionalReference3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AdditionalReference3 obj) {
+			return obj.getReference();
+		}
+
+		@Override
+		public void setValue(AdditionalReference3 obj, Max35Text value) {
+			obj.setReference(value);
 		}
 	};
 	@XmlElement(name = "RefIssr")
@@ -1084,7 +1094,7 @@ public class AdditionalReference3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReferenceIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalReference3, Optional<PartyIdentification2Choice>> mmReferenceIssuer = new MMMessageAttribute<AdditionalReference3, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalReference3.mmObject();
@@ -1097,6 +1107,16 @@ public class AdditionalReference3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(AdditionalReference3 obj) {
+			return obj.getReferenceIssuer();
+		}
+
+		@Override
+		public void setValue(AdditionalReference3 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setReferenceIssuer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MsgNm")
@@ -1136,7 +1156,7 @@ public class AdditionalReference3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalReference3, Optional<Max35Text>> mmMessageName = new MMMessageAttribute<AdditionalReference3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalReference3.mmObject();
 			isDerived = false;
@@ -1148,6 +1168,16 @@ public class AdditionalReference3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AdditionalReference3 obj) {
+			return obj.getMessageName();
+		}
+
+		@Override
+		public void setValue(AdditionalReference3 obj, Optional<Max35Text> value) {
+			obj.setMessageName(value.orElse(null));
 		}
 	};
 

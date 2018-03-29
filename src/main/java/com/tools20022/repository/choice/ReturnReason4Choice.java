@@ -105,7 +105,7 @@ public class ReturnReason4Choice {
 	 * definition} = "Reason for the return in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReturnReason4Choice, TransactionReturnReason1Code> mmCode = new MMMessageAttribute<ReturnReason4Choice, TransactionReturnReason1Code>() {
 		{
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReturnReason4Choice.mmObject();
@@ -117,6 +117,16 @@ public class ReturnReason4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TransactionReturnReason1Code.mmObject();
+		}
+
+		@Override
+		public TransactionReturnReason1Code getValue(ReturnReason4Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ReturnReason4Choice obj, TransactionReturnReason1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -154,7 +164,7 @@ public class ReturnReason4Choice {
 	 * "Reason for the return not catered for by the available codes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReturnReason4Choice, RestrictedRR01SL01CodeText> mmProprietary = new MMMessageAttribute<ReturnReason4Choice, RestrictedRR01SL01CodeText>() {
 		{
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReturnReason4Choice.mmObject();
@@ -166,6 +176,16 @@ public class ReturnReason4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedRR01SL01CodeText.mmObject();
+		}
+
+		@Override
+		public RestrictedRR01SL01CodeText getValue(ReturnReason4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ReturnReason4Choice obj, RestrictedRR01SL01CodeText value) {
+			obj.setProprietary(value);
 		}
 	};
 

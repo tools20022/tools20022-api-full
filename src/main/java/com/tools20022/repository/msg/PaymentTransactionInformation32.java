@@ -27,6 +27,9 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CancellationStatusReasonInformation1;
+import com.tools20022.repository.msg.Case2;
+import com.tools20022.repository.msg.OriginalTransactionReference13;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -133,7 +136,7 @@ public class PaymentTransactionInformation32 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancellationStatusIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTransactionInformation32, Optional<Max35Text>> mmCancellationStatusIdentification = new MMMessageAttribute<PaymentTransactionInformation32, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionInformation32.mmObject();
 			isDerived = false;
@@ -144,6 +147,16 @@ public class PaymentTransactionInformation32 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PaymentTransactionInformation32 obj) {
+			return obj.getCancellationStatusIdentification();
+		}
+
+		@Override
+		public void setValue(PaymentTransactionInformation32 obj, Optional<Max35Text> value) {
+			obj.setCancellationStatusIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RslvdCase")
@@ -178,7 +191,7 @@ public class PaymentTransactionInformation32 {
 	 * definition} = "Identifies the resolved case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmResolvedCase = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentTransactionInformation32, Optional<Case2>> mmResolvedCase = new MMMessageAssociationEnd<PaymentTransactionInformation32, Optional<Case2>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmRelatedInvestigationCase;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionInformation32.mmObject();
@@ -190,7 +203,17 @@ public class PaymentTransactionInformation32 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Case2.mmObject();
+			type_lazy = () -> Case2.mmObject();
+		}
+
+		@Override
+		public Optional<Case2> getValue(PaymentTransactionInformation32 obj) {
+			return obj.getResolvedCase();
+		}
+
+		@Override
+		public void setValue(PaymentTransactionInformation32 obj, Optional<Case2> value) {
+			obj.setResolvedCase(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlInstrId")
@@ -229,7 +252,7 @@ public class PaymentTransactionInformation32 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalInstructionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTransactionInformation32, Optional<Max35Text>> mmOriginalInstructionIdentification = new MMMessageAttribute<PaymentTransactionInformation32, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmInstructionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionInformation32.mmObject();
@@ -241,6 +264,16 @@ public class PaymentTransactionInformation32 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PaymentTransactionInformation32 obj) {
+			return obj.getOriginalInstructionIdentification();
+		}
+
+		@Override
+		public void setValue(PaymentTransactionInformation32 obj, Optional<Max35Text> value) {
+			obj.setOriginalInstructionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlEndToEndId")
@@ -279,7 +312,7 @@ public class PaymentTransactionInformation32 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalEndToEndIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTransactionInformation32, Optional<Max35Text>> mmOriginalEndToEndIdentification = new MMMessageAttribute<PaymentTransactionInformation32, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmEndToEndIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionInformation32.mmObject();
@@ -291,6 +324,16 @@ public class PaymentTransactionInformation32 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PaymentTransactionInformation32 obj) {
+			return obj.getOriginalEndToEndIdentification();
+		}
+
+		@Override
+		public void setValue(PaymentTransactionInformation32 obj, Optional<Max35Text> value) {
+			obj.setOriginalEndToEndIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxCxlSts")
@@ -329,7 +372,7 @@ public class PaymentTransactionInformation32 {
 	 * "Specifies the status of the transaction cancellation request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionCancellationStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTransactionInformation32, Optional<CancellationIndividualStatus1Code>> mmTransactionCancellationStatus = new MMMessageAttribute<PaymentTransactionInformation32, Optional<CancellationIndividualStatus1Code>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionInformation32.mmObject();
@@ -342,9 +385,19 @@ public class PaymentTransactionInformation32 {
 			minOccurs = 0;
 			simpleType_lazy = () -> CancellationIndividualStatus1Code.mmObject();
 		}
+
+		@Override
+		public Optional<CancellationIndividualStatus1Code> getValue(PaymentTransactionInformation32 obj) {
+			return obj.getTransactionCancellationStatus();
+		}
+
+		@Override
+		public void setValue(PaymentTransactionInformation32 obj, Optional<CancellationIndividualStatus1Code> value) {
+			obj.setTransactionCancellationStatus(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "CxlStsRsnInf")
-	protected List<com.tools20022.repository.msg.CancellationStatusReasonInformation1> cancellationStatusReasonInformation;
+	protected List<CancellationStatusReasonInformation1> cancellationStatusReasonInformation;
 	/**
 	 * 
 	 <p>
@@ -379,7 +432,7 @@ public class PaymentTransactionInformation32 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCancellationStatusReasonInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentTransactionInformation32, List<CancellationStatusReasonInformation1>> mmCancellationStatusReasonInformation = new MMMessageAssociationEnd<PaymentTransactionInformation32, List<CancellationStatusReasonInformation1>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCaseResolution.mmInvestigationCaseRejection;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionInformation32.mmObject();
@@ -390,7 +443,17 @@ public class PaymentTransactionInformation32 {
 			definition = "Set of elements used to provide detailed information on the cancellation status reason.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CancellationStatusReasonInformation1.mmObject();
+			type_lazy = () -> CancellationStatusReasonInformation1.mmObject();
+		}
+
+		@Override
+		public List<CancellationStatusReasonInformation1> getValue(PaymentTransactionInformation32 obj) {
+			return obj.getCancellationStatusReasonInformation();
+		}
+
+		@Override
+		public void setValue(PaymentTransactionInformation32 obj, List<CancellationStatusReasonInformation1> value) {
+			obj.setCancellationStatusReasonInformation(value);
 		}
 	};
 	@XmlElement(name = "OrgnlInstdAmt")
@@ -430,7 +493,7 @@ public class PaymentTransactionInformation32 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalInstructedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTransactionInformation32, Optional<ActiveOrHistoricCurrencyAndAmount>> mmOriginalInstructedAmount = new MMMessageAttribute<PaymentTransactionInformation32, Optional<ActiveOrHistoricCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionInformation32.mmObject();
@@ -442,6 +505,16 @@ public class PaymentTransactionInformation32 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAndAmount> getValue(PaymentTransactionInformation32 obj) {
+			return obj.getOriginalInstructedAmount();
+		}
+
+		@Override
+		public void setValue(PaymentTransactionInformation32 obj, Optional<ActiveOrHistoricCurrencyAndAmount> value) {
+			obj.setOriginalInstructedAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlReqdExctnDt")
@@ -480,7 +553,7 @@ public class PaymentTransactionInformation32 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalRequestedExecutionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTransactionInformation32, Optional<ISODate>> mmOriginalRequestedExecutionDate = new MMMessageAttribute<PaymentTransactionInformation32, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmRequestedExecutionDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionInformation32.mmObject();
@@ -492,6 +565,16 @@ public class PaymentTransactionInformation32 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(PaymentTransactionInformation32 obj) {
+			return obj.getOriginalRequestedExecutionDate();
+		}
+
+		@Override
+		public void setValue(PaymentTransactionInformation32 obj, Optional<ISODate> value) {
+			obj.setOriginalRequestedExecutionDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlReqdColltnDt")
@@ -530,7 +613,7 @@ public class PaymentTransactionInformation32 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalRequestedCollectionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTransactionInformation32, Optional<ISODate>> mmOriginalRequestedCollectionDate = new MMMessageAttribute<PaymentTransactionInformation32, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmRequestedExecutionDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionInformation32.mmObject();
@@ -542,6 +625,16 @@ public class PaymentTransactionInformation32 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(PaymentTransactionInformation32 obj) {
+			return obj.getOriginalRequestedCollectionDate();
+		}
+
+		@Override
+		public void setValue(PaymentTransactionInformation32 obj, Optional<ISODate> value) {
+			obj.setOriginalRequestedCollectionDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlTxRef")
@@ -579,7 +672,7 @@ public class PaymentTransactionInformation32 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalTransactionReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentTransactionInformation32, Optional<OriginalTransactionReference13>> mmOriginalTransactionReference = new MMMessageAssociationEnd<PaymentTransactionInformation32, Optional<OriginalTransactionReference13>>() {
 		{
 			businessComponentTrace_lazy = () -> Payment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionInformation32.mmObject();
@@ -591,7 +684,17 @@ public class PaymentTransactionInformation32 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OriginalTransactionReference13.mmObject();
+			type_lazy = () -> OriginalTransactionReference13.mmObject();
+		}
+
+		@Override
+		public Optional<OriginalTransactionReference13> getValue(PaymentTransactionInformation32 obj) {
+			return obj.getOriginalTransactionReference();
+		}
+
+		@Override
+		public void setValue(PaymentTransactionInformation32 obj, Optional<OriginalTransactionReference13> value) {
+			obj.setOriginalTransactionReference(value.orElse(null));
 		}
 	};
 
@@ -626,7 +729,7 @@ public class PaymentTransactionInformation32 {
 		return resolvedCase == null ? Optional.empty() : Optional.of(resolvedCase);
 	}
 
-	public PaymentTransactionInformation32 setResolvedCase(com.tools20022.repository.msg.Case2 resolvedCase) {
+	public PaymentTransactionInformation32 setResolvedCase(Case2 resolvedCase) {
 		this.resolvedCase = resolvedCase;
 		return this;
 	}
@@ -662,7 +765,7 @@ public class PaymentTransactionInformation32 {
 		return cancellationStatusReasonInformation == null ? cancellationStatusReasonInformation = new ArrayList<>() : cancellationStatusReasonInformation;
 	}
 
-	public PaymentTransactionInformation32 setCancellationStatusReasonInformation(List<com.tools20022.repository.msg.CancellationStatusReasonInformation1> cancellationStatusReasonInformation) {
+	public PaymentTransactionInformation32 setCancellationStatusReasonInformation(List<CancellationStatusReasonInformation1> cancellationStatusReasonInformation) {
 		this.cancellationStatusReasonInformation = Objects.requireNonNull(cancellationStatusReasonInformation);
 		return this;
 	}
@@ -698,7 +801,7 @@ public class PaymentTransactionInformation32 {
 		return originalTransactionReference == null ? Optional.empty() : Optional.of(originalTransactionReference);
 	}
 
-	public PaymentTransactionInformation32 setOriginalTransactionReference(com.tools20022.repository.msg.OriginalTransactionReference13 originalTransactionReference) {
+	public PaymentTransactionInformation32 setOriginalTransactionReference(OriginalTransactionReference13 originalTransactionReference) {
 		this.originalTransactionReference = originalTransactionReference;
 		return this;
 	}

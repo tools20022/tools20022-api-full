@@ -61,12 +61,16 @@ public class ConstraintCancellation1Guideline {
 	 */
 	public static final MMConstraint<MeetingCancellationV05> forMeetingCancellationV05 = new MMConstraint<MeetingCancellationV05>() {
 		{
-			validator = ConstraintCancellation1Guideline::checkMeetingCancellationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation1Guideline";
 			definition = "It is recommended to cancel a meeting by using MeetingReference/MeetingIdentification and Reason only. It is recommended to avoid the repetition of optional building blocks or components.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCancellation1Guideline.forMeetingCancellationV04;
 			owner_lazy = () -> MeetingCancellationV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MeetingCancellationV05 obj) throws Exception {
+			checkMeetingCancellationV05(obj);
 		}
 	};
 	/**
@@ -100,12 +104,16 @@ public class ConstraintCancellation1Guideline {
 	 */
 	public static final MMConstraint<MeetingCancellationV04> forMeetingCancellationV04 = new MMConstraint<MeetingCancellationV04>() {
 		{
-			validator = ConstraintCancellation1Guideline::checkMeetingCancellationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation1Guideline";
 			definition = "It is recommended to cancel a meeting by using MeetingReference/MeetingIdentification and Reason only. It is recommended to avoid the repetition of optional building blocks or components.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCancellation1Guideline.forMeetingCancellationV05);
 			owner_lazy = () -> MeetingCancellationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MeetingCancellationV04 obj) throws Exception {
+			checkMeetingCancellationV04(obj);
 		}
 	};
 	/**
@@ -131,11 +139,15 @@ public class ConstraintCancellation1Guideline {
 	 */
 	public static final MMConstraint<MeetingCancellationV02> forMeetingCancellationV02 = new MMConstraint<MeetingCancellationV02>() {
 		{
-			validator = ConstraintCancellation1Guideline::checkMeetingCancellationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation1Guideline";
 			definition = "It is recommended to cancel a meeting by using MeetingReference/MeetingIdentification and Reason only. It is recommended to avoid the repetition of optional building blocks or components.";
 			owner_lazy = () -> MeetingCancellationV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MeetingCancellationV02 obj) throws Exception {
+			checkMeetingCancellationV02(obj);
 		}
 	};
 	/**
@@ -161,11 +173,15 @@ public class ConstraintCancellation1Guideline {
 	 */
 	public static final MMConstraint<MeetingCancellationV03> forMeetingCancellationV03 = new MMConstraint<MeetingCancellationV03>() {
 		{
-			validator = ConstraintCancellation1Guideline::checkMeetingCancellationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation1Guideline";
 			definition = "It is recommended to cancel a meeting by using MeetingReference/MeetingIdentification and Reason only. It is recommended to avoid the repetition of optional building blocks or components.";
 			owner_lazy = () -> MeetingCancellationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MeetingCancellationV03 obj) throws Exception {
+			checkMeetingCancellationV03(obj);
 		}
 	};
 

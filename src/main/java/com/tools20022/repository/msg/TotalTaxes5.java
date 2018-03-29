@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.InvestmentFundTax;
 import com.tools20022.repository.entity.SecuritiesTax;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Tax20;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -110,7 +111,7 @@ public class TotalTaxes5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEUCapitalGain = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalTaxes5, Optional<EUCapitalGain2Code>> mmEUCapitalGain = new MMMessageAttribute<TotalTaxes5, Optional<EUCapitalGain2Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmEUCapitalGain;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalTaxes5.mmObject();
@@ -122,6 +123,16 @@ public class TotalTaxes5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> EUCapitalGain2Code.mmObject();
+		}
+
+		@Override
+		public Optional<EUCapitalGain2Code> getValue(TotalTaxes5 obj) {
+			return obj.getEUCapitalGain();
+		}
+
+		@Override
+		public void setValue(TotalTaxes5 obj, Optional<EUCapitalGain2Code> value) {
+			obj.setEUCapitalGain(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PctgOfDebtClm")
@@ -160,7 +171,7 @@ public class TotalTaxes5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPercentageOfDebtClaim = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalTaxes5, Optional<PercentageRate>> mmPercentageOfDebtClaim = new MMMessageAttribute<TotalTaxes5, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTax.mmPercentageOfDebtClaim;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalTaxes5.mmObject();
@@ -173,9 +184,19 @@ public class TotalTaxes5 {
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
+
+		@Override
+		public Optional<PercentageRate> getValue(TotalTaxes5 obj) {
+			return obj.getPercentageOfDebtClaim();
+		}
+
+		@Override
+		public void setValue(TotalTaxes5 obj, Optional<PercentageRate> value) {
+			obj.setPercentageOfDebtClaim(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "TaxDtls")
-	protected List<com.tools20022.repository.msg.Tax20> taxDetails;
+	protected List<Tax20> taxDetails;
 	/**
 	 * 
 	 <p>
@@ -205,7 +226,7 @@ public class TotalTaxes5 {
 	 * definition} = "Information related to a specific tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTaxDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TotalTaxes5, List<Tax20>> mmTaxDetails = new MMMessageAssociationEnd<TotalTaxes5, List<Tax20>>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundTax.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalTaxes5.mmObject();
@@ -217,7 +238,17 @@ public class TotalTaxes5 {
 			maxOccurs = 7;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Tax20.mmObject();
+			type_lazy = () -> Tax20.mmObject();
+		}
+
+		@Override
+		public List<Tax20> getValue(TotalTaxes5 obj) {
+			return obj.getTaxDetails();
+		}
+
+		@Override
+		public void setValue(TotalTaxes5 obj, List<Tax20> value) {
+			obj.setTaxDetails(value);
 		}
 	};
 
@@ -257,7 +288,7 @@ public class TotalTaxes5 {
 		return taxDetails == null ? taxDetails = new ArrayList<>() : taxDetails;
 	}
 
-	public TotalTaxes5 setTaxDetails(List<com.tools20022.repository.msg.Tax20> taxDetails) {
+	public TotalTaxes5 setTaxDetails(List<Tax20> taxDetails) {
 		this.taxDetails = Objects.requireNonNull(taxDetails);
 		return this;
 	}

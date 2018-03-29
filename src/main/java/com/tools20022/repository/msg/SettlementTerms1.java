@@ -113,7 +113,7 @@ public class SettlementTerms1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinalAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementTerms1, Optional<FinancialInstitutionIdentification4Choice>> mmFinalAgent = new MMMessageAssociationEnd<SettlementTerms1, Optional<FinancialInstitutionIdentification4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTerms1.mmObject();
@@ -126,6 +126,16 @@ public class SettlementTerms1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstitutionIdentification4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstitutionIdentification4Choice> getValue(SettlementTerms1 obj) {
+			return obj.getFinalAgent();
+		}
+
+		@Override
+		public void setValue(SettlementTerms1 obj, Optional<FinancialInstitutionIdentification4Choice> value) {
+			obj.setFinalAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BnfcryAcct", required = true)
@@ -162,7 +172,7 @@ public class SettlementTerms1 {
 	 * definition} = "Account to be credited as a result of an instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBeneficiaryAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementTerms1, AccountIdentificationOrNameChoice> mmBeneficiaryAccount = new MMMessageAssociationEnd<SettlementTerms1, AccountIdentificationOrNameChoice>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTerms1.mmObject();
@@ -175,6 +185,16 @@ public class SettlementTerms1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AccountIdentificationOrNameChoice.mmObject();
+		}
+
+		@Override
+		public AccountIdentificationOrNameChoice getValue(SettlementTerms1 obj) {
+			return obj.getBeneficiaryAccount();
+		}
+
+		@Override
+		public void setValue(SettlementTerms1 obj, AccountIdentificationOrNameChoice value) {
+			obj.setBeneficiaryAccount(value);
 		}
 	};
 

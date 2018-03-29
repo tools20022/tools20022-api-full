@@ -84,6 +84,15 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V07#mmLinkages
  * SecuritiesSettlementTransactionGenerationNotification002V07.mmLinkages}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstruction002V08#mmLinkages
+ * SecuritiesFinancingInstruction002V08.mmLinkages}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V08#mmLinkages
+ * SecuritiesSettlementTransactionGenerationNotification002V08.mmLinkages}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V08#mmLinkages
+ * SecuritiesSettlementTransactionInstruction002V08.mmLinkages}</li>
  * </ul>
  * </li>
  * <li>
@@ -147,7 +156,7 @@ public class Linkages43 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessingPosition = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Linkages43, Optional<ProcessingPosition10Choice>> mmProcessingPosition = new MMMessageAssociationEnd<Linkages43, Optional<ProcessingPosition10Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Linkages43.mmObject();
 			isDerived = false;
@@ -160,6 +169,16 @@ public class Linkages43 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ProcessingPosition10Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ProcessingPosition10Choice> getValue(Linkages43 obj) {
+			return obj.getProcessingPosition();
+		}
+
+		@Override
+		public void setValue(Linkages43 obj, Optional<ProcessingPosition10Choice> value) {
+			obj.setProcessingPosition(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MsgNb")
@@ -195,7 +214,7 @@ public class Linkages43 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMessageNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Linkages43, Optional<DocumentNumber6Choice>> mmMessageNumber = new MMMessageAssociationEnd<Linkages43, Optional<DocumentNumber6Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Linkages43.mmObject();
 			isDerived = false;
@@ -208,6 +227,16 @@ public class Linkages43 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DocumentNumber6Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DocumentNumber6Choice> getValue(Linkages43 obj) {
+			return obj.getMessageNumber();
+		}
+
+		@Override
+		public void setValue(Linkages43 obj, Optional<DocumentNumber6Choice> value) {
+			obj.setMessageNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ref", required = true)
@@ -245,7 +274,7 @@ public class Linkages43 {
 	 * definition} = "Reference to the linked transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Linkages43, References50Choice> mmReference = new MMMessageAssociationEnd<Linkages43, References50Choice>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Linkages43.mmObject();
@@ -259,6 +288,16 @@ public class Linkages43 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> References50Choice.mmObject();
+		}
+
+		@Override
+		public References50Choice getValue(Linkages43 obj) {
+			return obj.getReference();
+		}
+
+		@Override
+		public void setValue(Linkages43 obj, References50Choice value) {
+			obj.setReference(value);
 		}
 	};
 	@XmlElement(name = "LkdQty")
@@ -299,7 +338,7 @@ public class Linkages43 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLinkedQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Linkages43, Optional<PairedOrTurnedQuantity4Choice>> mmLinkedQuantity = new MMMessageAssociationEnd<Linkages43, Optional<PairedOrTurnedQuantity4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Linkages43.mmObject();
@@ -313,6 +352,16 @@ public class Linkages43 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PairedOrTurnedQuantity4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PairedOrTurnedQuantity4Choice> getValue(Linkages43 obj) {
+			return obj.getLinkedQuantity();
+		}
+
+		@Override
+		public void setValue(Linkages43 obj, Optional<PairedOrTurnedQuantity4Choice> value) {
+			obj.setLinkedQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RefOwnr")
@@ -348,7 +397,7 @@ public class Linkages43 {
 	 * definition} = "Party that generates the reference."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReferenceOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Linkages43, Optional<PartyIdentification103Choice>> mmReferenceOwner = new MMMessageAssociationEnd<Linkages43, Optional<PartyIdentification103Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Linkages43.mmObject();
@@ -362,6 +411,16 @@ public class Linkages43 {
 			isComposite = true;
 			type_lazy = () -> PartyIdentification103Choice.mmObject();
 		}
+
+		@Override
+		public Optional<PartyIdentification103Choice> getValue(Linkages43 obj) {
+			return obj.getReferenceOwner();
+		}
+
+		@Override
+		public void setValue(Linkages43 obj, Optional<PartyIdentification103Choice> value) {
+			obj.setReferenceOwner(value.orElse(null));
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -371,7 +430,8 @@ public class Linkages43 {
 						com.tools20022.repository.msg.Linkages43.mmLinkedQuantity, com.tools20022.repository.msg.Linkages43.mmReferenceOwner);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionGenerationNotification002V06.mmLinkages, SecuritiesSettlementTransactionInstruction002V06.mmLinkages,
 						SecuritiesFinancingInstruction002V06.mmLinkages, SecuritiesSettlementTransactionInstruction002V07.mmLinkages, SecuritiesFinancingInstruction002V07.mmLinkages,
-						SecuritiesSettlementTransactionGenerationNotification002V07.mmLinkages);
+						SecuritiesSettlementTransactionGenerationNotification002V07.mmLinkages, SecuritiesFinancingInstruction002V08.mmLinkages, SecuritiesSettlementTransactionGenerationNotification002V08.mmLinkages,
+						SecuritiesSettlementTransactionInstruction002V08.mmLinkages);
 				trace_lazy = () -> SecuritiesTradeIdentification.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLinkedQuantityRule.forLinkages43);

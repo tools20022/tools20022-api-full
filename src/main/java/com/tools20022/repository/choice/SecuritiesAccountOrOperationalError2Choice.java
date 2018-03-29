@@ -112,7 +112,7 @@ public class SecuritiesAccountOrOperationalError2Choice {
 	 * SecuritiesAccountOrOperationalError1Choice.mmSecuritiesAccountReport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesAccountReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesAccountOrOperationalError2Choice, List<SecuritiesAccountReport2>> mmSecuritiesAccountReport = new MMMessageAssociationEnd<SecuritiesAccountOrOperationalError2Choice, List<SecuritiesAccountReport2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesAccountOrOperationalError2Choice.mmObject();
 			isDerived = false;
@@ -124,6 +124,16 @@ public class SecuritiesAccountOrOperationalError2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecuritiesAccountReport2.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesAccountReport2> getValue(SecuritiesAccountOrOperationalError2Choice obj) {
+			return obj.getSecuritiesAccountReport();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountOrOperationalError2Choice obj, List<SecuritiesAccountReport2> value) {
+			obj.setSecuritiesAccountReport(value);
 		}
 	};
 	@XmlElement(name = "OprlErr", required = true)
@@ -159,7 +169,7 @@ public class SecuritiesAccountOrOperationalError2Choice {
 	 * SecuritiesAccountOrOperationalError1Choice.mmOperationalError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesAccountOrOperationalError2Choice, List<ErrorHandling4>> mmOperationalError = new MMMessageAssociationEnd<SecuritiesAccountOrOperationalError2Choice, List<ErrorHandling4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesAccountOrOperationalError2Choice.mmObject();
 			isDerived = false;
@@ -171,6 +181,16 @@ public class SecuritiesAccountOrOperationalError2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling4.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling4> getValue(SecuritiesAccountOrOperationalError2Choice obj) {
+			return obj.getOperationalError();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountOrOperationalError2Choice obj, List<ErrorHandling4> value) {
+			obj.setOperationalError(value);
 		}
 	};
 

@@ -59,13 +59,17 @@ public class ConstraintSecondLevelTax3Rule {
 	 */
 	public static final MMConstraint<RateDetails31> forRateDetails31 = new MMConstraint<RateDetails31>() {
 		{
-			validator = ConstraintSecondLevelTax3Rule::checkRateDetails31;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondLevelTax3Rule";
 			definition = "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 564 NVR C19).";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecondLevelTax1Rule.forRateDetails26;
 			owner_lazy = () -> RateDetails31.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/WithholdingTaxRate[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SecondLevelTax[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(RateDetails31 obj) throws Exception {
+			checkRateDetails31(obj);
 		}
 	};
 	/**
@@ -100,13 +104,17 @@ public class ConstraintSecondLevelTax3Rule {
 	 */
 	public static final MMConstraint<CorporateActionRate86> forCorporateActionRate86 = new MMConstraint<CorporateActionRate86>() {
 		{
-			validator = ConstraintSecondLevelTax3Rule::checkCorporateActionRate86;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondLevelTax3Rule";
 			definition = "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecondLevelTax1Rule.forCorporateActionRate81;
 			owner_lazy = () -> CorporateActionRate86.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/WithholdingTaxRate[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SecondLevelTax[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate86 obj) throws Exception {
+			checkCorporateActionRate86(obj);
 		}
 	};
 	/**
@@ -140,13 +148,17 @@ public class ConstraintSecondLevelTax3Rule {
 	 */
 	public static final MMConstraint<RateDetails32> forRateDetails32 = new MMConstraint<RateDetails32>() {
 		{
-			validator = ConstraintSecondLevelTax3Rule::checkRateDetails32;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondLevelTax3Rule";
 			definition = "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8).";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecondLevelTax1Rule.forRateDetails27;
 			owner_lazy = () -> RateDetails32.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/WithholdingTaxRate[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SecondLevelTax[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(RateDetails32 obj) throws Exception {
+			checkRateDetails32(obj);
 		}
 	};
 	/**
@@ -181,13 +193,17 @@ public class ConstraintSecondLevelTax3Rule {
 	 */
 	public static final MMConstraint<CorporateActionRate87> forCorporateActionRate87 = new MMConstraint<CorporateActionRate87>() {
 		{
-			validator = ConstraintSecondLevelTax3Rule::checkCorporateActionRate87;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondLevelTax3Rule";
 			definition = "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 564 NVR C19).";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecondLevelTax1Rule.forCorporateActionRate80;
 			owner_lazy = () -> CorporateActionRate87.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/WithholdingTaxRate[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SecondLevelTax[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate87 obj) throws Exception {
+			checkCorporateActionRate87(obj);
 		}
 	};
 	/**
@@ -222,13 +238,17 @@ public class ConstraintSecondLevelTax3Rule {
 	 */
 	public static final MMConstraint<CorporateActionRate88> forCorporateActionRate88 = new MMConstraint<CorporateActionRate88>() {
 		{
-			validator = ConstraintSecondLevelTax3Rule::checkCorporateActionRate88;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondLevelTax3Rule";
 			definition = "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8).";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecondLevelTax1Rule.forCorporateActionRate82;
 			owner_lazy = () -> CorporateActionRate88.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/WithholdingTaxRate[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SecondLevelTax[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate88 obj) throws Exception {
+			checkCorporateActionRate88(obj);
 		}
 	};
 	/**
@@ -258,12 +278,16 @@ public class ConstraintSecondLevelTax3Rule {
 	 */
 	public static final MMConstraint<CorporateActionRate92> forCorporateActionRate92 = new MMConstraint<CorporateActionRate92>() {
 		{
-			validator = ConstraintSecondLevelTax3Rule::checkCorporateActionRate92;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondLevelTax3Rule";
 			definition = "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8).";
 			owner_lazy = () -> CorporateActionRate92.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/WithholdingTaxRate[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SecondLevelTax[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate92 obj) throws Exception {
+			checkCorporateActionRate92(obj);
 		}
 	};
 	/**
@@ -292,12 +316,16 @@ public class ConstraintSecondLevelTax3Rule {
 	 */
 	public static final MMConstraint<RateDetails33> forRateDetails33 = new MMConstraint<RateDetails33>() {
 		{
-			validator = ConstraintSecondLevelTax3Rule::checkRateDetails33;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondLevelTax3Rule";
 			definition = "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8).";
 			owner_lazy = () -> RateDetails33.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/WithholdingTaxRate[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SecondLevelTax[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(RateDetails33 obj) throws Exception {
+			checkRateDetails33(obj);
 		}
 	};
 	/**
@@ -327,12 +355,16 @@ public class ConstraintSecondLevelTax3Rule {
 	 */
 	public static final MMConstraint<CorporateActionRate94> forCorporateActionRate94 = new MMConstraint<CorporateActionRate94>() {
 		{
-			validator = ConstraintSecondLevelTax3Rule::checkCorporateActionRate94;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondLevelTax3Rule";
 			definition = "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present.";
 			owner_lazy = () -> CorporateActionRate94.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/WithholdingTaxRate[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SecondLevelTax[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate94 obj) throws Exception {
+			checkCorporateActionRate94(obj);
 		}
 	};
 	/**
@@ -361,12 +393,16 @@ public class ConstraintSecondLevelTax3Rule {
 	 */
 	public static final MMConstraint<RateDetails34> forRateDetails34 = new MMConstraint<RateDetails34>() {
 		{
-			validator = ConstraintSecondLevelTax3Rule::checkRateDetails34;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondLevelTax3Rule";
 			definition = "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 564 NVR C19).";
 			owner_lazy = () -> RateDetails34.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/WithholdingTaxRate[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SecondLevelTax[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(RateDetails34 obj) throws Exception {
+			checkRateDetails34(obj);
 		}
 	};
 	/**
@@ -396,12 +432,16 @@ public class ConstraintSecondLevelTax3Rule {
 	 */
 	public static final MMConstraint<CorporateActionRate97> forCorporateActionRate97 = new MMConstraint<CorporateActionRate97>() {
 		{
-			validator = ConstraintSecondLevelTax3Rule::checkCorporateActionRate97;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondLevelTax3Rule";
 			definition = "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 564 NVR C19).";
 			owner_lazy = () -> CorporateActionRate97.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/WithholdingTaxRate[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SecondLevelTax[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate97 obj) throws Exception {
+			checkCorporateActionRate97(obj);
 		}
 	};
 

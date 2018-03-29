@@ -25,7 +25,6 @@ import com.tools20022.repository.area.SecuritiesManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.PostTradeMatchingISOLatestversion;
 import com.tools20022.repository.msgset.PostTradeMatchingISOPreviousversion;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -139,7 +138,7 @@ public class SecuritiesEndOfProcessReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesEndOfProcessReportV01, List<Pagination>> mmPagination = new MMMessageBuildingBlock<SecuritiesEndOfProcessReportV01, List<Pagination>>() {
 		{
 			xmlTag = "Pgntn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -149,12 +148,14 @@ public class SecuritiesEndOfProcessReportV01 {
 			complexType_lazy = () -> Pagination.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesEndOfProcessReportV01.class.getMethod("getPagination", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Pagination> getValue(SecuritiesEndOfProcessReportV01 obj) {
+			return obj.getPagination();
+		}
+
+		@Override
+		public void setValue(SecuritiesEndOfProcessReportV01 obj, List<Pagination> value) {
+			obj.setPagination(value);
 		}
 	};
 	@XmlElement(name = "RptGnlDtls", required = true)
@@ -181,7 +182,7 @@ public class SecuritiesEndOfProcessReportV01 {
 	 * definition} = "Notifies the type of report transmitted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportGeneralDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesEndOfProcessReportV01, Report3> mmReportGeneralDetails = new MMMessageBuildingBlock<SecuritiesEndOfProcessReportV01, Report3>() {
 		{
 			xmlTag = "RptGnlDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -192,12 +193,14 @@ public class SecuritiesEndOfProcessReportV01 {
 			complexType_lazy = () -> Report3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesEndOfProcessReportV01.class.getMethod("getReportGeneralDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Report3 getValue(SecuritiesEndOfProcessReportV01 obj) {
+			return obj.getReportGeneralDetails();
+		}
+
+		@Override
+		public void setValue(SecuritiesEndOfProcessReportV01 obj, Report3 value) {
+			obj.setReportGeneralDetails(value);
 		}
 	};
 	@XmlElement(name = "ConfPties")
@@ -226,7 +229,7 @@ public class SecuritiesEndOfProcessReportV01 {
 	 * "Parties involved in the confirmation of the details of a trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmConfirmationParties = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesEndOfProcessReportV01, List<ConfirmationParties2>> mmConfirmationParties = new MMMessageBuildingBlock<SecuritiesEndOfProcessReportV01, List<ConfirmationParties2>>() {
 		{
 			xmlTag = "ConfPties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -236,12 +239,14 @@ public class SecuritiesEndOfProcessReportV01 {
 			complexType_lazy = () -> ConfirmationParties2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesEndOfProcessReportV01.class.getMethod("getConfirmationParties", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<ConfirmationParties2> getValue(SecuritiesEndOfProcessReportV01 obj) {
+			return obj.getConfirmationParties();
+		}
+
+		@Override
+		public void setValue(SecuritiesEndOfProcessReportV01 obj, List<ConfirmationParties2> value) {
+			obj.setConfirmationParties(value);
 		}
 	};
 	@XmlElement(name = "Invstr")
@@ -269,7 +274,7 @@ public class SecuritiesEndOfProcessReportV01 {
 	 * definition} = "Party that identifies the underlying investor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmInvestor = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesEndOfProcessReportV01, List<PartyIdentificationAndAccount79>> mmInvestor = new MMMessageBuildingBlock<SecuritiesEndOfProcessReportV01, List<PartyIdentificationAndAccount79>>() {
 		{
 			xmlTag = "Invstr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -279,12 +284,14 @@ public class SecuritiesEndOfProcessReportV01 {
 			complexType_lazy = () -> PartyIdentificationAndAccount79.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesEndOfProcessReportV01.class.getMethod("getInvestor", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<PartyIdentificationAndAccount79> getValue(SecuritiesEndOfProcessReportV01 obj) {
+			return obj.getInvestor();
+		}
+
+		@Override
+		public void setValue(SecuritiesEndOfProcessReportV01 obj, List<PartyIdentificationAndAccount79> value) {
+			obj.setInvestor(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -314,7 +321,7 @@ public class SecuritiesEndOfProcessReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesEndOfProcessReportV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<SecuritiesEndOfProcessReportV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -324,12 +331,14 @@ public class SecuritiesEndOfProcessReportV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesEndOfProcessReportV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(SecuritiesEndOfProcessReportV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(SecuritiesEndOfProcessReportV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

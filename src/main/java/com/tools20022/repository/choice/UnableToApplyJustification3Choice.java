@@ -131,7 +131,7 @@ public class UnableToApplyJustification3Choice {
 	 * UnableToApplyJustification2Choice.mmAnyInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAnyInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnableToApplyJustification3Choice, YesNoIndicator> mmAnyInformation = new MMMessageAttribute<UnableToApplyJustification3Choice, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnableToApplyJustification3Choice.mmObject();
 			isDerived = false;
@@ -143,6 +143,16 @@ public class UnableToApplyJustification3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(UnableToApplyJustification3Choice obj) {
+			return obj.getAnyInformation();
+		}
+
+		@Override
+		public void setValue(UnableToApplyJustification3Choice obj, YesNoIndicator value) {
+			obj.setAnyInformation(value);
 		}
 	};
 	@XmlElement(name = "MssngOrIncrrctInf", required = true)
@@ -181,7 +191,7 @@ public class UnableToApplyJustification3Choice {
 	 * UnableToApplyJustification2Choice.mmMissingOrIncorrectInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMissingOrIncorrectInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnableToApplyJustification3Choice, MissingOrIncorrectInformation3> mmMissingOrIncorrectInformation = new MMMessageAssociationEnd<UnableToApplyJustification3Choice, MissingOrIncorrectInformation3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnableToApplyJustification3Choice.mmObject();
 			isDerived = false;
@@ -194,6 +204,16 @@ public class UnableToApplyJustification3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> MissingOrIncorrectInformation3.mmObject();
+		}
+
+		@Override
+		public MissingOrIncorrectInformation3 getValue(UnableToApplyJustification3Choice obj) {
+			return obj.getMissingOrIncorrectInformation();
+		}
+
+		@Override
+		public void setValue(UnableToApplyJustification3Choice obj, MissingOrIncorrectInformation3 value) {
+			obj.setMissingOrIncorrectInformation(value);
 		}
 	};
 	@XmlElement(name = "PssblDplctInstr", required = true)
@@ -233,7 +253,7 @@ public class UnableToApplyJustification3Choice {
 	 * UnableToApplyJustification2Choice.mmPossibleDuplicateInstruction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPossibleDuplicateInstruction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnableToApplyJustification3Choice, TrueFalseIndicator> mmPossibleDuplicateInstruction = new MMMessageAttribute<UnableToApplyJustification3Choice, TrueFalseIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnableToApplyJustification3Choice.mmObject();
 			isDerived = false;
@@ -245,6 +265,16 @@ public class UnableToApplyJustification3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public TrueFalseIndicator getValue(UnableToApplyJustification3Choice obj) {
+			return obj.getPossibleDuplicateInstruction();
+		}
+
+		@Override
+		public void setValue(UnableToApplyJustification3Choice obj, TrueFalseIndicator value) {
+			obj.setPossibleDuplicateInstruction(value);
 		}
 	};
 

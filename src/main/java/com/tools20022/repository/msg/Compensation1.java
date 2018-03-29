@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.CreditorAgentRole;
 import com.tools20022.repository.entity.DebtorAgentRole;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -111,7 +112,7 @@ public class Compensation1 {
 	 * definition} = "Amount of money to be paid in compensation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Compensation1, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<Compensation1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Compensation1.mmObject();
@@ -123,6 +124,16 @@ public class Compensation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(Compensation1 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Compensation1 obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "DbtrAgt", required = true)
@@ -160,7 +171,7 @@ public class Compensation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDebtorAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Compensation1, BranchAndFinancialInstitutionIdentification5> mmDebtorAgent = new MMMessageAssociationEnd<Compensation1, BranchAndFinancialInstitutionIdentification5>() {
 		{
 			businessComponentTrace_lazy = () -> DebtorAgentRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Compensation1.mmObject();
@@ -172,7 +183,17 @@ public class Compensation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+
+		@Override
+		public BranchAndFinancialInstitutionIdentification5 getValue(Compensation1 obj) {
+			return obj.getDebtorAgent();
+		}
+
+		@Override
+		public void setValue(Compensation1 obj, BranchAndFinancialInstitutionIdentification5 value) {
+			obj.setDebtorAgent(value);
 		}
 	};
 	@XmlElement(name = "CdtrAgt", required = true)
@@ -210,7 +231,7 @@ public class Compensation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditorAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Compensation1, BranchAndFinancialInstitutionIdentification5> mmCreditorAgent = new MMMessageAssociationEnd<Compensation1, BranchAndFinancialInstitutionIdentification5>() {
 		{
 			businessComponentTrace_lazy = () -> CreditorAgentRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Compensation1.mmObject();
@@ -222,7 +243,17 @@ public class Compensation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+
+		@Override
+		public BranchAndFinancialInstitutionIdentification5 getValue(Compensation1 obj) {
+			return obj.getCreditorAgent();
+		}
+
+		@Override
+		public void setValue(Compensation1 obj, BranchAndFinancialInstitutionIdentification5 value) {
+			obj.setCreditorAgent(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -258,7 +289,7 @@ public class Compensation1 {
 	 * definition} = "Reason for the payment compensation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Compensation1, CompensationReason1Choice> mmReason = new MMMessageAssociationEnd<Compensation1, CompensationReason1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Compensation1.mmObject();
@@ -271,6 +302,16 @@ public class Compensation1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CompensationReason1Choice.mmObject();
+		}
+
+		@Override
+		public CompensationReason1Choice getValue(Compensation1 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(Compensation1 obj, CompensationReason1Choice value) {
+			obj.setReason(value);
 		}
 	};
 
@@ -302,7 +343,7 @@ public class Compensation1 {
 		return debtorAgent;
 	}
 
-	public Compensation1 setDebtorAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 debtorAgent) {
+	public Compensation1 setDebtorAgent(BranchAndFinancialInstitutionIdentification5 debtorAgent) {
 		this.debtorAgent = Objects.requireNonNull(debtorAgent);
 		return this;
 	}
@@ -311,7 +352,7 @@ public class Compensation1 {
 		return creditorAgent;
 	}
 
-	public Compensation1 setCreditorAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 creditorAgent) {
+	public Compensation1 setCreditorAgent(BranchAndFinancialInstitutionIdentification5 creditorAgent) {
 		this.creditorAgent = Objects.requireNonNull(creditorAgent);
 		return this;
 	}

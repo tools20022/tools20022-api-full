@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.MarginCall;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Amount1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -105,7 +106,7 @@ public class AgreedAmount1 {
 	 * "Provides details about the agreed amount for the variation margin."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmVariationMarginAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AgreedAmount1, Amount1> mmVariationMarginAmount = new MMMessageAssociationEnd<AgreedAmount1, Amount1>() {
 		{
 			businessElementTrace_lazy = () -> MarginCall.mmVariationMargin;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AgreedAmount1.mmObject();
@@ -117,7 +118,17 @@ public class AgreedAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Amount1.mmObject();
+			type_lazy = () -> Amount1.mmObject();
+		}
+
+		@Override
+		public Amount1 getValue(AgreedAmount1 obj) {
+			return obj.getVariationMarginAmount();
+		}
+
+		@Override
+		public void setValue(AgreedAmount1 obj, Amount1 value) {
+			obj.setVariationMarginAmount(value);
 		}
 	};
 	@XmlElement(name = "SgrtdIndpdntAmt")
@@ -153,7 +164,7 @@ public class AgreedAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSegregatedIndependentAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AgreedAmount1, Optional<Amount1>> mmSegregatedIndependentAmount = new MMMessageAssociationEnd<AgreedAmount1, Optional<Amount1>>() {
 		{
 			businessElementTrace_lazy = () -> MarginCall.mmSegregatedIndependentAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AgreedAmount1.mmObject();
@@ -165,7 +176,17 @@ public class AgreedAmount1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Amount1.mmObject();
+			type_lazy = () -> Amount1.mmObject();
+		}
+
+		@Override
+		public Optional<Amount1> getValue(AgreedAmount1 obj) {
+			return obj.getSegregatedIndependentAmount();
+		}
+
+		@Override
+		public void setValue(AgreedAmount1 obj, Optional<Amount1> value) {
+			obj.setSegregatedIndependentAmount(value.orElse(null));
 		}
 	};
 
@@ -187,7 +208,7 @@ public class AgreedAmount1 {
 		return variationMarginAmount;
 	}
 
-	public AgreedAmount1 setVariationMarginAmount(com.tools20022.repository.msg.Amount1 variationMarginAmount) {
+	public AgreedAmount1 setVariationMarginAmount(Amount1 variationMarginAmount) {
 		this.variationMarginAmount = Objects.requireNonNull(variationMarginAmount);
 		return this;
 	}
@@ -196,7 +217,7 @@ public class AgreedAmount1 {
 		return segregatedIndependentAmount == null ? Optional.empty() : Optional.of(segregatedIndependentAmount);
 	}
 
-	public AgreedAmount1 setSegregatedIndependentAmount(com.tools20022.repository.msg.Amount1 segregatedIndependentAmount) {
+	public AgreedAmount1 setSegregatedIndependentAmount(Amount1 segregatedIndependentAmount) {
 		this.segregatedIndependentAmount = segregatedIndependentAmount;
 		return this;
 	}

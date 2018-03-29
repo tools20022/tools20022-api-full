@@ -114,7 +114,7 @@ public class OpeningClosing2Choice {
 	 * "Opening closing information expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OpeningClosing2Choice, OpeningClosing1Code> mmCode = new MMMessageAttribute<OpeningClosing2Choice, OpeningClosing1Code>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmOpeningClosingCode;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OpeningClosing2Choice.mmObject();
@@ -127,6 +127,16 @@ public class OpeningClosing2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OpeningClosing1Code.mmObject();
+		}
+
+		@Override
+		public OpeningClosing1Code getValue(OpeningClosing2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(OpeningClosing2Choice obj, OpeningClosing1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -167,7 +177,7 @@ public class OpeningClosing2Choice {
 	 * "Opening closing information expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OpeningClosing2Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<OpeningClosing2Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmOpeningClosingCode;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OpeningClosing2Choice.mmObject();
@@ -181,6 +191,16 @@ public class OpeningClosing2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(OpeningClosing2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(OpeningClosing2Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

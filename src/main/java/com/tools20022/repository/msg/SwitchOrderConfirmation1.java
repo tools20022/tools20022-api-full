@@ -25,6 +25,8 @@ import com.tools20022.repository.area.setr.SwitchOrderConfirmationCancellationIn
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.SwitchExecution;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Extension1;
+import com.tools20022.repository.msg.SwitchExecution4;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -131,7 +133,7 @@ public class SwitchOrderConfirmation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmendmentIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SwitchOrderConfirmation1, YesNoIndicator> mmAmendmentIndicator = new MMMessageAttribute<SwitchOrderConfirmation1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrderConfirmation1.mmObject();
 			isDerived = false;
@@ -143,9 +145,19 @@ public class SwitchOrderConfirmation1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
+
+		@Override
+		public YesNoIndicator getValue(SwitchOrderConfirmation1 obj) {
+			return obj.getAmendmentIndicator();
+		}
+
+		@Override
+		public void setValue(SwitchOrderConfirmation1 obj, YesNoIndicator value) {
+			obj.setAmendmentIndicator(value);
+		}
 	};
 	@XmlElement(name = "SwtchExctnDtls", required = true)
-	protected List<com.tools20022.repository.msg.SwitchExecution4> switchExecutionDetails;
+	protected List<SwitchExecution4> switchExecutionDetails;
 	/**
 	 * 
 	 <p>
@@ -177,7 +189,7 @@ public class SwitchOrderConfirmation1 {
 	 * definition} = "Information related to a switch execution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSwitchExecutionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchOrderConfirmation1, List<SwitchExecution4>> mmSwitchExecutionDetails = new MMMessageAssociationEnd<SwitchOrderConfirmation1, List<SwitchExecution4>>() {
 		{
 			businessComponentTrace_lazy = () -> SwitchExecution.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrderConfirmation1.mmObject();
@@ -188,11 +200,21 @@ public class SwitchOrderConfirmation1 {
 			definition = "Information related to a switch execution.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SwitchExecution4.mmObject();
+			type_lazy = () -> SwitchExecution4.mmObject();
+		}
+
+		@Override
+		public List<SwitchExecution4> getValue(SwitchOrderConfirmation1 obj) {
+			return obj.getSwitchExecutionDetails();
+		}
+
+		@Override
+		public void setValue(SwitchOrderConfirmation1 obj, List<SwitchExecution4> value) {
+			obj.setSwitchExecutionDetails(value);
 		}
 	};
 	@XmlElement(name = "Xtnsn")
-	protected List<com.tools20022.repository.msg.Extension1> extension;
+	protected List<Extension1> extension;
 	/**
 	 * 
 	 <p>
@@ -220,7 +242,7 @@ public class SwitchOrderConfirmation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchOrderConfirmation1, List<Extension1>> mmExtension = new MMMessageAssociationEnd<SwitchOrderConfirmation1, List<Extension1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrderConfirmation1.mmObject();
 			isDerived = false;
@@ -230,7 +252,17 @@ public class SwitchOrderConfirmation1 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Extension1.mmObject();
+			type_lazy = () -> Extension1.mmObject();
+		}
+
+		@Override
+		public List<Extension1> getValue(SwitchOrderConfirmation1 obj) {
+			return obj.getExtension();
+		}
+
+		@Override
+		public void setValue(SwitchOrderConfirmation1 obj, List<Extension1> value) {
+			obj.setExtension(value);
 		}
 	};
 
@@ -265,7 +297,7 @@ public class SwitchOrderConfirmation1 {
 		return switchExecutionDetails == null ? switchExecutionDetails = new ArrayList<>() : switchExecutionDetails;
 	}
 
-	public SwitchOrderConfirmation1 setSwitchExecutionDetails(List<com.tools20022.repository.msg.SwitchExecution4> switchExecutionDetails) {
+	public SwitchOrderConfirmation1 setSwitchExecutionDetails(List<SwitchExecution4> switchExecutionDetails) {
 		this.switchExecutionDetails = Objects.requireNonNull(switchExecutionDetails);
 		return this;
 	}
@@ -274,7 +306,7 @@ public class SwitchOrderConfirmation1 {
 		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public SwitchOrderConfirmation1 setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+	public SwitchOrderConfirmation1 setExtension(List<Extension1> extension) {
 		this.extension = Objects.requireNonNull(extension);
 		return this;
 	}

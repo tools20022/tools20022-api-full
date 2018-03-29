@@ -114,7 +114,7 @@ public class CancellationReason14 {
 	 * definition} = "Specifies the reason why the instruction is cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CancellationReason14, CancellationReason24Choice> mmCode = new MMMessageAssociationEnd<CancellationReason14, CancellationReason24Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationReason14.mmObject();
@@ -128,6 +128,16 @@ public class CancellationReason14 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CancellationReason24Choice.mmObject();
+		}
+
+		@Override
+		public CancellationReason24Choice getValue(CancellationReason14 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CancellationReason14 obj, CancellationReason24Choice value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -170,7 +180,7 @@ public class CancellationReason14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationReason14, Optional<RestrictedFINXMax210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<CancellationReason14, Optional<RestrictedFINXMax210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationReason14.mmObject();
@@ -183,6 +193,16 @@ public class CancellationReason14 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax210Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax210Text> getValue(CancellationReason14 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(CancellationReason14 obj, Optional<RestrictedFINXMax210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

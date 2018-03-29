@@ -31,6 +31,10 @@ import com.tools20022.repository.entity.Obligation;
 import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.entity.SecuritiesTrade;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification20;
+import com.tools20022.repository.msg.HoldIndicator2;
+import com.tools20022.repository.msg.Linkages10;
+import com.tools20022.repository.msg.References7;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -187,7 +191,7 @@ public class RequestDetails6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RequestDetails6, References7> mmReference = new MMMessageAssociationEnd<RequestDetails6, References7>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTradeRelatedIdentifications;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestDetails6.mmObject();
@@ -201,7 +205,17 @@ public class RequestDetails6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.References7.mmObject();
+			type_lazy = () -> References7.mmObject();
+		}
+
+		@Override
+		public References7 getValue(RequestDetails6 obj) {
+			return obj.getReference();
+		}
+
+		@Override
+		public void setValue(RequestDetails6 obj, References7 value) {
+			obj.setReference(value);
 		}
 	};
 	@XmlElement(name = "AutomtcBrrwg")
@@ -249,7 +263,7 @@ public class RequestDetails6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAutomaticBorrowing = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RequestDetails6, Optional<AutomaticBorrowing2Choice>> mmAutomaticBorrowing = new MMMessageAssociationEnd<RequestDetails6, Optional<AutomaticBorrowing2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmAutomaticBorrowing;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestDetails6.mmObject();
@@ -264,6 +278,16 @@ public class RequestDetails6 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AutomaticBorrowing2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AutomaticBorrowing2Choice> getValue(RequestDetails6 obj) {
+			return obj.getAutomaticBorrowing();
+		}
+
+		@Override
+		public void setValue(RequestDetails6 obj, Optional<AutomaticBorrowing2Choice> value) {
+			obj.setAutomaticBorrowing(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RtnInd")
@@ -309,7 +333,7 @@ public class RequestDetails6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRetainIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequestDetails6, Optional<YesNoIndicator>> mmRetainIndicator = new MMMessageAttribute<RequestDetails6, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestDetails6.mmObject();
 			isDerived = false;
@@ -322,6 +346,16 @@ public class RequestDetails6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(RequestDetails6 obj) {
+			return obj.getRetainIndicator();
+		}
+
+		@Override
+		public void setValue(RequestDetails6 obj, Optional<YesNoIndicator> value) {
+			obj.setRetainIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Lkg")
@@ -362,7 +396,7 @@ public class RequestDetails6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLinkage = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RequestDetails6, Optional<LinkageType1Choice>> mmLinkage = new MMMessageAssociationEnd<RequestDetails6, Optional<LinkageType1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestDetails6.mmObject();
 			isDerived = false;
@@ -376,6 +410,16 @@ public class RequestDetails6 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> LinkageType1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<LinkageType1Choice> getValue(RequestDetails6 obj) {
+			return obj.getLinkage();
+		}
+
+		@Override
+		public void setValue(RequestDetails6 obj, Optional<LinkageType1Choice> value) {
+			obj.setLinkage(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Prty")
@@ -425,7 +469,7 @@ public class RequestDetails6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPriority = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RequestDetails6, Optional<PriorityNumeric1Choice>> mmPriority = new MMMessageAssociationEnd<RequestDetails6, Optional<PriorityNumeric1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Obligation.mmPriority;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestDetails6.mmObject();
@@ -441,9 +485,19 @@ public class RequestDetails6 {
 			isComposite = true;
 			type_lazy = () -> PriorityNumeric1Choice.mmObject();
 		}
+
+		@Override
+		public Optional<PriorityNumeric1Choice> getValue(RequestDetails6 obj) {
+			return obj.getPriority();
+		}
+
+		@Override
+		public void setValue(RequestDetails6 obj, Optional<PriorityNumeric1Choice> value) {
+			obj.setPriority(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "OthrPrcg")
-	protected List<com.tools20022.repository.msg.GenericIdentification20> otherProcessing;
+	protected List<GenericIdentification20> otherProcessing;
 	/**
 	 * 
 	 <p>
@@ -482,7 +536,7 @@ public class RequestDetails6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherProcessing = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RequestDetails6, List<GenericIdentification20>> mmOtherProcessing = new MMMessageAssociationEnd<RequestDetails6, List<GenericIdentification20>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestDetails6.mmObject();
 			isDerived = false;
@@ -494,7 +548,17 @@ public class RequestDetails6 {
 			nextVersions_lazy = () -> Arrays.asList(RequestDetails18.mmOtherProcessing);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification20.mmObject();
+			type_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public List<GenericIdentification20> getValue(RequestDetails6 obj) {
+			return obj.getOtherProcessing();
+		}
+
+		@Override
+		public void setValue(RequestDetails6 obj, List<GenericIdentification20> value) {
+			obj.setOtherProcessing(value);
 		}
 	};
 	@XmlElement(name = "PrtlSttlmInd")
@@ -543,7 +607,7 @@ public class RequestDetails6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartialSettlementIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequestDetails6, Optional<SettlementTransactionCondition5Code>> mmPartialSettlementIndicator = new MMMessageAttribute<RequestDetails6, Optional<SettlementTransactionCondition5Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementTransactionCondition;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestDetails6.mmObject();
@@ -557,6 +621,16 @@ public class RequestDetails6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> SettlementTransactionCondition5Code.mmObject();
+		}
+
+		@Override
+		public Optional<SettlementTransactionCondition5Code> getValue(RequestDetails6 obj) {
+			return obj.getPartialSettlementIndicator();
+		}
+
+		@Override
+		public void setValue(RequestDetails6 obj, Optional<SettlementTransactionCondition5Code> value) {
+			obj.setPartialSettlementIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctiesRTGS")
@@ -606,7 +680,7 @@ public class RequestDetails6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesRTGS = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RequestDetails6, Optional<SecuritiesRTGS1Choice>> mmSecuritiesRTGS = new MMMessageAssociationEnd<RequestDetails6, Optional<SecuritiesRTGS1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSecuritiesRealTimeGrossSettlement;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestDetails6.mmObject();
@@ -621,6 +695,16 @@ public class RequestDetails6 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SecuritiesRTGS1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesRTGS1Choice> getValue(RequestDetails6 obj) {
+			return obj.getSecuritiesRTGS();
+		}
+
+		@Override
+		public void setValue(RequestDetails6 obj, Optional<SecuritiesRTGS1Choice> value) {
+			obj.setSecuritiesRTGS(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "HldInd")
@@ -668,7 +752,7 @@ public class RequestDetails6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmHoldIndicator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RequestDetails6, Optional<HoldIndicator2>> mmHoldIndicator = new MMMessageAssociationEnd<RequestDetails6, Optional<HoldIndicator2>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmHoldIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestDetails6.mmObject();
@@ -682,7 +766,17 @@ public class RequestDetails6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.HoldIndicator2.mmObject();
+			type_lazy = () -> HoldIndicator2.mmObject();
+		}
+
+		@Override
+		public Optional<HoldIndicator2> getValue(RequestDetails6 obj) {
+			return obj.getHoldIndicator();
+		}
+
+		@Override
+		public void setValue(RequestDetails6 obj, Optional<HoldIndicator2> value) {
+			obj.setHoldIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MtchgDnl")
@@ -730,7 +824,7 @@ public class RequestDetails6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMatchingDenial = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RequestDetails6, Optional<MatchingDenied1Choice>> mmMatchingDenial = new MMMessageAssociationEnd<RequestDetails6, Optional<MatchingDenied1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTradeStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestDetails6.mmObject();
@@ -745,6 +839,16 @@ public class RequestDetails6 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> MatchingDenied1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<MatchingDenied1Choice> getValue(RequestDetails6 obj) {
+			return obj.getMatchingDenial();
+		}
+
+		@Override
+		public void setValue(RequestDetails6 obj, Optional<MatchingDenied1Choice> value) {
+			obj.setMatchingDenial(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UnltrlSplt")
@@ -793,7 +897,7 @@ public class RequestDetails6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnilateralSplit = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RequestDetails6, Optional<UnilateralSplit1Choice>> mmUnilateralSplit = new MMMessageAssociationEnd<RequestDetails6, Optional<UnilateralSplit1Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesSettlement.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestDetails6.mmObject();
@@ -809,9 +913,19 @@ public class RequestDetails6 {
 			isComposite = true;
 			type_lazy = () -> UnilateralSplit1Choice.mmObject();
 		}
+
+		@Override
+		public Optional<UnilateralSplit1Choice> getValue(RequestDetails6 obj) {
+			return obj.getUnilateralSplit();
+		}
+
+		@Override
+		public void setValue(RequestDetails6 obj, Optional<UnilateralSplit1Choice> value) {
+			obj.setUnilateralSplit(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "Lnkgs")
-	protected List<com.tools20022.repository.msg.Linkages10> linkages;
+	protected List<Linkages10> linkages;
 	/**
 	 * 
 	 <p>
@@ -848,7 +962,7 @@ public class RequestDetails6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLinkages = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RequestDetails6, List<Linkages10>> mmLinkages = new MMMessageAssociationEnd<RequestDetails6, List<Linkages10>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestDetails6.mmObject();
 			isDerived = false;
@@ -860,7 +974,17 @@ public class RequestDetails6 {
 			nextVersions_lazy = () -> Arrays.asList(RequestDetails18.mmLinkages);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Linkages10.mmObject();
+			type_lazy = () -> Linkages10.mmObject();
+		}
+
+		@Override
+		public List<Linkages10> getValue(RequestDetails6 obj) {
+			return obj.getLinkages();
+		}
+
+		@Override
+		public void setValue(RequestDetails6 obj, List<Linkages10> value) {
+			obj.setLinkages(value);
 		}
 	};
 
@@ -890,7 +1014,7 @@ public class RequestDetails6 {
 		return reference;
 	}
 
-	public RequestDetails6 setReference(com.tools20022.repository.msg.References7 reference) {
+	public RequestDetails6 setReference(References7 reference) {
 		this.reference = Objects.requireNonNull(reference);
 		return this;
 	}
@@ -935,7 +1059,7 @@ public class RequestDetails6 {
 		return otherProcessing == null ? otherProcessing = new ArrayList<>() : otherProcessing;
 	}
 
-	public RequestDetails6 setOtherProcessing(List<com.tools20022.repository.msg.GenericIdentification20> otherProcessing) {
+	public RequestDetails6 setOtherProcessing(List<GenericIdentification20> otherProcessing) {
 		this.otherProcessing = Objects.requireNonNull(otherProcessing);
 		return this;
 	}
@@ -962,7 +1086,7 @@ public class RequestDetails6 {
 		return holdIndicator == null ? Optional.empty() : Optional.of(holdIndicator);
 	}
 
-	public RequestDetails6 setHoldIndicator(com.tools20022.repository.msg.HoldIndicator2 holdIndicator) {
+	public RequestDetails6 setHoldIndicator(HoldIndicator2 holdIndicator) {
 		this.holdIndicator = holdIndicator;
 		return this;
 	}
@@ -989,7 +1113,7 @@ public class RequestDetails6 {
 		return linkages == null ? linkages = new ArrayList<>() : linkages;
 	}
 
-	public RequestDetails6 setLinkages(List<com.tools20022.repository.msg.Linkages10> linkages) {
+	public RequestDetails6 setLinkages(List<Linkages10> linkages) {
 		this.linkages = Objects.requireNonNull(linkages);
 		return this;
 	}

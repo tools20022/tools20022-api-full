@@ -111,7 +111,7 @@ public class AwaitingCancellationReason1 {
 	 * "Specifies the reason why the trade is wainting the cancellation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AwaitingCancellationReason1, AwaitingCancellationReason1Choice> mmCode = new MMMessageAttribute<AwaitingCancellationReason1, AwaitingCancellationReason1Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AwaitingCancellationReason1.mmObject();
@@ -123,6 +123,16 @@ public class AwaitingCancellationReason1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AwaitingCancellationReason1Choice.mmObject();
+		}
+
+		@Override
+		public AwaitingCancellationReason1Choice getValue(AwaitingCancellationReason1 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(AwaitingCancellationReason1 obj, AwaitingCancellationReason1Choice value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -160,7 +170,7 @@ public class AwaitingCancellationReason1 {
 	 * "Provides additional information about the reason in narrative form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AwaitingCancellationReason1, Optional<Max210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<AwaitingCancellationReason1, Optional<Max210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AwaitingCancellationReason1.mmObject();
@@ -172,6 +182,16 @@ public class AwaitingCancellationReason1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max210Text> getValue(AwaitingCancellationReason1 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(AwaitingCancellationReason1 obj, Optional<Max210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

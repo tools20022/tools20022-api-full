@@ -24,6 +24,7 @@ import com.tools20022.repository.choice.PartyIdentification34Choice;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountAndDirection20;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -106,7 +107,7 @@ public class SettlementDetails21 {
 	 * definition} = "Total amount to be settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementDetails21, AmountAndDirection20> mmSettlementAmount = new MMMessageAssociationEnd<SettlementDetails21, AmountAndDirection20>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails21.mmObject();
@@ -118,7 +119,17 @@ public class SettlementDetails21 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection20.mmObject();
+			type_lazy = () -> AmountAndDirection20.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection20 getValue(SettlementDetails21 obj) {
+			return obj.getSettlementAmount();
+		}
+
+		@Override
+		public void setValue(SettlementDetails21 obj, AmountAndDirection20 value) {
+			obj.setSettlementAmount(value);
 		}
 	};
 	@XmlElement(name = "Dpstry")
@@ -155,7 +166,7 @@ public class SettlementDetails21 {
 	 * definition} = "Place where settlement of the securities takes place."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDepository = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementDetails21, Optional<PartyIdentification34Choice>> mmDepository = new MMMessageAssociationEnd<SettlementDetails21, Optional<PartyIdentification34Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails21.mmObject();
@@ -168,6 +179,16 @@ public class SettlementDetails21 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification34Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification34Choice> getValue(SettlementDetails21 obj) {
+			return obj.getDepository();
+		}
+
+		@Override
+		public void setValue(SettlementDetails21 obj, Optional<PartyIdentification34Choice> value) {
+			obj.setDepository(value.orElse(null));
 		}
 	};
 
@@ -189,7 +210,7 @@ public class SettlementDetails21 {
 		return settlementAmount;
 	}
 
-	public SettlementDetails21 setSettlementAmount(com.tools20022.repository.msg.AmountAndDirection20 settlementAmount) {
+	public SettlementDetails21 setSettlementAmount(AmountAndDirection20 settlementAmount) {
 		this.settlementAmount = Objects.requireNonNull(settlementAmount);
 		return this;
 	}

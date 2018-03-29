@@ -130,7 +130,7 @@ public class BalanceFormat6Choice {
 	 * BalanceFormat3Choice.mmBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BalanceFormat6Choice, SignedQuantityFormat7> mmBalance = new MMMessageAssociationEnd<BalanceFormat6Choice, SignedQuantityFormat7>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.BalanceFormat6Choice.mmObject();
@@ -145,6 +145,16 @@ public class BalanceFormat6Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SignedQuantityFormat7.mmObject();
+		}
+
+		@Override
+		public SignedQuantityFormat7 getValue(BalanceFormat6Choice obj) {
+			return obj.getBalance();
+		}
+
+		@Override
+		public void setValue(BalanceFormat6Choice obj, SignedQuantityFormat7 value) {
+			obj.setBalance(value);
 		}
 	};
 	@XmlElement(name = "ElgblBal", required = true)
@@ -189,7 +199,7 @@ public class BalanceFormat6Choice {
 	 * BalanceFormat3Choice.mmEligibleBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEligibleBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BalanceFormat6Choice, SignedQuantityFormat6> mmEligibleBalance = new MMMessageAssociationEnd<BalanceFormat6Choice, SignedQuantityFormat6>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.BalanceFormat6Choice.mmObject();
@@ -204,6 +214,16 @@ public class BalanceFormat6Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SignedQuantityFormat6.mmObject();
+		}
+
+		@Override
+		public SignedQuantityFormat6 getValue(BalanceFormat6Choice obj) {
+			return obj.getEligibleBalance();
+		}
+
+		@Override
+		public void setValue(BalanceFormat6Choice obj, SignedQuantityFormat6 value) {
+			obj.setEligibleBalance(value);
 		}
 	};
 	@XmlElement(name = "NotElgblBal", required = true)
@@ -248,7 +268,7 @@ public class BalanceFormat6Choice {
 	 * BalanceFormat3Choice.mmNotEligibleBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNotEligibleBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BalanceFormat6Choice, SignedQuantityFormat6> mmNotEligibleBalance = new MMMessageAssociationEnd<BalanceFormat6Choice, SignedQuantityFormat6>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.BalanceFormat6Choice.mmObject();
@@ -263,6 +283,16 @@ public class BalanceFormat6Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SignedQuantityFormat6.mmObject();
+		}
+
+		@Override
+		public SignedQuantityFormat6 getValue(BalanceFormat6Choice obj) {
+			return obj.getNotEligibleBalance();
+		}
+
+		@Override
+		public void setValue(BalanceFormat6Choice obj, SignedQuantityFormat6 value) {
+			obj.setNotEligibleBalance(value);
 		}
 	};
 	@XmlElement(name = "FullPrdUnits", required = true)
@@ -307,7 +337,7 @@ public class BalanceFormat6Choice {
 	 * BalanceFormat3Choice.mmFullPeriodUnits}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFullPeriodUnits = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BalanceFormat6Choice, SignedQuantityFormat6> mmFullPeriodUnits = new MMMessageAttribute<BalanceFormat6Choice, SignedQuantityFormat6>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.BalanceFormat6Choice.mmObject();
@@ -320,6 +350,16 @@ public class BalanceFormat6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SignedQuantityFormat6.mmObject();
+		}
+
+		@Override
+		public SignedQuantityFormat6 getValue(BalanceFormat6Choice obj) {
+			return obj.getFullPeriodUnits();
+		}
+
+		@Override
+		public void setValue(BalanceFormat6Choice obj, SignedQuantityFormat6 value) {
+			obj.setFullPeriodUnits(value);
 		}
 	};
 	@XmlElement(name = "PartWayPrdUnits", required = true)
@@ -364,7 +404,7 @@ public class BalanceFormat6Choice {
 	 * BalanceFormat3Choice.mmPartWayPeriodUnits}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartWayPeriodUnits = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BalanceFormat6Choice, SignedQuantityFormat6> mmPartWayPeriodUnits = new MMMessageAttribute<BalanceFormat6Choice, SignedQuantityFormat6>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.BalanceFormat6Choice.mmObject();
@@ -377,6 +417,16 @@ public class BalanceFormat6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SignedQuantityFormat6.mmObject();
+		}
+
+		@Override
+		public SignedQuantityFormat6 getValue(BalanceFormat6Choice obj) {
+			return obj.getPartWayPeriodUnits();
+		}
+
+		@Override
+		public void setValue(BalanceFormat6Choice obj, SignedQuantityFormat6 value) {
+			obj.setPartWayPeriodUnits(value);
 		}
 	};
 

@@ -51,11 +51,15 @@ public class ConstraintNonStandardsSLAReferenceRule {
 	 */
 	public static final MMConstraint<TotalFeesAndTaxes40> forTotalFeesAndTaxes40 = new MMConstraint<TotalFeesAndTaxes40>() {
 		{
-			validator = ConstraintNonStandardsSLAReferenceRule::checkTotalFeesAndTaxes40;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonStandardsSLAReferenceRule";
 			definition = "For each value of IndividualFee/Type, NonStandardSLAReference may only be present once.";
 			owner_lazy = () -> TotalFeesAndTaxes40.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TotalFeesAndTaxes40 obj) throws Exception {
+			checkTotalFeesAndTaxes40(obj);
 		}
 	};
 

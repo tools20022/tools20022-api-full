@@ -123,7 +123,7 @@ public class StandingOrderOrAll1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStandingOrder = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StandingOrderOrAll1Choice, List<StandingOrderIdentification2>> mmStandingOrder = new MMMessageAssociationEnd<StandingOrderOrAll1Choice, List<StandingOrderIdentification2>>() {
 		{
 			businessComponentTrace_lazy = () -> CashStandingOrder.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.StandingOrderOrAll1Choice.mmObject();
@@ -135,6 +135,16 @@ public class StandingOrderOrAll1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> StandingOrderIdentification2.mmObject();
+		}
+
+		@Override
+		public List<StandingOrderIdentification2> getValue(StandingOrderOrAll1Choice obj) {
+			return obj.getStandingOrder();
+		}
+
+		@Override
+		public void setValue(StandingOrderOrAll1Choice obj, List<StandingOrderIdentification2> value) {
+			obj.setStandingOrder(value);
 		}
 	};
 	@XmlElement(name = "AllStgOrdrs", required = true)
@@ -173,7 +183,7 @@ public class StandingOrderOrAll1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAllStandingOrders = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StandingOrderOrAll1Choice, List<StandingOrderIdentification3>> mmAllStandingOrders = new MMMessageAssociationEnd<StandingOrderOrAll1Choice, List<StandingOrderIdentification3>>() {
 		{
 			businessComponentTrace_lazy = () -> CashStandingOrder.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.StandingOrderOrAll1Choice.mmObject();
@@ -185,6 +195,16 @@ public class StandingOrderOrAll1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> StandingOrderIdentification3.mmObject();
+		}
+
+		@Override
+		public List<StandingOrderIdentification3> getValue(StandingOrderOrAll1Choice obj) {
+			return obj.getAllStandingOrders();
+		}
+
+		@Override
+		public void setValue(StandingOrderOrAll1Choice obj, List<StandingOrderIdentification3> value) {
+			obj.setAllStandingOrders(value);
 		}
 	};
 

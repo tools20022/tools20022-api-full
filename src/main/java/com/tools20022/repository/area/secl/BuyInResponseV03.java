@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.BuyIn3;
 import com.tools20022.repository.msg.SettlementObligation7;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -127,7 +126,7 @@ public class BuyInResponseV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BuyInResponseV03, Optional<Max35Text>> mmTransactionIdentification = new MMMessageBuildingBlock<BuyInResponseV03, Optional<Max35Text>>() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -138,12 +137,14 @@ public class BuyInResponseV03 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BuyInResponseV03.class.getMethod("getTransactionIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Max35Text> getValue(BuyInResponseV03 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(BuyInResponseV03 obj, Optional<Max35Text> value) {
+			obj.setTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BuyInRspnDtls", required = true)
@@ -171,7 +172,7 @@ public class BuyInResponseV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmBuyInResponseDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BuyInResponseV03, BuyIn3> mmBuyInResponseDetails = new MMMessageBuildingBlock<BuyInResponseV03, BuyIn3>() {
 		{
 			xmlTag = "BuyInRspnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -182,12 +183,14 @@ public class BuyInResponseV03 {
 			complexType_lazy = () -> BuyIn3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BuyInResponseV03.class.getMethod("getBuyInResponseDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public BuyIn3 getValue(BuyInResponseV03 obj) {
+			return obj.getBuyInResponseDetails();
+		}
+
+		@Override
+		public void setValue(BuyInResponseV03 obj, BuyIn3 value) {
+			obj.setBuyInResponseDetails(value);
 		}
 	};
 	@XmlElement(name = "OrgnlSttlmOblgtnDtls")
@@ -217,7 +220,7 @@ public class BuyInResponseV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOriginalSettlementObligationDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BuyInResponseV03, Optional<SettlementObligation7>> mmOriginalSettlementObligationDetails = new MMMessageBuildingBlock<BuyInResponseV03, Optional<SettlementObligation7>>() {
 		{
 			xmlTag = "OrgnlSttlmOblgtnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -228,12 +231,14 @@ public class BuyInResponseV03 {
 			complexType_lazy = () -> SettlementObligation7.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BuyInResponseV03.class.getMethod("getOriginalSettlementObligationDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<SettlementObligation7> getValue(BuyInResponseV03 obj) {
+			return obj.getOriginalSettlementObligationDetails();
+		}
+
+		@Override
+		public void setValue(BuyInResponseV03 obj, Optional<SettlementObligation7> value) {
+			obj.setOriginalSettlementObligationDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -263,7 +268,7 @@ public class BuyInResponseV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BuyInResponseV03, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<BuyInResponseV03, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -273,12 +278,14 @@ public class BuyInResponseV03 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BuyInResponseV03.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(BuyInResponseV03 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(BuyInResponseV03 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

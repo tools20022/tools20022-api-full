@@ -24,6 +24,10 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.MeetingContactPerson;
+import com.tools20022.repository.msg.NameAndAddress5;
+import com.tools20022.repository.msg.PostalAddress1;
+import com.tools20022.repository.msg.ProxyParameters;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -187,7 +191,7 @@ public class MeetingNotice1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMeetingIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingNotice1, Optional<Max35Text>> mmMeetingIdentification = new MMMessageAttribute<MeetingNotice1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Meeting.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingNotice1.mmObject();
@@ -199,6 +203,16 @@ public class MeetingNotice1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(MeetingNotice1 obj) {
+			return obj.getMeetingIdentification();
+		}
+
+		@Override
+		public void setValue(MeetingNotice1 obj, Optional<Max35Text> value) {
+			obj.setMeetingIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IssrMtgId")
@@ -236,7 +250,7 @@ public class MeetingNotice1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuerMeetingIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingNotice1, Optional<Max35Text>> mmIssuerMeetingIdentification = new MMMessageAttribute<MeetingNotice1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> IssuerMeeting.mmIssuerMeetingIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingNotice1.mmObject();
@@ -248,6 +262,16 @@ public class MeetingNotice1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(MeetingNotice1 obj) {
+			return obj.getIssuerMeetingIdentification();
+		}
+
+		@Override
+		public void setValue(MeetingNotice1 obj, Optional<Max35Text> value) {
+			obj.setIssuerMeetingIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -285,7 +309,7 @@ public class MeetingNotice1 {
 	 * "Specifies the type of meeting for which instructions are sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingNotice1, MeetingType1Code> mmType = new MMMessageAttribute<MeetingNotice1, MeetingType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Meeting.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingNotice1.mmObject();
@@ -297,6 +321,16 @@ public class MeetingNotice1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MeetingType1Code.mmObject();
+		}
+
+		@Override
+		public MeetingType1Code getValue(MeetingNotice1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(MeetingNotice1 obj, MeetingType1Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "AnncmntDt")
@@ -332,7 +366,7 @@ public class MeetingNotice1 {
 	 * definition} = "Official meeting announcement date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAnnouncementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingNotice1, Optional<ISODate>> mmAnnouncementDate = new MMMessageAttribute<MeetingNotice1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmAnnouncementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingNotice1.mmObject();
@@ -344,6 +378,16 @@ public class MeetingNotice1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(MeetingNotice1 obj) {
+			return obj.getAnnouncementDate();
+		}
+
+		@Override
+		public void setValue(MeetingNotice1 obj, Optional<ISODate> value) {
+			obj.setAnnouncementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AttndncReqrd")
@@ -382,7 +426,7 @@ public class MeetingNotice1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAttendanceRequired = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingNotice1, Optional<YesNoIndicator>> mmAttendanceRequired = new MMMessageAttribute<MeetingNotice1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> Meeting.mmAttendanceRequired;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingNotice1.mmObject();
@@ -394,6 +438,16 @@ public class MeetingNotice1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(MeetingNotice1 obj) {
+			return obj.getAttendanceRequired();
+		}
+
+		@Override
+		public void setValue(MeetingNotice1 obj, Optional<YesNoIndicator> value) {
+			obj.setAttendanceRequired(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AttndncConfInf")
@@ -431,7 +485,7 @@ public class MeetingNotice1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAttendanceConfirmationInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingNotice1, Optional<Max350Text>> mmAttendanceConfirmationInformation = new MMMessageAttribute<MeetingNotice1, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> Meeting.mmAttendanceConfirmation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingNotice1.mmObject();
@@ -443,6 +497,16 @@ public class MeetingNotice1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(MeetingNotice1 obj) {
+			return obj.getAttendanceConfirmationInformation();
+		}
+
+		@Override
+		public void setValue(MeetingNotice1 obj, Optional<Max350Text> value) {
+			obj.setAttendanceConfirmationInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AttndncConfDdln")
@@ -480,7 +544,7 @@ public class MeetingNotice1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAttendanceConfirmationDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingNotice1, Optional<ISODateTime>> mmAttendanceConfirmationDeadline = new MMMessageAttribute<MeetingNotice1, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmIntermediaryDeadline;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingNotice1.mmObject();
@@ -492,6 +556,16 @@ public class MeetingNotice1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(MeetingNotice1 obj) {
+			return obj.getAttendanceConfirmationDeadline();
+		}
+
+		@Override
+		public void setValue(MeetingNotice1 obj, Optional<ISODateTime> value) {
+			obj.setAttendanceConfirmationDeadline(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AttndncConfElctrncDdln")
@@ -529,7 +603,7 @@ public class MeetingNotice1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAttendanceConfirmationElectronicDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingNotice1, Optional<ISODateTime>> mmAttendanceConfirmationElectronicDeadline = new MMMessageAttribute<MeetingNotice1, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmSTPDeadline;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingNotice1.mmObject();
@@ -541,6 +615,16 @@ public class MeetingNotice1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(MeetingNotice1 obj) {
+			return obj.getAttendanceConfirmationElectronicDeadline();
+		}
+
+		@Override
+		public void setValue(MeetingNotice1 obj, Optional<ISODateTime> value) {
+			obj.setAttendanceConfirmationElectronicDeadline(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AttndncConfMktDdln")
@@ -578,7 +662,7 @@ public class MeetingNotice1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAttendanceConfirmationMarketDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingNotice1, Optional<ISODateTime>> mmAttendanceConfirmationMarketDeadline = new MMMessageAttribute<MeetingNotice1, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmMarketDeadline;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingNotice1.mmObject();
@@ -590,6 +674,16 @@ public class MeetingNotice1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(MeetingNotice1 obj) {
+			return obj.getAttendanceConfirmationMarketDeadline();
+		}
+
+		@Override
+		public void setValue(MeetingNotice1 obj, Optional<ISODateTime> value) {
+			obj.setAttendanceConfirmationMarketDeadline(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlDcmnttnURLAdr")
@@ -627,7 +721,7 @@ public class MeetingNotice1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalDocumentationURLAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingNotice1, Optional<Max256Text>> mmAdditionalDocumentationURLAddress = new MMMessageAttribute<MeetingNotice1, Optional<Max256Text>>() {
 		{
 			businessElementTrace_lazy = () -> ElectronicAddress.mmURLAddress;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingNotice1.mmObject();
@@ -639,6 +733,16 @@ public class MeetingNotice1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max256Text> getValue(MeetingNotice1 obj) {
+			return obj.getAdditionalDocumentationURLAddress();
+		}
+
+		@Override
+		public void setValue(MeetingNotice1 obj, Optional<Max256Text> value) {
+			obj.setAdditionalDocumentationURLAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RsltnPrpslDdln")
@@ -676,7 +780,7 @@ public class MeetingNotice1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResolutionProposalDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingNotice1, Optional<ISODate>> mmResolutionProposalDeadline = new MMMessageAttribute<MeetingNotice1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmIntermediaryDeadline;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingNotice1.mmObject();
@@ -688,6 +792,16 @@ public class MeetingNotice1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(MeetingNotice1 obj) {
+			return obj.getResolutionProposalDeadline();
+		}
+
+		@Override
+		public void setValue(MeetingNotice1 obj, Optional<ISODate> value) {
+			obj.setResolutionProposalDeadline(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RsltnPrpslMktDdln")
@@ -725,7 +839,7 @@ public class MeetingNotice1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResolutionProposalMarketDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingNotice1, Optional<ISODate>> mmResolutionProposalMarketDeadline = new MMMessageAttribute<MeetingNotice1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmMarketDeadline;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingNotice1.mmObject();
@@ -737,6 +851,16 @@ public class MeetingNotice1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(MeetingNotice1 obj) {
+			return obj.getResolutionProposalMarketDeadline();
+		}
+
+		@Override
+		public void setValue(MeetingNotice1 obj, Optional<ISODate> value) {
+			obj.setResolutionProposalMarketDeadline(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrxyAppntmntNtfctnAdr")
@@ -772,7 +896,7 @@ public class MeetingNotice1 {
 	 * "Address where the information on the proxy should be sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProxyAppointmentNotificationAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MeetingNotice1, Optional<PostalAddress1>> mmProxyAppointmentNotificationAddress = new MMMessageAssociationEnd<MeetingNotice1, Optional<PostalAddress1>>() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingNotice1.mmObject();
@@ -784,7 +908,17 @@ public class MeetingNotice1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PostalAddress1.mmObject();
+			type_lazy = () -> PostalAddress1.mmObject();
+		}
+
+		@Override
+		public Optional<PostalAddress1> getValue(MeetingNotice1 obj) {
+			return obj.getProxyAppointmentNotificationAddress();
+		}
+
+		@Override
+		public void setValue(MeetingNotice1 obj, Optional<PostalAddress1> value) {
+			obj.setProxyAppointmentNotificationAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlNbOfSctiesOutsdng")
@@ -823,7 +957,7 @@ public class MeetingNotice1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalNumberOfSecuritiesOutstanding = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingNotice1, Optional<CurrencyAndAmount>> mmTotalNumberOfSecuritiesOutstanding = new MMMessageAttribute<MeetingNotice1, Optional<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> MeetingParticipation.mmTotalNumberOfSecuritiesOutstanding;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingNotice1.mmObject();
@@ -835,6 +969,16 @@ public class MeetingNotice1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyAndAmount> getValue(MeetingNotice1 obj) {
+			return obj.getTotalNumberOfSecuritiesOutstanding();
+		}
+
+		@Override
+		public void setValue(MeetingNotice1 obj, Optional<CurrencyAndAmount> value) {
+			obj.setTotalNumberOfSecuritiesOutstanding(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlNbOfVtngRghts")
@@ -870,7 +1014,7 @@ public class MeetingNotice1 {
 	 * definition} = "Number of rights admitted to the vote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalNumberOfVotingRights = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingNotice1, Optional<Number>> mmTotalNumberOfVotingRights = new MMMessageAttribute<MeetingNotice1, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> MeetingParticipation.mmTotalNumberOfVotingRights;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingNotice1.mmObject();
@@ -883,9 +1027,19 @@ public class MeetingNotice1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
+
+		@Override
+		public Optional<Number> getValue(MeetingNotice1 obj) {
+			return obj.getTotalNumberOfVotingRights();
+		}
+
+		@Override
+		public void setValue(MeetingNotice1 obj, Optional<Number> value) {
+			obj.setTotalNumberOfVotingRights(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "CtctPrsnDtls")
-	protected List<com.tools20022.repository.msg.MeetingContactPerson> contactPersonDetails;
+	protected List<MeetingContactPerson> contactPersonDetails;
 	/**
 	 * 
 	 <p>
@@ -917,7 +1071,7 @@ public class MeetingNotice1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContactPersonDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MeetingNotice1, List<MeetingContactPerson>> mmContactPersonDetails = new MMMessageAssociationEnd<MeetingNotice1, List<MeetingContactPerson>>() {
 		{
 			businessComponentTrace_lazy = () -> Person.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingNotice1.mmObject();
@@ -929,7 +1083,17 @@ public class MeetingNotice1 {
 			maxOccurs = 12;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MeetingContactPerson.mmObject();
+			type_lazy = () -> MeetingContactPerson.mmObject();
+		}
+
+		@Override
+		public List<MeetingContactPerson> getValue(MeetingNotice1 obj) {
+			return obj.getContactPersonDetails();
+		}
+
+		@Override
+		public void setValue(MeetingNotice1 obj, List<MeetingContactPerson> value) {
+			obj.setContactPersonDetails(value);
 		}
 	};
 	@XmlElement(name = "RsltPblctnDt")
@@ -966,7 +1130,7 @@ public class MeetingNotice1 {
 	 * "Date on which a company publishes the results of its meeting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResultPublicationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingNotice1, Optional<ISODate>> mmResultPublicationDate = new MMMessageAttribute<MeetingNotice1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmResultPublicationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingNotice1.mmObject();
@@ -978,6 +1142,16 @@ public class MeetingNotice1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(MeetingNotice1 obj) {
+			return obj.getResultPublicationDate();
+		}
+
+		@Override
+		public void setValue(MeetingNotice1 obj, Optional<ISODate> value) {
+			obj.setResultPublicationDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InittdByHldr")
@@ -1014,7 +1188,7 @@ public class MeetingNotice1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInitiatedByHolder = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MeetingNotice1, Optional<NameAndAddress5>> mmInitiatedByHolder = new MMMessageAssociationEnd<MeetingNotice1, Optional<NameAndAddress5>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingNotice1.mmObject();
@@ -1026,7 +1200,17 @@ public class MeetingNotice1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NameAndAddress5.mmObject();
+			type_lazy = () -> NameAndAddress5.mmObject();
+		}
+
+		@Override
+		public Optional<NameAndAddress5> getValue(MeetingNotice1 obj) {
+			return obj.getInitiatedByHolder();
+		}
+
+		@Override
+		public void setValue(MeetingNotice1 obj, Optional<NameAndAddress5> value) {
+			obj.setInitiatedByHolder(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InittdByCrt")
@@ -1063,7 +1247,7 @@ public class MeetingNotice1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInitiatedByCourt = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MeetingNotice1, Optional<NameAndAddress5>> mmInitiatedByCourt = new MMMessageAssociationEnd<MeetingNotice1, Optional<NameAndAddress5>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingNotice1.mmObject();
@@ -1075,7 +1259,17 @@ public class MeetingNotice1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NameAndAddress5.mmObject();
+			type_lazy = () -> NameAndAddress5.mmObject();
+		}
+
+		@Override
+		public Optional<NameAndAddress5> getValue(MeetingNotice1 obj) {
+			return obj.getInitiatedByCourt();
+		}
+
+		@Override
+		public void setValue(MeetingNotice1 obj, Optional<NameAndAddress5> value) {
+			obj.setInitiatedByCourt(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrxyNotAllwd")
@@ -1107,7 +1301,7 @@ public class MeetingNotice1 {
 	 * definition} = "Indicates that no proxy is allowed for a meeting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProxyNotAllowed = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingNotice1, Optional<ProxyNotAllowedCode>> mmProxyNotAllowed = new MMMessageAttribute<MeetingNotice1, Optional<ProxyNotAllowedCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingNotice1.mmObject();
 			isDerived = false;
@@ -1118,6 +1312,16 @@ public class MeetingNotice1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ProxyNotAllowedCode.mmObject();
+		}
+
+		@Override
+		public Optional<ProxyNotAllowedCode> getValue(MeetingNotice1 obj) {
+			return obj.getProxyNotAllowed();
+		}
+
+		@Override
+		public void setValue(MeetingNotice1 obj, Optional<ProxyNotAllowedCode> value) {
+			obj.setProxyNotAllowed(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Prxy")
@@ -1152,7 +1356,7 @@ public class MeetingNotice1 {
 	 * definition} = "Specifies the elements required to assign a proxy."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProxy = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MeetingNotice1, Optional<ProxyParameters>> mmProxy = new MMMessageAssociationEnd<MeetingNotice1, Optional<ProxyParameters>>() {
 		{
 			businessElementTrace_lazy = () -> Meeting.mmProxyAppointmentConditions;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingNotice1.mmObject();
@@ -1164,7 +1368,17 @@ public class MeetingNotice1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ProxyParameters.mmObject();
+			type_lazy = () -> ProxyParameters.mmObject();
+		}
+
+		@Override
+		public Optional<ProxyParameters> getValue(MeetingNotice1 obj) {
+			return obj.getProxy();
+		}
+
+		@Override
+		public void setValue(MeetingNotice1 obj, Optional<ProxyParameters> value) {
+			obj.setProxy(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RsltnPrpslThrshld")
@@ -1202,7 +1416,7 @@ public class MeetingNotice1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResolutionProposalThreshold = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingNotice1, Optional<Max350Text>> mmResolutionProposalThreshold = new MMMessageAttribute<MeetingNotice1, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> ResolutionProposal.mmResolutionProposalThreshold;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingNotice1.mmObject();
@@ -1214,6 +1428,16 @@ public class MeetingNotice1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(MeetingNotice1 obj) {
+			return obj.getResolutionProposalThreshold();
+		}
+
+		@Override
+		public void setValue(MeetingNotice1 obj, Optional<Max350Text> value) {
+			obj.setResolutionProposalThreshold(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RsltnPrpslThrshldPctg")
@@ -1252,7 +1476,7 @@ public class MeetingNotice1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResolutionProposalThresholdPercentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingNotice1, Optional<PercentageRate>> mmResolutionProposalThresholdPercentage = new MMMessageAttribute<MeetingNotice1, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> ResolutionProposal.mmResolutionProposalThresholdPercentage;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingNotice1.mmObject();
@@ -1264,6 +1488,16 @@ public class MeetingNotice1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(MeetingNotice1 obj) {
+			return obj.getResolutionProposalThresholdPercentage();
+		}
+
+		@Override
+		public void setValue(MeetingNotice1 obj, Optional<PercentageRate> value) {
+			obj.setResolutionProposalThresholdPercentage(value.orElse(null));
 		}
 	};
 	/**
@@ -1508,7 +1742,7 @@ public class MeetingNotice1 {
 		return proxyAppointmentNotificationAddress == null ? Optional.empty() : Optional.of(proxyAppointmentNotificationAddress);
 	}
 
-	public MeetingNotice1 setProxyAppointmentNotificationAddress(com.tools20022.repository.msg.PostalAddress1 proxyAppointmentNotificationAddress) {
+	public MeetingNotice1 setProxyAppointmentNotificationAddress(PostalAddress1 proxyAppointmentNotificationAddress) {
 		this.proxyAppointmentNotificationAddress = proxyAppointmentNotificationAddress;
 		return this;
 	}
@@ -1535,7 +1769,7 @@ public class MeetingNotice1 {
 		return contactPersonDetails == null ? contactPersonDetails = new ArrayList<>() : contactPersonDetails;
 	}
 
-	public MeetingNotice1 setContactPersonDetails(List<com.tools20022.repository.msg.MeetingContactPerson> contactPersonDetails) {
+	public MeetingNotice1 setContactPersonDetails(List<MeetingContactPerson> contactPersonDetails) {
 		this.contactPersonDetails = Objects.requireNonNull(contactPersonDetails);
 		return this;
 	}
@@ -1553,7 +1787,7 @@ public class MeetingNotice1 {
 		return initiatedByHolder == null ? Optional.empty() : Optional.of(initiatedByHolder);
 	}
 
-	public MeetingNotice1 setInitiatedByHolder(com.tools20022.repository.msg.NameAndAddress5 initiatedByHolder) {
+	public MeetingNotice1 setInitiatedByHolder(NameAndAddress5 initiatedByHolder) {
 		this.initiatedByHolder = initiatedByHolder;
 		return this;
 	}
@@ -1562,7 +1796,7 @@ public class MeetingNotice1 {
 		return initiatedByCourt == null ? Optional.empty() : Optional.of(initiatedByCourt);
 	}
 
-	public MeetingNotice1 setInitiatedByCourt(com.tools20022.repository.msg.NameAndAddress5 initiatedByCourt) {
+	public MeetingNotice1 setInitiatedByCourt(NameAndAddress5 initiatedByCourt) {
 		this.initiatedByCourt = initiatedByCourt;
 		return this;
 	}
@@ -1580,7 +1814,7 @@ public class MeetingNotice1 {
 		return proxy == null ? Optional.empty() : Optional.of(proxy);
 	}
 
-	public MeetingNotice1 setProxy(com.tools20022.repository.msg.ProxyParameters proxy) {
+	public MeetingNotice1 setProxy(ProxyParameters proxy) {
 		this.proxy = proxy;
 		return this;
 	}

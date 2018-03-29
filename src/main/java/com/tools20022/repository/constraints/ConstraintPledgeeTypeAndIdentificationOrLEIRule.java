@@ -62,13 +62,17 @@ public class ConstraintPledgeeTypeAndIdentificationOrLEIRule {
 	 */
 	public static final MMConstraint<Pledgee1> forPledgee1 = new MMConstraint<Pledgee1>() {
 		{
-			validator = ConstraintPledgeeTypeAndIdentificationOrLEIRule::checkPledgee1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PledgeeTypeAndIdentificationOrLEIRule";
 			definition = "PledgeeTypeAndIdentification must be present or LEI must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPledgeeTypeAndIdentificationOrLEIRule.forPledgee2);
 			owner_lazy = () -> Pledgee1.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PledgeeTypeAndIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/LEI</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(Pledgee1 obj) throws Exception {
+			checkPledgee1(obj);
 		}
 	};
 	/**
@@ -101,13 +105,17 @@ public class ConstraintPledgeeTypeAndIdentificationOrLEIRule {
 	 */
 	public static final MMConstraint<Pledgee2> forPledgee2 = new MMConstraint<Pledgee2>() {
 		{
-			validator = ConstraintPledgeeTypeAndIdentificationOrLEIRule::checkPledgee2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PledgeeTypeAndIdentificationOrLEIRule";
 			definition = "PledgeeTypeAndIdentification must be present or LEI must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPledgeeTypeAndIdentificationOrLEIRule.forPledgee1;
 			owner_lazy = () -> Pledgee2.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PledgeeTypeAndIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/LEI</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(Pledgee2 obj) throws Exception {
+			checkPledgee2(obj);
 		}
 	};
 

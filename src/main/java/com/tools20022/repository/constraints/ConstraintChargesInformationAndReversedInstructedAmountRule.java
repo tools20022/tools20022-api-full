@@ -52,11 +52,15 @@ public class ConstraintChargesInformationAndReversedInstructedAmountRule {
 	 */
 	public static final MMConstraint<PaymentTransactionInformation5> forPaymentTransactionInformation5 = new MMConstraint<PaymentTransactionInformation5>() {
 		{
-			validator = ConstraintChargesInformationAndReversedInstructedAmountRule::checkPaymentTransactionInformation5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesInformationAndReversedInstructedAmountRule";
 			definition = "If ChargesInformation/ChargesAmount is present, then ReversedInstructedAmount must be present.";
 			owner_lazy = () -> PaymentTransactionInformation5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentTransactionInformation5 obj) throws Exception {
+			checkPaymentTransactionInformation5(obj);
 		}
 	};
 	/**
@@ -86,12 +90,16 @@ public class ConstraintChargesInformationAndReversedInstructedAmountRule {
 	 */
 	public static final MMConstraint<PaymentTransactionInformation29> forPaymentTransactionInformation29 = new MMConstraint<PaymentTransactionInformation29>() {
 		{
-			validator = ConstraintChargesInformationAndReversedInstructedAmountRule::checkPaymentTransactionInformation29;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesInformationAndReversedInstructedAmountRule";
 			definition = "If ChargesInformation is present, then ReversedInstructedAmount must be present.";
 			owner_lazy = () -> PaymentTransactionInformation29.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReversedInstructedAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesInformation[1]/Amount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentTransactionInformation29 obj) throws Exception {
+			checkPaymentTransactionInformation29(obj);
 		}
 	};
 	/**
@@ -121,12 +129,16 @@ public class ConstraintChargesInformationAndReversedInstructedAmountRule {
 	 */
 	public static final MMConstraint<PaymentTransaction36> forPaymentTransaction36 = new MMConstraint<PaymentTransaction36>() {
 		{
-			validator = ConstraintChargesInformationAndReversedInstructedAmountRule::checkPaymentTransaction36;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesInformationAndReversedInstructedAmountRule";
 			definition = "If ChargesInformation is present, then ReversedInstructedAmount must be present.";
 			owner_lazy = () -> PaymentTransaction36.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReversedInstructedAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesInformation[1]/Amount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentTransaction36 obj) throws Exception {
+			checkPaymentTransaction36(obj);
 		}
 	};
 	/**
@@ -165,13 +177,17 @@ public class ConstraintChargesInformationAndReversedInstructedAmountRule {
 	 */
 	public static final MMConstraint<PaymentTransaction45> forPaymentTransaction45 = new MMConstraint<PaymentTransaction45>() {
 		{
-			validator = ConstraintChargesInformationAndReversedInstructedAmountRule::checkPaymentTransaction45;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesInformationAndReversedInstructedAmountRule";
 			definition = "If ChargesInformation is present, then ReversedInstructedAmount must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChargesInformationAndReversedInstructedAmountRule.forPaymentTransaction51);
 			owner_lazy = () -> PaymentTransaction45.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReversedInstructedAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesInformation[1]/Amount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentTransaction45 obj) throws Exception {
+			checkPaymentTransaction45(obj);
 		}
 	};
 	/**
@@ -201,12 +217,16 @@ public class ConstraintChargesInformationAndReversedInstructedAmountRule {
 	 */
 	public static final MMConstraint<PaymentTransactionInformation17> forPaymentTransactionInformation17 = new MMConstraint<PaymentTransactionInformation17>() {
 		{
-			validator = ConstraintChargesInformationAndReversedInstructedAmountRule::checkPaymentTransactionInformation17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesInformationAndReversedInstructedAmountRule";
 			definition = "ISO20022 Rule: \nIf ChargesInformation/ChargesAmount is present, then ReversedInstructedAmount must be present.";
 			owner_lazy = () -> PaymentTransactionInformation17.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReversedInstructedAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesInformation[*]/ChargesAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentTransactionInformation17 obj) throws Exception {
+			checkPaymentTransactionInformation17(obj);
 		}
 	};
 	/**
@@ -236,12 +256,16 @@ public class ConstraintChargesInformationAndReversedInstructedAmountRule {
 	 */
 	public static final MMConstraint<PaymentTransactionInformation24> forPaymentTransactionInformation24 = new MMConstraint<PaymentTransactionInformation24>() {
 		{
-			validator = ConstraintChargesInformationAndReversedInstructedAmountRule::checkPaymentTransactionInformation24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesInformationAndReversedInstructedAmountRule";
 			definition = "ISO20022 Rule: \nIf ChargesInformation/ChargesAmount is present, then ReversedInstructedAmount must be present.";
 			owner_lazy = () -> PaymentTransactionInformation24.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReversedInstructedAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesInformation[*]/ChargesAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentTransactionInformation24 obj) throws Exception {
+			checkPaymentTransactionInformation24(obj);
 		}
 	};
 	/**
@@ -286,7 +310,6 @@ public class ConstraintChargesInformationAndReversedInstructedAmountRule {
 	 */
 	public static final MMConstraint<PaymentTransaction51> forPaymentTransaction51 = new MMConstraint<PaymentTransaction51>() {
 		{
-			validator = ConstraintChargesInformationAndReversedInstructedAmountRule::checkPaymentTransaction51;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesInformationAndReversedInstructedAmountRule";
 			definition = "If ChargesInformation is present, then ReversedInstructedAmount must be present.";
@@ -294,6 +317,11 @@ public class ConstraintChargesInformationAndReversedInstructedAmountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChargesInformationAndReversedInstructedAmountRule.forPaymentTransaction45;
 			owner_lazy = () -> PaymentTransaction51.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReversedInstructedAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesInformation[1]/Amount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentTransaction51 obj) throws Exception {
+			checkPaymentTransaction51(obj);
 		}
 	};
 	/**
@@ -338,7 +366,6 @@ public class ConstraintChargesInformationAndReversedInstructedAmountRule {
 	 */
 	public static final MMConstraint<PaymentTransaction60> forPaymentTransaction60 = new MMConstraint<PaymentTransaction60>() {
 		{
-			validator = ConstraintChargesInformationAndReversedInstructedAmountRule::checkPaymentTransaction60;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesInformationAndReversedInstructedAmountRule";
 			definition = "If ChargesInformation is present, then ReversedInstructedAmount must be present.";
@@ -346,6 +373,11 @@ public class ConstraintChargesInformationAndReversedInstructedAmountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChargesInformationAndReversedInstructedAmountRule.forPaymentTransaction51;
 			owner_lazy = () -> PaymentTransaction60.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReversedInstructedAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesInformation[1]/Amount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentTransaction60 obj) throws Exception {
+			checkPaymentTransaction60(obj);
 		}
 	};
 	/**
@@ -390,7 +422,6 @@ public class ConstraintChargesInformationAndReversedInstructedAmountRule {
 	 */
 	public static final MMConstraint<PaymentTransaction81> forPaymentTransaction81 = new MMConstraint<PaymentTransaction81>() {
 		{
-			validator = ConstraintChargesInformationAndReversedInstructedAmountRule::checkPaymentTransaction81;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesInformationAndReversedInstructedAmountRule";
 			definition = "If ChargesInformation is present, then ReversedInstructedAmount must be present.";
@@ -398,6 +429,11 @@ public class ConstraintChargesInformationAndReversedInstructedAmountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChargesInformationAndReversedInstructedAmountRule.forPaymentTransaction60;
 			owner_lazy = () -> PaymentTransaction81.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReversedInstructedAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesInformation[1]/Amount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentTransaction81 obj) throws Exception {
+			checkPaymentTransaction81(obj);
 		}
 	};
 	/**
@@ -433,13 +469,17 @@ public class ConstraintChargesInformationAndReversedInstructedAmountRule {
 	 */
 	public static final MMConstraint<PaymentTransaction88> forPaymentTransaction88 = new MMConstraint<PaymentTransaction88>() {
 		{
-			validator = ConstraintChargesInformationAndReversedInstructedAmountRule::checkPaymentTransaction88;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesInformationAndReversedInstructedAmountRule";
 			definition = "If ChargesInformation is present, then ReversedInstructedAmount must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChargesInformationAndReversedInstructedAmountRule.forPaymentTransaction81;
 			owner_lazy = () -> PaymentTransaction88.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReversedInstructedAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesInformation[1]/Amount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentTransaction88 obj) throws Exception {
+			checkPaymentTransaction88(obj);
 		}
 	};
 

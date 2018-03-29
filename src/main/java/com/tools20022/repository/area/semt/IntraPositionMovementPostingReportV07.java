@@ -28,7 +28,7 @@ import com.tools20022.repository.msg.Pagination1;
 import com.tools20022.repository.msg.SecuritiesAccount19;
 import com.tools20022.repository.msg.Statement60;
 import com.tools20022.repository.msgset._SR2018_SettlementandReconciliation;
-import java.lang.reflect.Method;
+import com.tools20022.repository.msgset.SettlementAndReconciliationISOLatestversion;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -83,6 +83,9 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
  * messageSet} =
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.SettlementAndReconciliationISOLatestversion
+ * SettlementAndReconciliationISOLatestversion}</li>
  * <li>
  * {@linkplain com.tools20022.repository.msgset._SR2018_SettlementandReconciliation
  * _SR2018_SettlementandReconciliation}</li>
@@ -151,7 +154,7 @@ public class IntraPositionMovementPostingReportV07 {
 	 * IntraPositionMovementPostingReportV06.mmPagination}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<IntraPositionMovementPostingReportV07, Pagination1> mmPagination = new MMMessageBuildingBlock<IntraPositionMovementPostingReportV07, Pagination1>() {
 		{
 			xmlTag = "Pgntn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -163,12 +166,14 @@ public class IntraPositionMovementPostingReportV07 {
 			complexType_lazy = () -> Pagination1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IntraPositionMovementPostingReportV07.class.getMethod("getPagination", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Pagination1 getValue(IntraPositionMovementPostingReportV07 obj) {
+			return obj.getPagination();
+		}
+
+		@Override
+		public void setValue(IntraPositionMovementPostingReportV07 obj, Pagination1 value) {
+			obj.setPagination(value);
 		}
 	};
 	@XmlElement(name = "StmtGnlDtls", required = true)
@@ -200,7 +205,7 @@ public class IntraPositionMovementPostingReportV07 {
 	 * IntraPositionMovementPostingReportV06.mmStatementGeneralDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmStatementGeneralDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<IntraPositionMovementPostingReportV07, Statement60> mmStatementGeneralDetails = new MMMessageBuildingBlock<IntraPositionMovementPostingReportV07, Statement60>() {
 		{
 			xmlTag = "StmtGnlDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -212,12 +217,14 @@ public class IntraPositionMovementPostingReportV07 {
 			complexType_lazy = () -> Statement60.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IntraPositionMovementPostingReportV07.class.getMethod("getStatementGeneralDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Statement60 getValue(IntraPositionMovementPostingReportV07 obj) {
+			return obj.getStatementGeneralDetails();
+		}
+
+		@Override
+		public void setValue(IntraPositionMovementPostingReportV07 obj, Statement60 value) {
+			obj.setStatementGeneralDetails(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -250,7 +257,7 @@ public class IntraPositionMovementPostingReportV07 {
 	 * IntraPositionMovementPostingReportV06.mmAccountOwner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAccountOwner = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<IntraPositionMovementPostingReportV07, Optional<PartyIdentification92Choice>> mmAccountOwner = new MMMessageBuildingBlock<IntraPositionMovementPostingReportV07, Optional<PartyIdentification92Choice>>() {
 		{
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -262,12 +269,14 @@ public class IntraPositionMovementPostingReportV07 {
 			complexType_lazy = () -> PartyIdentification92Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IntraPositionMovementPostingReportV07.class.getMethod("getAccountOwner", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification92Choice> getValue(IntraPositionMovementPostingReportV07 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(IntraPositionMovementPostingReportV07 obj, Optional<PartyIdentification92Choice> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SfkpgAcct", required = true)
@@ -300,7 +309,7 @@ public class IntraPositionMovementPostingReportV07 {
 	 * IntraPositionMovementPostingReportV06.mmSafekeepingAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSafekeepingAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<IntraPositionMovementPostingReportV07, SecuritiesAccount19> mmSafekeepingAccount = new MMMessageBuildingBlock<IntraPositionMovementPostingReportV07, SecuritiesAccount19>() {
 		{
 			xmlTag = "SfkpgAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -312,12 +321,14 @@ public class IntraPositionMovementPostingReportV07 {
 			complexType_lazy = () -> SecuritiesAccount19.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IntraPositionMovementPostingReportV07.class.getMethod("getSafekeepingAccount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SecuritiesAccount19 getValue(IntraPositionMovementPostingReportV07 obj) {
+			return obj.getSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(IntraPositionMovementPostingReportV07 obj, SecuritiesAccount19 value) {
+			obj.setSafekeepingAccount(value);
 		}
 	};
 	@XmlElement(name = "FinInstrm")
@@ -350,7 +361,7 @@ public class IntraPositionMovementPostingReportV07 {
 	 * IntraPositionMovementPostingReportV06.mmFinancialInstrument}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmFinancialInstrument = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<IntraPositionMovementPostingReportV07, List<FinancialInstrumentDetails29>> mmFinancialInstrument = new MMMessageBuildingBlock<IntraPositionMovementPostingReportV07, List<FinancialInstrumentDetails29>>() {
 		{
 			xmlTag = "FinInstrm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -361,12 +372,14 @@ public class IntraPositionMovementPostingReportV07 {
 			complexType_lazy = () -> FinancialInstrumentDetails29.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IntraPositionMovementPostingReportV07.class.getMethod("getFinancialInstrument", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<FinancialInstrumentDetails29> getValue(IntraPositionMovementPostingReportV07 obj) {
+			return obj.getFinancialInstrument();
+		}
+
+		@Override
+		public void setValue(IntraPositionMovementPostingReportV07 obj, List<FinancialInstrumentDetails29> value) {
+			obj.setFinancialInstrument(value);
 		}
 	};
 
@@ -377,7 +390,7 @@ public class IntraPositionMovementPostingReportV07 {
 				name = "IntraPositionMovementPostingReportV07";
 				definition = "Scope\r\nAn account servicer sends an IntraPositionMovementPostingReport to an account owner to provide the details of increases and decreases in securities with a given status within a holding, that is, intra-position transfers, which occurred during a specified period, for all or selected securities in a specified safekeeping account which the account servicer holds for the account owner. \r\n\r\n\rThe account servicer/owner relationship may be:\r\n- a central securities depository or another settlement market infrastructure acting on behalf of their participants\r\n- an agent (sub-custodian) acting on behalf of their global custodian customer, or \r\n- a custodian acting on behalf of an investment management institution or a broker/dealer.\r\n\r\nUsage\n:\r\nThe message may also be used to:\n- re-send a message previously sent,\n- provide a third party with a copy of a message for information,\n- re-send to a third party a copy of a message for information \nusing the relevant elements in the Business Application Header.";
 				previousVersion_lazy = () -> IntraPositionMovementPostingReportV06.mmObject();
-				messageSet_lazy = () -> Arrays.asList(_SR2018_SettlementandReconciliation.mmObject());
+				messageSet_lazy = () -> Arrays.asList(SettlementAndReconciliationISOLatestversion.mmObject(), _SR2018_SettlementandReconciliation.mmObject());
 				rootElement = "Document";
 				xmlTag = "IntraPosMvmntPstngRpt";
 				businessArea_lazy = () -> SecuritiesManagementLatestVersion.mmObject();

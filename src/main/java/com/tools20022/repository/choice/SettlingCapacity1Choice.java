@@ -117,7 +117,7 @@ public class SettlingCapacity1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlingCapacity1Choice, SettlingCapacity1Code> mmCode = new MMMessageAttribute<SettlingCapacity1Choice, SettlingCapacity1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlingCapacity1Choice.mmObject();
 			isDerived = false;
@@ -130,6 +130,16 @@ public class SettlingCapacity1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SettlingCapacity1Code.mmObject();
+		}
+
+		@Override
+		public SettlingCapacity1Code getValue(SettlingCapacity1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(SettlingCapacity1Choice obj, SettlingCapacity1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -173,7 +183,7 @@ public class SettlingCapacity1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlingCapacity1Choice, GenericIdentification20> mmProprietary = new MMMessageAttribute<SettlingCapacity1Choice, GenericIdentification20>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlingCapacity1Choice.mmObject();
 			isDerived = false;
@@ -186,6 +196,16 @@ public class SettlingCapacity1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(SettlingCapacity1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SettlingCapacity1Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

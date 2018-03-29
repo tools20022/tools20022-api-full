@@ -105,7 +105,7 @@ public class ProductIdentifier2Choice {
 	 * definition} = "Specifies the type of product identifier."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStructuredProductIdentifier = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProductIdentifier2Choice, ProductIdentifier2> mmStructuredProductIdentifier = new MMMessageAssociationEnd<ProductIdentifier2Choice, ProductIdentifier2>() {
 		{
 			businessComponentTrace_lazy = () -> ProductIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProductIdentifier2Choice.mmObject();
@@ -118,6 +118,16 @@ public class ProductIdentifier2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProductIdentifier2.mmObject();
+		}
+
+		@Override
+		public ProductIdentifier2 getValue(ProductIdentifier2Choice obj) {
+			return obj.getStructuredProductIdentifier();
+		}
+
+		@Override
+		public void setValue(ProductIdentifier2Choice obj, ProductIdentifier2 value) {
+			obj.setStructuredProductIdentifier(value);
 		}
 	};
 	@XmlElement(name = "OthrPdctIdr", required = true)
@@ -154,7 +164,7 @@ public class ProductIdentifier2Choice {
 	 * "Specifies the type of product identifier not present in the code list."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherProductIdentifier = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProductIdentifier2Choice, GenericIdentification4> mmOtherProductIdentifier = new MMMessageAssociationEnd<ProductIdentifier2Choice, GenericIdentification4>() {
 		{
 			businessComponentTrace_lazy = () -> ProductIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProductIdentifier2Choice.mmObject();
@@ -167,6 +177,16 @@ public class ProductIdentifier2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification4.mmObject();
+		}
+
+		@Override
+		public GenericIdentification4 getValue(ProductIdentifier2Choice obj) {
+			return obj.getOtherProductIdentifier();
+		}
+
+		@Override
+		public void setValue(ProductIdentifier2Choice obj, GenericIdentification4 value) {
+			obj.setOtherProductIdentifier(value);
 		}
 	};
 

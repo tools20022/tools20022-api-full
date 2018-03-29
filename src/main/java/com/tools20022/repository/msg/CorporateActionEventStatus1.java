@@ -116,7 +116,7 @@ public class CorporateActionEventStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEventCompletenessStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionEventStatus1, EventCompletenessStatus1Code> mmEventCompletenessStatus = new MMMessageAttribute<CorporateActionEventStatus1, EventCompletenessStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatus.mmProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionEventStatus1.mmObject();
@@ -129,6 +129,16 @@ public class CorporateActionEventStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EventCompletenessStatus1Code.mmObject();
+		}
+
+		@Override
+		public EventCompletenessStatus1Code getValue(CorporateActionEventStatus1 obj) {
+			return obj.getEventCompletenessStatus();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventStatus1 obj, EventCompletenessStatus1Code value) {
+			obj.setEventCompletenessStatus(value);
 		}
 	};
 	@XmlElement(name = "EvtConfSts", required = true)
@@ -169,7 +179,7 @@ public class CorporateActionEventStatus1 {
 	 * definition} = "Indicates the status of the occurrence of an event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEventConfirmationStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionEventStatus1, EventConfirmationStatus1Code> mmEventConfirmationStatus = new MMMessageAttribute<CorporateActionEventStatus1, EventConfirmationStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatus.mmProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionEventStatus1.mmObject();
@@ -182,6 +192,16 @@ public class CorporateActionEventStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EventConfirmationStatus1Code.mmObject();
+		}
+
+		@Override
+		public EventConfirmationStatus1Code getValue(CorporateActionEventStatus1 obj) {
+			return obj.getEventConfirmationStatus();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventStatus1 obj, EventConfirmationStatus1Code value) {
+			obj.setEventConfirmationStatus(value);
 		}
 	};
 

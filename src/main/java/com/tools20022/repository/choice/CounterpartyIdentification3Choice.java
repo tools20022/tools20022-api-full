@@ -136,7 +136,7 @@ public class CounterpartyIdentification3Choice {
 	 * CounterpartyIdentification2Choice.mmLEI}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CounterpartyIdentification3Choice, LEIIdentifier> mmLEI = new MMMessageAttribute<CounterpartyIdentification3Choice, LEIIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CounterpartyIdentification3Choice.mmObject();
@@ -149,6 +149,16 @@ public class CounterpartyIdentification3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public LEIIdentifier getValue(CounterpartyIdentification3Choice obj) {
+			return obj.getLEI();
+		}
+
+		@Override
+		public void setValue(CounterpartyIdentification3Choice obj, LEIIdentifier value) {
+			obj.setLEI(value);
 		}
 	};
 	@XmlElement(name = "SctrAndLctn", required = true)
@@ -191,7 +201,7 @@ public class CounterpartyIdentification3Choice {
 	 * CounterpartyIdentification2Choice.mmOther}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSectorAndLocation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CounterpartyIdentification3Choice, SectorAndLocation1> mmSectorAndLocation = new MMMessageAssociationEnd<CounterpartyIdentification3Choice, SectorAndLocation1>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CounterpartyIdentification3Choice.mmObject();
@@ -205,6 +215,16 @@ public class CounterpartyIdentification3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SectorAndLocation1.mmObject();
+		}
+
+		@Override
+		public SectorAndLocation1 getValue(CounterpartyIdentification3Choice obj) {
+			return obj.getSectorAndLocation();
+		}
+
+		@Override
+		public void setValue(CounterpartyIdentification3Choice obj, SectorAndLocation1 value) {
+			obj.setSectorAndLocation(value);
 		}
 	};
 	@XmlElement(name = "NmAndLctn", required = true)
@@ -241,7 +261,7 @@ public class CounterpartyIdentification3Choice {
 	 * "Identification of the counterparty through the name and the location."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNameAndLocation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CounterpartyIdentification3Choice, NameAndLocation1> mmNameAndLocation = new MMMessageAssociationEnd<CounterpartyIdentification3Choice, NameAndLocation1>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CounterpartyIdentification3Choice.mmObject();
@@ -254,6 +274,16 @@ public class CounterpartyIdentification3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> NameAndLocation1.mmObject();
+		}
+
+		@Override
+		public NameAndLocation1 getValue(CounterpartyIdentification3Choice obj) {
+			return obj.getNameAndLocation();
+		}
+
+		@Override
+		public void setValue(CounterpartyIdentification3Choice obj, NameAndLocation1 value) {
+			obj.setNameAndLocation(value);
 		}
 	};
 

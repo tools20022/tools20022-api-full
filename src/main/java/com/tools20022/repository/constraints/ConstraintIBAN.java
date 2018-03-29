@@ -52,11 +52,15 @@ public class ConstraintIBAN {
 	 */
 	public static final MMConstraint<IBAN2007Identifier> forIBAN2007Identifier = new MMConstraint<IBAN2007Identifier>() {
 		{
-			validator = ConstraintIBAN::checkIBAN2007Identifier;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IBAN";
 			definition = "A valid IBAN consists of all three of the following components: Country Code, check digits and BBAN.";
 			owner_lazy = () -> IBAN2007Identifier.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IBAN2007Identifier obj) throws Exception {
+			checkIBAN2007Identifier(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintIBAN {
 	 */
 	public static final MMConstraint<IBANIdentifier> forIBANIdentifier = new MMConstraint<IBANIdentifier>() {
 		{
-			validator = ConstraintIBAN::checkIBANIdentifier;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IBAN";
 			definition = "A valid IBAN consists of all three of the following components: Country Code, check digits and BBAN.";
 			owner_lazy = () -> IBANIdentifier.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IBANIdentifier obj) throws Exception {
+			checkIBANIdentifier(obj);
 		}
 	};
 

@@ -24,7 +24,6 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesTradePreviousVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -182,7 +181,7 @@ public class SwitchOrderConfirmationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SwitchOrderConfirmationV03, MessageIdentification1> mmMessageIdentification = new MMMessageBuildingBlock<SwitchOrderConfirmationV03, MessageIdentification1>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -194,12 +193,14 @@ public class SwitchOrderConfirmationV03 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SwitchOrderConfirmationV03.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(SwitchOrderConfirmationV03 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(SwitchOrderConfirmationV03 obj, MessageIdentification1 value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "PoolRef")
@@ -235,7 +236,7 @@ public class SwitchOrderConfirmationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SwitchOrderConfirmationV03, Optional<AdditionalReference3>> mmPoolReference = new MMMessageBuildingBlock<SwitchOrderConfirmationV03, Optional<AdditionalReference3>>() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -247,12 +248,14 @@ public class SwitchOrderConfirmationV03 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SwitchOrderConfirmationV03.class.getMethod("getPoolReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference3> getValue(SwitchOrderConfirmationV03 obj) {
+			return obj.getPoolReference();
+		}
+
+		@Override
+		public void setValue(SwitchOrderConfirmationV03 obj, Optional<AdditionalReference3> value) {
+			obj.setPoolReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsRef")
@@ -288,7 +291,7 @@ public class SwitchOrderConfirmationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SwitchOrderConfirmationV03, List<AdditionalReference3>> mmPreviousReference = new MMMessageBuildingBlock<SwitchOrderConfirmationV03, List<AdditionalReference3>>() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -299,12 +302,14 @@ public class SwitchOrderConfirmationV03 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SwitchOrderConfirmationV03.class.getMethod("getPreviousReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<AdditionalReference3> getValue(SwitchOrderConfirmationV03 obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(SwitchOrderConfirmationV03 obj, List<AdditionalReference3> value) {
+			obj.setPreviousReference(value);
 		}
 	};
 	@XmlElement(name = "RltdRef")
@@ -341,7 +346,7 @@ public class SwitchOrderConfirmationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SwitchOrderConfirmationV03, Optional<AdditionalReference3>> mmRelatedReference = new MMMessageBuildingBlock<SwitchOrderConfirmationV03, Optional<AdditionalReference3>>() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -353,12 +358,14 @@ public class SwitchOrderConfirmationV03 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SwitchOrderConfirmationV03.class.getMethod("getRelatedReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference3> getValue(SwitchOrderConfirmationV03 obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(SwitchOrderConfirmationV03 obj, Optional<AdditionalReference3> value) {
+			obj.setRelatedReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SwtchExctnDtls", required = true)
@@ -394,7 +401,7 @@ public class SwitchOrderConfirmationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSwitchExecutionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SwitchOrderConfirmationV03, List<SwitchExecution4>> mmSwitchExecutionDetails = new MMMessageBuildingBlock<SwitchOrderConfirmationV03, List<SwitchExecution4>>() {
 		{
 			xmlTag = "SwtchExctnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -405,12 +412,14 @@ public class SwitchOrderConfirmationV03 {
 			complexType_lazy = () -> SwitchExecution4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SwitchOrderConfirmationV03.class.getMethod("getSwitchExecutionDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SwitchExecution4> getValue(SwitchOrderConfirmationV03 obj) {
+			return obj.getSwitchExecutionDetails();
+		}
+
+		@Override
+		public void setValue(SwitchOrderConfirmationV03 obj, List<SwitchExecution4> value) {
+			obj.setSwitchExecutionDetails(value);
 		}
 	};
 	@XmlElement(name = "CpyDtls")
@@ -447,7 +456,7 @@ public class SwitchOrderConfirmationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCopyDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SwitchOrderConfirmationV03, Optional<CopyInformation2>> mmCopyDetails = new MMMessageBuildingBlock<SwitchOrderConfirmationV03, Optional<CopyInformation2>>() {
 		{
 			xmlTag = "CpyDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -459,12 +468,14 @@ public class SwitchOrderConfirmationV03 {
 			complexType_lazy = () -> CopyInformation2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SwitchOrderConfirmationV03.class.getMethod("getCopyDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<CopyInformation2> getValue(SwitchOrderConfirmationV03 obj) {
+			return obj.getCopyDetails();
+		}
+
+		@Override
+		public void setValue(SwitchOrderConfirmationV03 obj, Optional<CopyInformation2> value) {
+			obj.setCopyDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Xtnsn")
@@ -501,7 +512,7 @@ public class SwitchOrderConfirmationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SwitchOrderConfirmationV03, List<Extension1>> mmExtension = new MMMessageBuildingBlock<SwitchOrderConfirmationV03, List<Extension1>>() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -512,12 +523,14 @@ public class SwitchOrderConfirmationV03 {
 			complexType_lazy = () -> Extension1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SwitchOrderConfirmationV03.class.getMethod("getExtension", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Extension1> getValue(SwitchOrderConfirmationV03 obj) {
+			return obj.getExtension();
+		}
+
+		@Override
+		public void setValue(SwitchOrderConfirmationV03 obj, List<Extension1> value) {
+			obj.setExtension(value);
 		}
 	};
 

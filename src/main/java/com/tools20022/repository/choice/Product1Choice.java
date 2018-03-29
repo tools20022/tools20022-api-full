@@ -100,7 +100,7 @@ public class Product1Choice {
 	 * definition} = "Derivative specific attributes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDerivative = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Product1Choice, Derivative3> mmDerivative = new MMMessageAssociationEnd<Product1Choice, Derivative3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Product1Choice.mmObject();
 			isDerived = false;
@@ -112,6 +112,16 @@ public class Product1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Derivative3.mmObject();
+		}
+
+		@Override
+		public Derivative3 getValue(Product1Choice obj) {
+			return obj.getDerivative();
+		}
+
+		@Override
+		public void setValue(Product1Choice obj, Derivative3 value) {
+			obj.setDerivative(value);
 		}
 	};
 	@XmlElement(name = "SctiesFincgTx", required = true)
@@ -144,7 +154,7 @@ public class Product1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesFinancingTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Product1Choice, RepurchaseAgreement3> mmSecuritiesFinancingTransaction = new MMMessageAssociationEnd<Product1Choice, RepurchaseAgreement3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Product1Choice.mmObject();
 			isDerived = false;
@@ -156,6 +166,16 @@ public class Product1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RepurchaseAgreement3.mmObject();
+		}
+
+		@Override
+		public RepurchaseAgreement3 getValue(Product1Choice obj) {
+			return obj.getSecuritiesFinancingTransaction();
+		}
+
+		@Override
+		public void setValue(Product1Choice obj, RepurchaseAgreement3 value) {
+			obj.setSecuritiesFinancingTransaction(value);
 		}
 	};
 	@XmlElement(name = "Scty", required = true)
@@ -186,7 +206,7 @@ public class Product1Choice {
 	 * definition} = "Attributes relating to cleared securities.\r\n\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecurity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Product1Choice, FinancialInstrument59> mmSecurity = new MMMessageAssociationEnd<Product1Choice, FinancialInstrument59>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Product1Choice.mmObject();
 			isDerived = false;
@@ -198,6 +218,16 @@ public class Product1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrument59.mmObject();
+		}
+
+		@Override
+		public FinancialInstrument59 getValue(Product1Choice obj) {
+			return obj.getSecurity();
+		}
+
+		@Override
+		public void setValue(Product1Choice obj, FinancialInstrument59 value) {
+			obj.setSecurity(value);
 		}
 	};
 

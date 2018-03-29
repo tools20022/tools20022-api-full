@@ -131,7 +131,7 @@ public class CollateralValuation4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPoolStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralValuation4, CollateralPool1Code> mmPoolStatus = new MMMessageAttribute<CollateralValuation4, CollateralPool1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValuation4.mmObject();
 			isDerived = false;
@@ -143,6 +143,16 @@ public class CollateralValuation4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CollateralPool1Code.mmObject();
+		}
+
+		@Override
+		public CollateralPool1Code getValue(CollateralValuation4 obj) {
+			return obj.getPoolStatus();
+		}
+
+		@Override
+		public void setValue(CollateralValuation4 obj, CollateralPool1Code value) {
+			obj.setPoolStatus(value);
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -190,7 +200,7 @@ public class CollateralValuation4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralValuation4, CFIIdentifier> mmType = new MMMessageAttribute<CollateralValuation4, CFIIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValuation4.mmObject();
@@ -203,6 +213,16 @@ public class CollateralValuation4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CFIIdentifier.mmObject();
+		}
+
+		@Override
+		public CFIIdentifier getValue(CollateralValuation4 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(CollateralValuation4 obj, CFIIdentifier value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Sctr", required = true)
@@ -250,7 +270,7 @@ public class CollateralValuation4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSector = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralValuation4, SNA2008SectorIdentifier> mmSector = new MMMessageAttribute<CollateralValuation4, SNA2008SectorIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmSector;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValuation4.mmObject();
@@ -263,6 +283,16 @@ public class CollateralValuation4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SNA2008SectorIdentifier.mmObject();
+		}
+
+		@Override
+		public SNA2008SectorIdentifier getValue(CollateralValuation4 obj) {
+			return obj.getSector();
+		}
+
+		@Override
+		public void setValue(CollateralValuation4 obj, SNA2008SectorIdentifier value) {
+			obj.setSector(value);
 		}
 	};
 	@XmlElement(name = "NmnlAmt")
@@ -310,7 +340,7 @@ public class CollateralValuation4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNominalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralValuation4, Optional<ActiveCurrencyAndAmount>> mmNominalAmount = new MMMessageAttribute<CollateralValuation4, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Collateral.mmCollateralAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValuation4.mmObject();
@@ -323,6 +353,16 @@ public class CollateralValuation4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CollateralValuation4 obj) {
+			return obj.getNominalAmount();
+		}
+
+		@Override
+		public void setValue(CollateralValuation4 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setNominalAmount(value.orElse(null));
 		}
 	};
 

@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -112,7 +113,7 @@ public class AccountLiquidityReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountLiquidityReport1, CashAccount25> mmAccount = new MMMessageAssociationEnd<AccountLiquidityReport1, CashAccount25>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLiquidityReport1.mmObject();
 			isDerived = false;
@@ -123,7 +124,17 @@ public class AccountLiquidityReport1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount25.mmObject();
+			type_lazy = () -> CashAccount25.mmObject();
+		}
+
+		@Override
+		public CashAccount25 getValue(AccountLiquidityReport1 obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(AccountLiquidityReport1 obj, CashAccount25 value) {
+			obj.setAccount(value);
 		}
 	};
 	@XmlElement(name = "AcctOvrdueInd", required = true)
@@ -156,7 +167,7 @@ public class AccountLiquidityReport1 {
 	 * definition} = "Indicates overdue FTI queue on the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOverdueIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountLiquidityReport1, YesNoIndicator> mmAccountOverdueIndicator = new MMMessageAttribute<AccountLiquidityReport1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLiquidityReport1.mmObject();
 			isDerived = false;
@@ -168,9 +179,19 @@ public class AccountLiquidityReport1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
+
+		@Override
+		public YesNoIndicator getValue(AccountLiquidityReport1 obj) {
+			return obj.getAccountOverdueIndicator();
+		}
+
+		@Override
+		public void setValue(AccountLiquidityReport1 obj, YesNoIndicator value) {
+			obj.setAccountOverdueIndicator(value);
+		}
 	};
 	@XmlElement(name = "LmtInf")
-	protected List<com.tools20022.repository.msg.AccountLimits1> limitInformation;
+	protected List<AccountLimits1> limitInformation;
 	/**
 	 * 
 	 <p>
@@ -197,7 +218,7 @@ public class AccountLiquidityReport1 {
 	 * definition} = "Information about funds limits set on the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLimitInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountLiquidityReport1, List<AccountLimits1>> mmLimitInformation = new MMMessageAssociationEnd<AccountLiquidityReport1, List<AccountLimits1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLiquidityReport1.mmObject();
 			isDerived = false;
@@ -207,7 +228,17 @@ public class AccountLiquidityReport1 {
 			definition = "Information about funds limits set on the account.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AccountLimits1.mmObject();
+			type_lazy = () -> AccountLimits1.mmObject();
+		}
+
+		@Override
+		public List<AccountLimits1> getValue(AccountLiquidityReport1 obj) {
+			return obj.getLimitInformation();
+		}
+
+		@Override
+		public void setValue(AccountLiquidityReport1 obj, List<AccountLimits1> value) {
+			obj.setLimitInformation(value);
 		}
 	};
 	@XmlElement(name = "LqdtyInf")
@@ -238,7 +269,7 @@ public class AccountLiquidityReport1 {
 	 * definition} = "Information about liquidity of the funds of the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLiquidityInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountLiquidityReport1, Optional<LiquidityDetails1>> mmLiquidityInformation = new MMMessageAssociationEnd<AccountLiquidityReport1, Optional<LiquidityDetails1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLiquidityReport1.mmObject();
 			isDerived = false;
@@ -249,7 +280,17 @@ public class AccountLiquidityReport1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.LiquidityDetails1.mmObject();
+			type_lazy = () -> LiquidityDetails1.mmObject();
+		}
+
+		@Override
+		public Optional<LiquidityDetails1> getValue(AccountLiquidityReport1 obj) {
+			return obj.getLiquidityInformation();
+		}
+
+		@Override
+		public void setValue(AccountLiquidityReport1 obj, Optional<LiquidityDetails1> value) {
+			obj.setLiquidityInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ArrstInf", required = true)
@@ -281,7 +322,7 @@ public class AccountLiquidityReport1 {
 	 * "Information about restricted (arrested) funds on the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmArrestInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountLiquidityReport1, ArrestedFunds1> mmArrestInformation = new MMMessageAssociationEnd<AccountLiquidityReport1, ArrestedFunds1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLiquidityReport1.mmObject();
 			isDerived = false;
@@ -292,11 +333,21 @@ public class AccountLiquidityReport1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ArrestedFunds1.mmObject();
+			type_lazy = () -> ArrestedFunds1.mmObject();
+		}
+
+		@Override
+		public ArrestedFunds1 getValue(AccountLiquidityReport1 obj) {
+			return obj.getArrestInformation();
+		}
+
+		@Override
+		public void setValue(AccountLiquidityReport1 obj, ArrestedFunds1 value) {
+			obj.setArrestInformation(value);
 		}
 	};
 	@XmlElement(name = "DbtQdTxs")
-	protected List<com.tools20022.repository.msg.QueuedTransactionsReport1> debitQueuedTransactions;
+	protected List<QueuedTransactionsReport1> debitQueuedTransactions;
 	/**
 	 * 
 	 <p>
@@ -324,7 +375,7 @@ public class AccountLiquidityReport1 {
 	 * definition} = "Information about queued debit transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDebitQueuedTransactions = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountLiquidityReport1, List<QueuedTransactionsReport1>> mmDebitQueuedTransactions = new MMMessageAssociationEnd<AccountLiquidityReport1, List<QueuedTransactionsReport1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLiquidityReport1.mmObject();
 			isDerived = false;
@@ -335,11 +386,21 @@ public class AccountLiquidityReport1 {
 			maxOccurs = 5;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.QueuedTransactionsReport1.mmObject();
+			type_lazy = () -> QueuedTransactionsReport1.mmObject();
+		}
+
+		@Override
+		public List<QueuedTransactionsReport1> getValue(AccountLiquidityReport1 obj) {
+			return obj.getDebitQueuedTransactions();
+		}
+
+		@Override
+		public void setValue(AccountLiquidityReport1 obj, List<QueuedTransactionsReport1> value) {
+			obj.setDebitQueuedTransactions(value);
 		}
 	};
 	@XmlElement(name = "CdtQdTxs")
-	protected List<com.tools20022.repository.msg.QueuedTransactionsReport1> creditQueuedTransactions;
+	protected List<QueuedTransactionsReport1> creditQueuedTransactions;
 	/**
 	 * 
 	 <p>
@@ -367,7 +428,7 @@ public class AccountLiquidityReport1 {
 	 * definition} = "Information about queued credit transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditQueuedTransactions = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountLiquidityReport1, List<QueuedTransactionsReport1>> mmCreditQueuedTransactions = new MMMessageAssociationEnd<AccountLiquidityReport1, List<QueuedTransactionsReport1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLiquidityReport1.mmObject();
 			isDerived = false;
@@ -378,7 +439,17 @@ public class AccountLiquidityReport1 {
 			maxOccurs = 2;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.QueuedTransactionsReport1.mmObject();
+			type_lazy = () -> QueuedTransactionsReport1.mmObject();
+		}
+
+		@Override
+		public List<QueuedTransactionsReport1> getValue(AccountLiquidityReport1 obj) {
+			return obj.getCreditQueuedTransactions();
+		}
+
+		@Override
+		public void setValue(AccountLiquidityReport1 obj, List<QueuedTransactionsReport1> value) {
+			obj.setCreditQueuedTransactions(value);
 		}
 	};
 
@@ -402,7 +473,7 @@ public class AccountLiquidityReport1 {
 		return account;
 	}
 
-	public AccountLiquidityReport1 setAccount(com.tools20022.repository.msg.CashAccount25 account) {
+	public AccountLiquidityReport1 setAccount(CashAccount25 account) {
 		this.account = Objects.requireNonNull(account);
 		return this;
 	}
@@ -420,7 +491,7 @@ public class AccountLiquidityReport1 {
 		return limitInformation == null ? limitInformation = new ArrayList<>() : limitInformation;
 	}
 
-	public AccountLiquidityReport1 setLimitInformation(List<com.tools20022.repository.msg.AccountLimits1> limitInformation) {
+	public AccountLiquidityReport1 setLimitInformation(List<AccountLimits1> limitInformation) {
 		this.limitInformation = Objects.requireNonNull(limitInformation);
 		return this;
 	}
@@ -429,7 +500,7 @@ public class AccountLiquidityReport1 {
 		return liquidityInformation == null ? Optional.empty() : Optional.of(liquidityInformation);
 	}
 
-	public AccountLiquidityReport1 setLiquidityInformation(com.tools20022.repository.msg.LiquidityDetails1 liquidityInformation) {
+	public AccountLiquidityReport1 setLiquidityInformation(LiquidityDetails1 liquidityInformation) {
 		this.liquidityInformation = liquidityInformation;
 		return this;
 	}
@@ -438,7 +509,7 @@ public class AccountLiquidityReport1 {
 		return arrestInformation;
 	}
 
-	public AccountLiquidityReport1 setArrestInformation(com.tools20022.repository.msg.ArrestedFunds1 arrestInformation) {
+	public AccountLiquidityReport1 setArrestInformation(ArrestedFunds1 arrestInformation) {
 		this.arrestInformation = Objects.requireNonNull(arrestInformation);
 		return this;
 	}
@@ -447,7 +518,7 @@ public class AccountLiquidityReport1 {
 		return debitQueuedTransactions == null ? debitQueuedTransactions = new ArrayList<>() : debitQueuedTransactions;
 	}
 
-	public AccountLiquidityReport1 setDebitQueuedTransactions(List<com.tools20022.repository.msg.QueuedTransactionsReport1> debitQueuedTransactions) {
+	public AccountLiquidityReport1 setDebitQueuedTransactions(List<QueuedTransactionsReport1> debitQueuedTransactions) {
 		this.debitQueuedTransactions = Objects.requireNonNull(debitQueuedTransactions);
 		return this;
 	}
@@ -456,7 +527,7 @@ public class AccountLiquidityReport1 {
 		return creditQueuedTransactions == null ? creditQueuedTransactions = new ArrayList<>() : creditQueuedTransactions;
 	}
 
-	public AccountLiquidityReport1 setCreditQueuedTransactions(List<com.tools20022.repository.msg.QueuedTransactionsReport1> creditQueuedTransactions) {
+	public AccountLiquidityReport1 setCreditQueuedTransactions(List<QueuedTransactionsReport1> creditQueuedTransactions) {
 		this.creditQueuedTransactions = Objects.requireNonNull(creditQueuedTransactions);
 		return this;
 	}

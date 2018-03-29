@@ -119,7 +119,7 @@ public class FATCASource1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FATCASource1Choice, FATCASourceStatus1Code> mmCode = new MMMessageAttribute<FATCASource1Choice, FATCASourceStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> FATCAStatus.mmFATCASourceStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FATCASource1Choice.mmObject();
@@ -132,6 +132,16 @@ public class FATCASource1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FATCASourceStatus1Code.mmObject();
+		}
+
+		@Override
+		public FATCASourceStatus1Code getValue(FATCASource1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(FATCASource1Choice obj, FATCASourceStatus1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -173,7 +183,7 @@ public class FATCASource1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FATCASource1Choice, GenericIdentification47> mmProprietary = new MMMessageAssociationEnd<FATCASource1Choice, GenericIdentification47>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.FATCASource1Choice.mmObject();
 			isDerived = false;
@@ -186,6 +196,16 @@ public class FATCASource1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(FATCASource1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(FATCASource1Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

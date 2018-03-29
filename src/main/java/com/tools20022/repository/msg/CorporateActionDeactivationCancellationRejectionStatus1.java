@@ -110,7 +110,7 @@ public class CorporateActionDeactivationCancellationRejectionStatus1 {
 	 * definition} = "The rejection reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDeactivationCancellationRejectionStatus1, List<RejectionReason7FormatChoice>> mmReason = new MMMessageAttribute<CorporateActionDeactivationCancellationRejectionStatus1, List<RejectionReason7FormatChoice>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDeactivationCancellationRejectionStatus1.mmObject();
@@ -121,6 +121,16 @@ public class CorporateActionDeactivationCancellationRejectionStatus1 {
 			definition = "The rejection reason.";
 			minOccurs = 1;
 			complexType_lazy = () -> RejectionReason7FormatChoice.mmObject();
+		}
+
+		@Override
+		public List<RejectionReason7FormatChoice> getValue(CorporateActionDeactivationCancellationRejectionStatus1 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(CorporateActionDeactivationCancellationRejectionStatus1 obj, List<RejectionReason7FormatChoice> value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -157,7 +167,7 @@ public class CorporateActionDeactivationCancellationRejectionStatus1 {
 	 * definition} = "Additional information about the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDeactivationCancellationRejectionStatus1, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<CorporateActionDeactivationCancellationRejectionStatus1, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusDescription;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDeactivationCancellationRejectionStatus1.mmObject();
@@ -169,6 +179,16 @@ public class CorporateActionDeactivationCancellationRejectionStatus1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionDeactivationCancellationRejectionStatus1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(CorporateActionDeactivationCancellationRejectionStatus1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

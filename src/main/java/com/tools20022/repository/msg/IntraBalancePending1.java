@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.BookEntry;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.IntraBalancePending2;
+import com.tools20022.repository.msg.PendingStatusAndReason1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -126,7 +128,7 @@ public class IntraBalancePending1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusAndReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalancePending1, Optional<PendingStatusAndReason1>> mmStatusAndReason = new MMMessageAssociationEnd<IntraBalancePending1, Optional<PendingStatusAndReason1>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPaymentStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalancePending1.mmObject();
@@ -139,11 +141,21 @@ public class IntraBalancePending1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PendingStatusAndReason1.mmObject();
+			type_lazy = () -> PendingStatusAndReason1.mmObject();
+		}
+
+		@Override
+		public Optional<PendingStatusAndReason1> getValue(IntraBalancePending1 obj) {
+			return obj.getStatusAndReason();
+		}
+
+		@Override
+		public void setValue(IntraBalancePending1 obj, Optional<PendingStatusAndReason1> value) {
+			obj.setStatusAndReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Mvmnt", required = true)
-	protected List<com.tools20022.repository.msg.IntraBalancePending2> movement;
+	protected List<IntraBalancePending2> movement;
 	/**
 	 * 
 	 <p>
@@ -182,7 +194,7 @@ public class IntraBalancePending1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMovement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalancePending1, List<IntraBalancePending2>> mmMovement = new MMMessageAssociationEnd<IntraBalancePending1, List<IntraBalancePending2>>() {
 		{
 			businessComponentTrace_lazy = () -> BookEntry.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalancePending1.mmObject();
@@ -194,7 +206,17 @@ public class IntraBalancePending1 {
 			nextVersions_lazy = () -> Arrays.asList(IntraBalancePending3.mmMovement);
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IntraBalancePending2.mmObject();
+			type_lazy = () -> IntraBalancePending2.mmObject();
+		}
+
+		@Override
+		public List<IntraBalancePending2> getValue(IntraBalancePending1 obj) {
+			return obj.getMovement();
+		}
+
+		@Override
+		public void setValue(IntraBalancePending1 obj, List<IntraBalancePending2> value) {
+			obj.setMovement(value);
 		}
 	};
 
@@ -218,7 +240,7 @@ public class IntraBalancePending1 {
 		return statusAndReason == null ? Optional.empty() : Optional.of(statusAndReason);
 	}
 
-	public IntraBalancePending1 setStatusAndReason(com.tools20022.repository.msg.PendingStatusAndReason1 statusAndReason) {
+	public IntraBalancePending1 setStatusAndReason(PendingStatusAndReason1 statusAndReason) {
 		this.statusAndReason = statusAndReason;
 		return this;
 	}
@@ -227,7 +249,7 @@ public class IntraBalancePending1 {
 		return movement == null ? movement = new ArrayList<>() : movement;
 	}
 
-	public IntraBalancePending1 setMovement(List<com.tools20022.repository.msg.IntraBalancePending2> movement) {
+	public IntraBalancePending1 setMovement(List<IntraBalancePending2> movement) {
 		this.movement = Objects.requireNonNull(movement);
 		return this;
 	}

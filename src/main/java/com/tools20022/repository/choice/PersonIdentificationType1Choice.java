@@ -130,7 +130,7 @@ public class PersonIdentificationType1Choice {
 	 * definition} = "Number assigned by a passport authority to a passport."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPassportNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PersonIdentificationType1Choice, Max35Text> mmPassportNumber = new MMMessageAttribute<PersonIdentificationType1Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PersonIdentification.mmPassportNumber;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PersonIdentificationType1Choice.mmObject();
@@ -143,6 +143,16 @@ public class PersonIdentificationType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PersonIdentificationType1Choice obj) {
+			return obj.getPassportNumber();
+		}
+
+		@Override
+		public void setValue(PersonIdentificationType1Choice obj, Max35Text value) {
+			obj.setPassportNumber(value);
 		}
 	};
 	@XmlElement(name = "TaxIdNb", required = true)
@@ -182,7 +192,7 @@ public class PersonIdentificationType1Choice {
 	 * definition} = "Number assigned by a tax authority to an entity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxIdentificationNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PersonIdentificationType1Choice, Max35Text> mmTaxIdentificationNumber = new MMMessageAttribute<PersonIdentificationType1Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmTaxIdentificationNumber;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PersonIdentificationType1Choice.mmObject();
@@ -195,6 +205,16 @@ public class PersonIdentificationType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PersonIdentificationType1Choice obj) {
+			return obj.getTaxIdentificationNumber();
+		}
+
+		@Override
+		public void setValue(PersonIdentificationType1Choice obj, Max35Text value) {
+			obj.setTaxIdentificationNumber(value);
 		}
 	};
 	@XmlElement(name = "SclSctyNb", required = true)
@@ -234,7 +254,7 @@ public class PersonIdentificationType1Choice {
 	 * definition} = "Number assigned by a social security agency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSocialSecurityNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PersonIdentificationType1Choice, Max35Text> mmSocialSecurityNumber = new MMMessageAttribute<PersonIdentificationType1Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PersonIdentification.mmSocialSecurityNumber;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PersonIdentificationType1Choice.mmObject();
@@ -247,6 +267,16 @@ public class PersonIdentificationType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PersonIdentificationType1Choice obj) {
+			return obj.getSocialSecurityNumber();
+		}
+
+		@Override
+		public void setValue(PersonIdentificationType1Choice obj, Max35Text value) {
+			obj.setSocialSecurityNumber(value);
 		}
 	};
 	@XmlElement(name = "MplyrIdNb", required = true)
@@ -287,7 +317,7 @@ public class PersonIdentificationType1Choice {
 	 * "Number assigned to an employer by a registration authority."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEmployerIdentificationNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PersonIdentificationType1Choice, Max35Text> mmEmployerIdentificationNumber = new MMMessageAttribute<PersonIdentificationType1Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PersonIdentification.mmEmployerIdentificationNumber;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PersonIdentificationType1Choice.mmObject();
@@ -300,6 +330,16 @@ public class PersonIdentificationType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PersonIdentificationType1Choice obj) {
+			return obj.getEmployerIdentificationNumber();
+		}
+
+		@Override
+		public void setValue(PersonIdentificationType1Choice obj, Max35Text value) {
+			obj.setEmployerIdentificationNumber(value);
 		}
 	};
 	@XmlElement(name = "DrvrsLicNb", required = true)
@@ -340,7 +380,7 @@ public class PersonIdentificationType1Choice {
 	 * "Number assigned by a license authority to a driver's license."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDriversLicenseNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PersonIdentificationType1Choice, Max35Text> mmDriversLicenseNumber = new MMMessageAttribute<PersonIdentificationType1Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PersonIdentification.mmDriversLicenseNumber;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PersonIdentificationType1Choice.mmObject();
@@ -353,6 +393,16 @@ public class PersonIdentificationType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PersonIdentificationType1Choice obj) {
+			return obj.getDriversLicenseNumber();
+		}
+
+		@Override
+		public void setValue(PersonIdentificationType1Choice obj, Max35Text value) {
+			obj.setDriversLicenseNumber(value);
 		}
 	};
 	@XmlElement(name = "AlnRegnNb", required = true)
@@ -393,7 +443,7 @@ public class PersonIdentificationType1Choice {
 	 * "Number assigned by a government agency to identify foreign nationals."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAlienRegistrationNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PersonIdentificationType1Choice, Max35Text> mmAlienRegistrationNumber = new MMMessageAttribute<PersonIdentificationType1Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PersonIdentification.mmAlienRegistrationNumber;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PersonIdentificationType1Choice.mmObject();
@@ -406,6 +456,16 @@ public class PersonIdentificationType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PersonIdentificationType1Choice obj) {
+			return obj.getAlienRegistrationNumber();
+		}
+
+		@Override
+		public void setValue(PersonIdentificationType1Choice obj, Max35Text value) {
+			obj.setAlienRegistrationNumber(value);
 		}
 	};
 	@XmlElement(name = "IdntyCardNb", required = true)
@@ -443,7 +503,7 @@ public class PersonIdentificationType1Choice {
 	 * "Number assigned by a national authority to an identity card."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentityCardNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PersonIdentificationType1Choice, Max35Text> mmIdentityCardNumber = new MMMessageAttribute<PersonIdentificationType1Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PersonIdentification.mmIdentityCardNumber;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PersonIdentificationType1Choice.mmObject();
@@ -455,6 +515,16 @@ public class PersonIdentificationType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PersonIdentificationType1Choice obj) {
+			return obj.getIdentityCardNumber();
+		}
+
+		@Override
+		public void setValue(PersonIdentificationType1Choice obj, Max35Text value) {
+			obj.setIdentityCardNumber(value);
 		}
 	};
 	@XmlElement(name = "OthrId", required = true)
@@ -494,7 +564,7 @@ public class PersonIdentificationType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PersonIdentificationType1Choice, GenericIdentification4> mmOtherIdentification = new MMMessageAttribute<PersonIdentificationType1Choice, GenericIdentification4>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PersonIdentificationType1Choice.mmObject();
@@ -506,6 +576,16 @@ public class PersonIdentificationType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification4.mmObject();
+		}
+
+		@Override
+		public GenericIdentification4 getValue(PersonIdentificationType1Choice obj) {
+			return obj.getOtherIdentification();
+		}
+
+		@Override
+		public void setValue(PersonIdentificationType1Choice obj, GenericIdentification4 value) {
+			obj.setOtherIdentification(value);
 		}
 	};
 

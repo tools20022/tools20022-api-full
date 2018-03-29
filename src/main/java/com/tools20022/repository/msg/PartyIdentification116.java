@@ -22,6 +22,9 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SellerRole;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.LegalOrganisation1;
+import com.tools20022.repository.msg.OrganisationIdentification28;
+import com.tools20022.repository.msg.TaxParty1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -107,7 +110,7 @@ public class PartyIdentification116 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification116, OrganisationIdentification28> mmPartyIdentification = new MMMessageAssociationEnd<PartyIdentification116, OrganisationIdentification28>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification116.mmObject();
 			isDerived = false;
@@ -118,7 +121,17 @@ public class PartyIdentification116 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OrganisationIdentification28.mmObject();
+			type_lazy = () -> OrganisationIdentification28.mmObject();
+		}
+
+		@Override
+		public OrganisationIdentification28 getValue(PartyIdentification116 obj) {
+			return obj.getPartyIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification116 obj, OrganisationIdentification28 value) {
+			obj.setPartyIdentification(value);
 		}
 	};
 	@XmlElement(name = "LglOrg")
@@ -151,7 +164,7 @@ public class PartyIdentification116 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLegalOrganisation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification116, Optional<LegalOrganisation1>> mmLegalOrganisation = new MMMessageAssociationEnd<PartyIdentification116, Optional<LegalOrganisation1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification116.mmObject();
 			isDerived = false;
@@ -162,7 +175,17 @@ public class PartyIdentification116 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.LegalOrganisation1.mmObject();
+			type_lazy = () -> LegalOrganisation1.mmObject();
+		}
+
+		@Override
+		public Optional<LegalOrganisation1> getValue(PartyIdentification116 obj) {
+			return obj.getLegalOrganisation();
+		}
+
+		@Override
+		public void setValue(PartyIdentification116 obj, Optional<LegalOrganisation1> value) {
+			obj.setLegalOrganisation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxPty")
@@ -192,7 +215,7 @@ public class PartyIdentification116 {
 	 * definition} = "TaxParty."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTaxParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification116, Optional<TaxParty1>> mmTaxParty = new MMMessageAssociationEnd<PartyIdentification116, Optional<TaxParty1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification116.mmObject();
 			isDerived = false;
@@ -203,7 +226,17 @@ public class PartyIdentification116 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TaxParty1.mmObject();
+			type_lazy = () -> TaxParty1.mmObject();
+		}
+
+		@Override
+		public Optional<TaxParty1> getValue(PartyIdentification116 obj) {
+			return obj.getTaxParty();
+		}
+
+		@Override
+		public void setValue(PartyIdentification116 obj, Optional<TaxParty1> value) {
+			obj.setTaxParty(value.orElse(null));
 		}
 	};
 
@@ -226,7 +259,7 @@ public class PartyIdentification116 {
 		return partyIdentification;
 	}
 
-	public PartyIdentification116 setPartyIdentification(com.tools20022.repository.msg.OrganisationIdentification28 partyIdentification) {
+	public PartyIdentification116 setPartyIdentification(OrganisationIdentification28 partyIdentification) {
 		this.partyIdentification = Objects.requireNonNull(partyIdentification);
 		return this;
 	}
@@ -235,7 +268,7 @@ public class PartyIdentification116 {
 		return legalOrganisation == null ? Optional.empty() : Optional.of(legalOrganisation);
 	}
 
-	public PartyIdentification116 setLegalOrganisation(com.tools20022.repository.msg.LegalOrganisation1 legalOrganisation) {
+	public PartyIdentification116 setLegalOrganisation(LegalOrganisation1 legalOrganisation) {
 		this.legalOrganisation = legalOrganisation;
 		return this;
 	}
@@ -244,7 +277,7 @@ public class PartyIdentification116 {
 		return taxParty == null ? Optional.empty() : Optional.of(taxParty);
 	}
 
-	public PartyIdentification116 setTaxParty(com.tools20022.repository.msg.TaxParty1 taxParty) {
+	public PartyIdentification116 setTaxParty(TaxParty1 taxParty) {
 		this.taxParty = taxParty;
 		return this;
 	}

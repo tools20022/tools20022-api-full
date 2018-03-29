@@ -109,7 +109,7 @@ public class TimeFrame3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeMinus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TimeFrame3Choice, Number> mmTradeMinus = new MMMessageAttribute<TimeFrame3Choice, Number>() {
 		{
 			businessElementTrace_lazy = () -> TimeFrame.mmTradeMinus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TimeFrame3Choice.mmObject();
@@ -121,6 +121,16 @@ public class TimeFrame3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(TimeFrame3Choice obj) {
+			return obj.getTradeMinus();
+		}
+
+		@Override
+		public void setValue(TimeFrame3Choice obj, Number value) {
+			obj.setTradeMinus(value);
 		}
 	};
 	@XmlElement(name = "RMns", required = true)
@@ -159,7 +169,7 @@ public class TimeFrame3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRenunciationMinus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TimeFrame3Choice, Number> mmRenunciationMinus = new MMMessageAttribute<TimeFrame3Choice, Number>() {
 		{
 			businessElementTrace_lazy = () -> TimeFrame.mmRenunciationMinus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TimeFrame3Choice.mmObject();
@@ -171,6 +181,16 @@ public class TimeFrame3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(TimeFrame3Choice obj) {
+			return obj.getRenunciationMinus();
+		}
+
+		@Override
+		public void setValue(TimeFrame3Choice obj, Number value) {
+			obj.setRenunciationMinus(value);
 		}
 	};
 

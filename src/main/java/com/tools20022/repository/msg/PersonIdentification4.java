@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.PersonIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.RestrictedIdentification2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -104,7 +105,7 @@ public class PersonIdentification4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PersonIdentification4, RestrictedIdentification2> mmOtherIdentification = new MMMessageAssociationEnd<PersonIdentification4, RestrictedIdentification2>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PersonIdentification4.mmObject();
@@ -116,7 +117,17 @@ public class PersonIdentification4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RestrictedIdentification2.mmObject();
+			type_lazy = () -> RestrictedIdentification2.mmObject();
+		}
+
+		@Override
+		public RestrictedIdentification2 getValue(PersonIdentification4 obj) {
+			return obj.getOtherIdentification();
+		}
+
+		@Override
+		public void setValue(PersonIdentification4 obj, RestrictedIdentification2 value) {
+			obj.setOtherIdentification(value);
 		}
 	};
 
@@ -138,7 +149,7 @@ public class PersonIdentification4 {
 		return otherIdentification;
 	}
 
-	public PersonIdentification4 setOtherIdentification(com.tools20022.repository.msg.RestrictedIdentification2 otherIdentification) {
+	public PersonIdentification4 setOtherIdentification(RestrictedIdentification2 otherIdentification) {
 		this.otherIdentification = Objects.requireNonNull(otherIdentification);
 		return this;
 	}

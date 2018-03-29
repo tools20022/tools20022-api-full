@@ -98,7 +98,7 @@ public class UpdateType16Choice {
 	 * "Indicates whether the report is complete or contains changes only."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UpdateType16Choice, StatementUpdateType1Code> mmCode = new MMMessageAttribute<UpdateType16Choice, StatementUpdateType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UpdateType16Choice.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class UpdateType16Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> StatementUpdateType1Code.mmObject();
+		}
+
+		@Override
+		public StatementUpdateType1Code getValue(UpdateType16Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(UpdateType16Choice obj, StatementUpdateType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -142,7 +152,7 @@ public class UpdateType16Choice {
 	 * "Indicates whether the report is complete or contains changes only."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UpdateType16Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<UpdateType16Choice, GenericIdentification47>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UpdateType16Choice.mmObject();
 			isDerived = false;
@@ -153,6 +163,16 @@ public class UpdateType16Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(UpdateType16Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(UpdateType16Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

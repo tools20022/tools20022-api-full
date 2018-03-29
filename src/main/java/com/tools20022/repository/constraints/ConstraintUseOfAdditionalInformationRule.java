@@ -51,11 +51,15 @@ public class ConstraintUseOfAdditionalInformationRule {
 	 */
 	public static final MMConstraint<UpdatedAdditionalInformation6SD3> forUpdatedAdditionalInformation6SD3 = new MMConstraint<UpdatedAdditionalInformation6SD3>() {
 		{
-			validator = ConstraintUseOfAdditionalInformationRule::checkUpdatedAdditionalInformation6SD3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UseOfAdditionalInformationRule";
 			definition = "AdditionalInformation can only be used when the corporate action event type code is TEND.";
 			owner_lazy = () -> UpdatedAdditionalInformation6SD3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(UpdatedAdditionalInformation6SD3 obj) throws Exception {
+			checkUpdatedAdditionalInformation6SD3(obj);
 		}
 	};
 

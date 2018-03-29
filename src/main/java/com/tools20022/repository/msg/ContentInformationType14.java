@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ContentType2Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SignedData4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -110,7 +111,7 @@ public class ContentInformationType14 {
 	 * ContentInformationType12.mmContentType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContentInformationType14, ContentType2Code> mmContentType = new MMMessageAttribute<ContentInformationType14, ContentType2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType14.mmObject();
 			isDerived = false;
@@ -122,6 +123,16 @@ public class ContentInformationType14 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ContentType2Code.mmObject();
+		}
+
+		@Override
+		public ContentType2Code getValue(ContentInformationType14 obj) {
+			return obj.getContentType();
+		}
+
+		@Override
+		public void setValue(ContentInformationType14 obj, ContentType2Code value) {
+			obj.setContentType(value);
 		}
 	};
 	@XmlElement(name = "SgndData", required = true)
@@ -157,7 +168,7 @@ public class ContentInformationType14 {
 	 * ContentInformationType12.mmSignedData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSignedData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ContentInformationType14, SignedData4> mmSignedData = new MMMessageAssociationEnd<ContentInformationType14, SignedData4>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType14.mmObject();
 			isDerived = false;
@@ -169,7 +180,17 @@ public class ContentInformationType14 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SignedData4.mmObject();
+			type_lazy = () -> SignedData4.mmObject();
+		}
+
+		@Override
+		public SignedData4 getValue(ContentInformationType14 obj) {
+			return obj.getSignedData();
+		}
+
+		@Override
+		public void setValue(ContentInformationType14 obj, SignedData4 value) {
+			obj.setSignedData(value);
 		}
 	};
 
@@ -200,7 +221,7 @@ public class ContentInformationType14 {
 		return signedData;
 	}
 
-	public ContentInformationType14 setSignedData(com.tools20022.repository.msg.SignedData4 signedData) {
+	public ContentInformationType14 setSignedData(SignedData4 signedData) {
 		this.signedData = Objects.requireNonNull(signedData);
 		return this;
 	}

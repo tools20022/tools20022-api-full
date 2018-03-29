@@ -20,8 +20,8 @@ package com.tools20022.repository.entity;
 import com.tools20022.metamodel.MMBusinessAttribute;
 import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.Capital;
 import com.tools20022.repository.GeneratedRepository;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -85,7 +85,7 @@ public class CapitalValue {
 	 * definition} = "Capital for which a value is provided."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCapital = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CapitalValue, Optional<Capital>> mmCapital = new MMBusinessAttribute<CapitalValue, Optional<Capital>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CapitalValue.mmObject();
@@ -94,15 +94,17 @@ public class CapitalValue {
 			definition = "Capital for which a value is provided.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.entity.Capital.mmObject();
+			complexType_lazy = () -> Capital.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CapitalValue.class.getMethod("getCapital", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Capital> getValue(CapitalValue obj) {
+			return obj.getCapital();
+		}
+
+		@Override
+		public void setValue(CapitalValue obj, Optional<Capital> value) {
+			obj.setCapital(value.orElse(null));
 		}
 	};
 
@@ -128,7 +130,7 @@ public class CapitalValue {
 		return capital == null ? Optional.empty() : Optional.of(capital);
 	}
 
-	public CapitalValue setCapital(com.tools20022.repository.entity.Capital capital) {
+	public CapitalValue setCapital(Capital capital) {
 		this.capital = capital;
 		return this;
 	}

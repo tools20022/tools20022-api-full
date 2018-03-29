@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.LanguageCode;
 import com.tools20022.repository.entity.CardholderRole;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMCustomerProfile1;
+import com.tools20022.repository.msg.TransactionVerificationResult5;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -109,7 +111,7 @@ public class ATMCustomer3 {
 	 * ATMCustomer2.mmProfile}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProfile = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMCustomer3, Optional<ATMCustomerProfile1>> mmProfile = new MMMessageAssociationEnd<ATMCustomer3, Optional<ATMCustomerProfile1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCustomer3.mmObject();
 			isDerived = false;
@@ -121,7 +123,17 @@ public class ATMCustomer3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMCustomerProfile1.mmObject();
+			type_lazy = () -> ATMCustomerProfile1.mmObject();
+		}
+
+		@Override
+		public Optional<ATMCustomerProfile1> getValue(ATMCustomer3 obj) {
+			return obj.getProfile();
+		}
+
+		@Override
+		public void setValue(ATMCustomer3 obj, Optional<ATMCustomerProfile1> value) {
+			obj.setProfile(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SelctdLang")
@@ -154,7 +166,7 @@ public class ATMCustomer3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSelectedLanguage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMCustomer3, Optional<LanguageCode>> mmSelectedLanguage = new MMMessageAttribute<ATMCustomer3, Optional<LanguageCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCustomer3.mmObject();
 			isDerived = false;
@@ -166,9 +178,19 @@ public class ATMCustomer3 {
 			minOccurs = 0;
 			simpleType_lazy = () -> LanguageCode.mmObject();
 		}
+
+		@Override
+		public Optional<LanguageCode> getValue(ATMCustomer3 obj) {
+			return obj.getSelectedLanguage();
+		}
+
+		@Override
+		public void setValue(ATMCustomer3 obj, Optional<LanguageCode> value) {
+			obj.setSelectedLanguage(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "AuthntcnRslt", required = true)
-	protected List<com.tools20022.repository.msg.TransactionVerificationResult5> authenticationResult;
+	protected List<TransactionVerificationResult5> authenticationResult;
 	/**
 	 * 
 	 <p>
@@ -201,7 +223,7 @@ public class ATMCustomer3 {
 	 * ATMCustomer2.mmAuthenticationResult}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAuthenticationResult = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMCustomer3, List<TransactionVerificationResult5>> mmAuthenticationResult = new MMMessageAssociationEnd<ATMCustomer3, List<TransactionVerificationResult5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCustomer3.mmObject();
 			isDerived = false;
@@ -212,7 +234,17 @@ public class ATMCustomer3 {
 			previousVersion_lazy = () -> ATMCustomer2.mmAuthenticationResult;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult5.mmObject();
+			type_lazy = () -> TransactionVerificationResult5.mmObject();
+		}
+
+		@Override
+		public List<TransactionVerificationResult5> getValue(ATMCustomer3 obj) {
+			return obj.getAuthenticationResult();
+		}
+
+		@Override
+		public void setValue(ATMCustomer3 obj, List<TransactionVerificationResult5> value) {
+			obj.setAuthenticationResult(value);
 		}
 	};
 
@@ -236,7 +268,7 @@ public class ATMCustomer3 {
 		return profile == null ? Optional.empty() : Optional.of(profile);
 	}
 
-	public ATMCustomer3 setProfile(com.tools20022.repository.msg.ATMCustomerProfile1 profile) {
+	public ATMCustomer3 setProfile(ATMCustomerProfile1 profile) {
 		this.profile = profile;
 		return this;
 	}
@@ -254,7 +286,7 @@ public class ATMCustomer3 {
 		return authenticationResult == null ? authenticationResult = new ArrayList<>() : authenticationResult;
 	}
 
-	public ATMCustomer3 setAuthenticationResult(List<com.tools20022.repository.msg.TransactionVerificationResult5> authenticationResult) {
+	public ATMCustomer3 setAuthenticationResult(List<TransactionVerificationResult5> authenticationResult) {
 		this.authenticationResult = Objects.requireNonNull(authenticationResult);
 		return this;
 	}

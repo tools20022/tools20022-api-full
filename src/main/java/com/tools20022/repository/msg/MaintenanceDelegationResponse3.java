@@ -22,6 +22,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.catm.MaintenanceDelegationResponseV03;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification72;
+import com.tools20022.repository.msg.MaintenanceDelegation6;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -66,7 +68,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "MaintenanceDelegationResponse3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -117,7 +119,7 @@ public class MaintenanceDelegationResponse3 {
 	 * MaintenanceDelegationResponse2.mmTMIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTMIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MaintenanceDelegationResponse3, GenericIdentification72> mmTMIdentification = new MMMessageAssociationEnd<MaintenanceDelegationResponse3, GenericIdentification72>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegationResponse3.mmObject();
 			isDerived = false;
@@ -129,7 +131,17 @@ public class MaintenanceDelegationResponse3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification72.mmObject();
+			type_lazy = () -> GenericIdentification72.mmObject();
+		}
+
+		@Override
+		public GenericIdentification72 getValue(MaintenanceDelegationResponse3 obj) {
+			return obj.getTMIdentification();
+		}
+
+		@Override
+		public void setValue(MaintenanceDelegationResponse3 obj, GenericIdentification72 value) {
+			obj.setTMIdentification(value);
 		}
 	};
 	@XmlElement(name = "MstrTMId")
@@ -166,7 +178,7 @@ public class MaintenanceDelegationResponse3 {
 	 * MaintenanceDelegationResponse2.mmMasterTMIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMasterTMIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MaintenanceDelegationResponse3, Optional<GenericIdentification72>> mmMasterTMIdentification = new MMMessageAssociationEnd<MaintenanceDelegationResponse3, Optional<GenericIdentification72>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegationResponse3.mmObject();
 			isDerived = false;
@@ -178,11 +190,21 @@ public class MaintenanceDelegationResponse3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification72.mmObject();
+			type_lazy = () -> GenericIdentification72.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification72> getValue(MaintenanceDelegationResponse3 obj) {
+			return obj.getMasterTMIdentification();
+		}
+
+		@Override
+		public void setValue(MaintenanceDelegationResponse3 obj, Optional<GenericIdentification72> value) {
+			obj.setMasterTMIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DlgtnRspn", required = true)
-	protected List<com.tools20022.repository.msg.MaintenanceDelegation6> delegationResponse;
+	protected List<MaintenanceDelegation6> delegationResponse;
 	/**
 	 * 
 	 <p>
@@ -214,7 +236,7 @@ public class MaintenanceDelegationResponse3 {
 	 * MaintenanceDelegationResponse2.mmDelegationResponse}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDelegationResponse = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MaintenanceDelegationResponse3, List<MaintenanceDelegation6>> mmDelegationResponse = new MMMessageAssociationEnd<MaintenanceDelegationResponse3, List<MaintenanceDelegation6>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegationResponse3.mmObject();
 			isDerived = false;
@@ -225,7 +247,17 @@ public class MaintenanceDelegationResponse3 {
 			previousVersion_lazy = () -> MaintenanceDelegationResponse2.mmDelegationResponse;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation6.mmObject();
+			type_lazy = () -> MaintenanceDelegation6.mmObject();
+		}
+
+		@Override
+		public List<MaintenanceDelegation6> getValue(MaintenanceDelegationResponse3 obj) {
+			return obj.getDelegationResponse();
+		}
+
+		@Override
+		public void setValue(MaintenanceDelegationResponse3 obj, List<MaintenanceDelegation6> value) {
+			obj.setDelegationResponse(value);
 		}
 	};
 
@@ -236,7 +268,7 @@ public class MaintenanceDelegationResponse3 {
 						com.tools20022.repository.msg.MaintenanceDelegationResponse3.mmDelegationResponse);
 				messageBuildingBlock_lazy = () -> Arrays.asList(MaintenanceDelegationResponseV03.mmMaintenanceDelegationResponse);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MaintenanceDelegationResponse3";
 				definition = "Information related to the request of maintenance delegations.";
 				previousVersion_lazy = () -> MaintenanceDelegationResponse2.mmObject();
@@ -249,7 +281,7 @@ public class MaintenanceDelegationResponse3 {
 		return tMIdentification;
 	}
 
-	public MaintenanceDelegationResponse3 setTMIdentification(com.tools20022.repository.msg.GenericIdentification72 tMIdentification) {
+	public MaintenanceDelegationResponse3 setTMIdentification(GenericIdentification72 tMIdentification) {
 		this.tMIdentification = Objects.requireNonNull(tMIdentification);
 		return this;
 	}
@@ -258,7 +290,7 @@ public class MaintenanceDelegationResponse3 {
 		return masterTMIdentification == null ? Optional.empty() : Optional.of(masterTMIdentification);
 	}
 
-	public MaintenanceDelegationResponse3 setMasterTMIdentification(com.tools20022.repository.msg.GenericIdentification72 masterTMIdentification) {
+	public MaintenanceDelegationResponse3 setMasterTMIdentification(GenericIdentification72 masterTMIdentification) {
 		this.masterTMIdentification = masterTMIdentification;
 		return this;
 	}
@@ -267,7 +299,7 @@ public class MaintenanceDelegationResponse3 {
 		return delegationResponse == null ? delegationResponse = new ArrayList<>() : delegationResponse;
 	}
 
-	public MaintenanceDelegationResponse3 setDelegationResponse(List<com.tools20022.repository.msg.MaintenanceDelegation6> delegationResponse) {
+	public MaintenanceDelegationResponse3 setDelegationResponse(List<MaintenanceDelegation6> delegationResponse) {
 		this.delegationResponse = Objects.requireNonNull(delegationResponse);
 		return this;
 	}

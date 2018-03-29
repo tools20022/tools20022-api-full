@@ -124,7 +124,7 @@ public class PaymentInstrument12 {
 	 * PaymentInstrument10.mmSettlementCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstrument12, ActiveCurrencyCode> mmSettlementCurrency = new MMMessageAttribute<PaymentInstrument12, ActiveCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmCurrencyOfTransfer;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstrument12.mmObject();
@@ -137,6 +137,16 @@ public class PaymentInstrument12 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyCode getValue(PaymentInstrument12 obj) {
+			return obj.getSettlementCurrency();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument12 obj, ActiveCurrencyCode value) {
+			obj.setSettlementCurrency(value);
 		}
 	};
 	@XmlElement(name = "PmtInstrm", required = true)
@@ -179,7 +189,7 @@ public class PaymentInstrument12 {
 	 * PaymentInstrument10.mmPaymentInstrument}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentInstrument = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstrument12, PaymentInstrument16Choice> mmPaymentInstrument = new MMMessageAttribute<PaymentInstrument12, PaymentInstrument16Choice>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmCreditMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstrument12.mmObject();
@@ -192,6 +202,16 @@ public class PaymentInstrument12 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PaymentInstrument16Choice.mmObject();
+		}
+
+		@Override
+		public PaymentInstrument16Choice getValue(PaymentInstrument12 obj) {
+			return obj.getPaymentInstrument();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument12 obj, PaymentInstrument16Choice value) {
+			obj.setPaymentInstrument(value);
 		}
 	};
 	@XmlElement(name = "DvddPctg")
@@ -236,7 +256,7 @@ public class PaymentInstrument12 {
 	 * PaymentInstrument10.mmDividendPercentage}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDividendPercentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstrument12, Optional<PercentageBoundedRate>> mmDividendPercentage = new MMMessageAttribute<PaymentInstrument12, Optional<PercentageBoundedRate>>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmAnnualTotalDividendRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstrument12.mmObject();
@@ -249,6 +269,16 @@ public class PaymentInstrument12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageBoundedRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageBoundedRate> getValue(PaymentInstrument12 obj) {
+			return obj.getDividendPercentage();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument12 obj, Optional<PercentageBoundedRate> value) {
+			obj.setDividendPercentage(value.orElse(null));
 		}
 	};
 

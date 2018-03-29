@@ -112,7 +112,7 @@ public class TransactionCriteria4Choice {
 	 * TransactionCriteria3Choice.mmQueryName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionCriteria4Choice, Max35Text> mmQueryName = new MMMessageAttribute<TransactionCriteria4Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransactionCriteria4Choice.mmObject();
 			isDerived = false;
@@ -124,6 +124,16 @@ public class TransactionCriteria4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(TransactionCriteria4Choice obj) {
+			return obj.getQueryName();
+		}
+
+		@Override
+		public void setValue(TransactionCriteria4Choice obj, Max35Text value) {
+			obj.setQueryName(value);
 		}
 	};
 	@XmlElement(name = "NewCrit", required = true)
@@ -159,7 +169,7 @@ public class TransactionCriteria4Choice {
 	 * TransactionCriteria3Choice.mmNewCriteria}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNewCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionCriteria4Choice, TransactionCriteria7> mmNewCriteria = new MMMessageAssociationEnd<TransactionCriteria4Choice, TransactionCriteria7>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransactionCriteria4Choice.mmObject();
 			isDerived = false;
@@ -172,6 +182,16 @@ public class TransactionCriteria4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TransactionCriteria7.mmObject();
+		}
+
+		@Override
+		public TransactionCriteria7 getValue(TransactionCriteria4Choice obj) {
+			return obj.getNewCriteria();
+		}
+
+		@Override
+		public void setValue(TransactionCriteria4Choice obj, TransactionCriteria7 value) {
+			obj.setNewCriteria(value);
 		}
 	};
 

@@ -53,11 +53,15 @@ public class ConstraintGenericCashPriceReceivedPerProductGuideline {
 	 */
 	public static final MMConstraint<CorporateActionPrice21> forCorporateActionPrice21 = new MMConstraint<CorporateActionPrice21>() {
 		{
-			validator = ConstraintGenericCashPriceReceivedPerProductGuideline::checkCorporateActionPrice21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GenericCashPriceReceivedPerProductGuideline";
 			definition = "GenericCashPriceReceivedPerProduct is the price received in the course of an event. The specific meaning (redemption price, subscription price, reinvestment price, ETC.) is derived from the event type.";
 			owner_lazy = () -> CorporateActionPrice21.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionPrice21 obj) throws Exception {
+			checkCorporateActionPrice21(obj);
 		}
 	};
 	/**
@@ -83,11 +87,15 @@ public class ConstraintGenericCashPriceReceivedPerProductGuideline {
 	 */
 	public static final MMConstraint<CorporateActionPrice22> forCorporateActionPrice22 = new MMConstraint<CorporateActionPrice22>() {
 		{
-			validator = ConstraintGenericCashPriceReceivedPerProductGuideline::checkCorporateActionPrice22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GenericCashPriceReceivedPerProductGuideline";
 			definition = "GenericCashPriceReceivedPerProduct is the price received in the course of an event. The specific meaning (redemption price, subscription price, reinvestment price, ETC.) is derived from the event type.";
 			owner_lazy = () -> CorporateActionPrice22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionPrice22 obj) throws Exception {
+			checkCorporateActionPrice22(obj);
 		}
 	};
 	/**
@@ -122,12 +130,16 @@ public class ConstraintGenericCashPriceReceivedPerProductGuideline {
 	 */
 	public static final MMConstraint<CorporateActionPrice30> forCorporateActionPrice30 = new MMConstraint<CorporateActionPrice30>() {
 		{
-			validator = ConstraintGenericCashPriceReceivedPerProductGuideline::checkCorporateActionPrice30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GenericCashPriceReceivedPerProductGuideline";
 			definition = "GenericCashPriceReceivedPerProduct is the price received in the course of an event. The specific meaning (redemption price, subscription price, reinvestment price, ETC.) is derived from the event type.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGenericCashPriceReceivedPerProductGuideline.forCorporateActionPrice61);
 			owner_lazy = () -> CorporateActionPrice30.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionPrice30 obj) throws Exception {
+			checkCorporateActionPrice30(obj);
 		}
 	};
 	/**
@@ -153,11 +165,15 @@ public class ConstraintGenericCashPriceReceivedPerProductGuideline {
 	 */
 	public static final MMConstraint<CorporateActionPrice36> forCorporateActionPrice36 = new MMConstraint<CorporateActionPrice36>() {
 		{
-			validator = ConstraintGenericCashPriceReceivedPerProductGuideline::checkCorporateActionPrice36;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GenericCashPriceReceivedPerProductGuideline";
 			definition = "GenericCashPriceReceivedPerProduct is the price received in the course of an event. The specific meaning (redemption price, subscription price, reinvestment price, ETC.) is derived from the event type.";
 			owner_lazy = () -> CorporateActionPrice36.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionPrice36 obj) throws Exception {
+			checkCorporateActionPrice36(obj);
 		}
 	};
 	/**
@@ -183,11 +199,15 @@ public class ConstraintGenericCashPriceReceivedPerProductGuideline {
 	 */
 	public static final MMConstraint<CorporateActionPrice16> forCorporateActionPrice16 = new MMConstraint<CorporateActionPrice16>() {
 		{
-			validator = ConstraintGenericCashPriceReceivedPerProductGuideline::checkCorporateActionPrice16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GenericCashPriceReceivedPerProductGuideline";
 			definition = "GenericCashPriceReceivedPerProduct is the price received in the course of an event. The specific meaning (redemption price, subscription price, reinvestment price, ETC.) is derived from the event type.";
 			owner_lazy = () -> CorporateActionPrice16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionPrice16 obj) throws Exception {
+			checkCorporateActionPrice16(obj);
 		}
 	};
 	/**
@@ -213,11 +233,15 @@ public class ConstraintGenericCashPriceReceivedPerProductGuideline {
 	 */
 	public static final MMConstraint<CorporateActionPrice23> forCorporateActionPrice23 = new MMConstraint<CorporateActionPrice23>() {
 		{
-			validator = ConstraintGenericCashPriceReceivedPerProductGuideline::checkCorporateActionPrice23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GenericCashPriceReceivedPerProductGuideline";
 			definition = "GenericCashPriceReceivedPerProduct is the price received in the course of an event. The specific meaning (redemption price, subscription price, reinvestment price, ETC.) is derived from the event type.";
 			owner_lazy = () -> CorporateActionPrice23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionPrice23 obj) throws Exception {
+			checkCorporateActionPrice23(obj);
 		}
 	};
 	/**
@@ -249,12 +273,16 @@ public class ConstraintGenericCashPriceReceivedPerProductGuideline {
 	 */
 	public static final MMConstraint<CorporateActionPrice61> forCorporateActionPrice61 = new MMConstraint<CorporateActionPrice61>() {
 		{
-			validator = ConstraintGenericCashPriceReceivedPerProductGuideline::checkCorporateActionPrice61;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GenericCashPriceReceivedPerProductGuideline";
 			definition = "GenericCashPriceReceivedPerProduct is the price received in the course of an event. The specific meaning (redemption price, subscription price, reinvestment price, ETC.) is derived from the event type.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGenericCashPriceReceivedPerProductGuideline.forCorporateActionPrice30;
 			owner_lazy = () -> CorporateActionPrice61.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionPrice61 obj) throws Exception {
+			checkCorporateActionPrice61(obj);
 		}
 	};
 	/**
@@ -280,11 +308,15 @@ public class ConstraintGenericCashPriceReceivedPerProductGuideline {
 	 */
 	public static final MMConstraint<CorporateActionPrice63> forCorporateActionPrice63 = new MMConstraint<CorporateActionPrice63>() {
 		{
-			validator = ConstraintGenericCashPriceReceivedPerProductGuideline::checkCorporateActionPrice63;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GenericCashPriceReceivedPerProductGuideline";
 			definition = "GenericCashPriceReceivedPerProduct is the price received in the course of an event. The specific meaning (redemption price, subscription price, reinvestment price, ETC.) is derived from the event type.";
 			owner_lazy = () -> CorporateActionPrice63.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionPrice63 obj) throws Exception {
+			checkCorporateActionPrice63(obj);
 		}
 	};
 

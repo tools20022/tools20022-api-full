@@ -138,7 +138,7 @@ public class TradingVenueAttributes1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradingVenueAttributes1, MICIdentifier> mmIdentification = new MMMessageAttribute<TradingVenueAttributes1, MICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmMIC;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradingVenueAttributes1.mmObject();
@@ -150,6 +150,16 @@ public class TradingVenueAttributes1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
+		}
+
+		@Override
+		public MICIdentifier getValue(TradingVenueAttributes1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(TradingVenueAttributes1 obj, MICIdentifier value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "IssrReq", required = true)
@@ -184,7 +194,7 @@ public class TradingVenueAttributes1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuerRequest = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradingVenueAttributes1, TrueFalseIndicator> mmIssuerRequest = new MMMessageAttribute<TradingVenueAttributes1, TrueFalseIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradingVenueAttributes1.mmObject();
 			isDerived = false;
@@ -195,6 +205,16 @@ public class TradingVenueAttributes1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public TrueFalseIndicator getValue(TradingVenueAttributes1 obj) {
+			return obj.getIssuerRequest();
+		}
+
+		@Override
+		public void setValue(TradingVenueAttributes1 obj, TrueFalseIndicator value) {
+			obj.setIssuerRequest(value);
 		}
 	};
 	@XmlElement(name = "AdmssnApprvlDtByIssr")
@@ -228,7 +248,7 @@ public class TradingVenueAttributes1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdmissionApprovalDateByIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradingVenueAttributes1, Optional<ISODateTime>> mmAdmissionApprovalDateByIssuer = new MMMessageAttribute<TradingVenueAttributes1, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradingVenueAttributes1.mmObject();
 			isDerived = false;
@@ -239,6 +259,16 @@ public class TradingVenueAttributes1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(TradingVenueAttributes1 obj) {
+			return obj.getAdmissionApprovalDateByIssuer();
+		}
+
+		@Override
+		public void setValue(TradingVenueAttributes1 obj, Optional<ISODateTime> value) {
+			obj.setAdmissionApprovalDateByIssuer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReqForAdmssnDt")
@@ -272,7 +302,7 @@ public class TradingVenueAttributes1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestForAdmissionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradingVenueAttributes1, Optional<ISODateTime>> mmRequestForAdmissionDate = new MMMessageAttribute<TradingVenueAttributes1, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradingVenueAttributes1.mmObject();
 			isDerived = false;
@@ -283,6 +313,16 @@ public class TradingVenueAttributes1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(TradingVenueAttributes1 obj) {
+			return obj.getRequestForAdmissionDate();
+		}
+
+		@Override
+		public void setValue(TradingVenueAttributes1 obj, Optional<ISODateTime> value) {
+			obj.setRequestForAdmissionDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FrstTradDt")
@@ -316,7 +356,7 @@ public class TradingVenueAttributes1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFirstTradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradingVenueAttributes1, Optional<ISODateTime>> mmFirstTradeDate = new MMMessageAttribute<TradingVenueAttributes1, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradingVenueAttributes1.mmObject();
 			isDerived = false;
@@ -327,6 +367,16 @@ public class TradingVenueAttributes1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(TradingVenueAttributes1 obj) {
+			return obj.getFirstTradeDate();
+		}
+
+		@Override
+		public void setValue(TradingVenueAttributes1 obj, Optional<ISODateTime> value) {
+			obj.setFirstTradeDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TermntnDt")
@@ -360,7 +410,7 @@ public class TradingVenueAttributes1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTerminationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradingVenueAttributes1, Optional<ISODateTime>> mmTerminationDate = new MMMessageAttribute<TradingVenueAttributes1, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradingVenueAttributes1.mmObject();
 			isDerived = false;
@@ -371,6 +421,16 @@ public class TradingVenueAttributes1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(TradingVenueAttributes1 obj) {
+			return obj.getTerminationDate();
+		}
+
+		@Override
+		public void setValue(TradingVenueAttributes1 obj, Optional<ISODateTime> value) {
+			obj.setTerminationDate(value.orElse(null));
 		}
 	};
 

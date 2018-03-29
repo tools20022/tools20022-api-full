@@ -32,6 +32,7 @@ import com.tools20022.repository.entity.Interest;
 import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.entity.SecuritiesTax;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PriceValue1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -136,7 +137,7 @@ public class UnitPrice23 {
 	 * UnitPrice21.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice23, TypeOfPrice46Choice> mmType = new MMMessageAttribute<UnitPrice23, TypeOfPrice46Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice23.mmObject();
@@ -149,6 +150,16 @@ public class UnitPrice23 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TypeOfPrice46Choice.mmObject();
+		}
+
+		@Override
+		public TypeOfPrice46Choice getValue(UnitPrice23 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(UnitPrice23 obj, TypeOfPrice46Choice value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Val", required = true)
@@ -189,7 +200,7 @@ public class UnitPrice23 {
 	 * UnitPrice21.mmValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice23, PriceValue1> mmValue = new MMMessageAttribute<UnitPrice23, PriceValue1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice23.mmObject();
@@ -201,7 +212,17 @@ public class UnitPrice23 {
 			previousVersion_lazy = () -> UnitPrice21.mmValue;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.PriceValue1.mmObject();
+			complexType_lazy = () -> PriceValue1.mmObject();
+		}
+
+		@Override
+		public PriceValue1 getValue(UnitPrice23 obj) {
+			return obj.getValue();
+		}
+
+		@Override
+		public void setValue(UnitPrice23 obj, PriceValue1 value) {
+			obj.setValue(value);
 		}
 	};
 	@XmlElement(name = "PricMtd")
@@ -243,7 +264,7 @@ public class UnitPrice23 {
 	 * UnitPrice21.mmPriceMethod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriceMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice23, Optional<PriceMethod1Code>> mmPriceMethod = new MMMessageAttribute<UnitPrice23, Optional<PriceMethod1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice23.mmObject();
@@ -256,6 +277,16 @@ public class UnitPrice23 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PriceMethod1Code.mmObject();
+		}
+
+		@Override
+		public Optional<PriceMethod1Code> getValue(UnitPrice23 obj) {
+			return obj.getPriceMethod();
+		}
+
+		@Override
+		public void setValue(UnitPrice23 obj, Optional<PriceMethod1Code> value) {
+			obj.setPriceMethod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcrdIntrstNAV")
@@ -299,7 +330,7 @@ public class UnitPrice23 {
 	 * UnitPrice21.mmAccruedInterestNAV}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccruedInterestNAV = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice23, Optional<ActiveOrHistoricCurrencyAndAmount>> mmAccruedInterestNAV = new MMMessageAttribute<UnitPrice23, Optional<ActiveOrHistoricCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmAccruedInterestAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice23.mmObject();
@@ -312,6 +343,16 @@ public class UnitPrice23 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAndAmount> getValue(UnitPrice23 obj) {
+			return obj.getAccruedInterestNAV();
+		}
+
+		@Override
+		public void setValue(UnitPrice23 obj, Optional<ActiveOrHistoricCurrencyAndAmount> value) {
+			obj.setAccruedInterestNAV(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NbOfDaysAcrd")
@@ -356,7 +397,7 @@ public class UnitPrice23 {
 	 * UnitPrice21.mmNumberOfDaysAccrued}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfDaysAccrued = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice23, Optional<Number>> mmNumberOfDaysAccrued = new MMMessageAttribute<UnitPrice23, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmNumberOfDays;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice23.mmObject();
@@ -370,6 +411,16 @@ public class UnitPrice23 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(UnitPrice23 obj) {
+			return obj.getNumberOfDaysAccrued();
+		}
+
+		@Override
+		public void setValue(UnitPrice23 obj, Optional<Number> value) {
+			obj.setNumberOfDaysAccrued(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxblIncmPerShr")
@@ -413,7 +464,7 @@ public class UnitPrice23 {
 	 * UnitPrice21.mmTaxableIncomePerShare}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxableIncomePerShare = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice23, Optional<ActiveCurrencyAnd13DecimalAmount>> mmTaxableIncomePerShare = new MMMessageAttribute<UnitPrice23, Optional<ActiveCurrencyAnd13DecimalAmount>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmTaxableIncomePerShare;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice23.mmObject();
@@ -426,6 +477,16 @@ public class UnitPrice23 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAnd13DecimalAmount> getValue(UnitPrice23 obj) {
+			return obj.getTaxableIncomePerShare();
+		}
+
+		@Override
+		public void setValue(UnitPrice23 obj, Optional<ActiveCurrencyAnd13DecimalAmount> value) {
+			obj.setTaxableIncomePerShare(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxblIncmPerShrClctd")
@@ -464,7 +525,7 @@ public class UnitPrice23 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxableIncomePerShareCalculated = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice23, Optional<TaxableIncomePerShareCalculated2Choice>> mmTaxableIncomePerShareCalculated = new MMMessageAttribute<UnitPrice23, Optional<TaxableIncomePerShareCalculated2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmTaxableIncomePerShareCalculated;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice23.mmObject();
@@ -476,6 +537,16 @@ public class UnitPrice23 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> TaxableIncomePerShareCalculated2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<TaxableIncomePerShareCalculated2Choice> getValue(UnitPrice23 obj) {
+			return obj.getTaxableIncomePerShareCalculated();
+		}
+
+		@Override
+		public void setValue(UnitPrice23 obj, Optional<TaxableIncomePerShareCalculated2Choice> value) {
+			obj.setTaxableIncomePerShareCalculated(value.orElse(null));
 		}
 	};
 
@@ -509,7 +580,7 @@ public class UnitPrice23 {
 		return value;
 	}
 
-	public UnitPrice23 setValue(com.tools20022.repository.msg.PriceValue1 value) {
+	public UnitPrice23 setValue(PriceValue1 value) {
 		this.value = Objects.requireNonNull(value);
 		return this;
 	}

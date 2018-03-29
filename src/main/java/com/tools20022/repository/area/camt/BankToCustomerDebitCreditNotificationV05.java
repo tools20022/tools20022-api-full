@@ -25,9 +25,7 @@ import com.tools20022.repository.area.CashManagementArchive;
 import com.tools20022.repository.msg.AccountNotification11;
 import com.tools20022.repository.msg.GroupHeader58;
 import com.tools20022.repository.msg.SupplementaryData1;
-import com.tools20022.repository.msgset.BanktoCustomerCashManagementISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -71,9 +69,6 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
  * messageSet} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.BanktoCustomerCashManagementISOPreviousversion
- * BanktoCustomerCashManagementISOPreviousversion}</li>
  * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
  * </ul>
  * </li>
@@ -166,7 +161,7 @@ public class BankToCustomerDebitCreditNotificationV05 {
 	 * BankToCustomerDebitCreditNotificationV04.mmGroupHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BankToCustomerDebitCreditNotificationV05, GroupHeader58> mmGroupHeader = new MMMessageBuildingBlock<BankToCustomerDebitCreditNotificationV05, GroupHeader58>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -179,12 +174,14 @@ public class BankToCustomerDebitCreditNotificationV05 {
 			complexType_lazy = () -> GroupHeader58.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BankToCustomerDebitCreditNotificationV05.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader58 getValue(BankToCustomerDebitCreditNotificationV05 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(BankToCustomerDebitCreditNotificationV05 obj, GroupHeader58 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "Ntfctn", required = true)
@@ -225,7 +222,7 @@ public class BankToCustomerDebitCreditNotificationV05 {
 	 * BankToCustomerDebitCreditNotificationV04.mmNotification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmNotification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BankToCustomerDebitCreditNotificationV05, List<AccountNotification11>> mmNotification = new MMMessageBuildingBlock<BankToCustomerDebitCreditNotificationV05, List<AccountNotification11>>() {
 		{
 			xmlTag = "Ntfctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -237,12 +234,14 @@ public class BankToCustomerDebitCreditNotificationV05 {
 			complexType_lazy = () -> AccountNotification11.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BankToCustomerDebitCreditNotificationV05.class.getMethod("getNotification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<AccountNotification11> getValue(BankToCustomerDebitCreditNotificationV05 obj) {
+			return obj.getNotification();
+		}
+
+		@Override
+		public void setValue(BankToCustomerDebitCreditNotificationV05 obj, List<AccountNotification11> value) {
+			obj.setNotification(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -285,7 +284,7 @@ public class BankToCustomerDebitCreditNotificationV05 {
 	 * BankToCustomerDebitCreditNotificationV04.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BankToCustomerDebitCreditNotificationV05, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<BankToCustomerDebitCreditNotificationV05, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -297,12 +296,14 @@ public class BankToCustomerDebitCreditNotificationV05 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BankToCustomerDebitCreditNotificationV05.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(BankToCustomerDebitCreditNotificationV05 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(BankToCustomerDebitCreditNotificationV05 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -316,7 +317,7 @@ public class BankToCustomerDebitCreditNotificationV05 {
 				definition = "Scope\nThe BankToCustomerDebitCreditNotification message is sent by the account servicer to an account owner or to a party authorised by the account owner to receive the message. It can be used to inform the account owner, or authorised party, of single or multiple debit and/or credit entries reported to the account.\nUsage\nThe BankToCustomerDebitCreditNotification message can contain reports for more than one account. It provides information for cash management and/or reconciliation.\nThe BankToCustomerDebitCreditNotification message can be used to: \n- report pending and booked items;\n- notify one or more debit entries;\n- notify one or more credit entries;\n- notify a combination of debit and credit entries.\nIt can include underlying details of transactions that have been included in the entry.\nIt is possible that the receiver of the message is not the account owner, but a party entitled by the account owner to receive the account information (also known as recipient).\nIt does not contain balance information.";
 				nextVersions_lazy = () -> Arrays.asList(BankToCustomerDebitCreditNotificationV06.mmObject());
 				previousVersion_lazy = () -> BankToCustomerDebitCreditNotificationV04.mmObject();
-				messageSet_lazy = () -> Arrays.asList(BanktoCustomerCashManagementISOPreviousversion.mmObject(), ISOArchive.mmObject());
+				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "BkToCstmrDbtCdtNtfctn";
 				businessArea_lazy = () -> CashManagementArchive.mmObject();

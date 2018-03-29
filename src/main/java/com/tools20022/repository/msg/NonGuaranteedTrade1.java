@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.ReceivingSettlementParty;
 import com.tools20022.repository.entity.SystemPartyRole;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DeliveringPartiesAndAccount5;
+import com.tools20022.repository.msg.ReceivingPartiesAndAccount6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -119,7 +121,7 @@ public class NonGuaranteedTrade1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeCounterpartyMemberIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NonGuaranteedTrade1, PartyIdentification35Choice> mmTradeCounterpartyMemberIdentification = new MMMessageAttribute<NonGuaranteedTrade1, PartyIdentification35Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NonGuaranteedTrade1.mmObject();
@@ -131,6 +133,16 @@ public class NonGuaranteedTrade1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification35Choice getValue(NonGuaranteedTrade1 obj) {
+			return obj.getTradeCounterpartyMemberIdentification();
+		}
+
+		@Override
+		public void setValue(NonGuaranteedTrade1 obj, PartyIdentification35Choice value) {
+			obj.setTradeCounterpartyMemberIdentification(value);
 		}
 	};
 	@XmlElement(name = "TradCtrPtyClrMmbId", required = true)
@@ -170,7 +182,7 @@ public class NonGuaranteedTrade1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeCounterpartyClearingMemberIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NonGuaranteedTrade1, PartyIdentification35Choice> mmTradeCounterpartyClearingMemberIdentification = new MMMessageAttribute<NonGuaranteedTrade1, PartyIdentification35Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NonGuaranteedTrade1.mmObject();
@@ -182,6 +194,16 @@ public class NonGuaranteedTrade1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification35Choice getValue(NonGuaranteedTrade1 obj) {
+			return obj.getTradeCounterpartyClearingMemberIdentification();
+		}
+
+		@Override
+		public void setValue(NonGuaranteedTrade1 obj, PartyIdentification35Choice value) {
+			obj.setTradeCounterpartyClearingMemberIdentification(value);
 		}
 	};
 	@XmlElement(name = "DlvrgPties")
@@ -220,7 +242,7 @@ public class NonGuaranteedTrade1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDeliveringParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NonGuaranteedTrade1, Optional<DeliveringPartiesAndAccount5>> mmDeliveringParties = new MMMessageAssociationEnd<NonGuaranteedTrade1, Optional<DeliveringPartiesAndAccount5>>() {
 		{
 			businessComponentTrace_lazy = () -> DeliveringSettlementParty.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.NonGuaranteedTrade1.mmObject();
@@ -232,7 +254,17 @@ public class NonGuaranteedTrade1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DeliveringPartiesAndAccount5.mmObject();
+			type_lazy = () -> DeliveringPartiesAndAccount5.mmObject();
+		}
+
+		@Override
+		public Optional<DeliveringPartiesAndAccount5> getValue(NonGuaranteedTrade1 obj) {
+			return obj.getDeliveringParties();
+		}
+
+		@Override
+		public void setValue(NonGuaranteedTrade1 obj, Optional<DeliveringPartiesAndAccount5> value) {
+			obj.setDeliveringParties(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcvgPties")
@@ -271,7 +303,7 @@ public class NonGuaranteedTrade1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReceivingParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NonGuaranteedTrade1, Optional<ReceivingPartiesAndAccount6>> mmReceivingParties = new MMMessageAssociationEnd<NonGuaranteedTrade1, Optional<ReceivingPartiesAndAccount6>>() {
 		{
 			businessComponentTrace_lazy = () -> ReceivingSettlementParty.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.NonGuaranteedTrade1.mmObject();
@@ -283,7 +315,17 @@ public class NonGuaranteedTrade1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ReceivingPartiesAndAccount6.mmObject();
+			type_lazy = () -> ReceivingPartiesAndAccount6.mmObject();
+		}
+
+		@Override
+		public Optional<ReceivingPartiesAndAccount6> getValue(NonGuaranteedTrade1 obj) {
+			return obj.getReceivingParties();
+		}
+
+		@Override
+		public void setValue(NonGuaranteedTrade1 obj, Optional<ReceivingPartiesAndAccount6> value) {
+			obj.setReceivingParties(value.orElse(null));
 		}
 	};
 
@@ -325,7 +367,7 @@ public class NonGuaranteedTrade1 {
 		return deliveringParties == null ? Optional.empty() : Optional.of(deliveringParties);
 	}
 
-	public NonGuaranteedTrade1 setDeliveringParties(com.tools20022.repository.msg.DeliveringPartiesAndAccount5 deliveringParties) {
+	public NonGuaranteedTrade1 setDeliveringParties(DeliveringPartiesAndAccount5 deliveringParties) {
 		this.deliveringParties = deliveringParties;
 		return this;
 	}
@@ -334,7 +376,7 @@ public class NonGuaranteedTrade1 {
 		return receivingParties == null ? Optional.empty() : Optional.of(receivingParties);
 	}
 
-	public NonGuaranteedTrade1 setReceivingParties(com.tools20022.repository.msg.ReceivingPartiesAndAccount6 receivingParties) {
+	public NonGuaranteedTrade1 setReceivingParties(ReceivingPartiesAndAccount6 receivingParties) {
 		this.receivingParties = receivingParties;
 		return this;
 	}

@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.AccountIdentification;
 import com.tools20022.repository.entity.InvestmentAccount;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.InvestmentFundTransactionsByFund1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -137,7 +138,7 @@ public class SubAccountIdentification4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubAccountIdentification4, AccountIdentificationFormatChoice> mmIdentification = new MMMessageAttribute<SubAccountIdentification4, AccountIdentificationFormatChoice>() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubAccountIdentification4.mmObject();
@@ -149,6 +150,16 @@ public class SubAccountIdentification4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AccountIdentificationFormatChoice.mmObject();
+		}
+
+		@Override
+		public AccountIdentificationFormatChoice getValue(SubAccountIdentification4 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SubAccountIdentification4 obj, AccountIdentificationFormatChoice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "ActvtyInd", required = true)
@@ -182,7 +193,7 @@ public class SubAccountIdentification4 {
 	 * "Indicates whether there is activity reported in the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActivityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubAccountIdentification4, YesNoIndicator> mmActivityIndicator = new MMMessageAttribute<SubAccountIdentification4, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubAccountIdentification4.mmObject();
 			isDerived = false;
@@ -194,9 +205,19 @@ public class SubAccountIdentification4 {
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
+
+		@Override
+		public YesNoIndicator getValue(SubAccountIdentification4 obj) {
+			return obj.getActivityIndicator();
+		}
+
+		@Override
+		public void setValue(SubAccountIdentification4 obj, YesNoIndicator value) {
+			obj.setActivityIndicator(value);
+		}
 	};
 	@XmlElement(name = "TxOnSubAcct")
-	protected List<com.tools20022.repository.msg.InvestmentFundTransactionsByFund1> transactionOnSubAccount;
+	protected List<InvestmentFundTransactionsByFund1> transactionOnSubAccount;
 	/**
 	 * 
 	 <p>
@@ -231,7 +252,7 @@ public class SubAccountIdentification4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionOnSubAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SubAccountIdentification4, List<InvestmentFundTransactionsByFund1>> mmTransactionOnSubAccount = new MMMessageAssociationEnd<SubAccountIdentification4, List<InvestmentFundTransactionsByFund1>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmInvestmentFundTransaction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubAccountIdentification4.mmObject();
@@ -242,7 +263,17 @@ public class SubAccountIdentification4 {
 			definition = "Creation/cancellation of investment units on the books of the fund or its designated agent, as a result of executing an investment fund order.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransactionsByFund1.mmObject();
+			type_lazy = () -> InvestmentFundTransactionsByFund1.mmObject();
+		}
+
+		@Override
+		public List<InvestmentFundTransactionsByFund1> getValue(SubAccountIdentification4 obj) {
+			return obj.getTransactionOnSubAccount();
+		}
+
+		@Override
+		public void setValue(SubAccountIdentification4 obj, List<InvestmentFundTransactionsByFund1> value) {
+			obj.setTransactionOnSubAccount(value);
 		}
 	};
 
@@ -285,7 +316,7 @@ public class SubAccountIdentification4 {
 		return transactionOnSubAccount == null ? transactionOnSubAccount = new ArrayList<>() : transactionOnSubAccount;
 	}
 
-	public SubAccountIdentification4 setTransactionOnSubAccount(List<com.tools20022.repository.msg.InvestmentFundTransactionsByFund1> transactionOnSubAccount) {
+	public SubAccountIdentification4 setTransactionOnSubAccount(List<InvestmentFundTransactionsByFund1> transactionOnSubAccount) {
 		this.transactionOnSubAccount = Objects.requireNonNull(transactionOnSubAccount);
 		return this;
 	}

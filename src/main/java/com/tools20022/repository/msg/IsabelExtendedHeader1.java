@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.BICFIIdentifier;
 import com.tools20022.repository.datatype.Max3Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.IsabelSEPAFile1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -100,7 +101,7 @@ public class IsabelExtendedHeader1 {
 	 * definition} = "SEPA related information for a payment file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSEPA = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IsabelExtendedHeader1, Optional<IsabelSEPAFile1>> mmSEPA = new MMMessageAssociationEnd<IsabelExtendedHeader1, Optional<IsabelSEPAFile1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelExtendedHeader1.mmObject();
 			isDerived = false;
@@ -111,7 +112,17 @@ public class IsabelExtendedHeader1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IsabelSEPAFile1.mmObject();
+			type_lazy = () -> IsabelSEPAFile1.mmObject();
+		}
+
+		@Override
+		public Optional<IsabelSEPAFile1> getValue(IsabelExtendedHeader1 obj) {
+			return obj.getSEPA();
+		}
+
+		@Override
+		public void setValue(IsabelExtendedHeader1 obj, Optional<IsabelSEPAFile1> value) {
+			obj.setSEPA(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BPNFI")
@@ -144,7 +155,7 @@ public class IsabelExtendedHeader1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBPNFinancialInstitution = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelExtendedHeader1, Optional<Max3Text>> mmBPNFinancialInstitution = new MMMessageAttribute<IsabelExtendedHeader1, Optional<Max3Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelExtendedHeader1.mmObject();
 			isDerived = false;
@@ -155,6 +166,16 @@ public class IsabelExtendedHeader1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max3Text> getValue(IsabelExtendedHeader1 obj) {
+			return obj.getBPNFinancialInstitution();
+		}
+
+		@Override
+		public void setValue(IsabelExtendedHeader1 obj, Optional<Max3Text> value) {
+			obj.setBPNFinancialInstitution(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BICFI")
@@ -187,7 +208,7 @@ public class IsabelExtendedHeader1 {
 	 * definition} = "Business identification code of the receiving bank."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBICFinancialInstitution = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelExtendedHeader1, Optional<BICFIIdentifier>> mmBICFinancialInstitution = new MMMessageAttribute<IsabelExtendedHeader1, Optional<BICFIIdentifier>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelExtendedHeader1.mmObject();
 			isDerived = false;
@@ -198,6 +219,16 @@ public class IsabelExtendedHeader1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<BICFIIdentifier> getValue(IsabelExtendedHeader1 obj) {
+			return obj.getBICFinancialInstitution();
+		}
+
+		@Override
+		public void setValue(IsabelExtendedHeader1 obj, Optional<BICFIIdentifier> value) {
+			obj.setBICFinancialInstitution(value.orElse(null));
 		}
 	};
 
@@ -219,7 +250,7 @@ public class IsabelExtendedHeader1 {
 		return sEPA == null ? Optional.empty() : Optional.of(sEPA);
 	}
 
-	public IsabelExtendedHeader1 setSEPA(com.tools20022.repository.msg.IsabelSEPAFile1 sEPA) {
+	public IsabelExtendedHeader1 setSEPA(IsabelSEPAFile1 sEPA) {
 		this.sEPA = sEPA;
 		return this;
 	}

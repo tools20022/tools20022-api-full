@@ -106,7 +106,7 @@ public class Commodity2 {
 	 * definition} = "Mark-to-market pre-haircut value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarketValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Commodity2, ActiveCurrencyAndAmount> mmMarketValue = new MMMessageAttribute<Commodity2, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmMarketValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commodity2.mmObject();
@@ -118,6 +118,16 @@ public class Commodity2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(Commodity2 obj) {
+			return obj.getMarketValue();
+		}
+
+		@Override
+		public void setValue(Commodity2 obj, ActiveCurrencyAndAmount value) {
+			obj.setMarketValue(value);
 		}
 	};
 	@XmlElement(name = "CmmdtyTp", required = true)
@@ -153,7 +163,7 @@ public class Commodity2 {
 	 * definition} = "Specifies the type of commodity.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCommodityType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Commodity2, AssetClassDetailedSubProductType16Choice> mmCommodityType = new MMMessageAssociationEnd<Commodity2, AssetClassDetailedSubProductType16Choice>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commodity2.mmObject();
@@ -166,6 +176,16 @@ public class Commodity2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AssetClassDetailedSubProductType16Choice.mmObject();
+		}
+
+		@Override
+		public AssetClassDetailedSubProductType16Choice getValue(Commodity2 obj) {
+			return obj.getCommodityType();
+		}
+
+		@Override
+		public void setValue(Commodity2 obj, AssetClassDetailedSubProductType16Choice value) {
+			obj.setCommodityType(value);
 		}
 	};
 

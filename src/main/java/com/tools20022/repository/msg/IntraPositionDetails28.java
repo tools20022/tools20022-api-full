@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.IntraPositionTransfer;
 import com.tools20022.repository.entity.SafekeepingPlace;
 import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.IntraPositionMovementDetails9;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -139,7 +140,7 @@ public class IntraPositionDetails28 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSafekeepingPlace = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionDetails28, Optional<SafekeepingPlaceFormat3Choice>> mmSafekeepingPlace = new MMMessageAssociationEnd<IntraPositionDetails28, Optional<SafekeepingPlaceFormat3Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> SafekeepingPlace.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionDetails28.mmObject();
@@ -153,6 +154,16 @@ public class IntraPositionDetails28 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SafekeepingPlaceFormat3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SafekeepingPlaceFormat3Choice> getValue(IntraPositionDetails28 obj) {
+			return obj.getSafekeepingPlace();
+		}
+
+		@Override
+		public void setValue(IntraPositionDetails28 obj, Optional<SafekeepingPlaceFormat3Choice> value) {
+			obj.setSafekeepingPlace(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BalFr", required = true)
@@ -197,7 +208,7 @@ public class IntraPositionDetails28 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalanceFrom = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionDetails28, SecuritiesBalanceType3Choice> mmBalanceFrom = new MMMessageAssociationEnd<IntraPositionDetails28, SecuritiesBalanceType3Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionDetails28.mmObject();
@@ -212,9 +223,19 @@ public class IntraPositionDetails28 {
 			isComposite = true;
 			type_lazy = () -> SecuritiesBalanceType3Choice.mmObject();
 		}
+
+		@Override
+		public SecuritiesBalanceType3Choice getValue(IntraPositionDetails28 obj) {
+			return obj.getBalanceFrom();
+		}
+
+		@Override
+		public void setValue(IntraPositionDetails28 obj, SecuritiesBalanceType3Choice value) {
+			obj.setBalanceFrom(value);
+		}
 	};
 	@XmlElement(name = "IntraPosMvmnt", required = true)
-	protected List<com.tools20022.repository.msg.IntraPositionMovementDetails9> intraPositionMovement;
+	protected List<IntraPositionMovementDetails9> intraPositionMovement;
 	/**
 	 * 
 	 <p>
@@ -255,7 +276,7 @@ public class IntraPositionDetails28 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIntraPositionMovement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionDetails28, List<IntraPositionMovementDetails9>> mmIntraPositionMovement = new MMMessageAssociationEnd<IntraPositionDetails28, List<IntraPositionMovementDetails9>>() {
 		{
 			businessComponentTrace_lazy = () -> IntraPositionTransfer.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionDetails28.mmObject();
@@ -267,7 +288,17 @@ public class IntraPositionDetails28 {
 			nextVersions_lazy = () -> Arrays.asList(IntraPositionDetails32.mmIntraPositionMovement);
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IntraPositionMovementDetails9.mmObject();
+			type_lazy = () -> IntraPositionMovementDetails9.mmObject();
+		}
+
+		@Override
+		public List<IntraPositionMovementDetails9> getValue(IntraPositionDetails28 obj) {
+			return obj.getIntraPositionMovement();
+		}
+
+		@Override
+		public void setValue(IntraPositionDetails28 obj, List<IntraPositionMovementDetails9> value) {
+			obj.setIntraPositionMovement(value);
 		}
 	};
 
@@ -311,7 +342,7 @@ public class IntraPositionDetails28 {
 		return intraPositionMovement == null ? intraPositionMovement = new ArrayList<>() : intraPositionMovement;
 	}
 
-	public IntraPositionDetails28 setIntraPositionMovement(List<com.tools20022.repository.msg.IntraPositionMovementDetails9> intraPositionMovement) {
+	public IntraPositionDetails28 setIntraPositionMovement(List<IntraPositionMovementDetails9> intraPositionMovement) {
 		this.intraPositionMovement = Objects.requireNonNull(intraPositionMovement);
 		return this;
 	}

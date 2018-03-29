@@ -467,6 +467,9 @@ public class GeneratedRepository extends ReflectionBasedRepository {
 	 * {@linkplain com.tools20022.repository.area.ForeignExchangeTradeLatestVersion
 	 * ForeignExchangeTradeLatestVersion}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.area.SecuritiesEventsArchivesubsetvariant
+	 * SecuritiesEventsArchivesubsetvariant}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchivesubsetsvariants
 	 * SecuritiesSettlementArchivesubsetsvariants}</li>
 	 * <li>{@linkplain com.tools20022.repository.area.SecuritiesTradeArchive
@@ -570,11 +573,11 @@ public class GeneratedRepository extends ReflectionBasedRepository {
 					PaymentsClearingandSettlementPreviousVersion.mmObject(), TradeServicesManagementPreviousVersion.mmObject(), TradeServicesLatestVersion.mmObject(), SupplementaryDataLatestVersion.mmObject(),
 					AcceptortoAcquirerCardTransactionPreviousVersion.mmObject(), TerminalManagementLatestVersion.mmObject(), OtherMessages.mmObject(), CashManagementArchive.mmObject(), ReferenceDataArchive.mmObject(),
 					PaymentsInitiationArchive.mmObject(), SecuritiesManagementArchive.mmObject(), SecuritiesSettlementArchive.mmObject(), PaymentsClearingandSettlementArchive.mmObject(), SecuritiesEventsArchive.mmObject(),
-					ForeignExchangeTradeLatestVersion.mmObject(), SecuritiesSettlementArchivesubsetsvariants.mmObject(), SecuritiesTradeArchive.mmObject(), TradeServicesManagementArchive.mmObject(), AccountManagementArchive.mmObject(),
-					PaymentsRemittanceAdviceLatestVersion.mmObject(), ForeignExchangeTradePreviousVersion.mmObject(), ATMManagementLatestVersion.mmObject(), ATMCardTransactionLatestVersion.mmObject(),
-					CollateralManagementPreviousVersion.mmObject(), TerminalManagementArchive.mmObject(), AcceptortoAcquirerCardTransactionArchive.mmObject(), AcquirertoIssuerCardTransactionLatestVersion.mmObject(),
-					PaymentsRemittanceAdvicePreviousVersion.mmObject(), CollateralManagementArchive.mmObject(), PaymentsRemittanceAdviceArchive.mmObject(), ATMCardTransactionPreviousVersion.mmObject(),
-					ATMManagementPreviousVersion.mmObject(), ATMManagementArchive.mmObject(), AuthoritiesPreviousVersion.mmObject(), BUSINESSPROCESS_FOR_ROLES.mmObject());
+					ForeignExchangeTradeLatestVersion.mmObject(), SecuritiesEventsArchivesubsetvariant.mmObject(), SecuritiesSettlementArchivesubsetsvariants.mmObject(), SecuritiesTradeArchive.mmObject(),
+					TradeServicesManagementArchive.mmObject(), AccountManagementArchive.mmObject(), PaymentsRemittanceAdviceLatestVersion.mmObject(), ForeignExchangeTradePreviousVersion.mmObject(), ATMManagementLatestVersion.mmObject(),
+					ATMCardTransactionLatestVersion.mmObject(), CollateralManagementPreviousVersion.mmObject(), TerminalManagementArchive.mmObject(), AcceptortoAcquirerCardTransactionArchive.mmObject(),
+					AcquirertoIssuerCardTransactionLatestVersion.mmObject(), PaymentsRemittanceAdvicePreviousVersion.mmObject(), CollateralManagementArchive.mmObject(), PaymentsRemittanceAdviceArchive.mmObject(),
+					ATMCardTransactionPreviousVersion.mmObject(), ATMManagementPreviousVersion.mmObject(), ATMManagementArchive.mmObject(), AuthoritiesPreviousVersion.mmObject(), BUSINESSPROCESS_FOR_ROLES.mmObject());
 			repository_lazy = () -> GeneratedRepository.mmObject();
 		}
 	};

@@ -107,7 +107,7 @@ public class References62Choice {
 	 * References61Choice.mmRelatedReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPreviousReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<References62Choice, List<AdditionalReference8>> mmPreviousReference = new MMMessageAssociationEnd<References62Choice, List<AdditionalReference8>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.References62Choice.mmObject();
 			isDerived = false;
@@ -120,6 +120,16 @@ public class References62Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AdditionalReference8.mmObject();
+		}
+
+		@Override
+		public List<AdditionalReference8> getValue(References62Choice obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(References62Choice obj, List<AdditionalReference8> value) {
+			obj.setPreviousReference(value);
 		}
 	};
 	@XmlElement(name = "OthrRef", required = true)
@@ -157,7 +167,7 @@ public class References62Choice {
 	 * References61Choice.mmOtherReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<References62Choice, List<AdditionalReference8>> mmOtherReference = new MMMessageAssociationEnd<References62Choice, List<AdditionalReference8>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.References62Choice.mmObject();
 			isDerived = false;
@@ -170,6 +180,16 @@ public class References62Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AdditionalReference8.mmObject();
+		}
+
+		@Override
+		public List<AdditionalReference8> getValue(References62Choice obj) {
+			return obj.getOtherReference();
+		}
+
+		@Override
+		public void setValue(References62Choice obj, List<AdditionalReference8> value) {
+			obj.setOtherReference(value);
 		}
 	};
 

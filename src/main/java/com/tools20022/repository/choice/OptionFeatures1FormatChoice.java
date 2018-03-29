@@ -107,7 +107,7 @@ public class OptionFeatures1FormatChoice {
 	 * definition} = "Standard code to specify the feature of an option."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionFeatures1FormatChoice, OptionFeatures1Code> mmCode = new MMMessageAttribute<OptionFeatures1FormatChoice, OptionFeatures1Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionFeatures;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OptionFeatures1FormatChoice.mmObject();
@@ -119,6 +119,16 @@ public class OptionFeatures1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OptionFeatures1Code.mmObject();
+		}
+
+		@Override
+		public OptionFeatures1Code getValue(OptionFeatures1FormatChoice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(OptionFeatures1FormatChoice obj, OptionFeatures1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -156,7 +166,7 @@ public class OptionFeatures1FormatChoice {
 	 * definition} = "Proprietary code to express the feature of an option."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionFeatures1FormatChoice, GenericIdentification13> mmProprietary = new MMMessageAttribute<OptionFeatures1FormatChoice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionFeatures;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OptionFeatures1FormatChoice.mmObject();
@@ -168,6 +178,16 @@ public class OptionFeatures1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(OptionFeatures1FormatChoice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(OptionFeatures1FormatChoice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

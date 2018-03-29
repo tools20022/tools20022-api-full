@@ -26,6 +26,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.entity.TaxRecord;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TaxAmount2;
+import com.tools20022.repository.msg.TaxPeriod2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -128,7 +130,7 @@ public class TaxRecord2 {
 	 * TaxRecord1.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxRecord2, Optional<Max35Text>> mmType = new MMMessageAttribute<TaxRecord2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> TaxRecord.mmTaxRecordType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxRecord2.mmObject();
@@ -141,6 +143,16 @@ public class TaxRecord2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TaxRecord2 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(TaxRecord2 obj, Optional<Max35Text> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ctgy")
@@ -182,7 +194,7 @@ public class TaxRecord2 {
 	 * TaxRecord1.mmCategory}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCategory = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxRecord2, Optional<Max35Text>> mmCategory = new MMMessageAttribute<TaxRecord2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> TaxRecord.mmCategory;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxRecord2.mmObject();
@@ -195,6 +207,16 @@ public class TaxRecord2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TaxRecord2 obj) {
+			return obj.getCategory();
+		}
+
+		@Override
+		public void setValue(TaxRecord2 obj, Optional<Max35Text> value) {
+			obj.setCategory(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtgyDtls")
@@ -230,7 +252,7 @@ public class TaxRecord2 {
 	 * TaxRecord1.mmCategoryDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCategoryDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxRecord2, Optional<Max35Text>> mmCategoryDetails = new MMMessageAttribute<TaxRecord2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxRecord2.mmObject();
 			isDerived = false;
@@ -242,6 +264,16 @@ public class TaxRecord2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TaxRecord2 obj) {
+			return obj.getCategoryDetails();
+		}
+
+		@Override
+		public void setValue(TaxRecord2 obj, Optional<Max35Text> value) {
+			obj.setCategoryDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DbtrSts")
@@ -284,7 +316,7 @@ public class TaxRecord2 {
 	 * TaxRecord1.mmDebtorStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDebtorStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxRecord2, Optional<Max35Text>> mmDebtorStatus = new MMMessageAttribute<TaxRecord2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> TaxRecord.mmStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxRecord2.mmObject();
@@ -297,6 +329,16 @@ public class TaxRecord2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TaxRecord2 obj) {
+			return obj.getDebtorStatus();
+		}
+
+		@Override
+		public void setValue(TaxRecord2 obj, Optional<Max35Text> value) {
+			obj.setDebtorStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CertId")
@@ -339,7 +381,7 @@ public class TaxRecord2 {
 	 * TaxRecord1.mmCertificateIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCertificateIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxRecord2, Optional<Max35Text>> mmCertificateIdentification = new MMMessageAttribute<TaxRecord2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmCertificateIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxRecord2.mmObject();
@@ -352,6 +394,16 @@ public class TaxRecord2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TaxRecord2 obj) {
+			return obj.getCertificateIdentification();
+		}
+
+		@Override
+		public void setValue(TaxRecord2 obj, Optional<Max35Text> value) {
+			obj.setCertificateIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FrmsCd")
@@ -394,7 +446,7 @@ public class TaxRecord2 {
 	 * TaxRecord1.mmFormsCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFormsCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxRecord2, Optional<Max35Text>> mmFormsCode = new MMMessageAttribute<TaxRecord2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> TaxRecord.mmFormsCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxRecord2.mmObject();
@@ -407,6 +459,16 @@ public class TaxRecord2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TaxRecord2 obj) {
+			return obj.getFormsCode();
+		}
+
+		@Override
+		public void setValue(TaxRecord2 obj, Optional<Max35Text> value) {
+			obj.setFormsCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Prd")
@@ -447,7 +509,7 @@ public class TaxRecord2 {
 	 * TaxRecord1.mmPeriod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TaxRecord2, Optional<TaxPeriod2>> mmPeriod = new MMMessageAssociationEnd<TaxRecord2, Optional<TaxPeriod2>>() {
 		{
 			businessElementTrace_lazy = () -> TaxRecord.mmPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxRecord2.mmObject();
@@ -460,7 +522,17 @@ public class TaxRecord2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TaxPeriod2.mmObject();
+			type_lazy = () -> TaxPeriod2.mmObject();
+		}
+
+		@Override
+		public Optional<TaxPeriod2> getValue(TaxRecord2 obj) {
+			return obj.getPeriod();
+		}
+
+		@Override
+		public void setValue(TaxRecord2 obj, Optional<TaxPeriod2> value) {
+			obj.setPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxAmt")
@@ -501,7 +573,7 @@ public class TaxRecord2 {
 	 * TaxRecord1.mmTaxAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTaxAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TaxRecord2, Optional<TaxAmount2>> mmTaxAmount = new MMMessageAssociationEnd<TaxRecord2, Optional<TaxAmount2>>() {
 		{
 			businessElementTrace_lazy = () -> TaxRecord.mmTax;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxRecord2.mmObject();
@@ -514,7 +586,17 @@ public class TaxRecord2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TaxAmount2.mmObject();
+			type_lazy = () -> TaxAmount2.mmObject();
+		}
+
+		@Override
+		public Optional<TaxAmount2> getValue(TaxRecord2 obj) {
+			return obj.getTaxAmount();
+		}
+
+		@Override
+		public void setValue(TaxRecord2 obj, Optional<TaxAmount2> value) {
+			obj.setTaxAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -550,7 +632,7 @@ public class TaxRecord2 {
 	 * TaxRecord1.mmAdditionalInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxRecord2, Optional<Max140Text>> mmAdditionalInformation = new MMMessageAttribute<TaxRecord2, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxRecord2.mmObject();
 			isDerived = false;
@@ -562,6 +644,16 @@ public class TaxRecord2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(TaxRecord2 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(TaxRecord2 obj, Optional<Max140Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 
@@ -640,7 +732,7 @@ public class TaxRecord2 {
 		return period == null ? Optional.empty() : Optional.of(period);
 	}
 
-	public TaxRecord2 setPeriod(com.tools20022.repository.msg.TaxPeriod2 period) {
+	public TaxRecord2 setPeriod(TaxPeriod2 period) {
 		this.period = period;
 		return this;
 	}
@@ -649,7 +741,7 @@ public class TaxRecord2 {
 		return taxAmount == null ? Optional.empty() : Optional.of(taxAmount);
 	}
 
-	public TaxRecord2 setTaxAmount(com.tools20022.repository.msg.TaxAmount2 taxAmount) {
+	public TaxRecord2 setTaxAmount(TaxAmount2 taxAmount) {
 		this.taxAmount = taxAmount;
 		return this;
 	}

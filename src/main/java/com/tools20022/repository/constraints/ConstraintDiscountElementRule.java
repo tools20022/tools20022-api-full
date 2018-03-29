@@ -62,13 +62,17 @@ public class ConstraintDiscountElementRule {
 	 */
 	public static final MMConstraint<ChargeOrCommissionDiscount1> forChargeOrCommissionDiscount1 = new MMConstraint<ChargeOrCommissionDiscount1>() {
 		{
-			validator = ConstraintDiscountElementRule::checkChargeOrCommissionDiscount1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiscountElementRule";
 			definition = "Amount Or Rate Or Basis must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDiscountElementRule.forChargeOrCommissionDiscount2);
 			owner_lazy = () -> ChargeOrCommissionDiscount1.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Amount</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Rate</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Basis</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(ChargeOrCommissionDiscount1 obj) throws Exception {
+			checkChargeOrCommissionDiscount1(obj);
 		}
 	};
 	/**
@@ -101,13 +105,17 @@ public class ConstraintDiscountElementRule {
 	 */
 	public static final MMConstraint<ChargeOrCommissionDiscount2> forChargeOrCommissionDiscount2 = new MMConstraint<ChargeOrCommissionDiscount2>() {
 		{
-			validator = ConstraintDiscountElementRule::checkChargeOrCommissionDiscount2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiscountElementRule";
 			definition = "Amount Or Rate Or Basis must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDiscountElementRule.forChargeOrCommissionDiscount1;
 			owner_lazy = () -> ChargeOrCommissionDiscount2.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Amount</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Rate</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Basis</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(ChargeOrCommissionDiscount2 obj) throws Exception {
+			checkChargeOrCommissionDiscount2(obj);
 		}
 	};
 

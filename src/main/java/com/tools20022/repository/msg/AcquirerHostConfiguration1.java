@@ -117,7 +117,7 @@ public class AcquirerHostConfiguration1 {
 	 * definition} = "Identification of a host."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHostIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcquirerHostConfiguration1, Max35Text> mmHostIdentification = new MMMessageAttribute<AcquirerHostConfiguration1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> System.mmSystemIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerHostConfiguration1.mmObject();
@@ -129,6 +129,16 @@ public class AcquirerHostConfiguration1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AcquirerHostConfiguration1 obj) {
+			return obj.getHostIdentification();
+		}
+
+		@Override
+		public void setValue(AcquirerHostConfiguration1 obj, Max35Text value) {
+			obj.setHostIdentification(value);
 		}
 	};
 	@XmlElement(name = "MsgToSnd", required = true)
@@ -161,7 +171,7 @@ public class AcquirerHostConfiguration1 {
 	 * definition} = "Types of message to sent to this host."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageToSend = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcquirerHostConfiguration1, List<MessageFunction3Code>> mmMessageToSend = new MMMessageAttribute<AcquirerHostConfiguration1, List<MessageFunction3Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerHostConfiguration1.mmObject();
 			isDerived = false;
@@ -171,6 +181,16 @@ public class AcquirerHostConfiguration1 {
 			definition = "Types of message to sent to this host.";
 			minOccurs = 1;
 			simpleType_lazy = () -> MessageFunction3Code.mmObject();
+		}
+
+		@Override
+		public List<MessageFunction3Code> getValue(AcquirerHostConfiguration1 obj) {
+			return obj.getMessageToSend();
+		}
+
+		@Override
+		public void setValue(AcquirerHostConfiguration1 obj, List<MessageFunction3Code> value) {
+			obj.setMessageToSend(value);
 		}
 	};
 

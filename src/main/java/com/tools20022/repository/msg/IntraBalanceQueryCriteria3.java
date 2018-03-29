@@ -30,6 +30,7 @@ import com.tools20022.repository.entity.BookEntry;
 import com.tools20022.repository.entity.CashEntry;
 import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SystemPartyIdentification5;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -135,7 +136,7 @@ public class IntraBalanceQueryCriteria3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmModificationRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalanceQueryCriteria3, List<Max35Text>> mmModificationRequestIdentification = new MMMessageAttribute<IntraBalanceQueryCriteria3, List<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceQueryCriteria3.mmObject();
 			isDerived = false;
@@ -147,6 +148,16 @@ public class IntraBalanceQueryCriteria3 {
 			nextVersions_lazy = () -> Arrays.asList(IntraBalanceQueryCriteria6.mmModificationRequestIdentification);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(IntraBalanceQueryCriteria3 obj) {
+			return obj.getModificationRequestIdentification();
+		}
+
+		@Override
+		public void setValue(IntraBalanceQueryCriteria3 obj, List<Max35Text> value) {
+			obj.setModificationRequestIdentification(value);
 		}
 	};
 	@XmlElement(name = "PrcgSts")
@@ -187,7 +198,7 @@ public class IntraBalanceQueryCriteria3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessingStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalanceQueryCriteria3, List<ModificationProcessingStatus1Choice>> mmProcessingStatus = new MMMessageAttribute<IntraBalanceQueryCriteria3, List<ModificationProcessingStatus1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceQueryCriteria3.mmObject();
 			isDerived = false;
@@ -198,6 +209,16 @@ public class IntraBalanceQueryCriteria3 {
 			nextVersions_lazy = () -> Arrays.asList(IntraBalanceQueryCriteria6.mmProcessingStatus);
 			minOccurs = 0;
 			complexType_lazy = () -> ModificationProcessingStatus1Choice.mmObject();
+		}
+
+		@Override
+		public List<ModificationProcessingStatus1Choice> getValue(IntraBalanceQueryCriteria3 obj) {
+			return obj.getProcessingStatus();
+		}
+
+		@Override
+		public void setValue(IntraBalanceQueryCriteria3 obj, List<ModificationProcessingStatus1Choice> value) {
+			obj.setProcessingStatus(value);
 		}
 	};
 	@XmlElement(name = "CshAcct")
@@ -243,7 +264,7 @@ public class IntraBalanceQueryCriteria3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalanceQueryCriteria3, List<AccountIdentificationSearchCriteria2Choice>> mmCashAccount = new MMMessageAttribute<IntraBalanceQueryCriteria3, List<AccountIdentificationSearchCriteria2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceQueryCriteria3.mmObject();
@@ -256,9 +277,19 @@ public class IntraBalanceQueryCriteria3 {
 			minOccurs = 0;
 			complexType_lazy = () -> AccountIdentificationSearchCriteria2Choice.mmObject();
 		}
+
+		@Override
+		public List<AccountIdentificationSearchCriteria2Choice> getValue(IntraBalanceQueryCriteria3 obj) {
+			return obj.getCashAccount();
+		}
+
+		@Override
+		public void setValue(IntraBalanceQueryCriteria3 obj, List<AccountIdentificationSearchCriteria2Choice> value) {
+			obj.setCashAccount(value);
+		}
 	};
 	@XmlElement(name = "CshAcctOwnr")
-	protected List<com.tools20022.repository.msg.SystemPartyIdentification5> cashAccountOwner;
+	protected List<SystemPartyIdentification5> cashAccountOwner;
 	/**
 	 * 
 	 <p>
@@ -299,7 +330,7 @@ public class IntraBalanceQueryCriteria3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalanceQueryCriteria3, List<SystemPartyIdentification5>> mmCashAccountOwner = new MMMessageAssociationEnd<IntraBalanceQueryCriteria3, List<SystemPartyIdentification5>>() {
 		{
 			businessElementTrace_lazy = () -> System.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceQueryCriteria3.mmObject();
@@ -311,11 +342,21 @@ public class IntraBalanceQueryCriteria3 {
 			nextVersions_lazy = () -> Arrays.asList(IntraBalanceQueryCriteria6.mmCashAccountOwner);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification5.mmObject();
+			type_lazy = () -> SystemPartyIdentification5.mmObject();
+		}
+
+		@Override
+		public List<SystemPartyIdentification5> getValue(IntraBalanceQueryCriteria3 obj) {
+			return obj.getCashAccountOwner();
+		}
+
+		@Override
+		public void setValue(IntraBalanceQueryCriteria3 obj, List<SystemPartyIdentification5> value) {
+			obj.setCashAccountOwner(value);
 		}
 	};
 	@XmlElement(name = "MsgOrgtr")
-	protected List<com.tools20022.repository.msg.SystemPartyIdentification5> messageOriginator;
+	protected List<SystemPartyIdentification5> messageOriginator;
 	/**
 	 * 
 	 <p>
@@ -352,7 +393,7 @@ public class IntraBalanceQueryCriteria3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMessageOriginator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalanceQueryCriteria3, List<SystemPartyIdentification5>> mmMessageOriginator = new MMMessageAssociationEnd<IntraBalanceQueryCriteria3, List<SystemPartyIdentification5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceQueryCriteria3.mmObject();
 			isDerived = false;
@@ -363,7 +404,17 @@ public class IntraBalanceQueryCriteria3 {
 			nextVersions_lazy = () -> Arrays.asList(IntraBalanceQueryCriteria6.mmMessageOriginator);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification5.mmObject();
+			type_lazy = () -> SystemPartyIdentification5.mmObject();
+		}
+
+		@Override
+		public List<SystemPartyIdentification5> getValue(IntraBalanceQueryCriteria3 obj) {
+			return obj.getMessageOriginator();
+		}
+
+		@Override
+		public void setValue(IntraBalanceQueryCriteria3 obj, List<SystemPartyIdentification5> value) {
+			obj.setMessageOriginator(value);
 		}
 	};
 	@XmlElement(name = "CreDtTm")
@@ -408,7 +459,7 @@ public class IntraBalanceQueryCriteria3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalanceQueryCriteria3, Optional<DateAndDateTimeSearch2Choice>> mmCreationDateTime = new MMMessageAttribute<IntraBalanceQueryCriteria3, Optional<DateAndDateTimeSearch2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceQueryCriteria3.mmObject();
 			isDerived = false;
@@ -421,6 +472,16 @@ public class IntraBalanceQueryCriteria3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeSearch2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeSearch2Choice> getValue(IntraBalanceQueryCriteria3 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(IntraBalanceQueryCriteria3 obj, Optional<DateAndDateTimeSearch2Choice> value) {
+			obj.setCreationDateTime(value.orElse(null));
 		}
 	};
 
@@ -472,7 +533,7 @@ public class IntraBalanceQueryCriteria3 {
 		return cashAccountOwner == null ? cashAccountOwner = new ArrayList<>() : cashAccountOwner;
 	}
 
-	public IntraBalanceQueryCriteria3 setCashAccountOwner(List<com.tools20022.repository.msg.SystemPartyIdentification5> cashAccountOwner) {
+	public IntraBalanceQueryCriteria3 setCashAccountOwner(List<SystemPartyIdentification5> cashAccountOwner) {
 		this.cashAccountOwner = Objects.requireNonNull(cashAccountOwner);
 		return this;
 	}
@@ -481,7 +542,7 @@ public class IntraBalanceQueryCriteria3 {
 		return messageOriginator == null ? messageOriginator = new ArrayList<>() : messageOriginator;
 	}
 
-	public IntraBalanceQueryCriteria3 setMessageOriginator(List<com.tools20022.repository.msg.SystemPartyIdentification5> messageOriginator) {
+	public IntraBalanceQueryCriteria3 setMessageOriginator(List<SystemPartyIdentification5> messageOriginator) {
 		this.messageOriginator = Objects.requireNonNull(messageOriginator);
 		return this;
 	}

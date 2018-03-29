@@ -48,11 +48,15 @@ public class ConstraintBirthDateGuideline {
 	 */
 	public static final MMConstraint<IndividualPerson3> forIndividualPerson3 = new MMConstraint<IndividualPerson3>() {
 		{
-			validator = ConstraintBirthDateGuideline::checkIndividualPerson3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BirthDateGuideline";
 			definition = "When available, date of birth must be indicated.";
 			owner_lazy = () -> IndividualPerson3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IndividualPerson3 obj) throws Exception {
+			checkIndividualPerson3(obj);
 		}
 	};
 

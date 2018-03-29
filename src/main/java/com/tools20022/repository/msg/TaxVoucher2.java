@@ -127,7 +127,7 @@ public class TaxVoucher2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxVoucher2, Max35Text> mmIdentification = new MMMessageAttribute<TaxVoucher2, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> TaxVoucher.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxVoucher2.mmObject();
@@ -141,6 +141,16 @@ public class TaxVoucher2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(TaxVoucher2 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(TaxVoucher2 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "BrgnDt")
@@ -189,7 +199,7 @@ public class TaxVoucher2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBargainDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxVoucher2, Optional<DateAndDateTimeChoice>> mmBargainDate = new MMMessageAttribute<TaxVoucher2, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> TaxVoucher.mmBargainDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxVoucher2.mmObject();
@@ -203,6 +213,16 @@ public class TaxVoucher2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(TaxVoucher2 obj) {
+			return obj.getBargainDate();
+		}
+
+		@Override
+		public void setValue(TaxVoucher2 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setBargainDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BrgnSttlmDt")
@@ -251,7 +271,7 @@ public class TaxVoucher2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBargainSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxVoucher2, Optional<DateAndDateTimeChoice>> mmBargainSettlementDate = new MMMessageAttribute<TaxVoucher2, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> TaxVoucher.mmBargainSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxVoucher2.mmObject();
@@ -265,6 +285,16 @@ public class TaxVoucher2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(TaxVoucher2 obj) {
+			return obj.getBargainSettlementDate();
+		}
+
+		@Override
+		public void setValue(TaxVoucher2 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setBargainSettlementDate(value.orElse(null));
 		}
 	};
 

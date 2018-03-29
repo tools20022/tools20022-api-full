@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.pain.MandateCancellationRequestV02;
 import com.tools20022.repository.choice.OriginalMandate2Choice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.OriginalMessageInformation1;
+import com.tools20022.repository.msg.PaymentCancellationReason1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -117,7 +119,7 @@ public class MandateCancellation2 {
 	 * definition} = "Provides information on the original message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalMessageInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateCancellation2, Optional<OriginalMessageInformation1>> mmOriginalMessageInformation = new MMMessageAssociationEnd<MandateCancellation2, Optional<OriginalMessageInformation1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateCancellation2.mmObject();
 			isDerived = false;
@@ -128,7 +130,17 @@ public class MandateCancellation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OriginalMessageInformation1.mmObject();
+			type_lazy = () -> OriginalMessageInformation1.mmObject();
+		}
+
+		@Override
+		public Optional<OriginalMessageInformation1> getValue(MandateCancellation2 obj) {
+			return obj.getOriginalMessageInformation();
+		}
+
+		@Override
+		public void setValue(MandateCancellation2 obj, Optional<OriginalMessageInformation1> value) {
+			obj.setOriginalMessageInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CxlRsn", required = true)
@@ -161,7 +173,7 @@ public class MandateCancellation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCancellationReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateCancellation2, PaymentCancellationReason1> mmCancellationReason = new MMMessageAssociationEnd<MandateCancellation2, PaymentCancellationReason1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateCancellation2.mmObject();
 			isDerived = false;
@@ -172,7 +184,17 @@ public class MandateCancellation2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentCancellationReason1.mmObject();
+			type_lazy = () -> PaymentCancellationReason1.mmObject();
+		}
+
+		@Override
+		public PaymentCancellationReason1 getValue(MandateCancellation2 obj) {
+			return obj.getCancellationReason();
+		}
+
+		@Override
+		public void setValue(MandateCancellation2 obj, PaymentCancellationReason1 value) {
+			obj.setCancellationReason(value);
 		}
 	};
 	@XmlElement(name = "OrgnlMndt", required = true)
@@ -204,7 +226,7 @@ public class MandateCancellation2 {
 	 * definition} = "Provides the original mandate data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalMandate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateCancellation2, OriginalMandate2Choice> mmOriginalMandate = new MMMessageAssociationEnd<MandateCancellation2, OriginalMandate2Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateCancellation2.mmObject();
 			isDerived = false;
@@ -216,6 +238,16 @@ public class MandateCancellation2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OriginalMandate2Choice.mmObject();
+		}
+
+		@Override
+		public OriginalMandate2Choice getValue(MandateCancellation2 obj) {
+			return obj.getOriginalMandate();
+		}
+
+		@Override
+		public void setValue(MandateCancellation2 obj, OriginalMandate2Choice value) {
+			obj.setOriginalMandate(value);
 		}
 	};
 
@@ -239,7 +271,7 @@ public class MandateCancellation2 {
 		return originalMessageInformation == null ? Optional.empty() : Optional.of(originalMessageInformation);
 	}
 
-	public MandateCancellation2 setOriginalMessageInformation(com.tools20022.repository.msg.OriginalMessageInformation1 originalMessageInformation) {
+	public MandateCancellation2 setOriginalMessageInformation(OriginalMessageInformation1 originalMessageInformation) {
 		this.originalMessageInformation = originalMessageInformation;
 		return this;
 	}
@@ -248,7 +280,7 @@ public class MandateCancellation2 {
 		return cancellationReason;
 	}
 
-	public MandateCancellation2 setCancellationReason(com.tools20022.repository.msg.PaymentCancellationReason1 cancellationReason) {
+	public MandateCancellation2 setCancellationReason(PaymentCancellationReason1 cancellationReason) {
 		this.cancellationReason = Objects.requireNonNull(cancellationReason);
 		return this;
 	}

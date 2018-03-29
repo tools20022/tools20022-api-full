@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.YieldCalculation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Price1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -134,7 +135,7 @@ public class YieldCalculation5 {
 	 * YieldCalculation3.mmValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<YieldCalculation5, PercentageRate> mmValue = new MMMessageAttribute<YieldCalculation5, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> YieldCalculation.mmValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.YieldCalculation5.mmObject();
@@ -148,6 +149,16 @@ public class YieldCalculation5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(YieldCalculation5 obj) {
+			return obj.getValue();
+		}
+
+		@Override
+		public void setValue(YieldCalculation5 obj, PercentageRate value) {
+			obj.setValue(value);
 		}
 	};
 	@XmlElement(name = "ClctnTp")
@@ -193,7 +204,7 @@ public class YieldCalculation5 {
 	 * YieldCalculation3.mmCalculationType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCalculationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<YieldCalculation5, Optional<CalculationType3Choice>> mmCalculationType = new MMMessageAttribute<YieldCalculation5, Optional<CalculationType3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> YieldCalculation.mmCalculationType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.YieldCalculation5.mmObject();
@@ -207,6 +218,16 @@ public class YieldCalculation5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CalculationType3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CalculationType3Choice> getValue(YieldCalculation5 obj) {
+			return obj.getCalculationType();
+		}
+
+		@Override
+		public void setValue(YieldCalculation5 obj, Optional<CalculationType3Choice> value) {
+			obj.setCalculationType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RedPric")
@@ -250,7 +271,7 @@ public class YieldCalculation5 {
 	 * YieldCalculation3.mmRedemptionPrice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRedemptionPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<YieldCalculation5, Optional<Price1>> mmRedemptionPrice = new MMMessageAttribute<YieldCalculation5, Optional<Price1>>() {
 		{
 			businessElementTrace_lazy = () -> YieldCalculation.mmRedemptionPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.YieldCalculation5.mmObject();
@@ -263,7 +284,17 @@ public class YieldCalculation5 {
 			previousVersion_lazy = () -> YieldCalculation3.mmRedemptionPrice;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
+			complexType_lazy = () -> Price1.mmObject();
+		}
+
+		@Override
+		public Optional<Price1> getValue(YieldCalculation5 obj) {
+			return obj.getRedemptionPrice();
+		}
+
+		@Override
+		public void setValue(YieldCalculation5 obj, Optional<Price1> value) {
+			obj.setRedemptionPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ValDt", required = true)
@@ -310,7 +341,7 @@ public class YieldCalculation5 {
 	 * YieldCalculation3.mmValueDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<YieldCalculation5, ISODate> mmValueDate = new MMMessageAttribute<YieldCalculation5, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> YieldCalculation.mmValueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.YieldCalculation5.mmObject();
@@ -324,6 +355,16 @@ public class YieldCalculation5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(YieldCalculation5 obj) {
+			return obj.getValueDate();
+		}
+
+		@Override
+		public void setValue(YieldCalculation5 obj, ISODate value) {
+			obj.setValueDate(value);
 		}
 	};
 	@XmlElement(name = "ValPrd", required = true)
@@ -369,7 +410,7 @@ public class YieldCalculation5 {
 	 * YieldCalculation3.mmValuePeriod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValuePeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<YieldCalculation5, DateTimePeriodChoice> mmValuePeriod = new MMMessageAttribute<YieldCalculation5, DateTimePeriodChoice>() {
 		{
 			businessElementTrace_lazy = () -> YieldCalculation.mmValuePeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.YieldCalculation5.mmObject();
@@ -383,6 +424,16 @@ public class YieldCalculation5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
+		}
+
+		@Override
+		public DateTimePeriodChoice getValue(YieldCalculation5 obj) {
+			return obj.getValuePeriod();
+		}
+
+		@Override
+		public void setValue(YieldCalculation5 obj, DateTimePeriodChoice value) {
+			obj.setValuePeriod(value);
 		}
 	};
 	@XmlElement(name = "ClctnDt", required = true)
@@ -429,7 +480,7 @@ public class YieldCalculation5 {
 	 * YieldCalculation3.mmCalculationDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCalculationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<YieldCalculation5, ISODateTime> mmCalculationDate = new MMMessageAttribute<YieldCalculation5, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> YieldCalculation.mmYieldCalculationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.YieldCalculation5.mmObject();
@@ -443,6 +494,16 @@ public class YieldCalculation5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(YieldCalculation5 obj) {
+			return obj.getCalculationDate();
+		}
+
+		@Override
+		public void setValue(YieldCalculation5 obj, ISODateTime value) {
+			obj.setCalculationDate(value);
 		}
 	};
 
@@ -485,7 +546,7 @@ public class YieldCalculation5 {
 		return redemptionPrice == null ? Optional.empty() : Optional.of(redemptionPrice);
 	}
 
-	public YieldCalculation5 setRedemptionPrice(com.tools20022.repository.msg.Price1 redemptionPrice) {
+	public YieldCalculation5 setRedemptionPrice(Price1 redemptionPrice) {
 		this.redemptionPrice = redemptionPrice;
 		return this;
 	}

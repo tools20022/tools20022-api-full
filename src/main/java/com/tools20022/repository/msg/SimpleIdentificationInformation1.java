@@ -108,7 +108,7 @@ public class SimpleIdentificationInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SimpleIdentificationInformation1, RestrictedFINXMax35Text> mmIdentification = new MMMessageAttribute<SimpleIdentificationInformation1, RestrictedFINXMax35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SimpleIdentificationInformation1.mmObject();
@@ -120,6 +120,16 @@ public class SimpleIdentificationInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax35Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax35Text getValue(SimpleIdentificationInformation1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SimpleIdentificationInformation1 obj, RestrictedFINXMax35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 

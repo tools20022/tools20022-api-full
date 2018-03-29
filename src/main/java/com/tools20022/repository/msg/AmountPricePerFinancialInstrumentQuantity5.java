@@ -153,7 +153,7 @@ public class AmountPricePerFinancialInstrumentQuantity5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmountPriceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountPricePerFinancialInstrumentQuantity5, YieldedOrValueType1Choice> mmAmountPriceType = new MMMessageAttribute<AmountPricePerFinancialInstrumentQuantity5, YieldedOrValueType1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmTypeOfAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity5.mmObject();
@@ -167,6 +167,16 @@ public class AmountPricePerFinancialInstrumentQuantity5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> YieldedOrValueType1Choice.mmObject();
+		}
+
+		@Override
+		public YieldedOrValueType1Choice getValue(AmountPricePerFinancialInstrumentQuantity5 obj) {
+			return obj.getAmountPriceType();
+		}
+
+		@Override
+		public void setValue(AmountPricePerFinancialInstrumentQuantity5 obj, YieldedOrValueType1Choice value) {
+			obj.setAmountPriceType(value);
 		}
 	};
 	@XmlElement(name = "PricVal", required = true)
@@ -215,7 +225,7 @@ public class AmountPricePerFinancialInstrumentQuantity5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriceValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountPricePerFinancialInstrumentQuantity5, PriceRateOrAmountChoice> mmPriceValue = new MMMessageAttribute<AmountPricePerFinancialInstrumentQuantity5, PriceRateOrAmountChoice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity5.mmObject();
@@ -229,6 +239,16 @@ public class AmountPricePerFinancialInstrumentQuantity5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PriceRateOrAmountChoice.mmObject();
+		}
+
+		@Override
+		public PriceRateOrAmountChoice getValue(AmountPricePerFinancialInstrumentQuantity5 obj) {
+			return obj.getPriceValue();
+		}
+
+		@Override
+		public void setValue(AmountPricePerFinancialInstrumentQuantity5 obj, PriceRateOrAmountChoice value) {
+			obj.setPriceValue(value);
 		}
 	};
 	@XmlElement(name = "FinInstrmQty", required = true)
@@ -277,7 +297,7 @@ public class AmountPricePerFinancialInstrumentQuantity5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AmountPricePerFinancialInstrumentQuantity5, FinancialInstrumentQuantity1Choice> mmFinancialInstrumentQuantity = new MMMessageAssociationEnd<AmountPricePerFinancialInstrumentQuantity5, FinancialInstrumentQuantity1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmSecuritiesQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity5.mmObject();
@@ -292,6 +312,16 @@ public class AmountPricePerFinancialInstrumentQuantity5 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity1Choice getValue(AmountPricePerFinancialInstrumentQuantity5 obj) {
+			return obj.getFinancialInstrumentQuantity();
+		}
+
+		@Override
+		public void setValue(AmountPricePerFinancialInstrumentQuantity5 obj, FinancialInstrumentQuantity1Choice value) {
+			obj.setFinancialInstrumentQuantity(value);
 		}
 	};
 	@XmlElement(name = "PricFxgDt", required = true)
@@ -337,7 +367,7 @@ public class AmountPricePerFinancialInstrumentQuantity5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriceFixingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountPricePerFinancialInstrumentQuantity5, ISODate> mmPriceFixingDate = new MMMessageAttribute<AmountPricePerFinancialInstrumentQuantity5, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity5.mmObject();
@@ -350,6 +380,16 @@ public class AmountPricePerFinancialInstrumentQuantity5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(AmountPricePerFinancialInstrumentQuantity5 obj) {
+			return obj.getPriceFixingDate();
+		}
+
+		@Override
+		public void setValue(AmountPricePerFinancialInstrumentQuantity5 obj, ISODate value) {
+			obj.setPriceFixingDate(value);
 		}
 	};
 

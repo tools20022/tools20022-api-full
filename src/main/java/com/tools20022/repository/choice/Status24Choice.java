@@ -114,7 +114,7 @@ public class Status24Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOrderDetailsReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Status24Choice, OrderStatusAndReason10> mmOrderDetailsReport = new MMMessageAssociationEnd<Status24Choice, OrderStatusAndReason10>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status24Choice.mmObject();
 			isDerived = false;
@@ -126,6 +126,16 @@ public class Status24Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OrderStatusAndReason10.mmObject();
+		}
+
+		@Override
+		public OrderStatusAndReason10 getValue(Status24Choice obj) {
+			return obj.getOrderDetailsReport();
+		}
+
+		@Override
+		public void setValue(Status24Choice obj, OrderStatusAndReason10 value) {
+			obj.setOrderDetailsReport(value);
 		}
 	};
 	@XmlElement(name = "IndvOrdrDtlsRpt", required = true)
@@ -157,7 +167,7 @@ public class Status24Choice {
 	 * definition} = "Status report details of an individual order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIndividualOrderDetailsReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Status24Choice, List<IndividualOrderStatusAndReason7>> mmIndividualOrderDetailsReport = new MMMessageAssociationEnd<Status24Choice, List<IndividualOrderStatusAndReason7>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status24Choice.mmObject();
 			isDerived = false;
@@ -168,6 +178,16 @@ public class Status24Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> IndividualOrderStatusAndReason7.mmObject();
+		}
+
+		@Override
+		public List<IndividualOrderStatusAndReason7> getValue(Status24Choice obj) {
+			return obj.getIndividualOrderDetailsReport();
+		}
+
+		@Override
+		public void setValue(Status24Choice obj, List<IndividualOrderStatusAndReason7> value) {
+			obj.setIndividualOrderDetailsReport(value);
 		}
 	};
 	@XmlElement(name = "SwtchOrdrDtlsRpt", required = true)
@@ -199,7 +219,7 @@ public class Status24Choice {
 	 * definition} = "Status report details of a switch order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSwitchOrderDetailsReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Status24Choice, List<SwitchOrderStatusAndReason2>> mmSwitchOrderDetailsReport = new MMMessageAssociationEnd<Status24Choice, List<SwitchOrderStatusAndReason2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status24Choice.mmObject();
 			isDerived = false;
@@ -210,6 +230,16 @@ public class Status24Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SwitchOrderStatusAndReason2.mmObject();
+		}
+
+		@Override
+		public List<SwitchOrderStatusAndReason2> getValue(Status24Choice obj) {
+			return obj.getSwitchOrderDetailsReport();
+		}
+
+		@Override
+		public void setValue(Status24Choice obj, List<SwitchOrderStatusAndReason2> value) {
+			obj.setSwitchOrderDetailsReport(value);
 		}
 	};
 

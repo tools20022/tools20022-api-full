@@ -117,7 +117,7 @@ public class ActiveAmountRange3Choice {
 	 * ActiveAmountRange2Choice.mmImpliedCurrencyAndAmountRange}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmImpliedCurrencyAndAmountRange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ActiveAmountRange3Choice, ImpliedCurrencyAndAmountRange1> mmImpliedCurrencyAndAmountRange = new MMMessageAssociationEnd<ActiveAmountRange3Choice, ImpliedCurrencyAndAmountRange1>() {
 		{
 			businessComponentTrace_lazy = () -> AmountRange.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ActiveAmountRange3Choice.mmObject();
@@ -131,6 +131,16 @@ public class ActiveAmountRange3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ImpliedCurrencyAndAmountRange1.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmountRange1 getValue(ActiveAmountRange3Choice obj) {
+			return obj.getImpliedCurrencyAndAmountRange();
+		}
+
+		@Override
+		public void setValue(ActiveAmountRange3Choice obj, ImpliedCurrencyAndAmountRange1 value) {
+			obj.setImpliedCurrencyAndAmountRange(value);
 		}
 	};
 	@XmlElement(name = "CcyAndAmtRg", required = true)
@@ -173,7 +183,7 @@ public class ActiveAmountRange3Choice {
 	 * ActiveAmountRange2Choice.mmCurrencyAndAmountRange}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCurrencyAndAmountRange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ActiveAmountRange3Choice, ActiveCurrencyAndAmountRange3> mmCurrencyAndAmountRange = new MMMessageAssociationEnd<ActiveAmountRange3Choice, ActiveCurrencyAndAmountRange3>() {
 		{
 			businessComponentTrace_lazy = () -> AmountRange.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ActiveAmountRange3Choice.mmObject();
@@ -187,6 +197,16 @@ public class ActiveAmountRange3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ActiveCurrencyAndAmountRange3.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmountRange3 getValue(ActiveAmountRange3Choice obj) {
+			return obj.getCurrencyAndAmountRange();
+		}
+
+		@Override
+		public void setValue(ActiveAmountRange3Choice obj, ActiveCurrencyAndAmountRange3 value) {
+			obj.setCurrencyAndAmountRange(value);
 		}
 	};
 

@@ -107,7 +107,7 @@ public class PaymentInstructionInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestedExecutionDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstructionInformation, Optional<ISODateTime>> mmRequestedExecutionDateTime = new MMMessageAttribute<PaymentInstructionInformation, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionInformation.mmObject();
 			isDerived = false;
@@ -118,6 +118,16 @@ public class PaymentInstructionInformation {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(PaymentInstructionInformation obj) {
+			return obj.getRequestedExecutionDateTime();
+		}
+
+		@Override
+		public void setValue(PaymentInstructionInformation obj, Optional<ISODateTime> value) {
+			obj.setRequestedExecutionDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtTp")
@@ -150,7 +160,7 @@ public class PaymentInstructionInformation {
 	 * definition} = "Type, or nature, of the payment, eg, express payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstructionInformation, Optional<PaymentType2Choice>> mmPaymentType = new MMMessageAttribute<PaymentInstructionInformation, Optional<PaymentType2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionInformation.mmObject();
 			isDerived = false;
@@ -161,6 +171,16 @@ public class PaymentInstructionInformation {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PaymentType2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentType2Choice> getValue(PaymentInstructionInformation obj) {
+			return obj.getPaymentType();
+		}
+
+		@Override
+		public void setValue(PaymentInstructionInformation obj, Optional<PaymentType2Choice> value) {
+			obj.setPaymentType(value.orElse(null));
 		}
 	};
 

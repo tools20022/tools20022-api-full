@@ -110,7 +110,7 @@ public class TransferCancellationRejectionReason1 {
 	 * definition} = "Reason for a rejected status in structured form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferCancellationRejectionReason1, CancellationRejectedReason1Code> mmStructured = new MMMessageAttribute<TransferCancellationRejectionReason1, CancellationRejectedReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferCancellationRejectionReason1.mmObject();
@@ -122,6 +122,16 @@ public class TransferCancellationRejectionReason1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CancellationRejectedReason1Code.mmObject();
+		}
+
+		@Override
+		public CancellationRejectedReason1Code getValue(TransferCancellationRejectionReason1 obj) {
+			return obj.getStructured();
+		}
+
+		@Override
+		public void setValue(TransferCancellationRejectionReason1 obj, CancellationRejectedReason1Code value) {
+			obj.setStructured(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -155,7 +165,7 @@ public class TransferCancellationRejectionReason1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferCancellationRejectionReason1, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<TransferCancellationRejectionReason1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferCancellationRejectionReason1.mmObject();
 			isDerived = false;
@@ -166,6 +176,16 @@ public class TransferCancellationRejectionReason1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(TransferCancellationRejectionReason1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(TransferCancellationRejectionReason1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

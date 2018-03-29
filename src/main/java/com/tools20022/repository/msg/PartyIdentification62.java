@@ -24,6 +24,8 @@ import com.tools20022.repository.datatype.BICFIIdentifier;
 import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification1;
+import com.tools20022.repository.msg.NameAndAddress5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -134,7 +136,7 @@ public class PartyIdentification62 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBICFI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification62, Optional<BICFIIdentifier>> mmBICFI = new MMMessageAttribute<PartyIdentification62, Optional<BICFIIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification62.mmObject();
@@ -147,6 +149,16 @@ public class PartyIdentification62 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<BICFIIdentifier> getValue(PartyIdentification62 obj) {
+			return obj.getBICFI();
+		}
+
+		@Override
+		public void setValue(PartyIdentification62 obj, Optional<BICFIIdentifier> value) {
+			obj.setBICFI(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrtryId")
@@ -194,7 +206,7 @@ public class PartyIdentification62 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification62, Optional<GenericIdentification1>> mmProprietaryIdentification = new MMMessageAttribute<PartyIdentification62, Optional<GenericIdentification1>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification62.mmObject();
@@ -206,7 +218,17 @@ public class PartyIdentification62 {
 			nextVersions_lazy = () -> Arrays.asList(PartyIdentification64.mmProprietaryIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
+			complexType_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification1> getValue(PartyIdentification62 obj) {
+			return obj.getProprietaryIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification62 obj, Optional<GenericIdentification1> value) {
+			obj.setProprietaryIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NmAndAdr")
@@ -251,7 +273,7 @@ public class PartyIdentification62 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNameAndAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification62, Optional<NameAndAddress5>> mmNameAndAddress = new MMMessageAttribute<PartyIdentification62, Optional<NameAndAddress5>>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification62.mmObject();
@@ -263,7 +285,17 @@ public class PartyIdentification62 {
 			nextVersions_lazy = () -> Arrays.asList(PartyIdentification64.mmNameAndAddress);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.NameAndAddress5.mmObject();
+			complexType_lazy = () -> NameAndAddress5.mmObject();
+		}
+
+		@Override
+		public Optional<NameAndAddress5> getValue(PartyIdentification62 obj) {
+			return obj.getNameAndAddress();
+		}
+
+		@Override
+		public void setValue(PartyIdentification62 obj, Optional<NameAndAddress5> value) {
+			obj.setNameAndAddress(value.orElse(null));
 		}
 	};
 
@@ -297,7 +329,7 @@ public class PartyIdentification62 {
 		return proprietaryIdentification == null ? Optional.empty() : Optional.of(proprietaryIdentification);
 	}
 
-	public PartyIdentification62 setProprietaryIdentification(com.tools20022.repository.msg.GenericIdentification1 proprietaryIdentification) {
+	public PartyIdentification62 setProprietaryIdentification(GenericIdentification1 proprietaryIdentification) {
 		this.proprietaryIdentification = proprietaryIdentification;
 		return this;
 	}
@@ -306,7 +338,7 @@ public class PartyIdentification62 {
 		return nameAndAddress == null ? Optional.empty() : Optional.of(nameAndAddress);
 	}
 
-	public PartyIdentification62 setNameAndAddress(com.tools20022.repository.msg.NameAndAddress5 nameAndAddress) {
+	public PartyIdentification62 setNameAndAddress(NameAndAddress5 nameAndAddress) {
 		this.nameAndAddress = nameAndAddress;
 		return this;
 	}

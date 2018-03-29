@@ -114,7 +114,7 @@ public class WaivingType1 {
 	 * definition} = "Structured format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute<WaivingType1, WaivingInstruction2Code> mmStructured = new MMMessageAttribute<WaivingType1, WaivingInstruction2Code>() {
 		{
 			businessElementTrace_lazy = () -> CommissionWaiver.mmInstructionBasis;
 			componentContext_lazy = () -> com.tools20022.repository.msg.WaivingType1.mmObject();
@@ -126,6 +126,16 @@ public class WaivingType1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> WaivingInstruction2Code.mmObject();
+		}
+
+		@Override
+		public WaivingInstruction2Code getValue(WaivingType1 obj) {
+			return obj.getStructured();
+		}
+
+		@Override
+		public void setValue(WaivingType1 obj, WaivingInstruction2Code value) {
+			obj.setStructured(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -156,7 +166,7 @@ public class WaivingType1 {
 	 * definition} = "Additional information about the type of waiving."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<WaivingType1, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<WaivingType1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.WaivingType1.mmObject();
 			isDerived = false;
@@ -167,6 +177,16 @@ public class WaivingType1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(WaivingType1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(WaivingType1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

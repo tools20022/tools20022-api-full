@@ -55,12 +55,16 @@ public class ConstraintMultipleDemandIndicatorRule {
 	 */
 	public static final MMConstraint<Undertaking4> forUndertaking4 = new MMConstraint<Undertaking4>() {
 		{
-			validator = ConstraintMultipleDemandIndicatorRule::checkUndertaking4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleDemandIndicatorRule";
 			definition = "If MultipleDemandIndicator is \"true\" or \"1\" (Yes), then PartialDemandIndicator cannot be \"false\" or \"0\" (No).";
 			owner_lazy = () -> Undertaking4.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromValue\"><leftOperand>/PartialDemandIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/MultipleDemandIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(Undertaking4 obj) throws Exception {
+			checkUndertaking4(obj);
 		}
 	};
 	/**
@@ -89,12 +93,16 @@ public class ConstraintMultipleDemandIndicatorRule {
 	 */
 	public static final MMConstraint<Undertaking3> forUndertaking3 = new MMConstraint<Undertaking3>() {
 		{
-			validator = ConstraintMultipleDemandIndicatorRule::checkUndertaking3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleDemandIndicatorRule";
 			definition = "If MultipleDemandIndicator is \"true\" or \"1\" (Yes), then PartialDemandIndicator cannot be \"false\" or \"0\" (No).";
 			owner_lazy = () -> Undertaking3.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromValue\"><leftOperand>/PartialDemandIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/MultipleDemandIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(Undertaking3 obj) throws Exception {
+			checkUndertaking3(obj);
 		}
 	};
 

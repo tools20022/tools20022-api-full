@@ -113,7 +113,7 @@ public class Amount2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalCurrencyAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Amount2, Optional<ActiveCurrencyAndAmount>> mmOriginalCurrencyAmount = new MMMessageAttribute<Amount2, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Amount2.mmObject();
 			isDerived = false;
@@ -125,6 +125,16 @@ public class Amount2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(Amount2 obj) {
+			return obj.getOriginalCurrencyAmount();
+		}
+
+		@Override
+		public void setValue(Amount2 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setOriginalCurrencyAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RptgAmt", required = true)
@@ -156,7 +166,7 @@ public class Amount2 {
 	 * definition} = "Amount expressed in the reporting currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportingAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Amount2, ImpliedCurrencyAndAmount> mmReportingAmount = new MMMessageAttribute<Amount2, ImpliedCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Amount2.mmObject();
 			isDerived = false;
@@ -167,6 +177,16 @@ public class Amount2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(Amount2 obj) {
+			return obj.getReportingAmount();
+		}
+
+		@Override
+		public void setValue(Amount2 obj, ImpliedCurrencyAndAmount value) {
+			obj.setReportingAmount(value);
 		}
 	};
 

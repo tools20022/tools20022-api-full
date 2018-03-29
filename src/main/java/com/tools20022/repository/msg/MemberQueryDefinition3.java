@@ -120,7 +120,7 @@ public class MemberQueryDefinition3 {
 	 * MemberQueryDefinition2.mmQueryType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MemberQueryDefinition3, Optional<QueryType2Code>> mmQueryType = new MMMessageAttribute<MemberQueryDefinition3, Optional<QueryType2Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MemberQueryDefinition3.mmObject();
 			isDerived = false;
@@ -132,6 +132,16 @@ public class MemberQueryDefinition3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> QueryType2Code.mmObject();
+		}
+
+		@Override
+		public Optional<QueryType2Code> getValue(MemberQueryDefinition3 obj) {
+			return obj.getQueryType();
+		}
+
+		@Override
+		public void setValue(MemberQueryDefinition3 obj, Optional<QueryType2Code> value) {
+			obj.setQueryType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MmbCrit")
@@ -168,7 +178,7 @@ public class MemberQueryDefinition3 {
 	 * MemberQueryDefinition2.mmMemberCriteria}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMemberCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MemberQueryDefinition3, Optional<MemberCriteriaDefinition1Choice>> mmMemberCriteria = new MMMessageAssociationEnd<MemberQueryDefinition3, Optional<MemberCriteriaDefinition1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MemberQueryDefinition3.mmObject();
 			isDerived = false;
@@ -181,6 +191,16 @@ public class MemberQueryDefinition3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> MemberCriteriaDefinition1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<MemberCriteriaDefinition1Choice> getValue(MemberQueryDefinition3 obj) {
+			return obj.getMemberCriteria();
+		}
+
+		@Override
+		public void setValue(MemberQueryDefinition3 obj, Optional<MemberCriteriaDefinition1Choice> value) {
+			obj.setMemberCriteria(value.orElse(null));
 		}
 	};
 

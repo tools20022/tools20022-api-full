@@ -110,7 +110,7 @@ public class IsabelQueryHeader1 {
 	 * definition} = "Unique identification of the actual sender of the file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActualSenderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelQueryHeader1, Max13AlphaNumericText> mmActualSenderIdentification = new MMMessageAttribute<IsabelQueryHeader1, Max13AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelQueryHeader1.mmObject();
 			isDerived = false;
@@ -121,6 +121,16 @@ public class IsabelQueryHeader1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max13AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max13AlphaNumericText getValue(IsabelQueryHeader1 obj) {
+			return obj.getActualSenderIdentification();
+		}
+
+		@Override
+		public void setValue(IsabelQueryHeader1 obj, Max13AlphaNumericText value) {
+			obj.setActualSenderIdentification(value);
 		}
 	};
 	@XmlElement(name = "PyldCreDt", required = true)
@@ -153,7 +163,7 @@ public class IsabelQueryHeader1 {
 	 * "Date and time at which the file in the payload was actually created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPayloadCreationDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IsabelQueryHeader1, DateAndDateTimeChoice> mmPayloadCreationDate = new MMMessageAssociationEnd<IsabelQueryHeader1, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelQueryHeader1.mmObject();
 			isDerived = false;
@@ -165,6 +175,16 @@ public class IsabelQueryHeader1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(IsabelQueryHeader1 obj) {
+			return obj.getPayloadCreationDate();
+		}
+
+		@Override
+		public void setValue(IsabelQueryHeader1 obj, DateAndDateTimeChoice value) {
+			obj.setPayloadCreationDate(value);
 		}
 	};
 	@XmlElement(name = "TrnsprtId", required = true)
@@ -197,7 +217,7 @@ public class IsabelQueryHeader1 {
 	 * definition} = "Unique identification of the transport."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransportIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelQueryHeader1, Max14AlphaNumericText> mmTransportIdentification = new MMMessageAttribute<IsabelQueryHeader1, Max14AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelQueryHeader1.mmObject();
 			isDerived = false;
@@ -208,6 +228,16 @@ public class IsabelQueryHeader1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max14AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max14AlphaNumericText getValue(IsabelQueryHeader1 obj) {
+			return obj.getTransportIdentification();
+		}
+
+		@Override
+		public void setValue(IsabelQueryHeader1 obj, Max14AlphaNumericText value) {
+			obj.setTransportIdentification(value);
 		}
 	};
 	@XmlElement(name = "ReqMdAndTp", required = true)
@@ -242,7 +272,7 @@ public class IsabelQueryHeader1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestModeAndType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelQueryHeader1, RequestModeType1Code> mmRequestModeAndType = new MMMessageAttribute<IsabelQueryHeader1, RequestModeType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelQueryHeader1.mmObject();
 			isDerived = false;
@@ -253,6 +283,16 @@ public class IsabelQueryHeader1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestModeType1Code.mmObject();
+		}
+
+		@Override
+		public RequestModeType1Code getValue(IsabelQueryHeader1 obj) {
+			return obj.getRequestModeAndType();
+		}
+
+		@Override
+		public void setValue(IsabelQueryHeader1 obj, RequestModeType1Code value) {
+			obj.setRequestModeAndType(value);
 		}
 	};
 

@@ -103,7 +103,7 @@ public class LetterIntent1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLetterIntentReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LetterIntent1, Max35Text> mmLetterIntentReference = new MMMessageAttribute<LetterIntent1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LetterIntent1.mmObject();
 			isDerived = false;
@@ -114,6 +114,16 @@ public class LetterIntent1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(LetterIntent1 obj) {
+			return obj.getLetterIntentReference();
+		}
+
+		@Override
+		public void setValue(LetterIntent1 obj, Max35Text value) {
+			obj.setLetterIntentReference(value);
 		}
 	};
 	@XmlElement(name = "Amt")
@@ -145,7 +155,7 @@ public class LetterIntent1 {
 	 * definition} = "Amount stated on the letter of intent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LetterIntent1, Optional<ActiveCurrencyAnd13DecimalAmount>> mmAmount = new MMMessageAttribute<LetterIntent1, Optional<ActiveCurrencyAnd13DecimalAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LetterIntent1.mmObject();
 			isDerived = false;
@@ -156,6 +166,16 @@ public class LetterIntent1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAnd13DecimalAmount> getValue(LetterIntent1 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(LetterIntent1 obj, Optional<ActiveCurrencyAnd13DecimalAmount> value) {
+			obj.setAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StartDt")
@@ -186,7 +206,7 @@ public class LetterIntent1 {
 	 * definition} = "Start date stated on the letter of intent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LetterIntent1, Optional<ISODate>> mmStartDate = new MMMessageAttribute<LetterIntent1, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LetterIntent1.mmObject();
 			isDerived = false;
@@ -197,6 +217,16 @@ public class LetterIntent1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(LetterIntent1 obj) {
+			return obj.getStartDate();
+		}
+
+		@Override
+		public void setValue(LetterIntent1 obj, Optional<ISODate> value) {
+			obj.setStartDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EndDt")
@@ -227,7 +257,7 @@ public class LetterIntent1 {
 	 * definition} = "End date stated on the letter of intent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEndDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LetterIntent1, Optional<ISODate>> mmEndDate = new MMMessageAttribute<LetterIntent1, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LetterIntent1.mmObject();
 			isDerived = false;
@@ -238,6 +268,16 @@ public class LetterIntent1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(LetterIntent1 obj) {
+			return obj.getEndDate();
+		}
+
+		@Override
+		public void setValue(LetterIntent1 obj, Optional<ISODate> value) {
+			obj.setEndDate(value.orElse(null));
 		}
 	};
 

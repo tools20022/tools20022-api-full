@@ -28,7 +28,6 @@ import com.tools20022.repository.msg.SecuritiesAccount13;
 import com.tools20022.repository.msg.SecuritiesTradeDetails19;
 import com.tools20022.repository.msg.Statement19;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -173,7 +172,7 @@ public class PortfolioTransferNotificationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferNotificationV02, Pagination> mmPagination = new MMMessageBuildingBlock<PortfolioTransferNotificationV02, Pagination>() {
 		{
 			xmlTag = "Pgntn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,12 +183,14 @@ public class PortfolioTransferNotificationV02 {
 			complexType_lazy = () -> Pagination.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferNotificationV02.class.getMethod("getPagination", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Pagination getValue(PortfolioTransferNotificationV02 obj) {
+			return obj.getPagination();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferNotificationV02 obj, Pagination value) {
+			obj.setPagination(value);
 		}
 	};
 	@XmlElement(name = "StmtGnlDtls", required = true)
@@ -216,7 +217,7 @@ public class PortfolioTransferNotificationV02 {
 	 * definition} = "Provides general information on the notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmStatementGeneralDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferNotificationV02, Statement19> mmStatementGeneralDetails = new MMMessageBuildingBlock<PortfolioTransferNotificationV02, Statement19>() {
 		{
 			xmlTag = "StmtGnlDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -227,12 +228,14 @@ public class PortfolioTransferNotificationV02 {
 			complexType_lazy = () -> Statement19.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferNotificationV02.class.getMethod("getStatementGeneralDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Statement19 getValue(PortfolioTransferNotificationV02 obj) {
+			return obj.getStatementGeneralDetails();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferNotificationV02 obj, Statement19 value) {
+			obj.setStatementGeneralDetails(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -260,7 +263,7 @@ public class PortfolioTransferNotificationV02 {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAccountOwner = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferNotificationV02, Optional<PartyIdentification36Choice>> mmAccountOwner = new MMMessageBuildingBlock<PortfolioTransferNotificationV02, Optional<PartyIdentification36Choice>>() {
 		{
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -271,12 +274,14 @@ public class PortfolioTransferNotificationV02 {
 			complexType_lazy = () -> PartyIdentification36Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferNotificationV02.class.getMethod("getAccountOwner", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification36Choice> getValue(PortfolioTransferNotificationV02 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferNotificationV02 obj, Optional<PartyIdentification36Choice> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SfkpgAcct", required = true)
@@ -304,7 +309,7 @@ public class PortfolioTransferNotificationV02 {
 	 * definition} = "Account to or from which a securities entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSafekeepingAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferNotificationV02, SecuritiesAccount13> mmSafekeepingAccount = new MMMessageBuildingBlock<PortfolioTransferNotificationV02, SecuritiesAccount13>() {
 		{
 			xmlTag = "SfkpgAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -315,12 +320,14 @@ public class PortfolioTransferNotificationV02 {
 			complexType_lazy = () -> SecuritiesAccount13.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferNotificationV02.class.getMethod("getSafekeepingAccount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SecuritiesAccount13 getValue(PortfolioTransferNotificationV02 obj) {
+			return obj.getSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferNotificationV02 obj, SecuritiesAccount13 value) {
+			obj.setSafekeepingAccount(value);
 		}
 	};
 	@XmlElement(name = "TrfNtfctnDtls")
@@ -348,7 +355,7 @@ public class PortfolioTransferNotificationV02 {
 	 * definition} = "Details of transfer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransferNotificationDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferNotificationV02, List<SecuritiesTradeDetails19>> mmTransferNotificationDetails = new MMMessageBuildingBlock<PortfolioTransferNotificationV02, List<SecuritiesTradeDetails19>>() {
 		{
 			xmlTag = "TrfNtfctnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -358,12 +365,14 @@ public class PortfolioTransferNotificationV02 {
 			complexType_lazy = () -> SecuritiesTradeDetails19.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferNotificationV02.class.getMethod("getTransferNotificationDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SecuritiesTradeDetails19> getValue(PortfolioTransferNotificationV02 obj) {
+			return obj.getTransferNotificationDetails();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferNotificationV02 obj, List<SecuritiesTradeDetails19> value) {
+			obj.setTransferNotificationDetails(value);
 		}
 	};
 

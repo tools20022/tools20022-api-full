@@ -107,7 +107,7 @@ public class Forms {
 	 * definition} = "Physical application form is required."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmApplicationForm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Forms, YesNoIndicator> mmApplicationForm = new MMMessageAttribute<Forms, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmApplicationForm;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Forms.mmObject();
@@ -119,6 +119,16 @@ public class Forms {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(Forms obj) {
+			return obj.getApplicationForm();
+		}
+
+		@Override
+		public void setValue(Forms obj, YesNoIndicator value) {
+			obj.setApplicationForm(value);
 		}
 	};
 	@XmlElement(name = "SgntrTp", required = true)
@@ -155,7 +165,7 @@ public class Forms {
 	 * definition} = "Type of signature."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSignatureType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Forms, SignatureType1Code> mmSignatureType = new MMMessageAttribute<Forms, SignatureType1Code>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmSignatureRequired;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Forms.mmObject();
@@ -167,6 +177,16 @@ public class Forms {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SignatureType1Code.mmObject();
+		}
+
+		@Override
+		public SignatureType1Code getValue(Forms obj) {
+			return obj.getSignatureType();
+		}
+
+		@Override
+		public void setValue(Forms obj, SignatureType1Code value) {
+			obj.setSignatureType(value);
 		}
 	};
 

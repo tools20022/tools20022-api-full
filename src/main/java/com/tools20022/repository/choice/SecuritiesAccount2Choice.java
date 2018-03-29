@@ -112,7 +112,7 @@ public class SecuritiesAccount2Choice {
 	 * SecuritiesAccount1Choice.mmRange}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesAccount2Choice, SecuritiesAccountRange2> mmRange = new MMMessageAssociationEnd<SecuritiesAccount2Choice, SecuritiesAccountRange2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesAccount2Choice.mmObject();
 			isDerived = false;
@@ -125,6 +125,16 @@ public class SecuritiesAccount2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecuritiesAccountRange2.mmObject();
+		}
+
+		@Override
+		public SecuritiesAccountRange2 getValue(SecuritiesAccount2Choice obj) {
+			return obj.getRange();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount2Choice obj, SecuritiesAccountRange2 value) {
+			obj.setRange(value);
 		}
 	};
 	@XmlElement(name = "Acct", required = true)
@@ -165,7 +175,7 @@ public class SecuritiesAccount2Choice {
 	 * SecuritiesAccount1Choice.mmAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesAccount2Choice, List<SecuritiesAccount19>> mmAccount = new MMMessageAssociationEnd<SecuritiesAccount2Choice, List<SecuritiesAccount19>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesAccount2Choice.mmObject();
@@ -178,6 +188,16 @@ public class SecuritiesAccount2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecuritiesAccount19.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesAccount19> getValue(SecuritiesAccount2Choice obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount2Choice obj, List<SecuritiesAccount19> value) {
+			obj.setAccount(value);
 		}
 	};
 

@@ -98,7 +98,7 @@ public class RegisteredShareholderName1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIndividualPerson = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RegisteredShareholderName1Choice, IndividualPerson29> mmIndividualPerson = new MMMessageAssociationEnd<RegisteredShareholderName1Choice, IndividualPerson29>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RegisteredShareholderName1Choice.mmObject();
 			isDerived = false;
@@ -110,6 +110,16 @@ public class RegisteredShareholderName1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> IndividualPerson29.mmObject();
+		}
+
+		@Override
+		public IndividualPerson29 getValue(RegisteredShareholderName1Choice obj) {
+			return obj.getIndividualPerson();
+		}
+
+		@Override
+		public void setValue(RegisteredShareholderName1Choice obj, IndividualPerson29 value) {
+			obj.setIndividualPerson(value);
 		}
 	};
 	@XmlElement(name = "Org", required = true)
@@ -142,7 +152,7 @@ public class RegisteredShareholderName1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOrganisation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RegisteredShareholderName1Choice, Organisation23> mmOrganisation = new MMMessageAssociationEnd<RegisteredShareholderName1Choice, Organisation23>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RegisteredShareholderName1Choice.mmObject();
 			isDerived = false;
@@ -154,6 +164,16 @@ public class RegisteredShareholderName1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Organisation23.mmObject();
+		}
+
+		@Override
+		public Organisation23 getValue(RegisteredShareholderName1Choice obj) {
+			return obj.getOrganisation();
+		}
+
+		@Override
+		public void setValue(RegisteredShareholderName1Choice obj, Organisation23 value) {
+			obj.setOrganisation(value);
 		}
 	};
 

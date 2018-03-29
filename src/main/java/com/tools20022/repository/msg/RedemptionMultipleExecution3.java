@@ -25,6 +25,10 @@ import com.tools20022.repository.codeset.CancellationRight1Code;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.IndividualPerson12;
+import com.tools20022.repository.msg.InvestmentAccount21;
+import com.tools20022.repository.msg.PaymentTransaction22;
+import com.tools20022.repository.msg.RedemptionExecution6;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -194,7 +198,7 @@ public class RedemptionMultipleExecution3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RedemptionMultipleExecution3, Optional<Max35Text>> mmMasterReference = new MMMessageAttribute<RedemptionMultipleExecution3, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleExecution3.mmObject();
@@ -207,6 +211,16 @@ public class RedemptionMultipleExecution3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(RedemptionMultipleExecution3 obj) {
+			return obj.getMasterReference();
+		}
+
+		@Override
+		public void setValue(RedemptionMultipleExecution3 obj, Optional<Max35Text> value) {
+			obj.setMasterReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BnfcryDtls")
@@ -249,7 +263,7 @@ public class RedemptionMultipleExecution3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBeneficiaryDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RedemptionMultipleExecution3, Optional<IndividualPerson12>> mmBeneficiaryDetails = new MMMessageAssociationEnd<RedemptionMultipleExecution3, Optional<IndividualPerson12>>() {
 		{
 			businessComponentTrace_lazy = () -> Person.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleExecution3.mmObject();
@@ -262,7 +276,17 @@ public class RedemptionMultipleExecution3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IndividualPerson12.mmObject();
+			type_lazy = () -> IndividualPerson12.mmObject();
+		}
+
+		@Override
+		public Optional<IndividualPerson12> getValue(RedemptionMultipleExecution3 obj) {
+			return obj.getBeneficiaryDetails();
+		}
+
+		@Override
+		public void setValue(RedemptionMultipleExecution3 obj, Optional<IndividualPerson12> value) {
+			obj.setBeneficiaryDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PlcOfTrad")
@@ -309,7 +333,7 @@ public class RedemptionMultipleExecution3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceOfTrade = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RedemptionMultipleExecution3, Optional<PlaceOfTradeIdentification1Choice>> mmPlaceOfTrade = new MMMessageAttribute<RedemptionMultipleExecution3, Optional<PlaceOfTradeIdentification1Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> TradingMarket.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleExecution3.mmObject();
@@ -322,6 +346,16 @@ public class RedemptionMultipleExecution3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PlaceOfTradeIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PlaceOfTradeIdentification1Choice> getValue(RedemptionMultipleExecution3 obj) {
+			return obj.getPlaceOfTrade();
+		}
+
+		@Override
+		public void setValue(RedemptionMultipleExecution3 obj, Optional<PlaceOfTradeIdentification1Choice> value) {
+			obj.setPlaceOfTrade(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrdrDtTm")
@@ -367,7 +401,7 @@ public class RedemptionMultipleExecution3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RedemptionMultipleExecution3, Optional<ISODateTime>> mmOrderDateTime = new MMMessageAttribute<RedemptionMultipleExecution3, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleExecution3.mmObject();
@@ -380,6 +414,16 @@ public class RedemptionMultipleExecution3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(RedemptionMultipleExecution3 obj) {
+			return obj.getOrderDateTime();
+		}
+
+		@Override
+		public void setValue(RedemptionMultipleExecution3 obj, Optional<ISODateTime> value) {
+			obj.setOrderDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReqdFutrTradDt")
@@ -426,7 +470,7 @@ public class RedemptionMultipleExecution3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestedFutureTradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RedemptionMultipleExecution3, Optional<ISODate>> mmRequestedFutureTradeDate = new MMMessageAttribute<RedemptionMultipleExecution3, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmRequestedExecutionDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleExecution3.mmObject();
@@ -439,6 +483,16 @@ public class RedemptionMultipleExecution3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(RedemptionMultipleExecution3 obj) {
+			return obj.getRequestedFutureTradeDate();
+		}
+
+		@Override
+		public void setValue(RedemptionMultipleExecution3 obj, Optional<ISODate> value) {
+			obj.setRequestedFutureTradeDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CxlRght")
@@ -478,7 +532,7 @@ public class RedemptionMultipleExecution3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancellationRight = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RedemptionMultipleExecution3, Optional<CancellationRight1Code>> mmCancellationRight = new MMMessageAttribute<RedemptionMultipleExecution3, Optional<CancellationRight1Code>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmCancellationRight;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleExecution3.mmObject();
@@ -490,6 +544,16 @@ public class RedemptionMultipleExecution3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CancellationRight1Code.mmObject();
+		}
+
+		@Override
+		public Optional<CancellationRight1Code> getValue(RedemptionMultipleExecution3 obj) {
+			return obj.getCancellationRight();
+		}
+
+		@Override
+		public void setValue(RedemptionMultipleExecution3 obj, Optional<CancellationRight1Code> value) {
+			obj.setCancellationRight(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XtndedCxlRght")
@@ -529,7 +593,7 @@ public class RedemptionMultipleExecution3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedCancellationRight = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RedemptionMultipleExecution3, Optional<Extended350Code>> mmExtendedCancellationRight = new MMMessageAttribute<RedemptionMultipleExecution3, Optional<Extended350Code>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmCancellationRight;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleExecution3.mmObject();
@@ -541,6 +605,16 @@ public class RedemptionMultipleExecution3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Optional<Extended350Code> getValue(RedemptionMultipleExecution3 obj) {
+			return obj.getExtendedCancellationRight();
+		}
+
+		@Override
+		public void setValue(RedemptionMultipleExecution3 obj, Optional<Extended350Code> value) {
+			obj.setExtendedCancellationRight(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InvstmtAcctDtls", required = true)
@@ -584,7 +658,7 @@ public class RedemptionMultipleExecution3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RedemptionMultipleExecution3, InvestmentAccount21> mmInvestmentAccountDetails = new MMMessageAssociationEnd<RedemptionMultipleExecution3, InvestmentAccount21>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleExecution3.mmObject();
@@ -597,11 +671,21 @@ public class RedemptionMultipleExecution3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount21.mmObject();
+			type_lazy = () -> InvestmentAccount21.mmObject();
+		}
+
+		@Override
+		public InvestmentAccount21 getValue(RedemptionMultipleExecution3 obj) {
+			return obj.getInvestmentAccountDetails();
+		}
+
+		@Override
+		public void setValue(RedemptionMultipleExecution3 obj, InvestmentAccount21 value) {
+			obj.setInvestmentAccountDetails(value);
 		}
 	};
 	@XmlElement(name = "IndvExctnDtls", required = true)
-	protected List<com.tools20022.repository.msg.RedemptionExecution6> individualExecutionDetails;
+	protected List<RedemptionExecution6> individualExecutionDetails;
 	/**
 	 * 
 	 <p>
@@ -641,7 +725,7 @@ public class RedemptionMultipleExecution3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIndividualExecutionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RedemptionMultipleExecution3, List<RedemptionExecution6>> mmIndividualExecutionDetails = new MMMessageAssociationEnd<RedemptionMultipleExecution3, List<RedemptionExecution6>>() {
 		{
 			businessComponentTrace_lazy = () -> RedemptionExecution.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleExecution3.mmObject();
@@ -653,7 +737,17 @@ public class RedemptionMultipleExecution3 {
 			nextVersions_lazy = () -> Arrays.asList(RedemptionMultipleExecution5.mmIndividualExecutionDetails);
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RedemptionExecution6.mmObject();
+			type_lazy = () -> RedemptionExecution6.mmObject();
+		}
+
+		@Override
+		public List<RedemptionExecution6> getValue(RedemptionMultipleExecution3 obj) {
+			return obj.getIndividualExecutionDetails();
+		}
+
+		@Override
+		public void setValue(RedemptionMultipleExecution3 obj, List<RedemptionExecution6> value) {
+			obj.setIndividualExecutionDetails(value);
 		}
 	};
 	@XmlElement(name = "TtlSttlmAmt")
@@ -701,7 +795,7 @@ public class RedemptionMultipleExecution3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalSettlementAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RedemptionMultipleExecution3, Optional<ActiveCurrencyAndAmount>> mmTotalSettlementAmount = new MMMessageAttribute<RedemptionMultipleExecution3, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleExecution3.mmObject();
@@ -714,6 +808,16 @@ public class RedemptionMultipleExecution3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(RedemptionMultipleExecution3 obj) {
+			return obj.getTotalSettlementAmount();
+		}
+
+		@Override
+		public void setValue(RedemptionMultipleExecution3 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setTotalSettlementAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CshSttlmDt")
@@ -750,7 +854,7 @@ public class RedemptionMultipleExecution3 {
 	 * definition} = "Date on which cash is available."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RedemptionMultipleExecution3, Optional<ISODate>> mmCashSettlementDate = new MMMessageAttribute<RedemptionMultipleExecution3, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmValueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleExecution3.mmObject();
@@ -762,6 +866,16 @@ public class RedemptionMultipleExecution3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(RedemptionMultipleExecution3 obj) {
+			return obj.getCashSettlementDate();
+		}
+
+		@Override
+		public void setValue(RedemptionMultipleExecution3 obj, Optional<ISODate> value) {
+			obj.setCashSettlementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BlkCshSttlmDtls")
@@ -806,7 +920,7 @@ public class RedemptionMultipleExecution3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBulkCashSettlementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RedemptionMultipleExecution3, Optional<PaymentTransaction22>> mmBulkCashSettlementDetails = new MMMessageAssociationEnd<RedemptionMultipleExecution3, Optional<PaymentTransaction22>>() {
 		{
 			businessComponentTrace_lazy = () -> BulkPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleExecution3.mmObject();
@@ -819,7 +933,17 @@ public class RedemptionMultipleExecution3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentTransaction22.mmObject();
+			type_lazy = () -> PaymentTransaction22.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentTransaction22> getValue(RedemptionMultipleExecution3 obj) {
+			return obj.getBulkCashSettlementDetails();
+		}
+
+		@Override
+		public void setValue(RedemptionMultipleExecution3 obj, Optional<PaymentTransaction22> value) {
+			obj.setBulkCashSettlementDetails(value.orElse(null));
 		}
 	};
 	/**
@@ -911,7 +1035,7 @@ public class RedemptionMultipleExecution3 {
 		return beneficiaryDetails == null ? Optional.empty() : Optional.of(beneficiaryDetails);
 	}
 
-	public RedemptionMultipleExecution3 setBeneficiaryDetails(com.tools20022.repository.msg.IndividualPerson12 beneficiaryDetails) {
+	public RedemptionMultipleExecution3 setBeneficiaryDetails(IndividualPerson12 beneficiaryDetails) {
 		this.beneficiaryDetails = beneficiaryDetails;
 		return this;
 	}
@@ -965,7 +1089,7 @@ public class RedemptionMultipleExecution3 {
 		return investmentAccountDetails;
 	}
 
-	public RedemptionMultipleExecution3 setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount21 investmentAccountDetails) {
+	public RedemptionMultipleExecution3 setInvestmentAccountDetails(InvestmentAccount21 investmentAccountDetails) {
 		this.investmentAccountDetails = Objects.requireNonNull(investmentAccountDetails);
 		return this;
 	}
@@ -974,7 +1098,7 @@ public class RedemptionMultipleExecution3 {
 		return individualExecutionDetails == null ? individualExecutionDetails = new ArrayList<>() : individualExecutionDetails;
 	}
 
-	public RedemptionMultipleExecution3 setIndividualExecutionDetails(List<com.tools20022.repository.msg.RedemptionExecution6> individualExecutionDetails) {
+	public RedemptionMultipleExecution3 setIndividualExecutionDetails(List<RedemptionExecution6> individualExecutionDetails) {
 		this.individualExecutionDetails = Objects.requireNonNull(individualExecutionDetails);
 		return this;
 	}
@@ -1001,7 +1125,7 @@ public class RedemptionMultipleExecution3 {
 		return bulkCashSettlementDetails == null ? Optional.empty() : Optional.of(bulkCashSettlementDetails);
 	}
 
-	public RedemptionMultipleExecution3 setBulkCashSettlementDetails(com.tools20022.repository.msg.PaymentTransaction22 bulkCashSettlementDetails) {
+	public RedemptionMultipleExecution3 setBulkCashSettlementDetails(PaymentTransaction22 bulkCashSettlementDetails) {
 		this.bulkCashSettlementDetails = bulkCashSettlementDetails;
 		return this;
 	}

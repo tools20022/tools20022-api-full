@@ -110,7 +110,7 @@ public class AutomatedTellerMachine7 {
 	 * AutomatedTellerMachine6.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AutomatedTellerMachine7, Max35Text> mmIdentification = new MMMessageAttribute<AutomatedTellerMachine7, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine7.mmObject();
 			isDerived = false;
@@ -122,6 +122,16 @@ public class AutomatedTellerMachine7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AutomatedTellerMachine7 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(AutomatedTellerMachine7 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "AddtlId")
@@ -158,7 +168,7 @@ public class AutomatedTellerMachine7 {
 	 * AutomatedTellerMachine6.mmAdditionalIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AutomatedTellerMachine7, Optional<Max35Text>> mmAdditionalIdentification = new MMMessageAttribute<AutomatedTellerMachine7, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine7.mmObject();
 			isDerived = false;
@@ -170,6 +180,16 @@ public class AutomatedTellerMachine7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AutomatedTellerMachine7 obj) {
+			return obj.getAdditionalIdentification();
+		}
+
+		@Override
+		public void setValue(AutomatedTellerMachine7 obj, Optional<Max35Text> value) {
+			obj.setAdditionalIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SeqNb")
@@ -206,7 +226,7 @@ public class AutomatedTellerMachine7 {
 	 * AutomatedTellerMachine6.mmSequenceNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AutomatedTellerMachine7, Optional<Max35Text>> mmSequenceNumber = new MMMessageAttribute<AutomatedTellerMachine7, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine7.mmObject();
 			isDerived = false;
@@ -218,6 +238,16 @@ public class AutomatedTellerMachine7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AutomatedTellerMachine7 obj) {
+			return obj.getSequenceNumber();
+		}
+
+		@Override
+		public void setValue(AutomatedTellerMachine7 obj, Optional<Max35Text> value) {
+			obj.setSequenceNumber(value.orElse(null));
 		}
 	};
 

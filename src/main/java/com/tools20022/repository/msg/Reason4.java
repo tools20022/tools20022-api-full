@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ProprietaryReason4;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -73,7 +74,7 @@ public class Reason4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "Rsn")
-	protected List<com.tools20022.repository.msg.ProprietaryReason4> reason;
+	protected List<ProprietaryReason4> reason;
 	/**
 	 * 
 	 <p>
@@ -108,7 +109,7 @@ public class Reason4 {
 	 * Reason3.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Reason4, List<ProprietaryReason4>> mmReason = new MMMessageAssociationEnd<Reason4, List<ProprietaryReason4>>() {
 		{
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reason4.mmObject();
@@ -120,7 +121,17 @@ public class Reason4 {
 			previousVersion_lazy = () -> Reason3.mmReason;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ProprietaryReason4.mmObject();
+			type_lazy = () -> ProprietaryReason4.mmObject();
+		}
+
+		@Override
+		public List<ProprietaryReason4> getValue(Reason4 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(Reason4 obj, List<ProprietaryReason4> value) {
+			obj.setReason(value);
 		}
 	};
 
@@ -143,7 +154,7 @@ public class Reason4 {
 		return reason == null ? reason = new ArrayList<>() : reason;
 	}
 
-	public Reason4 setReason(List<com.tools20022.repository.msg.ProprietaryReason4> reason) {
+	public Reason4 setReason(List<ProprietaryReason4> reason) {
 		this.reason = Objects.requireNonNull(reason);
 		return this;
 	}

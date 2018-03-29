@@ -28,7 +28,6 @@ import com.tools20022.repository.msg.EndOfDayRequirement2;
 import com.tools20022.repository.msg.IntraDayRequirement1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CentralCounterPartyCCPDataReporting;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -128,7 +127,7 @@ public class CCPMemberRequirementsReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmIntraDayRequirementAmount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CCPMemberRequirementsReportV01, List<IntraDayRequirement1>> mmIntraDayRequirementAmount = new MMMessageBuildingBlock<CCPMemberRequirementsReportV01, List<IntraDayRequirement1>>() {
 		{
 			xmlTag = "IntraDayRqrmntAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -138,12 +137,14 @@ public class CCPMemberRequirementsReportV01 {
 			complexType_lazy = () -> IntraDayRequirement1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CCPMemberRequirementsReportV01.class.getMethod("getIntraDayRequirementAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<IntraDayRequirement1> getValue(CCPMemberRequirementsReportV01 obj) {
+			return obj.getIntraDayRequirementAmount();
+		}
+
+		@Override
+		public void setValue(CCPMemberRequirementsReportV01 obj, List<IntraDayRequirement1> value) {
+			obj.setIntraDayRequirementAmount(value);
 		}
 	};
 	@XmlElement(name = "EndOfDayRqrmnt", required = true)
@@ -173,7 +174,7 @@ public class CCPMemberRequirementsReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmEndOfDayRequirement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CCPMemberRequirementsReportV01, List<EndOfDayRequirement2>> mmEndOfDayRequirement = new MMMessageBuildingBlock<CCPMemberRequirementsReportV01, List<EndOfDayRequirement2>>() {
 		{
 			xmlTag = "EndOfDayRqrmnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -183,12 +184,14 @@ public class CCPMemberRequirementsReportV01 {
 			complexType_lazy = () -> EndOfDayRequirement2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CCPMemberRequirementsReportV01.class.getMethod("getEndOfDayRequirement", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<EndOfDayRequirement2> getValue(CCPMemberRequirementsReportV01 obj) {
+			return obj.getEndOfDayRequirement();
+		}
+
+		@Override
+		public void setValue(CCPMemberRequirementsReportV01 obj, List<EndOfDayRequirement2> value) {
+			obj.setEndOfDayRequirement(value);
 		}
 	};
 	@XmlElement(name = "DfltFndRqrmnt", required = true)
@@ -218,7 +221,7 @@ public class CCPMemberRequirementsReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmDefaultFundRequirement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CCPMemberRequirementsReportV01, List<DefaultFundRequirement1>> mmDefaultFundRequirement = new MMMessageBuildingBlock<CCPMemberRequirementsReportV01, List<DefaultFundRequirement1>>() {
 		{
 			xmlTag = "DfltFndRqrmnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -228,12 +231,14 @@ public class CCPMemberRequirementsReportV01 {
 			complexType_lazy = () -> DefaultFundRequirement1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CCPMemberRequirementsReportV01.class.getMethod("getDefaultFundRequirement", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<DefaultFundRequirement1> getValue(CCPMemberRequirementsReportV01 obj) {
+			return obj.getDefaultFundRequirement();
+		}
+
+		@Override
+		public void setValue(CCPMemberRequirementsReportV01 obj, List<DefaultFundRequirement1> value) {
+			obj.setDefaultFundRequirement(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -263,7 +268,7 @@ public class CCPMemberRequirementsReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CCPMemberRequirementsReportV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<CCPMemberRequirementsReportV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -273,12 +278,14 @@ public class CCPMemberRequirementsReportV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CCPMemberRequirementsReportV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(CCPMemberRequirementsReportV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(CCPMemberRequirementsReportV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

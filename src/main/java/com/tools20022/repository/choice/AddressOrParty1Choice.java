@@ -106,7 +106,7 @@ public class AddressOrParty1Choice {
 	 * definition} = "New beneficiary address."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AddressOrParty1Choice, PostalAddress6> mmNewAddress = new MMMessageAttribute<AddressOrParty1Choice, PostalAddress6>() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AddressOrParty1Choice.mmObject();
@@ -118,6 +118,16 @@ public class AddressOrParty1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PostalAddress6.mmObject();
+		}
+
+		@Override
+		public PostalAddress6 getValue(AddressOrParty1Choice obj) {
+			return obj.getNewAddress();
+		}
+
+		@Override
+		public void setValue(AddressOrParty1Choice obj, PostalAddress6 value) {
+			obj.setNewAddress(value);
 		}
 	};
 	@XmlElement(name = "NewBnfcry", required = true)
@@ -155,7 +165,7 @@ public class AddressOrParty1Choice {
 	 * definition} = "New beneficiary."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewBeneficiary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AddressOrParty1Choice, NameAndAddress10> mmNewBeneficiary = new MMMessageAttribute<AddressOrParty1Choice, NameAndAddress10>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AddressOrParty1Choice.mmObject();
@@ -167,6 +177,16 @@ public class AddressOrParty1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> NameAndAddress10.mmObject();
+		}
+
+		@Override
+		public NameAndAddress10 getValue(AddressOrParty1Choice obj) {
+			return obj.getNewBeneficiary();
+		}
+
+		@Override
+		public void setValue(AddressOrParty1Choice obj, NameAndAddress10 value) {
+			obj.setNewBeneficiary(value);
 		}
 	};
 

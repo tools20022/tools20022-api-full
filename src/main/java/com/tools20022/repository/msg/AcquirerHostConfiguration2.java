@@ -129,7 +129,7 @@ public class AcquirerHostConfiguration2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHostIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcquirerHostConfiguration2, Max35Text> mmHostIdentification = new MMMessageAttribute<AcquirerHostConfiguration2, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> System.mmSystemIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerHostConfiguration2.mmObject();
@@ -142,6 +142,16 @@ public class AcquirerHostConfiguration2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AcquirerHostConfiguration2 obj) {
+			return obj.getHostIdentification();
+		}
+
+		@Override
+		public void setValue(AcquirerHostConfiguration2 obj, Max35Text value) {
+			obj.setHostIdentification(value);
 		}
 	};
 	@XmlElement(name = "MsgToSnd")
@@ -182,7 +192,7 @@ public class AcquirerHostConfiguration2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageToSend = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcquirerHostConfiguration2, List<MessageFunction3Code>> mmMessageToSend = new MMMessageAttribute<AcquirerHostConfiguration2, List<MessageFunction3Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerHostConfiguration2.mmObject();
 			isDerived = false;
@@ -193,6 +203,16 @@ public class AcquirerHostConfiguration2 {
 			nextVersions_lazy = () -> Arrays.asList(AcquirerHostConfiguration3.mmMessageToSend);
 			minOccurs = 0;
 			simpleType_lazy = () -> MessageFunction3Code.mmObject();
+		}
+
+		@Override
+		public List<MessageFunction3Code> getValue(AcquirerHostConfiguration2 obj) {
+			return obj.getMessageToSend();
+		}
+
+		@Override
+		public void setValue(AcquirerHostConfiguration2 obj, List<MessageFunction3Code> value) {
+			obj.setMessageToSend(value);
 		}
 	};
 

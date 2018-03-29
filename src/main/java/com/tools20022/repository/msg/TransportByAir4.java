@@ -149,7 +149,7 @@ public class TransportByAir4 {
 	 * TransportByAir2.mmDepartureAirport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDepartureAirport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransportByAir4, AirportName1Choice> mmDepartureAirport = new MMMessageAssociationEnd<TransportByAir4, AirportName1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDeparture;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportByAir4.mmObject();
@@ -164,6 +164,16 @@ public class TransportByAir4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AirportName1Choice.mmObject();
+		}
+
+		@Override
+		public AirportName1Choice getValue(TransportByAir4 obj) {
+			return obj.getDepartureAirport();
+		}
+
+		@Override
+		public void setValue(TransportByAir4 obj, AirportName1Choice value) {
+			obj.setDepartureAirport(value);
 		}
 	};
 	@XmlElement(name = "DstnAirprt", required = true)
@@ -212,7 +222,7 @@ public class TransportByAir4 {
 	 * TransportByAir2.mmDestinationAirport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDestinationAirport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransportByAir4, AirportName1Choice> mmDestinationAirport = new MMMessageAssociationEnd<TransportByAir4, AirportName1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDestination;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportByAir4.mmObject();
@@ -227,6 +237,16 @@ public class TransportByAir4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AirportName1Choice.mmObject();
+		}
+
+		@Override
+		public AirportName1Choice getValue(TransportByAir4 obj) {
+			return obj.getDestinationAirport();
+		}
+
+		@Override
+		public void setValue(TransportByAir4 obj, AirportName1Choice value) {
+			obj.setDestinationAirport(value);
 		}
 	};
 	@XmlElement(name = "FlghtNb")
@@ -265,7 +285,7 @@ public class TransportByAir4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFlightNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransportByAir4, Optional<Max35Text>> mmFlightNumber = new MMMessageAttribute<TransportByAir4, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> TransportByAir.mmFlightNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportByAir4.mmObject();
@@ -277,6 +297,16 @@ public class TransportByAir4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransportByAir4 obj) {
+			return obj.getFlightNumber();
+		}
+
+		@Override
+		public void setValue(TransportByAir4 obj, Optional<Max35Text> value) {
+			obj.setFlightNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AirCrrierNm")
@@ -328,7 +358,7 @@ public class TransportByAir4 {
 	 * TransportByAir2.mmAirCarrierName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAirCarrierName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransportByAir4, Optional<Max70Text>> mmAirCarrierName = new MMMessageAttribute<TransportByAir4, Optional<Max70Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportByAir4.mmObject();
@@ -342,6 +372,16 @@ public class TransportByAir4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(TransportByAir4 obj) {
+			return obj.getAirCarrierName();
+		}
+
+		@Override
+		public void setValue(TransportByAir4 obj, Optional<Max70Text> value) {
+			obj.setAirCarrierName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AirCrrierCtry")
@@ -388,7 +428,7 @@ public class TransportByAir4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAirCarrierCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransportByAir4, Optional<CountryCode>> mmAirCarrierCountry = new MMMessageAttribute<TransportByAir4, Optional<CountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportByAir4.mmObject();
@@ -401,6 +441,16 @@ public class TransportByAir4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(TransportByAir4 obj) {
+			return obj.getAirCarrierCountry();
+		}
+
+		@Override
+		public void setValue(TransportByAir4 obj, Optional<CountryCode> value) {
+			obj.setAirCarrierCountry(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CrrierAgtNm")
@@ -447,7 +497,7 @@ public class TransportByAir4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCarrierAgentName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransportByAir4, Optional<Max70Text>> mmCarrierAgentName = new MMMessageAttribute<TransportByAir4, Optional<Max70Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportByAir4.mmObject();
@@ -460,6 +510,16 @@ public class TransportByAir4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(TransportByAir4 obj) {
+			return obj.getCarrierAgentName();
+		}
+
+		@Override
+		public void setValue(TransportByAir4 obj, Optional<Max70Text> value) {
+			obj.setCarrierAgentName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CrrierAgtCtry")
@@ -506,7 +566,7 @@ public class TransportByAir4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCarrierAgentCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransportByAir4, Optional<CountryCode>> mmCarrierAgentCountry = new MMMessageAttribute<TransportByAir4, Optional<CountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportByAir4.mmObject();
@@ -519,6 +579,16 @@ public class TransportByAir4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(TransportByAir4 obj) {
+			return obj.getCarrierAgentCountry();
+		}
+
+		@Override
+		public void setValue(TransportByAir4 obj, Optional<CountryCode> value) {
+			obj.setCarrierAgentCountry(value.orElse(null));
 		}
 	};
 

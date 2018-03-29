@@ -22,9 +22,9 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max3NumericText;
+import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -202,7 +202,7 @@ public class CouponAttached {
 	 * definition} = "Date of the coupon attached to the physical security."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CouponAttached, ISODate> mmDate = new MMBusinessAttribute<CouponAttached, ISODate>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes8.mmCouponDate, FinancialInstrumentAttributes20.mmCouponDate, FinancialInstrumentAttributes35.mmCouponDate, FinancialInstrumentAttributes41.mmCouponDate,
 					FinancialInstrumentAttributes4.mmCouponDate, FinancialInstrumentAttributes13.mmCouponDate, FinancialInstrumentAttributes21.mmCouponDate, FinancialInstrumentAttributes26.mmCouponDate,
@@ -221,12 +221,14 @@ public class CouponAttached {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CouponAttached.class.getMethod("getDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODate getValue(CouponAttached obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(CouponAttached obj, ISODate value) {
+			obj.setDate(value);
 		}
 	};
 	protected Max3NumericText number;
@@ -396,7 +398,7 @@ public class CouponAttached {
 	 * definition} = "Number of the coupon attached to the physical security."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmNumber = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CouponAttached, Max3NumericText> mmNumber = new MMBusinessAttribute<CouponAttached, Max3NumericText>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes8.mmCouponAttachedNumber, FinancialInstrumentAttributes20.mmCouponAttachedNumber, FinancialInstrumentAttributes35.mmCouponAttachedNumber,
 					FinancialInstrumentAttributes41.mmCouponAttachedNumber, CorporateAction3.mmCouponNumber, CorporateAction4.mmCouponNumber, CorporateAction5.mmCouponNumber, CorporateAction6.mmCouponNumber,
@@ -421,12 +423,14 @@ public class CouponAttached {
 			simpleType_lazy = () -> Max3NumericText.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CouponAttached.class.getMethod("getNumber", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max3NumericText getValue(CouponAttached obj) {
+			return obj.getNumber();
+		}
+
+		@Override
+		public void setValue(CouponAttached obj, Max3NumericText value) {
+			obj.setNumber(value);
 		}
 	};
 	protected Security security;
@@ -462,7 +466,7 @@ public class CouponAttached {
 	 * definition} = "Instrument to which a coupon is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSecurity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CouponAttached, Security> mmSecurity = new MMBusinessAssociationEnd<CouponAttached, Security>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CouponAttached.mmObject();
@@ -471,9 +475,19 @@ public class CouponAttached {
 			definition = "Instrument to which a coupon is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.Security.mmCouponAttached;
+			opposite_lazy = () -> Security.mmCouponAttached;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
+			type_lazy = () -> Security.mmObject();
+		}
+
+		@Override
+		public Security getValue(CouponAttached obj) {
+			return obj.getSecurity();
+		}
+
+		@Override
+		public void setValue(CouponAttached obj, Security value) {
+			obj.setSecurity(value);
 		}
 	};
 	protected ISODateTime couponClippingDate;
@@ -512,7 +526,7 @@ public class CouponAttached {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCouponClippingDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CouponAttached, ISODateTime> mmCouponClippingDate = new MMBusinessAttribute<CouponAttached, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate4.mmCouponClippingDate);
 			isDerived = false;
@@ -525,12 +539,14 @@ public class CouponAttached {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CouponAttached.class.getMethod("getCouponClippingDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(CouponAttached obj) {
+			return obj.getCouponClippingDate();
+		}
+
+		@Override
+		public void setValue(CouponAttached obj, ISODateTime value) {
+			obj.setCouponClippingDate(value);
 		}
 	};
 	protected Max35Text identification;
@@ -559,7 +575,7 @@ public class CouponAttached {
 	 * definition} = "Identification of the coupon."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CouponAttached, Max35Text> mmIdentification = new MMBusinessAttribute<CouponAttached, Max35Text>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CouponAttached.mmObject();
@@ -571,12 +587,14 @@ public class CouponAttached {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CouponAttached.class.getMethod("getIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(CouponAttached obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(CouponAttached obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 
@@ -587,7 +605,7 @@ public class CouponAttached {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CouponAttached";
 				definition = "Physical certificates representing rights attached to the physical certificates representing a security.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.mmCouponAttached);
+				associationDomain_lazy = () -> Arrays.asList(Security.mmCouponAttached);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CouponAttached.mmDate, com.tools20022.repository.entity.CouponAttached.mmNumber, com.tools20022.repository.entity.CouponAttached.mmSecurity,
 						com.tools20022.repository.entity.CouponAttached.mmCouponClippingDate, com.tools20022.repository.entity.CouponAttached.mmIdentification);
 			}
@@ -622,7 +640,7 @@ public class CouponAttached {
 		return security;
 	}
 
-	public CouponAttached setSecurity(com.tools20022.repository.entity.Security security) {
+	public CouponAttached setSecurity(Security security) {
 		this.security = Objects.requireNonNull(security);
 		return this;
 	}

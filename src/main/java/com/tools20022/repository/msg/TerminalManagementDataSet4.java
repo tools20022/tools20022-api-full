@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max9NumericText;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DataSetIdentification3;
+import com.tools20022.repository.msg.StatusReportContent2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -121,7 +123,7 @@ public class TerminalManagementDataSet4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TerminalManagementDataSet4, DataSetIdentification3> mmIdentification = new MMMessageAssociationEnd<TerminalManagementDataSet4, DataSetIdentification3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet4.mmObject();
 			isDerived = false;
@@ -133,7 +135,17 @@ public class TerminalManagementDataSet4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DataSetIdentification3.mmObject();
+			type_lazy = () -> DataSetIdentification3.mmObject();
+		}
+
+		@Override
+		public DataSetIdentification3 getValue(TerminalManagementDataSet4 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(TerminalManagementDataSet4 obj, DataSetIdentification3 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "SeqCntr")
@@ -175,7 +187,7 @@ public class TerminalManagementDataSet4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSequenceCounter = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TerminalManagementDataSet4, Optional<Max9NumericText>> mmSequenceCounter = new MMMessageAttribute<TerminalManagementDataSet4, Optional<Max9NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet4.mmObject();
 			isDerived = false;
@@ -187,6 +199,16 @@ public class TerminalManagementDataSet4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max9NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max9NumericText> getValue(TerminalManagementDataSet4 obj) {
+			return obj.getSequenceCounter();
+		}
+
+		@Override
+		public void setValue(TerminalManagementDataSet4 obj, Optional<Max9NumericText> value) {
+			obj.setSequenceCounter(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Cntt", required = true)
@@ -225,7 +247,7 @@ public class TerminalManagementDataSet4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TerminalManagementDataSet4, StatusReportContent2> mmContent = new MMMessageAssociationEnd<TerminalManagementDataSet4, StatusReportContent2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet4.mmObject();
 			isDerived = false;
@@ -237,7 +259,17 @@ public class TerminalManagementDataSet4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.StatusReportContent2.mmObject();
+			type_lazy = () -> StatusReportContent2.mmObject();
+		}
+
+		@Override
+		public StatusReportContent2 getValue(TerminalManagementDataSet4 obj) {
+			return obj.getContent();
+		}
+
+		@Override
+		public void setValue(TerminalManagementDataSet4 obj, StatusReportContent2 value) {
+			obj.setContent(value);
 		}
 	};
 
@@ -261,7 +293,7 @@ public class TerminalManagementDataSet4 {
 		return identification;
 	}
 
-	public TerminalManagementDataSet4 setIdentification(com.tools20022.repository.msg.DataSetIdentification3 identification) {
+	public TerminalManagementDataSet4 setIdentification(DataSetIdentification3 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}
@@ -279,7 +311,7 @@ public class TerminalManagementDataSet4 {
 		return content;
 	}
 
-	public TerminalManagementDataSet4 setContent(com.tools20022.repository.msg.StatusReportContent2 content) {
+	public TerminalManagementDataSet4 setContent(StatusReportContent2 content) {
 		this.content = Objects.requireNonNull(content);
 		return this;
 	}

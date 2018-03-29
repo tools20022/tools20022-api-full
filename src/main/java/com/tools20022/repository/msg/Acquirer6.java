@@ -127,7 +127,7 @@ public class Acquirer6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Acquirer6, Max35Text> mmIdentification = new MMMessageAttribute<Acquirer6, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Acquirer6.mmObject();
@@ -140,6 +140,16 @@ public class Acquirer6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Acquirer6 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Acquirer6 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Issr")
@@ -178,7 +188,7 @@ public class Acquirer6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Acquirer6, Optional<Max35Text>> mmIssuer = new MMMessageAttribute<Acquirer6, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Acquirer6.mmObject();
 			isDerived = false;
@@ -190,6 +200,16 @@ public class Acquirer6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Acquirer6 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(Acquirer6 obj, Optional<Max35Text> value) {
+			obj.setIssuer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtryCd")
@@ -228,7 +248,7 @@ public class Acquirer6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountryCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Acquirer6, Optional<ISO3NumericCountryCode>> mmCountryCode = new MMMessageAttribute<Acquirer6, Optional<ISO3NumericCountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmCountry;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Acquirer6.mmObject();
@@ -240,6 +260,16 @@ public class Acquirer6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISO3NumericCountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<ISO3NumericCountryCode> getValue(Acquirer6 obj) {
+			return obj.getCountryCode();
+		}
+
+		@Override
+		public void setValue(Acquirer6 obj, Optional<ISO3NumericCountryCode> value) {
+			obj.setCountryCode(value.orElse(null));
 		}
 	};
 

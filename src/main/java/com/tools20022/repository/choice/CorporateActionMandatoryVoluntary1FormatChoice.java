@@ -112,7 +112,7 @@ public class CorporateActionMandatoryVoluntary1FormatChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMandatoryVoluntary1FormatChoice, CorporateActionMandatoryVoluntary1Code> mmCode = new MMMessageAttribute<CorporateActionMandatoryVoluntary1FormatChoice, CorporateActionMandatoryVoluntary1Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmMandatoryVoluntaryEventType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionMandatoryVoluntary1FormatChoice.mmObject();
@@ -124,6 +124,16 @@ public class CorporateActionMandatoryVoluntary1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionMandatoryVoluntary1Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionMandatoryVoluntary1Code getValue(CorporateActionMandatoryVoluntary1FormatChoice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CorporateActionMandatoryVoluntary1FormatChoice obj, CorporateActionMandatoryVoluntary1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -163,7 +173,7 @@ public class CorporateActionMandatoryVoluntary1FormatChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMandatoryVoluntary1FormatChoice, GenericIdentification13> mmProprietary = new MMMessageAttribute<CorporateActionMandatoryVoluntary1FormatChoice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmMandatoryVoluntaryEventType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionMandatoryVoluntary1FormatChoice.mmObject();
@@ -175,6 +185,16 @@ public class CorporateActionMandatoryVoluntary1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(CorporateActionMandatoryVoluntary1FormatChoice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CorporateActionMandatoryVoluntary1FormatChoice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

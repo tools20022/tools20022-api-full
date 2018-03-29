@@ -29,7 +29,6 @@ import com.tools20022.repository.msg.Obligation3;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CollateralManagementISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -163,7 +162,7 @@ public class CollateralManagementCancellationRequestV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CollateralManagementCancellationRequestV03, Max35Text> mmTransactionIdentification = new MMMessageBuildingBlock<CollateralManagementCancellationRequestV03, Max35Text>() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,12 +174,14 @@ public class CollateralManagementCancellationRequestV03 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CollateralManagementCancellationRequestV03.class.getMethod("getTransactionIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(CollateralManagementCancellationRequestV03 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(CollateralManagementCancellationRequestV03 obj, Max35Text value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "Ref", required = true)
@@ -216,7 +217,7 @@ public class CollateralManagementCancellationRequestV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CollateralManagementCancellationRequestV03, Reference2Choice> mmReference = new MMMessageBuildingBlock<CollateralManagementCancellationRequestV03, Reference2Choice>() {
 		{
 			xmlTag = "Ref";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -228,12 +229,14 @@ public class CollateralManagementCancellationRequestV03 {
 			complexType_lazy = () -> Reference2Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CollateralManagementCancellationRequestV03.class.getMethod("getReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Reference2Choice getValue(CollateralManagementCancellationRequestV03 obj) {
+			return obj.getReference();
+		}
+
+		@Override
+		public void setValue(CollateralManagementCancellationRequestV03 obj, Reference2Choice value) {
+			obj.setReference(value);
 		}
 	};
 	@XmlElement(name = "Oblgtn", required = true)
@@ -270,7 +273,7 @@ public class CollateralManagementCancellationRequestV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmObligation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CollateralManagementCancellationRequestV03, Obligation3> mmObligation = new MMMessageBuildingBlock<CollateralManagementCancellationRequestV03, Obligation3>() {
 		{
 			xmlTag = "Oblgtn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -282,12 +285,14 @@ public class CollateralManagementCancellationRequestV03 {
 			complexType_lazy = () -> Obligation3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CollateralManagementCancellationRequestV03.class.getMethod("getObligation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Obligation3 getValue(CollateralManagementCancellationRequestV03 obj) {
+			return obj.getObligation();
+		}
+
+		@Override
+		public void setValue(CollateralManagementCancellationRequestV03 obj, Obligation3 value) {
+			obj.setObligation(value);
 		}
 	};
 	@XmlElement(name = "CxlRsn", required = true)
@@ -325,7 +330,7 @@ public class CollateralManagementCancellationRequestV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCancellationReason = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CollateralManagementCancellationRequestV03, CollateralCancellationReason1> mmCancellationReason = new MMMessageBuildingBlock<CollateralManagementCancellationRequestV03, CollateralCancellationReason1>() {
 		{
 			xmlTag = "CxlRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -337,12 +342,14 @@ public class CollateralManagementCancellationRequestV03 {
 			complexType_lazy = () -> CollateralCancellationReason1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CollateralManagementCancellationRequestV03.class.getMethod("getCancellationReason", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CollateralCancellationReason1 getValue(CollateralManagementCancellationRequestV03 obj) {
+			return obj.getCancellationReason();
+		}
+
+		@Override
+		public void setValue(CollateralManagementCancellationRequestV03 obj, CollateralCancellationReason1 value) {
+			obj.setCancellationReason(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -380,7 +387,7 @@ public class CollateralManagementCancellationRequestV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CollateralManagementCancellationRequestV03, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<CollateralManagementCancellationRequestV03, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -391,12 +398,14 @@ public class CollateralManagementCancellationRequestV03 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CollateralManagementCancellationRequestV03.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(CollateralManagementCancellationRequestV03 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(CollateralManagementCancellationRequestV03 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

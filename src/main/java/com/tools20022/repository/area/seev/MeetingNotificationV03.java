@@ -25,7 +25,6 @@ import com.tools20022.repository.area.SecuritiesEventsArchive;
 import com.tools20022.repository.choice.PartyIdentification9Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -180,7 +179,7 @@ public class MeetingNotificationV03 {
 	 * definition} = "Identifies the meeting notification message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingNotificationV03, MessageIdentification1> mmIdentification = new MMMessageBuildingBlock<MeetingNotificationV03, MessageIdentification1>() {
 		{
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -191,12 +190,14 @@ public class MeetingNotificationV03 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingNotificationV03.class.getMethod("getIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(MeetingNotificationV03 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(MeetingNotificationV03 obj, MessageIdentification1 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Amdmnt")
@@ -224,7 +225,7 @@ public class MeetingNotificationV03 {
 	 * definition} = "Information specific to an amendment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAmendment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingNotificationV03, Optional<AmendInformation1>> mmAmendment = new MMMessageBuildingBlock<MeetingNotificationV03, Optional<AmendInformation1>>() {
 		{
 			xmlTag = "Amdmnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -235,12 +236,14 @@ public class MeetingNotificationV03 {
 			complexType_lazy = () -> AmendInformation1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingNotificationV03.class.getMethod("getAmendment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AmendInformation1> getValue(MeetingNotificationV03 obj) {
+			return obj.getAmendment();
+		}
+
+		@Override
+		public void setValue(MeetingNotificationV03 obj, Optional<AmendInformation1> value) {
+			obj.setAmendment(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NtfctnSts", required = true)
@@ -269,7 +272,7 @@ public class MeetingNotificationV03 {
 	 * "Defines the global status of the event contained in the notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmNotificationStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingNotificationV03, NotificationStatus1> mmNotificationStatus = new MMMessageBuildingBlock<MeetingNotificationV03, NotificationStatus1>() {
 		{
 			xmlTag = "NtfctnSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -280,12 +283,14 @@ public class MeetingNotificationV03 {
 			complexType_lazy = () -> NotificationStatus1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingNotificationV03.class.getMethod("getNotificationStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public NotificationStatus1 getValue(MeetingNotificationV03 obj) {
+			return obj.getNotificationStatus();
+		}
+
+		@Override
+		public void setValue(MeetingNotificationV03 obj, NotificationStatus1 value) {
+			obj.setNotificationStatus(value);
 		}
 	};
 	@XmlElement(name = "Mtg", required = true)
@@ -314,7 +319,7 @@ public class MeetingNotificationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMeeting = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingNotificationV03, MeetingNotice3> mmMeeting = new MMMessageBuildingBlock<MeetingNotificationV03, MeetingNotice3>() {
 		{
 			xmlTag = "Mtg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -325,12 +330,14 @@ public class MeetingNotificationV03 {
 			complexType_lazy = () -> MeetingNotice3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingNotificationV03.class.getMethod("getMeeting", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MeetingNotice3 getValue(MeetingNotificationV03 obj) {
+			return obj.getMeeting();
+		}
+
+		@Override
+		public void setValue(MeetingNotificationV03 obj, MeetingNotice3 value) {
+			obj.setMeeting(value);
 		}
 	};
 	@XmlElement(name = "MtgDtls", required = true)
@@ -357,7 +364,7 @@ public class MeetingNotificationV03 {
 	 * definition} = "Dates and details of the shareholders meeting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMeetingDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingNotificationV03, List<Meeting3>> mmMeetingDetails = new MMMessageBuildingBlock<MeetingNotificationV03, List<Meeting3>>() {
 		{
 			xmlTag = "MtgDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -368,12 +375,14 @@ public class MeetingNotificationV03 {
 			complexType_lazy = () -> Meeting3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingNotificationV03.class.getMethod("getMeetingDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Meeting3> getValue(MeetingNotificationV03 obj) {
+			return obj.getMeetingDetails();
+		}
+
+		@Override
+		public void setValue(MeetingNotificationV03 obj, List<Meeting3> value) {
+			obj.setMeetingDetails(value);
 		}
 	};
 	@XmlElement(name = "NtifngPty", required = true)
@@ -401,7 +410,7 @@ public class MeetingNotificationV03 {
 	 * definition} = "Party notifying the meeting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmNotifyingParty = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingNotificationV03, PartyIdentification9Choice> mmNotifyingParty = new MMMessageBuildingBlock<MeetingNotificationV03, PartyIdentification9Choice>() {
 		{
 			xmlTag = "NtifngPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -412,12 +421,14 @@ public class MeetingNotificationV03 {
 			complexType_lazy = () -> PartyIdentification9Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingNotificationV03.class.getMethod("getNotifyingParty", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PartyIdentification9Choice getValue(MeetingNotificationV03 obj) {
+			return obj.getNotifyingParty();
+		}
+
+		@Override
+		public void setValue(MeetingNotificationV03 obj, PartyIdentification9Choice value) {
+			obj.setNotifyingParty(value);
 		}
 	};
 	@XmlElement(name = "Issr", required = true)
@@ -447,7 +458,7 @@ public class MeetingNotificationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmIssuer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingNotificationV03, IssuerInformation1> mmIssuer = new MMMessageBuildingBlock<MeetingNotificationV03, IssuerInformation1>() {
 		{
 			xmlTag = "Issr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -458,12 +469,14 @@ public class MeetingNotificationV03 {
 			complexType_lazy = () -> IssuerInformation1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingNotificationV03.class.getMethod("getIssuer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public IssuerInformation1 getValue(MeetingNotificationV03 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(MeetingNotificationV03 obj, IssuerInformation1 value) {
+			obj.setIssuer(value);
 		}
 	};
 	@XmlElement(name = "IssrAgt")
@@ -490,7 +503,7 @@ public class MeetingNotificationV03 {
 	 * definition} = "Agents of the issuer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmIssuerAgent = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingNotificationV03, List<IssuerAgent1>> mmIssuerAgent = new MMMessageBuildingBlock<MeetingNotificationV03, List<IssuerAgent1>>() {
 		{
 			xmlTag = "IssrAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -501,12 +514,14 @@ public class MeetingNotificationV03 {
 			complexType_lazy = () -> IssuerAgent1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingNotificationV03.class.getMethod("getIssuerAgent", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<IssuerAgent1> getValue(MeetingNotificationV03 obj) {
+			return obj.getIssuerAgent();
+		}
+
+		@Override
+		public void setValue(MeetingNotificationV03 obj, List<IssuerAgent1> value) {
+			obj.setIssuerAgent(value);
 		}
 	};
 	@XmlElement(name = "Scty", required = true)
@@ -536,7 +551,7 @@ public class MeetingNotificationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurity = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingNotificationV03, List<SecurityPosition6>> mmSecurity = new MMMessageBuildingBlock<MeetingNotificationV03, List<SecurityPosition6>>() {
 		{
 			xmlTag = "Scty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -547,12 +562,14 @@ public class MeetingNotificationV03 {
 			complexType_lazy = () -> SecurityPosition6.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingNotificationV03.class.getMethod("getSecurity", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SecurityPosition6> getValue(MeetingNotificationV03 obj) {
+			return obj.getSecurity();
+		}
+
+		@Override
+		public void setValue(MeetingNotificationV03 obj, List<SecurityPosition6> value) {
+			obj.setSecurity(value);
 		}
 	};
 	@XmlElement(name = "Rsltn")
@@ -580,7 +597,7 @@ public class MeetingNotificationV03 {
 	 * "Detailed information of a resolution proposed to the vote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmResolution = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingNotificationV03, List<Resolution2>> mmResolution = new MMMessageBuildingBlock<MeetingNotificationV03, List<Resolution2>>() {
 		{
 			xmlTag = "Rsltn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -591,12 +608,14 @@ public class MeetingNotificationV03 {
 			complexType_lazy = () -> Resolution2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingNotificationV03.class.getMethod("getResolution", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Resolution2> getValue(MeetingNotificationV03 obj) {
+			return obj.getResolution();
+		}
+
+		@Override
+		public void setValue(MeetingNotificationV03 obj, List<Resolution2> value) {
+			obj.setResolution(value);
 		}
 	};
 	@XmlElement(name = "Vote")
@@ -625,7 +644,7 @@ public class MeetingNotificationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmVote = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingNotificationV03, Optional<VoteParameters2>> mmVote = new MMMessageBuildingBlock<MeetingNotificationV03, Optional<VoteParameters2>>() {
 		{
 			xmlTag = "Vote";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -636,12 +655,14 @@ public class MeetingNotificationV03 {
 			complexType_lazy = () -> VoteParameters2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingNotificationV03.class.getMethod("getVote", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<VoteParameters2> getValue(MeetingNotificationV03 obj) {
+			return obj.getVote();
+		}
+
+		@Override
+		public void setValue(MeetingNotificationV03 obj, Optional<VoteParameters2> value) {
+			obj.setVote(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EntitlmntSpcfctn", required = true)
@@ -671,7 +692,7 @@ public class MeetingNotificationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmEntitlementSpecification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingNotificationV03, EntitlementAssessment2> mmEntitlementSpecification = new MMMessageBuildingBlock<MeetingNotificationV03, EntitlementAssessment2>() {
 		{
 			xmlTag = "EntitlmntSpcfctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -682,12 +703,14 @@ public class MeetingNotificationV03 {
 			complexType_lazy = () -> EntitlementAssessment2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingNotificationV03.class.getMethod("getEntitlementSpecification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public EntitlementAssessment2 getValue(MeetingNotificationV03 obj) {
+			return obj.getEntitlementSpecification();
+		}
+
+		@Override
+		public void setValue(MeetingNotificationV03 obj, EntitlementAssessment2 value) {
+			obj.setEntitlementSpecification(value);
 		}
 	};
 	@XmlElement(name = "PwrOfAttnyRqrmnts")
@@ -716,7 +739,7 @@ public class MeetingNotificationV03 {
 	 * "Specifies requirements relative to the use of Power of Attorney."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPowerOfAttorneyRequirements = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingNotificationV03, Optional<PowerOfAttorneyRequirements2>> mmPowerOfAttorneyRequirements = new MMMessageBuildingBlock<MeetingNotificationV03, Optional<PowerOfAttorneyRequirements2>>() {
 		{
 			xmlTag = "PwrOfAttnyRqrmnts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -727,12 +750,14 @@ public class MeetingNotificationV03 {
 			complexType_lazy = () -> PowerOfAttorneyRequirements2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingNotificationV03.class.getMethod("getPowerOfAttorneyRequirements", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PowerOfAttorneyRequirements2> getValue(MeetingNotificationV03 obj) {
+			return obj.getPowerOfAttorneyRequirements();
+		}
+
+		@Override
+		public void setValue(MeetingNotificationV03 obj, Optional<PowerOfAttorneyRequirements2> value) {
+			obj.setPowerOfAttorneyRequirements(value.orElse(null));
 		}
 	};
 

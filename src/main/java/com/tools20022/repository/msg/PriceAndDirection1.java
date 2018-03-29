@@ -108,7 +108,7 @@ public class PriceAndDirection1 {
 	 * definition} = "Currency and value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceAndDirection1, ActiveOrHistoricCurrencyAnd13DecimalAmount> mmValue = new MMMessageAttribute<PriceAndDirection1, ActiveOrHistoricCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceAndDirection1.mmObject();
@@ -120,6 +120,16 @@ public class PriceAndDirection1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAnd13DecimalAmount getValue(PriceAndDirection1 obj) {
+			return obj.getValue();
+		}
+
+		@Override
+		public void setValue(PriceAndDirection1 obj, ActiveOrHistoricCurrencyAnd13DecimalAmount value) {
+			obj.setValue(value);
 		}
 	};
 	@XmlElement(name = "Sgn")
@@ -155,7 +165,7 @@ public class PriceAndDirection1 {
 	 * definition} = "Indicates that the value is positive or negative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSign = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceAndDirection1, Optional<PlusOrMinusIndicator>> mmSign = new MMMessageAttribute<PriceAndDirection1, Optional<PlusOrMinusIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceAndDirection1.mmObject();
 			isDerived = false;
@@ -167,6 +177,16 @@ public class PriceAndDirection1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PlusOrMinusIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<PlusOrMinusIndicator> getValue(PriceAndDirection1 obj) {
+			return obj.getSign();
+		}
+
+		@Override
+		public void setValue(PriceAndDirection1 obj, Optional<PlusOrMinusIndicator> value) {
+			obj.setSign(value.orElse(null));
 		}
 	};
 

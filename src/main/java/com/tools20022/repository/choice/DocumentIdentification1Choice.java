@@ -141,7 +141,7 @@ public class DocumentIdentification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicerDocumentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentIdentification1Choice, Max35Text> mmAccountServicerDocumentIdentification = new MMMessageAttribute<DocumentIdentification1Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DocumentIdentification1Choice.mmObject();
@@ -155,6 +155,16 @@ public class DocumentIdentification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(DocumentIdentification1Choice obj) {
+			return obj.getAccountServicerDocumentIdentification();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification1Choice obj, Max35Text value) {
+			obj.setAccountServicerDocumentIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnrDocId", required = true)
@@ -203,7 +213,7 @@ public class DocumentIdentification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwnerDocumentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentIdentification1Choice, Max35Text> mmAccountOwnerDocumentIdentification = new MMMessageAttribute<DocumentIdentification1Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DocumentIdentification1Choice.mmObject();
@@ -217,6 +227,16 @@ public class DocumentIdentification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(DocumentIdentification1Choice obj) {
+			return obj.getAccountOwnerDocumentIdentification();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification1Choice obj, Max35Text value) {
+			obj.setAccountOwnerDocumentIdentification(value);
 		}
 	};
 

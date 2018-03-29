@@ -32,6 +32,7 @@ import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -195,7 +196,7 @@ public class IndicationOfInterest1 {
 	 * definition} = "Side of the indication of interest."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSide = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndicationOfInterest1, IOISideTypeCode> mmSide = new MMMessageAttribute<IndicationOfInterest1, IOISideTypeCode>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmSide;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndicationOfInterest1.mmObject();
@@ -208,6 +209,16 @@ public class IndicationOfInterest1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> IOISideTypeCode.mmObject();
+		}
+
+		@Override
+		public IOISideTypeCode getValue(IndicationOfInterest1 obj) {
+			return obj.getSide();
+		}
+
+		@Override
+		public void setValue(IndicationOfInterest1 obj, IOISideTypeCode value) {
+			obj.setSide(value);
 		}
 	};
 	@XmlElement(name = "IOIQty", required = true)
@@ -249,7 +260,7 @@ public class IndicationOfInterest1 {
 	 * "Quantity of financial instrument to which the indication applies."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIOIQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndicationOfInterest1, Quantity1Choice> mmIOIQuantity = new MMMessageAttribute<IndicationOfInterest1, Quantity1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Quote.mmQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndicationOfInterest1.mmObject();
@@ -262,6 +273,16 @@ public class IndicationOfInterest1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Quantity1Choice.mmObject();
+		}
+
+		@Override
+		public Quantity1Choice getValue(IndicationOfInterest1 obj) {
+			return obj.getIOIQuantity();
+		}
+
+		@Override
+		public void setValue(IndicationOfInterest1 obj, Quantity1Choice value) {
+			obj.setIOIQuantity(value);
 		}
 	};
 	@XmlElement(name = "Pric")
@@ -302,7 +323,7 @@ public class IndicationOfInterest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndicationOfInterest1, Optional<Price1>> mmPrice = new MMMessageAttribute<IndicationOfInterest1, Optional<Price1>>() {
 		{
 			businessElementTrace_lazy = () -> BuyOrSellIndicationOfInterest.mmPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndicationOfInterest1.mmObject();
@@ -314,7 +335,17 @@ public class IndicationOfInterest1 {
 			definition = "Indicates the price of the instrument, applicable to the indication of interest.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
+			complexType_lazy = () -> Price1.mmObject();
+		}
+
+		@Override
+		public Optional<Price1> getValue(IndicationOfInterest1 obj) {
+			return obj.getPrice();
+		}
+
+		@Override
+		public void setValue(IndicationOfInterest1 obj, Optional<Price1> value) {
+			obj.setPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "VldUntilDtTm")
@@ -356,7 +387,7 @@ public class IndicationOfInterest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValidUntilDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndicationOfInterest1, Optional<ISODateTime>> mmValidUntilDateTime = new MMMessageAttribute<IndicationOfInterest1, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> Quote.mmValidUntilDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndicationOfInterest1.mmObject();
@@ -369,6 +400,16 @@ public class IndicationOfInterest1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(IndicationOfInterest1 obj) {
+			return obj.getValidUntilDateTime();
+		}
+
+		@Override
+		public void setValue(IndicationOfInterest1 obj, Optional<ISODateTime> value) {
+			obj.setValidUntilDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "QltyIndctn")
@@ -410,7 +451,7 @@ public class IndicationOfInterest1 {
 	 * "Indicates the relative quality of the indication of interest."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQualityIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndicationOfInterest1, Optional<QualityIndication1Code>> mmQualityIndication = new MMMessageAttribute<IndicationOfInterest1, Optional<QualityIndication1Code>>() {
 		{
 			businessElementTrace_lazy = () -> BuyOrSellIndicationOfInterest.mmQualityIndication;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndicationOfInterest1.mmObject();
@@ -423,6 +464,16 @@ public class IndicationOfInterest1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> QualityIndication1Code.mmObject();
+		}
+
+		@Override
+		public Optional<QualityIndication1Code> getValue(IndicationOfInterest1 obj) {
+			return obj.getQualityIndication();
+		}
+
+		@Override
+		public void setValue(IndicationOfInterest1 obj, Optional<QualityIndication1Code> value) {
+			obj.setQualityIndication(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NtrlInd")
@@ -465,7 +516,7 @@ public class IndicationOfInterest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNaturalIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndicationOfInterest1, Optional<TrueFalseIndicator>> mmNaturalIndicator = new MMMessageAttribute<IndicationOfInterest1, Optional<TrueFalseIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> BuyOrSellIndicationOfInterest.mmNaturalIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndicationOfInterest1.mmObject();
@@ -478,6 +529,16 @@ public class IndicationOfInterest1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(IndicationOfInterest1 obj) {
+			return obj.getNaturalIndicator();
+		}
+
+		@Override
+		public void setValue(IndicationOfInterest1 obj, Optional<TrueFalseIndicator> value) {
+			obj.setNaturalIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Qlfr")
@@ -518,7 +579,7 @@ public class IndicationOfInterest1 {
 	 * definition} = "Qualifies the use of the indication of interest."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQualifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndicationOfInterest1, List<Qualifier1Code>> mmQualifier = new MMMessageAttribute<IndicationOfInterest1, List<Qualifier1Code>>() {
 		{
 			businessElementTrace_lazy = () -> BuyOrSellIndicationOfInterest.mmQualifier;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndicationOfInterest1.mmObject();
@@ -530,6 +591,16 @@ public class IndicationOfInterest1 {
 			definition = "Qualifies the use of the indication of interest.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Qualifier1Code.mmObject();
+		}
+
+		@Override
+		public List<Qualifier1Code> getValue(IndicationOfInterest1 obj) {
+			return obj.getQualifier();
+		}
+
+		@Override
+		public void setValue(IndicationOfInterest1 obj, List<Qualifier1Code> value) {
+			obj.setQualifier(value);
 		}
 	};
 	@XmlElement(name = "LkdURLAdr")
@@ -566,7 +637,7 @@ public class IndicationOfInterest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLinkedURLAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndicationOfInterest1, Optional<Max256Text>> mmLinkedURLAddress = new MMMessageAttribute<IndicationOfInterest1, Optional<Max256Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndicationOfInterest1.mmObject();
 			isDerived = false;
@@ -578,6 +649,16 @@ public class IndicationOfInterest1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max256Text> getValue(IndicationOfInterest1 obj) {
+			return obj.getLinkedURLAddress();
+		}
+
+		@Override
+		public void setValue(IndicationOfInterest1 obj, Optional<Max256Text> value) {
+			obj.setLinkedURLAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NbOfLegs")
@@ -620,7 +701,7 @@ public class IndicationOfInterest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfLegs = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndicationOfInterest1, Optional<DecimalNumber>> mmNumberOfLegs = new MMMessageAttribute<IndicationOfInterest1, Optional<DecimalNumber>>() {
 		{
 			businessElementTrace_lazy = () -> BuyOrSellIndicationOfInterest.mmNumberOfLegs;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndicationOfInterest1.mmObject();
@@ -633,6 +714,16 @@ public class IndicationOfInterest1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(IndicationOfInterest1 obj) {
+			return obj.getNumberOfLegs();
+		}
+
+		@Override
+		public void setValue(IndicationOfInterest1 obj, Optional<DecimalNumber> value) {
+			obj.setNumberOfLegs(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FinInstrmDtls", required = true)
@@ -670,7 +761,7 @@ public class IndicationOfInterest1 {
 	 * "Financial instrument to which an indication of interest is related."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndicationOfInterest1, SecurityIdentification7> mmFinancialInstrumentDetails = new MMMessageAssociationEnd<IndicationOfInterest1, SecurityIdentification7>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndicationOfInterest1.mmObject();
@@ -682,7 +773,17 @@ public class IndicationOfInterest1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
+			type_lazy = () -> SecurityIdentification7.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification7 getValue(IndicationOfInterest1 obj) {
+			return obj.getFinancialInstrumentDetails();
+		}
+
+		@Override
+		public void setValue(IndicationOfInterest1 obj, SecurityIdentification7 value) {
+			obj.setFinancialInstrumentDetails(value);
 		}
 	};
 	@XmlElement(name = "FinInstrmAttrbts")
@@ -721,7 +822,7 @@ public class IndicationOfInterest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndicationOfInterest1, Optional<FinancialInstrumentAttributes1>> mmFinancialInstrumentAttributes = new MMMessageAssociationEnd<IndicationOfInterest1, Optional<FinancialInstrumentAttributes1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedSecurity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndicationOfInterest1.mmObject();
@@ -733,7 +834,17 @@ public class IndicationOfInterest1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes1.mmObject();
+			type_lazy = () -> FinancialInstrumentAttributes1.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentAttributes1> getValue(IndicationOfInterest1 obj) {
+			return obj.getFinancialInstrumentAttributes();
+		}
+
+		@Override
+		public void setValue(IndicationOfInterest1 obj, Optional<FinancialInstrumentAttributes1> value) {
+			obj.setFinancialInstrumentAttributes(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Stiptns")
@@ -772,7 +883,7 @@ public class IndicationOfInterest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStipulations = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndicationOfInterest1, Optional<FinancialInstrumentStipulations>> mmStipulations = new MMMessageAssociationEnd<IndicationOfInterest1, Optional<FinancialInstrumentStipulations>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedSecurity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndicationOfInterest1.mmObject();
@@ -784,11 +895,21 @@ public class IndicationOfInterest1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentStipulations.mmObject();
+			type_lazy = () -> FinancialInstrumentStipulations.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentStipulations> getValue(IndicationOfInterest1 obj) {
+			return obj.getStipulations();
+		}
+
+		@Override
+		public void setValue(IndicationOfInterest1 obj, Optional<FinancialInstrumentStipulations> value) {
+			obj.setStipulations(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UndrlygFinInstrmDtls")
-	protected List<com.tools20022.repository.msg.SecurityIdentification7> underlyingFinancialInstrumentDetails;
+	protected List<SecurityIdentification7> underlyingFinancialInstrumentDetails;
 	/**
 	 * 
 	 <p>
@@ -823,7 +944,7 @@ public class IndicationOfInterest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnderlyingFinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndicationOfInterest1, List<SecurityIdentification7>> mmUnderlyingFinancialInstrumentDetails = new MMMessageAssociationEnd<IndicationOfInterest1, List<SecurityIdentification7>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedSecurity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndicationOfInterest1.mmObject();
@@ -834,11 +955,21 @@ public class IndicationOfInterest1 {
 			definition = "Underlying financial instrument to which an indication of interest is related.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
+			type_lazy = () -> SecurityIdentification7.mmObject();
+		}
+
+		@Override
+		public List<SecurityIdentification7> getValue(IndicationOfInterest1 obj) {
+			return obj.getUnderlyingFinancialInstrumentDetails();
+		}
+
+		@Override
+		public void setValue(IndicationOfInterest1 obj, List<SecurityIdentification7> value) {
+			obj.setUnderlyingFinancialInstrumentDetails(value);
 		}
 	};
 	@XmlElement(name = "UndrlygFinInstrmAttrbts")
-	protected List<com.tools20022.repository.msg.FinancialInstrumentAttributes1> underlyingFinancialInstrumentAttributes;
+	protected List<FinancialInstrumentAttributes1> underlyingFinancialInstrumentAttributes;
 	/**
 	 * 
 	 <p>
@@ -873,7 +1004,7 @@ public class IndicationOfInterest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnderlyingFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndicationOfInterest1, List<FinancialInstrumentAttributes1>> mmUnderlyingFinancialInstrumentAttributes = new MMMessageAssociationEnd<IndicationOfInterest1, List<FinancialInstrumentAttributes1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedSecurity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndicationOfInterest1.mmObject();
@@ -884,11 +1015,21 @@ public class IndicationOfInterest1 {
 			definition = "Underlying financial instrument attributes to which an indication of interest is related.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes1.mmObject();
+			type_lazy = () -> FinancialInstrumentAttributes1.mmObject();
+		}
+
+		@Override
+		public List<FinancialInstrumentAttributes1> getValue(IndicationOfInterest1 obj) {
+			return obj.getUnderlyingFinancialInstrumentAttributes();
+		}
+
+		@Override
+		public void setValue(IndicationOfInterest1 obj, List<FinancialInstrumentAttributes1> value) {
+			obj.setUnderlyingFinancialInstrumentAttributes(value);
 		}
 	};
 	@XmlElement(name = "UndrlygStiptns")
-	protected List<com.tools20022.repository.msg.FinancialInstrumentStipulations> underlyingStipulations;
+	protected List<FinancialInstrumentStipulations> underlyingStipulations;
 	/**
 	 * 
 	 <p>
@@ -923,7 +1064,7 @@ public class IndicationOfInterest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnderlyingStipulations = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndicationOfInterest1, List<FinancialInstrumentStipulations>> mmUnderlyingStipulations = new MMMessageAssociationEnd<IndicationOfInterest1, List<FinancialInstrumentStipulations>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedSecurity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndicationOfInterest1.mmObject();
@@ -934,11 +1075,21 @@ public class IndicationOfInterest1 {
 			definition = "Underlying financial instrument stipulations to which an indication of interest is related.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentStipulations.mmObject();
+			type_lazy = () -> FinancialInstrumentStipulations.mmObject();
+		}
+
+		@Override
+		public List<FinancialInstrumentStipulations> getValue(IndicationOfInterest1 obj) {
+			return obj.getUnderlyingStipulations();
+		}
+
+		@Override
+		public void setValue(IndicationOfInterest1 obj, List<FinancialInstrumentStipulations> value) {
+			obj.setUnderlyingStipulations(value);
 		}
 	};
 	@XmlElement(name = "InstrmLegGrpDtls")
-	protected List<com.tools20022.repository.msg.InstrumentLeg1> instrumentLegGroupDetails;
+	protected List<InstrumentLeg1> instrumentLegGroupDetails;
 	/**
 	 * 
 	 <p>
@@ -971,7 +1122,7 @@ public class IndicationOfInterest1 {
 	 * "Provides details about each leg of the multileg instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstrumentLegGroupDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndicationOfInterest1, List<InstrumentLeg1>> mmInstrumentLegGroupDetails = new MMMessageAssociationEnd<IndicationOfInterest1, List<InstrumentLeg1>>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmLegAdditionalInformation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndicationOfInterest1.mmObject();
@@ -982,7 +1133,17 @@ public class IndicationOfInterest1 {
 			definition = "Provides details about each leg of the multileg instrument.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InstrumentLeg1.mmObject();
+			type_lazy = () -> InstrumentLeg1.mmObject();
+		}
+
+		@Override
+		public List<InstrumentLeg1> getValue(IndicationOfInterest1 obj) {
+			return obj.getInstrumentLegGroupDetails();
+		}
+
+		@Override
+		public void setValue(IndicationOfInterest1 obj, List<InstrumentLeg1> value) {
+			obj.setInstrumentLegGroupDetails(value);
 		}
 	};
 	@XmlElement(name = "YldDtls")
@@ -1019,7 +1180,7 @@ public class IndicationOfInterest1 {
 	 * "Details about the return provided by a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmYieldDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndicationOfInterest1, Optional<YieldCalculation1>> mmYieldDetails = new MMMessageAssociationEnd<IndicationOfInterest1, Optional<YieldCalculation1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmYieldCalculation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndicationOfInterest1.mmObject();
@@ -1031,7 +1192,17 @@ public class IndicationOfInterest1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.YieldCalculation1.mmObject();
+			type_lazy = () -> YieldCalculation1.mmObject();
+		}
+
+		@Override
+		public Optional<YieldCalculation1> getValue(IndicationOfInterest1 obj) {
+			return obj.getYieldDetails();
+		}
+
+		@Override
+		public void setValue(IndicationOfInterest1 obj, Optional<YieldCalculation1> value) {
+			obj.setYieldDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrdrQty")
@@ -1069,7 +1240,7 @@ public class IndicationOfInterest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOrderQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndicationOfInterest1, Optional<OrderQuantity1>> mmOrderQuantity = new MMMessageAssociationEnd<IndicationOfInterest1, Optional<OrderQuantity1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndicationOfInterest1.mmObject();
@@ -1081,7 +1252,17 @@ public class IndicationOfInterest1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OrderQuantity1.mmObject();
+			type_lazy = () -> OrderQuantity1.mmObject();
+		}
+
+		@Override
+		public Optional<OrderQuantity1> getValue(IndicationOfInterest1 obj) {
+			return obj.getOrderQuantity();
+		}
+
+		@Override
+		public void setValue(IndicationOfInterest1 obj, Optional<OrderQuantity1> value) {
+			obj.setOrderQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SprdAndBchmkCrvDtls")
@@ -1119,7 +1300,7 @@ public class IndicationOfInterest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSpreadAndBenchmarkCurveDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndicationOfInterest1, Optional<BenchmarkCurve1>> mmSpreadAndBenchmarkCurveDetails = new MMMessageAssociationEnd<IndicationOfInterest1, Optional<BenchmarkCurve1>>() {
 		{
 			businessElementTrace_lazy = () -> BuyOrSellIndicationOfInterest.mmSpreadToBenchmark;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndicationOfInterest1.mmObject();
@@ -1131,7 +1312,17 @@ public class IndicationOfInterest1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BenchmarkCurve1.mmObject();
+			type_lazy = () -> BenchmarkCurve1.mmObject();
+		}
+
+		@Override
+		public Optional<BenchmarkCurve1> getValue(IndicationOfInterest1 obj) {
+			return obj.getSpreadAndBenchmarkCurveDetails();
+		}
+
+		@Override
+		public void setValue(IndicationOfInterest1 obj, Optional<BenchmarkCurve1> value) {
+			obj.setSpreadAndBenchmarkCurveDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TwoLegTxDtls")
@@ -1169,7 +1360,7 @@ public class IndicationOfInterest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTwoLegTransactionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndicationOfInterest1, Optional<SecuritiesFinancing1>> mmTwoLegTransactionDetails = new MMMessageAssociationEnd<IndicationOfInterest1, Optional<SecuritiesFinancing1>>() {
 		{
 			businessElementTrace_lazy = () -> BuyOrSellIndicationOfInterest.mmTwoLegTransaction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndicationOfInterest1.mmObject();
@@ -1181,11 +1372,21 @@ public class IndicationOfInterest1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancing1.mmObject();
+			type_lazy = () -> SecuritiesFinancing1.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesFinancing1> getValue(IndicationOfInterest1 obj) {
+			return obj.getTwoLegTransactionDetails();
+		}
+
+		@Override
+		public void setValue(IndicationOfInterest1 obj, Optional<SecuritiesFinancing1> value) {
+			obj.setTwoLegTransactionDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradgPties")
-	protected List<com.tools20022.repository.msg.Intermediary14> tradingParties;
+	protected List<Intermediary14> tradingParties;
 	/**
 	 * 
 	 <p>
@@ -1217,7 +1418,7 @@ public class IndicationOfInterest1 {
 	 * definition} = "Parties involved in the specific transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradingParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndicationOfInterest1, List<Intermediary14>> mmTradingParties = new MMMessageAssociationEnd<IndicationOfInterest1, List<Intermediary14>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradePartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndicationOfInterest1.mmObject();
@@ -1228,7 +1429,17 @@ public class IndicationOfInterest1 {
 			definition = "Parties involved in the specific transaction.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Intermediary14.mmObject();
+			type_lazy = () -> Intermediary14.mmObject();
+		}
+
+		@Override
+		public List<Intermediary14> getValue(IndicationOfInterest1 obj) {
+			return obj.getTradingParties();
+		}
+
+		@Override
+		public void setValue(IndicationOfInterest1 obj, List<Intermediary14> value) {
+			obj.setTradingParties(value);
 		}
 	};
 	@XmlElement(name = "CshPties")
@@ -1264,7 +1475,7 @@ public class IndicationOfInterest1 {
 	 * definition} = "Cash parties involved in the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndicationOfInterest1, Optional<CashParties1>> mmCashParties = new MMMessageAssociationEnd<IndicationOfInterest1, Optional<CashParties1>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndicationOfInterest1.mmObject();
@@ -1276,7 +1487,17 @@ public class IndicationOfInterest1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashParties1.mmObject();
+			type_lazy = () -> CashParties1.mmObject();
+		}
+
+		@Override
+		public Optional<CashParties1> getValue(IndicationOfInterest1 obj) {
+			return obj.getCashParties();
+		}
+
+		@Override
+		public void setValue(IndicationOfInterest1 obj, Optional<CashParties1> value) {
+			obj.setCashParties(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcvgSttlmPties")
@@ -1312,7 +1533,7 @@ public class IndicationOfInterest1 {
 	 * definition} = "Receiving parties involved in the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReceivingSettlementParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndicationOfInterest1, Optional<SettlementParties3>> mmReceivingSettlementParties = new MMMessageAssociationEnd<IndicationOfInterest1, Optional<SettlementParties3>>() {
 		{
 			businessComponentTrace_lazy = () -> ReceivingSettlementParty.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndicationOfInterest1.mmObject();
@@ -1324,7 +1545,17 @@ public class IndicationOfInterest1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SettlementParties3.mmObject();
+			type_lazy = () -> SettlementParties3.mmObject();
+		}
+
+		@Override
+		public Optional<SettlementParties3> getValue(IndicationOfInterest1 obj) {
+			return obj.getReceivingSettlementParties();
+		}
+
+		@Override
+		public void setValue(IndicationOfInterest1 obj, Optional<SettlementParties3> value) {
+			obj.setReceivingSettlementParties(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DlvrgSttlmPties")
@@ -1362,7 +1593,7 @@ public class IndicationOfInterest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDeliveringSettlementParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndicationOfInterest1, Optional<SettlementParties3>> mmDeliveringSettlementParties = new MMMessageAssociationEnd<IndicationOfInterest1, Optional<SettlementParties3>>() {
 		{
 			businessComponentTrace_lazy = () -> DeliveringSettlementParty.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndicationOfInterest1.mmObject();
@@ -1374,7 +1605,17 @@ public class IndicationOfInterest1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SettlementParties3.mmObject();
+			type_lazy = () -> SettlementParties3.mmObject();
+		}
+
+		@Override
+		public Optional<SettlementParties3> getValue(IndicationOfInterest1 obj) {
+			return obj.getDeliveringSettlementParties();
+		}
+
+		@Override
+		public void setValue(IndicationOfInterest1 obj, Optional<SettlementParties3> value) {
+			obj.setDeliveringSettlementParties(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OthrBizPties")
@@ -1405,7 +1646,7 @@ public class IndicationOfInterest1 {
 	 * definition} = "Other parties involved in the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherBusinessParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndicationOfInterest1, Optional<OtherParties1>> mmOtherBusinessParties = new MMMessageAssociationEnd<IndicationOfInterest1, Optional<OtherParties1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndicationOfInterest1.mmObject();
 			isDerived = false;
@@ -1416,7 +1657,17 @@ public class IndicationOfInterest1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OtherParties1.mmObject();
+			type_lazy = () -> OtherParties1.mmObject();
+		}
+
+		@Override
+		public Optional<OtherParties1> getValue(IndicationOfInterest1 obj) {
+			return obj.getOtherBusinessParties();
+		}
+
+		@Override
+		public void setValue(IndicationOfInterest1 obj, Optional<OtherParties1> value) {
+			obj.setOtherBusinessParties(value.orElse(null));
 		}
 	};
 
@@ -1468,7 +1719,7 @@ public class IndicationOfInterest1 {
 		return price == null ? Optional.empty() : Optional.of(price);
 	}
 
-	public IndicationOfInterest1 setPrice(com.tools20022.repository.msg.Price1 price) {
+	public IndicationOfInterest1 setPrice(Price1 price) {
 		this.price = price;
 		return this;
 	}
@@ -1531,7 +1782,7 @@ public class IndicationOfInterest1 {
 		return financialInstrumentDetails;
 	}
 
-	public IndicationOfInterest1 setFinancialInstrumentDetails(com.tools20022.repository.msg.SecurityIdentification7 financialInstrumentDetails) {
+	public IndicationOfInterest1 setFinancialInstrumentDetails(SecurityIdentification7 financialInstrumentDetails) {
 		this.financialInstrumentDetails = Objects.requireNonNull(financialInstrumentDetails);
 		return this;
 	}
@@ -1540,7 +1791,7 @@ public class IndicationOfInterest1 {
 		return financialInstrumentAttributes == null ? Optional.empty() : Optional.of(financialInstrumentAttributes);
 	}
 
-	public IndicationOfInterest1 setFinancialInstrumentAttributes(com.tools20022.repository.msg.FinancialInstrumentAttributes1 financialInstrumentAttributes) {
+	public IndicationOfInterest1 setFinancialInstrumentAttributes(FinancialInstrumentAttributes1 financialInstrumentAttributes) {
 		this.financialInstrumentAttributes = financialInstrumentAttributes;
 		return this;
 	}
@@ -1549,7 +1800,7 @@ public class IndicationOfInterest1 {
 		return stipulations == null ? Optional.empty() : Optional.of(stipulations);
 	}
 
-	public IndicationOfInterest1 setStipulations(com.tools20022.repository.msg.FinancialInstrumentStipulations stipulations) {
+	public IndicationOfInterest1 setStipulations(FinancialInstrumentStipulations stipulations) {
 		this.stipulations = stipulations;
 		return this;
 	}
@@ -1558,7 +1809,7 @@ public class IndicationOfInterest1 {
 		return underlyingFinancialInstrumentDetails == null ? underlyingFinancialInstrumentDetails = new ArrayList<>() : underlyingFinancialInstrumentDetails;
 	}
 
-	public IndicationOfInterest1 setUnderlyingFinancialInstrumentDetails(List<com.tools20022.repository.msg.SecurityIdentification7> underlyingFinancialInstrumentDetails) {
+	public IndicationOfInterest1 setUnderlyingFinancialInstrumentDetails(List<SecurityIdentification7> underlyingFinancialInstrumentDetails) {
 		this.underlyingFinancialInstrumentDetails = Objects.requireNonNull(underlyingFinancialInstrumentDetails);
 		return this;
 	}
@@ -1567,7 +1818,7 @@ public class IndicationOfInterest1 {
 		return underlyingFinancialInstrumentAttributes == null ? underlyingFinancialInstrumentAttributes = new ArrayList<>() : underlyingFinancialInstrumentAttributes;
 	}
 
-	public IndicationOfInterest1 setUnderlyingFinancialInstrumentAttributes(List<com.tools20022.repository.msg.FinancialInstrumentAttributes1> underlyingFinancialInstrumentAttributes) {
+	public IndicationOfInterest1 setUnderlyingFinancialInstrumentAttributes(List<FinancialInstrumentAttributes1> underlyingFinancialInstrumentAttributes) {
 		this.underlyingFinancialInstrumentAttributes = Objects.requireNonNull(underlyingFinancialInstrumentAttributes);
 		return this;
 	}
@@ -1576,7 +1827,7 @@ public class IndicationOfInterest1 {
 		return underlyingStipulations == null ? underlyingStipulations = new ArrayList<>() : underlyingStipulations;
 	}
 
-	public IndicationOfInterest1 setUnderlyingStipulations(List<com.tools20022.repository.msg.FinancialInstrumentStipulations> underlyingStipulations) {
+	public IndicationOfInterest1 setUnderlyingStipulations(List<FinancialInstrumentStipulations> underlyingStipulations) {
 		this.underlyingStipulations = Objects.requireNonNull(underlyingStipulations);
 		return this;
 	}
@@ -1585,7 +1836,7 @@ public class IndicationOfInterest1 {
 		return instrumentLegGroupDetails == null ? instrumentLegGroupDetails = new ArrayList<>() : instrumentLegGroupDetails;
 	}
 
-	public IndicationOfInterest1 setInstrumentLegGroupDetails(List<com.tools20022.repository.msg.InstrumentLeg1> instrumentLegGroupDetails) {
+	public IndicationOfInterest1 setInstrumentLegGroupDetails(List<InstrumentLeg1> instrumentLegGroupDetails) {
 		this.instrumentLegGroupDetails = Objects.requireNonNull(instrumentLegGroupDetails);
 		return this;
 	}
@@ -1594,7 +1845,7 @@ public class IndicationOfInterest1 {
 		return yieldDetails == null ? Optional.empty() : Optional.of(yieldDetails);
 	}
 
-	public IndicationOfInterest1 setYieldDetails(com.tools20022.repository.msg.YieldCalculation1 yieldDetails) {
+	public IndicationOfInterest1 setYieldDetails(YieldCalculation1 yieldDetails) {
 		this.yieldDetails = yieldDetails;
 		return this;
 	}
@@ -1603,7 +1854,7 @@ public class IndicationOfInterest1 {
 		return orderQuantity == null ? Optional.empty() : Optional.of(orderQuantity);
 	}
 
-	public IndicationOfInterest1 setOrderQuantity(com.tools20022.repository.msg.OrderQuantity1 orderQuantity) {
+	public IndicationOfInterest1 setOrderQuantity(OrderQuantity1 orderQuantity) {
 		this.orderQuantity = orderQuantity;
 		return this;
 	}
@@ -1612,7 +1863,7 @@ public class IndicationOfInterest1 {
 		return spreadAndBenchmarkCurveDetails == null ? Optional.empty() : Optional.of(spreadAndBenchmarkCurveDetails);
 	}
 
-	public IndicationOfInterest1 setSpreadAndBenchmarkCurveDetails(com.tools20022.repository.msg.BenchmarkCurve1 spreadAndBenchmarkCurveDetails) {
+	public IndicationOfInterest1 setSpreadAndBenchmarkCurveDetails(BenchmarkCurve1 spreadAndBenchmarkCurveDetails) {
 		this.spreadAndBenchmarkCurveDetails = spreadAndBenchmarkCurveDetails;
 		return this;
 	}
@@ -1621,7 +1872,7 @@ public class IndicationOfInterest1 {
 		return twoLegTransactionDetails == null ? Optional.empty() : Optional.of(twoLegTransactionDetails);
 	}
 
-	public IndicationOfInterest1 setTwoLegTransactionDetails(com.tools20022.repository.msg.SecuritiesFinancing1 twoLegTransactionDetails) {
+	public IndicationOfInterest1 setTwoLegTransactionDetails(SecuritiesFinancing1 twoLegTransactionDetails) {
 		this.twoLegTransactionDetails = twoLegTransactionDetails;
 		return this;
 	}
@@ -1630,7 +1881,7 @@ public class IndicationOfInterest1 {
 		return tradingParties == null ? tradingParties = new ArrayList<>() : tradingParties;
 	}
 
-	public IndicationOfInterest1 setTradingParties(List<com.tools20022.repository.msg.Intermediary14> tradingParties) {
+	public IndicationOfInterest1 setTradingParties(List<Intermediary14> tradingParties) {
 		this.tradingParties = Objects.requireNonNull(tradingParties);
 		return this;
 	}
@@ -1639,7 +1890,7 @@ public class IndicationOfInterest1 {
 		return cashParties == null ? Optional.empty() : Optional.of(cashParties);
 	}
 
-	public IndicationOfInterest1 setCashParties(com.tools20022.repository.msg.CashParties1 cashParties) {
+	public IndicationOfInterest1 setCashParties(CashParties1 cashParties) {
 		this.cashParties = cashParties;
 		return this;
 	}
@@ -1648,7 +1899,7 @@ public class IndicationOfInterest1 {
 		return receivingSettlementParties == null ? Optional.empty() : Optional.of(receivingSettlementParties);
 	}
 
-	public IndicationOfInterest1 setReceivingSettlementParties(com.tools20022.repository.msg.SettlementParties3 receivingSettlementParties) {
+	public IndicationOfInterest1 setReceivingSettlementParties(SettlementParties3 receivingSettlementParties) {
 		this.receivingSettlementParties = receivingSettlementParties;
 		return this;
 	}
@@ -1657,7 +1908,7 @@ public class IndicationOfInterest1 {
 		return deliveringSettlementParties == null ? Optional.empty() : Optional.of(deliveringSettlementParties);
 	}
 
-	public IndicationOfInterest1 setDeliveringSettlementParties(com.tools20022.repository.msg.SettlementParties3 deliveringSettlementParties) {
+	public IndicationOfInterest1 setDeliveringSettlementParties(SettlementParties3 deliveringSettlementParties) {
 		this.deliveringSettlementParties = deliveringSettlementParties;
 		return this;
 	}
@@ -1666,7 +1917,7 @@ public class IndicationOfInterest1 {
 		return otherBusinessParties == null ? Optional.empty() : Optional.of(otherBusinessParties);
 	}
 
-	public IndicationOfInterest1 setOtherBusinessParties(com.tools20022.repository.msg.OtherParties1 otherBusinessParties) {
+	public IndicationOfInterest1 setOtherBusinessParties(OtherParties1 otherBusinessParties) {
 		this.otherBusinessParties = otherBusinessParties;
 		return this;
 	}

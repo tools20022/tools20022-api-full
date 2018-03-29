@@ -111,7 +111,7 @@ public class FertilizerCommodityUreaAndAmmoniumNitrate1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBaseProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FertilizerCommodityUreaAndAmmoniumNitrate1, AssetClassProductType5Code> mmBaseProduct = new MMMessageAttribute<FertilizerCommodityUreaAndAmmoniumNitrate1, AssetClassProductType5Code>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FertilizerCommodityUreaAndAmmoniumNitrate1.mmObject();
@@ -123,6 +123,16 @@ public class FertilizerCommodityUreaAndAmmoniumNitrate1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassProductType5Code.mmObject();
+		}
+
+		@Override
+		public AssetClassProductType5Code getValue(FertilizerCommodityUreaAndAmmoniumNitrate1 obj) {
+			return obj.getBaseProduct();
+		}
+
+		@Override
+		public void setValue(FertilizerCommodityUreaAndAmmoniumNitrate1 obj, AssetClassProductType5Code value) {
+			obj.setBaseProduct(value);
 		}
 	};
 	@XmlElement(name = "SubPdct", required = true)
@@ -160,7 +170,7 @@ public class FertilizerCommodityUreaAndAmmoniumNitrate1 {
 	 * definition} = "Sub-product for the underlying asset class."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FertilizerCommodityUreaAndAmmoniumNitrate1, AssetClassSubProductType44Code> mmSubProduct = new MMMessageAttribute<FertilizerCommodityUreaAndAmmoniumNitrate1, AssetClassSubProductType44Code>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FertilizerCommodityUreaAndAmmoniumNitrate1.mmObject();
@@ -172,6 +182,16 @@ public class FertilizerCommodityUreaAndAmmoniumNitrate1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassSubProductType44Code.mmObject();
+		}
+
+		@Override
+		public AssetClassSubProductType44Code getValue(FertilizerCommodityUreaAndAmmoniumNitrate1 obj) {
+			return obj.getSubProduct();
+		}
+
+		@Override
+		public void setValue(FertilizerCommodityUreaAndAmmoniumNitrate1 obj, AssetClassSubProductType44Code value) {
+			obj.setSubProduct(value);
 		}
 	};
 

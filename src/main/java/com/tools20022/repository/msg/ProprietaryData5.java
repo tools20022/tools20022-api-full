@@ -98,7 +98,7 @@ public class ProprietaryData5 {
 	 * definition} = "Type of the proprietary document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryData5, Max35Text> mmType = new MMMessageAttribute<ProprietaryData5, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryData5.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class ProprietaryData5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ProprietaryData5 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(ProprietaryData5 obj, Max35Text value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Data", required = true)
@@ -141,7 +151,7 @@ public class ProprietaryData5 {
 	 * definition} = "Technical element wrapping the proprietary message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmData = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryData5, SupplementaryDataEnvelope1> mmData = new MMMessageAttribute<ProprietaryData5, SupplementaryDataEnvelope1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryData5.mmObject();
 			isDerived = false;
@@ -152,6 +162,16 @@ public class ProprietaryData5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SupplementaryDataEnvelope1.mmObject();
+		}
+
+		@Override
+		public SupplementaryDataEnvelope1 getValue(ProprietaryData5 obj) {
+			return obj.getData();
+		}
+
+		@Override
+		public void setValue(ProprietaryData5 obj, SupplementaryDataEnvelope1 value) {
+			obj.setData(value);
 		}
 	};
 

@@ -132,7 +132,7 @@ public class Participation4 {
 	 * Participation3.mmTotalNumberOfVotingRights}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalNumberOfVotingRights = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Participation4, Optional<Number>> mmTotalNumberOfVotingRights = new MMMessageAttribute<Participation4, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> MeetingParticipation.mmTotalNumberOfVotingRights;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Participation4.mmObject();
@@ -145,6 +145,16 @@ public class Participation4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(Participation4 obj) {
+			return obj.getTotalNumberOfVotingRights();
+		}
+
+		@Override
+		public void setValue(Participation4 obj, Optional<Number> value) {
+			obj.setTotalNumberOfVotingRights(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PctgOfVtngRghts")
@@ -183,7 +193,7 @@ public class Participation4 {
 	 * Participation3.mmPercentageOfVotingRights}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPercentageOfVotingRights = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Participation4, Optional<PercentageRate>> mmPercentageOfVotingRights = new MMMessageAttribute<Participation4, Optional<PercentageRate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Participation4.mmObject();
 			isDerived = false;
@@ -195,6 +205,16 @@ public class Participation4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(Participation4 obj) {
+			return obj.getPercentageOfVotingRights();
+		}
+
+		@Override
+		public void setValue(Participation4 obj, Optional<PercentageRate> value) {
+			obj.setPercentageOfVotingRights(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlNbOfSctiesOutsdng")
@@ -238,7 +258,7 @@ public class Participation4 {
 	 * Participation3.mmTotalNumberOfSecuritiesOutstanding}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalNumberOfSecuritiesOutstanding = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Participation4, Optional<UnitOrFaceAmount1Choice>> mmTotalNumberOfSecuritiesOutstanding = new MMMessageAttribute<Participation4, Optional<UnitOrFaceAmount1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> MeetingParticipation.mmTotalNumberOfSecuritiesOutstanding;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Participation4.mmObject();
@@ -251,6 +271,16 @@ public class Participation4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> UnitOrFaceAmount1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<UnitOrFaceAmount1Choice> getValue(Participation4 obj) {
+			return obj.getTotalNumberOfSecuritiesOutstanding();
+		}
+
+		@Override
+		public void setValue(Participation4 obj, Optional<UnitOrFaceAmount1Choice> value) {
+			obj.setTotalNumberOfSecuritiesOutstanding(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClctnDt")
@@ -292,7 +322,7 @@ public class Participation4 {
 	 * Participation3.mmCalculationDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCalculationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Participation4, Optional<ISODate>> mmCalculationDate = new MMMessageAttribute<Participation4, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> MeetingParticipation.mmCalculationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Participation4.mmObject();
@@ -305,6 +335,16 @@ public class Participation4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(Participation4 obj) {
+			return obj.getCalculationDate();
+		}
+
+		@Override
+		public void setValue(Participation4 obj, Optional<ISODate> value) {
+			obj.setCalculationDate(value.orElse(null));
 		}
 	};
 

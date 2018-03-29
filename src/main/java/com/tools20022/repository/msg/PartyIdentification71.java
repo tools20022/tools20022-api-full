@@ -118,7 +118,7 @@ public class PartyIdentification71 {
 	 * PartyIdentification39.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification71, PartyIdentification40Choice> mmIdentification = new MMMessageAssociationEnd<PartyIdentification71, PartyIdentification40Choice>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification71.mmObject();
@@ -132,6 +132,16 @@ public class PartyIdentification71 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification40Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification40Choice getValue(PartyIdentification71 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification71 obj, PartyIdentification40Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "AddtlIdInf")
@@ -168,7 +178,7 @@ public class PartyIdentification71 {
 	 * PartyIdentification39.mmAdditionalIdentificationInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdditionalIdentificationInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification71, Optional<PartyAdditionalIdentification2Choice>> mmAdditionalIdentificationInformation = new MMMessageAssociationEnd<PartyIdentification71, Optional<PartyAdditionalIdentification2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification71.mmObject();
 			isDerived = false;
@@ -181,6 +191,16 @@ public class PartyIdentification71 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyAdditionalIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyAdditionalIdentification2Choice> getValue(PartyIdentification71 obj) {
+			return obj.getAdditionalIdentificationInformation();
+		}
+
+		@Override
+		public void setValue(PartyIdentification71 obj, Optional<PartyAdditionalIdentification2Choice> value) {
+			obj.setAdditionalIdentificationInformation(value.orElse(null));
 		}
 	};
 

@@ -111,7 +111,7 @@ public class ClassificationType33Choice {
 	 * definition} = "ISO 10962 Classification of Financial Instrument (CFI)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClassificationFinancialInstrument = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClassificationType33Choice, CFIOct2015Identifier> mmClassificationFinancialInstrument = new MMMessageAttribute<ClassificationType33Choice, CFIOct2015Identifier>() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClassificationType33Choice.mmObject();
@@ -124,6 +124,16 @@ public class ClassificationType33Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CFIOct2015Identifier.mmObject();
+		}
+
+		@Override
+		public CFIOct2015Identifier getValue(ClassificationType33Choice obj) {
+			return obj.getClassificationFinancialInstrument();
+		}
+
+		@Override
+		public void setValue(ClassificationType33Choice obj, CFIOct2015Identifier value) {
+			obj.setClassificationFinancialInstrument(value);
 		}
 	};
 	@XmlElement(name = "AltrnClssfctn", required = true)
@@ -164,7 +174,7 @@ public class ClassificationType33Choice {
 	 * definition} = "Proprietary classification of financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAlternateClassification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClassificationType33Choice, GenericIdentification86> mmAlternateClassification = new MMMessageAttribute<ClassificationType33Choice, GenericIdentification86>() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClassificationType33Choice.mmObject();
@@ -177,6 +187,16 @@ public class ClassificationType33Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification86.mmObject();
+		}
+
+		@Override
+		public GenericIdentification86 getValue(ClassificationType33Choice obj) {
+			return obj.getAlternateClassification();
+		}
+
+		@Override
+		public void setValue(ClassificationType33Choice obj, GenericIdentification86 value) {
+			obj.setAlternateClassification(value);
 		}
 	};
 

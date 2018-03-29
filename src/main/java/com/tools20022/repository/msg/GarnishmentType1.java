@@ -115,7 +115,7 @@ public class GarnishmentType1 {
 	 * ReferredDocumentType2.mmCodeOrProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCodeOrProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GarnishmentType1, GarnishmentType1Choice> mmCodeOrProprietary = new MMMessageAssociationEnd<GarnishmentType1, GarnishmentType1Choice>() {
 		{
 			businessComponentTrace_lazy = () -> Document.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.GarnishmentType1.mmObject();
@@ -129,6 +129,16 @@ public class GarnishmentType1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GarnishmentType1Choice.mmObject();
+		}
+
+		@Override
+		public GarnishmentType1Choice getValue(GarnishmentType1 obj) {
+			return obj.getCodeOrProprietary();
+		}
+
+		@Override
+		public void setValue(GarnishmentType1 obj, GarnishmentType1Choice value) {
+			obj.setCodeOrProprietary(value);
 		}
 	};
 	@XmlElement(name = "Issr")
@@ -170,7 +180,7 @@ public class GarnishmentType1 {
 	 * ReferredDocumentType2.mmIssuer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GarnishmentType1, Optional<Max35Text>> mmIssuer = new MMMessageAttribute<GarnishmentType1, Optional<Max35Text>>() {
 		{
 			businessComponentTrace_lazy = () -> DocumentIssuer.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.GarnishmentType1.mmObject();
@@ -183,6 +193,16 @@ public class GarnishmentType1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(GarnishmentType1 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(GarnishmentType1 obj, Optional<Max35Text> value) {
+			obj.setIssuer(value.orElse(null));
 		}
 	};
 

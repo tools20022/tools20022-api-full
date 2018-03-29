@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.BaselineStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BICIdentification1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -115,7 +116,7 @@ public class StatusReportItems2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatusReportItems2, Max35Text> mmTransactionIdentification = new MMMessageAttribute<StatusReportItems2, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReportItems2.mmObject();
 			isDerived = false;
@@ -127,9 +128,19 @@ public class StatusReportItems2 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Max35Text getValue(StatusReportItems2 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(StatusReportItems2 obj, Max35Text value) {
+			obj.setTransactionIdentification(value);
+		}
 	};
 	@XmlElement(name = "RptdNtty", required = true)
-	protected List<com.tools20022.repository.msg.BICIdentification1> reportedEntity;
+	protected List<BICIdentification1> reportedEntity;
 	/**
 	 * 
 	 <p>
@@ -157,7 +168,7 @@ public class StatusReportItems2 {
 	 * "Entity for which the matching application has generated a report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReportedEntity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusReportItems2, List<BICIdentification1>> mmReportedEntity = new MMMessageAssociationEnd<StatusReportItems2, List<BICIdentification1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReportItems2.mmObject();
 			isDerived = false;
@@ -168,7 +179,17 @@ public class StatusReportItems2 {
 			maxOccurs = 2;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
+			type_lazy = () -> BICIdentification1.mmObject();
+		}
+
+		@Override
+		public List<BICIdentification1> getValue(StatusReportItems2 obj) {
+			return obj.getReportedEntity();
+		}
+
+		@Override
+		public void setValue(StatusReportItems2 obj, List<BICIdentification1> value) {
+			obj.setReportedEntity(value);
 		}
 	};
 	@XmlElement(name = "Sts", required = true)
@@ -207,7 +228,7 @@ public class StatusReportItems2 {
 	 * "Identifies the status of the transaction by means of a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatusReportItems2, BaselineStatus3Code> mmStatus = new MMMessageAttribute<StatusReportItems2, BaselineStatus3Code>() {
 		{
 			businessElementTrace_lazy = () -> BaselineStatus.mmStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReportItems2.mmObject();
@@ -219,6 +240,16 @@ public class StatusReportItems2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaselineStatus3Code.mmObject();
+		}
+
+		@Override
+		public BaselineStatus3Code getValue(StatusReportItems2 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(StatusReportItems2 obj, BaselineStatus3Code value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "SubSts")
@@ -250,7 +281,7 @@ public class StatusReportItems2 {
 	 * definition} = "Further description of the transaction status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatusReportItems2, Optional<Max140Text>> mmSubStatus = new MMMessageAttribute<StatusReportItems2, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReportItems2.mmObject();
 			isDerived = false;
@@ -261,6 +292,16 @@ public class StatusReportItems2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(StatusReportItems2 obj) {
+			return obj.getSubStatus();
+		}
+
+		@Override
+		public void setValue(StatusReportItems2 obj, Optional<Max140Text> value) {
+			obj.setSubStatus(value.orElse(null));
 		}
 	};
 
@@ -292,7 +333,7 @@ public class StatusReportItems2 {
 		return reportedEntity == null ? reportedEntity = new ArrayList<>() : reportedEntity;
 	}
 
-	public StatusReportItems2 setReportedEntity(List<com.tools20022.repository.msg.BICIdentification1> reportedEntity) {
+	public StatusReportItems2 setReportedEntity(List<BICIdentification1> reportedEntity) {
 		this.reportedEntity = Objects.requireNonNull(reportedEntity);
 		return this;
 	}

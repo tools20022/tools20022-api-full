@@ -113,7 +113,7 @@ public class Notification1 {
 	 * definition} = "Type of the notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Notification1, NotificationType1Code> mmType = new MMMessageAttribute<Notification1, NotificationType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Notification1.mmObject();
 			isDerived = false;
@@ -124,6 +124,16 @@ public class Notification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NotificationType1Code.mmObject();
+		}
+
+		@Override
+		public NotificationType1Code getValue(Notification1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Notification1 obj, NotificationType1Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf", required = true)
@@ -156,7 +166,7 @@ public class Notification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Notification1, Max140Text> mmAdditionalInformation = new MMMessageAttribute<Notification1, Max140Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Notification1.mmObject();
 			isDerived = false;
@@ -167,6 +177,16 @@ public class Notification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Max140Text getValue(Notification1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(Notification1 obj, Max140Text value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 

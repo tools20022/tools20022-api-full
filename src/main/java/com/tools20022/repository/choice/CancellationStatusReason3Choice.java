@@ -119,7 +119,7 @@ public class CancellationStatusReason3Choice {
 	 * CancellationStatusReason2Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationStatusReason3Choice, ExternalPaymentCancellationRejection1Code> mmCode = new MMMessageAttribute<CancellationStatusReason3Choice, ExternalPaymentCancellationRejection1Code>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCaseRejection.mmRejectedCancellation;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationStatusReason3Choice.mmObject();
@@ -132,6 +132,16 @@ public class CancellationStatusReason3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalPaymentCancellationRejection1Code.mmObject();
+		}
+
+		@Override
+		public ExternalPaymentCancellationRejection1Code getValue(CancellationStatusReason3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CancellationStatusReason3Choice obj, ExternalPaymentCancellationRejection1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -173,7 +183,7 @@ public class CancellationStatusReason3Choice {
 	 * CancellationStatusReason2Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationStatusReason3Choice, Max35Text> mmProprietary = new MMMessageAttribute<CancellationStatusReason3Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCaseRejection.mmRejectedCancellation;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationStatusReason3Choice.mmObject();
@@ -186,6 +196,16 @@ public class CancellationStatusReason3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CancellationStatusReason3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CancellationStatusReason3Choice obj, Max35Text value) {
+			obj.setProprietary(value);
 		}
 	};
 

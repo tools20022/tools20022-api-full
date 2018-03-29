@@ -112,7 +112,7 @@ public class CentralCounterPartyEligibility3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CentralCounterPartyEligibility3Choice, YesNoIndicator> mmIndicator = new MMMessageAttribute<CentralCounterPartyEligibility3Choice, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> Settlement.mmCentralCounterpartyEligibilityIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CentralCounterPartyEligibility3Choice.mmObject();
@@ -125,6 +125,16 @@ public class CentralCounterPartyEligibility3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(CentralCounterPartyEligibility3Choice obj) {
+			return obj.getIndicator();
+		}
+
+		@Override
+		public void setValue(CentralCounterPartyEligibility3Choice obj, YesNoIndicator value) {
+			obj.setIndicator(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -162,7 +172,7 @@ public class CentralCounterPartyEligibility3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CentralCounterPartyEligibility3Choice, GenericIdentification38> mmProprietary = new MMMessageAttribute<CentralCounterPartyEligibility3Choice, GenericIdentification38>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CentralCounterPartyEligibility3Choice.mmObject();
 			isDerived = false;
@@ -174,6 +184,16 @@ public class CentralCounterPartyEligibility3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification38.mmObject();
+		}
+
+		@Override
+		public GenericIdentification38 getValue(CentralCounterPartyEligibility3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CentralCounterPartyEligibility3Choice obj, GenericIdentification38 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.PresentationMedium1Choice;
 import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.entity.Presentation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Document11;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -117,7 +118,7 @@ public class Presentation4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMedium = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Presentation4, Optional<PresentationMedium1Choice>> mmMedium = new MMMessageAttribute<Presentation4, Optional<PresentationMedium1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Presentation.mmMedium;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Presentation4.mmObject();
@@ -130,9 +131,19 @@ public class Presentation4 {
 			minOccurs = 0;
 			complexType_lazy = () -> PresentationMedium1Choice.mmObject();
 		}
+
+		@Override
+		public Optional<PresentationMedium1Choice> getValue(Presentation4 obj) {
+			return obj.getMedium();
+		}
+
+		@Override
+		public void setValue(Presentation4 obj, Optional<PresentationMedium1Choice> value) {
+			obj.setMedium(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "Doc")
-	protected List<com.tools20022.repository.msg.Document11> document;
+	protected List<Document11> document;
 	/**
 	 * 
 	 <p>
@@ -162,7 +173,7 @@ public class Presentation4 {
 	 * definition} = "Document required to be presented."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDocument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Presentation4, List<Document11>> mmDocument = new MMMessageAssociationEnd<Presentation4, List<Document11>>() {
 		{
 			businessElementTrace_lazy = () -> Presentation.mmPresentedDocument;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Presentation4.mmObject();
@@ -173,7 +184,17 @@ public class Presentation4 {
 			definition = "Document required to be presented.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Document11.mmObject();
+			type_lazy = () -> Document11.mmObject();
+		}
+
+		@Override
+		public List<Document11> getValue(Presentation4 obj) {
+			return obj.getDocument();
+		}
+
+		@Override
+		public void setValue(Presentation4 obj, List<Document11> value) {
+			obj.setDocument(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -204,7 +225,7 @@ public class Presentation4 {
 	 * definition} = "Additional information related to the presentation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Presentation4, List<Max2000Text>> mmAdditionalInformation = new MMMessageAttribute<Presentation4, List<Max2000Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Presentation4.mmObject();
 			isDerived = false;
@@ -215,6 +236,16 @@ public class Presentation4 {
 			maxOccurs = 5;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
+		}
+
+		@Override
+		public List<Max2000Text> getValue(Presentation4 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(Presentation4 obj, List<Max2000Text> value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 
@@ -246,7 +277,7 @@ public class Presentation4 {
 		return document == null ? document = new ArrayList<>() : document;
 	}
 
-	public Presentation4 setDocument(List<com.tools20022.repository.msg.Document11> document) {
+	public Presentation4 setDocument(List<Document11> document) {
 		this.document = Objects.requireNonNull(document);
 		return this;
 	}

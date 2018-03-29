@@ -49,11 +49,15 @@ public class ConstraintHandlingInstructionForEquityGuideline {
 	 */
 	public static final MMConstraint<OrderParameters1> forOrderParameters1 = new MMConstraint<OrderParameters1>() {
 		{
-			validator = ConstraintHandlingInstructionForEquityGuideline::checkOrderParameters1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HandlingInstructionForEquityGuideline";
 			definition = "It is recommended that HandlingInstruction is used for equity orders.";
 			owner_lazy = () -> OrderParameters1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OrderParameters1 obj) throws Exception {
+			checkOrderParameters1(obj);
 		}
 	};
 

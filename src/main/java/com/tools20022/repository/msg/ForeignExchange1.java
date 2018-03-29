@@ -114,7 +114,7 @@ public class ForeignExchange1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmForeignCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ForeignExchange1, ActiveOrHistoricCurrencyCode> mmForeignCurrency = new MMMessageAttribute<ForeignExchange1, ActiveOrHistoricCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmTargetCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignExchange1.mmObject();
@@ -126,6 +126,16 @@ public class ForeignExchange1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyCode getValue(ForeignExchange1 obj) {
+			return obj.getForeignCurrency();
+		}
+
+		@Override
+		public void setValue(ForeignExchange1 obj, ActiveOrHistoricCurrencyCode value) {
+			obj.setForeignCurrency(value);
 		}
 	};
 	@XmlElement(name = "XchgSpotRate", required = true)
@@ -164,7 +174,7 @@ public class ForeignExchange1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExchangeSpotRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ForeignExchange1, BaseOneRate> mmExchangeSpotRate = new MMMessageAttribute<ForeignExchange1, BaseOneRate>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmExchangeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignExchange1.mmObject();
@@ -176,6 +186,16 @@ public class ForeignExchange1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		@Override
+		public BaseOneRate getValue(ForeignExchange1 obj) {
+			return obj.getExchangeSpotRate();
+		}
+
+		@Override
+		public void setValue(ForeignExchange1 obj, BaseOneRate value) {
+			obj.setExchangeSpotRate(value);
 		}
 	};
 	@XmlElement(name = "XchgFwdPt", required = true)
@@ -215,7 +235,7 @@ public class ForeignExchange1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExchangeForwardPoint = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ForeignExchange1, DecimalNumber> mmExchangeForwardPoint = new MMMessageAttribute<ForeignExchange1, DecimalNumber>() {
 		{
 			businessElementTrace_lazy = () -> ForeignExchangeTrade.mmExchangeForwardPoint;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignExchange1.mmObject();
@@ -227,6 +247,16 @@ public class ForeignExchange1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(ForeignExchange1 obj) {
+			return obj.getExchangeForwardPoint();
+		}
+
+		@Override
+		public void setValue(ForeignExchange1 obj, DecimalNumber value) {
+			obj.setExchangeForwardPoint(value);
 		}
 	};
 

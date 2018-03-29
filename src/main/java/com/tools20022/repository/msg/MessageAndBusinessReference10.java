@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.entity.SecuritiesTradeIdentification;
 import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AdditionalReference8;
+import com.tools20022.repository.msg.InvestmentFundOrder8;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -135,7 +137,7 @@ public class MessageAndBusinessReference10 {
 	 * definition} = "Reference to a linked message that was previously sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MessageAndBusinessReference10, Optional<References62Choice>> mmReference = new MMMessageAssociationEnd<MessageAndBusinessReference10, Optional<References62Choice>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageAndBusinessReference10.mmObject();
@@ -148,6 +150,16 @@ public class MessageAndBusinessReference10 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> References62Choice.mmObject();
+		}
+
+		@Override
+		public Optional<References62Choice> getValue(MessageAndBusinessReference10 obj) {
+			return obj.getReference();
+		}
+
+		@Override
+		public void setValue(MessageAndBusinessReference10 obj, Optional<References62Choice> value) {
+			obj.setReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RltdRef")
@@ -189,7 +201,7 @@ public class MessageAndBusinessReference10 {
 	 * MessageAndBusinessReference4.mmRelatedReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRelatedReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MessageAndBusinessReference10, Optional<AdditionalReference8>> mmRelatedReference = new MMMessageAssociationEnd<MessageAndBusinessReference10, Optional<AdditionalReference8>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageAndBusinessReference10.mmObject();
@@ -202,11 +214,21 @@ public class MessageAndBusinessReference10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AdditionalReference8.mmObject();
+			type_lazy = () -> AdditionalReference8.mmObject();
+		}
+
+		@Override
+		public Optional<AdditionalReference8> getValue(MessageAndBusinessReference10 obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(MessageAndBusinessReference10 obj, Optional<AdditionalReference8> value) {
+			obj.setRelatedReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrdrRef")
-	protected List<com.tools20022.repository.msg.InvestmentFundOrder8> orderReference;
+	protected List<InvestmentFundOrder8> orderReference;
 	/**
 	 * 
 	 <p>
@@ -245,7 +267,7 @@ public class MessageAndBusinessReference10 {
 	 * MessageAndBusinessReference4.mmOrderReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOrderReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MessageAndBusinessReference10, List<InvestmentFundOrder8>> mmOrderReference = new MMMessageAssociationEnd<MessageAndBusinessReference10, List<InvestmentFundOrder8>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageAndBusinessReference10.mmObject();
@@ -257,7 +279,17 @@ public class MessageAndBusinessReference10 {
 			previousVersion_lazy = () -> MessageAndBusinessReference4.mmOrderReference;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvestmentFundOrder8.mmObject();
+			type_lazy = () -> InvestmentFundOrder8.mmObject();
+		}
+
+		@Override
+		public List<InvestmentFundOrder8> getValue(MessageAndBusinessReference10 obj) {
+			return obj.getOrderReference();
+		}
+
+		@Override
+		public void setValue(MessageAndBusinessReference10 obj, List<InvestmentFundOrder8> value) {
+			obj.setOrderReference(value);
 		}
 	};
 
@@ -292,7 +324,7 @@ public class MessageAndBusinessReference10 {
 		return relatedReference == null ? Optional.empty() : Optional.of(relatedReference);
 	}
 
-	public MessageAndBusinessReference10 setRelatedReference(com.tools20022.repository.msg.AdditionalReference8 relatedReference) {
+	public MessageAndBusinessReference10 setRelatedReference(AdditionalReference8 relatedReference) {
 		this.relatedReference = relatedReference;
 		return this;
 	}
@@ -301,7 +333,7 @@ public class MessageAndBusinessReference10 {
 		return orderReference == null ? orderReference = new ArrayList<>() : orderReference;
 	}
 
-	public MessageAndBusinessReference10 setOrderReference(List<com.tools20022.repository.msg.InvestmentFundOrder8> orderReference) {
+	public MessageAndBusinessReference10 setOrderReference(List<InvestmentFundOrder8> orderReference) {
 		this.orderReference = Objects.requireNonNull(orderReference);
 		return this;
 	}

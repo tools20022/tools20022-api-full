@@ -103,7 +103,7 @@ public class ReportType3 {
 	 * "Specifies whether the report is for a matched or pre-matched data set."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportType3, InstructionType3Code> mmType = new MMMessageAttribute<ReportType3, InstructionType3Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportType3.mmObject();
 			isDerived = false;
@@ -114,6 +114,16 @@ public class ReportType3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InstructionType3Code.mmObject();
+		}
+
+		@Override
+		public InstructionType3Code getValue(ReportType3 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(ReportType3 obj, InstructionType3Code value) {
+			obj.setType(value);
 		}
 	};
 

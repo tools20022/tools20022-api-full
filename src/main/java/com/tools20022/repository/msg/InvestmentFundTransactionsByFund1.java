@@ -33,6 +33,8 @@ import com.tools20022.repository.entity.InvestmentFundTransaction;
 import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.InvestmentFundTransaction2;
+import com.tools20022.repository.msg.PaginationBalance1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -144,7 +146,7 @@ public class InvestmentFundTransactionsByFund1 {
 	 * definition} = "Identification of a security by an ISIN."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundTransactionsByFund1, SecurityIdentification1Choice> mmIdentification = new MMMessageAttribute<InvestmentFundTransactionsByFund1, SecurityIdentification1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransactionsByFund1.mmObject();
@@ -156,6 +158,16 @@ public class InvestmentFundTransactionsByFund1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SecurityIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification1Choice getValue(InvestmentFundTransactionsByFund1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(InvestmentFundTransactionsByFund1 obj, SecurityIdentification1Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Nm")
@@ -192,7 +204,7 @@ public class InvestmentFundTransactionsByFund1 {
 	 * definition} = "Name of the financial instrument in free format text."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundTransactionsByFund1, Optional<Max350Text>> mmName = new MMMessageAttribute<InvestmentFundTransactionsByFund1, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransactionsByFund1.mmObject();
@@ -204,6 +216,16 @@ public class InvestmentFundTransactionsByFund1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(InvestmentFundTransactionsByFund1 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(InvestmentFundTransactionsByFund1 obj, Optional<Max350Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryId")
@@ -237,7 +259,7 @@ public class InvestmentFundTransactionsByFund1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSupplementaryIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundTransactionsByFund1, Optional<Max35Text>> mmSupplementaryIdentification = new MMMessageAttribute<InvestmentFundTransactionsByFund1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransactionsByFund1.mmObject();
 			isDerived = false;
@@ -248,6 +270,16 @@ public class InvestmentFundTransactionsByFund1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(InvestmentFundTransactionsByFund1 obj) {
+			return obj.getSupplementaryIdentification();
+		}
+
+		@Override
+		public void setValue(InvestmentFundTransactionsByFund1 obj, Optional<Max35Text> value) {
+			obj.setSupplementaryIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Form")
@@ -288,7 +320,7 @@ public class InvestmentFundTransactionsByFund1 {
 	 * definition} = "Specifies the form, ie, ownership, of the security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmForm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundTransactionsByFund1, Optional<FormOfSecurity1Code>> mmForm = new MMMessageAttribute<InvestmentFundTransactionsByFund1, Optional<FormOfSecurity1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmRegistrationForm;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransactionsByFund1.mmObject();
@@ -301,6 +333,16 @@ public class InvestmentFundTransactionsByFund1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> FormOfSecurity1Code.mmObject();
+		}
+
+		@Override
+		public Optional<FormOfSecurity1Code> getValue(InvestmentFundTransactionsByFund1 obj) {
+			return obj.getForm();
+		}
+
+		@Override
+		public void setValue(InvestmentFundTransactionsByFund1 obj, Optional<FormOfSecurity1Code> value) {
+			obj.setForm(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClssTp")
@@ -339,7 +381,7 @@ public class InvestmentFundTransactionsByFund1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClassType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundTransactionsByFund1, Optional<Max35Text>> mmClassType = new MMMessageAttribute<InvestmentFundTransactionsByFund1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmClassType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransactionsByFund1.mmObject();
@@ -351,6 +393,16 @@ public class InvestmentFundTransactionsByFund1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(InvestmentFundTransactionsByFund1 obj) {
+			return obj.getClassType();
+		}
+
+		@Override
+		public void setValue(InvestmentFundTransactionsByFund1 obj, Optional<Max35Text> value) {
+			obj.setClassType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DstrbtnPlcy")
@@ -390,7 +442,7 @@ public class InvestmentFundTransactionsByFund1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDistributionPolicy = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundTransactionsByFund1, Optional<DistributionPolicy1Code>> mmDistributionPolicy = new MMMessageAttribute<InvestmentFundTransactionsByFund1, Optional<DistributionPolicy1Code>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmDistributionPolicy;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransactionsByFund1.mmObject();
@@ -403,9 +455,19 @@ public class InvestmentFundTransactionsByFund1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> DistributionPolicy1Code.mmObject();
 		}
+
+		@Override
+		public Optional<DistributionPolicy1Code> getValue(InvestmentFundTransactionsByFund1 obj) {
+			return obj.getDistributionPolicy();
+		}
+
+		@Override
+		public void setValue(InvestmentFundTransactionsByFund1 obj, Optional<DistributionPolicy1Code> value) {
+			obj.setDistributionPolicy(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "TxDtls", required = true)
-	protected List<com.tools20022.repository.msg.InvestmentFundTransaction2> transactionDetails;
+	protected List<InvestmentFundTransaction2> transactionDetails;
 	/**
 	 * 
 	 <p>
@@ -439,7 +501,7 @@ public class InvestmentFundTransactionsByFund1 {
 	 * "Process of buying, selling, switching or transferring fund units."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentFundTransactionsByFund1, List<InvestmentFundTransaction2>> mmTransactionDetails = new MMMessageAssociationEnd<InvestmentFundTransactionsByFund1, List<InvestmentFundTransaction2>>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundTransaction.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransactionsByFund1.mmObject();
@@ -450,7 +512,17 @@ public class InvestmentFundTransactionsByFund1 {
 			definition = "Process of buying, selling, switching or transferring fund units.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransaction2.mmObject();
+			type_lazy = () -> InvestmentFundTransaction2.mmObject();
+		}
+
+		@Override
+		public List<InvestmentFundTransaction2> getValue(InvestmentFundTransactionsByFund1 obj) {
+			return obj.getTransactionDetails();
+		}
+
+		@Override
+		public void setValue(InvestmentFundTransactionsByFund1 obj, List<InvestmentFundTransaction2> value) {
+			obj.setTransactionDetails(value);
 		}
 	};
 	@XmlElement(name = "BalByPg")
@@ -482,7 +554,7 @@ public class InvestmentFundTransactionsByFund1 {
 	 * "Balance of the financial instrument for this specific statement page."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalanceByPage = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentFundTransactionsByFund1, Optional<PaginationBalance1>> mmBalanceByPage = new MMMessageAssociationEnd<InvestmentFundTransactionsByFund1, Optional<PaginationBalance1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransactionsByFund1.mmObject();
 			isDerived = false;
@@ -493,7 +565,17 @@ public class InvestmentFundTransactionsByFund1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaginationBalance1.mmObject();
+			type_lazy = () -> PaginationBalance1.mmObject();
+		}
+
+		@Override
+		public Optional<PaginationBalance1> getValue(InvestmentFundTransactionsByFund1 obj) {
+			return obj.getBalanceByPage();
+		}
+
+		@Override
+		public void setValue(InvestmentFundTransactionsByFund1 obj, Optional<PaginationBalance1> value) {
+			obj.setBalanceByPage(value.orElse(null));
 		}
 	};
 
@@ -573,7 +655,7 @@ public class InvestmentFundTransactionsByFund1 {
 		return transactionDetails == null ? transactionDetails = new ArrayList<>() : transactionDetails;
 	}
 
-	public InvestmentFundTransactionsByFund1 setTransactionDetails(List<com.tools20022.repository.msg.InvestmentFundTransaction2> transactionDetails) {
+	public InvestmentFundTransactionsByFund1 setTransactionDetails(List<InvestmentFundTransaction2> transactionDetails) {
 		this.transactionDetails = Objects.requireNonNull(transactionDetails);
 		return this;
 	}
@@ -582,7 +664,7 @@ public class InvestmentFundTransactionsByFund1 {
 		return balanceByPage == null ? Optional.empty() : Optional.of(balanceByPage);
 	}
 
-	public InvestmentFundTransactionsByFund1 setBalanceByPage(com.tools20022.repository.msg.PaginationBalance1 balanceByPage) {
+	public InvestmentFundTransactionsByFund1 setBalanceByPage(PaginationBalance1 balanceByPage) {
 		this.balanceByPage = balanceByPage;
 		return this;
 	}

@@ -110,7 +110,7 @@ public class CorporateActionEventStageFormat4SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionEventStageFormat4SD1, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<CorporateActionEventStageFormat4SD1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionEventStageFormat4SD1.mmObject();
 			isDerived = false;
@@ -121,6 +121,16 @@ public class CorporateActionEventStageFormat4SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionEventStageFormat4SD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventStageFormat4SD1 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctiesPurchsd", required = true)
@@ -155,7 +165,7 @@ public class CorporateActionEventStageFormat4SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesPurchased = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionEventStageFormat4SD1, FinancialInstrumentQuantity15Choice> mmSecuritiesPurchased = new MMMessageAttribute<CorporateActionEventStageFormat4SD1, FinancialInstrumentQuantity15Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionEventStageFormat4SD1.mmObject();
 			isDerived = false;
@@ -166,6 +176,16 @@ public class CorporateActionEventStageFormat4SD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity15Choice getValue(CorporateActionEventStageFormat4SD1 obj) {
+			return obj.getSecuritiesPurchased();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventStageFormat4SD1 obj, FinancialInstrumentQuantity15Choice value) {
+			obj.setSecuritiesPurchased(value);
 		}
 	};
 

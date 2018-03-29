@@ -116,7 +116,7 @@ public class CorporateActionNarrative3Choice {
 	 * CorporateActionNarrative1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative3Choice, CorporateActionNarrative1Code> mmCode = new MMMessageAttribute<CorporateActionNarrative3Choice, CorporateActionNarrative1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionNarrative3Choice.mmObject();
 			isDerived = false;
@@ -129,6 +129,16 @@ public class CorporateActionNarrative3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionNarrative1Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionNarrative1Code getValue(CorporateActionNarrative3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative3Choice obj, CorporateActionNarrative1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -166,7 +176,7 @@ public class CorporateActionNarrative3Choice {
 	 * CorporateActionNarrative1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionNarrative3Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<CorporateActionNarrative3Choice, GenericIdentification30>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionNarrative3Choice.mmObject();
 			isDerived = false;
@@ -179,6 +189,16 @@ public class CorporateActionNarrative3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(CorporateActionNarrative3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative3Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -106,7 +106,7 @@ public class SecuritiesAccountModification1Choice {
 	 * definition} = "Account to or from which a securities entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSystemSecuritiesAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccountModification1Choice, SystemSecuritiesAccount2> mmSystemSecuritiesAccount = new MMMessageAttribute<SecuritiesAccountModification1Choice, SystemSecuritiesAccount2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesAccountModification1Choice.mmObject();
 			isDerived = false;
@@ -117,6 +117,16 @@ public class SecuritiesAccountModification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SystemSecuritiesAccount2.mmObject();
+		}
+
+		@Override
+		public SystemSecuritiesAccount2 getValue(SecuritiesAccountModification1Choice obj) {
+			return obj.getSystemSecuritiesAccount();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountModification1Choice obj, SystemSecuritiesAccount2 value) {
+			obj.setSystemSecuritiesAccount(value);
 		}
 	};
 	@XmlElement(name = "SysRstrctn", required = true)
@@ -149,7 +159,7 @@ public class SecuritiesAccountModification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSystemRestriction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesAccountModification1Choice, SystemRestriction1> mmSystemRestriction = new MMMessageAssociationEnd<SecuritiesAccountModification1Choice, SystemRestriction1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesAccountModification1Choice.mmObject();
 			isDerived = false;
@@ -161,6 +171,16 @@ public class SecuritiesAccountModification1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SystemRestriction1.mmObject();
+		}
+
+		@Override
+		public SystemRestriction1 getValue(SecuritiesAccountModification1Choice obj) {
+			return obj.getSystemRestriction();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountModification1Choice obj, SystemRestriction1 value) {
+			obj.setSystemRestriction(value);
 		}
 	};
 	@XmlElement(name = "MktSpcfcAttr", required = true)
@@ -194,7 +214,7 @@ public class SecuritiesAccountModification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMarketSpecificAttribute = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesAccountModification1Choice, MarketSpecificAttribute1> mmMarketSpecificAttribute = new MMMessageAssociationEnd<SecuritiesAccountModification1Choice, MarketSpecificAttribute1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesAccountModification1Choice.mmObject();
 			isDerived = false;
@@ -206,6 +226,16 @@ public class SecuritiesAccountModification1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> MarketSpecificAttribute1.mmObject();
+		}
+
+		@Override
+		public MarketSpecificAttribute1 getValue(SecuritiesAccountModification1Choice obj) {
+			return obj.getMarketSpecificAttribute();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountModification1Choice obj, MarketSpecificAttribute1 value) {
+			obj.setMarketSpecificAttribute(value);
 		}
 	};
 

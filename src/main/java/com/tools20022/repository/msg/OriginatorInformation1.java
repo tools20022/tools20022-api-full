@@ -55,7 +55,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "OriginatorInformation1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -101,7 +101,7 @@ public class OriginatorInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCertificate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginatorInformation1, List<Max5000Binary>> mmCertificate = new MMMessageAttribute<OriginatorInformation1, List<Max5000Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginatorInformation1.mmObject();
 			isDerived = false;
@@ -112,6 +112,16 @@ public class OriginatorInformation1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max5000Binary.mmObject();
 		}
+
+		@Override
+		public List<Max5000Binary> getValue(OriginatorInformation1 obj) {
+			return obj.getCertificate();
+		}
+
+		@Override
+		public void setValue(OriginatorInformation1 obj, List<Max5000Binary> value) {
+			obj.setCertificate(value);
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -119,7 +129,7 @@ public class OriginatorInformation1 {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginatorInformation1.mmCertificate);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OriginatorInformation1";
 				definition = "Provides information about the originator. It is present only if required by the key management algorithm.";
 			}

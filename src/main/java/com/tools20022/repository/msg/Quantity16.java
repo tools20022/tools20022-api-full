@@ -63,7 +63,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "Quantity16"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -116,7 +116,7 @@ public class Quantity16 {
 	 * Quantity9.mmUnitOfMeasure}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnitOfMeasure = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Quantity16, UnitOfMeasure6Choice> mmUnitOfMeasure = new MMMessageAssociationEnd<Quantity16, UnitOfMeasure6Choice>() {
 		{
 			businessElementTrace_lazy = () -> ProductQuantity.mmUnitOfMeasure;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Quantity16.mmObject();
@@ -130,6 +130,16 @@ public class Quantity16 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> UnitOfMeasure6Choice.mmObject();
+		}
+
+		@Override
+		public UnitOfMeasure6Choice getValue(Quantity16 obj) {
+			return obj.getUnitOfMeasure();
+		}
+
+		@Override
+		public void setValue(Quantity16 obj, UnitOfMeasure6Choice value) {
+			obj.setUnitOfMeasure(value);
 		}
 	};
 	@XmlElement(name = "Val", required = true)
@@ -173,7 +183,7 @@ public class Quantity16 {
 	 * Quantity9.mmValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Quantity16, DecimalNumber> mmValue = new MMMessageAttribute<Quantity16, DecimalNumber>() {
 		{
 			businessElementTrace_lazy = () -> ProductQuantity.mmValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Quantity16.mmObject();
@@ -186,6 +196,16 @@ public class Quantity16 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(Quantity16 obj) {
+			return obj.getValue();
+		}
+
+		@Override
+		public void setValue(Quantity16 obj, DecimalNumber value) {
+			obj.setValue(value);
 		}
 	};
 	@XmlElement(name = "Fctr")
@@ -229,7 +249,7 @@ public class Quantity16 {
 	 * Quantity9.mmFactor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFactor = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Quantity16, Optional<Max15NumericText>> mmFactor = new MMMessageAttribute<Quantity16, Optional<Max15NumericText>>() {
 		{
 			businessElementTrace_lazy = () -> ProductQuantity.mmFactor;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Quantity16.mmObject();
@@ -243,6 +263,16 @@ public class Quantity16 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
+
+		@Override
+		public Optional<Max15NumericText> getValue(Quantity16 obj) {
+			return obj.getFactor();
+		}
+
+		@Override
+		public void setValue(Quantity16 obj, Optional<Max15NumericText> value) {
+			obj.setFactor(value.orElse(null));
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -251,7 +281,7 @@ public class Quantity16 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Quantity16.mmUnitOfMeasure, com.tools20022.repository.msg.Quantity16.mmValue, com.tools20022.repository.msg.Quantity16.mmFactor);
 				trace_lazy = () -> ProductQuantity.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Quantity16";
 				definition = "Specifies the quantity of a product in a trade transaction.";
 				previousVersion_lazy = () -> Quantity9.mmObject();

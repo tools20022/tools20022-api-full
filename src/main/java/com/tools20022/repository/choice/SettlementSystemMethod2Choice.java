@@ -109,7 +109,7 @@ public class SettlementSystemMethod2Choice {
 	 * definition} = "Settlement system expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementSystemMethod2Choice, SettlementSystemMethod1Code> mmCode = new MMMessageAttribute<SettlementSystemMethod2Choice, SettlementSystemMethod1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementSystemMethod;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementSystemMethod2Choice.mmObject();
@@ -122,6 +122,16 @@ public class SettlementSystemMethod2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SettlementSystemMethod1Code.mmObject();
+		}
+
+		@Override
+		public SettlementSystemMethod1Code getValue(SettlementSystemMethod2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(SettlementSystemMethod2Choice obj, SettlementSystemMethod1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -161,7 +171,7 @@ public class SettlementSystemMethod2Choice {
 	 * definition} = "Settlement system expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementSystemMethod2Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<SettlementSystemMethod2Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementSystemMethod;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementSystemMethod2Choice.mmObject();
@@ -175,6 +185,16 @@ public class SettlementSystemMethod2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(SettlementSystemMethod2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SettlementSystemMethod2Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

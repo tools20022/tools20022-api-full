@@ -128,7 +128,7 @@ public class Acquirer7 {
 	 * Acquirer6.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAcquiringInstitution = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Acquirer7, Optional<Max35Text>> mmAcquiringInstitution = new MMMessageAttribute<Acquirer7, Optional<Max35Text>>() {
 		{
 			businessComponentTrace_lazy = () -> FinancialInstitution.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Acquirer7.mmObject();
@@ -142,6 +142,16 @@ public class Acquirer7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Acquirer7 obj) {
+			return obj.getAcquiringInstitution();
+		}
+
+		@Override
+		public void setValue(Acquirer7 obj, Optional<Max35Text> value) {
+			obj.setAcquiringInstitution(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Brnch")
@@ -185,7 +195,7 @@ public class Acquirer7 {
 	 * Acquirer6.mmIssuer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBranch = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Acquirer7, Optional<Max35Text>> mmBranch = new MMMessageAttribute<Acquirer7, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Acquirer7.mmObject();
 			isDerived = false;
@@ -198,6 +208,16 @@ public class Acquirer7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Acquirer7 obj) {
+			return obj.getBranch();
+		}
+
+		@Override
+		public void setValue(Acquirer7 obj, Optional<Max35Text> value) {
+			obj.setBranch(value.orElse(null));
 		}
 	};
 

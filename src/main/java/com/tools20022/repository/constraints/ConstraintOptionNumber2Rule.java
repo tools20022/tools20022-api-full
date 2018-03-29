@@ -53,11 +53,15 @@ public class ConstraintOptionNumber2Rule {
 	 */
 	public static final MMConstraint<CorporateActionOption5> forCorporateActionOption5 = new MMConstraint<CorporateActionOption5>() {
 		{
-			validator = ConstraintOptionNumber2Rule::checkCorporateActionOption5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber2Rule";
 			definition = "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited).";
 			owner_lazy = () -> CorporateActionOption5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption5 obj) throws Exception {
+			checkCorporateActionOption5(obj);
 		}
 	};
 	/**
@@ -83,11 +87,15 @@ public class ConstraintOptionNumber2Rule {
 	 */
 	public static final MMConstraint<CorporateActionOption13> forCorporateActionOption13 = new MMConstraint<CorporateActionOption13>() {
 		{
-			validator = ConstraintOptionNumber2Rule::checkCorporateActionOption13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber2Rule";
 			definition = "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited).";
 			owner_lazy = () -> CorporateActionOption13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption13 obj) throws Exception {
+			checkCorporateActionOption13(obj);
 		}
 	};
 	/**
@@ -113,11 +121,15 @@ public class ConstraintOptionNumber2Rule {
 	 */
 	public static final MMConstraint<CorporateActionOption25> forCorporateActionOption25 = new MMConstraint<CorporateActionOption25>() {
 		{
-			validator = ConstraintOptionNumber2Rule::checkCorporateActionOption25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber2Rule";
 			definition = "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited).";
 			owner_lazy = () -> CorporateActionOption25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption25 obj) throws Exception {
+			checkCorporateActionOption25(obj);
 		}
 	};
 	/**
@@ -143,11 +155,15 @@ public class ConstraintOptionNumber2Rule {
 	 */
 	public static final MMConstraint<CorporateActionOption30> forCorporateActionOption30 = new MMConstraint<CorporateActionOption30>() {
 		{
-			validator = ConstraintOptionNumber2Rule::checkCorporateActionOption30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber2Rule";
 			definition = "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited).";
 			owner_lazy = () -> CorporateActionOption30.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption30 obj) throws Exception {
+			checkCorporateActionOption30(obj);
 		}
 	};
 	/**
@@ -173,11 +189,15 @@ public class ConstraintOptionNumber2Rule {
 	 */
 	public static final MMConstraint<CorporateActionOption38> forCorporateActionOption38 = new MMConstraint<CorporateActionOption38>() {
 		{
-			validator = ConstraintOptionNumber2Rule::checkCorporateActionOption38;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber2Rule";
 			definition = "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited).";
 			owner_lazy = () -> CorporateActionOption38.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption38 obj) throws Exception {
+			checkCorporateActionOption38(obj);
 		}
 	};
 	/**
@@ -203,11 +223,15 @@ public class ConstraintOptionNumber2Rule {
 	 */
 	public static final MMConstraint<CorporateActionOption47> forCorporateActionOption47 = new MMConstraint<CorporateActionOption47>() {
 		{
-			validator = ConstraintOptionNumber2Rule::checkCorporateActionOption47;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber2Rule";
 			definition = "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited).";
 			owner_lazy = () -> CorporateActionOption47.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption47 obj) throws Exception {
+			checkCorporateActionOption47(obj);
 		}
 	};
 	/**
@@ -241,12 +265,16 @@ public class ConstraintOptionNumber2Rule {
 	 */
 	public static final MMConstraint<CorporateActionOption57> forCorporateActionOption57 = new MMConstraint<CorporateActionOption57>() {
 		{
-			validator = ConstraintOptionNumber2Rule::checkCorporateActionOption57;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber2Rule";
 			definition = "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionNumber2Rule.forCorporateActionOption103);
 			owner_lazy = () -> CorporateActionOption57.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption57 obj) throws Exception {
+			checkCorporateActionOption57(obj);
 		}
 	};
 	/**
@@ -272,11 +300,15 @@ public class ConstraintOptionNumber2Rule {
 	 */
 	public static final MMConstraint<CorporateActionOption58> forCorporateActionOption58 = new MMConstraint<CorporateActionOption58>() {
 		{
-			validator = ConstraintOptionNumber2Rule::checkCorporateActionOption58;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber2Rule";
 			definition = "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited).";
 			owner_lazy = () -> CorporateActionOption58.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption58 obj) throws Exception {
+			checkCorporateActionOption58(obj);
 		}
 	};
 	/**
@@ -302,11 +334,15 @@ public class ConstraintOptionNumber2Rule {
 	 */
 	public static final MMConstraint<CorporateActionOption6> forCorporateActionOption6 = new MMConstraint<CorporateActionOption6>() {
 		{
-			validator = ConstraintOptionNumber2Rule::checkCorporateActionOption6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber2Rule";
 			definition = "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited).";
 			owner_lazy = () -> CorporateActionOption6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption6 obj) throws Exception {
+			checkCorporateActionOption6(obj);
 		}
 	};
 	/**
@@ -332,11 +368,15 @@ public class ConstraintOptionNumber2Rule {
 	 */
 	public static final MMConstraint<CorporateActionOption21> forCorporateActionOption21 = new MMConstraint<CorporateActionOption21>() {
 		{
-			validator = ConstraintOptionNumber2Rule::checkCorporateActionOption21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber2Rule";
 			definition = "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited).";
 			owner_lazy = () -> CorporateActionOption21.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption21 obj) throws Exception {
+			checkCorporateActionOption21(obj);
 		}
 	};
 	/**
@@ -370,12 +410,16 @@ public class ConstraintOptionNumber2Rule {
 	 */
 	public static final MMConstraint<CorporateActionOption42> forCorporateActionOption42 = new MMConstraint<CorporateActionOption42>() {
 		{
-			validator = ConstraintOptionNumber2Rule::checkCorporateActionOption42;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber2Rule";
 			definition = "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionNumber2Rule.forCorporateActionOption120);
 			owner_lazy = () -> CorporateActionOption42.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption42 obj) throws Exception {
+			checkCorporateActionOption42(obj);
 		}
 	};
 	/**
@@ -401,11 +445,15 @@ public class ConstraintOptionNumber2Rule {
 	 */
 	public static final MMConstraint<CorporateActionOption28> forCorporateActionOption28 = new MMConstraint<CorporateActionOption28>() {
 		{
-			validator = ConstraintOptionNumber2Rule::checkCorporateActionOption28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber2Rule";
 			definition = "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited).";
 			owner_lazy = () -> CorporateActionOption28.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption28 obj) throws Exception {
+			checkCorporateActionOption28(obj);
 		}
 	};
 	/**
@@ -431,11 +479,15 @@ public class ConstraintOptionNumber2Rule {
 	 */
 	public static final MMConstraint<CorporateActionOption43> forCorporateActionOption43 = new MMConstraint<CorporateActionOption43>() {
 		{
-			validator = ConstraintOptionNumber2Rule::checkCorporateActionOption43;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber2Rule";
 			definition = "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited).";
 			owner_lazy = () -> CorporateActionOption43.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption43 obj) throws Exception {
+			checkCorporateActionOption43(obj);
 		}
 	};
 	/**
@@ -461,11 +513,15 @@ public class ConstraintOptionNumber2Rule {
 	 */
 	public static final MMConstraint<CorporateActionOption7> forCorporateActionOption7 = new MMConstraint<CorporateActionOption7>() {
 		{
-			validator = ConstraintOptionNumber2Rule::checkCorporateActionOption7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber2Rule";
 			definition = "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited).";
 			owner_lazy = () -> CorporateActionOption7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption7 obj) throws Exception {
+			checkCorporateActionOption7(obj);
 		}
 	};
 	/**
@@ -504,13 +560,17 @@ public class ConstraintOptionNumber2Rule {
 	 */
 	public static final MMConstraint<CorporateActionOption103> forCorporateActionOption103 = new MMConstraint<CorporateActionOption103>() {
 		{
-			validator = ConstraintOptionNumber2Rule::checkCorporateActionOption103;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber2Rule";
 			definition = "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionNumber2Rule.forCorporateActionOption118);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionNumber2Rule.forCorporateActionOption57;
 			owner_lazy = () -> CorporateActionOption103.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption103 obj) throws Exception {
+			checkCorporateActionOption103(obj);
 		}
 	};
 	/**
@@ -536,11 +596,15 @@ public class ConstraintOptionNumber2Rule {
 	 */
 	public static final MMConstraint<CorporateActionOption107> forCorporateActionOption107 = new MMConstraint<CorporateActionOption107>() {
 		{
-			validator = ConstraintOptionNumber2Rule::checkCorporateActionOption107;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber2Rule";
 			definition = "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited).";
 			owner_lazy = () -> CorporateActionOption107.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption107 obj) throws Exception {
+			checkCorporateActionOption107(obj);
 		}
 	};
 	/**
@@ -579,13 +643,17 @@ public class ConstraintOptionNumber2Rule {
 	 */
 	public static final MMConstraint<CorporateActionOption118> forCorporateActionOption118 = new MMConstraint<CorporateActionOption118>() {
 		{
-			validator = ConstraintOptionNumber2Rule::checkCorporateActionOption118;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber2Rule";
 			definition = "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionNumber2Rule.forCorporateActionOption131);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionNumber2Rule.forCorporateActionOption103;
 			owner_lazy = () -> CorporateActionOption118.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption118 obj) throws Exception {
+			checkCorporateActionOption118(obj);
 		}
 	};
 	/**
@@ -616,12 +684,16 @@ public class ConstraintOptionNumber2Rule {
 	 */
 	public static final MMConstraint<CorporateActionOption120> forCorporateActionOption120 = new MMConstraint<CorporateActionOption120>() {
 		{
-			validator = ConstraintOptionNumber2Rule::checkCorporateActionOption120;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber2Rule";
 			definition = "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited).";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionNumber2Rule.forCorporateActionOption42;
 			owner_lazy = () -> CorporateActionOption120.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption120 obj) throws Exception {
+			checkCorporateActionOption120(obj);
 		}
 	};
 	/**
@@ -647,11 +719,15 @@ public class ConstraintOptionNumber2Rule {
 	 */
 	public static final MMConstraint<CorporateActionOption123> forCorporateActionOption123 = new MMConstraint<CorporateActionOption123>() {
 		{
-			validator = ConstraintOptionNumber2Rule::checkCorporateActionOption123;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber2Rule";
 			definition = "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited).";
 			owner_lazy = () -> CorporateActionOption123.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption123 obj) throws Exception {
+			checkCorporateActionOption123(obj);
 		}
 	};
 	/**
@@ -677,11 +753,15 @@ public class ConstraintOptionNumber2Rule {
 	 */
 	public static final MMConstraint<CorporateActionOption128> forCorporateActionOption128 = new MMConstraint<CorporateActionOption128>() {
 		{
-			validator = ConstraintOptionNumber2Rule::checkCorporateActionOption128;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber2Rule";
 			definition = "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited).";
 			owner_lazy = () -> CorporateActionOption128.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption128 obj) throws Exception {
+			checkCorporateActionOption128(obj);
 		}
 	};
 	/**
@@ -720,13 +800,17 @@ public class ConstraintOptionNumber2Rule {
 	 */
 	public static final MMConstraint<CorporateActionOption131> forCorporateActionOption131 = new MMConstraint<CorporateActionOption131>() {
 		{
-			validator = ConstraintOptionNumber2Rule::checkCorporateActionOption131;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber2Rule";
 			definition = "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionNumber2Rule.forCorporateActionOption142);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionNumber2Rule.forCorporateActionOption118;
 			owner_lazy = () -> CorporateActionOption131.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption131 obj) throws Exception {
+			checkCorporateActionOption131(obj);
 		}
 	};
 	/**
@@ -752,11 +836,15 @@ public class ConstraintOptionNumber2Rule {
 	 */
 	public static final MMConstraint<CorporateActionOption134> forCorporateActionOption134 = new MMConstraint<CorporateActionOption134>() {
 		{
-			validator = ConstraintOptionNumber2Rule::checkCorporateActionOption134;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber2Rule";
 			definition = "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited).";
 			owner_lazy = () -> CorporateActionOption134.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption134 obj) throws Exception {
+			checkCorporateActionOption134(obj);
 		}
 	};
 	/**
@@ -787,12 +875,16 @@ public class ConstraintOptionNumber2Rule {
 	 */
 	public static final MMConstraint<CorporateActionOption142> forCorporateActionOption142 = new MMConstraint<CorporateActionOption142>() {
 		{
-			validator = ConstraintOptionNumber2Rule::checkCorporateActionOption142;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber2Rule";
 			definition = "When the CorporateActionInstruction is unsolicited, that is, the instruction has not been preceded by a Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited).";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionNumber2Rule.forCorporateActionOption131;
 			owner_lazy = () -> CorporateActionOption142.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption142 obj) throws Exception {
+			checkCorporateActionOption142(obj);
 		}
 	};
 	/**
@@ -818,11 +910,15 @@ public class ConstraintOptionNumber2Rule {
 	 */
 	public static final MMConstraint<CorporateActionOption146> forCorporateActionOption146 = new MMConstraint<CorporateActionOption146>() {
 		{
-			validator = ConstraintOptionNumber2Rule::checkCorporateActionOption146;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber2Rule";
 			definition = "When the CorporateActionInstruction is unsolicited, that is, the instruction has not been preceded by a Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited).";
 			owner_lazy = () -> CorporateActionOption146.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption146 obj) throws Exception {
+			checkCorporateActionOption146(obj);
 		}
 	};
 

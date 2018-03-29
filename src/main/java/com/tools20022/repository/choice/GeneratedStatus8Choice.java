@@ -112,7 +112,7 @@ public class GeneratedStatus8Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GeneratedStatus8Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<GeneratedStatus8Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.GeneratedStatus8Choice.mmObject();
@@ -124,6 +124,16 @@ public class GeneratedStatus8Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(GeneratedStatus8Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(GeneratedStatus8Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -159,7 +169,7 @@ public class GeneratedStatus8Choice {
 	 * definition} = "Specifies the reason of the generated status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GeneratedStatus8Choice, List<GeneratedReason6>> mmReason = new MMMessageAssociationEnd<GeneratedStatus8Choice, List<GeneratedReason6>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.GeneratedStatus8Choice.mmObject();
@@ -171,6 +181,16 @@ public class GeneratedStatus8Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GeneratedReason6.mmObject();
+		}
+
+		@Override
+		public List<GeneratedReason6> getValue(GeneratedStatus8Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(GeneratedStatus8Choice obj, List<GeneratedReason6> value) {
+			obj.setReason(value);
 		}
 	};
 

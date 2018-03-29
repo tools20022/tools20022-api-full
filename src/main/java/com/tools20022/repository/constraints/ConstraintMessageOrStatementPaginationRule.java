@@ -62,13 +62,17 @@ public class ConstraintMessageOrStatementPaginationRule {
 	 */
 	public static final MMConstraint<BankToCustomerStatementV07> forBankToCustomerStatementV07 = new MMConstraint<BankToCustomerStatementV07>() {
 		{
-			validator = ConstraintMessageOrStatementPaginationRule::checkBankToCustomerStatementV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageOrStatementPaginationRule";
 			definition = "MessagePagination may be present or StatementPagination may be present, but not both.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMessageOrStatementPaginationRule.forBankToCustomerStatementV06;
 			owner_lazy = () -> BankToCustomerStatementV07.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/GroupHeader/MessagePagination</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/Statement[*]/StatementPagination</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(BankToCustomerStatementV07 obj) throws Exception {
+			checkBankToCustomerStatementV07(obj);
 		}
 	};
 	/**
@@ -113,7 +117,6 @@ public class ConstraintMessageOrStatementPaginationRule {
 	 */
 	public static final MMConstraint<BankToCustomerStatementV06> forBankToCustomerStatementV06 = new MMConstraint<BankToCustomerStatementV06>() {
 		{
-			validator = ConstraintMessageOrStatementPaginationRule::checkBankToCustomerStatementV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageOrStatementPaginationRule";
 			definition = "MessagePagination may be present or StatementPagination may be present, but not both.";
@@ -121,6 +124,11 @@ public class ConstraintMessageOrStatementPaginationRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMessageOrStatementPaginationRule.forBankToCustomerStatementV05;
 			owner_lazy = () -> BankToCustomerStatementV06.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/GroupHeader/MessagePagination</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/Statement[*]/StatementPagination</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(BankToCustomerStatementV06 obj) throws Exception {
+			checkBankToCustomerStatementV06(obj);
 		}
 	};
 	/**
@@ -150,12 +158,16 @@ public class ConstraintMessageOrStatementPaginationRule {
 	 */
 	public static final MMConstraint<BankToCustomerStatementV03> forBankToCustomerStatementV03 = new MMConstraint<BankToCustomerStatementV03>() {
 		{
-			validator = ConstraintMessageOrStatementPaginationRule::checkBankToCustomerStatementV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageOrStatementPaginationRule";
 			definition = "MessagePagination may be present or StatementPagination may be present, but not both.";
 			owner_lazy = () -> BankToCustomerStatementV03.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/GroupHeader/MessagePagination</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/Statement[*]/StatementPagination</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(BankToCustomerStatementV03 obj) throws Exception {
+			checkBankToCustomerStatementV03(obj);
 		}
 	};
 	/**
@@ -194,13 +206,17 @@ public class ConstraintMessageOrStatementPaginationRule {
 	 */
 	public static final MMConstraint<BankToCustomerStatementV04> forBankToCustomerStatementV04 = new MMConstraint<BankToCustomerStatementV04>() {
 		{
-			validator = ConstraintMessageOrStatementPaginationRule::checkBankToCustomerStatementV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageOrStatementPaginationRule";
 			definition = "MessagePagination may be present or StatementPagination may be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageOrStatementPaginationRule.forBankToCustomerStatementV05);
 			owner_lazy = () -> BankToCustomerStatementV04.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/GroupHeader/MessagePagination</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/Statement[*]/StatementPagination</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(BankToCustomerStatementV04 obj) throws Exception {
+			checkBankToCustomerStatementV04(obj);
 		}
 	};
 	/**
@@ -245,7 +261,6 @@ public class ConstraintMessageOrStatementPaginationRule {
 	 */
 	public static final MMConstraint<BankToCustomerStatementV05> forBankToCustomerStatementV05 = new MMConstraint<BankToCustomerStatementV05>() {
 		{
-			validator = ConstraintMessageOrStatementPaginationRule::checkBankToCustomerStatementV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageOrStatementPaginationRule";
 			definition = "MessagePagination may be present or StatementPagination may be present, but not both.";
@@ -253,6 +268,11 @@ public class ConstraintMessageOrStatementPaginationRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMessageOrStatementPaginationRule.forBankToCustomerStatementV04;
 			owner_lazy = () -> BankToCustomerStatementV05.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/GroupHeader/MessagePagination</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/Statement[*]/StatementPagination</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(BankToCustomerStatementV05 obj) throws Exception {
+			checkBankToCustomerStatementV05(obj);
 		}
 	};
 

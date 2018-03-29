@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.SecuritiesAccountPurposeType1Code;
 import com.tools20022.repository.entity.AccountIdentification;
 import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -110,7 +111,7 @@ public class AccountIdentificationAndPurpose {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentificationAndPurpose, AccountIdentification1> mmIdentification = new MMMessageAttribute<AccountIdentificationAndPurpose, AccountIdentification1>() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentificationAndPurpose.mmObject();
@@ -121,7 +122,17 @@ public class AccountIdentificationAndPurpose {
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentification1.mmObject();
+			complexType_lazy = () -> AccountIdentification1.mmObject();
+		}
+
+		@Override
+		public AccountIdentification1 getValue(AccountIdentificationAndPurpose obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(AccountIdentificationAndPurpose obj, AccountIdentification1 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Purp", required = true)
@@ -159,7 +170,7 @@ public class AccountIdentificationAndPurpose {
 	 * definition} = "Specifies the purpose of the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPurpose = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentificationAndPurpose, SecuritiesAccountPurposeType1Code> mmPurpose = new MMMessageAttribute<AccountIdentificationAndPurpose, SecuritiesAccountPurposeType1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesAccount.mmSecuritiesAccountType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentificationAndPurpose.mmObject();
@@ -171,6 +182,16 @@ public class AccountIdentificationAndPurpose {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesAccountPurposeType1Code.mmObject();
+		}
+
+		@Override
+		public SecuritiesAccountPurposeType1Code getValue(AccountIdentificationAndPurpose obj) {
+			return obj.getPurpose();
+		}
+
+		@Override
+		public void setValue(AccountIdentificationAndPurpose obj, SecuritiesAccountPurposeType1Code value) {
+			obj.setPurpose(value);
 		}
 	};
 
@@ -192,7 +213,7 @@ public class AccountIdentificationAndPurpose {
 		return identification;
 	}
 
-	public AccountIdentificationAndPurpose setIdentification(com.tools20022.repository.msg.AccountIdentification1 identification) {
+	public AccountIdentificationAndPurpose setIdentification(AccountIdentification1 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}

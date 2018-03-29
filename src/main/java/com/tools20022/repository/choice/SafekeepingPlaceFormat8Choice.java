@@ -130,7 +130,7 @@ public class SafekeepingPlaceFormat8Choice {
 	 * SafekeepingPlaceFormat2Choice.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SafekeepingPlaceFormat8Choice, SafekeepingPlaceTypeAndText6> mmIdentification = new MMMessageAssociationEnd<SafekeepingPlaceFormat8Choice, SafekeepingPlaceTypeAndText6>() {
 		{
 			businessComponentTrace_lazy = () -> SafekeepingPlace.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.SafekeepingPlaceFormat8Choice.mmObject();
@@ -145,6 +145,16 @@ public class SafekeepingPlaceFormat8Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SafekeepingPlaceTypeAndText6.mmObject();
+		}
+
+		@Override
+		public SafekeepingPlaceTypeAndText6 getValue(SafekeepingPlaceFormat8Choice obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SafekeepingPlaceFormat8Choice obj, SafekeepingPlaceTypeAndText6 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Ctry", required = true)
@@ -189,7 +199,7 @@ public class SafekeepingPlaceFormat8Choice {
 	 * SafekeepingPlaceFormat2Choice.mmCountry}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SafekeepingPlaceFormat8Choice, CountryCode> mmCountry = new MMMessageAttribute<SafekeepingPlaceFormat8Choice, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> SafekeepingPlace.mmCountry;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SafekeepingPlaceFormat8Choice.mmObject();
@@ -203,6 +213,16 @@ public class SafekeepingPlaceFormat8Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(SafekeepingPlaceFormat8Choice obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(SafekeepingPlaceFormat8Choice obj, CountryCode value) {
+			obj.setCountry(value);
 		}
 	};
 	@XmlElement(name = "TpAndId", required = true)
@@ -248,7 +268,7 @@ public class SafekeepingPlaceFormat8Choice {
 	 * SafekeepingPlaceFormat2Choice.mmTypeAndIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTypeAndIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SafekeepingPlaceFormat8Choice, SafekeepingPlaceTypeAndAnyBICIdentifier1> mmTypeAndIdentification = new MMMessageAssociationEnd<SafekeepingPlaceFormat8Choice, SafekeepingPlaceTypeAndAnyBICIdentifier1>() {
 		{
 			businessComponentTrace_lazy = () -> SafekeepingPlace.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.SafekeepingPlaceFormat8Choice.mmObject();
@@ -263,6 +283,16 @@ public class SafekeepingPlaceFormat8Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SafekeepingPlaceTypeAndAnyBICIdentifier1.mmObject();
+		}
+
+		@Override
+		public SafekeepingPlaceTypeAndAnyBICIdentifier1 getValue(SafekeepingPlaceFormat8Choice obj) {
+			return obj.getTypeAndIdentification();
+		}
+
+		@Override
+		public void setValue(SafekeepingPlaceFormat8Choice obj, SafekeepingPlaceTypeAndAnyBICIdentifier1 value) {
+			obj.setTypeAndIdentification(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -305,7 +335,7 @@ public class SafekeepingPlaceFormat8Choice {
 	 * SafekeepingPlaceFormat2Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SafekeepingPlaceFormat8Choice, GenericIdentification78> mmProprietary = new MMMessageAssociationEnd<SafekeepingPlaceFormat8Choice, GenericIdentification78>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SafekeepingPlaceFormat8Choice.mmObject();
@@ -319,6 +349,16 @@ public class SafekeepingPlaceFormat8Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification78.mmObject();
+		}
+
+		@Override
+		public GenericIdentification78 getValue(SafekeepingPlaceFormat8Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SafekeepingPlaceFormat8Choice obj, GenericIdentification78 value) {
+			obj.setProprietary(value);
 		}
 	};
 

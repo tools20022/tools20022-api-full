@@ -131,7 +131,7 @@ public class MemberReturnCriteria {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNameIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MemberReturnCriteria, Optional<RequestedIndicator>> mmNameIndicator = new MMMessageAttribute<MemberReturnCriteria, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MemberReturnCriteria.mmObject();
 			isDerived = false;
@@ -143,6 +143,16 @@ public class MemberReturnCriteria {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(MemberReturnCriteria obj) {
+			return obj.getNameIndicator();
+		}
+
+		@Override
+		public void setValue(MemberReturnCriteria obj, Optional<RequestedIndicator> value) {
+			obj.setNameIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MmbRtrAdrInd")
@@ -184,7 +194,7 @@ public class MemberReturnCriteria {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMemberReturnAddressIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MemberReturnCriteria, Optional<RequestedIndicator>> mmMemberReturnAddressIndicator = new MMMessageAttribute<MemberReturnCriteria, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MemberReturnCriteria.mmObject();
 			isDerived = false;
@@ -196,6 +206,16 @@ public class MemberReturnCriteria {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(MemberReturnCriteria obj) {
+			return obj.getMemberReturnAddressIndicator();
+		}
+
+		@Override
+		public void setValue(MemberReturnCriteria obj, Optional<RequestedIndicator> value) {
+			obj.setMemberReturnAddressIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctInd")
@@ -236,7 +256,7 @@ public class MemberReturnCriteria {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MemberReturnCriteria, Optional<RequestedIndicator>> mmAccountIndicator = new MMMessageAttribute<MemberReturnCriteria, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MemberReturnCriteria.mmObject();
 			isDerived = false;
@@ -248,6 +268,16 @@ public class MemberReturnCriteria {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(MemberReturnCriteria obj) {
+			return obj.getAccountIndicator();
+		}
+
+		@Override
+		public void setValue(MemberReturnCriteria obj, Optional<RequestedIndicator> value) {
+			obj.setAccountIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TpInd")
@@ -288,7 +318,7 @@ public class MemberReturnCriteria {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTypeIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MemberReturnCriteria, Optional<RequestedIndicator>> mmTypeIndicator = new MMMessageAttribute<MemberReturnCriteria, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MemberReturnCriteria.mmObject();
 			isDerived = false;
@@ -300,6 +330,16 @@ public class MemberReturnCriteria {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(MemberReturnCriteria obj) {
+			return obj.getTypeIndicator();
+		}
+
+		@Override
+		public void setValue(MemberReturnCriteria obj, Optional<RequestedIndicator> value) {
+			obj.setTypeIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StsInd")
@@ -340,7 +380,7 @@ public class MemberReturnCriteria {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatusIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MemberReturnCriteria, Optional<RequestedIndicator>> mmStatusIndicator = new MMMessageAttribute<MemberReturnCriteria, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MemberReturnCriteria.mmObject();
 			isDerived = false;
@@ -352,6 +392,16 @@ public class MemberReturnCriteria {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(MemberReturnCriteria obj) {
+			return obj.getStatusIndicator();
+		}
+
+		@Override
+		public void setValue(MemberReturnCriteria obj, Optional<RequestedIndicator> value) {
+			obj.setStatusIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtctRefInd")
@@ -392,7 +442,7 @@ public class MemberReturnCriteria {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContactReferenceIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MemberReturnCriteria, Optional<RequestedIndicator>> mmContactReferenceIndicator = new MMMessageAttribute<MemberReturnCriteria, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MemberReturnCriteria.mmObject();
 			isDerived = false;
@@ -404,6 +454,16 @@ public class MemberReturnCriteria {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(MemberReturnCriteria obj) {
+			return obj.getContactReferenceIndicator();
+		}
+
+		@Override
+		public void setValue(MemberReturnCriteria obj, Optional<RequestedIndicator> value) {
+			obj.setContactReferenceIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ComAdrInd")
@@ -445,7 +505,7 @@ public class MemberReturnCriteria {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommunicationAddressIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MemberReturnCriteria, Optional<RequestedIndicator>> mmCommunicationAddressIndicator = new MMMessageAttribute<MemberReturnCriteria, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MemberReturnCriteria.mmObject();
 			isDerived = false;
@@ -457,6 +517,16 @@ public class MemberReturnCriteria {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(MemberReturnCriteria obj) {
+			return obj.getCommunicationAddressIndicator();
+		}
+
+		@Override
+		public void setValue(MemberReturnCriteria obj, Optional<RequestedIndicator> value) {
+			obj.setCommunicationAddressIndicator(value.orElse(null));
 		}
 	};
 

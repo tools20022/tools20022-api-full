@@ -98,7 +98,7 @@ public class RiskFactor1 {
 	 * definition} = "Unique identifier for the risk factor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RiskFactor1, Max35Text> mmIdentification = new MMMessageAttribute<RiskFactor1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RiskFactor1.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class RiskFactor1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(RiskFactor1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(RiskFactor1 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "StrssSz", required = true)
@@ -139,7 +149,7 @@ public class RiskFactor1 {
 	 * "Assumed stress move of the associated stress item under the scenario."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStressSize = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RiskFactor1, StressSize1Choice> mmStressSize = new MMMessageAssociationEnd<RiskFactor1, StressSize1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RiskFactor1.mmObject();
 			isDerived = false;
@@ -151,6 +161,16 @@ public class RiskFactor1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> StressSize1Choice.mmObject();
+		}
+
+		@Override
+		public StressSize1Choice getValue(RiskFactor1 obj) {
+			return obj.getStressSize();
+		}
+
+		@Override
+		public void setValue(RiskFactor1 obj, StressSize1Choice value) {
+			obj.setStressSize(value);
 		}
 	};
 

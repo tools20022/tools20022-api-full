@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.CorporateActionInformation1;
 import com.tools20022.repository.msg.DocumentIdentification8;
 import com.tools20022.repository.msg.EntitlementAdvice1;
 import com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -123,7 +122,7 @@ public class AgentCADistributionBreakdownAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCADistributionBreakdownAdviceV01, DocumentIdentification8> mmIdentification = new MMMessageBuildingBlock<AgentCADistributionBreakdownAdviceV01, DocumentIdentification8>() {
 		{
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,12 +133,14 @@ public class AgentCADistributionBreakdownAdviceV01 {
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCADistributionBreakdownAdviceV01.class.getMethod("getIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DocumentIdentification8 getValue(AgentCADistributionBreakdownAdviceV01 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(AgentCADistributionBreakdownAdviceV01 obj, DocumentIdentification8 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "CorpActnGnlInf", required = true)
@@ -167,7 +168,7 @@ public class AgentCADistributionBreakdownAdviceV01 {
 	 * definition} = "General information about the corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCorporateActionGeneralInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCADistributionBreakdownAdviceV01, CorporateActionInformation1> mmCorporateActionGeneralInformation = new MMMessageBuildingBlock<AgentCADistributionBreakdownAdviceV01, CorporateActionInformation1>() {
 		{
 			xmlTag = "CorpActnGnlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,12 +179,14 @@ public class AgentCADistributionBreakdownAdviceV01 {
 			complexType_lazy = () -> CorporateActionInformation1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCADistributionBreakdownAdviceV01.class.getMethod("getCorporateActionGeneralInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CorporateActionInformation1 getValue(AgentCADistributionBreakdownAdviceV01 obj) {
+			return obj.getCorporateActionGeneralInformation();
+		}
+
+		@Override
+		public void setValue(AgentCADistributionBreakdownAdviceV01 obj, CorporateActionInformation1 value) {
+			obj.setCorporateActionGeneralInformation(value);
 		}
 	};
 	@XmlElement(name = "CorpActnDstrbtnDtls", required = true)
@@ -212,7 +215,7 @@ public class AgentCADistributionBreakdownAdviceV01 {
 	 * "Provides information about the CA option and the entitlements."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCorporateActionDistributionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCADistributionBreakdownAdviceV01, EntitlementAdvice1> mmCorporateActionDistributionDetails = new MMMessageBuildingBlock<AgentCADistributionBreakdownAdviceV01, EntitlementAdvice1>() {
 		{
 			xmlTag = "CorpActnDstrbtnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -223,12 +226,14 @@ public class AgentCADistributionBreakdownAdviceV01 {
 			complexType_lazy = () -> EntitlementAdvice1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCADistributionBreakdownAdviceV01.class.getMethod("getCorporateActionDistributionDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public EntitlementAdvice1 getValue(AgentCADistributionBreakdownAdviceV01 obj) {
+			return obj.getCorporateActionDistributionDetails();
+		}
+
+		@Override
+		public void setValue(AgentCADistributionBreakdownAdviceV01 obj, EntitlementAdvice1 value) {
+			obj.setCorporateActionDistributionDetails(value);
 		}
 	};
 

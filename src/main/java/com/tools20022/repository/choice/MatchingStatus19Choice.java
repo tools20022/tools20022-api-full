@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV05;
 import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV06;
+import com.tools20022.repository.choice.UnmatchedStatus12Choice;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryReason1;
@@ -152,7 +153,7 @@ public class MatchingStatus19Choice {
 	 * MatchingStatus7Choice.mmMatched}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMatched = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MatchingStatus19Choice, ProprietaryReason1> mmMatched = new MMMessageAssociationEnd<MatchingStatus19Choice, ProprietaryReason1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus19Choice.mmObject();
@@ -167,6 +168,16 @@ public class MatchingStatus19Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryReason1.mmObject();
+		}
+
+		@Override
+		public ProprietaryReason1 getValue(MatchingStatus19Choice obj) {
+			return obj.getMatched();
+		}
+
+		@Override
+		public void setValue(MatchingStatus19Choice obj, ProprietaryReason1 value) {
+			obj.setMatched(value);
 		}
 	};
 	@XmlElement(name = "Umtchd", required = true)
@@ -216,7 +227,7 @@ public class MatchingStatus19Choice {
 	 * MatchingStatus7Choice.mmUnmatched}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnmatched = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MatchingStatus19Choice, UnmatchedStatus12Choice> mmUnmatched = new MMMessageAssociationEnd<MatchingStatus19Choice, UnmatchedStatus12Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus19Choice.mmObject();
@@ -230,7 +241,17 @@ public class MatchingStatus19Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.UnmatchedStatus12Choice.mmObject();
+			type_lazy = () -> UnmatchedStatus12Choice.mmObject();
+		}
+
+		@Override
+		public UnmatchedStatus12Choice getValue(MatchingStatus19Choice obj) {
+			return obj.getUnmatched();
+		}
+
+		@Override
+		public void setValue(MatchingStatus19Choice obj, UnmatchedStatus12Choice value) {
+			obj.setUnmatched(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -280,7 +301,7 @@ public class MatchingStatus19Choice {
 	 * MatchingStatus7Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MatchingStatus19Choice, ProprietaryStatusAndReason1> mmProprietary = new MMMessageAssociationEnd<MatchingStatus19Choice, ProprietaryStatusAndReason1>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus19Choice.mmObject();
@@ -295,6 +316,16 @@ public class MatchingStatus19Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryStatusAndReason1.mmObject();
+		}
+
+		@Override
+		public ProprietaryStatusAndReason1 getValue(MatchingStatus19Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(MatchingStatus19Choice obj, ProprietaryStatusAndReason1 value) {
+			obj.setProprietary(value);
 		}
 	};
 
@@ -330,7 +361,7 @@ public class MatchingStatus19Choice {
 		return unmatched;
 	}
 
-	public MatchingStatus19Choice setUnmatched(com.tools20022.repository.choice.UnmatchedStatus12Choice unmatched) {
+	public MatchingStatus19Choice setUnmatched(UnmatchedStatus12Choice unmatched) {
 		this.unmatched = Objects.requireNonNull(unmatched);
 		return this;
 	}

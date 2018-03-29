@@ -25,8 +25,11 @@ import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.DecimalNumberFraction5;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.NonNegativeDecimalNumberFraction5;
-import com.tools20022.repository.entity.PortfolioValuation;
+import com.tools20022.repository.entity.Derivative;
+import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountAndDirection6;
+import com.tools20022.repository.msg.EndOfDayRequirement1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -69,8 +72,7 @@ import javax.xml.bind.annotation.XmlType;
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
- * trace} = {@linkplain com.tools20022.repository.entity.PortfolioValuation
- * PortfolioValuation}</li>
+ * trace} = {@linkplain com.tools20022.repository.entity.Security Security}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -104,6 +106,11 @@ public class Position1 {
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Position1
 	 * Position1}</li>
@@ -120,8 +127,9 @@ public class Position1 {
 	 * definition} = "CCP’s unique internal identifier for product."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProductIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Position1, Max35Text> mmProductIdentification = new MMMessageAttribute<Position1, Max35Text>() {
 		{
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Position1.mmObject();
 			isDerived = false;
 			xmlTag = "PdctId";
@@ -131,6 +139,16 @@ public class Position1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Position1 obj) {
+			return obj.getProductIdentification();
+		}
+
+		@Override
+		public void setValue(Position1 obj, Max35Text value) {
+			obj.setProductIdentification(value);
 		}
 	};
 	@XmlElement(name = "RskRqrmnt")
@@ -143,6 +161,11 @@ public class Position1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.msg.EndOfDayRequirement1
 	 * EndOfDayRequirement1}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Security#mmRelatedMarginCall
+	 * Security.mmRelatedMarginCall}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Position1
@@ -162,8 +185,9 @@ public class Position1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRiskRequirement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Position1, Optional<EndOfDayRequirement1>> mmRiskRequirement = new MMMessageAssociationEnd<Position1, Optional<EndOfDayRequirement1>>() {
 		{
+			businessElementTrace_lazy = () -> Security.mmRelatedMarginCall;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Position1.mmObject();
 			isDerived = false;
 			xmlTag = "RskRqrmnt";
@@ -173,7 +197,17 @@ public class Position1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.EndOfDayRequirement1.mmObject();
+			type_lazy = () -> EndOfDayRequirement1.mmObject();
+		}
+
+		@Override
+		public Optional<EndOfDayRequirement1> getValue(Position1 obj) {
+			return obj.getRiskRequirement();
+		}
+
+		@Override
+		public void setValue(Position1 obj, Optional<EndOfDayRequirement1> value) {
+			obj.setRiskRequirement(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GrssNtnl", required = true)
@@ -188,6 +222,11 @@ public class Position1 {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Derivative#mmNotionalCurrencyAndAmount
+	 * Derivative.mmNotionalCurrencyAndAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Position1
@@ -207,8 +246,9 @@ public class Position1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGrossNotional = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Position1, ActiveCurrencyAndAmount> mmGrossNotional = new MMMessageAttribute<Position1, ActiveCurrencyAndAmount>() {
 		{
+			businessElementTrace_lazy = () -> Derivative.mmNotionalCurrencyAndAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Position1.mmObject();
 			isDerived = false;
 			xmlTag = "GrssNtnl";
@@ -218,6 +258,16 @@ public class Position1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(Position1 obj) {
+			return obj.getGrossNotional();
+		}
+
+		@Override
+		public void setValue(Position1 obj, ActiveCurrencyAndAmount value) {
+			obj.setGrossNotional(value);
 		}
 	};
 	@XmlElement(name = "NetNtnl", required = true)
@@ -230,6 +280,11 @@ public class Position1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.msg.AmountAndDirection6
 	 * AmountAndDirection6}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Derivative#mmNotionalCurrencyAndAmount
+	 * Derivative.mmNotionalCurrencyAndAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Position1
@@ -249,8 +304,9 @@ public class Position1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNetNotional = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Position1, AmountAndDirection6> mmNetNotional = new MMMessageAssociationEnd<Position1, AmountAndDirection6>() {
 		{
+			businessElementTrace_lazy = () -> Derivative.mmNotionalCurrencyAndAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Position1.mmObject();
 			isDerived = false;
 			xmlTag = "NetNtnl";
@@ -260,7 +316,17 @@ public class Position1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
+			type_lazy = () -> AmountAndDirection6.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection6 getValue(Position1 obj) {
+			return obj.getNetNotional();
+		}
+
+		@Override
+		public void setValue(Position1 obj, AmountAndDirection6 value) {
+			obj.setNetNotional(value);
 		}
 	};
 	@XmlElement(name = "GrssDltaEqvtVal")
@@ -294,7 +360,7 @@ public class Position1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGrossDeltaEquivalentValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Position1, Optional<ActiveCurrencyAndAmount>> mmGrossDeltaEquivalentValue = new MMMessageAttribute<Position1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Position1.mmObject();
 			isDerived = false;
@@ -305,6 +371,16 @@ public class Position1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(Position1 obj) {
+			return obj.getGrossDeltaEquivalentValue();
+		}
+
+		@Override
+		public void setValue(Position1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setGrossDeltaEquivalentValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NetDltaEqvtVal")
@@ -336,7 +412,7 @@ public class Position1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNetDeltaEquivalentValue = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Position1, Optional<AmountAndDirection6>> mmNetDeltaEquivalentValue = new MMMessageAssociationEnd<Position1, Optional<AmountAndDirection6>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Position1.mmObject();
 			isDerived = false;
@@ -347,7 +423,17 @@ public class Position1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
+			type_lazy = () -> AmountAndDirection6.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection6> getValue(Position1 obj) {
+			return obj.getNetDeltaEquivalentValue();
+		}
+
+		@Override
+		public void setValue(Position1 obj, Optional<AmountAndDirection6> value) {
+			obj.setNetDeltaEquivalentValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GrssDltaEqvtQty")
@@ -381,7 +467,7 @@ public class Position1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGrossDeltaEquivalentQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Position1, Optional<NonNegativeDecimalNumberFraction5>> mmGrossDeltaEquivalentQuantity = new MMMessageAttribute<Position1, Optional<NonNegativeDecimalNumberFraction5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Position1.mmObject();
 			isDerived = false;
@@ -392,6 +478,16 @@ public class Position1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> NonNegativeDecimalNumberFraction5.mmObject();
+		}
+
+		@Override
+		public Optional<NonNegativeDecimalNumberFraction5> getValue(Position1 obj) {
+			return obj.getGrossDeltaEquivalentQuantity();
+		}
+
+		@Override
+		public void setValue(Position1 obj, Optional<NonNegativeDecimalNumberFraction5> value) {
+			obj.setGrossDeltaEquivalentQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NetDltaEqvtQty")
@@ -425,7 +521,7 @@ public class Position1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNetDeltaEquivalentQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Position1, Optional<DecimalNumberFraction5>> mmNetDeltaEquivalentQuantity = new MMMessageAttribute<Position1, Optional<DecimalNumberFraction5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Position1.mmObject();
 			isDerived = false;
@@ -437,6 +533,16 @@ public class Position1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumberFraction5.mmObject();
 		}
+
+		@Override
+		public Optional<DecimalNumberFraction5> getValue(Position1 obj) {
+			return obj.getNetDeltaEquivalentQuantity();
+		}
+
+		@Override
+		public void setValue(Position1 obj, Optional<DecimalNumberFraction5> value) {
+			obj.setNetDeltaEquivalentQuantity(value.orElse(null));
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -445,7 +551,7 @@ public class Position1 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Position1.mmProductIdentification, com.tools20022.repository.msg.Position1.mmRiskRequirement, com.tools20022.repository.msg.Position1.mmGrossNotional,
 						com.tools20022.repository.msg.Position1.mmNetNotional, com.tools20022.repository.msg.Position1.mmGrossDeltaEquivalentValue, com.tools20022.repository.msg.Position1.mmNetDeltaEquivalentValue,
 						com.tools20022.repository.msg.Position1.mmGrossDeltaEquivalentQuantity, com.tools20022.repository.msg.Position1.mmNetDeltaEquivalentQuantity);
-				trace_lazy = () -> PortfolioValuation.mmObject();
+				trace_lazy = () -> Security.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Position1";
@@ -468,7 +574,7 @@ public class Position1 {
 		return riskRequirement == null ? Optional.empty() : Optional.of(riskRequirement);
 	}
 
-	public Position1 setRiskRequirement(com.tools20022.repository.msg.EndOfDayRequirement1 riskRequirement) {
+	public Position1 setRiskRequirement(EndOfDayRequirement1 riskRequirement) {
 		this.riskRequirement = riskRequirement;
 		return this;
 	}
@@ -486,7 +592,7 @@ public class Position1 {
 		return netNotional;
 	}
 
-	public Position1 setNetNotional(com.tools20022.repository.msg.AmountAndDirection6 netNotional) {
+	public Position1 setNetNotional(AmountAndDirection6 netNotional) {
 		this.netNotional = Objects.requireNonNull(netNotional);
 		return this;
 	}
@@ -504,7 +610,7 @@ public class Position1 {
 		return netDeltaEquivalentValue == null ? Optional.empty() : Optional.of(netDeltaEquivalentValue);
 	}
 
-	public Position1 setNetDeltaEquivalentValue(com.tools20022.repository.msg.AmountAndDirection6 netDeltaEquivalentValue) {
+	public Position1 setNetDeltaEquivalentValue(AmountAndDirection6 netDeltaEquivalentValue) {
 		this.netDeltaEquivalentValue = netDeltaEquivalentValue;
 		return this;
 	}

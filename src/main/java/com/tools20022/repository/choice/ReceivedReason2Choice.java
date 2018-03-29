@@ -111,7 +111,7 @@ public class ReceivedReason2Choice {
 	 * "Reason for the received status expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReceivedReason2Choice, ExternalReceivedReason1Code> mmCode = new MMMessageAttribute<ReceivedReason2Choice, ExternalReceivedReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReceivedReason2Choice.mmObject();
@@ -123,6 +123,16 @@ public class ReceivedReason2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalReceivedReason1Code.mmObject();
+		}
+
+		@Override
+		public ExternalReceivedReason1Code getValue(ReceivedReason2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ReceivedReason2Choice obj, ExternalReceivedReason1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -155,7 +165,7 @@ public class ReceivedReason2Choice {
 	 * "Reason for the received status expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReceivedReason2Choice, GenericIdentification36> mmProprietary = new MMMessageAssociationEnd<ReceivedReason2Choice, GenericIdentification36>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReceivedReason2Choice.mmObject();
 			isDerived = false;
@@ -167,6 +177,16 @@ public class ReceivedReason2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification36.mmObject();
+		}
+
+		@Override
+		public GenericIdentification36 getValue(ReceivedReason2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ReceivedReason2Choice obj, GenericIdentification36 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -35,28 +35,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageDefinition} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationResponseV02
- * MaintenanceDelegationResponseV02}</li>
- * <li>
  * {@linkplain com.tools20022.repository.area.catm.TerminalManagementRejectionV04
  * TerminalManagementRejectionV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.CertificateManagementResponseV01
- * CertificateManagementResponseV01}</li>
+ * {@linkplain com.tools20022.repository.area.catm.ManagementPlanReplacementV07
+ * ManagementPlanReplacementV07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.CertificateManagementRequestV01
- * CertificateManagementRequestV01}</li>
- * <li>{@linkplain com.tools20022.repository.area.catm.StatusReportV06
- * StatusReportV06}</li>
+ * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationRequestV04
+ * MaintenanceDelegationRequestV04}</li>
+ * <li>{@linkplain com.tools20022.repository.area.catm.StatusReportV07
+ * StatusReportV07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV06
- * AcceptorConfigurationUpdateV06}</li>
+ * {@linkplain com.tools20022.repository.area.catm.CertificateManagementRequestV02
+ * CertificateManagementRequestV02}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationRequestV03
- * MaintenanceDelegationRequestV03}</li>
+ * {@linkplain com.tools20022.repository.area.catm.CertificateManagementResponseV02
+ * CertificateManagementResponseV02}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.ManagementPlanReplacementV06
- * ManagementPlanReplacementV06}</li>
+ * {@linkplain com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV07
+ * AcceptorConfigurationUpdateV07}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationResponseV03
+ * MaintenanceDelegationResponseV03}</li>
  * </ul>
  * </li>
  * <li>
@@ -87,8 +87,8 @@ public class CardPaymentsExchangesTerminalManagementISOLatestversion {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Card Payments Exchanges - Terminal Management - ISO - Latest version";
 				definition = "Set of messages that support card-related, terminal management services between a Terminal Management System (TMS) and a Point of Interaction (POI) system.";
-				messageDefinition_lazy = () -> Arrays.asList(MaintenanceDelegationResponseV02.mmObject(), TerminalManagementRejectionV04.mmObject(), CertificateManagementResponseV01.mmObject(), CertificateManagementRequestV01.mmObject(),
-						StatusReportV06.mmObject(), AcceptorConfigurationUpdateV06.mmObject(), MaintenanceDelegationRequestV03.mmObject(), ManagementPlanReplacementV06.mmObject());
+				messageDefinition_lazy = () -> Arrays.asList(TerminalManagementRejectionV04.mmObject(), ManagementPlanReplacementV07.mmObject(), MaintenanceDelegationRequestV04.mmObject(), StatusReportV07.mmObject(),
+						CertificateManagementRequestV02.mmObject(), CertificateManagementResponseV02.mmObject(), AcceptorConfigurationUpdateV07.mmObject(), MaintenanceDelegationResponseV03.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

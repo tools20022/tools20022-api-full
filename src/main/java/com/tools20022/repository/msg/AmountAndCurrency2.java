@@ -116,7 +116,7 @@ public class AmountAndCurrency2 {
 	 * AmountAndCurrency1.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndCurrency2, Optional<ImpliedCurrencyAndAmount>> mmAmount = new MMMessageAttribute<AmountAndCurrency2, Optional<ImpliedCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndCurrency2.mmObject();
@@ -129,6 +129,16 @@ public class AmountAndCurrency2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ImpliedCurrencyAndAmount> getValue(AmountAndCurrency2 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(AmountAndCurrency2 obj, Optional<ImpliedCurrencyAndAmount> value) {
+			obj.setAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ccy", required = true)
@@ -171,7 +181,7 @@ public class AmountAndCurrency2 {
 	 * AmountAndCurrency1.mmCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndCurrency2, ActiveCurrencyCode> mmCurrency = new MMMessageAttribute<AmountAndCurrency2, ActiveCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmCurrencyExchange;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndCurrency2.mmObject();
@@ -184,6 +194,16 @@ public class AmountAndCurrency2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyCode getValue(AmountAndCurrency2 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(AmountAndCurrency2 obj, ActiveCurrencyCode value) {
+			obj.setCurrency(value);
 		}
 	};
 

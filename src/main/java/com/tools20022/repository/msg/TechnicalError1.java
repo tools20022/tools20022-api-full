@@ -105,7 +105,7 @@ public class TechnicalError1 {
 	 * definition} = "Indicates the severity of the related error."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSeverity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TechnicalError1, ErrorSeverity1Code> mmSeverity = new MMMessageAttribute<TechnicalError1, ErrorSeverity1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TechnicalError1.mmObject();
 			isDerived = false;
@@ -116,6 +116,16 @@ public class TechnicalError1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ErrorSeverity1Code.mmObject();
+		}
+
+		@Override
+		public ErrorSeverity1Code getValue(TechnicalError1 obj) {
+			return obj.getSeverity();
+		}
+
+		@Override
+		public void setValue(TechnicalError1 obj, ErrorSeverity1Code value) {
+			obj.setSeverity(value);
 		}
 	};
 	@XmlElement(name = "ErrCd", required = true)
@@ -147,7 +157,7 @@ public class TechnicalError1 {
 	 * definition} = "Specifies the error code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmErrorCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TechnicalError1, TechnicalError1Choice> mmErrorCode = new MMMessageAssociationEnd<TechnicalError1, TechnicalError1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TechnicalError1.mmObject();
 			isDerived = false;
@@ -159,6 +169,16 @@ public class TechnicalError1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TechnicalError1Choice.mmObject();
+		}
+
+		@Override
+		public TechnicalError1Choice getValue(TechnicalError1 obj) {
+			return obj.getErrorCode();
+		}
+
+		@Override
+		public void setValue(TechnicalError1 obj, TechnicalError1Choice value) {
+			obj.setErrorCode(value);
 		}
 	};
 	@XmlElement(name = "Desc", required = true)
@@ -190,7 +210,7 @@ public class TechnicalError1 {
 	 * definition} = "Specification of the error, in free format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TechnicalError1, List<Max140Text>> mmDescription = new MMMessageAttribute<TechnicalError1, List<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TechnicalError1.mmObject();
 			isDerived = false;
@@ -200,6 +220,16 @@ public class TechnicalError1 {
 			definition = "Specification of the error, in free format.";
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public List<Max140Text> getValue(TechnicalError1 obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(TechnicalError1 obj, List<Max140Text> value) {
+			obj.setDescription(value);
 		}
 	};
 

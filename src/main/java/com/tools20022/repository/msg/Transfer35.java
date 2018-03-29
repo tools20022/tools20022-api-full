@@ -33,6 +33,7 @@ import com.tools20022.repository.codeset.RoundingDirection2Code;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -200,7 +201,7 @@ public class Transfer35 {
 	 * Transfer31.mmTransferConfirmationReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransferConfirmationReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Transfer35, Max35Text> mmTransferConfirmationReference = new MMMessageAttribute<Transfer35, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer35.mmObject();
 			isDerived = false;
@@ -212,6 +213,16 @@ public class Transfer35 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Transfer35 obj) {
+			return obj.getTransferConfirmationReference();
+		}
+
+		@Override
+		public void setValue(Transfer35 obj, Max35Text value) {
+			obj.setTransferConfirmationReference(value);
 		}
 	};
 	@XmlElement(name = "TrfRef", required = true)
@@ -254,7 +265,7 @@ public class Transfer35 {
 	 * Transfer31.mmTransferReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransferReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Transfer35, Max35Text> mmTransferReference = new MMMessageAttribute<Transfer35, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer35.mmObject();
@@ -267,6 +278,16 @@ public class Transfer35 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Transfer35 obj) {
+			return obj.getTransferReference();
+		}
+
+		@Override
+		public void setValue(Transfer35 obj, Max35Text value) {
+			obj.setTransferReference(value);
 		}
 	};
 	@XmlElement(name = "ClntRef")
@@ -310,7 +331,7 @@ public class Transfer35 {
 	 * Transfer31.mmClientReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Transfer35, Optional<AdditionalReference8>> mmClientReference = new MMMessageAttribute<Transfer35, Optional<AdditionalReference8>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmClientReference;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer35.mmObject();
@@ -322,7 +343,17 @@ public class Transfer35 {
 			previousVersion_lazy = () -> Transfer31.mmClientReference;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference8.mmObject();
+			complexType_lazy = () -> AdditionalReference8.mmObject();
+		}
+
+		@Override
+		public Optional<AdditionalReference8> getValue(Transfer35 obj) {
+			return obj.getClientReference();
+		}
+
+		@Override
+		public void setValue(Transfer35 obj, Optional<AdditionalReference8> value) {
+			obj.setClientReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtrPtyRef")
@@ -366,7 +397,7 @@ public class Transfer35 {
 	 * Transfer31.mmCounterpartyReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCounterpartyReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Transfer35, Optional<AdditionalReference7>> mmCounterpartyReference = new MMMessageAttribute<Transfer35, Optional<AdditionalReference7>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCounterpartyReference;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer35.mmObject();
@@ -378,7 +409,17 @@ public class Transfer35 {
 			previousVersion_lazy = () -> Transfer31.mmCounterpartyReference;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference7.mmObject();
+			complexType_lazy = () -> AdditionalReference7.mmObject();
+		}
+
+		@Override
+		public Optional<AdditionalReference7> getValue(Transfer35 obj) {
+			return obj.getCounterpartyReference();
+		}
+
+		@Override
+		public void setValue(Transfer35 obj, Optional<AdditionalReference7> value) {
+			obj.setCounterpartyReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BizFlowTp")
@@ -417,7 +458,7 @@ public class Transfer35 {
 	 * Transfer31.mmBusinessFlowType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBusinessFlowType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Transfer35, Optional<BusinessFlowType1Code>> mmBusinessFlowType = new MMMessageAttribute<Transfer35, Optional<BusinessFlowType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer35.mmObject();
 			isDerived = false;
@@ -429,6 +470,16 @@ public class Transfer35 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BusinessFlowType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<BusinessFlowType1Code> getValue(Transfer35 obj) {
+			return obj.getBusinessFlowType();
+		}
+
+		@Override
+		public void setValue(Transfer35 obj, Optional<BusinessFlowType1Code> value) {
+			obj.setBusinessFlowType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReqdSttlmDt")
@@ -471,7 +522,7 @@ public class Transfer35 {
 	 * Transfer31.mmRequestedSettlementDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestedSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Transfer35, Optional<ISODate>> mmRequestedSettlementDate = new MMMessageAttribute<Transfer35, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer35.mmObject();
@@ -484,6 +535,16 @@ public class Transfer35 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(Transfer35 obj) {
+			return obj.getRequestedSettlementDate();
+		}
+
+		@Override
+		public void setValue(Transfer35 obj, Optional<ISODate> value) {
+			obj.setRequestedSettlementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FctvTrfDt", required = true)
@@ -525,7 +586,7 @@ public class Transfer35 {
 	 * Transfer31.mmEffectiveTransferDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEffectiveTransferDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Transfer35, DateAndDateTime2Choice> mmEffectiveTransferDate = new MMMessageAttribute<Transfer35, DateAndDateTime2Choice>() {
 		{
 			businessElementTrace_lazy = () -> ObligationFulfilment.mmDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer35.mmObject();
@@ -538,6 +599,16 @@ public class Transfer35 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTime2Choice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTime2Choice getValue(Transfer35 obj) {
+			return obj.getEffectiveTransferDate();
+		}
+
+		@Override
+		public void setValue(Transfer35 obj, DateAndDateTime2Choice value) {
+			obj.setEffectiveTransferDate(value);
 		}
 	};
 	@XmlElement(name = "FctvSttlmDt")
@@ -581,7 +652,7 @@ public class Transfer35 {
 	 * Transfer31.mmEffectiveSettlementDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEffectiveSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Transfer35, Optional<DateAndDateTime2Choice>> mmEffectiveSettlementDate = new MMMessageAttribute<Transfer35, Optional<DateAndDateTime2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer35.mmObject();
@@ -594,6 +665,16 @@ public class Transfer35 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTime2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTime2Choice> getValue(Transfer35 obj) {
+			return obj.getEffectiveSettlementDate();
+		}
+
+		@Override
+		public void setValue(Transfer35 obj, Optional<DateAndDateTime2Choice> value) {
+			obj.setEffectiveSettlementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradDt")
@@ -637,7 +718,7 @@ public class Transfer35 {
 	 * Transfer31.mmTradeDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Transfer35, Optional<DateAndDateTime2Choice>> mmTradeDate = new MMMessageAttribute<Transfer35, Optional<DateAndDateTime2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer35.mmObject();
@@ -650,6 +731,16 @@ public class Transfer35 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTime2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTime2Choice> getValue(Transfer35 obj) {
+			return obj.getTradeDate();
+		}
+
+		@Override
+		public void setValue(Transfer35 obj, Optional<DateAndDateTime2Choice> value) {
+			obj.setTradeDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrfOrdrDtForm")
@@ -691,7 +782,7 @@ public class Transfer35 {
 	 * Transfer31.mmTransferOrderDateForm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransferOrderDateForm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Transfer35, Optional<ISODate>> mmTransferOrderDateForm = new MMMessageAttribute<Transfer35, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer35.mmObject();
@@ -704,6 +795,16 @@ public class Transfer35 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(Transfer35 obj) {
+			return obj.getTransferOrderDateForm();
+		}
+
+		@Override
+		public void setValue(Transfer35 obj, Optional<ISODate> value) {
+			obj.setTransferOrderDateForm(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrfRsn")
@@ -745,7 +846,7 @@ public class Transfer35 {
 	 * Transfer31.mmTransferReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransferReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Transfer35, Optional<TransferReason1Choice>> mmTransferReason = new MMMessageAttribute<Transfer35, Optional<TransferReason1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer35.mmObject();
@@ -758,6 +859,16 @@ public class Transfer35 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> TransferReason1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<TransferReason1Choice> getValue(Transfer35 obj) {
+			return obj.getTransferReason();
+		}
+
+		@Override
+		public void setValue(Transfer35 obj, Optional<TransferReason1Choice> value) {
+			obj.setTransferReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "HldgsPlanTp")
@@ -800,7 +911,7 @@ public class Transfer35 {
 	 * Transfer31.mmHoldingsPlanType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHoldingsPlanType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Transfer35, List<HoldingsPlanType1Code>> mmHoldingsPlanType = new MMMessageAttribute<Transfer35, List<HoldingsPlanType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmHoldingsPlanType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer35.mmObject();
@@ -813,6 +924,16 @@ public class Transfer35 {
 			maxOccurs = 3;
 			minOccurs = 0;
 			simpleType_lazy = () -> HoldingsPlanType1Code.mmObject();
+		}
+
+		@Override
+		public List<HoldingsPlanType1Code> getValue(Transfer35 obj) {
+			return obj.getHoldingsPlanType();
+		}
+
+		@Override
+		public void setValue(Transfer35 obj, List<HoldingsPlanType1Code> value) {
+			obj.setHoldingsPlanType(value);
 		}
 	};
 	@XmlElement(name = "FinInstrmDtls", required = true)
@@ -855,7 +976,7 @@ public class Transfer35 {
 	 * Transfer31.mmFinancialInstrumentDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinancialInstrumentDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Transfer35, FinancialInstrument63> mmFinancialInstrumentDetails = new MMMessageAttribute<Transfer35, FinancialInstrument63>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundClass.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer35.mmObject();
@@ -867,7 +988,17 @@ public class Transfer35 {
 			previousVersion_lazy = () -> Transfer31.mmFinancialInstrumentDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrument63.mmObject();
+			complexType_lazy = () -> FinancialInstrument63.mmObject();
+		}
+
+		@Override
+		public FinancialInstrument63 getValue(Transfer35 obj) {
+			return obj.getFinancialInstrumentDetails();
+		}
+
+		@Override
+		public void setValue(Transfer35 obj, FinancialInstrument63 value) {
+			obj.setFinancialInstrumentDetails(value);
 		}
 	};
 	@XmlElement(name = "TtlUnitsNb", required = true)
@@ -909,7 +1040,7 @@ public class Transfer35 {
 	 * Transfer31.mmTotalUnitsNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalUnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Transfer35, DecimalNumber> mmTotalUnitsNumber = new MMMessageAttribute<Transfer35, DecimalNumber>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferredQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer35.mmObject();
@@ -922,6 +1053,16 @@ public class Transfer35 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(Transfer35 obj) {
+			return obj.getTotalUnitsNumber();
+		}
+
+		@Override
+		public void setValue(Transfer35 obj, DecimalNumber value) {
+			obj.setTotalUnitsNumber(value);
 		}
 	};
 	@XmlElement(name = "TrfRate")
@@ -964,7 +1105,7 @@ public class Transfer35 {
 	 * Transfer31.mmPortfolioTransferOutRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransferRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Transfer35, Optional<PercentageRate>> mmTransferRate = new MMMessageAttribute<Transfer35, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer35.mmObject();
@@ -978,9 +1119,19 @@ public class Transfer35 {
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
+
+		@Override
+		public Optional<PercentageRate> getValue(Transfer35 obj) {
+			return obj.getTransferRate();
+		}
+
+		@Override
+		public void setValue(Transfer35 obj, Optional<PercentageRate> value) {
+			obj.setTransferRate(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "UnitsDtls")
-	protected List<com.tools20022.repository.msg.Unit8> unitsDetails;
+	protected List<Unit8> unitsDetails;
 	/**
 	 * 
 	 <p>
@@ -1015,7 +1166,7 @@ public class Transfer35 {
 	 * Transfer31.mmUnitsDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnitsDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Transfer35, List<Unit8>> mmUnitsDetails = new MMMessageAssociationEnd<Transfer35, List<Unit8>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferredQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer35.mmObject();
@@ -1027,7 +1178,17 @@ public class Transfer35 {
 			previousVersion_lazy = () -> Transfer31.mmUnitsDetails;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Unit8.mmObject();
+			type_lazy = () -> Unit8.mmObject();
+		}
+
+		@Override
+		public List<Unit8> getValue(Transfer35 obj) {
+			return obj.getUnitsDetails();
+		}
+
+		@Override
+		public void setValue(Transfer35 obj, List<Unit8> value) {
+			obj.setUnitsDetails(value);
 		}
 	};
 	@XmlElement(name = "Rndg")
@@ -1069,7 +1230,7 @@ public class Transfer35 {
 	 * Transfer31.mmRounding}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRounding = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Transfer35, Optional<RoundingDirection2Code>> mmRounding = new MMMessageAttribute<Transfer35, Optional<RoundingDirection2Code>>() {
 		{
 			businessElementTrace_lazy = () -> RoundingParameters.mmRoundingDirection;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer35.mmObject();
@@ -1082,6 +1243,16 @@ public class Transfer35 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RoundingDirection2Code.mmObject();
+		}
+
+		@Override
+		public Optional<RoundingDirection2Code> getValue(Transfer35 obj) {
+			return obj.getRounding();
+		}
+
+		@Override
+		public void setValue(Transfer35 obj, Optional<RoundingDirection2Code> value) {
+			obj.setRounding(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AvrgPric")
@@ -1125,7 +1296,7 @@ public class Transfer35 {
 	 * Transfer31.mmAveragePrice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAveragePrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Transfer35, Optional<ActiveOrHistoricCurrencyAnd13DecimalAmount>> mmAveragePrice = new MMMessageAttribute<Transfer35, Optional<ActiveOrHistoricCurrencyAnd13DecimalAmount>>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmBookValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer35.mmObject();
@@ -1138,6 +1309,16 @@ public class Transfer35 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAnd13DecimalAmount> getValue(Transfer35 obj) {
+			return obj.getAveragePrice();
+		}
+
+		@Override
+		public void setValue(Transfer35 obj, Optional<ActiveOrHistoricCurrencyAnd13DecimalAmount> value) {
+			obj.setAveragePrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NewAvrgPric")
@@ -1181,7 +1362,7 @@ public class Transfer35 {
 	 * Transfer31.mmNewAveragePrice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewAveragePrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Transfer35, Optional<ActiveOrHistoricCurrencyAnd13DecimalAmount>> mmNewAveragePrice = new MMMessageAttribute<Transfer35, Optional<ActiveOrHistoricCurrencyAnd13DecimalAmount>>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmBookValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer35.mmObject();
@@ -1194,6 +1375,16 @@ public class Transfer35 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAnd13DecimalAmount> getValue(Transfer35 obj) {
+			return obj.getNewAveragePrice();
+		}
+
+		@Override
+		public void setValue(Transfer35 obj, Optional<ActiveOrHistoricCurrencyAnd13DecimalAmount> value) {
+			obj.setNewAveragePrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AvrgDt")
@@ -1236,7 +1427,7 @@ public class Transfer35 {
 	 * Transfer31.mmAverageDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAverageDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Transfer35, Optional<ISODate>> mmAverageDate = new MMMessageAttribute<Transfer35, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> ObligationFulfilment.mmDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer35.mmObject();
@@ -1249,6 +1440,16 @@ public class Transfer35 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(Transfer35 obj) {
+			return obj.getAverageDate();
+		}
+
+		@Override
+		public void setValue(Transfer35 obj, Optional<ISODate> value) {
+			obj.setAverageDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NewAvrgDt")
@@ -1291,7 +1492,7 @@ public class Transfer35 {
 	 * Transfer31.mmNewAverageDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewAverageDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Transfer35, Optional<ISODate>> mmNewAverageDate = new MMMessageAttribute<Transfer35, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> ObligationFulfilment.mmDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer35.mmObject();
@@ -1304,6 +1505,16 @@ public class Transfer35 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(Transfer35 obj) {
+			return obj.getNewAverageDate();
+		}
+
+		@Override
+		public void setValue(Transfer35 obj, Optional<ISODate> value) {
+			obj.setNewAverageDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrfCcy")
@@ -1347,7 +1558,7 @@ public class Transfer35 {
 	 * Transfer31.mmTransferCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransferCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Transfer35, Optional<ActiveOrHistoricCurrencyCode>> mmTransferCurrency = new MMMessageAttribute<Transfer35, Optional<ActiveOrHistoricCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesDeliveryObligation.mmTransferCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer35.mmObject();
@@ -1360,6 +1571,16 @@ public class Transfer35 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyCode> getValue(Transfer35 obj) {
+			return obj.getTransferCurrency();
+		}
+
+		@Override
+		public void setValue(Transfer35 obj, Optional<ActiveOrHistoricCurrencyCode> value) {
+			obj.setTransferCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OwnAcctTrfInd")
@@ -1403,7 +1624,7 @@ public class Transfer35 {
 	 * Transfer31.mmOwnAccountTransferIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOwnAccountTransferIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Transfer35, Optional<YesNoIndicator>> mmOwnAccountTransferIndicator = new MMMessageAttribute<Transfer35, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmOwnAccountTransferIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer35.mmObject();
@@ -1416,6 +1637,16 @@ public class Transfer35 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(Transfer35 obj) {
+			return obj.getOwnAccountTransferIndicator();
+		}
+
+		@Override
+		public void setValue(Transfer35 obj, Optional<YesNoIndicator> value) {
+			obj.setOwnAccountTransferIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NonStdSttlmInf")
@@ -1458,7 +1689,7 @@ public class Transfer35 {
 	 * Transfer31.mmNonStandardSettlementInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNonStandardSettlementInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Transfer35, Optional<Max350Text>> mmNonStandardSettlementInformation = new MMMessageAttribute<Transfer35, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmNonStandardSettlementInformation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer35.mmObject();
@@ -1471,6 +1702,16 @@ public class Transfer35 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(Transfer35 obj) {
+			return obj.getNonStandardSettlementInformation();
+		}
+
+		@Override
+		public void setValue(Transfer35 obj, Optional<Max350Text> value) {
+			obj.setNonStandardSettlementInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcvgAgtDtls")
@@ -1514,7 +1755,7 @@ public class Transfer35 {
 	 * Transfer31.mmReceivingAgentDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReceivingAgentDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Transfer35, Optional<PartyIdentificationAndAccount156>> mmReceivingAgentDetails = new MMMessageAttribute<Transfer35, Optional<PartyIdentificationAndAccount156>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer35.mmObject();
@@ -1526,7 +1767,17 @@ public class Transfer35 {
 			previousVersion_lazy = () -> Transfer31.mmReceivingAgentDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount156.mmObject();
+			complexType_lazy = () -> PartyIdentificationAndAccount156.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount156> getValue(Transfer35 obj) {
+			return obj.getReceivingAgentDetails();
+		}
+
+		@Override
+		public void setValue(Transfer35 obj, Optional<PartyIdentificationAndAccount156> value) {
+			obj.setReceivingAgentDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DlvrgAgtDtls")
@@ -1570,7 +1821,7 @@ public class Transfer35 {
 	 * Transfer31.mmDeliveringAgentDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeliveringAgentDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Transfer35, Optional<PartyIdentificationAndAccount156>> mmDeliveringAgentDetails = new MMMessageAttribute<Transfer35, Optional<PartyIdentificationAndAccount156>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer35.mmObject();
@@ -1582,7 +1833,17 @@ public class Transfer35 {
 			previousVersion_lazy = () -> Transfer31.mmDeliveringAgentDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount156.mmObject();
+			complexType_lazy = () -> PartyIdentificationAndAccount156.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount156> getValue(Transfer35 obj) {
+			return obj.getDeliveringAgentDetails();
+		}
+
+		@Override
+		public void setValue(Transfer35 obj, Optional<PartyIdentificationAndAccount156> value) {
+			obj.setDeliveringAgentDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrfExpnssPmtTp")
@@ -1625,7 +1886,7 @@ public class Transfer35 {
 	 * Transfer31.mmTransferExpensesPaymentType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransferExpensesPaymentType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Transfer35, Optional<ChargePaymentMethod1Choice>> mmTransferExpensesPaymentType = new MMMessageAssociationEnd<Transfer35, Optional<ChargePaymentMethod1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargePaymentMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer35.mmObject();
@@ -1639,6 +1900,16 @@ public class Transfer35 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ChargePaymentMethod1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ChargePaymentMethod1Choice> getValue(Transfer35 obj) {
+			return obj.getTransferExpensesPaymentType();
+		}
+
+		@Override
+		public void setValue(Transfer35 obj, Optional<ChargePaymentMethod1Choice> value) {
+			obj.setTransferExpensesPaymentType(value.orElse(null));
 		}
 	};
 
@@ -1690,7 +1961,7 @@ public class Transfer35 {
 		return clientReference == null ? Optional.empty() : Optional.of(clientReference);
 	}
 
-	public Transfer35 setClientReference(com.tools20022.repository.msg.AdditionalReference8 clientReference) {
+	public Transfer35 setClientReference(AdditionalReference8 clientReference) {
 		this.clientReference = clientReference;
 		return this;
 	}
@@ -1699,7 +1970,7 @@ public class Transfer35 {
 		return counterpartyReference == null ? Optional.empty() : Optional.of(counterpartyReference);
 	}
 
-	public Transfer35 setCounterpartyReference(com.tools20022.repository.msg.AdditionalReference7 counterpartyReference) {
+	public Transfer35 setCounterpartyReference(AdditionalReference7 counterpartyReference) {
 		this.counterpartyReference = counterpartyReference;
 		return this;
 	}
@@ -1780,7 +2051,7 @@ public class Transfer35 {
 		return financialInstrumentDetails;
 	}
 
-	public Transfer35 setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument63 financialInstrumentDetails) {
+	public Transfer35 setFinancialInstrumentDetails(FinancialInstrument63 financialInstrumentDetails) {
 		this.financialInstrumentDetails = Objects.requireNonNull(financialInstrumentDetails);
 		return this;
 	}
@@ -1807,7 +2078,7 @@ public class Transfer35 {
 		return unitsDetails == null ? unitsDetails = new ArrayList<>() : unitsDetails;
 	}
 
-	public Transfer35 setUnitsDetails(List<com.tools20022.repository.msg.Unit8> unitsDetails) {
+	public Transfer35 setUnitsDetails(List<Unit8> unitsDetails) {
 		this.unitsDetails = Objects.requireNonNull(unitsDetails);
 		return this;
 	}
@@ -1888,7 +2159,7 @@ public class Transfer35 {
 		return receivingAgentDetails == null ? Optional.empty() : Optional.of(receivingAgentDetails);
 	}
 
-	public Transfer35 setReceivingAgentDetails(com.tools20022.repository.msg.PartyIdentificationAndAccount156 receivingAgentDetails) {
+	public Transfer35 setReceivingAgentDetails(PartyIdentificationAndAccount156 receivingAgentDetails) {
 		this.receivingAgentDetails = receivingAgentDetails;
 		return this;
 	}
@@ -1897,7 +2168,7 @@ public class Transfer35 {
 		return deliveringAgentDetails == null ? Optional.empty() : Optional.of(deliveringAgentDetails);
 	}
 
-	public Transfer35 setDeliveringAgentDetails(com.tools20022.repository.msg.PartyIdentificationAndAccount156 deliveringAgentDetails) {
+	public Transfer35 setDeliveringAgentDetails(PartyIdentificationAndAccount156 deliveringAgentDetails) {
 		this.deliveringAgentDetails = deliveringAgentDetails;
 		return this;
 	}

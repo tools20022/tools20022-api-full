@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification116;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -130,7 +131,7 @@ public class GroupHeader69 {
 	 * GroupHeader12.mmMessageIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader69, Max35Text> mmIdentification = new MMMessageAttribute<GroupHeader69, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader69.mmObject();
 			isDerived = false;
@@ -142,6 +143,16 @@ public class GroupHeader69 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(GroupHeader69 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(GroupHeader69 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "IssdDt", required = true)
@@ -177,7 +188,7 @@ public class GroupHeader69 {
 	 * GroupHeader12.mmCreationDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuedDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader69, ISODate> mmIssuedDate = new MMMessageAttribute<GroupHeader69, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader69.mmObject();
 			isDerived = false;
@@ -189,6 +200,16 @@ public class GroupHeader69 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(GroupHeader69 obj) {
+			return obj.getIssuedDate();
+		}
+
+		@Override
+		public void setValue(GroupHeader69 obj, ISODate value) {
+			obj.setIssuedDate(value);
 		}
 	};
 	@XmlElement(name = "RptCtgy", required = true)
@@ -231,7 +252,7 @@ public class GroupHeader69 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportCategory = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader69, ExternalDocumentType1Code> mmReportCategory = new MMMessageAttribute<GroupHeader69, ExternalDocumentType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader69.mmObject();
 			isDerived = false;
@@ -243,6 +264,16 @@ public class GroupHeader69 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalDocumentType1Code.mmObject();
+		}
+
+		@Override
+		public ExternalDocumentType1Code getValue(GroupHeader69 obj) {
+			return obj.getReportCategory();
+		}
+
+		@Override
+		public void setValue(GroupHeader69 obj, ExternalDocumentType1Code value) {
+			obj.setReportCategory(value);
 		}
 	};
 	@XmlElement(name = "TaxRptPurp", required = true)
@@ -283,7 +314,7 @@ public class GroupHeader69 {
 	 * definition} = "Specifies if the TaxReport is new, correction or remove."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxReportPurpose = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader69, ExternalDocumentType1Code> mmTaxReportPurpose = new MMMessageAttribute<GroupHeader69, ExternalDocumentType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader69.mmObject();
 			isDerived = false;
@@ -295,6 +326,16 @@ public class GroupHeader69 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalDocumentType1Code.mmObject();
+		}
+
+		@Override
+		public ExternalDocumentType1Code getValue(GroupHeader69 obj) {
+			return obj.getTaxReportPurpose();
+		}
+
+		@Override
+		public void setValue(GroupHeader69 obj, ExternalDocumentType1Code value) {
+			obj.setTaxReportPurpose(value);
 		}
 	};
 	@XmlElement(name = "OrgnlId")
@@ -327,7 +368,7 @@ public class GroupHeader69 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader69, Optional<Max35Text>> mmOriginalIdentification = new MMMessageAttribute<GroupHeader69, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader69.mmObject();
 			isDerived = false;
@@ -338,6 +379,16 @@ public class GroupHeader69 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(GroupHeader69 obj) {
+			return obj.getOriginalIdentification();
+		}
+
+		@Override
+		public void setValue(GroupHeader69 obj, Optional<Max35Text> value) {
+			obj.setOriginalIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SellrTaxRprtv")
@@ -369,7 +420,7 @@ public class GroupHeader69 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSellerTaxRepresentative = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GroupHeader69, Optional<PartyIdentification116>> mmSellerTaxRepresentative = new MMMessageAssociationEnd<GroupHeader69, Optional<PartyIdentification116>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader69.mmObject();
 			isDerived = false;
@@ -380,7 +431,17 @@ public class GroupHeader69 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification116.mmObject();
+			type_lazy = () -> PartyIdentification116.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification116> getValue(GroupHeader69 obj) {
+			return obj.getSellerTaxRepresentative();
+		}
+
+		@Override
+		public void setValue(GroupHeader69 obj, Optional<PartyIdentification116> value) {
+			obj.setSellerTaxRepresentative(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BuyrTaxRprtv")
@@ -412,7 +473,7 @@ public class GroupHeader69 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBuyerTaxRepresentative = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GroupHeader69, Optional<PartyIdentification116>> mmBuyerTaxRepresentative = new MMMessageAssociationEnd<GroupHeader69, Optional<PartyIdentification116>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader69.mmObject();
 			isDerived = false;
@@ -423,7 +484,17 @@ public class GroupHeader69 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification116.mmObject();
+			type_lazy = () -> PartyIdentification116.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification116> getValue(GroupHeader69 obj) {
+			return obj.getBuyerTaxRepresentative();
+		}
+
+		@Override
+		public void setValue(GroupHeader69 obj, Optional<PartyIdentification116> value) {
+			obj.setBuyerTaxRepresentative(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LangCd")
@@ -463,7 +534,7 @@ public class GroupHeader69 {
 	 * definition} = "Specifies the language used in the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLanguageCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader69, Optional<LanguageCode>> mmLanguageCode = new MMMessageAttribute<GroupHeader69, Optional<LanguageCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader69.mmObject();
 			isDerived = false;
@@ -475,6 +546,16 @@ public class GroupHeader69 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LanguageCode.mmObject();
+		}
+
+		@Override
+		public Optional<LanguageCode> getValue(GroupHeader69 obj) {
+			return obj.getLanguageCode();
+		}
+
+		@Override
+		public void setValue(GroupHeader69 obj, Optional<LanguageCode> value) {
+			obj.setLanguageCode(value.orElse(null));
 		}
 	};
 
@@ -544,7 +625,7 @@ public class GroupHeader69 {
 		return sellerTaxRepresentative == null ? Optional.empty() : Optional.of(sellerTaxRepresentative);
 	}
 
-	public GroupHeader69 setSellerTaxRepresentative(com.tools20022.repository.msg.PartyIdentification116 sellerTaxRepresentative) {
+	public GroupHeader69 setSellerTaxRepresentative(PartyIdentification116 sellerTaxRepresentative) {
 		this.sellerTaxRepresentative = sellerTaxRepresentative;
 		return this;
 	}
@@ -553,7 +634,7 @@ public class GroupHeader69 {
 		return buyerTaxRepresentative == null ? Optional.empty() : Optional.of(buyerTaxRepresentative);
 	}
 
-	public GroupHeader69 setBuyerTaxRepresentative(com.tools20022.repository.msg.PartyIdentification116 buyerTaxRepresentative) {
+	public GroupHeader69 setBuyerTaxRepresentative(PartyIdentification116 buyerTaxRepresentative) {
 		this.buyerTaxRepresentative = buyerTaxRepresentative;
 		return this;
 	}

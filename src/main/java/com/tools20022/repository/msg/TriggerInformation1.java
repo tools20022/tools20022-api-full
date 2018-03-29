@@ -66,7 +66,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "TriggerInformation1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -110,7 +110,7 @@ public class TriggerInformation1 {
 	 * definition} = "Actor who trigger the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTriggerSource = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TriggerInformation1, PartyType5Code> mmTriggerSource = new MMMessageAttribute<TriggerInformation1, PartyType5Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TriggerInformation1.mmObject();
 			isDerived = false;
@@ -121,6 +121,16 @@ public class TriggerInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PartyType5Code.mmObject();
+		}
+
+		@Override
+		public PartyType5Code getValue(TriggerInformation1 obj) {
+			return obj.getTriggerSource();
+		}
+
+		@Override
+		public void setValue(TriggerInformation1 obj, PartyType5Code value) {
+			obj.setTriggerSource(value);
 		}
 	};
 	@XmlElement(name = "SrcId", required = true)
@@ -152,7 +162,7 @@ public class TriggerInformation1 {
 	 * definition} = "Identification of the trigger source."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSourceIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TriggerInformation1, Max35Text> mmSourceIdentification = new MMMessageAttribute<TriggerInformation1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TriggerInformation1.mmObject();
 			isDerived = false;
@@ -163,6 +173,16 @@ public class TriggerInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(TriggerInformation1 obj) {
+			return obj.getSourceIdentification();
+		}
+
+		@Override
+		public void setValue(TriggerInformation1 obj, Max35Text value) {
+			obj.setSourceIdentification(value);
 		}
 	};
 	@XmlElement(name = "TrggrTp", required = true)
@@ -195,7 +215,7 @@ public class TriggerInformation1 {
 	 * definition} = "Identification of the type of the call."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTriggerType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TriggerInformation1, ExchangePolicy1Code> mmTriggerType = new MMMessageAttribute<TriggerInformation1, ExchangePolicy1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TriggerInformation1.mmObject();
 			isDerived = false;
@@ -206,6 +226,16 @@ public class TriggerInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExchangePolicy1Code.mmObject();
+		}
+
+		@Override
+		public ExchangePolicy1Code getValue(TriggerInformation1 obj) {
+			return obj.getTriggerType();
+		}
+
+		@Override
+		public void setValue(TriggerInformation1 obj, ExchangePolicy1Code value) {
+			obj.setTriggerType(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -237,7 +267,7 @@ public class TriggerInformation1 {
 	 * definition} = "Additional information related to request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TriggerInformation1, Optional<Max70Text>> mmAdditionalInformation = new MMMessageAttribute<TriggerInformation1, Optional<Max70Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TriggerInformation1.mmObject();
 			isDerived = false;
@@ -249,6 +279,16 @@ public class TriggerInformation1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max70Text> getValue(TriggerInformation1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(TriggerInformation1 obj, Optional<Max70Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -257,7 +297,7 @@ public class TriggerInformation1 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TriggerInformation1.mmTriggerSource, com.tools20022.repository.msg.TriggerInformation1.mmSourceIdentification,
 						com.tools20022.repository.msg.TriggerInformation1.mmTriggerType, com.tools20022.repository.msg.TriggerInformation1.mmAdditionalInformation);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TriggerInformation1";
 				definition = "Element containing all information needed to identify who triggered the request.";
 			}

@@ -120,7 +120,7 @@ public class ATMCustomerProfile2 {
 	 * ATMCustomerProfile1.mmProfileReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProfileReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMCustomerProfile2, Optional<Max35Text>> mmProfileReference = new MMMessageAttribute<ATMCustomerProfile2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCustomerProfile2.mmObject();
 			isDerived = false;
@@ -133,6 +133,16 @@ public class ATMCustomerProfile2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMCustomerProfile2 obj) {
+			return obj.getProfileReference();
+		}
+
+		@Override
+		public void setValue(ATMCustomerProfile2 obj, Optional<Max35Text> value) {
+			obj.setProfileReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CstmrId")
@@ -177,7 +187,7 @@ public class ATMCustomerProfile2 {
 	 * ATMCustomerProfile1.mmCustomerIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCustomerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMCustomerProfile2, Optional<Max35Text>> mmCustomerIdentification = new MMMessageAttribute<ATMCustomerProfile2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCustomerProfile2.mmObject();
 			isDerived = false;
@@ -190,6 +200,16 @@ public class ATMCustomerProfile2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMCustomerProfile2 obj) {
+			return obj.getCustomerIdentification();
+		}
+
+		@Override
+		public void setValue(ATMCustomerProfile2 obj, Optional<Max35Text> value) {
+			obj.setCustomerIdentification(value.orElse(null));
 		}
 	};
 

@@ -115,7 +115,7 @@ public class RejectionAndRepairReason17Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionAndRepairReason17Choice, RejectionReason29Code> mmCode = new MMMessageAttribute<RejectionAndRepairReason17Choice, RejectionReason29Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectionAndRepairReason17Choice.mmObject();
@@ -128,6 +128,16 @@ public class RejectionAndRepairReason17Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RejectionReason29Code.mmObject();
+		}
+
+		@Override
+		public RejectionReason29Code getValue(RejectionAndRepairReason17Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RejectionAndRepairReason17Choice obj, RejectionReason29Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -170,7 +180,7 @@ public class RejectionAndRepairReason17Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionAndRepairReason17Choice, GenericIdentification25> mmProprietary = new MMMessageAttribute<RejectionAndRepairReason17Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectionAndRepairReason17Choice.mmObject();
@@ -183,6 +193,16 @@ public class RejectionAndRepairReason17Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(RejectionAndRepairReason17Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RejectionAndRepairReason17Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

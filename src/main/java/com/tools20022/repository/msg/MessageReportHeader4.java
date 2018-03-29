@@ -23,6 +23,9 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.StatusAdviceReport3;
+import com.tools20022.repository.msg.StatusReportRecord3;
+import com.tools20022.repository.msg.SupplementaryData1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -119,7 +122,7 @@ public class MessageReportHeader4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageReportIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MessageReportHeader4, Optional<Max140Text>> mmMessageReportIdentifier = new MMMessageAttribute<MessageReportHeader4, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageReportHeader4.mmObject();
 			isDerived = false;
@@ -130,6 +133,16 @@ public class MessageReportHeader4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(MessageReportHeader4 obj) {
+			return obj.getMessageReportIdentifier();
+		}
+
+		@Override
+		public void setValue(MessageReportHeader4 obj, Optional<Max140Text> value) {
+			obj.setMessageReportIdentifier(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MsgSts")
@@ -161,7 +174,7 @@ public class MessageReportHeader4 {
 	 * "Details the status of the whole message that has been received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMessageStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MessageReportHeader4, Optional<StatusAdviceReport3>> mmMessageStatus = new MMMessageAssociationEnd<MessageReportHeader4, Optional<StatusAdviceReport3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageReportHeader4.mmObject();
 			isDerived = false;
@@ -172,11 +185,21 @@ public class MessageReportHeader4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.StatusAdviceReport3.mmObject();
+			type_lazy = () -> StatusAdviceReport3.mmObject();
+		}
+
+		@Override
+		public Optional<StatusAdviceReport3> getValue(MessageReportHeader4 obj) {
+			return obj.getMessageStatus();
+		}
+
+		@Override
+		public void setValue(MessageReportHeader4 obj, Optional<StatusAdviceReport3> value) {
+			obj.setMessageStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcrdSts")
-	protected List<com.tools20022.repository.msg.StatusReportRecord3> recordStatus;
+	protected List<StatusReportRecord3> recordStatus;
 	/**
 	 * 
 	 <p>
@@ -204,7 +227,7 @@ public class MessageReportHeader4 {
 	 * "Provides per record status on the report that has been received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRecordStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MessageReportHeader4, List<StatusReportRecord3>> mmRecordStatus = new MMMessageAssociationEnd<MessageReportHeader4, List<StatusReportRecord3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageReportHeader4.mmObject();
 			isDerived = false;
@@ -214,11 +237,21 @@ public class MessageReportHeader4 {
 			definition = "Provides per record status on the report that has been received.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.StatusReportRecord3.mmObject();
+			type_lazy = () -> StatusReportRecord3.mmObject();
+		}
+
+		@Override
+		public List<StatusReportRecord3> getValue(MessageReportHeader4 obj) {
+			return obj.getRecordStatus();
+		}
+
+		@Override
+		public void setValue(MessageReportHeader4 obj, List<StatusReportRecord3> value) {
+			obj.setRecordStatus(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
-	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * 
 	 <p>
@@ -247,7 +280,7 @@ public class MessageReportHeader4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MessageReportHeader4, List<SupplementaryData1>> mmSupplementaryData = new MMMessageAssociationEnd<MessageReportHeader4, List<SupplementaryData1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageReportHeader4.mmObject();
 			isDerived = false;
@@ -257,7 +290,17 @@ public class MessageReportHeader4 {
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
+			type_lazy = () -> SupplementaryData1.mmObject();
+		}
+
+		@Override
+		public List<SupplementaryData1> getValue(MessageReportHeader4 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(MessageReportHeader4 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -290,7 +333,7 @@ public class MessageReportHeader4 {
 		return messageStatus == null ? Optional.empty() : Optional.of(messageStatus);
 	}
 
-	public MessageReportHeader4 setMessageStatus(com.tools20022.repository.msg.StatusAdviceReport3 messageStatus) {
+	public MessageReportHeader4 setMessageStatus(StatusAdviceReport3 messageStatus) {
 		this.messageStatus = messageStatus;
 		return this;
 	}
@@ -299,7 +342,7 @@ public class MessageReportHeader4 {
 		return recordStatus == null ? recordStatus = new ArrayList<>() : recordStatus;
 	}
 
-	public MessageReportHeader4 setRecordStatus(List<com.tools20022.repository.msg.StatusReportRecord3> recordStatus) {
+	public MessageReportHeader4 setRecordStatus(List<StatusReportRecord3> recordStatus) {
 		this.recordStatus = Objects.requireNonNull(recordStatus);
 		return this;
 	}
@@ -308,7 +351,7 @@ public class MessageReportHeader4 {
 		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public MessageReportHeader4 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+	public MessageReportHeader4 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = Objects.requireNonNull(supplementaryData);
 		return this;
 	}

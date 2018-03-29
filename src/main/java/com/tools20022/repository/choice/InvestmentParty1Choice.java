@@ -112,7 +112,7 @@ public class InvestmentParty1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPerson = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentParty1Choice, PersonIdentification12> mmPerson = new MMMessageAssociationEnd<InvestmentParty1Choice, PersonIdentification12>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.InvestmentParty1Choice.mmObject();
 			isDerived = false;
@@ -125,6 +125,16 @@ public class InvestmentParty1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PersonIdentification12.mmObject();
+		}
+
+		@Override
+		public PersonIdentification12 getValue(InvestmentParty1Choice obj) {
+			return obj.getPerson();
+		}
+
+		@Override
+		public void setValue(InvestmentParty1Choice obj, PersonIdentification12 value) {
+			obj.setPerson(value);
 		}
 	};
 	@XmlElement(name = "Algo", required = true)
@@ -164,7 +174,7 @@ public class InvestmentParty1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentParty1Choice, Max50Text> mmAlgorithm = new MMMessageAttribute<InvestmentParty1Choice, Max50Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.InvestmentParty1Choice.mmObject();
 			isDerived = false;
@@ -176,6 +186,16 @@ public class InvestmentParty1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max50Text.mmObject();
+		}
+
+		@Override
+		public Max50Text getValue(InvestmentParty1Choice obj) {
+			return obj.getAlgorithm();
+		}
+
+		@Override
+		public void setValue(InvestmentParty1Choice obj, Max50Text value) {
+			obj.setAlgorithm(value);
 		}
 	};
 

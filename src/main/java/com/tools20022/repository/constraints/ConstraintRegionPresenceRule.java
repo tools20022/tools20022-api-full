@@ -53,12 +53,16 @@ public class ConstraintRegionPresenceRule {
 	 */
 	public static final MMConstraint<ServiceTaxDesignation1> forServiceTaxDesignation1 = new MMConstraint<ServiceTaxDesignation1>() {
 		{
-			validator = ConstraintRegionPresenceRule::checkServiceTaxDesignation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegionPresenceRule";
 			definition = "If Region is present, then Code must be equal to ZeroRate or Taxable.";
 			owner_lazy = () -> ServiceTaxDesignation1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/Code</leftOperand><rightOperand>ZeroRate</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/Code</leftOperand><rightOperand>Taxable</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Region</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(ServiceTaxDesignation1 obj) throws Exception {
+			checkServiceTaxDesignation1(obj);
 		}
 	};
 

@@ -25,9 +25,12 @@ import com.tools20022.repository.choice.UnitOfMeasure6Choice;
 import com.tools20022.repository.codeset.UnitOfMeasureCode;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.Max15NumericText;
+import com.tools20022.repository.entity.LineItem;
+import com.tools20022.repository.entity.Packaging;
+import com.tools20022.repository.entity.Product;
+import com.tools20022.repository.entity.Tolerance;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -268,7 +271,7 @@ public class ProductQuantity {
 	 * "Specifies the unit of measurement. For example, kilo, tons."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmUnitOfMeasure = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<ProductQuantity, UnitOfMeasureCode> mmUnitOfMeasure = new MMBusinessAttribute<ProductQuantity, UnitOfMeasureCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Product2.mmUnitOfMeasure, Product1.mmUnitOfMeasure, Quantity3.mmUnitOfMeasureCode, Quantity3.mmOtherUnitOfMeasure, Quantity4.mmUnitOfMeasureCode, Quantity4.mmOtherUnitOfMeasure,
 					Quantity2.mmUnitOfMeasureCode, Quantity2.mmOtherUnitOfMeasure, UnitOfMeasure2Choice.mmCode, UnitOfMeasure2Choice.mmProprietary, Quantity10.mmUnitOfMeasure, UnitOfMeasure3Choice.mmUnitOfMeasureCode,
@@ -284,12 +287,14 @@ public class ProductQuantity {
 			simpleType_lazy = () -> UnitOfMeasureCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ProductQuantity.class.getMethod("getUnitOfMeasure", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public UnitOfMeasureCode getValue(ProductQuantity obj) {
+			return obj.getUnitOfMeasure();
+		}
+
+		@Override
+		public void setValue(ProductQuantity obj, UnitOfMeasureCode value) {
+			obj.setUnitOfMeasure(value);
 		}
 	};
 	protected DecimalNumber value;
@@ -367,7 +372,7 @@ public class ProductQuantity {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmValue = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<ProductQuantity, DecimalNumber> mmValue = new MMBusinessAttribute<ProductQuantity, DecimalNumber>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Product2.mmProductQuantity, Product1.mmProductQuantity, Quantity3.mmValue, Quantity4.mmValue, BillingServiceParameters1.mmVolume, BillingServiceParameters2.mmVolume,
 					BillingServiceAdjustment1.mmVolumeChange, BillingServiceAdjustment1.mmOriginalVolume, BillingServiceAdjustment1.mmNewVolume, ServiceItemTotals1.mmQuantity, Quantity10.mmValue, Quantity9.mmValue,
@@ -382,15 +387,17 @@ public class ProductQuantity {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ProductQuantity.class.getMethod("getValue", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DecimalNumber getValue(ProductQuantity obj) {
+			return obj.getValue();
+		}
+
+		@Override
+		public void setValue(ProductQuantity obj, DecimalNumber value) {
+			obj.setValue(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.Product> product;
+	protected List<Product> product;
 	/**
 	 * 
 	 <p>
@@ -424,7 +431,7 @@ public class ProductQuantity {
 	 * "Specifies the type of goods and services linked to the quantity."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmProduct = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ProductQuantity, List<Product>> mmProduct = new MMBusinessAssociationEnd<ProductQuantity, List<Product>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
@@ -432,9 +439,19 @@ public class ProductQuantity {
 			name = "Product";
 			definition = "Specifies the type of goods and services linked to the quantity.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Product.mmQuantity;
+			opposite_lazy = () -> Product.mmQuantity;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
+			type_lazy = () -> Product.mmObject();
+		}
+
+		@Override
+		public List<Product> getValue(ProductQuantity obj) {
+			return obj.getProduct();
+		}
+
+		@Override
+		public void setValue(ProductQuantity obj, List<Product> value) {
+			obj.setProduct(value);
 		}
 	};
 	protected Max15NumericText factor;
@@ -485,7 +502,7 @@ public class ProductQuantity {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmFactor = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<ProductQuantity, Max15NumericText> mmFactor = new MMBusinessAttribute<ProductQuantity, Max15NumericText>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Quantity4.mmFactor, Quantity2.mmFactor, UnitPrice8.mmFactor, UnitPrice9.mmFactor, Quantity9.mmFactor, UnitPrice18.mmFactor, Quantity16.mmFactor);
 			isDerived = false;
@@ -498,12 +515,14 @@ public class ProductQuantity {
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ProductQuantity.class.getMethod("getFactor", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max15NumericText getValue(ProductQuantity obj) {
+			return obj.getFactor();
+		}
+
+		@Override
+		public void setValue(ProductQuantity obj, Max15NumericText value) {
+			obj.setFactor(value);
 		}
 	};
 	protected LineItem netWeightRelatedLineItem;
@@ -539,7 +558,7 @@ public class ProductQuantity {
 	 * definition} = "Line item for which a net weight is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmNetWeightRelatedLineItem = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ProductQuantity, Optional<LineItem>> mmNetWeightRelatedLineItem = new MMBusinessAssociationEnd<ProductQuantity, Optional<LineItem>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
@@ -548,9 +567,19 @@ public class ProductQuantity {
 			definition = "Line item for which a net weight is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.LineItem.mmNetWeight;
+			opposite_lazy = () -> LineItem.mmNetWeight;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.LineItem.mmObject();
+			type_lazy = () -> LineItem.mmObject();
+		}
+
+		@Override
+		public Optional<LineItem> getValue(ProductQuantity obj) {
+			return obj.getNetWeightRelatedLineItem();
+		}
+
+		@Override
+		public void setValue(ProductQuantity obj, Optional<LineItem> value) {
+			obj.setNetWeightRelatedLineItem(value.orElse(null));
 		}
 	};
 	protected LineItem billedQuantityRelatedLineItem;
@@ -586,7 +615,7 @@ public class ProductQuantity {
 	 * definition} = "Line item which contains this quantity."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmBilledQuantityRelatedLineItem = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ProductQuantity, Optional<LineItem>> mmBilledQuantityRelatedLineItem = new MMBusinessAssociationEnd<ProductQuantity, Optional<LineItem>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
@@ -595,9 +624,19 @@ public class ProductQuantity {
 			definition = "Line item which contains this quantity.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.LineItem.mmBilledQuantity;
+			opposite_lazy = () -> LineItem.mmBilledQuantity;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.LineItem.mmObject();
+			type_lazy = () -> LineItem.mmObject();
+		}
+
+		@Override
+		public Optional<LineItem> getValue(ProductQuantity obj) {
+			return obj.getBilledQuantityRelatedLineItem();
+		}
+
+		@Override
+		public void setValue(ProductQuantity obj, Optional<LineItem> value) {
+			obj.setBilledQuantityRelatedLineItem(value.orElse(null));
 		}
 	};
 	protected Packaging relatedPackaging;
@@ -634,7 +673,7 @@ public class ProductQuantity {
 	 * definition} = "Packaging for which a quantity is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedPackaging = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ProductQuantity, Optional<Packaging>> mmRelatedPackaging = new MMBusinessAssociationEnd<ProductQuantity, Optional<Packaging>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
@@ -643,9 +682,19 @@ public class ProductQuantity {
 			definition = "Packaging for which a quantity is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Packaging.mmQuantity;
+			opposite_lazy = () -> Packaging.mmQuantity;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Packaging.mmObject();
+			type_lazy = () -> Packaging.mmObject();
+		}
+
+		@Override
+		public Optional<Packaging> getValue(ProductQuantity obj) {
+			return obj.getRelatedPackaging();
+		}
+
+		@Override
+		public void setValue(ProductQuantity obj, Optional<Packaging> value) {
+			obj.setRelatedPackaging(value.orElse(null));
 		}
 	};
 	protected Packaging packagingForUnitQuantity;
@@ -683,7 +732,7 @@ public class ProductQuantity {
 	 * "Packaging for which a unit quantity per package is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPackagingForUnitQuantity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ProductQuantity, Optional<Packaging>> mmPackagingForUnitQuantity = new MMBusinessAssociationEnd<ProductQuantity, Optional<Packaging>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
@@ -692,9 +741,19 @@ public class ProductQuantity {
 			definition = "Packaging for which a unit quantity per package is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Packaging.mmPerPackageUnitQuantity;
+			opposite_lazy = () -> Packaging.mmPerPackageUnitQuantity;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Packaging.mmObject();
+			type_lazy = () -> Packaging.mmObject();
+		}
+
+		@Override
+		public Optional<Packaging> getValue(ProductQuantity obj) {
+			return obj.getPackagingForUnitQuantity();
+		}
+
+		@Override
+		public void setValue(ProductQuantity obj, Optional<Packaging> value) {
+			obj.setPackagingForUnitQuantity(value.orElse(null));
 		}
 	};
 	protected LineItem chargeFreeQuantityRelatedLineItem;
@@ -731,7 +790,7 @@ public class ProductQuantity {
 	 * "Line item for which a charge free quantity of product is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmChargeFreeQuantityRelatedLineItem = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ProductQuantity, Optional<LineItem>> mmChargeFreeQuantityRelatedLineItem = new MMBusinessAssociationEnd<ProductQuantity, Optional<LineItem>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
@@ -740,9 +799,19 @@ public class ProductQuantity {
 			definition = "Line item for which a charge free quantity of product is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.LineItem.mmChargeFreeQuantity;
+			opposite_lazy = () -> LineItem.mmChargeFreeQuantity;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.LineItem.mmObject();
+			type_lazy = () -> LineItem.mmObject();
+		}
+
+		@Override
+		public Optional<LineItem> getValue(ProductQuantity obj) {
+			return obj.getChargeFreeQuantityRelatedLineItem();
+		}
+
+		@Override
+		public void setValue(ProductQuantity obj, Optional<LineItem> value) {
+			obj.setChargeFreeQuantityRelatedLineItem(value.orElse(null));
 		}
 	};
 	protected LineItem measureQuantityStart;
@@ -794,7 +863,7 @@ public class ProductQuantity {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmMeasureQuantityStart = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ProductQuantity, LineItem> mmMeasureQuantityStart = new MMBusinessAssociationEnd<ProductQuantity, LineItem>() {
 		{
 			derivation_lazy = () -> Arrays.asList(LineItem10.mmMeasureQuantityStart, LineItem16.mmMeasureQuantityStart, LineItem17.mmMeasureQuantityStart);
 			isDerived = false;
@@ -804,9 +873,19 @@ public class ProductQuantity {
 			definition = "Quantity value on which the quantity measurement started for a line item. For instance the start amount of a meter reading for an electricity supplier.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.LineItem.mmMeasureQuantityStartRelatedLineItem;
+			opposite_lazy = () -> LineItem.mmMeasureQuantityStartRelatedLineItem;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.LineItem.mmObject();
+			type_lazy = () -> LineItem.mmObject();
+		}
+
+		@Override
+		public LineItem getValue(ProductQuantity obj) {
+			return obj.getMeasureQuantityStart();
+		}
+
+		@Override
+		public void setValue(ProductQuantity obj, LineItem value) {
+			obj.setMeasureQuantityStart(value);
 		}
 	};
 	protected LineItem measureQuantityEnd;
@@ -858,7 +937,7 @@ public class ProductQuantity {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmMeasureQuantityEnd = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ProductQuantity, LineItem> mmMeasureQuantityEnd = new MMBusinessAssociationEnd<ProductQuantity, LineItem>() {
 		{
 			derivation_lazy = () -> Arrays.asList(LineItem10.mmMeasureQuantityEnd, LineItem16.mmMeasureQuantityEnd, LineItem17.mmMeasureQuantityEnd);
 			isDerived = false;
@@ -868,9 +947,19 @@ public class ProductQuantity {
 			definition = "Quantity value on which the quantity measurement ended for a line item. For instance the end amount of a meter reading for an electricity supplier.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.LineItem.mmMeasureQuantityEndRelatedLineItem;
+			opposite_lazy = () -> LineItem.mmMeasureQuantityEndRelatedLineItem;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.LineItem.mmObject();
+			type_lazy = () -> LineItem.mmObject();
+		}
+
+		@Override
+		public LineItem getValue(ProductQuantity obj) {
+			return obj.getMeasureQuantityEnd();
+		}
+
+		@Override
+		public void setValue(ProductQuantity obj, LineItem value) {
+			obj.setMeasureQuantityEnd(value);
 		}
 	};
 	protected Tolerance quantityTolerance;
@@ -933,7 +1022,7 @@ public class ProductQuantity {
 	 * definition} = "Variance allowed in the quantity of goods."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmQuantityTolerance = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ProductQuantity, Tolerance> mmQuantityTolerance = new MMBusinessAssociationEnd<ProductQuantity, Tolerance>() {
 		{
 			derivation_lazy = () -> Arrays.asList(LineItemDetails4.mmQuantityTolerance, LineItemDetails7.mmQuantityTolerance, LineItemDetails5.mmQuantityTolerance, LineItemDetails8.mmQuantityTolerance,
 					LineItemDetails10.mmQuantityTolerance, LineItemDetails13.mmQuantityTolerance, LineItemDetails12.mmQuantityTolerance);
@@ -944,9 +1033,19 @@ public class ProductQuantity {
 			definition = "Variance allowed in the quantity of goods.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.Tolerance.mmQuantity;
+			opposite_lazy = () -> Tolerance.mmQuantity;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Tolerance.mmObject();
+			type_lazy = () -> Tolerance.mmObject();
+		}
+
+		@Override
+		public Tolerance getValue(ProductQuantity obj) {
+			return obj.getQuantityTolerance();
+		}
+
+		@Override
+		public void setValue(ProductQuantity obj, Tolerance value) {
+			obj.setQuantityTolerance(value);
 		}
 	};
 	protected Packaging packagingForConsignmentlQuantity;
@@ -984,7 +1083,7 @@ public class ProductQuantity {
 	 * "Packaging for which a total consignment quantity is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPackagingForConsignmentlQuantity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ProductQuantity, Optional<Packaging>> mmPackagingForConsignmentlQuantity = new MMBusinessAssociationEnd<ProductQuantity, Optional<Packaging>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
@@ -993,9 +1092,19 @@ public class ProductQuantity {
 			definition = "Packaging for which a total consignment quantity is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Packaging.mmTotalConsignmentQuantity;
+			opposite_lazy = () -> Packaging.mmTotalConsignmentQuantity;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Packaging.mmObject();
+			type_lazy = () -> Packaging.mmObject();
+		}
+
+		@Override
+		public Optional<Packaging> getValue(ProductQuantity obj) {
+			return obj.getPackagingForConsignmentlQuantity();
+		}
+
+		@Override
+		public void setValue(ProductQuantity obj, Optional<Packaging> value) {
+			obj.setPackagingForConsignmentlQuantity(value.orElse(null));
 		}
 	};
 	protected Packaging packagingForVolume;
@@ -1032,7 +1141,7 @@ public class ProductQuantity {
 	 * definition} = "Packaging for which a volume is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPackagingForVolume = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ProductQuantity, Optional<Packaging>> mmPackagingForVolume = new MMBusinessAssociationEnd<ProductQuantity, Optional<Packaging>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
@@ -1041,9 +1150,19 @@ public class ProductQuantity {
 			definition = "Packaging for which a volume is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Packaging.mmTotalVolume;
+			opposite_lazy = () -> Packaging.mmTotalVolume;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Packaging.mmObject();
+			type_lazy = () -> Packaging.mmObject();
+		}
+
+		@Override
+		public Optional<Packaging> getValue(ProductQuantity obj) {
+			return obj.getPackagingForVolume();
+		}
+
+		@Override
+		public void setValue(ProductQuantity obj, Optional<Packaging> value) {
+			obj.setPackagingForVolume(value.orElse(null));
 		}
 	};
 	protected Packaging packagingForWeight;
@@ -1080,7 +1199,7 @@ public class ProductQuantity {
 	 * definition} = "Packaging for which a weight is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPackagingForWeight = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ProductQuantity, Optional<Packaging>> mmPackagingForWeight = new MMBusinessAssociationEnd<ProductQuantity, Optional<Packaging>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
@@ -1089,9 +1208,19 @@ public class ProductQuantity {
 			definition = "Packaging for which a weight is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Packaging.mmTotalWeight;
+			opposite_lazy = () -> Packaging.mmTotalWeight;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Packaging.mmObject();
+			type_lazy = () -> Packaging.mmObject();
+		}
+
+		@Override
+		public Optional<Packaging> getValue(ProductQuantity obj) {
+			return obj.getPackagingForWeight();
+		}
+
+		@Override
+		public void setValue(ProductQuantity obj, Optional<Packaging> value) {
+			obj.setPackagingForWeight(value.orElse(null));
 		}
 	};
 	protected LineItem grossPriceQuantityRelatedLineItem;
@@ -1127,7 +1256,7 @@ public class ProductQuantity {
 	 * definition} = "Line item for which gross price quantity is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmGrossPriceQuantityRelatedLineItem = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ProductQuantity, Optional<LineItem>> mmGrossPriceQuantityRelatedLineItem = new MMBusinessAssociationEnd<ProductQuantity, Optional<LineItem>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
@@ -1136,9 +1265,19 @@ public class ProductQuantity {
 			definition = "Line item for which gross price quantity is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.LineItem.mmGrossPriceQuantity;
+			opposite_lazy = () -> LineItem.mmGrossPriceQuantity;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.LineItem.mmObject();
+			type_lazy = () -> LineItem.mmObject();
+		}
+
+		@Override
+		public Optional<LineItem> getValue(ProductQuantity obj) {
+			return obj.getGrossPriceQuantityRelatedLineItem();
+		}
+
+		@Override
+		public void setValue(ProductQuantity obj, Optional<LineItem> value) {
+			obj.setGrossPriceQuantityRelatedLineItem(value.orElse(null));
 		}
 	};
 	protected LineItem netPriceQuantityRelatedLineItem;
@@ -1174,7 +1313,7 @@ public class ProductQuantity {
 	 * definition} = "Line item for which a net price quantity is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmNetPriceQuantityRelatedLineItem = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ProductQuantity, Optional<LineItem>> mmNetPriceQuantityRelatedLineItem = new MMBusinessAssociationEnd<ProductQuantity, Optional<LineItem>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
@@ -1183,9 +1322,19 @@ public class ProductQuantity {
 			definition = "Line item for which a net price quantity is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.LineItem.mmNetPriceQuantity;
+			opposite_lazy = () -> LineItem.mmNetPriceQuantity;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.LineItem.mmObject();
+			type_lazy = () -> LineItem.mmObject();
+		}
+
+		@Override
+		public Optional<LineItem> getValue(ProductQuantity obj) {
+			return obj.getNetPriceQuantityRelatedLineItem();
+		}
+
+		@Override
+		public void setValue(ProductQuantity obj, Optional<LineItem> value) {
+			obj.setNetPriceQuantityRelatedLineItem(value.orElse(null));
 		}
 	};
 	protected LineItem grossWeightRelatedLineItem;
@@ -1221,7 +1370,7 @@ public class ProductQuantity {
 	 * definition} = "Line item for which a gross weight is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmGrossWeightRelatedLineItem = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ProductQuantity, Optional<LineItem>> mmGrossWeightRelatedLineItem = new MMBusinessAssociationEnd<ProductQuantity, Optional<LineItem>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
@@ -1230,9 +1379,19 @@ public class ProductQuantity {
 			definition = "Line item for which a gross weight is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.LineItem.mmGrossWeight;
+			opposite_lazy = () -> LineItem.mmGrossWeight;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.LineItem.mmObject();
+			type_lazy = () -> LineItem.mmObject();
+		}
+
+		@Override
+		public Optional<LineItem> getValue(ProductQuantity obj) {
+			return obj.getGrossWeightRelatedLineItem();
+		}
+
+		@Override
+		public void setValue(ProductQuantity obj, Optional<LineItem> value) {
+			obj.setGrossWeightRelatedLineItem(value.orElse(null));
 		}
 	};
 
@@ -1243,11 +1402,9 @@ public class ProductQuantity {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProductQuantity";
 				definition = "Specifies the ordered quantity of a product.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Product.mmQuantity, com.tools20022.repository.entity.Tolerance.mmQuantity, com.tools20022.repository.entity.LineItem.mmNetWeight,
-						com.tools20022.repository.entity.LineItem.mmBilledQuantity, com.tools20022.repository.entity.LineItem.mmChargeFreeQuantity, com.tools20022.repository.entity.LineItem.mmMeasureQuantityStartRelatedLineItem,
-						com.tools20022.repository.entity.LineItem.mmMeasureQuantityEndRelatedLineItem, com.tools20022.repository.entity.LineItem.mmGrossPriceQuantity, com.tools20022.repository.entity.LineItem.mmNetPriceQuantity,
-						com.tools20022.repository.entity.LineItem.mmGrossWeight, com.tools20022.repository.entity.Packaging.mmQuantity, com.tools20022.repository.entity.Packaging.mmPerPackageUnitQuantity,
-						com.tools20022.repository.entity.Packaging.mmTotalConsignmentQuantity, com.tools20022.repository.entity.Packaging.mmTotalVolume, com.tools20022.repository.entity.Packaging.mmTotalWeight);
+				associationDomain_lazy = () -> Arrays.asList(Product.mmQuantity, Tolerance.mmQuantity, LineItem.mmNetWeight, LineItem.mmBilledQuantity, LineItem.mmChargeFreeQuantity, LineItem.mmMeasureQuantityStartRelatedLineItem,
+						LineItem.mmMeasureQuantityEndRelatedLineItem, LineItem.mmGrossPriceQuantity, LineItem.mmNetPriceQuantity, LineItem.mmGrossWeight, Packaging.mmQuantity, Packaging.mmPerPackageUnitQuantity,
+						Packaging.mmTotalConsignmentQuantity, Packaging.mmTotalVolume, Packaging.mmTotalWeight);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ProductQuantity.mmUnitOfMeasure, com.tools20022.repository.entity.ProductQuantity.mmValue, com.tools20022.repository.entity.ProductQuantity.mmProduct,
 						com.tools20022.repository.entity.ProductQuantity.mmFactor, com.tools20022.repository.entity.ProductQuantity.mmNetWeightRelatedLineItem,
 						com.tools20022.repository.entity.ProductQuantity.mmBilledQuantityRelatedLineItem, com.tools20022.repository.entity.ProductQuantity.mmRelatedPackaging,
@@ -1290,7 +1447,7 @@ public class ProductQuantity {
 		return product == null ? product = new ArrayList<>() : product;
 	}
 
-	public ProductQuantity setProduct(List<com.tools20022.repository.entity.Product> product) {
+	public ProductQuantity setProduct(List<Product> product) {
 		this.product = Objects.requireNonNull(product);
 		return this;
 	}
@@ -1308,7 +1465,7 @@ public class ProductQuantity {
 		return netWeightRelatedLineItem == null ? Optional.empty() : Optional.of(netWeightRelatedLineItem);
 	}
 
-	public ProductQuantity setNetWeightRelatedLineItem(com.tools20022.repository.entity.LineItem netWeightRelatedLineItem) {
+	public ProductQuantity setNetWeightRelatedLineItem(LineItem netWeightRelatedLineItem) {
 		this.netWeightRelatedLineItem = netWeightRelatedLineItem;
 		return this;
 	}
@@ -1317,7 +1474,7 @@ public class ProductQuantity {
 		return billedQuantityRelatedLineItem == null ? Optional.empty() : Optional.of(billedQuantityRelatedLineItem);
 	}
 
-	public ProductQuantity setBilledQuantityRelatedLineItem(com.tools20022.repository.entity.LineItem billedQuantityRelatedLineItem) {
+	public ProductQuantity setBilledQuantityRelatedLineItem(LineItem billedQuantityRelatedLineItem) {
 		this.billedQuantityRelatedLineItem = billedQuantityRelatedLineItem;
 		return this;
 	}
@@ -1326,7 +1483,7 @@ public class ProductQuantity {
 		return relatedPackaging == null ? Optional.empty() : Optional.of(relatedPackaging);
 	}
 
-	public ProductQuantity setRelatedPackaging(com.tools20022.repository.entity.Packaging relatedPackaging) {
+	public ProductQuantity setRelatedPackaging(Packaging relatedPackaging) {
 		this.relatedPackaging = relatedPackaging;
 		return this;
 	}
@@ -1335,7 +1492,7 @@ public class ProductQuantity {
 		return packagingForUnitQuantity == null ? Optional.empty() : Optional.of(packagingForUnitQuantity);
 	}
 
-	public ProductQuantity setPackagingForUnitQuantity(com.tools20022.repository.entity.Packaging packagingForUnitQuantity) {
+	public ProductQuantity setPackagingForUnitQuantity(Packaging packagingForUnitQuantity) {
 		this.packagingForUnitQuantity = packagingForUnitQuantity;
 		return this;
 	}
@@ -1344,7 +1501,7 @@ public class ProductQuantity {
 		return chargeFreeQuantityRelatedLineItem == null ? Optional.empty() : Optional.of(chargeFreeQuantityRelatedLineItem);
 	}
 
-	public ProductQuantity setChargeFreeQuantityRelatedLineItem(com.tools20022.repository.entity.LineItem chargeFreeQuantityRelatedLineItem) {
+	public ProductQuantity setChargeFreeQuantityRelatedLineItem(LineItem chargeFreeQuantityRelatedLineItem) {
 		this.chargeFreeQuantityRelatedLineItem = chargeFreeQuantityRelatedLineItem;
 		return this;
 	}
@@ -1353,7 +1510,7 @@ public class ProductQuantity {
 		return measureQuantityStart;
 	}
 
-	public ProductQuantity setMeasureQuantityStart(com.tools20022.repository.entity.LineItem measureQuantityStart) {
+	public ProductQuantity setMeasureQuantityStart(LineItem measureQuantityStart) {
 		this.measureQuantityStart = Objects.requireNonNull(measureQuantityStart);
 		return this;
 	}
@@ -1362,7 +1519,7 @@ public class ProductQuantity {
 		return measureQuantityEnd;
 	}
 
-	public ProductQuantity setMeasureQuantityEnd(com.tools20022.repository.entity.LineItem measureQuantityEnd) {
+	public ProductQuantity setMeasureQuantityEnd(LineItem measureQuantityEnd) {
 		this.measureQuantityEnd = Objects.requireNonNull(measureQuantityEnd);
 		return this;
 	}
@@ -1371,7 +1528,7 @@ public class ProductQuantity {
 		return quantityTolerance;
 	}
 
-	public ProductQuantity setQuantityTolerance(com.tools20022.repository.entity.Tolerance quantityTolerance) {
+	public ProductQuantity setQuantityTolerance(Tolerance quantityTolerance) {
 		this.quantityTolerance = Objects.requireNonNull(quantityTolerance);
 		return this;
 	}
@@ -1380,7 +1537,7 @@ public class ProductQuantity {
 		return packagingForConsignmentlQuantity == null ? Optional.empty() : Optional.of(packagingForConsignmentlQuantity);
 	}
 
-	public ProductQuantity setPackagingForConsignmentlQuantity(com.tools20022.repository.entity.Packaging packagingForConsignmentlQuantity) {
+	public ProductQuantity setPackagingForConsignmentlQuantity(Packaging packagingForConsignmentlQuantity) {
 		this.packagingForConsignmentlQuantity = packagingForConsignmentlQuantity;
 		return this;
 	}
@@ -1389,7 +1546,7 @@ public class ProductQuantity {
 		return packagingForVolume == null ? Optional.empty() : Optional.of(packagingForVolume);
 	}
 
-	public ProductQuantity setPackagingForVolume(com.tools20022.repository.entity.Packaging packagingForVolume) {
+	public ProductQuantity setPackagingForVolume(Packaging packagingForVolume) {
 		this.packagingForVolume = packagingForVolume;
 		return this;
 	}
@@ -1398,7 +1555,7 @@ public class ProductQuantity {
 		return packagingForWeight == null ? Optional.empty() : Optional.of(packagingForWeight);
 	}
 
-	public ProductQuantity setPackagingForWeight(com.tools20022.repository.entity.Packaging packagingForWeight) {
+	public ProductQuantity setPackagingForWeight(Packaging packagingForWeight) {
 		this.packagingForWeight = packagingForWeight;
 		return this;
 	}
@@ -1407,7 +1564,7 @@ public class ProductQuantity {
 		return grossPriceQuantityRelatedLineItem == null ? Optional.empty() : Optional.of(grossPriceQuantityRelatedLineItem);
 	}
 
-	public ProductQuantity setGrossPriceQuantityRelatedLineItem(com.tools20022.repository.entity.LineItem grossPriceQuantityRelatedLineItem) {
+	public ProductQuantity setGrossPriceQuantityRelatedLineItem(LineItem grossPriceQuantityRelatedLineItem) {
 		this.grossPriceQuantityRelatedLineItem = grossPriceQuantityRelatedLineItem;
 		return this;
 	}
@@ -1416,7 +1573,7 @@ public class ProductQuantity {
 		return netPriceQuantityRelatedLineItem == null ? Optional.empty() : Optional.of(netPriceQuantityRelatedLineItem);
 	}
 
-	public ProductQuantity setNetPriceQuantityRelatedLineItem(com.tools20022.repository.entity.LineItem netPriceQuantityRelatedLineItem) {
+	public ProductQuantity setNetPriceQuantityRelatedLineItem(LineItem netPriceQuantityRelatedLineItem) {
 		this.netPriceQuantityRelatedLineItem = netPriceQuantityRelatedLineItem;
 		return this;
 	}
@@ -1425,7 +1582,7 @@ public class ProductQuantity {
 		return grossWeightRelatedLineItem == null ? Optional.empty() : Optional.of(grossWeightRelatedLineItem);
 	}
 
-	public ProductQuantity setGrossWeightRelatedLineItem(com.tools20022.repository.entity.LineItem grossWeightRelatedLineItem) {
+	public ProductQuantity setGrossWeightRelatedLineItem(LineItem grossWeightRelatedLineItem) {
 		this.grossWeightRelatedLineItem = grossWeightRelatedLineItem;
 		return this;
 	}

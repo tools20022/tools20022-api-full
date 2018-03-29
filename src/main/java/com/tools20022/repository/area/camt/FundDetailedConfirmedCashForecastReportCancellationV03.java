@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.FundDetailedConfirmedCashForecastReport3;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.Pagination;
 import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -145,7 +144,7 @@ public class FundDetailedConfirmedCashForecastReportCancellationV03 {
 	 * mmMessageIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FundDetailedConfirmedCashForecastReportCancellationV03, MessageIdentification1> mmMessageIdentification = new MMMessageBuildingBlock<FundDetailedConfirmedCashForecastReportCancellationV03, MessageIdentification1>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,12 +156,14 @@ public class FundDetailedConfirmedCashForecastReportCancellationV03 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FundDetailedConfirmedCashForecastReportCancellationV03.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(FundDetailedConfirmedCashForecastReportCancellationV03 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(FundDetailedConfirmedCashForecastReportCancellationV03 obj, MessageIdentification1 value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "PoolRef")
@@ -195,7 +196,7 @@ public class FundDetailedConfirmedCashForecastReportCancellationV03 {
 	 * FundDetailedConfirmedCashForecastReportCancellationV02.mmPoolReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FundDetailedConfirmedCashForecastReportCancellationV03, Optional<AdditionalReference3>> mmPoolReference = new MMMessageBuildingBlock<FundDetailedConfirmedCashForecastReportCancellationV03, Optional<AdditionalReference3>>() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -207,12 +208,14 @@ public class FundDetailedConfirmedCashForecastReportCancellationV03 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FundDetailedConfirmedCashForecastReportCancellationV03.class.getMethod("getPoolReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference3> getValue(FundDetailedConfirmedCashForecastReportCancellationV03 obj) {
+			return obj.getPoolReference();
+		}
+
+		@Override
+		public void setValue(FundDetailedConfirmedCashForecastReportCancellationV03 obj, Optional<AdditionalReference3> value) {
+			obj.setPoolReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsRef")
@@ -246,7 +249,7 @@ public class FundDetailedConfirmedCashForecastReportCancellationV03 {
 	 * mmPreviousReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FundDetailedConfirmedCashForecastReportCancellationV03, Optional<AdditionalReference3>> mmPreviousReference = new MMMessageBuildingBlock<FundDetailedConfirmedCashForecastReportCancellationV03, Optional<AdditionalReference3>>() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -258,12 +261,14 @@ public class FundDetailedConfirmedCashForecastReportCancellationV03 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FundDetailedConfirmedCashForecastReportCancellationV03.class.getMethod("getPreviousReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference3> getValue(FundDetailedConfirmedCashForecastReportCancellationV03 obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(FundDetailedConfirmedCashForecastReportCancellationV03 obj, Optional<AdditionalReference3> value) {
+			obj.setPreviousReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RltdRef")
@@ -298,7 +303,7 @@ public class FundDetailedConfirmedCashForecastReportCancellationV03 {
 	 * }</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FundDetailedConfirmedCashForecastReportCancellationV03, List<AdditionalReference3>> mmRelatedReference = new MMMessageBuildingBlock<FundDetailedConfirmedCashForecastReportCancellationV03, List<AdditionalReference3>>() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -309,12 +314,14 @@ public class FundDetailedConfirmedCashForecastReportCancellationV03 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FundDetailedConfirmedCashForecastReportCancellationV03.class.getMethod("getRelatedReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<AdditionalReference3> getValue(FundDetailedConfirmedCashForecastReportCancellationV03 obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(FundDetailedConfirmedCashForecastReportCancellationV03 obj, List<AdditionalReference3> value) {
+			obj.setRelatedReference(value);
 		}
 	};
 	@XmlElement(name = "MsgPgntn", required = true)
@@ -347,7 +354,7 @@ public class FundDetailedConfirmedCashForecastReportCancellationV03 {
 	 * mmMessagePagination}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessagePagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FundDetailedConfirmedCashForecastReportCancellationV03, Pagination> mmMessagePagination = new MMMessageBuildingBlock<FundDetailedConfirmedCashForecastReportCancellationV03, Pagination>() {
 		{
 			xmlTag = "MsgPgntn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -359,12 +366,14 @@ public class FundDetailedConfirmedCashForecastReportCancellationV03 {
 			complexType_lazy = () -> Pagination.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FundDetailedConfirmedCashForecastReportCancellationV03.class.getMethod("getMessagePagination", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Pagination getValue(FundDetailedConfirmedCashForecastReportCancellationV03 obj) {
+			return obj.getMessagePagination();
+		}
+
+		@Override
+		public void setValue(FundDetailedConfirmedCashForecastReportCancellationV03 obj, Pagination value) {
+			obj.setMessagePagination(value);
 		}
 	};
 	@XmlElement(name = "CshFcstRptToBeCanc")
@@ -399,7 +408,7 @@ public class FundDetailedConfirmedCashForecastReportCancellationV03 {
 	 * mmCashForecastReportToBeCancelled}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCashForecastReportToBeCancelled = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FundDetailedConfirmedCashForecastReportCancellationV03, Optional<FundDetailedConfirmedCashForecastReport3>> mmCashForecastReportToBeCancelled = new MMMessageBuildingBlock<FundDetailedConfirmedCashForecastReportCancellationV03, Optional<FundDetailedConfirmedCashForecastReport3>>() {
 		{
 			xmlTag = "CshFcstRptToBeCanc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -411,12 +420,14 @@ public class FundDetailedConfirmedCashForecastReportCancellationV03 {
 			complexType_lazy = () -> FundDetailedConfirmedCashForecastReport3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FundDetailedConfirmedCashForecastReportCancellationV03.class.getMethod("getCashForecastReportToBeCancelled", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<FundDetailedConfirmedCashForecastReport3> getValue(FundDetailedConfirmedCashForecastReportCancellationV03 obj) {
+			return obj.getCashForecastReportToBeCancelled();
+		}
+
+		@Override
+		public void setValue(FundDetailedConfirmedCashForecastReportCancellationV03 obj, Optional<FundDetailedConfirmedCashForecastReport3> value) {
+			obj.setCashForecastReportToBeCancelled(value.orElse(null));
 		}
 	};
 

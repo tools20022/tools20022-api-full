@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max140Binary;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ContentInformationType14;
+import com.tools20022.repository.msg.CryptographicKey8;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -123,7 +125,7 @@ public class SecurityParameters5 {
 	 * SecurityParameters4.mmATMChallenge}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHostChallenge = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityParameters5, Optional<Max140Binary>> mmHostChallenge = new MMMessageAttribute<SecurityParameters5, Optional<Max140Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityParameters5.mmObject();
 			isDerived = false;
@@ -137,9 +139,19 @@ public class SecurityParameters5 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Binary.mmObject();
 		}
+
+		@Override
+		public Optional<Max140Binary> getValue(SecurityParameters5 obj) {
+			return obj.getHostChallenge();
+		}
+
+		@Override
+		public void setValue(SecurityParameters5 obj, Optional<Max140Binary> value) {
+			obj.setHostChallenge(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "Key")
-	protected List<com.tools20022.repository.msg.CryptographicKey8> key;
+	protected List<CryptographicKey8> key;
 	/**
 	 * 
 	 <p>
@@ -180,7 +192,7 @@ public class SecurityParameters5 {
 	 * SecurityParameters4.mmKey}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmKey = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityParameters5, List<CryptographicKey8>> mmKey = new MMMessageAttribute<SecurityParameters5, List<CryptographicKey8>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityParameters5.mmObject();
 			isDerived = false;
@@ -191,7 +203,17 @@ public class SecurityParameters5 {
 			nextVersions_lazy = () -> Arrays.asList(SecurityParameters8.mmKey);
 			previousVersion_lazy = () -> SecurityParameters4.mmKey;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.CryptographicKey8.mmObject();
+			complexType_lazy = () -> CryptographicKey8.mmObject();
+		}
+
+		@Override
+		public List<CryptographicKey8> getValue(SecurityParameters5 obj) {
+			return obj.getKey();
+		}
+
+		@Override
+		public void setValue(SecurityParameters5 obj, List<CryptographicKey8> value) {
+			obj.setKey(value);
 		}
 	};
 	@XmlElement(name = "DgtlSgntr")
@@ -230,7 +252,7 @@ public class SecurityParameters5 {
 	 * SecurityParameters4.mmDigitalSignature}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDigitalSignature = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityParameters5, Optional<ContentInformationType14>> mmDigitalSignature = new MMMessageAssociationEnd<SecurityParameters5, Optional<ContentInformationType14>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityParameters5.mmObject();
 			isDerived = false;
@@ -242,7 +264,17 @@ public class SecurityParameters5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContentInformationType14.mmObject();
+			type_lazy = () -> ContentInformationType14.mmObject();
+		}
+
+		@Override
+		public Optional<ContentInformationType14> getValue(SecurityParameters5 obj) {
+			return obj.getDigitalSignature();
+		}
+
+		@Override
+		public void setValue(SecurityParameters5 obj, Optional<ContentInformationType14> value) {
+			obj.setDigitalSignature(value.orElse(null));
 		}
 	};
 
@@ -275,7 +307,7 @@ public class SecurityParameters5 {
 		return key == null ? key = new ArrayList<>() : key;
 	}
 
-	public SecurityParameters5 setKey(List<com.tools20022.repository.msg.CryptographicKey8> key) {
+	public SecurityParameters5 setKey(List<CryptographicKey8> key) {
 		this.key = Objects.requireNonNull(key);
 		return this;
 	}
@@ -284,7 +316,7 @@ public class SecurityParameters5 {
 		return digitalSignature == null ? Optional.empty() : Optional.of(digitalSignature);
 	}
 
-	public SecurityParameters5 setDigitalSignature(com.tools20022.repository.msg.ContentInformationType14 digitalSignature) {
+	public SecurityParameters5 setDigitalSignature(ContentInformationType14 digitalSignature) {
 		this.digitalSignature = digitalSignature;
 		return this;
 	}

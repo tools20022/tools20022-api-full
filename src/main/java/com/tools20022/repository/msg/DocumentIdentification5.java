@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.entity.FinancialInstitution;
 import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BICIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -196,7 +197,7 @@ public class DocumentIdentification5 {
 	 * definition} = "Identification of a set of data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentIdentification5, Max35Text> mmIdentification = new MMMessageAttribute<DocumentIdentification5, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification5.mmObject();
@@ -208,6 +209,16 @@ public class DocumentIdentification5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(DocumentIdentification5 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification5 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "IdIssr", required = true)
@@ -245,7 +256,7 @@ public class DocumentIdentification5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentificationIssuer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DocumentIdentification5, BICIdentification1> mmIdentificationIssuer = new MMMessageAssociationEnd<DocumentIdentification5, BICIdentification1>() {
 		{
 			businessComponentTrace_lazy = () -> FinancialInstitution.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification5.mmObject();
@@ -257,7 +268,17 @@ public class DocumentIdentification5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
+			type_lazy = () -> BICIdentification1.mmObject();
+		}
+
+		@Override
+		public BICIdentification1 getValue(DocumentIdentification5 obj) {
+			return obj.getIdentificationIssuer();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification5 obj, BICIdentification1 value) {
+			obj.setIdentificationIssuer(value);
 		}
 	};
 
@@ -297,7 +318,7 @@ public class DocumentIdentification5 {
 		return identificationIssuer;
 	}
 
-	public DocumentIdentification5 setIdentificationIssuer(com.tools20022.repository.msg.BICIdentification1 identificationIssuer) {
+	public DocumentIdentification5 setIdentificationIssuer(BICIdentification1 identificationIssuer) {
 		this.identificationIssuer = Objects.requireNonNull(identificationIssuer);
 		return this;
 	}

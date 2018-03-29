@@ -56,12 +56,16 @@ public class ConstraintVendorPresenceRule {
 	 */
 	public static final MMConstraint<StandingSettlementInstruction1> forStandingSettlementInstruction1 = new MMConstraint<StandingSettlementInstruction1>() {
 		{
-			validator = ConstraintVendorPresenceRule::checkStandingSettlementInstruction1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VendorPresenceRule";
 			definition = "If the settlement standing instruction database is a vendor database, then the vendor must be identified.";
 			owner_lazy = () -> StandingSettlementInstruction1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Vendor</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementStandingInstructionDatabase/Code</leftOperand><rightOperand>VendorDatabase</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(StandingSettlementInstruction1 obj) throws Exception {
+			checkStandingSettlementInstruction1(obj);
 		}
 	};
 	/**
@@ -91,12 +95,16 @@ public class ConstraintVendorPresenceRule {
 	 */
 	public static final MMConstraint<StandingSettlementInstruction4> forStandingSettlementInstruction4 = new MMConstraint<StandingSettlementInstruction4>() {
 		{
-			validator = ConstraintVendorPresenceRule::checkStandingSettlementInstruction4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VendorPresenceRule";
 			definition = "If the settlement standing instruction database is a vendor database, then the vendor must be identified.";
 			owner_lazy = () -> StandingSettlementInstruction4.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Vendor</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementStandingInstructionDatabase/Code</leftOperand><rightOperand>VendorDatabase</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(StandingSettlementInstruction4 obj) throws Exception {
+			checkStandingSettlementInstruction4(obj);
 		}
 	};
 	/**
@@ -126,12 +134,16 @@ public class ConstraintVendorPresenceRule {
 	 */
 	public static final MMConstraint<StandingSettlementInstruction7> forStandingSettlementInstruction7 = new MMConstraint<StandingSettlementInstruction7>() {
 		{
-			validator = ConstraintVendorPresenceRule::checkStandingSettlementInstruction7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VendorPresenceRule";
 			definition = "If the settlement standing instruction database is a vendor database, then the vendor must be identified.";
 			owner_lazy = () -> StandingSettlementInstruction7.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Vendor</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementStandingInstructionDatabase/Code</leftOperand><rightOperand>VendorDatabase</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(StandingSettlementInstruction7 obj) throws Exception {
+			checkStandingSettlementInstruction7(obj);
 		}
 	};
 	/**
@@ -161,12 +173,16 @@ public class ConstraintVendorPresenceRule {
 	 */
 	public static final MMConstraint<StandingSettlementInstruction2> forStandingSettlementInstruction2 = new MMConstraint<StandingSettlementInstruction2>() {
 		{
-			validator = ConstraintVendorPresenceRule::checkStandingSettlementInstruction2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VendorPresenceRule";
 			definition = "If the settlement standing instruction database is a vendor database, then the vendor must be identified.";
 			owner_lazy = () -> StandingSettlementInstruction2.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Vendor</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementStandingInstructionDatabase/Code</leftOperand><rightOperand>VendorDatabase</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(StandingSettlementInstruction2 obj) throws Exception {
+			checkStandingSettlementInstruction2(obj);
 		}
 	};
 	/**
@@ -204,13 +220,17 @@ public class ConstraintVendorPresenceRule {
 	 */
 	public static final MMConstraint<StandingSettlementInstruction3> forStandingSettlementInstruction3 = new MMConstraint<StandingSettlementInstruction3>() {
 		{
-			validator = ConstraintVendorPresenceRule::checkStandingSettlementInstruction3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VendorPresenceRule";
 			definition = "If the settlement standing instruction database is a vendor database, then the vendor must be identified.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintVendorPresenceRule.forStandingSettlementInstruction11);
 			owner_lazy = () -> StandingSettlementInstruction3.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Vendor</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementStandingInstructionDatabase/Code</leftOperand><rightOperand>VendorDatabase</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(StandingSettlementInstruction3 obj) throws Exception {
+			checkStandingSettlementInstruction3(obj);
 		}
 	};
 	/**
@@ -240,12 +260,16 @@ public class ConstraintVendorPresenceRule {
 	 */
 	public static final MMConstraint<StandingSettlementInstruction6> forStandingSettlementInstruction6 = new MMConstraint<StandingSettlementInstruction6>() {
 		{
-			validator = ConstraintVendorPresenceRule::checkStandingSettlementInstruction6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VendorPresenceRule";
 			definition = "If the settlement standing instruction database is a vendor database, then the vendor must be identified.";
 			owner_lazy = () -> StandingSettlementInstruction6.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Vendor</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementStandingInstructionDatabase/Code</leftOperand><rightOperand>VendorDatabase</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(StandingSettlementInstruction6 obj) throws Exception {
+			checkStandingSettlementInstruction6(obj);
 		}
 	};
 	/**
@@ -275,12 +299,16 @@ public class ConstraintVendorPresenceRule {
 	 */
 	public static final MMConstraint<StandingSettlementInstruction9> forStandingSettlementInstruction9 = new MMConstraint<StandingSettlementInstruction9>() {
 		{
-			validator = ConstraintVendorPresenceRule::checkStandingSettlementInstruction9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VendorPresenceRule";
 			definition = "If the settlement standing instruction database is a vendor database, then the vendor must be identified.";
 			owner_lazy = () -> StandingSettlementInstruction9.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Vendor</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementStandingInstructionDatabase/Code</leftOperand><rightOperand>VendorDatabase</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(StandingSettlementInstruction9 obj) throws Exception {
+			checkStandingSettlementInstruction9(obj);
 		}
 	};
 	/**
@@ -310,12 +338,16 @@ public class ConstraintVendorPresenceRule {
 	 */
 	public static final MMConstraint<StandingSettlementInstruction5> forStandingSettlementInstruction5 = new MMConstraint<StandingSettlementInstruction5>() {
 		{
-			validator = ConstraintVendorPresenceRule::checkStandingSettlementInstruction5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VendorPresenceRule";
 			definition = "If the settlement standing instruction database is a vendor database, then the vendor must be identified.";
 			owner_lazy = () -> StandingSettlementInstruction5.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Vendor</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementStandingInstructionDatabase/Code</leftOperand><rightOperand>VendorDatabase</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(StandingSettlementInstruction5 obj) throws Exception {
+			checkStandingSettlementInstruction5(obj);
 		}
 	};
 	/**
@@ -345,12 +377,16 @@ public class ConstraintVendorPresenceRule {
 	 */
 	public static final MMConstraint<StandingSettlementInstruction8> forStandingSettlementInstruction8 = new MMConstraint<StandingSettlementInstruction8>() {
 		{
-			validator = ConstraintVendorPresenceRule::checkStandingSettlementInstruction8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VendorPresenceRule";
 			definition = "If the settlement standing instruction database is a vendor database, then the vendor must be identified.";
 			owner_lazy = () -> StandingSettlementInstruction8.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Vendor</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementStandingInstructionDatabase/Code</leftOperand><rightOperand>VendorDatabase</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(StandingSettlementInstruction8 obj) throws Exception {
+			checkStandingSettlementInstruction8(obj);
 		}
 	};
 	/**
@@ -393,7 +429,6 @@ public class ConstraintVendorPresenceRule {
 	 */
 	public static final MMConstraint<StandingSettlementInstruction11> forStandingSettlementInstruction11 = new MMConstraint<StandingSettlementInstruction11>() {
 		{
-			validator = ConstraintVendorPresenceRule::checkStandingSettlementInstruction11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VendorPresenceRule";
 			definition = "If the settlement standing instruction database is a vendor database, then the vendor must be identified.";
@@ -401,6 +436,11 @@ public class ConstraintVendorPresenceRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintVendorPresenceRule.forStandingSettlementInstruction3;
 			owner_lazy = () -> StandingSettlementInstruction11.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Vendor</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementStandingInstructionDatabase/Code</leftOperand><rightOperand>VendorDatabase</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(StandingSettlementInstruction11 obj) throws Exception {
+			checkStandingSettlementInstruction11(obj);
 		}
 	};
 	/**
@@ -430,12 +470,16 @@ public class ConstraintVendorPresenceRule {
 	 */
 	public static final MMConstraint<StandingSettlementInstruction12> forStandingSettlementInstruction12 = new MMConstraint<StandingSettlementInstruction12>() {
 		{
-			validator = ConstraintVendorPresenceRule::checkStandingSettlementInstruction12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VendorPresenceRule";
 			definition = "If the settlement standing instruction database is a vendor database, then the vendor must be identified.";
 			owner_lazy = () -> StandingSettlementInstruction12.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Vendor</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementStandingInstructionDatabase/Code</leftOperand><rightOperand>VendorDatabase</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(StandingSettlementInstruction12 obj) throws Exception {
+			checkStandingSettlementInstruction12(obj);
 		}
 	};
 	/**
@@ -470,13 +514,17 @@ public class ConstraintVendorPresenceRule {
 	 */
 	public static final MMConstraint<StandingSettlementInstruction14> forStandingSettlementInstruction14 = new MMConstraint<StandingSettlementInstruction14>() {
 		{
-			validator = ConstraintVendorPresenceRule::checkStandingSettlementInstruction14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VendorPresenceRule";
 			definition = "If the settlement standing instruction database is a vendor database, then the vendor must be identified.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintVendorPresenceRule.forStandingSettlementInstruction11;
 			owner_lazy = () -> StandingSettlementInstruction14.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Vendor</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementStandingInstructionDatabase/Code</leftOperand><rightOperand>VendorDatabase</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(StandingSettlementInstruction14 obj) throws Exception {
+			checkStandingSettlementInstruction14(obj);
 		}
 	};
 	/**
@@ -506,12 +554,16 @@ public class ConstraintVendorPresenceRule {
 	 */
 	public static final MMConstraint<StandingSettlementInstruction15> forStandingSettlementInstruction15 = new MMConstraint<StandingSettlementInstruction15>() {
 		{
-			validator = ConstraintVendorPresenceRule::checkStandingSettlementInstruction15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VendorPresenceRule";
 			definition = "If the settlement standing instruction database is a vendor database, then the vendor must be identified.";
 			owner_lazy = () -> StandingSettlementInstruction15.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Vendor</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementStandingInstructionDatabase/Code</leftOperand><rightOperand>VendorDatabase</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(StandingSettlementInstruction15 obj) throws Exception {
+			checkStandingSettlementInstruction15(obj);
 		}
 	};
 

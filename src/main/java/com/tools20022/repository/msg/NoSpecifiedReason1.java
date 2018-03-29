@@ -107,7 +107,7 @@ public class NoSpecifiedReason1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NoSpecifiedReason1, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<NoSpecifiedReason1, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NoSpecifiedReason1.mmObject();
@@ -120,6 +120,16 @@ public class NoSpecifiedReason1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(NoSpecifiedReason1 obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(NoSpecifiedReason1 obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 

@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.AcceptorConfiguration;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ProcessTiming1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -121,7 +122,7 @@ public class ExchangeConfiguration1 {
 	 * definition} = "Exchange policy between parties."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExchangePolicy = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExchangeConfiguration1, List<ExchangePolicy1Code>> mmExchangePolicy = new MMMessageAttribute<ExchangeConfiguration1, List<ExchangePolicy1Code>>() {
 		{
 			businessElementTrace_lazy = () -> AcceptorConfiguration.mmExchangePolicy;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExchangeConfiguration1.mmObject();
@@ -132,6 +133,16 @@ public class ExchangeConfiguration1 {
 			definition = "Exchange policy between parties.";
 			minOccurs = 1;
 			simpleType_lazy = () -> ExchangePolicy1Code.mmObject();
+		}
+
+		@Override
+		public List<ExchangePolicy1Code> getValue(ExchangeConfiguration1 obj) {
+			return obj.getExchangePolicy();
+		}
+
+		@Override
+		public void setValue(ExchangeConfiguration1 obj, List<ExchangePolicy1Code> value) {
+			obj.setExchangePolicy(value);
 		}
 	};
 	@XmlElement(name = "MaxNb")
@@ -168,7 +179,7 @@ public class ExchangeConfiguration1 {
 	 * definition} = "Maximum number of transactions without exchange."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExchangeConfiguration1, Optional<Number>> mmMaximumNumber = new MMMessageAttribute<ExchangeConfiguration1, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> AcceptorConfiguration.mmMaximumNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExchangeConfiguration1.mmObject();
@@ -180,6 +191,16 @@ public class ExchangeConfiguration1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(ExchangeConfiguration1 obj) {
+			return obj.getMaximumNumber();
+		}
+
+		@Override
+		public void setValue(ExchangeConfiguration1 obj, Optional<Number> value) {
+			obj.setMaximumNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MaxAmt")
@@ -218,7 +239,7 @@ public class ExchangeConfiguration1 {
 	 * "Maximum cumulative amount of the transactions without exchange."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExchangeConfiguration1, Optional<ImpliedCurrencyAndAmount>> mmMaximumAmount = new MMMessageAttribute<ExchangeConfiguration1, Optional<ImpliedCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> AcceptorConfiguration.mmMaximumAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExchangeConfiguration1.mmObject();
@@ -230,6 +251,16 @@ public class ExchangeConfiguration1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ImpliedCurrencyAndAmount> getValue(ExchangeConfiguration1 obj) {
+			return obj.getMaximumAmount();
+		}
+
+		@Override
+		public void setValue(ExchangeConfiguration1 obj, Optional<ImpliedCurrencyAndAmount> value) {
+			obj.setMaximumAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TmCond")
@@ -260,7 +291,7 @@ public class ExchangeConfiguration1 {
 	 * definition} = "Timing condition for periodic exchanges."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTimeCondition = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ExchangeConfiguration1, Optional<ProcessTiming1>> mmTimeCondition = new MMMessageAssociationEnd<ExchangeConfiguration1, Optional<ProcessTiming1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExchangeConfiguration1.mmObject();
 			isDerived = false;
@@ -271,7 +302,17 @@ public class ExchangeConfiguration1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ProcessTiming1.mmObject();
+			type_lazy = () -> ProcessTiming1.mmObject();
+		}
+
+		@Override
+		public Optional<ProcessTiming1> getValue(ExchangeConfiguration1 obj) {
+			return obj.getTimeCondition();
+		}
+
+		@Override
+		public void setValue(ExchangeConfiguration1 obj, Optional<ProcessTiming1> value) {
+			obj.setTimeCondition(value.orElse(null));
 		}
 	};
 
@@ -322,7 +363,7 @@ public class ExchangeConfiguration1 {
 		return timeCondition == null ? Optional.empty() : Optional.of(timeCondition);
 	}
 
-	public ExchangeConfiguration1 setTimeCondition(com.tools20022.repository.msg.ProcessTiming1 timeCondition) {
+	public ExchangeConfiguration1 setTimeCondition(ProcessTiming1 timeCondition) {
 		this.timeCondition = timeCondition;
 		return this;
 	}

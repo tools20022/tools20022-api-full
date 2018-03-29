@@ -101,7 +101,7 @@ public class NotificationGeneralInformationExtension2 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NotificationGeneralInformationExtension2, Max350Text> mmPlaceAndName = new MMMessageAttribute<NotificationGeneralInformationExtension2, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationGeneralInformationExtension2.mmObject();
 			isDerived = false;
@@ -112,6 +112,16 @@ public class NotificationGeneralInformationExtension2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(NotificationGeneralInformationExtension2 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(NotificationGeneralInformationExtension2 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "EvtSts", required = true)
@@ -147,7 +157,7 @@ public class NotificationGeneralInformationExtension2 {
 	 * definition} = "Workflow status of the event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEventStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NotificationGeneralInformationExtension2, EventWorkflowStatus2Code> mmEventStatus = new MMMessageAttribute<NotificationGeneralInformationExtension2, EventWorkflowStatus2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationGeneralInformationExtension2.mmObject();
 			isDerived = false;
@@ -159,6 +169,16 @@ public class NotificationGeneralInformationExtension2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EventWorkflowStatus2Code.mmObject();
+		}
+
+		@Override
+		public EventWorkflowStatus2Code getValue(NotificationGeneralInformationExtension2 obj) {
+			return obj.getEventStatus();
+		}
+
+		@Override
+		public void setValue(NotificationGeneralInformationExtension2 obj, EventWorkflowStatus2Code value) {
+			obj.setEventStatus(value);
 		}
 	};
 

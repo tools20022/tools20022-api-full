@@ -132,7 +132,7 @@ public class InterestRateContractTerm2 {
 	 * InterestRateContractTerm1.mmUnit}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestRateContractTerm2, RateBasis1Code> mmUnit = new MMMessageAttribute<InterestRateContractTerm2, RateBasis1Code>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmCalculationFrequency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestRateContractTerm2.mmObject();
@@ -146,6 +146,16 @@ public class InterestRateContractTerm2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RateBasis1Code.mmObject();
+		}
+
+		@Override
+		public RateBasis1Code getValue(InterestRateContractTerm2 obj) {
+			return obj.getUnit();
+		}
+
+		@Override
+		public void setValue(InterestRateContractTerm2 obj, RateBasis1Code value) {
+			obj.setUnit(value);
 		}
 	};
 	@XmlElement(name = "Val", required = true)
@@ -195,7 +205,7 @@ public class InterestRateContractTerm2 {
 	 * InterestRateContractTerm1.mmValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestRateContractTerm2, Max3Number> mmValue = new MMMessageAttribute<InterestRateContractTerm2, Max3Number>() {
 		{
 			businessElementTrace_lazy = () -> Index.mmIndexRateMultiplier;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestRateContractTerm2.mmObject();
@@ -209,6 +219,16 @@ public class InterestRateContractTerm2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max3Number.mmObject();
+		}
+
+		@Override
+		public Max3Number getValue(InterestRateContractTerm2 obj) {
+			return obj.getValue();
+		}
+
+		@Override
+		public void setValue(InterestRateContractTerm2 obj, Max3Number value) {
+			obj.setValue(value);
 		}
 	};
 

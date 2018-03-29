@@ -109,7 +109,7 @@ public class OriginalAndCurrentQuantities1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFaceAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalAndCurrentQuantities1, ImpliedCurrencyAndAmount> mmFaceAmount = new MMMessageAttribute<OriginalAndCurrentQuantities1, ImpliedCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmFaceAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalAndCurrentQuantities1.mmObject();
@@ -121,6 +121,16 @@ public class OriginalAndCurrentQuantities1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(OriginalAndCurrentQuantities1 obj) {
+			return obj.getFaceAmount();
+		}
+
+		@Override
+		public void setValue(OriginalAndCurrentQuantities1 obj, ImpliedCurrencyAndAmount value) {
+			obj.setFaceAmount(value);
 		}
 	};
 	@XmlElement(name = "AmtsdVal", required = true)
@@ -160,7 +170,7 @@ public class OriginalAndCurrentQuantities1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmortisedValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalAndCurrentQuantities1, ImpliedCurrencyAndAmount> mmAmortisedValue = new MMMessageAttribute<OriginalAndCurrentQuantities1, ImpliedCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmAmortisedFaceValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalAndCurrentQuantities1.mmObject();
@@ -172,6 +182,16 @@ public class OriginalAndCurrentQuantities1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(OriginalAndCurrentQuantities1 obj) {
+			return obj.getAmortisedValue();
+		}
+
+		@Override
+		public void setValue(OriginalAndCurrentQuantities1 obj, ImpliedCurrencyAndAmount value) {
+			obj.setAmortisedValue(value);
 		}
 	};
 

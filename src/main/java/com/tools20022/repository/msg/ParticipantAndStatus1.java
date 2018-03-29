@@ -25,6 +25,9 @@ import com.tools20022.repository.entity.Person;
 import com.tools20022.repository.entity.System;
 import com.tools20022.repository.entity.SystemEventInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ContactDetails2;
+import com.tools20022.repository.msg.FinancialInstitutionIdentification13;
+import com.tools20022.repository.msg.ServiceAvailability1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -110,7 +113,7 @@ public class ParticipantAndStatus1 {
 	 * definition} = "Identification of participant."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParticipantIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ParticipantAndStatus1, FinancialInstitutionIdentification13> mmParticipantIdentification = new MMMessageAssociationEnd<ParticipantAndStatus1, FinancialInstitutionIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantAndStatus1.mmObject();
@@ -122,7 +125,17 @@ public class ParticipantAndStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification13.mmObject();
+			type_lazy = () -> FinancialInstitutionIdentification13.mmObject();
+		}
+
+		@Override
+		public FinancialInstitutionIdentification13 getValue(ParticipantAndStatus1 obj) {
+			return obj.getParticipantIdentification();
+		}
+
+		@Override
+		public void setValue(ParticipantAndStatus1 obj, FinancialInstitutionIdentification13 value) {
+			obj.setParticipantIdentification(value);
 		}
 	};
 	@XmlElement(name = "PtcptCtctDtls")
@@ -159,7 +172,7 @@ public class ParticipantAndStatus1 {
 	 * "Set of elements used to indicate how to contact the participant."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParticipantContactDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ParticipantAndStatus1, Optional<ContactDetails2>> mmParticipantContactDetails = new MMMessageAssociationEnd<ParticipantAndStatus1, Optional<ContactDetails2>>() {
 		{
 			businessElementTrace_lazy = () -> Person.mmPersonIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantAndStatus1.mmObject();
@@ -171,11 +184,21 @@ public class ParticipantAndStatus1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContactDetails2.mmObject();
+			type_lazy = () -> ContactDetails2.mmObject();
+		}
+
+		@Override
+		public Optional<ContactDetails2> getValue(ParticipantAndStatus1 obj) {
+			return obj.getParticipantContactDetails();
+		}
+
+		@Override
+		public void setValue(ParticipantAndStatus1 obj, Optional<ContactDetails2> value) {
+			obj.setParticipantContactDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SvcAvlbty", required = true)
-	protected List<com.tools20022.repository.msg.ServiceAvailability1> serviceAvailability;
+	protected List<ServiceAvailability1> serviceAvailability;
 	/**
 	 * 
 	 <p>
@@ -209,7 +232,7 @@ public class ParticipantAndStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmServiceAvailability = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ParticipantAndStatus1, List<ServiceAvailability1>> mmServiceAvailability = new MMMessageAssociationEnd<ParticipantAndStatus1, List<ServiceAvailability1>>() {
 		{
 			businessElementTrace_lazy = () -> System.mmAvailability;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantAndStatus1.mmObject();
@@ -220,7 +243,17 @@ public class ParticipantAndStatus1 {
 			definition = "Provides details on operational availability of the participant business service.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ServiceAvailability1.mmObject();
+			type_lazy = () -> ServiceAvailability1.mmObject();
+		}
+
+		@Override
+		public List<ServiceAvailability1> getValue(ParticipantAndStatus1 obj) {
+			return obj.getServiceAvailability();
+		}
+
+		@Override
+		public void setValue(ParticipantAndStatus1 obj, List<ServiceAvailability1> value) {
+			obj.setServiceAvailability(value);
 		}
 	};
 
@@ -243,7 +276,7 @@ public class ParticipantAndStatus1 {
 		return participantIdentification;
 	}
 
-	public ParticipantAndStatus1 setParticipantIdentification(com.tools20022.repository.msg.FinancialInstitutionIdentification13 participantIdentification) {
+	public ParticipantAndStatus1 setParticipantIdentification(FinancialInstitutionIdentification13 participantIdentification) {
 		this.participantIdentification = Objects.requireNonNull(participantIdentification);
 		return this;
 	}
@@ -252,7 +285,7 @@ public class ParticipantAndStatus1 {
 		return participantContactDetails == null ? Optional.empty() : Optional.of(participantContactDetails);
 	}
 
-	public ParticipantAndStatus1 setParticipantContactDetails(com.tools20022.repository.msg.ContactDetails2 participantContactDetails) {
+	public ParticipantAndStatus1 setParticipantContactDetails(ContactDetails2 participantContactDetails) {
 		this.participantContactDetails = participantContactDetails;
 		return this;
 	}
@@ -261,7 +294,7 @@ public class ParticipantAndStatus1 {
 		return serviceAvailability == null ? serviceAvailability = new ArrayList<>() : serviceAvailability;
 	}
 
-	public ParticipantAndStatus1 setServiceAvailability(List<com.tools20022.repository.msg.ServiceAvailability1> serviceAvailability) {
+	public ParticipantAndStatus1 setServiceAvailability(List<ServiceAvailability1> serviceAvailability) {
 		this.serviceAvailability = Objects.requireNonNull(serviceAvailability);
 		return this;
 	}

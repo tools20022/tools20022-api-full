@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.PartyName;
 import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PostalAddress1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -110,7 +111,7 @@ public class NameAndAddress7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NameAndAddress7, Max70Text> mmName = new MMMessageAttribute<NameAndAddress7, Max70Text>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NameAndAddress7.mmObject();
@@ -122,6 +123,16 @@ public class NameAndAddress7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Max70Text getValue(NameAndAddress7 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(NameAndAddress7 obj, Max70Text value) {
+			obj.setName(value);
 		}
 	};
 	@XmlElement(name = "PstlAdr", required = true)
@@ -159,7 +170,7 @@ public class NameAndAddress7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPostalAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NameAndAddress7, PostalAddress1> mmPostalAddress = new MMMessageAssociationEnd<NameAndAddress7, PostalAddress1>() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.NameAndAddress7.mmObject();
@@ -171,7 +182,17 @@ public class NameAndAddress7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PostalAddress1.mmObject();
+			type_lazy = () -> PostalAddress1.mmObject();
+		}
+
+		@Override
+		public PostalAddress1 getValue(NameAndAddress7 obj) {
+			return obj.getPostalAddress();
+		}
+
+		@Override
+		public void setValue(NameAndAddress7 obj, PostalAddress1 value) {
+			obj.setPostalAddress(value);
 		}
 	};
 
@@ -202,7 +223,7 @@ public class NameAndAddress7 {
 		return postalAddress;
 	}
 
-	public NameAndAddress7 setPostalAddress(com.tools20022.repository.msg.PostalAddress1 postalAddress) {
+	public NameAndAddress7 setPostalAddress(PostalAddress1 postalAddress) {
 		this.postalAddress = Objects.requireNonNull(postalAddress);
 		return this;
 	}

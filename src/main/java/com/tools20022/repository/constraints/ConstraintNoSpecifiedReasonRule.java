@@ -48,11 +48,15 @@ public class ConstraintNoSpecifiedReasonRule {
 	 */
 	public static final MMConstraint<ConditionallyAcceptedStatusReason1Choice> forConditionallyAcceptedStatusReason1Choice = new MMConstraint<ConditionallyAcceptedStatusReason1Choice>() {
 		{
-			validator = ConstraintNoSpecifiedReasonRule::checkConditionallyAcceptedStatusReason1Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReasonRule";
 			definition = "NoSpecifiedReason may only be present once.";
 			owner_lazy = () -> ConditionallyAcceptedStatusReason1Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ConditionallyAcceptedStatusReason1Choice obj) throws Exception {
+			checkConditionallyAcceptedStatusReason1Choice(obj);
 		}
 	};
 

@@ -25,6 +25,7 @@ import com.tools20022.repository.codeset.CurrencyConversionResponse1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.CurrencyExchange;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CurrencyConversion6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -133,7 +134,7 @@ public class CurrencyConversion7 {
 	 * CurrencyConversion3.mmResult}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResult = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyConversion7, CurrencyConversionResponse1Code> mmResult = new MMMessageAttribute<CurrencyConversion7, CurrencyConversionResponse1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyConversion7.mmObject();
 			isDerived = false;
@@ -146,6 +147,16 @@ public class CurrencyConversion7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyConversionResponse1Code.mmObject();
+		}
+
+		@Override
+		public CurrencyConversionResponse1Code getValue(CurrencyConversion7 obj) {
+			return obj.getResult();
+		}
+
+		@Override
+		public void setValue(CurrencyConversion7 obj, CurrencyConversionResponse1Code value) {
+			obj.setResult(value);
 		}
 	};
 	@XmlElement(name = "RsltRsn")
@@ -191,7 +202,7 @@ public class CurrencyConversion7 {
 	 * CurrencyConversion3.mmResultReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResultReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyConversion7, Optional<Max35Text>> mmResultReason = new MMMessageAttribute<CurrencyConversion7, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyConversion7.mmObject();
 			isDerived = false;
@@ -204,6 +215,16 @@ public class CurrencyConversion7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CurrencyConversion7 obj) {
+			return obj.getResultReason();
+		}
+
+		@Override
+		public void setValue(CurrencyConversion7 obj, Optional<Max35Text> value) {
+			obj.setResultReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ConvsDtls")
@@ -247,7 +268,7 @@ public class CurrencyConversion7 {
 	 * CurrencyConversion3.mmConversion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmConversionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CurrencyConversion7, Optional<CurrencyConversion6>> mmConversionDetails = new MMMessageAssociationEnd<CurrencyConversion7, Optional<CurrencyConversion6>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyConversion7.mmObject();
 			isDerived = false;
@@ -260,7 +281,17 @@ public class CurrencyConversion7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CurrencyConversion6.mmObject();
+			type_lazy = () -> CurrencyConversion6.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyConversion6> getValue(CurrencyConversion7 obj) {
+			return obj.getConversionDetails();
+		}
+
+		@Override
+		public void setValue(CurrencyConversion7 obj, Optional<CurrencyConversion6> value) {
+			obj.setConversionDetails(value.orElse(null));
 		}
 	};
 
@@ -303,7 +334,7 @@ public class CurrencyConversion7 {
 		return conversionDetails == null ? Optional.empty() : Optional.of(conversionDetails);
 	}
 
-	public CurrencyConversion7 setConversionDetails(com.tools20022.repository.msg.CurrencyConversion6 conversionDetails) {
+	public CurrencyConversion7 setConversionDetails(CurrencyConversion6 conversionDetails) {
 		this.conversionDetails = conversionDetails;
 		return this;
 	}

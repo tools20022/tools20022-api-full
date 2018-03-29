@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TypeOfPrice8Code;
 import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PriceValue1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -104,7 +105,7 @@ public class UnitPrice4 {
 	 * definition} = "Type and information about a price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice4, TypeOfPrice8Code> mmType = new MMMessageAttribute<UnitPrice4, TypeOfPrice8Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice4.mmObject();
@@ -116,6 +117,16 @@ public class UnitPrice4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TypeOfPrice8Code.mmObject();
+		}
+
+		@Override
+		public TypeOfPrice8Code getValue(UnitPrice4 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(UnitPrice4 obj, TypeOfPrice8Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Val", required = true)
@@ -151,7 +162,7 @@ public class UnitPrice4 {
 	 * definition} = "Value of the price, eg, as a currency and value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice4, PriceValue1> mmValue = new MMMessageAttribute<UnitPrice4, PriceValue1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice4.mmObject();
@@ -162,7 +173,17 @@ public class UnitPrice4 {
 			definition = "Value of the price, eg, as a currency and value.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.PriceValue1.mmObject();
+			complexType_lazy = () -> PriceValue1.mmObject();
+		}
+
+		@Override
+		public PriceValue1 getValue(UnitPrice4 obj) {
+			return obj.getValue();
+		}
+
+		@Override
+		public void setValue(UnitPrice4 obj, PriceValue1 value) {
+			obj.setValue(value);
 		}
 	};
 
@@ -193,7 +214,7 @@ public class UnitPrice4 {
 		return value;
 	}
 
-	public UnitPrice4 setValue(com.tools20022.repository.msg.PriceValue1 value) {
+	public UnitPrice4 setValue(PriceValue1 value) {
 		this.value = Objects.requireNonNull(value);
 		return this;
 	}

@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstitution2;
+import com.tools20022.repository.msg.SettlementInformation11;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -139,7 +141,7 @@ public class GroupHeader22 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader22, Max35Text> mmMessageIdentification = new MMMessageAttribute<GroupHeader22, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader22.mmObject();
@@ -151,6 +153,16 @@ public class GroupHeader22 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(GroupHeader22 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(GroupHeader22 obj, Max35Text value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "CreDtTm", required = true)
@@ -188,7 +200,7 @@ public class GroupHeader22 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader22, ISODateTime> mmCreationDateTime = new MMMessageAttribute<GroupHeader22, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmCreationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader22.mmObject();
@@ -200,6 +212,16 @@ public class GroupHeader22 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(GroupHeader22 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(GroupHeader22 obj, ISODateTime value) {
+			obj.setCreationDateTime(value);
 		}
 	};
 	@XmlElement(name = "NbOfTxs", required = true)
@@ -232,7 +254,7 @@ public class GroupHeader22 {
 	 * "Number of individual transactions contained in the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfTransactions = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader22, Max15NumericText> mmNumberOfTransactions = new MMMessageAttribute<GroupHeader22, Max15NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader22.mmObject();
 			isDerived = false;
@@ -243,6 +265,16 @@ public class GroupHeader22 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
+		}
+
+		@Override
+		public Max15NumericText getValue(GroupHeader22 obj) {
+			return obj.getNumberOfTransactions();
+		}
+
+		@Override
+		public void setValue(GroupHeader22 obj, Max15NumericText value) {
+			obj.setNumberOfTransactions(value);
 		}
 	};
 	@XmlElement(name = "GrpRvsl", required = true)
@@ -276,7 +308,7 @@ public class GroupHeader22 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGroupReversal = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader22, TrueFalseIndicator> mmGroupReversal = new MMMessageAttribute<GroupHeader22, TrueFalseIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader22.mmObject();
 			isDerived = false;
@@ -287,6 +319,16 @@ public class GroupHeader22 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public TrueFalseIndicator getValue(GroupHeader22 obj) {
+			return obj.getGroupReversal();
+		}
+
+		@Override
+		public void setValue(GroupHeader22 obj, TrueFalseIndicator value) {
+			obj.setGroupReversal(value);
 		}
 	};
 	@XmlElement(name = "TtlRvsdIntrBkSttlmAmt", required = true)
@@ -325,7 +367,7 @@ public class GroupHeader22 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalReversedInterbankSettlementAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader22, EuroMax15Amount> mmTotalReversedInterbankSettlementAmount = new MMMessageAttribute<GroupHeader22, EuroMax15Amount>() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader22.mmObject();
@@ -337,6 +379,16 @@ public class GroupHeader22 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EuroMax15Amount.mmObject();
+		}
+
+		@Override
+		public EuroMax15Amount getValue(GroupHeader22 obj) {
+			return obj.getTotalReversedInterbankSettlementAmount();
+		}
+
+		@Override
+		public void setValue(GroupHeader22 obj, EuroMax15Amount value) {
+			obj.setTotalReversedInterbankSettlementAmount(value);
 		}
 	};
 	@XmlElement(name = "IntrBkSttlmDt", required = true)
@@ -374,7 +426,7 @@ public class GroupHeader22 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterbankSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader22, ISODate> mmInterbankSettlementDate = new MMMessageAttribute<GroupHeader22, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader22.mmObject();
@@ -386,6 +438,16 @@ public class GroupHeader22 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(GroupHeader22 obj) {
+			return obj.getInterbankSettlementDate();
+		}
+
+		@Override
+		public void setValue(GroupHeader22 obj, ISODate value) {
+			obj.setInterbankSettlementDate(value);
 		}
 	};
 	@XmlElement(name = "SttlmInf", required = true)
@@ -423,7 +485,7 @@ public class GroupHeader22 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GroupHeader22, SettlementInformation11> mmSettlementInformation = new MMMessageAssociationEnd<GroupHeader22, SettlementInformation11>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInstruction.mmSettlementInstruction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader22.mmObject();
@@ -435,7 +497,17 @@ public class GroupHeader22 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SettlementInformation11.mmObject();
+			type_lazy = () -> SettlementInformation11.mmObject();
+		}
+
+		@Override
+		public SettlementInformation11 getValue(GroupHeader22 obj) {
+			return obj.getSettlementInformation();
+		}
+
+		@Override
+		public void setValue(GroupHeader22 obj, SettlementInformation11 value) {
+			obj.setSettlementInformation(value);
 		}
 	};
 	@XmlElement(name = "InstgAgt")
@@ -472,7 +544,7 @@ public class GroupHeader22 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstructingAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GroupHeader22, Optional<FinancialInstitution2>> mmInstructingAgent = new MMMessageAssociationEnd<GroupHeader22, Optional<FinancialInstitution2>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader22.mmObject();
@@ -484,7 +556,17 @@ public class GroupHeader22 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitution2.mmObject();
+			type_lazy = () -> FinancialInstitution2.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstitution2> getValue(GroupHeader22 obj) {
+			return obj.getInstructingAgent();
+		}
+
+		@Override
+		public void setValue(GroupHeader22 obj, Optional<FinancialInstitution2> value) {
+			obj.setInstructingAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstdAgt")
@@ -521,7 +603,7 @@ public class GroupHeader22 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstructedAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GroupHeader22, Optional<FinancialInstitution2>> mmInstructedAgent = new MMMessageAssociationEnd<GroupHeader22, Optional<FinancialInstitution2>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader22.mmObject();
@@ -533,7 +615,17 @@ public class GroupHeader22 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitution2.mmObject();
+			type_lazy = () -> FinancialInstitution2.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstitution2> getValue(GroupHeader22 obj) {
+			return obj.getInstructedAgent();
+		}
+
+		@Override
+		public void setValue(GroupHeader22 obj, Optional<FinancialInstitution2> value) {
+			obj.setInstructedAgent(value.orElse(null));
 		}
 	};
 
@@ -613,7 +705,7 @@ public class GroupHeader22 {
 		return settlementInformation;
 	}
 
-	public GroupHeader22 setSettlementInformation(com.tools20022.repository.msg.SettlementInformation11 settlementInformation) {
+	public GroupHeader22 setSettlementInformation(SettlementInformation11 settlementInformation) {
 		this.settlementInformation = Objects.requireNonNull(settlementInformation);
 		return this;
 	}
@@ -622,7 +714,7 @@ public class GroupHeader22 {
 		return instructingAgent == null ? Optional.empty() : Optional.of(instructingAgent);
 	}
 
-	public GroupHeader22 setInstructingAgent(com.tools20022.repository.msg.FinancialInstitution2 instructingAgent) {
+	public GroupHeader22 setInstructingAgent(FinancialInstitution2 instructingAgent) {
 		this.instructingAgent = instructingAgent;
 		return this;
 	}
@@ -631,7 +723,7 @@ public class GroupHeader22 {
 		return instructedAgent == null ? Optional.empty() : Optional.of(instructedAgent);
 	}
 
-	public GroupHeader22 setInstructedAgent(com.tools20022.repository.msg.FinancialInstitution2 instructedAgent) {
+	public GroupHeader22 setInstructedAgent(FinancialInstitution2 instructedAgent) {
 		this.instructedAgent = instructedAgent;
 		return this;
 	}

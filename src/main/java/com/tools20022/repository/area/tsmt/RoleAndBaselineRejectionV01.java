@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.Reason2;
 import com.tools20022.repository.msg.SimpleIdentificationInformation;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -127,7 +126,7 @@ public class RoleAndBaselineRejectionV01 {
 	 * definition} = "Identifies the rejection message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRejectionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RoleAndBaselineRejectionV01, MessageIdentification1> mmRejectionIdentification = new MMMessageBuildingBlock<RoleAndBaselineRejectionV01, MessageIdentification1>() {
 		{
 			xmlTag = "RjctnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -138,12 +137,14 @@ public class RoleAndBaselineRejectionV01 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RoleAndBaselineRejectionV01.class.getMethod("getRejectionIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(RoleAndBaselineRejectionV01 obj) {
+			return obj.getRejectionIdentification();
+		}
+
+		@Override
+		public void setValue(RoleAndBaselineRejectionV01 obj, MessageIdentification1 value) {
+			obj.setRejectionIdentification(value);
 		}
 	};
 	@XmlElement(name = "RltdMsgRef", required = true)
@@ -172,7 +173,7 @@ public class RoleAndBaselineRejectionV01 {
 	 * "Reference to the message that contained the baseline and is rejected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRelatedMessageReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RoleAndBaselineRejectionV01, MessageIdentification1> mmRelatedMessageReference = new MMMessageBuildingBlock<RoleAndBaselineRejectionV01, MessageIdentification1>() {
 		{
 			xmlTag = "RltdMsgRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -183,12 +184,14 @@ public class RoleAndBaselineRejectionV01 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RoleAndBaselineRejectionV01.class.getMethod("getRelatedMessageReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(RoleAndBaselineRejectionV01 obj) {
+			return obj.getRelatedMessageReference();
+		}
+
+		@Override
+		public void setValue(RoleAndBaselineRejectionV01 obj, MessageIdentification1 value) {
+			obj.setRelatedMessageReference(value);
 		}
 	};
 	@XmlElement(name = "TxId", required = true)
@@ -218,7 +221,7 @@ public class RoleAndBaselineRejectionV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RoleAndBaselineRejectionV01, SimpleIdentificationInformation> mmTransactionIdentification = new MMMessageBuildingBlock<RoleAndBaselineRejectionV01, SimpleIdentificationInformation>() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -229,12 +232,14 @@ public class RoleAndBaselineRejectionV01 {
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RoleAndBaselineRejectionV01.class.getMethod("getTransactionIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SimpleIdentificationInformation getValue(RoleAndBaselineRejectionV01 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(RoleAndBaselineRejectionV01 obj, SimpleIdentificationInformation value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "RjctnRsn")
@@ -261,7 +266,7 @@ public class RoleAndBaselineRejectionV01 {
 	 * definition} = "Reason why the user cannot accept the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRejectionReason = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RoleAndBaselineRejectionV01, Optional<Reason2>> mmRejectionReason = new MMMessageBuildingBlock<RoleAndBaselineRejectionV01, Optional<Reason2>>() {
 		{
 			xmlTag = "RjctnRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -272,12 +277,14 @@ public class RoleAndBaselineRejectionV01 {
 			complexType_lazy = () -> Reason2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RoleAndBaselineRejectionV01.class.getMethod("getRejectionReason", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Reason2> getValue(RoleAndBaselineRejectionV01 obj) {
+			return obj.getRejectionReason();
+		}
+
+		@Override
+		public void setValue(RoleAndBaselineRejectionV01 obj, Optional<Reason2> value) {
+			obj.setRejectionReason(value.orElse(null));
 		}
 	};
 

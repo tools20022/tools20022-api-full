@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.*;
+import com.tools20022.repository.entity.ReceivingSettlementParty;
 import com.tools20022.repository.entity.SecuritiesSettlementPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
@@ -426,7 +427,7 @@ public class ReceivingSettlementParty extends SecuritiesSettlementPartyRole {
 	 * "Specifies the settlement party which is followed by another party."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmReceivingSettlementParty = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ReceivingSettlementParty, com.tools20022.repository.entity.ReceivingSettlementParty> mmReceivingSettlementParty = new MMBusinessAssociationEnd<ReceivingSettlementParty, com.tools20022.repository.entity.ReceivingSettlementParty>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ReceivingSettlementParty.mmObject();
@@ -438,6 +439,16 @@ public class ReceivingSettlementParty extends SecuritiesSettlementPartyRole {
 			opposite_lazy = () -> com.tools20022.repository.entity.ReceivingSettlementParty.mmNextParty;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ReceivingSettlementParty.mmObject();
+		}
+
+		@Override
+		public com.tools20022.repository.entity.ReceivingSettlementParty getValue(ReceivingSettlementParty obj) {
+			return obj.getReceivingSettlementParty();
+		}
+
+		@Override
+		public void setValue(ReceivingSettlementParty obj, com.tools20022.repository.entity.ReceivingSettlementParty value) {
+			obj.setReceivingSettlementParty(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.ReceivingSettlementParty> nextParty;
@@ -476,7 +487,7 @@ public class ReceivingSettlementParty extends SecuritiesSettlementPartyRole {
 	 * "Next party in the receiving side of the settlement transaction chain."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmNextParty = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ReceivingSettlementParty, List<ReceivingSettlementParty>> mmNextParty = new MMBusinessAssociationEnd<ReceivingSettlementParty, List<ReceivingSettlementParty>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ReceivingSettlementParty.mmObject();
@@ -487,6 +498,16 @@ public class ReceivingSettlementParty extends SecuritiesSettlementPartyRole {
 			opposite_lazy = () -> com.tools20022.repository.entity.ReceivingSettlementParty.mmReceivingSettlementParty;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ReceivingSettlementParty.mmObject();
+		}
+
+		@Override
+		public List<ReceivingSettlementParty> getValue(ReceivingSettlementParty obj) {
+			return obj.getNextParty();
+		}
+
+		@Override
+		public void setValue(ReceivingSettlementParty obj, List<ReceivingSettlementParty> value) {
+			obj.setNextParty(value);
 		}
 	};
 

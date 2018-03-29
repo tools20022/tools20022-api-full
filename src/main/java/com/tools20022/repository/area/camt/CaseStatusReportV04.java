@@ -27,7 +27,6 @@ import com.tools20022.repository.msgset.ExceptionsandInvestigationsISOLatestvers
 import com.tools20022.repository.msgset.ExceptionsandInvestigationsISOPreviousversion;
 import com.tools20022.repository.msgset.ExceptionsandInvestigationsMaintenance20162017;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -149,7 +148,7 @@ public class CaseStatusReportV04 {
 	 * "Specifies generic information about an investigation report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CaseStatusReportV04, ReportHeader4> mmHeader = new MMMessageBuildingBlock<CaseStatusReportV04, ReportHeader4>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -160,12 +159,14 @@ public class CaseStatusReportV04 {
 			complexType_lazy = () -> ReportHeader4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CaseStatusReportV04.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ReportHeader4 getValue(CaseStatusReportV04 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(CaseStatusReportV04 obj, ReportHeader4 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "Case", required = true)
@@ -191,7 +192,7 @@ public class CaseStatusReportV04 {
 	 * definition} = "Identifies the investigation case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CaseStatusReportV04, Case3> mmCase = new MMMessageBuildingBlock<CaseStatusReportV04, Case3>() {
 		{
 			xmlTag = "Case";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -202,12 +203,14 @@ public class CaseStatusReportV04 {
 			complexType_lazy = () -> Case3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CaseStatusReportV04.class.getMethod("getCase", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Case3 getValue(CaseStatusReportV04 obj) {
+			return obj.getCase();
+		}
+
+		@Override
+		public void setValue(CaseStatusReportV04 obj, Case3 value) {
+			obj.setCase(value);
 		}
 	};
 	@XmlElement(name = "Sts", required = true)
@@ -234,7 +237,7 @@ public class CaseStatusReportV04 {
 	 * definition} = "Defines the status of the case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CaseStatusReportV04, CaseStatus2> mmStatus = new MMMessageBuildingBlock<CaseStatusReportV04, CaseStatus2>() {
 		{
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -245,12 +248,14 @@ public class CaseStatusReportV04 {
 			complexType_lazy = () -> CaseStatus2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CaseStatusReportV04.class.getMethod("getStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CaseStatus2 getValue(CaseStatusReportV04 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(CaseStatusReportV04 obj, CaseStatus2 value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "NewAssgnmt")
@@ -279,7 +284,7 @@ public class CaseStatusReportV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmNewAssignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CaseStatusReportV04, Optional<CaseAssignment3>> mmNewAssignment = new MMMessageBuildingBlock<CaseStatusReportV04, Optional<CaseAssignment3>>() {
 		{
 			xmlTag = "NewAssgnmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -290,12 +295,14 @@ public class CaseStatusReportV04 {
 			complexType_lazy = () -> CaseAssignment3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CaseStatusReportV04.class.getMethod("getNewAssignment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<CaseAssignment3> getValue(CaseStatusReportV04 obj) {
+			return obj.getNewAssignment();
+		}
+
+		@Override
+		public void setValue(CaseStatusReportV04 obj, Optional<CaseAssignment3> value) {
+			obj.setNewAssignment(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -325,7 +332,7 @@ public class CaseStatusReportV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CaseStatusReportV04, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<CaseStatusReportV04, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -335,12 +342,14 @@ public class CaseStatusReportV04 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CaseStatusReportV04.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(CaseStatusReportV04 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(CaseStatusReportV04 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

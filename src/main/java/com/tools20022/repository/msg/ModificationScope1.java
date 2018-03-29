@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DataModification1Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PostalAddress3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -122,7 +123,7 @@ public class ModificationScope1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmModificationScopeIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ModificationScope1, DataModification1Code> mmModificationScopeIndication = new MMMessageAttribute<ModificationScope1, DataModification1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope1.mmObject();
 			isDerived = false;
@@ -134,6 +135,16 @@ public class ModificationScope1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DataModification1Code.mmObject();
+		}
+
+		@Override
+		public DataModification1Code getValue(ModificationScope1 obj) {
+			return obj.getModificationScopeIndication();
+		}
+
+		@Override
+		public void setValue(ModificationScope1 obj, DataModification1Code value) {
+			obj.setModificationScopeIndication(value);
 		}
 	};
 	@XmlElement(name = "PstlAdr", required = true)
@@ -174,7 +185,7 @@ public class ModificationScope1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPostalAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ModificationScope1, PostalAddress3> mmPostalAddress = new MMMessageAssociationEnd<ModificationScope1, PostalAddress3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope1.mmObject();
 			isDerived = false;
@@ -186,7 +197,17 @@ public class ModificationScope1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PostalAddress3.mmObject();
+			type_lazy = () -> PostalAddress3.mmObject();
+		}
+
+		@Override
+		public PostalAddress3 getValue(ModificationScope1 obj) {
+			return obj.getPostalAddress();
+		}
+
+		@Override
+		public void setValue(ModificationScope1 obj, PostalAddress3 value) {
+			obj.setPostalAddress(value);
 		}
 	};
 
@@ -217,7 +238,7 @@ public class ModificationScope1 {
 		return postalAddress;
 	}
 
-	public ModificationScope1 setPostalAddress(com.tools20022.repository.msg.PostalAddress3 postalAddress) {
+	public ModificationScope1 setPostalAddress(PostalAddress3 postalAddress) {
 		this.postalAddress = Objects.requireNonNull(postalAddress);
 		return this;
 	}

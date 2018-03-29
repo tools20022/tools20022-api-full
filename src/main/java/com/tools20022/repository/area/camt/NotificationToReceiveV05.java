@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.AccountNotification13;
 import com.tools20022.repository.msg.GroupHeader59;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.NotificationtoReceiveISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -133,7 +132,7 @@ public class NotificationToReceiveV05 {
 	 * NotificationToReceiveV04.mmGroupHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<NotificationToReceiveV05, GroupHeader59> mmGroupHeader = new MMMessageBuildingBlock<NotificationToReceiveV05, GroupHeader59>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -145,12 +144,14 @@ public class NotificationToReceiveV05 {
 			complexType_lazy = () -> GroupHeader59.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NotificationToReceiveV05.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader59 getValue(NotificationToReceiveV05 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(NotificationToReceiveV05 obj, GroupHeader59 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "Ntfctn", required = true)
@@ -185,7 +186,7 @@ public class NotificationToReceiveV05 {
 	 * NotificationToReceiveV04.mmNotification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmNotification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<NotificationToReceiveV05, AccountNotification13> mmNotification = new MMMessageBuildingBlock<NotificationToReceiveV05, AccountNotification13>() {
 		{
 			xmlTag = "Ntfctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -197,12 +198,14 @@ public class NotificationToReceiveV05 {
 			complexType_lazy = () -> AccountNotification13.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NotificationToReceiveV05.class.getMethod("getNotification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AccountNotification13 getValue(NotificationToReceiveV05 obj) {
+			return obj.getNotification();
+		}
+
+		@Override
+		public void setValue(NotificationToReceiveV05 obj, AccountNotification13 value) {
+			obj.setNotification(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -237,7 +240,7 @@ public class NotificationToReceiveV05 {
 	 * NotificationToReceiveV04.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<NotificationToReceiveV05, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<NotificationToReceiveV05, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -248,12 +251,14 @@ public class NotificationToReceiveV05 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NotificationToReceiveV05.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(NotificationToReceiveV05 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(NotificationToReceiveV05 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

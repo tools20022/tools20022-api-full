@@ -115,7 +115,7 @@ public class AccountStatusUpdateInstructionReason1 {
 	 * EnabledStatusReason1.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountStatusUpdateInstructionReason1, Optional<AccountStatusUpdateInstructionReason2Choice>> mmCode = new MMMessageAssociationEnd<AccountStatusUpdateInstructionReason1, Optional<AccountStatusUpdateInstructionReason2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountStatusUpdateInstructionReason1.mmObject();
 			isDerived = false;
@@ -128,6 +128,16 @@ public class AccountStatusUpdateInstructionReason1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AccountStatusUpdateInstructionReason2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AccountStatusUpdateInstructionReason2Choice> getValue(AccountStatusUpdateInstructionReason1 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(AccountStatusUpdateInstructionReason1 obj, Optional<AccountStatusUpdateInstructionReason2Choice> value) {
+			obj.setCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -166,7 +176,7 @@ public class AccountStatusUpdateInstructionReason1 {
 	 * EnabledStatusReason1.mmAdditionalInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountStatusUpdateInstructionReason1, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<AccountStatusUpdateInstructionReason1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountStatusUpdateInstructionReason1.mmObject();
 			isDerived = false;
@@ -178,6 +188,16 @@ public class AccountStatusUpdateInstructionReason1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(AccountStatusUpdateInstructionReason1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(AccountStatusUpdateInstructionReason1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

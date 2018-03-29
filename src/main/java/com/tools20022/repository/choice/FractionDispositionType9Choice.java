@@ -121,7 +121,7 @@ public class FractionDispositionType9Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FractionDispositionType9Choice, FractionDispositionType5Code> mmCode = new MMMessageAttribute<FractionDispositionType9Choice, FractionDispositionType5Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmFractionDisposition;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FractionDispositionType9Choice.mmObject();
@@ -133,6 +133,16 @@ public class FractionDispositionType9Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FractionDispositionType5Code.mmObject();
+		}
+
+		@Override
+		public FractionDispositionType5Code getValue(FractionDispositionType9Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(FractionDispositionType9Choice obj, FractionDispositionType5Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -170,7 +180,7 @@ public class FractionDispositionType9Choice {
 	 * "Proprietary identification of the type of fraction disposition."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FractionDispositionType9Choice, GenericIdentification20> mmProprietary = new MMMessageAssociationEnd<FractionDispositionType9Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmFractionDisposition;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FractionDispositionType9Choice.mmObject();
@@ -183,6 +193,16 @@ public class FractionDispositionType9Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(FractionDispositionType9Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(FractionDispositionType9Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

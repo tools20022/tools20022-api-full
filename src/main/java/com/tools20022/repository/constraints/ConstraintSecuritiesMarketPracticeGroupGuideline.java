@@ -56,11 +56,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPendingReport002V08> forSecuritiesTransactionPendingReport002V08 = new MMConstraint<SecuritiesTransactionPendingReport002V08>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionPendingReport002V08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesTransactionPendingReport002V08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPendingReport002V08 obj) throws Exception {
+			checkSecuritiesTransactionPendingReport002V08(obj);
 		}
 	};
 	/**
@@ -86,11 +90,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPostingReport002V07> forSecuritiesTransactionPostingReport002V07 = new MMConstraint<SecuritiesTransactionPostingReport002V07>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionPostingReport002V07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesTransactionPostingReport002V07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPostingReport002V07 obj) throws Exception {
+			checkSecuritiesTransactionPostingReport002V07(obj);
 		}
 	};
 	/**
@@ -122,12 +130,16 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesBalanceCustodyReportV09> forSecuritiesBalanceCustodyReportV09 = new MMConstraint<SecuritiesBalanceCustodyReportV09>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesBalanceCustodyReportV09;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesBalanceCustodyReportV08;
 			owner_lazy = () -> SecuritiesBalanceCustodyReportV09.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceCustodyReportV09 obj) throws Exception {
+			checkSecuritiesBalanceCustodyReportV09(obj);
 		}
 	};
 	/**
@@ -159,12 +171,16 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesBalanceAccountingReportV09> forSecuritiesBalanceAccountingReportV09 = new MMConstraint<SecuritiesBalanceAccountingReportV09>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesBalanceAccountingReportV09;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesBalanceAccountingReportV08;
 			owner_lazy = () -> SecuritiesBalanceAccountingReportV09.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceAccountingReportV09 obj) throws Exception {
+			checkSecuritiesBalanceAccountingReportV09(obj);
 		}
 	};
 	/**
@@ -196,12 +212,16 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPendingReportV09> forSecuritiesTransactionPendingReportV09 = new MMConstraint<SecuritiesTransactionPendingReportV09>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionPendingReportV09;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionPendingReportV08;
 			owner_lazy = () -> SecuritiesTransactionPendingReportV09.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPendingReportV09 obj) throws Exception {
+			checkSecuritiesTransactionPendingReportV09(obj);
 		}
 	};
 	/**
@@ -233,12 +253,16 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPostingReportV08> forSecuritiesTransactionPostingReportV08 = new MMConstraint<SecuritiesTransactionPostingReportV08>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionPostingReportV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionPostingReportV07;
 			owner_lazy = () -> SecuritiesTransactionPostingReportV08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPostingReportV08 obj) throws Exception {
+			checkSecuritiesTransactionPostingReportV08(obj);
 		}
 	};
 	/**
@@ -264,11 +288,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesBalanceAccountingReport002V09> forSecuritiesBalanceAccountingReport002V09 = new MMConstraint<SecuritiesBalanceAccountingReport002V09>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesBalanceAccountingReport002V09;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesBalanceAccountingReport002V09.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceAccountingReport002V09 obj) throws Exception {
+			checkSecuritiesBalanceAccountingReport002V09(obj);
 		}
 	};
 	/**
@@ -294,11 +322,83 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesBalanceCustodyReport002V09> forSecuritiesBalanceCustodyReport002V09 = new MMConstraint<SecuritiesBalanceCustodyReport002V09>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesBalanceCustodyReport002V09;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesBalanceCustodyReport002V09.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceCustodyReport002V09 obj) throws Exception {
+			checkSecuritiesBalanceCustodyReport002V09(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V09
+	 * SecuritiesTransactionPendingReport002V09}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTransactionPendingReport002V09> forSecuritiesTransactionPendingReport002V09 = new MMConstraint<SecuritiesTransactionPendingReport002V09>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesMarketPracticeGroupGuideline";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			owner_lazy = () -> SecuritiesTransactionPendingReport002V09.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPendingReport002V09 obj) throws Exception {
+			checkSecuritiesTransactionPendingReport002V09(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReport002V08
+	 * SecuritiesTransactionPostingReport002V08}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTransactionPostingReport002V08> forSecuritiesTransactionPostingReport002V08 = new MMConstraint<SecuritiesTransactionPostingReport002V08>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesMarketPracticeGroupGuideline";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			owner_lazy = () -> SecuritiesTransactionPostingReport002V08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPostingReport002V08 obj) throws Exception {
+			checkSecuritiesTransactionPostingReport002V08(obj);
 		}
 	};
 	/**
@@ -339,13 +439,17 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesBalanceCustodyReportV08> forSecuritiesBalanceCustodyReportV08 = new MMConstraint<SecuritiesBalanceCustodyReportV08>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesBalanceCustodyReportV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesBalanceCustodyReportV09);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesBalanceCustodyReportV07;
 			owner_lazy = () -> SecuritiesBalanceCustodyReportV08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceCustodyReportV08 obj) throws Exception {
+			checkSecuritiesBalanceCustodyReportV08(obj);
 		}
 	};
 	/**
@@ -386,13 +490,17 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesBalanceAccountingReportV08> forSecuritiesBalanceAccountingReportV08 = new MMConstraint<SecuritiesBalanceAccountingReportV08>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesBalanceAccountingReportV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesBalanceAccountingReportV09);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesBalanceAccountingReportV07;
 			owner_lazy = () -> SecuritiesBalanceAccountingReportV08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceAccountingReportV08 obj) throws Exception {
+			checkSecuritiesBalanceAccountingReportV08(obj);
 		}
 	};
 	/**
@@ -433,13 +541,17 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPendingReportV08> forSecuritiesTransactionPendingReportV08 = new MMConstraint<SecuritiesTransactionPendingReportV08>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionPendingReportV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionPendingReportV09);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionPendingReportV07;
 			owner_lazy = () -> SecuritiesTransactionPendingReportV08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPendingReportV08 obj) throws Exception {
+			checkSecuritiesTransactionPendingReportV08(obj);
 		}
 	};
 	/**
@@ -480,13 +592,17 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPostingReportV07> forSecuritiesTransactionPostingReportV07 = new MMConstraint<SecuritiesTransactionPostingReportV07>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionPostingReportV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionPostingReportV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionPostingReportV06;
 			owner_lazy = () -> SecuritiesTransactionPostingReportV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPostingReportV07 obj) throws Exception {
+			checkSecuritiesTransactionPostingReportV07(obj);
 		}
 	};
 	/**
@@ -512,11 +628,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPostingReport002V06> forSecuritiesTransactionPostingReport002V06 = new MMConstraint<SecuritiesTransactionPostingReport002V06>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionPostingReport002V06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesTransactionPostingReport002V06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPostingReport002V06 obj) throws Exception {
+			checkSecuritiesTransactionPostingReport002V06(obj);
 		}
 	};
 	/**
@@ -542,11 +662,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPendingReport002V07> forSecuritiesTransactionPendingReport002V07 = new MMConstraint<SecuritiesTransactionPendingReport002V07>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionPendingReport002V07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesTransactionPendingReport002V07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPendingReport002V07 obj) throws Exception {
+			checkSecuritiesTransactionPendingReport002V07(obj);
 		}
 	};
 	/**
@@ -578,12 +702,16 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTransactionCancellationRequestStatusAdviceV05> forSecuritiesTransactionCancellationRequestStatusAdviceV05 = new MMConstraint<SecuritiesTransactionCancellationRequestStatusAdviceV05>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionCancellationRequestStatusAdviceV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionCancellationRequestStatusAdviceV04;
 			owner_lazy = () -> SecuritiesTransactionCancellationRequestStatusAdviceV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionCancellationRequestStatusAdviceV05 obj) throws Exception {
+			checkSecuritiesTransactionCancellationRequestStatusAdviceV05(obj);
 		}
 	};
 	/**
@@ -615,12 +743,16 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementConditionsModificationRequestV07> forSecuritiesSettlementConditionsModificationRequestV07 = new MMConstraint<SecuritiesSettlementConditionsModificationRequestV07>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementConditionsModificationRequestV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementConditionsModificationRequestV06;
 			owner_lazy = () -> SecuritiesSettlementConditionsModificationRequestV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementConditionsModificationRequestV07 obj) throws Exception {
+			checkSecuritiesSettlementConditionsModificationRequestV07(obj);
 		}
 	};
 	/**
@@ -652,12 +784,16 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV07> forSecuritiesSettlementTransactionAllegementNotificationV07 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV07>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionAllegementNotificationV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionAllegementNotificationV06;
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementNotificationV07 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementNotificationV07(obj);
 		}
 	};
 	/**
@@ -689,12 +825,16 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV08> forSecuritiesSettlementTransactionConfirmationV08 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV08>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionConfirmationV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionConfirmationV07;
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionConfirmationV08 obj) throws Exception {
+			checkSecuritiesSettlementTransactionConfirmationV08(obj);
 		}
 	};
 	/**
@@ -726,12 +866,16 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<PortfolioTransferNotificationV05> forPortfolioTransferNotificationV05 = new MMConstraint<PortfolioTransferNotificationV05>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkPortfolioTransferNotificationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forPortfolioTransferNotificationV04;
 			owner_lazy = () -> PortfolioTransferNotificationV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PortfolioTransferNotificationV05 obj) throws Exception {
+			checkPortfolioTransferNotificationV05(obj);
 		}
 	};
 	/**
@@ -763,12 +907,16 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesFinancingInstructionV08> forSecuritiesFinancingInstructionV08 = new MMConstraint<SecuritiesFinancingInstructionV08>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesFinancingInstructionV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesFinancingInstructionV07;
 			owner_lazy = () -> SecuritiesFinancingInstructionV08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingInstructionV08 obj) throws Exception {
+			checkSecuritiesFinancingInstructionV08(obj);
 		}
 	};
 	/**
@@ -800,12 +948,16 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV09> forSecuritiesSettlementTransactionStatusAdviceV09 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV09>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionStatusAdviceV09;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionStatusAdviceV08;
 			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV09.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV09 obj) throws Exception {
+			checkSecuritiesSettlementTransactionStatusAdviceV09(obj);
 		}
 	};
 	/**
@@ -837,12 +989,16 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV08> forSecuritiesSettlementTransactionInstructionV08 = new MMConstraint<SecuritiesSettlementTransactionInstructionV08>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionInstructionV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionInstructionV07;
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV08 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV08(obj);
 		}
 	};
 	/**
@@ -868,11 +1024,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTransactionCancellationRequestStatusAdvice002V05> forSecuritiesTransactionCancellationRequestStatusAdvice002V05 = new MMConstraint<SecuritiesTransactionCancellationRequestStatusAdvice002V05>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionCancellationRequestStatusAdvice002V05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesTransactionCancellationRequestStatusAdvice002V05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionCancellationRequestStatusAdvice002V05 obj) throws Exception {
+			checkSecuritiesTransactionCancellationRequestStatusAdvice002V05(obj);
 		}
 	};
 	/**
@@ -898,11 +1058,219 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementConditionsModificationRequest002V07> forSecuritiesSettlementConditionsModificationRequest002V07 = new MMConstraint<SecuritiesSettlementConditionsModificationRequest002V07>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementConditionsModificationRequest002V07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesSettlementConditionsModificationRequest002V07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementConditionsModificationRequest002V07 obj) throws Exception {
+			checkSecuritiesSettlementConditionsModificationRequest002V07(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotification002V05
+	 * PortfolioTransferNotification002V05}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PortfolioTransferNotification002V05> forPortfolioTransferNotification002V05 = new MMConstraint<PortfolioTransferNotification002V05>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesMarketPracticeGroupGuideline";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			owner_lazy = () -> PortfolioTransferNotification002V05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PortfolioTransferNotification002V05 obj) throws Exception {
+			checkPortfolioTransferNotification002V05(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstruction002V08
+	 * SecuritiesFinancingInstruction002V08}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesFinancingInstruction002V08> forSecuritiesFinancingInstruction002V08 = new MMConstraint<SecuritiesFinancingInstruction002V08>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesMarketPracticeGroupGuideline";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			owner_lazy = () -> SecuritiesFinancingInstruction002V08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingInstruction002V08 obj) throws Exception {
+			checkSecuritiesFinancingInstruction002V08(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V07
+	 * SecuritiesSettlementTransactionAllegementNotification002V07}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotification002V07> forSecuritiesSettlementTransactionAllegementNotification002V07 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotification002V07>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesMarketPracticeGroupGuideline";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotification002V07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementNotification002V07 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementNotification002V07(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V08
+	 * SecuritiesSettlementTransactionConfirmation002V08}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionConfirmation002V08> forSecuritiesSettlementTransactionConfirmation002V08 = new MMConstraint<SecuritiesSettlementTransactionConfirmation002V08>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesMarketPracticeGroupGuideline";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			owner_lazy = () -> SecuritiesSettlementTransactionConfirmation002V08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionConfirmation002V08 obj) throws Exception {
+			checkSecuritiesSettlementTransactionConfirmation002V08(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V08
+	 * SecuritiesSettlementTransactionInstruction002V08}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionInstruction002V08> forSecuritiesSettlementTransactionInstruction002V08 = new MMConstraint<SecuritiesSettlementTransactionInstruction002V08>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesMarketPracticeGroupGuideline";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			owner_lazy = () -> SecuritiesSettlementTransactionInstruction002V08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstruction002V08 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstruction002V08(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V09
+	 * SecuritiesSettlementTransactionStatusAdvice002V09}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdvice002V09> forSecuritiesSettlementTransactionStatusAdvice002V09 = new MMConstraint<SecuritiesSettlementTransactionStatusAdvice002V09>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesMarketPracticeGroupGuideline";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdvice002V09.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdvice002V09 obj) throws Exception {
+			checkSecuritiesSettlementTransactionStatusAdvice002V09(obj);
 		}
 	};
 	/**
@@ -943,13 +1311,17 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTransactionCancellationRequestStatusAdviceV04> forSecuritiesTransactionCancellationRequestStatusAdviceV04 = new MMConstraint<SecuritiesTransactionCancellationRequestStatusAdviceV04>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionCancellationRequestStatusAdviceV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionCancellationRequestStatusAdviceV05);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionCancellationRequestStatusAdviceV03;
 			owner_lazy = () -> SecuritiesTransactionCancellationRequestStatusAdviceV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionCancellationRequestStatusAdviceV04 obj) throws Exception {
+			checkSecuritiesTransactionCancellationRequestStatusAdviceV04(obj);
 		}
 	};
 	/**
@@ -990,13 +1362,17 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementConditionsModificationRequestV06> forSecuritiesSettlementConditionsModificationRequestV06 = new MMConstraint<SecuritiesSettlementConditionsModificationRequestV06>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementConditionsModificationRequestV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementConditionsModificationRequestV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementConditionsModificationRequestV05;
 			owner_lazy = () -> SecuritiesSettlementConditionsModificationRequestV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementConditionsModificationRequestV06 obj) throws Exception {
+			checkSecuritiesSettlementConditionsModificationRequestV06(obj);
 		}
 	};
 	/**
@@ -1037,13 +1413,17 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<PortfolioTransferNotificationV04> forPortfolioTransferNotificationV04 = new MMConstraint<PortfolioTransferNotificationV04>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkPortfolioTransferNotificationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forPortfolioTransferNotificationV05);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forPortfolioTransferNotificationV03;
 			owner_lazy = () -> PortfolioTransferNotificationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PortfolioTransferNotificationV04 obj) throws Exception {
+			checkPortfolioTransferNotificationV04(obj);
 		}
 	};
 	/**
@@ -1084,13 +1464,17 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesFinancingInstructionV07> forSecuritiesFinancingInstructionV07 = new MMConstraint<SecuritiesFinancingInstructionV07>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesFinancingInstructionV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesFinancingInstructionV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesFinancingInstructionV06;
 			owner_lazy = () -> SecuritiesFinancingInstructionV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingInstructionV07 obj) throws Exception {
+			checkSecuritiesFinancingInstructionV07(obj);
 		}
 	};
 	/**
@@ -1131,13 +1515,17 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV06> forSecuritiesSettlementTransactionAllegementNotificationV06 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV06>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionAllegementNotificationV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionAllegementNotificationV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionAllegementNotificationV05;
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementNotificationV06 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementNotificationV06(obj);
 		}
 	};
 	/**
@@ -1178,13 +1566,17 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV07> forSecuritiesSettlementTransactionConfirmationV07 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV07>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionConfirmationV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionConfirmationV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionConfirmationV06;
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionConfirmationV07 obj) throws Exception {
+			checkSecuritiesSettlementTransactionConfirmationV07(obj);
 		}
 	};
 	/**
@@ -1225,13 +1617,17 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV08> forSecuritiesSettlementTransactionStatusAdviceV08 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV08>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionStatusAdviceV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionStatusAdviceV09);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionStatusAdviceV07;
 			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV08 obj) throws Exception {
+			checkSecuritiesSettlementTransactionStatusAdviceV08(obj);
 		}
 	};
 	/**
@@ -1272,13 +1668,17 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV07> forSecuritiesSettlementTransactionInstructionV07 = new MMConstraint<SecuritiesSettlementTransactionInstructionV07>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionInstructionV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionInstructionV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionInstructionV06;
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV07 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV07(obj);
 		}
 	};
 	/**
@@ -1304,11 +1704,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<PortfolioTransferNotification002V04> forPortfolioTransferNotification002V04 = new MMConstraint<PortfolioTransferNotification002V04>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkPortfolioTransferNotification002V04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> PortfolioTransferNotification002V04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PortfolioTransferNotification002V04 obj) throws Exception {
+			checkPortfolioTransferNotification002V04(obj);
 		}
 	};
 	/**
@@ -1334,11 +1738,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementConditionsModificationRequest002V06> forSecuritiesSettlementConditionsModificationRequest002V06 = new MMConstraint<SecuritiesSettlementConditionsModificationRequest002V06>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementConditionsModificationRequest002V06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesSettlementConditionsModificationRequest002V06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementConditionsModificationRequest002V06 obj) throws Exception {
+			checkSecuritiesSettlementConditionsModificationRequest002V06(obj);
 		}
 	};
 	/**
@@ -1364,11 +1772,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotification002V06> forSecuritiesSettlementTransactionAllegementNotification002V06 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotification002V06>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionAllegementNotification002V06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotification002V06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementNotification002V06 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementNotification002V06(obj);
 		}
 	};
 	/**
@@ -1394,11 +1806,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstruction002V07> forSecuritiesSettlementTransactionInstruction002V07 = new MMConstraint<SecuritiesSettlementTransactionInstruction002V07>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionInstruction002V07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesSettlementTransactionInstruction002V07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstruction002V07 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstruction002V07(obj);
 		}
 	};
 	/**
@@ -1424,11 +1840,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdvice002V08> forSecuritiesSettlementTransactionStatusAdvice002V08 = new MMConstraint<SecuritiesSettlementTransactionStatusAdvice002V08>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionStatusAdvice002V08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdvice002V08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdvice002V08 obj) throws Exception {
+			checkSecuritiesSettlementTransactionStatusAdvice002V08(obj);
 		}
 	};
 	/**
@@ -1454,11 +1874,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesFinancingInstruction002V07> forSecuritiesFinancingInstruction002V07 = new MMConstraint<SecuritiesFinancingInstruction002V07>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesFinancingInstruction002V07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesFinancingInstruction002V07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingInstruction002V07 obj) throws Exception {
+			checkSecuritiesFinancingInstruction002V07(obj);
 		}
 	};
 	/**
@@ -1484,11 +1908,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmation002V07> forSecuritiesSettlementTransactionConfirmation002V07 = new MMConstraint<SecuritiesSettlementTransactionConfirmation002V07>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionConfirmation002V07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmation002V07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionConfirmation002V07 obj) throws Exception {
+			checkSecuritiesSettlementTransactionConfirmation002V07(obj);
 		}
 	};
 	/**
@@ -1514,11 +1942,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesBalanceAccountingReportV03> forSecuritiesBalanceAccountingReportV03 = new MMConstraint<SecuritiesBalanceAccountingReportV03>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesBalanceAccountingReportV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesBalanceAccountingReportV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceAccountingReportV03 obj) throws Exception {
+			checkSecuritiesBalanceAccountingReportV03(obj);
 		}
 	};
 	/**
@@ -1544,11 +1976,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesBalanceAccountingReportV04> forSecuritiesBalanceAccountingReportV04 = new MMConstraint<SecuritiesBalanceAccountingReportV04>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesBalanceAccountingReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesBalanceAccountingReportV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceAccountingReportV04 obj) throws Exception {
+			checkSecuritiesBalanceAccountingReportV04(obj);
 		}
 	};
 	/**
@@ -1574,11 +2010,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesBalanceAccountingReportV05> forSecuritiesBalanceAccountingReportV05 = new MMConstraint<SecuritiesBalanceAccountingReportV05>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesBalanceAccountingReportV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesBalanceAccountingReportV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceAccountingReportV05 obj) throws Exception {
+			checkSecuritiesBalanceAccountingReportV05(obj);
 		}
 	};
 	/**
@@ -1613,12 +2053,16 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesBalanceAccountingReportV06> forSecuritiesBalanceAccountingReportV06 = new MMConstraint<SecuritiesBalanceAccountingReportV06>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesBalanceAccountingReportV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesBalanceAccountingReportV07);
 			owner_lazy = () -> SecuritiesBalanceAccountingReportV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceAccountingReportV06 obj) throws Exception {
+			checkSecuritiesBalanceAccountingReportV06(obj);
 		}
 	};
 	/**
@@ -1644,11 +2088,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesBalanceCustodyReportV03> forSecuritiesBalanceCustodyReportV03 = new MMConstraint<SecuritiesBalanceCustodyReportV03>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesBalanceCustodyReportV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesBalanceCustodyReportV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceCustodyReportV03 obj) throws Exception {
+			checkSecuritiesBalanceCustodyReportV03(obj);
 		}
 	};
 	/**
@@ -1674,11 +2122,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesBalanceCustodyReportV04> forSecuritiesBalanceCustodyReportV04 = new MMConstraint<SecuritiesBalanceCustodyReportV04>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesBalanceCustodyReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesBalanceCustodyReportV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceCustodyReportV04 obj) throws Exception {
+			checkSecuritiesBalanceCustodyReportV04(obj);
 		}
 	};
 	/**
@@ -1704,11 +2156,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesBalanceCustodyReportV05> forSecuritiesBalanceCustodyReportV05 = new MMConstraint<SecuritiesBalanceCustodyReportV05>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesBalanceCustodyReportV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesBalanceCustodyReportV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceCustodyReportV05 obj) throws Exception {
+			checkSecuritiesBalanceCustodyReportV05(obj);
 		}
 	};
 	/**
@@ -1743,12 +2199,16 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesBalanceCustodyReportV06> forSecuritiesBalanceCustodyReportV06 = new MMConstraint<SecuritiesBalanceCustodyReportV06>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesBalanceCustodyReportV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesBalanceCustodyReportV07);
 			owner_lazy = () -> SecuritiesBalanceCustodyReportV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceCustodyReportV06 obj) throws Exception {
+			checkSecuritiesBalanceCustodyReportV06(obj);
 		}
 	};
 	/**
@@ -1774,11 +2234,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPendingReportV01> forSecuritiesTransactionPendingReportV01 = new MMConstraint<SecuritiesTransactionPendingReportV01>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionPendingReportV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesTransactionPendingReportV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPendingReportV01 obj) throws Exception {
+			checkSecuritiesTransactionPendingReportV01(obj);
 		}
 	};
 	/**
@@ -1804,11 +2268,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPendingReportV02> forSecuritiesTransactionPendingReportV02 = new MMConstraint<SecuritiesTransactionPendingReportV02>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionPendingReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesTransactionPendingReportV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPendingReportV02 obj) throws Exception {
+			checkSecuritiesTransactionPendingReportV02(obj);
 		}
 	};
 	/**
@@ -1834,11 +2302,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPendingReportV03> forSecuritiesTransactionPendingReportV03 = new MMConstraint<SecuritiesTransactionPendingReportV03>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionPendingReportV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesTransactionPendingReportV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPendingReportV03 obj) throws Exception {
+			checkSecuritiesTransactionPendingReportV03(obj);
 		}
 	};
 	/**
@@ -1873,12 +2345,16 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPendingReportV04> forSecuritiesTransactionPendingReportV04 = new MMConstraint<SecuritiesTransactionPendingReportV04>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionPendingReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionPendingReportV05);
 			owner_lazy = () -> SecuritiesTransactionPendingReportV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPendingReportV04 obj) throws Exception {
+			checkSecuritiesTransactionPendingReportV04(obj);
 		}
 	};
 	/**
@@ -1904,11 +2380,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPostingReportV01> forSecuritiesTransactionPostingReportV01 = new MMConstraint<SecuritiesTransactionPostingReportV01>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionPostingReportV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesTransactionPostingReportV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPostingReportV01 obj) throws Exception {
+			checkSecuritiesTransactionPostingReportV01(obj);
 		}
 	};
 	/**
@@ -1934,11 +2414,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPostingReportV02> forSecuritiesTransactionPostingReportV02 = new MMConstraint<SecuritiesTransactionPostingReportV02>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionPostingReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesTransactionPostingReportV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPostingReportV02 obj) throws Exception {
+			checkSecuritiesTransactionPostingReportV02(obj);
 		}
 	};
 	/**
@@ -1964,11 +2448,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPostingReportV03> forSecuritiesTransactionPostingReportV03 = new MMConstraint<SecuritiesTransactionPostingReportV03>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionPostingReportV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesTransactionPostingReportV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPostingReportV03 obj) throws Exception {
+			checkSecuritiesTransactionPostingReportV03(obj);
 		}
 	};
 	/**
@@ -2003,12 +2491,16 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPostingReportV04> forSecuritiesTransactionPostingReportV04 = new MMConstraint<SecuritiesTransactionPostingReportV04>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionPostingReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionPostingReportV05);
 			owner_lazy = () -> SecuritiesTransactionPostingReportV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPostingReportV04 obj) throws Exception {
+			checkSecuritiesTransactionPostingReportV04(obj);
 		}
 	};
 	/**
@@ -2049,13 +2541,17 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPendingReportV05> forSecuritiesTransactionPendingReportV05 = new MMConstraint<SecuritiesTransactionPendingReportV05>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionPendingReportV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionPendingReportV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionPendingReportV04;
 			owner_lazy = () -> SecuritiesTransactionPendingReportV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPendingReportV05 obj) throws Exception {
+			checkSecuritiesTransactionPendingReportV05(obj);
 		}
 	};
 	/**
@@ -2096,13 +2592,17 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPostingReportV05> forSecuritiesTransactionPostingReportV05 = new MMConstraint<SecuritiesTransactionPostingReportV05>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionPostingReportV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionPostingReportV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionPostingReportV04;
 			owner_lazy = () -> SecuritiesTransactionPostingReportV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPostingReportV05 obj) throws Exception {
+			checkSecuritiesTransactionPostingReportV05(obj);
 		}
 	};
 	/**
@@ -2143,13 +2643,17 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesBalanceCustodyReportV07> forSecuritiesBalanceCustodyReportV07 = new MMConstraint<SecuritiesBalanceCustodyReportV07>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesBalanceCustodyReportV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesBalanceCustodyReportV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesBalanceCustodyReportV06;
 			owner_lazy = () -> SecuritiesBalanceCustodyReportV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceCustodyReportV07 obj) throws Exception {
+			checkSecuritiesBalanceCustodyReportV07(obj);
 		}
 	};
 	/**
@@ -2190,13 +2694,17 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesBalanceAccountingReportV07> forSecuritiesBalanceAccountingReportV07 = new MMConstraint<SecuritiesBalanceAccountingReportV07>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesBalanceAccountingReportV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesBalanceAccountingReportV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesBalanceAccountingReportV06;
 			owner_lazy = () -> SecuritiesBalanceAccountingReportV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceAccountingReportV07 obj) throws Exception {
+			checkSecuritiesBalanceAccountingReportV07(obj);
 		}
 	};
 	/**
@@ -2237,13 +2745,17 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPendingReportV06> forSecuritiesTransactionPendingReportV06 = new MMConstraint<SecuritiesTransactionPendingReportV06>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionPendingReportV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionPendingReportV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionPendingReportV05;
 			owner_lazy = () -> SecuritiesTransactionPendingReportV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPendingReportV06 obj) throws Exception {
+			checkSecuritiesTransactionPendingReportV06(obj);
 		}
 	};
 	/**
@@ -2284,13 +2796,17 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPostingReportV06> forSecuritiesTransactionPostingReportV06 = new MMConstraint<SecuritiesTransactionPostingReportV06>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionPostingReportV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionPostingReportV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionPostingReportV05;
 			owner_lazy = () -> SecuritiesTransactionPostingReportV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPostingReportV06 obj) throws Exception {
+			checkSecuritiesTransactionPostingReportV06(obj);
 		}
 	};
 	/**
@@ -2331,13 +2847,17 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPendingReportV07> forSecuritiesTransactionPendingReportV07 = new MMConstraint<SecuritiesTransactionPendingReportV07>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionPendingReportV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionPendingReportV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionPendingReportV06;
 			owner_lazy = () -> SecuritiesTransactionPendingReportV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPendingReportV07 obj) throws Exception {
+			checkSecuritiesTransactionPendingReportV07(obj);
 		}
 	};
 	/**
@@ -2363,11 +2883,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesFinancingInstructionV01> forSecuritiesFinancingInstructionV01 = new MMConstraint<SecuritiesFinancingInstructionV01>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesFinancingInstructionV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesFinancingInstructionV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingInstructionV01 obj) throws Exception {
+			checkSecuritiesFinancingInstructionV01(obj);
 		}
 	};
 	/**
@@ -2393,11 +2917,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesFinancingInstructionV02> forSecuritiesFinancingInstructionV02 = new MMConstraint<SecuritiesFinancingInstructionV02>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesFinancingInstructionV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesFinancingInstructionV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingInstructionV02 obj) throws Exception {
+			checkSecuritiesFinancingInstructionV02(obj);
 		}
 	};
 	/**
@@ -2423,11 +2951,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesFinancingInstructionV03> forSecuritiesFinancingInstructionV03 = new MMConstraint<SecuritiesFinancingInstructionV03>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesFinancingInstructionV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesFinancingInstructionV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingInstructionV03 obj) throws Exception {
+			checkSecuritiesFinancingInstructionV03(obj);
 		}
 	};
 	/**
@@ -2453,11 +2985,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementConditionsModificationRequestV01> forSecuritiesSettlementConditionsModificationRequestV01 = new MMConstraint<SecuritiesSettlementConditionsModificationRequestV01>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementConditionsModificationRequestV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesSettlementConditionsModificationRequestV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementConditionsModificationRequestV01 obj) throws Exception {
+			checkSecuritiesSettlementConditionsModificationRequestV01(obj);
 		}
 	};
 	/**
@@ -2483,11 +3019,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementConditionsModificationRequestV02> forSecuritiesSettlementConditionsModificationRequestV02 = new MMConstraint<SecuritiesSettlementConditionsModificationRequestV02>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementConditionsModificationRequestV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesSettlementConditionsModificationRequestV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementConditionsModificationRequestV02 obj) throws Exception {
+			checkSecuritiesSettlementConditionsModificationRequestV02(obj);
 		}
 	};
 	/**
@@ -2513,11 +3053,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementConditionsModificationRequestV03> forSecuritiesSettlementConditionsModificationRequestV03 = new MMConstraint<SecuritiesSettlementConditionsModificationRequestV03>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementConditionsModificationRequestV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesSettlementConditionsModificationRequestV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementConditionsModificationRequestV03 obj) throws Exception {
+			checkSecuritiesSettlementConditionsModificationRequestV03(obj);
 		}
 	};
 	/**
@@ -2552,12 +3096,16 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementConditionsModificationRequestV04> forSecuritiesSettlementConditionsModificationRequestV04 = new MMConstraint<SecuritiesSettlementConditionsModificationRequestV04>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementConditionsModificationRequestV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementConditionsModificationRequestV05);
 			owner_lazy = () -> SecuritiesSettlementConditionsModificationRequestV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementConditionsModificationRequestV04 obj) throws Exception {
+			checkSecuritiesSettlementConditionsModificationRequestV04(obj);
 		}
 	};
 	/**
@@ -2583,11 +3131,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV01> forSecuritiesSettlementTransactionConfirmationV01 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV01>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionConfirmationV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionConfirmationV01 obj) throws Exception {
+			checkSecuritiesSettlementTransactionConfirmationV01(obj);
 		}
 	};
 	/**
@@ -2613,11 +3165,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV02> forSecuritiesSettlementTransactionConfirmationV02 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV02>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionConfirmationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionConfirmationV02 obj) throws Exception {
+			checkSecuritiesSettlementTransactionConfirmationV02(obj);
 		}
 	};
 	/**
@@ -2643,11 +3199,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV03> forSecuritiesSettlementTransactionConfirmationV03 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV03>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionConfirmationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionConfirmationV03 obj) throws Exception {
+			checkSecuritiesSettlementTransactionConfirmationV03(obj);
 		}
 	};
 	/**
@@ -2682,12 +3242,16 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV04> forSecuritiesSettlementTransactionConfirmationV04 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV04>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionConfirmationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionConfirmationV05);
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionConfirmationV04 obj) throws Exception {
+			checkSecuritiesSettlementTransactionConfirmationV04(obj);
 		}
 	};
 	/**
@@ -2713,11 +3277,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV01> forSecuritiesSettlementTransactionInstructionV01 = new MMConstraint<SecuritiesSettlementTransactionInstructionV01>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionInstructionV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV01 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV01(obj);
 		}
 	};
 	/**
@@ -2743,11 +3311,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV02> forSecuritiesSettlementTransactionInstructionV02 = new MMConstraint<SecuritiesSettlementTransactionInstructionV02>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionInstructionV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV02 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV02(obj);
 		}
 	};
 	/**
@@ -2773,11 +3345,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV03> forSecuritiesSettlementTransactionInstructionV03 = new MMConstraint<SecuritiesSettlementTransactionInstructionV03>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionInstructionV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV03 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV03(obj);
 		}
 	};
 	/**
@@ -2812,12 +3388,16 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV04> forSecuritiesSettlementTransactionInstructionV04 = new MMConstraint<SecuritiesSettlementTransactionInstructionV04>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionInstructionV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionInstructionV05);
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV04 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV04(obj);
 		}
 	};
 	/**
@@ -2843,11 +3423,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV01> forSecuritiesSettlementTransactionStatusAdviceV01 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV01>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionStatusAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV01 obj) throws Exception {
+			checkSecuritiesSettlementTransactionStatusAdviceV01(obj);
 		}
 	};
 	/**
@@ -2873,11 +3457,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV02> forSecuritiesSettlementTransactionStatusAdviceV02 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV02>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionStatusAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV02 obj) throws Exception {
+			checkSecuritiesSettlementTransactionStatusAdviceV02(obj);
 		}
 	};
 	/**
@@ -2903,11 +3491,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV03> forSecuritiesSettlementTransactionStatusAdviceV03 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV03>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionStatusAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV03 obj) throws Exception {
+			checkSecuritiesSettlementTransactionStatusAdviceV03(obj);
 		}
 	};
 	/**
@@ -2942,12 +3534,16 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV04> forSecuritiesSettlementTransactionStatusAdviceV04 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV04>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionStatusAdviceV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionStatusAdviceV05);
 			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV04 obj) throws Exception {
+			checkSecuritiesSettlementTransactionStatusAdviceV04(obj);
 		}
 	};
 	/**
@@ -2982,12 +3578,16 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesFinancingInstructionV04> forSecuritiesFinancingInstructionV04 = new MMConstraint<SecuritiesFinancingInstructionV04>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesFinancingInstructionV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesFinancingInstructionV05);
 			owner_lazy = () -> SecuritiesFinancingInstructionV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingInstructionV04 obj) throws Exception {
+			checkSecuritiesFinancingInstructionV04(obj);
 		}
 	};
 	/**
@@ -3013,11 +3613,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<PortfolioTransferNotificationV01> forPortfolioTransferNotificationV01 = new MMConstraint<PortfolioTransferNotificationV01>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkPortfolioTransferNotificationV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> PortfolioTransferNotificationV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PortfolioTransferNotificationV01 obj) throws Exception {
+			checkPortfolioTransferNotificationV01(obj);
 		}
 	};
 	/**
@@ -3043,11 +3647,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<PortfolioTransferNotificationV02> forPortfolioTransferNotificationV02 = new MMConstraint<PortfolioTransferNotificationV02>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkPortfolioTransferNotificationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> PortfolioTransferNotificationV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PortfolioTransferNotificationV02 obj) throws Exception {
+			checkPortfolioTransferNotificationV02(obj);
 		}
 	};
 	/**
@@ -3073,11 +3681,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV01> forSecuritiesSettlementTransactionAllegementNotificationV01 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV01>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionAllegementNotificationV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementNotificationV01 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementNotificationV01(obj);
 		}
 	};
 	/**
@@ -3103,11 +3715,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV02> forSecuritiesSettlementTransactionAllegementNotificationV02 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV02>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionAllegementNotificationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementNotificationV02 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementNotificationV02(obj);
 		}
 	};
 	/**
@@ -3133,11 +3749,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTransactionCancellationRequestStatusAdviceV01> forSecuritiesTransactionCancellationRequestStatusAdviceV01 = new MMConstraint<SecuritiesTransactionCancellationRequestStatusAdviceV01>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionCancellationRequestStatusAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesTransactionCancellationRequestStatusAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionCancellationRequestStatusAdviceV01 obj) throws Exception {
+			checkSecuritiesTransactionCancellationRequestStatusAdviceV01(obj);
 		}
 	};
 	/**
@@ -3163,11 +3783,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTransactionCancellationRequestStatusAdviceV02> forSecuritiesTransactionCancellationRequestStatusAdviceV02 = new MMConstraint<SecuritiesTransactionCancellationRequestStatusAdviceV02>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionCancellationRequestStatusAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesTransactionCancellationRequestStatusAdviceV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionCancellationRequestStatusAdviceV02 obj) throws Exception {
+			checkSecuritiesTransactionCancellationRequestStatusAdviceV02(obj);
 		}
 	};
 	/**
@@ -3202,12 +3826,16 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV03> forSecuritiesSettlementTransactionAllegementNotificationV03 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV03>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionAllegementNotificationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionAllegementNotificationV04);
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementNotificationV03 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementNotificationV03(obj);
 		}
 	};
 	/**
@@ -3242,12 +3870,16 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTransactionCancellationRequestStatusAdviceV03> forSecuritiesTransactionCancellationRequestStatusAdviceV03 = new MMConstraint<SecuritiesTransactionCancellationRequestStatusAdviceV03>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionCancellationRequestStatusAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionCancellationRequestStatusAdviceV04);
 			owner_lazy = () -> SecuritiesTransactionCancellationRequestStatusAdviceV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionCancellationRequestStatusAdviceV03 obj) throws Exception {
+			checkSecuritiesTransactionCancellationRequestStatusAdviceV03(obj);
 		}
 	};
 	/**
@@ -3282,12 +3914,16 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<PortfolioTransferNotificationV03> forPortfolioTransferNotificationV03 = new MMConstraint<PortfolioTransferNotificationV03>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkPortfolioTransferNotificationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forPortfolioTransferNotificationV04);
 			owner_lazy = () -> PortfolioTransferNotificationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PortfolioTransferNotificationV03 obj) throws Exception {
+			checkPortfolioTransferNotificationV03(obj);
 		}
 	};
 	/**
@@ -3328,13 +3964,17 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV04> forSecuritiesSettlementTransactionAllegementNotificationV04 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV04>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionAllegementNotificationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionAllegementNotificationV05);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionAllegementNotificationV03;
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementNotificationV04 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementNotificationV04(obj);
 		}
 	};
 	/**
@@ -3375,13 +4015,17 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesFinancingInstructionV05> forSecuritiesFinancingInstructionV05 = new MMConstraint<SecuritiesFinancingInstructionV05>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesFinancingInstructionV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesFinancingInstructionV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesFinancingInstructionV04;
 			owner_lazy = () -> SecuritiesFinancingInstructionV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingInstructionV05 obj) throws Exception {
+			checkSecuritiesFinancingInstructionV05(obj);
 		}
 	};
 	/**
@@ -3422,13 +4066,17 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV05> forSecuritiesSettlementTransactionInstructionV05 = new MMConstraint<SecuritiesSettlementTransactionInstructionV05>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionInstructionV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionInstructionV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionInstructionV04;
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV05 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV05(obj);
 		}
 	};
 	/**
@@ -3469,13 +4117,17 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV05> forSecuritiesSettlementTransactionConfirmationV05 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV05>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionConfirmationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionConfirmationV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionConfirmationV04;
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionConfirmationV05 obj) throws Exception {
+			checkSecuritiesSettlementTransactionConfirmationV05(obj);
 		}
 	};
 	/**
@@ -3516,13 +4168,17 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementConditionsModificationRequestV05> forSecuritiesSettlementConditionsModificationRequestV05 = new MMConstraint<SecuritiesSettlementConditionsModificationRequestV05>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementConditionsModificationRequestV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementConditionsModificationRequestV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementConditionsModificationRequestV04;
 			owner_lazy = () -> SecuritiesSettlementConditionsModificationRequestV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementConditionsModificationRequestV05 obj) throws Exception {
+			checkSecuritiesSettlementConditionsModificationRequestV05(obj);
 		}
 	};
 	/**
@@ -3563,13 +4219,17 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV05> forSecuritiesSettlementTransactionStatusAdviceV05 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV05>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionStatusAdviceV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionStatusAdviceV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionStatusAdviceV04;
 			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV05 obj) throws Exception {
+			checkSecuritiesSettlementTransactionStatusAdviceV05(obj);
 		}
 	};
 	/**
@@ -3610,13 +4270,17 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV06> forSecuritiesSettlementTransactionStatusAdviceV06 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV06>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionStatusAdviceV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionStatusAdviceV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionStatusAdviceV05;
 			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV06 obj) throws Exception {
+			checkSecuritiesSettlementTransactionStatusAdviceV06(obj);
 		}
 	};
 	/**
@@ -3657,13 +4321,17 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV06> forSecuritiesSettlementTransactionInstructionV06 = new MMConstraint<SecuritiesSettlementTransactionInstructionV06>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionInstructionV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionInstructionV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionInstructionV05;
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV06 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV06(obj);
 		}
 	};
 	/**
@@ -3704,13 +4372,17 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV06> forSecuritiesSettlementTransactionConfirmationV06 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV06>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionConfirmationV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionConfirmationV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionConfirmationV05;
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionConfirmationV06 obj) throws Exception {
+			checkSecuritiesSettlementTransactionConfirmationV06(obj);
 		}
 	};
 	/**
@@ -3751,13 +4423,17 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesFinancingInstructionV06> forSecuritiesFinancingInstructionV06 = new MMConstraint<SecuritiesFinancingInstructionV06>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesFinancingInstructionV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesFinancingInstructionV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesFinancingInstructionV05;
 			owner_lazy = () -> SecuritiesFinancingInstructionV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingInstructionV06 obj) throws Exception {
+			checkSecuritiesFinancingInstructionV06(obj);
 		}
 	};
 	/**
@@ -3798,13 +4474,17 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV07> forSecuritiesSettlementTransactionStatusAdviceV07 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV07>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionStatusAdviceV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionStatusAdviceV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionStatusAdviceV06;
 			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV07 obj) throws Exception {
+			checkSecuritiesSettlementTransactionStatusAdviceV07(obj);
 		}
 	};
 	/**
@@ -3845,13 +4525,17 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV05> forSecuritiesSettlementTransactionAllegementNotificationV05 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV05>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionAllegementNotificationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionAllegementNotificationV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionAllegementNotificationV04;
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementNotificationV05 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementNotificationV05(obj);
 		}
 	};
 	/**
@@ -3877,11 +4561,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotification002V05> forSecuritiesSettlementTransactionAllegementNotification002V05 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotification002V05>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionAllegementNotification002V05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotification002V05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementNotification002V05 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementNotification002V05(obj);
 		}
 	};
 	/**
@@ -3907,11 +4595,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdvice002V07> forSecuritiesSettlementTransactionStatusAdvice002V07 = new MMConstraint<SecuritiesSettlementTransactionStatusAdvice002V07>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionStatusAdvice002V07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdvice002V07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdvice002V07 obj) throws Exception {
+			checkSecuritiesSettlementTransactionStatusAdvice002V07(obj);
 		}
 	};
 	/**
@@ -3937,11 +4629,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmation002V06> forSecuritiesSettlementTransactionConfirmation002V06 = new MMConstraint<SecuritiesSettlementTransactionConfirmation002V06>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionConfirmation002V06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmation002V06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionConfirmation002V06 obj) throws Exception {
+			checkSecuritiesSettlementTransactionConfirmation002V06(obj);
 		}
 	};
 	/**
@@ -3967,11 +4663,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstruction002V06> forSecuritiesSettlementTransactionInstruction002V06 = new MMConstraint<SecuritiesSettlementTransactionInstruction002V06>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionInstruction002V06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesSettlementTransactionInstruction002V06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstruction002V06 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstruction002V06(obj);
 		}
 	};
 	/**
@@ -3997,11 +4697,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 */
 	public static final MMConstraint<SecuritiesFinancingInstruction002V06> forSecuritiesFinancingInstruction002V06 = new MMConstraint<SecuritiesFinancingInstruction002V06>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesFinancingInstruction002V06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesFinancingInstruction002V06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingInstruction002V06 obj) throws Exception {
+			checkSecuritiesFinancingInstruction002V06(obj);
 		}
 	};
 
@@ -4074,6 +4778,24 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 * These market practices are available on www.smpg.info.
 	 */
 	public static void checkSecuritiesBalanceCustodyReport002V09(SecuritiesBalanceCustodyReport002V09 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the use of this message.<br>
+	 * These market practices are available on www.smpg.info.
+	 */
+	public static void checkSecuritiesTransactionPendingReport002V09(SecuritiesTransactionPendingReport002V09 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the use of this message.<br>
+	 * These market practices are available on www.smpg.info.
+	 */
+	public static void checkSecuritiesTransactionPostingReport002V08(SecuritiesTransactionPostingReport002V08 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -4218,6 +4940,60 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 * These market practices are available on www.smpg.info.
 	 */
 	public static void checkSecuritiesSettlementConditionsModificationRequest002V07(SecuritiesSettlementConditionsModificationRequest002V07 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the use of this message.<br>
+	 * These market practices are available on www.smpg.info.
+	 */
+	public static void checkPortfolioTransferNotification002V05(PortfolioTransferNotification002V05 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the use of this message.<br>
+	 * These market practices are available on www.smpg.info.
+	 */
+	public static void checkSecuritiesFinancingInstruction002V08(SecuritiesFinancingInstruction002V08 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the use of this message.<br>
+	 * These market practices are available on www.smpg.info.
+	 */
+	public static void checkSecuritiesSettlementTransactionAllegementNotification002V07(SecuritiesSettlementTransactionAllegementNotification002V07 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the use of this message.<br>
+	 * These market practices are available on www.smpg.info.
+	 */
+	public static void checkSecuritiesSettlementTransactionConfirmation002V08(SecuritiesSettlementTransactionConfirmation002V08 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the use of this message.<br>
+	 * These market practices are available on www.smpg.info.
+	 */
+	public static void checkSecuritiesSettlementTransactionInstruction002V08(SecuritiesSettlementTransactionInstruction002V08 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the use of this message.<br>
+	 * These market practices are available on www.smpg.info.
+	 */
+	public static void checkSecuritiesSettlementTransactionStatusAdvice002V09(SecuritiesSettlementTransactionStatusAdvice002V09 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 

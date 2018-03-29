@@ -125,7 +125,7 @@ public class CurrencyExchange11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeliverableCrossCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyExchange11, Optional<ActiveOrHistoricCurrencyCode>> mmDeliverableCrossCurrency = new MMMessageAttribute<CurrencyExchange11, Optional<ActiveOrHistoricCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmSourceCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyExchange11.mmObject();
@@ -137,6 +137,16 @@ public class CurrencyExchange11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyCode> getValue(CurrencyExchange11 obj) {
+			return obj.getDeliverableCrossCurrency();
+		}
+
+		@Override
+		public void setValue(CurrencyExchange11 obj, Optional<ActiveOrHistoricCurrencyCode> value) {
+			obj.setDeliverableCrossCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XchgRate")
@@ -175,7 +185,7 @@ public class CurrencyExchange11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyExchange11, Optional<BaseOneRate>> mmExchangeRate = new MMMessageAttribute<CurrencyExchange11, Optional<BaseOneRate>>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmExchangeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyExchange11.mmObject();
@@ -187,6 +197,16 @@ public class CurrencyExchange11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		@Override
+		public Optional<BaseOneRate> getValue(CurrencyExchange11 obj) {
+			return obj.getExchangeRate();
+		}
+
+		@Override
+		public void setValue(CurrencyExchange11 obj, Optional<BaseOneRate> value) {
+			obj.setExchangeRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FwdXchgRate")
@@ -225,7 +245,7 @@ public class CurrencyExchange11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmForwardExchangeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyExchange11, Optional<BaseOneRate>> mmForwardExchangeRate = new MMMessageAttribute<CurrencyExchange11, Optional<BaseOneRate>>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmExchangeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyExchange11.mmObject();
@@ -237,6 +257,16 @@ public class CurrencyExchange11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		@Override
+		public Optional<BaseOneRate> getValue(CurrencyExchange11 obj) {
+			return obj.getForwardExchangeRate();
+		}
+
+		@Override
+		public void setValue(CurrencyExchange11 obj, Optional<BaseOneRate> value) {
+			obj.setForwardExchangeRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XchgRateBsis")
@@ -273,7 +303,7 @@ public class CurrencyExchange11 {
 	 * definition} = "Indicates the quote base for the exchange rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExchangeRateBasis = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CurrencyExchange11, Optional<ExchangeRateBasis2Choice>> mmExchangeRateBasis = new MMMessageAssociationEnd<CurrencyExchange11, Optional<ExchangeRateBasis2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmExchangeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyExchange11.mmObject();
@@ -286,6 +316,16 @@ public class CurrencyExchange11 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ExchangeRateBasis2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ExchangeRateBasis2Choice> getValue(CurrencyExchange11 obj) {
+			return obj.getExchangeRateBasis();
+		}
+
+		@Override
+		public void setValue(CurrencyExchange11 obj, Optional<ExchangeRateBasis2Choice> value) {
+			obj.setExchangeRateBasis(value.orElse(null));
 		}
 	};
 

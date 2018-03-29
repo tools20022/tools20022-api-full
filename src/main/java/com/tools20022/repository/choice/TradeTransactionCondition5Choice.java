@@ -120,7 +120,7 @@ public class TradeTransactionCondition5Choice {
 	 * TradeTransactionCondition1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeTransactionCondition5Choice, TradeTransactionCondition4Code> mmCode = new MMMessageAttribute<TradeTransactionCondition5Choice, TradeTransactionCondition4Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTradeTransactionCondition;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradeTransactionCondition5Choice.mmObject();
@@ -134,6 +134,16 @@ public class TradeTransactionCondition5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TradeTransactionCondition4Code.mmObject();
+		}
+
+		@Override
+		public TradeTransactionCondition4Code getValue(TradeTransactionCondition5Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(TradeTransactionCondition5Choice obj, TradeTransactionCondition4Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -179,7 +189,7 @@ public class TradeTransactionCondition5Choice {
 	 * TradeTransactionCondition1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeTransactionCondition5Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<TradeTransactionCondition5Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTradeTransactionCondition;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradeTransactionCondition5Choice.mmObject();
@@ -193,6 +203,16 @@ public class TradeTransactionCondition5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(TradeTransactionCondition5Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(TradeTransactionCondition5Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

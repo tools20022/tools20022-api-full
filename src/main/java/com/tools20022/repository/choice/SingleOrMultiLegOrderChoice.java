@@ -102,7 +102,7 @@ public class SingleOrMultiLegOrderChoice {
 	 * definition} = "Provides details about the single order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSingleOrderDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SingleOrMultiLegOrderChoice, SingleOrder1> mmSingleOrderDetails = new MMMessageAssociationEnd<SingleOrMultiLegOrderChoice, SingleOrder1>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesOrder.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.SingleOrMultiLegOrderChoice.mmObject();
@@ -115,6 +115,16 @@ public class SingleOrMultiLegOrderChoice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SingleOrder1.mmObject();
+		}
+
+		@Override
+		public SingleOrder1 getValue(SingleOrMultiLegOrderChoice obj) {
+			return obj.getSingleOrderDetails();
+		}
+
+		@Override
+		public void setValue(SingleOrMultiLegOrderChoice obj, SingleOrder1 value) {
+			obj.setSingleOrderDetails(value);
 		}
 	};
 	@XmlElement(name = "MltlgOrdrDtls", required = true)
@@ -150,7 +160,7 @@ public class SingleOrMultiLegOrderChoice {
 	 * definition} = "Provides details about the multileg order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMultilegOrderDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SingleOrMultiLegOrderChoice, MultiLegOrder1> mmMultilegOrderDetails = new MMMessageAssociationEnd<SingleOrMultiLegOrderChoice, MultiLegOrder1>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesOrder.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.SingleOrMultiLegOrderChoice.mmObject();
@@ -163,6 +173,16 @@ public class SingleOrMultiLegOrderChoice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> MultiLegOrder1.mmObject();
+		}
+
+		@Override
+		public MultiLegOrder1 getValue(SingleOrMultiLegOrderChoice obj) {
+			return obj.getMultilegOrderDetails();
+		}
+
+		@Override
+		public void setValue(SingleOrMultiLegOrderChoice obj, MultiLegOrder1 value) {
+			obj.setMultilegOrderDetails(value);
 		}
 	};
 

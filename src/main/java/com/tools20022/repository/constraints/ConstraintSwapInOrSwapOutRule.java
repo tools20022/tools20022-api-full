@@ -52,12 +52,16 @@ public class ConstraintSwapInOrSwapOutRule {
 	 */
 	public static final MMConstraint<SwapLegIdentification2> forSwapLegIdentification2 = new MMConstraint<SwapLegIdentification2>() {
 		{
-			validator = ConstraintSwapInOrSwapOutRule::checkSwapLegIdentification2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwapInOrSwapOutRule";
 			definition = "SwapIn or SwapOut must be present or both.";
 			owner_lazy = () -> SwapLegIdentification2.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SwapIn</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/SwapOut</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SwapLegIdentification2 obj) throws Exception {
+			checkSwapLegIdentification2(obj);
 		}
 	};
 

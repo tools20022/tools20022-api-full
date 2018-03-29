@@ -122,7 +122,7 @@ public class AffirmationStatus8Choice {
 	 * AffirmationStatus1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AffirmationStatus8Choice, AffirmationStatus1Code> mmCode = new MMMessageAttribute<AffirmationStatus8Choice, AffirmationStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmAffirmationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AffirmationStatus8Choice.mmObject();
@@ -136,6 +136,16 @@ public class AffirmationStatus8Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AffirmationStatus1Code.mmObject();
+		}
+
+		@Override
+		public AffirmationStatus1Code getValue(AffirmationStatus8Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(AffirmationStatus8Choice obj, AffirmationStatus1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -183,7 +193,7 @@ public class AffirmationStatus8Choice {
 	 * AffirmationStatus1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AffirmationStatus8Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<AffirmationStatus8Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmAffirmationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AffirmationStatus8Choice.mmObject();
@@ -197,6 +207,16 @@ public class AffirmationStatus8Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(AffirmationStatus8Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(AffirmationStatus8Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

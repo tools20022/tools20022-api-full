@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AuditTrailOrBusinessError1Choice;
 import com.tools20022.repository.choice.DateSearchChoice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecurityIdentification14;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -119,7 +120,7 @@ public class SecuritiesAuditTrailReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesAuditTrailOrError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesAuditTrailReport1, AuditTrailOrBusinessError1Choice> mmSecuritiesAuditTrailOrError = new MMMessageAssociationEnd<SecuritiesAuditTrailReport1, AuditTrailOrBusinessError1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAuditTrailReport1.mmObject();
 			isDerived = false;
@@ -132,6 +133,16 @@ public class SecuritiesAuditTrailReport1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AuditTrailOrBusinessError1Choice.mmObject();
+		}
+
+		@Override
+		public AuditTrailOrBusinessError1Choice getValue(SecuritiesAuditTrailReport1 obj) {
+			return obj.getSecuritiesAuditTrailOrError();
+		}
+
+		@Override
+		public void setValue(SecuritiesAuditTrailReport1 obj, AuditTrailOrBusinessError1Choice value) {
+			obj.setSecuritiesAuditTrailOrError(value);
 		}
 	};
 	@XmlElement(name = "DtPrd")
@@ -172,7 +183,7 @@ public class SecuritiesAuditTrailReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDatePeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAuditTrailReport1, Optional<DateSearchChoice>> mmDatePeriod = new MMMessageAttribute<SecuritiesAuditTrailReport1, Optional<DateSearchChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAuditTrailReport1.mmObject();
 			isDerived = false;
@@ -184,6 +195,16 @@ public class SecuritiesAuditTrailReport1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateSearchChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateSearchChoice> getValue(SecuritiesAuditTrailReport1 obj) {
+			return obj.getDatePeriod();
+		}
+
+		@Override
+		public void setValue(SecuritiesAuditTrailReport1 obj, Optional<DateSearchChoice> value) {
+			obj.setDatePeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FinInstrmId", required = true)
@@ -225,7 +246,7 @@ public class SecuritiesAuditTrailReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinancialInstrumentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAuditTrailReport1, SecurityIdentification14> mmFinancialInstrumentIdentification = new MMMessageAttribute<SecuritiesAuditTrailReport1, SecurityIdentification14>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAuditTrailReport1.mmObject();
 			isDerived = false;
@@ -236,7 +257,17 @@ public class SecuritiesAuditTrailReport1 {
 			nextVersions_lazy = () -> Arrays.asList(SecuritiesAuditTrailReport2.mmFinancialInstrumentIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
+			complexType_lazy = () -> SecurityIdentification14.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification14 getValue(SecuritiesAuditTrailReport1 obj) {
+			return obj.getFinancialInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesAuditTrailReport1 obj, SecurityIdentification14 value) {
+			obj.setFinancialInstrumentIdentification(value);
 		}
 	};
 
@@ -277,7 +308,7 @@ public class SecuritiesAuditTrailReport1 {
 		return financialInstrumentIdentification;
 	}
 
-	public SecuritiesAuditTrailReport1 setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
+	public SecuritiesAuditTrailReport1 setFinancialInstrumentIdentification(SecurityIdentification14 financialInstrumentIdentification) {
 		this.financialInstrumentIdentification = Objects.requireNonNull(financialInstrumentIdentification);
 		return this;
 	}

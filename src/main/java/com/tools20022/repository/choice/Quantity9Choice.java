@@ -122,7 +122,7 @@ public class Quantity9Choice {
 	 * definition} = "Signed face amount and amortised value of security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalAndCurrentFaceAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Quantity9Choice, OriginalAndCurrentQuantities3> mmOriginalAndCurrentFaceAmount = new MMMessageAssociationEnd<Quantity9Choice, OriginalAndCurrentQuantities3>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmFaceAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity9Choice.mmObject();
@@ -135,6 +135,16 @@ public class Quantity9Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OriginalAndCurrentQuantities3.mmObject();
+		}
+
+		@Override
+		public OriginalAndCurrentQuantities3 getValue(Quantity9Choice obj) {
+			return obj.getOriginalAndCurrentFaceAmount();
+		}
+
+		@Override
+		public void setValue(Quantity9Choice obj, OriginalAndCurrentQuantities3 value) {
+			obj.setOriginalAndCurrentFaceAmount(value);
 		}
 	};
 	@XmlElement(name = "SgndQty", required = true)
@@ -165,7 +175,7 @@ public class Quantity9Choice {
 	 * definition} = "Signed quantity of security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSignedQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Quantity9Choice, SignedQuantityFormat4> mmSignedQuantity = new MMMessageAssociationEnd<Quantity9Choice, SignedQuantityFormat4>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity9Choice.mmObject();
 			isDerived = false;
@@ -177,6 +187,16 @@ public class Quantity9Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SignedQuantityFormat4.mmObject();
+		}
+
+		@Override
+		public SignedQuantityFormat4 getValue(Quantity9Choice obj) {
+			return obj.getSignedQuantity();
+		}
+
+		@Override
+		public void setValue(Quantity9Choice obj, SignedQuantityFormat4 value) {
+			obj.setSignedQuantity(value);
 		}
 	};
 

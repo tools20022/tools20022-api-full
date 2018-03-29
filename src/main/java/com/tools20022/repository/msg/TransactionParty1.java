@@ -23,6 +23,9 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PaymentPartyRole;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccount7;
+import com.tools20022.repository.msg.PartyIdentification8;
+import com.tools20022.repository.msg.ProprietaryParty1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -127,7 +130,7 @@ public class TransactionParty1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInitiatingParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionParty1, Optional<PartyIdentification8>> mmInitiatingParty = new MMMessageAssociationEnd<TransactionParty1, Optional<PartyIdentification8>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionParty1.mmObject();
@@ -139,7 +142,17 @@ public class TransactionParty1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification8.mmObject();
+			type_lazy = () -> PartyIdentification8.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification8> getValue(TransactionParty1 obj) {
+			return obj.getInitiatingParty();
+		}
+
+		@Override
+		public void setValue(TransactionParty1 obj, Optional<PartyIdentification8> value) {
+			obj.setInitiatingParty(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Dbtr")
@@ -176,7 +189,7 @@ public class TransactionParty1 {
 	 * "Party that owes an amount of money to the (ultimate) creditor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDebtor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionParty1, Optional<PartyIdentification8>> mmDebtor = new MMMessageAssociationEnd<TransactionParty1, Optional<PartyIdentification8>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionParty1.mmObject();
@@ -188,7 +201,17 @@ public class TransactionParty1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification8.mmObject();
+			type_lazy = () -> PartyIdentification8.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification8> getValue(TransactionParty1 obj) {
+			return obj.getDebtor();
+		}
+
+		@Override
+		public void setValue(TransactionParty1 obj, Optional<PartyIdentification8> value) {
+			obj.setDebtor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DbtrAcct")
@@ -224,7 +247,7 @@ public class TransactionParty1 {
 	 * definition} = "Unambiguous identification of the account of the debtor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDebtorAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionParty1, Optional<CashAccount7>> mmDebtorAccount = new MMMessageAssociationEnd<TransactionParty1, Optional<CashAccount7>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionParty1.mmObject();
@@ -236,7 +259,17 @@ public class TransactionParty1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount7.mmObject();
+			type_lazy = () -> CashAccount7.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount7> getValue(TransactionParty1 obj) {
+			return obj.getDebtorAccount();
+		}
+
+		@Override
+		public void setValue(TransactionParty1 obj, Optional<CashAccount7> value) {
+			obj.setDebtorAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UltmtDbtr")
@@ -274,7 +307,7 @@ public class TransactionParty1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUltimateDebtor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionParty1, Optional<PartyIdentification8>> mmUltimateDebtor = new MMMessageAssociationEnd<TransactionParty1, Optional<PartyIdentification8>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionParty1.mmObject();
@@ -286,7 +319,17 @@ public class TransactionParty1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification8.mmObject();
+			type_lazy = () -> PartyIdentification8.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification8> getValue(TransactionParty1 obj) {
+			return obj.getUltimateDebtor();
+		}
+
+		@Override
+		public void setValue(TransactionParty1 obj, Optional<PartyIdentification8> value) {
+			obj.setUltimateDebtor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Cdtr")
@@ -322,7 +365,7 @@ public class TransactionParty1 {
 	 * definition} = "Party to which an amount of money is due."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionParty1, Optional<PartyIdentification8>> mmCreditor = new MMMessageAssociationEnd<TransactionParty1, Optional<PartyIdentification8>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionParty1.mmObject();
@@ -334,7 +377,17 @@ public class TransactionParty1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification8.mmObject();
+			type_lazy = () -> PartyIdentification8.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification8> getValue(TransactionParty1 obj) {
+			return obj.getCreditor();
+		}
+
+		@Override
+		public void setValue(TransactionParty1 obj, Optional<PartyIdentification8> value) {
+			obj.setCreditor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtrAcct")
@@ -372,7 +425,7 @@ public class TransactionParty1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditorAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionParty1, Optional<CashAccount7>> mmCreditorAccount = new MMMessageAssociationEnd<TransactionParty1, Optional<CashAccount7>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionParty1.mmObject();
@@ -384,7 +437,17 @@ public class TransactionParty1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount7.mmObject();
+			type_lazy = () -> CashAccount7.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount7> getValue(TransactionParty1 obj) {
+			return obj.getCreditorAccount();
+		}
+
+		@Override
+		public void setValue(TransactionParty1 obj, Optional<CashAccount7> value) {
+			obj.setCreditorAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UltmtCdtr")
@@ -420,7 +483,7 @@ public class TransactionParty1 {
 	 * definition} = "Ultimate party to which an amount of money is due."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUltimateCreditor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionParty1, Optional<PartyIdentification8>> mmUltimateCreditor = new MMMessageAssociationEnd<TransactionParty1, Optional<PartyIdentification8>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionParty1.mmObject();
@@ -432,7 +495,17 @@ public class TransactionParty1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification8.mmObject();
+			type_lazy = () -> PartyIdentification8.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification8> getValue(TransactionParty1 obj) {
+			return obj.getUltimateCreditor();
+		}
+
+		@Override
+		public void setValue(TransactionParty1 obj, Optional<PartyIdentification8> value) {
+			obj.setUltimateCreditor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradgPty")
@@ -470,7 +543,7 @@ public class TransactionParty1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradingParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionParty1, Optional<PartyIdentification8>> mmTradingParty = new MMMessageAssociationEnd<TransactionParty1, Optional<PartyIdentification8>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionParty1.mmObject();
@@ -482,11 +555,21 @@ public class TransactionParty1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification8.mmObject();
+			type_lazy = () -> PartyIdentification8.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification8> getValue(TransactionParty1 obj) {
+			return obj.getTradingParty();
+		}
+
+		@Override
+		public void setValue(TransactionParty1 obj, Optional<PartyIdentification8> value) {
+			obj.setTradingParty(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Prtry")
-	protected List<com.tools20022.repository.msg.ProprietaryParty1> proprietary;
+	protected List<ProprietaryParty1> proprietary;
 	/**
 	 * 
 	 <p>
@@ -513,7 +596,7 @@ public class TransactionParty1 {
 	 * definition} = "Provides proprietary party information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionParty1, List<ProprietaryParty1>> mmProprietary = new MMMessageAssociationEnd<TransactionParty1, List<ProprietaryParty1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionParty1.mmObject();
 			isDerived = false;
@@ -523,7 +606,17 @@ public class TransactionParty1 {
 			definition = "Provides proprietary party information.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ProprietaryParty1.mmObject();
+			type_lazy = () -> ProprietaryParty1.mmObject();
+		}
+
+		@Override
+		public List<ProprietaryParty1> getValue(TransactionParty1 obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(TransactionParty1 obj, List<ProprietaryParty1> value) {
+			obj.setProprietary(value);
 		}
 	};
 
@@ -548,7 +641,7 @@ public class TransactionParty1 {
 		return initiatingParty == null ? Optional.empty() : Optional.of(initiatingParty);
 	}
 
-	public TransactionParty1 setInitiatingParty(com.tools20022.repository.msg.PartyIdentification8 initiatingParty) {
+	public TransactionParty1 setInitiatingParty(PartyIdentification8 initiatingParty) {
 		this.initiatingParty = initiatingParty;
 		return this;
 	}
@@ -557,7 +650,7 @@ public class TransactionParty1 {
 		return debtor == null ? Optional.empty() : Optional.of(debtor);
 	}
 
-	public TransactionParty1 setDebtor(com.tools20022.repository.msg.PartyIdentification8 debtor) {
+	public TransactionParty1 setDebtor(PartyIdentification8 debtor) {
 		this.debtor = debtor;
 		return this;
 	}
@@ -566,7 +659,7 @@ public class TransactionParty1 {
 		return debtorAccount == null ? Optional.empty() : Optional.of(debtorAccount);
 	}
 
-	public TransactionParty1 setDebtorAccount(com.tools20022.repository.msg.CashAccount7 debtorAccount) {
+	public TransactionParty1 setDebtorAccount(CashAccount7 debtorAccount) {
 		this.debtorAccount = debtorAccount;
 		return this;
 	}
@@ -575,7 +668,7 @@ public class TransactionParty1 {
 		return ultimateDebtor == null ? Optional.empty() : Optional.of(ultimateDebtor);
 	}
 
-	public TransactionParty1 setUltimateDebtor(com.tools20022.repository.msg.PartyIdentification8 ultimateDebtor) {
+	public TransactionParty1 setUltimateDebtor(PartyIdentification8 ultimateDebtor) {
 		this.ultimateDebtor = ultimateDebtor;
 		return this;
 	}
@@ -584,7 +677,7 @@ public class TransactionParty1 {
 		return creditor == null ? Optional.empty() : Optional.of(creditor);
 	}
 
-	public TransactionParty1 setCreditor(com.tools20022.repository.msg.PartyIdentification8 creditor) {
+	public TransactionParty1 setCreditor(PartyIdentification8 creditor) {
 		this.creditor = creditor;
 		return this;
 	}
@@ -593,7 +686,7 @@ public class TransactionParty1 {
 		return creditorAccount == null ? Optional.empty() : Optional.of(creditorAccount);
 	}
 
-	public TransactionParty1 setCreditorAccount(com.tools20022.repository.msg.CashAccount7 creditorAccount) {
+	public TransactionParty1 setCreditorAccount(CashAccount7 creditorAccount) {
 		this.creditorAccount = creditorAccount;
 		return this;
 	}
@@ -602,7 +695,7 @@ public class TransactionParty1 {
 		return ultimateCreditor == null ? Optional.empty() : Optional.of(ultimateCreditor);
 	}
 
-	public TransactionParty1 setUltimateCreditor(com.tools20022.repository.msg.PartyIdentification8 ultimateCreditor) {
+	public TransactionParty1 setUltimateCreditor(PartyIdentification8 ultimateCreditor) {
 		this.ultimateCreditor = ultimateCreditor;
 		return this;
 	}
@@ -611,7 +704,7 @@ public class TransactionParty1 {
 		return tradingParty == null ? Optional.empty() : Optional.of(tradingParty);
 	}
 
-	public TransactionParty1 setTradingParty(com.tools20022.repository.msg.PartyIdentification8 tradingParty) {
+	public TransactionParty1 setTradingParty(PartyIdentification8 tradingParty) {
 		this.tradingParty = tradingParty;
 		return this;
 	}
@@ -620,7 +713,7 @@ public class TransactionParty1 {
 		return proprietary == null ? proprietary = new ArrayList<>() : proprietary;
 	}
 
-	public TransactionParty1 setProprietary(List<com.tools20022.repository.msg.ProprietaryParty1> proprietary) {
+	public TransactionParty1 setProprietary(List<ProprietaryParty1> proprietary) {
 		this.proprietary = Objects.requireNonNull(proprietary);
 		return this;
 	}

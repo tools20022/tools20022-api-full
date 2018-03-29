@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.GroupHeader38;
 import com.tools20022.repository.msg.OriginalGroupInformation21;
 import com.tools20022.repository.msg.PaymentTransactionInformation27;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -184,7 +183,7 @@ public class PaymentReturnV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PaymentReturnV02, GroupHeader38> mmGroupHeader = new MMMessageBuildingBlock<PaymentReturnV02, GroupHeader38>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -195,12 +194,14 @@ public class PaymentReturnV02 {
 			complexType_lazy = () -> GroupHeader38.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PaymentReturnV02.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader38 getValue(PaymentReturnV02 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(PaymentReturnV02 obj, GroupHeader38 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "OrgnlGrpInf")
@@ -230,7 +231,7 @@ public class PaymentReturnV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOriginalGroupInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PaymentReturnV02, Optional<OriginalGroupInformation21>> mmOriginalGroupInformation = new MMMessageBuildingBlock<PaymentReturnV02, Optional<OriginalGroupInformation21>>() {
 		{
 			xmlTag = "OrgnlGrpInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -241,12 +242,14 @@ public class PaymentReturnV02 {
 			complexType_lazy = () -> OriginalGroupInformation21.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PaymentReturnV02.class.getMethod("getOriginalGroupInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<OriginalGroupInformation21> getValue(PaymentReturnV02 obj) {
+			return obj.getOriginalGroupInformation();
+		}
+
+		@Override
+		public void setValue(PaymentReturnV02 obj, Optional<OriginalGroupInformation21> value) {
+			obj.setOriginalGroupInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxInf")
@@ -276,7 +279,7 @@ public class PaymentReturnV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PaymentReturnV02, List<PaymentTransactionInformation27>> mmTransactionInformation = new MMMessageBuildingBlock<PaymentReturnV02, List<PaymentTransactionInformation27>>() {
 		{
 			xmlTag = "TxInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -286,12 +289,14 @@ public class PaymentReturnV02 {
 			complexType_lazy = () -> PaymentTransactionInformation27.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PaymentReturnV02.class.getMethod("getTransactionInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<PaymentTransactionInformation27> getValue(PaymentReturnV02 obj) {
+			return obj.getTransactionInformation();
+		}
+
+		@Override
+		public void setValue(PaymentReturnV02 obj, List<PaymentTransactionInformation27> value) {
+			obj.setTransactionInformation(value);
 		}
 	};
 

@@ -27,6 +27,10 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountAndDirection20;
+import com.tools20022.repository.msg.MarketIdentification20;
+import com.tools20022.repository.msg.SecurityIdentification14;
+import com.tools20022.repository.msg.SettlementObligation3;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -126,7 +130,7 @@ public class SettlementObligation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementObligationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementObligation2, Max35Text> mmSettlementObligationIdentification = new MMMessageAttribute<SettlementObligation2, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation2.mmObject();
 			isDerived = false;
@@ -137,6 +141,16 @@ public class SettlementObligation2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(SettlementObligation2 obj) {
+			return obj.getSettlementObligationIdentification();
+		}
+
+		@Override
+		public void setValue(SettlementObligation2 obj, Max35Text value) {
+			obj.setSettlementObligationIdentification(value);
 		}
 	};
 	@XmlElement(name = "FinInstrmId", required = true)
@@ -173,7 +187,7 @@ public class SettlementObligation2 {
 	 * definition} = "Provides details about the security identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementObligation2, SecurityIdentification14> mmFinancialInstrumentIdentification = new MMMessageAssociationEnd<SettlementObligation2, SecurityIdentification14>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation2.mmObject();
@@ -185,7 +199,17 @@ public class SettlementObligation2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
+			type_lazy = () -> SecurityIdentification14.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification14 getValue(SettlementObligation2 obj) {
+			return obj.getFinancialInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(SettlementObligation2 obj, SecurityIdentification14 value) {
+			obj.setFinancialInstrumentIdentification(value);
 		}
 	};
 	@XmlElement(name = "IntnddSttlmDt", required = true)
@@ -223,7 +247,7 @@ public class SettlementObligation2 {
 	 * definition} = "Intended settlement date of the position."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIntendedSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementObligation2, DateFormat11Choice> mmIntendedSettlementDate = new MMMessageAttribute<SettlementObligation2, DateFormat11Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation2.mmObject();
@@ -235,6 +259,16 @@ public class SettlementObligation2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateFormat11Choice.mmObject();
+		}
+
+		@Override
+		public DateFormat11Choice getValue(SettlementObligation2 obj) {
+			return obj.getIntendedSettlementDate();
+		}
+
+		@Override
+		public void setValue(SettlementObligation2 obj, DateFormat11Choice value) {
+			obj.setIntendedSettlementDate(value);
 		}
 	};
 	@XmlElement(name = "Qty", required = true)
@@ -272,7 +306,7 @@ public class SettlementObligation2 {
 	 * "Specifies the quantity related to the settlement obligation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementObligation2, FinancialInstrumentQuantity1Choice> mmQuantity = new MMMessageAssociationEnd<SettlementObligation2, FinancialInstrumentQuantity1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferredQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation2.mmObject();
@@ -285,6 +319,16 @@ public class SettlementObligation2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity1Choice getValue(SettlementObligation2 obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(SettlementObligation2 obj, FinancialInstrumentQuantity1Choice value) {
+			obj.setQuantity(value);
 		}
 	};
 	@XmlElement(name = "SttlmAmt", required = true)
@@ -320,7 +364,7 @@ public class SettlementObligation2 {
 	 * definition} = "Provides the total amount to be settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementObligation2, AmountAndDirection20> mmSettlementAmount = new MMMessageAssociationEnd<SettlementObligation2, AmountAndDirection20>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation2.mmObject();
@@ -332,11 +376,21 @@ public class SettlementObligation2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection20.mmObject();
+			type_lazy = () -> AmountAndDirection20.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection20 getValue(SettlementObligation2 obj) {
+			return obj.getSettlementAmount();
+		}
+
+		@Override
+		public void setValue(SettlementObligation2 obj, AmountAndDirection20 value) {
+			obj.setSettlementAmount(value);
 		}
 	};
 	@XmlElement(name = "AddtlSttlmOblgtnDtls")
-	protected List<com.tools20022.repository.msg.SettlementObligation3> additionalSettlementObligationDetails;
+	protected List<SettlementObligation3> additionalSettlementObligationDetails;
 	/**
 	 * 
 	 <p>
@@ -370,7 +424,7 @@ public class SettlementObligation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdditionalSettlementObligationDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementObligation2, List<SettlementObligation3>> mmAdditionalSettlementObligationDetails = new MMMessageAssociationEnd<SettlementObligation2, List<SettlementObligation3>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesDeliveryObligation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation2.mmObject();
@@ -381,7 +435,17 @@ public class SettlementObligation2 {
 			definition = "Provides additional information about the settlement obligation details.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SettlementObligation3.mmObject();
+			type_lazy = () -> SettlementObligation3.mmObject();
+		}
+
+		@Override
+		public List<SettlementObligation3> getValue(SettlementObligation2 obj) {
+			return obj.getAdditionalSettlementObligationDetails();
+		}
+
+		@Override
+		public void setValue(SettlementObligation2 obj, List<SettlementObligation3> value) {
+			obj.setAdditionalSettlementObligationDetails(value);
 		}
 	};
 	@XmlElement(name = "PlcOfTrad", required = true)
@@ -419,7 +483,7 @@ public class SettlementObligation2 {
 	 * definition} = "Place at which the security is traded."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceOfTrade = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementObligation2, MarketIdentification20> mmPlaceOfTrade = new MMMessageAttribute<SettlementObligation2, MarketIdentification20>() {
 		{
 			businessComponentTrace_lazy = () -> TradingMarket.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation2.mmObject();
@@ -430,7 +494,17 @@ public class SettlementObligation2 {
 			definition = "Place at which the security is traded.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.MarketIdentification20.mmObject();
+			complexType_lazy = () -> MarketIdentification20.mmObject();
+		}
+
+		@Override
+		public MarketIdentification20 getValue(SettlementObligation2 obj) {
+			return obj.getPlaceOfTrade();
+		}
+
+		@Override
+		public void setValue(SettlementObligation2 obj, MarketIdentification20 value) {
+			obj.setPlaceOfTrade(value);
 		}
 	};
 	@XmlElement(name = "TradDt", required = true)
@@ -467,7 +541,7 @@ public class SettlementObligation2 {
 	 * definition} = "Provides the trade date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementObligation2, ISODate> mmTradeDate = new MMMessageAttribute<SettlementObligation2, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation2.mmObject();
@@ -479,6 +553,16 @@ public class SettlementObligation2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(SettlementObligation2 obj) {
+			return obj.getTradeDate();
+		}
+
+		@Override
+		public void setValue(SettlementObligation2 obj, ISODate value) {
+			obj.setTradeDate(value);
 		}
 	};
 
@@ -512,7 +596,7 @@ public class SettlementObligation2 {
 		return financialInstrumentIdentification;
 	}
 
-	public SettlementObligation2 setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
+	public SettlementObligation2 setFinancialInstrumentIdentification(SecurityIdentification14 financialInstrumentIdentification) {
 		this.financialInstrumentIdentification = Objects.requireNonNull(financialInstrumentIdentification);
 		return this;
 	}
@@ -539,7 +623,7 @@ public class SettlementObligation2 {
 		return settlementAmount;
 	}
 
-	public SettlementObligation2 setSettlementAmount(com.tools20022.repository.msg.AmountAndDirection20 settlementAmount) {
+	public SettlementObligation2 setSettlementAmount(AmountAndDirection20 settlementAmount) {
 		this.settlementAmount = Objects.requireNonNull(settlementAmount);
 		return this;
 	}
@@ -548,7 +632,7 @@ public class SettlementObligation2 {
 		return additionalSettlementObligationDetails == null ? additionalSettlementObligationDetails = new ArrayList<>() : additionalSettlementObligationDetails;
 	}
 
-	public SettlementObligation2 setAdditionalSettlementObligationDetails(List<com.tools20022.repository.msg.SettlementObligation3> additionalSettlementObligationDetails) {
+	public SettlementObligation2 setAdditionalSettlementObligationDetails(List<SettlementObligation3> additionalSettlementObligationDetails) {
 		this.additionalSettlementObligationDetails = Objects.requireNonNull(additionalSettlementObligationDetails);
 		return this;
 	}
@@ -557,7 +641,7 @@ public class SettlementObligation2 {
 		return placeOfTrade;
 	}
 
-	public SettlementObligation2 setPlaceOfTrade(com.tools20022.repository.msg.MarketIdentification20 placeOfTrade) {
+	public SettlementObligation2 setPlaceOfTrade(MarketIdentification20 placeOfTrade) {
 		this.placeOfTrade = Objects.requireNonNull(placeOfTrade);
 		return this;
 	}

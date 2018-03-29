@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashBalance6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -101,7 +102,7 @@ public class LiquidityDetails1 {
 	 * definition} = "Current balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LiquidityDetails1, CashBalance6> mmBalance = new MMMessageAssociationEnd<LiquidityDetails1, CashBalance6>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityDetails1.mmObject();
 			isDerived = false;
@@ -112,7 +113,17 @@ public class LiquidityDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashBalance6.mmObject();
+			type_lazy = () -> CashBalance6.mmObject();
+		}
+
+		@Override
+		public CashBalance6 getValue(LiquidityDetails1 obj) {
+			return obj.getBalance();
+		}
+
+		@Override
+		public void setValue(LiquidityDetails1 obj, CashBalance6 value) {
+			obj.setBalance(value);
 		}
 	};
 	@XmlElement(name = "NetAvlblLqdty", required = true)
@@ -145,7 +156,7 @@ public class LiquidityDetails1 {
 	 * definition} = "Net available liquidity on the account(s)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNetAvailableLiquidity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LiquidityDetails1, ActiveCurrencyAndAmount> mmNetAvailableLiquidity = new MMMessageAttribute<LiquidityDetails1, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityDetails1.mmObject();
 			isDerived = false;
@@ -156,6 +167,16 @@ public class LiquidityDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(LiquidityDetails1 obj) {
+			return obj.getNetAvailableLiquidity();
+		}
+
+		@Override
+		public void setValue(LiquidityDetails1 obj, ActiveCurrencyAndAmount value) {
+			obj.setNetAvailableLiquidity(value);
 		}
 	};
 	@XmlElement(name = "NonCshRsvdAmt", required = true)
@@ -190,7 +211,7 @@ public class LiquidityDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNonCashReservedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LiquidityDetails1, ActiveCurrencyAndAmount> mmNonCashReservedAmount = new MMMessageAttribute<LiquidityDetails1, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityDetails1.mmObject();
 			isDerived = false;
@@ -201,6 +222,16 @@ public class LiquidityDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(LiquidityDetails1 obj) {
+			return obj.getNonCashReservedAmount();
+		}
+
+		@Override
+		public void setValue(LiquidityDetails1 obj, ActiveCurrencyAndAmount value) {
+			obj.setNonCashReservedAmount(value);
 		}
 	};
 	@XmlElement(name = "CshRsvdAmt", required = true)
@@ -233,7 +264,7 @@ public class LiquidityDetails1 {
 	 * definition} = "Total amount of liquidity reserved for cash withdrawal."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashReservedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LiquidityDetails1, ActiveCurrencyAndAmount> mmCashReservedAmount = new MMMessageAttribute<LiquidityDetails1, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityDetails1.mmObject();
 			isDerived = false;
@@ -244,6 +275,16 @@ public class LiquidityDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(LiquidityDetails1 obj) {
+			return obj.getCashReservedAmount();
+		}
+
+		@Override
+		public void setValue(LiquidityDetails1 obj, ActiveCurrencyAndAmount value) {
+			obj.setCashReservedAmount(value);
 		}
 	};
 
@@ -265,7 +306,7 @@ public class LiquidityDetails1 {
 		return balance;
 	}
 
-	public LiquidityDetails1 setBalance(com.tools20022.repository.msg.CashBalance6 balance) {
+	public LiquidityDetails1 setBalance(CashBalance6 balance) {
 		this.balance = Objects.requireNonNull(balance);
 		return this;
 	}

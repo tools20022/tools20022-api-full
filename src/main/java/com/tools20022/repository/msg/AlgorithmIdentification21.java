@@ -52,7 +52,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "AlgorithmIdentification21"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -103,7 +103,7 @@ public class AlgorithmIdentification21 {
 	 * AlgorithmIdentification16.mmAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AlgorithmIdentification21, Algorithm16Code> mmAlgorithm = new MMMessageAttribute<AlgorithmIdentification21, Algorithm16Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification21.mmObject();
 			isDerived = false;
@@ -116,6 +116,16 @@ public class AlgorithmIdentification21 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Algorithm16Code.mmObject();
 		}
+
+		@Override
+		public Algorithm16Code getValue(AlgorithmIdentification21 obj) {
+			return obj.getAlgorithm();
+		}
+
+		@Override
+		public void setValue(AlgorithmIdentification21 obj, Algorithm16Code value) {
+			obj.setAlgorithm(value);
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -123,7 +133,7 @@ public class AlgorithmIdentification21 {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlgorithmIdentification21.mmAlgorithm);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AlgorithmIdentification21";
 				definition = "Cryptographic algorithm and parameters of digests.";
 				previousVersion_lazy = () -> AlgorithmIdentification16.mmObject();

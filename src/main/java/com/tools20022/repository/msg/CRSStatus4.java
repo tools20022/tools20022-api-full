@@ -107,7 +107,7 @@ public class CRSStatus4 {
 	 * definition} = "Common Reporting Standard (CRS) status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CRSStatus4, CRSStatus3Choice> mmType = new MMMessageAssociationEnd<CRSStatus4, CRSStatus3Choice>() {
 		{
 			businessElementTrace_lazy = () -> CRSStatus.mmCRSStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CRSStatus4.mmObject();
@@ -120,6 +120,16 @@ public class CRSStatus4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CRSStatus3Choice.mmObject();
+		}
+
+		@Override
+		public CRSStatus3Choice getValue(CRSStatus4 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(CRSStatus4 obj, CRSStatus3Choice value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Src")
@@ -154,7 +164,7 @@ public class CRSStatus4 {
 	 * definition} = "Source of the Common Reporting Standard (CRS) status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSource = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CRSStatus4, Optional<CRSSource1Choice>> mmSource = new MMMessageAssociationEnd<CRSStatus4, Optional<CRSSource1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CRSStatus.mmCRSSourceStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CRSStatus4.mmObject();
@@ -167,6 +177,16 @@ public class CRSStatus4 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CRSSource1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CRSSource1Choice> getValue(CRSStatus4 obj) {
+			return obj.getSource();
+		}
+
+		@Override
+		public void setValue(CRSStatus4 obj, Optional<CRSSource1Choice> value) {
+			obj.setSource(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XcptnlRptgCtry")
@@ -204,7 +224,7 @@ public class CRSStatus4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExceptionalReportingCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CRSStatus4, Optional<CountryCode>> mmExceptionalReportingCountry = new MMMessageAttribute<CRSStatus4, Optional<CountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> CRSStatus.mmExceptionalReportingCountry;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CRSStatus4.mmObject();
@@ -216,6 +236,16 @@ public class CRSStatus4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(CRSStatus4 obj) {
+			return obj.getExceptionalReportingCountry();
+		}
+
+		@Override
+		public void setValue(CRSStatus4 obj, Optional<CountryCode> value) {
+			obj.setExceptionalReportingCountry(value.orElse(null));
 		}
 	};
 

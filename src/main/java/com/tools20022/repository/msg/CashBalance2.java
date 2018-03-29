@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.Balance;
 import com.tools20022.repository.entity.CashBalance;
 import com.tools20022.repository.entity.DebitCreditFacility;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashBalanceAvailability1;
+import com.tools20022.repository.msg.CreditLine1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -124,7 +126,7 @@ public class CashBalance2 {
 	 * "Specifies the nature of a balance, eg, opening booked balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashBalance2, BalanceType2Choice> mmType = new MMMessageAssociationEnd<CashBalance2, BalanceType2Choice>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalance2.mmObject();
@@ -137,6 +139,16 @@ public class CashBalance2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> BalanceType2Choice.mmObject();
+		}
+
+		@Override
+		public BalanceType2Choice getValue(CashBalance2 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(CashBalance2 obj, BalanceType2Choice value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "CdtLine")
@@ -171,7 +183,7 @@ public class CashBalance2 {
 	 * definition} = "Provides further details on the credit line information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditLine = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashBalance2, Optional<CreditLine1>> mmCreditLine = new MMMessageAssociationEnd<CashBalance2, Optional<CreditLine1>>() {
 		{
 			businessElementTrace_lazy = () -> DebitCreditFacility.mmCreditLine;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalance2.mmObject();
@@ -183,7 +195,17 @@ public class CashBalance2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CreditLine1.mmObject();
+			type_lazy = () -> CreditLine1.mmObject();
+		}
+
+		@Override
+		public Optional<CreditLine1> getValue(CashBalance2 obj) {
+			return obj.getCreditLine();
+		}
+
+		@Override
+		public void setValue(CashBalance2 obj, Optional<CreditLine1> value) {
+			obj.setCreditLine(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -220,7 +242,7 @@ public class CashBalance2 {
 	 * definition} = "Currency and amount of money of the cash balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashBalance2, CurrencyAndAmount> mmAmount = new MMMessageAttribute<CashBalance2, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalance2.mmObject();
@@ -232,6 +254,16 @@ public class CashBalance2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(CashBalance2 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(CashBalance2 obj, CurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "CdtDbtInd", required = true)
@@ -270,7 +302,7 @@ public class CashBalance2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashBalance2, CreditDebitCode> mmCreditDebitIndicator = new MMMessageAttribute<CashBalance2, CreditDebitCode>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalance2.mmObject();
@@ -282,6 +314,16 @@ public class CashBalance2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public CreditDebitCode getValue(CashBalance2 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(CashBalance2 obj, CreditDebitCode value) {
+			obj.setCreditDebitIndicator(value);
 		}
 	};
 	@XmlElement(name = "Dt", required = true)
@@ -318,7 +360,7 @@ public class CashBalance2 {
 	 * definition} = "Specifies the date (and time) of the balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashBalance2, DateAndDateTimeChoice> mmDate = new MMMessageAttribute<CashBalance2, DateAndDateTimeChoice>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmValueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalance2.mmObject();
@@ -331,9 +373,19 @@ public class CashBalance2 {
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(CashBalance2 obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(CashBalance2 obj, DateAndDateTimeChoice value) {
+			obj.setDate(value);
+		}
 	};
 	@XmlElement(name = "Avlbty")
-	protected List<com.tools20022.repository.msg.CashBalanceAvailability1> availability;
+	protected List<CashBalanceAvailability1> availability;
 	/**
 	 * 
 	 <p>
@@ -367,7 +419,7 @@ public class CashBalance2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAvailability = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashBalance2, List<CashBalanceAvailability1>> mmAvailability = new MMMessageAssociationEnd<CashBalance2, List<CashBalanceAvailability1>>() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmAvailability;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalance2.mmObject();
@@ -378,7 +430,17 @@ public class CashBalance2 {
 			definition = "Set of elements used to indicate when the booked funds will become available, ie can be accessed and start generating interest. \n\nUsage: this type of info is eg used in US, and is linked to particular instruments, such as cheques.\nExample: When a cheque is deposited, it will be booked on the deposit day, but the funds will only be accessible as of the indicated availability day (according to national banking regulations).";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashBalanceAvailability1.mmObject();
+			type_lazy = () -> CashBalanceAvailability1.mmObject();
+		}
+
+		@Override
+		public List<CashBalanceAvailability1> getValue(CashBalance2 obj) {
+			return obj.getAvailability();
+		}
+
+		@Override
+		public void setValue(CashBalance2 obj, List<CashBalanceAvailability1> value) {
+			obj.setAvailability(value);
 		}
 	};
 
@@ -411,7 +473,7 @@ public class CashBalance2 {
 		return creditLine == null ? Optional.empty() : Optional.of(creditLine);
 	}
 
-	public CashBalance2 setCreditLine(com.tools20022.repository.msg.CreditLine1 creditLine) {
+	public CashBalance2 setCreditLine(CreditLine1 creditLine) {
 		this.creditLine = creditLine;
 		return this;
 	}
@@ -447,7 +509,7 @@ public class CashBalance2 {
 		return availability == null ? availability = new ArrayList<>() : availability;
 	}
 
-	public CashBalance2 setAvailability(List<com.tools20022.repository.msg.CashBalanceAvailability1> availability) {
+	public CashBalance2 setAvailability(List<CashBalanceAvailability1> availability) {
 		this.availability = Objects.requireNonNull(availability);
 		return this;
 	}

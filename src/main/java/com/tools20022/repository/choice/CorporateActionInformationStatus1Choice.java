@@ -120,7 +120,7 @@ public class CorporateActionInformationStatus1Choice {
 	 * "Provides information about the processing status of the advice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionInformationStatus1Choice, CorporateActionInformationProcessingStatus1> mmProcessedStatus = new MMMessageAssociationEnd<CorporateActionInformationStatus1Choice, CorporateActionInformationProcessingStatus1>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionInformationStatus1Choice.mmObject();
@@ -133,6 +133,16 @@ public class CorporateActionInformationStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CorporateActionInformationProcessingStatus1.mmObject();
+		}
+
+		@Override
+		public CorporateActionInformationProcessingStatus1 getValue(CorporateActionInformationStatus1Choice obj) {
+			return obj.getProcessedStatus();
+		}
+
+		@Override
+		public void setValue(CorporateActionInformationStatus1Choice obj, CorporateActionInformationProcessingStatus1 value) {
+			obj.setProcessedStatus(value);
 		}
 	};
 	@XmlElement(name = "RjctdSts", required = true)
@@ -169,7 +179,7 @@ public class CorporateActionInformationStatus1Choice {
 	 * definition} = "Provides information about the rejection status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejectedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionInformationStatus1Choice, CorporateActionInformationRejectedStatus1> mmRejectedStatus = new MMMessageAssociationEnd<CorporateActionInformationStatus1Choice, CorporateActionInformationRejectedStatus1>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionInformationStatus1Choice.mmObject();
@@ -182,6 +192,16 @@ public class CorporateActionInformationStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CorporateActionInformationRejectedStatus1.mmObject();
+		}
+
+		@Override
+		public CorporateActionInformationRejectedStatus1 getValue(CorporateActionInformationStatus1Choice obj) {
+			return obj.getRejectedStatus();
+		}
+
+		@Override
+		public void setValue(CorporateActionInformationStatus1Choice obj, CorporateActionInformationRejectedStatus1 value) {
+			obj.setRejectedStatus(value);
 		}
 	};
 

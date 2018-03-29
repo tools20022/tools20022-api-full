@@ -114,7 +114,7 @@ public class Reference1Choice {
 	 * definition} = "Unique identifier of the margin call request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarginCallRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference1Choice, Max35Text> mmMarginCallRequestIdentification = new MMMessageAttribute<Reference1Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Reference1Choice.mmObject();
 			isDerived = false;
@@ -125,6 +125,16 @@ public class Reference1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Reference1Choice obj) {
+			return obj.getMarginCallRequestIdentification();
+		}
+
+		@Override
+		public void setValue(Reference1Choice obj, Max35Text value) {
+			obj.setMarginCallRequestIdentification(value);
 		}
 	};
 	@XmlElement(name = "MrgnCallRspnId", required = true)
@@ -156,7 +166,7 @@ public class Reference1Choice {
 	 * definition} = "Unique identifier of the margin call response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarginCallResponseIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference1Choice, Max35Text> mmMarginCallResponseIdentification = new MMMessageAttribute<Reference1Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Reference1Choice.mmObject();
 			isDerived = false;
@@ -167,6 +177,16 @@ public class Reference1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Reference1Choice obj) {
+			return obj.getMarginCallResponseIdentification();
+		}
+
+		@Override
+		public void setValue(Reference1Choice obj, Max35Text value) {
+			obj.setMarginCallResponseIdentification(value);
 		}
 	};
 	@XmlElement(name = "CollPrpslId", required = true)
@@ -198,7 +218,7 @@ public class Reference1Choice {
 	 * definition} = "Unique identifier of the collateral proposal."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralProposalIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference1Choice, Max35Text> mmCollateralProposalIdentification = new MMMessageAttribute<Reference1Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Reference1Choice.mmObject();
 			isDerived = false;
@@ -209,6 +229,16 @@ public class Reference1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Reference1Choice obj) {
+			return obj.getCollateralProposalIdentification();
+		}
+
+		@Override
+		public void setValue(Reference1Choice obj, Max35Text value) {
+			obj.setCollateralProposalIdentification(value);
 		}
 	};
 	@XmlElement(name = "CollPrpslRspnId", required = true)
@@ -240,7 +270,7 @@ public class Reference1Choice {
 	 * definition} = "Unique identifier of the collateral proposal response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralProposalResponseIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference1Choice, Max35Text> mmCollateralProposalResponseIdentification = new MMMessageAttribute<Reference1Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Reference1Choice.mmObject();
 			isDerived = false;
@@ -251,6 +281,16 @@ public class Reference1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Reference1Choice obj) {
+			return obj.getCollateralProposalResponseIdentification();
+		}
+
+		@Override
+		public void setValue(Reference1Choice obj, Max35Text value) {
+			obj.setCollateralProposalResponseIdentification(value);
 		}
 	};
 	@XmlElement(name = "DsptNtfctnId", required = true)
@@ -282,7 +322,7 @@ public class Reference1Choice {
 	 * definition} = "Unique identifier of the dispute notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDisputeNotificationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference1Choice, Max35Text> mmDisputeNotificationIdentification = new MMMessageAttribute<Reference1Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Reference1Choice.mmObject();
 			isDerived = false;
@@ -293,6 +333,16 @@ public class Reference1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Reference1Choice obj) {
+			return obj.getDisputeNotificationIdentification();
+		}
+
+		@Override
+		public void setValue(Reference1Choice obj, Max35Text value) {
+			obj.setDisputeNotificationIdentification(value);
 		}
 	};
 	@XmlElement(name = "CollSbstitnReqId", required = true)
@@ -325,7 +375,7 @@ public class Reference1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralSubstitutionRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference1Choice, Max35Text> mmCollateralSubstitutionRequestIdentification = new MMMessageAttribute<Reference1Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Reference1Choice.mmObject();
 			isDerived = false;
@@ -336,6 +386,16 @@ public class Reference1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Reference1Choice obj) {
+			return obj.getCollateralSubstitutionRequestIdentification();
+		}
+
+		@Override
+		public void setValue(Reference1Choice obj, Max35Text value) {
+			obj.setCollateralSubstitutionRequestIdentification(value);
 		}
 	};
 

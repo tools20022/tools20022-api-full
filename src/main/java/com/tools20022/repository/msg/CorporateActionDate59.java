@@ -121,7 +121,7 @@ public class CorporateActionDate59 {
 	 * CorporateActionDate49.mmRecordDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRecordDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionDate59, Optional<DateFormat43Choice>> mmRecordDate = new MMMessageAssociationEnd<CorporateActionDate59, Optional<DateFormat43Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDeadline.mmRecordDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate59.mmObject();
@@ -136,6 +136,16 @@ public class CorporateActionDate59 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat43Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat43Choice> getValue(CorporateActionDate59 obj) {
+			return obj.getRecordDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate59 obj, Optional<DateFormat43Choice> value) {
+			obj.setRecordDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ExDvddDt")
@@ -181,7 +191,7 @@ public class CorporateActionDate59 {
 	 * CorporateActionDate49.mmExDividendDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExDividendDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionDate59, Optional<DateFormat43Choice>> mmExDividendDate = new MMMessageAssociationEnd<CorporateActionDate59, Optional<DateFormat43Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmExDividendDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate59.mmObject();
@@ -196,6 +206,16 @@ public class CorporateActionDate59 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat43Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat43Choice> getValue(CorporateActionDate59 obj) {
+			return obj.getExDividendDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate59 obj, Optional<DateFormat43Choice> value) {
+			obj.setExDividendDate(value.orElse(null));
 		}
 	};
 

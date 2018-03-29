@@ -120,7 +120,7 @@ public class CounterpartyTradeNature5Choice {
 	 * "Indicates that reporting counterparty is a financial institution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinancialInstitution = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CounterpartyTradeNature5Choice, List<FinancialPartySectorType1Code>> mmFinancialInstitution = new MMMessageAttribute<CounterpartyTradeNature5Choice, List<FinancialPartySectorType1Code>>() {
 		{
 			businessComponentTrace_lazy = () -> FinancialInstitution.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.CounterpartyTradeNature5Choice.mmObject();
@@ -131,6 +131,16 @@ public class CounterpartyTradeNature5Choice {
 			definition = "Indicates that reporting counterparty is a financial institution.";
 			minOccurs = 1;
 			simpleType_lazy = () -> FinancialPartySectorType1Code.mmObject();
+		}
+
+		@Override
+		public List<FinancialPartySectorType1Code> getValue(CounterpartyTradeNature5Choice obj) {
+			return obj.getFinancialInstitution();
+		}
+
+		@Override
+		public void setValue(CounterpartyTradeNature5Choice obj, List<FinancialPartySectorType1Code> value) {
+			obj.setFinancialInstitution(value);
 		}
 	};
 	@XmlElement(name = "NFI", required = true)
@@ -168,7 +178,7 @@ public class CounterpartyTradeNature5Choice {
 	 * "Indicates that reporting counterparty is a non financial institution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNonFinancialInstitution = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CounterpartyTradeNature5Choice, NonFinancialInstitutionSector2> mmNonFinancialInstitution = new MMMessageAssociationEnd<CounterpartyTradeNature5Choice, NonFinancialInstitutionSector2>() {
 		{
 			businessComponentTrace_lazy = () -> NonFinancialInstitution.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.CounterpartyTradeNature5Choice.mmObject();
@@ -181,6 +191,16 @@ public class CounterpartyTradeNature5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> NonFinancialInstitutionSector2.mmObject();
+		}
+
+		@Override
+		public NonFinancialInstitutionSector2 getValue(CounterpartyTradeNature5Choice obj) {
+			return obj.getNonFinancialInstitution();
+		}
+
+		@Override
+		public void setValue(CounterpartyTradeNature5Choice obj, NonFinancialInstitutionSector2 value) {
+			obj.setNonFinancialInstitution(value);
 		}
 	};
 	@XmlElement(name = "CntrlCntrPty", required = true)
@@ -218,7 +238,7 @@ public class CounterpartyTradeNature5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCentralCounterParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CounterpartyTradeNature5Choice, NoReasonCode> mmCentralCounterParty = new MMMessageAttribute<CounterpartyTradeNature5Choice, NoReasonCode>() {
 		{
 			businessComponentTrace_lazy = () -> ClearingSystem.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.CounterpartyTradeNature5Choice.mmObject();
@@ -230,6 +250,16 @@ public class CounterpartyTradeNature5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(CounterpartyTradeNature5Choice obj) {
+			return obj.getCentralCounterParty();
+		}
+
+		@Override
+		public void setValue(CounterpartyTradeNature5Choice obj, NoReasonCode value) {
+			obj.setCentralCounterParty(value);
 		}
 	};
 	@XmlElement(name = "Othr", required = true)
@@ -262,7 +292,7 @@ public class CounterpartyTradeNature5Choice {
 	 * "Indicates that reporting party is other type of counterparty."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOther = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CounterpartyTradeNature5Choice, NoReasonCode> mmOther = new MMMessageAttribute<CounterpartyTradeNature5Choice, NoReasonCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CounterpartyTradeNature5Choice.mmObject();
 			isDerived = false;
@@ -273,6 +303,16 @@ public class CounterpartyTradeNature5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(CounterpartyTradeNature5Choice obj) {
+			return obj.getOther();
+		}
+
+		@Override
+		public void setValue(CounterpartyTradeNature5Choice obj, NoReasonCode value) {
+			obj.setOther(value);
 		}
 	};
 

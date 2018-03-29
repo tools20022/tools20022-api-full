@@ -108,7 +108,7 @@ public class CashAccount15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmServicer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount15, BICIdentifier> mmServicer = new MMMessageAttribute<CashAccount15, BICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount15.mmObject();
@@ -120,6 +120,16 @@ public class CashAccount15 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
+		}
+
+		@Override
+		public BICIdentifier getValue(CashAccount15 obj) {
+			return obj.getServicer();
+		}
+
+		@Override
+		public void setValue(CashAccount15 obj, BICIdentifier value) {
+			obj.setServicer(value);
 		}
 	};
 	@XmlElement(name = "Id", required = true)
@@ -158,7 +168,7 @@ public class CashAccount15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount15, AccountIdentification1Choice> mmIdentification = new MMMessageAttribute<CashAccount15, AccountIdentification1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount15.mmObject();
@@ -170,6 +180,16 @@ public class CashAccount15 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AccountIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public AccountIdentification1Choice getValue(CashAccount15 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(CashAccount15 obj, AccountIdentification1Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 

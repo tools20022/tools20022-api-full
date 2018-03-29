@@ -31,6 +31,7 @@ import com.tools20022.repository.entity.ElectronicAddress;
 import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.SecurityCertificate;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BinaryFile1;
 import com.tools20022.repository.other.SignatureEnvelopeReference;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -143,7 +144,7 @@ public class DocumentGeneralInformation3 {
 	 * DocumentGeneralInformation2.mmDocumentType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDocumentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentGeneralInformation3, ExternalDocumentType1Code> mmDocumentType = new MMMessageAttribute<DocumentGeneralInformation3, ExternalDocumentType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation3.mmObject();
@@ -156,6 +157,16 @@ public class DocumentGeneralInformation3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalDocumentType1Code.mmObject();
+		}
+
+		@Override
+		public ExternalDocumentType1Code getValue(DocumentGeneralInformation3 obj) {
+			return obj.getDocumentType();
+		}
+
+		@Override
+		public void setValue(DocumentGeneralInformation3 obj, ExternalDocumentType1Code value) {
+			obj.setDocumentType(value);
 		}
 	};
 	@XmlElement(name = "DocNb", required = true)
@@ -197,7 +208,7 @@ public class DocumentGeneralInformation3 {
 	 * DocumentGeneralInformation2.mmDocumentNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDocumentNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentGeneralInformation3, Max35Text> mmDocumentNumber = new MMMessageAttribute<DocumentGeneralInformation3, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation3.mmObject();
@@ -210,6 +221,16 @@ public class DocumentGeneralInformation3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(DocumentGeneralInformation3 obj) {
+			return obj.getDocumentNumber();
+		}
+
+		@Override
+		public void setValue(DocumentGeneralInformation3 obj, Max35Text value) {
+			obj.setDocumentNumber(value);
 		}
 	};
 	@XmlElement(name = "SndrRcvrSeqId")
@@ -248,7 +269,7 @@ public class DocumentGeneralInformation3 {
 	 * DocumentGeneralInformation2.mmSenderReceiverSequenceIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSenderReceiverSequenceIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentGeneralInformation3, Optional<Max140Text>> mmSenderReceiverSequenceIdentification = new MMMessageAttribute<DocumentGeneralInformation3, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation3.mmObject();
 			isDerived = false;
@@ -260,6 +281,16 @@ public class DocumentGeneralInformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(DocumentGeneralInformation3 obj) {
+			return obj.getSenderReceiverSequenceIdentification();
+		}
+
+		@Override
+		public void setValue(DocumentGeneralInformation3 obj, Optional<Max140Text> value) {
+			obj.setSenderReceiverSequenceIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IsseDt")
@@ -301,7 +332,7 @@ public class DocumentGeneralInformation3 {
 	 * DocumentGeneralInformation2.mmIssueDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentGeneralInformation3, Optional<ISODate>> mmIssueDate = new MMMessageAttribute<DocumentGeneralInformation3, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation3.mmObject();
@@ -314,6 +345,16 @@ public class DocumentGeneralInformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(DocumentGeneralInformation3 obj) {
+			return obj.getIssueDate();
+		}
+
+		@Override
+		public void setValue(DocumentGeneralInformation3 obj, Optional<ISODate> value) {
+			obj.setIssueDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "URL")
@@ -356,7 +397,7 @@ public class DocumentGeneralInformation3 {
 	 * DocumentGeneralInformation2.mmURL}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmURL = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentGeneralInformation3, Optional<Max256Text>> mmURL = new MMMessageAttribute<DocumentGeneralInformation3, Optional<Max256Text>>() {
 		{
 			businessElementTrace_lazy = () -> ElectronicAddress.mmURLAddress;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation3.mmObject();
@@ -369,6 +410,16 @@ public class DocumentGeneralInformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max256Text> getValue(DocumentGeneralInformation3 obj) {
+			return obj.getURL();
+		}
+
+		@Override
+		public void setValue(DocumentGeneralInformation3 obj, Optional<Max256Text> value) {
+			obj.setURL(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LkFileHash")
@@ -407,7 +458,7 @@ public class DocumentGeneralInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLinkFileHash = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DocumentGeneralInformation3, Optional<SignatureEnvelopeReference>> mmLinkFileHash = new MMMessageAssociationEnd<DocumentGeneralInformation3, Optional<SignatureEnvelopeReference>>() {
 		{
 			businessElementTrace_lazy = () -> SecurityCertificate.mmElectronicSignature;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation3.mmObject();
@@ -420,6 +471,16 @@ public class DocumentGeneralInformation3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SignatureEnvelopeReference.mmObject();
+		}
+
+		@Override
+		public Optional<SignatureEnvelopeReference> getValue(DocumentGeneralInformation3 obj) {
+			return obj.getLinkFileHash();
+		}
+
+		@Override
+		public void setValue(DocumentGeneralInformation3 obj, Optional<SignatureEnvelopeReference> value) {
+			obj.setLinkFileHash(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AttchdBinryFile", required = true)
@@ -455,7 +516,7 @@ public class DocumentGeneralInformation3 {
 	 * DocumentGeneralInformation2.mmAttachedBinaryFile}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAttachedBinaryFile = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DocumentGeneralInformation3, BinaryFile1> mmAttachedBinaryFile = new MMMessageAssociationEnd<DocumentGeneralInformation3, BinaryFile1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation3.mmObject();
 			isDerived = false;
@@ -467,7 +528,17 @@ public class DocumentGeneralInformation3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BinaryFile1.mmObject();
+			type_lazy = () -> BinaryFile1.mmObject();
+		}
+
+		@Override
+		public BinaryFile1 getValue(DocumentGeneralInformation3 obj) {
+			return obj.getAttachedBinaryFile();
+		}
+
+		@Override
+		public void setValue(DocumentGeneralInformation3 obj, BinaryFile1 value) {
+			obj.setAttachedBinaryFile(value);
 		}
 	};
 
@@ -547,7 +618,7 @@ public class DocumentGeneralInformation3 {
 		return attachedBinaryFile;
 	}
 
-	public DocumentGeneralInformation3 setAttachedBinaryFile(com.tools20022.repository.msg.BinaryFile1 attachedBinaryFile) {
+	public DocumentGeneralInformation3 setAttachedBinaryFile(BinaryFile1 attachedBinaryFile) {
 		this.attachedBinaryFile = Objects.requireNonNull(attachedBinaryFile);
 		return this;
 	}

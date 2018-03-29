@@ -52,11 +52,15 @@ public class ConstraintInstrumentDescription2Rule {
 	 */
 	public static final MMConstraint<FinancialInstrument14> forFinancialInstrument14 = new MMConstraint<FinancialInstrument14>() {
 		{
-			validator = ConstraintInstrumentDescription2Rule::checkFinancialInstrument14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstrumentDescription2Rule";
 			definition = "If InstrumentDescription is present, then InstrumentDescription/Description must be present.";
 			owner_lazy = () -> FinancialInstrument14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrument14 obj) throws Exception {
+			checkFinancialInstrument14(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintInstrumentDescription2Rule {
 	 */
 	public static final MMConstraint<FinancialInstrument15> forFinancialInstrument15 = new MMConstraint<FinancialInstrument15>() {
 		{
-			validator = ConstraintInstrumentDescription2Rule::checkFinancialInstrument15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstrumentDescription2Rule";
 			definition = "If InstrumentDescription is present, then InstrumentDescription/Description must be present.";
 			owner_lazy = () -> FinancialInstrument15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrument15 obj) throws Exception {
+			checkFinancialInstrument15(obj);
 		}
 	};
 

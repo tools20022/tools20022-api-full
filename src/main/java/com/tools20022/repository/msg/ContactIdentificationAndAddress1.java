@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.PartyName;
 import com.tools20022.repository.entity.Person;
 import com.tools20022.repository.entity.Role;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CommunicationAddress8;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -127,7 +128,7 @@ public class ContactIdentificationAndAddress1 {
 	 * ContactIdentificationAndAddress.mmName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContactIdentificationAndAddress1, Optional<Max35Text>> mmName = new MMMessageAttribute<ContactIdentificationAndAddress1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContactIdentificationAndAddress1.mmObject();
@@ -140,6 +141,16 @@ public class ContactIdentificationAndAddress1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ContactIdentificationAndAddress1 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(ContactIdentificationAndAddress1 obj, Optional<Max35Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Role", required = true)
@@ -182,7 +193,7 @@ public class ContactIdentificationAndAddress1 {
 	 * ContactIdentificationAndAddress.mmRole}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRole = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContactIdentificationAndAddress1, PaymentRole1Code> mmRole = new MMMessageAttribute<ContactIdentificationAndAddress1, PaymentRole1Code>() {
 		{
 			businessElementTrace_lazy = () -> Role.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContactIdentificationAndAddress1.mmObject();
@@ -195,6 +206,16 @@ public class ContactIdentificationAndAddress1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PaymentRole1Code.mmObject();
+		}
+
+		@Override
+		public PaymentRole1Code getValue(ContactIdentificationAndAddress1 obj) {
+			return obj.getRole();
+		}
+
+		@Override
+		public void setValue(ContactIdentificationAndAddress1 obj, PaymentRole1Code value) {
+			obj.setRole(value);
 		}
 	};
 	@XmlElement(name = "ComAdr", required = true)
@@ -235,7 +256,7 @@ public class ContactIdentificationAndAddress1 {
 	 * ContactIdentificationAndAddress.mmCommunicationAddress}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCommunicationAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ContactIdentificationAndAddress1, CommunicationAddress8> mmCommunicationAddress = new MMMessageAssociationEnd<ContactIdentificationAndAddress1, CommunicationAddress8>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmContactPoint;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContactIdentificationAndAddress1.mmObject();
@@ -248,7 +269,17 @@ public class ContactIdentificationAndAddress1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CommunicationAddress8.mmObject();
+			type_lazy = () -> CommunicationAddress8.mmObject();
+		}
+
+		@Override
+		public CommunicationAddress8 getValue(ContactIdentificationAndAddress1 obj) {
+			return obj.getCommunicationAddress();
+		}
+
+		@Override
+		public void setValue(ContactIdentificationAndAddress1 obj, CommunicationAddress8 value) {
+			obj.setCommunicationAddress(value);
 		}
 	};
 
@@ -290,7 +321,7 @@ public class ContactIdentificationAndAddress1 {
 		return communicationAddress;
 	}
 
-	public ContactIdentificationAndAddress1 setCommunicationAddress(com.tools20022.repository.msg.CommunicationAddress8 communicationAddress) {
+	public ContactIdentificationAndAddress1 setCommunicationAddress(CommunicationAddress8 communicationAddress) {
 		this.communicationAddress = Objects.requireNonNull(communicationAddress);
 		return this;
 	}

@@ -111,7 +111,7 @@ public class AccountIdentificationDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentificationDetails, AccountIdentification1Choice> mmIdentification = new MMMessageAttribute<AccountIdentificationDetails, AccountIdentification1Choice>() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentificationDetails.mmObject();
@@ -123,6 +123,16 @@ public class AccountIdentificationDetails {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AccountIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public AccountIdentification1Choice getValue(AccountIdentificationDetails obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(AccountIdentificationDetails obj, AccountIdentification1Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -160,7 +170,7 @@ public class AccountIdentificationDetails {
 	 * definition} = "Specifies the nature, or use, of the cash account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentificationDetails, Optional<CashAccountType2Code>> mmType = new MMMessageAttribute<AccountIdentificationDetails, Optional<CashAccountType2Code>>() {
 		{
 			businessElementTrace_lazy = () -> CashAccount.mmCashAccountType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentificationDetails.mmObject();
@@ -172,6 +182,16 @@ public class AccountIdentificationDetails {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CashAccountType2Code.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccountType2Code> getValue(AccountIdentificationDetails obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(AccountIdentificationDetails obj, Optional<CashAccountType2Code> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 

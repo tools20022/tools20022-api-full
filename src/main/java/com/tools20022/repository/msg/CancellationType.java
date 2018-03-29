@@ -107,7 +107,7 @@ public class CancellationType {
 	 * definition} = "Reason for the cancellation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancellationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationType, QuoteStatus2Code> mmCancellationType = new MMMessageAttribute<CancellationType, QuoteStatus2Code>() {
 		{
 			businessElementTrace_lazy = () -> QuoteStatus.mmStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationType.mmObject();
@@ -120,6 +120,16 @@ public class CancellationType {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> QuoteStatus2Code.mmObject();
+		}
+
+		@Override
+		public QuoteStatus2Code getValue(CancellationType obj) {
+			return obj.getCancellationType();
+		}
+
+		@Override
+		public void setValue(CancellationType obj, QuoteStatus2Code value) {
+			obj.setCancellationType(value);
 		}
 	};
 

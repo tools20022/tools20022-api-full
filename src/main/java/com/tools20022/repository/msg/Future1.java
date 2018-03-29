@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.BaseOneRate;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Price1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -121,7 +122,7 @@ public class Future1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContractSize = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Future1, Optional<BaseOneRate>> mmContractSize = new MMMessageAttribute<Future1, Optional<BaseOneRate>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesConversion.mmContractSize;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Future1.mmObject();
@@ -133,6 +134,16 @@ public class Future1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		@Override
+		public Optional<BaseOneRate> getValue(Future1 obj) {
+			return obj.getContractSize();
+		}
+
+		@Override
+		public void setValue(Future1 obj, Optional<BaseOneRate> value) {
+			obj.setContractSize(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ExrcPric")
@@ -169,7 +180,7 @@ public class Future1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExercisePrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Future1, Optional<Price1>> mmExercisePrice = new MMMessageAttribute<Future1, Optional<Price1>>() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmExercisePrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Future1.mmObject();
@@ -180,7 +191,17 @@ public class Future1 {
 			definition = "Predetermined price at which the holder of a Future will have to buy or sell the underlying instrument.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
+			complexType_lazy = () -> Price1.mmObject();
+		}
+
+		@Override
+		public Optional<Price1> getValue(Future1 obj) {
+			return obj.getExercisePrice();
+		}
+
+		@Override
+		public void setValue(Future1 obj, Optional<Price1> value) {
+			obj.setExercisePrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XpryDt")
@@ -216,7 +237,7 @@ public class Future1 {
 	 * definition} = "Date and time upon which the future expires."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpiryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Future1, Optional<ISODateTime>> mmExpiryDate = new MMMessageAttribute<Future1, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmExpiryDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Future1.mmObject();
@@ -228,6 +249,16 @@ public class Future1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(Future1 obj) {
+			return obj.getExpiryDate();
+		}
+
+		@Override
+		public void setValue(Future1 obj, Optional<ISODateTime> value) {
+			obj.setExpiryDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FutrDt")
@@ -263,7 +294,7 @@ public class Future1 {
 	 * definition} = "Date on which future contracts settle."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFutureDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Future1, Optional<ISODateTime>> mmFutureDate = new MMMessageAttribute<Future1, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> Future.mmFutureDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Future1.mmObject();
@@ -275,6 +306,16 @@ public class Future1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(Future1 obj) {
+			return obj.getFutureDate();
+		}
+
+		@Override
+		public void setValue(Future1 obj, Optional<ISODateTime> value) {
+			obj.setFutureDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinSz")
@@ -313,7 +354,7 @@ public class Future1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumSize = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Future1, Optional<ActiveCurrencyAndAmount>> mmMinimumSize = new MMMessageAttribute<Future1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Future.mmMinimumSize;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Future1.mmObject();
@@ -325,6 +366,16 @@ public class Future1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(Future1 obj) {
+			return obj.getMinimumSize();
+		}
+
+		@Override
+		public void setValue(Future1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setMinimumSize(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UnitOfMeasr")
@@ -366,7 +417,7 @@ public class Future1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnitOfMeasure = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Future1, Optional<UnitOfMeasure3Code>> mmUnitOfMeasure = new MMMessageAttribute<Future1, Optional<UnitOfMeasure3Code>>() {
 		{
 			businessElementTrace_lazy = () -> Future.mmUnitOfMeasure;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Future1.mmObject();
@@ -379,6 +430,16 @@ public class Future1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> UnitOfMeasure3Code.mmObject();
+		}
+
+		@Override
+		public Optional<UnitOfMeasure3Code> getValue(Future1 obj) {
+			return obj.getUnitOfMeasure();
+		}
+
+		@Override
+		public void setValue(Future1 obj, Optional<UnitOfMeasure3Code> value) {
+			obj.setUnitOfMeasure(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TmUnit")
@@ -420,7 +481,7 @@ public class Future1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTimeUnit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Future1, Optional<TimeUnit1Code>> mmTimeUnit = new MMMessageAttribute<Future1, Optional<TimeUnit1Code>>() {
 		{
 			businessElementTrace_lazy = () -> FutureRule.mmTimeType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Future1.mmObject();
@@ -433,6 +494,16 @@ public class Future1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TimeUnit1Code.mmObject();
+		}
+
+		@Override
+		public Optional<TimeUnit1Code> getValue(Future1 obj) {
+			return obj.getTimeUnit();
+		}
+
+		@Override
+		public void setValue(Future1 obj, Optional<TimeUnit1Code> value) {
+			obj.setTimeUnit(value.orElse(null));
 		}
 	};
 
@@ -464,7 +535,7 @@ public class Future1 {
 		return exercisePrice == null ? Optional.empty() : Optional.of(exercisePrice);
 	}
 
-	public Future1 setExercisePrice(com.tools20022.repository.msg.Price1 exercisePrice) {
+	public Future1 setExercisePrice(Price1 exercisePrice) {
 		this.exercisePrice = exercisePrice;
 		return this;
 	}

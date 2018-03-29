@@ -26,6 +26,7 @@ import com.tools20022.repository.area.acmt.AccountModificationInstructionV03;
 import com.tools20022.repository.area.acmt.AccountModificationInstructionV04;
 import com.tools20022.repository.codeset.DataModification1Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DocumentToSend1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -135,7 +136,7 @@ public class ModificationScope10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmModificationScopeIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ModificationScope10, DataModification1Code> mmModificationScopeIndication = new MMMessageAttribute<ModificationScope10, DataModification1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope10.mmObject();
 			isDerived = false;
@@ -147,6 +148,16 @@ public class ModificationScope10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DataModification1Code.mmObject();
+		}
+
+		@Override
+		public DataModification1Code getValue(ModificationScope10 obj) {
+			return obj.getModificationScopeIndication();
+		}
+
+		@Override
+		public void setValue(ModificationScope10 obj, DataModification1Code value) {
+			obj.setModificationScopeIndication(value);
 		}
 	};
 	@XmlElement(name = "SvcLvlAgrmt", required = true)
@@ -187,7 +198,7 @@ public class ModificationScope10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmServiceLevelAgreement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ModificationScope10, DocumentToSend1> mmServiceLevelAgreement = new MMMessageAssociationEnd<ModificationScope10, DocumentToSend1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope10.mmObject();
 			isDerived = false;
@@ -199,7 +210,17 @@ public class ModificationScope10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DocumentToSend1.mmObject();
+			type_lazy = () -> DocumentToSend1.mmObject();
+		}
+
+		@Override
+		public DocumentToSend1 getValue(ModificationScope10 obj) {
+			return obj.getServiceLevelAgreement();
+		}
+
+		@Override
+		public void setValue(ModificationScope10 obj, DocumentToSend1 value) {
+			obj.setServiceLevelAgreement(value);
 		}
 	};
 
@@ -232,7 +253,7 @@ public class ModificationScope10 {
 		return serviceLevelAgreement;
 	}
 
-	public ModificationScope10 setServiceLevelAgreement(com.tools20022.repository.msg.DocumentToSend1 serviceLevelAgreement) {
+	public ModificationScope10 setServiceLevelAgreement(DocumentToSend1 serviceLevelAgreement) {
 		this.serviceLevelAgreement = Objects.requireNonNull(serviceLevelAgreement);
 		return this;
 	}

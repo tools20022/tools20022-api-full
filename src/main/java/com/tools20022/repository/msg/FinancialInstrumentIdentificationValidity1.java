@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.DateTimePeriod;
 import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecurityIdentification14;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -129,7 +130,7 @@ public class FinancialInstrumentIdentificationValidity1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentIdentificationValidity1, Optional<SecurityIdentification14>> mmFinancialInstrumentIdentification = new MMMessageAssociationEnd<FinancialInstrumentIdentificationValidity1, Optional<SecurityIdentification14>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentIdentificationValidity1.mmObject();
@@ -142,7 +143,17 @@ public class FinancialInstrumentIdentificationValidity1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
+			type_lazy = () -> SecurityIdentification14.mmObject();
+		}
+
+		@Override
+		public Optional<SecurityIdentification14> getValue(FinancialInstrumentIdentificationValidity1 obj) {
+			return obj.getFinancialInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentIdentificationValidity1 obj, Optional<SecurityIdentification14> value) {
+			obj.setFinancialInstrumentIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ISINVldFr")
@@ -189,7 +200,7 @@ public class FinancialInstrumentIdentificationValidity1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmISINValidFrom = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentIdentificationValidity1, Optional<ISODate>> mmISINValidFrom = new MMMessageAttribute<FinancialInstrumentIdentificationValidity1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentIdentificationValidity1.mmObject();
@@ -202,6 +213,16 @@ public class FinancialInstrumentIdentificationValidity1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(FinancialInstrumentIdentificationValidity1 obj) {
+			return obj.getISINValidFrom();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentIdentificationValidity1 obj, Optional<ISODate> value) {
+			obj.setISINValidFrom(value.orElse(null));
 		}
 	};
 
@@ -225,7 +246,7 @@ public class FinancialInstrumentIdentificationValidity1 {
 		return financialInstrumentIdentification == null ? Optional.empty() : Optional.of(financialInstrumentIdentification);
 	}
 
-	public FinancialInstrumentIdentificationValidity1 setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
+	public FinancialInstrumentIdentificationValidity1 setFinancialInstrumentIdentification(SecurityIdentification14 financialInstrumentIdentification) {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 		return this;
 	}

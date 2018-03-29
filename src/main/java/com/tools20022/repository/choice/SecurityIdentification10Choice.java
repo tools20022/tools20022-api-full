@@ -113,7 +113,7 @@ public class SecurityIdentification10Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification10Choice, ISINIdentifier> mmISIN = new MMMessageAttribute<SecurityIdentification10Choice, ISINIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification10Choice.mmObject();
@@ -125,6 +125,16 @@ public class SecurityIdentification10Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISINIdentifier.mmObject();
+		}
+
+		@Override
+		public ISINIdentifier getValue(SecurityIdentification10Choice obj) {
+			return obj.getISIN();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification10Choice obj, ISINIdentifier value) {
+			obj.setISIN(value);
 		}
 	};
 	@XmlElement(name = "OthrId", required = true)
@@ -164,7 +174,7 @@ public class SecurityIdentification10Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification10Choice, AlternateSecurityIdentification3> mmOtherIdentification = new MMMessageAttribute<SecurityIdentification10Choice, AlternateSecurityIdentification3>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification10Choice.mmObject();
@@ -176,6 +186,16 @@ public class SecurityIdentification10Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AlternateSecurityIdentification3.mmObject();
+		}
+
+		@Override
+		public AlternateSecurityIdentification3 getValue(SecurityIdentification10Choice obj) {
+			return obj.getOtherIdentification();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification10Choice obj, AlternateSecurityIdentification3 value) {
+			obj.setOtherIdentification(value);
 		}
 	};
 

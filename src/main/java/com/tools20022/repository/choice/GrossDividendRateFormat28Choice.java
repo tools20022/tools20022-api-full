@@ -125,7 +125,7 @@ public class GrossDividendRateFormat28Choice {
 	 * GrossDividendRateFormat21Choice.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GrossDividendRateFormat28Choice, ActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<GrossDividendRateFormat28Choice, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.GrossDividendRateFormat28Choice.mmObject();
@@ -139,6 +139,16 @@ public class GrossDividendRateFormat28Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(GrossDividendRateFormat28Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(GrossDividendRateFormat28Choice obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "AmtAndRateSts", required = true)
@@ -179,7 +189,7 @@ public class GrossDividendRateFormat28Choice {
 	 * GrossDividendRateFormat21Choice.mmAmountAndRateStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountAndRateStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GrossDividendRateFormat28Choice, AmountAndRateStatus1> mmAmountAndRateStatus = new MMMessageAssociationEnd<GrossDividendRateFormat28Choice, AmountAndRateStatus1>() {
 		{
 			businessComponentTrace_lazy = () -> RateAndAmount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.GrossDividendRateFormat28Choice.mmObject();
@@ -193,6 +203,16 @@ public class GrossDividendRateFormat28Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountAndRateStatus1.mmObject();
+		}
+
+		@Override
+		public AmountAndRateStatus1 getValue(GrossDividendRateFormat28Choice obj) {
+			return obj.getAmountAndRateStatus();
+		}
+
+		@Override
+		public void setValue(GrossDividendRateFormat28Choice obj, AmountAndRateStatus1 value) {
+			obj.setAmountAndRateStatus(value);
 		}
 	};
 	@XmlElement(name = "RateTpAndAmtAndRateSts", required = true)
@@ -232,7 +252,7 @@ public class GrossDividendRateFormat28Choice {
 	 * GrossDividendRateFormat21Choice.mmRateTypeAndAmountAndRateStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GrossDividendRateFormat28Choice, RateTypeAndAmountAndStatus38> mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd<GrossDividendRateFormat28Choice, RateTypeAndAmountAndStatus38>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.GrossDividendRateFormat28Choice.mmObject();
 			isDerived = false;
@@ -246,6 +266,16 @@ public class GrossDividendRateFormat28Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RateTypeAndAmountAndStatus38.mmObject();
+		}
+
+		@Override
+		public RateTypeAndAmountAndStatus38 getValue(GrossDividendRateFormat28Choice obj) {
+			return obj.getRateTypeAndAmountAndRateStatus();
+		}
+
+		@Override
+		public void setValue(GrossDividendRateFormat28Choice obj, RateTypeAndAmountAndStatus38 value) {
+			obj.setRateTypeAndAmountAndRateStatus(value);
 		}
 	};
 

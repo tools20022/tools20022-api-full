@@ -27,6 +27,7 @@ import com.tools20022.repository.codeset.Frequency2Code;
 import com.tools20022.repository.entity.CashStandingOrder;
 import com.tools20022.repository.entity.StandingOrder;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountIdentificationDetails;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -119,7 +120,7 @@ public class StandingOrderDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrderDetails1, Optional<AmountChoice>> mmAmount = new MMMessageAttribute<StandingOrderDetails1, Optional<AmountChoice>>() {
 		{
 			businessElementTrace_lazy = () -> StandingOrder.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderDetails1.mmObject();
@@ -131,6 +132,16 @@ public class StandingOrderDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AmountChoice.mmObject();
+		}
+
+		@Override
+		public Optional<AmountChoice> getValue(StandingOrderDetails1 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(StandingOrderDetails1 obj, Optional<AmountChoice> value) {
+			obj.setAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtAcct")
@@ -167,7 +178,7 @@ public class StandingOrderDetails1 {
 	 * definition} = "Cash account credited from a standing order mechanism."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StandingOrderDetails1, Optional<AccountIdentificationDetails>> mmCreditAccount = new MMMessageAssociationEnd<StandingOrderDetails1, Optional<AccountIdentificationDetails>>() {
 		{
 			businessElementTrace_lazy = () -> StandingOrder.mmCreditAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderDetails1.mmObject();
@@ -179,7 +190,17 @@ public class StandingOrderDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AccountIdentificationDetails.mmObject();
+			type_lazy = () -> AccountIdentificationDetails.mmObject();
+		}
+
+		@Override
+		public Optional<AccountIdentificationDetails> getValue(StandingOrderDetails1 obj) {
+			return obj.getCreditAccount();
+		}
+
+		@Override
+		public void setValue(StandingOrderDetails1 obj, Optional<AccountIdentificationDetails> value) {
+			obj.setCreditAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DbtAcct")
@@ -216,7 +237,7 @@ public class StandingOrderDetails1 {
 	 * definition} = "Cash account debited from a standing order mechanism."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDebitAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StandingOrderDetails1, Optional<AccountIdentificationDetails>> mmDebitAccount = new MMMessageAssociationEnd<StandingOrderDetails1, Optional<AccountIdentificationDetails>>() {
 		{
 			businessElementTrace_lazy = () -> StandingOrder.mmDebitAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderDetails1.mmObject();
@@ -228,7 +249,17 @@ public class StandingOrderDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AccountIdentificationDetails.mmObject();
+			type_lazy = () -> AccountIdentificationDetails.mmObject();
+		}
+
+		@Override
+		public Optional<AccountIdentificationDetails> getValue(StandingOrderDetails1 obj) {
+			return obj.getDebitAccount();
+		}
+
+		@Override
+		public void setValue(StandingOrderDetails1 obj, Optional<AccountIdentificationDetails> value) {
+			obj.setDebitAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Frqcy")
@@ -268,7 +299,7 @@ public class StandingOrderDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrderDetails1, Optional<Frequency2Code>> mmFrequency = new MMMessageAttribute<StandingOrderDetails1, Optional<Frequency2Code>>() {
 		{
 			businessElementTrace_lazy = () -> StandingOrder.mmFrequency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderDetails1.mmObject();
@@ -280,6 +311,16 @@ public class StandingOrderDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Frequency2Code.mmObject();
+		}
+
+		@Override
+		public Optional<Frequency2Code> getValue(StandingOrderDetails1 obj) {
+			return obj.getFrequency();
+		}
+
+		@Override
+		public void setValue(StandingOrderDetails1 obj, Optional<Frequency2Code> value) {
+			obj.setFrequency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "VldtyPrd")
@@ -316,7 +357,7 @@ public class StandingOrderDetails1 {
 	 * definition} = "Dates during which the standing order is in effect."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmValidityPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StandingOrderDetails1, Optional<DatePeriodDetails2Choice>> mmValidityPeriod = new MMMessageAssociationEnd<StandingOrderDetails1, Optional<DatePeriodDetails2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> StandingOrder.mmValidityPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderDetails1.mmObject();
@@ -329,6 +370,16 @@ public class StandingOrderDetails1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DatePeriodDetails2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DatePeriodDetails2Choice> getValue(StandingOrderDetails1 obj) {
+			return obj.getValidityPeriod();
+		}
+
+		@Override
+		public void setValue(StandingOrderDetails1 obj, Optional<DatePeriodDetails2Choice> value) {
+			obj.setValidityPeriod(value.orElse(null));
 		}
 	};
 
@@ -360,7 +411,7 @@ public class StandingOrderDetails1 {
 		return creditAccount == null ? Optional.empty() : Optional.of(creditAccount);
 	}
 
-	public StandingOrderDetails1 setCreditAccount(com.tools20022.repository.msg.AccountIdentificationDetails creditAccount) {
+	public StandingOrderDetails1 setCreditAccount(AccountIdentificationDetails creditAccount) {
 		this.creditAccount = creditAccount;
 		return this;
 	}
@@ -369,7 +420,7 @@ public class StandingOrderDetails1 {
 		return debitAccount == null ? Optional.empty() : Optional.of(debitAccount);
 	}
 
-	public StandingOrderDetails1 setDebitAccount(com.tools20022.repository.msg.AccountIdentificationDetails debitAccount) {
+	public StandingOrderDetails1 setDebitAccount(AccountIdentificationDetails debitAccount) {
 		this.debitAccount = debitAccount;
 		return this;
 	}

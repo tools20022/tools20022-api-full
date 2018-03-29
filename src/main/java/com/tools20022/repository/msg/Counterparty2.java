@@ -122,7 +122,7 @@ public class Counterparty2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Counterparty2, OrganisationIdentification3Choice> mmIdentification = new MMMessageAssociationEnd<Counterparty2, OrganisationIdentification3Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Counterparty2.mmObject();
@@ -136,6 +136,16 @@ public class Counterparty2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OrganisationIdentification3Choice.mmObject();
+		}
+
+		@Override
+		public OrganisationIdentification3Choice getValue(Counterparty2 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Counterparty2 obj, OrganisationIdentification3Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Ctry", required = true)
@@ -180,7 +190,7 @@ public class Counterparty2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Counterparty2, CountryCode> mmCountry = new MMMessageAttribute<Counterparty2, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmCountry;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Counterparty2.mmObject();
@@ -193,6 +203,16 @@ public class Counterparty2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(Counterparty2 obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(Counterparty2 obj, CountryCode value) {
+			obj.setCountry(value);
 		}
 	};
 

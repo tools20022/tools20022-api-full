@@ -25,6 +25,10 @@ import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.ValuationStatistics;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PriceType2;
+import com.tools20022.repository.msg.PriceValue2;
+import com.tools20022.repository.msg.StatisticsByPredefinedTimePeriods1;
+import com.tools20022.repository.msg.StatisticsByUserDefinedTimePeriod1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -132,7 +136,7 @@ public class ValuationStatistics2 {
 	 * definition} = "Currency of the valuation statistics."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ValuationStatistics2, ActiveOrHistoricCurrencyCode> mmCurrency = new MMMessageAttribute<ValuationStatistics2, ActiveOrHistoricCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> ValuationStatistics.mmCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationStatistics2.mmObject();
@@ -144,6 +148,16 @@ public class ValuationStatistics2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyCode getValue(ValuationStatistics2 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(ValuationStatistics2 obj, ActiveOrHistoricCurrencyCode value) {
+			obj.setCurrency(value);
 		}
 	};
 	@XmlElement(name = "PricTpChngBsis", required = true)
@@ -182,7 +196,7 @@ public class ValuationStatistics2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriceTypeChangeBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ValuationStatistics2, PriceType2> mmPriceTypeChangeBasis = new MMMessageAttribute<ValuationStatistics2, PriceType2>() {
 		{
 			businessElementTrace_lazy = () -> ValuationStatistics.mmPriceTypeChangeBasis;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationStatistics2.mmObject();
@@ -193,7 +207,17 @@ public class ValuationStatistics2 {
 			definition = "Type of price from which the change is calculated, eg, bid, offer, or single.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.PriceType2.mmObject();
+			complexType_lazy = () -> PriceType2.mmObject();
+		}
+
+		@Override
+		public PriceType2 getValue(ValuationStatistics2 obj) {
+			return obj.getPriceTypeChangeBasis();
+		}
+
+		@Override
+		public void setValue(ValuationStatistics2 obj, PriceType2 value) {
+			obj.setPriceTypeChangeBasis(value);
 		}
 	};
 	@XmlElement(name = "PricChng", required = true)
@@ -230,7 +254,7 @@ public class ValuationStatistics2 {
 	 * definition} = "Change in price since the last valuation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriceChange = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ValuationStatistics2, PriceValue2> mmPriceChange = new MMMessageAttribute<ValuationStatistics2, PriceValue2>() {
 		{
 			businessElementTrace_lazy = () -> ValuationStatistics.mmPriceChange;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationStatistics2.mmObject();
@@ -241,7 +265,17 @@ public class ValuationStatistics2 {
 			definition = "Change in price since the last valuation.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.PriceValue2.mmObject();
+			complexType_lazy = () -> PriceValue2.mmObject();
+		}
+
+		@Override
+		public PriceValue2 getValue(ValuationStatistics2 obj) {
+			return obj.getPriceChange();
+		}
+
+		@Override
+		public void setValue(ValuationStatistics2 obj, PriceValue2 value) {
+			obj.setPriceChange(value);
 		}
 	};
 	@XmlElement(name = "Yld")
@@ -281,7 +315,7 @@ public class ValuationStatistics2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmYield = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ValuationStatistics2, Optional<PercentageRate>> mmYield = new MMMessageAttribute<ValuationStatistics2, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> ValuationStatistics.mmYield;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationStatistics2.mmObject();
@@ -293,6 +327,16 @@ public class ValuationStatistics2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(ValuationStatistics2 obj) {
+			return obj.getYield();
+		}
+
+		@Override
+		public void setValue(ValuationStatistics2 obj, Optional<PercentageRate> value) {
+			obj.setYield(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ByPrdfndTmPrds")
@@ -326,7 +370,7 @@ public class ValuationStatistics2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmByPredefinedTimePeriods = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ValuationStatistics2, Optional<StatisticsByPredefinedTimePeriods1>> mmByPredefinedTimePeriods = new MMMessageAssociationEnd<ValuationStatistics2, Optional<StatisticsByPredefinedTimePeriods1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationStatistics2.mmObject();
 			isDerived = false;
@@ -337,11 +381,21 @@ public class ValuationStatistics2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.StatisticsByPredefinedTimePeriods1.mmObject();
+			type_lazy = () -> StatisticsByPredefinedTimePeriods1.mmObject();
+		}
+
+		@Override
+		public Optional<StatisticsByPredefinedTimePeriods1> getValue(ValuationStatistics2 obj) {
+			return obj.getByPredefinedTimePeriods();
+		}
+
+		@Override
+		public void setValue(ValuationStatistics2 obj, Optional<StatisticsByPredefinedTimePeriods1> value) {
+			obj.setByPredefinedTimePeriods(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ByUsrDfndTmPrd")
-	protected List<com.tools20022.repository.msg.StatisticsByUserDefinedTimePeriod1> byUserDefinedTimePeriod;
+	protected List<StatisticsByUserDefinedTimePeriod1> byUserDefinedTimePeriod;
 	/**
 	 * 
 	 <p>
@@ -371,7 +425,7 @@ public class ValuationStatistics2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmByUserDefinedTimePeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ValuationStatistics2, List<StatisticsByUserDefinedTimePeriod1>> mmByUserDefinedTimePeriod = new MMMessageAssociationEnd<ValuationStatistics2, List<StatisticsByUserDefinedTimePeriod1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationStatistics2.mmObject();
 			isDerived = false;
@@ -381,7 +435,17 @@ public class ValuationStatistics2 {
 			definition = "Information related to price variations, expressed using user-defined periods.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.StatisticsByUserDefinedTimePeriod1.mmObject();
+			type_lazy = () -> StatisticsByUserDefinedTimePeriod1.mmObject();
+		}
+
+		@Override
+		public List<StatisticsByUserDefinedTimePeriod1> getValue(ValuationStatistics2 obj) {
+			return obj.getByUserDefinedTimePeriod();
+		}
+
+		@Override
+		public void setValue(ValuationStatistics2 obj, List<StatisticsByUserDefinedTimePeriod1> value) {
+			obj.setByUserDefinedTimePeriod(value);
 		}
 	};
 
@@ -416,7 +480,7 @@ public class ValuationStatistics2 {
 		return priceTypeChangeBasis;
 	}
 
-	public ValuationStatistics2 setPriceTypeChangeBasis(com.tools20022.repository.msg.PriceType2 priceTypeChangeBasis) {
+	public ValuationStatistics2 setPriceTypeChangeBasis(PriceType2 priceTypeChangeBasis) {
 		this.priceTypeChangeBasis = Objects.requireNonNull(priceTypeChangeBasis);
 		return this;
 	}
@@ -425,7 +489,7 @@ public class ValuationStatistics2 {
 		return priceChange;
 	}
 
-	public ValuationStatistics2 setPriceChange(com.tools20022.repository.msg.PriceValue2 priceChange) {
+	public ValuationStatistics2 setPriceChange(PriceValue2 priceChange) {
 		this.priceChange = Objects.requireNonNull(priceChange);
 		return this;
 	}
@@ -443,7 +507,7 @@ public class ValuationStatistics2 {
 		return byPredefinedTimePeriods == null ? Optional.empty() : Optional.of(byPredefinedTimePeriods);
 	}
 
-	public ValuationStatistics2 setByPredefinedTimePeriods(com.tools20022.repository.msg.StatisticsByPredefinedTimePeriods1 byPredefinedTimePeriods) {
+	public ValuationStatistics2 setByPredefinedTimePeriods(StatisticsByPredefinedTimePeriods1 byPredefinedTimePeriods) {
 		this.byPredefinedTimePeriods = byPredefinedTimePeriods;
 		return this;
 	}
@@ -452,7 +516,7 @@ public class ValuationStatistics2 {
 		return byUserDefinedTimePeriod == null ? byUserDefinedTimePeriod = new ArrayList<>() : byUserDefinedTimePeriod;
 	}
 
-	public ValuationStatistics2 setByUserDefinedTimePeriod(List<com.tools20022.repository.msg.StatisticsByUserDefinedTimePeriod1> byUserDefinedTimePeriod) {
+	public ValuationStatistics2 setByUserDefinedTimePeriod(List<StatisticsByUserDefinedTimePeriod1> byUserDefinedTimePeriod) {
 		this.byUserDefinedTimePeriod = Objects.requireNonNull(byUserDefinedTimePeriod);
 		return this;
 	}

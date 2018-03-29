@@ -105,7 +105,7 @@ public class PartyIdentification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification, Max35Text> mmName = new MMMessageAttribute<PartyIdentification, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification.mmObject();
@@ -117,6 +117,16 @@ public class PartyIdentification {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PartyIdentification obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(PartyIdentification obj, Max35Text value) {
+			obj.setName(value);
 		}
 	};
 

@@ -110,7 +110,7 @@ public class OrganisationIdentification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrganisationIdentification3, BICIdentifier> mmBIC = new MMMessageAttribute<OrganisationIdentification3, BICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrganisationIdentification3.mmObject();
@@ -122,6 +122,16 @@ public class OrganisationIdentification3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
+		}
+
+		@Override
+		public BICIdentifier getValue(OrganisationIdentification3 obj) {
+			return obj.getBIC();
+		}
+
+		@Override
+		public void setValue(OrganisationIdentification3 obj, BICIdentifier value) {
+			obj.setBIC(value);
 		}
 	};
 

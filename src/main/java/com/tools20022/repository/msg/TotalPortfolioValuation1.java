@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.AssetHolding;
 import com.tools20022.repository.entity.InvestmentFundClass;
 import com.tools20022.repository.entity.PortfolioValuation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountAndDirection30;
+import com.tools20022.repository.msg.AmountAndDirection31;
+import com.tools20022.repository.msg.AmountAndRate2;
+import com.tools20022.repository.msg.InvestmentFund1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -156,7 +160,7 @@ public class TotalPortfolioValuation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalPortfolioValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalPortfolioValuation1, AmountAndDirection30> mmTotalPortfolioValue = new MMMessageAttribute<TotalPortfolioValuation1, AmountAndDirection30>() {
 		{
 			businessElementTrace_lazy = () -> PortfolioValuation.mmTotalPortfolioValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalPortfolioValuation1.mmObject();
@@ -167,7 +171,17 @@ public class TotalPortfolioValuation1 {
 			definition = "Total value of the portfolio (sum of the assets, liabilities and unrealised gain/loss) calculated according to the accounting rules.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection30.mmObject();
+			complexType_lazy = () -> AmountAndDirection30.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection30 getValue(TotalPortfolioValuation1 obj) {
+			return obj.getTotalPortfolioValue();
+		}
+
+		@Override
+		public void setValue(TotalPortfolioValuation1 obj, AmountAndDirection30 value) {
+			obj.setTotalPortfolioValue(value);
 		}
 	};
 	@XmlElement(name = "PrvsTtlPrtflVal")
@@ -205,7 +219,7 @@ public class TotalPortfolioValuation1 {
 	 * definition} = "Previous total value of the portfolio."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreviousTotalPortfolioValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalPortfolioValuation1, Optional<AmountAndDirection30>> mmPreviousTotalPortfolioValue = new MMMessageAttribute<TotalPortfolioValuation1, Optional<AmountAndDirection30>>() {
 		{
 			businessElementTrace_lazy = () -> PortfolioValuation.mmTotalPortfolioValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalPortfolioValuation1.mmObject();
@@ -216,7 +230,17 @@ public class TotalPortfolioValuation1 {
 			definition = "Previous total value of the portfolio.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection30.mmObject();
+			complexType_lazy = () -> AmountAndDirection30.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection30> getValue(TotalPortfolioValuation1 obj) {
+			return obj.getPreviousTotalPortfolioValue();
+		}
+
+		@Override
+		public void setValue(TotalPortfolioValuation1 obj, Optional<AmountAndDirection30> value) {
+			obj.setPreviousTotalPortfolioValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlPrtflValChng")
@@ -250,7 +274,7 @@ public class TotalPortfolioValuation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalPortfolioValueChange = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalPortfolioValuation1, Optional<AmountAndRate2>> mmTotalPortfolioValueChange = new MMMessageAttribute<TotalPortfolioValuation1, Optional<AmountAndRate2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalPortfolioValuation1.mmObject();
 			isDerived = false;
@@ -260,7 +284,17 @@ public class TotalPortfolioValuation1 {
 			definition = "Difference or change between the previous total portfolio value and the current total portfolio value.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndRate2.mmObject();
+			complexType_lazy = () -> AmountAndRate2.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndRate2> getValue(TotalPortfolioValuation1 obj) {
+			return obj.getTotalPortfolioValueChange();
+		}
+
+		@Override
+		public void setValue(TotalPortfolioValuation1 obj, Optional<AmountAndRate2> value) {
+			obj.setTotalPortfolioValueChange(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlBookVal", required = true)
@@ -300,7 +334,7 @@ public class TotalPortfolioValuation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalBookValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalPortfolioValuation1, AmountAndDirection30> mmTotalBookValue = new MMMessageAttribute<TotalPortfolioValuation1, AmountAndDirection30>() {
 		{
 			businessElementTrace_lazy = () -> PortfolioValuation.mmTotalBookValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalPortfolioValuation1.mmObject();
@@ -311,7 +345,17 @@ public class TotalPortfolioValuation1 {
 			definition = "Net asset on balance sheet - total portfolio value minus or plus the unrealised gain or loss.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection30.mmObject();
+			complexType_lazy = () -> AmountAndDirection30.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection30 getValue(TotalPortfolioValuation1 obj) {
+			return obj.getTotalBookValue();
+		}
+
+		@Override
+		public void setValue(TotalPortfolioValuation1 obj, AmountAndDirection30 value) {
+			obj.setTotalBookValue(value);
 		}
 	};
 	@XmlElement(name = "PrvsTtlBookVal")
@@ -349,7 +393,7 @@ public class TotalPortfolioValuation1 {
 	 * definition} = "Previous net asset on balance sheet."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreviousTotalBookValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalPortfolioValuation1, Optional<AmountAndDirection30>> mmPreviousTotalBookValue = new MMMessageAttribute<TotalPortfolioValuation1, Optional<AmountAndDirection30>>() {
 		{
 			businessElementTrace_lazy = () -> PortfolioValuation.mmTotalBookValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalPortfolioValuation1.mmObject();
@@ -360,7 +404,17 @@ public class TotalPortfolioValuation1 {
 			definition = "Previous net asset on balance sheet.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection30.mmObject();
+			complexType_lazy = () -> AmountAndDirection30.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection30> getValue(TotalPortfolioValuation1 obj) {
+			return obj.getPreviousTotalBookValue();
+		}
+
+		@Override
+		public void setValue(TotalPortfolioValuation1 obj, Optional<AmountAndDirection30> value) {
+			obj.setPreviousTotalBookValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlBookValChng")
@@ -394,7 +448,7 @@ public class TotalPortfolioValuation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalBookValueChange = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalPortfolioValuation1, Optional<AmountAndRate2>> mmTotalBookValueChange = new MMMessageAttribute<TotalPortfolioValuation1, Optional<AmountAndRate2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalPortfolioValuation1.mmObject();
 			isDerived = false;
@@ -404,7 +458,17 @@ public class TotalPortfolioValuation1 {
 			definition = "Difference or change between the previous net asset on balance sheet and the current net asset on balance sheet.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndRate2.mmObject();
+			complexType_lazy = () -> AmountAndRate2.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndRate2> getValue(TotalPortfolioValuation1 obj) {
+			return obj.getTotalBookValueChange();
+		}
+
+		@Override
+		public void setValue(TotalPortfolioValuation1 obj, Optional<AmountAndRate2> value) {
+			obj.setTotalBookValueChange(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlRcts")
@@ -442,7 +506,7 @@ public class TotalPortfolioValuation1 {
 	 * definition} = "Total receipts attributable to the portfolio."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalReceipts = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalPortfolioValuation1, Optional<AmountAndDirection30>> mmTotalReceipts = new MMMessageAttribute<TotalPortfolioValuation1, Optional<AmountAndDirection30>>() {
 		{
 			businessElementTrace_lazy = () -> PortfolioValuation.mmTotalReceipts;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalPortfolioValuation1.mmObject();
@@ -453,7 +517,17 @@ public class TotalPortfolioValuation1 {
 			definition = "Total receipts attributable to the portfolio.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection30.mmObject();
+			complexType_lazy = () -> AmountAndDirection30.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection30> getValue(TotalPortfolioValuation1 obj) {
+			return obj.getTotalReceipts();
+		}
+
+		@Override
+		public void setValue(TotalPortfolioValuation1 obj, Optional<AmountAndDirection30> value) {
+			obj.setTotalReceipts(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlDsbrsmnts")
@@ -491,7 +565,7 @@ public class TotalPortfolioValuation1 {
 	 * definition} = "Total disbursements attributable to the portfolio."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalDisbursements = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalPortfolioValuation1, Optional<AmountAndDirection30>> mmTotalDisbursements = new MMMessageAttribute<TotalPortfolioValuation1, Optional<AmountAndDirection30>>() {
 		{
 			businessElementTrace_lazy = () -> PortfolioValuation.mmTotalDisbursements;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalPortfolioValuation1.mmObject();
@@ -502,7 +576,17 @@ public class TotalPortfolioValuation1 {
 			definition = "Total disbursements attributable to the portfolio.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection30.mmObject();
+			complexType_lazy = () -> AmountAndDirection30.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection30> getValue(TotalPortfolioValuation1 obj) {
+			return obj.getTotalDisbursements();
+		}
+
+		@Override
+		public void setValue(TotalPortfolioValuation1 obj, Optional<AmountAndDirection30> value) {
+			obj.setTotalDisbursements(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IncmRcvd")
@@ -540,7 +624,7 @@ public class TotalPortfolioValuation1 {
 	 * definition} = "Income attributable to the portfolio."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIncomeReceived = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalPortfolioValuation1, Optional<AmountAndDirection30>> mmIncomeReceived = new MMMessageAttribute<TotalPortfolioValuation1, Optional<AmountAndDirection30>>() {
 		{
 			businessElementTrace_lazy = () -> PortfolioValuation.mmIncomeReceived;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalPortfolioValuation1.mmObject();
@@ -551,7 +635,17 @@ public class TotalPortfolioValuation1 {
 			definition = "Income attributable to the portfolio.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection30.mmObject();
+			complexType_lazy = () -> AmountAndDirection30.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection30> getValue(TotalPortfolioValuation1 obj) {
+			return obj.getIncomeReceived();
+		}
+
+		@Override
+		public void setValue(TotalPortfolioValuation1 obj, Optional<AmountAndDirection30> value) {
+			obj.setIncomeReceived(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ExpnssPd")
@@ -589,7 +683,7 @@ public class TotalPortfolioValuation1 {
 	 * definition} = "Expenses attributable to the portfolio."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpensesPaid = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalPortfolioValuation1, Optional<AmountAndDirection30>> mmExpensesPaid = new MMMessageAttribute<TotalPortfolioValuation1, Optional<AmountAndDirection30>>() {
 		{
 			businessElementTrace_lazy = () -> PortfolioValuation.mmExpensesPaid;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalPortfolioValuation1.mmObject();
@@ -600,7 +694,17 @@ public class TotalPortfolioValuation1 {
 			definition = "Expenses attributable to the portfolio.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection30.mmObject();
+			complexType_lazy = () -> AmountAndDirection30.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection30> getValue(TotalPortfolioValuation1 obj) {
+			return obj.getExpensesPaid();
+		}
+
+		@Override
+		public void setValue(TotalPortfolioValuation1 obj, Optional<AmountAndDirection30> value) {
+			obj.setExpensesPaid(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UrlsdGnOrLoss")
@@ -640,7 +744,7 @@ public class TotalPortfolioValuation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnrealisedGainOrLoss = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalPortfolioValuation1, Optional<AmountAndDirection31>> mmUnrealisedGainOrLoss = new MMMessageAttribute<TotalPortfolioValuation1, Optional<AmountAndDirection31>>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmUnrealisedGainOrLoss;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalPortfolioValuation1.mmObject();
@@ -651,7 +755,17 @@ public class TotalPortfolioValuation1 {
 			definition = "Difference between the holding value and the book value of the portfolio.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection31.mmObject();
+			complexType_lazy = () -> AmountAndDirection31.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection31> getValue(TotalPortfolioValuation1 obj) {
+			return obj.getUnrealisedGainOrLoss();
+		}
+
+		@Override
+		public void setValue(TotalPortfolioValuation1 obj, Optional<AmountAndDirection31> value) {
+			obj.setUnrealisedGainOrLoss(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RealsdGnOrLoss")
@@ -691,7 +805,7 @@ public class TotalPortfolioValuation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRealisedGainOrLoss = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalPortfolioValuation1, Optional<AmountAndDirection31>> mmRealisedGainOrLoss = new MMMessageAttribute<TotalPortfolioValuation1, Optional<AmountAndDirection31>>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmRealisedGainOrLoss;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalPortfolioValuation1.mmObject();
@@ -702,7 +816,17 @@ public class TotalPortfolioValuation1 {
 			definition = "Difference between the realised value caused by the actual trade/re-evaluation and the book value of the portfolio.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection31.mmObject();
+			complexType_lazy = () -> AmountAndDirection31.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection31> getValue(TotalPortfolioValuation1 obj) {
+			return obj.getRealisedGainOrLoss();
+		}
+
+		@Override
+		public void setValue(TotalPortfolioValuation1 obj, Optional<AmountAndDirection31> value) {
+			obj.setRealisedGainOrLoss(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcrdIncm")
@@ -735,7 +859,7 @@ public class TotalPortfolioValuation1 {
 	 * definition} = "Accrued income."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccruedIncome = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalPortfolioValuation1, Optional<AmountAndDirection30>> mmAccruedIncome = new MMMessageAttribute<TotalPortfolioValuation1, Optional<AmountAndDirection30>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalPortfolioValuation1.mmObject();
 			isDerived = false;
@@ -745,11 +869,21 @@ public class TotalPortfolioValuation1 {
 			definition = "Accrued income.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection30.mmObject();
+			complexType_lazy = () -> AmountAndDirection30.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection30> getValue(TotalPortfolioValuation1 obj) {
+			return obj.getAccruedIncome();
+		}
+
+		@Override
+		public void setValue(TotalPortfolioValuation1 obj, Optional<AmountAndDirection30> value) {
+			obj.setAccruedIncome(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InvstmtFndDtls")
-	protected List<com.tools20022.repository.msg.InvestmentFund1> investmentFundDetails;
+	protected List<InvestmentFund1> investmentFundDetails;
 	/**
 	 * 
 	 <p>
@@ -783,7 +917,7 @@ public class TotalPortfolioValuation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestmentFundDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TotalPortfolioValuation1, List<InvestmentFund1>> mmInvestmentFundDetails = new MMMessageAssociationEnd<TotalPortfolioValuation1, List<InvestmentFund1>>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundClass.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalPortfolioValuation1.mmObject();
@@ -794,7 +928,17 @@ public class TotalPortfolioValuation1 {
 			definition = "Valuation information of the investment fund or investment fund share class.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvestmentFund1.mmObject();
+			type_lazy = () -> InvestmentFund1.mmObject();
+		}
+
+		@Override
+		public List<InvestmentFund1> getValue(TotalPortfolioValuation1 obj) {
+			return obj.getInvestmentFundDetails();
+		}
+
+		@Override
+		public void setValue(TotalPortfolioValuation1 obj, List<InvestmentFund1> value) {
+			obj.setInvestmentFundDetails(value);
 		}
 	};
 
@@ -823,7 +967,7 @@ public class TotalPortfolioValuation1 {
 		return totalPortfolioValue;
 	}
 
-	public TotalPortfolioValuation1 setTotalPortfolioValue(com.tools20022.repository.msg.AmountAndDirection30 totalPortfolioValue) {
+	public TotalPortfolioValuation1 setTotalPortfolioValue(AmountAndDirection30 totalPortfolioValue) {
 		this.totalPortfolioValue = Objects.requireNonNull(totalPortfolioValue);
 		return this;
 	}
@@ -832,7 +976,7 @@ public class TotalPortfolioValuation1 {
 		return previousTotalPortfolioValue == null ? Optional.empty() : Optional.of(previousTotalPortfolioValue);
 	}
 
-	public TotalPortfolioValuation1 setPreviousTotalPortfolioValue(com.tools20022.repository.msg.AmountAndDirection30 previousTotalPortfolioValue) {
+	public TotalPortfolioValuation1 setPreviousTotalPortfolioValue(AmountAndDirection30 previousTotalPortfolioValue) {
 		this.previousTotalPortfolioValue = previousTotalPortfolioValue;
 		return this;
 	}
@@ -841,7 +985,7 @@ public class TotalPortfolioValuation1 {
 		return totalPortfolioValueChange == null ? Optional.empty() : Optional.of(totalPortfolioValueChange);
 	}
 
-	public TotalPortfolioValuation1 setTotalPortfolioValueChange(com.tools20022.repository.msg.AmountAndRate2 totalPortfolioValueChange) {
+	public TotalPortfolioValuation1 setTotalPortfolioValueChange(AmountAndRate2 totalPortfolioValueChange) {
 		this.totalPortfolioValueChange = totalPortfolioValueChange;
 		return this;
 	}
@@ -850,7 +994,7 @@ public class TotalPortfolioValuation1 {
 		return totalBookValue;
 	}
 
-	public TotalPortfolioValuation1 setTotalBookValue(com.tools20022.repository.msg.AmountAndDirection30 totalBookValue) {
+	public TotalPortfolioValuation1 setTotalBookValue(AmountAndDirection30 totalBookValue) {
 		this.totalBookValue = Objects.requireNonNull(totalBookValue);
 		return this;
 	}
@@ -859,7 +1003,7 @@ public class TotalPortfolioValuation1 {
 		return previousTotalBookValue == null ? Optional.empty() : Optional.of(previousTotalBookValue);
 	}
 
-	public TotalPortfolioValuation1 setPreviousTotalBookValue(com.tools20022.repository.msg.AmountAndDirection30 previousTotalBookValue) {
+	public TotalPortfolioValuation1 setPreviousTotalBookValue(AmountAndDirection30 previousTotalBookValue) {
 		this.previousTotalBookValue = previousTotalBookValue;
 		return this;
 	}
@@ -868,7 +1012,7 @@ public class TotalPortfolioValuation1 {
 		return totalBookValueChange == null ? Optional.empty() : Optional.of(totalBookValueChange);
 	}
 
-	public TotalPortfolioValuation1 setTotalBookValueChange(com.tools20022.repository.msg.AmountAndRate2 totalBookValueChange) {
+	public TotalPortfolioValuation1 setTotalBookValueChange(AmountAndRate2 totalBookValueChange) {
 		this.totalBookValueChange = totalBookValueChange;
 		return this;
 	}
@@ -877,7 +1021,7 @@ public class TotalPortfolioValuation1 {
 		return totalReceipts == null ? Optional.empty() : Optional.of(totalReceipts);
 	}
 
-	public TotalPortfolioValuation1 setTotalReceipts(com.tools20022.repository.msg.AmountAndDirection30 totalReceipts) {
+	public TotalPortfolioValuation1 setTotalReceipts(AmountAndDirection30 totalReceipts) {
 		this.totalReceipts = totalReceipts;
 		return this;
 	}
@@ -886,7 +1030,7 @@ public class TotalPortfolioValuation1 {
 		return totalDisbursements == null ? Optional.empty() : Optional.of(totalDisbursements);
 	}
 
-	public TotalPortfolioValuation1 setTotalDisbursements(com.tools20022.repository.msg.AmountAndDirection30 totalDisbursements) {
+	public TotalPortfolioValuation1 setTotalDisbursements(AmountAndDirection30 totalDisbursements) {
 		this.totalDisbursements = totalDisbursements;
 		return this;
 	}
@@ -895,7 +1039,7 @@ public class TotalPortfolioValuation1 {
 		return incomeReceived == null ? Optional.empty() : Optional.of(incomeReceived);
 	}
 
-	public TotalPortfolioValuation1 setIncomeReceived(com.tools20022.repository.msg.AmountAndDirection30 incomeReceived) {
+	public TotalPortfolioValuation1 setIncomeReceived(AmountAndDirection30 incomeReceived) {
 		this.incomeReceived = incomeReceived;
 		return this;
 	}
@@ -904,7 +1048,7 @@ public class TotalPortfolioValuation1 {
 		return expensesPaid == null ? Optional.empty() : Optional.of(expensesPaid);
 	}
 
-	public TotalPortfolioValuation1 setExpensesPaid(com.tools20022.repository.msg.AmountAndDirection30 expensesPaid) {
+	public TotalPortfolioValuation1 setExpensesPaid(AmountAndDirection30 expensesPaid) {
 		this.expensesPaid = expensesPaid;
 		return this;
 	}
@@ -913,7 +1057,7 @@ public class TotalPortfolioValuation1 {
 		return unrealisedGainOrLoss == null ? Optional.empty() : Optional.of(unrealisedGainOrLoss);
 	}
 
-	public TotalPortfolioValuation1 setUnrealisedGainOrLoss(com.tools20022.repository.msg.AmountAndDirection31 unrealisedGainOrLoss) {
+	public TotalPortfolioValuation1 setUnrealisedGainOrLoss(AmountAndDirection31 unrealisedGainOrLoss) {
 		this.unrealisedGainOrLoss = unrealisedGainOrLoss;
 		return this;
 	}
@@ -922,7 +1066,7 @@ public class TotalPortfolioValuation1 {
 		return realisedGainOrLoss == null ? Optional.empty() : Optional.of(realisedGainOrLoss);
 	}
 
-	public TotalPortfolioValuation1 setRealisedGainOrLoss(com.tools20022.repository.msg.AmountAndDirection31 realisedGainOrLoss) {
+	public TotalPortfolioValuation1 setRealisedGainOrLoss(AmountAndDirection31 realisedGainOrLoss) {
 		this.realisedGainOrLoss = realisedGainOrLoss;
 		return this;
 	}
@@ -931,7 +1075,7 @@ public class TotalPortfolioValuation1 {
 		return accruedIncome == null ? Optional.empty() : Optional.of(accruedIncome);
 	}
 
-	public TotalPortfolioValuation1 setAccruedIncome(com.tools20022.repository.msg.AmountAndDirection30 accruedIncome) {
+	public TotalPortfolioValuation1 setAccruedIncome(AmountAndDirection30 accruedIncome) {
 		this.accruedIncome = accruedIncome;
 		return this;
 	}
@@ -940,7 +1084,7 @@ public class TotalPortfolioValuation1 {
 		return investmentFundDetails == null ? investmentFundDetails = new ArrayList<>() : investmentFundDetails;
 	}
 
-	public TotalPortfolioValuation1 setInvestmentFundDetails(List<com.tools20022.repository.msg.InvestmentFund1> investmentFundDetails) {
+	public TotalPortfolioValuation1 setInvestmentFundDetails(List<InvestmentFund1> investmentFundDetails) {
 		this.investmentFundDetails = Objects.requireNonNull(investmentFundDetails);
 		return this;
 	}

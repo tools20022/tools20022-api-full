@@ -26,6 +26,9 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.BuyIn;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashCompensation1;
+import com.tools20022.repository.msg.Price4;
+import com.tools20022.repository.msg.SecuritiesCompensation1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -121,7 +124,7 @@ public class BuyIn2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBuyInNotificationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BuyIn2, Optional<Max35Text>> mmBuyInNotificationIdentification = new MMMessageAttribute<BuyIn2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BuyIn2.mmObject();
 			isDerived = false;
@@ -132,6 +135,16 @@ public class BuyIn2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(BuyIn2 obj) {
+			return obj.getBuyInNotificationIdentification();
+		}
+
+		@Override
+		public void setValue(BuyIn2 obj, Optional<Max35Text> value) {
+			obj.setBuyInNotificationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BuyInId", required = true)
@@ -162,7 +175,7 @@ public class BuyIn2 {
 	 * definition} = "Indicates the reference id of the buy in."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBuyInIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BuyIn2, Max35Text> mmBuyInIdentification = new MMMessageAttribute<BuyIn2, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BuyIn2.mmObject();
 			isDerived = false;
@@ -173,6 +186,16 @@ public class BuyIn2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(BuyIn2 obj) {
+			return obj.getBuyInIdentification();
+		}
+
+		@Override
+		public void setValue(BuyIn2 obj, Max35Text value) {
+			obj.setBuyInIdentification(value);
 		}
 	};
 	@XmlElement(name = "Dt", required = true)
@@ -208,7 +231,7 @@ public class BuyIn2 {
 	 * definition} = "Provides the date at which the buy occured."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BuyIn2, ISODate> mmDate = new MMMessageAttribute<BuyIn2, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> BuyIn.mmBuyinDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BuyIn2.mmObject();
@@ -220,6 +243,16 @@ public class BuyIn2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(BuyIn2 obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(BuyIn2 obj, ISODate value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "Pric")
@@ -253,7 +286,7 @@ public class BuyIn2 {
 	 * definition} = "Provides the price of the buy-in."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BuyIn2, Optional<Price4>> mmPrice = new MMMessageAssociationEnd<BuyIn2, Optional<Price4>>() {
 		{
 			businessElementTrace_lazy = () -> BuyIn.mmBuyInPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BuyIn2.mmObject();
@@ -265,7 +298,17 @@ public class BuyIn2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
+			type_lazy = () -> Price4.mmObject();
+		}
+
+		@Override
+		public Optional<Price4> getValue(BuyIn2 obj) {
+			return obj.getPrice();
+		}
+
+		@Override
+		public void setValue(BuyIn2 obj, Optional<Price4> value) {
+			obj.setPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctiesBuyIn")
@@ -303,7 +346,7 @@ public class BuyIn2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesBuyIn = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BuyIn2, Optional<SecuritiesCompensation1>> mmSecuritiesBuyIn = new MMMessageAssociationEnd<BuyIn2, Optional<SecuritiesCompensation1>>() {
 		{
 			businessElementTrace_lazy = () -> BuyIn.mmSecuritiesCompensation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BuyIn2.mmObject();
@@ -315,7 +358,17 @@ public class BuyIn2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesCompensation1.mmObject();
+			type_lazy = () -> SecuritiesCompensation1.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesCompensation1> getValue(BuyIn2 obj) {
+			return obj.getSecuritiesBuyIn();
+		}
+
+		@Override
+		public void setValue(BuyIn2 obj, Optional<SecuritiesCompensation1> value) {
+			obj.setSecuritiesBuyIn(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReqrdCshCompstn")
@@ -352,7 +405,7 @@ public class BuyIn2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRequiredCashCompensation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BuyIn2, Optional<CashCompensation1>> mmRequiredCashCompensation = new MMMessageAssociationEnd<BuyIn2, Optional<CashCompensation1>>() {
 		{
 			businessElementTrace_lazy = () -> BuyIn.mmCashCompensation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BuyIn2.mmObject();
@@ -364,7 +417,17 @@ public class BuyIn2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashCompensation1.mmObject();
+			type_lazy = () -> CashCompensation1.mmObject();
+		}
+
+		@Override
+		public Optional<CashCompensation1> getValue(BuyIn2 obj) {
+			return obj.getRequiredCashCompensation();
+		}
+
+		@Override
+		public void setValue(BuyIn2 obj, Optional<CashCompensation1> value) {
+			obj.setRequiredCashCompensation(value.orElse(null));
 		}
 	};
 
@@ -415,7 +478,7 @@ public class BuyIn2 {
 		return price == null ? Optional.empty() : Optional.of(price);
 	}
 
-	public BuyIn2 setPrice(com.tools20022.repository.msg.Price4 price) {
+	public BuyIn2 setPrice(Price4 price) {
 		this.price = price;
 		return this;
 	}
@@ -424,7 +487,7 @@ public class BuyIn2 {
 		return securitiesBuyIn == null ? Optional.empty() : Optional.of(securitiesBuyIn);
 	}
 
-	public BuyIn2 setSecuritiesBuyIn(com.tools20022.repository.msg.SecuritiesCompensation1 securitiesBuyIn) {
+	public BuyIn2 setSecuritiesBuyIn(SecuritiesCompensation1 securitiesBuyIn) {
 		this.securitiesBuyIn = securitiesBuyIn;
 		return this;
 	}
@@ -433,7 +496,7 @@ public class BuyIn2 {
 		return requiredCashCompensation == null ? Optional.empty() : Optional.of(requiredCashCompensation);
 	}
 
-	public BuyIn2 setRequiredCashCompensation(com.tools20022.repository.msg.CashCompensation1 requiredCashCompensation) {
+	public BuyIn2 setRequiredCashCompensation(CashCompensation1 requiredCashCompensation) {
 		this.requiredCashCompensation = requiredCashCompensation;
 		return this;
 	}

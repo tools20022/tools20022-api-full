@@ -123,7 +123,7 @@ public class CashAccount5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount5, CashAccountIdentification1Choice> mmIdentification = new MMMessageAttribute<CashAccount5, CashAccountIdentification1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount5.mmObject();
@@ -135,6 +135,16 @@ public class CashAccount5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CashAccountIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public CashAccountIdentification1Choice getValue(CashAccount5 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(CashAccount5 obj, CashAccountIdentification1Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Nm", required = true)
@@ -172,7 +182,7 @@ public class CashAccount5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount5, Max35Text> mmName = new MMMessageAttribute<CashAccount5, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount5.mmObject();
@@ -184,6 +194,16 @@ public class CashAccount5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CashAccount5 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(CashAccount5 obj, Max35Text value) {
+			obj.setName(value);
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -224,7 +244,7 @@ public class CashAccount5 {
 	 * definition} = "Specifies the nature, or use, of the cash account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount5, Optional<CashAccountType1Code>> mmType = new MMMessageAttribute<CashAccount5, Optional<CashAccountType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> CashAccount.mmCashAccountType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount5.mmObject();
@@ -237,6 +257,16 @@ public class CashAccount5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CashAccountType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccountType1Code> getValue(CashAccount5 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(CashAccount5 obj, Optional<CashAccountType1Code> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ccy", required = true)
@@ -275,7 +305,7 @@ public class CashAccount5 {
 	 * definition} = "Medium of exchange of value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount5, CurrencyCode> mmCurrency = new MMMessageAttribute<CashAccount5, CurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmBaseCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount5.mmObject();
@@ -288,6 +318,16 @@ public class CashAccount5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		@Override
+		public CurrencyCode getValue(CashAccount5 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(CashAccount5 obj, CurrencyCode value) {
+			obj.setCurrency(value);
 		}
 	};
 	@XmlElement(name = "Sts", required = true)
@@ -325,7 +365,7 @@ public class CashAccount5 {
 	 * "Specifies the current state of an account, eg, enabled or deleted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount5, AccountStatus1Code> mmStatus = new MMMessageAttribute<CashAccount5, AccountStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount5.mmObject();
@@ -337,6 +377,16 @@ public class CashAccount5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AccountStatus1Code.mmObject();
+		}
+
+		@Override
+		public AccountStatus1Code getValue(CashAccount5 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(CashAccount5 obj, AccountStatus1Code value) {
+			obj.setStatus(value);
 		}
 	};
 

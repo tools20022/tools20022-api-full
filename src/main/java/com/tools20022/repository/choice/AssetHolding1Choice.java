@@ -111,7 +111,7 @@ public class AssetHolding1Choice {
 	 * definition} = "Mark-to-market pre-haircut value of gold collateral.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGold = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AssetHolding1Choice, ActiveCurrencyAndAmount> mmGold = new MMMessageAttribute<AssetHolding1Choice, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetHolding1Choice.mmObject();
 			isDerived = false;
@@ -122,6 +122,16 @@ public class AssetHolding1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(AssetHolding1Choice obj) {
+			return obj.getGold();
+		}
+
+		@Override
+		public void setValue(AssetHolding1Choice obj, ActiveCurrencyAndAmount value) {
+			obj.setGold(value);
 		}
 	};
 	@XmlElement(name = "Trpty", required = true)
@@ -155,7 +165,7 @@ public class AssetHolding1Choice {
 	 * "Mark-to-market pre-haircut value of triparty collateral.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTriparty = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AssetHolding1Choice, ActiveCurrencyAndAmount> mmTriparty = new MMMessageAttribute<AssetHolding1Choice, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetHolding1Choice.mmObject();
 			isDerived = false;
@@ -166,6 +176,16 @@ public class AssetHolding1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(AssetHolding1Choice obj) {
+			return obj.getTriparty();
+		}
+
+		@Override
+		public void setValue(AssetHolding1Choice obj, ActiveCurrencyAndAmount value) {
+			obj.setTriparty(value);
 		}
 	};
 	@XmlElement(name = "Csh", required = true)
@@ -198,7 +218,7 @@ public class AssetHolding1Choice {
 	 * definition} = "Value of cash collateral.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCash = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AssetHolding1Choice, ActiveCurrencyAndAmount> mmCash = new MMMessageAttribute<AssetHolding1Choice, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetHolding1Choice.mmObject();
 			isDerived = false;
@@ -209,6 +229,16 @@ public class AssetHolding1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(AssetHolding1Choice obj) {
+			return obj.getCash();
+		}
+
+		@Override
+		public void setValue(AssetHolding1Choice obj, ActiveCurrencyAndAmount value) {
+			obj.setCash(value);
 		}
 	};
 	@XmlElement(name = "Scty", required = true)
@@ -240,7 +270,7 @@ public class AssetHolding1Choice {
 	 * definition} = "Identification and value of the outright investment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecurity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetHolding1Choice, SecurityIdentificationAndAmount1> mmSecurity = new MMMessageAssociationEnd<AssetHolding1Choice, SecurityIdentificationAndAmount1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetHolding1Choice.mmObject();
 			isDerived = false;
@@ -252,6 +282,16 @@ public class AssetHolding1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecurityIdentificationAndAmount1.mmObject();
+		}
+
+		@Override
+		public SecurityIdentificationAndAmount1 getValue(AssetHolding1Choice obj) {
+			return obj.getSecurity();
+		}
+
+		@Override
+		public void setValue(AssetHolding1Choice obj, SecurityIdentificationAndAmount1 value) {
+			obj.setSecurity(value);
 		}
 	};
 	@XmlElement(name = "Grnt", required = true)
@@ -283,7 +323,7 @@ public class AssetHolding1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGuarantee = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetHolding1Choice, Guarantee1> mmGuarantee = new MMMessageAssociationEnd<AssetHolding1Choice, Guarantee1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetHolding1Choice.mmObject();
 			isDerived = false;
@@ -295,6 +335,16 @@ public class AssetHolding1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Guarantee1.mmObject();
+		}
+
+		@Override
+		public Guarantee1 getValue(AssetHolding1Choice obj) {
+			return obj.getGuarantee();
+		}
+
+		@Override
+		public void setValue(AssetHolding1Choice obj, Guarantee1 value) {
+			obj.setGuarantee(value);
 		}
 	};
 	@XmlElement(name = "Cmmdty", required = true)
@@ -325,7 +375,7 @@ public class AssetHolding1Choice {
 	 * "Mark-to-market pre-haircut value of other commodity collateral.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCommodity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetHolding1Choice, Commodity2> mmCommodity = new MMMessageAssociationEnd<AssetHolding1Choice, Commodity2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetHolding1Choice.mmObject();
 			isDerived = false;
@@ -337,6 +387,16 @@ public class AssetHolding1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Commodity2.mmObject();
+		}
+
+		@Override
+		public Commodity2 getValue(AssetHolding1Choice obj) {
+			return obj.getCommodity();
+		}
+
+		@Override
+		public void setValue(AssetHolding1Choice obj, Commodity2 value) {
+			obj.setCommodity(value);
 		}
 	};
 

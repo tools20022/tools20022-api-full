@@ -111,7 +111,7 @@ public class TransferUnmatchedStatusReason1 {
 	 * definition} = "Reason for a rejected status in structured form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferUnmatchedStatusReason1, TransferUnmatchedReason1Code> mmStructured = new MMMessageAttribute<TransferUnmatchedStatusReason1, TransferUnmatchedReason1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferUnmatchedStatusReason1.mmObject();
 			isDerived = false;
@@ -122,6 +122,16 @@ public class TransferUnmatchedStatusReason1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TransferUnmatchedReason1Code.mmObject();
+		}
+
+		@Override
+		public TransferUnmatchedReason1Code getValue(TransferUnmatchedStatusReason1 obj) {
+			return obj.getStructured();
+		}
+
+		@Override
+		public void setValue(TransferUnmatchedStatusReason1 obj, TransferUnmatchedReason1Code value) {
+			obj.setStructured(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -155,7 +165,7 @@ public class TransferUnmatchedStatusReason1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferUnmatchedStatusReason1, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<TransferUnmatchedStatusReason1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferUnmatchedStatusReason1.mmObject();
 			isDerived = false;
@@ -166,6 +176,16 @@ public class TransferUnmatchedStatusReason1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(TransferUnmatchedStatusReason1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(TransferUnmatchedStatusReason1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

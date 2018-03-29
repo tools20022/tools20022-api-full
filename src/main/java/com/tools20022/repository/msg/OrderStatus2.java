@@ -31,6 +31,7 @@ import com.tools20022.repository.entity.ListTrading;
 import com.tools20022.repository.entity.SecuritiesOrderStatus;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.OrderStatus3;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -139,7 +140,7 @@ public class OrderStatus2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmListIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderStatus2, Max35Text> mmListIdentification = new MMMessageAttribute<OrderStatus2, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> ListTrading.mmListIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatus2.mmObject();
@@ -152,6 +153,16 @@ public class OrderStatus2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OrderStatus2 obj) {
+			return obj.getListIdentification();
+		}
+
+		@Override
+		public void setValue(OrderStatus2 obj, Max35Text value) {
+			obj.setListIdentification(value);
 		}
 	};
 	@XmlElement(name = "ListStsTp", required = true)
@@ -191,7 +202,7 @@ public class OrderStatus2 {
 	 * definition} = "Status of an instructed order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmListStatusType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderStatus2, ListStatusType1Code> mmListStatusType = new MMMessageAttribute<OrderStatus2, ListStatusType1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmListOrderStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatus2.mmObject();
@@ -204,6 +215,16 @@ public class OrderStatus2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ListStatusType1Code.mmObject();
+		}
+
+		@Override
+		public ListStatusType1Code getValue(OrderStatus2 obj) {
+			return obj.getListStatusType();
+		}
+
+		@Override
+		public void setValue(OrderStatus2 obj, ListStatusType1Code value) {
+			obj.setListStatusType(value);
 		}
 	};
 	@XmlElement(name = "ListOrdrSts", required = true)
@@ -243,7 +264,7 @@ public class OrderStatus2 {
 	 * definition} = "Indicates the status of a list order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmListOrderStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderStatus2, OrderStatus6Code> mmListOrderStatus = new MMMessageAttribute<OrderStatus2, OrderStatus6Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmOrderStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatus2.mmObject();
@@ -256,6 +277,16 @@ public class OrderStatus2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OrderStatus6Code.mmObject();
+		}
+
+		@Override
+		public OrderStatus6Code getValue(OrderStatus2 obj) {
+			return obj.getListOrderStatus();
+		}
+
+		@Override
+		public void setValue(OrderStatus2 obj, OrderStatus6Code value) {
+			obj.setListOrderStatus(value);
 		}
 	};
 	@XmlElement(name = "TtlNbOfRpts", required = true)
@@ -287,7 +318,7 @@ public class OrderStatus2 {
 	 * "Total number of messages required to get a complete status list."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalNumberOfReports = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderStatus2, Number> mmTotalNumberOfReports = new MMMessageAttribute<OrderStatus2, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatus2.mmObject();
 			isDerived = false;
@@ -298,6 +329,16 @@ public class OrderStatus2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(OrderStatus2 obj) {
+			return obj.getTotalNumberOfReports();
+		}
+
+		@Override
+		public void setValue(OrderStatus2 obj, Number value) {
+			obj.setTotalNumberOfReports(value);
 		}
 	};
 	@XmlElement(name = "RptSeqNb", required = true)
@@ -331,7 +372,7 @@ public class OrderStatus2 {
 	 * definition} = "Sequence number of this report message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportSequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderStatus2, Number> mmReportSequenceNumber = new MMMessageAttribute<OrderStatus2, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatus2.mmObject();
 			isDerived = false;
@@ -343,6 +384,16 @@ public class OrderStatus2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(OrderStatus2 obj) {
+			return obj.getReportSequenceNumber();
+		}
+
+		@Override
+		public void setValue(OrderStatus2 obj, Number value) {
+			obj.setReportSequenceNumber(value);
 		}
 	};
 	@XmlElement(name = "TtlNbOfOrdrs", required = true)
@@ -378,7 +429,7 @@ public class OrderStatus2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalNumberOfOrders = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderStatus2, Number> mmTotalNumberOfOrders = new MMMessageAttribute<OrderStatus2, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatus2.mmObject();
 			isDerived = false;
@@ -390,6 +441,16 @@ public class OrderStatus2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(OrderStatus2 obj) {
+			return obj.getTotalNumberOfOrders();
+		}
+
+		@Override
+		public void setValue(OrderStatus2 obj, Number value) {
+			obj.setTotalNumberOfOrders(value);
 		}
 	};
 	@XmlElement(name = "RjctnRsn")
@@ -429,7 +490,7 @@ public class OrderStatus2 {
 	 * definition} = "Reason for which an order is rejected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRejectionReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderStatus2, Optional<RejectionReason3Choice>> mmRejectionReason = new MMMessageAttribute<OrderStatus2, Optional<RejectionReason3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatus2.mmObject();
@@ -443,9 +504,19 @@ public class OrderStatus2 {
 			minOccurs = 0;
 			complexType_lazy = () -> RejectionReason3Choice.mmObject();
 		}
+
+		@Override
+		public Optional<RejectionReason3Choice> getValue(OrderStatus2 obj) {
+			return obj.getRejectionReason();
+		}
+
+		@Override
+		public void setValue(OrderStatus2 obj, Optional<RejectionReason3Choice> value) {
+			obj.setRejectionReason(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "SnglOrdrDtls")
-	protected List<com.tools20022.repository.msg.OrderStatus3> singleOrderDetails;
+	protected List<OrderStatus3> singleOrderDetails;
 	/**
 	 * 
 	 <p>
@@ -476,7 +547,7 @@ public class OrderStatus2 {
 	 * definition} = "Status details specific to each order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSingleOrderDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OrderStatus2, List<OrderStatus3>> mmSingleOrderDetails = new MMMessageAssociationEnd<OrderStatus2, List<OrderStatus3>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesOrderStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatus2.mmObject();
@@ -487,7 +558,17 @@ public class OrderStatus2 {
 			definition = "Status details specific to each order.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OrderStatus3.mmObject();
+			type_lazy = () -> OrderStatus3.mmObject();
+		}
+
+		@Override
+		public List<OrderStatus3> getValue(OrderStatus2 obj) {
+			return obj.getSingleOrderDetails();
+		}
+
+		@Override
+		public void setValue(OrderStatus2 obj, List<OrderStatus3> value) {
+			obj.setSingleOrderDetails(value);
 		}
 	};
 
@@ -575,7 +656,7 @@ public class OrderStatus2 {
 		return singleOrderDetails == null ? singleOrderDetails = new ArrayList<>() : singleOrderDetails;
 	}
 
-	public OrderStatus2 setSingleOrderDetails(List<com.tools20022.repository.msg.OrderStatus3> singleOrderDetails) {
+	public OrderStatus2 setSingleOrderDetails(List<OrderStatus3> singleOrderDetails) {
 		this.singleOrderDetails = Objects.requireNonNull(singleOrderDetails);
 		return this;
 	}

@@ -137,7 +137,7 @@ public class References35Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwnerTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References35Choice, Max35Text> mmAccountOwnerTransactionIdentification = new MMMessageAttribute<References35Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountOwnerTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References35Choice.mmObject();
@@ -150,6 +150,16 @@ public class References35Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(References35Choice obj) {
+			return obj.getAccountOwnerTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(References35Choice obj, Max35Text value) {
+			obj.setAccountOwnerTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctSvcrTxId", required = true)
@@ -191,7 +201,7 @@ public class References35Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicerTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References35Choice, Max35Text> mmAccountServicerTransactionIdentification = new MMMessageAttribute<References35Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountServicerTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References35Choice.mmObject();
@@ -204,6 +214,16 @@ public class References35Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(References35Choice obj) {
+			return obj.getAccountServicerTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(References35Choice obj, Max35Text value) {
+			obj.setAccountServicerTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "MktInfrstrctrTxId", required = true)
@@ -246,7 +266,7 @@ public class References35Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarketInfrastructureTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References35Choice, Max35Text> mmMarketInfrastructureTransactionIdentification = new MMMessageAttribute<References35Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmMarketInfrastructureTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References35Choice.mmObject();
@@ -259,6 +279,16 @@ public class References35Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(References35Choice obj) {
+			return obj.getMarketInfrastructureTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(References35Choice obj, Max35Text value) {
+			obj.setMarketInfrastructureTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "PrcrTxId", required = true)
@@ -296,7 +326,7 @@ public class References35Choice {
 	 * "Identification of the transaction as assigned by the processor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessorTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References35Choice, Max35Text> mmProcessorTransactionIdentification = new MMMessageAttribute<References35Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmProcessorTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References35Choice.mmObject();
@@ -308,6 +338,16 @@ public class References35Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(References35Choice obj) {
+			return obj.getProcessorTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(References35Choice obj, Max35Text value) {
+			obj.setProcessorTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "PoolId", required = true)
@@ -347,7 +387,7 @@ public class References35Choice {
 	 * definition} = "Collective reference identifying a set of messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPoolIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References35Choice, Max35Text> mmPoolIdentification = new MMMessageAttribute<References35Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmPoolIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References35Choice.mmObject();
@@ -360,6 +400,16 @@ public class References35Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(References35Choice obj) {
+			return obj.getPoolIdentification();
+		}
+
+		@Override
+		public void setValue(References35Choice obj, Max35Text value) {
+			obj.setPoolIdentification(value);
 		}
 	};
 	@XmlElement(name = "CmonId", required = true)
@@ -401,7 +451,7 @@ public class References35Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommonIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References35Choice, Max35Text> mmCommonIdentification = new MMMessageAttribute<References35Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCommonIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References35Choice.mmObject();
@@ -414,6 +464,16 @@ public class References35Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(References35Choice obj) {
+			return obj.getCommonIdentification();
+		}
+
+		@Override
+		public void setValue(References35Choice obj, Max35Text value) {
+			obj.setCommonIdentification(value);
 		}
 	};
 	@XmlElement(name = "TradId", required = true)
@@ -455,7 +515,7 @@ public class References35Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References35Choice, Max35Text> mmTradeIdentification = new MMMessageAttribute<References35Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References35Choice.mmObject();
@@ -468,6 +528,16 @@ public class References35Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(References35Choice obj) {
+			return obj.getTradeIdentification();
+		}
+
+		@Override
+		public void setValue(References35Choice obj, Max35Text value) {
+			obj.setTradeIdentification(value);
 		}
 	};
 	@XmlElement(name = "CorpActnEvtId", required = true)
@@ -509,7 +579,7 @@ public class References35Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References35Choice, Max35Text> mmCorporateActionEventIdentification = new MMMessageAttribute<References35Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmCorporateActionEventIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References35Choice.mmObject();
@@ -522,6 +592,16 @@ public class References35Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(References35Choice obj) {
+			return obj.getCorporateActionEventIdentification();
+		}
+
+		@Override
+		public void setValue(References35Choice obj, Max35Text value) {
+			obj.setCorporateActionEventIdentification(value);
 		}
 	};
 

@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ContentInformationType14;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -119,7 +120,7 @@ public class ATMEquipment3 {
 	 * ATMEquipment2.mmManufacturer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmManufacturer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMEquipment3, Optional<Max35Text>> mmManufacturer = new MMMessageAttribute<ATMEquipment3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEquipment3.mmObject();
 			isDerived = false;
@@ -131,6 +132,16 @@ public class ATMEquipment3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMEquipment3 obj) {
+			return obj.getManufacturer();
+		}
+
+		@Override
+		public void setValue(ATMEquipment3 obj, Optional<Max35Text> value) {
+			obj.setManufacturer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Mdl")
@@ -166,7 +177,7 @@ public class ATMEquipment3 {
 	 * ATMEquipment2.mmModel}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmModel = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMEquipment3, Optional<Max35Text>> mmModel = new MMMessageAttribute<ATMEquipment3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEquipment3.mmObject();
 			isDerived = false;
@@ -178,6 +189,16 @@ public class ATMEquipment3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMEquipment3 obj) {
+			return obj.getModel();
+		}
+
+		@Override
+		public void setValue(ATMEquipment3 obj, Optional<Max35Text> value) {
+			obj.setModel(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Vrsn")
@@ -213,7 +234,7 @@ public class ATMEquipment3 {
 	 * ATMEquipment2.mmVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMEquipment3, Optional<Max35Text>> mmVersion = new MMMessageAttribute<ATMEquipment3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEquipment3.mmObject();
 			isDerived = false;
@@ -225,6 +246,16 @@ public class ATMEquipment3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMEquipment3 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(ATMEquipment3 obj, Optional<Max35Text> value) {
+			obj.setVersion(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SrlNb")
@@ -260,7 +291,7 @@ public class ATMEquipment3 {
 	 * ATMEquipment2.mmSerialNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSerialNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMEquipment3, Optional<Max35Text>> mmSerialNumber = new MMMessageAttribute<ATMEquipment3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEquipment3.mmObject();
 			isDerived = false;
@@ -272,6 +303,16 @@ public class ATMEquipment3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMEquipment3 obj) {
+			return obj.getSerialNumber();
+		}
+
+		@Override
+		public void setValue(ATMEquipment3 obj, Optional<Max35Text> value) {
+			obj.setSerialNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SgndSrlNb")
@@ -304,7 +345,7 @@ public class ATMEquipment3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSignedSerialNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMEquipment3, Optional<ContentInformationType14>> mmSignedSerialNumber = new MMMessageAssociationEnd<ATMEquipment3, Optional<ContentInformationType14>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEquipment3.mmObject();
 			isDerived = false;
@@ -315,7 +356,17 @@ public class ATMEquipment3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContentInformationType14.mmObject();
+			type_lazy = () -> ContentInformationType14.mmObject();
+		}
+
+		@Override
+		public Optional<ContentInformationType14> getValue(ATMEquipment3 obj) {
+			return obj.getSignedSerialNumber();
+		}
+
+		@Override
+		public void setValue(ATMEquipment3 obj, Optional<ContentInformationType14> value) {
+			obj.setSignedSerialNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FrmwrPrvdr")
@@ -351,7 +402,7 @@ public class ATMEquipment3 {
 	 * ATMEquipment2.mmFirmwareProvider}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFirmwareProvider = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMEquipment3, Optional<Max35Text>> mmFirmwareProvider = new MMMessageAttribute<ATMEquipment3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEquipment3.mmObject();
 			isDerived = false;
@@ -363,6 +414,16 @@ public class ATMEquipment3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMEquipment3 obj) {
+			return obj.getFirmwareProvider();
+		}
+
+		@Override
+		public void setValue(ATMEquipment3 obj, Optional<Max35Text> value) {
+			obj.setFirmwareProvider(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FrmwrId")
@@ -398,7 +459,7 @@ public class ATMEquipment3 {
 	 * ATMEquipment2.mmFirmwareIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFirmwareIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMEquipment3, Optional<Max35Text>> mmFirmwareIdentification = new MMMessageAttribute<ATMEquipment3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEquipment3.mmObject();
 			isDerived = false;
@@ -410,6 +471,16 @@ public class ATMEquipment3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMEquipment3 obj) {
+			return obj.getFirmwareIdentification();
+		}
+
+		@Override
+		public void setValue(ATMEquipment3 obj, Optional<Max35Text> value) {
+			obj.setFirmwareIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FrmwrVrsn")
@@ -445,7 +516,7 @@ public class ATMEquipment3 {
 	 * ATMEquipment2.mmFirmwareVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFirmwareVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMEquipment3, Optional<Max35Text>> mmFirmwareVersion = new MMMessageAttribute<ATMEquipment3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEquipment3.mmObject();
 			isDerived = false;
@@ -457,6 +528,16 @@ public class ATMEquipment3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMEquipment3 obj) {
+			return obj.getFirmwareVersion();
+		}
+
+		@Override
+		public void setValue(ATMEquipment3 obj, Optional<Max35Text> value) {
+			obj.setFirmwareVersion(value.orElse(null));
 		}
 	};
 
@@ -516,7 +597,7 @@ public class ATMEquipment3 {
 		return signedSerialNumber == null ? Optional.empty() : Optional.of(signedSerialNumber);
 	}
 
-	public ATMEquipment3 setSignedSerialNumber(com.tools20022.repository.msg.ContentInformationType14 signedSerialNumber) {
+	public ATMEquipment3 setSignedSerialNumber(ContentInformationType14 signedSerialNumber) {
 		this.signedSerialNumber = signedSerialNumber;
 		return this;
 	}

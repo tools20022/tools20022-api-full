@@ -57,12 +57,16 @@ public class ConstraintOriginalMandateIdentificationPresenceRule {
 	 */
 	public static final MMConstraint<MandateAcceptance5> forMandateAcceptance5 = new MMConstraint<MandateAcceptance5>() {
 		{
-			validator = ConstraintOriginalMandateIdentificationPresenceRule::checkMandateAcceptance5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMandateIdentificationPresenceRule";
 			definition = "When AcceptanceResults/Accepted is \"true\" then OriginalMandate/OriginalMandateIdentification must be present or OriginalMandate/OriginalMandate/OriginalMandateIdentification must be present.";
 			owner_lazy = () -> MandateAcceptance5.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalMandate/OriginalMandateIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalMandate/OriginalMandate/MandateIdentification</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromValue\"><leftOperand>/AcceptanceResult/Accepted</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(MandateAcceptance5 obj) throws Exception {
+			checkMandateAcceptance5(obj);
 		}
 	};
 

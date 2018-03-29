@@ -19,10 +19,12 @@ package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.TradeCertificateTypeCode;
+import com.tools20022.repository.entity.DateTimePeriod;
 import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.entity.ProductDelivery;
+import com.tools20022.repository.entity.TradeCertificatePartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -177,7 +179,7 @@ public class TradeCertificate extends Document {
 	 * definition} = "Specifies the type of the certificate."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCertificateType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<TradeCertificate, TradeCertificateTypeCode> mmCertificateType = new MMBusinessAttribute<TradeCertificate, TradeCertificateTypeCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(RequiredSubmission4.mmCertificateType, RequiredSubmission5.mmCertificateType, CertificateDataSet1.mmCertificateType, OtherCertificateDataSet1.mmCertificateType,
 					CertificateDataSet2.mmCertificateType, OtherCertificateDataSet2.mmCertificateType, RequiredSubmission6.mmCertificateType);
@@ -191,12 +193,14 @@ public class TradeCertificate extends Document {
 			simpleType_lazy = () -> TradeCertificateTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TradeCertificate.class.getMethod("getCertificateType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TradeCertificateTypeCode getValue(TradeCertificate obj) {
+			return obj.getCertificateType();
+		}
+
+		@Override
+		public void setValue(TradeCertificate obj, TradeCertificateTypeCode value) {
+			obj.setCertificateType(value);
 		}
 	};
 	protected DateTimePeriod inspectionDate;
@@ -244,7 +248,7 @@ public class TradeCertificate extends Document {
 	 * definition} = "Date(s) at which inspection of the goods took place."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmInspectionDate = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<TradeCertificate, DateTimePeriod> mmInspectionDate = new MMBusinessAssociationEnd<TradeCertificate, DateTimePeriod>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CertificateDataSet1.mmInspectionDate, CertificateDataSet2.mmInspectionDate);
 			isDerived = false;
@@ -254,9 +258,19 @@ public class TradeCertificate extends Document {
 			definition = "Date(s) at which inspection of the goods took place.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmTradeCertificate;
+			opposite_lazy = () -> DateTimePeriod.mmTradeCertificate;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
+			type_lazy = () -> DateTimePeriod.mmObject();
+		}
+
+		@Override
+		public DateTimePeriod getValue(TradeCertificate obj) {
+			return obj.getInspectionDate();
+		}
+
+		@Override
+		public void setValue(TradeCertificate obj, DateTimePeriod value) {
+			obj.setInspectionDate(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.TradeCertificatePartyRole> tradeCertificatePartyRole;
@@ -295,7 +309,7 @@ public class TradeCertificate extends Document {
 	 * "Role played by a party in the context of issuing a trade certificate."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmTradeCertificatePartyRole = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<TradeCertificate, List<TradeCertificatePartyRole>> mmTradeCertificatePartyRole = new MMBusinessAssociationEnd<TradeCertificate, List<TradeCertificatePartyRole>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.TradeCertificate.mmObject();
@@ -306,6 +320,16 @@ public class TradeCertificate extends Document {
 			opposite_lazy = () -> com.tools20022.repository.entity.TradeCertificatePartyRole.mmTradeCertificate;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.TradeCertificatePartyRole.mmObject();
+		}
+
+		@Override
+		public List<TradeCertificatePartyRole> getValue(TradeCertificate obj) {
+			return obj.getTradeCertificatePartyRole();
+		}
+
+		@Override
+		public void setValue(TradeCertificate obj, List<TradeCertificatePartyRole> value) {
+			obj.setTradeCertificatePartyRole(value);
 		}
 	};
 	protected ProductDelivery productDelivery;
@@ -342,7 +366,7 @@ public class TradeCertificate extends Document {
 	 * definition} = "Delivery parameters of a trade."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmProductDelivery = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<TradeCertificate, Optional<ProductDelivery>> mmProductDelivery = new MMBusinessAssociationEnd<TradeCertificate, Optional<ProductDelivery>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.TradeCertificate.mmObject();
@@ -355,6 +379,16 @@ public class TradeCertificate extends Document {
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ProductDelivery.mmObject();
 		}
+
+		@Override
+		public Optional<ProductDelivery> getValue(TradeCertificate obj) {
+			return obj.getProductDelivery();
+		}
+
+		@Override
+		public void setValue(TradeCertificate obj, Optional<ProductDelivery> value) {
+			obj.setProductDelivery(value.orElse(null));
+		}
 	};
 
 	static public MMBusinessComponent mmObject() {
@@ -364,7 +398,7 @@ public class TradeCertificate extends Document {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeCertificate";
 				definition = "Formal document used to record a fact and used as proof of the fact, in the context of a commercial trade transaction.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DateTimePeriod.mmTradeCertificate, com.tools20022.repository.entity.ProductDelivery.mmTradeCertificate,
+				associationDomain_lazy = () -> Arrays.asList(DateTimePeriod.mmTradeCertificate, com.tools20022.repository.entity.ProductDelivery.mmTradeCertificate,
 						com.tools20022.repository.entity.TradeCertificatePartyRole.mmTradeCertificate);
 				derivationElement_lazy = () -> Arrays.asList(CertificateDataSet1.mmDataSetIdentification, CertificateDataSet1.mmCertifiedCharacteristics);
 				superType_lazy = () -> Document.mmObject();
@@ -395,7 +429,7 @@ public class TradeCertificate extends Document {
 		return inspectionDate;
 	}
 
-	public TradeCertificate setInspectionDate(com.tools20022.repository.entity.DateTimePeriod inspectionDate) {
+	public TradeCertificate setInspectionDate(DateTimePeriod inspectionDate) {
 		this.inspectionDate = Objects.requireNonNull(inspectionDate);
 		return this;
 	}

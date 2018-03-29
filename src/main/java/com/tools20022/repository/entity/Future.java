@@ -26,9 +26,9 @@ import com.tools20022.repository.codeset.UnitOfMeasureCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.entity.Derivative;
+import com.tools20022.repository.entity.FutureRule;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -166,7 +166,7 @@ public class Future extends Derivative {
 	 * definition} = "Date on which future contracts settle."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmFutureDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Future, ISODateTime> mmFutureDate = new MMBusinessAttribute<Future, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Future1.mmFutureDate, FutureOrOptionDetails1.mmFutureDate, Future2.mmFutureDate, Future3.mmFutureDate);
 			isDerived = false;
@@ -179,12 +179,14 @@ public class Future extends Derivative {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Future.class.getMethod("getFutureDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(Future obj) {
+			return obj.getFutureDate();
+		}
+
+		@Override
+		public void setValue(Future obj, ISODateTime value) {
+			obj.setFutureDate(value);
 		}
 	};
 	protected CurrencyAndAmount minimumSize;
@@ -229,7 +231,7 @@ public class Future extends Derivative {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmMinimumSize = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Future, CurrencyAndAmount> mmMinimumSize = new MMBusinessAttribute<Future, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Future1.mmMinimumSize, FutureOrOptionDetails1.mmMinimumSize, Future2.mmMinimumSize, Future3.mmMinimumSize);
 			isDerived = false;
@@ -242,12 +244,14 @@ public class Future extends Derivative {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Future.class.getMethod("getMinimumSize", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(Future obj) {
+			return obj.getMinimumSize();
+		}
+
+		@Override
+		public void setValue(Future obj, CurrencyAndAmount value) {
+			obj.setMinimumSize(value);
 		}
 	};
 	protected UnitOfMeasureCode unitOfMeasure;
@@ -288,29 +292,31 @@ public class Future extends Derivative {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Used to indicate the size of the underlying commodity on which the contract is based (e.g., 2500 lbs of lean cattle, 1000 barrels of crude oil, 1000 bushels of corn, etc.)."
+	 * "Used to indicate the size of the underlying commodity on which the contract is based (e.g., 2500 lbs of lean cattle, 1000 barrels of crude oil, 1000 bushels of corn, etc.)"
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmUnitOfMeasure = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Future, UnitOfMeasureCode> mmUnitOfMeasure = new MMBusinessAttribute<Future, UnitOfMeasureCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Future1.mmUnitOfMeasure, FutureOrOptionDetails1.mmUnitOfMeasure, Future2.mmUnitOfMeasure, Future3.mmUnitOfMeasure);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Future.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnitOfMeasure";
-			definition = "Used to indicate the size of the underlying commodity on which the contract is based (e.g., 2500 lbs of lean cattle, 1000 barrels of crude oil, 1000 bushels of corn, etc.).";
+			definition = "Used to indicate the size of the underlying commodity on which the contract is based (e.g., 2500 lbs of lean cattle, 1000 barrels of crude oil, 1000 bushels of corn, etc.)";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UnitOfMeasureCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Future.class.getMethod("getUnitOfMeasure", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public UnitOfMeasureCode getValue(Future obj) {
+			return obj.getUnitOfMeasure();
+		}
+
+		@Override
+		public void setValue(Future obj, UnitOfMeasureCode value) {
+			obj.setUnitOfMeasure(value);
 		}
 	};
 	protected ISODateTime lastDeliveryDate;
@@ -348,7 +354,7 @@ public class Future extends Derivative {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmLastDeliveryDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Future, ISODateTime> mmLastDeliveryDate = new MMBusinessAttribute<Future, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FutureOrOptionDetails1.mmLastDeliveryDate);
 			isDerived = false;
@@ -361,12 +367,14 @@ public class Future extends Derivative {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Future.class.getMethod("getLastDeliveryDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(Future obj) {
+			return obj.getLastDeliveryDate();
+		}
+
+		@Override
+		public void setValue(Future obj, ISODateTime value) {
+			obj.setLastDeliveryDate(value);
 		}
 	};
 	protected StandardisationCode standardisation;
@@ -397,7 +405,7 @@ public class Future extends Derivative {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmStandardisation = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Future, StandardisationCode> mmStandardisation = new MMBusinessAttribute<Future, StandardisationCode>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Future.mmObject();
@@ -409,12 +417,14 @@ public class Future extends Derivative {
 			simpleType_lazy = () -> StandardisationCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Future.class.getMethod("getStandardisation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public StandardisationCode getValue(Future obj) {
+			return obj.getStandardisation();
+		}
+
+		@Override
+		public void setValue(Future obj, StandardisationCode value) {
+			obj.setStandardisation(value);
 		}
 	};
 	protected UnderlyingTypeCode underlyingType;
@@ -444,7 +454,7 @@ public class Future extends Derivative {
 	 * "Specifies the type of underlying to which the option relates."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmUnderlyingType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Future, UnderlyingTypeCode> mmUnderlyingType = new MMBusinessAttribute<Future, UnderlyingTypeCode>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Future.mmObject();
@@ -456,12 +466,14 @@ public class Future extends Derivative {
 			simpleType_lazy = () -> UnderlyingTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Future.class.getMethod("getUnderlyingType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public UnderlyingTypeCode getValue(Future obj) {
+			return obj.getUnderlyingType();
+		}
+
+		@Override
+		public void setValue(Future obj, UnderlyingTypeCode value) {
+			obj.setUnderlyingType(value);
 		}
 	};
 	protected FutureRule futureRule;
@@ -497,7 +509,7 @@ public class Future extends Derivative {
 	 * definition} = "Rule attached to a future on debt."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmFutureRule = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Future, com.tools20022.repository.entity.FutureRule> mmFutureRule = new MMBusinessAssociationEnd<Future, com.tools20022.repository.entity.FutureRule>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Future.mmObject();
@@ -509,6 +521,16 @@ public class Future extends Derivative {
 			opposite_lazy = () -> com.tools20022.repository.entity.FutureRule.mmRelatedFutureInstrument;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.FutureRule.mmObject();
+		}
+
+		@Override
+		public com.tools20022.repository.entity.FutureRule getValue(Future obj) {
+			return obj.getFutureRule();
+		}
+
+		@Override
+		public void setValue(Future obj, com.tools20022.repository.entity.FutureRule value) {
+			obj.setFutureRule(value);
 		}
 	};
 

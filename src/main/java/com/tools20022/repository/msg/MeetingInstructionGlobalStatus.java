@@ -127,7 +127,7 @@ public class MeetingInstructionGlobalStatus {
 	 * definition} = "Status on the processing of the instructions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessingStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingInstructionGlobalStatus, Status1Code> mmProcessingStatus = new MMMessageAttribute<MeetingInstructionGlobalStatus, Status1Code>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmInstructionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingInstructionGlobalStatus.mmObject();
@@ -139,6 +139,16 @@ public class MeetingInstructionGlobalStatus {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Status1Code.mmObject();
+		}
+
+		@Override
+		public Status1Code getValue(MeetingInstructionGlobalStatus obj) {
+			return obj.getProcessingStatus();
+		}
+
+		@Override
+		public void setValue(MeetingInstructionGlobalStatus obj, Status1Code value) {
+			obj.setProcessingStatus(value);
 		}
 	};
 	@XmlElement(name = "RjctnSts", required = true)
@@ -177,7 +187,7 @@ public class MeetingInstructionGlobalStatus {
 	 * "Status advising the rejection of the meeting instruction message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRejectionStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingInstructionGlobalStatus, MeetingInstructionRejection1Code> mmRejectionStatus = new MMMessageAttribute<MeetingInstructionGlobalStatus, MeetingInstructionRejection1Code>() {
 		{
 			businessComponentTrace_lazy = () -> MeetingStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingInstructionGlobalStatus.mmObject();
@@ -189,6 +199,16 @@ public class MeetingInstructionGlobalStatus {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MeetingInstructionRejection1Code.mmObject();
+		}
+
+		@Override
+		public MeetingInstructionRejection1Code getValue(MeetingInstructionGlobalStatus obj) {
+			return obj.getRejectionStatus();
+		}
+
+		@Override
+		public void setValue(MeetingInstructionGlobalStatus obj, MeetingInstructionRejection1Code value) {
+			obj.setRejectionStatus(value);
 		}
 	};
 	@XmlElement(name = "CxlSts", required = true)
@@ -226,7 +246,7 @@ public class MeetingInstructionGlobalStatus {
 	 * definition} = "Status of the request for cancellation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancellationStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingInstructionGlobalStatus, MeetingInstructionCancellationStatus1Code> mmCancellationStatus = new MMMessageAttribute<MeetingInstructionGlobalStatus, MeetingInstructionCancellationStatus1Code>() {
 		{
 			businessComponentTrace_lazy = () -> MeetingStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingInstructionGlobalStatus.mmObject();
@@ -238,6 +258,16 @@ public class MeetingInstructionGlobalStatus {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MeetingInstructionCancellationStatus1Code.mmObject();
+		}
+
+		@Override
+		public MeetingInstructionCancellationStatus1Code getValue(MeetingInstructionGlobalStatus obj) {
+			return obj.getCancellationStatus();
+		}
+
+		@Override
+		public void setValue(MeetingInstructionGlobalStatus obj, MeetingInstructionCancellationStatus1Code value) {
+			obj.setCancellationStatus(value);
 		}
 	};
 	@XmlElement(name = "StsRsn")
@@ -274,7 +304,7 @@ public class MeetingInstructionGlobalStatus {
 	 * definition} = "Additional information about the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatusReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingInstructionGlobalStatus, Optional<Max350Text>> mmStatusReason = new MMMessageAttribute<MeetingInstructionGlobalStatus, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingInstructionGlobalStatus.mmObject();
@@ -286,6 +316,16 @@ public class MeetingInstructionGlobalStatus {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(MeetingInstructionGlobalStatus obj) {
+			return obj.getStatusReason();
+		}
+
+		@Override
+		public void setValue(MeetingInstructionGlobalStatus obj, Optional<Max350Text> value) {
+			obj.setStatusReason(value.orElse(null));
 		}
 	};
 	/**

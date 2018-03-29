@@ -98,7 +98,7 @@ public class SystemRestriction1 {
 	 * definition} = "Specifies the date from which the restriction is valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValidFrom = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemRestriction1, ISODateTime> mmValidFrom = new MMMessageAttribute<SystemRestriction1, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemRestriction1.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class SystemRestriction1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(SystemRestriction1 obj) {
+			return obj.getValidFrom();
+		}
+
+		@Override
+		public void setValue(SystemRestriction1 obj, ISODateTime value) {
+			obj.setValidFrom(value);
 		}
 	};
 	@XmlElement(name = "VldTo")
@@ -140,7 +150,7 @@ public class SystemRestriction1 {
 	 * definition} = "Specifies the date until which the restriction is valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValidTo = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemRestriction1, Optional<ISODateTime>> mmValidTo = new MMMessageAttribute<SystemRestriction1, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemRestriction1.mmObject();
 			isDerived = false;
@@ -151,6 +161,16 @@ public class SystemRestriction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(SystemRestriction1 obj) {
+			return obj.getValidTo();
+		}
+
+		@Override
+		public void setValue(SystemRestriction1 obj, Optional<ISODateTime> value) {
+			obj.setValidTo(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -182,7 +202,7 @@ public class SystemRestriction1 {
 	 * definition} = "Specifies the identification of a restriction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemRestriction1, Max35Text> mmType = new MMMessageAttribute<SystemRestriction1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemRestriction1.mmObject();
 			isDerived = false;
@@ -193,6 +213,16 @@ public class SystemRestriction1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(SystemRestriction1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(SystemRestriction1 obj, Max35Text value) {
+			obj.setType(value);
 		}
 	};
 

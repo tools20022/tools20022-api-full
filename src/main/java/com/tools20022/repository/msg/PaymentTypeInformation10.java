@@ -133,7 +133,7 @@ public class PaymentTypeInformation10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructionPriority = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTypeInformation10, Optional<Priority2Code>> mmInstructionPriority = new MMMessageAttribute<PaymentTypeInformation10, Optional<Priority2Code>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmPriority;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation10.mmObject();
@@ -145,6 +145,16 @@ public class PaymentTypeInformation10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Priority2Code.mmObject();
+		}
+
+		@Override
+		public Optional<Priority2Code> getValue(PaymentTypeInformation10 obj) {
+			return obj.getInstructionPriority();
+		}
+
+		@Override
+		public void setValue(PaymentTypeInformation10 obj, Optional<Priority2Code> value) {
+			obj.setInstructionPriority(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SvcLvl")
@@ -182,7 +192,7 @@ public class PaymentTypeInformation10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmServiceLevel = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentTypeInformation10, Optional<ServiceLevel6Choice>> mmServiceLevel = new MMMessageAssociationEnd<PaymentTypeInformation10, Optional<ServiceLevel6Choice>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmServiceLevel;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation10.mmObject();
@@ -195,6 +205,16 @@ public class PaymentTypeInformation10 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ServiceLevel6Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ServiceLevel6Choice> getValue(PaymentTypeInformation10 obj) {
+			return obj.getServiceLevel();
+		}
+
+		@Override
+		public void setValue(PaymentTypeInformation10 obj, Optional<ServiceLevel6Choice> value) {
+			obj.setServiceLevel(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClrChanl")
@@ -234,7 +254,7 @@ public class PaymentTypeInformation10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClearingChannel = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTypeInformation10, Optional<ClearingChannel2Code>> mmClearingChannel = new MMMessageAttribute<PaymentTypeInformation10, Optional<ClearingChannel2Code>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmClearingChannel;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation10.mmObject();
@@ -246,6 +266,16 @@ public class PaymentTypeInformation10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ClearingChannel2Code.mmObject();
+		}
+
+		@Override
+		public Optional<ClearingChannel2Code> getValue(PaymentTypeInformation10 obj) {
+			return obj.getClearingChannel();
+		}
+
+		@Override
+		public void setValue(PaymentTypeInformation10 obj, Optional<ClearingChannel2Code> value) {
+			obj.setClearingChannel(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LclInstrm")
@@ -284,7 +314,7 @@ public class PaymentTypeInformation10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLocalInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentTypeInformation10, Optional<LocalInstrument1Choice>> mmLocalInstrument = new MMMessageAssociationEnd<PaymentTypeInformation10, Optional<LocalInstrument1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmLocalInstrument;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation10.mmObject();
@@ -297,6 +327,16 @@ public class PaymentTypeInformation10 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> LocalInstrument1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<LocalInstrument1Choice> getValue(PaymentTypeInformation10 obj) {
+			return obj.getLocalInstrument();
+		}
+
+		@Override
+		public void setValue(PaymentTypeInformation10 obj, Optional<LocalInstrument1Choice> value) {
+			obj.setLocalInstrument(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtgyPurp")
@@ -336,7 +376,7 @@ public class PaymentTypeInformation10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCategoryPurpose = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTypeInformation10, Optional<PaymentCategoryPurpose1Code>> mmCategoryPurpose = new MMMessageAttribute<PaymentTypeInformation10, Optional<PaymentCategoryPurpose1Code>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmCategoryPurpose;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation10.mmObject();
@@ -348,6 +388,16 @@ public class PaymentTypeInformation10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PaymentCategoryPurpose1Code.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentCategoryPurpose1Code> getValue(PaymentTypeInformation10 obj) {
+			return obj.getCategoryPurpose();
+		}
+
+		@Override
+		public void setValue(PaymentTypeInformation10 obj, Optional<PaymentCategoryPurpose1Code> value) {
+			obj.setCategoryPurpose(value.orElse(null));
 		}
 	};
 	/**

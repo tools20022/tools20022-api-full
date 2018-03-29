@@ -108,7 +108,7 @@ public class SecurityOrBusinessError2Choice {
 	 * SecurityOrBusinessError1Choice.mmSecurityReport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecurityReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityOrBusinessError2Choice, List<SecurityAttributes4>> mmSecurityReport = new MMMessageAssociationEnd<SecurityOrBusinessError2Choice, List<SecurityAttributes4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityOrBusinessError2Choice.mmObject();
 			isDerived = false;
@@ -120,6 +120,16 @@ public class SecurityOrBusinessError2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecurityAttributes4.mmObject();
+		}
+
+		@Override
+		public List<SecurityAttributes4> getValue(SecurityOrBusinessError2Choice obj) {
+			return obj.getSecurityReport();
+		}
+
+		@Override
+		public void setValue(SecurityOrBusinessError2Choice obj, List<SecurityAttributes4> value) {
+			obj.setSecurityReport(value);
 		}
 	};
 	@XmlElement(name = "BizErr", required = true)
@@ -155,7 +165,7 @@ public class SecurityOrBusinessError2Choice {
 	 * SecurityOrBusinessError1Choice.mmBusinessError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityOrBusinessError2Choice, List<BusinessError2>> mmBusinessError = new MMMessageAssociationEnd<SecurityOrBusinessError2Choice, List<BusinessError2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityOrBusinessError2Choice.mmObject();
 			isDerived = false;
@@ -167,6 +177,16 @@ public class SecurityOrBusinessError2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> BusinessError2.mmObject();
+		}
+
+		@Override
+		public List<BusinessError2> getValue(SecurityOrBusinessError2Choice obj) {
+			return obj.getBusinessError();
+		}
+
+		@Override
+		public void setValue(SecurityOrBusinessError2Choice obj, List<BusinessError2> value) {
+			obj.setBusinessError(value);
 		}
 	};
 

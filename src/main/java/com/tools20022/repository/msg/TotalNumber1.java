@@ -113,7 +113,7 @@ public class TotalNumber1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrentInstructionNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalNumber1, Exact3NumericText> mmCurrentInstructionNumber = new MMMessageAttribute<TotalNumber1, Exact3NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalNumber1.mmObject();
 			isDerived = false;
@@ -125,6 +125,16 @@ public class TotalNumber1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
+		}
+
+		@Override
+		public Exact3NumericText getValue(TotalNumber1 obj) {
+			return obj.getCurrentInstructionNumber();
+		}
+
+		@Override
+		public void setValue(TotalNumber1 obj, Exact3NumericText value) {
+			obj.setCurrentInstructionNumber(value);
 		}
 	};
 	@XmlElement(name = "TtlOfLkdInstrs", required = true)
@@ -160,7 +170,7 @@ public class TotalNumber1 {
 	 * "Total number of settlement instructions that are linked together."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalOfLinkedInstructions = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalNumber1, Exact3NumericText> mmTotalOfLinkedInstructions = new MMMessageAttribute<TotalNumber1, Exact3NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalNumber1.mmObject();
 			isDerived = false;
@@ -172,6 +182,16 @@ public class TotalNumber1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
+		}
+
+		@Override
+		public Exact3NumericText getValue(TotalNumber1 obj) {
+			return obj.getTotalOfLinkedInstructions();
+		}
+
+		@Override
+		public void setValue(TotalNumber1 obj, Exact3NumericText value) {
+			obj.setTotalOfLinkedInstructions(value);
 		}
 	};
 

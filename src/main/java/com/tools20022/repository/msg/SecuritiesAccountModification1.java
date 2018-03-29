@@ -102,7 +102,7 @@ public class SecuritiesAccountModification1 {
 	 * definition} = "Specifies the type of requested modification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmScopeIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccountModification1, DataModification1Code> mmScopeIndication = new MMMessageAttribute<SecuritiesAccountModification1, DataModification1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountModification1.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class SecuritiesAccountModification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DataModification1Code.mmObject();
+		}
+
+		@Override
+		public DataModification1Code getValue(SecuritiesAccountModification1 obj) {
+			return obj.getScopeIndication();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountModification1 obj, DataModification1Code value) {
+			obj.setScopeIndication(value);
 		}
 	};
 	@XmlElement(name = "ReqdMod", required = true)
@@ -146,7 +156,7 @@ public class SecuritiesAccountModification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRequestedModification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesAccountModification1, SecuritiesAccountModification1Choice> mmRequestedModification = new MMMessageAssociationEnd<SecuritiesAccountModification1, SecuritiesAccountModification1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountModification1.mmObject();
 			isDerived = false;
@@ -158,6 +168,16 @@ public class SecuritiesAccountModification1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecuritiesAccountModification1Choice.mmObject();
+		}
+
+		@Override
+		public SecuritiesAccountModification1Choice getValue(SecuritiesAccountModification1 obj) {
+			return obj.getRequestedModification();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountModification1 obj, SecuritiesAccountModification1Choice value) {
+			obj.setRequestedModification(value);
 		}
 	};
 

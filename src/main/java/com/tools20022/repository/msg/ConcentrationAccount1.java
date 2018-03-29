@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.CashBalance;
 import com.tools20022.repository.entity.CashEntry;
 import com.tools20022.repository.entity.CurrencyExchange;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Flows1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -125,7 +126,7 @@ public class ConcentrationAccount1 {
 	 * definition} = "Indicates inflows into the account.\r\n\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInFlow = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ConcentrationAccount1, Flows1> mmInFlow = new MMMessageAssociationEnd<ConcentrationAccount1, Flows1>() {
 		{
 			businessComponentTrace_lazy = () -> CashEntry.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConcentrationAccount1.mmObject();
@@ -137,7 +138,17 @@ public class ConcentrationAccount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Flows1.mmObject();
+			type_lazy = () -> Flows1.mmObject();
+		}
+
+		@Override
+		public Flows1 getValue(ConcentrationAccount1 obj) {
+			return obj.getInFlow();
+		}
+
+		@Override
+		public void setValue(ConcentrationAccount1 obj, Flows1 value) {
+			obj.setInFlow(value);
 		}
 	};
 	@XmlElement(name = "OutFlow", required = true)
@@ -171,7 +182,7 @@ public class ConcentrationAccount1 {
 	 * definition} = "Indicates outflows out of the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOutFlow = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ConcentrationAccount1, Flows1> mmOutFlow = new MMMessageAssociationEnd<ConcentrationAccount1, Flows1>() {
 		{
 			businessComponentTrace_lazy = () -> CashEntry.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConcentrationAccount1.mmObject();
@@ -183,7 +194,17 @@ public class ConcentrationAccount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Flows1.mmObject();
+			type_lazy = () -> Flows1.mmObject();
+		}
+
+		@Override
+		public Flows1 getValue(ConcentrationAccount1 obj) {
+			return obj.getOutFlow();
+		}
+
+		@Override
+		public void setValue(ConcentrationAccount1 obj, Flows1 value) {
+			obj.setOutFlow(value);
 		}
 	};
 	@XmlElement(name = "EndOfDay", required = true)
@@ -221,7 +242,7 @@ public class ConcentrationAccount1 {
 	 * definition} = "Indicates end of day cash balance on the account.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEndOfDay = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConcentrationAccount1, ImpliedCurrencyAndAmount> mmEndOfDay = new MMMessageAttribute<ConcentrationAccount1, ImpliedCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConcentrationAccount1.mmObject();
@@ -233,6 +254,16 @@ public class ConcentrationAccount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(ConcentrationAccount1 obj) {
+			return obj.getEndOfDay();
+		}
+
+		@Override
+		public void setValue(ConcentrationAccount1 obj, ImpliedCurrencyAndAmount value) {
+			obj.setEndOfDay(value);
 		}
 	};
 	@XmlElement(name = "PeakCdt", required = true)
@@ -247,6 +278,11 @@ public class ConcentrationAccount1 {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ImpliedCurrencyAndAmount
 	 * ImpliedCurrencyAndAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.CashBalance#mmAmount
+	 * CashBalance.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -265,8 +301,9 @@ public class ConcentrationAccount1 {
 	 * definition} = "Indicatres peak credit balance on the account.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPeakCredit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConcentrationAccount1, ImpliedCurrencyAndAmount> mmPeakCredit = new MMMessageAttribute<ConcentrationAccount1, ImpliedCurrencyAndAmount>() {
 		{
+			businessElementTrace_lazy = () -> CashBalance.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConcentrationAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "PeakCdt";
@@ -276,6 +313,16 @@ public class ConcentrationAccount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(ConcentrationAccount1 obj) {
+			return obj.getPeakCredit();
+		}
+
+		@Override
+		public void setValue(ConcentrationAccount1 obj, ImpliedCurrencyAndAmount value) {
+			obj.setPeakCredit(value);
 		}
 	};
 	@XmlElement(name = "PeakDbt", required = true)
@@ -290,6 +337,11 @@ public class ConcentrationAccount1 {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ImpliedCurrencyAndAmount
 	 * ImpliedCurrencyAndAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.CashBalance#mmAmount
+	 * CashBalance.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -308,8 +360,9 @@ public class ConcentrationAccount1 {
 	 * definition} = "Indicates peak debit balance on the account.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPeakDebit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConcentrationAccount1, ImpliedCurrencyAndAmount> mmPeakDebit = new MMMessageAttribute<ConcentrationAccount1, ImpliedCurrencyAndAmount>() {
 		{
+			businessElementTrace_lazy = () -> CashBalance.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConcentrationAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "PeakDbt";
@@ -319,6 +372,16 @@ public class ConcentrationAccount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(ConcentrationAccount1 obj) {
+			return obj.getPeakDebit();
+		}
+
+		@Override
+		public void setValue(ConcentrationAccount1 obj, ImpliedCurrencyAndAmount value) {
+			obj.setPeakDebit(value);
 		}
 	};
 	@XmlElement(name = "Ccy", required = true)
@@ -356,7 +419,7 @@ public class ConcentrationAccount1 {
 	 * definition} = "Indicates the currency of the account.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConcentrationAccount1, ActiveCurrencyCode> mmCurrency = new MMMessageAttribute<ConcentrationAccount1, ActiveCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmSourceCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConcentrationAccount1.mmObject();
@@ -368,6 +431,16 @@ public class ConcentrationAccount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyCode getValue(ConcentrationAccount1 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(ConcentrationAccount1 obj, ActiveCurrencyCode value) {
+			obj.setCurrency(value);
 		}
 	};
 	@XmlElement(name = "LatePmtConf", required = true)
@@ -402,7 +475,7 @@ public class ConcentrationAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLatePaymentConfirmation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConcentrationAccount1, Max10NumericText> mmLatePaymentConfirmation = new MMMessageAttribute<ConcentrationAccount1, Max10NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConcentrationAccount1.mmObject();
 			isDerived = false;
@@ -413,6 +486,16 @@ public class ConcentrationAccount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max10NumericText.mmObject();
+		}
+
+		@Override
+		public Max10NumericText getValue(ConcentrationAccount1 obj) {
+			return obj.getLatePaymentConfirmation();
+		}
+
+		@Override
+		public void setValue(ConcentrationAccount1 obj, Max10NumericText value) {
+			obj.setLatePaymentConfirmation(value);
 		}
 	};
 
@@ -436,7 +519,7 @@ public class ConcentrationAccount1 {
 		return inFlow;
 	}
 
-	public ConcentrationAccount1 setInFlow(com.tools20022.repository.msg.Flows1 inFlow) {
+	public ConcentrationAccount1 setInFlow(Flows1 inFlow) {
 		this.inFlow = Objects.requireNonNull(inFlow);
 		return this;
 	}
@@ -445,7 +528,7 @@ public class ConcentrationAccount1 {
 		return outFlow;
 	}
 
-	public ConcentrationAccount1 setOutFlow(com.tools20022.repository.msg.Flows1 outFlow) {
+	public ConcentrationAccount1 setOutFlow(Flows1 outFlow) {
 		this.outFlow = Objects.requireNonNull(outFlow);
 		return this;
 	}

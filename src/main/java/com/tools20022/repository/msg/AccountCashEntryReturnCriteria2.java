@@ -136,7 +136,7 @@ public class AccountCashEntryReturnCriteria2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEntryReferenceIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountCashEntryReturnCriteria2, Optional<RequestedIndicator>> mmEntryReferenceIndicator = new MMMessageAttribute<AccountCashEntryReturnCriteria2, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountCashEntryReturnCriteria2.mmObject();
 			isDerived = false;
@@ -148,6 +148,16 @@ public class AccountCashEntryReturnCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(AccountCashEntryReturnCriteria2 obj) {
+			return obj.getEntryReferenceIndicator();
+		}
+
+		@Override
+		public void setValue(AccountCashEntryReturnCriteria2 obj, Optional<RequestedIndicator> value) {
+			obj.setEntryReferenceIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctTpInd")
@@ -188,7 +198,7 @@ public class AccountCashEntryReturnCriteria2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountTypeIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountCashEntryReturnCriteria2, Optional<RequestedIndicator>> mmAccountTypeIndicator = new MMMessageAttribute<AccountCashEntryReturnCriteria2, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountCashEntryReturnCriteria2.mmObject();
 			isDerived = false;
@@ -200,6 +210,16 @@ public class AccountCashEntryReturnCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(AccountCashEntryReturnCriteria2 obj) {
+			return obj.getAccountTypeIndicator();
+		}
+
+		@Override
+		public void setValue(AccountCashEntryReturnCriteria2 obj, Optional<RequestedIndicator> value) {
+			obj.setAccountTypeIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NtryAmtInd")
@@ -240,7 +260,7 @@ public class AccountCashEntryReturnCriteria2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEntryAmountIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountCashEntryReturnCriteria2, Optional<RequestedIndicator>> mmEntryAmountIndicator = new MMMessageAttribute<AccountCashEntryReturnCriteria2, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountCashEntryReturnCriteria2.mmObject();
 			isDerived = false;
@@ -252,6 +272,16 @@ public class AccountCashEntryReturnCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(AccountCashEntryReturnCriteria2 obj) {
+			return obj.getEntryAmountIndicator();
+		}
+
+		@Override
+		public void setValue(AccountCashEntryReturnCriteria2 obj, Optional<RequestedIndicator> value) {
+			obj.setEntryAmountIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctCcyInd")
@@ -292,7 +322,7 @@ public class AccountCashEntryReturnCriteria2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountCurrencyIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountCashEntryReturnCriteria2, Optional<RequestedIndicator>> mmAccountCurrencyIndicator = new MMMessageAttribute<AccountCashEntryReturnCriteria2, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountCashEntryReturnCriteria2.mmObject();
 			isDerived = false;
@@ -304,6 +334,16 @@ public class AccountCashEntryReturnCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(AccountCashEntryReturnCriteria2 obj) {
+			return obj.getAccountCurrencyIndicator();
+		}
+
+		@Override
+		public void setValue(AccountCashEntryReturnCriteria2 obj, Optional<RequestedIndicator> value) {
+			obj.setAccountCurrencyIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NtryStsInd")
@@ -344,7 +384,7 @@ public class AccountCashEntryReturnCriteria2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEntryStatusIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountCashEntryReturnCriteria2, Optional<RequestedIndicator>> mmEntryStatusIndicator = new MMMessageAttribute<AccountCashEntryReturnCriteria2, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountCashEntryReturnCriteria2.mmObject();
 			isDerived = false;
@@ -356,6 +396,16 @@ public class AccountCashEntryReturnCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(AccountCashEntryReturnCriteria2 obj) {
+			return obj.getEntryStatusIndicator();
+		}
+
+		@Override
+		public void setValue(AccountCashEntryReturnCriteria2 obj, Optional<RequestedIndicator> value) {
+			obj.setEntryStatusIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NtryDtInd")
@@ -396,7 +446,7 @@ public class AccountCashEntryReturnCriteria2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEntryDateIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountCashEntryReturnCriteria2, Optional<RequestedIndicator>> mmEntryDateIndicator = new MMMessageAttribute<AccountCashEntryReturnCriteria2, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountCashEntryReturnCriteria2.mmObject();
 			isDerived = false;
@@ -408,6 +458,16 @@ public class AccountCashEntryReturnCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(AccountCashEntryReturnCriteria2 obj) {
+			return obj.getEntryDateIndicator();
+		}
+
+		@Override
+		public void setValue(AccountCashEntryReturnCriteria2 obj, Optional<RequestedIndicator> value) {
+			obj.setEntryDateIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctSrcrInd")
@@ -448,7 +508,7 @@ public class AccountCashEntryReturnCriteria2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicerIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountCashEntryReturnCriteria2, Optional<RequestedIndicator>> mmAccountServicerIndicator = new MMMessageAttribute<AccountCashEntryReturnCriteria2, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountCashEntryReturnCriteria2.mmObject();
 			isDerived = false;
@@ -460,6 +520,16 @@ public class AccountCashEntryReturnCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(AccountCashEntryReturnCriteria2 obj) {
+			return obj.getAccountServicerIndicator();
+		}
+
+		@Override
+		public void setValue(AccountCashEntryReturnCriteria2 obj, Optional<RequestedIndicator> value) {
+			obj.setAccountServicerIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctOwnrInd")
@@ -500,7 +570,7 @@ public class AccountCashEntryReturnCriteria2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwnerIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountCashEntryReturnCriteria2, Optional<RequestedIndicator>> mmAccountOwnerIndicator = new MMMessageAttribute<AccountCashEntryReturnCriteria2, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountCashEntryReturnCriteria2.mmObject();
 			isDerived = false;
@@ -512,6 +582,16 @@ public class AccountCashEntryReturnCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(AccountCashEntryReturnCriteria2 obj) {
+			return obj.getAccountOwnerIndicator();
+		}
+
+		@Override
+		public void setValue(AccountCashEntryReturnCriteria2 obj, Optional<RequestedIndicator> value) {
+			obj.setAccountOwnerIndicator(value.orElse(null));
 		}
 	};
 

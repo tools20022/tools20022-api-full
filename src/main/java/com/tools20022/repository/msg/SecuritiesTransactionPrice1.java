@@ -99,7 +99,7 @@ public class SecuritiesTransactionPrice1 {
 	 * definition} = "Price is currently not available, but pending."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPending = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTransactionPrice1, PriceStatus1Code> mmPending = new MMMessageAttribute<SecuritiesTransactionPrice1, PriceStatus1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTransactionPrice1.mmObject();
 			isDerived = false;
@@ -110,6 +110,16 @@ public class SecuritiesTransactionPrice1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PriceStatus1Code.mmObject();
+		}
+
+		@Override
+		public PriceStatus1Code getValue(SecuritiesTransactionPrice1 obj) {
+			return obj.getPending();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionPrice1 obj, PriceStatus1Code value) {
+			obj.setPending(value);
 		}
 	};
 	@XmlElement(name = "Ccy")
@@ -143,7 +153,7 @@ public class SecuritiesTransactionPrice1 {
 	 * "Currency that will be used but for which no price is yet known."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTransactionPrice1, Optional<ActiveOrHistoricCurrencyCode>> mmCurrency = new MMMessageAttribute<SecuritiesTransactionPrice1, Optional<ActiveOrHistoricCurrencyCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTransactionPrice1.mmObject();
 			isDerived = false;
@@ -154,6 +164,16 @@ public class SecuritiesTransactionPrice1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyCode> getValue(SecuritiesTransactionPrice1 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionPrice1 obj, Optional<ActiveOrHistoricCurrencyCode> value) {
+			obj.setCurrency(value.orElse(null));
 		}
 	};
 

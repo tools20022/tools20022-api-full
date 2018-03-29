@@ -27,6 +27,9 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max6Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification53;
+import com.tools20022.repository.msg.GenericIdentification94;
+import com.tools20022.repository.msg.Traceability5;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -104,7 +107,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "Header35"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -153,7 +156,7 @@ public class Header35 {
 	 * Header30.mmMessageFunction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageFunction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Header35, MessageFunction14Code> mmMessageFunction = new MMMessageAttribute<Header35, MessageFunction14Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header35.mmObject();
 			isDerived = false;
@@ -165,6 +168,16 @@ public class Header35 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MessageFunction14Code.mmObject();
+		}
+
+		@Override
+		public MessageFunction14Code getValue(Header35 obj) {
+			return obj.getMessageFunction();
+		}
+
+		@Override
+		public void setValue(Header35 obj, MessageFunction14Code value) {
+			obj.setMessageFunction(value);
 		}
 	};
 	@XmlElement(name = "PrtcolVrsn", required = true)
@@ -200,7 +213,7 @@ public class Header35 {
 	 * Header30.mmProtocolVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProtocolVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Header35, Max6Text> mmProtocolVersion = new MMMessageAttribute<Header35, Max6Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header35.mmObject();
 			isDerived = false;
@@ -212,6 +225,16 @@ public class Header35 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max6Text.mmObject();
+		}
+
+		@Override
+		public Max6Text getValue(Header35 obj) {
+			return obj.getProtocolVersion();
+		}
+
+		@Override
+		public void setValue(Header35 obj, Max6Text value) {
+			obj.setProtocolVersion(value);
 		}
 	};
 	@XmlElement(name = "XchgId", required = true)
@@ -247,7 +270,7 @@ public class Header35 {
 	 * Header30.mmExchangeIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExchangeIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Header35, Number> mmExchangeIdentification = new MMMessageAttribute<Header35, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header35.mmObject();
 			isDerived = false;
@@ -259,6 +282,16 @@ public class Header35 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(Header35 obj) {
+			return obj.getExchangeIdentification();
+		}
+
+		@Override
+		public void setValue(Header35 obj, Number value) {
+			obj.setExchangeIdentification(value);
 		}
 	};
 	@XmlElement(name = "CreDtTm", required = true)
@@ -294,7 +327,7 @@ public class Header35 {
 	 * Header30.mmCreationDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Header35, ISODateTime> mmCreationDateTime = new MMMessageAttribute<Header35, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header35.mmObject();
 			isDerived = false;
@@ -306,6 +339,16 @@ public class Header35 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(Header35 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(Header35 obj, ISODateTime value) {
+			obj.setCreationDateTime(value);
 		}
 	};
 	@XmlElement(name = "InitgPty", required = true)
@@ -342,7 +385,7 @@ public class Header35 {
 	 * Header30.mmInitiatingParty}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInitiatingParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Header35, GenericIdentification53> mmInitiatingParty = new MMMessageAssociationEnd<Header35, GenericIdentification53>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header35.mmObject();
 			isDerived = false;
@@ -354,7 +397,17 @@ public class Header35 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification53.mmObject();
+			type_lazy = () -> GenericIdentification53.mmObject();
+		}
+
+		@Override
+		public GenericIdentification53 getValue(Header35 obj) {
+			return obj.getInitiatingParty();
+		}
+
+		@Override
+		public void setValue(Header35 obj, GenericIdentification53 value) {
+			obj.setInitiatingParty(value);
 		}
 	};
 	@XmlElement(name = "RcptPty")
@@ -392,7 +445,7 @@ public class Header35 {
 	 * Header30.mmRecipientParty}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRecipientParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Header35, Optional<GenericIdentification94>> mmRecipientParty = new MMMessageAssociationEnd<Header35, Optional<GenericIdentification94>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header35.mmObject();
 			isDerived = false;
@@ -404,11 +457,21 @@ public class Header35 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification94.mmObject();
+			type_lazy = () -> GenericIdentification94.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification94> getValue(Header35 obj) {
+			return obj.getRecipientParty();
+		}
+
+		@Override
+		public void setValue(Header35 obj, Optional<GenericIdentification94> value) {
+			obj.setRecipientParty(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tracblt")
-	protected List<com.tools20022.repository.msg.Traceability5> traceability;
+	protected List<Traceability5> traceability;
 	/**
 	 * 
 	 <p>
@@ -442,7 +505,7 @@ public class Header35 {
 	 * Header30.mmTraceability}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTraceability = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Header35, List<Traceability5>> mmTraceability = new MMMessageAttribute<Header35, List<Traceability5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header35.mmObject();
 			isDerived = false;
@@ -452,7 +515,17 @@ public class Header35 {
 			definition = "Identification of partners involved in exchange from the merchant to the issuer, with the relative timestamp of their exchanges.";
 			previousVersion_lazy = () -> Header30.mmTraceability;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Traceability5.mmObject();
+			complexType_lazy = () -> Traceability5.mmObject();
+		}
+
+		@Override
+		public List<Traceability5> getValue(Header35 obj) {
+			return obj.getTraceability();
+		}
+
+		@Override
+		public void setValue(Header35 obj, List<Traceability5> value) {
+			obj.setTraceability(value);
 		}
 	};
 
@@ -466,7 +539,7 @@ public class Header35 {
 						AcceptorReconciliationResponseV06.mmHeader, AcceptorAuthorisationRequestV07.mmHeader, AcceptorReconciliationRequestV07.mmHeader, AcceptorDiagnosticResponseV06.mmHeader, AcceptorCancellationRequestV07.mmHeader,
 						AcceptorCurrencyConversionResponseV05.mmHeader);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Header35";
 				definition = "Set of characteristics related to the protocol.";
 				previousVersion_lazy = () -> Header30.mmObject();
@@ -515,7 +588,7 @@ public class Header35 {
 		return initiatingParty;
 	}
 
-	public Header35 setInitiatingParty(com.tools20022.repository.msg.GenericIdentification53 initiatingParty) {
+	public Header35 setInitiatingParty(GenericIdentification53 initiatingParty) {
 		this.initiatingParty = Objects.requireNonNull(initiatingParty);
 		return this;
 	}
@@ -524,7 +597,7 @@ public class Header35 {
 		return recipientParty == null ? Optional.empty() : Optional.of(recipientParty);
 	}
 
-	public Header35 setRecipientParty(com.tools20022.repository.msg.GenericIdentification94 recipientParty) {
+	public Header35 setRecipientParty(GenericIdentification94 recipientParty) {
 		this.recipientParty = recipientParty;
 		return this;
 	}
@@ -533,7 +606,7 @@ public class Header35 {
 		return traceability == null ? traceability = new ArrayList<>() : traceability;
 	}
 
-	public Header35 setTraceability(List<com.tools20022.repository.msg.Traceability5> traceability) {
+	public Header35 setTraceability(List<Traceability5> traceability) {
 		this.traceability = Objects.requireNonNull(traceability);
 		return this;
 	}

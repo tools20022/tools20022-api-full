@@ -62,12 +62,16 @@ public class ConstraintSubBalanceAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AdditionalBalanceInformation6> forAdditionalBalanceInformation6 = new MMConstraint<AdditionalBalanceInformation6>() {
 		{
-			validator = ConstraintSubBalanceAdditionalDetailsRule::checkAdditionalBalanceInformation6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalanceAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is used, them it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSubBalanceAdditionalDetailsRule.forAdditionalBalanceInformation14);
 			owner_lazy = () -> AdditionalBalanceInformation6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalBalanceInformation6 obj) throws Exception {
+			checkAdditionalBalanceInformation6(obj);
 		}
 	};
 	/**
@@ -101,12 +105,16 @@ public class ConstraintSubBalanceAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SubBalanceInformation6> forSubBalanceInformation6 = new MMConstraint<SubBalanceInformation6>() {
 		{
-			validator = ConstraintSubBalanceAdditionalDetailsRule::checkSubBalanceInformation6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalanceAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is used, them it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSubBalanceAdditionalDetailsRule.forSubBalanceInformation14);
 			owner_lazy = () -> SubBalanceInformation6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubBalanceInformation6 obj) throws Exception {
+			checkSubBalanceInformation6(obj);
 		}
 	};
 	/**
@@ -132,11 +140,15 @@ public class ConstraintSubBalanceAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AdditionalBalanceInformation7> forAdditionalBalanceInformation7 = new MMConstraint<AdditionalBalanceInformation7>() {
 		{
-			validator = ConstraintSubBalanceAdditionalDetailsRule::checkAdditionalBalanceInformation7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalanceAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is used, them it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AdditionalBalanceInformation7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalBalanceInformation7 obj) throws Exception {
+			checkAdditionalBalanceInformation7(obj);
 		}
 	};
 	/**
@@ -162,11 +174,15 @@ public class ConstraintSubBalanceAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SubBalanceInformation7> forSubBalanceInformation7 = new MMConstraint<SubBalanceInformation7>() {
 		{
-			validator = ConstraintSubBalanceAdditionalDetailsRule::checkSubBalanceInformation7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalanceAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is used, them it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SubBalanceInformation7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubBalanceInformation7 obj) throws Exception {
+			checkSubBalanceInformation7(obj);
 		}
 	};
 	/**
@@ -192,11 +208,15 @@ public class ConstraintSubBalanceAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AdditionalBalanceInformation5> forAdditionalBalanceInformation5 = new MMConstraint<AdditionalBalanceInformation5>() {
 		{
-			validator = ConstraintSubBalanceAdditionalDetailsRule::checkAdditionalBalanceInformation5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalanceAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is used, them it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AdditionalBalanceInformation5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalBalanceInformation5 obj) throws Exception {
+			checkAdditionalBalanceInformation5(obj);
 		}
 	};
 	/**
@@ -222,11 +242,15 @@ public class ConstraintSubBalanceAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SubBalanceInformation5> forSubBalanceInformation5 = new MMConstraint<SubBalanceInformation5>() {
 		{
-			validator = ConstraintSubBalanceAdditionalDetailsRule::checkSubBalanceInformation5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalanceAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is used, them it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SubBalanceInformation5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubBalanceInformation5 obj) throws Exception {
+			checkSubBalanceInformation5(obj);
 		}
 	};
 	/**
@@ -252,11 +276,15 @@ public class ConstraintSubBalanceAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AdditionalBalanceInformation8> forAdditionalBalanceInformation8 = new MMConstraint<AdditionalBalanceInformation8>() {
 		{
-			validator = ConstraintSubBalanceAdditionalDetailsRule::checkAdditionalBalanceInformation8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalanceAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is used, them it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AdditionalBalanceInformation8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalBalanceInformation8 obj) throws Exception {
+			checkAdditionalBalanceInformation8(obj);
 		}
 	};
 	/**
@@ -282,11 +310,15 @@ public class ConstraintSubBalanceAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SubBalanceInformation8> forSubBalanceInformation8 = new MMConstraint<SubBalanceInformation8>() {
 		{
-			validator = ConstraintSubBalanceAdditionalDetailsRule::checkSubBalanceInformation8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalanceAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is used, them it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SubBalanceInformation8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubBalanceInformation8 obj) throws Exception {
+			checkSubBalanceInformation8(obj);
 		}
 	};
 	/**
@@ -312,11 +344,15 @@ public class ConstraintSubBalanceAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AdditionalBalanceInformation9> forAdditionalBalanceInformation9 = new MMConstraint<AdditionalBalanceInformation9>() {
 		{
-			validator = ConstraintSubBalanceAdditionalDetailsRule::checkAdditionalBalanceInformation9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalanceAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is used, them it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AdditionalBalanceInformation9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalBalanceInformation9 obj) throws Exception {
+			checkAdditionalBalanceInformation9(obj);
 		}
 	};
 	/**
@@ -342,11 +378,15 @@ public class ConstraintSubBalanceAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SubBalanceInformation9> forSubBalanceInformation9 = new MMConstraint<SubBalanceInformation9>() {
 		{
-			validator = ConstraintSubBalanceAdditionalDetailsRule::checkSubBalanceInformation9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalanceAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is used, them it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SubBalanceInformation9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubBalanceInformation9 obj) throws Exception {
+			checkSubBalanceInformation9(obj);
 		}
 	};
 	/**
@@ -372,11 +412,15 @@ public class ConstraintSubBalanceAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AdditionalBalanceInformation10> forAdditionalBalanceInformation10 = new MMConstraint<AdditionalBalanceInformation10>() {
 		{
-			validator = ConstraintSubBalanceAdditionalDetailsRule::checkAdditionalBalanceInformation10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalanceAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is used, them it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AdditionalBalanceInformation10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalBalanceInformation10 obj) throws Exception {
+			checkAdditionalBalanceInformation10(obj);
 		}
 	};
 	/**
@@ -402,11 +446,15 @@ public class ConstraintSubBalanceAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SubBalanceInformation10> forSubBalanceInformation10 = new MMConstraint<SubBalanceInformation10>() {
 		{
-			validator = ConstraintSubBalanceAdditionalDetailsRule::checkSubBalanceInformation10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalanceAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is used, them it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SubBalanceInformation10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubBalanceInformation10 obj) throws Exception {
+			checkSubBalanceInformation10(obj);
 		}
 	};
 	/**
@@ -441,12 +489,16 @@ public class ConstraintSubBalanceAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AdditionalBalanceInformation11> forAdditionalBalanceInformation11 = new MMConstraint<AdditionalBalanceInformation11>() {
 		{
-			validator = ConstraintSubBalanceAdditionalDetailsRule::checkAdditionalBalanceInformation11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalanceAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is used, them it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSubBalanceAdditionalDetailsRule.forAdditionalBalanceInformation15);
 			owner_lazy = () -> AdditionalBalanceInformation11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalBalanceInformation11 obj) throws Exception {
+			checkAdditionalBalanceInformation11(obj);
 		}
 	};
 	/**
@@ -480,12 +532,16 @@ public class ConstraintSubBalanceAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SubBalanceInformation11> forSubBalanceInformation11 = new MMConstraint<SubBalanceInformation11>() {
 		{
-			validator = ConstraintSubBalanceAdditionalDetailsRule::checkSubBalanceInformation11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalanceAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is used, them it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSubBalanceAdditionalDetailsRule.forSubBalanceInformation15);
 			owner_lazy = () -> SubBalanceInformation11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubBalanceInformation11 obj) throws Exception {
+			checkSubBalanceInformation11(obj);
 		}
 	};
 	/**
@@ -511,11 +567,15 @@ public class ConstraintSubBalanceAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AdditionalBalanceInformation12> forAdditionalBalanceInformation12 = new MMConstraint<AdditionalBalanceInformation12>() {
 		{
-			validator = ConstraintSubBalanceAdditionalDetailsRule::checkAdditionalBalanceInformation12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalanceAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is used, them it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AdditionalBalanceInformation12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalBalanceInformation12 obj) throws Exception {
+			checkAdditionalBalanceInformation12(obj);
 		}
 	};
 	/**
@@ -541,11 +601,15 @@ public class ConstraintSubBalanceAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SubBalanceInformation12> forSubBalanceInformation12 = new MMConstraint<SubBalanceInformation12>() {
 		{
-			validator = ConstraintSubBalanceAdditionalDetailsRule::checkSubBalanceInformation12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalanceAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is used, them it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SubBalanceInformation12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubBalanceInformation12 obj) throws Exception {
+			checkSubBalanceInformation12(obj);
 		}
 	};
 	/**
@@ -571,11 +635,15 @@ public class ConstraintSubBalanceAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AdditionalBalanceInformation4> forAdditionalBalanceInformation4 = new MMConstraint<AdditionalBalanceInformation4>() {
 		{
-			validator = ConstraintSubBalanceAdditionalDetailsRule::checkAdditionalBalanceInformation4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalanceAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, SubBalanceAdditionnalDetails must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AdditionalBalanceInformation4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalBalanceInformation4 obj) throws Exception {
+			checkAdditionalBalanceInformation4(obj);
 		}
 	};
 	/**
@@ -601,11 +669,15 @@ public class ConstraintSubBalanceAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SubBalanceInformation4> forSubBalanceInformation4 = new MMConstraint<SubBalanceInformation4>() {
 		{
-			validator = ConstraintSubBalanceAdditionalDetailsRule::checkSubBalanceInformation4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalanceAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, SubBalanceAdditionnalDetails must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SubBalanceInformation4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubBalanceInformation4 obj) throws Exception {
+			checkSubBalanceInformation4(obj);
 		}
 	};
 	/**
@@ -636,12 +708,16 @@ public class ConstraintSubBalanceAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SubBalanceInformation15> forSubBalanceInformation15 = new MMConstraint<SubBalanceInformation15>() {
 		{
-			validator = ConstraintSubBalanceAdditionalDetailsRule::checkSubBalanceInformation15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalanceAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is used, them it must not contain information that can be provided in a structured field.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSubBalanceAdditionalDetailsRule.forSubBalanceInformation11;
 			owner_lazy = () -> SubBalanceInformation15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubBalanceInformation15 obj) throws Exception {
+			checkSubBalanceInformation15(obj);
 		}
 	};
 	/**
@@ -673,12 +749,16 @@ public class ConstraintSubBalanceAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AdditionalBalanceInformation15> forAdditionalBalanceInformation15 = new MMConstraint<AdditionalBalanceInformation15>() {
 		{
-			validator = ConstraintSubBalanceAdditionalDetailsRule::checkAdditionalBalanceInformation15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalanceAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is used, them it must not contain information that can be provided in a structured field.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSubBalanceAdditionalDetailsRule.forAdditionalBalanceInformation11;
 			owner_lazy = () -> AdditionalBalanceInformation15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalBalanceInformation15 obj) throws Exception {
+			checkAdditionalBalanceInformation15(obj);
 		}
 	};
 	/**
@@ -710,12 +790,16 @@ public class ConstraintSubBalanceAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AdditionalBalanceInformation14> forAdditionalBalanceInformation14 = new MMConstraint<AdditionalBalanceInformation14>() {
 		{
-			validator = ConstraintSubBalanceAdditionalDetailsRule::checkAdditionalBalanceInformation14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalanceAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is used, them it must not contain information that can be provided in a structured field.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSubBalanceAdditionalDetailsRule.forAdditionalBalanceInformation6;
 			owner_lazy = () -> AdditionalBalanceInformation14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalBalanceInformation14 obj) throws Exception {
+			checkAdditionalBalanceInformation14(obj);
 		}
 	};
 	/**
@@ -746,12 +830,16 @@ public class ConstraintSubBalanceAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SubBalanceInformation14> forSubBalanceInformation14 = new MMConstraint<SubBalanceInformation14>() {
 		{
-			validator = ConstraintSubBalanceAdditionalDetailsRule::checkSubBalanceInformation14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalanceAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is used, them it must not contain information that can be provided in a structured field.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSubBalanceAdditionalDetailsRule.forSubBalanceInformation6;
 			owner_lazy = () -> SubBalanceInformation14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubBalanceInformation14 obj) throws Exception {
+			checkSubBalanceInformation14(obj);
 		}
 	};
 	/**
@@ -777,11 +865,15 @@ public class ConstraintSubBalanceAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AdditionalBalanceInformation16> forAdditionalBalanceInformation16 = new MMConstraint<AdditionalBalanceInformation16>() {
 		{
-			validator = ConstraintSubBalanceAdditionalDetailsRule::checkAdditionalBalanceInformation16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalanceAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is used, them it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AdditionalBalanceInformation16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalBalanceInformation16 obj) throws Exception {
+			checkAdditionalBalanceInformation16(obj);
 		}
 	};
 	/**
@@ -807,11 +899,15 @@ public class ConstraintSubBalanceAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AdditionalBalanceInformation17> forAdditionalBalanceInformation17 = new MMConstraint<AdditionalBalanceInformation17>() {
 		{
-			validator = ConstraintSubBalanceAdditionalDetailsRule::checkAdditionalBalanceInformation17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalanceAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is used, them it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AdditionalBalanceInformation17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalBalanceInformation17 obj) throws Exception {
+			checkAdditionalBalanceInformation17(obj);
 		}
 	};
 	/**
@@ -837,11 +933,15 @@ public class ConstraintSubBalanceAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SubBalanceInformation17> forSubBalanceInformation17 = new MMConstraint<SubBalanceInformation17>() {
 		{
-			validator = ConstraintSubBalanceAdditionalDetailsRule::checkSubBalanceInformation17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalanceAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is used, them it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SubBalanceInformation17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubBalanceInformation17 obj) throws Exception {
+			checkSubBalanceInformation17(obj);
 		}
 	};
 	/**
@@ -867,11 +967,15 @@ public class ConstraintSubBalanceAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SubBalanceInformation16> forSubBalanceInformation16 = new MMConstraint<SubBalanceInformation16>() {
 		{
-			validator = ConstraintSubBalanceAdditionalDetailsRule::checkSubBalanceInformation16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalanceAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is used, them it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SubBalanceInformation16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubBalanceInformation16 obj) throws Exception {
+			checkSubBalanceInformation16(obj);
 		}
 	};
 

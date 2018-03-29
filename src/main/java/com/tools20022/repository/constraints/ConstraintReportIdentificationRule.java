@@ -64,12 +64,16 @@ public class ConstraintReportIdentificationRule {
 	 */
 	public static final MMConstraint<IntraPositionReport3> forIntraPositionReport3 = new MMConstraint<IntraPositionReport3>() {
 		{
-			validator = ConstraintReportIdentificationRule::checkIntraPositionReport3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentificationRule";
 			definition = "If the report has multiple pages, then the ReportIdentification must remain the same through all the pages. It is a unique number to the report.\r\nTwo reports of the same type sent one after the other to the same receiver in relation to the same safekeeping account must have different report identifications. For example, a daily report sent on day 1 would have ReportIdentification 001, on day 2, 002, etc.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReportIdentificationRule.forIntraPositionReport4);
 			owner_lazy = () -> IntraPositionReport3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionReport3 obj) throws Exception {
+			checkIntraPositionReport3(obj);
 		}
 	};
 	/**
@@ -95,11 +99,15 @@ public class ConstraintReportIdentificationRule {
 	 */
 	public static final MMConstraint<MovementReport1> forMovementReport1 = new MMConstraint<MovementReport1>() {
 		{
-			validator = ConstraintReportIdentificationRule::checkMovementReport1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentificationRule";
 			definition = "If Long number (Exact5NumericText) is used, then the report must be a delta reports (UpdateType: DELT).\r\nIf the report has multiple pages, then the ReportIdentification must remain the same through all the pages. It is a unique number to the report.\r\nTwo reports of the same type sent one after the other to the same receiver in relation to the same safekeeping account must have different report identifications. For example, a daily report sent on day 1 would have ReportIdentification 001, on day 2, 002, etc.";
 			owner_lazy = () -> MovementReport1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MovementReport1 obj) throws Exception {
+			checkMovementReport1(obj);
 		}
 	};
 	/**
@@ -133,12 +141,16 @@ public class ConstraintReportIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesReport1> forSecuritiesReport1 = new MMConstraint<SecuritiesReport1>() {
 		{
-			validator = ConstraintReportIdentificationRule::checkSecuritiesReport1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentificationRule";
 			definition = "If Long number (Exact5NumericText) is used, then the report must be a delta reports (UpdateType: DELT).\r\nIf the report has multiple pages, then the ReportIdentification must remain the same through all the pages. It is a unique number to the report.\r\nTwo reports of the same type sent one after the other to the same receiver in relation to the same safekeeping account must have different report identifications. For example, a daily report sent on day 1 would have ReportIdentification 001, on day 2, 002, etc.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReportIdentificationRule.forSecuritiesReport2);
 			owner_lazy = () -> SecuritiesReport1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesReport1 obj) throws Exception {
+			checkSecuritiesReport1(obj);
 		}
 	};
 	/**
@@ -169,12 +181,16 @@ public class ConstraintReportIdentificationRule {
 	 */
 	public static final MMConstraint<IntraPositionReport4> forIntraPositionReport4 = new MMConstraint<IntraPositionReport4>() {
 		{
-			validator = ConstraintReportIdentificationRule::checkIntraPositionReport4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentificationRule";
 			definition = "If the report has multiple pages, then the ReportIdentification must remain the same through all the pages. It is a unique number to the report.\r\nTwo reports of the same type sent one after the other to the same receiver in relation to the same safekeeping account must have different report identifications. For example, a daily report sent on day 1 would have ReportIdentification 001, on day 2, 002, etc.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReportIdentificationRule.forIntraPositionReport3;
 			owner_lazy = () -> IntraPositionReport4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionReport4 obj) throws Exception {
+			checkIntraPositionReport4(obj);
 		}
 	};
 	/**
@@ -205,12 +221,16 @@ public class ConstraintReportIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesReport2> forSecuritiesReport2 = new MMConstraint<SecuritiesReport2>() {
 		{
-			validator = ConstraintReportIdentificationRule::checkSecuritiesReport2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentificationRule";
 			definition = "If Long number (Exact5NumericText) is used, then the report must be a delta reports (UpdateType: DELT).\r\nIf the report has multiple pages, then the ReportIdentification must remain the same through all the pages. It is a unique number to the report.\r\nTwo reports of the same type sent one after the other to the same receiver in relation to the same safekeeping account must have different report identifications. For example, a daily report sent on day 1 would have ReportIdentification 001, on day 2, 002, etc.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReportIdentificationRule.forSecuritiesReport1;
 			owner_lazy = () -> SecuritiesReport2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesReport2 obj) throws Exception {
+			checkSecuritiesReport2(obj);
 		}
 	};
 

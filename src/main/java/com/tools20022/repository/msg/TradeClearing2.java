@@ -120,7 +120,7 @@ public class TradeClearing2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClearingObligation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeClearing2, Optional<ClearingObligationType1Code>> mmClearingObligation = new MMMessageAttribute<TradeClearing2, Optional<ClearingObligationType1Code>>() {
 		{
 			businessComponentTrace_lazy = () -> Obligation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeClearing2.mmObject();
@@ -132,6 +132,16 @@ public class TradeClearing2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ClearingObligationType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ClearingObligationType1Code> getValue(TradeClearing2 obj) {
+			return obj.getClearingObligation();
+		}
+
+		@Override
+		public void setValue(TradeClearing2 obj, Optional<ClearingObligationType1Code> value) {
+			obj.setClearingObligation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClrSts")
@@ -161,7 +171,7 @@ public class TradeClearing2 {
 	 * definition} = "Indicates whether clearing of contract has taken place."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmClearingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeClearing2, Optional<Cleared3Choice>> mmClearingStatus = new MMMessageAssociationEnd<TradeClearing2, Optional<Cleared3Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeClearing2.mmObject();
 			isDerived = false;
@@ -173,6 +183,16 @@ public class TradeClearing2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Cleared3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Cleared3Choice> getValue(TradeClearing2 obj) {
+			return obj.getClearingStatus();
+		}
+
+		@Override
+		public void setValue(TradeClearing2 obj, Optional<Cleared3Choice> value) {
+			obj.setClearingStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntraGrp")
@@ -206,7 +226,7 @@ public class TradeClearing2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIntraGroup = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeClearing2, Optional<TrueFalseIndicator>> mmIntraGroup = new MMMessageAttribute<TradeClearing2, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeClearing2.mmObject();
 			isDerived = false;
@@ -217,6 +237,16 @@ public class TradeClearing2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(TradeClearing2 obj) {
+			return obj.getIntraGroup();
+		}
+
+		@Override
+		public void setValue(TradeClearing2 obj, Optional<TrueFalseIndicator> value) {
+			obj.setIntraGroup(value.orElse(null));
 		}
 	};
 

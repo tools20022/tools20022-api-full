@@ -126,7 +126,7 @@ public class PriceDetails7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGenericCashPricePaidPerProduct = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceDetails7, Optional<PriceFormat6Choice>> mmGenericCashPricePaidPerProduct = new MMMessageAssociationEnd<PriceDetails7, Optional<PriceFormat6Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmGenericCashPricePaidPerProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceDetails7.mmObject();
@@ -139,6 +139,16 @@ public class PriceDetails7 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PriceFormat6Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat6Choice> getValue(PriceDetails7 obj) {
+			return obj.getGenericCashPricePaidPerProduct();
+		}
+
+		@Override
+		public void setValue(PriceDetails7 obj, Optional<PriceFormat6Choice> value) {
+			obj.setGenericCashPricePaidPerProduct(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GncCshPricRcvdPerPdct")
@@ -175,7 +185,7 @@ public class PriceDetails7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGenericCashPriceReceivedPerProduct = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceDetails7, Optional<PriceFormat7Choice>> mmGenericCashPriceReceivedPerProduct = new MMMessageAssociationEnd<PriceDetails7, Optional<PriceFormat7Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmGenericCashPriceReceivedPerProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceDetails7.mmObject();
@@ -188,6 +198,16 @@ public class PriceDetails7 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PriceFormat7Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat7Choice> getValue(PriceDetails7 obj) {
+			return obj.getGenericCashPriceReceivedPerProduct();
+		}
+
+		@Override
+		public void setValue(PriceDetails7 obj, Optional<PriceFormat7Choice> value) {
+			obj.setGenericCashPriceReceivedPerProduct(value.orElse(null));
 		}
 	};
 

@@ -29,6 +29,9 @@ import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.entity.TradingSession;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Price1;
+import com.tools20022.repository.msg.SecurityIdentification7;
+import com.tools20022.repository.msg.TradingSession1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -138,7 +141,7 @@ public class TriggeringInstructions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TriggeringInstructions, Optional<TriggerType1Code>> mmType = new MMMessageAttribute<TriggeringInstructions, Optional<TriggerType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TriggeringInstructions.mmObject();
 			isDerived = false;
@@ -150,6 +153,16 @@ public class TriggeringInstructions {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TriggerType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<TriggerType1Code> getValue(TriggeringInstructions obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(TriggeringInstructions obj, Optional<TriggerType1Code> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Actn")
@@ -186,7 +199,7 @@ public class TriggeringInstructions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TriggeringInstructions, Optional<TriggerAction1Code>> mmAction = new MMMessageAttribute<TriggeringInstructions, Optional<TriggerAction1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TriggeringInstructions.mmObject();
 			isDerived = false;
@@ -198,6 +211,16 @@ public class TriggeringInstructions {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TriggerAction1Code.mmObject();
+		}
+
+		@Override
+		public Optional<TriggerAction1Code> getValue(TriggeringInstructions obj) {
+			return obj.getAction();
+		}
+
+		@Override
+		public void setValue(TriggeringInstructions obj, Optional<TriggerAction1Code> value) {
+			obj.setAction(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Pric")
@@ -231,7 +254,7 @@ public class TriggeringInstructions {
 	 * definition} = "The price at which the trigger should hit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TriggeringInstructions, Optional<Price1>> mmPrice = new MMMessageAttribute<TriggeringInstructions, Optional<Price1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TriggeringInstructions.mmObject();
 			isDerived = false;
@@ -242,7 +265,17 @@ public class TriggeringInstructions {
 			definition = "The price at which the trigger should hit.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
+			complexType_lazy = () -> Price1.mmObject();
+		}
+
+		@Override
+		public Optional<Price1> getValue(TriggeringInstructions obj) {
+			return obj.getPrice();
+		}
+
+		@Override
+		public void setValue(TriggeringInstructions obj, Optional<Price1> value) {
+			obj.setPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PricPrtcnScp")
@@ -280,7 +313,7 @@ public class TriggeringInstructions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriceProtectionScope = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TriggeringInstructions, Optional<PriceProtectionScope2Code>> mmPriceProtectionScope = new MMMessageAttribute<TriggeringInstructions, Optional<PriceProtectionScope2Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TriggeringInstructions.mmObject();
 			isDerived = false;
@@ -292,6 +325,16 @@ public class TriggeringInstructions {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PriceProtectionScope2Code.mmObject();
+		}
+
+		@Override
+		public Optional<PriceProtectionScope2Code> getValue(TriggeringInstructions obj) {
+			return obj.getPriceProtectionScope();
+		}
+
+		@Override
+		public void setValue(TriggeringInstructions obj, Optional<PriceProtectionScope2Code> value) {
+			obj.setPriceProtectionScope(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PricDrctn")
@@ -329,7 +372,7 @@ public class TriggeringInstructions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriceDirection = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TriggeringInstructions, Optional<DirectionIndicator>> mmPriceDirection = new MMMessageAttribute<TriggeringInstructions, Optional<DirectionIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TriggeringInstructions.mmObject();
 			isDerived = false;
@@ -341,6 +384,16 @@ public class TriggeringInstructions {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DirectionIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<DirectionIndicator> getValue(TriggeringInstructions obj) {
+			return obj.getPriceDirection();
+		}
+
+		@Override
+		public void setValue(TriggeringInstructions obj, Optional<DirectionIndicator> value) {
+			obj.setPriceDirection(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NewPric")
@@ -376,7 +429,7 @@ public class TriggeringInstructions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TriggeringInstructions, Optional<Price1>> mmNewPrice = new MMMessageAttribute<TriggeringInstructions, Optional<Price1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TriggeringInstructions.mmObject();
 			isDerived = false;
@@ -387,7 +440,17 @@ public class TriggeringInstructions {
 			definition = "The price that the order should have after the trigger has hit. Could be applicable for any trigger type, but must be specified for Trigger Type = PAEX.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
+			complexType_lazy = () -> Price1.mmObject();
+		}
+
+		@Override
+		public Optional<Price1> getValue(TriggeringInstructions obj) {
+			return obj.getNewPrice();
+		}
+
+		@Override
+		public void setValue(TriggeringInstructions obj, Optional<Price1> value) {
+			obj.setNewPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrdrTp")
@@ -430,7 +493,7 @@ public class TriggeringInstructions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TriggeringInstructions, Optional<OrderType2Code>> mmOrderType = new MMMessageAttribute<TriggeringInstructions, Optional<OrderType2Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TriggeringInstructions.mmObject();
@@ -443,6 +506,16 @@ public class TriggeringInstructions {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> OrderType2Code.mmObject();
+		}
+
+		@Override
+		public Optional<OrderType2Code> getValue(TriggeringInstructions obj) {
+			return obj.getOrderType();
+		}
+
+		@Override
+		public void setValue(TriggeringInstructions obj, Optional<OrderType2Code> value) {
+			obj.setOrderType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NewQty")
@@ -484,7 +557,7 @@ public class TriggeringInstructions {
 	 * "The quantity the order should have after the trigger has hit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TriggeringInstructions, Optional<FinancialInstrumentQuantityChoice>> mmNewQuantity = new MMMessageAttribute<TriggeringInstructions, Optional<FinancialInstrumentQuantityChoice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TriggeringInstructions.mmObject();
@@ -497,6 +570,16 @@ public class TriggeringInstructions {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantityChoice> getValue(TriggeringInstructions obj) {
+			return obj.getNewQuantity();
+		}
+
+		@Override
+		public void setValue(TriggeringInstructions obj, Optional<FinancialInstrumentQuantityChoice> value) {
+			obj.setNewQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PricTp")
@@ -532,7 +615,7 @@ public class TriggeringInstructions {
 	 * definition} = "Type of price that the trigger is compared to."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TriggeringInstructions, Optional<TriggerPriceType1Code>> mmPriceType = new MMMessageAttribute<TriggeringInstructions, Optional<TriggerPriceType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TriggeringInstructions.mmObject();
 			isDerived = false;
@@ -544,6 +627,16 @@ public class TriggeringInstructions {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TriggerPriceType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<TriggerPriceType1Code> getValue(TriggeringInstructions obj) {
+			return obj.getPriceType();
+		}
+
+		@Override
+		public void setValue(TriggeringInstructions obj, Optional<TriggerPriceType1Code> value) {
+			obj.setPriceType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrggrSctyDtls")
@@ -586,7 +679,7 @@ public class TriggeringInstructions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTriggerSecurityDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TriggeringInstructions, Optional<SecurityIdentification7>> mmTriggerSecurityDetails = new MMMessageAssociationEnd<TriggeringInstructions, Optional<SecurityIdentification7>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TriggeringInstructions.mmObject();
@@ -599,7 +692,17 @@ public class TriggeringInstructions {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
+			type_lazy = () -> SecurityIdentification7.mmObject();
+		}
+
+		@Override
+		public Optional<SecurityIdentification7> getValue(TriggeringInstructions obj) {
+			return obj.getTriggerSecurityDetails();
+		}
+
+		@Override
+		public void setValue(TriggeringInstructions obj, Optional<SecurityIdentification7> value) {
+			obj.setTriggerSecurityDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradgSsnDtls")
@@ -638,7 +741,7 @@ public class TriggeringInstructions {
 	 * definition} = "Provides details about the trading session."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradingSessionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TriggeringInstructions, Optional<TradingSession1>> mmTradingSessionDetails = new MMMessageAssociationEnd<TriggeringInstructions, Optional<TradingSession1>>() {
 		{
 			businessComponentTrace_lazy = () -> TradingSession.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TriggeringInstructions.mmObject();
@@ -651,7 +754,17 @@ public class TriggeringInstructions {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TradingSession1.mmObject();
+			type_lazy = () -> TradingSession1.mmObject();
+		}
+
+		@Override
+		public Optional<TradingSession1> getValue(TriggeringInstructions obj) {
+			return obj.getTradingSessionDetails();
+		}
+
+		@Override
+		public void setValue(TriggeringInstructions obj, Optional<TradingSession1> value) {
+			obj.setTradingSessionDetails(value.orElse(null));
 		}
 	};
 
@@ -694,7 +807,7 @@ public class TriggeringInstructions {
 		return price == null ? Optional.empty() : Optional.of(price);
 	}
 
-	public TriggeringInstructions setPrice(com.tools20022.repository.msg.Price1 price) {
+	public TriggeringInstructions setPrice(Price1 price) {
 		this.price = price;
 		return this;
 	}
@@ -721,7 +834,7 @@ public class TriggeringInstructions {
 		return newPrice == null ? Optional.empty() : Optional.of(newPrice);
 	}
 
-	public TriggeringInstructions setNewPrice(com.tools20022.repository.msg.Price1 newPrice) {
+	public TriggeringInstructions setNewPrice(Price1 newPrice) {
 		this.newPrice = newPrice;
 		return this;
 	}
@@ -757,7 +870,7 @@ public class TriggeringInstructions {
 		return triggerSecurityDetails == null ? Optional.empty() : Optional.of(triggerSecurityDetails);
 	}
 
-	public TriggeringInstructions setTriggerSecurityDetails(com.tools20022.repository.msg.SecurityIdentification7 triggerSecurityDetails) {
+	public TriggeringInstructions setTriggerSecurityDetails(SecurityIdentification7 triggerSecurityDetails) {
 		this.triggerSecurityDetails = triggerSecurityDetails;
 		return this;
 	}
@@ -766,7 +879,7 @@ public class TriggeringInstructions {
 		return tradingSessionDetails == null ? Optional.empty() : Optional.of(tradingSessionDetails);
 	}
 
-	public TriggeringInstructions setTradingSessionDetails(com.tools20022.repository.msg.TradingSession1 tradingSessionDetails) {
+	public TriggeringInstructions setTradingSessionDetails(TradingSession1 tradingSessionDetails) {
 		this.tradingSessionDetails = tradingSessionDetails;
 		return this;
 	}

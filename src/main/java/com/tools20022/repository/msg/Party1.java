@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.OrganisationIdentification26;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -101,7 +102,7 @@ public class Party1 {
 	 * definition} = "Unique and unambiguous way to identify an organisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOrganisationIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Party1, OrganisationIdentification26> mmOrganisationIdentification = new MMMessageAssociationEnd<Party1, OrganisationIdentification26>() {
 		{
 			businessComponentTrace_lazy = () -> OrganisationIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Party1.mmObject();
@@ -113,7 +114,17 @@ public class Party1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OrganisationIdentification26.mmObject();
+			type_lazy = () -> OrganisationIdentification26.mmObject();
+		}
+
+		@Override
+		public OrganisationIdentification26 getValue(Party1 obj) {
+			return obj.getOrganisationIdentification();
+		}
+
+		@Override
+		public void setValue(Party1 obj, OrganisationIdentification26 value) {
+			obj.setOrganisationIdentification(value);
 		}
 	};
 
@@ -135,7 +146,7 @@ public class Party1 {
 		return organisationIdentification;
 	}
 
-	public Party1 setOrganisationIdentification(com.tools20022.repository.msg.OrganisationIdentification26 organisationIdentification) {
+	public Party1 setOrganisationIdentification(OrganisationIdentification26 organisationIdentification) {
 		this.organisationIdentification = Objects.requireNonNull(organisationIdentification);
 		return this;
 	}

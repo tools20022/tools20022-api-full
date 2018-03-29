@@ -105,7 +105,7 @@ public class ApplicationSpecifics1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSystemUser = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ApplicationSpecifics1, Optional<Max140Text>> mmSystemUser = new MMMessageAttribute<ApplicationSpecifics1, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ApplicationSpecifics1.mmObject();
 			isDerived = false;
@@ -116,6 +116,16 @@ public class ApplicationSpecifics1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(ApplicationSpecifics1 obj) {
+			return obj.getSystemUser();
+		}
+
+		@Override
+		public void setValue(ApplicationSpecifics1 obj, Optional<Max140Text> value) {
+			obj.setSystemUser(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sgntr")
@@ -150,7 +160,7 @@ public class ApplicationSpecifics1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSignature = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ApplicationSpecifics1, Optional<SignatureEnvelope>> mmSignature = new MMMessageAttribute<ApplicationSpecifics1, Optional<SignatureEnvelope>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ApplicationSpecifics1.mmObject();
 			isDerived = false;
@@ -161,6 +171,16 @@ public class ApplicationSpecifics1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SignatureEnvelope.mmObject();
+		}
+
+		@Override
+		public Optional<SignatureEnvelope> getValue(ApplicationSpecifics1 obj) {
+			return obj.getSignature();
+		}
+
+		@Override
+		public void setValue(ApplicationSpecifics1 obj, Optional<SignatureEnvelope> value) {
+			obj.setSignature(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlNbOfDocs", required = true)
@@ -193,7 +213,7 @@ public class ApplicationSpecifics1 {
 	 * "Gives the total number of instances (messages) within the file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalNumberOfDocuments = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ApplicationSpecifics1, Number> mmTotalNumberOfDocuments = new MMMessageAttribute<ApplicationSpecifics1, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ApplicationSpecifics1.mmObject();
 			isDerived = false;
@@ -204,6 +224,16 @@ public class ApplicationSpecifics1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(ApplicationSpecifics1 obj) {
+			return obj.getTotalNumberOfDocuments();
+		}
+
+		@Override
+		public void setValue(ApplicationSpecifics1 obj, Number value) {
+			obj.setTotalNumberOfDocuments(value);
 		}
 	};
 

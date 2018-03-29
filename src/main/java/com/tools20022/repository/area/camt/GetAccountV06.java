@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.AccountQuery2;
 import com.tools20022.repository.msg.MessageHeader9;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset._SR2018_MX_CashManagement_Maintenance;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -101,7 +100,7 @@ import javax.xml.bind.annotation.*;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "GetAccountV06"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -139,7 +138,7 @@ public class GetAccountV06 {
 	 * definition} = "Common business identification for the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<GetAccountV06, MessageHeader9> mmMessageHeader = new MMMessageBuildingBlock<GetAccountV06, MessageHeader9>() {
 		{
 			xmlTag = "MsgHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -150,12 +149,14 @@ public class GetAccountV06 {
 			complexType_lazy = () -> MessageHeader9.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return GetAccountV06.class.getMethod("getMessageHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageHeader9 getValue(GetAccountV06 obj) {
+			return obj.getMessageHeader();
+		}
+
+		@Override
+		public void setValue(GetAccountV06 obj, MessageHeader9 value) {
+			obj.setMessageHeader(value);
 		}
 	};
 	@XmlElement(name = "AcctQryDef")
@@ -182,7 +183,7 @@ public class GetAccountV06 {
 	 * definition} = "Defines the account query criteria."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAccountQueryDefinition = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<GetAccountV06, Optional<AccountQuery2>> mmAccountQueryDefinition = new MMMessageBuildingBlock<GetAccountV06, Optional<AccountQuery2>>() {
 		{
 			xmlTag = "AcctQryDef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -193,12 +194,14 @@ public class GetAccountV06 {
 			complexType_lazy = () -> AccountQuery2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return GetAccountV06.class.getMethod("getAccountQueryDefinition", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AccountQuery2> getValue(GetAccountV06 obj) {
+			return obj.getAccountQueryDefinition();
+		}
+
+		@Override
+		public void setValue(GetAccountV06 obj, Optional<AccountQuery2> value) {
+			obj.setAccountQueryDefinition(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -228,7 +231,7 @@ public class GetAccountV06 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<GetAccountV06, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<GetAccountV06, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -238,19 +241,21 @@ public class GetAccountV06 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return GetAccountV06.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(GetAccountV06 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(GetAccountV06 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "GetAccountV06";
 				definition = "Scope\r\nThe GetAccount message is sent by a member to the transaction administrator.\r\nIt is used to request information on the details of one or more accounts held at the transaction administrator, including information on the balances.\r\nUsage\r\nAt any time during the operating hours of the system, the member can query the transaction administrator to get information about the account(s) that the transaction administrator maintains for the member.\r\nFor example, this may be necessary in order to perform the appropriate liquidity management and the funds transfers between accounts.\r\nThe member can request information about accounts through a series of criteria, corresponding to the known information stored at the transaction administrator.\r\nThe query can concern one or more specific accounts, accounts of a particular identification, or a particular type. The purpose of the query may be to obtain one or more types of balance.\r\nThe member can request information based on the following elements:\r\n- account identification\r\n- account type (this element can be used to refine the query when the account identification represents, for example, a group of accounts)\r\n- balance type (if not present, all balances are requested)\r\n- type of counterparty: bilateral or multilateral (note that, by default, a balance is multilateral unless a particular counterparty is specified)\r\n- identification of the counterparty when a bilateral balance is requested\r\n- balance value date (if not present in the GetAccount message, the ReturnAccount message will contain the latest available balance)\r\nThis message will be answered by a ReturnAccount message.\r\nAdditional information on the generic design of the Get/Return messages can be found in the section How to Use the Cash Management Messages.";
 				messageSet_lazy = () -> Arrays.asList(_SR2018_MX_CashManagement_Maintenance.mmObject());

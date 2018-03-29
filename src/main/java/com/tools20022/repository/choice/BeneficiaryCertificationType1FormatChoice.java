@@ -109,7 +109,7 @@ public class BeneficiaryCertificationType1FormatChoice {
 	 * "Standard code to specify the type of beneficiary's certification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BeneficiaryCertificationType1FormatChoice, BeneficiaryCertificationType1Code> mmCode = new MMMessageAttribute<BeneficiaryCertificationType1FormatChoice, BeneficiaryCertificationType1Code>() {
 		{
 			businessElementTrace_lazy = () -> BeneficialOwner.mmCertificationType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BeneficiaryCertificationType1FormatChoice.mmObject();
@@ -121,6 +121,16 @@ public class BeneficiaryCertificationType1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BeneficiaryCertificationType1Code.mmObject();
+		}
+
+		@Override
+		public BeneficiaryCertificationType1Code getValue(BeneficiaryCertificationType1FormatChoice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(BeneficiaryCertificationType1FormatChoice obj, BeneficiaryCertificationType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -159,7 +169,7 @@ public class BeneficiaryCertificationType1FormatChoice {
 	 * "Proprietary code to express the type of beneficiary's certification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BeneficiaryCertificationType1FormatChoice, GenericIdentification13> mmProprietary = new MMMessageAttribute<BeneficiaryCertificationType1FormatChoice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> BeneficialOwner.mmCertificationType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BeneficiaryCertificationType1FormatChoice.mmObject();
@@ -171,6 +181,16 @@ public class BeneficiaryCertificationType1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(BeneficiaryCertificationType1FormatChoice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(BeneficiaryCertificationType1FormatChoice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

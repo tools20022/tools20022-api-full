@@ -62,12 +62,16 @@ public class ConstraintPortfolioRule {
 	 */
 	public static final MMConstraint<PortfolioTransferInstructionV08> forPortfolioTransferInstructionV08 = new MMConstraint<PortfolioTransferInstructionV08>() {
 		{
-			validator = ConstraintPortfolioRule::checkPortfolioTransferInstructionV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PortfolioRule";
 			definition = "If any occurrence of ProductTransfer\\Portfolio is present, then one or more elements in the list (PrimaryIndividualInvestor, SecondaryIndividualInvestor, OtherIndividualInvestor) may be present.\r\nIf any occurrence of ProductTransfer\\Portfolio is present, then one or more elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) may be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPortfolioRule.forPortfolioTransferInstructionV07;
 			owner_lazy = () -> PortfolioTransferInstructionV08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PortfolioTransferInstructionV08 obj) throws Exception {
+			checkPortfolioTransferInstructionV08(obj);
 		}
 	};
 	/**
@@ -98,12 +102,16 @@ public class ConstraintPortfolioRule {
 	 */
 	public static final MMConstraint<AccountHoldingInformationV06> forAccountHoldingInformationV06 = new MMConstraint<AccountHoldingInformationV06>() {
 		{
-			validator = ConstraintPortfolioRule::checkAccountHoldingInformationV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PortfolioRule";
 			definition = "If ProductTransfer/Portfolio is present, then one or more message elements in the list (PrimaryIndividualInvestor, SecondaryIndividualInvestor, OtherIndividualInvestor) may be present.\r\nIf ProductTransfer/Portfolio is present, then one or more message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) may be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPortfolioRule.forAccountHoldingInformationV05;
 			owner_lazy = () -> AccountHoldingInformationV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountHoldingInformationV06 obj) throws Exception {
+			checkAccountHoldingInformationV06(obj);
 		}
 	};
 	/**
@@ -134,12 +142,16 @@ public class ConstraintPortfolioRule {
 	 */
 	public static final MMConstraint<AccountHoldingInformationRequestV05> forAccountHoldingInformationRequestV05 = new MMConstraint<AccountHoldingInformationRequestV05>() {
 		{
-			validator = ConstraintPortfolioRule::checkAccountHoldingInformationRequestV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PortfolioRule";
 			definition = "If ProductTransfer/Portfolio is present, then one or more message elements in the list (PrimaryIndividualInvestor, SecondaryIndividualInvestor, OtherIndividualInvestor) may be present.\r\nIf ProductTransfer/Portfolio is present, then one or more message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) may be present.\r\n";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPortfolioRule.forAccountHoldingInformationRequestV04;
 			owner_lazy = () -> AccountHoldingInformationRequestV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountHoldingInformationRequestV05 obj) throws Exception {
+			checkAccountHoldingInformationRequestV05(obj);
 		}
 	};
 	/**
@@ -178,13 +190,17 @@ public class ConstraintPortfolioRule {
 	 */
 	public static final MMConstraint<PortfolioTransferInstructionV07> forPortfolioTransferInstructionV07 = new MMConstraint<PortfolioTransferInstructionV07>() {
 		{
-			validator = ConstraintPortfolioRule::checkPortfolioTransferInstructionV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PortfolioRule";
 			definition = "If any occurrence of ProductTransfer\\Portfolio is present, then one or more elements in the list (PrimaryIndividualInvestor, SecondaryIndividualInvestor, OtherIndividualInvestor) may be present.\r\nIf any occurrence of ProductTransfer\\Portfolio is present, then one or more elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) may be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPortfolioRule.forPortfolioTransferInstructionV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPorfolioRule.forPortfolioTransferInstructionV06;
 			owner_lazy = () -> PortfolioTransferInstructionV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PortfolioTransferInstructionV07 obj) throws Exception {
+			checkPortfolioTransferInstructionV07(obj);
 		}
 	};
 	/**
@@ -223,13 +239,17 @@ public class ConstraintPortfolioRule {
 	 */
 	public static final MMConstraint<AccountHoldingInformationV05> forAccountHoldingInformationV05 = new MMConstraint<AccountHoldingInformationV05>() {
 		{
-			validator = ConstraintPortfolioRule::checkAccountHoldingInformationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PortfolioRule";
 			definition = "If ProductTransfer/Portfolio is present, then one or more message elements in the list (PrimaryIndividualInvestor, SecondaryIndividualInvestor, OtherIndividualInvestor) may be present.\r\nIf ProductTransfer/Portfolio is present, then one or more message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) may be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPortfolioRule.forAccountHoldingInformationV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPorfolioRule.forAccountHoldingInformationV04;
 			owner_lazy = () -> AccountHoldingInformationV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountHoldingInformationV05 obj) throws Exception {
+			checkAccountHoldingInformationV05(obj);
 		}
 	};
 	/**
@@ -268,13 +288,17 @@ public class ConstraintPortfolioRule {
 	 */
 	public static final MMConstraint<AccountHoldingInformationRequestV04> forAccountHoldingInformationRequestV04 = new MMConstraint<AccountHoldingInformationRequestV04>() {
 		{
-			validator = ConstraintPortfolioRule::checkAccountHoldingInformationRequestV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PortfolioRule";
 			definition = "If ProductTransfer/Portfolio is present, then one or more message elements in the list (PrimaryIndividualInvestor, SecondaryIndividualInvestor, OtherIndividualInvestor) may be present.\r\nIf ProductTransfer/Portfolio is present, then one or more message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) may be present.\r\n";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPortfolioRule.forAccountHoldingInformationRequestV05);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPorfolioRule.forAccountHoldingInformationRequestV03;
 			owner_lazy = () -> AccountHoldingInformationRequestV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountHoldingInformationRequestV04 obj) throws Exception {
+			checkAccountHoldingInformationRequestV04(obj);
 		}
 	};
 	/**
@@ -304,12 +328,16 @@ public class ConstraintPortfolioRule {
 	 */
 	public static final MMConstraint<ISATransfer24> forISATransfer24 = new MMConstraint<ISATransfer24>() {
 		{
-			validator = ConstraintPortfolioRule::checkISATransfer24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PortfolioRule";
 			definition = "If any occurrence of ProductTransfer/Portfolio is present, then one or more elements in the list (PrimaryIndividualInvestor, SecondaryIndividualInvestor, OtherIndividualInvestor) may be present.\r\nIf any occurrence of ProductTransfer/Portfolio is present, then one or more message in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) may be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPorfolioRule.forISATransfer19;
 			owner_lazy = () -> ISATransfer24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ISATransfer24 obj) throws Exception {
+			checkISATransfer24(obj);
 		}
 	};
 

@@ -29,6 +29,7 @@ import com.tools20022.repository.datatype.ID;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BusinessApplicationHeader1;
 import com.tools20022.repository.other.StrictPayload;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -175,7 +176,7 @@ public class EncapsulatedBusinessMessage1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmHeader = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EncapsulatedBusinessMessage1, Optional<BusinessApplicationHeader1>> mmHeader = new MMMessageAssociationEnd<EncapsulatedBusinessMessage1, Optional<BusinessApplicationHeader1>>() {
 		{
 			businessComponentTrace_lazy = () -> Document.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.EncapsulatedBusinessMessage1.mmObject();
@@ -187,7 +188,17 @@ public class EncapsulatedBusinessMessage1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BusinessApplicationHeader1.mmObject();
+			type_lazy = () -> BusinessApplicationHeader1.mmObject();
+		}
+
+		@Override
+		public Optional<BusinessApplicationHeader1> getValue(EncapsulatedBusinessMessage1 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(EncapsulatedBusinessMessage1 obj, Optional<BusinessApplicationHeader1> value) {
+			obj.setHeader(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Prfx")
@@ -220,7 +231,7 @@ public class EncapsulatedBusinessMessage1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPrefix = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EncapsulatedBusinessMessage1, Optional<ID>> mmPrefix = new MMMessageAttribute<EncapsulatedBusinessMessage1, Optional<ID>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EncapsulatedBusinessMessage1.mmObject();
 			isDerived = false;
@@ -231,6 +242,16 @@ public class EncapsulatedBusinessMessage1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ID.mmObject();
+		}
+
+		@Override
+		public Optional<ID> getValue(EncapsulatedBusinessMessage1 obj) {
+			return obj.getPrefix();
+		}
+
+		@Override
+		public void setValue(EncapsulatedBusinessMessage1 obj, Optional<ID> value) {
+			obj.setPrefix(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Prtl", required = true)
@@ -265,7 +286,7 @@ public class EncapsulatedBusinessMessage1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartial = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EncapsulatedBusinessMessage1, YesNoIndicator> mmPartial = new MMMessageAttribute<EncapsulatedBusinessMessage1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EncapsulatedBusinessMessage1.mmObject();
 			isDerived = false;
@@ -276,6 +297,16 @@ public class EncapsulatedBusinessMessage1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(EncapsulatedBusinessMessage1 obj) {
+			return obj.getPartial();
+		}
+
+		@Override
+		public void setValue(EncapsulatedBusinessMessage1 obj, YesNoIndicator value) {
+			obj.setPartial(value);
 		}
 	};
 	@XmlElement(name = "Msg", required = true)
@@ -311,7 +342,7 @@ public class EncapsulatedBusinessMessage1 {
 	 * definition} = "The encapsulated ISO 20022 message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EncapsulatedBusinessMessage1, StrictPayload> mmMessage = new MMMessageAttribute<EncapsulatedBusinessMessage1, StrictPayload>() {
 		{
 			businessComponentTrace_lazy = () -> Document.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.EncapsulatedBusinessMessage1.mmObject();
@@ -323,6 +354,16 @@ public class EncapsulatedBusinessMessage1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> StrictPayload.mmObject();
+		}
+
+		@Override
+		public StrictPayload getValue(EncapsulatedBusinessMessage1 obj) {
+			return obj.getMessage();
+		}
+
+		@Override
+		public void setValue(EncapsulatedBusinessMessage1 obj, StrictPayload value) {
+			obj.setMessage(value);
 		}
 	};
 
@@ -351,7 +392,7 @@ public class EncapsulatedBusinessMessage1 {
 		return header == null ? Optional.empty() : Optional.of(header);
 	}
 
-	public EncapsulatedBusinessMessage1 setHeader(com.tools20022.repository.msg.BusinessApplicationHeader1 header) {
+	public EncapsulatedBusinessMessage1 setHeader(BusinessApplicationHeader1 header) {
 		this.header = header;
 		return this;
 	}

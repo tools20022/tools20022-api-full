@@ -112,7 +112,7 @@ public class OrganisationIdentification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrganisationIdentification1Choice, LEIIdentifier> mmLEI = new MMMessageAttribute<OrganisationIdentification1Choice, LEIIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OrganisationIdentification1Choice.mmObject();
@@ -124,6 +124,16 @@ public class OrganisationIdentification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public LEIIdentifier getValue(OrganisationIdentification1Choice obj) {
+			return obj.getLEI();
+		}
+
+		@Override
+		public void setValue(OrganisationIdentification1Choice obj, LEIIdentifier value) {
+			obj.setLEI(value);
 		}
 	};
 	@XmlElement(name = "AnyBIC", required = true)
@@ -162,7 +172,7 @@ public class OrganisationIdentification1Choice {
 	 * "Business identifier code used to identify the organisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAnyBIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrganisationIdentification1Choice, AnyBICIdentifier> mmAnyBIC = new MMMessageAttribute<OrganisationIdentification1Choice, AnyBICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OrganisationIdentification1Choice.mmObject();
@@ -174,6 +184,16 @@ public class OrganisationIdentification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public AnyBICIdentifier getValue(OrganisationIdentification1Choice obj) {
+			return obj.getAnyBIC();
+		}
+
+		@Override
+		public void setValue(OrganisationIdentification1Choice obj, AnyBICIdentifier value) {
+			obj.setAnyBIC(value);
 		}
 	};
 

@@ -33,6 +33,7 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.TreasuryTradePartyRole;
 import com.tools20022.repository.entity.TreasuryTradingParty;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FundIdentification4;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -185,7 +186,7 @@ public class TradePartyIdentification6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSubmittingParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradePartyIdentification6, PartyIdentification73Choice> mmSubmittingParty = new MMMessageAssociationEnd<TradePartyIdentification6, PartyIdentification73Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradePartyIdentification6.mmObject();
@@ -198,6 +199,16 @@ public class TradePartyIdentification6 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification73Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification73Choice getValue(TradePartyIdentification6 obj) {
+			return obj.getSubmittingParty();
+		}
+
+		@Override
+		public void setValue(TradePartyIdentification6 obj, PartyIdentification73Choice value) {
+			obj.setSubmittingParty(value);
 		}
 	};
 	@XmlElement(name = "TradPty")
@@ -236,7 +247,7 @@ public class TradePartyIdentification6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradeParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradePartyIdentification6, Optional<PartyIdentification73Choice>> mmTradeParty = new MMMessageAssociationEnd<TradePartyIdentification6, Optional<PartyIdentification73Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradePartyIdentification6.mmObject();
@@ -250,9 +261,19 @@ public class TradePartyIdentification6 {
 			isComposite = true;
 			type_lazy = () -> PartyIdentification73Choice.mmObject();
 		}
+
+		@Override
+		public Optional<PartyIdentification73Choice> getValue(TradePartyIdentification6 obj) {
+			return obj.getTradeParty();
+		}
+
+		@Override
+		public void setValue(TradePartyIdentification6 obj, Optional<PartyIdentification73Choice> value) {
+			obj.setTradeParty(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "FndId")
-	protected List<com.tools20022.repository.msg.FundIdentification4> fundIdentification;
+	protected List<FundIdentification4> fundIdentification;
 	/**
 	 * 
 	 <p>
@@ -286,7 +307,7 @@ public class TradePartyIdentification6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFundIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradePartyIdentification6, List<FundIdentification4>> mmFundIdentification = new MMMessageAssociationEnd<TradePartyIdentification6, List<FundIdentification4>>() {
 		{
 			businessElementTrace_lazy = () -> TreasuryTradingParty.mmInvestmentFund;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradePartyIdentification6.mmObject();
@@ -297,7 +318,17 @@ public class TradePartyIdentification6 {
 			definition = "Identifies the fund that is one of the parties in the foreign exchange trade.\r\n";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FundIdentification4.mmObject();
+			type_lazy = () -> FundIdentification4.mmObject();
+		}
+
+		@Override
+		public List<FundIdentification4> getValue(TradePartyIdentification6 obj) {
+			return obj.getFundIdentification();
+		}
+
+		@Override
+		public void setValue(TradePartyIdentification6 obj, List<FundIdentification4> value) {
+			obj.setFundIdentification(value);
 		}
 	};
 
@@ -347,7 +378,7 @@ public class TradePartyIdentification6 {
 		return fundIdentification == null ? fundIdentification = new ArrayList<>() : fundIdentification;
 	}
 
-	public TradePartyIdentification6 setFundIdentification(List<com.tools20022.repository.msg.FundIdentification4> fundIdentification) {
+	public TradePartyIdentification6 setFundIdentification(List<FundIdentification4> fundIdentification) {
 		this.fundIdentification = Objects.requireNonNull(fundIdentification);
 		return this;
 	}

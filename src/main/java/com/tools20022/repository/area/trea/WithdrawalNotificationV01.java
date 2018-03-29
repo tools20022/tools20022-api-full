@@ -24,7 +24,6 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TreasuryArchive;
 import com.tools20022.repository.msg.MessageReference;
 import com.tools20022.repository.msgset.ForexNotificationsISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -112,7 +111,7 @@ public class WithdrawalNotificationV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMatchingSystemUniqueReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<WithdrawalNotificationV01, MessageReference> mmMatchingSystemUniqueReference = new MMMessageBuildingBlock<WithdrawalNotificationV01, MessageReference>() {
 		{
 			xmlTag = "MtchgSysUnqRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,12 +122,14 @@ public class WithdrawalNotificationV01 {
 			complexType_lazy = () -> MessageReference.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return WithdrawalNotificationV01.class.getMethod("getMatchingSystemUniqueReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageReference getValue(WithdrawalNotificationV01 obj) {
+			return obj.getMatchingSystemUniqueReference();
+		}
+
+		@Override
+		public void setValue(WithdrawalNotificationV01 obj, MessageReference value) {
+			obj.setMatchingSystemUniqueReference(value);
 		}
 	};
 

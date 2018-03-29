@@ -21,7 +21,9 @@ import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.FinancialProduct;
+import com.tools20022.repository.entity.InvestmentAccountContract;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -116,7 +118,7 @@ public class ManagedAccountProduct extends FinancialProduct {
 	 * "Account which is the object of the managed account product."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmAccount = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ManagedAccountProduct, com.tools20022.repository.entity.Account> mmAccount = new MMBusinessAssociationEnd<ManagedAccountProduct, com.tools20022.repository.entity.Account>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ManagedAccountProduct.mmObject();
@@ -128,6 +130,16 @@ public class ManagedAccountProduct extends FinancialProduct {
 			opposite_lazy = () -> com.tools20022.repository.entity.Account.mmManagedAccountProduct;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Account.mmObject();
+		}
+
+		@Override
+		public com.tools20022.repository.entity.Account getValue(ManagedAccountProduct obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(ManagedAccountProduct obj, com.tools20022.repository.entity.Account value) {
+			obj.setAccount(value);
 		}
 	};
 	protected InvestmentAccountContract investmentAccountContract;
@@ -167,7 +179,7 @@ public class ManagedAccountProduct extends FinancialProduct {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmInvestmentAccountContract = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ManagedAccountProduct, com.tools20022.repository.entity.InvestmentAccountContract> mmInvestmentAccountContract = new MMBusinessAssociationEnd<ManagedAccountProduct, com.tools20022.repository.entity.InvestmentAccountContract>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ManagedAccountProduct.mmObject();
@@ -179,6 +191,16 @@ public class ManagedAccountProduct extends FinancialProduct {
 			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentAccountContract.mmModeledAccount;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InvestmentAccountContract.mmObject();
+		}
+
+		@Override
+		public com.tools20022.repository.entity.InvestmentAccountContract getValue(ManagedAccountProduct obj) {
+			return obj.getInvestmentAccountContract();
+		}
+
+		@Override
+		public void setValue(ManagedAccountProduct obj, com.tools20022.repository.entity.InvestmentAccountContract value) {
+			obj.setInvestmentAccountContract(value);
 		}
 	};
 

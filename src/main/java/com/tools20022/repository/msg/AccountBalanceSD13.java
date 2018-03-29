@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SignedQuantityFormat9;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -128,7 +129,7 @@ public class AccountBalanceSD13 {
 	 * AccountBalanceSD9.mmPlaceAndName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountBalanceSD13, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<AccountBalanceSD13, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountBalanceSD13.mmObject();
 			isDerived = false;
@@ -140,6 +141,16 @@ public class AccountBalanceSD13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(AccountBalanceSD13 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(AccountBalanceSD13 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlBal")
@@ -177,7 +188,7 @@ public class AccountBalanceSD13 {
 	 * AccountBalanceSD9.mmOriginalBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountBalanceSD13, Optional<SignedQuantityFormat9>> mmOriginalBalance = new MMMessageAssociationEnd<AccountBalanceSD13, Optional<SignedQuantityFormat9>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountBalanceSD13.mmObject();
 			isDerived = false;
@@ -189,7 +200,17 @@ public class AccountBalanceSD13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat9.mmObject();
+			type_lazy = () -> SignedQuantityFormat9.mmObject();
+		}
+
+		@Override
+		public Optional<SignedQuantityFormat9> getValue(AccountBalanceSD13 obj) {
+			return obj.getOriginalBalance();
+		}
+
+		@Override
+		public void setValue(AccountBalanceSD13 obj, Optional<SignedQuantityFormat9> value) {
+			obj.setOriginalBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UpldgdBal")
@@ -227,7 +248,7 @@ public class AccountBalanceSD13 {
 	 * AccountBalanceSD9.mmUnpledgedBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnpledgedBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountBalanceSD13, Optional<SignedQuantityFormat9>> mmUnpledgedBalance = new MMMessageAssociationEnd<AccountBalanceSD13, Optional<SignedQuantityFormat9>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountBalanceSD13.mmObject();
 			isDerived = false;
@@ -239,7 +260,17 @@ public class AccountBalanceSD13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat9.mmObject();
+			type_lazy = () -> SignedQuantityFormat9.mmObject();
+		}
+
+		@Override
+		public Optional<SignedQuantityFormat9> getValue(AccountBalanceSD13 obj) {
+			return obj.getUnpledgedBalance();
+		}
+
+		@Override
+		public void setValue(AccountBalanceSD13 obj, Optional<SignedQuantityFormat9> value) {
+			obj.setUnpledgedBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InvstmtUpldgdBal")
@@ -277,7 +308,7 @@ public class AccountBalanceSD13 {
 	 * AccountBalanceSD9.mmInvestmentUnpledgedBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestmentUnpledgedBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountBalanceSD13, Optional<SignedQuantityFormat9>> mmInvestmentUnpledgedBalance = new MMMessageAssociationEnd<AccountBalanceSD13, Optional<SignedQuantityFormat9>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountBalanceSD13.mmObject();
 			isDerived = false;
@@ -289,7 +320,17 @@ public class AccountBalanceSD13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat9.mmObject();
+			type_lazy = () -> SignedQuantityFormat9.mmObject();
+		}
+
+		@Override
+		public Optional<SignedQuantityFormat9> getValue(AccountBalanceSD13 obj) {
+			return obj.getInvestmentUnpledgedBalance();
+		}
+
+		@Override
+		public void setValue(AccountBalanceSD13 obj, Optional<SignedQuantityFormat9> value) {
+			obj.setInvestmentUnpledgedBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InvstmtPldgdBal")
@@ -327,7 +368,7 @@ public class AccountBalanceSD13 {
 	 * AccountBalanceSD9.mmInvestmentPledgedBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestmentPledgedBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountBalanceSD13, Optional<SignedQuantityFormat9>> mmInvestmentPledgedBalance = new MMMessageAssociationEnd<AccountBalanceSD13, Optional<SignedQuantityFormat9>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountBalanceSD13.mmObject();
 			isDerived = false;
@@ -339,7 +380,17 @@ public class AccountBalanceSD13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat9.mmObject();
+			type_lazy = () -> SignedQuantityFormat9.mmObject();
+		}
+
+		@Override
+		public Optional<SignedQuantityFormat9> getValue(AccountBalanceSD13 obj) {
+			return obj.getInvestmentPledgedBalance();
+		}
+
+		@Override
+		public void setValue(AccountBalanceSD13 obj, Optional<SignedQuantityFormat9> value) {
+			obj.setInvestmentPledgedBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AccptdBal")
@@ -376,7 +427,7 @@ public class AccountBalanceSD13 {
 	 * AccountBalanceSD9.mmAcceptedBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAcceptedBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountBalanceSD13, Optional<SignedQuantityFormat9>> mmAcceptedBalance = new MMMessageAssociationEnd<AccountBalanceSD13, Optional<SignedQuantityFormat9>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountBalanceSD13.mmObject();
 			isDerived = false;
@@ -388,7 +439,17 @@ public class AccountBalanceSD13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat9.mmObject();
+			type_lazy = () -> SignedQuantityFormat9.mmObject();
+		}
+
+		@Override
+		public Optional<SignedQuantityFormat9> getValue(AccountBalanceSD13 obj) {
+			return obj.getAcceptedBalance();
+		}
+
+		@Override
+		public void setValue(AccountBalanceSD13 obj, Optional<SignedQuantityFormat9> value) {
+			obj.setAcceptedBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UaccptdBal")
@@ -425,7 +486,7 @@ public class AccountBalanceSD13 {
 	 * AccountBalanceSD9.mmUnacceptedBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnacceptedBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountBalanceSD13, Optional<SignedQuantityFormat9>> mmUnacceptedBalance = new MMMessageAssociationEnd<AccountBalanceSD13, Optional<SignedQuantityFormat9>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountBalanceSD13.mmObject();
 			isDerived = false;
@@ -437,7 +498,17 @@ public class AccountBalanceSD13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat9.mmObject();
+			type_lazy = () -> SignedQuantityFormat9.mmObject();
+		}
+
+		@Override
+		public Optional<SignedQuantityFormat9> getValue(AccountBalanceSD13 obj) {
+			return obj.getUnacceptedBalance();
+		}
+
+		@Override
+		public void setValue(AccountBalanceSD13 obj, Optional<SignedQuantityFormat9> value) {
+			obj.setUnacceptedBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OvrsbcptBal")
@@ -475,7 +546,7 @@ public class AccountBalanceSD13 {
 	 * AccountBalanceSD9.mmOversubscriptionBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOversubscriptionBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountBalanceSD13, Optional<SignedQuantityFormat9>> mmOversubscriptionBalance = new MMMessageAssociationEnd<AccountBalanceSD13, Optional<SignedQuantityFormat9>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountBalanceSD13.mmObject();
 			isDerived = false;
@@ -487,7 +558,17 @@ public class AccountBalanceSD13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat9.mmObject();
+			type_lazy = () -> SignedQuantityFormat9.mmObject();
+		}
+
+		@Override
+		public Optional<SignedQuantityFormat9> getValue(AccountBalanceSD13 obj) {
+			return obj.getOversubscriptionBalance();
+		}
+
+		@Override
+		public void setValue(AccountBalanceSD13 obj, Optional<SignedQuantityFormat9> value) {
+			obj.setOversubscriptionBalance(value.orElse(null));
 		}
 	};
 
@@ -521,7 +602,7 @@ public class AccountBalanceSD13 {
 		return originalBalance == null ? Optional.empty() : Optional.of(originalBalance);
 	}
 
-	public AccountBalanceSD13 setOriginalBalance(com.tools20022.repository.msg.SignedQuantityFormat9 originalBalance) {
+	public AccountBalanceSD13 setOriginalBalance(SignedQuantityFormat9 originalBalance) {
 		this.originalBalance = originalBalance;
 		return this;
 	}
@@ -530,7 +611,7 @@ public class AccountBalanceSD13 {
 		return unpledgedBalance == null ? Optional.empty() : Optional.of(unpledgedBalance);
 	}
 
-	public AccountBalanceSD13 setUnpledgedBalance(com.tools20022.repository.msg.SignedQuantityFormat9 unpledgedBalance) {
+	public AccountBalanceSD13 setUnpledgedBalance(SignedQuantityFormat9 unpledgedBalance) {
 		this.unpledgedBalance = unpledgedBalance;
 		return this;
 	}
@@ -539,7 +620,7 @@ public class AccountBalanceSD13 {
 		return investmentUnpledgedBalance == null ? Optional.empty() : Optional.of(investmentUnpledgedBalance);
 	}
 
-	public AccountBalanceSD13 setInvestmentUnpledgedBalance(com.tools20022.repository.msg.SignedQuantityFormat9 investmentUnpledgedBalance) {
+	public AccountBalanceSD13 setInvestmentUnpledgedBalance(SignedQuantityFormat9 investmentUnpledgedBalance) {
 		this.investmentUnpledgedBalance = investmentUnpledgedBalance;
 		return this;
 	}
@@ -548,7 +629,7 @@ public class AccountBalanceSD13 {
 		return investmentPledgedBalance == null ? Optional.empty() : Optional.of(investmentPledgedBalance);
 	}
 
-	public AccountBalanceSD13 setInvestmentPledgedBalance(com.tools20022.repository.msg.SignedQuantityFormat9 investmentPledgedBalance) {
+	public AccountBalanceSD13 setInvestmentPledgedBalance(SignedQuantityFormat9 investmentPledgedBalance) {
 		this.investmentPledgedBalance = investmentPledgedBalance;
 		return this;
 	}
@@ -557,7 +638,7 @@ public class AccountBalanceSD13 {
 		return acceptedBalance == null ? Optional.empty() : Optional.of(acceptedBalance);
 	}
 
-	public AccountBalanceSD13 setAcceptedBalance(com.tools20022.repository.msg.SignedQuantityFormat9 acceptedBalance) {
+	public AccountBalanceSD13 setAcceptedBalance(SignedQuantityFormat9 acceptedBalance) {
 		this.acceptedBalance = acceptedBalance;
 		return this;
 	}
@@ -566,7 +647,7 @@ public class AccountBalanceSD13 {
 		return unacceptedBalance == null ? Optional.empty() : Optional.of(unacceptedBalance);
 	}
 
-	public AccountBalanceSD13 setUnacceptedBalance(com.tools20022.repository.msg.SignedQuantityFormat9 unacceptedBalance) {
+	public AccountBalanceSD13 setUnacceptedBalance(SignedQuantityFormat9 unacceptedBalance) {
 		this.unacceptedBalance = unacceptedBalance;
 		return this;
 	}
@@ -575,7 +656,7 @@ public class AccountBalanceSD13 {
 		return oversubscriptionBalance == null ? Optional.empty() : Optional.of(oversubscriptionBalance);
 	}
 
-	public AccountBalanceSD13 setOversubscriptionBalance(com.tools20022.repository.msg.SignedQuantityFormat9 oversubscriptionBalance) {
+	public AccountBalanceSD13 setOversubscriptionBalance(SignedQuantityFormat9 oversubscriptionBalance) {
 		this.oversubscriptionBalance = oversubscriptionBalance;
 		return this;
 	}

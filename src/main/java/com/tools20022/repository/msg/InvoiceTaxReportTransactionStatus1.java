@@ -25,6 +25,8 @@ import com.tools20022.repository.area.auth.InvoiceTaxReportStatusAdviceV01;
 import com.tools20022.repository.codeset.TaxReportingStatus2Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericValidationRuleIdentification1;
+import com.tools20022.repository.msg.SupplementaryData1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -128,7 +130,7 @@ public class InvoiceTaxReportTransactionStatus1 {
 	 * MoneyMarketTransactionStatus2.mmUniqueTransactionIdentifier}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxReportIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvoiceTaxReportTransactionStatus1, Max35Text> mmTaxReportIdentification = new MMMessageAttribute<InvoiceTaxReportTransactionStatus1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1.mmObject();
 			isDerived = false;
@@ -140,6 +142,16 @@ public class InvoiceTaxReportTransactionStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(InvoiceTaxReportTransactionStatus1 obj) {
+			return obj.getTaxReportIdentification();
+		}
+
+		@Override
+		public void setValue(InvoiceTaxReportTransactionStatus1 obj, Max35Text value) {
+			obj.setTaxReportIdentification(value);
 		}
 	};
 	@XmlElement(name = "Sts", required = true)
@@ -177,7 +189,7 @@ public class InvoiceTaxReportTransactionStatus1 {
 	 * MoneyMarketTransactionStatus2.mmStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvoiceTaxReportTransactionStatus1, TaxReportingStatus2Code> mmStatus = new MMMessageAttribute<InvoiceTaxReportTransactionStatus1, TaxReportingStatus2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1.mmObject();
 			isDerived = false;
@@ -190,9 +202,19 @@ public class InvoiceTaxReportTransactionStatus1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> TaxReportingStatus2Code.mmObject();
 		}
+
+		@Override
+		public TaxReportingStatus2Code getValue(InvoiceTaxReportTransactionStatus1 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(InvoiceTaxReportTransactionStatus1 obj, TaxReportingStatus2Code value) {
+			obj.setStatus(value);
+		}
 	};
 	@XmlElement(name = "VldtnRule")
-	protected List<com.tools20022.repository.msg.GenericValidationRuleIdentification1> validationRule;
+	protected List<GenericValidationRuleIdentification1> validationRule;
 	/**
 	 * 
 	 <p>
@@ -226,7 +248,7 @@ public class InvoiceTaxReportTransactionStatus1 {
 	 * MoneyMarketTransactionStatus2.mmValidationRule}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmValidationRule = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvoiceTaxReportTransactionStatus1, List<GenericValidationRuleIdentification1>> mmValidationRule = new MMMessageAssociationEnd<InvoiceTaxReportTransactionStatus1, List<GenericValidationRuleIdentification1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1.mmObject();
 			isDerived = false;
@@ -237,11 +259,21 @@ public class InvoiceTaxReportTransactionStatus1 {
 			previousVersion_lazy = () -> MoneyMarketTransactionStatus2.mmValidationRule;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericValidationRuleIdentification1.mmObject();
+			type_lazy = () -> GenericValidationRuleIdentification1.mmObject();
+		}
+
+		@Override
+		public List<GenericValidationRuleIdentification1> getValue(InvoiceTaxReportTransactionStatus1 obj) {
+			return obj.getValidationRule();
+		}
+
+		@Override
+		public void setValue(InvoiceTaxReportTransactionStatus1 obj, List<GenericValidationRuleIdentification1> value) {
+			obj.setValidationRule(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
-	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * 
 	 <p>
@@ -275,7 +307,7 @@ public class InvoiceTaxReportTransactionStatus1 {
 	 * MoneyMarketTransactionStatus2.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvoiceTaxReportTransactionStatus1, List<SupplementaryData1>> mmSupplementaryData = new MMMessageAssociationEnd<InvoiceTaxReportTransactionStatus1, List<SupplementaryData1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1.mmObject();
 			isDerived = false;
@@ -286,7 +318,17 @@ public class InvoiceTaxReportTransactionStatus1 {
 			previousVersion_lazy = () -> MoneyMarketTransactionStatus2.mmSupplementaryData;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
+			type_lazy = () -> SupplementaryData1.mmObject();
+		}
+
+		@Override
+		public List<SupplementaryData1> getValue(InvoiceTaxReportTransactionStatus1 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(InvoiceTaxReportTransactionStatus1 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -328,7 +370,7 @@ public class InvoiceTaxReportTransactionStatus1 {
 		return validationRule == null ? validationRule = new ArrayList<>() : validationRule;
 	}
 
-	public InvoiceTaxReportTransactionStatus1 setValidationRule(List<com.tools20022.repository.msg.GenericValidationRuleIdentification1> validationRule) {
+	public InvoiceTaxReportTransactionStatus1 setValidationRule(List<GenericValidationRuleIdentification1> validationRule) {
 		this.validationRule = Objects.requireNonNull(validationRule);
 		return this;
 	}
@@ -337,7 +379,7 @@ public class InvoiceTaxReportTransactionStatus1 {
 		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public InvoiceTaxReportTransactionStatus1 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+	public InvoiceTaxReportTransactionStatus1 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = Objects.requireNonNull(supplementaryData);
 		return this;
 	}

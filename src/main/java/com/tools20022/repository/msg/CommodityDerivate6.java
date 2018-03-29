@@ -105,7 +105,7 @@ public class CommodityDerivate6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementLocation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommodityDerivate6, Max25Text> mmSettlementLocation = new MMMessageAttribute<CommodityDerivate6, Max25Text>() {
 		{
 			businessComponentTrace_lazy = () -> PlaceOfSettlement.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommodityDerivate6.mmObject();
@@ -117,6 +117,16 @@ public class CommodityDerivate6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max25Text.mmObject();
+		}
+
+		@Override
+		public Max25Text getValue(CommodityDerivate6 obj) {
+			return obj.getSettlementLocation();
+		}
+
+		@Override
+		public void setValue(CommodityDerivate6 obj, Max25Text value) {
+			obj.setSettlementLocation(value);
 		}
 	};
 

@@ -131,7 +131,7 @@ public class NetworkParameters1 {
 	 * definition} = "IP address or host name of the primary host."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPrimaryAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetworkParameters1, Max35Text> mmPrimaryAddress = new MMMessageAttribute<NetworkParameters1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> NetworkAccess.mmHostIPAddress;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetworkParameters1.mmObject();
@@ -143,6 +143,16 @@ public class NetworkParameters1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(NetworkParameters1 obj) {
+			return obj.getPrimaryAddress();
+		}
+
+		@Override
+		public void setValue(NetworkParameters1 obj, Max35Text value) {
+			obj.setPrimaryAddress(value);
 		}
 	};
 	@XmlElement(name = "PmryPortNb", required = true)
@@ -179,7 +189,7 @@ public class NetworkParameters1 {
 	 * definition} = "Port number of the primary host."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPrimaryPortNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetworkParameters1, Number> mmPrimaryPortNumber = new MMMessageAttribute<NetworkParameters1, Number>() {
 		{
 			businessElementTrace_lazy = () -> NetworkAccess.mmHostPortNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetworkParameters1.mmObject();
@@ -191,6 +201,16 @@ public class NetworkParameters1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(NetworkParameters1 obj) {
+			return obj.getPrimaryPortNumber();
+		}
+
+		@Override
+		public void setValue(NetworkParameters1 obj, Number value) {
+			obj.setPrimaryPortNumber(value);
 		}
 	};
 	@XmlElement(name = "ScndryAdr")
@@ -227,7 +247,7 @@ public class NetworkParameters1 {
 	 * definition} = "IP address or host name of the secondary host."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecondaryAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetworkParameters1, Optional<Max35Text>> mmSecondaryAddress = new MMMessageAttribute<NetworkParameters1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> NetworkAccess.mmHostIPAddress;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetworkParameters1.mmObject();
@@ -239,6 +259,16 @@ public class NetworkParameters1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(NetworkParameters1 obj) {
+			return obj.getSecondaryAddress();
+		}
+
+		@Override
+		public void setValue(NetworkParameters1 obj, Optional<Max35Text> value) {
+			obj.setSecondaryAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ScndryPortNb")
@@ -275,7 +305,7 @@ public class NetworkParameters1 {
 	 * definition} = "Port number of the secondary host."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecondaryPortNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetworkParameters1, Optional<Number>> mmSecondaryPortNumber = new MMMessageAttribute<NetworkParameters1, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> NetworkAccess.mmHostPortNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetworkParameters1.mmObject();
@@ -287,6 +317,16 @@ public class NetworkParameters1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(NetworkParameters1 obj) {
+			return obj.getSecondaryPortNumber();
+		}
+
+		@Override
+		public void setValue(NetworkParameters1 obj, Optional<Number> value) {
+			obj.setSecondaryPortNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UsrNm")
@@ -331,7 +371,7 @@ public class NetworkParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUserName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetworkParameters1, Optional<Max35Text>> mmUserName = new MMMessageAttribute<NetworkParameters1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> NetworkAccess.mmUserName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetworkParameters1.mmObject();
@@ -344,6 +384,16 @@ public class NetworkParameters1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(NetworkParameters1 obj) {
+			return obj.getUserName();
+		}
+
+		@Override
+		public void setValue(NetworkParameters1 obj, Optional<Max35Text> value) {
+			obj.setUserName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AccsCd")
@@ -388,7 +438,7 @@ public class NetworkParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccessCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetworkParameters1, Optional<Max35Text>> mmAccessCode = new MMMessageAttribute<NetworkParameters1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> NetworkAccess.mmAccessCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetworkParameters1.mmObject();
@@ -401,6 +451,16 @@ public class NetworkParameters1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(NetworkParameters1 obj) {
+			return obj.getAccessCode();
+		}
+
+		@Override
+		public void setValue(NetworkParameters1 obj, Optional<Max35Text> value) {
+			obj.setAccessCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClntCert")
@@ -438,7 +498,7 @@ public class NetworkParameters1 {
 	 * definition} = "Client certificate chain."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClientCertificate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetworkParameters1, Optional<Max3000Binary>> mmClientCertificate = new MMMessageAttribute<NetworkParameters1, Optional<Max3000Binary>>() {
 		{
 			businessElementTrace_lazy = () -> NetworkAccess.mmClientCertificate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetworkParameters1.mmObject();
@@ -450,6 +510,16 @@ public class NetworkParameters1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3000Binary.mmObject();
+		}
+
+		@Override
+		public Optional<Max3000Binary> getValue(NetworkParameters1 obj) {
+			return obj.getClientCertificate();
+		}
+
+		@Override
+		public void setValue(NetworkParameters1 obj, Optional<Max3000Binary> value) {
+			obj.setClientCertificate(value.orElse(null));
 		}
 	};
 

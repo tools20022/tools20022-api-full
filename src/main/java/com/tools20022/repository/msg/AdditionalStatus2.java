@@ -112,7 +112,7 @@ public class AdditionalStatus2 {
 	 * "Reason advising the rejection of the instruction cancellation request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AdditionalStatus2, CancellationRejectionStatus1Choice> mmReason = new MMMessageAssociationEnd<AdditionalStatus2, CancellationRejectionStatus1Choice>() {
 		{
 			businessElementTrace_lazy = () -> MeetingStatusReason.mmInstructionRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalStatus2.mmObject();
@@ -125,6 +125,16 @@ public class AdditionalStatus2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CancellationRejectionStatus1Choice.mmObject();
+		}
+
+		@Override
+		public CancellationRejectionStatus1Choice getValue(AdditionalStatus2 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(AdditionalStatus2 obj, CancellationRejectionStatus1Choice value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -161,7 +171,7 @@ public class AdditionalStatus2 {
 	 * definition} = "Additional information about the reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalStatus2, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<AdditionalStatus2, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalStatus2.mmObject();
@@ -173,6 +183,16 @@ public class AdditionalStatus2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(AdditionalStatus2 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(AdditionalStatus2 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

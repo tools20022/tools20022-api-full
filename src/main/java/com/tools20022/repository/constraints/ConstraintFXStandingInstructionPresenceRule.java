@@ -56,12 +56,16 @@ public class ConstraintFXStandingInstructionPresenceRule {
 	 */
 	public static final MMConstraint<SettlementDetails3> forSettlementDetails3 = new MMConstraint<SettlementDetails3>() {
 		{
-			validator = ConstraintFXStandingInstructionPresenceRule::checkSettlementDetails3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXStandingInstructionPresenceRule";
 			definition = "If HoldIndicator is present and is value TRUE (Yes), then FXStandingInstruction must be absent.";
 			owner_lazy = () -> SettlementDetails3.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FXStandingInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldIndicator</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/HoldIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails3 obj) throws Exception {
+			checkSettlementDetails3(obj);
 		}
 	};
 	/**
@@ -91,12 +95,16 @@ public class ConstraintFXStandingInstructionPresenceRule {
 	 */
 	public static final MMConstraint<SettlementDetails16> forSettlementDetails16 = new MMConstraint<SettlementDetails16>() {
 		{
-			validator = ConstraintFXStandingInstructionPresenceRule::checkSettlementDetails16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXStandingInstructionPresenceRule";
 			definition = "If HoldIndicator is present and is value TRUE (Yes), then FXStandingInstruction must be absent.";
 			owner_lazy = () -> SettlementDetails16.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FXStandingInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldIndicator</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/HoldIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails16 obj) throws Exception {
+			checkSettlementDetails16(obj);
 		}
 	};
 	/**
@@ -126,12 +134,16 @@ public class ConstraintFXStandingInstructionPresenceRule {
 	 */
 	public static final MMConstraint<SettlementDetails31> forSettlementDetails31 = new MMConstraint<SettlementDetails31>() {
 		{
-			validator = ConstraintFXStandingInstructionPresenceRule::checkSettlementDetails31;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXStandingInstructionPresenceRule";
 			definition = "If HoldIndicator is present and is value TRUE (Yes), then FXStandingInstruction must be absent.";
 			owner_lazy = () -> SettlementDetails31.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FXStandingInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldIndicator</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/HoldIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails31 obj) throws Exception {
+			checkSettlementDetails31(obj);
 		}
 	};
 	/**
@@ -161,12 +173,16 @@ public class ConstraintFXStandingInstructionPresenceRule {
 	 */
 	public static final MMConstraint<SettlementDetails40> forSettlementDetails40 = new MMConstraint<SettlementDetails40>() {
 		{
-			validator = ConstraintFXStandingInstructionPresenceRule::checkSettlementDetails40;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXStandingInstructionPresenceRule";
 			definition = "If HoldIndicator is present and is value TRUE (Yes), then FXStandingInstruction must be absent.";
 			owner_lazy = () -> SettlementDetails40.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FXStandingInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldIndicator</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/HoldIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails40 obj) throws Exception {
+			checkSettlementDetails40(obj);
 		}
 	};
 	/**
@@ -204,13 +220,17 @@ public class ConstraintFXStandingInstructionPresenceRule {
 	 */
 	public static final MMConstraint<SettlementDetails62> forSettlementDetails62 = new MMConstraint<SettlementDetails62>() {
 		{
-			validator = ConstraintFXStandingInstructionPresenceRule::checkSettlementDetails62;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXStandingInstructionPresenceRule";
 			definition = "If HoldIndicator is present and is value TRUE (Yes), then FXStandingInstruction must be absent.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFXStandingInstructionPresenceRule.forSettlementDetails72);
 			owner_lazy = () -> SettlementDetails62.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FXStandingInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldIndicator</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/HoldIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails62 obj) throws Exception {
+			checkSettlementDetails62(obj);
 		}
 	};
 	/**
@@ -240,12 +260,16 @@ public class ConstraintFXStandingInstructionPresenceRule {
 	 */
 	public static final MMConstraint<SettlementDetails63> forSettlementDetails63 = new MMConstraint<SettlementDetails63>() {
 		{
-			validator = ConstraintFXStandingInstructionPresenceRule::checkSettlementDetails63;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXStandingInstructionPresenceRule";
 			definition = "If HoldIndicator is present and is value TRUE (Yes), then FXStandingInstruction must be absent.";
 			owner_lazy = () -> SettlementDetails63.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FXStandingInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldIndicator</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/HoldIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails63 obj) throws Exception {
+			checkSettlementDetails63(obj);
 		}
 	};
 	/**
@@ -275,12 +299,16 @@ public class ConstraintFXStandingInstructionPresenceRule {
 	 */
 	public static final MMConstraint<SettlementDetails1> forSettlementDetails1 = new MMConstraint<SettlementDetails1>() {
 		{
-			validator = ConstraintFXStandingInstructionPresenceRule::checkSettlementDetails1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXStandingInstructionPresenceRule";
 			definition = "If HoldIndicator is present and is value TRUE (Yes), then FXStandingInstruction must not be present. In ISO 15022, and therefore in ISO 20022, the FXStandingInstruction indicator can only be used when the transation is instructed in a released mode.";
 			owner_lazy = () -> SettlementDetails1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FXStandingInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldIndicator</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/HoldIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails1 obj) throws Exception {
+			checkSettlementDetails1(obj);
 		}
 	};
 	/**
@@ -310,12 +338,16 @@ public class ConstraintFXStandingInstructionPresenceRule {
 	 */
 	public static final MMConstraint<SettlementDetails19> forSettlementDetails19 = new MMConstraint<SettlementDetails19>() {
 		{
-			validator = ConstraintFXStandingInstructionPresenceRule::checkSettlementDetails19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXStandingInstructionPresenceRule";
 			definition = "If HoldIndicator is present and is value TRUE (Yes), then FXStandingInstruction must not be present. In ISO 15022, and therefore in ISO 20022, the FXStandingInstruction indicator can only be used when the transation is instructed in a released mode.";
 			owner_lazy = () -> SettlementDetails19.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FXStandingInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldIndicator</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/HoldIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails19 obj) throws Exception {
+			checkSettlementDetails19(obj);
 		}
 	};
 	/**
@@ -345,12 +377,16 @@ public class ConstraintFXStandingInstructionPresenceRule {
 	 */
 	public static final MMConstraint<SettlementDetails22> forSettlementDetails22 = new MMConstraint<SettlementDetails22>() {
 		{
-			validator = ConstraintFXStandingInstructionPresenceRule::checkSettlementDetails22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXStandingInstructionPresenceRule";
 			definition = "If HoldIndicator is present and is value TRUE (Yes), then FXStandingInstruction must not be present. In ISO 15022,\r\nand therefore in ISO 20022, the FXStandingInstruction indicator can only be used when the transation is instructed\r\nin a released mode.";
 			owner_lazy = () -> SettlementDetails22.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FXStandingInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldIndicator</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/HoldIndicator/Indicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails22 obj) throws Exception {
+			checkSettlementDetails22(obj);
 		}
 	};
 	/**
@@ -380,12 +416,16 @@ public class ConstraintFXStandingInstructionPresenceRule {
 	 */
 	public static final MMConstraint<SettlementDetails35> forSettlementDetails35 = new MMConstraint<SettlementDetails35>() {
 		{
-			validator = ConstraintFXStandingInstructionPresenceRule::checkSettlementDetails35;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXStandingInstructionPresenceRule";
 			definition = "If HoldIndicator is present and is value TRUE (Yes), then FXStandingInstruction must not be present. In ISO 15022,\r\nand therefore in ISO 20022, the FXStandingInstruction indicator can only be used when the transation is instructed\r\nin a released mode.";
 			owner_lazy = () -> SettlementDetails35.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FXStandingInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldIndicator</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/HoldIndicator/Indicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails35 obj) throws Exception {
+			checkSettlementDetails35(obj);
 		}
 	};
 	/**
@@ -423,13 +463,17 @@ public class ConstraintFXStandingInstructionPresenceRule {
 	 */
 	public static final MMConstraint<SettlementDetails42> forSettlementDetails42 = new MMConstraint<SettlementDetails42>() {
 		{
-			validator = ConstraintFXStandingInstructionPresenceRule::checkSettlementDetails42;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXStandingInstructionPresenceRule";
 			definition = "If HoldIndicator is present and is value TRUE (Yes), then FXStandingInstruction must not be present. In ISO 15022,\r\nand therefore in ISO 20022, the FXStandingInstruction indicator can only be used when the transation is instructed\r\nin a released mode.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFXStandingInstructionPresenceRule.forSettlementDetails67);
 			owner_lazy = () -> SettlementDetails42.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FXStandingInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldIndicator</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/HoldIndicator/Indicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails42 obj) throws Exception {
+			checkSettlementDetails42(obj);
 		}
 	};
 	/**
@@ -459,12 +503,16 @@ public class ConstraintFXStandingInstructionPresenceRule {
 	 */
 	public static final MMConstraint<SettlementDetails52> forSettlementDetails52 = new MMConstraint<SettlementDetails52>() {
 		{
-			validator = ConstraintFXStandingInstructionPresenceRule::checkSettlementDetails52;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXStandingInstructionPresenceRule";
 			definition = "If HoldIndicator is present and is value TRUE (Yes), then FXStandingInstruction must not be present. In ISO 15022,\r\nand therefore in ISO 20022, the FXStandingInstruction indicator can only be used when the transation is instructed\r\nin a released mode.";
 			owner_lazy = () -> SettlementDetails52.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FXStandingInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldIndicator</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/HoldIndicator/Indicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails52 obj) throws Exception {
+			checkSettlementDetails52(obj);
 		}
 	};
 	/**
@@ -494,12 +542,16 @@ public class ConstraintFXStandingInstructionPresenceRule {
 	 */
 	public static final MMConstraint<SettlementDetails43> forSettlementDetails43 = new MMConstraint<SettlementDetails43>() {
 		{
-			validator = ConstraintFXStandingInstructionPresenceRule::checkSettlementDetails43;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXStandingInstructionPresenceRule";
 			definition = "If HoldIndicator is present and is value TRUE (Yes), then FXStandingInstruction must not be present. In ISO 15022, and therefore in ISO 20022, the FXStandingInstruction indicator can only be used when the transation is instructed in a released mode.";
 			owner_lazy = () -> SettlementDetails43.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FXStandingInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldIndicator</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/HoldIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails43 obj) throws Exception {
+			checkSettlementDetails43(obj);
 		}
 	};
 	/**
@@ -529,12 +581,16 @@ public class ConstraintFXStandingInstructionPresenceRule {
 	 */
 	public static final MMConstraint<SettlementDetails65> forSettlementDetails65 = new MMConstraint<SettlementDetails65>() {
 		{
-			validator = ConstraintFXStandingInstructionPresenceRule::checkSettlementDetails65;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXStandingInstructionPresenceRule";
 			definition = "If HoldIndicator is present and is value TRUE (Yes), then FXStandingInstruction must be absent.";
 			owner_lazy = () -> SettlementDetails65.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FXStandingInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldIndicator</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/HoldIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails65 obj) throws Exception {
+			checkSettlementDetails65(obj);
 		}
 	};
 	/**
@@ -577,7 +633,6 @@ public class ConstraintFXStandingInstructionPresenceRule {
 	 */
 	public static final MMConstraint<SettlementDetails67> forSettlementDetails67 = new MMConstraint<SettlementDetails67>() {
 		{
-			validator = ConstraintFXStandingInstructionPresenceRule::checkSettlementDetails67;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXStandingInstructionPresenceRule";
 			definition = "If HoldIndicator is present and is value TRUE (Yes), then FXStandingInstruction must not be present. In ISO 15022,\r\nand therefore in ISO 20022, the FXStandingInstruction indicator can only be used when the transation is instructed\r\nin a released mode.";
@@ -585,6 +640,11 @@ public class ConstraintFXStandingInstructionPresenceRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFXStandingInstructionPresenceRule.forSettlementDetails42;
 			owner_lazy = () -> SettlementDetails67.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FXStandingInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldIndicator</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/HoldIndicator/Indicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails67 obj) throws Exception {
+			checkSettlementDetails67(obj);
 		}
 	};
 	/**
@@ -627,7 +687,6 @@ public class ConstraintFXStandingInstructionPresenceRule {
 	 */
 	public static final MMConstraint<SettlementDetails72> forSettlementDetails72 = new MMConstraint<SettlementDetails72>() {
 		{
-			validator = ConstraintFXStandingInstructionPresenceRule::checkSettlementDetails72;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXStandingInstructionPresenceRule";
 			definition = "If HoldIndicator is present and is value TRUE (Yes), then FXStandingInstruction must be absent.";
@@ -635,6 +694,11 @@ public class ConstraintFXStandingInstructionPresenceRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFXStandingInstructionPresenceRule.forSettlementDetails62;
 			owner_lazy = () -> SettlementDetails72.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FXStandingInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldIndicator</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/HoldIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails72 obj) throws Exception {
+			checkSettlementDetails72(obj);
 		}
 	};
 	/**
@@ -664,12 +728,16 @@ public class ConstraintFXStandingInstructionPresenceRule {
 	 */
 	public static final MMConstraint<SettlementDetails81> forSettlementDetails81 = new MMConstraint<SettlementDetails81>() {
 		{
-			validator = ConstraintFXStandingInstructionPresenceRule::checkSettlementDetails81;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXStandingInstructionPresenceRule";
 			definition = "If HoldIndicator is present and is value TRUE (Yes), then FXStandingInstruction must not be present. In ISO 15022,\r\nand therefore in ISO 20022, the FXStandingInstruction indicator can only be used when the transation is instructed\r\nin a released mode.";
 			owner_lazy = () -> SettlementDetails81.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FXStandingInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldIndicator</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/HoldIndicator/Indicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails81 obj) throws Exception {
+			checkSettlementDetails81(obj);
 		}
 	};
 	/**
@@ -699,12 +767,16 @@ public class ConstraintFXStandingInstructionPresenceRule {
 	 */
 	public static final MMConstraint<SettlementDetails78> forSettlementDetails78 = new MMConstraint<SettlementDetails78>() {
 		{
-			validator = ConstraintFXStandingInstructionPresenceRule::checkSettlementDetails78;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXStandingInstructionPresenceRule";
 			definition = "If HoldIndicator is present and is value TRUE (Yes), then FXStandingInstruction must be absent.";
 			owner_lazy = () -> SettlementDetails78.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FXStandingInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldIndicator</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/HoldIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails78 obj) throws Exception {
+			checkSettlementDetails78(obj);
 		}
 	};
 	/**
@@ -734,12 +806,16 @@ public class ConstraintFXStandingInstructionPresenceRule {
 	 */
 	public static final MMConstraint<SettlementDetails77> forSettlementDetails77 = new MMConstraint<SettlementDetails77>() {
 		{
-			validator = ConstraintFXStandingInstructionPresenceRule::checkSettlementDetails77;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXStandingInstructionPresenceRule";
 			definition = "If HoldIndicator is present and is value TRUE (Yes), then FXStandingInstruction must be absent.";
 			owner_lazy = () -> SettlementDetails77.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FXStandingInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldIndicator</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/HoldIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails77 obj) throws Exception {
+			checkSettlementDetails77(obj);
 		}
 	};
 	/**
@@ -788,7 +864,6 @@ public class ConstraintFXStandingInstructionPresenceRule {
 	 */
 	public static final MMConstraint<SettlementDetails93> forSettlementDetails93 = new MMConstraint<SettlementDetails93>() {
 		{
-			validator = ConstraintFXStandingInstructionPresenceRule::checkSettlementDetails93;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXStandingInstructionPresenceRule";
 			definition = "If HoldIndicator is present and is value TRUE (Yes), then FXStandingInstruction must not be present. In ISO 15022,\r\nand therefore in ISO 20022, the FXStandingInstruction indicator can only be used when the transation is instructed\r\nin a released mode.";
@@ -797,6 +872,11 @@ public class ConstraintFXStandingInstructionPresenceRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFXStandingInstructionPresenceRule.forSettlementDetails67;
 			owner_lazy = () -> SettlementDetails93.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FXStandingInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldIndicator</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/HoldIndicator/Indicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails93 obj) throws Exception {
+			checkSettlementDetails93(obj);
 		}
 	};
 	/**
@@ -839,7 +919,6 @@ public class ConstraintFXStandingInstructionPresenceRule {
 	 */
 	public static final MMConstraint<SettlementDetails97> forSettlementDetails97 = new MMConstraint<SettlementDetails97>() {
 		{
-			validator = ConstraintFXStandingInstructionPresenceRule::checkSettlementDetails97;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXStandingInstructionPresenceRule";
 			definition = "If HoldIndicator is present and is value TRUE (Yes), then FXStandingInstruction must be absent.";
@@ -847,6 +926,11 @@ public class ConstraintFXStandingInstructionPresenceRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFXStandingInstructionPresenceRule.forSettlementDetails72;
 			owner_lazy = () -> SettlementDetails97.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FXStandingInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldIndicator</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/HoldIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails97 obj) throws Exception {
+			checkSettlementDetails97(obj);
 		}
 	};
 	/**
@@ -889,7 +973,6 @@ public class ConstraintFXStandingInstructionPresenceRule {
 	 */
 	public static final MMConstraint<SettlementDetails101> forSettlementDetails101 = new MMConstraint<SettlementDetails101>() {
 		{
-			validator = ConstraintFXStandingInstructionPresenceRule::checkSettlementDetails101;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXStandingInstructionPresenceRule";
 			definition = "If HoldIndicator is present and is value TRUE (Yes), then FXStandingInstruction must not be present. In ISO 15022,\r\nand therefore in ISO 20022, the FXStandingInstruction indicator can only be used when the transation is instructed\r\nin a released mode.";
@@ -897,6 +980,11 @@ public class ConstraintFXStandingInstructionPresenceRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFXStandingInstructionPresenceRule.forSettlementDetails93;
 			owner_lazy = () -> SettlementDetails101.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FXStandingInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldIndicator</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/HoldIndicator/Indicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails101 obj) throws Exception {
+			checkSettlementDetails101(obj);
 		}
 	};
 	/**
@@ -926,12 +1014,16 @@ public class ConstraintFXStandingInstructionPresenceRule {
 	 */
 	public static final MMConstraint<SettlementDetails105> forSettlementDetails105 = new MMConstraint<SettlementDetails105>() {
 		{
-			validator = ConstraintFXStandingInstructionPresenceRule::checkSettlementDetails105;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXStandingInstructionPresenceRule";
 			definition = "If HoldIndicator is present and is value TRUE (Yes), then FXStandingInstruction must be absent.";
 			owner_lazy = () -> SettlementDetails105.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FXStandingInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldIndicator</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/HoldIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails105 obj) throws Exception {
+			checkSettlementDetails105(obj);
 		}
 	};
 	/**
@@ -961,12 +1053,16 @@ public class ConstraintFXStandingInstructionPresenceRule {
 	 */
 	public static final MMConstraint<SettlementDetails106> forSettlementDetails106 = new MMConstraint<SettlementDetails106>() {
 		{
-			validator = ConstraintFXStandingInstructionPresenceRule::checkSettlementDetails106;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXStandingInstructionPresenceRule";
 			definition = "If HoldIndicator is present and is value TRUE (Yes), then FXStandingInstruction must be absent.";
 			owner_lazy = () -> SettlementDetails106.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FXStandingInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldIndicator</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/HoldIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails106 obj) throws Exception {
+			checkSettlementDetails106(obj);
 		}
 	};
 	/**
@@ -996,12 +1092,16 @@ public class ConstraintFXStandingInstructionPresenceRule {
 	 */
 	public static final MMConstraint<SettlementDetails111> forSettlementDetails111 = new MMConstraint<SettlementDetails111>() {
 		{
-			validator = ConstraintFXStandingInstructionPresenceRule::checkSettlementDetails111;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXStandingInstructionPresenceRule";
 			definition = "If HoldIndicator is present and is value TRUE (Yes), then FXStandingInstruction must not be present. In ISO 15022,\r\nand therefore in ISO 20022, the FXStandingInstruction indicator can only be used when the transation is instructed\r\nin a released mode.";
 			owner_lazy = () -> SettlementDetails111.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FXStandingInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldIndicator</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/HoldIndicator/Indicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails111 obj) throws Exception {
+			checkSettlementDetails111(obj);
 		}
 	};
 	/**
@@ -1031,12 +1131,16 @@ public class ConstraintFXStandingInstructionPresenceRule {
 	 */
 	public static final MMConstraint<SettlementDetails112> forSettlementDetails112 = new MMConstraint<SettlementDetails112>() {
 		{
-			validator = ConstraintFXStandingInstructionPresenceRule::checkSettlementDetails112;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXStandingInstructionPresenceRule";
 			definition = "If HoldIndicator is present and is value TRUE (Yes), then FXStandingInstruction must not be present. In ISO 15022,\r\nand therefore in ISO 20022, the FXStandingInstruction indicator can only be used when the transation is instructed\r\nin a released mode.";
 			owner_lazy = () -> SettlementDetails112.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FXStandingInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldIndicator</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/HoldIndicator/Indicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails112 obj) throws Exception {
+			checkSettlementDetails112(obj);
 		}
 	};
 	/**
@@ -1079,7 +1183,6 @@ public class ConstraintFXStandingInstructionPresenceRule {
 	 */
 	public static final MMConstraint<SettlementDetails120> forSettlementDetails120 = new MMConstraint<SettlementDetails120>() {
 		{
-			validator = ConstraintFXStandingInstructionPresenceRule::checkSettlementDetails120;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXStandingInstructionPresenceRule";
 			definition = "If HoldIndicator is present and is value TRUE (Yes), then FXStandingInstruction must not be present. In ISO 15022,\r\nand therefore in ISO 20022, the FXStandingInstruction indicator can only be used when the transation is instructed\r\nin a released mode.";
@@ -1087,6 +1190,11 @@ public class ConstraintFXStandingInstructionPresenceRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFXStandingInstructionPresenceRule.forSettlementDetails101;
 			owner_lazy = () -> SettlementDetails120.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FXStandingInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldIndicator</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/HoldIndicator/Indicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails120 obj) throws Exception {
+			checkSettlementDetails120(obj);
 		}
 	};
 	/**
@@ -1129,7 +1237,6 @@ public class ConstraintFXStandingInstructionPresenceRule {
 	 */
 	public static final MMConstraint<SettlementDetails119> forSettlementDetails119 = new MMConstraint<SettlementDetails119>() {
 		{
-			validator = ConstraintFXStandingInstructionPresenceRule::checkSettlementDetails119;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXStandingInstructionPresenceRule";
 			definition = "If HoldIndicator is present and is value TRUE (Yes), then FXStandingInstruction must not be present. In ISO 15022,\r\nand therefore in ISO 20022, the FXStandingInstruction indicator can only be used when the transation is instructed\r\nin a released mode.";
@@ -1137,6 +1244,11 @@ public class ConstraintFXStandingInstructionPresenceRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFXStandingInstructionPresenceRule.forSettlementDetails93;
 			owner_lazy = () -> SettlementDetails119.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FXStandingInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldIndicator</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/HoldIndicator/Indicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails119 obj) throws Exception {
+			checkSettlementDetails119(obj);
 		}
 	};
 	/**
@@ -1166,12 +1278,16 @@ public class ConstraintFXStandingInstructionPresenceRule {
 	 */
 	public static final MMConstraint<SettlementDetails137> forSettlementDetails137 = new MMConstraint<SettlementDetails137>() {
 		{
-			validator = ConstraintFXStandingInstructionPresenceRule::checkSettlementDetails137;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXStandingInstructionPresenceRule";
 			definition = "If HoldIndicator is present and is value TRUE (Yes), then FXStandingInstruction must not be present. In ISO 15022,\r\nand therefore in ISO 20022, the FXStandingInstruction indicator can only be used when the transation is instructed\r\nin a released mode.";
 			owner_lazy = () -> SettlementDetails137.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FXStandingInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldIndicator</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/HoldIndicator/Indicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails137 obj) throws Exception {
+			checkSettlementDetails137(obj);
 		}
 	};
 	/**
@@ -1201,12 +1317,16 @@ public class ConstraintFXStandingInstructionPresenceRule {
 	 */
 	public static final MMConstraint<SettlementDetails132> forSettlementDetails132 = new MMConstraint<SettlementDetails132>() {
 		{
-			validator = ConstraintFXStandingInstructionPresenceRule::checkSettlementDetails132;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXStandingInstructionPresenceRule";
 			definition = "If HoldIndicator is present and is value TRUE (Yes), then FXStandingInstruction must not be present. In ISO 15022,\r\nand therefore in ISO 20022, the FXStandingInstruction indicator can only be used when the transation is instructed\r\nin a released mode.";
 			owner_lazy = () -> SettlementDetails132.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FXStandingInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldIndicator</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/HoldIndicator/Indicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails132 obj) throws Exception {
+			checkSettlementDetails132(obj);
 		}
 	};
 	/**
@@ -1241,13 +1361,17 @@ public class ConstraintFXStandingInstructionPresenceRule {
 	 */
 	public static final MMConstraint<SettlementDetails140> forSettlementDetails140 = new MMConstraint<SettlementDetails140>() {
 		{
-			validator = ConstraintFXStandingInstructionPresenceRule::checkSettlementDetails140;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXStandingInstructionPresenceRule";
 			definition = "If HoldIndicator is present and is value TRUE (Yes), then FXStandingInstruction must not be present. In ISO 15022,\r\nand therefore in ISO 20022, the FXStandingInstruction indicator can only be used when the transation is instructed\r\nin a released mode.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFXStandingInstructionPresenceRule.forSettlementDetails93;
 			owner_lazy = () -> SettlementDetails140.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FXStandingInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldIndicator</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/HoldIndicator/Indicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails140 obj) throws Exception {
+			checkSettlementDetails140(obj);
 		}
 	};
 	/**
@@ -1282,13 +1406,17 @@ public class ConstraintFXStandingInstructionPresenceRule {
 	 */
 	public static final MMConstraint<SettlementDetails142> forSettlementDetails142 = new MMConstraint<SettlementDetails142>() {
 		{
-			validator = ConstraintFXStandingInstructionPresenceRule::checkSettlementDetails142;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXStandingInstructionPresenceRule";
 			definition = "If HoldIndicator is present and is value TRUE (Yes), then FXStandingInstruction must not be present. In ISO 15022,\r\nand therefore in ISO 20022, the FXStandingInstruction indicator can only be used when the transation is instructed\r\nin a released mode.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFXStandingInstructionPresenceRule.forSettlementDetails119;
 			owner_lazy = () -> SettlementDetails142.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FXStandingInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldIndicator</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/HoldIndicator/Indicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails142 obj) throws Exception {
+			checkSettlementDetails142(obj);
 		}
 	};
 	/**
@@ -1323,13 +1451,17 @@ public class ConstraintFXStandingInstructionPresenceRule {
 	 */
 	public static final MMConstraint<SettlementDetails148> forSettlementDetails148 = new MMConstraint<SettlementDetails148>() {
 		{
-			validator = ConstraintFXStandingInstructionPresenceRule::checkSettlementDetails148;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXStandingInstructionPresenceRule";
 			definition = "If HoldIndicator is present and is value TRUE (Yes), then FXStandingInstruction must be absent.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFXStandingInstructionPresenceRule.forSettlementDetails97;
 			owner_lazy = () -> SettlementDetails148.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FXStandingInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldIndicator</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/HoldIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails148 obj) throws Exception {
+			checkSettlementDetails148(obj);
 		}
 	};
 	/**
@@ -1364,13 +1496,17 @@ public class ConstraintFXStandingInstructionPresenceRule {
 	 */
 	public static final MMConstraint<SettlementDetails145> forSettlementDetails145 = new MMConstraint<SettlementDetails145>() {
 		{
-			validator = ConstraintFXStandingInstructionPresenceRule::checkSettlementDetails145;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXStandingInstructionPresenceRule";
 			definition = "If HoldIndicator is present and is value TRUE (Yes), then FXStandingInstruction must not be present. \r\nIn ISO 15022, and therefore in ISO 20022, the FXStandingInstruction indicator can only be used when the transaction is instructed in a released mode.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFXStandingInstructionPresenceRule.forSettlementDetails120;
 			owner_lazy = () -> SettlementDetails145.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FXStandingInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldIndicator</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/HoldIndicator/Indicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails145 obj) throws Exception {
+			checkSettlementDetails145(obj);
 		}
 	};
 	/**
@@ -1400,12 +1536,16 @@ public class ConstraintFXStandingInstructionPresenceRule {
 	 */
 	public static final MMConstraint<SettlementDetails152> forSettlementDetails152 = new MMConstraint<SettlementDetails152>() {
 		{
-			validator = ConstraintFXStandingInstructionPresenceRule::checkSettlementDetails152;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXStandingInstructionPresenceRule";
 			definition = "If HoldIndicator is present and is value TRUE (Yes), then FXStandingInstruction must be absent.";
 			owner_lazy = () -> SettlementDetails152.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FXStandingInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldIndicator</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/HoldIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails152 obj) throws Exception {
+			checkSettlementDetails152(obj);
 		}
 	};
 	/**
@@ -1435,12 +1575,16 @@ public class ConstraintFXStandingInstructionPresenceRule {
 	 */
 	public static final MMConstraint<SettlementDetails156> forSettlementDetails156 = new MMConstraint<SettlementDetails156>() {
 		{
-			validator = ConstraintFXStandingInstructionPresenceRule::checkSettlementDetails156;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXStandingInstructionPresenceRule";
 			definition = "If HoldIndicator is present and is value TRUE (Yes), then FXStandingInstruction must not be present. \r\nIn ISO 15022, and therefore in ISO 20022, the FXStandingInstruction indicator can only be used when the transaction is instructed in a released mode.";
 			owner_lazy = () -> SettlementDetails156.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FXStandingInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldIndicator</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/HoldIndicator/Indicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails156 obj) throws Exception {
+			checkSettlementDetails156(obj);
 		}
 	};
 	/**
@@ -1470,12 +1614,16 @@ public class ConstraintFXStandingInstructionPresenceRule {
 	 */
 	public static final MMConstraint<SettlementDetails157> forSettlementDetails157 = new MMConstraint<SettlementDetails157>() {
 		{
-			validator = ConstraintFXStandingInstructionPresenceRule::checkSettlementDetails157;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXStandingInstructionPresenceRule";
 			definition = "If HoldIndicator is present and is value TRUE (Yes), then FXStandingInstruction must not be present. In ISO 15022,\r\nand therefore in ISO 20022, the FXStandingInstruction indicator can only be used when the transation is instructed\r\nin a released mode.";
 			owner_lazy = () -> SettlementDetails157.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FXStandingInstruction</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldIndicator</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/HoldIndicator/Indicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails157 obj) throws Exception {
+			checkSettlementDetails157(obj);
 		}
 	};
 

@@ -115,7 +115,7 @@ public class InflationIndex1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InflationIndex1Choice, ISINOct2015Identifier> mmISIN = new MMMessageAttribute<InflationIndex1Choice, ISINOct2015Identifier>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InflationIndex1Choice.mmObject();
@@ -127,6 +127,16 @@ public class InflationIndex1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
+		}
+
+		@Override
+		public ISINOct2015Identifier getValue(InflationIndex1Choice obj) {
+			return obj.getISIN();
+		}
+
+		@Override
+		public void setValue(InflationIndex1Choice obj, ISINOct2015Identifier value) {
+			obj.setISIN(value);
 		}
 	};
 	@XmlElement(name = "Nm", required = true)
@@ -162,7 +172,7 @@ public class InflationIndex1Choice {
 	 * definition} = "Standardised name of the index."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InflationIndex1Choice, Max25Text> mmName = new MMMessageAttribute<InflationIndex1Choice, Max25Text>() {
 		{
 			businessElementTrace_lazy = () -> Curve.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InflationIndex1Choice.mmObject();
@@ -174,6 +184,16 @@ public class InflationIndex1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max25Text.mmObject();
+		}
+
+		@Override
+		public Max25Text getValue(InflationIndex1Choice obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(InflationIndex1Choice obj, Max25Text value) {
+			obj.setName(value);
 		}
 	};
 

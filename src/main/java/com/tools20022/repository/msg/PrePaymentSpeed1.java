@@ -110,7 +110,7 @@ public class PrePaymentSpeed1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PrePaymentSpeed1, PrePaymentSpeed1Code> mmType = new MMMessageAttribute<PrePaymentSpeed1, PrePaymentSpeed1Code>() {
 		{
 			businessElementTrace_lazy = () -> PrePaymentSpeed.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PrePaymentSpeed1.mmObject();
@@ -122,6 +122,16 @@ public class PrePaymentSpeed1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PrePaymentSpeed1Code.mmObject();
+		}
+
+		@Override
+		public PrePaymentSpeed1Code getValue(PrePaymentSpeed1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(PrePaymentSpeed1 obj, PrePaymentSpeed1Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Rate", required = true)
@@ -159,7 +169,7 @@ public class PrePaymentSpeed1 {
 	 * definition} = "Rate of prepayment speed of the fixed income instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PrePaymentSpeed1, PercentageRate> mmRate = new MMMessageAttribute<PrePaymentSpeed1, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> PrePaymentSpeed.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PrePaymentSpeed1.mmObject();
@@ -171,6 +181,16 @@ public class PrePaymentSpeed1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(PrePaymentSpeed1 obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(PrePaymentSpeed1 obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 

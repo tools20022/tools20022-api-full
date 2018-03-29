@@ -120,7 +120,7 @@ public class IsabelReportHeader4 {
 	 * definition} = "Unique identification of the actual sender of the file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActualSenderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelReportHeader4, Max13AlphaNumericText> mmActualSenderIdentification = new MMMessageAttribute<IsabelReportHeader4, Max13AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelReportHeader4.mmObject();
 			isDerived = false;
@@ -131,6 +131,16 @@ public class IsabelReportHeader4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max13AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max13AlphaNumericText getValue(IsabelReportHeader4 obj) {
+			return obj.getActualSenderIdentification();
+		}
+
+		@Override
+		public void setValue(IsabelReportHeader4 obj, Max13AlphaNumericText value) {
+			obj.setActualSenderIdentification(value);
 		}
 	};
 	@XmlElement(name = "PyldCreDt", required = true)
@@ -163,7 +173,7 @@ public class IsabelReportHeader4 {
 	 * "Date and time at which the file in the payload was actually created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPayloadCreationDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IsabelReportHeader4, DateAndDateTimeChoice> mmPayloadCreationDate = new MMMessageAssociationEnd<IsabelReportHeader4, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelReportHeader4.mmObject();
 			isDerived = false;
@@ -175,6 +185,16 @@ public class IsabelReportHeader4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(IsabelReportHeader4 obj) {
+			return obj.getPayloadCreationDate();
+		}
+
+		@Override
+		public void setValue(IsabelReportHeader4 obj, DateAndDateTimeChoice value) {
+			obj.setPayloadCreationDate(value);
 		}
 	};
 	@XmlElement(name = "FileFrmt", required = true)
@@ -206,7 +226,7 @@ public class IsabelReportHeader4 {
 	 * definition} = "Format of the file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFileFormat = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelReportHeader4, Max16Text> mmFileFormat = new MMMessageAttribute<IsabelReportHeader4, Max16Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelReportHeader4.mmObject();
 			isDerived = false;
@@ -217,6 +237,16 @@ public class IsabelReportHeader4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
+		}
+
+		@Override
+		public Max16Text getValue(IsabelReportHeader4 obj) {
+			return obj.getFileFormat();
+		}
+
+		@Override
+		public void setValue(IsabelReportHeader4 obj, Max16Text value) {
+			obj.setFileFormat(value);
 		}
 	};
 	@XmlElement(name = "SndTmStmp", required = true)
@@ -248,7 +278,7 @@ public class IsabelReportHeader4 {
 	 * definition} = "Time stamp on when the file is sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSendTimeStamp = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelReportHeader4, ISODateTime> mmSendTimeStamp = new MMMessageAttribute<IsabelReportHeader4, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelReportHeader4.mmObject();
 			isDerived = false;
@@ -259,6 +289,16 @@ public class IsabelReportHeader4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(IsabelReportHeader4 obj) {
+			return obj.getSendTimeStamp();
+		}
+
+		@Override
+		public void setValue(IsabelReportHeader4 obj, ISODateTime value) {
+			obj.setSendTimeStamp(value);
 		}
 	};
 	@XmlElement(name = "TrnsprtId", required = true)
@@ -291,7 +331,7 @@ public class IsabelReportHeader4 {
 	 * definition} = "Unique identification of the transport."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransportIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelReportHeader4, Max14AlphaNumericText> mmTransportIdentification = new MMMessageAttribute<IsabelReportHeader4, Max14AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelReportHeader4.mmObject();
 			isDerived = false;
@@ -302,6 +342,16 @@ public class IsabelReportHeader4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max14AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max14AlphaNumericText getValue(IsabelReportHeader4 obj) {
+			return obj.getTransportIdentification();
+		}
+
+		@Override
+		public void setValue(IsabelReportHeader4 obj, Max14AlphaNumericText value) {
+			obj.setTransportIdentification(value);
 		}
 	};
 	@XmlElement(name = "OrgnlReqId", required = true)
@@ -334,7 +384,7 @@ public class IsabelReportHeader4 {
 	 * definition} = "Unique identification of the actual sender of the file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelReportHeader4, Max38AlphaNumericText> mmOriginalRequestIdentification = new MMMessageAttribute<IsabelReportHeader4, Max38AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelReportHeader4.mmObject();
 			isDerived = false;
@@ -345,6 +395,16 @@ public class IsabelReportHeader4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max38AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max38AlphaNumericText getValue(IsabelReportHeader4 obj) {
+			return obj.getOriginalRequestIdentification();
+		}
+
+		@Override
+		public void setValue(IsabelReportHeader4 obj, Max38AlphaNumericText value) {
+			obj.setOriginalRequestIdentification(value);
 		}
 	};
 	@XmlElement(name = "MptyPyld", required = true)
@@ -377,7 +437,7 @@ public class IsabelReportHeader4 {
 	 * definition} = "Specifies whether the payload is empty."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEmptyPayload = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelReportHeader4, TrueFalseIndicator> mmEmptyPayload = new MMMessageAttribute<IsabelReportHeader4, TrueFalseIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelReportHeader4.mmObject();
 			isDerived = false;
@@ -388,6 +448,16 @@ public class IsabelReportHeader4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public TrueFalseIndicator getValue(IsabelReportHeader4 obj) {
+			return obj.getEmptyPayload();
+		}
+
+		@Override
+		public void setValue(IsabelReportHeader4 obj, TrueFalseIndicator value) {
+			obj.setEmptyPayload(value);
 		}
 	};
 	@XmlElement(name = "BkRef", required = true)
@@ -419,7 +489,7 @@ public class IsabelReportHeader4 {
 	 * definition} = "Unique reference as assigned by the bank to the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBankReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelReportHeader4, Max64Text> mmBankReference = new MMMessageAttribute<IsabelReportHeader4, Max64Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelReportHeader4.mmObject();
 			isDerived = false;
@@ -430,6 +500,16 @@ public class IsabelReportHeader4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max64Text.mmObject();
+		}
+
+		@Override
+		public Max64Text getValue(IsabelReportHeader4 obj) {
+			return obj.getBankReference();
+		}
+
+		@Override
+		public void setValue(IsabelReportHeader4 obj, Max64Text value) {
+			obj.setBankReference(value);
 		}
 	};
 

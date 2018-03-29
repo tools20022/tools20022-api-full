@@ -144,7 +144,7 @@ public class Commission12 {
 	 * definition} = "Service for which the commission is asked or paid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Commission12, CommissionType7Code> mmType = new MMMessageAttribute<Commission12, CommissionType7Code>() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommissionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission12.mmObject();
@@ -156,6 +156,16 @@ public class Commission12 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CommissionType7Code.mmObject();
+		}
+
+		@Override
+		public CommissionType7Code getValue(Commission12 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Commission12 obj, CommissionType7Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "XtndedTp", required = true)
@@ -192,7 +202,7 @@ public class Commission12 {
 	 * definition} = "Service for which the commission is asked or paid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Commission12, Extended350Code> mmExtendedType = new MMMessageAttribute<Commission12, Extended350Code>() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommissionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission12.mmObject();
@@ -204,6 +214,16 @@ public class Commission12 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Extended350Code getValue(Commission12 obj) {
+			return obj.getExtendedType();
+		}
+
+		@Override
+		public void setValue(Commission12 obj, Extended350Code value) {
+			obj.setExtendedType(value);
 		}
 	};
 	@XmlElement(name = "Bsis")
@@ -240,7 +260,7 @@ public class Commission12 {
 	 * definition} = "Basis upon which a commission is charged, eg, flat fee."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Commission12, Optional<TaxationBasis4Code>> mmBasis = new MMMessageAttribute<Commission12, Optional<TaxationBasis4Code>>() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmBasis;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission12.mmObject();
@@ -252,6 +272,16 @@ public class Commission12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TaxationBasis4Code.mmObject();
+		}
+
+		@Override
+		public Optional<TaxationBasis4Code> getValue(Commission12 obj) {
+			return obj.getBasis();
+		}
+
+		@Override
+		public void setValue(Commission12 obj, Optional<TaxationBasis4Code> value) {
+			obj.setBasis(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XtndedBsis")
@@ -288,7 +318,7 @@ public class Commission12 {
 	 * definition} = "Basis upon which a commission is charged, eg, flat fee."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Commission12, Optional<Extended350Code>> mmExtendedBasis = new MMMessageAttribute<Commission12, Optional<Extended350Code>>() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmBasis;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission12.mmObject();
@@ -300,6 +330,16 @@ public class Commission12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Optional<Extended350Code> getValue(Commission12 obj) {
+			return obj.getExtendedBasis();
+		}
+
+		@Override
+		public void setValue(Commission12 obj, Optional<Extended350Code> value) {
+			obj.setExtendedBasis(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -343,7 +383,7 @@ public class Commission12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Commission12, ActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<Commission12, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission12.mmObject();
@@ -356,6 +396,16 @@ public class Commission12 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(Commission12 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Commission12 obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "RcptId")
@@ -401,7 +451,7 @@ public class Commission12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRecipientIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Commission12, Optional<PartyIdentification2Choice>> mmRecipientIdentification = new MMMessageAttribute<Commission12, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission12.mmObject();
@@ -414,6 +464,16 @@ public class Commission12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(Commission12 obj) {
+			return obj.getRecipientIdentification();
+		}
+
+		@Override
+		public void setValue(Commission12 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setRecipientIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ComrclAgrmtRef")
@@ -459,7 +519,7 @@ public class Commission12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommercialAgreementReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Commission12, Optional<Max35Text>> mmCommercialAgreementReference = new MMMessageAttribute<Commission12, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommercialAgreementReference;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission12.mmObject();
@@ -472,6 +532,16 @@ public class Commission12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Commission12 obj) {
+			return obj.getCommercialAgreementReference();
+		}
+
+		@Override
+		public void setValue(Commission12 obj, Optional<Max35Text> value) {
+			obj.setCommercialAgreementReference(value.orElse(null));
 		}
 	};
 	/**

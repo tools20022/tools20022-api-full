@@ -117,7 +117,7 @@ public class ATMTransactionAmounts3 {
 	 * definition} = "Type of limit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransactionAmounts3, Max35Text> mmType = new MMMessageAttribute<ATMTransactionAmounts3, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts3.mmObject();
@@ -129,6 +129,16 @@ public class ATMTransactionAmounts3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ATMTransactionAmounts3 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(ATMTransactionAmounts3 obj, Max35Text value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Labl")
@@ -160,7 +170,7 @@ public class ATMTransactionAmounts3 {
 	 * definition} = "Label of the limit to display or print."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLabel = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransactionAmounts3, Optional<Max35Text>> mmLabel = new MMMessageAttribute<ATMTransactionAmounts3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts3.mmObject();
 			isDerived = false;
@@ -171,6 +181,16 @@ public class ATMTransactionAmounts3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMTransactionAmounts3 obj) {
+			return obj.getLabel();
+		}
+
+		@Override
+		public void setValue(ATMTransactionAmounts3 obj, Optional<Max35Text> value) {
+			obj.setLabel(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ccy", required = true)
@@ -213,7 +233,7 @@ public class ATMTransactionAmounts3 {
 	 * ATMTransactionAmounts2.mmCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransactionAmounts3, ActiveCurrencyCode> mmCurrency = new MMMessageAttribute<ATMTransactionAmounts3, ActiveCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts3.mmObject();
@@ -226,6 +246,16 @@ public class ATMTransactionAmounts3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyCode getValue(ATMTransactionAmounts3 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(ATMTransactionAmounts3 obj, ActiveCurrencyCode value) {
+			obj.setCurrency(value);
 		}
 	};
 	@XmlElement(name = "MinAmt")
@@ -268,7 +298,7 @@ public class ATMTransactionAmounts3 {
 	 * ATMTransactionAmounts2.mmMinimumAllowedAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransactionAmounts3, Optional<ImpliedCurrencyAndAmount>> mmMinimumAmount = new MMMessageAttribute<ATMTransactionAmounts3, Optional<ImpliedCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts3.mmObject();
@@ -281,6 +311,16 @@ public class ATMTransactionAmounts3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ImpliedCurrencyAndAmount> getValue(ATMTransactionAmounts3 obj) {
+			return obj.getMinimumAmount();
+		}
+
+		@Override
+		public void setValue(ATMTransactionAmounts3 obj, Optional<ImpliedCurrencyAndAmount> value) {
+			obj.setMinimumAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MaxAmt")
@@ -323,7 +363,7 @@ public class ATMTransactionAmounts3 {
 	 * ATMTransactionAmounts2.mmMaximumAuthorisableAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransactionAmounts3, Optional<ImpliedCurrencyAndAmount>> mmMaximumAmount = new MMMessageAttribute<ATMTransactionAmounts3, Optional<ImpliedCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts3.mmObject();
@@ -336,6 +376,16 @@ public class ATMTransactionAmounts3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ImpliedCurrencyAndAmount> getValue(ATMTransactionAmounts3 obj) {
+			return obj.getMaximumAmount();
+		}
+
+		@Override
+		public void setValue(ATMTransactionAmounts3 obj, Optional<ImpliedCurrencyAndAmount> value) {
+			obj.setMaximumAmount(value.orElse(null));
 		}
 	};
 

@@ -51,11 +51,15 @@ public class ConstraintNextCallableDateAndCallableIndicatorRule {
 	 */
 	public static final MMConstraint<Debt1> forDebt1 = new MMConstraint<Debt1>() {
 		{
-			validator = ConstraintNextCallableDateAndCallableIndicatorRule::checkDebt1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NextCallableDateAndCallableIndicatorRule";
 			definition = "If CallableIndicator is present, then CallDate must be present.";
 			owner_lazy = () -> Debt1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Debt1 obj) throws Exception {
+			checkDebt1(obj);
 		}
 	};
 	/**
@@ -87,12 +91,16 @@ public class ConstraintNextCallableDateAndCallableIndicatorRule {
 	 */
 	public static final MMConstraint<Debt2> forDebt2 = new MMConstraint<Debt2>() {
 		{
-			validator = ConstraintNextCallableDateAndCallableIndicatorRule::checkDebt2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NextCallableDateAndCallableIndicatorRule";
 			definition = "If CallableIndicator is present, then NextCalldate must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNextCallableDateAndCallableIndicatorRule.forDebt3);
 			owner_lazy = () -> Debt2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Debt2 obj) throws Exception {
+			checkDebt2(obj);
 		}
 	};
 	/**
@@ -121,12 +129,16 @@ public class ConstraintNextCallableDateAndCallableIndicatorRule {
 	 */
 	public static final MMConstraint<Debt3> forDebt3 = new MMConstraint<Debt3>() {
 		{
-			validator = ConstraintNextCallableDateAndCallableIndicatorRule::checkDebt3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NextCallableDateAndCallableIndicatorRule";
 			definition = "If CallableIndicator is present, then NextCalldate must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNextCallableDateAndCallableIndicatorRule.forDebt2;
 			owner_lazy = () -> Debt3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Debt3 obj) throws Exception {
+			checkDebt3(obj);
 		}
 	};
 

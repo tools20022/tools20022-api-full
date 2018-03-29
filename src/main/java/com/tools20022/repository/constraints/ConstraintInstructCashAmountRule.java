@@ -61,12 +61,16 @@ public class ConstraintInstructCashAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption138> forCorporateActionOption138 = new MMConstraint<CorporateActionOption138>() {
 		{
-			validator = ConstraintInstructCashAmountRule::checkCorporateActionOption138;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructCashAmountRule";
 			definition = "If OptionFeatures/Code QCAS (InstructCashAmount) is not present, then any message elements in the list (PriceDetails/MaximumCashToInstruct, PriceDetails/MinimumCashToInstruct, PriceDetails/MinimumMutipleCashToInstruct) must not be present.\r\n(MT564 NVR C20).";
 			owner_lazy = () -> CorporateActionOption138.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PriceDetails/MaximumCashToInstruct</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/PriceDetails/MinimumCashToInstruct</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/PriceDetails/MinimumMultipleCashToInstruct</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"DifferentFromValue\"><leftOperand>/OptionFeatures[*]/Code</leftOperand><rightOperand>InstructCashAmount</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption138 obj) throws Exception {
+			checkCorporateActionOption138(obj);
 		}
 	};
 	/**
@@ -96,12 +100,16 @@ public class ConstraintInstructCashAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption139> forCorporateActionOption139 = new MMConstraint<CorporateActionOption139>() {
 		{
-			validator = ConstraintInstructCashAmountRule::checkCorporateActionOption139;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructCashAmountRule";
 			definition = "If OptionFeatures/Code QCAS (InstructCashAmount) is not present, then any message elements in the list (PriceDetails/MaximumCashToInstruct, PriceDetails/MinimumCashToInstruct, PriceDetails/MinimumMutipleCashToInstruct) must not be present.\r\n(MT564 NVR C20).";
 			owner_lazy = () -> CorporateActionOption139.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PriceDetails/MaximumCashToInstruct</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/PriceDetails/MinimumCashToInstruct</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/PriceDetails/MinimumMultipleCashToInstruct</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"DifferentFromValue\"><leftOperand>/OptionFeatures[*]/Code</leftOperand><rightOperand>InstructCashAmount</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption139 obj) throws Exception {
+			checkCorporateActionOption139(obj);
 		}
 	};
 	/**
@@ -131,12 +139,16 @@ public class ConstraintInstructCashAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption148> forCorporateActionOption148 = new MMConstraint<CorporateActionOption148>() {
 		{
-			validator = ConstraintInstructCashAmountRule::checkCorporateActionOption148;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructCashAmountRule";
 			definition = "If OptionFeatures/Code QCAS (InstructCashAmount) is not present, then any message elements in the list (PriceDetails/MaximumCashToInstruct, PriceDetails/MinimumCashToInstruct, PriceDetails/MinimumMutipleCashToInstruct) must not be present.\r\n(MT564 NVR C20).";
 			owner_lazy = () -> CorporateActionOption148.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PriceDetails/MaximumCashToInstruct</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/PriceDetails/MinimumCashToInstruct</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/PriceDetails/MinimumMultipleCashToInstruct</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"DifferentFromValue\"><leftOperand>/OptionFeatures[*]/Code</leftOperand><rightOperand>InstructCashAmount</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption148 obj) throws Exception {
+			checkCorporateActionOption148(obj);
 		}
 	};
 	/**
@@ -166,12 +178,16 @@ public class ConstraintInstructCashAmountRule {
 	 */
 	public static final MMConstraint<CorporateActionOption150> forCorporateActionOption150 = new MMConstraint<CorporateActionOption150>() {
 		{
-			validator = ConstraintInstructCashAmountRule::checkCorporateActionOption150;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructCashAmountRule";
 			definition = "If OptionFeatures/Code QCAS (InstructCashAmount) is not present, then any message elements in the list (PriceDetails/MaximumCashToInstruct, PriceDetails/MinimumCashToInstruct, PriceDetails/MinimumMutipleCashToInstruct) must not be present.\r\n(MT564 NVR C20).";
 			owner_lazy = () -> CorporateActionOption150.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PriceDetails/MaximumCashToInstruct</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/PriceDetails/MinimumCashToInstruct</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/PriceDetails/MinimumMultipleCashToInstruct</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"DifferentFromValue\"><leftOperand>/OptionFeatures[*]/Code</leftOperand><rightOperand>InstructCashAmount</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption150 obj) throws Exception {
+			checkCorporateActionOption150(obj);
 		}
 	};
 

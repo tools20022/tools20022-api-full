@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.AmendmentOfUndertaking;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.UndertakingAmendmentMessage1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -120,7 +121,7 @@ public class Amendment6 {
 	 * "Contents of the related proposed Undertaking Amendment message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUndertakingAmendmentMessage = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Amendment6, UndertakingAmendmentMessage1> mmUndertakingAmendmentMessage = new MMMessageAssociationEnd<Amendment6, UndertakingAmendmentMessage1>() {
 		{
 			businessComponentTrace_lazy = () -> AmendmentOfUndertaking.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Amendment6.mmObject();
@@ -132,7 +133,17 @@ public class Amendment6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UndertakingAmendmentMessage1.mmObject();
+			type_lazy = () -> UndertakingAmendmentMessage1.mmObject();
+		}
+
+		@Override
+		public UndertakingAmendmentMessage1 getValue(Amendment6 obj) {
+			return obj.getUndertakingAmendmentMessage();
+		}
+
+		@Override
+		public void setValue(Amendment6 obj, UndertakingAmendmentMessage1 value) {
+			obj.setUndertakingAmendmentMessage(value);
 		}
 	};
 	@XmlElement(name = "ApplcntRefNb")
@@ -165,7 +176,7 @@ public class Amendment6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmApplicantReferenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Amendment6, Optional<Max35Text>> mmApplicantReferenceNumber = new MMMessageAttribute<Amendment6, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Amendment6.mmObject();
 			isDerived = false;
@@ -176,6 +187,16 @@ public class Amendment6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Amendment6 obj) {
+			return obj.getApplicantReferenceNumber();
+		}
+
+		@Override
+		public void setValue(Amendment6 obj, Optional<Max35Text> value) {
+			obj.setApplicantReferenceNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -206,7 +227,7 @@ public class Amendment6 {
 	 * definition} = "Additional information related to the notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Amendment6, List<Max2000Text>> mmAdditionalInformation = new MMMessageAttribute<Amendment6, List<Max2000Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Amendment6.mmObject();
 			isDerived = false;
@@ -217,6 +238,16 @@ public class Amendment6 {
 			maxOccurs = 5;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
+		}
+
+		@Override
+		public List<Max2000Text> getValue(Amendment6 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(Amendment6 obj, List<Max2000Text> value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 
@@ -240,7 +271,7 @@ public class Amendment6 {
 		return undertakingAmendmentMessage;
 	}
 
-	public Amendment6 setUndertakingAmendmentMessage(com.tools20022.repository.msg.UndertakingAmendmentMessage1 undertakingAmendmentMessage) {
+	public Amendment6 setUndertakingAmendmentMessage(UndertakingAmendmentMessage1 undertakingAmendmentMessage) {
 		this.undertakingAmendmentMessage = Objects.requireNonNull(undertakingAmendmentMessage);
 		return this;
 	}

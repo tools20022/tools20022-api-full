@@ -126,7 +126,7 @@ public class ForeignExchangeSwap3Choice {
 	 * ForeignExchangeSwap2Choice.mmDataSetAction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDataSetAction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ForeignExchangeSwap3Choice, ReportPeriodActivity3Code> mmDataSetAction = new MMMessageAttribute<ForeignExchangeSwap3Choice, ReportPeriodActivity3Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ForeignExchangeSwap3Choice.mmObject();
 			isDerived = false;
@@ -138,6 +138,16 @@ public class ForeignExchangeSwap3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ReportPeriodActivity3Code.mmObject();
+		}
+
+		@Override
+		public ReportPeriodActivity3Code getValue(ForeignExchangeSwap3Choice obj) {
+			return obj.getDataSetAction();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeSwap3Choice obj, ReportPeriodActivity3Code value) {
+			obj.setDataSetAction(value);
 		}
 	};
 	@XmlElement(name = "Tx", required = true)
@@ -176,7 +186,7 @@ public class ForeignExchangeSwap3Choice {
 	 * ForeignExchangeSwap2Choice.mmTransaction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ForeignExchangeSwap3Choice, List<ForeignExchangeSwapTransaction3>> mmTransaction = new MMMessageAssociationEnd<ForeignExchangeSwap3Choice, List<ForeignExchangeSwapTransaction3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ForeignExchangeSwap3Choice.mmObject();
 			isDerived = false;
@@ -188,6 +198,16 @@ public class ForeignExchangeSwap3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ForeignExchangeSwapTransaction3.mmObject();
+		}
+
+		@Override
+		public List<ForeignExchangeSwapTransaction3> getValue(ForeignExchangeSwap3Choice obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeSwap3Choice obj, List<ForeignExchangeSwapTransaction3> value) {
+			obj.setTransaction(value);
 		}
 	};
 

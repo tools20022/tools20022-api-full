@@ -26,6 +26,7 @@ import com.tools20022.repository.codeset.SettlementMethod2Code;
 import com.tools20022.repository.entity.CashClearingSystem;
 import com.tools20022.repository.entity.CashSettlement;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccount16;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -128,7 +129,7 @@ public class SettlementInformation14 {
 	 * "Method used to settle the (batch of) payment instructions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementInformation14, SettlementMethod2Code> mmSettlementMethod = new MMMessageAttribute<SettlementInformation14, SettlementMethod2Code>() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmSettlementMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInformation14.mmObject();
@@ -140,6 +141,16 @@ public class SettlementInformation14 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SettlementMethod2Code.mmObject();
+		}
+
+		@Override
+		public SettlementMethod2Code getValue(SettlementInformation14 obj) {
+			return obj.getSettlementMethod();
+		}
+
+		@Override
+		public void setValue(SettlementInformation14 obj, SettlementMethod2Code value) {
+			obj.setSettlementMethod(value);
 		}
 	};
 	@XmlElement(name = "SttlmAcct")
@@ -177,7 +188,7 @@ public class SettlementInformation14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementInformation14, Optional<CashAccount16>> mmSettlementAccount = new MMMessageAssociationEnd<SettlementInformation14, Optional<CashAccount16>>() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmSettlementAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInformation14.mmObject();
@@ -189,7 +200,17 @@ public class SettlementInformation14 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount16.mmObject();
+			type_lazy = () -> CashAccount16.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount16> getValue(SettlementInformation14 obj) {
+			return obj.getSettlementAccount();
+		}
+
+		@Override
+		public void setValue(SettlementInformation14 obj, Optional<CashAccount16> value) {
+			obj.setSettlementAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClrSys")
@@ -228,7 +249,7 @@ public class SettlementInformation14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmClearingSystem = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementInformation14, Optional<ClearingSystemIdentification3Choice>> mmClearingSystem = new MMMessageAssociationEnd<SettlementInformation14, Optional<ClearingSystemIdentification3Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> CashClearingSystem.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInformation14.mmObject();
@@ -241,6 +262,16 @@ public class SettlementInformation14 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ClearingSystemIdentification3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ClearingSystemIdentification3Choice> getValue(SettlementInformation14 obj) {
+			return obj.getClearingSystem();
+		}
+
+		@Override
+		public void setValue(SettlementInformation14 obj, Optional<ClearingSystemIdentification3Choice> value) {
+			obj.setClearingSystem(value.orElse(null));
 		}
 	};
 
@@ -274,7 +305,7 @@ public class SettlementInformation14 {
 		return settlementAccount == null ? Optional.empty() : Optional.of(settlementAccount);
 	}
 
-	public SettlementInformation14 setSettlementAccount(com.tools20022.repository.msg.CashAccount16 settlementAccount) {
+	public SettlementInformation14 setSettlementAccount(CashAccount16 settlementAccount) {
 		this.settlementAccount = settlementAccount;
 		return this;
 	}

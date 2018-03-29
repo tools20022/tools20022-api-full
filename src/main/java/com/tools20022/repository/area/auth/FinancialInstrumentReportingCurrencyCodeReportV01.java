@@ -25,7 +25,6 @@ import com.tools20022.repository.area.AuthoritiesLatestVersion;
 import com.tools20022.repository.msg.SecuritiesCurrencyIdentification2;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.FinancialInstrumentsandTransactionsRegulatoryReportingTransactionsandFinancialInstrumentsDataReporting;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -115,7 +114,7 @@ public class FinancialInstrumentReportingCurrencyCodeReportV01 {
 	 * "Report all currencies and countries which use that currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCurrencyData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FinancialInstrumentReportingCurrencyCodeReportV01, List<SecuritiesCurrencyIdentification2>> mmCurrencyData = new MMMessageBuildingBlock<FinancialInstrumentReportingCurrencyCodeReportV01, List<SecuritiesCurrencyIdentification2>>() {
 		{
 			xmlTag = "CcyData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,12 +124,14 @@ public class FinancialInstrumentReportingCurrencyCodeReportV01 {
 			complexType_lazy = () -> SecuritiesCurrencyIdentification2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FinancialInstrumentReportingCurrencyCodeReportV01.class.getMethod("getCurrencyData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SecuritiesCurrencyIdentification2> getValue(FinancialInstrumentReportingCurrencyCodeReportV01 obj) {
+			return obj.getCurrencyData();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentReportingCurrencyCodeReportV01 obj, List<SecuritiesCurrencyIdentification2> value) {
+			obj.setCurrencyData(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -160,7 +161,7 @@ public class FinancialInstrumentReportingCurrencyCodeReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FinancialInstrumentReportingCurrencyCodeReportV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<FinancialInstrumentReportingCurrencyCodeReportV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,12 +171,14 @@ public class FinancialInstrumentReportingCurrencyCodeReportV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FinancialInstrumentReportingCurrencyCodeReportV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(FinancialInstrumentReportingCurrencyCodeReportV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentReportingCurrencyCodeReportV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

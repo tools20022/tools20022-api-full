@@ -122,7 +122,7 @@ public class PlanStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PlanStatus1Choice, PlanStatus1Code> mmCode = new MMMessageAttribute<PlanStatus1Choice, PlanStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentPlan.mmPlanStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PlanStatus1Choice.mmObject();
@@ -135,6 +135,16 @@ public class PlanStatus1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PlanStatus1Code.mmObject();
+		}
+
+		@Override
+		public PlanStatus1Code getValue(PlanStatus1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(PlanStatus1Choice obj, PlanStatus1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -174,7 +184,7 @@ public class PlanStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PlanStatus1Choice, GenericIdentification29> mmProprietary = new MMMessageAssociationEnd<PlanStatus1Choice, GenericIdentification29>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PlanStatus1Choice.mmObject();
 			isDerived = false;
@@ -187,6 +197,16 @@ public class PlanStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification29.mmObject();
+		}
+
+		@Override
+		public GenericIdentification29 getValue(PlanStatus1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(PlanStatus1Choice obj, GenericIdentification29 value) {
+			obj.setProprietary(value);
 		}
 	};
 

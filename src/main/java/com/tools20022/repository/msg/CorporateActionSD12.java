@@ -100,7 +100,7 @@ public class CorporateActionSD12 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionSD12, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionSD12, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionSD12.mmObject();
 			isDerived = false;
@@ -111,6 +111,16 @@ public class CorporateActionSD12 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionSD12 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionSD12 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "EvtStag")
@@ -148,7 +158,7 @@ public class CorporateActionSD12 {
 	 * definition} = "Stage in the corporate action event life cycle."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEventStage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionSD12, Optional<CorporateActionEventStage4Code>> mmEventStage = new MMMessageAttribute<CorporateActionSD12, Optional<CorporateActionEventStage4Code>>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionEvent.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionSD12.mmObject();
@@ -160,6 +170,16 @@ public class CorporateActionSD12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CorporateActionEventStage4Code.mmObject();
+		}
+
+		@Override
+		public Optional<CorporateActionEventStage4Code> getValue(CorporateActionSD12 obj) {
+			return obj.getEventStage();
+		}
+
+		@Override
+		public void setValue(CorporateActionSD12 obj, Optional<CorporateActionEventStage4Code> value) {
+			obj.setEventStage(value.orElse(null));
 		}
 	};
 

@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecuritiesAccount19;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -121,7 +122,7 @@ public class SecuritiesAccountReferenceDataChange2 {
 	 * SecuritiesAccountReferenceDataChange1.mmSecuritiesAccountIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesAccountReferenceDataChange2, SecuritiesAccount19> mmSecuritiesAccountIdentification = new MMMessageAssociationEnd<SecuritiesAccountReferenceDataChange2, SecuritiesAccount19>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountReferenceDataChange2.mmObject();
 			isDerived = false;
@@ -133,7 +134,17 @@ public class SecuritiesAccountReferenceDataChange2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount19.mmObject();
+			type_lazy = () -> SecuritiesAccount19.mmObject();
+		}
+
+		@Override
+		public SecuritiesAccount19 getValue(SecuritiesAccountReferenceDataChange2 obj) {
+			return obj.getSecuritiesAccountIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountReferenceDataChange2 obj, SecuritiesAccount19 value) {
+			obj.setSecuritiesAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "FldNm", required = true)
@@ -172,7 +183,7 @@ public class SecuritiesAccountReferenceDataChange2 {
 	 * SecuritiesAccountReferenceDataChange1.mmFieldName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFieldName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccountReferenceDataChange2, Max35Text> mmFieldName = new MMMessageAttribute<SecuritiesAccountReferenceDataChange2, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountReferenceDataChange2.mmObject();
 			isDerived = false;
@@ -184,6 +195,16 @@ public class SecuritiesAccountReferenceDataChange2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(SecuritiesAccountReferenceDataChange2 obj) {
+			return obj.getFieldName();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountReferenceDataChange2 obj, Max35Text value) {
+			obj.setFieldName(value);
 		}
 	};
 	@XmlElement(name = "OdFldVal", required = true)
@@ -221,7 +242,7 @@ public class SecuritiesAccountReferenceDataChange2 {
 	 * SecuritiesAccountReferenceDataChange1.mmOldFieldValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOldFieldValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccountReferenceDataChange2, Max350Text> mmOldFieldValue = new MMMessageAttribute<SecuritiesAccountReferenceDataChange2, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountReferenceDataChange2.mmObject();
 			isDerived = false;
@@ -233,6 +254,16 @@ public class SecuritiesAccountReferenceDataChange2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(SecuritiesAccountReferenceDataChange2 obj) {
+			return obj.getOldFieldValue();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountReferenceDataChange2 obj, Max350Text value) {
+			obj.setOldFieldValue(value);
 		}
 	};
 	@XmlElement(name = "NewFldVal", required = true)
@@ -269,7 +300,7 @@ public class SecuritiesAccountReferenceDataChange2 {
 	 * SecuritiesAccountReferenceDataChange1.mmNewFieldValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewFieldValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccountReferenceDataChange2, Max350Text> mmNewFieldValue = new MMMessageAttribute<SecuritiesAccountReferenceDataChange2, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountReferenceDataChange2.mmObject();
 			isDerived = false;
@@ -281,6 +312,16 @@ public class SecuritiesAccountReferenceDataChange2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(SecuritiesAccountReferenceDataChange2 obj) {
+			return obj.getNewFieldValue();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountReferenceDataChange2 obj, Max350Text value) {
+			obj.setNewFieldValue(value);
 		}
 	};
 	@XmlElement(name = "OprTmStmp", required = true)
@@ -317,7 +358,7 @@ public class SecuritiesAccountReferenceDataChange2 {
 	 * SecuritiesAccountReferenceDataChange1.mmOperationTimeStamp}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOperationTimeStamp = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccountReferenceDataChange2, ISODateTime> mmOperationTimeStamp = new MMMessageAttribute<SecuritiesAccountReferenceDataChange2, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountReferenceDataChange2.mmObject();
 			isDerived = false;
@@ -329,6 +370,16 @@ public class SecuritiesAccountReferenceDataChange2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(SecuritiesAccountReferenceDataChange2 obj) {
+			return obj.getOperationTimeStamp();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountReferenceDataChange2 obj, ISODateTime value) {
+			obj.setOperationTimeStamp(value);
 		}
 	};
 
@@ -352,7 +403,7 @@ public class SecuritiesAccountReferenceDataChange2 {
 		return securitiesAccountIdentification;
 	}
 
-	public SecuritiesAccountReferenceDataChange2 setSecuritiesAccountIdentification(com.tools20022.repository.msg.SecuritiesAccount19 securitiesAccountIdentification) {
+	public SecuritiesAccountReferenceDataChange2 setSecuritiesAccountIdentification(SecuritiesAccount19 securitiesAccountIdentification) {
 		this.securitiesAccountIdentification = Objects.requireNonNull(securitiesAccountIdentification);
 		return this;
 	}

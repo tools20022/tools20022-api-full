@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.CashSettlement;
 import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.entity.PaymentPartyRole;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccount24;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -121,7 +122,7 @@ public class SettlementTerms3 {
 	 * SettlementTerms2.mmCreditorAgent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditorAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementTerms3, Optional<FinancialInstitutionIdentification4Choice>> mmCreditorAgent = new MMMessageAssociationEnd<SettlementTerms3, Optional<FinancialInstitutionIdentification4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTerms3.mmObject();
@@ -135,6 +136,16 @@ public class SettlementTerms3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstitutionIdentification4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstitutionIdentification4Choice> getValue(SettlementTerms3 obj) {
+			return obj.getCreditorAgent();
+		}
+
+		@Override
+		public void setValue(SettlementTerms3 obj, Optional<FinancialInstitutionIdentification4Choice> value) {
+			obj.setCreditorAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtrAcct", required = true)
@@ -175,7 +186,7 @@ public class SettlementTerms3 {
 	 * SettlementTerms2.mmCreditorAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditorAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementTerms3, CashAccount24> mmCreditorAccount = new MMMessageAssociationEnd<SettlementTerms3, CashAccount24>() {
 		{
 			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTerms3.mmObject();
@@ -188,7 +199,17 @@ public class SettlementTerms3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
+			type_lazy = () -> CashAccount24.mmObject();
+		}
+
+		@Override
+		public CashAccount24 getValue(SettlementTerms3 obj) {
+			return obj.getCreditorAccount();
+		}
+
+		@Override
+		public void setValue(SettlementTerms3 obj, CashAccount24 value) {
+			obj.setCreditorAccount(value);
 		}
 	};
 
@@ -220,7 +241,7 @@ public class SettlementTerms3 {
 		return creditorAccount;
 	}
 
-	public SettlementTerms3 setCreditorAccount(com.tools20022.repository.msg.CashAccount24 creditorAccount) {
+	public SettlementTerms3 setCreditorAccount(CashAccount24 creditorAccount) {
 		this.creditorAccount = Objects.requireNonNull(creditorAccount);
 		return this;
 	}

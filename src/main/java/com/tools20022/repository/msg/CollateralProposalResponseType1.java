@@ -140,7 +140,7 @@ public class CollateralProposalResponseType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralProposalIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralProposalResponseType1, Max35Text> mmCollateralProposalIdentification = new MMMessageAttribute<CollateralProposalResponseType1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralProposalResponseType1.mmObject();
 			isDerived = false;
@@ -152,6 +152,16 @@ public class CollateralProposalResponseType1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CollateralProposalResponseType1 obj) {
+			return obj.getCollateralProposalIdentification();
+		}
+
+		@Override
+		public void setValue(CollateralProposalResponseType1 obj, Max35Text value) {
+			obj.setCollateralProposalIdentification(value);
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -199,7 +209,7 @@ public class CollateralProposalResponseType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralProposalResponseType1, CollateralProposalResponse1Code> mmType = new MMMessageAttribute<CollateralProposalResponseType1, CollateralProposalResponse1Code>() {
 		{
 			businessElementTrace_lazy = () -> CollateralProposal.mmResponseType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralProposalResponseType1.mmObject();
@@ -212,6 +222,16 @@ public class CollateralProposalResponseType1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CollateralProposalResponse1Code.mmObject();
+		}
+
+		@Override
+		public CollateralProposalResponse1Code getValue(CollateralProposalResponseType1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(CollateralProposalResponseType1 obj, CollateralProposalResponse1Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "RspnTp", required = true)
@@ -248,7 +268,7 @@ public class CollateralProposalResponseType1 {
 	 * definition} = "Specifies the status of the collateral proposal."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResponseType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralProposalResponseType1, Status4Code> mmResponseType = new MMMessageAttribute<CollateralProposalResponseType1, Status4Code>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmInstructionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralProposalResponseType1.mmObject();
@@ -260,6 +280,16 @@ public class CollateralProposalResponseType1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Status4Code.mmObject();
+		}
+
+		@Override
+		public Status4Code getValue(CollateralProposalResponseType1 obj) {
+			return obj.getResponseType();
+		}
+
+		@Override
+		public void setValue(CollateralProposalResponseType1 obj, Status4Code value) {
+			obj.setResponseType(value);
 		}
 	};
 	@XmlElement(name = "RjctnRsn")
@@ -299,7 +329,7 @@ public class CollateralProposalResponseType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRejectionReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralProposalResponseType1, Optional<RejectionReasonV021Code>> mmRejectionReason = new MMMessageAttribute<CollateralProposalResponseType1, Optional<RejectionReasonV021Code>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralProposalResponseType1.mmObject();
@@ -311,6 +341,16 @@ public class CollateralProposalResponseType1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RejectionReasonV021Code.mmObject();
+		}
+
+		@Override
+		public Optional<RejectionReasonV021Code> getValue(CollateralProposalResponseType1 obj) {
+			return obj.getRejectionReason();
+		}
+
+		@Override
+		public void setValue(CollateralProposalResponseType1 obj, Optional<RejectionReasonV021Code> value) {
+			obj.setRejectionReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RjctnInf")
@@ -349,7 +389,7 @@ public class CollateralProposalResponseType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRejectionInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralProposalResponseType1, Optional<Max35Text>> mmRejectionInformation = new MMMessageAttribute<CollateralProposalResponseType1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralProposalResponseType1.mmObject();
@@ -361,6 +401,16 @@ public class CollateralProposalResponseType1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CollateralProposalResponseType1 obj) {
+			return obj.getRejectionInformation();
+		}
+
+		@Override
+		public void setValue(CollateralProposalResponseType1 obj, Optional<Max35Text> value) {
+			obj.setRejectionInformation(value.orElse(null));
 		}
 	};
 

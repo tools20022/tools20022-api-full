@@ -26,7 +26,6 @@ import com.tools20022.repository.choice.SecuredMarketReport4Choice;
 import com.tools20022.repository.msg.MoneyMarketReportHeader1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.MoneyMarketStatisticalReportingISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -126,7 +125,7 @@ public class MoneyMarketSecuredMarketStatisticalReportV02 {
 	 * MoneyMarketSecuredMarketStatisticalReportV01.mmReportHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MoneyMarketSecuredMarketStatisticalReportV02, MoneyMarketReportHeader1> mmReportHeader = new MMMessageBuildingBlock<MoneyMarketSecuredMarketStatisticalReportV02, MoneyMarketReportHeader1>() {
 		{
 			xmlTag = "RptHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -138,12 +137,14 @@ public class MoneyMarketSecuredMarketStatisticalReportV02 {
 			complexType_lazy = () -> MoneyMarketReportHeader1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MoneyMarketSecuredMarketStatisticalReportV02.class.getMethod("getReportHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MoneyMarketReportHeader1 getValue(MoneyMarketSecuredMarketStatisticalReportV02 obj) {
+			return obj.getReportHeader();
+		}
+
+		@Override
+		public void setValue(MoneyMarketSecuredMarketStatisticalReportV02 obj, MoneyMarketReportHeader1 value) {
+			obj.setReportHeader(value);
 		}
 	};
 	@XmlElement(name = "ScrdMktRpt", required = true)
@@ -178,7 +179,7 @@ public class MoneyMarketSecuredMarketStatisticalReportV02 {
 	 * MoneyMarketSecuredMarketStatisticalReportV01.mmSecuredMarketReport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecuredMarketReport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MoneyMarketSecuredMarketStatisticalReportV02, SecuredMarketReport4Choice> mmSecuredMarketReport = new MMMessageBuildingBlock<MoneyMarketSecuredMarketStatisticalReportV02, SecuredMarketReport4Choice>() {
 		{
 			xmlTag = "ScrdMktRpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -190,12 +191,14 @@ public class MoneyMarketSecuredMarketStatisticalReportV02 {
 			complexType_lazy = () -> SecuredMarketReport4Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MoneyMarketSecuredMarketStatisticalReportV02.class.getMethod("getSecuredMarketReport", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SecuredMarketReport4Choice getValue(MoneyMarketSecuredMarketStatisticalReportV02 obj) {
+			return obj.getSecuredMarketReport();
+		}
+
+		@Override
+		public void setValue(MoneyMarketSecuredMarketStatisticalReportV02 obj, SecuredMarketReport4Choice value) {
+			obj.setSecuredMarketReport(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -230,7 +233,7 @@ public class MoneyMarketSecuredMarketStatisticalReportV02 {
 	 * MoneyMarketSecuredMarketStatisticalReportV01.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MoneyMarketSecuredMarketStatisticalReportV02, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<MoneyMarketSecuredMarketStatisticalReportV02, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -241,12 +244,14 @@ public class MoneyMarketSecuredMarketStatisticalReportV02 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MoneyMarketSecuredMarketStatisticalReportV02.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(MoneyMarketSecuredMarketStatisticalReportV02 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(MoneyMarketSecuredMarketStatisticalReportV02 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

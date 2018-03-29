@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.BusinessDayQuery2;
 import com.tools20022.repository.msg.MessageHeader9;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset._SR2018_MX_CashManagement_Maintenance;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -99,7 +98,7 @@ import javax.xml.bind.annotation.*;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "GetBusinessDayInformationV04"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -137,7 +136,7 @@ public class GetBusinessDayInformationV04 {
 	 * definition} = "Common business identification for the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<GetBusinessDayInformationV04, MessageHeader9> mmMessageHeader = new MMMessageBuildingBlock<GetBusinessDayInformationV04, MessageHeader9>() {
 		{
 			xmlTag = "MsgHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -148,12 +147,14 @@ public class GetBusinessDayInformationV04 {
 			complexType_lazy = () -> MessageHeader9.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return GetBusinessDayInformationV04.class.getMethod("getMessageHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageHeader9 getValue(GetBusinessDayInformationV04 obj) {
+			return obj.getMessageHeader();
+		}
+
+		@Override
+		public void setValue(GetBusinessDayInformationV04 obj, MessageHeader9 value) {
+			obj.setMessageHeader(value);
 		}
 	};
 	@XmlElement(name = "BizDayInfQryDef")
@@ -181,7 +182,7 @@ public class GetBusinessDayInformationV04 {
 	 * definition} = "Defines the business day information query criteria."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmBusinessDayInformationQueryDefinition = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<GetBusinessDayInformationV04, Optional<BusinessDayQuery2>> mmBusinessDayInformationQueryDefinition = new MMMessageBuildingBlock<GetBusinessDayInformationV04, Optional<BusinessDayQuery2>>() {
 		{
 			xmlTag = "BizDayInfQryDef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -192,12 +193,14 @@ public class GetBusinessDayInformationV04 {
 			complexType_lazy = () -> BusinessDayQuery2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return GetBusinessDayInformationV04.class.getMethod("getBusinessDayInformationQueryDefinition", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<BusinessDayQuery2> getValue(GetBusinessDayInformationV04 obj) {
+			return obj.getBusinessDayInformationQueryDefinition();
+		}
+
+		@Override
+		public void setValue(GetBusinessDayInformationV04 obj, Optional<BusinessDayQuery2> value) {
+			obj.setBusinessDayInformationQueryDefinition(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -227,7 +230,7 @@ public class GetBusinessDayInformationV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<GetBusinessDayInformationV04, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<GetBusinessDayInformationV04, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -237,19 +240,21 @@ public class GetBusinessDayInformationV04 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return GetBusinessDayInformationV04.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(GetBusinessDayInformationV04 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(GetBusinessDayInformationV04 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "GetBusinessDayInformationV04";
 				definition = "Scope\r\nThe GetBusinessDayInformation message is sent by a member to the transaction administrator.\r\nIt is used to request information on different types of administrative data linked to the system.\r\nUsage\r\nThe transaction administrator is in charge of providing the members with business information. The term business day information covers all information related to the management of the system, not related to the transactions created in the system. The type of business day information available can vary depending on the system.\r\nAt any time during the operating hours of the system, the member can query the transaction administrator to get information about the static data of the system.\r\nThe member can request information based on the following elements:\r\n- identification of the system\r\n- currency within the system concerned\r\n- status of the system\r\n- period of availability of a given currency linked to the system concerned (in case the system handles more than one currency)\r\n- closure information (dates when the system will be inactive and reasons for this inactivity)\r\n- event indicator (types of event and precise timing of their occurrence within the system concerned)\r\nThis message will be replied to by a ReturnBusinessDayInformation message. Additional information on the generic design of the Get/Return messages can be found in the section How to Use the Cash Management Messages.";
 				messageSet_lazy = () -> Arrays.asList(_SR2018_MX_CashManagement_Maintenance.mmObject());

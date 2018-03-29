@@ -122,7 +122,7 @@ public class StandingInstructionCancellationStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StandingInstructionCancellationStatus1Choice, CorporateActionStandingInstructionCancellationProcessingStatus1> mmProcessedStatus = new MMMessageAssociationEnd<StandingInstructionCancellationStatus1Choice, CorporateActionStandingInstructionCancellationProcessingStatus1>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.StandingInstructionCancellationStatus1Choice.mmObject();
@@ -135,6 +135,16 @@ public class StandingInstructionCancellationStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CorporateActionStandingInstructionCancellationProcessingStatus1.mmObject();
+		}
+
+		@Override
+		public CorporateActionStandingInstructionCancellationProcessingStatus1 getValue(StandingInstructionCancellationStatus1Choice obj) {
+			return obj.getProcessedStatus();
+		}
+
+		@Override
+		public void setValue(StandingInstructionCancellationStatus1Choice obj, CorporateActionStandingInstructionCancellationProcessingStatus1 value) {
+			obj.setProcessedStatus(value);
 		}
 	};
 	@XmlElement(name = "RjctdSts", required = true)
@@ -171,7 +181,7 @@ public class StandingInstructionCancellationStatus1Choice {
 	 * definition} = "Provides information about the rejection status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejectedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StandingInstructionCancellationStatus1Choice, CorporateActionStandingInstructionCancellationRejectionStatus1> mmRejectedStatus = new MMMessageAssociationEnd<StandingInstructionCancellationStatus1Choice, CorporateActionStandingInstructionCancellationRejectionStatus1>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.StandingInstructionCancellationStatus1Choice.mmObject();
@@ -184,6 +194,16 @@ public class StandingInstructionCancellationStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CorporateActionStandingInstructionCancellationRejectionStatus1.mmObject();
+		}
+
+		@Override
+		public CorporateActionStandingInstructionCancellationRejectionStatus1 getValue(StandingInstructionCancellationStatus1Choice obj) {
+			return obj.getRejectedStatus();
+		}
+
+		@Override
+		public void setValue(StandingInstructionCancellationStatus1Choice obj, CorporateActionStandingInstructionCancellationRejectionStatus1 value) {
+			obj.setRejectedStatus(value);
 		}
 	};
 

@@ -24,6 +24,10 @@ import com.tools20022.repository.area.setr.RedemptionMultipleOrderCancellationIn
 import com.tools20022.repository.entity.RedemptionOrder;
 import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CopyInformation1;
+import com.tools20022.repository.msg.Extension1;
+import com.tools20022.repository.msg.Intermediary4;
+import com.tools20022.repository.msg.RedemptionMultipleOrder2;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -120,7 +124,7 @@ public class RedemptionMultipleOrderInstruction1 {
 	 * definition} = "General information related to the order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMultipleOrderDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RedemptionMultipleOrderInstruction1, RedemptionMultipleOrder2> mmMultipleOrderDetails = new MMMessageAssociationEnd<RedemptionMultipleOrderInstruction1, RedemptionMultipleOrder2>() {
 		{
 			businessComponentTrace_lazy = () -> RedemptionOrder.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleOrderInstruction1.mmObject();
@@ -132,11 +136,21 @@ public class RedemptionMultipleOrderInstruction1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleOrder2.mmObject();
+			type_lazy = () -> RedemptionMultipleOrder2.mmObject();
+		}
+
+		@Override
+		public RedemptionMultipleOrder2 getValue(RedemptionMultipleOrderInstruction1 obj) {
+			return obj.getMultipleOrderDetails();
+		}
+
+		@Override
+		public void setValue(RedemptionMultipleOrderInstruction1 obj, RedemptionMultipleOrder2 value) {
+			obj.setMultipleOrderDetails(value);
 		}
 	};
 	@XmlElement(name = "IntrmyDtls")
-	protected List<com.tools20022.repository.msg.Intermediary4> intermediaryDetails;
+	protected List<Intermediary4> intermediaryDetails;
 	/**
 	 * 
 	 <p>
@@ -168,7 +182,7 @@ public class RedemptionMultipleOrderInstruction1 {
 	 * definition} = "Information related to an intermediary."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIntermediaryDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RedemptionMultipleOrderInstruction1, List<Intermediary4>> mmIntermediaryDetails = new MMMessageAssociationEnd<RedemptionMultipleOrderInstruction1, List<Intermediary4>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradePartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleOrderInstruction1.mmObject();
@@ -180,7 +194,17 @@ public class RedemptionMultipleOrderInstruction1 {
 			maxOccurs = 10;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Intermediary4.mmObject();
+			type_lazy = () -> Intermediary4.mmObject();
+		}
+
+		@Override
+		public List<Intermediary4> getValue(RedemptionMultipleOrderInstruction1 obj) {
+			return obj.getIntermediaryDetails();
+		}
+
+		@Override
+		public void setValue(RedemptionMultipleOrderInstruction1 obj, List<Intermediary4> value) {
+			obj.setIntermediaryDetails(value);
 		}
 	};
 	@XmlElement(name = "CpyDtls")
@@ -211,7 +235,7 @@ public class RedemptionMultipleOrderInstruction1 {
 	 * definition} = "Message is a copy."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCopyDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RedemptionMultipleOrderInstruction1, Optional<CopyInformation1>> mmCopyDetails = new MMMessageAssociationEnd<RedemptionMultipleOrderInstruction1, Optional<CopyInformation1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleOrderInstruction1.mmObject();
 			isDerived = false;
@@ -222,11 +246,21 @@ public class RedemptionMultipleOrderInstruction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CopyInformation1.mmObject();
+			type_lazy = () -> CopyInformation1.mmObject();
+		}
+
+		@Override
+		public Optional<CopyInformation1> getValue(RedemptionMultipleOrderInstruction1 obj) {
+			return obj.getCopyDetails();
+		}
+
+		@Override
+		public void setValue(RedemptionMultipleOrderInstruction1 obj, Optional<CopyInformation1> value) {
+			obj.setCopyDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Xtnsn")
-	protected List<com.tools20022.repository.msg.Extension1> extension;
+	protected List<Extension1> extension;
 	/**
 	 * 
 	 <p>
@@ -254,7 +288,7 @@ public class RedemptionMultipleOrderInstruction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RedemptionMultipleOrderInstruction1, List<Extension1>> mmExtension = new MMMessageAssociationEnd<RedemptionMultipleOrderInstruction1, List<Extension1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleOrderInstruction1.mmObject();
 			isDerived = false;
@@ -264,7 +298,17 @@ public class RedemptionMultipleOrderInstruction1 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Extension1.mmObject();
+			type_lazy = () -> Extension1.mmObject();
+		}
+
+		@Override
+		public List<Extension1> getValue(RedemptionMultipleOrderInstruction1 obj) {
+			return obj.getExtension();
+		}
+
+		@Override
+		public void setValue(RedemptionMultipleOrderInstruction1 obj, List<Extension1> value) {
+			obj.setExtension(value);
 		}
 	};
 
@@ -288,7 +332,7 @@ public class RedemptionMultipleOrderInstruction1 {
 		return multipleOrderDetails;
 	}
 
-	public RedemptionMultipleOrderInstruction1 setMultipleOrderDetails(com.tools20022.repository.msg.RedemptionMultipleOrder2 multipleOrderDetails) {
+	public RedemptionMultipleOrderInstruction1 setMultipleOrderDetails(RedemptionMultipleOrder2 multipleOrderDetails) {
 		this.multipleOrderDetails = Objects.requireNonNull(multipleOrderDetails);
 		return this;
 	}
@@ -297,7 +341,7 @@ public class RedemptionMultipleOrderInstruction1 {
 		return intermediaryDetails == null ? intermediaryDetails = new ArrayList<>() : intermediaryDetails;
 	}
 
-	public RedemptionMultipleOrderInstruction1 setIntermediaryDetails(List<com.tools20022.repository.msg.Intermediary4> intermediaryDetails) {
+	public RedemptionMultipleOrderInstruction1 setIntermediaryDetails(List<Intermediary4> intermediaryDetails) {
 		this.intermediaryDetails = Objects.requireNonNull(intermediaryDetails);
 		return this;
 	}
@@ -306,7 +350,7 @@ public class RedemptionMultipleOrderInstruction1 {
 		return copyDetails == null ? Optional.empty() : Optional.of(copyDetails);
 	}
 
-	public RedemptionMultipleOrderInstruction1 setCopyDetails(com.tools20022.repository.msg.CopyInformation1 copyDetails) {
+	public RedemptionMultipleOrderInstruction1 setCopyDetails(CopyInformation1 copyDetails) {
 		this.copyDetails = copyDetails;
 		return this;
 	}
@@ -315,7 +359,7 @@ public class RedemptionMultipleOrderInstruction1 {
 		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public RedemptionMultipleOrderInstruction1 setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+	public RedemptionMultipleOrderInstruction1 setExtension(List<Extension1> extension) {
 		this.extension = Objects.requireNonNull(extension);
 		return this;
 	}

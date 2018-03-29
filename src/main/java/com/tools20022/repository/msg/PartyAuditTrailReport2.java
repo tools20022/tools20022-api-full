@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AuditTrailOrBusinessError2Choice;
 import com.tools20022.repository.choice.DateSearchChoice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SystemPartyIdentification3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -127,7 +128,7 @@ public class PartyAuditTrailReport2 {
 	 * PartyAuditTrailReport1.mmPartyAuditTrailOrError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPartyAuditTrailOrError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyAuditTrailReport2, AuditTrailOrBusinessError2Choice> mmPartyAuditTrailOrError = new MMMessageAssociationEnd<PartyAuditTrailReport2, AuditTrailOrBusinessError2Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyAuditTrailReport2.mmObject();
 			isDerived = false;
@@ -141,6 +142,16 @@ public class PartyAuditTrailReport2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AuditTrailOrBusinessError2Choice.mmObject();
+		}
+
+		@Override
+		public AuditTrailOrBusinessError2Choice getValue(PartyAuditTrailReport2 obj) {
+			return obj.getPartyAuditTrailOrError();
+		}
+
+		@Override
+		public void setValue(PartyAuditTrailReport2 obj, AuditTrailOrBusinessError2Choice value) {
+			obj.setPartyAuditTrailOrError(value);
 		}
 	};
 	@XmlElement(name = "DtPrd")
@@ -186,7 +197,7 @@ public class PartyAuditTrailReport2 {
 	 * PartyAuditTrailReport1.mmDatePeriod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDatePeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyAuditTrailReport2, Optional<DateSearchChoice>> mmDatePeriod = new MMMessageAttribute<PartyAuditTrailReport2, Optional<DateSearchChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyAuditTrailReport2.mmObject();
 			isDerived = false;
@@ -199,6 +210,16 @@ public class PartyAuditTrailReport2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateSearchChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateSearchChoice> getValue(PartyAuditTrailReport2 obj) {
+			return obj.getDatePeriod();
+		}
+
+		@Override
+		public void setValue(PartyAuditTrailReport2 obj, Optional<DateSearchChoice> value) {
+			obj.setDatePeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PtyId", required = true)
@@ -244,7 +265,7 @@ public class PartyAuditTrailReport2 {
 	 * PartyAuditTrailReport1.mmPartyIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyAuditTrailReport2, SystemPartyIdentification3> mmPartyIdentification = new MMMessageAssociationEnd<PartyAuditTrailReport2, SystemPartyIdentification3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyAuditTrailReport2.mmObject();
 			isDerived = false;
@@ -257,7 +278,17 @@ public class PartyAuditTrailReport2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification3.mmObject();
+			type_lazy = () -> SystemPartyIdentification3.mmObject();
+		}
+
+		@Override
+		public SystemPartyIdentification3 getValue(PartyAuditTrailReport2 obj) {
+			return obj.getPartyIdentification();
+		}
+
+		@Override
+		public void setValue(PartyAuditTrailReport2 obj, SystemPartyIdentification3 value) {
+			obj.setPartyIdentification(value);
 		}
 	};
 
@@ -299,7 +330,7 @@ public class PartyAuditTrailReport2 {
 		return partyIdentification;
 	}
 
-	public PartyAuditTrailReport2 setPartyIdentification(com.tools20022.repository.msg.SystemPartyIdentification3 partyIdentification) {
+	public PartyAuditTrailReport2 setPartyIdentification(SystemPartyIdentification3 partyIdentification) {
 		this.partyIdentification = Objects.requireNonNull(partyIdentification);
 		return this;
 	}

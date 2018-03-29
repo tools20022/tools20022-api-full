@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ProprietaryReference1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -125,7 +126,7 @@ public class TransactionReferences1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionReferences1, Optional<Max35Text>> mmMessageIdentification = new MMMessageAttribute<TransactionReferences1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReferences1.mmObject();
 			isDerived = false;
@@ -136,6 +137,16 @@ public class TransactionReferences1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransactionReferences1 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(TransactionReferences1 obj, Optional<Max35Text> value) {
+			obj.setMessageIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctSvcrRef")
@@ -173,7 +184,7 @@ public class TransactionReferences1 {
 	 * "The account servicing institution's reference for the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicerReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionReferences1, Optional<Max35Text>> mmAccountServicerReference = new MMMessageAttribute<TransactionReferences1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountServicerTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReferences1.mmObject();
@@ -185,6 +196,16 @@ public class TransactionReferences1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransactionReferences1 obj) {
+			return obj.getAccountServicerReference();
+		}
+
+		@Override
+		public void setValue(TransactionReferences1 obj, Optional<Max35Text> value) {
+			obj.setAccountServicerReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstrId")
@@ -223,7 +244,7 @@ public class TransactionReferences1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionReferences1, Optional<Max35Text>> mmInstructionIdentification = new MMMessageAttribute<TransactionReferences1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmInstructionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReferences1.mmObject();
@@ -235,6 +256,16 @@ public class TransactionReferences1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransactionReferences1 obj) {
+			return obj.getInstructionIdentification();
+		}
+
+		@Override
+		public void setValue(TransactionReferences1 obj, Optional<Max35Text> value) {
+			obj.setInstructionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EndToEndId")
@@ -273,7 +304,7 @@ public class TransactionReferences1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEndToEndIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionReferences1, Optional<Max35Text>> mmEndToEndIdentification = new MMMessageAttribute<TransactionReferences1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmEndToEndIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReferences1.mmObject();
@@ -285,6 +316,16 @@ public class TransactionReferences1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransactionReferences1 obj) {
+			return obj.getEndToEndIdentification();
+		}
+
+		@Override
+		public void setValue(TransactionReferences1 obj, Optional<Max35Text> value) {
+			obj.setEndToEndIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxId")
@@ -323,7 +364,7 @@ public class TransactionReferences1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionReferences1, Optional<Max35Text>> mmTransactionIdentification = new MMMessageAttribute<TransactionReferences1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReferences1.mmObject();
@@ -335,6 +376,16 @@ public class TransactionReferences1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransactionReferences1 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(TransactionReferences1 obj, Optional<Max35Text> value) {
+			obj.setTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MndtId")
@@ -373,7 +424,7 @@ public class TransactionReferences1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMandateIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionReferences1, Optional<Max35Text>> mmMandateIdentification = new MMMessageAttribute<TransactionReferences1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Mandate.mmMandateIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReferences1.mmObject();
@@ -385,6 +436,16 @@ public class TransactionReferences1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransactionReferences1 obj) {
+			return obj.getMandateIdentification();
+		}
+
+		@Override
+		public void setValue(TransactionReferences1 obj, Optional<Max35Text> value) {
+			obj.setMandateIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ChqNb")
@@ -421,7 +482,7 @@ public class TransactionReferences1 {
 	 * definition} = "Identifies the cheque number."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmChequeNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionReferences1, Optional<Max35Text>> mmChequeNumber = new MMMessageAttribute<TransactionReferences1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Cheque.mmNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReferences1.mmObject();
@@ -433,6 +494,16 @@ public class TransactionReferences1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransactionReferences1 obj) {
+			return obj.getChequeNumber();
+		}
+
+		@Override
+		public void setValue(TransactionReferences1 obj, Optional<Max35Text> value) {
+			obj.setChequeNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClrSysRef")
@@ -471,7 +542,7 @@ public class TransactionReferences1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClearingSystemReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionReferences1, Optional<Max35Text>> mmClearingSystemReference = new MMMessageAttribute<TransactionReferences1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmClearingSystemReference;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReferences1.mmObject();
@@ -483,6 +554,16 @@ public class TransactionReferences1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransactionReferences1 obj) {
+			return obj.getClearingSystemReference();
+		}
+
+		@Override
+		public void setValue(TransactionReferences1 obj, Optional<Max35Text> value) {
+			obj.setClearingSystemReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Prtry")
@@ -513,7 +594,7 @@ public class TransactionReferences1 {
 	 * definition} = "Proprietary reference of an underlying transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionReferences1, Optional<ProprietaryReference1>> mmProprietary = new MMMessageAssociationEnd<TransactionReferences1, Optional<ProprietaryReference1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReferences1.mmObject();
 			isDerived = false;
@@ -524,7 +605,17 @@ public class TransactionReferences1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ProprietaryReference1.mmObject();
+			type_lazy = () -> ProprietaryReference1.mmObject();
+		}
+
+		@Override
+		public Optional<ProprietaryReference1> getValue(TransactionReferences1 obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(TransactionReferences1 obj, Optional<ProprietaryReference1> value) {
+			obj.setProprietary(value.orElse(null));
 		}
 	};
 
@@ -623,7 +714,7 @@ public class TransactionReferences1 {
 		return proprietary == null ? Optional.empty() : Optional.of(proprietary);
 	}
 
-	public TransactionReferences1 setProprietary(com.tools20022.repository.msg.ProprietaryReference1 proprietary) {
+	public TransactionReferences1 setProprietary(ProprietaryReference1 proprietary) {
 		this.proprietary = proprietary;
 		return this;
 	}

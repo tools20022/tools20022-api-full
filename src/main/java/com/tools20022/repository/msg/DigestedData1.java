@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AlgorithmIdentification1;
+import com.tools20022.repository.msg.EncapsulatedContent1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -106,7 +108,7 @@ public class DigestedData1 {
 	 * definition} = "Version of the data structure."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DigestedData1, Optional<Number>> mmVersion = new MMMessageAttribute<DigestedData1, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DigestedData1.mmObject();
 			isDerived = false;
@@ -118,9 +120,19 @@ public class DigestedData1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
+
+		@Override
+		public Optional<Number> getValue(DigestedData1 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(DigestedData1 obj, Optional<Number> value) {
+			obj.setVersion(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "DgstAlgo", required = true)
-	protected List<com.tools20022.repository.msg.AlgorithmIdentification1> digestAlgorithm;
+	protected List<AlgorithmIdentification1> digestAlgorithm;
 	/**
 	 * 
 	 <p>
@@ -147,7 +159,7 @@ public class DigestedData1 {
 	 * definition} = "Identification of a digest algorithm."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDigestAlgorithm = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DigestedData1, List<AlgorithmIdentification1>> mmDigestAlgorithm = new MMMessageAssociationEnd<DigestedData1, List<AlgorithmIdentification1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DigestedData1.mmObject();
 			isDerived = false;
@@ -157,7 +169,17 @@ public class DigestedData1 {
 			definition = "Identification of a digest algorithm.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification1.mmObject();
+			type_lazy = () -> AlgorithmIdentification1.mmObject();
+		}
+
+		@Override
+		public List<AlgorithmIdentification1> getValue(DigestedData1 obj) {
+			return obj.getDigestAlgorithm();
+		}
+
+		@Override
+		public void setValue(DigestedData1 obj, List<AlgorithmIdentification1> value) {
+			obj.setDigestAlgorithm(value);
 		}
 	};
 	@XmlElement(name = "NcpsltdCntt", required = true)
@@ -187,7 +209,7 @@ public class DigestedData1 {
 	 * definition} = "Data on which the digest is computed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEncapsulatedContent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DigestedData1, EncapsulatedContent1> mmEncapsulatedContent = new MMMessageAssociationEnd<DigestedData1, EncapsulatedContent1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DigestedData1.mmObject();
 			isDerived = false;
@@ -198,7 +220,17 @@ public class DigestedData1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.EncapsulatedContent1.mmObject();
+			type_lazy = () -> EncapsulatedContent1.mmObject();
+		}
+
+		@Override
+		public EncapsulatedContent1 getValue(DigestedData1 obj) {
+			return obj.getEncapsulatedContent();
+		}
+
+		@Override
+		public void setValue(DigestedData1 obj, EncapsulatedContent1 value) {
+			obj.setEncapsulatedContent(value);
 		}
 	};
 	@XmlElement(name = "Dgst", required = true)
@@ -229,7 +261,7 @@ public class DigestedData1 {
 	 * definition} = "Result of data-digesting process."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDigest = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DigestedData1, Max140Text> mmDigest = new MMMessageAttribute<DigestedData1, Max140Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DigestedData1.mmObject();
 			isDerived = false;
@@ -240,6 +272,16 @@ public class DigestedData1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Max140Text getValue(DigestedData1 obj) {
+			return obj.getDigest();
+		}
+
+		@Override
+		public void setValue(DigestedData1 obj, Max140Text value) {
+			obj.setDigest(value);
 		}
 	};
 
@@ -271,7 +313,7 @@ public class DigestedData1 {
 		return digestAlgorithm == null ? digestAlgorithm = new ArrayList<>() : digestAlgorithm;
 	}
 
-	public DigestedData1 setDigestAlgorithm(List<com.tools20022.repository.msg.AlgorithmIdentification1> digestAlgorithm) {
+	public DigestedData1 setDigestAlgorithm(List<AlgorithmIdentification1> digestAlgorithm) {
 		this.digestAlgorithm = Objects.requireNonNull(digestAlgorithm);
 		return this;
 	}
@@ -280,7 +322,7 @@ public class DigestedData1 {
 		return encapsulatedContent;
 	}
 
-	public DigestedData1 setEncapsulatedContent(com.tools20022.repository.msg.EncapsulatedContent1 encapsulatedContent) {
+	public DigestedData1 setEncapsulatedContent(EncapsulatedContent1 encapsulatedContent) {
 		this.encapsulatedContent = Objects.requireNonNull(encapsulatedContent);
 		return this;
 	}

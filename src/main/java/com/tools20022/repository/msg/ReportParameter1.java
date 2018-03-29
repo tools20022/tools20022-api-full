@@ -95,7 +95,7 @@ public class ReportParameter1 {
 	 * definition} = "Name or type of the parameter being returned."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportParameter1, Max70Text> mmName = new MMMessageAttribute<ReportParameter1, Max70Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportParameter1.mmObject();
 			isDerived = false;
@@ -106,6 +106,16 @@ public class ReportParameter1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Max70Text getValue(ReportParameter1 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(ReportParameter1 obj, Max70Text value) {
+			obj.setName(value);
 		}
 	};
 	@XmlElement(name = "Val", required = true)
@@ -137,7 +147,7 @@ public class ReportParameter1 {
 	 * definition} = "Value of the parameter being returned."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportParameter1, Max350Text> mmValue = new MMMessageAttribute<ReportParameter1, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportParameter1.mmObject();
 			isDerived = false;
@@ -148,6 +158,16 @@ public class ReportParameter1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(ReportParameter1 obj) {
+			return obj.getValue();
+		}
+
+		@Override
+		public void setValue(ReportParameter1 obj, Max350Text value) {
+			obj.setValue(value);
 		}
 	};
 

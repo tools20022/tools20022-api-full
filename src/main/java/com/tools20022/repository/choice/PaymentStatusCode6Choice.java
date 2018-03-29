@@ -129,7 +129,7 @@ public class PaymentStatusCode6Choice {
 	 * PaymentStatusCode5Choice.mmPending}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPending = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentStatusCode6Choice, PendingStatus4Code> mmPending = new MMMessageAttribute<PaymentStatusCode6Choice, PendingStatus4Code>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmInstructionStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentStatusCode6Choice.mmObject();
@@ -142,6 +142,16 @@ public class PaymentStatusCode6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PendingStatus4Code.mmObject();
+		}
+
+		@Override
+		public PendingStatus4Code getValue(PaymentStatusCode6Choice obj) {
+			return obj.getPending();
+		}
+
+		@Override
+		public void setValue(PaymentStatusCode6Choice obj, PendingStatus4Code value) {
+			obj.setPending(value);
 		}
 	};
 	@XmlElement(name = "Fnl", required = true)
@@ -184,7 +194,7 @@ public class PaymentStatusCode6Choice {
 	 * PaymentStatusCode5Choice.mmFinal}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinal = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentStatusCode6Choice, FinalStatus1Code> mmFinal = new MMMessageAttribute<PaymentStatusCode6Choice, FinalStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmInstructionStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentStatusCode6Choice.mmObject();
@@ -197,6 +207,16 @@ public class PaymentStatusCode6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FinalStatus1Code.mmObject();
+		}
+
+		@Override
+		public FinalStatus1Code getValue(PaymentStatusCode6Choice obj) {
+			return obj.getFinal();
+		}
+
+		@Override
+		public void setValue(PaymentStatusCode6Choice obj, FinalStatus1Code value) {
+			obj.setFinal(value);
 		}
 	};
 	@XmlElement(name = "RTGS", required = true)
@@ -239,7 +259,7 @@ public class PaymentStatusCode6Choice {
 	 * PaymentStatusCode5Choice.mmRTGS}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRTGS = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentStatusCode6Choice, Max4AlphaNumericText> mmRTGS = new MMMessageAttribute<PaymentStatusCode6Choice, Max4AlphaNumericText>() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmRTGS;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentStatusCode6Choice.mmObject();
@@ -252,6 +272,16 @@ public class PaymentStatusCode6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max4AlphaNumericText getValue(PaymentStatusCode6Choice obj) {
+			return obj.getRTGS();
+		}
+
+		@Override
+		public void setValue(PaymentStatusCode6Choice obj, Max4AlphaNumericText value) {
+			obj.setRTGS(value);
 		}
 	};
 	@XmlElement(name = "Sttlm", required = true)
@@ -294,7 +324,7 @@ public class PaymentStatusCode6Choice {
 	 * PaymentStatusCode5Choice.mmSettlement}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlement = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentStatusCode6Choice, Max4AlphaNumericText> mmSettlement = new MMMessageAttribute<PaymentStatusCode6Choice, Max4AlphaNumericText>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInstruction.mmSettlementInstruction;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentStatusCode6Choice.mmObject();
@@ -307,6 +337,16 @@ public class PaymentStatusCode6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max4AlphaNumericText getValue(PaymentStatusCode6Choice obj) {
+			return obj.getSettlement();
+		}
+
+		@Override
+		public void setValue(PaymentStatusCode6Choice obj, Max4AlphaNumericText value) {
+			obj.setSettlement(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -348,7 +388,7 @@ public class PaymentStatusCode6Choice {
 	 * PaymentStatusCode5Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentStatusCode6Choice, Max35Text> mmProprietary = new MMMessageAttribute<PaymentStatusCode6Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmInstructionStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentStatusCode6Choice.mmObject();
@@ -361,6 +401,16 @@ public class PaymentStatusCode6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PaymentStatusCode6Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(PaymentStatusCode6Choice obj, Max35Text value) {
+			obj.setProprietary(value);
 		}
 	};
 

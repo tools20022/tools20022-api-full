@@ -51,11 +51,15 @@ public class ConstraintUSeOfSecuritiesPurchasedRule {
 	 */
 	public static final MMConstraint<CorporateActionEventStageFormat4SD1> forCorporateActionEventStageFormat4SD1 = new MMConstraint<CorporateActionEventStageFormat4SD1>() {
 		{
-			validator = ConstraintUSeOfSecuritiesPurchasedRule::checkCorporateActionEventStageFormat4SD1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USeOfSecuritiesPurchasedRule";
 			definition = "The value of SecuritiesPurchased should be the actual number, or 0 (if, as a result, TEND or BIDS will not take place).";
 			owner_lazy = () -> CorporateActionEventStageFormat4SD1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventStageFormat4SD1 obj) throws Exception {
+			checkCorporateActionEventStageFormat4SD1(obj);
 		}
 	};
 

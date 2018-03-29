@@ -57,12 +57,16 @@ public class ConstraintPaymentInformationReversalAndTransactionInformationNotPre
 	 */
 	public static final MMConstraint<OriginalPaymentInformation2> forOriginalPaymentInformation2 = new MMConstraint<OriginalPaymentInformation2>() {
 		{
-			validator = ConstraintPaymentInformationReversalAndTransactionInformationNotPresentRule::checkOriginalPaymentInformation2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationReversalAndTransactionInformationNotPresentRule";
 			definition = "If PaymentInformationReversal is true, then TransactionInformation is not allowed.";
 			owner_lazy = () -> OriginalPaymentInformation2.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionInformation[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentInformationReversal</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentInformationReversal</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInformation2 obj) throws Exception {
+			checkOriginalPaymentInformation2(obj);
 		}
 	};
 	/**
@@ -93,12 +97,16 @@ public class ConstraintPaymentInformationReversalAndTransactionInformationNotPre
 	 */
 	public static final MMConstraint<OriginalPaymentInstruction2> forOriginalPaymentInstruction2 = new MMConstraint<OriginalPaymentInstruction2>() {
 		{
-			validator = ConstraintPaymentInformationReversalAndTransactionInformationNotPresentRule::checkOriginalPaymentInstruction2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationReversalAndTransactionInformationNotPresentRule";
 			definition = "If PaymentInformationReversal is true, then TransactionInformation is not allowed.";
 			owner_lazy = () -> OriginalPaymentInstruction2.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionInformation[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentInformationReversal</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentInformationReversal</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInstruction2 obj) throws Exception {
+			checkOriginalPaymentInstruction2(obj);
 		}
 	};
 	/**
@@ -138,13 +146,17 @@ public class ConstraintPaymentInformationReversalAndTransactionInformationNotPre
 	 */
 	public static final MMConstraint<OriginalPaymentInstruction7> forOriginalPaymentInstruction7 = new MMConstraint<OriginalPaymentInstruction7>() {
 		{
-			validator = ConstraintPaymentInformationReversalAndTransactionInformationNotPresentRule::checkOriginalPaymentInstruction7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationReversalAndTransactionInformationNotPresentRule";
 			definition = "If PaymentInformationReversal is true, then TransactionInformation is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPaymentInformationReversalAndTransactionInformationNotPresentRule.forOriginalPaymentInstruction11);
 			owner_lazy = () -> OriginalPaymentInstruction7.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionInformation[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentInformationReversal</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentInformationReversal</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInstruction7 obj) throws Exception {
+			checkOriginalPaymentInstruction7(obj);
 		}
 	};
 	/**
@@ -190,7 +202,6 @@ public class ConstraintPaymentInformationReversalAndTransactionInformationNotPre
 	 */
 	public static final MMConstraint<OriginalPaymentInstruction11> forOriginalPaymentInstruction11 = new MMConstraint<OriginalPaymentInstruction11>() {
 		{
-			validator = ConstraintPaymentInformationReversalAndTransactionInformationNotPresentRule::checkOriginalPaymentInstruction11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationReversalAndTransactionInformationNotPresentRule";
 			definition = "If PaymentInformationReversal is true, then TransactionInformation is not allowed.";
@@ -198,6 +209,11 @@ public class ConstraintPaymentInformationReversalAndTransactionInformationNotPre
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPaymentInformationReversalAndTransactionInformationNotPresentRule.forOriginalPaymentInstruction7;
 			owner_lazy = () -> OriginalPaymentInstruction11.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionInformation[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentInformationReversal</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentInformationReversal</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInstruction11 obj) throws Exception {
+			checkOriginalPaymentInstruction11(obj);
 		}
 	};
 	/**
@@ -243,7 +259,6 @@ public class ConstraintPaymentInformationReversalAndTransactionInformationNotPre
 	 */
 	public static final MMConstraint<OriginalPaymentInstruction16> forOriginalPaymentInstruction16 = new MMConstraint<OriginalPaymentInstruction16>() {
 		{
-			validator = ConstraintPaymentInformationReversalAndTransactionInformationNotPresentRule::checkOriginalPaymentInstruction16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationReversalAndTransactionInformationNotPresentRule";
 			definition = "If PaymentInformationReversal is true, then TransactionInformation is not allowed.";
@@ -251,6 +266,11 @@ public class ConstraintPaymentInformationReversalAndTransactionInformationNotPre
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPaymentInformationReversalAndTransactionInformationNotPresentRule.forOriginalPaymentInstruction11;
 			owner_lazy = () -> OriginalPaymentInstruction16.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionInformation[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentInformationReversal</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentInformationReversal</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInstruction16 obj) throws Exception {
+			checkOriginalPaymentInstruction16(obj);
 		}
 	};
 	/**
@@ -296,7 +316,6 @@ public class ConstraintPaymentInformationReversalAndTransactionInformationNotPre
 	 */
 	public static final MMConstraint<OriginalPaymentInstruction21> forOriginalPaymentInstruction21 = new MMConstraint<OriginalPaymentInstruction21>() {
 		{
-			validator = ConstraintPaymentInformationReversalAndTransactionInformationNotPresentRule::checkOriginalPaymentInstruction21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationReversalAndTransactionInformationNotPresentRule";
 			definition = "If PaymentInformationReversal is true, then TransactionInformation is not allowed.";
@@ -304,6 +323,11 @@ public class ConstraintPaymentInformationReversalAndTransactionInformationNotPre
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPaymentInformationReversalAndTransactionInformationNotPresentRule.forOriginalPaymentInstruction16;
 			owner_lazy = () -> OriginalPaymentInstruction21.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionInformation[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentInformationReversal</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentInformationReversal</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInstruction21 obj) throws Exception {
+			checkOriginalPaymentInstruction21(obj);
 		}
 	};
 	/**
@@ -340,13 +364,17 @@ public class ConstraintPaymentInformationReversalAndTransactionInformationNotPre
 	 */
 	public static final MMConstraint<OriginalPaymentInstruction28> forOriginalPaymentInstruction28 = new MMConstraint<OriginalPaymentInstruction28>() {
 		{
-			validator = ConstraintPaymentInformationReversalAndTransactionInformationNotPresentRule::checkOriginalPaymentInstruction28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationReversalAndTransactionInformationNotPresentRule";
 			definition = "If PaymentInformationReversal is true, then TransactionInformation is not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPaymentInformationReversalAndTransactionInformationNotPresentRule.forOriginalPaymentInstruction21;
 			owner_lazy = () -> OriginalPaymentInstruction28.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionInformation[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentInformationReversal</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentInformationReversal</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInstruction28 obj) throws Exception {
+			checkOriginalPaymentInstruction28(obj);
 		}
 	};
 

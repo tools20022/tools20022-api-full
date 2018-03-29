@@ -25,6 +25,8 @@ import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.AssetHolding;
 import com.tools20022.repository.entity.Collateral;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AssetHolding1;
+import com.tools20022.repository.msg.GenericIdentification165;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -135,7 +137,7 @@ public class CollateralAccount4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralAccount4, GenericIdentification165> mmIdentification = new MMMessageAssociationEnd<CollateralAccount4, GenericIdentification165>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralAccount4.mmObject();
@@ -148,11 +150,21 @@ public class CollateralAccount4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification165.mmObject();
+			type_lazy = () -> GenericIdentification165.mmObject();
+		}
+
+		@Override
+		public GenericIdentification165 getValue(CollateralAccount4 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(CollateralAccount4 obj, GenericIdentification165 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "AsstHldg", required = true)
-	protected List<com.tools20022.repository.msg.AssetHolding1> assetHolding;
+	protected List<AssetHolding1> assetHolding;
 	/**
 	 * 
 	 <p>
@@ -184,7 +196,7 @@ public class CollateralAccount4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAssetHolding = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralAccount4, List<AssetHolding1>> mmAssetHolding = new MMMessageAssociationEnd<CollateralAccount4, List<AssetHolding1>>() {
 		{
 			businessComponentTrace_lazy = () -> AssetHolding.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralAccount4.mmObject();
@@ -195,7 +207,17 @@ public class CollateralAccount4 {
 			definition = "Specifies the financial instruments placed as collateral.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AssetHolding1.mmObject();
+			type_lazy = () -> AssetHolding1.mmObject();
+		}
+
+		@Override
+		public List<AssetHolding1> getValue(CollateralAccount4 obj) {
+			return obj.getAssetHolding();
+		}
+
+		@Override
+		public void setValue(CollateralAccount4 obj, List<AssetHolding1> value) {
+			obj.setAssetHolding(value);
 		}
 	};
 
@@ -219,7 +241,7 @@ public class CollateralAccount4 {
 		return identification;
 	}
 
-	public CollateralAccount4 setIdentification(com.tools20022.repository.msg.GenericIdentification165 identification) {
+	public CollateralAccount4 setIdentification(GenericIdentification165 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}
@@ -228,7 +250,7 @@ public class CollateralAccount4 {
 		return assetHolding == null ? assetHolding = new ArrayList<>() : assetHolding;
 	}
 
-	public CollateralAccount4 setAssetHolding(List<com.tools20022.repository.msg.AssetHolding1> assetHolding) {
+	public CollateralAccount4 setAssetHolding(List<AssetHolding1> assetHolding) {
 		this.assetHolding = Objects.requireNonNull(assetHolding);
 		return this;
 	}

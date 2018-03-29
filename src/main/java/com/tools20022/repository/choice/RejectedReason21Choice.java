@@ -111,7 +111,7 @@ public class RejectedReason21Choice {
 	 * RejectedReason20Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectedReason21Choice, RejectedStatusReason8Code> mmCode = new MMMessageAttribute<RejectedReason21Choice, RejectedStatusReason8Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectedReason21Choice.mmObject();
 			isDerived = false;
@@ -124,6 +124,16 @@ public class RejectedReason21Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RejectedStatusReason8Code.mmObject();
+		}
+
+		@Override
+		public RejectedStatusReason8Code getValue(RejectedReason21Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RejectedReason21Choice obj, RejectedStatusReason8Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -164,7 +174,7 @@ public class RejectedReason21Choice {
 	 * RejectedReason20Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectedReason21Choice, GenericIdentification1> mmProprietary = new MMMessageAttribute<RejectedReason21Choice, GenericIdentification1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectedReason21Choice.mmObject();
 			isDerived = false;
@@ -177,6 +187,16 @@ public class RejectedReason21Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(RejectedReason21Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RejectedReason21Choice obj, GenericIdentification1 value) {
+			obj.setProprietary(value);
 		}
 	};
 

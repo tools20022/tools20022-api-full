@@ -104,7 +104,7 @@ public class LegIdentification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRedemptionLegIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LegIdentification1Choice, Max35Text> mmRedemptionLegIdentification = new MMMessageAttribute<LegIdentification1Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.LegIdentification1Choice.mmObject();
@@ -116,6 +116,16 @@ public class LegIdentification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(LegIdentification1Choice obj) {
+			return obj.getRedemptionLegIdentification();
+		}
+
+		@Override
+		public void setValue(LegIdentification1Choice obj, Max35Text value) {
+			obj.setRedemptionLegIdentification(value);
 		}
 	};
 	@XmlElement(name = "SbcptLegId", required = true)
@@ -154,7 +164,7 @@ public class LegIdentification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubscriptionLegIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LegIdentification1Choice, Max35Text> mmSubscriptionLegIdentification = new MMMessageAttribute<LegIdentification1Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.LegIdentification1Choice.mmObject();
@@ -166,6 +176,16 @@ public class LegIdentification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(LegIdentification1Choice obj) {
+			return obj.getSubscriptionLegIdentification();
+		}
+
+		@Override
+		public void setValue(LegIdentification1Choice obj, Max35Text value) {
+			obj.setSubscriptionLegIdentification(value);
 		}
 	};
 

@@ -22,6 +22,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.catm.StatusReportV06;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification71;
+import com.tools20022.repository.msg.TerminalManagementDataSet21;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -132,7 +134,7 @@ public class StatusReport6 {
 	 * StatusReport5.mmPOIIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPOIIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusReport6, GenericIdentification71> mmPOIIdentification = new MMMessageAssociationEnd<StatusReport6, GenericIdentification71>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReport6.mmObject();
 			isDerived = false;
@@ -145,7 +147,17 @@ public class StatusReport6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification71.mmObject();
+			type_lazy = () -> GenericIdentification71.mmObject();
+		}
+
+		@Override
+		public GenericIdentification71 getValue(StatusReport6 obj) {
+			return obj.getPOIIdentification();
+		}
+
+		@Override
+		public void setValue(StatusReport6 obj, GenericIdentification71 value) {
+			obj.setPOIIdentification(value);
 		}
 	};
 	@XmlElement(name = "TermnlMgrId", required = true)
@@ -191,7 +203,7 @@ public class StatusReport6 {
 	 * StatusReport5.mmTerminalManagerIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTerminalManagerIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusReport6, GenericIdentification71> mmTerminalManagerIdentification = new MMMessageAssociationEnd<StatusReport6, GenericIdentification71>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReport6.mmObject();
 			isDerived = false;
@@ -204,7 +216,17 @@ public class StatusReport6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification71.mmObject();
+			type_lazy = () -> GenericIdentification71.mmObject();
+		}
+
+		@Override
+		public GenericIdentification71 getValue(StatusReport6 obj) {
+			return obj.getTerminalManagerIdentification();
+		}
+
+		@Override
+		public void setValue(StatusReport6 obj, GenericIdentification71 value) {
+			obj.setTerminalManagerIdentification(value);
 		}
 	};
 	@XmlElement(name = "DataSet", required = true)
@@ -248,7 +270,7 @@ public class StatusReport6 {
 	 * StatusReport5.mmDataSet}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSet = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusReport6, TerminalManagementDataSet21> mmDataSet = new MMMessageAssociationEnd<StatusReport6, TerminalManagementDataSet21>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReport6.mmObject();
 			isDerived = false;
@@ -261,7 +283,17 @@ public class StatusReport6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet21.mmObject();
+			type_lazy = () -> TerminalManagementDataSet21.mmObject();
+		}
+
+		@Override
+		public TerminalManagementDataSet21 getValue(StatusReport6 obj) {
+			return obj.getDataSet();
+		}
+
+		@Override
+		public void setValue(StatusReport6 obj, TerminalManagementDataSet21 value) {
+			obj.setDataSet(value);
 		}
 	};
 
@@ -286,7 +318,7 @@ public class StatusReport6 {
 		return pOIIdentification;
 	}
 
-	public StatusReport6 setPOIIdentification(com.tools20022.repository.msg.GenericIdentification71 pOIIdentification) {
+	public StatusReport6 setPOIIdentification(GenericIdentification71 pOIIdentification) {
 		this.pOIIdentification = Objects.requireNonNull(pOIIdentification);
 		return this;
 	}
@@ -295,7 +327,7 @@ public class StatusReport6 {
 		return terminalManagerIdentification;
 	}
 
-	public StatusReport6 setTerminalManagerIdentification(com.tools20022.repository.msg.GenericIdentification71 terminalManagerIdentification) {
+	public StatusReport6 setTerminalManagerIdentification(GenericIdentification71 terminalManagerIdentification) {
 		this.terminalManagerIdentification = Objects.requireNonNull(terminalManagerIdentification);
 		return this;
 	}
@@ -304,7 +336,7 @@ public class StatusReport6 {
 		return dataSet;
 	}
 
-	public StatusReport6 setDataSet(com.tools20022.repository.msg.TerminalManagementDataSet21 dataSet) {
+	public StatusReport6 setDataSet(TerminalManagementDataSet21 dataSet) {
 		this.dataSet = Objects.requireNonNull(dataSet);
 		return this;
 	}

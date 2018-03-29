@@ -108,7 +108,7 @@ public class InvestmentAccountCategory1Choice {
 	 * definition} = "Category of investment account expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccountCategory1Choice, InvestmentAccountCategory1Code> mmCode = new MMMessageAttribute<InvestmentAccountCategory1Choice, InvestmentAccountCategory1Code>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmCategory;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InvestmentAccountCategory1Choice.mmObject();
@@ -120,6 +120,16 @@ public class InvestmentAccountCategory1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InvestmentAccountCategory1Code.mmObject();
+		}
+
+		@Override
+		public InvestmentAccountCategory1Code getValue(InvestmentAccountCategory1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountCategory1Choice obj, InvestmentAccountCategory1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -157,7 +167,7 @@ public class InvestmentAccountCategory1Choice {
 	 * "Category of investment account expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccountCategory1Choice, GenericIdentification47> mmProprietary = new MMMessageAssociationEnd<InvestmentAccountCategory1Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmCategory;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InvestmentAccountCategory1Choice.mmObject();
@@ -170,6 +180,16 @@ public class InvestmentAccountCategory1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(InvestmentAccountCategory1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountCategory1Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -118,7 +118,7 @@ public class ContactInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContactInformation1, Optional<Max350Text>> mmName = new MMMessageAttribute<ContactInformation1, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContactInformation1.mmObject();
@@ -130,6 +130,16 @@ public class ContactInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(ContactInformation1 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(ContactInformation1 obj, Optional<Max350Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FaxNb")
@@ -168,7 +178,7 @@ public class ContactInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFaxNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContactInformation1, Optional<PhoneNumber>> mmFaxNumber = new MMMessageAttribute<ContactInformation1, Optional<PhoneNumber>>() {
 		{
 			businessElementTrace_lazy = () -> PhoneAddress.mmFaxNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContactInformation1.mmObject();
@@ -180,6 +190,16 @@ public class ContactInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PhoneNumber.mmObject();
+		}
+
+		@Override
+		public Optional<PhoneNumber> getValue(ContactInformation1 obj) {
+			return obj.getFaxNumber();
+		}
+
+		@Override
+		public void setValue(ContactInformation1 obj, Optional<PhoneNumber> value) {
+			obj.setFaxNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TelNb")
@@ -218,7 +238,7 @@ public class ContactInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTelephoneNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContactInformation1, Optional<PhoneNumber>> mmTelephoneNumber = new MMMessageAttribute<ContactInformation1, Optional<PhoneNumber>>() {
 		{
 			businessElementTrace_lazy = () -> PhoneAddress.mmPhoneNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContactInformation1.mmObject();
@@ -230,6 +250,16 @@ public class ContactInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PhoneNumber.mmObject();
+		}
+
+		@Override
+		public Optional<PhoneNumber> getValue(ContactInformation1 obj) {
+			return obj.getTelephoneNumber();
+		}
+
+		@Override
+		public void setValue(ContactInformation1 obj, Optional<PhoneNumber> value) {
+			obj.setTelephoneNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EmailAdr")
@@ -266,7 +296,7 @@ public class ContactInformation1 {
 	 * definition} = "Address for electronic mail (e-mail)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEmailAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContactInformation1, Optional<Max256Text>> mmEmailAddress = new MMMessageAttribute<ContactInformation1, Optional<Max256Text>>() {
 		{
 			businessElementTrace_lazy = () -> ElectronicAddress.mmEmailAddress;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContactInformation1.mmObject();
@@ -278,6 +308,16 @@ public class ContactInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max256Text> getValue(ContactInformation1 obj) {
+			return obj.getEmailAddress();
+		}
+
+		@Override
+		public void setValue(ContactInformation1 obj, Optional<Max256Text> value) {
+			obj.setEmailAddress(value.orElse(null));
 		}
 	};
 

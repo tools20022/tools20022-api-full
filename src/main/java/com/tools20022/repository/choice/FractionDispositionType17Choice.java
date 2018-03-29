@@ -133,7 +133,7 @@ public class FractionDispositionType17Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FractionDispositionType17Choice, FractionDispositionType10Code> mmCode = new MMMessageAttribute<FractionDispositionType17Choice, FractionDispositionType10Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmFractionDisposition;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FractionDispositionType17Choice.mmObject();
@@ -146,6 +146,16 @@ public class FractionDispositionType17Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FractionDispositionType10Code.mmObject();
+		}
+
+		@Override
+		public FractionDispositionType10Code getValue(FractionDispositionType17Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(FractionDispositionType17Choice obj, FractionDispositionType10Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -191,7 +201,7 @@ public class FractionDispositionType17Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FractionDispositionType17Choice, GenericIdentification20> mmProprietary = new MMMessageAssociationEnd<FractionDispositionType17Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmFractionDisposition;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FractionDispositionType17Choice.mmObject();
@@ -205,6 +215,16 @@ public class FractionDispositionType17Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(FractionDispositionType17Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(FractionDispositionType17Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

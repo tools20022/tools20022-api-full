@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max105Text;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PaymentStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification43;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -134,7 +135,7 @@ public class PaymentCancellationReason3 {
 	 * PaymentCancellationReason2.mmOriginator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentCancellationReason3, Optional<PartyIdentification43>> mmOriginator = new MMMessageAssociationEnd<PaymentCancellationReason3, Optional<PartyIdentification43>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCancellationReason3.mmObject();
@@ -148,7 +149,17 @@ public class PaymentCancellationReason3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
+			type_lazy = () -> PartyIdentification43.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification43> getValue(PaymentCancellationReason3 obj) {
+			return obj.getOriginator();
+		}
+
+		@Override
+		public void setValue(PaymentCancellationReason3 obj, Optional<PartyIdentification43> value) {
+			obj.setOriginator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rsn")
@@ -198,7 +209,7 @@ public class PaymentCancellationReason3 {
 	 * PaymentCancellationReason2.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentCancellationReason3, Optional<CancellationReason33Choice>> mmReason = new MMMessageAssociationEnd<PaymentCancellationReason3, Optional<CancellationReason33Choice>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCancellationReason3.mmObject();
@@ -213,6 +224,16 @@ public class PaymentCancellationReason3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CancellationReason33Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CancellationReason33Choice> getValue(PaymentCancellationReason3 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(PaymentCancellationReason3 obj, Optional<CancellationReason33Choice> value) {
+			obj.setReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -257,7 +278,7 @@ public class PaymentCancellationReason3 {
 	 * PaymentCancellationReason2.mmAdditionalInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCancellationReason3, List<Max105Text>> mmAdditionalInformation = new MMMessageAttribute<PaymentCancellationReason3, List<Max105Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCancellationReason3.mmObject();
 			isDerived = false;
@@ -269,6 +290,16 @@ public class PaymentCancellationReason3 {
 			previousVersion_lazy = () -> PaymentCancellationReason2.mmAdditionalInformation;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public List<Max105Text> getValue(PaymentCancellationReason3 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(PaymentCancellationReason3 obj, List<Max105Text> value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 
@@ -293,7 +324,7 @@ public class PaymentCancellationReason3 {
 		return originator == null ? Optional.empty() : Optional.of(originator);
 	}
 
-	public PaymentCancellationReason3 setOriginator(com.tools20022.repository.msg.PartyIdentification43 originator) {
+	public PaymentCancellationReason3 setOriginator(PartyIdentification43 originator) {
 		this.originator = originator;
 		return this;
 	}

@@ -102,7 +102,7 @@ public class CommissionType5Choice {
 	 * definition} = "Commission type expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommissionType5Choice, CommissionType6Code> mmCode = new MMMessageAttribute<CommissionType5Choice, CommissionType6Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CommissionType5Choice.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class CommissionType5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CommissionType6Code.mmObject();
+		}
+
+		@Override
+		public CommissionType6Code getValue(CommissionType5Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CommissionType5Choice obj, CommissionType6Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -150,7 +160,7 @@ public class CommissionType5Choice {
 	 * definition} = "Commission type expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommissionType5Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<CommissionType5Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmAutomaticBorrowing;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CommissionType5Choice.mmObject();
@@ -162,6 +172,16 @@ public class CommissionType5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(CommissionType5Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CommissionType5Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

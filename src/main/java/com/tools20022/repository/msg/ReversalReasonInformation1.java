@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max105Text;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PaymentStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification8;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -110,7 +111,7 @@ public class ReversalReasonInformation1 {
 	 * definition} = "Party issuing the reversal."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReversalOriginator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReversalReasonInformation1, Optional<PartyIdentification8>> mmReversalOriginator = new MMMessageAssociationEnd<ReversalReasonInformation1, Optional<PartyIdentification8>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReversalReasonInformation1.mmObject();
@@ -122,7 +123,17 @@ public class ReversalReasonInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification8.mmObject();
+			type_lazy = () -> PartyIdentification8.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification8> getValue(ReversalReasonInformation1 obj) {
+			return obj.getReversalOriginator();
+		}
+
+		@Override
+		public void setValue(ReversalReasonInformation1 obj, Optional<PartyIdentification8> value) {
+			obj.setReversalOriginator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RvslRsn")
@@ -159,7 +170,7 @@ public class ReversalReasonInformation1 {
 	 * definition} = "Specifies the reason for the reversal."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReversalReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReversalReasonInformation1, Optional<ReversalReason1Choice>> mmReversalReason = new MMMessageAssociationEnd<ReversalReasonInformation1, Optional<ReversalReason1Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> PaymentStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReversalReasonInformation1.mmObject();
@@ -172,6 +183,16 @@ public class ReversalReasonInformation1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ReversalReason1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ReversalReason1Choice> getValue(ReversalReasonInformation1 obj) {
+			return obj.getReversalReason();
+		}
+
+		@Override
+		public void setValue(ReversalReasonInformation1 obj, Optional<ReversalReason1Choice> value) {
+			obj.setReversalReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlRvslRsnInf")
@@ -203,7 +224,7 @@ public class ReversalReasonInformation1 {
 	 * definition} = "Further details on the reversal reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReversalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReversalReasonInformation1, List<Max105Text>> mmAdditionalReversalReasonInformation = new MMMessageAttribute<ReversalReasonInformation1, List<Max105Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReversalReasonInformation1.mmObject();
 			isDerived = false;
@@ -213,6 +234,16 @@ public class ReversalReasonInformation1 {
 			definition = "Further details on the reversal reason.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public List<Max105Text> getValue(ReversalReasonInformation1 obj) {
+			return obj.getAdditionalReversalReasonInformation();
+		}
+
+		@Override
+		public void setValue(ReversalReasonInformation1 obj, List<Max105Text> value) {
+			obj.setAdditionalReversalReasonInformation(value);
 		}
 	};
 
@@ -235,7 +266,7 @@ public class ReversalReasonInformation1 {
 		return reversalOriginator == null ? Optional.empty() : Optional.of(reversalOriginator);
 	}
 
-	public ReversalReasonInformation1 setReversalOriginator(com.tools20022.repository.msg.PartyIdentification8 reversalOriginator) {
+	public ReversalReasonInformation1 setReversalOriginator(PartyIdentification8 reversalOriginator) {
 		this.reversalOriginator = reversalOriginator;
 		return this;
 	}

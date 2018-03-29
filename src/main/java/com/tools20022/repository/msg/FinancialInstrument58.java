@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.entity.Spread;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FloatingInterestRate8;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -109,7 +110,7 @@ public class FinancialInstrument58 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument58, Optional<ISINOct2015Identifier>> mmISIN = new MMMessageAttribute<FinancialInstrument58, Optional<ISINOct2015Identifier>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument58.mmObject();
@@ -121,6 +122,16 @@ public class FinancialInstrument58 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
+		}
+
+		@Override
+		public Optional<ISINOct2015Identifier> getValue(FinancialInstrument58 obj) {
+			return obj.getISIN();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument58 obj, Optional<ISINOct2015Identifier> value) {
+			obj.setISIN(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Nm", required = true)
@@ -157,7 +168,7 @@ public class FinancialInstrument58 {
 	 * "Name of the index on which the financial instrument is based."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmName = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrument58, FloatingInterestRate8> mmName = new MMMessageAssociationEnd<FinancialInstrument58, FloatingInterestRate8>() {
 		{
 			businessElementTrace_lazy = () -> Spread.mmIndex;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument58.mmObject();
@@ -169,7 +180,17 @@ public class FinancialInstrument58 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FloatingInterestRate8.mmObject();
+			type_lazy = () -> FloatingInterestRate8.mmObject();
+		}
+
+		@Override
+		public FloatingInterestRate8 getValue(FinancialInstrument58 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument58 obj, FloatingInterestRate8 value) {
+			obj.setName(value);
 		}
 	};
 
@@ -200,7 +221,7 @@ public class FinancialInstrument58 {
 		return name;
 	}
 
-	public FinancialInstrument58 setName(com.tools20022.repository.msg.FloatingInterestRate8 name) {
+	public FinancialInstrument58 setName(FloatingInterestRate8 name) {
 		this.name = Objects.requireNonNull(name);
 		return this;
 	}

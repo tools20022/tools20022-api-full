@@ -62,13 +62,17 @@ public class ConstraintPartialOrRejectedCancellationRule {
 	 */
 	public static final MMConstraint<ResolutionOfInvestigationV08> forResolutionOfInvestigationV08 = new MMConstraint<ResolutionOfInvestigationV08>() {
 		{
-			validator = ConstraintPartialOrRejectedCancellationRule::checkResolutionOfInvestigationV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialOrRejectedCancellationRule";
 			definition = "If Status/Confirmation is present and equal to PECR or RJCR then CancellationDetails must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule.forResolutionOfInvestigationV07;
 			owner_lazy = () -> ResolutionOfInvestigationV08.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationDetails[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Status/Confirmation</leftOperand></BooleanRule><BooleanRule xsi:type=\"WithInList\"><leftOperand>/Status/Confirmation</leftOperand><rightOperand>InvestigationExecutionConfirmation4Code</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(ResolutionOfInvestigationV08 obj) throws Exception {
+			checkResolutionOfInvestigationV08(obj);
 		}
 	};
 	/**
@@ -113,7 +117,6 @@ public class ConstraintPartialOrRejectedCancellationRule {
 	 */
 	public static final MMConstraint<ResolutionOfInvestigationV07> forResolutionOfInvestigationV07 = new MMConstraint<ResolutionOfInvestigationV07>() {
 		{
-			validator = ConstraintPartialOrRejectedCancellationRule::checkResolutionOfInvestigationV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialOrRejectedCancellationRule";
 			definition = "If Status/Confirmation is present and equal to PECR or RJCR then CancellationDetails must be present.";
@@ -121,6 +124,11 @@ public class ConstraintPartialOrRejectedCancellationRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule.forResolutionOfInvestigationV06;
 			owner_lazy = () -> ResolutionOfInvestigationV07.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationDetails[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Status/Confirmation</leftOperand></BooleanRule><BooleanRule xsi:type=\"WithInList\"><leftOperand>/Status/Confirmation</leftOperand><rightOperand>InvestigationExecutionConfirmation4Code</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(ResolutionOfInvestigationV07 obj) throws Exception {
+			checkResolutionOfInvestigationV07(obj);
 		}
 	};
 	/**
@@ -150,12 +158,16 @@ public class ConstraintPartialOrRejectedCancellationRule {
 	 */
 	public static final MMConstraint<ResolutionOfInvestigationV03> forResolutionOfInvestigationV03 = new MMConstraint<ResolutionOfInvestigationV03>() {
 		{
-			validator = ConstraintPartialOrRejectedCancellationRule::checkResolutionOfInvestigationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialOrRejectedCancellationRule";
 			definition = "If Status/Confirmation is present and equal to PECR or RJCR then CancellationDetails must be present.";
 			owner_lazy = () -> ResolutionOfInvestigationV03.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationDetails[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Status/Confirmation</leftOperand></BooleanRule><BooleanRule xsi:type=\"WithInList\"><leftOperand>/Status/Confirmation</leftOperand><rightOperand>InvestigationExecutionConfirmation4Code</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(ResolutionOfInvestigationV03 obj) throws Exception {
+			checkResolutionOfInvestigationV03(obj);
 		}
 	};
 	/**
@@ -194,13 +206,17 @@ public class ConstraintPartialOrRejectedCancellationRule {
 	 */
 	public static final MMConstraint<ResolutionOfInvestigationV04> forResolutionOfInvestigationV04 = new MMConstraint<ResolutionOfInvestigationV04>() {
 		{
-			validator = ConstraintPartialOrRejectedCancellationRule::checkResolutionOfInvestigationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialOrRejectedCancellationRule";
 			definition = "If Status/Confirmation is present and equal to PECR or RJCR then CancellationDetails must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule.forResolutionOfInvestigationV05);
 			owner_lazy = () -> ResolutionOfInvestigationV04.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationDetails[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Status/Confirmation</leftOperand></BooleanRule><BooleanRule xsi:type=\"WithInList\"><leftOperand>/Status/Confirmation</leftOperand><rightOperand>InvestigationExecutionConfirmation4Code</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(ResolutionOfInvestigationV04 obj) throws Exception {
+			checkResolutionOfInvestigationV04(obj);
 		}
 	};
 	/**
@@ -245,7 +261,6 @@ public class ConstraintPartialOrRejectedCancellationRule {
 	 */
 	public static final MMConstraint<ResolutionOfInvestigationV05> forResolutionOfInvestigationV05 = new MMConstraint<ResolutionOfInvestigationV05>() {
 		{
-			validator = ConstraintPartialOrRejectedCancellationRule::checkResolutionOfInvestigationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialOrRejectedCancellationRule";
 			definition = "If Status/Confirmation is present and equal to PECR or RJCR then CancellationDetails must be present.";
@@ -253,6 +268,11 @@ public class ConstraintPartialOrRejectedCancellationRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule.forResolutionOfInvestigationV04;
 			owner_lazy = () -> ResolutionOfInvestigationV05.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationDetails[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Status/Confirmation</leftOperand></BooleanRule><BooleanRule xsi:type=\"WithInList\"><leftOperand>/Status/Confirmation</leftOperand><rightOperand>InvestigationExecutionConfirmation4Code</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(ResolutionOfInvestigationV05 obj) throws Exception {
+			checkResolutionOfInvestigationV05(obj);
 		}
 	};
 	/**
@@ -297,7 +317,6 @@ public class ConstraintPartialOrRejectedCancellationRule {
 	 */
 	public static final MMConstraint<ResolutionOfInvestigationV06> forResolutionOfInvestigationV06 = new MMConstraint<ResolutionOfInvestigationV06>() {
 		{
-			validator = ConstraintPartialOrRejectedCancellationRule::checkResolutionOfInvestigationV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialOrRejectedCancellationRule";
 			definition = "If Status/Confirmation is present and equal to PECR or RJCR then CancellationDetails must be present.";
@@ -305,6 +324,11 @@ public class ConstraintPartialOrRejectedCancellationRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule.forResolutionOfInvestigationV05;
 			owner_lazy = () -> ResolutionOfInvestigationV06.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationDetails[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Status/Confirmation</leftOperand></BooleanRule><BooleanRule xsi:type=\"WithInList\"><leftOperand>/Status/Confirmation</leftOperand><rightOperand>InvestigationExecutionConfirmation4Code</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(ResolutionOfInvestigationV06 obj) throws Exception {
+			checkResolutionOfInvestigationV06(obj);
 		}
 	};
 

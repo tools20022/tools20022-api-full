@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.UnitsOrAmountOrPercentage1Choice;
 import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.entity.InvestmentFundClass;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrument29;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -133,7 +134,7 @@ public class Repartition3 {
 	 * Repartition2.mmPercentage}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Repartition3, UnitsOrAmountOrPercentage1Choice> mmQuantity = new MMMessageAttribute<Repartition3, UnitsOrAmountOrPercentage1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Repartition3.mmObject();
 			isDerived = false;
@@ -146,6 +147,16 @@ public class Repartition3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> UnitsOrAmountOrPercentage1Choice.mmObject();
+		}
+
+		@Override
+		public UnitsOrAmountOrPercentage1Choice getValue(Repartition3 obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(Repartition3 obj, UnitsOrAmountOrPercentage1Choice value) {
+			obj.setQuantity(value);
 		}
 	};
 	@XmlElement(name = "FinInstrm", required = true)
@@ -195,7 +206,7 @@ public class Repartition3 {
 	 * Repartition2.mmFinancialInstrument}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Repartition3, FinancialInstrument29> mmFinancialInstrument = new MMMessageAssociationEnd<Repartition3, FinancialInstrument29>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundClass.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Repartition3.mmObject();
@@ -209,7 +220,17 @@ public class Repartition3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument29.mmObject();
+			type_lazy = () -> FinancialInstrument29.mmObject();
+		}
+
+		@Override
+		public FinancialInstrument29 getValue(Repartition3 obj) {
+			return obj.getFinancialInstrument();
+		}
+
+		@Override
+		public void setValue(Repartition3 obj, FinancialInstrument29 value) {
+			obj.setFinancialInstrument(value);
 		}
 	};
 	@XmlElement(name = "CcyOfPlan")
@@ -255,7 +276,7 @@ public class Repartition3 {
 	 * Repartition2.mmCurrencyOfPlan}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrencyOfPlan = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Repartition3, Optional<CurrencyCode>> mmCurrencyOfPlan = new MMMessageAttribute<Repartition3, Optional<CurrencyCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Repartition3.mmObject();
 			isDerived = false;
@@ -268,6 +289,16 @@ public class Repartition3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyCode> getValue(Repartition3 obj) {
+			return obj.getCurrencyOfPlan();
+		}
+
+		@Override
+		public void setValue(Repartition3 obj, Optional<CurrencyCode> value) {
+			obj.setCurrencyOfPlan(value.orElse(null));
 		}
 	};
 
@@ -307,7 +338,7 @@ public class Repartition3 {
 		return financialInstrument;
 	}
 
-	public Repartition3 setFinancialInstrument(com.tools20022.repository.msg.FinancialInstrument29 financialInstrument) {
+	public Repartition3 setFinancialInstrument(FinancialInstrument29 financialInstrument) {
 		this.financialInstrument = Objects.requireNonNull(financialInstrument);
 		return this;
 	}

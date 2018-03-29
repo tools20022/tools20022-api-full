@@ -25,6 +25,8 @@ import com.tools20022.repository.area.acmt.AccountDetailsConfirmationV03;
 import com.tools20022.repository.area.acmt.AccountOpeningInstructionV03;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PaymentInstrument10;
+import com.tools20022.repository.msg.PaymentInstrument11;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -151,7 +153,7 @@ public class InvestmentFundCashSettlementInformation5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSubscriptionPaymentInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentFundCashSettlementInformation5, Optional<PaymentInstrument11>> mmSubscriptionPaymentInstrument = new MMMessageAssociationEnd<InvestmentFundCashSettlementInformation5, Optional<PaymentInstrument11>>() {
 		{
 			businessComponentTrace_lazy = () -> Payment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5.mmObject();
@@ -164,7 +166,17 @@ public class InvestmentFundCashSettlementInformation5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentInstrument11.mmObject();
+			type_lazy = () -> PaymentInstrument11.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentInstrument11> getValue(InvestmentFundCashSettlementInformation5 obj) {
+			return obj.getSubscriptionPaymentInstrument();
+		}
+
+		@Override
+		public void setValue(InvestmentFundCashSettlementInformation5 obj, Optional<PaymentInstrument11> value) {
+			obj.setSubscriptionPaymentInstrument(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RedPmtInstrm")
@@ -209,7 +221,7 @@ public class InvestmentFundCashSettlementInformation5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRedemptionPaymentInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentFundCashSettlementInformation5, Optional<PaymentInstrument10>> mmRedemptionPaymentInstrument = new MMMessageAssociationEnd<InvestmentFundCashSettlementInformation5, Optional<PaymentInstrument10>>() {
 		{
 			businessComponentTrace_lazy = () -> Payment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5.mmObject();
@@ -222,7 +234,17 @@ public class InvestmentFundCashSettlementInformation5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentInstrument10.mmObject();
+			type_lazy = () -> PaymentInstrument10.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentInstrument10> getValue(InvestmentFundCashSettlementInformation5 obj) {
+			return obj.getRedemptionPaymentInstrument();
+		}
+
+		@Override
+		public void setValue(InvestmentFundCashSettlementInformation5 obj, Optional<PaymentInstrument10> value) {
+			obj.setRedemptionPaymentInstrument(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DvddPmtInstrm")
@@ -267,7 +289,7 @@ public class InvestmentFundCashSettlementInformation5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDividendPaymentInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentFundCashSettlementInformation5, Optional<PaymentInstrument10>> mmDividendPaymentInstrument = new MMMessageAssociationEnd<InvestmentFundCashSettlementInformation5, Optional<PaymentInstrument10>>() {
 		{
 			businessComponentTrace_lazy = () -> Payment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5.mmObject();
@@ -280,7 +302,17 @@ public class InvestmentFundCashSettlementInformation5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentInstrument10.mmObject();
+			type_lazy = () -> PaymentInstrument10.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentInstrument10> getValue(InvestmentFundCashSettlementInformation5 obj) {
+			return obj.getDividendPaymentInstrument();
+		}
+
+		@Override
+		public void setValue(InvestmentFundCashSettlementInformation5 obj, Optional<PaymentInstrument10> value) {
+			obj.setDividendPaymentInstrument(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SvgsPlanPmtInstrm")
@@ -325,7 +357,7 @@ public class InvestmentFundCashSettlementInformation5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSavingsPlanPaymentInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentFundCashSettlementInformation5, Optional<PaymentInstrument11>> mmSavingsPlanPaymentInstrument = new MMMessageAssociationEnd<InvestmentFundCashSettlementInformation5, Optional<PaymentInstrument11>>() {
 		{
 			businessComponentTrace_lazy = () -> Payment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5.mmObject();
@@ -338,7 +370,17 @@ public class InvestmentFundCashSettlementInformation5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentInstrument11.mmObject();
+			type_lazy = () -> PaymentInstrument11.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentInstrument11> getValue(InvestmentFundCashSettlementInformation5 obj) {
+			return obj.getSavingsPlanPaymentInstrument();
+		}
+
+		@Override
+		public void setValue(InvestmentFundCashSettlementInformation5 obj, Optional<PaymentInstrument11> value) {
+			obj.setSavingsPlanPaymentInstrument(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrstPmtInstrm")
@@ -385,7 +427,7 @@ public class InvestmentFundCashSettlementInformation5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterestPaymentInstrument = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundCashSettlementInformation5, Optional<PaymentInstrument10>> mmInterestPaymentInstrument = new MMMessageAttribute<InvestmentFundCashSettlementInformation5, Optional<PaymentInstrument10>>() {
 		{
 			businessComponentTrace_lazy = () -> Payment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundCashSettlementInformation5.mmObject();
@@ -397,7 +439,17 @@ public class InvestmentFundCashSettlementInformation5 {
 			nextVersions_lazy = () -> Arrays.asList(InvestmentFundCashSettlementInformation7.mmInterestPaymentInstrument);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PaymentInstrument10.mmObject();
+			complexType_lazy = () -> PaymentInstrument10.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentInstrument10> getValue(InvestmentFundCashSettlementInformation5 obj) {
+			return obj.getInterestPaymentInstrument();
+		}
+
+		@Override
+		public void setValue(InvestmentFundCashSettlementInformation5 obj, Optional<PaymentInstrument10> value) {
+			obj.setInterestPaymentInstrument(value.orElse(null));
 		}
 	};
 
@@ -424,7 +476,7 @@ public class InvestmentFundCashSettlementInformation5 {
 		return subscriptionPaymentInstrument == null ? Optional.empty() : Optional.of(subscriptionPaymentInstrument);
 	}
 
-	public InvestmentFundCashSettlementInformation5 setSubscriptionPaymentInstrument(com.tools20022.repository.msg.PaymentInstrument11 subscriptionPaymentInstrument) {
+	public InvestmentFundCashSettlementInformation5 setSubscriptionPaymentInstrument(PaymentInstrument11 subscriptionPaymentInstrument) {
 		this.subscriptionPaymentInstrument = subscriptionPaymentInstrument;
 		return this;
 	}
@@ -433,7 +485,7 @@ public class InvestmentFundCashSettlementInformation5 {
 		return redemptionPaymentInstrument == null ? Optional.empty() : Optional.of(redemptionPaymentInstrument);
 	}
 
-	public InvestmentFundCashSettlementInformation5 setRedemptionPaymentInstrument(com.tools20022.repository.msg.PaymentInstrument10 redemptionPaymentInstrument) {
+	public InvestmentFundCashSettlementInformation5 setRedemptionPaymentInstrument(PaymentInstrument10 redemptionPaymentInstrument) {
 		this.redemptionPaymentInstrument = redemptionPaymentInstrument;
 		return this;
 	}
@@ -442,7 +494,7 @@ public class InvestmentFundCashSettlementInformation5 {
 		return dividendPaymentInstrument == null ? Optional.empty() : Optional.of(dividendPaymentInstrument);
 	}
 
-	public InvestmentFundCashSettlementInformation5 setDividendPaymentInstrument(com.tools20022.repository.msg.PaymentInstrument10 dividendPaymentInstrument) {
+	public InvestmentFundCashSettlementInformation5 setDividendPaymentInstrument(PaymentInstrument10 dividendPaymentInstrument) {
 		this.dividendPaymentInstrument = dividendPaymentInstrument;
 		return this;
 	}
@@ -451,7 +503,7 @@ public class InvestmentFundCashSettlementInformation5 {
 		return savingsPlanPaymentInstrument == null ? Optional.empty() : Optional.of(savingsPlanPaymentInstrument);
 	}
 
-	public InvestmentFundCashSettlementInformation5 setSavingsPlanPaymentInstrument(com.tools20022.repository.msg.PaymentInstrument11 savingsPlanPaymentInstrument) {
+	public InvestmentFundCashSettlementInformation5 setSavingsPlanPaymentInstrument(PaymentInstrument11 savingsPlanPaymentInstrument) {
 		this.savingsPlanPaymentInstrument = savingsPlanPaymentInstrument;
 		return this;
 	}
@@ -460,7 +512,7 @@ public class InvestmentFundCashSettlementInformation5 {
 		return interestPaymentInstrument == null ? Optional.empty() : Optional.of(interestPaymentInstrument);
 	}
 
-	public InvestmentFundCashSettlementInformation5 setInterestPaymentInstrument(com.tools20022.repository.msg.PaymentInstrument10 interestPaymentInstrument) {
+	public InvestmentFundCashSettlementInformation5 setInterestPaymentInstrument(PaymentInstrument10 interestPaymentInstrument) {
 		this.interestPaymentInstrument = interestPaymentInstrument;
 		return this;
 	}

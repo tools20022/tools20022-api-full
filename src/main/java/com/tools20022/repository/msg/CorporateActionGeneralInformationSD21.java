@@ -139,7 +139,7 @@ public class CorporateActionGeneralInformationSD21 {
 	 * CorporateActionGeneralInformationSD14.mmPlaceAndName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformationSD21, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionGeneralInformationSD21, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD21.mmObject();
 			isDerived = false;
@@ -152,6 +152,16 @@ public class CorporateActionGeneralInformationSD21 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionGeneralInformationSD21 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformationSD21 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "EvtGrp")
@@ -195,7 +205,7 @@ public class CorporateActionGeneralInformationSD21 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEventGroup = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformationSD21, Optional<EventGroup1Code>> mmEventGroup = new MMMessageAttribute<CorporateActionGeneralInformationSD21, Optional<EventGroup1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD21.mmObject();
 			isDerived = false;
@@ -208,6 +218,16 @@ public class CorporateActionGeneralInformationSD21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> EventGroup1Code.mmObject();
+		}
+
+		@Override
+		public Optional<EventGroup1Code> getValue(CorporateActionGeneralInformationSD21 obj) {
+			return obj.getEventGroup();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformationSD21 obj, Optional<EventGroup1Code> value) {
+			obj.setEventGroup(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EvtTp")
@@ -253,7 +273,7 @@ public class CorporateActionGeneralInformationSD21 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformationSD21, Optional<ExtendedEventType3Code>> mmEventType = new MMMessageAttribute<CorporateActionGeneralInformationSD21, Optional<ExtendedEventType3Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD21.mmObject();
 			isDerived = false;
@@ -266,6 +286,16 @@ public class CorporateActionGeneralInformationSD21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ExtendedEventType3Code.mmObject();
+		}
+
+		@Override
+		public Optional<ExtendedEventType3Code> getValue(CorporateActionGeneralInformationSD21 obj) {
+			return obj.getEventType();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformationSD21 obj, Optional<ExtendedEventType3Code> value) {
+			obj.setEventType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SubEvtTp")
@@ -311,7 +341,7 @@ public class CorporateActionGeneralInformationSD21 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubEventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformationSD21, Optional<DTCCSubEventType4Code>> mmSubEventType = new MMMessageAttribute<CorporateActionGeneralInformationSD21, Optional<DTCCSubEventType4Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD21.mmObject();
 			isDerived = false;
@@ -324,6 +354,16 @@ public class CorporateActionGeneralInformationSD21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCCSubEventType4Code.mmObject();
+		}
+
+		@Override
+		public Optional<DTCCSubEventType4Code> getValue(CorporateActionGeneralInformationSD21 obj) {
+			return obj.getSubEventType();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformationSD21 obj, Optional<DTCCSubEventType4Code> value) {
+			obj.setSubEventType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RedId")
@@ -371,7 +411,7 @@ public class CorporateActionGeneralInformationSD21 {
 	 * CorporateActionGeneralInformationSD14.mmRedemptionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRedemptionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformationSD21, Optional<Max10NumericText>> mmRedemptionIdentification = new MMMessageAttribute<CorporateActionGeneralInformationSD21, Optional<Max10NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD21.mmObject();
 			isDerived = false;
@@ -384,6 +424,16 @@ public class CorporateActionGeneralInformationSD21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max10NumericText> getValue(CorporateActionGeneralInformationSD21 obj) {
+			return obj.getRedemptionIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformationSD21 obj, Optional<Max10NumericText> value) {
+			obj.setRedemptionIdentification(value.orElse(null));
 		}
 	};
 

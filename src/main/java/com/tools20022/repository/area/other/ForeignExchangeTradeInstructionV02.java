@@ -24,7 +24,6 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.OtherMessages;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -135,7 +134,7 @@ public class ForeignExchangeTradeInstructionV02 {
 	 * definition} = "General information related to the trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTradeInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeInstructionV02, TradeAgreement7> mmTradeInformation = new MMMessageBuildingBlock<ForeignExchangeTradeInstructionV02, TradeAgreement7>() {
 		{
 			xmlTag = "TradInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -146,12 +145,14 @@ public class ForeignExchangeTradeInstructionV02 {
 			complexType_lazy = () -> TradeAgreement7.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeInstructionV02.class.getMethod("getTradeInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TradeAgreement7 getValue(ForeignExchangeTradeInstructionV02 obj) {
+			return obj.getTradeInformation();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeInstructionV02 obj, TradeAgreement7 value) {
+			obj.setTradeInformation(value);
 		}
 	};
 	@XmlElement(name = "TradgSdId", required = true)
@@ -179,7 +180,7 @@ public class ForeignExchangeTradeInstructionV02 {
 	 * definition} = "Party(ies) on the trading side of the trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTradingSideIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeInstructionV02, TradePartyIdentification6> mmTradingSideIdentification = new MMMessageBuildingBlock<ForeignExchangeTradeInstructionV02, TradePartyIdentification6>() {
 		{
 			xmlTag = "TradgSdId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -190,12 +191,14 @@ public class ForeignExchangeTradeInstructionV02 {
 			complexType_lazy = () -> TradePartyIdentification6.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeInstructionV02.class.getMethod("getTradingSideIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TradePartyIdentification6 getValue(ForeignExchangeTradeInstructionV02 obj) {
+			return obj.getTradingSideIdentification();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeInstructionV02 obj, TradePartyIdentification6 value) {
+			obj.setTradingSideIdentification(value);
 		}
 	};
 	@XmlElement(name = "CtrPtySdId", required = true)
@@ -223,7 +226,7 @@ public class ForeignExchangeTradeInstructionV02 {
 	 * definition} = "Party(ies) on the counterparty side of the trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCounterpartySideIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeInstructionV02, TradePartyIdentification6> mmCounterpartySideIdentification = new MMMessageBuildingBlock<ForeignExchangeTradeInstructionV02, TradePartyIdentification6>() {
 		{
 			xmlTag = "CtrPtySdId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -234,12 +237,14 @@ public class ForeignExchangeTradeInstructionV02 {
 			complexType_lazy = () -> TradePartyIdentification6.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeInstructionV02.class.getMethod("getCounterpartySideIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TradePartyIdentification6 getValue(ForeignExchangeTradeInstructionV02 obj) {
+			return obj.getCounterpartySideIdentification();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeInstructionV02 obj, TradePartyIdentification6 value) {
+			obj.setCounterpartySideIdentification(value);
 		}
 	};
 	@XmlElement(name = "TradAmts", required = true)
@@ -267,7 +272,7 @@ public class ForeignExchangeTradeInstructionV02 {
 	 * definition} = "Amounts of the trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTradeAmounts = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeInstructionV02, AmountsAndValueDate1> mmTradeAmounts = new MMMessageBuildingBlock<ForeignExchangeTradeInstructionV02, AmountsAndValueDate1>() {
 		{
 			xmlTag = "TradAmts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -278,12 +283,14 @@ public class ForeignExchangeTradeInstructionV02 {
 			complexType_lazy = () -> AmountsAndValueDate1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeInstructionV02.class.getMethod("getTradeAmounts", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AmountsAndValueDate1 getValue(ForeignExchangeTradeInstructionV02 obj) {
+			return obj.getTradeAmounts();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeInstructionV02 obj, AmountsAndValueDate1 value) {
+			obj.setTradeAmounts(value);
 		}
 	};
 	@XmlElement(name = "AgrdRate", required = true)
@@ -310,7 +317,7 @@ public class ForeignExchangeTradeInstructionV02 {
 	 * definition} = "Exchange rate as agreed by the traders."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAgreedRate = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeInstructionV02, AgreedRate1> mmAgreedRate = new MMMessageBuildingBlock<ForeignExchangeTradeInstructionV02, AgreedRate1>() {
 		{
 			xmlTag = "AgrdRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -321,12 +328,14 @@ public class ForeignExchangeTradeInstructionV02 {
 			complexType_lazy = () -> AgreedRate1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeInstructionV02.class.getMethod("getAgreedRate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AgreedRate1 getValue(ForeignExchangeTradeInstructionV02 obj) {
+			return obj.getAgreedRate();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeInstructionV02 obj, AgreedRate1 value) {
+			obj.setAgreedRate(value);
 		}
 	};
 	@XmlElement(name = "TradgSdSttlmInstrs")
@@ -355,7 +364,7 @@ public class ForeignExchangeTradeInstructionV02 {
 	 * "Settlement instructions for the amounts received by the trading side."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTradingSideSettlementInstructions = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeInstructionV02, Optional<SettlementParties29>> mmTradingSideSettlementInstructions = new MMMessageBuildingBlock<ForeignExchangeTradeInstructionV02, Optional<SettlementParties29>>() {
 		{
 			xmlTag = "TradgSdSttlmInstrs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -366,12 +375,14 @@ public class ForeignExchangeTradeInstructionV02 {
 			complexType_lazy = () -> SettlementParties29.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeInstructionV02.class.getMethod("getTradingSideSettlementInstructions", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<SettlementParties29> getValue(ForeignExchangeTradeInstructionV02 obj) {
+			return obj.getTradingSideSettlementInstructions();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeInstructionV02 obj, Optional<SettlementParties29> value) {
+			obj.setTradingSideSettlementInstructions(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtrPtySdSttlmInstrs")
@@ -400,7 +411,7 @@ public class ForeignExchangeTradeInstructionV02 {
 	 * "Settlement instructions for the amounts received by the counterparty."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCounterpartySideSettlementInstructions = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeInstructionV02, Optional<SettlementParties29>> mmCounterpartySideSettlementInstructions = new MMMessageBuildingBlock<ForeignExchangeTradeInstructionV02, Optional<SettlementParties29>>() {
 		{
 			xmlTag = "CtrPtySdSttlmInstrs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -411,12 +422,14 @@ public class ForeignExchangeTradeInstructionV02 {
 			complexType_lazy = () -> SettlementParties29.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeInstructionV02.class.getMethod("getCounterpartySideSettlementInstructions", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<SettlementParties29> getValue(ForeignExchangeTradeInstructionV02 obj) {
+			return obj.getCounterpartySideSettlementInstructions();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeInstructionV02 obj, Optional<SettlementParties29> value) {
+			obj.setCounterpartySideSettlementInstructions(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OptnlGnlInf")
@@ -446,7 +459,7 @@ public class ForeignExchangeTradeInstructionV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOptionalGeneralInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeInstructionV02, Optional<GeneralInformation4>> mmOptionalGeneralInformation = new MMMessageBuildingBlock<ForeignExchangeTradeInstructionV02, Optional<GeneralInformation4>>() {
 		{
 			xmlTag = "OptnlGnlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -457,12 +470,14 @@ public class ForeignExchangeTradeInstructionV02 {
 			complexType_lazy = () -> GeneralInformation4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeInstructionV02.class.getMethod("getOptionalGeneralInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<GeneralInformation4> getValue(ForeignExchangeTradeInstructionV02 obj) {
+			return obj.getOptionalGeneralInformation();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeInstructionV02 obj, Optional<GeneralInformation4> value) {
+			obj.setOptionalGeneralInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RgltryRptg")
@@ -492,7 +507,7 @@ public class ForeignExchangeTradeInstructionV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRegulatoryReporting = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeInstructionV02, Optional<RegulatoryReporting1>> mmRegulatoryReporting = new MMMessageBuildingBlock<ForeignExchangeTradeInstructionV02, Optional<RegulatoryReporting1>>() {
 		{
 			xmlTag = "RgltryRptg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -503,12 +518,14 @@ public class ForeignExchangeTradeInstructionV02 {
 			complexType_lazy = () -> RegulatoryReporting1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeInstructionV02.class.getMethod("getRegulatoryReporting", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<RegulatoryReporting1> getValue(ForeignExchangeTradeInstructionV02 obj) {
+			return obj.getRegulatoryReporting();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeInstructionV02 obj, Optional<RegulatoryReporting1> value) {
+			obj.setRegulatoryReporting(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -538,7 +555,7 @@ public class ForeignExchangeTradeInstructionV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeInstructionV02, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<ForeignExchangeTradeInstructionV02, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -548,12 +565,14 @@ public class ForeignExchangeTradeInstructionV02 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeInstructionV02.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(ForeignExchangeTradeInstructionV02 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeInstructionV02 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

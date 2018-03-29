@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.Pagination;
 import com.tools20022.repository.msg.StatementOfInvestmentFundTransactions3;
 import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -145,7 +144,7 @@ public class StatementOfInvestmentFundTransactionsCancellationV03 {
 	 * mmMessageIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StatementOfInvestmentFundTransactionsCancellationV03, MessageIdentification1> mmMessageIdentification = new MMMessageBuildingBlock<StatementOfInvestmentFundTransactionsCancellationV03, MessageIdentification1>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,12 +156,14 @@ public class StatementOfInvestmentFundTransactionsCancellationV03 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StatementOfInvestmentFundTransactionsCancellationV03.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(StatementOfInvestmentFundTransactionsCancellationV03 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(StatementOfInvestmentFundTransactionsCancellationV03 obj, MessageIdentification1 value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "PrvsRef")
@@ -196,7 +197,7 @@ public class StatementOfInvestmentFundTransactionsCancellationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StatementOfInvestmentFundTransactionsCancellationV03, Optional<AdditionalReference2>> mmPreviousReference = new MMMessageBuildingBlock<StatementOfInvestmentFundTransactionsCancellationV03, Optional<AdditionalReference2>>() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -208,12 +209,14 @@ public class StatementOfInvestmentFundTransactionsCancellationV03 {
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StatementOfInvestmentFundTransactionsCancellationV03.class.getMethod("getPreviousReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference2> getValue(StatementOfInvestmentFundTransactionsCancellationV03 obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(StatementOfInvestmentFundTransactionsCancellationV03 obj, Optional<AdditionalReference2> value) {
+			obj.setPreviousReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RltdRef")
@@ -247,7 +250,7 @@ public class StatementOfInvestmentFundTransactionsCancellationV03 {
 	 * StatementOfInvestmentFundTransactionsCancellationV02.mmRelatedReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StatementOfInvestmentFundTransactionsCancellationV03, Optional<AdditionalReference2>> mmRelatedReference = new MMMessageBuildingBlock<StatementOfInvestmentFundTransactionsCancellationV03, Optional<AdditionalReference2>>() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -259,12 +262,14 @@ public class StatementOfInvestmentFundTransactionsCancellationV03 {
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StatementOfInvestmentFundTransactionsCancellationV03.class.getMethod("getRelatedReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference2> getValue(StatementOfInvestmentFundTransactionsCancellationV03 obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(StatementOfInvestmentFundTransactionsCancellationV03 obj, Optional<AdditionalReference2> value) {
+			obj.setRelatedReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MsgPgntn", required = true)
@@ -297,7 +302,7 @@ public class StatementOfInvestmentFundTransactionsCancellationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessagePagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StatementOfInvestmentFundTransactionsCancellationV03, Pagination> mmMessagePagination = new MMMessageBuildingBlock<StatementOfInvestmentFundTransactionsCancellationV03, Pagination>() {
 		{
 			xmlTag = "MsgPgntn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -309,12 +314,14 @@ public class StatementOfInvestmentFundTransactionsCancellationV03 {
 			complexType_lazy = () -> Pagination.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StatementOfInvestmentFundTransactionsCancellationV03.class.getMethod("getMessagePagination", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Pagination getValue(StatementOfInvestmentFundTransactionsCancellationV03 obj) {
+			return obj.getMessagePagination();
+		}
+
+		@Override
+		public void setValue(StatementOfInvestmentFundTransactionsCancellationV03 obj, Pagination value) {
+			obj.setMessagePagination(value);
 		}
 	};
 	@XmlElement(name = "StmtToBeCanc")
@@ -349,7 +356,7 @@ public class StatementOfInvestmentFundTransactionsCancellationV03 {
 	 * mmStatementToBeCancelled}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmStatementToBeCancelled = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StatementOfInvestmentFundTransactionsCancellationV03, Optional<StatementOfInvestmentFundTransactions3>> mmStatementToBeCancelled = new MMMessageBuildingBlock<StatementOfInvestmentFundTransactionsCancellationV03, Optional<StatementOfInvestmentFundTransactions3>>() {
 		{
 			xmlTag = "StmtToBeCanc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -361,12 +368,14 @@ public class StatementOfInvestmentFundTransactionsCancellationV03 {
 			complexType_lazy = () -> StatementOfInvestmentFundTransactions3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StatementOfInvestmentFundTransactionsCancellationV03.class.getMethod("getStatementToBeCancelled", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<StatementOfInvestmentFundTransactions3> getValue(StatementOfInvestmentFundTransactionsCancellationV03 obj) {
+			return obj.getStatementToBeCancelled();
+		}
+
+		@Override
+		public void setValue(StatementOfInvestmentFundTransactionsCancellationV03 obj, Optional<StatementOfInvestmentFundTransactions3> value) {
+			obj.setStatementToBeCancelled(value.orElse(null));
 		}
 	};
 

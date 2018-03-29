@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.ElectronicSignature;
 import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.UndertakingDocument;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyAndSignature2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -116,7 +117,7 @@ public class Document9 {
 	 * definition} = "Type of document or template."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Document9, UndertakingDocumentType1Choice> mmType = new MMMessageAttribute<Document9, UndertakingDocumentType1Choice>() {
 		{
 			businessElementTrace_lazy = () -> UndertakingDocument.mmDocumentType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Document9.mmObject();
@@ -128,6 +129,16 @@ public class Document9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> UndertakingDocumentType1Choice.mmObject();
+		}
+
+		@Override
+		public UndertakingDocumentType1Choice getValue(Document9 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Document9 obj, UndertakingDocumentType1Choice value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Id", required = true)
@@ -163,7 +174,7 @@ public class Document9 {
 	 * definition} = "Identification of the document or template."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Document9, Max35Text> mmIdentification = new MMMessageAttribute<Document9, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Document9.mmObject();
@@ -175,6 +186,16 @@ public class Document9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Document9 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Document9 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Frmt")
@@ -212,7 +233,7 @@ public class Document9 {
 	 * "Format of the document or template, such as PDF, XML, XSLT."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFormat = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Document9, Optional<DocumentFormat1Choice>> mmFormat = new MMMessageAttribute<Document9, Optional<DocumentFormat1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> UndertakingDocument.mmFormat;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Document9.mmObject();
@@ -224,6 +245,16 @@ public class Document9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentFormat1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DocumentFormat1Choice> getValue(Document9 obj) {
+			return obj.getFormat();
+		}
+
+		@Override
+		public void setValue(Document9 obj, Optional<DocumentFormat1Choice> value) {
+			obj.setFormat(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Nclsr", required = true)
@@ -262,7 +293,7 @@ public class Document9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEnclosure = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Document9, Max2MBBinary> mmEnclosure = new MMMessageAttribute<Document9, Max2MBBinary>() {
 		{
 			businessComponentTrace_lazy = () -> UndertakingDocument.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Document9.mmObject();
@@ -274,6 +305,16 @@ public class Document9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max2MBBinary.mmObject();
+		}
+
+		@Override
+		public Max2MBBinary getValue(Document9 obj) {
+			return obj.getEnclosure();
+		}
+
+		@Override
+		public void setValue(Document9 obj, Max2MBBinary value) {
+			obj.setEnclosure(value);
 		}
 	};
 	@XmlElement(name = "DgtlSgntr")
@@ -308,7 +349,7 @@ public class Document9 {
 	 * definition} = "Digital signature of the enclosed binary file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDigitalSignature = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Document9, Optional<PartyAndSignature2>> mmDigitalSignature = new MMMessageAssociationEnd<Document9, Optional<PartyAndSignature2>>() {
 		{
 			businessComponentTrace_lazy = () -> ElectronicSignature.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Document9.mmObject();
@@ -320,7 +361,17 @@ public class Document9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyAndSignature2.mmObject();
+			type_lazy = () -> PartyAndSignature2.mmObject();
+		}
+
+		@Override
+		public Optional<PartyAndSignature2> getValue(Document9 obj) {
+			return obj.getDigitalSignature();
+		}
+
+		@Override
+		public void setValue(Document9 obj, Optional<PartyAndSignature2> value) {
+			obj.setDigitalSignature(value.orElse(null));
 		}
 	};
 
@@ -379,7 +430,7 @@ public class Document9 {
 		return digitalSignature == null ? Optional.empty() : Optional.of(digitalSignature);
 	}
 
-	public Document9 setDigitalSignature(com.tools20022.repository.msg.PartyAndSignature2 digitalSignature) {
+	public Document9 setDigitalSignature(PartyAndSignature2 digitalSignature) {
 		this.digitalSignature = digitalSignature;
 		return this;
 	}

@@ -111,7 +111,7 @@ public class Incoterms4 {
 	 * Incoterms3.mmIncotermsCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIncotermsCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Incoterms4, Incoterms4Choice> mmIncotermsCode = new MMMessageAssociationEnd<Incoterms4, Incoterms4Choice>() {
 		{
 			businessElementTrace_lazy = () -> Incoterms.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Incoterms4.mmObject();
@@ -125,6 +125,16 @@ public class Incoterms4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Incoterms4Choice.mmObject();
+		}
+
+		@Override
+		public Incoterms4Choice getValue(Incoterms4 obj) {
+			return obj.getIncotermsCode();
+		}
+
+		@Override
+		public void setValue(Incoterms4 obj, Incoterms4Choice value) {
+			obj.setIncotermsCode(value);
 		}
 	};
 	@XmlElement(name = "Lctn")
@@ -167,7 +177,7 @@ public class Incoterms4 {
 	 * Incoterms3.mmLocation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLocation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Incoterms4, Optional<Max70Text>> mmLocation = new MMMessageAttribute<Incoterms4, Optional<Max70Text>>() {
 		{
 			businessElementTrace_lazy = () -> Incoterms.mmLocation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Incoterms4.mmObject();
@@ -180,6 +190,16 @@ public class Incoterms4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(Incoterms4 obj) {
+			return obj.getLocation();
+		}
+
+		@Override
+		public void setValue(Incoterms4 obj, Optional<Max70Text> value) {
+			obj.setLocation(value.orElse(null));
 		}
 	};
 

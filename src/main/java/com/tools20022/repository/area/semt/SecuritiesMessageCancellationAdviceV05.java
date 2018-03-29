@@ -28,7 +28,6 @@ import com.tools20022.repository.msg.SecuritiesAccount24;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISOLatestversion;
 import com.tools20022.repository.msgset.SettlementandReconciliationMaintenance20162017;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -161,7 +160,7 @@ public class SecuritiesMessageCancellationAdviceV05 {
 	 * SecuritiesMessageCancellationAdviceV04.mmReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesMessageCancellationAdviceV05, References43Choice> mmReference = new MMMessageBuildingBlock<SecuritiesMessageCancellationAdviceV05, References43Choice>() {
 		{
 			xmlTag = "Ref";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,12 +172,14 @@ public class SecuritiesMessageCancellationAdviceV05 {
 			complexType_lazy = () -> References43Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesMessageCancellationAdviceV05.class.getMethod("getReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public References43Choice getValue(SecuritiesMessageCancellationAdviceV05 obj) {
+			return obj.getReference();
+		}
+
+		@Override
+		public void setValue(SecuritiesMessageCancellationAdviceV05 obj, References43Choice value) {
+			obj.setReference(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -211,7 +212,7 @@ public class SecuritiesMessageCancellationAdviceV05 {
 	 * SecuritiesMessageCancellationAdviceV04.mmAccountOwner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAccountOwner = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesMessageCancellationAdviceV05, Optional<PartyIdentification98>> mmAccountOwner = new MMMessageBuildingBlock<SecuritiesMessageCancellationAdviceV05, Optional<PartyIdentification98>>() {
 		{
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -223,12 +224,14 @@ public class SecuritiesMessageCancellationAdviceV05 {
 			complexType_lazy = () -> PartyIdentification98.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesMessageCancellationAdviceV05.class.getMethod("getAccountOwner", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification98> getValue(SecuritiesMessageCancellationAdviceV05 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(SecuritiesMessageCancellationAdviceV05 obj, Optional<PartyIdentification98> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SfkpgAcct", required = true)
@@ -261,7 +264,7 @@ public class SecuritiesMessageCancellationAdviceV05 {
 	 * SecuritiesMessageCancellationAdviceV04.mmSafekeepingAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSafekeepingAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesMessageCancellationAdviceV05, SecuritiesAccount24> mmSafekeepingAccount = new MMMessageBuildingBlock<SecuritiesMessageCancellationAdviceV05, SecuritiesAccount24>() {
 		{
 			xmlTag = "SfkpgAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -273,12 +276,14 @@ public class SecuritiesMessageCancellationAdviceV05 {
 			complexType_lazy = () -> SecuritiesAccount24.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesMessageCancellationAdviceV05.class.getMethod("getSafekeepingAccount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SecuritiesAccount24 getValue(SecuritiesMessageCancellationAdviceV05 obj) {
+			return obj.getSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(SecuritiesMessageCancellationAdviceV05 obj, SecuritiesAccount24 value) {
+			obj.setSafekeepingAccount(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -313,7 +318,7 @@ public class SecuritiesMessageCancellationAdviceV05 {
 	 * SecuritiesMessageCancellationAdviceV04.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesMessageCancellationAdviceV05, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<SecuritiesMessageCancellationAdviceV05, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -324,12 +329,14 @@ public class SecuritiesMessageCancellationAdviceV05 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesMessageCancellationAdviceV05.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(SecuritiesMessageCancellationAdviceV05 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(SecuritiesMessageCancellationAdviceV05 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

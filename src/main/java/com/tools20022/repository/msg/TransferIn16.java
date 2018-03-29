@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.SecuritiesTransfer;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Transfer32;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -108,7 +109,7 @@ public class TransferIn16 {
 	 * TransferIn11.mmCancellationReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancellationReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferIn16, Optional<Max35Text>> mmCancellationReference = new MMMessageAttribute<TransferIn16, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferIn16.mmObject();
 			isDerived = false;
@@ -121,9 +122,19 @@ public class TransferIn16 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransferIn16 obj) {
+			return obj.getCancellationReference();
+		}
+
+		@Override
+		public void setValue(TransferIn16 obj, Optional<Max35Text> value) {
+			obj.setCancellationReference(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "TrfDtls", required = true)
-	protected List<com.tools20022.repository.msg.Transfer32> transferDetails;
+	protected List<Transfer32> transferDetails;
 	/**
 	 * 
 	 <p>
@@ -159,7 +170,7 @@ public class TransferIn16 {
 	 * TransferIn11.mmTransferDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransferDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferIn16, List<Transfer32>> mmTransferDetails = new MMMessageAssociationEnd<TransferIn16, List<Transfer32>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTransfer.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferIn16.mmObject();
@@ -171,7 +182,17 @@ public class TransferIn16 {
 			previousVersion_lazy = () -> TransferIn11.mmTransferDetails;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Transfer32.mmObject();
+			type_lazy = () -> Transfer32.mmObject();
+		}
+
+		@Override
+		public List<Transfer32> getValue(TransferIn16 obj) {
+			return obj.getTransferDetails();
+		}
+
+		@Override
+		public void setValue(TransferIn16 obj, List<Transfer32> value) {
+			obj.setTransferDetails(value);
 		}
 	};
 
@@ -203,7 +224,7 @@ public class TransferIn16 {
 		return transferDetails == null ? transferDetails = new ArrayList<>() : transferDetails;
 	}
 
-	public TransferIn16 setTransferDetails(List<com.tools20022.repository.msg.Transfer32> transferDetails) {
+	public TransferIn16 setTransferDetails(List<Transfer32> transferDetails) {
 		this.transferDetails = Objects.requireNonNull(transferDetails);
 		return this;
 	}

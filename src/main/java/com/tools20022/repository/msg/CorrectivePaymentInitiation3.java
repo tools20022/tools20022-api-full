@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CorrectiveGroupInformation1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -145,7 +146,7 @@ public class CorrectivePaymentInitiation3 {
 	 * CorrectivePaymentInitiation2.mmGroupHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGroupHeader = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorrectivePaymentInitiation3, Optional<CorrectiveGroupInformation1>> mmGroupHeader = new MMMessageAssociationEnd<CorrectivePaymentInitiation3, Optional<CorrectiveGroupInformation1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorrectivePaymentInitiation3.mmObject();
 			isDerived = false;
@@ -157,7 +158,17 @@ public class CorrectivePaymentInitiation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CorrectiveGroupInformation1.mmObject();
+			type_lazy = () -> CorrectiveGroupInformation1.mmObject();
+		}
+
+		@Override
+		public Optional<CorrectiveGroupInformation1> getValue(CorrectivePaymentInitiation3 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(CorrectivePaymentInitiation3 obj, Optional<CorrectiveGroupInformation1> value) {
+			obj.setGroupHeader(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtInfId")
@@ -201,7 +212,7 @@ public class CorrectivePaymentInitiation3 {
 	 * CorrectivePaymentInitiation2.mmPaymentInformationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentInformationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorrectivePaymentInitiation3, Optional<Max35Text>> mmPaymentInformationIdentification = new MMMessageAttribute<CorrectivePaymentInitiation3, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorrectivePaymentInitiation3.mmObject();
@@ -214,6 +225,16 @@ public class CorrectivePaymentInitiation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CorrectivePaymentInitiation3 obj) {
+			return obj.getPaymentInformationIdentification();
+		}
+
+		@Override
+		public void setValue(CorrectivePaymentInitiation3 obj, Optional<Max35Text> value) {
+			obj.setPaymentInformationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstrId")
@@ -257,7 +278,7 @@ public class CorrectivePaymentInitiation3 {
 	 * CorrectivePaymentInitiation2.mmInstructionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorrectivePaymentInitiation3, Optional<Max35Text>> mmInstructionIdentification = new MMMessageAttribute<CorrectivePaymentInitiation3, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmInstructionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorrectivePaymentInitiation3.mmObject();
@@ -270,6 +291,16 @@ public class CorrectivePaymentInitiation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CorrectivePaymentInitiation3 obj) {
+			return obj.getInstructionIdentification();
+		}
+
+		@Override
+		public void setValue(CorrectivePaymentInitiation3 obj, Optional<Max35Text> value) {
+			obj.setInstructionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EndToEndId")
@@ -313,7 +344,7 @@ public class CorrectivePaymentInitiation3 {
 	 * CorrectivePaymentInitiation2.mmEndToEndIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEndToEndIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorrectivePaymentInitiation3, Optional<Max35Text>> mmEndToEndIdentification = new MMMessageAttribute<CorrectivePaymentInitiation3, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmEndToEndIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorrectivePaymentInitiation3.mmObject();
@@ -326,6 +357,16 @@ public class CorrectivePaymentInitiation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CorrectivePaymentInitiation3 obj) {
+			return obj.getEndToEndIdentification();
+		}
+
+		@Override
+		public void setValue(CorrectivePaymentInitiation3 obj, Optional<Max35Text> value) {
+			obj.setEndToEndIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstdAmt", required = true)
@@ -370,7 +411,7 @@ public class CorrectivePaymentInitiation3 {
 	 * CorrectivePaymentInitiation2.mmInstructedAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorrectivePaymentInitiation3, ActiveOrHistoricCurrencyAndAmount> mmInstructedAmount = new MMMessageAttribute<CorrectivePaymentInitiation3, ActiveOrHistoricCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorrectivePaymentInitiation3.mmObject();
@@ -383,6 +424,16 @@ public class CorrectivePaymentInitiation3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAndAmount getValue(CorrectivePaymentInitiation3 obj) {
+			return obj.getInstructedAmount();
+		}
+
+		@Override
+		public void setValue(CorrectivePaymentInitiation3 obj, ActiveOrHistoricCurrencyAndAmount value) {
+			obj.setInstructedAmount(value);
 		}
 	};
 	@XmlElement(name = "ReqdExctnDt")
@@ -427,7 +478,7 @@ public class CorrectivePaymentInitiation3 {
 	 * CorrectivePaymentInitiation2.mmRequestedExecutionDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestedExecutionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorrectivePaymentInitiation3, Optional<DateAndDateTime2Choice>> mmRequestedExecutionDate = new MMMessageAttribute<CorrectivePaymentInitiation3, Optional<DateAndDateTime2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmRequestedExecutionDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorrectivePaymentInitiation3.mmObject();
@@ -440,6 +491,16 @@ public class CorrectivePaymentInitiation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTime2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTime2Choice> getValue(CorrectivePaymentInitiation3 obj) {
+			return obj.getRequestedExecutionDate();
+		}
+
+		@Override
+		public void setValue(CorrectivePaymentInitiation3 obj, Optional<DateAndDateTime2Choice> value) {
+			obj.setRequestedExecutionDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReqdColltnDt")
@@ -483,7 +544,7 @@ public class CorrectivePaymentInitiation3 {
 	 * CorrectivePaymentInitiation2.mmRequestedCollectionDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestedCollectionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorrectivePaymentInitiation3, Optional<ISODate>> mmRequestedCollectionDate = new MMMessageAttribute<CorrectivePaymentInitiation3, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorrectivePaymentInitiation3.mmObject();
@@ -496,6 +557,16 @@ public class CorrectivePaymentInitiation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CorrectivePaymentInitiation3 obj) {
+			return obj.getRequestedCollectionDate();
+		}
+
+		@Override
+		public void setValue(CorrectivePaymentInitiation3 obj, Optional<ISODate> value) {
+			obj.setRequestedCollectionDate(value.orElse(null));
 		}
 	};
 
@@ -523,7 +594,7 @@ public class CorrectivePaymentInitiation3 {
 		return groupHeader == null ? Optional.empty() : Optional.of(groupHeader);
 	}
 
-	public CorrectivePaymentInitiation3 setGroupHeader(com.tools20022.repository.msg.CorrectiveGroupInformation1 groupHeader) {
+	public CorrectivePaymentInitiation3 setGroupHeader(CorrectiveGroupInformation1 groupHeader) {
 		this.groupHeader = groupHeader;
 		return this;
 	}

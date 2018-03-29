@@ -28,6 +28,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.HoldBackInformation1;
+import com.tools20022.repository.msg.SidePocketQuantityAndAmount1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -138,7 +140,7 @@ public class ExpectedExecutionDetails3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpectedTradeDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExpectedExecutionDetails3, Optional<DateAndDateTimeChoice>> mmExpectedTradeDateTime = new MMMessageAttribute<ExpectedExecutionDetails3, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExpectedExecutionDetails3.mmObject();
@@ -150,6 +152,16 @@ public class ExpectedExecutionDetails3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(ExpectedExecutionDetails3 obj) {
+			return obj.getExpectedTradeDateTime();
+		}
+
+		@Override
+		public void setValue(ExpectedExecutionDetails3 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setExpectedTradeDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XpctdCshSttlmDt")
@@ -186,7 +198,7 @@ public class ExpectedExecutionDetails3 {
 	 * definition} = "Expected date on which the cash will be available."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpectedCashSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExpectedExecutionDetails3, Optional<ISODate>> mmExpectedCashSettlementDate = new MMMessageAttribute<ExpectedExecutionDetails3, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExpectedExecutionDetails3.mmObject();
@@ -198,6 +210,16 @@ public class ExpectedExecutionDetails3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(ExpectedExecutionDetails3 obj) {
+			return obj.getExpectedCashSettlementDate();
+		}
+
+		@Override
+		public void setValue(ExpectedExecutionDetails3 obj, Optional<ISODate> value) {
+			obj.setExpectedCashSettlementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XpctdExctdAmt", required = true)
@@ -235,7 +257,7 @@ public class ExpectedExecutionDetails3 {
 	 * definition} = "Expected execution amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpectedExecutedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExpectedExecutionDetails3, ActiveCurrencyAndAmount> mmExpectedExecutedAmount = new MMMessageAttribute<ExpectedExecutionDetails3, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExpectedExecutionDetails3.mmObject();
@@ -247,6 +269,16 @@ public class ExpectedExecutionDetails3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(ExpectedExecutionDetails3 obj) {
+			return obj.getExpectedExecutedAmount();
+		}
+
+		@Override
+		public void setValue(ExpectedExecutionDetails3 obj, ActiveCurrencyAndAmount value) {
+			obj.setExpectedExecutedAmount(value);
 		}
 	};
 	@XmlElement(name = "PmtInInd")
@@ -281,7 +313,7 @@ public class ExpectedExecutionDetails3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentInIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExpectedExecutionDetails3, Optional<YesNoIndicator>> mmPaymentInIndicator = new MMMessageAttribute<ExpectedExecutionDetails3, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExpectedExecutionDetails3.mmObject();
 			isDerived = false;
@@ -292,6 +324,16 @@ public class ExpectedExecutionDetails3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(ExpectedExecutionDetails3 obj) {
+			return obj.getPaymentInIndicator();
+		}
+
+		@Override
+		public void setValue(ExpectedExecutionDetails3 obj, Optional<YesNoIndicator> value) {
+			obj.setPaymentInIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtRef")
@@ -330,7 +372,7 @@ public class ExpectedExecutionDetails3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExpectedExecutionDetails3, Optional<Max35Text>> mmPaymentReference = new MMMessageAttribute<ExpectedExecutionDetails3, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmEndToEndIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExpectedExecutionDetails3.mmObject();
@@ -342,6 +384,16 @@ public class ExpectedExecutionDetails3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ExpectedExecutionDetails3 obj) {
+			return obj.getPaymentReference();
+		}
+
+		@Override
+		public void setValue(ExpectedExecutionDetails3 obj, Optional<Max35Text> value) {
+			obj.setPaymentReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrepmtDt")
@@ -378,7 +430,7 @@ public class ExpectedExecutionDetails3 {
 	 * definition} = "Date of the prepayment, if applicable."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPrepaymentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExpectedExecutionDetails3, Optional<ISODate>> mmPrepaymentDate = new MMMessageAttribute<ExpectedExecutionDetails3, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> ObligationFulfilment.mmDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExpectedExecutionDetails3.mmObject();
@@ -390,6 +442,16 @@ public class ExpectedExecutionDetails3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(ExpectedExecutionDetails3 obj) {
+			return obj.getPrepaymentDate();
+		}
+
+		@Override
+		public void setValue(ExpectedExecutionDetails3 obj, Optional<ISODate> value) {
+			obj.setPrepaymentDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TopUpAmt")
@@ -429,7 +491,7 @@ public class ExpectedExecutionDetails3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTopUpAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExpectedExecutionDetails3, Optional<ActiveCurrencyAndAmount>> mmTopUpAmount = new MMMessageAttribute<ExpectedExecutionDetails3, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmTopUpAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExpectedExecutionDetails3.mmObject();
@@ -441,6 +503,16 @@ public class ExpectedExecutionDetails3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(ExpectedExecutionDetails3 obj) {
+			return obj.getTopUpAmount();
+		}
+
+		@Override
+		public void setValue(ExpectedExecutionDetails3 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setTopUpAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "HldBckDtls")
@@ -476,7 +548,7 @@ public class ExpectedExecutionDetails3 {
 	 * definition} = "Information about hold back of redemption proceeds."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmHoldBackDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ExpectedExecutionDetails3, Optional<HoldBackInformation1>> mmHoldBackDetails = new MMMessageAssociationEnd<ExpectedExecutionDetails3, Optional<HoldBackInformation1>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentFundClass;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExpectedExecutionDetails3.mmObject();
@@ -488,7 +560,17 @@ public class ExpectedExecutionDetails3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.HoldBackInformation1.mmObject();
+			type_lazy = () -> HoldBackInformation1.mmObject();
+		}
+
+		@Override
+		public Optional<HoldBackInformation1> getValue(ExpectedExecutionDetails3 obj) {
+			return obj.getHoldBackDetails();
+		}
+
+		@Override
+		public void setValue(ExpectedExecutionDetails3 obj, Optional<HoldBackInformation1> value) {
+			obj.setHoldBackDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SdPcktQty")
@@ -525,7 +607,7 @@ public class ExpectedExecutionDetails3 {
 	 * definition} = "Quantity of the side pocket."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSidePocketQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ExpectedExecutionDetails3, Optional<SidePocketQuantityAndAmount1>> mmSidePocketQuantity = new MMMessageAssociationEnd<ExpectedExecutionDetails3, Optional<SidePocketQuantityAndAmount1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmSidePocket;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExpectedExecutionDetails3.mmObject();
@@ -537,7 +619,17 @@ public class ExpectedExecutionDetails3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SidePocketQuantityAndAmount1.mmObject();
+			type_lazy = () -> SidePocketQuantityAndAmount1.mmObject();
+		}
+
+		@Override
+		public Optional<SidePocketQuantityAndAmount1> getValue(ExpectedExecutionDetails3 obj) {
+			return obj.getSidePocketQuantity();
+		}
+
+		@Override
+		public void setValue(ExpectedExecutionDetails3 obj, Optional<SidePocketQuantityAndAmount1> value) {
+			obj.setSidePocketQuantity(value.orElse(null));
 		}
 	};
 
@@ -626,7 +718,7 @@ public class ExpectedExecutionDetails3 {
 		return holdBackDetails == null ? Optional.empty() : Optional.of(holdBackDetails);
 	}
 
-	public ExpectedExecutionDetails3 setHoldBackDetails(com.tools20022.repository.msg.HoldBackInformation1 holdBackDetails) {
+	public ExpectedExecutionDetails3 setHoldBackDetails(HoldBackInformation1 holdBackDetails) {
 		this.holdBackDetails = holdBackDetails;
 		return this;
 	}
@@ -635,7 +727,7 @@ public class ExpectedExecutionDetails3 {
 		return sidePocketQuantity == null ? Optional.empty() : Optional.of(sidePocketQuantity);
 	}
 
-	public ExpectedExecutionDetails3 setSidePocketQuantity(com.tools20022.repository.msg.SidePocketQuantityAndAmount1 sidePocketQuantity) {
+	public ExpectedExecutionDetails3 setSidePocketQuantity(SidePocketQuantityAndAmount1 sidePocketQuantity) {
 		this.sidePocketQuantity = sidePocketQuantity;
 		return this;
 	}

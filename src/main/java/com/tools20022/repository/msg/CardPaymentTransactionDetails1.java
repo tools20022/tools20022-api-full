@@ -31,6 +31,9 @@ import com.tools20022.repository.datatype.Max10000Binary;
 import com.tools20022.repository.datatype.Max35NumericText;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DetailedAmount1;
+import com.tools20022.repository.msg.Product1;
+import com.tools20022.repository.msg.RecurringTransaction1;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -162,7 +165,7 @@ public class CardPaymentTransactionDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentTransactionDetails1, CurrencyCode> mmCurrency = new MMMessageAttribute<CardPaymentTransactionDetails1, CurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmCurrencyOfTransfer;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails1.mmObject();
@@ -175,6 +178,16 @@ public class CardPaymentTransactionDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		@Override
+		public CurrencyCode getValue(CardPaymentTransactionDetails1 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransactionDetails1 obj, CurrencyCode value) {
+			obj.setCurrency(value);
 		}
 	};
 	@XmlElement(name = "TtlAmt", required = true)
@@ -220,7 +233,7 @@ public class CardPaymentTransactionDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentTransactionDetails1, ImpliedCurrencyAndAmount> mmTotalAmount = new MMMessageAttribute<CardPaymentTransactionDetails1, ImpliedCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails1.mmObject();
@@ -233,6 +246,16 @@ public class CardPaymentTransactionDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(CardPaymentTransactionDetails1 obj) {
+			return obj.getTotalAmount();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransactionDetails1 obj, ImpliedCurrencyAndAmount value) {
+			obj.setTotalAmount(value);
 		}
 	};
 	@XmlElement(name = "AmtQlfr")
@@ -278,7 +301,7 @@ public class CardPaymentTransactionDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmountQualifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentTransactionDetails1, Optional<TypeOfAmount1Code>> mmAmountQualifier = new MMMessageAttribute<CardPaymentTransactionDetails1, Optional<TypeOfAmount1Code>>() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmAmountQualifier;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails1.mmObject();
@@ -292,9 +315,19 @@ public class CardPaymentTransactionDetails1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> TypeOfAmount1Code.mmObject();
 		}
+
+		@Override
+		public Optional<TypeOfAmount1Code> getValue(CardPaymentTransactionDetails1 obj) {
+			return obj.getAmountQualifier();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransactionDetails1 obj, Optional<TypeOfAmount1Code> value) {
+			obj.setAmountQualifier(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "DtldAmt")
-	protected List<com.tools20022.repository.msg.DetailedAmount1> detailedAmount;
+	protected List<DetailedAmount1> detailedAmount;
 	/**
 	 * 
 	 <p>
@@ -335,7 +368,7 @@ public class CardPaymentTransactionDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDetailedAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentTransactionDetails1, List<DetailedAmount1>> mmDetailedAmount = new MMMessageAssociationEnd<CardPaymentTransactionDetails1, List<DetailedAmount1>>() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmDetailedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails1.mmObject();
@@ -347,7 +380,17 @@ public class CardPaymentTransactionDetails1 {
 			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransactionDetails12.mmDetailedAmount);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount1.mmObject();
+			type_lazy = () -> DetailedAmount1.mmObject();
+		}
+
+		@Override
+		public List<DetailedAmount1> getValue(CardPaymentTransactionDetails1 obj) {
+			return obj.getDetailedAmount();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransactionDetails1 obj, List<DetailedAmount1> value) {
+			obj.setDetailedAmount(value);
 		}
 	};
 	@XmlElement(name = "VldtyDt")
@@ -393,7 +436,7 @@ public class CardPaymentTransactionDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValidityDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentTransactionDetails1, Optional<ISODate>> mmValidityDate = new MMMessageAttribute<CardPaymentTransactionDetails1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentValidation.mmValidityDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails1.mmObject();
@@ -406,6 +449,16 @@ public class CardPaymentTransactionDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CardPaymentTransactionDetails1 obj) {
+			return obj.getValidityDate();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransactionDetails1 obj, Optional<ISODate> value) {
+			obj.setValidityDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OnLineRsn")
@@ -451,7 +504,7 @@ public class CardPaymentTransactionDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOnLineReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentTransactionDetails1, Optional<OnLineReason1Code>> mmOnLineReason = new MMMessageAttribute<CardPaymentTransactionDetails1, Optional<OnLineReason1Code>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentValidation.mmOnLineReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails1.mmObject();
@@ -464,6 +517,16 @@ public class CardPaymentTransactionDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> OnLineReason1Code.mmObject();
+		}
+
+		@Override
+		public Optional<OnLineReason1Code> getValue(CardPaymentTransactionDetails1 obj) {
+			return obj.getOnLineReason();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransactionDetails1 obj, Optional<OnLineReason1Code> value) {
+			obj.setOnLineReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UattnddLvlCtgy")
@@ -511,7 +574,7 @@ public class CardPaymentTransactionDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnattendedLevelCategory = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentTransactionDetails1, Optional<Max35NumericText>> mmUnattendedLevelCategory = new MMMessageAttribute<CardPaymentTransactionDetails1, Optional<Max35NumericText>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmUnattendedLevelCategory;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails1.mmObject();
@@ -524,6 +587,16 @@ public class CardPaymentTransactionDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max35NumericText> getValue(CardPaymentTransactionDetails1 obj) {
+			return obj.getUnattendedLevelCategory();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransactionDetails1 obj, Optional<Max35NumericText> value) {
+			obj.setUnattendedLevelCategory(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctTp")
@@ -569,7 +642,7 @@ public class CardPaymentTransactionDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentTransactionDetails1, Optional<CardAccountType1Code>> mmAccountType = new MMMessageAttribute<CardPaymentTransactionDetails1, Optional<CardAccountType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentCard.mmRelatedAccountType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails1.mmObject();
@@ -582,6 +655,16 @@ public class CardPaymentTransactionDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CardAccountType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<CardAccountType1Code> getValue(CardPaymentTransactionDetails1 obj) {
+			return obj.getAccountType();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransactionDetails1 obj, Optional<CardAccountType1Code> value) {
+			obj.setAccountType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcrngTx")
@@ -618,7 +701,7 @@ public class CardPaymentTransactionDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRecurringTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentTransactionDetails1, Optional<RecurringTransaction1>> mmRecurringTransaction = new MMMessageAssociationEnd<CardPaymentTransactionDetails1, Optional<RecurringTransaction1>>() {
 		{
 			businessComponentTrace_lazy = () -> Instalment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails1.mmObject();
@@ -630,11 +713,21 @@ public class CardPaymentTransactionDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RecurringTransaction1.mmObject();
+			type_lazy = () -> RecurringTransaction1.mmObject();
+		}
+
+		@Override
+		public Optional<RecurringTransaction1> getValue(CardPaymentTransactionDetails1 obj) {
+			return obj.getRecurringTransaction();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransactionDetails1 obj, Optional<RecurringTransaction1> value) {
+			obj.setRecurringTransaction(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Pdct")
-	protected List<com.tools20022.repository.msg.Product1> product;
+	protected List<Product1> product;
 	/**
 	 * 
 	 <p>
@@ -673,7 +766,7 @@ public class CardPaymentTransactionDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProduct = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentTransactionDetails1, List<Product1>> mmProduct = new MMMessageAssociationEnd<CardPaymentTransactionDetails1, List<Product1>>() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails1.mmObject();
@@ -685,7 +778,17 @@ public class CardPaymentTransactionDetails1 {
 			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransactionDetails12.mmProduct);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Product1.mmObject();
+			type_lazy = () -> Product1.mmObject();
+		}
+
+		@Override
+		public List<Product1> getValue(CardPaymentTransactionDetails1 obj) {
+			return obj.getProduct();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransactionDetails1 obj, List<Product1> value) {
+			obj.setProduct(value);
 		}
 	};
 	@XmlElement(name = "ICCRltdData")
@@ -731,7 +834,7 @@ public class CardPaymentTransactionDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmICCRelatedData = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentTransactionDetails1, Optional<Max10000Binary>> mmICCRelatedData = new MMMessageAttribute<CardPaymentTransactionDetails1, Optional<Max10000Binary>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmICCRelatedData;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails1.mmObject();
@@ -744,6 +847,16 @@ public class CardPaymentTransactionDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10000Binary.mmObject();
+		}
+
+		@Override
+		public Optional<Max10000Binary> getValue(CardPaymentTransactionDetails1 obj) {
+			return obj.getICCRelatedData();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransactionDetails1 obj, Optional<Max10000Binary> value) {
+			obj.setICCRelatedData(value.orElse(null));
 		}
 	};
 
@@ -805,7 +918,7 @@ public class CardPaymentTransactionDetails1 {
 		return detailedAmount == null ? detailedAmount = new ArrayList<>() : detailedAmount;
 	}
 
-	public CardPaymentTransactionDetails1 setDetailedAmount(List<com.tools20022.repository.msg.DetailedAmount1> detailedAmount) {
+	public CardPaymentTransactionDetails1 setDetailedAmount(List<DetailedAmount1> detailedAmount) {
 		this.detailedAmount = Objects.requireNonNull(detailedAmount);
 		return this;
 	}
@@ -850,7 +963,7 @@ public class CardPaymentTransactionDetails1 {
 		return recurringTransaction == null ? Optional.empty() : Optional.of(recurringTransaction);
 	}
 
-	public CardPaymentTransactionDetails1 setRecurringTransaction(com.tools20022.repository.msg.RecurringTransaction1 recurringTransaction) {
+	public CardPaymentTransactionDetails1 setRecurringTransaction(RecurringTransaction1 recurringTransaction) {
 		this.recurringTransaction = recurringTransaction;
 		return this;
 	}
@@ -859,7 +972,7 @@ public class CardPaymentTransactionDetails1 {
 		return product == null ? product = new ArrayList<>() : product;
 	}
 
-	public CardPaymentTransactionDetails1 setProduct(List<com.tools20022.repository.msg.Product1> product) {
+	public CardPaymentTransactionDetails1 setProduct(List<Product1> product) {
 		this.product = Objects.requireNonNull(product);
 		return this;
 	}

@@ -154,7 +154,7 @@ public class SecurityInstrumentDescription9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityInstrumentDescription9, ISINOct2015Identifier> mmIdentification = new MMMessageAttribute<SecurityInstrumentDescription9, ISINOct2015Identifier>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription9.mmObject();
@@ -167,6 +167,16 @@ public class SecurityInstrumentDescription9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
+		}
+
+		@Override
+		public ISINOct2015Identifier getValue(SecurityInstrumentDescription9 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SecurityInstrumentDescription9 obj, ISINOct2015Identifier value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "FullNm", required = true)
@@ -211,7 +221,7 @@ public class SecurityInstrumentDescription9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFullName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityInstrumentDescription9, Max350Text> mmFullName = new MMMessageAttribute<SecurityInstrumentDescription9, Max350Text>() {
 		{
 			businessElementTrace_lazy = () -> LocalName.mmFullName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription9.mmObject();
@@ -224,6 +234,16 @@ public class SecurityInstrumentDescription9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(SecurityInstrumentDescription9 obj) {
+			return obj.getFullName();
+		}
+
+		@Override
+		public void setValue(SecurityInstrumentDescription9 obj, Max350Text value) {
+			obj.setFullName(value);
 		}
 	};
 	@XmlElement(name = "ShrtNm")
@@ -261,7 +281,7 @@ public class SecurityInstrumentDescription9 {
 	 * "Short name of financial instrument in accordance with ISO 18774."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmShortName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityInstrumentDescription9, Optional<Max35Text>> mmShortName = new MMMessageAttribute<SecurityInstrumentDescription9, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> LocalName.mmShortName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription9.mmObject();
@@ -273,6 +293,16 @@ public class SecurityInstrumentDescription9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SecurityInstrumentDescription9 obj) {
+			return obj.getShortName();
+		}
+
+		@Override
+		public void setValue(SecurityInstrumentDescription9 obj, Optional<Max35Text> value) {
+			obj.setShortName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClssfctnTp", required = true)
@@ -320,7 +350,7 @@ public class SecurityInstrumentDescription9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClassificationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityInstrumentDescription9, CFIOct2015Identifier> mmClassificationType = new MMMessageAttribute<SecurityInstrumentDescription9, CFIOct2015Identifier>() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription9.mmObject();
@@ -333,6 +363,16 @@ public class SecurityInstrumentDescription9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CFIOct2015Identifier.mmObject();
+		}
+
+		@Override
+		public CFIOct2015Identifier getValue(SecurityInstrumentDescription9 obj) {
+			return obj.getClassificationType();
+		}
+
+		@Override
+		public void setValue(SecurityInstrumentDescription9 obj, CFIOct2015Identifier value) {
+			obj.setClassificationType(value);
 		}
 	};
 	@XmlElement(name = "NtnlCcy", required = true)
@@ -378,7 +418,7 @@ public class SecurityInstrumentDescription9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotionalCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityInstrumentDescription9, ActiveOrHistoricCurrencyCode> mmNotionalCurrency = new MMMessageAttribute<SecurityInstrumentDescription9, ActiveOrHistoricCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmNotionalCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription9.mmObject();
@@ -391,6 +431,16 @@ public class SecurityInstrumentDescription9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyCode getValue(SecurityInstrumentDescription9 obj) {
+			return obj.getNotionalCurrency();
+		}
+
+		@Override
+		public void setValue(SecurityInstrumentDescription9 obj, ActiveOrHistoricCurrencyCode value) {
+			obj.setNotionalCurrency(value);
 		}
 	};
 	@XmlElement(name = "CmmdtyDerivInd", required = true)
@@ -425,7 +475,7 @@ public class SecurityInstrumentDescription9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommodityDerivativeIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityInstrumentDescription9, TrueFalseIndicator> mmCommodityDerivativeIndicator = new MMMessageAttribute<SecurityInstrumentDescription9, TrueFalseIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription9.mmObject();
 			isDerived = false;
@@ -436,6 +486,16 @@ public class SecurityInstrumentDescription9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public TrueFalseIndicator getValue(SecurityInstrumentDescription9 obj) {
+			return obj.getCommodityDerivativeIndicator();
+		}
+
+		@Override
+		public void setValue(SecurityInstrumentDescription9 obj, TrueFalseIndicator value) {
+			obj.setCommodityDerivativeIndicator(value);
 		}
 	};
 

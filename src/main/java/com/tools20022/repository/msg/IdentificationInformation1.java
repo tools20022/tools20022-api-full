@@ -25,6 +25,8 @@ import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4;
+import com.tools20022.repository.msg.PartyIdentification32;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -110,7 +112,7 @@ public class IdentificationInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IdentificationInformation1, Optional<PartyIdentification32>> mmParty = new MMMessageAssociationEnd<IdentificationInformation1, Optional<PartyIdentification32>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IdentificationInformation1.mmObject();
@@ -122,7 +124,17 @@ public class IdentificationInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification32.mmObject();
+			type_lazy = () -> PartyIdentification32.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification32> getValue(IdentificationInformation1 obj) {
+			return obj.getParty();
+		}
+
+		@Override
+		public void setValue(IdentificationInformation1 obj, Optional<PartyIdentification32> value) {
+			obj.setParty(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Acct")
@@ -159,7 +171,7 @@ public class IdentificationInformation1 {
 	 * definition} = "Unambiguous identification of the account of a party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IdentificationInformation1, Optional<AccountIdentification4Choice>> mmAccount = new MMMessageAssociationEnd<IdentificationInformation1, Optional<AccountIdentification4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IdentificationInformation1.mmObject();
@@ -172,6 +184,16 @@ public class IdentificationInformation1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AccountIdentification4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AccountIdentification4Choice> getValue(IdentificationInformation1 obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(IdentificationInformation1 obj, Optional<AccountIdentification4Choice> value) {
+			obj.setAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Agt")
@@ -208,7 +230,7 @@ public class IdentificationInformation1 {
 	 * definition} = "Financial institution servicing an account for a party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IdentificationInformation1, Optional<BranchAndFinancialInstitutionIdentification4>> mmAgent = new MMMessageAssociationEnd<IdentificationInformation1, Optional<BranchAndFinancialInstitutionIdentification4>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IdentificationInformation1.mmObject();
@@ -220,7 +242,17 @@ public class IdentificationInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification4.mmObject();
+		}
+
+		@Override
+		public Optional<BranchAndFinancialInstitutionIdentification4> getValue(IdentificationInformation1 obj) {
+			return obj.getAgent();
+		}
+
+		@Override
+		public void setValue(IdentificationInformation1 obj, Optional<BranchAndFinancialInstitutionIdentification4> value) {
+			obj.setAgent(value.orElse(null));
 		}
 	};
 
@@ -243,7 +275,7 @@ public class IdentificationInformation1 {
 		return party == null ? Optional.empty() : Optional.of(party);
 	}
 
-	public IdentificationInformation1 setParty(com.tools20022.repository.msg.PartyIdentification32 party) {
+	public IdentificationInformation1 setParty(PartyIdentification32 party) {
 		this.party = party;
 		return this;
 	}
@@ -261,7 +293,7 @@ public class IdentificationInformation1 {
 		return agent == null ? Optional.empty() : Optional.of(agent);
 	}
 
-	public IdentificationInformation1 setAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4 agent) {
+	public IdentificationInformation1 setAgent(BranchAndFinancialInstitutionIdentification4 agent) {
 		this.agent = agent;
 		return this;
 	}

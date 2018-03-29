@@ -52,11 +52,15 @@ public class ConstraintWithholdingTaxRate2Rule {
 	 */
 	public static final MMConstraint<RateDetails31> forRateDetails31 = new MMConstraint<RateDetails31>() {
 		{
-			validator = ConstraintWithholdingTaxRate2Rule::checkRateDetails31;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTaxRate2Rule";
 			definition = "Only a single occurrence of either WithholdingTaxRate/Amount or WithholdingTaxRate/Rate or WithholdingTaxRate/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 564 NVR C7).";
 			owner_lazy = () -> RateDetails31.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateDetails31 obj) throws Exception {
+			checkRateDetails31(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintWithholdingTaxRate2Rule {
 	 */
 	public static final MMConstraint<CorporateActionRate86> forCorporateActionRate86 = new MMConstraint<CorporateActionRate86>() {
 		{
-			validator = ConstraintWithholdingTaxRate2Rule::checkCorporateActionRate86;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTaxRate2Rule";
 			definition = "Only a single occurrence of either WithholdingTaxRate/Amount or WithholdingTaxRate/Rate or WithholdingTaxRate/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 564 NVR C7).";
 			owner_lazy = () -> CorporateActionRate86.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate86 obj) throws Exception {
+			checkCorporateActionRate86(obj);
 		}
 	};
 	/**
@@ -111,11 +119,15 @@ public class ConstraintWithholdingTaxRate2Rule {
 	 */
 	public static final MMConstraint<RateDetails32> forRateDetails32 = new MMConstraint<RateDetails32>() {
 		{
-			validator = ConstraintWithholdingTaxRate2Rule::checkRateDetails32;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTaxRate2Rule";
 			definition = "Only a single occurrence of either WithholdingTaxRate/Amount or WithholdingTaxRate/Rate or WithholdingTaxRate/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 566 NVR C3).";
 			owner_lazy = () -> RateDetails32.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateDetails32 obj) throws Exception {
+			checkRateDetails32(obj);
 		}
 	};
 	/**
@@ -141,11 +153,15 @@ public class ConstraintWithholdingTaxRate2Rule {
 	 */
 	public static final MMConstraint<CorporateActionRate87> forCorporateActionRate87 = new MMConstraint<CorporateActionRate87>() {
 		{
-			validator = ConstraintWithholdingTaxRate2Rule::checkCorporateActionRate87;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTaxRate2Rule";
 			definition = "Only a single occurrence of either WithholdingTaxRate/Amount or WithholdingTaxRate/Rate or WithholdingTaxRate/NotSpecifiedRate may be present, only one of those elements may be present. \r\n(MT 564 NVR C7).";
 			owner_lazy = () -> CorporateActionRate87.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate87 obj) throws Exception {
+			checkCorporateActionRate87(obj);
 		}
 	};
 	/**
@@ -171,11 +187,15 @@ public class ConstraintWithholdingTaxRate2Rule {
 	 */
 	public static final MMConstraint<CorporateActionRate88> forCorporateActionRate88 = new MMConstraint<CorporateActionRate88>() {
 		{
-			validator = ConstraintWithholdingTaxRate2Rule::checkCorporateActionRate88;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTaxRate2Rule";
 			definition = "Only a single occurrence of either WithholdingTaxRate/Amount or WithholdingTaxRate/Rate or WithholdingTaxRate/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 564 NVR C7).";
 			owner_lazy = () -> CorporateActionRate88.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate88 obj) throws Exception {
+			checkCorporateActionRate88(obj);
 		}
 	};
 	/**
@@ -201,11 +221,15 @@ public class ConstraintWithholdingTaxRate2Rule {
 	 */
 	public static final MMConstraint<CorporateActionRate92> forCorporateActionRate92 = new MMConstraint<CorporateActionRate92>() {
 		{
-			validator = ConstraintWithholdingTaxRate2Rule::checkCorporateActionRate92;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTaxRate2Rule";
 			definition = "Only a single occurrence of either WithholdingTaxRate/Amount or WithholdingTaxRate/Rate or WithholdingTaxRate/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 564 NVR C7).";
 			owner_lazy = () -> CorporateActionRate92.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate92 obj) throws Exception {
+			checkCorporateActionRate92(obj);
 		}
 	};
 	/**
@@ -230,11 +254,15 @@ public class ConstraintWithholdingTaxRate2Rule {
 	 */
 	public static final MMConstraint<RateDetails33> forRateDetails33 = new MMConstraint<RateDetails33>() {
 		{
-			validator = ConstraintWithholdingTaxRate2Rule::checkRateDetails33;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTaxRate2Rule";
 			definition = "Only a single occurrence of either WithholdingTaxRate/Amount or WithholdingTaxRate/Rate or WithholdingTaxRate/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 566 NVR C3).";
 			owner_lazy = () -> RateDetails33.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateDetails33 obj) throws Exception {
+			checkRateDetails33(obj);
 		}
 	};
 	/**
@@ -260,11 +288,15 @@ public class ConstraintWithholdingTaxRate2Rule {
 	 */
 	public static final MMConstraint<CorporateActionRate94> forCorporateActionRate94 = new MMConstraint<CorporateActionRate94>() {
 		{
-			validator = ConstraintWithholdingTaxRate2Rule::checkCorporateActionRate94;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTaxRate2Rule";
 			definition = "Only a single occurrence of either WithholdingTaxRate/Amount or WithholdingTaxRate/Rate or WithholdingTaxRate/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 564 NVR C7).";
 			owner_lazy = () -> CorporateActionRate94.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate94 obj) throws Exception {
+			checkCorporateActionRate94(obj);
 		}
 	};
 	/**
@@ -289,11 +321,15 @@ public class ConstraintWithholdingTaxRate2Rule {
 	 */
 	public static final MMConstraint<RateDetails34> forRateDetails34 = new MMConstraint<RateDetails34>() {
 		{
-			validator = ConstraintWithholdingTaxRate2Rule::checkRateDetails34;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTaxRate2Rule";
 			definition = "Only a single occurrence of either WithholdingTaxRate/Amount or WithholdingTaxRate/Rate or WithholdingTaxRate/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 564 NVR C7).";
 			owner_lazy = () -> RateDetails34.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateDetails34 obj) throws Exception {
+			checkRateDetails34(obj);
 		}
 	};
 	/**
@@ -319,11 +355,15 @@ public class ConstraintWithholdingTaxRate2Rule {
 	 */
 	public static final MMConstraint<CorporateActionRate97> forCorporateActionRate97 = new MMConstraint<CorporateActionRate97>() {
 		{
-			validator = ConstraintWithholdingTaxRate2Rule::checkCorporateActionRate97;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTaxRate2Rule";
 			definition = "Only a single occurrence of either WithholdingTaxRate/Amount or WithholdingTaxRate/Rate or WithholdingTaxRate/NotSpecifiedRate may be present, only one of those elements may be present. \r\n(MT 564 NVR C7).";
 			owner_lazy = () -> CorporateActionRate97.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate97 obj) throws Exception {
+			checkCorporateActionRate97(obj);
 		}
 	};
 

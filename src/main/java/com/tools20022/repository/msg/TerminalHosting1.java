@@ -97,7 +97,7 @@ public class TerminalHosting1 {
 	 * definition} = "Type of ATM terminal hosting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCategory = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TerminalHosting1, Optional<TransactionEnvironment3Code>> mmCategory = new MMMessageAttribute<TerminalHosting1, Optional<TransactionEnvironment3Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TerminalHosting1.mmObject();
 			isDerived = false;
@@ -108,6 +108,16 @@ public class TerminalHosting1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TransactionEnvironment3Code.mmObject();
+		}
+
+		@Override
+		public Optional<TransactionEnvironment3Code> getValue(TerminalHosting1 obj) {
+			return obj.getCategory();
+		}
+
+		@Override
+		public void setValue(TerminalHosting1 obj, Optional<TransactionEnvironment3Code> value) {
+			obj.setCategory(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Id")
@@ -139,7 +149,7 @@ public class TerminalHosting1 {
 	 * definition} = "Identify the entity hosting the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TerminalHosting1, Optional<Max35Text>> mmIdentification = new MMMessageAttribute<TerminalHosting1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TerminalHosting1.mmObject();
 			isDerived = false;
@@ -150,6 +160,16 @@ public class TerminalHosting1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TerminalHosting1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(TerminalHosting1 obj, Optional<Max35Text> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 

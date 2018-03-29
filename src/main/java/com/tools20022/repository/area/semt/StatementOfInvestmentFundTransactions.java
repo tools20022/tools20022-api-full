@@ -24,7 +24,6 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesManagementArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -166,7 +165,7 @@ public class StatementOfInvestmentFundTransactions {
 	 * definition} = "Reference to a linked message that was previously sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StatementOfInvestmentFundTransactions, List<AdditionalReference2>> mmPreviousReference = new MMMessageBuildingBlock<StatementOfInvestmentFundTransactions, List<AdditionalReference2>>() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,12 +175,14 @@ public class StatementOfInvestmentFundTransactions {
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StatementOfInvestmentFundTransactions.class.getMethod("getPreviousReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<AdditionalReference2> getValue(StatementOfInvestmentFundTransactions obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(StatementOfInvestmentFundTransactions obj, List<AdditionalReference2> value) {
+			obj.setPreviousReference(value);
 		}
 	};
 	@XmlElement(name = "RltdRef")
@@ -210,7 +211,7 @@ public class StatementOfInvestmentFundTransactions {
 	 * "Reference to a linked message that was previously received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StatementOfInvestmentFundTransactions, List<AdditionalReference2>> mmRelatedReference = new MMMessageBuildingBlock<StatementOfInvestmentFundTransactions, List<AdditionalReference2>>() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -220,12 +221,14 @@ public class StatementOfInvestmentFundTransactions {
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StatementOfInvestmentFundTransactions.class.getMethod("getRelatedReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<AdditionalReference2> getValue(StatementOfInvestmentFundTransactions obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(StatementOfInvestmentFundTransactions obj, List<AdditionalReference2> value) {
+			obj.setRelatedReference(value);
 		}
 	};
 	@XmlElement(name = "MsgPgntn", required = true)
@@ -252,7 +255,7 @@ public class StatementOfInvestmentFundTransactions {
 	 * definition} = "Pagination of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessagePagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StatementOfInvestmentFundTransactions, Pagination> mmMessagePagination = new MMMessageBuildingBlock<StatementOfInvestmentFundTransactions, Pagination>() {
 		{
 			xmlTag = "MsgPgntn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -263,12 +266,14 @@ public class StatementOfInvestmentFundTransactions {
 			complexType_lazy = () -> Pagination.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StatementOfInvestmentFundTransactions.class.getMethod("getMessagePagination", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Pagination getValue(StatementOfInvestmentFundTransactions obj) {
+			return obj.getMessagePagination();
+		}
+
+		@Override
+		public void setValue(StatementOfInvestmentFundTransactions obj, Pagination value) {
+			obj.setMessagePagination(value);
 		}
 	};
 	@XmlElement(name = "StmtGnlDtls", required = true)
@@ -297,7 +302,7 @@ public class StatementOfInvestmentFundTransactions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmStatementGeneralDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StatementOfInvestmentFundTransactions, Statement5> mmStatementGeneralDetails = new MMMessageBuildingBlock<StatementOfInvestmentFundTransactions, Statement5>() {
 		{
 			xmlTag = "StmtGnlDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -308,12 +313,14 @@ public class StatementOfInvestmentFundTransactions {
 			complexType_lazy = () -> Statement5.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StatementOfInvestmentFundTransactions.class.getMethod("getStatementGeneralDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Statement5 getValue(StatementOfInvestmentFundTransactions obj) {
+			return obj.getStatementGeneralDetails();
+		}
+
+		@Override
+		public void setValue(StatementOfInvestmentFundTransactions obj, Statement5 value) {
+			obj.setStatementGeneralDetails(value);
 		}
 	};
 	@XmlElement(name = "InvstmtAcctDtls", required = true)
@@ -341,7 +348,7 @@ public class StatementOfInvestmentFundTransactions {
 	 * definition} = "Information related to an investment account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmInvestmentAccountDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StatementOfInvestmentFundTransactions, InvestmentAccount12> mmInvestmentAccountDetails = new MMMessageBuildingBlock<StatementOfInvestmentFundTransactions, InvestmentAccount12>() {
 		{
 			xmlTag = "InvstmtAcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -352,12 +359,14 @@ public class StatementOfInvestmentFundTransactions {
 			complexType_lazy = () -> InvestmentAccount12.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StatementOfInvestmentFundTransactions.class.getMethod("getInvestmentAccountDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public InvestmentAccount12 getValue(StatementOfInvestmentFundTransactions obj) {
+			return obj.getInvestmentAccountDetails();
+		}
+
+		@Override
+		public void setValue(StatementOfInvestmentFundTransactions obj, InvestmentAccount12 value) {
+			obj.setInvestmentAccountDetails(value);
 		}
 	};
 	@XmlElement(name = "TxOnAcct")
@@ -387,7 +396,7 @@ public class StatementOfInvestmentFundTransactions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionOnAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StatementOfInvestmentFundTransactions, List<InvestmentFundTransactionsByFund1>> mmTransactionOnAccount = new MMMessageBuildingBlock<StatementOfInvestmentFundTransactions, List<InvestmentFundTransactionsByFund1>>() {
 		{
 			xmlTag = "TxOnAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -397,12 +406,14 @@ public class StatementOfInvestmentFundTransactions {
 			complexType_lazy = () -> InvestmentFundTransactionsByFund1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StatementOfInvestmentFundTransactions.class.getMethod("getTransactionOnAccount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<InvestmentFundTransactionsByFund1> getValue(StatementOfInvestmentFundTransactions obj) {
+			return obj.getTransactionOnAccount();
+		}
+
+		@Override
+		public void setValue(StatementOfInvestmentFundTransactions obj, List<InvestmentFundTransactionsByFund1> value) {
+			obj.setTransactionOnAccount(value);
 		}
 	};
 	@XmlElement(name = "SubAcctDtls")
@@ -431,7 +442,7 @@ public class StatementOfInvestmentFundTransactions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSubAccountDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StatementOfInvestmentFundTransactions, List<SubAccountIdentification4>> mmSubAccountDetails = new MMMessageBuildingBlock<StatementOfInvestmentFundTransactions, List<SubAccountIdentification4>>() {
 		{
 			xmlTag = "SubAcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -441,12 +452,14 @@ public class StatementOfInvestmentFundTransactions {
 			complexType_lazy = () -> SubAccountIdentification4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StatementOfInvestmentFundTransactions.class.getMethod("getSubAccountDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SubAccountIdentification4> getValue(StatementOfInvestmentFundTransactions obj) {
+			return obj.getSubAccountDetails();
+		}
+
+		@Override
+		public void setValue(StatementOfInvestmentFundTransactions obj, List<SubAccountIdentification4> value) {
+			obj.setSubAccountDetails(value);
 		}
 	};
 	@XmlElement(name = "Xtnsn")
@@ -475,7 +488,7 @@ public class StatementOfInvestmentFundTransactions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StatementOfInvestmentFundTransactions, List<Extension1>> mmExtension = new MMMessageBuildingBlock<StatementOfInvestmentFundTransactions, List<Extension1>>() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -485,12 +498,14 @@ public class StatementOfInvestmentFundTransactions {
 			complexType_lazy = () -> Extension1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StatementOfInvestmentFundTransactions.class.getMethod("getExtension", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Extension1> getValue(StatementOfInvestmentFundTransactions obj) {
+			return obj.getExtension();
+		}
+
+		@Override
+		public void setValue(StatementOfInvestmentFundTransactions obj, List<Extension1> value) {
+			obj.setExtension(value);
 		}
 	};
 

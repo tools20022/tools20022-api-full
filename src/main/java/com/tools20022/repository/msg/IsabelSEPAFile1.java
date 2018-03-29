@@ -108,7 +108,7 @@ public class IsabelSEPAFile1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSEPAIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelSEPAFile1, TrueFalseIndicator> mmSEPAIndicator = new MMMessageAttribute<IsabelSEPAFile1, TrueFalseIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelSEPAFile1.mmObject();
 			isDerived = false;
@@ -119,6 +119,16 @@ public class IsabelSEPAFile1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public TrueFalseIndicator getValue(IsabelSEPAFile1 obj) {
+			return obj.getSEPAIndicator();
+		}
+
+		@Override
+		public void setValue(IsabelSEPAFile1 obj, TrueFalseIndicator value) {
+			obj.setSEPAIndicator(value);
 		}
 	};
 	@XmlElement(name = "CtgyPurp", required = true)
@@ -152,7 +162,7 @@ public class IsabelSEPAFile1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCategoryPurpose = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelSEPAFile1, Max6Text> mmCategoryPurpose = new MMMessageAttribute<IsabelSEPAFile1, Max6Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelSEPAFile1.mmObject();
 			isDerived = false;
@@ -163,6 +173,16 @@ public class IsabelSEPAFile1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max6Text.mmObject();
+		}
+
+		@Override
+		public Max6Text getValue(IsabelSEPAFile1 obj) {
+			return obj.getCategoryPurpose();
+		}
+
+		@Override
+		public void setValue(IsabelSEPAFile1 obj, Max6Text value) {
+			obj.setCategoryPurpose(value);
 		}
 	};
 	@XmlElement(name = "MktPrctcs")
@@ -194,7 +214,7 @@ public class IsabelSEPAFile1 {
 	 * definition} = "Local market practices applicable to the SEPA file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarketPractices = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelSEPAFile1, List<Max35Text>> mmMarketPractices = new MMMessageAttribute<IsabelSEPAFile1, List<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelSEPAFile1.mmObject();
 			isDerived = false;
@@ -205,6 +225,16 @@ public class IsabelSEPAFile1 {
 			maxOccurs = 10;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(IsabelSEPAFile1 obj) {
+			return obj.getMarketPractices();
+		}
+
+		@Override
+		public void setValue(IsabelSEPAFile1 obj, List<Max35Text> value) {
+			obj.setMarketPractices(value);
 		}
 	};
 

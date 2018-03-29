@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.DateAndDateTime2Choice;
 import com.tools20022.repository.codeset.DateType8Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
@@ -110,7 +111,7 @@ public class DateFormat48Choice {
 	 * DateFormat28Choice.mmDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DateFormat48Choice, DateAndDateTime2Choice> mmDate = new MMMessageAssociationEnd<DateFormat48Choice, DateAndDateTime2Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat48Choice.mmObject();
 			isDerived = false;
@@ -123,7 +124,17 @@ public class DateFormat48Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.DateAndDateTime2Choice.mmObject();
+			type_lazy = () -> DateAndDateTime2Choice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTime2Choice getValue(DateFormat48Choice obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(DateFormat48Choice obj, DateAndDateTime2Choice value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "DtCd", required = true)
@@ -164,7 +175,7 @@ public class DateFormat48Choice {
 	 * DateFormat28Choice.mmDateCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateFormat48Choice, DateType8Code> mmDateCode = new MMMessageAttribute<DateFormat48Choice, DateType8Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat48Choice.mmObject();
 			isDerived = false;
@@ -177,6 +188,16 @@ public class DateFormat48Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DateType8Code.mmObject();
+		}
+
+		@Override
+		public DateType8Code getValue(DateFormat48Choice obj) {
+			return obj.getDateCode();
+		}
+
+		@Override
+		public void setValue(DateFormat48Choice obj, DateType8Code value) {
+			obj.setDateCode(value);
 		}
 	};
 
@@ -198,7 +219,7 @@ public class DateFormat48Choice {
 		return date;
 	}
 
-	public DateFormat48Choice setDate(com.tools20022.repository.choice.DateAndDateTime2Choice date) {
+	public DateFormat48Choice setDate(DateAndDateTime2Choice date) {
 		this.date = Objects.requireNonNull(date);
 		return this;
 	}

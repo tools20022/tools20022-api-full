@@ -115,7 +115,7 @@ public class InstructionType3 {
 	 * "Specifies whether the data set has to be matched or pre-matched."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstructionType3, InstructionType3Code> mmType = new MMMessageAttribute<InstructionType3, InstructionType3Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstructionType3.mmObject();
 			isDerived = false;
@@ -126,6 +126,16 @@ public class InstructionType3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InstructionType3Code.mmObject();
+		}
+
+		@Override
+		public InstructionType3Code getValue(InstructionType3 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(InstructionType3 obj, InstructionType3Code value) {
+			obj.setType(value);
 		}
 	};
 

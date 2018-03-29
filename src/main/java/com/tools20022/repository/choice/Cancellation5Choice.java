@@ -145,7 +145,7 @@ public class Cancellation5Choice {
 	 * Cancellation2Choice.mmReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReferences = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Cancellation5Choice, List<TransferReference5>> mmReferences = new MMMessageAttribute<Cancellation5Choice, List<TransferReference5>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeRelatedIdentifications;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Cancellation5Choice.mmObject();
@@ -158,6 +158,16 @@ public class Cancellation5Choice {
 			previousVersion_lazy = () -> Cancellation2Choice.mmReference;
 			minOccurs = 1;
 			complexType_lazy = () -> TransferReference5.mmObject();
+		}
+
+		@Override
+		public List<TransferReference5> getValue(Cancellation5Choice obj) {
+			return obj.getReferences();
+		}
+
+		@Override
+		public void setValue(Cancellation5Choice obj, List<TransferReference5> value) {
+			obj.setReferences(value);
 		}
 	};
 	@XmlElement(name = "TrfInDtls", required = true)
@@ -207,7 +217,7 @@ public class Cancellation5Choice {
 	 * Cancellation2Choice.mmTransferInDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransferInDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Cancellation5Choice, TransferIn10> mmTransferInDetails = new MMMessageAttribute<Cancellation5Choice, TransferIn10>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesSettlement.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Cancellation5Choice.mmObject();
@@ -221,6 +231,16 @@ public class Cancellation5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TransferIn10.mmObject();
+		}
+
+		@Override
+		public TransferIn10 getValue(Cancellation5Choice obj) {
+			return obj.getTransferInDetails();
+		}
+
+		@Override
+		public void setValue(Cancellation5Choice obj, TransferIn10 value) {
+			obj.setTransferInDetails(value);
 		}
 	};
 

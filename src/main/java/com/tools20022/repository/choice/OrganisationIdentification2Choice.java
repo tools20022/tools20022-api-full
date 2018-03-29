@@ -108,7 +108,7 @@ public class OrganisationIdentification2Choice {
 	 * definition} = "Client code used to identify the organisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClientIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrganisationIdentification2Choice, Max50Text> mmClientIdentification = new MMMessageAttribute<OrganisationIdentification2Choice, Max50Text>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OrganisationIdentification2Choice.mmObject();
@@ -120,6 +120,16 @@ public class OrganisationIdentification2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max50Text.mmObject();
+		}
+
+		@Override
+		public Max50Text getValue(OrganisationIdentification2Choice obj) {
+			return obj.getClientIdentification();
+		}
+
+		@Override
+		public void setValue(OrganisationIdentification2Choice obj, Max50Text value) {
+			obj.setClientIdentification(value);
 		}
 	};
 	@XmlElement(name = "AnyBIC", required = true)
@@ -158,7 +168,7 @@ public class OrganisationIdentification2Choice {
 	 * "Business identifier code used to identify the organisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAnyBIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrganisationIdentification2Choice, AnyBICIdentifier> mmAnyBIC = new MMMessageAttribute<OrganisationIdentification2Choice, AnyBICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OrganisationIdentification2Choice.mmObject();
@@ -170,6 +180,16 @@ public class OrganisationIdentification2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public AnyBICIdentifier getValue(OrganisationIdentification2Choice obj) {
+			return obj.getAnyBIC();
+		}
+
+		@Override
+		public void setValue(OrganisationIdentification2Choice obj, AnyBICIdentifier value) {
+			obj.setAnyBIC(value);
 		}
 	};
 

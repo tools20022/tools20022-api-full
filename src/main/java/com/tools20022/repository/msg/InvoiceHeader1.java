@@ -32,6 +32,8 @@ import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.entity.DocumentIssuer;
 import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AdditionalInformation6;
+import com.tools20022.repository.msg.TradeParty1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -151,7 +153,7 @@ public class InvoiceHeader1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvoiceHeader1, Max35Text> mmIdentification = new MMMessageAttribute<InvoiceHeader1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceHeader1.mmObject();
@@ -164,6 +166,16 @@ public class InvoiceHeader1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(InvoiceHeader1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(InvoiceHeader1 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "TpCd", required = true)
@@ -208,7 +220,7 @@ public class InvoiceHeader1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTypeCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvoiceHeader1, ExternalDocumentType1Code> mmTypeCode = new MMMessageAttribute<InvoiceHeader1, ExternalDocumentType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceHeader1.mmObject();
@@ -221,6 +233,16 @@ public class InvoiceHeader1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalDocumentType1Code.mmObject();
+		}
+
+		@Override
+		public ExternalDocumentType1Code getValue(InvoiceHeader1 obj) {
+			return obj.getTypeCode();
+		}
+
+		@Override
+		public void setValue(InvoiceHeader1 obj, ExternalDocumentType1Code value) {
+			obj.setTypeCode(value);
 		}
 	};
 	@XmlElement(name = "Nm")
@@ -264,7 +286,7 @@ public class InvoiceHeader1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvoiceHeader1, List<Max35Text>> mmName = new MMMessageAttribute<InvoiceHeader1, List<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmDocumentIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceHeader1.mmObject();
@@ -276,6 +298,16 @@ public class InvoiceHeader1 {
 			nextVersions_lazy = () -> Arrays.asList(InvoiceHeader2.mmName);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(InvoiceHeader1 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(InvoiceHeader1 obj, List<Max35Text> value) {
+			obj.setName(value);
 		}
 	};
 	@XmlElement(name = "IsseDtTm", required = true)
@@ -319,7 +351,7 @@ public class InvoiceHeader1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssueDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvoiceHeader1, ISODateTime> mmIssueDateTime = new MMMessageAttribute<InvoiceHeader1, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceHeader1.mmObject();
@@ -332,6 +364,16 @@ public class InvoiceHeader1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(InvoiceHeader1 obj) {
+			return obj.getIssueDateTime();
+		}
+
+		@Override
+		public void setValue(InvoiceHeader1 obj, ISODateTime value) {
+			obj.setIssueDateTime(value);
 		}
 	};
 	@XmlElement(name = "Issr")
@@ -373,7 +415,7 @@ public class InvoiceHeader1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIssuer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvoiceHeader1, Optional<TradeParty1>> mmIssuer = new MMMessageAssociationEnd<InvoiceHeader1, Optional<TradeParty1>>() {
 		{
 			businessComponentTrace_lazy = () -> DocumentIssuer.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceHeader1.mmObject();
@@ -386,7 +428,17 @@ public class InvoiceHeader1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TradeParty1.mmObject();
+			type_lazy = () -> TradeParty1.mmObject();
+		}
+
+		@Override
+		public Optional<TradeParty1> getValue(InvoiceHeader1 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(InvoiceHeader1 obj, Optional<TradeParty1> value) {
+			obj.setIssuer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LangCd")
@@ -431,7 +483,7 @@ public class InvoiceHeader1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLanguageCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvoiceHeader1, Optional<LanguageCode>> mmLanguageCode = new MMMessageAttribute<InvoiceHeader1, Optional<LanguageCode>>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmLanguage;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceHeader1.mmObject();
@@ -444,6 +496,16 @@ public class InvoiceHeader1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LanguageCode.mmObject();
+		}
+
+		@Override
+		public Optional<LanguageCode> getValue(InvoiceHeader1 obj) {
+			return obj.getLanguageCode();
+		}
+
+		@Override
+		public void setValue(InvoiceHeader1 obj, Optional<LanguageCode> value) {
+			obj.setLanguageCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CpyInd")
@@ -484,7 +546,7 @@ public class InvoiceHeader1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCopyIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvoiceHeader1, Optional<YesNoIndicator>> mmCopyIndicator = new MMMessageAttribute<InvoiceHeader1, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceHeader1.mmObject();
 			isDerived = false;
@@ -496,6 +558,16 @@ public class InvoiceHeader1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(InvoiceHeader1 obj) {
+			return obj.getCopyIndicator();
+		}
+
+		@Override
+		public void setValue(InvoiceHeader1 obj, Optional<YesNoIndicator> value) {
+			obj.setCopyIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DocPurp")
@@ -540,7 +612,7 @@ public class InvoiceHeader1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDocumentPurpose = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvoiceHeader1, Optional<ExternalDocumentPurpose1Code>> mmDocumentPurpose = new MMMessageAttribute<InvoiceHeader1, Optional<ExternalDocumentPurpose1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmPurpose;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceHeader1.mmObject();
@@ -554,9 +626,19 @@ public class InvoiceHeader1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> ExternalDocumentPurpose1Code.mmObject();
 		}
+
+		@Override
+		public Optional<ExternalDocumentPurpose1Code> getValue(InvoiceHeader1 obj) {
+			return obj.getDocumentPurpose();
+		}
+
+		@Override
+		public void setValue(InvoiceHeader1 obj, Optional<ExternalDocumentPurpose1Code> value) {
+			obj.setDocumentPurpose(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "InclNote")
-	protected List<com.tools20022.repository.msg.AdditionalInformation6> includedNote;
+	protected List<AdditionalInformation6> includedNote;
 	/**
 	 * 
 	 <p>
@@ -592,7 +674,7 @@ public class InvoiceHeader1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIncludedNote = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvoiceHeader1, List<AdditionalInformation6>> mmIncludedNote = new MMMessageAttribute<InvoiceHeader1, List<AdditionalInformation6>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceHeader1.mmObject();
 			isDerived = false;
@@ -602,7 +684,17 @@ public class InvoiceHeader1 {
 			definition = "Note included in this invoice document.";
 			nextVersions_lazy = () -> Arrays.asList(InvoiceHeader2.mmIncludedNote);
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalInformation6.mmObject();
+			complexType_lazy = () -> AdditionalInformation6.mmObject();
+		}
+
+		@Override
+		public List<AdditionalInformation6> getValue(InvoiceHeader1 obj) {
+			return obj.getIncludedNote();
+		}
+
+		@Override
+		public void setValue(InvoiceHeader1 obj, List<AdditionalInformation6> value) {
+			obj.setIncludedNote(value);
 		}
 	};
 
@@ -664,7 +756,7 @@ public class InvoiceHeader1 {
 		return issuer == null ? Optional.empty() : Optional.of(issuer);
 	}
 
-	public InvoiceHeader1 setIssuer(com.tools20022.repository.msg.TradeParty1 issuer) {
+	public InvoiceHeader1 setIssuer(TradeParty1 issuer) {
 		this.issuer = issuer;
 		return this;
 	}
@@ -700,7 +792,7 @@ public class InvoiceHeader1 {
 		return includedNote == null ? includedNote = new ArrayList<>() : includedNote;
 	}
 
-	public InvoiceHeader1 setIncludedNote(List<com.tools20022.repository.msg.AdditionalInformation6> includedNote) {
+	public InvoiceHeader1 setIncludedNote(List<AdditionalInformation6> includedNote) {
 		this.includedNote = Objects.requireNonNull(includedNote);
 		return this;
 	}

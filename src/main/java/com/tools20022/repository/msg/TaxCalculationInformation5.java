@@ -136,7 +136,7 @@ public class TaxCalculationInformation5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCalculationInformation5, Optional<TaxationBasis2Code>> mmBasis = new MMMessageAttribute<TaxCalculationInformation5, Optional<TaxationBasis2Code>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmBasis;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation5.mmObject();
@@ -149,6 +149,16 @@ public class TaxCalculationInformation5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TaxationBasis2Code.mmObject();
+		}
+
+		@Override
+		public Optional<TaxationBasis2Code> getValue(TaxCalculationInformation5 obj) {
+			return obj.getBasis();
+		}
+
+		@Override
+		public void setValue(TaxCalculationInformation5 obj, Optional<TaxationBasis2Code> value) {
+			obj.setBasis(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XtndedBsis")
@@ -187,7 +197,7 @@ public class TaxCalculationInformation5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCalculationInformation5, Optional<Extended350Code>> mmExtendedBasis = new MMMessageAttribute<TaxCalculationInformation5, Optional<Extended350Code>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmBasis;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation5.mmObject();
@@ -199,6 +209,16 @@ public class TaxCalculationInformation5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Optional<Extended350Code> getValue(TaxCalculationInformation5 obj) {
+			return obj.getExtendedBasis();
+		}
+
+		@Override
+		public void setValue(TaxCalculationInformation5 obj, Optional<Extended350Code> value) {
+			obj.setExtendedBasis(value.orElse(null));
 		}
 	};
 	/**

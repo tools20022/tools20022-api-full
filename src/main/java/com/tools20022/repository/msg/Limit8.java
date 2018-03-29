@@ -115,7 +115,7 @@ public class Limit8 {
 	 * Limit6.mmStartDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStartDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Limit8, Optional<DateAndDateTime2Choice>> mmStartDateTime = new MMMessageAttribute<Limit8, Optional<DateAndDateTime2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Limit8.mmObject();
@@ -128,6 +128,16 @@ public class Limit8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTime2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTime2Choice> getValue(Limit8 obj) {
+			return obj.getStartDateTime();
+		}
+
+		@Override
+		public void setValue(Limit8 obj, Optional<DateAndDateTime2Choice> value) {
+			obj.setStartDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -170,7 +180,7 @@ public class Limit8 {
 	 * Limit6.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Limit8, Amount2Choice> mmAmount = new MMMessageAttribute<Limit8, Amount2Choice>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Limit8.mmObject();
@@ -183,6 +193,16 @@ public class Limit8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Amount2Choice.mmObject();
+		}
+
+		@Override
+		public Amount2Choice getValue(Limit8 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Limit8 obj, Amount2Choice value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "CdtDbtInd")
@@ -224,7 +244,7 @@ public class Limit8 {
 	 * Limit6.mmCreditDebitIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Limit8, Optional<CreditDebitCode>> mmCreditDebitIndicator = new MMMessageAttribute<Limit8, Optional<CreditDebitCode>>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Limit8.mmObject();
@@ -237,6 +257,16 @@ public class Limit8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public Optional<CreditDebitCode> getValue(Limit8 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(Limit8 obj, Optional<CreditDebitCode> value) {
+			obj.setCreditDebitIndicator(value.orElse(null));
 		}
 	};
 

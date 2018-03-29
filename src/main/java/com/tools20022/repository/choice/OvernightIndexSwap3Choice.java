@@ -132,7 +132,7 @@ public class OvernightIndexSwap3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDataSetAction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OvernightIndexSwap3Choice, ReportPeriodActivity1Code> mmDataSetAction = new MMMessageAttribute<OvernightIndexSwap3Choice, ReportPeriodActivity1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.OvernightIndexSwap3Choice.mmObject();
 			isDerived = false;
@@ -144,6 +144,16 @@ public class OvernightIndexSwap3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ReportPeriodActivity1Code.mmObject();
+		}
+
+		@Override
+		public ReportPeriodActivity1Code getValue(OvernightIndexSwap3Choice obj) {
+			return obj.getDataSetAction();
+		}
+
+		@Override
+		public void setValue(OvernightIndexSwap3Choice obj, ReportPeriodActivity1Code value) {
+			obj.setDataSetAction(value);
 		}
 	};
 	@XmlElement(name = "Tx", required = true)
@@ -185,7 +195,7 @@ public class OvernightIndexSwap3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OvernightIndexSwap3Choice, List<OvernightIndexSwapTransaction3>> mmTransaction = new MMMessageAssociationEnd<OvernightIndexSwap3Choice, List<OvernightIndexSwapTransaction3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.OvernightIndexSwap3Choice.mmObject();
 			isDerived = false;
@@ -197,6 +207,16 @@ public class OvernightIndexSwap3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OvernightIndexSwapTransaction3.mmObject();
+		}
+
+		@Override
+		public List<OvernightIndexSwapTransaction3> getValue(OvernightIndexSwap3Choice obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(OvernightIndexSwap3Choice obj, List<OvernightIndexSwapTransaction3> value) {
+			obj.setTransaction(value);
 		}
 	};
 

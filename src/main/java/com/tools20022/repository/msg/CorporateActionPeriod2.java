@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Period1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -119,7 +120,7 @@ public class CorporateActionPeriod2 {
 	 * definition} = "Period during which the assented line is available."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAssentedLinePeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPeriod2, Optional<Period1>> mmAssentedLinePeriod = new MMMessageAttribute<CorporateActionPeriod2, Optional<Period1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmAssentedLinePeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod2.mmObject();
@@ -130,7 +131,17 @@ public class CorporateActionPeriod2 {
 			definition = "Period during which the assented line is available.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Period1.mmObject();
+			complexType_lazy = () -> Period1.mmObject();
+		}
+
+		@Override
+		public Optional<Period1> getValue(CorporateActionPeriod2 obj) {
+			return obj.getAssentedLinePeriod();
+		}
+
+		@Override
+		public void setValue(CorporateActionPeriod2 obj, Optional<Period1> value) {
+			obj.setAssentedLinePeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ActnPrd")
@@ -169,7 +180,7 @@ public class CorporateActionPeriod2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActionPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPeriod2, Optional<Period1>> mmActionPeriod = new MMMessageAttribute<CorporateActionPeriod2, Optional<Period1>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmActionPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod2.mmObject();
@@ -180,7 +191,17 @@ public class CorporateActionPeriod2 {
 			definition = "Period during which the specified option, or all options of the event, remains valid, eg, offer period.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Period1.mmObject();
+			complexType_lazy = () -> Period1.mmObject();
+		}
+
+		@Override
+		public Optional<Period1> getValue(CorporateActionPeriod2 obj) {
+			return obj.getActionPeriod();
+		}
+
+		@Override
+		public void setValue(CorporateActionPeriod2 obj, Optional<Period1> value) {
+			obj.setActionPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvlgSspnsnPrd")
@@ -219,7 +240,7 @@ public class CorporateActionPeriod2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPrivilegeSuspensionPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPeriod2, Optional<Period1>> mmPrivilegeSuspensionPeriod = new MMMessageAttribute<CorporateActionPeriod2, Optional<Period1>>() {
 		{
 			businessElementTrace_lazy = () -> SuspensionPeriod.mmPrivilegeSuspensionPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod2.mmObject();
@@ -230,7 +251,17 @@ public class CorporateActionPeriod2 {
 			definition = "Period during which the privilege is not available, eg, this can happen whenever a meeting takes place or whenever a coupon payment is due.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Period1.mmObject();
+			complexType_lazy = () -> Period1.mmObject();
+		}
+
+		@Override
+		public Optional<Period1> getValue(CorporateActionPeriod2 obj) {
+			return obj.getPrivilegeSuspensionPeriod();
+		}
+
+		@Override
+		public void setValue(CorporateActionPeriod2 obj, Optional<Period1> value) {
+			obj.setPrivilegeSuspensionPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ParllTradgPrd")
@@ -269,7 +300,7 @@ public class CorporateActionPeriod2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmParallelTradingPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPeriod2, Optional<Period1>> mmParallelTradingPeriod = new MMMessageAttribute<CorporateActionPeriod2, Optional<Period1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmParallelTradingPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod2.mmObject();
@@ -280,7 +311,17 @@ public class CorporateActionPeriod2 {
 			definition = "Period during which both old and new equity may be traded simultaneously, eg, consolidation of equity or splitting of equity.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Period1.mmObject();
+			complexType_lazy = () -> Period1.mmObject();
+		}
+
+		@Override
+		public Optional<Period1> getValue(CorporateActionPeriod2 obj) {
+			return obj.getParallelTradingPeriod();
+		}
+
+		@Override
+		public void setValue(CorporateActionPeriod2 obj, Optional<Period1> value) {
+			obj.setParallelTradingPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SellThruIssrPrd")
@@ -319,7 +360,7 @@ public class CorporateActionPeriod2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSellThruIssuerPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPeriod2, Optional<Period1>> mmSellThruIssuerPeriod = new MMMessageAttribute<CorporateActionPeriod2, Optional<Period1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmSellThruIssuerPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod2.mmObject();
@@ -330,7 +371,17 @@ public class CorporateActionPeriod2 {
 			definition = "Period (last day included) during which an account owner can surrender or sell securities to the issuer and receive the sale proceeds.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Period1.mmObject();
+			complexType_lazy = () -> Period1.mmObject();
+		}
+
+		@Override
+		public Optional<Period1> getValue(CorporateActionPeriod2 obj) {
+			return obj.getSellThruIssuerPeriod();
+		}
+
+		@Override
+		public void setValue(CorporateActionPeriod2 obj, Optional<Period1> value) {
+			obj.setSellThruIssuerPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RvcbltyPrd")
@@ -369,7 +420,7 @@ public class CorporateActionPeriod2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRevocabilityPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPeriod2, Optional<Period1>> mmRevocabilityPeriod = new MMMessageAttribute<CorporateActionPeriod2, Optional<Period1>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDeadline.mmRevocabilityPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod2.mmObject();
@@ -380,7 +431,17 @@ public class CorporateActionPeriod2 {
 			definition = "Period during which the shareholder can revoke, change or withdraw its instruction.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Period1.mmObject();
+			complexType_lazy = () -> Period1.mmObject();
+		}
+
+		@Override
+		public Optional<Period1> getValue(CorporateActionPeriod2 obj) {
+			return obj.getRevocabilityPeriod();
+		}
+
+		@Override
+		public void setValue(CorporateActionPeriod2 obj, Optional<Period1> value) {
+			obj.setRevocabilityPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PricClctnPrd")
@@ -419,7 +480,7 @@ public class CorporateActionPeriod2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriceCalculationPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPeriod2, Optional<Period1>> mmPriceCalculationPeriod = new MMMessageAttribute<CorporateActionPeriod2, Optional<Period1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceCalculationPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod2.mmObject();
@@ -430,7 +491,17 @@ public class CorporateActionPeriod2 {
 			definition = "Period during which the price of a security is determined (for outturn securities).";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Period1.mmObject();
+			complexType_lazy = () -> Period1.mmObject();
+		}
+
+		@Override
+		public Optional<Period1> getValue(CorporateActionPeriod2 obj) {
+			return obj.getPriceCalculationPeriod();
+		}
+
+		@Override
+		public void setValue(CorporateActionPeriod2 obj, Optional<Period1> value) {
+			obj.setPriceCalculationPeriod(value.orElse(null));
 		}
 	};
 
@@ -455,7 +526,7 @@ public class CorporateActionPeriod2 {
 		return assentedLinePeriod == null ? Optional.empty() : Optional.of(assentedLinePeriod);
 	}
 
-	public CorporateActionPeriod2 setAssentedLinePeriod(com.tools20022.repository.msg.Period1 assentedLinePeriod) {
+	public CorporateActionPeriod2 setAssentedLinePeriod(Period1 assentedLinePeriod) {
 		this.assentedLinePeriod = assentedLinePeriod;
 		return this;
 	}
@@ -464,7 +535,7 @@ public class CorporateActionPeriod2 {
 		return actionPeriod == null ? Optional.empty() : Optional.of(actionPeriod);
 	}
 
-	public CorporateActionPeriod2 setActionPeriod(com.tools20022.repository.msg.Period1 actionPeriod) {
+	public CorporateActionPeriod2 setActionPeriod(Period1 actionPeriod) {
 		this.actionPeriod = actionPeriod;
 		return this;
 	}
@@ -473,7 +544,7 @@ public class CorporateActionPeriod2 {
 		return privilegeSuspensionPeriod == null ? Optional.empty() : Optional.of(privilegeSuspensionPeriod);
 	}
 
-	public CorporateActionPeriod2 setPrivilegeSuspensionPeriod(com.tools20022.repository.msg.Period1 privilegeSuspensionPeriod) {
+	public CorporateActionPeriod2 setPrivilegeSuspensionPeriod(Period1 privilegeSuspensionPeriod) {
 		this.privilegeSuspensionPeriod = privilegeSuspensionPeriod;
 		return this;
 	}
@@ -482,7 +553,7 @@ public class CorporateActionPeriod2 {
 		return parallelTradingPeriod == null ? Optional.empty() : Optional.of(parallelTradingPeriod);
 	}
 
-	public CorporateActionPeriod2 setParallelTradingPeriod(com.tools20022.repository.msg.Period1 parallelTradingPeriod) {
+	public CorporateActionPeriod2 setParallelTradingPeriod(Period1 parallelTradingPeriod) {
 		this.parallelTradingPeriod = parallelTradingPeriod;
 		return this;
 	}
@@ -491,7 +562,7 @@ public class CorporateActionPeriod2 {
 		return sellThruIssuerPeriod == null ? Optional.empty() : Optional.of(sellThruIssuerPeriod);
 	}
 
-	public CorporateActionPeriod2 setSellThruIssuerPeriod(com.tools20022.repository.msg.Period1 sellThruIssuerPeriod) {
+	public CorporateActionPeriod2 setSellThruIssuerPeriod(Period1 sellThruIssuerPeriod) {
 		this.sellThruIssuerPeriod = sellThruIssuerPeriod;
 		return this;
 	}
@@ -500,7 +571,7 @@ public class CorporateActionPeriod2 {
 		return revocabilityPeriod == null ? Optional.empty() : Optional.of(revocabilityPeriod);
 	}
 
-	public CorporateActionPeriod2 setRevocabilityPeriod(com.tools20022.repository.msg.Period1 revocabilityPeriod) {
+	public CorporateActionPeriod2 setRevocabilityPeriod(Period1 revocabilityPeriod) {
 		this.revocabilityPeriod = revocabilityPeriod;
 		return this;
 	}
@@ -509,7 +580,7 @@ public class CorporateActionPeriod2 {
 		return priceCalculationPeriod == null ? Optional.empty() : Optional.of(priceCalculationPeriod);
 	}
 
-	public CorporateActionPeriod2 setPriceCalculationPeriod(com.tools20022.repository.msg.Period1 priceCalculationPeriod) {
+	public CorporateActionPeriod2 setPriceCalculationPeriod(Period1 priceCalculationPeriod) {
 		this.priceCalculationPeriod = priceCalculationPeriod;
 		return this;
 	}

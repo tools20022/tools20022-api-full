@@ -96,7 +96,7 @@ public class TimeOutEvent1 {
 	 * "Specifies in coded form the reason for the time-out notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TimeOutEvent1, TimeOut1Code> mmType = new MMMessageAttribute<TimeOutEvent1, TimeOut1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TimeOutEvent1.mmObject();
 			isDerived = false;
@@ -107,6 +107,16 @@ public class TimeOutEvent1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TimeOut1Code.mmObject();
+		}
+
+		@Override
+		public TimeOut1Code getValue(TimeOutEvent1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(TimeOutEvent1 obj, TimeOut1Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Desc")
@@ -137,7 +147,7 @@ public class TimeOutEvent1 {
 	 * definition} = "Additional information on the reason for the time-out."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TimeOutEvent1, Optional<Max140Text>> mmDescription = new MMMessageAttribute<TimeOutEvent1, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TimeOutEvent1.mmObject();
 			isDerived = false;
@@ -148,6 +158,16 @@ public class TimeOutEvent1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(TimeOutEvent1 obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(TimeOutEvent1 obj, Optional<Max140Text> value) {
+			obj.setDescription(value.orElse(null));
 		}
 	};
 

@@ -119,7 +119,7 @@ public class ClearingPartyAndTime3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCCP = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ClearingPartyAndTime3, Optional<OrganisationIdentification1Choice>> mmCCP = new MMMessageAssociationEnd<ClearingPartyAndTime3, Optional<OrganisationIdentification1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> System.mmSystemIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ClearingPartyAndTime3.mmObject();
@@ -132,6 +132,16 @@ public class ClearingPartyAndTime3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> OrganisationIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<OrganisationIdentification1Choice> getValue(ClearingPartyAndTime3 obj) {
+			return obj.getCCP();
+		}
+
+		@Override
+		public void setValue(ClearingPartyAndTime3 obj, Optional<OrganisationIdentification1Choice> value) {
+			obj.setCCP(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClrDtTm")
@@ -168,7 +178,7 @@ public class ClearingPartyAndTime3 {
 	 * definition} = "Time and date when clearing took place."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClearingDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClearingPartyAndTime3, Optional<ISODateTime>> mmClearingDateTime = new MMMessageAttribute<ClearingPartyAndTime3, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> ObligationFulfilment.mmDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ClearingPartyAndTime3.mmObject();
@@ -180,6 +190,16 @@ public class ClearingPartyAndTime3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(ClearingPartyAndTime3 obj) {
+			return obj.getClearingDateTime();
+		}
+
+		@Override
+		public void setValue(ClearingPartyAndTime3 obj, Optional<ISODateTime> value) {
+			obj.setClearingDateTime(value.orElse(null));
 		}
 	};
 

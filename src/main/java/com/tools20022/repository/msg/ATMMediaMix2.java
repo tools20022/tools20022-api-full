@@ -102,7 +102,7 @@ public class ATMMediaMix2 {
 	 * ATMMediaMix1.mmNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMMediaMix2, Number> mmNumber = new MMMessageAttribute<ATMMediaMix2, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMMediaMix2.mmObject();
 			isDerived = false;
@@ -114,6 +114,16 @@ public class ATMMediaMix2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(ATMMediaMix2 obj) {
+			return obj.getNumber();
+		}
+
+		@Override
+		public void setValue(ATMMediaMix2 obj, Number value) {
+			obj.setNumber(value);
 		}
 	};
 	@XmlElement(name = "UnitVal", required = true)
@@ -150,7 +160,7 @@ public class ATMMediaMix2 {
 	 * ATMMediaMix1.mmUnitValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnitValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMMediaMix2, ImpliedCurrencyAndAmount> mmUnitValue = new MMMessageAttribute<ATMMediaMix2, ImpliedCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMMediaMix2.mmObject();
 			isDerived = false;
@@ -162,6 +172,16 @@ public class ATMMediaMix2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(ATMMediaMix2 obj) {
+			return obj.getUnitValue();
+		}
+
+		@Override
+		public void setValue(ATMMediaMix2 obj, ImpliedCurrencyAndAmount value) {
+			obj.setUnitValue(value);
 		}
 	};
 

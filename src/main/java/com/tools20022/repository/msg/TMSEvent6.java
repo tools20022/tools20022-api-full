@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.System;
 import com.tools20022.repository.entity.TerminalManagementAction;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TMSActionIdentification5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -74,7 +75,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "TMSEvent6"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -126,7 +127,7 @@ public class TMSEvent6 {
 	 * TMSEvent5.mmTimeStamp}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTimeStamp = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSEvent6, ISODateTime> mmTimeStamp = new MMMessageAttribute<TMSEvent6, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSEvent6.mmObject();
 			isDerived = false;
@@ -138,6 +139,16 @@ public class TMSEvent6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(TMSEvent6 obj) {
+			return obj.getTimeStamp();
+		}
+
+		@Override
+		public void setValue(TMSEvent6 obj, ISODateTime value) {
+			obj.setTimeStamp(value);
 		}
 	};
 	@XmlElement(name = "Rslt", required = true)
@@ -180,7 +191,7 @@ public class TMSEvent6 {
 	 * TMSEvent5.mmResult}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResult = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSEvent6, TerminalManagementActionResult4Code> mmResult = new MMMessageAttribute<TMSEvent6, TerminalManagementActionResult4Code>() {
 		{
 			businessElementTrace_lazy = () -> TerminalManagementAction.mmActionResult;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSEvent6.mmObject();
@@ -193,6 +204,16 @@ public class TMSEvent6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementActionResult4Code.mmObject();
+		}
+
+		@Override
+		public TerminalManagementActionResult4Code getValue(TMSEvent6 obj) {
+			return obj.getResult();
+		}
+
+		@Override
+		public void setValue(TMSEvent6 obj, TerminalManagementActionResult4Code value) {
+			obj.setResult(value);
 		}
 	};
 	@XmlElement(name = "ActnId", required = true)
@@ -230,7 +251,7 @@ public class TMSEvent6 {
 	 * TMSEvent5.mmActionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmActionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TMSEvent6, TMSActionIdentification5> mmActionIdentification = new MMMessageAssociationEnd<TMSEvent6, TMSActionIdentification5>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSEvent6.mmObject();
 			isDerived = false;
@@ -242,7 +263,17 @@ public class TMSEvent6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TMSActionIdentification5.mmObject();
+			type_lazy = () -> TMSActionIdentification5.mmObject();
+		}
+
+		@Override
+		public TMSActionIdentification5 getValue(TMSEvent6 obj) {
+			return obj.getActionIdentification();
+		}
+
+		@Override
+		public void setValue(TMSEvent6 obj, TMSActionIdentification5 value) {
+			obj.setActionIdentification(value);
 		}
 	};
 	@XmlElement(name = "AddtlErrInf")
@@ -278,7 +309,7 @@ public class TMSEvent6 {
 	 * TMSEvent5.mmAdditionalErrorInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalErrorInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSEvent6, Optional<Max70Text>> mmAdditionalErrorInformation = new MMMessageAttribute<TMSEvent6, Optional<Max70Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSEvent6.mmObject();
 			isDerived = false;
@@ -290,6 +321,16 @@ public class TMSEvent6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(TMSEvent6 obj) {
+			return obj.getAdditionalErrorInformation();
+		}
+
+		@Override
+		public void setValue(TMSEvent6 obj, Optional<Max70Text> value) {
+			obj.setAdditionalErrorInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TermnlMgrId")
@@ -327,7 +368,7 @@ public class TMSEvent6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTerminalManagerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSEvent6, Optional<Max35Text>> mmTerminalManagerIdentification = new MMMessageAttribute<TMSEvent6, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> System.mmSystemIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSEvent6.mmObject();
@@ -340,6 +381,16 @@ public class TMSEvent6 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max35Text> getValue(TMSEvent6 obj) {
+			return obj.getTerminalManagerIdentification();
+		}
+
+		@Override
+		public void setValue(TMSEvent6 obj, Optional<Max35Text> value) {
+			obj.setTerminalManagerIdentification(value.orElse(null));
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -349,7 +400,7 @@ public class TMSEvent6 {
 						com.tools20022.repository.msg.TMSEvent6.mmAdditionalErrorInformation, com.tools20022.repository.msg.TMSEvent6.mmTerminalManagerIdentification);
 				trace_lazy = () -> TerminalManagementAction.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TMSEvent6";
 				definition = "Result of an individual terminal management action performed by the point of interaction.";
 				previousVersion_lazy = () -> TMSEvent5.mmObject();
@@ -380,7 +431,7 @@ public class TMSEvent6 {
 		return actionIdentification;
 	}
 
-	public TMSEvent6 setActionIdentification(com.tools20022.repository.msg.TMSActionIdentification5 actionIdentification) {
+	public TMSEvent6 setActionIdentification(TMSActionIdentification5 actionIdentification) {
 		this.actionIdentification = Objects.requireNonNull(actionIdentification);
 		return this;
 	}

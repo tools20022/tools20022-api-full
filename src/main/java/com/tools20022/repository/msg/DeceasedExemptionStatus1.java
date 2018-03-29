@@ -109,7 +109,7 @@ public class DeceasedExemptionStatus1 {
 	 * definition} = "Date of death of the beneficial owner."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBeneficialOwnerDeathDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DeceasedExemptionStatus1, ISODate> mmBeneficialOwnerDeathDate = new MMMessageAttribute<DeceasedExemptionStatus1, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeceasedExemptionStatus1.mmObject();
 			isDerived = false;
@@ -121,6 +121,16 @@ public class DeceasedExemptionStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(DeceasedExemptionStatus1 obj) {
+			return obj.getBeneficialOwnerDeathDate();
+		}
+
+		@Override
+		public void setValue(DeceasedExemptionStatus1 obj, ISODate value) {
+			obj.setBeneficialOwnerDeathDate(value);
 		}
 	};
 	@XmlElement(name = "DthCertSrlNb", required = true)
@@ -155,7 +165,7 @@ public class DeceasedExemptionStatus1 {
 	 * definition} = "Serial number of the death certificate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeathCertificateSerialNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DeceasedExemptionStatus1, Max35Text> mmDeathCertificateSerialNumber = new MMMessageAttribute<DeceasedExemptionStatus1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeceasedExemptionStatus1.mmObject();
 			isDerived = false;
@@ -167,6 +177,16 @@ public class DeceasedExemptionStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(DeceasedExemptionStatus1 obj) {
+			return obj.getDeathCertificateSerialNumber();
+		}
+
+		@Override
+		public void setValue(DeceasedExemptionStatus1 obj, Max35Text value) {
+			obj.setDeathCertificateSerialNumber(value);
 		}
 	};
 	@XmlElement(name = "IssgJursdctn", required = true)
@@ -202,7 +222,7 @@ public class DeceasedExemptionStatus1 {
 	 * "Identification of the jurisdiction issuing the death certificate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuingJurisdiction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DeceasedExemptionStatus1, Max35Text> mmIssuingJurisdiction = new MMMessageAttribute<DeceasedExemptionStatus1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeceasedExemptionStatus1.mmObject();
 			isDerived = false;
@@ -214,6 +234,16 @@ public class DeceasedExemptionStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(DeceasedExemptionStatus1 obj) {
+			return obj.getIssuingJurisdiction();
+		}
+
+		@Override
+		public void setValue(DeceasedExemptionStatus1 obj, Max35Text value) {
+			obj.setIssuingJurisdiction(value);
 		}
 	};
 	@XmlElement(name = "DcmnttnAckOfXmptn", required = true)
@@ -251,7 +281,7 @@ public class DeceasedExemptionStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDocumentationAcknowledgementOfExemption = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DeceasedExemptionStatus1, AcknowledgementOfExemption1Choice> mmDocumentationAcknowledgementOfExemption = new MMMessageAssociationEnd<DeceasedExemptionStatus1, AcknowledgementOfExemption1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeceasedExemptionStatus1.mmObject();
 			isDerived = false;
@@ -264,6 +294,16 @@ public class DeceasedExemptionStatus1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AcknowledgementOfExemption1Choice.mmObject();
+		}
+
+		@Override
+		public AcknowledgementOfExemption1Choice getValue(DeceasedExemptionStatus1 obj) {
+			return obj.getDocumentationAcknowledgementOfExemption();
+		}
+
+		@Override
+		public void setValue(DeceasedExemptionStatus1 obj, AcknowledgementOfExemption1Choice value) {
+			obj.setDocumentationAcknowledgementOfExemption(value);
 		}
 	};
 

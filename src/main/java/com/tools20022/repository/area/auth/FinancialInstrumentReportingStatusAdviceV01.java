@@ -25,7 +25,6 @@ import com.tools20022.repository.area.AuthoritiesLatestVersion;
 import com.tools20022.repository.msg.MessageReportHeader4;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.FinancialInstrumentsandTransactionsRegulatoryReportingTransactionsandFinancialInstrumentsDataReporting;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -123,7 +122,7 @@ public class FinancialInstrumentReportingStatusAdviceV01 {
 	 * FinancialInstrumentReportingStatusAdviceV01.mmStatusAdvice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmStatusAdvice = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FinancialInstrumentReportingStatusAdviceV01, List<MessageReportHeader4>> mmStatusAdvice = new MMMessageBuildingBlock<FinancialInstrumentReportingStatusAdviceV01, List<MessageReportHeader4>>() {
 		{
 			xmlTag = "StsAdvc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,12 +133,14 @@ public class FinancialInstrumentReportingStatusAdviceV01 {
 			complexType_lazy = () -> MessageReportHeader4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FinancialInstrumentReportingStatusAdviceV01.class.getMethod("getStatusAdvice", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<MessageReportHeader4> getValue(FinancialInstrumentReportingStatusAdviceV01 obj) {
+			return obj.getStatusAdvice();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentReportingStatusAdviceV01 obj, List<MessageReportHeader4> value) {
+			obj.setStatusAdvice(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -174,7 +175,7 @@ public class FinancialInstrumentReportingStatusAdviceV01 {
 	 * FinancialInstrumentReportingStatusAdviceV01.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FinancialInstrumentReportingStatusAdviceV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<FinancialInstrumentReportingStatusAdviceV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -185,12 +186,14 @@ public class FinancialInstrumentReportingStatusAdviceV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FinancialInstrumentReportingStatusAdviceV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(FinancialInstrumentReportingStatusAdviceV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentReportingStatusAdviceV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

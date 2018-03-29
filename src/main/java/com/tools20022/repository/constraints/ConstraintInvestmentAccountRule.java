@@ -57,12 +57,16 @@ public class ConstraintInvestmentAccountRule {
 	 */
 	public static final MMConstraint<AccountDetailsConfirmationV07> forAccountDetailsConfirmationV07 = new MMConstraint<AccountDetailsConfirmationV07>() {
 		{
-			validator = ConstraintInvestmentAccountRule::checkAccountDetailsConfirmationV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountRule";
 			definition = "If ConfirmationDetails/ConfirmationType/Code is ACCO (AccountOpening), then InvestmentAccount must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestmentAccountRule.forAccountDetailsConfirmationV06;
 			owner_lazy = () -> AccountDetailsConfirmationV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountDetailsConfirmationV07 obj) throws Exception {
+			checkAccountDetailsConfirmationV07(obj);
 		}
 	};
 	/**
@@ -101,13 +105,17 @@ public class ConstraintInvestmentAccountRule {
 	 */
 	public static final MMConstraint<AccountDetailsConfirmationV06> forAccountDetailsConfirmationV06 = new MMConstraint<AccountDetailsConfirmationV06>() {
 		{
-			validator = ConstraintInvestmentAccountRule::checkAccountDetailsConfirmationV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountRule";
 			definition = "If ConfirmationDetails/ConfirmationType is ACCO (AccountOpening), then InvestmentAccount must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestmentAccountRule.forAccountDetailsConfirmationV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestmentAccountRule.forAccountDetailsConfirmationV05;
 			owner_lazy = () -> AccountDetailsConfirmationV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountDetailsConfirmationV06 obj) throws Exception {
+			checkAccountDetailsConfirmationV06(obj);
 		}
 	};
 	/**
@@ -133,11 +141,15 @@ public class ConstraintInvestmentAccountRule {
 	 */
 	public static final MMConstraint<AccountDetailsConfirmationV02> forAccountDetailsConfirmationV02 = new MMConstraint<AccountDetailsConfirmationV02>() {
 		{
-			validator = ConstraintInvestmentAccountRule::checkAccountDetailsConfirmationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountRule";
 			definition = "If ConfirmationDetails/ConfirmationType is ACCO, then InvestmentAccount must be present.";
 			owner_lazy = () -> AccountDetailsConfirmationV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountDetailsConfirmationV02 obj) throws Exception {
+			checkAccountDetailsConfirmationV02(obj);
 		}
 	};
 	/**
@@ -171,12 +183,16 @@ public class ConstraintInvestmentAccountRule {
 	 */
 	public static final MMConstraint<AccountDetailsConfirmationV03> forAccountDetailsConfirmationV03 = new MMConstraint<AccountDetailsConfirmationV03>() {
 		{
-			validator = ConstraintInvestmentAccountRule::checkAccountDetailsConfirmationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountRule";
 			definition = "If ConfirmationDetails/ConfirmationType is ACCO, then InvestmentAccount must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestmentAccountRule.forAccountDetailsConfirmationV04);
 			owner_lazy = () -> AccountDetailsConfirmationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountDetailsConfirmationV03 obj) throws Exception {
+			checkAccountDetailsConfirmationV03(obj);
 		}
 	};
 	/**
@@ -215,13 +231,17 @@ public class ConstraintInvestmentAccountRule {
 	 */
 	public static final MMConstraint<AccountDetailsConfirmationV04> forAccountDetailsConfirmationV04 = new MMConstraint<AccountDetailsConfirmationV04>() {
 		{
-			validator = ConstraintInvestmentAccountRule::checkAccountDetailsConfirmationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountRule";
 			definition = "If ConfirmationDetails/ConfirmationType is ACCO, then InvestmentAccount must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestmentAccountRule.forAccountDetailsConfirmationV05);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestmentAccountRule.forAccountDetailsConfirmationV03;
 			owner_lazy = () -> AccountDetailsConfirmationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountDetailsConfirmationV04 obj) throws Exception {
+			checkAccountDetailsConfirmationV04(obj);
 		}
 	};
 	/**
@@ -260,13 +280,17 @@ public class ConstraintInvestmentAccountRule {
 	 */
 	public static final MMConstraint<AccountDetailsConfirmationV05> forAccountDetailsConfirmationV05 = new MMConstraint<AccountDetailsConfirmationV05>() {
 		{
-			validator = ConstraintInvestmentAccountRule::checkAccountDetailsConfirmationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountRule";
 			definition = "If ConfirmationDetails/ConfirmationType is ACCO, then InvestmentAccount must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestmentAccountRule.forAccountDetailsConfirmationV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestmentAccountRule.forAccountDetailsConfirmationV04;
 			owner_lazy = () -> AccountDetailsConfirmationV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountDetailsConfirmationV05 obj) throws Exception {
+			checkAccountDetailsConfirmationV05(obj);
 		}
 	};
 

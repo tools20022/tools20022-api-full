@@ -57,11 +57,15 @@ public class ConstraintMaturityDateRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV01> forCorporateActionNotificationV01 = new MMConstraint<CorporateActionNotificationV01>() {
 		{
-			validator = ConstraintMaturityDateRule::checkCorporateActionNotificationV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "If CorporateActionDetails/DateDetails/MaturityDate is present, then CorporateActionGeneralInformation/EventType/Code is EXTM (Maturity Extension).";
 			owner_lazy = () -> CorporateActionNotificationV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV01 obj) throws Exception {
+			checkCorporateActionNotificationV01(obj);
 		}
 	};
 	/**
@@ -87,11 +91,15 @@ public class ConstraintMaturityDateRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV02> forCorporateActionNotificationV02 = new MMConstraint<CorporateActionNotificationV02>() {
 		{
-			validator = ConstraintMaturityDateRule::checkCorporateActionNotificationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "If CorporateActionDetails/DateDetails/MaturityDate is present, then CorporateActionGeneralInformation/EventType/Code is EXTM (Maturity Extension).";
 			owner_lazy = () -> CorporateActionNotificationV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV02 obj) throws Exception {
+			checkCorporateActionNotificationV02(obj);
 		}
 	};
 	/**
@@ -117,11 +125,15 @@ public class ConstraintMaturityDateRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV03> forCorporateActionNotificationV03 = new MMConstraint<CorporateActionNotificationV03>() {
 		{
-			validator = ConstraintMaturityDateRule::checkCorporateActionNotificationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "If CorporateActionDetails/DateDetails/MaturityDate is present, then CorporateActionGeneralInformation/EventType/Code is EXTM (Maturity Extension).";
 			owner_lazy = () -> CorporateActionNotificationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV03 obj) throws Exception {
+			checkCorporateActionNotificationV03(obj);
 		}
 	};
 	/**
@@ -155,12 +167,16 @@ public class ConstraintMaturityDateRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV04> forCorporateActionNotificationV04 = new MMConstraint<CorporateActionNotificationV04>() {
 		{
-			validator = ConstraintMaturityDateRule::checkCorporateActionNotificationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "If CorporateActionDetails/DateDetails/MaturityDate is present, then CorporateActionGeneralInformation/EventType/Code is EXTM (Maturity Extension).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNewMaturityDateRule.forCorporateActionNotificationV05);
 			owner_lazy = () -> CorporateActionNotificationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV04 obj) throws Exception {
+			checkCorporateActionNotificationV04(obj);
 		}
 	};
 	/**
@@ -186,11 +202,15 @@ public class ConstraintMaturityDateRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes7> forFinancialInstrumentAttributes7 = new MMConstraint<FinancialInstrumentAttributes7>() {
 		{
-			validator = ConstraintMaturityDateRule::checkFinancialInstrumentAttributes7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
 			owner_lazy = () -> FinancialInstrumentAttributes7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes7 obj) throws Exception {
+			checkFinancialInstrumentAttributes7(obj);
 		}
 	};
 	/**
@@ -216,11 +236,15 @@ public class ConstraintMaturityDateRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes5> forFinancialInstrumentAttributes5 = new MMConstraint<FinancialInstrumentAttributes5>() {
 		{
-			validator = ConstraintMaturityDateRule::checkFinancialInstrumentAttributes5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
 			owner_lazy = () -> FinancialInstrumentAttributes5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes5 obj) throws Exception {
+			checkFinancialInstrumentAttributes5(obj);
 		}
 	};
 	/**
@@ -246,11 +270,15 @@ public class ConstraintMaturityDateRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes11> forFinancialInstrumentAttributes11 = new MMConstraint<FinancialInstrumentAttributes11>() {
 		{
-			validator = ConstraintMaturityDateRule::checkFinancialInstrumentAttributes11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
 			owner_lazy = () -> FinancialInstrumentAttributes11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes11 obj) throws Exception {
+			checkFinancialInstrumentAttributes11(obj);
 		}
 	};
 	/**
@@ -276,11 +304,15 @@ public class ConstraintMaturityDateRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes10> forFinancialInstrumentAttributes10 = new MMConstraint<FinancialInstrumentAttributes10>() {
 		{
-			validator = ConstraintMaturityDateRule::checkFinancialInstrumentAttributes10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
 			owner_lazy = () -> FinancialInstrumentAttributes10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes10 obj) throws Exception {
+			checkFinancialInstrumentAttributes10(obj);
 		}
 	};
 	/**
@@ -306,11 +338,15 @@ public class ConstraintMaturityDateRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes19> forFinancialInstrumentAttributes19 = new MMConstraint<FinancialInstrumentAttributes19>() {
 		{
-			validator = ConstraintMaturityDateRule::checkFinancialInstrumentAttributes19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
 			owner_lazy = () -> FinancialInstrumentAttributes19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes19 obj) throws Exception {
+			checkFinancialInstrumentAttributes19(obj);
 		}
 	};
 	/**
@@ -336,11 +372,15 @@ public class ConstraintMaturityDateRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes16> forFinancialInstrumentAttributes16 = new MMConstraint<FinancialInstrumentAttributes16>() {
 		{
-			validator = ConstraintMaturityDateRule::checkFinancialInstrumentAttributes16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
 			owner_lazy = () -> FinancialInstrumentAttributes16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes16 obj) throws Exception {
+			checkFinancialInstrumentAttributes16(obj);
 		}
 	};
 	/**
@@ -366,11 +406,15 @@ public class ConstraintMaturityDateRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes23> forFinancialInstrumentAttributes23 = new MMConstraint<FinancialInstrumentAttributes23>() {
 		{
-			validator = ConstraintMaturityDateRule::checkFinancialInstrumentAttributes23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
 			owner_lazy = () -> FinancialInstrumentAttributes23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes23 obj) throws Exception {
+			checkFinancialInstrumentAttributes23(obj);
 		}
 	};
 	/**
@@ -396,11 +440,15 @@ public class ConstraintMaturityDateRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes24> forFinancialInstrumentAttributes24 = new MMConstraint<FinancialInstrumentAttributes24>() {
 		{
-			validator = ConstraintMaturityDateRule::checkFinancialInstrumentAttributes24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
 			owner_lazy = () -> FinancialInstrumentAttributes24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes24 obj) throws Exception {
+			checkFinancialInstrumentAttributes24(obj);
 		}
 	};
 	/**
@@ -426,11 +474,15 @@ public class ConstraintMaturityDateRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes33> forFinancialInstrumentAttributes33 = new MMConstraint<FinancialInstrumentAttributes33>() {
 		{
-			validator = ConstraintMaturityDateRule::checkFinancialInstrumentAttributes33;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
 			owner_lazy = () -> FinancialInstrumentAttributes33.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes33 obj) throws Exception {
+			checkFinancialInstrumentAttributes33(obj);
 		}
 	};
 	/**
@@ -464,12 +516,16 @@ public class ConstraintMaturityDateRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes34> forFinancialInstrumentAttributes34 = new MMConstraint<FinancialInstrumentAttributes34>() {
 		{
-			validator = ConstraintMaturityDateRule::checkFinancialInstrumentAttributes34;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMaturityDateRule.forFinancialInstrumentAttributes49);
 			owner_lazy = () -> FinancialInstrumentAttributes34.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes34 obj) throws Exception {
+			checkFinancialInstrumentAttributes34(obj);
 		}
 	};
 	/**
@@ -495,11 +551,15 @@ public class ConstraintMaturityDateRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes39> forFinancialInstrumentAttributes39 = new MMConstraint<FinancialInstrumentAttributes39>() {
 		{
-			validator = ConstraintMaturityDateRule::checkFinancialInstrumentAttributes39;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
 			owner_lazy = () -> FinancialInstrumentAttributes39.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes39 obj) throws Exception {
+			checkFinancialInstrumentAttributes39(obj);
 		}
 	};
 	/**
@@ -525,11 +585,15 @@ public class ConstraintMaturityDateRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes40> forFinancialInstrumentAttributes40 = new MMConstraint<FinancialInstrumentAttributes40>() {
 		{
-			validator = ConstraintMaturityDateRule::checkFinancialInstrumentAttributes40;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
 			owner_lazy = () -> FinancialInstrumentAttributes40.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes40 obj) throws Exception {
+			checkFinancialInstrumentAttributes40(obj);
 		}
 	};
 	/**
@@ -563,12 +627,16 @@ public class ConstraintMaturityDateRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes43> forFinancialInstrumentAttributes43 = new MMConstraint<FinancialInstrumentAttributes43>() {
 		{
-			validator = ConstraintMaturityDateRule::checkFinancialInstrumentAttributes43;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMaturityDateRule.forFinancialInstrumentAttributes48);
 			owner_lazy = () -> FinancialInstrumentAttributes43.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes43 obj) throws Exception {
+			checkFinancialInstrumentAttributes43(obj);
 		}
 	};
 	/**
@@ -594,11 +662,15 @@ public class ConstraintMaturityDateRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes45> forFinancialInstrumentAttributes45 = new MMConstraint<FinancialInstrumentAttributes45>() {
 		{
-			validator = ConstraintMaturityDateRule::checkFinancialInstrumentAttributes45;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
 			owner_lazy = () -> FinancialInstrumentAttributes45.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes45 obj) throws Exception {
+			checkFinancialInstrumentAttributes45(obj);
 		}
 	};
 	/**
@@ -637,13 +709,17 @@ public class ConstraintMaturityDateRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes48> forFinancialInstrumentAttributes48 = new MMConstraint<FinancialInstrumentAttributes48>() {
 		{
-			validator = ConstraintMaturityDateRule::checkFinancialInstrumentAttributes48;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMaturityDateRule.forFinancialInstrumentAttributes66);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMaturityDateRule.forFinancialInstrumentAttributes43;
 			owner_lazy = () -> FinancialInstrumentAttributes48.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes48 obj) throws Exception {
+			checkFinancialInstrumentAttributes48(obj);
 		}
 	};
 	/**
@@ -682,13 +758,17 @@ public class ConstraintMaturityDateRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes49> forFinancialInstrumentAttributes49 = new MMConstraint<FinancialInstrumentAttributes49>() {
 		{
-			validator = ConstraintMaturityDateRule::checkFinancialInstrumentAttributes49;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMaturityDateRule.forFinancialInstrumentAttributes67);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMaturityDateRule.forFinancialInstrumentAttributes34;
 			owner_lazy = () -> FinancialInstrumentAttributes49.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes49 obj) throws Exception {
+			checkFinancialInstrumentAttributes49(obj);
 		}
 	};
 	/**
@@ -714,11 +794,15 @@ public class ConstraintMaturityDateRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes55> forFinancialInstrumentAttributes55 = new MMConstraint<FinancialInstrumentAttributes55>() {
 		{
-			validator = ConstraintMaturityDateRule::checkFinancialInstrumentAttributes55;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
 			owner_lazy = () -> FinancialInstrumentAttributes55.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes55 obj) throws Exception {
+			checkFinancialInstrumentAttributes55(obj);
 		}
 	};
 	/**
@@ -744,11 +828,15 @@ public class ConstraintMaturityDateRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes56> forFinancialInstrumentAttributes56 = new MMConstraint<FinancialInstrumentAttributes56>() {
 		{
-			validator = ConstraintMaturityDateRule::checkFinancialInstrumentAttributes56;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
 			owner_lazy = () -> FinancialInstrumentAttributes56.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes56 obj) throws Exception {
+			checkFinancialInstrumentAttributes56(obj);
 		}
 	};
 	/**
@@ -787,13 +875,17 @@ public class ConstraintMaturityDateRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes66> forFinancialInstrumentAttributes66 = new MMConstraint<FinancialInstrumentAttributes66>() {
 		{
-			validator = ConstraintMaturityDateRule::checkFinancialInstrumentAttributes66;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMaturityDateRule.forFinancialInstrumentAttributes79);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMaturityDateRule.forFinancialInstrumentAttributes48;
 			owner_lazy = () -> FinancialInstrumentAttributes66.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes66 obj) throws Exception {
+			checkFinancialInstrumentAttributes66(obj);
 		}
 	};
 	/**
@@ -832,13 +924,17 @@ public class ConstraintMaturityDateRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes67> forFinancialInstrumentAttributes67 = new MMConstraint<FinancialInstrumentAttributes67>() {
 		{
-			validator = ConstraintMaturityDateRule::checkFinancialInstrumentAttributes67;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMaturityDateRule.forFinancialInstrumentAttributes80);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMaturityDateRule.forFinancialInstrumentAttributes49;
 			owner_lazy = () -> FinancialInstrumentAttributes67.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes67 obj) throws Exception {
+			checkFinancialInstrumentAttributes67(obj);
 		}
 	};
 	/**
@@ -864,11 +960,15 @@ public class ConstraintMaturityDateRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes70> forFinancialInstrumentAttributes70 = new MMConstraint<FinancialInstrumentAttributes70>() {
 		{
-			validator = ConstraintMaturityDateRule::checkFinancialInstrumentAttributes70;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
 			owner_lazy = () -> FinancialInstrumentAttributes70.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes70 obj) throws Exception {
+			checkFinancialInstrumentAttributes70(obj);
 		}
 	};
 	/**
@@ -894,11 +994,15 @@ public class ConstraintMaturityDateRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes71> forFinancialInstrumentAttributes71 = new MMConstraint<FinancialInstrumentAttributes71>() {
 		{
-			validator = ConstraintMaturityDateRule::checkFinancialInstrumentAttributes71;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
 			owner_lazy = () -> FinancialInstrumentAttributes71.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes71 obj) throws Exception {
+			checkFinancialInstrumentAttributes71(obj);
 		}
 	};
 	/**
@@ -929,12 +1033,16 @@ public class ConstraintMaturityDateRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes79> forFinancialInstrumentAttributes79 = new MMConstraint<FinancialInstrumentAttributes79>() {
 		{
-			validator = ConstraintMaturityDateRule::checkFinancialInstrumentAttributes79;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMaturityDateRule.forFinancialInstrumentAttributes66;
 			owner_lazy = () -> FinancialInstrumentAttributes79.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes79 obj) throws Exception {
+			checkFinancialInstrumentAttributes79(obj);
 		}
 	};
 	/**
@@ -965,12 +1073,16 @@ public class ConstraintMaturityDateRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes80> forFinancialInstrumentAttributes80 = new MMConstraint<FinancialInstrumentAttributes80>() {
 		{
-			validator = ConstraintMaturityDateRule::checkFinancialInstrumentAttributes80;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMaturityDateRule.forFinancialInstrumentAttributes67;
 			owner_lazy = () -> FinancialInstrumentAttributes80.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes80 obj) throws Exception {
+			checkFinancialInstrumentAttributes80(obj);
 		}
 	};
 	/**
@@ -996,11 +1108,15 @@ public class ConstraintMaturityDateRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes85> forFinancialInstrumentAttributes85 = new MMConstraint<FinancialInstrumentAttributes85>() {
 		{
-			validator = ConstraintMaturityDateRule::checkFinancialInstrumentAttributes85;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
 			owner_lazy = () -> FinancialInstrumentAttributes85.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes85 obj) throws Exception {
+			checkFinancialInstrumentAttributes85(obj);
 		}
 	};
 	/**
@@ -1026,11 +1142,15 @@ public class ConstraintMaturityDateRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes83> forFinancialInstrumentAttributes83 = new MMConstraint<FinancialInstrumentAttributes83>() {
 		{
-			validator = ConstraintMaturityDateRule::checkFinancialInstrumentAttributes83;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateRule";
 			definition = "Maturity date may only provide generic information about the final maturity of the underlying instrument.";
 			owner_lazy = () -> FinancialInstrumentAttributes83.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes83 obj) throws Exception {
+			checkFinancialInstrumentAttributes83(obj);
 		}
 	};
 

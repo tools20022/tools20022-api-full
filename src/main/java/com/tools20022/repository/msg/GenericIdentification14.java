@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -109,7 +110,7 @@ public class GenericIdentification14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification14, GenericIdentification13> mmType = new MMMessageAttribute<GenericIdentification14, GenericIdentification13>() {
 		{
 			businessComponentTrace_lazy = () -> GenericIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification14.mmObject();
@@ -120,7 +121,17 @@ public class GenericIdentification14 {
 			definition = "Proprietary information, often a code, issued by the data source scheme issuer.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification13.mmObject();
+			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(GenericIdentification14 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(GenericIdentification14 obj, GenericIdentification13 value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Id")
@@ -157,7 +168,7 @@ public class GenericIdentification14 {
 	 * definition} = "Entity that assigns the identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification14, Optional<Max35Text>> mmIdentification = new MMMessageAttribute<GenericIdentification14, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification14.mmObject();
@@ -169,6 +180,16 @@ public class GenericIdentification14 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(GenericIdentification14 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(GenericIdentification14 obj, Optional<Max35Text> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 
@@ -190,7 +211,7 @@ public class GenericIdentification14 {
 		return type;
 	}
 
-	public GenericIdentification14 setType(com.tools20022.repository.msg.GenericIdentification13 type) {
+	public GenericIdentification14 setType(GenericIdentification13 type) {
 		this.type = Objects.requireNonNull(type);
 		return this;
 	}

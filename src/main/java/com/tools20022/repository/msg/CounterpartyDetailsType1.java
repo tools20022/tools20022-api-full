@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.InstitutionalClassificationCode;
 import com.tools20022.repository.datatype.Max240Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecurityIdentification15;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -106,7 +107,7 @@ public class CounterpartyDetailsType1 {
 	 * definition} = "Identifies the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinancialInstrumentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CounterpartyDetailsType1, SecurityIdentification15> mmFinancialInstrumentIdentification = new MMMessageAttribute<CounterpartyDetailsType1, SecurityIdentification15>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CounterpartyDetailsType1.mmObject();
 			isDerived = false;
@@ -116,7 +117,17 @@ public class CounterpartyDetailsType1 {
 			definition = "Identifies the financial instrument.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification15.mmObject();
+			complexType_lazy = () -> SecurityIdentification15.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification15 getValue(CounterpartyDetailsType1 obj) {
+			return obj.getFinancialInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(CounterpartyDetailsType1 obj, SecurityIdentification15 value) {
+			obj.setFinancialInstrumentIdentification(value);
 		}
 	};
 	@XmlElement(name = "PstFctvDtClssfctn")
@@ -151,7 +162,7 @@ public class CounterpartyDetailsType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPostEffectiveDateClassification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CounterpartyDetailsType1, Optional<InstitutionalClassificationCode>> mmPostEffectiveDateClassification = new MMMessageAttribute<CounterpartyDetailsType1, Optional<InstitutionalClassificationCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CounterpartyDetailsType1.mmObject();
 			isDerived = false;
@@ -162,6 +173,16 @@ public class CounterpartyDetailsType1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> InstitutionalClassificationCode.mmObject();
+		}
+
+		@Override
+		public Optional<InstitutionalClassificationCode> getValue(CounterpartyDetailsType1 obj) {
+			return obj.getPostEffectiveDateClassification();
+		}
+
+		@Override
+		public void setValue(CounterpartyDetailsType1 obj, Optional<InstitutionalClassificationCode> value) {
+			obj.setPostEffectiveDateClassification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AbbrvtdLclLangSctyNm", required = true)
@@ -195,7 +216,7 @@ public class CounterpartyDetailsType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAbbreviatedLocalLanguageSecurityName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CounterpartyDetailsType1, Max240Text> mmAbbreviatedLocalLanguageSecurityName = new MMMessageAttribute<CounterpartyDetailsType1, Max240Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CounterpartyDetailsType1.mmObject();
 			isDerived = false;
@@ -206,6 +227,16 @@ public class CounterpartyDetailsType1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max240Text.mmObject();
+		}
+
+		@Override
+		public Max240Text getValue(CounterpartyDetailsType1 obj) {
+			return obj.getAbbreviatedLocalLanguageSecurityName();
+		}
+
+		@Override
+		public void setValue(CounterpartyDetailsType1 obj, Max240Text value) {
+			obj.setAbbreviatedLocalLanguageSecurityName(value);
 		}
 	};
 
@@ -227,7 +258,7 @@ public class CounterpartyDetailsType1 {
 		return financialInstrumentIdentification;
 	}
 
-	public CounterpartyDetailsType1 setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification15 financialInstrumentIdentification) {
+	public CounterpartyDetailsType1 setFinancialInstrumentIdentification(SecurityIdentification15 financialInstrumentIdentification) {
 		this.financialInstrumentIdentification = Objects.requireNonNull(financialInstrumentIdentification);
 		return this;
 	}

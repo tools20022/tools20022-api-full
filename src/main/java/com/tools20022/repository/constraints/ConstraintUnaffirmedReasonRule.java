@@ -54,12 +54,16 @@ public class ConstraintUnaffirmedReasonRule {
 	 */
 	public static final MMConstraint<StatusAndReason10> forStatusAndReason10 = new MMConstraint<StatusAndReason10>() {
 		{
-			validator = ConstraintUnaffirmedReasonRule::checkStatusAndReason10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnaffirmedReasonRule";
 			definition = "If AffirmationStatus is Unaffirmed then UnaffirmedReason must be present.";
 			owner_lazy = () -> StatusAndReason10.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/UnaffirmedReason</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/AffirmationStatus/Code</leftOperand><rightOperand>Unaffirmed</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(StatusAndReason10 obj) throws Exception {
+			checkStatusAndReason10(obj);
 		}
 	};
 

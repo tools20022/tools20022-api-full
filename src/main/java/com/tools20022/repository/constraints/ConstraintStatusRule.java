@@ -52,11 +52,15 @@ public class ConstraintStatusRule {
 	 */
 	public static final MMConstraint<Status1Choice> forStatus1Choice = new MMConstraint<Status1Choice>() {
 		{
-			validator = ConstraintStatusRule::checkStatus1Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusRule";
 			definition = "If a specific Status is requested, then it must be in line with the statuses available for the message type requested.";
 			owner_lazy = () -> Status1Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Status1Choice obj) throws Exception {
+			checkStatus1Choice(obj);
 		}
 	};
 	/**
@@ -90,12 +94,16 @@ public class ConstraintStatusRule {
 	 */
 	public static final MMConstraint<Status8Choice> forStatus8Choice = new MMConstraint<Status8Choice>() {
 		{
-			validator = ConstraintStatusRule::checkStatus8Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusRule";
 			definition = "If a specific Status is requested, then it must be in line with the statuses available for the message type requested.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStatusRule.forStatus19Choice);
 			owner_lazy = () -> Status8Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Status8Choice obj) throws Exception {
+			checkStatus8Choice(obj);
 		}
 	};
 	/**
@@ -121,11 +129,15 @@ public class ConstraintStatusRule {
 	 */
 	public static final MMConstraint<Status3Choice> forStatus3Choice = new MMConstraint<Status3Choice>() {
 		{
-			validator = ConstraintStatusRule::checkStatus3Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusRule";
 			definition = "If a specific Status is requested, then it must be in line with the statuses available for the message type requested.";
 			owner_lazy = () -> Status3Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Status3Choice obj) throws Exception {
+			checkStatus3Choice(obj);
 		}
 	};
 	/**
@@ -151,11 +163,15 @@ public class ConstraintStatusRule {
 	 */
 	public static final MMConstraint<Status10Choice> forStatus10Choice = new MMConstraint<Status10Choice>() {
 		{
-			validator = ConstraintStatusRule::checkStatus10Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusRule";
 			definition = "If a specific Status is requested, then it must be in line with the statuses available for the message type requested.";
 			owner_lazy = () -> Status10Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Status10Choice obj) throws Exception {
+			checkStatus10Choice(obj);
 		}
 	};
 	/**
@@ -186,12 +202,16 @@ public class ConstraintStatusRule {
 	 */
 	public static final MMConstraint<Status19Choice> forStatus19Choice = new MMConstraint<Status19Choice>() {
 		{
-			validator = ConstraintStatusRule::checkStatus19Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusRule";
 			definition = "If a specific Status is requested, then it must be in line with the statuses available for the message type requested.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintStatusRule.forStatus8Choice;
 			owner_lazy = () -> Status19Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Status19Choice obj) throws Exception {
+			checkStatus19Choice(obj);
 		}
 	};
 	/**
@@ -217,11 +237,15 @@ public class ConstraintStatusRule {
 	 */
 	public static final MMConstraint<Status22Choice> forStatus22Choice = new MMConstraint<Status22Choice>() {
 		{
-			validator = ConstraintStatusRule::checkStatus22Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusRule";
 			definition = "If a specific Status is requested, then it must be in line with the statuses available for the message type requested.";
 			owner_lazy = () -> Status22Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Status22Choice obj) throws Exception {
+			checkStatus22Choice(obj);
 		}
 	};
 

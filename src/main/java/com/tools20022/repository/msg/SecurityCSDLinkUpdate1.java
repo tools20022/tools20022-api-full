@@ -98,7 +98,7 @@ public class SecurityCSDLinkUpdate1 {
 	 * "Defines the date until when the CSD is linked to the security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValidTo = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityCSDLinkUpdate1, DateAndDateTimeChoice> mmValidTo = new MMMessageAttribute<SecurityCSDLinkUpdate1, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityCSDLinkUpdate1.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class SecurityCSDLinkUpdate1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(SecurityCSDLinkUpdate1 obj) {
+			return obj.getValidTo();
+		}
+
+		@Override
+		public void setValue(SecurityCSDLinkUpdate1 obj, DateAndDateTimeChoice value) {
+			obj.setValidTo(value);
 		}
 	};
 

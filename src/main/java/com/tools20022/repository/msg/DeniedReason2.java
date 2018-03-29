@@ -128,7 +128,7 @@ public class DeniedReason2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DeniedReason2, DeniedReason2Choice> mmCode = new MMMessageAssociationEnd<DeniedReason2, DeniedReason2Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmDeniedReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeniedReason2.mmObject();
@@ -143,6 +143,16 @@ public class DeniedReason2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DeniedReason2Choice.mmObject();
+		}
+
+		@Override
+		public DeniedReason2Choice getValue(DeniedReason2 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(DeniedReason2 obj, DeniedReason2Choice value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -194,7 +204,7 @@ public class DeniedReason2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DeniedReason2, Optional<Max210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<DeniedReason2, Optional<Max210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeniedReason2.mmObject();
@@ -208,6 +218,16 @@ public class DeniedReason2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max210Text> getValue(DeniedReason2 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(DeniedReason2 obj, Optional<Max210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

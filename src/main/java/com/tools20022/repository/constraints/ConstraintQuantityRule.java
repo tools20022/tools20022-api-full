@@ -53,11 +53,15 @@ public class ConstraintQuantityRule {
 	 */
 	public static final MMConstraint<AdditionalInformation3> forAdditionalInformation3 = new MMConstraint<AdditionalInformation3>() {
 		{
-			validator = ConstraintQuantityRule::checkAdditionalInformation3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityRule";
 			definition = "If pre-agreed between account servicer and account owner, then Quantity will be used to instruct the quantity of securities that should be partially processed, for example, partially authorised.";
 			owner_lazy = () -> AdditionalInformation3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalInformation3 obj) throws Exception {
+			checkAdditionalInformation3(obj);
 		}
 	};
 	/**
@@ -83,11 +87,15 @@ public class ConstraintQuantityRule {
 	 */
 	public static final MMConstraint<AdditionalInformation4> forAdditionalInformation4 = new MMConstraint<AdditionalInformation4>() {
 		{
-			validator = ConstraintQuantityRule::checkAdditionalInformation4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityRule";
 			definition = "If pre-agreed between account servicer and account owner, then Quantity will be used to instruct the quantity of securities that should be partially processed, for example, partially authorised.";
 			owner_lazy = () -> AdditionalInformation4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalInformation4 obj) throws Exception {
+			checkAdditionalInformation4(obj);
 		}
 	};
 	/**
@@ -121,12 +129,16 @@ public class ConstraintQuantityRule {
 	 */
 	public static final MMConstraint<AdditionalInformation7> forAdditionalInformation7 = new MMConstraint<AdditionalInformation7>() {
 		{
-			validator = ConstraintQuantityRule::checkAdditionalInformation7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityRule";
 			definition = "If pre-agreed between account servicer and account owner, then Quantity will be used to instruct the quantity of securities that should be partially processed, for example, partially authorised.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintQuantityRule.forAdditionalInformation9);
 			owner_lazy = () -> AdditionalInformation7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalInformation7 obj) throws Exception {
+			checkAdditionalInformation7(obj);
 		}
 	};
 	/**
@@ -152,11 +164,15 @@ public class ConstraintQuantityRule {
 	 */
 	public static final MMConstraint<AdditionalInformation8> forAdditionalInformation8 = new MMConstraint<AdditionalInformation8>() {
 		{
-			validator = ConstraintQuantityRule::checkAdditionalInformation8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityRule";
 			definition = "If pre-agreed between account servicer and account owner, then Quantity will be used to instruct the quantity of securities that should be partially processed, for example, partially authorised.";
 			owner_lazy = () -> AdditionalInformation8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalInformation8 obj) throws Exception {
+			checkAdditionalInformation8(obj);
 		}
 	};
 	/**
@@ -195,13 +211,17 @@ public class ConstraintQuantityRule {
 	 */
 	public static final MMConstraint<AdditionalInformation9> forAdditionalInformation9 = new MMConstraint<AdditionalInformation9>() {
 		{
-			validator = ConstraintQuantityRule::checkAdditionalInformation9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityRule";
 			definition = "If pre-agreed between account servicer and account owner, then Quantity will be used to instruct the quantity of securities that should be partially processed, for example, partially authorised.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintQuantityRule.forAdditionalInformation11);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintQuantityRule.forAdditionalInformation7;
 			owner_lazy = () -> AdditionalInformation9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalInformation9 obj) throws Exception {
+			checkAdditionalInformation9(obj);
 		}
 	};
 	/**
@@ -227,11 +247,15 @@ public class ConstraintQuantityRule {
 	 */
 	public static final MMConstraint<AdditionalInformation10> forAdditionalInformation10 = new MMConstraint<AdditionalInformation10>() {
 		{
-			validator = ConstraintQuantityRule::checkAdditionalInformation10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityRule";
 			definition = "If pre-agreed between account servicer and account owner, then Quantity will be used to instruct the quantity of securities that should be partially processed, for example, partially authorised.";
 			owner_lazy = () -> AdditionalInformation10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalInformation10 obj) throws Exception {
+			checkAdditionalInformation10(obj);
 		}
 	};
 	/**
@@ -270,13 +294,17 @@ public class ConstraintQuantityRule {
 	 */
 	public static final MMConstraint<AdditionalInformation11> forAdditionalInformation11 = new MMConstraint<AdditionalInformation11>() {
 		{
-			validator = ConstraintQuantityRule::checkAdditionalInformation11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityRule";
 			definition = "If pre-agreed between account servicer and account owner, then Quantity will be used to instruct the quantity of securities that should be partially processed, for example, partially authorised.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintQuantityRule.forAdditionalInformation13);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintQuantityRule.forAdditionalInformation9;
 			owner_lazy = () -> AdditionalInformation11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalInformation11 obj) throws Exception {
+			checkAdditionalInformation11(obj);
 		}
 	};
 	/**
@@ -302,11 +330,15 @@ public class ConstraintQuantityRule {
 	 */
 	public static final MMConstraint<AdditionalInformation12> forAdditionalInformation12 = new MMConstraint<AdditionalInformation12>() {
 		{
-			validator = ConstraintQuantityRule::checkAdditionalInformation12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityRule";
 			definition = "If pre-agreed between account servicer and account owner, then Quantity will be used to instruct the quantity of securities that should be partially processed, for example, partially authorised.";
 			owner_lazy = () -> AdditionalInformation12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalInformation12 obj) throws Exception {
+			checkAdditionalInformation12(obj);
 		}
 	};
 	/**
@@ -337,12 +369,16 @@ public class ConstraintQuantityRule {
 	 */
 	public static final MMConstraint<AdditionalInformation13> forAdditionalInformation13 = new MMConstraint<AdditionalInformation13>() {
 		{
-			validator = ConstraintQuantityRule::checkAdditionalInformation13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityRule";
 			definition = "If pre-agreed between account servicer and account owner, then Quantity will be used to instruct the quantity of securities that should be partially processed, for example, partially authorised.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintQuantityRule.forAdditionalInformation11;
 			owner_lazy = () -> AdditionalInformation13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalInformation13 obj) throws Exception {
+			checkAdditionalInformation13(obj);
 		}
 	};
 	/**
@@ -368,11 +404,15 @@ public class ConstraintQuantityRule {
 	 */
 	public static final MMConstraint<AdditionalInformation14> forAdditionalInformation14 = new MMConstraint<AdditionalInformation14>() {
 		{
-			validator = ConstraintQuantityRule::checkAdditionalInformation14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityRule";
 			definition = "If pre-agreed between account servicer and account owner, then Quantity will be used to instruct the quantity of securities that should be partially processed, for example, partially authorised.";
 			owner_lazy = () -> AdditionalInformation14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalInformation14 obj) throws Exception {
+			checkAdditionalInformation14(obj);
 		}
 	};
 

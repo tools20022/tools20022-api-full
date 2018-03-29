@@ -25,9 +25,7 @@ import com.tools20022.repository.area.SecuritiesSettlementArchive;
 import com.tools20022.repository.choice.PartyIdentification2Choice;
 import com.tools20022.repository.codeset.BusinessFlowDirectionType1Code;
 import com.tools20022.repository.msg.*;
-import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -106,9 +104,6 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
  * messageSet} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion
- * InvestmentFundsISOPreviousversion}</li>
  * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
  * </ul>
  * </li>
@@ -214,7 +209,7 @@ public class AccountHoldingInformationRequestV03 {
 	 * AccountHoldingInformationRequestV02.mmMessageReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountHoldingInformationRequestV03, MessageIdentification1> mmMessageReference = new MMMessageBuildingBlock<AccountHoldingInformationRequestV03, MessageIdentification1>() {
 		{
 			xmlTag = "MsgRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -227,12 +222,14 @@ public class AccountHoldingInformationRequestV03 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountHoldingInformationRequestV03.class.getMethod("getMessageReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(AccountHoldingInformationRequestV03 obj) {
+			return obj.getMessageReference();
+		}
+
+		@Override
+		public void setValue(AccountHoldingInformationRequestV03 obj, MessageIdentification1 value) {
+			obj.setMessageReference(value);
 		}
 	};
 	@XmlElement(name = "PoolRef")
@@ -273,7 +270,7 @@ public class AccountHoldingInformationRequestV03 {
 	 * AccountHoldingInformationRequestV02.mmPoolReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountHoldingInformationRequestV03, Optional<AdditionalReference3>> mmPoolReference = new MMMessageBuildingBlock<AccountHoldingInformationRequestV03, Optional<AdditionalReference3>>() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -286,12 +283,14 @@ public class AccountHoldingInformationRequestV03 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountHoldingInformationRequestV03.class.getMethod("getPoolReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference3> getValue(AccountHoldingInformationRequestV03 obj) {
+			return obj.getPoolReference();
+		}
+
+		@Override
+		public void setValue(AccountHoldingInformationRequestV03 obj, Optional<AdditionalReference3> value) {
+			obj.setPoolReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsRef")
@@ -332,7 +331,7 @@ public class AccountHoldingInformationRequestV03 {
 	 * AccountHoldingInformationRequestV02.mmPreviousReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountHoldingInformationRequestV03, Optional<AdditionalReference3>> mmPreviousReference = new MMMessageBuildingBlock<AccountHoldingInformationRequestV03, Optional<AdditionalReference3>>() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -345,12 +344,14 @@ public class AccountHoldingInformationRequestV03 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountHoldingInformationRequestV03.class.getMethod("getPreviousReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference3> getValue(AccountHoldingInformationRequestV03 obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(AccountHoldingInformationRequestV03 obj, Optional<AdditionalReference3> value) {
+			obj.setPreviousReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RltdRef")
@@ -392,7 +393,7 @@ public class AccountHoldingInformationRequestV03 {
 	 * AccountHoldingInformationRequestV02.mmRelatedReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountHoldingInformationRequestV03, Optional<AdditionalReference3>> mmRelatedReference = new MMMessageBuildingBlock<AccountHoldingInformationRequestV03, Optional<AdditionalReference3>>() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -405,12 +406,14 @@ public class AccountHoldingInformationRequestV03 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountHoldingInformationRequestV03.class.getMethod("getRelatedReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference3> getValue(AccountHoldingInformationRequestV03 obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(AccountHoldingInformationRequestV03 obj, Optional<AdditionalReference3> value) {
+			obj.setRelatedReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BizFlowDrctnTp")
@@ -453,7 +456,7 @@ public class AccountHoldingInformationRequestV03 {
 	 * AccountHoldingInformationRequestV02.mmBusinessFlowDirectionType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmBusinessFlowDirectionType = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountHoldingInformationRequestV03, Optional<BusinessFlowDirectionType1Code>> mmBusinessFlowDirectionType = new MMMessageBuildingBlock<AccountHoldingInformationRequestV03, Optional<BusinessFlowDirectionType1Code>>() {
 		{
 			xmlTag = "BizFlowDrctnTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -466,12 +469,14 @@ public class AccountHoldingInformationRequestV03 {
 			simpleType_lazy = () -> BusinessFlowDirectionType1Code.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountHoldingInformationRequestV03.class.getMethod("getBusinessFlowDirectionType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<BusinessFlowDirectionType1Code> getValue(AccountHoldingInformationRequestV03 obj) {
+			return obj.getBusinessFlowDirectionType();
+		}
+
+		@Override
+		public void setValue(AccountHoldingInformationRequestV03 obj, Optional<BusinessFlowDirectionType1Code> value) {
+			obj.setBusinessFlowDirectionType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmryIndvInvstr")
@@ -514,7 +519,7 @@ public class AccountHoldingInformationRequestV03 {
 	 * AccountHoldingInformationRequestV02.mmPrimaryIndividualInvestor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPrimaryIndividualInvestor = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountHoldingInformationRequestV03, Optional<IndividualPerson8>> mmPrimaryIndividualInvestor = new MMMessageBuildingBlock<AccountHoldingInformationRequestV03, Optional<IndividualPerson8>>() {
 		{
 			xmlTag = "PmryIndvInvstr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -527,12 +532,14 @@ public class AccountHoldingInformationRequestV03 {
 			complexType_lazy = () -> IndividualPerson8.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountHoldingInformationRequestV03.class.getMethod("getPrimaryIndividualInvestor", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<IndividualPerson8> getValue(AccountHoldingInformationRequestV03 obj) {
+			return obj.getPrimaryIndividualInvestor();
+		}
+
+		@Override
+		public void setValue(AccountHoldingInformationRequestV03 obj, Optional<IndividualPerson8> value) {
+			obj.setPrimaryIndividualInvestor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ScndryIndvInvstr")
@@ -575,7 +582,7 @@ public class AccountHoldingInformationRequestV03 {
 	 * AccountHoldingInformationRequestV02.mmSecondaryIndividualInvestor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecondaryIndividualInvestor = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountHoldingInformationRequestV03, Optional<IndividualPerson8>> mmSecondaryIndividualInvestor = new MMMessageBuildingBlock<AccountHoldingInformationRequestV03, Optional<IndividualPerson8>>() {
 		{
 			xmlTag = "ScndryIndvInvstr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -588,12 +595,14 @@ public class AccountHoldingInformationRequestV03 {
 			complexType_lazy = () -> IndividualPerson8.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountHoldingInformationRequestV03.class.getMethod("getSecondaryIndividualInvestor", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<IndividualPerson8> getValue(AccountHoldingInformationRequestV03 obj) {
+			return obj.getSecondaryIndividualInvestor();
+		}
+
+		@Override
+		public void setValue(AccountHoldingInformationRequestV03 obj, Optional<IndividualPerson8> value) {
+			obj.setSecondaryIndividualInvestor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OthrIndvInvstr")
@@ -636,7 +645,7 @@ public class AccountHoldingInformationRequestV03 {
 	 * AccountHoldingInformationRequestV02.mmOtherIndividualInvestor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOtherIndividualInvestor = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountHoldingInformationRequestV03, List<IndividualPerson8>> mmOtherIndividualInvestor = new MMMessageBuildingBlock<AccountHoldingInformationRequestV03, List<IndividualPerson8>>() {
 		{
 			xmlTag = "OthrIndvInvstr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -648,12 +657,14 @@ public class AccountHoldingInformationRequestV03 {
 			complexType_lazy = () -> IndividualPerson8.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountHoldingInformationRequestV03.class.getMethod("getOtherIndividualInvestor", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<IndividualPerson8> getValue(AccountHoldingInformationRequestV03 obj) {
+			return obj.getOtherIndividualInvestor();
+		}
+
+		@Override
+		public void setValue(AccountHoldingInformationRequestV03 obj, List<IndividualPerson8> value) {
+			obj.setOtherIndividualInvestor(value);
 		}
 	};
 	@XmlElement(name = "PmryCorpInvstr")
@@ -695,7 +706,7 @@ public class AccountHoldingInformationRequestV03 {
 	 * AccountHoldingInformationRequestV02.mmPrimaryCorporateInvestor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPrimaryCorporateInvestor = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountHoldingInformationRequestV03, Optional<Organisation4>> mmPrimaryCorporateInvestor = new MMMessageBuildingBlock<AccountHoldingInformationRequestV03, Optional<Organisation4>>() {
 		{
 			xmlTag = "PmryCorpInvstr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -708,12 +719,14 @@ public class AccountHoldingInformationRequestV03 {
 			complexType_lazy = () -> Organisation4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountHoldingInformationRequestV03.class.getMethod("getPrimaryCorporateInvestor", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Organisation4> getValue(AccountHoldingInformationRequestV03 obj) {
+			return obj.getPrimaryCorporateInvestor();
+		}
+
+		@Override
+		public void setValue(AccountHoldingInformationRequestV03 obj, Optional<Organisation4> value) {
+			obj.setPrimaryCorporateInvestor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ScndryCorpInvstr")
@@ -755,7 +768,7 @@ public class AccountHoldingInformationRequestV03 {
 	 * AccountHoldingInformationRequestV02.mmSecondaryCorporateInvestor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecondaryCorporateInvestor = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountHoldingInformationRequestV03, Optional<Organisation4>> mmSecondaryCorporateInvestor = new MMMessageBuildingBlock<AccountHoldingInformationRequestV03, Optional<Organisation4>>() {
 		{
 			xmlTag = "ScndryCorpInvstr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -768,12 +781,14 @@ public class AccountHoldingInformationRequestV03 {
 			complexType_lazy = () -> Organisation4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountHoldingInformationRequestV03.class.getMethod("getSecondaryCorporateInvestor", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Organisation4> getValue(AccountHoldingInformationRequestV03 obj) {
+			return obj.getSecondaryCorporateInvestor();
+		}
+
+		@Override
+		public void setValue(AccountHoldingInformationRequestV03 obj, Optional<Organisation4> value) {
+			obj.setSecondaryCorporateInvestor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OthrCorpInvstr")
@@ -815,7 +830,7 @@ public class AccountHoldingInformationRequestV03 {
 	 * AccountHoldingInformationRequestV02.mmOtherCorporateInvestor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOtherCorporateInvestor = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountHoldingInformationRequestV03, List<Organisation4>> mmOtherCorporateInvestor = new MMMessageBuildingBlock<AccountHoldingInformationRequestV03, List<Organisation4>>() {
 		{
 			xmlTag = "OthrCorpInvstr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -827,12 +842,14 @@ public class AccountHoldingInformationRequestV03 {
 			complexType_lazy = () -> Organisation4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountHoldingInformationRequestV03.class.getMethod("getOtherCorporateInvestor", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Organisation4> getValue(AccountHoldingInformationRequestV03 obj) {
+			return obj.getOtherCorporateInvestor();
+		}
+
+		@Override
+		public void setValue(AccountHoldingInformationRequestV03 obj, List<Organisation4> value) {
+			obj.setOtherCorporateInvestor(value);
 		}
 	};
 	@XmlElement(name = "TrfrAcct", required = true)
@@ -874,7 +891,7 @@ public class AccountHoldingInformationRequestV03 {
 	 * AccountHoldingInformationRequestV02.mmTransferorAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransferorAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountHoldingInformationRequestV03, Account15> mmTransferorAccount = new MMMessageBuildingBlock<AccountHoldingInformationRequestV03, Account15>() {
 		{
 			xmlTag = "TrfrAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -887,12 +904,14 @@ public class AccountHoldingInformationRequestV03 {
 			complexType_lazy = () -> Account15.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountHoldingInformationRequestV03.class.getMethod("getTransferorAccount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Account15 getValue(AccountHoldingInformationRequestV03 obj) {
+			return obj.getTransferorAccount();
+		}
+
+		@Override
+		public void setValue(AccountHoldingInformationRequestV03 obj, Account15 value) {
+			obj.setTransferorAccount(value);
 		}
 	};
 	@XmlElement(name = "NmneeAcct")
@@ -934,7 +953,7 @@ public class AccountHoldingInformationRequestV03 {
 	 * AccountHoldingInformationRequestV02.mmNomineeAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmNomineeAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountHoldingInformationRequestV03, Optional<Account16>> mmNomineeAccount = new MMMessageBuildingBlock<AccountHoldingInformationRequestV03, Optional<Account16>>() {
 		{
 			xmlTag = "NmneeAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -947,12 +966,14 @@ public class AccountHoldingInformationRequestV03 {
 			complexType_lazy = () -> Account16.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountHoldingInformationRequestV03.class.getMethod("getNomineeAccount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Account16> getValue(AccountHoldingInformationRequestV03 obj) {
+			return obj.getNomineeAccount();
+		}
+
+		@Override
+		public void setValue(AccountHoldingInformationRequestV03 obj, Optional<Account16> value) {
+			obj.setNomineeAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Trfee", required = true)
@@ -995,7 +1016,7 @@ public class AccountHoldingInformationRequestV03 {
 	 * AccountHoldingInformationRequestV02.mmTransferee}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransferee = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountHoldingInformationRequestV03, PartyIdentification2Choice> mmTransferee = new MMMessageBuildingBlock<AccountHoldingInformationRequestV03, PartyIdentification2Choice>() {
 		{
 			xmlTag = "Trfee";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1008,12 +1029,14 @@ public class AccountHoldingInformationRequestV03 {
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountHoldingInformationRequestV03.class.getMethod("getTransferee", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PartyIdentification2Choice getValue(AccountHoldingInformationRequestV03 obj) {
+			return obj.getTransferee();
+		}
+
+		@Override
+		public void setValue(AccountHoldingInformationRequestV03 obj, PartyIdentification2Choice value) {
+			obj.setTransferee(value);
 		}
 	};
 	@XmlElement(name = "PdctTrf", required = true)
@@ -1054,7 +1077,7 @@ public class AccountHoldingInformationRequestV03 {
 	 * AccountHoldingInformationRequestV02.mmProductTransfer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmProductTransfer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountHoldingInformationRequestV03, List<ISATransfer15>> mmProductTransfer = new MMMessageBuildingBlock<AccountHoldingInformationRequestV03, List<ISATransfer15>>() {
 		{
 			xmlTag = "PdctTrf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1066,12 +1089,14 @@ public class AccountHoldingInformationRequestV03 {
 			complexType_lazy = () -> ISATransfer15.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountHoldingInformationRequestV03.class.getMethod("getProductTransfer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<ISATransfer15> getValue(AccountHoldingInformationRequestV03 obj) {
+			return obj.getProductTransfer();
+		}
+
+		@Override
+		public void setValue(AccountHoldingInformationRequestV03 obj, List<ISATransfer15> value) {
+			obj.setProductTransfer(value);
 		}
 	};
 	@XmlElement(name = "MktPrctcVrsn")
@@ -1108,7 +1133,7 @@ public class AccountHoldingInformationRequestV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMarketPracticeVersion = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountHoldingInformationRequestV03, Optional<MarketPracticeVersion1>> mmMarketPracticeVersion = new MMMessageBuildingBlock<AccountHoldingInformationRequestV03, Optional<MarketPracticeVersion1>>() {
 		{
 			xmlTag = "MktPrctcVrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1120,12 +1145,14 @@ public class AccountHoldingInformationRequestV03 {
 			complexType_lazy = () -> MarketPracticeVersion1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountHoldingInformationRequestV03.class.getMethod("getMarketPracticeVersion", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<MarketPracticeVersion1> getValue(AccountHoldingInformationRequestV03 obj) {
+			return obj.getMarketPracticeVersion();
+		}
+
+		@Override
+		public void setValue(AccountHoldingInformationRequestV03 obj, Optional<MarketPracticeVersion1> value) {
+			obj.setMarketPracticeVersion(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Xtnsn")
@@ -1167,7 +1194,7 @@ public class AccountHoldingInformationRequestV03 {
 	 * AccountHoldingInformationRequestV02.mmExtension}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountHoldingInformationRequestV03, List<Extension1>> mmExtension = new MMMessageBuildingBlock<AccountHoldingInformationRequestV03, List<Extension1>>() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1179,12 +1206,14 @@ public class AccountHoldingInformationRequestV03 {
 			complexType_lazy = () -> Extension1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountHoldingInformationRequestV03.class.getMethod("getExtension", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Extension1> getValue(AccountHoldingInformationRequestV03 obj) {
+			return obj.getExtension();
+		}
+
+		@Override
+		public void setValue(AccountHoldingInformationRequestV03 obj, List<Extension1> value) {
+			obj.setExtension(value);
 		}
 	};
 
@@ -1200,7 +1229,7 @@ public class AccountHoldingInformationRequestV03 {
 				definition = "Scope\r\nAn instructing party, for example, a (new) plan manager (Transferee) sends the AccountHoldingInformationRequest message to the executing party, for example, a (old) plan manager (Transferor), on behalf of the initiating party, for example, an investor (client), to request information about financial instruments held on behalf of the client.\r\nUsage\r\nThe AccountHoldingInformationRequest message is used to request information about one or more ISA or portfolio products held in a client's account for which it intends to instruct a transfer at a later time.";
 				nextVersions_lazy = () -> Arrays.asList(AccountHoldingInformationRequestV04.mmObject());
 				previousVersion_lazy = () -> AccountHoldingInformationRequestV02.mmObject();
-				messageSet_lazy = () -> Arrays.asList(InvestmentFundsISOPreviousversion.mmObject(), ISOArchive.mmObject());
+				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "AcctHldgInfReq";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();

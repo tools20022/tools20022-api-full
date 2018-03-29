@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.Recipient6Choice;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.EncryptedContent4;
+import com.tools20022.repository.msg.OriginatorInformation1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -60,7 +62,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "EnvelopedData5"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -108,7 +110,7 @@ public class EnvelopedData5 {
 	 * EnvelopedData4.mmVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EnvelopedData5, Optional<Number>> mmVersion = new MMMessageAttribute<EnvelopedData5, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EnvelopedData5.mmObject();
 			isDerived = false;
@@ -120,6 +122,16 @@ public class EnvelopedData5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(EnvelopedData5 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(EnvelopedData5 obj, Optional<Number> value) {
+			obj.setVersion(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgtrInf")
@@ -149,7 +161,7 @@ public class EnvelopedData5 {
 	 * definition} = "Provides certificates of the originator."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginatorInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EnvelopedData5, Optional<OriginatorInformation1>> mmOriginatorInformation = new MMMessageAssociationEnd<EnvelopedData5, Optional<OriginatorInformation1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EnvelopedData5.mmObject();
 			isDerived = false;
@@ -160,7 +172,17 @@ public class EnvelopedData5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OriginatorInformation1.mmObject();
+			type_lazy = () -> OriginatorInformation1.mmObject();
+		}
+
+		@Override
+		public Optional<OriginatorInformation1> getValue(EnvelopedData5 obj) {
+			return obj.getOriginatorInformation();
+		}
+
+		@Override
+		public void setValue(EnvelopedData5 obj, Optional<OriginatorInformation1> value) {
+			obj.setOriginatorInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rcpt", required = true)
@@ -197,7 +219,7 @@ public class EnvelopedData5 {
 	 * EnvelopedData4.mmRecipient}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRecipient = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EnvelopedData5, List<Recipient6Choice>> mmRecipient = new MMMessageAssociationEnd<EnvelopedData5, List<Recipient6Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EnvelopedData5.mmObject();
 			isDerived = false;
@@ -209,6 +231,16 @@ public class EnvelopedData5 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Recipient6Choice.mmObject();
+		}
+
+		@Override
+		public List<Recipient6Choice> getValue(EnvelopedData5 obj) {
+			return obj.getRecipient();
+		}
+
+		@Override
+		public void setValue(EnvelopedData5 obj, List<Recipient6Choice> value) {
+			obj.setRecipient(value);
 		}
 	};
 	@XmlElement(name = "NcrptdCntt")
@@ -245,7 +277,7 @@ public class EnvelopedData5 {
 	 * EnvelopedData4.mmEncryptedContent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEncryptedContent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EnvelopedData5, Optional<EncryptedContent4>> mmEncryptedContent = new MMMessageAssociationEnd<EnvelopedData5, Optional<EncryptedContent4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EnvelopedData5.mmObject();
 			isDerived = false;
@@ -257,7 +289,17 @@ public class EnvelopedData5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.EncryptedContent4.mmObject();
+			type_lazy = () -> EncryptedContent4.mmObject();
+		}
+
+		@Override
+		public Optional<EncryptedContent4> getValue(EnvelopedData5 obj) {
+			return obj.getEncryptedContent();
+		}
+
+		@Override
+		public void setValue(EnvelopedData5 obj, Optional<EncryptedContent4> value) {
+			obj.setEncryptedContent(value.orElse(null));
 		}
 	};
 
@@ -267,7 +309,7 @@ public class EnvelopedData5 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EnvelopedData5.mmVersion, com.tools20022.repository.msg.EnvelopedData5.mmOriginatorInformation,
 						com.tools20022.repository.msg.EnvelopedData5.mmRecipient, com.tools20022.repository.msg.EnvelopedData5.mmEncryptedContent);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EnvelopedData5";
 				definition = "Encrypted data with encryption key.";
 				previousVersion_lazy = () -> EnvelopedData4.mmObject();
@@ -289,7 +331,7 @@ public class EnvelopedData5 {
 		return originatorInformation == null ? Optional.empty() : Optional.of(originatorInformation);
 	}
 
-	public EnvelopedData5 setOriginatorInformation(com.tools20022.repository.msg.OriginatorInformation1 originatorInformation) {
+	public EnvelopedData5 setOriginatorInformation(OriginatorInformation1 originatorInformation) {
 		this.originatorInformation = originatorInformation;
 		return this;
 	}
@@ -307,7 +349,7 @@ public class EnvelopedData5 {
 		return encryptedContent == null ? Optional.empty() : Optional.of(encryptedContent);
 	}
 
-	public EnvelopedData5 setEncryptedContent(com.tools20022.repository.msg.EncryptedContent4 encryptedContent) {
+	public EnvelopedData5 setEncryptedContent(EncryptedContent4 encryptedContent) {
 		this.encryptedContent = encryptedContent;
 		return this;
 	}

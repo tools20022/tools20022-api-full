@@ -105,7 +105,7 @@ public class BalanceType6Choice {
 	 * definition} = "Balance type expressed in coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BalanceType6Choice, BalanceType13Code> mmCode = new MMMessageAttribute<BalanceType6Choice, BalanceType13Code>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BalanceType6Choice.mmObject();
@@ -117,6 +117,16 @@ public class BalanceType6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BalanceType13Code.mmObject();
+		}
+
+		@Override
+		public BalanceType13Code getValue(BalanceType6Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(BalanceType6Choice obj, BalanceType13Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -154,7 +164,7 @@ public class BalanceType6Choice {
 	 * definition} = "Balance type expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BalanceType6Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<BalanceType6Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BalanceType6Choice.mmObject();
@@ -166,6 +176,16 @@ public class BalanceType6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(BalanceType6Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(BalanceType6Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

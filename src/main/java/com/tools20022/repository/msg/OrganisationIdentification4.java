@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.AnyBICIdentifier;
 import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericOrganisationIdentification1;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -113,7 +114,7 @@ public class OrganisationIdentification4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBICOrBEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrganisationIdentification4, Optional<AnyBICIdentifier>> mmBICOrBEI = new MMMessageAttribute<OrganisationIdentification4, Optional<AnyBICIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrganisationIdentification4.mmObject();
@@ -126,9 +127,19 @@ public class OrganisationIdentification4 {
 			minOccurs = 0;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
+
+		@Override
+		public Optional<AnyBICIdentifier> getValue(OrganisationIdentification4 obj) {
+			return obj.getBICOrBEI();
+		}
+
+		@Override
+		public void setValue(OrganisationIdentification4 obj, Optional<AnyBICIdentifier> value) {
+			obj.setBICOrBEI(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "Othr")
-	protected List<com.tools20022.repository.msg.GenericOrganisationIdentification1> other;
+	protected List<GenericOrganisationIdentification1> other;
 	/**
 	 * 
 	 <p>
@@ -163,7 +174,7 @@ public class OrganisationIdentification4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOther = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OrganisationIdentification4, List<GenericOrganisationIdentification1>> mmOther = new MMMessageAssociationEnd<OrganisationIdentification4, List<GenericOrganisationIdentification1>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrganisationIdentification4.mmObject();
@@ -174,7 +185,17 @@ public class OrganisationIdentification4 {
 			definition = "Unique identification of an organisation, as assigned by an institution, using an identification scheme.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericOrganisationIdentification1.mmObject();
+			type_lazy = () -> GenericOrganisationIdentification1.mmObject();
+		}
+
+		@Override
+		public List<GenericOrganisationIdentification1> getValue(OrganisationIdentification4 obj) {
+			return obj.getOther();
+		}
+
+		@Override
+		public void setValue(OrganisationIdentification4 obj, List<GenericOrganisationIdentification1> value) {
+			obj.setOther(value);
 		}
 	};
 
@@ -212,7 +233,7 @@ public class OrganisationIdentification4 {
 		return other == null ? other = new ArrayList<>() : other;
 	}
 
-	public OrganisationIdentification4 setOther(List<com.tools20022.repository.msg.GenericOrganisationIdentification1> other) {
+	public OrganisationIdentification4 setOther(List<GenericOrganisationIdentification1> other) {
 		this.other = Objects.requireNonNull(other);
 		return this;
 	}

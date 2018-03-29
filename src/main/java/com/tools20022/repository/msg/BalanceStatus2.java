@@ -117,7 +117,7 @@ public class BalanceStatus2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BalanceStatus2, ActiveCurrencyAndAmount> mmBalance = new MMMessageAttribute<BalanceStatus2, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceStatus2.mmObject();
@@ -129,6 +129,16 @@ public class BalanceStatus2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(BalanceStatus2 obj) {
+			return obj.getBalance();
+		}
+
+		@Override
+		public void setValue(BalanceStatus2 obj, ActiveCurrencyAndAmount value) {
+			obj.setBalance(value);
 		}
 	};
 

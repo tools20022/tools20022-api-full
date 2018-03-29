@@ -148,7 +148,7 @@ public class CancelledStatusReason8 {
 	 * CancelledStatusReason6.mmReasonCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReasonCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CancelledStatusReason8, CancelledReason5Choice> mmReasonCode = new MMMessageAssociationEnd<CancelledStatusReason8, CancelledReason5Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancelledStatusReason8.mmObject();
@@ -164,6 +164,16 @@ public class CancelledStatusReason8 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CancelledReason5Choice.mmObject();
+		}
+
+		@Override
+		public CancelledReason5Choice getValue(CancelledStatusReason8 obj) {
+			return obj.getReasonCode();
+		}
+
+		@Override
+		public void setValue(CancelledStatusReason8 obj, CancelledReason5Choice value) {
+			obj.setReasonCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -217,7 +227,7 @@ public class CancelledStatusReason8 {
 	 * CancelledStatusReason6.mmAdditionalReasonInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancelledStatusReason8, Optional<Max210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<CancelledStatusReason8, Optional<Max210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancelledStatusReason8.mmObject();
@@ -232,6 +242,16 @@ public class CancelledStatusReason8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max210Text> getValue(CancelledStatusReason8 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(CancelledStatusReason8 obj, Optional<Max210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

@@ -140,7 +140,7 @@ public class CorporateActionEventType12Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionEventType12Choice, CorporateActionEventType11Code> mmCode = new MMMessageAttribute<CorporateActionEventType12Choice, CorporateActionEventType11Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionEventType12Choice.mmObject();
@@ -154,6 +154,16 @@ public class CorporateActionEventType12Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionEventType11Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionEventType11Code getValue(CorporateActionEventType12Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventType12Choice obj, CorporateActionEventType11Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -201,7 +211,7 @@ public class CorporateActionEventType12Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionEventType12Choice, GenericIdentification20> mmProprietary = new MMMessageAssociationEnd<CorporateActionEventType12Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionEventType12Choice.mmObject();
@@ -216,6 +226,16 @@ public class CorporateActionEventType12Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(CorporateActionEventType12Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventType12Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -109,7 +109,7 @@ public class OptionDateOrPeriod1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEarliestExerciseDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionDateOrPeriod1Choice, ISODate> mmEarliestExerciseDate = new MMMessageAttribute<OptionDateOrPeriod1Choice, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmEarliestExerciseDate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OptionDateOrPeriod1Choice.mmObject();
@@ -121,6 +121,16 @@ public class OptionDateOrPeriod1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(OptionDateOrPeriod1Choice obj) {
+			return obj.getEarliestExerciseDate();
+		}
+
+		@Override
+		public void setValue(OptionDateOrPeriod1Choice obj, ISODate value) {
+			obj.setEarliestExerciseDate(value);
 		}
 	};
 	@XmlElement(name = "NtcePrd", required = true)
@@ -159,7 +169,7 @@ public class OptionDateOrPeriod1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoticePeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionDateOrPeriod1Choice, Number> mmNoticePeriod = new MMMessageAttribute<OptionDateOrPeriod1Choice, Number>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesConversion.mmConversionPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OptionDateOrPeriod1Choice.mmObject();
@@ -171,6 +181,16 @@ public class OptionDateOrPeriod1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(OptionDateOrPeriod1Choice obj) {
+			return obj.getNoticePeriod();
+		}
+
+		@Override
+		public void setValue(OptionDateOrPeriod1Choice obj, Number value) {
+			obj.setNoticePeriod(value);
 		}
 	};
 

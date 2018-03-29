@@ -99,7 +99,7 @@ public class AccountStatusModification1 {
 	 * definition} = "Specifies the type of change."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmModificationCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountStatusModification1, Optional<Modification1Code>> mmModificationCode = new MMMessageAttribute<AccountStatusModification1, Optional<Modification1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountStatusModification1.mmObject();
 			isDerived = false;
@@ -110,6 +110,16 @@ public class AccountStatusModification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Modification1Code.mmObject();
+		}
+
+		@Override
+		public Optional<Modification1Code> getValue(AccountStatusModification1 obj) {
+			return obj.getModificationCode();
+		}
+
+		@Override
+		public void setValue(AccountStatusModification1 obj, Optional<Modification1Code> value) {
+			obj.setModificationCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sts", required = true)
@@ -142,7 +152,7 @@ public class AccountStatusModification1 {
 	 * definition} = "Status of the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountStatusModification1, AccountStatus3Code> mmStatus = new MMMessageAttribute<AccountStatusModification1, AccountStatus3Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountStatusModification1.mmObject();
 			isDerived = false;
@@ -153,6 +163,16 @@ public class AccountStatusModification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AccountStatus3Code.mmObject();
+		}
+
+		@Override
+		public AccountStatus3Code getValue(AccountStatusModification1 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(AccountStatusModification1 obj, AccountStatus3Code value) {
+			obj.setStatus(value);
 		}
 	};
 

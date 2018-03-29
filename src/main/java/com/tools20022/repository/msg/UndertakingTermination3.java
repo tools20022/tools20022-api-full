@@ -113,7 +113,7 @@ public class UndertakingTermination3 {
 	 * definition} = "Date on which the termination is effective."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEffectiveDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UndertakingTermination3, ISODate> mmEffectiveDate = new MMMessageAttribute<UndertakingTermination3, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Undertaking.mmTerminationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingTermination3.mmObject();
@@ -125,6 +125,16 @@ public class UndertakingTermination3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(UndertakingTermination3 obj) {
+			return obj.getEffectiveDate();
+		}
+
+		@Override
+		public void setValue(UndertakingTermination3 obj, ISODate value) {
+			obj.setEffectiveDate(value);
 		}
 	};
 	@XmlElement(name = "Rsn")
@@ -162,7 +172,7 @@ public class UndertakingTermination3 {
 	 * definition} = "Reason for the termination."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UndertakingTermination3, Optional<TerminationReason1Choice>> mmReason = new MMMessageAttribute<UndertakingTermination3, Optional<TerminationReason1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> UndertakingStatusReason.mmTerminationReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingTermination3.mmObject();
@@ -174,6 +184,16 @@ public class UndertakingTermination3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> TerminationReason1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<TerminationReason1Choice> getValue(UndertakingTermination3 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(UndertakingTermination3 obj, Optional<TerminationReason1Choice> value) {
+			obj.setReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -210,7 +230,7 @@ public class UndertakingTermination3 {
 	 * definition} = "Additional information related to the termination."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UndertakingTermination3, List<Max2000Text>> mmAdditionalInformation = new MMMessageAttribute<UndertakingTermination3, List<Max2000Text>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusDescription;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingTermination3.mmObject();
@@ -222,6 +242,16 @@ public class UndertakingTermination3 {
 			maxOccurs = 5;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
+		}
+
+		@Override
+		public List<Max2000Text> getValue(UndertakingTermination3 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(UndertakingTermination3 obj, List<Max2000Text> value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 

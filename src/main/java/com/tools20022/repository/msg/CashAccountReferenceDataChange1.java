@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccount24;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -112,7 +113,7 @@ public class CashAccountReferenceDataChange1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccountReferenceDataChange1, CashAccount24> mmCashAccountIdentification = new MMMessageAssociationEnd<CashAccountReferenceDataChange1, CashAccount24>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountReferenceDataChange1.mmObject();
 			isDerived = false;
@@ -123,7 +124,17 @@ public class CashAccountReferenceDataChange1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
+			type_lazy = () -> CashAccount24.mmObject();
+		}
+
+		@Override
+		public CashAccount24 getValue(CashAccountReferenceDataChange1 obj) {
+			return obj.getCashAccountIdentification();
+		}
+
+		@Override
+		public void setValue(CashAccountReferenceDataChange1 obj, CashAccount24 value) {
+			obj.setCashAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "FldNm", required = true)
@@ -157,7 +168,7 @@ public class CashAccountReferenceDataChange1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFieldName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountReferenceDataChange1, Max35Text> mmFieldName = new MMMessageAttribute<CashAccountReferenceDataChange1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountReferenceDataChange1.mmObject();
 			isDerived = false;
@@ -168,6 +179,16 @@ public class CashAccountReferenceDataChange1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CashAccountReferenceDataChange1 obj) {
+			return obj.getFieldName();
+		}
+
+		@Override
+		public void setValue(CashAccountReferenceDataChange1 obj, Max35Text value) {
+			obj.setFieldName(value);
 		}
 	};
 	@XmlElement(name = "OdFldVal", required = true)
@@ -200,7 +221,7 @@ public class CashAccountReferenceDataChange1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOldFieldValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountReferenceDataChange1, Max350Text> mmOldFieldValue = new MMMessageAttribute<CashAccountReferenceDataChange1, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountReferenceDataChange1.mmObject();
 			isDerived = false;
@@ -211,6 +232,16 @@ public class CashAccountReferenceDataChange1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CashAccountReferenceDataChange1 obj) {
+			return obj.getOldFieldValue();
+		}
+
+		@Override
+		public void setValue(CashAccountReferenceDataChange1 obj, Max350Text value) {
+			obj.setOldFieldValue(value);
 		}
 	};
 	@XmlElement(name = "NewFldVal", required = true)
@@ -242,7 +273,7 @@ public class CashAccountReferenceDataChange1 {
 	 * definition} = "Value of the related field after the change was applied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewFieldValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountReferenceDataChange1, Max350Text> mmNewFieldValue = new MMMessageAttribute<CashAccountReferenceDataChange1, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountReferenceDataChange1.mmObject();
 			isDerived = false;
@@ -253,6 +284,16 @@ public class CashAccountReferenceDataChange1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CashAccountReferenceDataChange1 obj) {
+			return obj.getNewFieldValue();
+		}
+
+		@Override
+		public void setValue(CashAccountReferenceDataChange1 obj, Max350Text value) {
+			obj.setNewFieldValue(value);
 		}
 	};
 	@XmlElement(name = "OprTmStmp", required = true)
@@ -284,7 +325,7 @@ public class CashAccountReferenceDataChange1 {
 	 * definition} = "Specifies the timestamp of the operation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOperationTimeStamp = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountReferenceDataChange1, ISODateTime> mmOperationTimeStamp = new MMMessageAttribute<CashAccountReferenceDataChange1, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountReferenceDataChange1.mmObject();
 			isDerived = false;
@@ -295,6 +336,16 @@ public class CashAccountReferenceDataChange1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(CashAccountReferenceDataChange1 obj) {
+			return obj.getOperationTimeStamp();
+		}
+
+		@Override
+		public void setValue(CashAccountReferenceDataChange1 obj, ISODateTime value) {
+			obj.setOperationTimeStamp(value);
 		}
 	};
 
@@ -317,7 +368,7 @@ public class CashAccountReferenceDataChange1 {
 		return cashAccountIdentification;
 	}
 
-	public CashAccountReferenceDataChange1 setCashAccountIdentification(com.tools20022.repository.msg.CashAccount24 cashAccountIdentification) {
+	public CashAccountReferenceDataChange1 setCashAccountIdentification(CashAccount24 cashAccountIdentification) {
 		this.cashAccountIdentification = Objects.requireNonNull(cashAccountIdentification);
 		return this;
 	}

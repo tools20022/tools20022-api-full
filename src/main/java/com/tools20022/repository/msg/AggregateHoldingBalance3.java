@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.IntermediaryRole;
 import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AggregateHoldingBalance1;
+import com.tools20022.repository.msg.Intermediary29;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -81,7 +83,7 @@ public class AggregateHoldingBalance3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "BalForAcct", required = true)
-	protected List<com.tools20022.repository.msg.AggregateHoldingBalance1> balanceForAccount;
+	protected List<AggregateHoldingBalance1> balanceForAccount;
 	/**
 	 * 
 	 <p>
@@ -116,7 +118,7 @@ public class AggregateHoldingBalance3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalanceForAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AggregateHoldingBalance3, List<AggregateHoldingBalance1>> mmBalanceForAccount = new MMMessageAssociationEnd<AggregateHoldingBalance3, List<AggregateHoldingBalance1>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AggregateHoldingBalance3.mmObject();
@@ -127,11 +129,21 @@ public class AggregateHoldingBalance3 {
 			definition = "Report on the net position of a financial instrument on the sub-account, for a certain date.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AggregateHoldingBalance1.mmObject();
+			type_lazy = () -> AggregateHoldingBalance1.mmObject();
+		}
+
+		@Override
+		public List<AggregateHoldingBalance1> getValue(AggregateHoldingBalance3 obj) {
+			return obj.getBalanceForAccount();
+		}
+
+		@Override
+		public void setValue(AggregateHoldingBalance3 obj, List<AggregateHoldingBalance1> value) {
+			obj.setBalanceForAccount(value);
 		}
 	};
 	@XmlElement(name = "Agt")
-	protected List<com.tools20022.repository.msg.Intermediary29> agent;
+	protected List<Intermediary29> agent;
 	/**
 	 * 
 	 <p>
@@ -164,7 +176,7 @@ public class AggregateHoldingBalance3 {
 	 * "Agent of the financial instrument, for example, a trade intermediary."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AggregateHoldingBalance3, List<Intermediary29>> mmAgent = new MMMessageAssociationEnd<AggregateHoldingBalance3, List<Intermediary29>>() {
 		{
 			businessComponentTrace_lazy = () -> IntermediaryRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AggregateHoldingBalance3.mmObject();
@@ -175,7 +187,17 @@ public class AggregateHoldingBalance3 {
 			definition = "Agent of the financial instrument, for example, a trade intermediary.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Intermediary29.mmObject();
+			type_lazy = () -> Intermediary29.mmObject();
+		}
+
+		@Override
+		public List<Intermediary29> getValue(AggregateHoldingBalance3 obj) {
+			return obj.getAgent();
+		}
+
+		@Override
+		public void setValue(AggregateHoldingBalance3 obj, List<Intermediary29> value) {
+			obj.setAgent(value);
 		}
 	};
 
@@ -188,7 +210,7 @@ public class AggregateHoldingBalance3 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AggregateHoldingBalance3";
 				definition = "Overall holding position, in a single financial instrument, held in a securities account at a specified place of safekeeping.";
-				previousVersion_lazy = () -> com.tools20022.repository.msg.AggregateHoldingBalance1.mmObject();
+				previousVersion_lazy = () -> AggregateHoldingBalance1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
@@ -198,7 +220,7 @@ public class AggregateHoldingBalance3 {
 		return balanceForAccount == null ? balanceForAccount = new ArrayList<>() : balanceForAccount;
 	}
 
-	public AggregateHoldingBalance3 setBalanceForAccount(List<com.tools20022.repository.msg.AggregateHoldingBalance1> balanceForAccount) {
+	public AggregateHoldingBalance3 setBalanceForAccount(List<AggregateHoldingBalance1> balanceForAccount) {
 		this.balanceForAccount = Objects.requireNonNull(balanceForAccount);
 		return this;
 	}
@@ -207,7 +229,7 @@ public class AggregateHoldingBalance3 {
 		return agent == null ? agent = new ArrayList<>() : agent;
 	}
 
-	public AggregateHoldingBalance3 setAgent(List<com.tools20022.repository.msg.Intermediary29> agent) {
+	public AggregateHoldingBalance3 setAgent(List<Intermediary29> agent) {
 		this.agent = Objects.requireNonNull(agent);
 		return this;
 	}

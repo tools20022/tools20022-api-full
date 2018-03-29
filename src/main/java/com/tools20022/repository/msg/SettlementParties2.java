@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesSettlementPartyRole;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification36;
+import com.tools20022.repository.msg.PartyIdentificationAndAccount16;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -142,7 +144,7 @@ public class SettlementParties2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDepository = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementParties2, Optional<PartyIdentification36>> mmDepository = new MMMessageAttribute<SettlementParties2, Optional<PartyIdentification36>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementParties2.mmObject();
@@ -154,7 +156,17 @@ public class SettlementParties2 {
 			definition = "First party in the settlement chain. In a plain vanilla settlement, it is the Central Securities Depository where the counterparty requests to receive the financial instrument or from where the counterparty delivers the financial instruments.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification36.mmObject();
+			complexType_lazy = () -> PartyIdentification36.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification36> getValue(SettlementParties2 obj) {
+			return obj.getDepository();
+		}
+
+		@Override
+		public void setValue(SettlementParties2 obj, Optional<PartyIdentification36> value) {
+			obj.setDepository(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Pty1")
@@ -196,7 +208,7 @@ public class SettlementParties2 {
 	 * "Party that, in a settlement chain interacts with the depository."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmParty1 = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementParties2, Optional<PartyIdentificationAndAccount16>> mmParty1 = new MMMessageAttribute<SettlementParties2, Optional<PartyIdentificationAndAccount16>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementParties2.mmObject();
@@ -208,7 +220,17 @@ public class SettlementParties2 {
 			definition = "Party that, in a settlement chain interacts with the depository.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount16.mmObject();
+			complexType_lazy = () -> PartyIdentificationAndAccount16.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount16> getValue(SettlementParties2 obj) {
+			return obj.getParty1();
+		}
+
+		@Override
+		public void setValue(SettlementParties2 obj, Optional<PartyIdentificationAndAccount16> value) {
+			obj.setParty1(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Pty2")
@@ -252,7 +274,7 @@ public class SettlementParties2 {
 	 * "Party that, in a settlement chain interacts with the party 1."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmParty2 = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementParties2, Optional<PartyIdentificationAndAccount16>> mmParty2 = new MMMessageAttribute<SettlementParties2, Optional<PartyIdentificationAndAccount16>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementParties2.mmObject();
@@ -265,7 +287,17 @@ public class SettlementParties2 {
 			definition = "Party that, in a settlement chain interacts with the party 1.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount16.mmObject();
+			complexType_lazy = () -> PartyIdentificationAndAccount16.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount16> getValue(SettlementParties2 obj) {
+			return obj.getParty2();
+		}
+
+		@Override
+		public void setValue(SettlementParties2 obj, Optional<PartyIdentificationAndAccount16> value) {
+			obj.setParty2(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Pty3")
@@ -308,7 +340,7 @@ public class SettlementParties2 {
 	 * "Party that, in a settlement chain interacts with the party 2."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmParty3 = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementParties2, Optional<PartyIdentificationAndAccount16>> mmParty3 = new MMMessageAttribute<SettlementParties2, Optional<PartyIdentificationAndAccount16>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementParties2.mmObject();
@@ -320,7 +352,17 @@ public class SettlementParties2 {
 			definition = "Party that, in a settlement chain interacts with the party 2.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount16.mmObject();
+			complexType_lazy = () -> PartyIdentificationAndAccount16.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount16> getValue(SettlementParties2 obj) {
+			return obj.getParty3();
+		}
+
+		@Override
+		public void setValue(SettlementParties2 obj, Optional<PartyIdentificationAndAccount16> value) {
+			obj.setParty3(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Pty4")
@@ -363,7 +405,7 @@ public class SettlementParties2 {
 	 * "Party that, in a settlement chain interacts with the party 3."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmParty4 = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementParties2, Optional<PartyIdentificationAndAccount16>> mmParty4 = new MMMessageAttribute<SettlementParties2, Optional<PartyIdentificationAndAccount16>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementParties2.mmObject();
@@ -375,7 +417,17 @@ public class SettlementParties2 {
 			definition = "Party that, in a settlement chain interacts with the party 3.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount16.mmObject();
+			complexType_lazy = () -> PartyIdentificationAndAccount16.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount16> getValue(SettlementParties2 obj) {
+			return obj.getParty4();
+		}
+
+		@Override
+		public void setValue(SettlementParties2 obj, Optional<PartyIdentificationAndAccount16> value) {
+			obj.setParty4(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Pty5")
@@ -417,7 +469,7 @@ public class SettlementParties2 {
 	 * "Party that, in a settlement chain interacts with the party 4."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmParty5 = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementParties2, Optional<PartyIdentificationAndAccount16>> mmParty5 = new MMMessageAttribute<SettlementParties2, Optional<PartyIdentificationAndAccount16>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementParties2.mmObject();
@@ -429,7 +481,17 @@ public class SettlementParties2 {
 			definition = "Party that, in a settlement chain interacts with the party 4.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount16.mmObject();
+			complexType_lazy = () -> PartyIdentificationAndAccount16.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount16> getValue(SettlementParties2 obj) {
+			return obj.getParty5();
+		}
+
+		@Override
+		public void setValue(SettlementParties2 obj, Optional<PartyIdentificationAndAccount16> value) {
+			obj.setParty5(value.orElse(null));
 		}
 	};
 
@@ -454,7 +516,7 @@ public class SettlementParties2 {
 		return depository == null ? Optional.empty() : Optional.of(depository);
 	}
 
-	public SettlementParties2 setDepository(com.tools20022.repository.msg.PartyIdentification36 depository) {
+	public SettlementParties2 setDepository(PartyIdentification36 depository) {
 		this.depository = depository;
 		return this;
 	}
@@ -463,7 +525,7 @@ public class SettlementParties2 {
 		return party1 == null ? Optional.empty() : Optional.of(party1);
 	}
 
-	public SettlementParties2 setParty1(com.tools20022.repository.msg.PartyIdentificationAndAccount16 party1) {
+	public SettlementParties2 setParty1(PartyIdentificationAndAccount16 party1) {
 		this.party1 = party1;
 		return this;
 	}
@@ -472,7 +534,7 @@ public class SettlementParties2 {
 		return party2 == null ? Optional.empty() : Optional.of(party2);
 	}
 
-	public SettlementParties2 setParty2(com.tools20022.repository.msg.PartyIdentificationAndAccount16 party2) {
+	public SettlementParties2 setParty2(PartyIdentificationAndAccount16 party2) {
 		this.party2 = party2;
 		return this;
 	}
@@ -481,7 +543,7 @@ public class SettlementParties2 {
 		return party3 == null ? Optional.empty() : Optional.of(party3);
 	}
 
-	public SettlementParties2 setParty3(com.tools20022.repository.msg.PartyIdentificationAndAccount16 party3) {
+	public SettlementParties2 setParty3(PartyIdentificationAndAccount16 party3) {
 		this.party3 = party3;
 		return this;
 	}
@@ -490,7 +552,7 @@ public class SettlementParties2 {
 		return party4 == null ? Optional.empty() : Optional.of(party4);
 	}
 
-	public SettlementParties2 setParty4(com.tools20022.repository.msg.PartyIdentificationAndAccount16 party4) {
+	public SettlementParties2 setParty4(PartyIdentificationAndAccount16 party4) {
 		this.party4 = party4;
 		return this;
 	}
@@ -499,7 +561,7 @@ public class SettlementParties2 {
 		return party5 == null ? Optional.empty() : Optional.of(party5);
 	}
 
-	public SettlementParties2 setParty5(com.tools20022.repository.msg.PartyIdentificationAndAccount16 party5) {
+	public SettlementParties2 setParty5(PartyIdentificationAndAccount16 party5) {
 		this.party5 = party5;
 		return this;
 	}

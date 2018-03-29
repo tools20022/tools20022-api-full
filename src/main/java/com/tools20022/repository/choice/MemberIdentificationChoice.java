@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.ClearingSystemMemberIdentificationChoice;
 import com.tools20022.repository.datatype.BICIdentifier;
 import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.SystemMemberRole;
@@ -114,7 +115,7 @@ public class MemberIdentificationChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MemberIdentificationChoice, BICIdentifier> mmBIC = new MMMessageAttribute<MemberIdentificationChoice, BICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MemberIdentificationChoice.mmObject();
@@ -126,6 +127,16 @@ public class MemberIdentificationChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
+		}
+
+		@Override
+		public BICIdentifier getValue(MemberIdentificationChoice obj) {
+			return obj.getBIC();
+		}
+
+		@Override
+		public void setValue(MemberIdentificationChoice obj, BICIdentifier value) {
+			obj.setBIC(value);
 		}
 	};
 	@XmlElement(name = "ClrSysMmbId", required = true)
@@ -165,7 +176,7 @@ public class MemberIdentificationChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClearingSystemMemberIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MemberIdentificationChoice, ClearingSystemMemberIdentificationChoice> mmClearingSystemMemberIdentification = new MMMessageAttribute<MemberIdentificationChoice, ClearingSystemMemberIdentificationChoice>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmClearingSystemMemberIdentificationType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MemberIdentificationChoice.mmObject();
@@ -176,7 +187,17 @@ public class MemberIdentificationChoice {
 			definition = "Unique and unambiguous identifier of a clearing system member, as assigned by the system or system administrator.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.ClearingSystemMemberIdentificationChoice.mmObject();
+			complexType_lazy = () -> ClearingSystemMemberIdentificationChoice.mmObject();
+		}
+
+		@Override
+		public ClearingSystemMemberIdentificationChoice getValue(MemberIdentificationChoice obj) {
+			return obj.getClearingSystemMemberIdentification();
+		}
+
+		@Override
+		public void setValue(MemberIdentificationChoice obj, ClearingSystemMemberIdentificationChoice value) {
+			obj.setClearingSystemMemberIdentification(value);
 		}
 	};
 
@@ -214,7 +235,7 @@ public class MemberIdentificationChoice {
 		return clearingSystemMemberIdentification;
 	}
 
-	public MemberIdentificationChoice setClearingSystemMemberIdentification(com.tools20022.repository.choice.ClearingSystemMemberIdentificationChoice clearingSystemMemberIdentification) {
+	public MemberIdentificationChoice setClearingSystemMemberIdentification(ClearingSystemMemberIdentificationChoice clearingSystemMemberIdentification) {
 		this.clearingSystemMemberIdentification = Objects.requireNonNull(clearingSystemMemberIdentification);
 		return this;
 	}

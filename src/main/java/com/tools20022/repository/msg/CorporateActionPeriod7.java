@@ -140,7 +140,7 @@ public class CorporateActionPeriod7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPriceCalculationPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPeriod7, Optional<Period3Choice>> mmPriceCalculationPeriod = new MMMessageAssociationEnd<CorporateActionPeriod7, Optional<Period3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceCalculationPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod7.mmObject();
@@ -155,6 +155,16 @@ public class CorporateActionPeriod7 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Period3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Period3Choice> getValue(CorporateActionPeriod7 obj) {
+			return obj.getPriceCalculationPeriod();
+		}
+
+		@Override
+		public void setValue(CorporateActionPeriod7 obj, Optional<Period3Choice> value) {
+			obj.setPriceCalculationPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ParllTradgPrd")
@@ -203,7 +213,7 @@ public class CorporateActionPeriod7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParallelTradingPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPeriod7, Optional<Period3Choice>> mmParallelTradingPeriod = new MMMessageAssociationEnd<CorporateActionPeriod7, Optional<Period3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmParallelTradingPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod7.mmObject();
@@ -218,6 +228,16 @@ public class CorporateActionPeriod7 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Period3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Period3Choice> getValue(CorporateActionPeriod7 obj) {
+			return obj.getParallelTradingPeriod();
+		}
+
+		@Override
+		public void setValue(CorporateActionPeriod7 obj, Optional<Period3Choice> value) {
+			obj.setParallelTradingPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ActnPrd")
@@ -266,7 +286,7 @@ public class CorporateActionPeriod7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmActionPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPeriod7, Optional<Period3Choice>> mmActionPeriod = new MMMessageAssociationEnd<CorporateActionPeriod7, Optional<Period3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmActionPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod7.mmObject();
@@ -281,6 +301,16 @@ public class CorporateActionPeriod7 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Period3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Period3Choice> getValue(CorporateActionPeriod7 obj) {
+			return obj.getActionPeriod();
+		}
+
+		@Override
+		public void setValue(CorporateActionPeriod7 obj, Optional<Period3Choice> value) {
+			obj.setActionPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RvcbltyPrd")
@@ -329,7 +359,7 @@ public class CorporateActionPeriod7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRevocabilityPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPeriod7, Optional<Period3Choice>> mmRevocabilityPeriod = new MMMessageAssociationEnd<CorporateActionPeriod7, Optional<Period3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDeadline.mmRevocabilityPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod7.mmObject();
@@ -344,6 +374,16 @@ public class CorporateActionPeriod7 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Period3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Period3Choice> getValue(CorporateActionPeriod7 obj) {
+			return obj.getRevocabilityPeriod();
+		}
+
+		@Override
+		public void setValue(CorporateActionPeriod7 obj, Optional<Period3Choice> value) {
+			obj.setRevocabilityPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvlgSspnsnPrd")
@@ -392,7 +432,7 @@ public class CorporateActionPeriod7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPrivilegeSuspensionPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPeriod7, Optional<Period3Choice>> mmPrivilegeSuspensionPeriod = new MMMessageAssociationEnd<CorporateActionPeriod7, Optional<Period3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SuspensionPeriod.mmPrivilegeSuspensionPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod7.mmObject();
@@ -407,6 +447,16 @@ public class CorporateActionPeriod7 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Period3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Period3Choice> getValue(CorporateActionPeriod7 obj) {
+			return obj.getPrivilegeSuspensionPeriod();
+		}
+
+		@Override
+		public void setValue(CorporateActionPeriod7 obj, Optional<Period3Choice> value) {
+			obj.setPrivilegeSuspensionPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctSvcrRvcbltyPrd")
@@ -455,7 +505,7 @@ public class CorporateActionPeriod7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountServicerRevocabilityPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPeriod7, Optional<Period3Choice>> mmAccountServicerRevocabilityPeriod = new MMMessageAssociationEnd<CorporateActionPeriod7, Optional<Period3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDeadline.mmRevocabilityPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod7.mmObject();
@@ -470,6 +520,16 @@ public class CorporateActionPeriod7 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Period3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Period3Choice> getValue(CorporateActionPeriod7 obj) {
+			return obj.getAccountServicerRevocabilityPeriod();
+		}
+
+		@Override
+		public void setValue(CorporateActionPeriod7 obj, Optional<Period3Choice> value) {
+			obj.setAccountServicerRevocabilityPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DpstrySspnsnPrdForWdrwl")
@@ -518,7 +578,7 @@ public class CorporateActionPeriod7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDepositorySuspensionPeriodForWithdrawal = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPeriod7, Optional<Period3Choice>> mmDepositorySuspensionPeriodForWithdrawal = new MMMessageAssociationEnd<CorporateActionPeriod7, Optional<Period3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SuspensionPeriod.mmDepositorySuspensionPeriodForWithdrawal;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod7.mmObject();
@@ -533,6 +593,16 @@ public class CorporateActionPeriod7 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Period3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Period3Choice> getValue(CorporateActionPeriod7 obj) {
+			return obj.getDepositorySuspensionPeriodForWithdrawal();
+		}
+
+		@Override
+		public void setValue(CorporateActionPeriod7 obj, Optional<Period3Choice> value) {
+			obj.setDepositorySuspensionPeriodForWithdrawal(value.orElse(null));
 		}
 	};
 

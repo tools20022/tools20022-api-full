@@ -25,7 +25,6 @@ import com.tools20022.repository.area.PaymentsClearingandSettlementArchive;
 import com.tools20022.repository.msg.DirectDebitTransactionInformation10;
 import com.tools20022.repository.msg.GroupHeader34;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -168,7 +167,7 @@ public class FIToFICustomerDirectDebitV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FIToFICustomerDirectDebitV02, GroupHeader34> mmGroupHeader = new MMMessageBuildingBlock<FIToFICustomerDirectDebitV02, GroupHeader34>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -179,12 +178,14 @@ public class FIToFICustomerDirectDebitV02 {
 			complexType_lazy = () -> GroupHeader34.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FIToFICustomerDirectDebitV02.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader34 getValue(FIToFICustomerDirectDebitV02 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(FIToFICustomerDirectDebitV02 obj, GroupHeader34 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "DrctDbtTxInf", required = true)
@@ -214,7 +215,7 @@ public class FIToFICustomerDirectDebitV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmDirectDebitTransactionInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FIToFICustomerDirectDebitV02, List<DirectDebitTransactionInformation10>> mmDirectDebitTransactionInformation = new MMMessageBuildingBlock<FIToFICustomerDirectDebitV02, List<DirectDebitTransactionInformation10>>() {
 		{
 			xmlTag = "DrctDbtTxInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -224,12 +225,14 @@ public class FIToFICustomerDirectDebitV02 {
 			complexType_lazy = () -> DirectDebitTransactionInformation10.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FIToFICustomerDirectDebitV02.class.getMethod("getDirectDebitTransactionInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<DirectDebitTransactionInformation10> getValue(FIToFICustomerDirectDebitV02 obj) {
+			return obj.getDirectDebitTransactionInformation();
+		}
+
+		@Override
+		public void setValue(FIToFICustomerDirectDebitV02 obj, List<DirectDebitTransactionInformation10> value) {
+			obj.setDirectDebitTransactionInformation(value);
 		}
 	};
 

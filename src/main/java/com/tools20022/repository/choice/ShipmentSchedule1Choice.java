@@ -126,7 +126,7 @@ public class ShipmentSchedule1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmShipmentDateRange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ShipmentSchedule1Choice, ShipmentDateRange1> mmShipmentDateRange = new MMMessageAssociationEnd<ShipmentSchedule1Choice, ShipmentDateRange1>() {
 		{
 			businessComponentTrace_lazy = () -> ShipmentDateRange.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ShipmentSchedule1Choice.mmObject();
@@ -140,6 +140,16 @@ public class ShipmentSchedule1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ShipmentDateRange1.mmObject();
+		}
+
+		@Override
+		public ShipmentDateRange1 getValue(ShipmentSchedule1Choice obj) {
+			return obj.getShipmentDateRange();
+		}
+
+		@Override
+		public void setValue(ShipmentSchedule1Choice obj, ShipmentDateRange1 value) {
+			obj.setShipmentDateRange(value);
 		}
 	};
 	@XmlElement(name = "ShipmntSubSchdl", required = true)
@@ -185,7 +195,7 @@ public class ShipmentSchedule1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmShipmentSubSchedule = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ShipmentSchedule1Choice, List<ShipmentDateRange2>> mmShipmentSubSchedule = new MMMessageAssociationEnd<ShipmentSchedule1Choice, List<ShipmentDateRange2>>() {
 		{
 			businessComponentTrace_lazy = () -> ShipmentDateRange.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ShipmentSchedule1Choice.mmObject();
@@ -198,6 +208,16 @@ public class ShipmentSchedule1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ShipmentDateRange2.mmObject();
+		}
+
+		@Override
+		public List<ShipmentDateRange2> getValue(ShipmentSchedule1Choice obj) {
+			return obj.getShipmentSubSchedule();
+		}
+
+		@Override
+		public void setValue(ShipmentSchedule1Choice obj, List<ShipmentDateRange2> value) {
+			obj.setShipmentSubSchedule(value);
 		}
 	};
 

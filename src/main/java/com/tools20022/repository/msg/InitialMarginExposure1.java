@@ -23,7 +23,9 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.MarginType2Choice;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.entity.MarginCall;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Amount3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -52,6 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * InitialMarginExposure1.mmCoreIndicator}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
+ * trace} = {@linkplain com.tools20022.repository.entity.MarginCall MarginCall}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -84,6 +88,11 @@ public class InitialMarginExposure1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.msg.Amount3 Amount3}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.MarginCall#mmInitialMargin
+	 * MarginCall.mmInitialMargin}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
 	 * {@linkplain com.tools20022.repository.msg.InitialMarginExposure1
@@ -101,8 +110,9 @@ public class InitialMarginExposure1 {
 	 * definition} = "Initial margin requirement for margin account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InitialMarginExposure1, Amount3> mmAmount = new MMMessageAssociationEnd<InitialMarginExposure1, Amount3>() {
 		{
+			businessElementTrace_lazy = () -> MarginCall.mmInitialMargin;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InitialMarginExposure1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
@@ -112,7 +122,17 @@ public class InitialMarginExposure1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Amount3.mmObject();
+			type_lazy = () -> Amount3.mmObject();
+		}
+
+		@Override
+		public Amount3 getValue(InitialMarginExposure1 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(InitialMarginExposure1 obj, Amount3 value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -125,6 +145,11 @@ public class InitialMarginExposure1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.choice.MarginType2Choice
 	 * MarginType2Choice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.MarginCall#mmMarginType
+	 * MarginCall.mmMarginType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -145,8 +170,9 @@ public class InitialMarginExposure1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InitialMarginExposure1, MarginType2Choice> mmType = new MMMessageAssociationEnd<InitialMarginExposure1, MarginType2Choice>() {
 		{
+			businessElementTrace_lazy = () -> MarginCall.mmMarginType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InitialMarginExposure1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
@@ -157,6 +183,16 @@ public class InitialMarginExposure1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> MarginType2Choice.mmObject();
+		}
+
+		@Override
+		public MarginType2Choice getValue(InitialMarginExposure1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(InitialMarginExposure1 obj, MarginType2Choice value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "CoreInd", required = true)
@@ -191,7 +227,7 @@ public class InitialMarginExposure1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCoreIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InitialMarginExposure1, YesNoIndicator> mmCoreIndicator = new MMMessageAttribute<InitialMarginExposure1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InitialMarginExposure1.mmObject();
 			isDerived = false;
@@ -203,6 +239,16 @@ public class InitialMarginExposure1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
+
+		@Override
+		public YesNoIndicator getValue(InitialMarginExposure1 obj) {
+			return obj.getCoreIndicator();
+		}
+
+		@Override
+		public void setValue(InitialMarginExposure1 obj, YesNoIndicator value) {
+			obj.setCoreIndicator(value);
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -210,6 +256,7 @@ public class InitialMarginExposure1 {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InitialMarginExposure1.mmAmount, com.tools20022.repository.msg.InitialMarginExposure1.mmType,
 						com.tools20022.repository.msg.InitialMarginExposure1.mmCoreIndicator);
+				trace_lazy = () -> MarginCall.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "InitialMarginExposure1";
@@ -223,7 +270,7 @@ public class InitialMarginExposure1 {
 		return amount;
 	}
 
-	public InitialMarginExposure1 setAmount(com.tools20022.repository.msg.Amount3 amount) {
+	public InitialMarginExposure1 setAmount(Amount3 amount) {
 		this.amount = Objects.requireNonNull(amount);
 		return this;
 	}

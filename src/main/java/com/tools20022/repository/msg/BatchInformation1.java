@@ -102,7 +102,7 @@ public class BatchInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BatchInformation1, Optional<Max35Text>> mmMessageIdentification = new MMMessageAttribute<BatchInformation1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BatchInformation1.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class BatchInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(BatchInformation1 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(BatchInformation1 obj, Optional<Max35Text> value) {
+			obj.setMessageIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtInfId")
@@ -146,7 +156,7 @@ public class BatchInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentInformationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BatchInformation1, Optional<Max35Text>> mmPaymentInformationIdentification = new MMMessageAttribute<BatchInformation1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BatchInformation1.mmObject();
 			isDerived = false;
@@ -157,6 +167,16 @@ public class BatchInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(BatchInformation1 obj) {
+			return obj.getPaymentInformationIdentification();
+		}
+
+		@Override
+		public void setValue(BatchInformation1 obj, Optional<Max35Text> value) {
+			obj.setPaymentInformationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NbOfTxs")
@@ -189,7 +209,7 @@ public class BatchInformation1 {
 	 * definition} = "Number of individual transactions included in the batch."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfTransactions = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BatchInformation1, Optional<Max15NumericText>> mmNumberOfTransactions = new MMMessageAttribute<BatchInformation1, Optional<Max15NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BatchInformation1.mmObject();
 			isDerived = false;
@@ -200,6 +220,16 @@ public class BatchInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max15NumericText> getValue(BatchInformation1 obj) {
+			return obj.getNumberOfTransactions();
+		}
+
+		@Override
+		public void setValue(BatchInformation1 obj, Optional<Max15NumericText> value) {
+			obj.setNumberOfTransactions(value.orElse(null));
 		}
 	};
 

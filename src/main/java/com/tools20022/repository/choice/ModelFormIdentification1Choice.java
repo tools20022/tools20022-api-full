@@ -107,7 +107,7 @@ public class ModelFormIdentification1Choice {
 	 * definition} = "Model form identification.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ModelFormIdentification1Choice, ExternalModelFormIdentification1Code> mmCode = new MMMessageAttribute<ModelFormIdentification1Choice, ExternalModelFormIdentification1Code>() {
 		{
 			businessElementTrace_lazy = () -> ModelForm.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ModelFormIdentification1Choice.mmObject();
@@ -119,6 +119,16 @@ public class ModelFormIdentification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalModelFormIdentification1Code.mmObject();
+		}
+
+		@Override
+		public ExternalModelFormIdentification1Code getValue(ModelFormIdentification1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ModelFormIdentification1Choice obj, ExternalModelFormIdentification1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -155,7 +165,7 @@ public class ModelFormIdentification1Choice {
 	 * "Model form identification expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ModelFormIdentification1Choice, GenericIdentification1> mmProprietary = new MMMessageAssociationEnd<ModelFormIdentification1Choice, GenericIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> ModelForm.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ModelFormIdentification1Choice.mmObject();
@@ -168,6 +178,16 @@ public class ModelFormIdentification1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(ModelFormIdentification1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ModelFormIdentification1Choice obj, GenericIdentification1 value) {
+			obj.setProprietary(value);
 		}
 	};
 

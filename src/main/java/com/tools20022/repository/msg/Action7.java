@@ -25,6 +25,7 @@ import com.tools20022.repository.codeset.ActionType6Code;
 import com.tools20022.repository.codeset.MessageFunction11Code;
 import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ActionMessage4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -108,7 +109,7 @@ public class Action7 {
 	 * definition} = "Type of action to be performed by the card acceptor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Action7, ActionType6Code> mmActionType = new MMMessageAttribute<Action7, ActionType6Code>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmActionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Action7.mmObject();
@@ -120,6 +121,16 @@ public class Action7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActionType6Code.mmObject();
+		}
+
+		@Override
+		public ActionType6Code getValue(Action7 obj) {
+			return obj.getActionType();
+		}
+
+		@Override
+		public void setValue(Action7 obj, ActionType6Code value) {
+			obj.setActionType(value);
 		}
 	};
 	@XmlElement(name = "MsgToPres")
@@ -154,7 +165,7 @@ public class Action7 {
 	 * definition} = "Information to display, print or log."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMessageToPresent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Action7, Optional<ActionMessage4>> mmMessageToPresent = new MMMessageAssociationEnd<Action7, Optional<ActionMessage4>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmActionMessage;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Action7.mmObject();
@@ -166,7 +177,17 @@ public class Action7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ActionMessage4.mmObject();
+			type_lazy = () -> ActionMessage4.mmObject();
+		}
+
+		@Override
+		public Optional<ActionMessage4> getValue(Action7 obj) {
+			return obj.getMessageToPresent();
+		}
+
+		@Override
+		public void setValue(Action7 obj, Optional<ActionMessage4> value) {
+			obj.setMessageToPresent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReqToPrfrm")
@@ -199,7 +220,7 @@ public class Action7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestToPerform = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Action7, Optional<MessageFunction11Code>> mmRequestToPerform = new MMMessageAttribute<Action7, Optional<MessageFunction11Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Action7.mmObject();
 			isDerived = false;
@@ -210,6 +231,16 @@ public class Action7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> MessageFunction11Code.mmObject();
+		}
+
+		@Override
+		public Optional<MessageFunction11Code> getValue(Action7 obj) {
+			return obj.getRequestToPerform();
+		}
+
+		@Override
+		public void setValue(Action7 obj, Optional<MessageFunction11Code> value) {
+			obj.setRequestToPerform(value.orElse(null));
 		}
 	};
 
@@ -240,7 +271,7 @@ public class Action7 {
 		return messageToPresent == null ? Optional.empty() : Optional.of(messageToPresent);
 	}
 
-	public Action7 setMessageToPresent(com.tools20022.repository.msg.ActionMessage4 messageToPresent) {
+	public Action7 setMessageToPresent(ActionMessage4 messageToPresent) {
 		this.messageToPresent = messageToPresent;
 		return this;
 	}

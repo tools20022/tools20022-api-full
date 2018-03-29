@@ -111,7 +111,7 @@ public class CorporateSectorCriteria3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinancialInstitutionSector = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateSectorCriteria3, List<FinancialPartySectorType1Code>> mmFinancialInstitutionSector = new MMMessageAttribute<CorporateSectorCriteria3, List<FinancialPartySectorType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Sector.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateSectorCriteria3.mmObject();
@@ -122,6 +122,16 @@ public class CorporateSectorCriteria3 {
 			definition = "Indicates that reporting counterparty is a financial institution.\r\n\r\n";
 			minOccurs = 0;
 			simpleType_lazy = () -> FinancialPartySectorType1Code.mmObject();
+		}
+
+		@Override
+		public List<FinancialPartySectorType1Code> getValue(CorporateSectorCriteria3 obj) {
+			return obj.getFinancialInstitutionSector();
+		}
+
+		@Override
+		public void setValue(CorporateSectorCriteria3 obj, List<FinancialPartySectorType1Code> value) {
+			obj.setFinancialInstitutionSector(value);
 		}
 	};
 	@XmlElement(name = "NFISctr")
@@ -160,7 +170,7 @@ public class CorporateSectorCriteria3 {
 	 * "Indicates that reporting counterparty is a non financial institution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNonFinancialInstitutionSector = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateSectorCriteria3, List<NonFinancialPartySector1Code>> mmNonFinancialInstitutionSector = new MMMessageAttribute<CorporateSectorCriteria3, List<NonFinancialPartySector1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Sector.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateSectorCriteria3.mmObject();
@@ -171,6 +181,16 @@ public class CorporateSectorCriteria3 {
 			definition = "Indicates that reporting counterparty is a non financial institution.";
 			minOccurs = 0;
 			simpleType_lazy = () -> NonFinancialPartySector1Code.mmObject();
+		}
+
+		@Override
+		public List<NonFinancialPartySector1Code> getValue(CorporateSectorCriteria3 obj) {
+			return obj.getNonFinancialInstitutionSector();
+		}
+
+		@Override
+		public void setValue(CorporateSectorCriteria3 obj, List<NonFinancialPartySector1Code> value) {
+			obj.setNonFinancialInstitutionSector(value);
 		}
 	};
 	@XmlElement(name = "NotRptd")
@@ -205,7 +225,7 @@ public class CorporateSectorCriteria3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotReported = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateSectorCriteria3, Optional<NotReported1Code>> mmNotReported = new MMMessageAttribute<CorporateSectorCriteria3, Optional<NotReported1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateSectorCriteria3.mmObject();
 			isDerived = false;
@@ -216,6 +236,16 @@ public class CorporateSectorCriteria3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> NotReported1Code.mmObject();
+		}
+
+		@Override
+		public Optional<NotReported1Code> getValue(CorporateSectorCriteria3 obj) {
+			return obj.getNotReported();
+		}
+
+		@Override
+		public void setValue(CorporateSectorCriteria3 obj, Optional<NotReported1Code> value) {
+			obj.setNotReported(value.orElse(null));
 		}
 	};
 

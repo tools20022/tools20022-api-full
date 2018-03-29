@@ -120,7 +120,7 @@ public class CorporateActionSD10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionSD10, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionSD10, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionSD10.mmObject();
 			isDerived = false;
@@ -132,6 +132,16 @@ public class CorporateActionSD10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionSD10 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionSD10 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "LtrySeqNb")
@@ -174,7 +184,7 @@ public class CorporateActionSD10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLotterySequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionSD10, Optional<Max3NumericText>> mmLotterySequenceNumber = new MMMessageAttribute<CorporateActionSD10, Optional<Max3NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionSD10.mmObject();
 			isDerived = false;
@@ -186,6 +196,16 @@ public class CorporateActionSD10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max3NumericText> getValue(CorporateActionSD10 obj) {
+			return obj.getLotterySequenceNumber();
+		}
+
+		@Override
+		public void setValue(CorporateActionSD10 obj, Optional<Max3NumericText> value) {
+			obj.setLotterySequenceNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LtryDt")
@@ -235,7 +255,7 @@ public class CorporateActionSD10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLotteryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionSD10, Optional<ISODate>> mmLotteryDate = new MMMessageAttribute<CorporateActionSD10, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Lottery.mmLotteryDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionSD10.mmObject();
@@ -249,6 +269,16 @@ public class CorporateActionSD10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CorporateActionSD10 obj) {
+			return obj.getLotteryDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionSD10 obj, Optional<ISODate> value) {
+			obj.setLotteryDate(value.orElse(null));
 		}
 	};
 

@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.RegulatoryReporting1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msg.TradeData7;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -116,7 +115,7 @@ public class ForeignExchangeTradeStatusNotificationV04 {
 	 * "Provides information on the status of a trade in a system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTradeData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeStatusNotificationV04, TradeData7> mmTradeData = new MMMessageBuildingBlock<ForeignExchangeTradeStatusNotificationV04, TradeData7>() {
 		{
 			xmlTag = "TradData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -127,12 +126,14 @@ public class ForeignExchangeTradeStatusNotificationV04 {
 			complexType_lazy = () -> TradeData7.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeStatusNotificationV04.class.getMethod("getTradeData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TradeData7 getValue(ForeignExchangeTradeStatusNotificationV04 obj) {
+			return obj.getTradeData();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeStatusNotificationV04 obj, TradeData7 value) {
+			obj.setTradeData(value);
 		}
 	};
 	@XmlElement(name = "RgltryRptg")
@@ -162,7 +163,7 @@ public class ForeignExchangeTradeStatusNotificationV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRegulatoryReporting = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeStatusNotificationV04, Optional<RegulatoryReporting1>> mmRegulatoryReporting = new MMMessageBuildingBlock<ForeignExchangeTradeStatusNotificationV04, Optional<RegulatoryReporting1>>() {
 		{
 			xmlTag = "RgltryRptg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,12 +174,14 @@ public class ForeignExchangeTradeStatusNotificationV04 {
 			complexType_lazy = () -> RegulatoryReporting1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeStatusNotificationV04.class.getMethod("getRegulatoryReporting", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<RegulatoryReporting1> getValue(ForeignExchangeTradeStatusNotificationV04 obj) {
+			return obj.getRegulatoryReporting();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeStatusNotificationV04 obj, Optional<RegulatoryReporting1> value) {
+			obj.setRegulatoryReporting(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -208,7 +211,7 @@ public class ForeignExchangeTradeStatusNotificationV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeStatusNotificationV04, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<ForeignExchangeTradeStatusNotificationV04, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -218,12 +221,14 @@ public class ForeignExchangeTradeStatusNotificationV04 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeStatusNotificationV04.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(ForeignExchangeTradeStatusNotificationV04 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeStatusNotificationV04 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

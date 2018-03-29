@@ -107,7 +107,7 @@ public class RequestInformation {
 	 * definition} = "Identifies the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequestInformation, Max35Text> mmIdentification = new MMMessageAttribute<RequestInformation, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestInformation.mmObject();
 			isDerived = false;
@@ -118,6 +118,16 @@ public class RequestInformation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(RequestInformation obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(RequestInformation obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "ReqdExctnDt")
@@ -154,7 +164,7 @@ public class RequestInformation {
 	 * definition} = "Date at which the instruction must b e executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestedExecutionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequestInformation, Optional<ISODateTime>> mmRequestedExecutionDate = new MMMessageAttribute<RequestInformation, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> InstructionForMeeting.mmRequestedExecutionDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestInformation.mmObject();
@@ -166,6 +176,16 @@ public class RequestInformation {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(RequestInformation obj) {
+			return obj.getRequestedExecutionDate();
+		}
+
+		@Override
+		public void setValue(RequestInformation obj, Optional<ISODateTime> value) {
+			obj.setRequestedExecutionDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "QtyOfScty")
@@ -202,7 +222,7 @@ public class RequestInformation {
 	 * definition} = "Quantity expressed as a number, eg, a number of shares."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantityOfSecurity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequestInformation, Optional<Number>> mmQuantityOfSecurity = new MMMessageAttribute<RequestInformation, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestInformation.mmObject();
@@ -214,6 +234,16 @@ public class RequestInformation {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(RequestInformation obj) {
+			return obj.getQuantityOfSecurity();
+		}
+
+		@Override
+		public void setValue(RequestInformation obj, Optional<Number> value) {
+			obj.setQuantityOfSecurity(value.orElse(null));
 		}
 	};
 

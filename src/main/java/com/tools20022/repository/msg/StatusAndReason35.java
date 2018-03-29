@@ -20,9 +20,11 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V09;
 import com.tools20022.repository.choice.Status23Choice;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Transaction63;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -52,6 +54,15 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
  * trace} = {@linkplain com.tools20022.repository.entity.Status Status}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
+ * messageBuildingBlock} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V09#mmStatus
+ * SecuritiesTransactionPendingReport002V09.mmStatus}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -104,7 +115,7 @@ public class StatusAndReason35 {
 	 * definition} = "Status and reason for the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusAndReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusAndReason35, Status23Choice> mmStatusAndReason = new MMMessageAssociationEnd<StatusAndReason35, Status23Choice>() {
 		{
 			businessComponentTrace_lazy = () -> Status.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason35.mmObject();
@@ -118,9 +129,19 @@ public class StatusAndReason35 {
 			isComposite = true;
 			type_lazy = () -> Status23Choice.mmObject();
 		}
+
+		@Override
+		public Status23Choice getValue(StatusAndReason35 obj) {
+			return obj.getStatusAndReason();
+		}
+
+		@Override
+		public void setValue(StatusAndReason35 obj, Status23Choice value) {
+			obj.setStatusAndReason(value);
+		}
 	};
 	@XmlElement(name = "Tx")
-	protected List<com.tools20022.repository.msg.Transaction63> transaction;
+	protected List<Transaction63> transaction;
 	/**
 	 * 
 	 <p>
@@ -147,7 +168,7 @@ public class StatusAndReason35 {
 	 * definition} = "Details of the transactions reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusAndReason35, List<Transaction63>> mmTransaction = new MMMessageAssociationEnd<StatusAndReason35, List<Transaction63>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason35.mmObject();
 			isDerived = false;
@@ -157,7 +178,17 @@ public class StatusAndReason35 {
 			definition = "Details of the transactions reported.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Transaction63.mmObject();
+			type_lazy = () -> Transaction63.mmObject();
+		}
+
+		@Override
+		public List<Transaction63> getValue(StatusAndReason35 obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(StatusAndReason35 obj, List<Transaction63> value) {
+			obj.setTransaction(value);
 		}
 	};
 
@@ -165,6 +196,7 @@ public class StatusAndReason35 {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusAndReason35.mmStatusAndReason, com.tools20022.repository.msg.StatusAndReason35.mmTransaction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesTransactionPendingReport002V09.mmStatus);
 				trace_lazy = () -> Status.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -188,7 +220,7 @@ public class StatusAndReason35 {
 		return transaction == null ? transaction = new ArrayList<>() : transaction;
 	}
 
-	public StatusAndReason35 setTransaction(List<com.tools20022.repository.msg.Transaction63> transaction) {
+	public StatusAndReason35 setTransaction(List<Transaction63> transaction) {
 		this.transaction = Objects.requireNonNull(transaction);
 		return this;
 	}

@@ -21,6 +21,7 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.CashAccountIdentification5Choice;
 import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.entity.Charges;
 import com.tools20022.repository.entity.Tax;
@@ -113,7 +114,7 @@ public class Account8Choice {
 	 * definition} = "Account in which cash is maintained."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Account8Choice, CashAccountIdentification5Choice> mmCashAccount = new MMMessageAttribute<Account8Choice, CashAccountIdentification5Choice>() {
 		{
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Account8Choice.mmObject();
@@ -125,7 +126,17 @@ public class Account8Choice {
 			definition = "Account in which cash is maintained.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.CashAccountIdentification5Choice.mmObject();
+			complexType_lazy = () -> CashAccountIdentification5Choice.mmObject();
+		}
+
+		@Override
+		public CashAccountIdentification5Choice getValue(Account8Choice obj) {
+			return obj.getCashAccount();
+		}
+
+		@Override
+		public void setValue(Account8Choice obj, CashAccountIdentification5Choice value) {
+			obj.setCashAccount(value);
 		}
 	};
 	@XmlElement(name = "ChrgsAcct", required = true)
@@ -168,7 +179,7 @@ public class Account8Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmChargesAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Account8Choice, CashAccountIdentification5Choice> mmChargesAccount = new MMMessageAttribute<Account8Choice, CashAccountIdentification5Choice>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargesDebitAccount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Account8Choice.mmObject();
@@ -180,7 +191,17 @@ public class Account8Choice {
 			definition = "Account to be used for charges if different from the account for payment.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.CashAccountIdentification5Choice.mmObject();
+			complexType_lazy = () -> CashAccountIdentification5Choice.mmObject();
+		}
+
+		@Override
+		public CashAccountIdentification5Choice getValue(Account8Choice obj) {
+			return obj.getChargesAccount();
+		}
+
+		@Override
+		public void setValue(Account8Choice obj, CashAccountIdentification5Choice value) {
+			obj.setChargesAccount(value);
 		}
 	};
 	@XmlElement(name = "TaxAcct", required = true)
@@ -223,7 +244,7 @@ public class Account8Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Account8Choice, CashAccountIdentification5Choice> mmTaxAccount = new MMMessageAttribute<Account8Choice, CashAccountIdentification5Choice>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmTaxAccount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Account8Choice.mmObject();
@@ -235,7 +256,17 @@ public class Account8Choice {
 			definition = "Account to be used for taxes if different from the account for payment.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.CashAccountIdentification5Choice.mmObject();
+			complexType_lazy = () -> CashAccountIdentification5Choice.mmObject();
+		}
+
+		@Override
+		public CashAccountIdentification5Choice getValue(Account8Choice obj) {
+			return obj.getTaxAccount();
+		}
+
+		@Override
+		public void setValue(Account8Choice obj, CashAccountIdentification5Choice value) {
+			obj.setTaxAccount(value);
 		}
 	};
 
@@ -258,7 +289,7 @@ public class Account8Choice {
 		return cashAccount;
 	}
 
-	public Account8Choice setCashAccount(com.tools20022.repository.choice.CashAccountIdentification5Choice cashAccount) {
+	public Account8Choice setCashAccount(CashAccountIdentification5Choice cashAccount) {
 		this.cashAccount = Objects.requireNonNull(cashAccount);
 		return this;
 	}
@@ -267,7 +298,7 @@ public class Account8Choice {
 		return chargesAccount;
 	}
 
-	public Account8Choice setChargesAccount(com.tools20022.repository.choice.CashAccountIdentification5Choice chargesAccount) {
+	public Account8Choice setChargesAccount(CashAccountIdentification5Choice chargesAccount) {
 		this.chargesAccount = Objects.requireNonNull(chargesAccount);
 		return this;
 	}
@@ -276,7 +307,7 @@ public class Account8Choice {
 		return taxAccount;
 	}
 
-	public Account8Choice setTaxAccount(com.tools20022.repository.choice.CashAccountIdentification5Choice taxAccount) {
+	public Account8Choice setTaxAccount(CashAccountIdentification5Choice taxAccount) {
 		this.taxAccount = Objects.requireNonNull(taxAccount);
 		return this;
 	}

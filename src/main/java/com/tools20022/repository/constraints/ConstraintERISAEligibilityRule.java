@@ -50,11 +50,15 @@ public class ConstraintERISAEligibilityRule {
 	 */
 	public static final MMConstraint<BeneficiaryInformation2> forBeneficiaryInformation2 = new MMConstraint<BeneficiaryInformation2>() {
 		{
-			validator = ConstraintERISAEligibilityRule::checkBeneficiaryInformation2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ERISAEligibilityRule";
 			definition = "If ERISAEligibility is ELIG, then ERISARate must be present.";
 			owner_lazy = () -> BeneficiaryInformation2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BeneficiaryInformation2 obj) throws Exception {
+			checkBeneficiaryInformation2(obj);
 		}
 	};
 	/**
@@ -79,11 +83,15 @@ public class ConstraintERISAEligibilityRule {
 	 */
 	public static final MMConstraint<BeneficiaryInformation1> forBeneficiaryInformation1 = new MMConstraint<BeneficiaryInformation1>() {
 		{
-			validator = ConstraintERISAEligibilityRule::checkBeneficiaryInformation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ERISAEligibilityRule";
 			definition = "If ERISAEligibility is ELIG, then ERISARate must be present.";
 			owner_lazy = () -> BeneficiaryInformation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BeneficiaryInformation1 obj) throws Exception {
+			checkBeneficiaryInformation1(obj);
 		}
 	};
 

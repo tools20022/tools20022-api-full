@@ -25,8 +25,9 @@ import com.tools20022.repository.codeset.ExoticOptionStyle1Code;
 import com.tools20022.repository.codeset.OptionStyle5Code;
 import com.tools20022.repository.codeset.OptionType1Code;
 import com.tools20022.repository.datatype.YesNoIndicator;
-import com.tools20022.repository.entity.CurrencyOption;
+import com.tools20022.repository.entity.Option;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.OptionEvent2;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -57,8 +58,7 @@ import javax.xml.bind.annotation.XmlType;
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
- * trace} = {@linkplain com.tools20022.repository.entity.CurrencyOption
- * CurrencyOption}</li>
+ * trace} = {@linkplain com.tools20022.repository.entity.Option Option}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -94,6 +94,11 @@ public class Option14 {
 	 * {@linkplain com.tools20022.repository.codeset.OptionStyle5Code
 	 * OptionStyle5Code}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Option#mmOptionStyle
+	 * Option.mmOptionStyle}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Option14
 	 * Option14}</li>
@@ -110,8 +115,9 @@ public class Option14 {
 	 * definition} = "Expiration style of the option."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpirationStyle = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Option14, List<OptionStyle5Code>> mmExpirationStyle = new MMMessageAttribute<Option14, List<OptionStyle5Code>>() {
 		{
+			businessElementTrace_lazy = () -> Option.mmOptionStyle;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Option14.mmObject();
 			isDerived = false;
 			xmlTag = "XprtnStyle";
@@ -121,6 +127,16 @@ public class Option14 {
 			maxOccurs = 4;
 			minOccurs = 1;
 			simpleType_lazy = () -> OptionStyle5Code.mmObject();
+		}
+
+		@Override
+		public List<OptionStyle5Code> getValue(Option14 obj) {
+			return obj.getExpirationStyle();
+		}
+
+		@Override
+		public void setValue(Option14 obj, List<OptionStyle5Code> value) {
+			obj.setExpirationStyle(value);
 		}
 	};
 	@XmlElement(name = "OptnStyle")
@@ -135,6 +151,11 @@ public class Option14 {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ExoticOptionStyle1Code
 	 * ExoticOptionStyle1Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Option#mmOptionStyle
+	 * Option.mmOptionStyle}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Option14
@@ -152,8 +173,9 @@ public class Option14 {
 	 * definition} = "Specifies how the option can be exercised."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOptionStyle = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Option14, Optional<ExoticOptionStyle1Code>> mmOptionStyle = new MMMessageAttribute<Option14, Optional<ExoticOptionStyle1Code>>() {
 		{
+			businessElementTrace_lazy = () -> Option.mmOptionStyle;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Option14.mmObject();
 			isDerived = false;
 			xmlTag = "OptnStyle";
@@ -163,6 +185,16 @@ public class Option14 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ExoticOptionStyle1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ExoticOptionStyle1Code> getValue(Option14 obj) {
+			return obj.getOptionStyle();
+		}
+
+		@Override
+		public void setValue(Option14 obj, Optional<ExoticOptionStyle1Code> value) {
+			obj.setOptionStyle(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OptnTp")
@@ -177,6 +209,11 @@ public class Option14 {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.OptionType1Code
 	 * OptionType1Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Option#mmOptionType
+	 * Option.mmOptionType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Option14
@@ -194,8 +231,9 @@ public class Option14 {
 	 * definition} = "Specifies whether the option is a call or a put."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOptionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Option14, Optional<OptionType1Code>> mmOptionType = new MMMessageAttribute<Option14, Optional<OptionType1Code>>() {
 		{
+			businessElementTrace_lazy = () -> Option.mmOptionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Option14.mmObject();
 			isDerived = false;
 			xmlTag = "OptnTp";
@@ -205,6 +243,16 @@ public class Option14 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> OptionType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<OptionType1Code> getValue(Option14 obj) {
+			return obj.getOptionType();
+		}
+
+		@Override
+		public void setValue(Option14 obj, Optional<OptionType1Code> value) {
+			obj.setOptionType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BrrrInd")
@@ -236,7 +284,7 @@ public class Option14 {
 	 * definition} = "Indicates whether the option has a barrier."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBarrierIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Option14, Optional<YesNoIndicator>> mmBarrierIndicator = new MMMessageAttribute<Option14, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Option14.mmObject();
 			isDerived = false;
@@ -247,6 +295,16 @@ public class Option14 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(Option14 obj) {
+			return obj.getBarrierIndicator();
+		}
+
+		@Override
+		public void setValue(Option14 obj, Optional<YesNoIndicator> value) {
+			obj.setBarrierIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EvtTp")
@@ -259,6 +317,10 @@ public class Option14 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.msg.OptionEvent2
 	 * OptionEvent2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessComponentTrace
+	 * businessComponentTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Option Option}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Option14
@@ -276,8 +338,9 @@ public class Option14 {
 	 * definition} = "Specifies the event in the life of the option."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEventType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Option14, Optional<OptionEvent2>> mmEventType = new MMMessageAssociationEnd<Option14, Optional<OptionEvent2>>() {
 		{
+			businessComponentTrace_lazy = () -> Option.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Option14.mmObject();
 			isDerived = false;
 			xmlTag = "EvtTp";
@@ -287,7 +350,17 @@ public class Option14 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OptionEvent2.mmObject();
+			type_lazy = () -> OptionEvent2.mmObject();
+		}
+
+		@Override
+		public Optional<OptionEvent2> getValue(Option14 obj) {
+			return obj.getEventType();
+		}
+
+		@Override
+		public void setValue(Option14 obj, Optional<OptionEvent2> value) {
+			obj.setEventType(value.orElse(null));
 		}
 	};
 
@@ -296,7 +369,7 @@ public class Option14 {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Option14.mmExpirationStyle, com.tools20022.repository.msg.Option14.mmOptionStyle, com.tools20022.repository.msg.Option14.mmOptionType,
 						com.tools20022.repository.msg.Option14.mmBarrierIndicator, com.tools20022.repository.msg.Option14.mmEventType);
-				trace_lazy = () -> CurrencyOption.mmObject();
+				trace_lazy = () -> Option.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Option14";
@@ -346,7 +419,7 @@ public class Option14 {
 		return eventType == null ? Optional.empty() : Optional.of(eventType);
 	}
 
-	public Option14 setEventType(com.tools20022.repository.msg.OptionEvent2 eventType) {
+	public Option14 setEventType(OptionEvent2 eventType) {
 		this.eventType = eventType;
 		return this;
 	}

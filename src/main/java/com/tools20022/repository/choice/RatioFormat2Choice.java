@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.RateType12FormatChoice;
 import com.tools20022.repository.entity.AmountAndQuantity;
 import com.tools20022.repository.entity.AmountRatio;
 import com.tools20022.repository.entity.QuantityRatio;
@@ -117,7 +118,7 @@ public class RatioFormat2Choice {
 	 * "The ratio is expressed as a quantity per another quantity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantityToQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RatioFormat2Choice, QuantityToQuantityRatio1> mmQuantityToQuantity = new MMMessageAttribute<RatioFormat2Choice, QuantityToQuantityRatio1>() {
 		{
 			businessComponentTrace_lazy = () -> QuantityRatio.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.RatioFormat2Choice.mmObject();
@@ -129,6 +130,16 @@ public class RatioFormat2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> QuantityToQuantityRatio1.mmObject();
+		}
+
+		@Override
+		public QuantityToQuantityRatio1 getValue(RatioFormat2Choice obj) {
+			return obj.getQuantityToQuantity();
+		}
+
+		@Override
+		public void setValue(RatioFormat2Choice obj, QuantityToQuantityRatio1 value) {
+			obj.setQuantityToQuantity(value);
 		}
 	};
 	@XmlElement(name = "AmtToAmt", required = true)
@@ -165,7 +176,7 @@ public class RatioFormat2Choice {
 	 * definition} = "The ratio is expressed as an amount per another amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmountToAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RatioFormat2Choice, AmountToAmountRatio1> mmAmountToAmount = new MMMessageAttribute<RatioFormat2Choice, AmountToAmountRatio1>() {
 		{
 			businessComponentTrace_lazy = () -> AmountRatio.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.RatioFormat2Choice.mmObject();
@@ -177,6 +188,16 @@ public class RatioFormat2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AmountToAmountRatio1.mmObject();
+		}
+
+		@Override
+		public AmountToAmountRatio1 getValue(RatioFormat2Choice obj) {
+			return obj.getAmountToAmount();
+		}
+
+		@Override
+		public void setValue(RatioFormat2Choice obj, AmountToAmountRatio1 value) {
+			obj.setAmountToAmount(value);
 		}
 	};
 	@XmlElement(name = "AmtToQty", required = true)
@@ -214,7 +235,7 @@ public class RatioFormat2Choice {
 	 * definition} = "The ratio is expressed as an amount per quantity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmountToQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RatioFormat2Choice, AmountAndQuantityRatio1> mmAmountToQuantity = new MMMessageAttribute<RatioFormat2Choice, AmountAndQuantityRatio1>() {
 		{
 			businessComponentTrace_lazy = () -> AmountAndQuantity.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.RatioFormat2Choice.mmObject();
@@ -226,6 +247,16 @@ public class RatioFormat2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AmountAndQuantityRatio1.mmObject();
+		}
+
+		@Override
+		public AmountAndQuantityRatio1 getValue(RatioFormat2Choice obj) {
+			return obj.getAmountToQuantity();
+		}
+
+		@Override
+		public void setValue(RatioFormat2Choice obj, AmountAndQuantityRatio1 value) {
+			obj.setAmountToQuantity(value);
 		}
 	};
 	@XmlElement(name = "QtyToAmt", required = true)
@@ -263,7 +294,7 @@ public class RatioFormat2Choice {
 	 * definition} = "Ratio is expressed as a quantity per an amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantityToAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RatioFormat2Choice, AmountAndQuantityRatio1> mmQuantityToAmount = new MMMessageAttribute<RatioFormat2Choice, AmountAndQuantityRatio1>() {
 		{
 			businessComponentTrace_lazy = () -> AmountAndQuantity.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.RatioFormat2Choice.mmObject();
@@ -275,6 +306,16 @@ public class RatioFormat2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AmountAndQuantityRatio1.mmObject();
+		}
+
+		@Override
+		public AmountAndQuantityRatio1 getValue(RatioFormat2Choice obj) {
+			return obj.getQuantityToAmount();
+		}
+
+		@Override
+		public void setValue(RatioFormat2Choice obj, AmountAndQuantityRatio1 value) {
+			obj.setQuantityToAmount(value);
 		}
 	};
 	@XmlElement(name = "NotSpcfdRate", required = true)
@@ -307,7 +348,7 @@ public class RatioFormat2Choice {
 	 * definition} = "The value of the ratio is not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RatioFormat2Choice, RateType12FormatChoice> mmNotSpecifiedRate = new MMMessageAttribute<RatioFormat2Choice, RateType12FormatChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RatioFormat2Choice.mmObject();
 			isDerived = false;
@@ -317,7 +358,17 @@ public class RatioFormat2Choice {
 			definition = "The value of the ratio is not specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.RateType12FormatChoice.mmObject();
+			complexType_lazy = () -> RateType12FormatChoice.mmObject();
+		}
+
+		@Override
+		public RateType12FormatChoice getValue(RatioFormat2Choice obj) {
+			return obj.getNotSpecifiedRate();
+		}
+
+		@Override
+		public void setValue(RatioFormat2Choice obj, RateType12FormatChoice value) {
+			obj.setNotSpecifiedRate(value);
 		}
 	};
 
@@ -375,7 +426,7 @@ public class RatioFormat2Choice {
 		return notSpecifiedRate;
 	}
 
-	public RatioFormat2Choice setNotSpecifiedRate(com.tools20022.repository.choice.RateType12FormatChoice notSpecifiedRate) {
+	public RatioFormat2Choice setNotSpecifiedRate(RateType12FormatChoice notSpecifiedRate) {
 		this.notSpecifiedRate = Objects.requireNonNull(notSpecifiedRate);
 		return this;
 	}

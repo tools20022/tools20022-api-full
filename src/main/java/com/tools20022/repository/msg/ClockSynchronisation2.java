@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISOTime;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.NetworkParameters5;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -58,7 +59,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ClockSynchronisation2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -110,7 +111,7 @@ public class ClockSynchronisation2 {
 	 * ClockSynchronisation1.mmPOITimeZone}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPOITimeZone = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClockSynchronisation2, Max70Text> mmPOITimeZone = new MMMessageAttribute<ClockSynchronisation2, Max70Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ClockSynchronisation2.mmObject();
 			isDerived = false;
@@ -123,9 +124,19 @@ public class ClockSynchronisation2 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
+
+		@Override
+		public Max70Text getValue(ClockSynchronisation2 obj) {
+			return obj.getPOITimeZone();
+		}
+
+		@Override
+		public void setValue(ClockSynchronisation2 obj, Max70Text value) {
+			obj.setPOITimeZone(value);
+		}
 	};
 	@XmlElement(name = "SynctnSvr")
-	protected List<com.tools20022.repository.msg.NetworkParameters5> synchronisationServer;
+	protected List<NetworkParameters5> synchronisationServer;
 	/**
 	 * 
 	 <p>
@@ -157,7 +168,7 @@ public class ClockSynchronisation2 {
 	 * ClockSynchronisation1.mmSynchronisationServer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSynchronisationServer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ClockSynchronisation2, List<NetworkParameters5>> mmSynchronisationServer = new MMMessageAssociationEnd<ClockSynchronisation2, List<NetworkParameters5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ClockSynchronisation2.mmObject();
 			isDerived = false;
@@ -168,7 +179,17 @@ public class ClockSynchronisation2 {
 			previousVersion_lazy = () -> ClockSynchronisation1.mmSynchronisationServer;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NetworkParameters5.mmObject();
+			type_lazy = () -> NetworkParameters5.mmObject();
+		}
+
+		@Override
+		public List<NetworkParameters5> getValue(ClockSynchronisation2 obj) {
+			return obj.getSynchronisationServer();
+		}
+
+		@Override
+		public void setValue(ClockSynchronisation2 obj, List<NetworkParameters5> value) {
+			obj.setSynchronisationServer(value);
 		}
 	};
 	@XmlElement(name = "Dely")
@@ -200,7 +221,7 @@ public class ClockSynchronisation2 {
 	 * definition} = "Delay between two contacts of the server."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDelay = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClockSynchronisation2, Optional<ISOTime>> mmDelay = new MMMessageAttribute<ClockSynchronisation2, Optional<ISOTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ClockSynchronisation2.mmObject();
 			isDerived = false;
@@ -212,6 +233,16 @@ public class ClockSynchronisation2 {
 			minOccurs = 0;
 			simpleType_lazy = () -> ISOTime.mmObject();
 		}
+
+		@Override
+		public Optional<ISOTime> getValue(ClockSynchronisation2 obj) {
+			return obj.getDelay();
+		}
+
+		@Override
+		public void setValue(ClockSynchronisation2 obj, Optional<ISOTime> value) {
+			obj.setDelay(value.orElse(null));
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -220,7 +251,7 @@ public class ClockSynchronisation2 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ClockSynchronisation2.mmPOITimeZone, com.tools20022.repository.msg.ClockSynchronisation2.mmSynchronisationServer,
 						com.tools20022.repository.msg.ClockSynchronisation2.mmDelay);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ClockSynchronisation2";
 				definition = "Parameters to synchronise a real time clock.";
 				previousVersion_lazy = () -> ClockSynchronisation1.mmObject();
@@ -242,7 +273,7 @@ public class ClockSynchronisation2 {
 		return synchronisationServer == null ? synchronisationServer = new ArrayList<>() : synchronisationServer;
 	}
 
-	public ClockSynchronisation2 setSynchronisationServer(List<com.tools20022.repository.msg.NetworkParameters5> synchronisationServer) {
+	public ClockSynchronisation2 setSynchronisationServer(List<NetworkParameters5> synchronisationServer) {
 		this.synchronisationServer = Objects.requireNonNull(synchronisationServer);
 		return this;
 	}

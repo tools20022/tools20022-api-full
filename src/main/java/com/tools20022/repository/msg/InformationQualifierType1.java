@@ -119,7 +119,7 @@ public class InformationQualifierType1 {
 	 * InformationQualifierType.mmIsFormatted}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIsFormatted = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InformationQualifierType1, Optional<YesNoIndicator>> mmIsFormatted = new MMMessageAttribute<InformationQualifierType1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> InformationQualifier.mmIsFormatted;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InformationQualifierType1.mmObject();
@@ -132,6 +132,16 @@ public class InformationQualifierType1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(InformationQualifierType1 obj) {
+			return obj.getIsFormatted();
+		}
+
+		@Override
+		public void setValue(InformationQualifierType1 obj, Optional<YesNoIndicator> value) {
+			obj.setIsFormatted(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Prty")
@@ -174,7 +184,7 @@ public class InformationQualifierType1 {
 	 * InformationQualifierType.mmPriority}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriority = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InformationQualifierType1, Optional<Priority1Code>> mmPriority = new MMMessageAttribute<InformationQualifierType1, Optional<Priority1Code>>() {
 		{
 			businessElementTrace_lazy = () -> InformationQualifier.mmPriority;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InformationQualifierType1.mmObject();
@@ -187,6 +197,16 @@ public class InformationQualifierType1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Priority1Code.mmObject();
+		}
+
+		@Override
+		public Optional<Priority1Code> getValue(InformationQualifierType1 obj) {
+			return obj.getPriority();
+		}
+
+		@Override
+		public void setValue(InformationQualifierType1 obj, Optional<Priority1Code> value) {
+			obj.setPriority(value.orElse(null));
 		}
 	};
 

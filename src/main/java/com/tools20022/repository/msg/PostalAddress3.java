@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.ContactPoint;
 import com.tools20022.repository.entity.MailingInstructions;
 import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.NameAndAddress4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -140,7 +141,7 @@ public class PostalAddress3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAddressType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PostalAddress3, AddressType1Code> mmAddressType = new MMMessageAttribute<PostalAddress3, AddressType1Code>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmAddressType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress3.mmObject();
@@ -153,6 +154,16 @@ public class PostalAddress3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AddressType1Code.mmObject();
+		}
+
+		@Override
+		public AddressType1Code getValue(PostalAddress3 obj) {
+			return obj.getAddressType();
+		}
+
+		@Override
+		public void setValue(PostalAddress3 obj, AddressType1Code value) {
+			obj.setAddressType(value);
 		}
 	};
 	@XmlElement(name = "MlngInd", required = true)
@@ -197,7 +208,7 @@ public class PostalAddress3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMailingIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PostalAddress3, YesNoIndicator> mmMailingIndicator = new MMMessageAttribute<PostalAddress3, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> MailingInstructions.mmMailingIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress3.mmObject();
@@ -210,6 +221,16 @@ public class PostalAddress3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(PostalAddress3 obj) {
+			return obj.getMailingIndicator();
+		}
+
+		@Override
+		public void setValue(PostalAddress3 obj, YesNoIndicator value) {
+			obj.setMailingIndicator(value);
 		}
 	};
 	@XmlElement(name = "RegnAdrInd", required = true)
@@ -255,7 +276,7 @@ public class PostalAddress3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegistrationAddressIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PostalAddress3, YesNoIndicator> mmRegistrationAddressIndicator = new MMMessageAttribute<PostalAddress3, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> MailingInstructions.mmRegistrationAddressIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress3.mmObject();
@@ -268,6 +289,16 @@ public class PostalAddress3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(PostalAddress3 obj) {
+			return obj.getRegistrationAddressIndicator();
+		}
+
+		@Override
+		public void setValue(PostalAddress3 obj, YesNoIndicator value) {
+			obj.setRegistrationAddressIndicator(value);
 		}
 	};
 	@XmlElement(name = "NmAndAdr", required = true)
@@ -304,7 +335,7 @@ public class PostalAddress3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNameAndAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PostalAddress3, NameAndAddress4> mmNameAndAddress = new MMMessageAssociationEnd<PostalAddress3, NameAndAddress4>() {
 		{
 			businessElementTrace_lazy = () -> ContactPoint.mmRelatedParty;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress3.mmObject();
@@ -316,7 +347,17 @@ public class PostalAddress3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NameAndAddress4.mmObject();
+			type_lazy = () -> NameAndAddress4.mmObject();
+		}
+
+		@Override
+		public NameAndAddress4 getValue(PostalAddress3 obj) {
+			return obj.getNameAndAddress();
+		}
+
+		@Override
+		public void setValue(PostalAddress3 obj, NameAndAddress4 value) {
+			obj.setNameAndAddress(value);
 		}
 	};
 
@@ -368,7 +409,7 @@ public class PostalAddress3 {
 		return nameAndAddress;
 	}
 
-	public PostalAddress3 setNameAndAddress(com.tools20022.repository.msg.NameAndAddress4 nameAndAddress) {
+	public PostalAddress3 setNameAndAddress(NameAndAddress4 nameAndAddress) {
 		this.nameAndAddress = Objects.requireNonNull(nameAndAddress);
 		return this;
 	}

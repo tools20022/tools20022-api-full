@@ -99,7 +99,7 @@ public class DefinedAttributes1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuantityDefinedAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DefinedAttributes1Choice, FinancialInstrumentAttributes89> mmQuantityDefinedAttributes = new MMMessageAssociationEnd<DefinedAttributes1Choice, FinancialInstrumentAttributes89>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DefinedAttributes1Choice.mmObject();
 			isDerived = false;
@@ -111,6 +111,16 @@ public class DefinedAttributes1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentAttributes89.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentAttributes89 getValue(DefinedAttributes1Choice obj) {
+			return obj.getQuantityDefinedAttributes();
+		}
+
+		@Override
+		public void setValue(DefinedAttributes1Choice obj, FinancialInstrumentAttributes89 value) {
+			obj.setQuantityDefinedAttributes(value);
 		}
 	};
 	@XmlElement(name = "ValDfndAttrbts", required = true)
@@ -144,7 +154,7 @@ public class DefinedAttributes1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmValueDefinedAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DefinedAttributes1Choice, FinancialInstrumentAttributes90> mmValueDefinedAttributes = new MMMessageAssociationEnd<DefinedAttributes1Choice, FinancialInstrumentAttributes90>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DefinedAttributes1Choice.mmObject();
 			isDerived = false;
@@ -156,6 +166,16 @@ public class DefinedAttributes1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentAttributes90.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentAttributes90 getValue(DefinedAttributes1Choice obj) {
+			return obj.getValueDefinedAttributes();
+		}
+
+		@Override
+		public void setValue(DefinedAttributes1Choice obj, FinancialInstrumentAttributes90 value) {
+			obj.setValueDefinedAttributes(value);
 		}
 	};
 

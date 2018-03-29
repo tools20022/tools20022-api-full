@@ -53,11 +53,15 @@ public class ConstraintPhysicalDeliveryDetailsRule {
 	 */
 	public static final MMConstraint<RedemptionOrder3> forRedemptionOrder3 = new MMConstraint<RedemptionOrder3>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetailsRule::checkRedemptionOrder3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetailsRule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed. If PhysicalDeliveryIndicator is \"true\" or \"1\" (Yes), then PhysicalDeliveryDetails must be present.";
 			owner_lazy = () -> RedemptionOrder3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionOrder3 obj) throws Exception {
+			checkRedemptionOrder3(obj);
 		}
 	};
 	/**
@@ -83,11 +87,15 @@ public class ConstraintPhysicalDeliveryDetailsRule {
 	 */
 	public static final MMConstraint<RedemptionOrder5> forRedemptionOrder5 = new MMConstraint<RedemptionOrder5>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetailsRule::checkRedemptionOrder5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetailsRule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed. If PhysicalDeliveryIndicator is \"true\" or \"1\" (Yes), then PhysicalDeliveryDetails must be present.";
 			owner_lazy = () -> RedemptionOrder5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionOrder5 obj) throws Exception {
+			checkRedemptionOrder5(obj);
 		}
 	};
 	/**
@@ -113,11 +121,15 @@ public class ConstraintPhysicalDeliveryDetailsRule {
 	 */
 	public static final MMConstraint<RedemptionExecution3> forRedemptionExecution3 = new MMConstraint<RedemptionExecution3>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetailsRule::checkRedemptionExecution3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetailsRule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed. If PhysicalDeliveryIndicator is \"true\" or \"1\" (Yes), then PhysicalDeliveryDetails must be present.";
 			owner_lazy = () -> RedemptionExecution3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionExecution3 obj) throws Exception {
+			checkRedemptionExecution3(obj);
 		}
 	};
 	/**
@@ -143,11 +155,15 @@ public class ConstraintPhysicalDeliveryDetailsRule {
 	 */
 	public static final MMConstraint<RedemptionExecution5> forRedemptionExecution5 = new MMConstraint<RedemptionExecution5>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetailsRule::checkRedemptionExecution5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetailsRule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed. If PhysicalDeliveryIndicator is \"true\" or \"1\" (Yes), then PhysicalDeliveryDetails must be present.";
 			owner_lazy = () -> RedemptionExecution5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionExecution5 obj) throws Exception {
+			checkRedemptionExecution5(obj);
 		}
 	};
 	/**
@@ -173,11 +189,15 @@ public class ConstraintPhysicalDeliveryDetailsRule {
 	 */
 	public static final MMConstraint<RedemptionOrder7> forRedemptionOrder7 = new MMConstraint<RedemptionOrder7>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetailsRule::checkRedemptionOrder7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetailsRule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed. If PhysicalDeliveryIndicator is \"true\" or \"1\" (Yes), then PhysicalDeliveryDetails must be present.";
 			owner_lazy = () -> RedemptionOrder7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionOrder7 obj) throws Exception {
+			checkRedemptionOrder7(obj);
 		}
 	};
 	/**
@@ -203,11 +223,15 @@ public class ConstraintPhysicalDeliveryDetailsRule {
 	 */
 	public static final MMConstraint<RedemptionOrder4> forRedemptionOrder4 = new MMConstraint<RedemptionOrder4>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetailsRule::checkRedemptionOrder4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetailsRule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed. If PhysicalDeliveryIndicator is \"true\" or \"1\" (Yes), then PhysicalDeliveryDetails must be present.";
 			owner_lazy = () -> RedemptionOrder4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionOrder4 obj) throws Exception {
+			checkRedemptionOrder4(obj);
 		}
 	};
 	/**
@@ -233,11 +257,15 @@ public class ConstraintPhysicalDeliveryDetailsRule {
 	 */
 	public static final MMConstraint<RedemptionOrder6> forRedemptionOrder6 = new MMConstraint<RedemptionOrder6>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetailsRule::checkRedemptionOrder6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetailsRule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed. If PhysicalDeliveryIndicator is \"true\" or \"1\" (Yes), then PhysicalDeliveryDetails must be present.";
 			owner_lazy = () -> RedemptionOrder6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionOrder6 obj) throws Exception {
+			checkRedemptionOrder6(obj);
 		}
 	};
 	/**
@@ -263,11 +291,15 @@ public class ConstraintPhysicalDeliveryDetailsRule {
 	 */
 	public static final MMConstraint<RedemptionExecution4> forRedemptionExecution4 = new MMConstraint<RedemptionExecution4>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetailsRule::checkRedemptionExecution4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetailsRule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed. If PhysicalDeliveryIndicator is \"true\" or \"1\" (Yes), then PhysicalDeliveryDetails must be present.";
 			owner_lazy = () -> RedemptionExecution4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionExecution4 obj) throws Exception {
+			checkRedemptionExecution4(obj);
 		}
 	};
 	/**
@@ -293,11 +325,15 @@ public class ConstraintPhysicalDeliveryDetailsRule {
 	 */
 	public static final MMConstraint<RedemptionExecution6> forRedemptionExecution6 = new MMConstraint<RedemptionExecution6>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetailsRule::checkRedemptionExecution6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetailsRule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed. If PhysicalDeliveryIndicator is \"true\" or \"1\" (Yes), then PhysicalDeliveryDetails must be present.";
 			owner_lazy = () -> RedemptionExecution6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionExecution6 obj) throws Exception {
+			checkRedemptionExecution6(obj);
 		}
 	};
 	/**
@@ -323,11 +359,15 @@ public class ConstraintPhysicalDeliveryDetailsRule {
 	 */
 	public static final MMConstraint<RedemptionOrder8> forRedemptionOrder8 = new MMConstraint<RedemptionOrder8>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetailsRule::checkRedemptionOrder8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetailsRule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed. If PhysicalDeliveryIndicator is \"true\" or \"1\" (Yes), then PhysicalDeliveryDetails must be present.";
 			owner_lazy = () -> RedemptionOrder8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionOrder8 obj) throws Exception {
+			checkRedemptionOrder8(obj);
 		}
 	};
 	/**
@@ -353,11 +393,15 @@ public class ConstraintPhysicalDeliveryDetailsRule {
 	 */
 	public static final MMConstraint<SubscriptionOrder3> forSubscriptionOrder3 = new MMConstraint<SubscriptionOrder3>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetailsRule::checkSubscriptionOrder3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetailsRule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed. If PhysicalDeliveryIndicator is \"true\" or \"1\" (Yes), then PhysicalDeliveryDetails must be present.";
 			owner_lazy = () -> SubscriptionOrder3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionOrder3 obj) throws Exception {
+			checkSubscriptionOrder3(obj);
 		}
 	};
 	/**
@@ -383,11 +427,15 @@ public class ConstraintPhysicalDeliveryDetailsRule {
 	 */
 	public static final MMConstraint<SubscriptionOrder5> forSubscriptionOrder5 = new MMConstraint<SubscriptionOrder5>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetailsRule::checkSubscriptionOrder5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetailsRule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed. If PhysicalDeliveryIndicator is \"true\" or \"1\" (Yes), then PhysicalDeliveryDetails must be present.";
 			owner_lazy = () -> SubscriptionOrder5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionOrder5 obj) throws Exception {
+			checkSubscriptionOrder5(obj);
 		}
 	};
 	/**
@@ -413,11 +461,15 @@ public class ConstraintPhysicalDeliveryDetailsRule {
 	 */
 	public static final MMConstraint<SubscriptionExecution3> forSubscriptionExecution3 = new MMConstraint<SubscriptionExecution3>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetailsRule::checkSubscriptionExecution3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetailsRule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed. If PhysicalDeliveryIndicator is \"true\" or \"1\" (Yes), then PhysicalDeliveryDetails must be present.";
 			owner_lazy = () -> SubscriptionExecution3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionExecution3 obj) throws Exception {
+			checkSubscriptionExecution3(obj);
 		}
 	};
 	/**
@@ -443,11 +495,15 @@ public class ConstraintPhysicalDeliveryDetailsRule {
 	 */
 	public static final MMConstraint<SubscriptionExecution5> forSubscriptionExecution5 = new MMConstraint<SubscriptionExecution5>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetailsRule::checkSubscriptionExecution5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetailsRule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed. If PhysicalDeliveryIndicator is \"true\" or \"1\" (Yes), then PhysicalDeliveryDetails must be present.";
 			owner_lazy = () -> SubscriptionExecution5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionExecution5 obj) throws Exception {
+			checkSubscriptionExecution5(obj);
 		}
 	};
 	/**
@@ -473,11 +529,15 @@ public class ConstraintPhysicalDeliveryDetailsRule {
 	 */
 	public static final MMConstraint<SubscriptionOrder7> forSubscriptionOrder7 = new MMConstraint<SubscriptionOrder7>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetailsRule::checkSubscriptionOrder7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetailsRule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed. If PhysicalDeliveryIndicator is \"true\" or \"1\" (Yes), then PhysicalDeliveryDetails must be present.";
 			owner_lazy = () -> SubscriptionOrder7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionOrder7 obj) throws Exception {
+			checkSubscriptionOrder7(obj);
 		}
 	};
 	/**
@@ -503,11 +563,15 @@ public class ConstraintPhysicalDeliveryDetailsRule {
 	 */
 	public static final MMConstraint<SubscriptionOrder4> forSubscriptionOrder4 = new MMConstraint<SubscriptionOrder4>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetailsRule::checkSubscriptionOrder4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetailsRule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed. If PhysicalDeliveryIndicator is \"true\" or \"1\" (Yes), then PhysicalDeliveryDetails must be present.";
 			owner_lazy = () -> SubscriptionOrder4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionOrder4 obj) throws Exception {
+			checkSubscriptionOrder4(obj);
 		}
 	};
 	/**
@@ -533,11 +597,15 @@ public class ConstraintPhysicalDeliveryDetailsRule {
 	 */
 	public static final MMConstraint<SubscriptionOrder6> forSubscriptionOrder6 = new MMConstraint<SubscriptionOrder6>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetailsRule::checkSubscriptionOrder6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetailsRule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed. If PhysicalDeliveryIndicator is \"true\" or \"1\" (Yes), then PhysicalDeliveryDetails must be present.";
 			owner_lazy = () -> SubscriptionOrder6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionOrder6 obj) throws Exception {
+			checkSubscriptionOrder6(obj);
 		}
 	};
 	/**
@@ -563,11 +631,15 @@ public class ConstraintPhysicalDeliveryDetailsRule {
 	 */
 	public static final MMConstraint<SubscriptionExecution4> forSubscriptionExecution4 = new MMConstraint<SubscriptionExecution4>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetailsRule::checkSubscriptionExecution4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetailsRule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed. If PhysicalDeliveryIndicator is \"true\" or \"1\" (Yes), then PhysicalDeliveryDetails must be present.";
 			owner_lazy = () -> SubscriptionExecution4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionExecution4 obj) throws Exception {
+			checkSubscriptionExecution4(obj);
 		}
 	};
 	/**
@@ -593,11 +665,15 @@ public class ConstraintPhysicalDeliveryDetailsRule {
 	 */
 	public static final MMConstraint<SubscriptionExecution6> forSubscriptionExecution6 = new MMConstraint<SubscriptionExecution6>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetailsRule::checkSubscriptionExecution6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetailsRule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed. If PhysicalDeliveryIndicator is \"true\" or \"1\" (Yes), then PhysicalDeliveryDetails must be present.";
 			owner_lazy = () -> SubscriptionExecution6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionExecution6 obj) throws Exception {
+			checkSubscriptionExecution6(obj);
 		}
 	};
 	/**
@@ -631,12 +707,16 @@ public class ConstraintPhysicalDeliveryDetailsRule {
 	 */
 	public static final MMConstraint<SubscriptionOrder8> forSubscriptionOrder8 = new MMConstraint<SubscriptionOrder8>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetailsRule::checkSubscriptionOrder8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetailsRule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed. If PhysicalDeliveryIndicator is \"true\" or \"1\" (Yes), then PhysicalDeliveryDetails must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPhysicalDeliveryDetails1Rule.forSubscriptionOrder14);
 			owner_lazy = () -> SubscriptionOrder8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionOrder8 obj) throws Exception {
+			checkSubscriptionOrder8(obj);
 		}
 	};
 	/**
@@ -662,11 +742,15 @@ public class ConstraintPhysicalDeliveryDetailsRule {
 	 */
 	public static final MMConstraint<SwitchRedemptionLegOrder2> forSwitchRedemptionLegOrder2 = new MMConstraint<SwitchRedemptionLegOrder2>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetailsRule::checkSwitchRedemptionLegOrder2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetailsRule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed. If PhysicalDeliveryIndicator is \"true\" or \"1\" (Yes), then PhysicalDeliveryDetails must be present.";
 			owner_lazy = () -> SwitchRedemptionLegOrder2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchRedemptionLegOrder2 obj) throws Exception {
+			checkSwitchRedemptionLegOrder2(obj);
 		}
 	};
 	/**
@@ -692,11 +776,15 @@ public class ConstraintPhysicalDeliveryDetailsRule {
 	 */
 	public static final MMConstraint<SwitchSubscriptionLegOrder2> forSwitchSubscriptionLegOrder2 = new MMConstraint<SwitchSubscriptionLegOrder2>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetailsRule::checkSwitchSubscriptionLegOrder2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetailsRule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed. If PhysicalDeliveryIndicator is \"true\" or \"1\" (Yes), then PhysicalDeliveryDetails must be present.";
 			owner_lazy = () -> SwitchSubscriptionLegOrder2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchSubscriptionLegOrder2 obj) throws Exception {
+			checkSwitchSubscriptionLegOrder2(obj);
 		}
 	};
 	/**
@@ -722,11 +810,15 @@ public class ConstraintPhysicalDeliveryDetailsRule {
 	 */
 	public static final MMConstraint<SwitchRedemptionLegOrder3> forSwitchRedemptionLegOrder3 = new MMConstraint<SwitchRedemptionLegOrder3>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetailsRule::checkSwitchRedemptionLegOrder3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetailsRule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed. If PhysicalDeliveryIndicator is \"true\" or \"1\" (Yes), then PhysicalDeliveryDetails must be present.";
 			owner_lazy = () -> SwitchRedemptionLegOrder3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchRedemptionLegOrder3 obj) throws Exception {
+			checkSwitchRedemptionLegOrder3(obj);
 		}
 	};
 	/**
@@ -752,11 +844,15 @@ public class ConstraintPhysicalDeliveryDetailsRule {
 	 */
 	public static final MMConstraint<SwitchSubscriptionLegOrder3> forSwitchSubscriptionLegOrder3 = new MMConstraint<SwitchSubscriptionLegOrder3>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetailsRule::checkSwitchSubscriptionLegOrder3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetailsRule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed. If PhysicalDeliveryIndicator is \"true\" or \"1\" (Yes), then PhysicalDeliveryDetails must be present.";
 			owner_lazy = () -> SwitchSubscriptionLegOrder3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchSubscriptionLegOrder3 obj) throws Exception {
+			checkSwitchSubscriptionLegOrder3(obj);
 		}
 	};
 	/**
@@ -782,11 +878,15 @@ public class ConstraintPhysicalDeliveryDetailsRule {
 	 */
 	public static final MMConstraint<SwitchRedemptionLegExecution2> forSwitchRedemptionLegExecution2 = new MMConstraint<SwitchRedemptionLegExecution2>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetailsRule::checkSwitchRedemptionLegExecution2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetailsRule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed. If PhysicalDeliveryIndicator is \"true\" or \"1\" (Yes), then PhysicalDeliveryDetails must be present.";
 			owner_lazy = () -> SwitchRedemptionLegExecution2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchRedemptionLegExecution2 obj) throws Exception {
+			checkSwitchRedemptionLegExecution2(obj);
 		}
 	};
 	/**
@@ -812,11 +912,15 @@ public class ConstraintPhysicalDeliveryDetailsRule {
 	 */
 	public static final MMConstraint<SwitchSubscriptionLegExecution2> forSwitchSubscriptionLegExecution2 = new MMConstraint<SwitchSubscriptionLegExecution2>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetailsRule::checkSwitchSubscriptionLegExecution2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetailsRule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed. If PhysicalDeliveryIndicator is \"true\" or \"1\" (Yes), then PhysicalDeliveryDetails must be present.";
 			owner_lazy = () -> SwitchSubscriptionLegExecution2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchSubscriptionLegExecution2 obj) throws Exception {
+			checkSwitchSubscriptionLegExecution2(obj);
 		}
 	};
 	/**
@@ -842,11 +946,15 @@ public class ConstraintPhysicalDeliveryDetailsRule {
 	 */
 	public static final MMConstraint<SwitchRedemptionLegExecution3> forSwitchRedemptionLegExecution3 = new MMConstraint<SwitchRedemptionLegExecution3>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetailsRule::checkSwitchRedemptionLegExecution3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetailsRule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed. If PhysicalDeliveryIndicator is \"true\" or \"1\" (Yes), then PhysicalDeliveryDetails must be present.";
 			owner_lazy = () -> SwitchRedemptionLegExecution3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchRedemptionLegExecution3 obj) throws Exception {
+			checkSwitchRedemptionLegExecution3(obj);
 		}
 	};
 	/**
@@ -872,11 +980,15 @@ public class ConstraintPhysicalDeliveryDetailsRule {
 	 */
 	public static final MMConstraint<SwitchSubscriptionLegExecution3> forSwitchSubscriptionLegExecution3 = new MMConstraint<SwitchSubscriptionLegExecution3>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetailsRule::checkSwitchSubscriptionLegExecution3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetailsRule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed. If PhysicalDeliveryIndicator is \"true\" or \"1\" (Yes), then PhysicalDeliveryDetails must be present.";
 			owner_lazy = () -> SwitchSubscriptionLegExecution3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchSubscriptionLegExecution3 obj) throws Exception {
+			checkSwitchSubscriptionLegExecution3(obj);
 		}
 	};
 

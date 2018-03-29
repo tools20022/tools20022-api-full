@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.CashAccountService;
 import com.tools20022.repository.entity.Invoice;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification43;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -118,7 +119,7 @@ public class InvoiceLegalIssue1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvoicer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvoiceLegalIssue1, PartyIdentification43> mmInvoicer = new MMMessageAssociationEnd<InvoiceLegalIssue1, PartyIdentification43>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceLegalIssue1.mmObject();
@@ -130,7 +131,17 @@ public class InvoiceLegalIssue1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
+			type_lazy = () -> PartyIdentification43.mmObject();
+		}
+
+		@Override
+		public PartyIdentification43 getValue(InvoiceLegalIssue1 obj) {
+			return obj.getInvoicer();
+		}
+
+		@Override
+		public void setValue(InvoiceLegalIssue1 obj, PartyIdentification43 value) {
+			obj.setInvoicer(value);
 		}
 	};
 	@XmlElement(name = "Invcee", required = true)
@@ -168,7 +179,7 @@ public class InvoiceLegalIssue1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvoicee = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvoiceLegalIssue1, PartyIdentification43> mmInvoicee = new MMMessageAssociationEnd<InvoiceLegalIssue1, PartyIdentification43>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceLegalIssue1.mmObject();
@@ -180,7 +191,17 @@ public class InvoiceLegalIssue1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
+			type_lazy = () -> PartyIdentification43.mmObject();
+		}
+
+		@Override
+		public PartyIdentification43 getValue(InvoiceLegalIssue1 obj) {
+			return obj.getInvoicee();
+		}
+
+		@Override
+		public void setValue(InvoiceLegalIssue1 obj, PartyIdentification43 value) {
+			obj.setInvoicee(value);
 		}
 	};
 	@XmlElement(name = "InvcLglStmt")
@@ -218,7 +239,7 @@ public class InvoiceLegalIssue1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInvoiceLegalStatement = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvoiceLegalIssue1, Optional<Max210Text>> mmInvoiceLegalStatement = new MMMessageAttribute<InvoiceLegalIssue1, Optional<Max210Text>>() {
 		{
 			businessComponentTrace_lazy = () -> Invoice.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceLegalIssue1.mmObject();
@@ -230,6 +251,16 @@ public class InvoiceLegalIssue1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max210Text> getValue(InvoiceLegalIssue1 obj) {
+			return obj.getInvoiceLegalStatement();
+		}
+
+		@Override
+		public void setValue(InvoiceLegalIssue1 obj, Optional<Max210Text> value) {
+			obj.setInvoiceLegalStatement(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtMtd")
@@ -268,7 +299,7 @@ public class InvoiceLegalIssue1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentMethod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvoiceLegalIssue1, Optional<PaymentMethod1Choice>> mmPaymentMethod = new MMMessageAssociationEnd<InvoiceLegalIssue1, Optional<PaymentMethod1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CashAccountService.mmPaymentMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceLegalIssue1.mmObject();
@@ -281,6 +312,16 @@ public class InvoiceLegalIssue1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PaymentMethod1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentMethod1Choice> getValue(InvoiceLegalIssue1 obj) {
+			return obj.getPaymentMethod();
+		}
+
+		@Override
+		public void setValue(InvoiceLegalIssue1 obj, Optional<PaymentMethod1Choice> value) {
+			obj.setPaymentMethod(value.orElse(null));
 		}
 	};
 
@@ -303,7 +344,7 @@ public class InvoiceLegalIssue1 {
 		return invoicer;
 	}
 
-	public InvoiceLegalIssue1 setInvoicer(com.tools20022.repository.msg.PartyIdentification43 invoicer) {
+	public InvoiceLegalIssue1 setInvoicer(PartyIdentification43 invoicer) {
 		this.invoicer = Objects.requireNonNull(invoicer);
 		return this;
 	}
@@ -312,7 +353,7 @@ public class InvoiceLegalIssue1 {
 		return invoicee;
 	}
 
-	public InvoiceLegalIssue1 setInvoicee(com.tools20022.repository.msg.PartyIdentification43 invoicee) {
+	public InvoiceLegalIssue1 setInvoicee(PartyIdentification43 invoicee) {
 		this.invoicee = Objects.requireNonNull(invoicee);
 		return this;
 	}

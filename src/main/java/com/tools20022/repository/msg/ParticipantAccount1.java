@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max40Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -128,7 +129,7 @@ public class ParticipantAccount1 {
 	 * definition} = "Type of the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountTypeName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ParticipantAccount1, Max40Text> mmAccountTypeName = new MMMessageAttribute<ParticipantAccount1, Max40Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantAccount1.mmObject();
 			isDerived = false;
@@ -139,6 +140,16 @@ public class ParticipantAccount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max40Text.mmObject();
+		}
+
+		@Override
+		public Max40Text getValue(ParticipantAccount1 obj) {
+			return obj.getAccountTypeName();
+		}
+
+		@Override
+		public void setValue(ParticipantAccount1 obj, Max40Text value) {
+			obj.setAccountTypeName(value);
 		}
 	};
 	@XmlElement(name = "AcctTpShrtNm", required = true)
@@ -170,7 +181,7 @@ public class ParticipantAccount1 {
 	 * definition} = "Short name for the account type."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountTypeShortName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ParticipantAccount1, Max140Text> mmAccountTypeShortName = new MMMessageAttribute<ParticipantAccount1, Max140Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantAccount1.mmObject();
 			isDerived = false;
@@ -181,6 +192,16 @@ public class ParticipantAccount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Max140Text getValue(ParticipantAccount1 obj) {
+			return obj.getAccountTypeShortName();
+		}
+
+		@Override
+		public void setValue(ParticipantAccount1 obj, Max140Text value) {
+			obj.setAccountTypeShortName(value);
 		}
 	};
 	@XmlElement(name = "OpngDt", required = true)
@@ -212,7 +233,7 @@ public class ParticipantAccount1 {
 	 * definition} = "Date the account was open."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOpeningDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ParticipantAccount1, ISODateTime> mmOpeningDate = new MMMessageAttribute<ParticipantAccount1, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantAccount1.mmObject();
 			isDerived = false;
@@ -223,6 +244,16 @@ public class ParticipantAccount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(ParticipantAccount1 obj) {
+			return obj.getOpeningDate();
+		}
+
+		@Override
+		public void setValue(ParticipantAccount1 obj, ISODateTime value) {
+			obj.setOpeningDate(value);
 		}
 	};
 	@XmlElement(name = "ClsgDt")
@@ -254,7 +285,7 @@ public class ParticipantAccount1 {
 	 * definition} = "Date the account was closed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClosingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ParticipantAccount1, Optional<ISODateTime>> mmClosingDate = new MMMessageAttribute<ParticipantAccount1, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantAccount1.mmObject();
 			isDerived = false;
@@ -265,6 +296,16 @@ public class ParticipantAccount1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(ParticipantAccount1 obj) {
+			return obj.getClosingDate();
+		}
+
+		@Override
+		public void setValue(ParticipantAccount1 obj, Optional<ISODateTime> value) {
+			obj.setClosingDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DeltnDt")
@@ -296,7 +337,7 @@ public class ParticipantAccount1 {
 	 * definition} = "Date the information about the account was deleted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeletionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ParticipantAccount1, Optional<ISODateTime>> mmDeletionDate = new MMMessageAttribute<ParticipantAccount1, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantAccount1.mmObject();
 			isDerived = false;
@@ -307,6 +348,16 @@ public class ParticipantAccount1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(ParticipantAccount1 obj) {
+			return obj.getDeletionDate();
+		}
+
+		@Override
+		public void setValue(ParticipantAccount1 obj, Optional<ISODateTime> value) {
+			obj.setDeletionDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LicWdrwlDoc")
@@ -338,7 +389,7 @@ public class ParticipantAccount1 {
 	 * definition} = "Details related to license withdrawal."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLicenseWithdrawalDocument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ParticipantAccount1, Optional<DocumentIdentification11>> mmLicenseWithdrawalDocument = new MMMessageAssociationEnd<ParticipantAccount1, Optional<DocumentIdentification11>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantAccount1.mmObject();
 			isDerived = false;
@@ -349,11 +400,21 @@ public class ParticipantAccount1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DocumentIdentification11.mmObject();
+			type_lazy = () -> DocumentIdentification11.mmObject();
+		}
+
+		@Override
+		public Optional<DocumentIdentification11> getValue(ParticipantAccount1 obj) {
+			return obj.getLicenseWithdrawalDocument();
+		}
+
+		@Override
+		public void setValue(ParticipantAccount1 obj, Optional<DocumentIdentification11> value) {
+			obj.setLicenseWithdrawalDocument(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctRstrctns")
-	protected List<com.tools20022.repository.msg.AccountRestrictions1> accountRestrictions;
+	protected List<AccountRestrictions1> accountRestrictions;
 	/**
 	 * 
 	 <p>
@@ -380,7 +441,7 @@ public class ParticipantAccount1 {
 	 * definition} = "Details regarding intraday account restrictions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountRestrictions = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ParticipantAccount1, List<AccountRestrictions1>> mmAccountRestrictions = new MMMessageAssociationEnd<ParticipantAccount1, List<AccountRestrictions1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantAccount1.mmObject();
 			isDerived = false;
@@ -390,7 +451,17 @@ public class ParticipantAccount1 {
 			definition = "Details regarding intraday account restrictions.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AccountRestrictions1.mmObject();
+			type_lazy = () -> AccountRestrictions1.mmObject();
+		}
+
+		@Override
+		public List<AccountRestrictions1> getValue(ParticipantAccount1 obj) {
+			return obj.getAccountRestrictions();
+		}
+
+		@Override
+		public void setValue(ParticipantAccount1 obj, List<AccountRestrictions1> value) {
+			obj.setAccountRestrictions(value);
 		}
 	};
 	@XmlElement(name = "DsgntdAcct")
@@ -423,7 +494,7 @@ public class ParticipantAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDesignatedAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ParticipantAccount1, Optional<DefaultAccountDetails1>> mmDesignatedAccount = new MMMessageAssociationEnd<ParticipantAccount1, Optional<DefaultAccountDetails1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantAccount1.mmObject();
 			isDerived = false;
@@ -434,7 +505,17 @@ public class ParticipantAccount1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DefaultAccountDetails1.mmObject();
+			type_lazy = () -> DefaultAccountDetails1.mmObject();
+		}
+
+		@Override
+		public Optional<DefaultAccountDetails1> getValue(ParticipantAccount1 obj) {
+			return obj.getDesignatedAccount();
+		}
+
+		@Override
+		public void setValue(ParticipantAccount1 obj, Optional<DefaultAccountDetails1> value) {
+			obj.setDesignatedAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LqdtyPoolPtcptDtls")
@@ -466,7 +547,7 @@ public class ParticipantAccount1 {
 	 * definition} = "Information about account and account owner."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLiquidityPoolParticipantDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ParticipantAccount1, Optional<LiquidityPoolMembers1Choice>> mmLiquidityPoolParticipantDetails = new MMMessageAssociationEnd<ParticipantAccount1, Optional<LiquidityPoolMembers1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantAccount1.mmObject();
 			isDerived = false;
@@ -479,9 +560,19 @@ public class ParticipantAccount1 {
 			isComposite = true;
 			type_lazy = () -> LiquidityPoolMembers1Choice.mmObject();
 		}
+
+		@Override
+		public Optional<LiquidityPoolMembers1Choice> getValue(ParticipantAccount1 obj) {
+			return obj.getLiquidityPoolParticipantDetails();
+		}
+
+		@Override
+		public void setValue(ParticipantAccount1 obj, Optional<LiquidityPoolMembers1Choice> value) {
+			obj.setLiquidityPoolParticipantDetails(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "Lmts")
-	protected List<com.tools20022.repository.msg.AccountLimits1> limits;
+	protected List<AccountLimits1> limits;
 	/**
 	 * 
 	 <p>
@@ -508,7 +599,7 @@ public class ParticipantAccount1 {
 	 * definition} = "Values and types of limits set on the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLimits = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ParticipantAccount1, List<AccountLimits1>> mmLimits = new MMMessageAssociationEnd<ParticipantAccount1, List<AccountLimits1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantAccount1.mmObject();
 			isDerived = false;
@@ -518,11 +609,21 @@ public class ParticipantAccount1 {
 			definition = "Values and types of limits set on the account.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AccountLimits1.mmObject();
+			type_lazy = () -> AccountLimits1.mmObject();
+		}
+
+		@Override
+		public List<AccountLimits1> getValue(ParticipantAccount1 obj) {
+			return obj.getLimits();
+		}
+
+		@Override
+		public void setValue(ParticipantAccount1 obj, List<AccountLimits1> value) {
+			obj.setLimits(value);
 		}
 	};
 	@XmlElement(name = "Arrsts")
-	protected List<com.tools20022.repository.msg.ArrestedFunds1> arrests;
+	protected List<ArrestedFunds1> arrests;
 	/**
 	 * 
 	 <p>
@@ -549,7 +650,7 @@ public class ParticipantAccount1 {
 	 * definition} = "Information related to the arrest."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmArrests = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ParticipantAccount1, List<ArrestedFunds1>> mmArrests = new MMMessageAssociationEnd<ParticipantAccount1, List<ArrestedFunds1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantAccount1.mmObject();
 			isDerived = false;
@@ -559,7 +660,17 @@ public class ParticipantAccount1 {
 			definition = "Information related to the arrest.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ArrestedFunds1.mmObject();
+			type_lazy = () -> ArrestedFunds1.mmObject();
+		}
+
+		@Override
+		public List<ArrestedFunds1> getValue(ParticipantAccount1 obj) {
+			return obj.getArrests();
+		}
+
+		@Override
+		public void setValue(ParticipantAccount1 obj, List<ArrestedFunds1> value) {
+			obj.setArrests(value);
 		}
 	};
 	@XmlElement(name = "Mgrtn")
@@ -590,7 +701,7 @@ public class ParticipantAccount1 {
 	 * definition} = "Information related for participant migration process."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMigration = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ParticipantAccount1, Optional<SystemMigration1>> mmMigration = new MMMessageAssociationEnd<ParticipantAccount1, Optional<SystemMigration1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantAccount1.mmObject();
 			isDerived = false;
@@ -601,7 +712,17 @@ public class ParticipantAccount1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemMigration1.mmObject();
+			type_lazy = () -> SystemMigration1.mmObject();
+		}
+
+		@Override
+		public Optional<SystemMigration1> getValue(ParticipantAccount1 obj) {
+			return obj.getMigration();
+		}
+
+		@Override
+		public void setValue(ParticipantAccount1 obj, Optional<SystemMigration1> value) {
+			obj.setMigration(value.orElse(null));
 		}
 	};
 
@@ -671,7 +792,7 @@ public class ParticipantAccount1 {
 		return licenseWithdrawalDocument == null ? Optional.empty() : Optional.of(licenseWithdrawalDocument);
 	}
 
-	public ParticipantAccount1 setLicenseWithdrawalDocument(com.tools20022.repository.msg.DocumentIdentification11 licenseWithdrawalDocument) {
+	public ParticipantAccount1 setLicenseWithdrawalDocument(DocumentIdentification11 licenseWithdrawalDocument) {
 		this.licenseWithdrawalDocument = licenseWithdrawalDocument;
 		return this;
 	}
@@ -680,7 +801,7 @@ public class ParticipantAccount1 {
 		return accountRestrictions == null ? accountRestrictions = new ArrayList<>() : accountRestrictions;
 	}
 
-	public ParticipantAccount1 setAccountRestrictions(List<com.tools20022.repository.msg.AccountRestrictions1> accountRestrictions) {
+	public ParticipantAccount1 setAccountRestrictions(List<AccountRestrictions1> accountRestrictions) {
 		this.accountRestrictions = Objects.requireNonNull(accountRestrictions);
 		return this;
 	}
@@ -689,7 +810,7 @@ public class ParticipantAccount1 {
 		return designatedAccount == null ? Optional.empty() : Optional.of(designatedAccount);
 	}
 
-	public ParticipantAccount1 setDesignatedAccount(com.tools20022.repository.msg.DefaultAccountDetails1 designatedAccount) {
+	public ParticipantAccount1 setDesignatedAccount(DefaultAccountDetails1 designatedAccount) {
 		this.designatedAccount = designatedAccount;
 		return this;
 	}
@@ -707,7 +828,7 @@ public class ParticipantAccount1 {
 		return limits == null ? limits = new ArrayList<>() : limits;
 	}
 
-	public ParticipantAccount1 setLimits(List<com.tools20022.repository.msg.AccountLimits1> limits) {
+	public ParticipantAccount1 setLimits(List<AccountLimits1> limits) {
 		this.limits = Objects.requireNonNull(limits);
 		return this;
 	}
@@ -716,7 +837,7 @@ public class ParticipantAccount1 {
 		return arrests == null ? arrests = new ArrayList<>() : arrests;
 	}
 
-	public ParticipantAccount1 setArrests(List<com.tools20022.repository.msg.ArrestedFunds1> arrests) {
+	public ParticipantAccount1 setArrests(List<ArrestedFunds1> arrests) {
 		this.arrests = Objects.requireNonNull(arrests);
 		return this;
 	}
@@ -725,7 +846,7 @@ public class ParticipantAccount1 {
 		return migration == null ? Optional.empty() : Optional.of(migration);
 	}
 
-	public ParticipantAccount1 setMigration(com.tools20022.repository.msg.SystemMigration1 migration) {
+	public ParticipantAccount1 setMigration(SystemMigration1 migration) {
 		this.migration = migration;
 		return this;
 	}

@@ -136,7 +136,7 @@ public class BalanceFormat3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BalanceFormat3Choice, SignedQuantityFormat1> mmBalance = new MMMessageAssociationEnd<BalanceFormat3Choice, SignedQuantityFormat1>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.BalanceFormat3Choice.mmObject();
@@ -151,6 +151,16 @@ public class BalanceFormat3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SignedQuantityFormat1.mmObject();
+		}
+
+		@Override
+		public SignedQuantityFormat1 getValue(BalanceFormat3Choice obj) {
+			return obj.getBalance();
+		}
+
+		@Override
+		public void setValue(BalanceFormat3Choice obj, SignedQuantityFormat1 value) {
+			obj.setBalance(value);
 		}
 	};
 	@XmlElement(name = "ElgblBal", required = true)
@@ -198,7 +208,7 @@ public class BalanceFormat3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEligibleBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BalanceFormat3Choice, SignedQuantityFormat2> mmEligibleBalance = new MMMessageAssociationEnd<BalanceFormat3Choice, SignedQuantityFormat2>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.BalanceFormat3Choice.mmObject();
@@ -213,6 +223,16 @@ public class BalanceFormat3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SignedQuantityFormat2.mmObject();
+		}
+
+		@Override
+		public SignedQuantityFormat2 getValue(BalanceFormat3Choice obj) {
+			return obj.getEligibleBalance();
+		}
+
+		@Override
+		public void setValue(BalanceFormat3Choice obj, SignedQuantityFormat2 value) {
+			obj.setEligibleBalance(value);
 		}
 	};
 	@XmlElement(name = "NotElgblBal", required = true)
@@ -260,7 +280,7 @@ public class BalanceFormat3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNotEligibleBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BalanceFormat3Choice, SignedQuantityFormat2> mmNotEligibleBalance = new MMMessageAssociationEnd<BalanceFormat3Choice, SignedQuantityFormat2>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.BalanceFormat3Choice.mmObject();
@@ -275,6 +295,16 @@ public class BalanceFormat3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SignedQuantityFormat2.mmObject();
+		}
+
+		@Override
+		public SignedQuantityFormat2 getValue(BalanceFormat3Choice obj) {
+			return obj.getNotEligibleBalance();
+		}
+
+		@Override
+		public void setValue(BalanceFormat3Choice obj, SignedQuantityFormat2 value) {
+			obj.setNotEligibleBalance(value);
 		}
 	};
 	@XmlElement(name = "FullPrdUnits", required = true)
@@ -322,7 +352,7 @@ public class BalanceFormat3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFullPeriodUnits = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BalanceFormat3Choice, SignedQuantityFormat2> mmFullPeriodUnits = new MMMessageAttribute<BalanceFormat3Choice, SignedQuantityFormat2>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.BalanceFormat3Choice.mmObject();
@@ -335,6 +365,16 @@ public class BalanceFormat3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SignedQuantityFormat2.mmObject();
+		}
+
+		@Override
+		public SignedQuantityFormat2 getValue(BalanceFormat3Choice obj) {
+			return obj.getFullPeriodUnits();
+		}
+
+		@Override
+		public void setValue(BalanceFormat3Choice obj, SignedQuantityFormat2 value) {
+			obj.setFullPeriodUnits(value);
 		}
 	};
 	@XmlElement(name = "PartWayPrdUnits", required = true)
@@ -382,7 +422,7 @@ public class BalanceFormat3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartWayPeriodUnits = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BalanceFormat3Choice, SignedQuantityFormat2> mmPartWayPeriodUnits = new MMMessageAttribute<BalanceFormat3Choice, SignedQuantityFormat2>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.BalanceFormat3Choice.mmObject();
@@ -395,6 +435,16 @@ public class BalanceFormat3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SignedQuantityFormat2.mmObject();
+		}
+
+		@Override
+		public SignedQuantityFormat2 getValue(BalanceFormat3Choice obj) {
+			return obj.getPartWayPeriodUnits();
+		}
+
+		@Override
+		public void setValue(BalanceFormat3Choice obj, SignedQuantityFormat2 value) {
+			obj.setPartWayPeriodUnits(value);
 		}
 	};
 

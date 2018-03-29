@@ -25,6 +25,7 @@ import com.tools20022.repository.area.auth.CCPDailyCashFlowsReportV01;
 import com.tools20022.repository.datatype.LEIIdentifier;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ConcentrationAccount1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -122,7 +123,7 @@ public class ConcentrationAgent1 {
 	 * definition} = "Identifies the concentration agent.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConcentrationAgent1, LEIIdentifier> mmIdentification = new MMMessageAttribute<ConcentrationAgent1, LEIIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConcentrationAgent1.mmObject();
@@ -135,9 +136,19 @@ public class ConcentrationAgent1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
 		}
+
+		@Override
+		public LEIIdentifier getValue(ConcentrationAgent1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(ConcentrationAgent1 obj, LEIIdentifier value) {
+			obj.setIdentification(value);
+		}
 	};
 	@XmlElement(name = "Acct", required = true)
-	protected List<com.tools20022.repository.msg.ConcentrationAccount1> account;
+	protected List<ConcentrationAccount1> account;
 	/**
 	 * 
 	 <p>
@@ -166,7 +177,7 @@ public class ConcentrationAgent1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ConcentrationAgent1, List<ConcentrationAccount1>> mmAccount = new MMMessageAssociationEnd<ConcentrationAgent1, List<ConcentrationAccount1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConcentrationAgent1.mmObject();
 			isDerived = false;
@@ -176,7 +187,17 @@ public class ConcentrationAgent1 {
 			definition = "Inflows and outflows to and from the CCP’s concentration accounts aggregated across all business lines / waterfalls. \r\n";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ConcentrationAccount1.mmObject();
+			type_lazy = () -> ConcentrationAccount1.mmObject();
+		}
+
+		@Override
+		public List<ConcentrationAccount1> getValue(ConcentrationAgent1 obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(ConcentrationAgent1 obj, List<ConcentrationAccount1> value) {
+			obj.setAccount(value);
 		}
 	};
 
@@ -208,7 +229,7 @@ public class ConcentrationAgent1 {
 		return account == null ? account = new ArrayList<>() : account;
 	}
 
-	public ConcentrationAgent1 setAccount(List<com.tools20022.repository.msg.ConcentrationAccount1> account) {
+	public ConcentrationAgent1 setAccount(List<ConcentrationAccount1> account) {
 		this.account = Objects.requireNonNull(account);
 		return this;
 	}

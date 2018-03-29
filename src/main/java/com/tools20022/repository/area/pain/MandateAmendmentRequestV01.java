@@ -25,7 +25,6 @@ import com.tools20022.repository.area.PaymentsInitiationArchive;
 import com.tools20022.repository.msg.GroupHeader31;
 import com.tools20022.repository.msg.MandateAmendment1;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -142,7 +141,7 @@ public class MandateAmendmentRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MandateAmendmentRequestV01, GroupHeader31> mmGroupHeader = new MMMessageBuildingBlock<MandateAmendmentRequestV01, GroupHeader31>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,12 +152,14 @@ public class MandateAmendmentRequestV01 {
 			complexType_lazy = () -> GroupHeader31.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MandateAmendmentRequestV01.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader31 getValue(MandateAmendmentRequestV01 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(MandateAmendmentRequestV01 obj, GroupHeader31 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "UndrlygAmdmntDtls", required = true)
@@ -187,7 +188,7 @@ public class MandateAmendmentRequestV01 {
 	 * "Set of elements used to provide details on the amendment request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUnderlyingAmendmentDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MandateAmendmentRequestV01, MandateAmendment1> mmUnderlyingAmendmentDetails = new MMMessageBuildingBlock<MandateAmendmentRequestV01, MandateAmendment1>() {
 		{
 			xmlTag = "UndrlygAmdmntDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -198,12 +199,14 @@ public class MandateAmendmentRequestV01 {
 			complexType_lazy = () -> MandateAmendment1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MandateAmendmentRequestV01.class.getMethod("getUnderlyingAmendmentDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MandateAmendment1 getValue(MandateAmendmentRequestV01 obj) {
+			return obj.getUnderlyingAmendmentDetails();
+		}
+
+		@Override
+		public void setValue(MandateAmendmentRequestV01 obj, MandateAmendment1 value) {
+			obj.setUnderlyingAmendmentDetails(value);
 		}
 	};
 

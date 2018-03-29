@@ -124,7 +124,7 @@ public class VariationMargin1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmThresholdAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<VariationMargin1, ActiveCurrencyAndAmount> mmThresholdAmount = new MMMessageAttribute<VariationMargin1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> VariationMarginTerm.mmThresholdAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.VariationMargin1.mmObject();
@@ -136,6 +136,16 @@ public class VariationMargin1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(VariationMargin1 obj) {
+			return obj.getThresholdAmount();
+		}
+
+		@Override
+		public void setValue(VariationMargin1 obj, ActiveCurrencyAndAmount value) {
+			obj.setThresholdAmount(value);
 		}
 	};
 	@XmlElement(name = "ThrshldTp")
@@ -174,7 +184,7 @@ public class VariationMargin1 {
 	 * "Specifies if the threshold amount is secured or unsecured."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmThresholdType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<VariationMargin1, Optional<ThresholdType1Code>> mmThresholdType = new MMMessageAttribute<VariationMargin1, Optional<ThresholdType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> VariationMarginTerm.mmThresholdType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.VariationMargin1.mmObject();
@@ -186,6 +196,16 @@ public class VariationMargin1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ThresholdType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ThresholdType1Code> getValue(VariationMargin1 obj) {
+			return obj.getThresholdType();
+		}
+
+		@Override
+		public void setValue(VariationMargin1 obj, Optional<ThresholdType1Code> value) {
+			obj.setThresholdType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinTrfAmt", required = true)
@@ -225,7 +245,7 @@ public class VariationMargin1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumTransferAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<VariationMargin1, ActiveCurrencyAndAmount> mmMinimumTransferAmount = new MMMessageAttribute<VariationMargin1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> ExposureTerm.mmMinimumTransferAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.VariationMargin1.mmObject();
@@ -237,6 +257,16 @@ public class VariationMargin1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(VariationMargin1 obj) {
+			return obj.getMinimumTransferAmount();
+		}
+
+		@Override
+		public void setValue(VariationMargin1 obj, ActiveCurrencyAndAmount value) {
+			obj.setMinimumTransferAmount(value);
 		}
 	};
 	@XmlElement(name = "RndgAmt", required = true)
@@ -276,7 +306,7 @@ public class VariationMargin1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRoundingAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<VariationMargin1, ActiveCurrencyAndAmount> mmRoundingAmount = new MMMessageAttribute<VariationMargin1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> ExposureTerm.mmRoundingAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.VariationMargin1.mmObject();
@@ -288,6 +318,16 @@ public class VariationMargin1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(VariationMargin1 obj) {
+			return obj.getRoundingAmount();
+		}
+
+		@Override
+		public void setValue(VariationMargin1 obj, ActiveCurrencyAndAmount value) {
+			obj.setRoundingAmount(value);
 		}
 	};
 	@XmlElement(name = "RndgMtd", required = true)
@@ -327,7 +367,7 @@ public class VariationMargin1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRoundingMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<VariationMargin1, RoundingMethod1Code> mmRoundingMethod = new MMMessageAttribute<VariationMargin1, RoundingMethod1Code>() {
 		{
 			businessElementTrace_lazy = () -> ExposureTerm.mmRoundingMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.VariationMargin1.mmObject();
@@ -339,6 +379,16 @@ public class VariationMargin1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RoundingMethod1Code.mmObject();
+		}
+
+		@Override
+		public RoundingMethod1Code getValue(VariationMargin1 obj) {
+			return obj.getRoundingMethod();
+		}
+
+		@Override
+		public void setValue(VariationMargin1 obj, RoundingMethod1Code value) {
+			obj.setRoundingMethod(value);
 		}
 	};
 

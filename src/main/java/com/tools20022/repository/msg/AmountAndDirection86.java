@@ -105,7 +105,7 @@ public class AmountAndDirection86 {
 	 * definition} = "Amount of money in the cash entry."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndDirection86, ImpliedCurrencyAndAmount> mmAmount = new MMMessageAttribute<AmountAndDirection86, ImpliedCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection86.mmObject();
@@ -117,6 +117,16 @@ public class AmountAndDirection86 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(AmountAndDirection86 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection86 obj, ImpliedCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "Sgn", required = true)
@@ -149,7 +159,7 @@ public class AmountAndDirection86 {
 	 * definition} = "Indicates that the amount value is positive or negative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSign = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndDirection86, PlusOrMinusIndicator> mmSign = new MMMessageAttribute<AmountAndDirection86, PlusOrMinusIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection86.mmObject();
 			isDerived = false;
@@ -160,6 +170,16 @@ public class AmountAndDirection86 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PlusOrMinusIndicator.mmObject();
+		}
+
+		@Override
+		public PlusOrMinusIndicator getValue(AmountAndDirection86 obj) {
+			return obj.getSign();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection86 obj, PlusOrMinusIndicator value) {
+			obj.setSign(value);
 		}
 	};
 

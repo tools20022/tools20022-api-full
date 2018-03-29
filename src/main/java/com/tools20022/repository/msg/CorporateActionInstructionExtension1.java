@@ -29,6 +29,7 @@ import com.tools20022.repository.codeset.ExtendedEventType1Code;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ConditionAcceptance1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -149,7 +150,7 @@ public class CorporateActionInstructionExtension1 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInstructionExtension1, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionInstructionExtension1, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionExtension1.mmObject();
 			isDerived = false;
@@ -160,6 +161,16 @@ public class CorporateActionInstructionExtension1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionInstructionExtension1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionExtension1 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "InstrTp")
@@ -195,7 +206,7 @@ public class CorporateActionInstructionExtension1 {
 	 * definition} = "Type of instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInstructionExtension1, Optional<DTCCorporateActionInstructionType1Code>> mmInstructionType = new MMMessageAttribute<CorporateActionInstructionExtension1, Optional<DTCCorporateActionInstructionType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionExtension1.mmObject();
 			isDerived = false;
@@ -207,6 +218,16 @@ public class CorporateActionInstructionExtension1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCCorporateActionInstructionType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<DTCCorporateActionInstructionType1Code> getValue(CorporateActionInstructionExtension1 obj) {
+			return obj.getInstructionType();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionExtension1 obj, Optional<DTCCorporateActionInstructionType1Code> value) {
+			obj.setInstructionType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EvtTp")
@@ -244,7 +265,7 @@ public class CorporateActionInstructionExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInstructionExtension1, Optional<ExtendedEventType1Code>> mmEventType = new MMMessageAttribute<CorporateActionInstructionExtension1, Optional<ExtendedEventType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionExtension1.mmObject();
 			isDerived = false;
@@ -256,6 +277,16 @@ public class CorporateActionInstructionExtension1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ExtendedEventType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ExtendedEventType1Code> getValue(CorporateActionInstructionExtension1 obj) {
+			return obj.getEventType();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionExtension1 obj, Optional<ExtendedEventType1Code> value) {
+			obj.setEventType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SubEvtTp")
@@ -293,7 +324,7 @@ public class CorporateActionInstructionExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubEventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInstructionExtension1, Optional<DTCCSubEventType1Code>> mmSubEventType = new MMMessageAttribute<CorporateActionInstructionExtension1, Optional<DTCCSubEventType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionExtension1.mmObject();
 			isDerived = false;
@@ -305,6 +336,16 @@ public class CorporateActionInstructionExtension1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCCSubEventType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<DTCCSubEventType1Code> getValue(CorporateActionInstructionExtension1 obj) {
+			return obj.getSubEventType();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionExtension1 obj, Optional<DTCCSubEventType1Code> value) {
+			obj.setSubEventType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCCOptnTp")
@@ -342,7 +383,7 @@ public class CorporateActionInstructionExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCCOptionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInstructionExtension1, Optional<Max4AlphaNumericText>> mmDTCCOptionType = new MMMessageAttribute<CorporateActionInstructionExtension1, Optional<Max4AlphaNumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionExtension1.mmObject();
 			isDerived = false;
@@ -354,6 +395,16 @@ public class CorporateActionInstructionExtension1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max4AlphaNumericText> getValue(CorporateActionInstructionExtension1 obj) {
+			return obj.getDTCCOptionType();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionExtension1 obj, Optional<Max4AlphaNumericText> value) {
+			obj.setDTCCOptionType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrtctId")
@@ -390,7 +441,7 @@ public class CorporateActionInstructionExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProtectIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInstructionExtension1, Optional<Max16Text>> mmProtectIdentification = new MMMessageAttribute<CorporateActionInstructionExtension1, Optional<Max16Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionExtension1.mmObject();
 			isDerived = false;
@@ -402,6 +453,16 @@ public class CorporateActionInstructionExtension1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max16Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max16Text> getValue(CorporateActionInstructionExtension1 obj) {
+			return obj.getProtectIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionExtension1 obj, Optional<Max16Text> value) {
+			obj.setProtectIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrtctDt")
@@ -436,7 +497,7 @@ public class CorporateActionInstructionExtension1 {
 	 * definition} = "Date at which the protect was created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProtectDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInstructionExtension1, Optional<ISODate>> mmProtectDate = new MMMessageAttribute<CorporateActionInstructionExtension1, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionExtension1.mmObject();
 			isDerived = false;
@@ -448,6 +509,16 @@ public class CorporateActionInstructionExtension1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CorporateActionInstructionExtension1 obj) {
+			return obj.getProtectDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionExtension1 obj, Optional<ISODate> value) {
+			obj.setProtectDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AckFlg")
@@ -484,7 +555,7 @@ public class CorporateActionInstructionExtension1 {
 	 * "Indicates that submitter has agreed to all terms and conditions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAcknowledgementFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInstructionExtension1, Optional<YesNoIndicator>> mmAcknowledgementFlag = new MMMessageAttribute<CorporateActionInstructionExtension1, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionExtension1.mmObject();
 			isDerived = false;
@@ -496,6 +567,16 @@ public class CorporateActionInstructionExtension1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CorporateActionInstructionExtension1 obj) {
+			return obj.getAcknowledgementFlag();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionExtension1 obj, Optional<YesNoIndicator> value) {
+			obj.setAcknowledgementFlag(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SlctnDealrFeeFlg")
@@ -533,7 +614,7 @@ public class CorporateActionInstructionExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSolicitationDealerFeeFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInstructionExtension1, Optional<YesNoIndicator>> mmSolicitationDealerFeeFlag = new MMMessageAttribute<CorporateActionInstructionExtension1, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionExtension1.mmObject();
 			isDerived = false;
@@ -546,9 +627,19 @@ public class CorporateActionInstructionExtension1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CorporateActionInstructionExtension1 obj) {
+			return obj.getSolicitationDealerFeeFlag();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionExtension1 obj, Optional<YesNoIndicator> value) {
+			obj.setSolicitationDealerFeeFlag(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "CondsAccptnc")
-	protected List<com.tools20022.repository.msg.ConditionAcceptance1> conditionsAcceptance;
+	protected List<ConditionAcceptance1> conditionsAcceptance;
 	/**
 	 * 
 	 <p>
@@ -579,7 +670,7 @@ public class CorporateActionInstructionExtension1 {
 	 * "Provides an acceptance flag for the identified conditions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmConditionsAcceptance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionInstructionExtension1, List<ConditionAcceptance1>> mmConditionsAcceptance = new MMMessageAssociationEnd<CorporateActionInstructionExtension1, List<ConditionAcceptance1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionExtension1.mmObject();
 			isDerived = false;
@@ -591,7 +682,17 @@ public class CorporateActionInstructionExtension1 {
 			maxOccurs = 9;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ConditionAcceptance1.mmObject();
+			type_lazy = () -> ConditionAcceptance1.mmObject();
+		}
+
+		@Override
+		public List<ConditionAcceptance1> getValue(CorporateActionInstructionExtension1 obj) {
+			return obj.getConditionsAcceptance();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionExtension1 obj, List<ConditionAcceptance1> value) {
+			obj.setConditionsAcceptance(value);
 		}
 	};
 	@XmlElement(name = "OddLotFlg")
@@ -628,7 +729,7 @@ public class CorporateActionInstructionExtension1 {
 	 * "Indicates whether the odd lot is accepted for tender offers."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOddLotFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInstructionExtension1, Optional<YesNoIndicator>> mmOddLotFlag = new MMMessageAttribute<CorporateActionInstructionExtension1, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionExtension1.mmObject();
 			isDerived = false;
@@ -640,6 +741,16 @@ public class CorporateActionInstructionExtension1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CorporateActionInstructionExtension1 obj) {
+			return obj.getOddLotFlag();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionExtension1 obj, Optional<YesNoIndicator> value) {
+			obj.setOddLotFlag(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XmptFrIntrstPnltyFlg")
@@ -676,7 +787,7 @@ public class CorporateActionInstructionExtension1 {
 	 * "Indicates whether the instruction is exempt from interest penalties."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExemptFromInterestPenaltyFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInstructionExtension1, Optional<YesNoIndicator>> mmExemptFromInterestPenaltyFlag = new MMMessageAttribute<CorporateActionInstructionExtension1, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionExtension1.mmObject();
 			isDerived = false;
@@ -688,6 +799,16 @@ public class CorporateActionInstructionExtension1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CorporateActionInstructionExtension1 obj) {
+			return obj.getExemptFromInterestPenaltyFlag();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionExtension1 obj, Optional<YesNoIndicator> value) {
+			obj.setExemptFromInterestPenaltyFlag(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DclrdPyblDt")
@@ -724,7 +845,7 @@ public class CorporateActionInstructionExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeclaredPayableDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInstructionExtension1, Optional<ISODate>> mmDeclaredPayableDate = new MMMessageAttribute<CorporateActionInstructionExtension1, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionExtension1.mmObject();
 			isDerived = false;
@@ -736,6 +857,16 @@ public class CorporateActionInstructionExtension1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CorporateActionInstructionExtension1 obj) {
+			return obj.getDeclaredPayableDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionExtension1 obj, Optional<ISODate> value) {
+			obj.setDeclaredPayableDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcrdDt")
@@ -772,7 +903,7 @@ public class CorporateActionInstructionExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRecordDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInstructionExtension1, Optional<ISODate>> mmRecordDate = new MMMessageAttribute<CorporateActionInstructionExtension1, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionExtension1.mmObject();
 			isDerived = false;
@@ -784,6 +915,16 @@ public class CorporateActionInstructionExtension1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CorporateActionInstructionExtension1 obj) {
+			return obj.getRecordDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionExtension1 obj, Optional<ISODate> value) {
+			obj.setRecordDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SvcTpInd")
@@ -819,7 +960,7 @@ public class CorporateActionInstructionExtension1 {
 	 * definition} = "Type of specific DTC service."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmServiceTypeIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInstructionExtension1, Optional<DTCServiceType1Code>> mmServiceTypeIndicator = new MMMessageAttribute<CorporateActionInstructionExtension1, Optional<DTCServiceType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionExtension1.mmObject();
 			isDerived = false;
@@ -831,6 +972,16 @@ public class CorporateActionInstructionExtension1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCServiceType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<DTCServiceType1Code> getValue(CorporateActionInstructionExtension1 obj) {
+			return obj.getServiceTypeIndicator();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionExtension1 obj, Optional<DTCServiceType1Code> value) {
+			obj.setServiceTypeIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CstmrCnt", required = true)
@@ -865,7 +1016,7 @@ public class CorporateActionInstructionExtension1 {
 	 * definition} = "Number of customers."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCustomerCount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInstructionExtension1, Number> mmCustomerCount = new MMMessageAttribute<CorporateActionInstructionExtension1, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionExtension1.mmObject();
 			isDerived = false;
@@ -877,6 +1028,16 @@ public class CorporateActionInstructionExtension1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(CorporateActionInstructionExtension1 obj) {
+			return obj.getCustomerCount();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionExtension1 obj, Number value) {
+			obj.setCustomerCount(value);
 		}
 	};
 	@XmlElement(name = "PyoutNb", required = true)
@@ -909,7 +1070,7 @@ public class CorporateActionInstructionExtension1 {
 	 * definition} = "Number of the payout cash selected for election."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPayoutNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInstructionExtension1, Exact3NumericText> mmPayoutNumber = new MMMessageAttribute<CorporateActionInstructionExtension1, Exact3NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionExtension1.mmObject();
 			isDerived = false;
@@ -920,6 +1081,16 @@ public class CorporateActionInstructionExtension1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
+		}
+
+		@Override
+		public Exact3NumericText getValue(CorporateActionInstructionExtension1 obj) {
+			return obj.getPayoutNumber();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionExtension1 obj, Exact3NumericText value) {
+			obj.setPayoutNumber(value);
 		}
 	};
 
@@ -1029,7 +1200,7 @@ public class CorporateActionInstructionExtension1 {
 		return conditionsAcceptance == null ? conditionsAcceptance = new ArrayList<>() : conditionsAcceptance;
 	}
 
-	public CorporateActionInstructionExtension1 setConditionsAcceptance(List<com.tools20022.repository.msg.ConditionAcceptance1> conditionsAcceptance) {
+	public CorporateActionInstructionExtension1 setConditionsAcceptance(List<ConditionAcceptance1> conditionsAcceptance) {
 		this.conditionsAcceptance = Objects.requireNonNull(conditionsAcceptance);
 		return this;
 	}

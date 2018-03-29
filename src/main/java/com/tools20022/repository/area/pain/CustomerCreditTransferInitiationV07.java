@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.GroupHeader48;
 import com.tools20022.repository.msg.PaymentInstruction20;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.PaymentsInitiationISOPreviousversion;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -176,7 +175,7 @@ public class CustomerCreditTransferInitiationV07 {
 	 * CustomerCreditTransferInitiationV06.mmGroupHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CustomerCreditTransferInitiationV07, GroupHeader48> mmGroupHeader = new MMMessageBuildingBlock<CustomerCreditTransferInitiationV07, GroupHeader48>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -189,12 +188,14 @@ public class CustomerCreditTransferInitiationV07 {
 			complexType_lazy = () -> GroupHeader48.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CustomerCreditTransferInitiationV07.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader48 getValue(CustomerCreditTransferInitiationV07 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(CustomerCreditTransferInitiationV07 obj, GroupHeader48 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "PmtInf", required = true)
@@ -237,7 +238,7 @@ public class CustomerCreditTransferInitiationV07 {
 	 * CustomerCreditTransferInitiationV06.mmPaymentInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPaymentInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CustomerCreditTransferInitiationV07, List<PaymentInstruction20>> mmPaymentInformation = new MMMessageBuildingBlock<CustomerCreditTransferInitiationV07, List<PaymentInstruction20>>() {
 		{
 			xmlTag = "PmtInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -249,12 +250,14 @@ public class CustomerCreditTransferInitiationV07 {
 			complexType_lazy = () -> PaymentInstruction20.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CustomerCreditTransferInitiationV07.class.getMethod("getPaymentInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<PaymentInstruction20> getValue(CustomerCreditTransferInitiationV07 obj) {
+			return obj.getPaymentInformation();
+		}
+
+		@Override
+		public void setValue(CustomerCreditTransferInitiationV07 obj, List<PaymentInstruction20> value) {
+			obj.setPaymentInformation(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -297,7 +300,7 @@ public class CustomerCreditTransferInitiationV07 {
 	 * CustomerCreditTransferInitiationV06.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CustomerCreditTransferInitiationV07, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<CustomerCreditTransferInitiationV07, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -309,12 +312,14 @@ public class CustomerCreditTransferInitiationV07 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CustomerCreditTransferInitiationV07.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(CustomerCreditTransferInitiationV07 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(CustomerCreditTransferInitiationV07 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

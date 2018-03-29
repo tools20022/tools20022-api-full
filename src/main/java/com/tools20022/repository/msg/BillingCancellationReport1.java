@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.Invoice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DatePeriodDetails;
+import com.tools20022.repository.msg.InvoiceLegalIssue1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -119,7 +121,7 @@ public class BillingCancellationReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRegulatoryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BillingCancellationReport1, Optional<InvoiceLegalIssue1>> mmRegulatoryData = new MMMessageAssociationEnd<BillingCancellationReport1, Optional<InvoiceLegalIssue1>>() {
 		{
 			businessComponentTrace_lazy = () -> Invoice.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.BillingCancellationReport1.mmObject();
@@ -131,7 +133,17 @@ public class BillingCancellationReport1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvoiceLegalIssue1.mmObject();
+			type_lazy = () -> InvoiceLegalIssue1.mmObject();
+		}
+
+		@Override
+		public Optional<InvoiceLegalIssue1> getValue(BillingCancellationReport1 obj) {
+			return obj.getRegulatoryData();
+		}
+
+		@Override
+		public void setValue(BillingCancellationReport1 obj, Optional<InvoiceLegalIssue1> value) {
+			obj.setRegulatoryData(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InvcDt", required = true)
@@ -168,7 +180,7 @@ public class BillingCancellationReport1 {
 	 * definition} = "Date at which the billing report was created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInvoiceDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BillingCancellationReport1, ISODate> mmInvoiceDate = new MMMessageAttribute<BillingCancellationReport1, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BillingCancellationReport1.mmObject();
@@ -180,6 +192,16 @@ public class BillingCancellationReport1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(BillingCancellationReport1 obj) {
+			return obj.getInvoiceDate();
+		}
+
+		@Override
+		public void setValue(BillingCancellationReport1 obj, ISODate value) {
+			obj.setInvoiceDate(value);
 		}
 	};
 	@XmlElement(name = "BllgId", required = true)
@@ -216,7 +238,7 @@ public class BillingCancellationReport1 {
 	 * definition} = "Identification of the billing report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBillingIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BillingCancellationReport1, Max35Text> mmBillingIdentification = new MMMessageAttribute<BillingCancellationReport1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BillingCancellationReport1.mmObject();
@@ -228,6 +250,16 @@ public class BillingCancellationReport1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(BillingCancellationReport1 obj) {
+			return obj.getBillingIdentification();
+		}
+
+		@Override
+		public void setValue(BillingCancellationReport1 obj, Max35Text value) {
+			obj.setBillingIdentification(value);
 		}
 	};
 	@XmlElement(name = "BllgPrd", required = true)
@@ -265,7 +297,7 @@ public class BillingCancellationReport1 {
 	 * definition} = "Date period which for which the report data is valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBillingPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BillingCancellationReport1, DatePeriodDetails> mmBillingPeriod = new MMMessageAttribute<BillingCancellationReport1, DatePeriodDetails>() {
 		{
 			businessElementTrace_lazy = () -> Invoice.mmPeriodCovered;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BillingCancellationReport1.mmObject();
@@ -276,7 +308,17 @@ public class BillingCancellationReport1 {
 			definition = "Date period which for which the report data is valid.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.DatePeriodDetails.mmObject();
+			complexType_lazy = () -> DatePeriodDetails.mmObject();
+		}
+
+		@Override
+		public DatePeriodDetails getValue(BillingCancellationReport1 obj) {
+			return obj.getBillingPeriod();
+		}
+
+		@Override
+		public void setValue(BillingCancellationReport1 obj, DatePeriodDetails value) {
+			obj.setBillingPeriod(value);
 		}
 	};
 	@XmlElement(name = "CxlRsn", required = true)
@@ -308,7 +350,7 @@ public class BillingCancellationReport1 {
 	 * definition} = "Reason why requested billing information is cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCancellationReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BillingCancellationReport1, CancellationReason16Choice> mmCancellationReason = new MMMessageAssociationEnd<BillingCancellationReport1, CancellationReason16Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BillingCancellationReport1.mmObject();
 			isDerived = false;
@@ -320,6 +362,16 @@ public class BillingCancellationReport1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CancellationReason16Choice.mmObject();
+		}
+
+		@Override
+		public CancellationReason16Choice getValue(BillingCancellationReport1 obj) {
+			return obj.getCancellationReason();
+		}
+
+		@Override
+		public void setValue(BillingCancellationReport1 obj, CancellationReason16Choice value) {
+			obj.setCancellationReason(value);
 		}
 	};
 
@@ -343,7 +395,7 @@ public class BillingCancellationReport1 {
 		return regulatoryData == null ? Optional.empty() : Optional.of(regulatoryData);
 	}
 
-	public BillingCancellationReport1 setRegulatoryData(com.tools20022.repository.msg.InvoiceLegalIssue1 regulatoryData) {
+	public BillingCancellationReport1 setRegulatoryData(InvoiceLegalIssue1 regulatoryData) {
 		this.regulatoryData = regulatoryData;
 		return this;
 	}
@@ -370,7 +422,7 @@ public class BillingCancellationReport1 {
 		return billingPeriod;
 	}
 
-	public BillingCancellationReport1 setBillingPeriod(com.tools20022.repository.msg.DatePeriodDetails billingPeriod) {
+	public BillingCancellationReport1 setBillingPeriod(DatePeriodDetails billingPeriod) {
 		this.billingPeriod = Objects.requireNonNull(billingPeriod);
 		return this;
 	}

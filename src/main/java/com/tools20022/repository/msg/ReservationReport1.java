@@ -23,6 +23,9 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMXor;
 import com.tools20022.repository.entity.Reservation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ErrorHandling2;
+import com.tools20022.repository.msg.ReservationDetails1;
+import com.tools20022.repository.msg.ReservationIdentificationDetails1;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -119,7 +122,7 @@ public class ReservationReport1 {
 	 * "Identification of the reservation on which information is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReservationIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReservationReport1, ReservationIdentificationDetails1> mmReservationIdentification = new MMMessageAssociationEnd<ReservationReport1, ReservationIdentificationDetails1>() {
 		{
 			businessComponentTrace_lazy = () -> Reservation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationReport1.mmObject();
@@ -131,7 +134,17 @@ public class ReservationReport1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ReservationIdentificationDetails1.mmObject();
+			type_lazy = () -> ReservationIdentificationDetails1.mmObject();
+		}
+
+		@Override
+		public ReservationIdentificationDetails1 getValue(ReservationReport1 obj) {
+			return obj.getReservationIdentification();
+		}
+
+		@Override
+		public void setValue(ReservationReport1 obj, ReservationIdentificationDetails1 value) {
+			obj.setReservationIdentification(value);
 		}
 	};
 	@XmlElement(name = "Rsvatn", required = true)
@@ -166,7 +179,7 @@ public class ReservationReport1 {
 	 * definition} = "Requested information on the limit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReservation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReservationReport1, ReservationDetails1> mmReservation = new MMMessageAssociationEnd<ReservationReport1, ReservationDetails1>() {
 		{
 			businessComponentTrace_lazy = () -> Reservation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationReport1.mmObject();
@@ -178,7 +191,17 @@ public class ReservationReport1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ReservationDetails1.mmObject();
+			type_lazy = () -> ReservationDetails1.mmObject();
+		}
+
+		@Override
+		public ReservationDetails1 getValue(ReservationReport1 obj) {
+			return obj.getReservation();
+		}
+
+		@Override
+		public void setValue(ReservationReport1 obj, ReservationDetails1 value) {
+			obj.setReservation(value);
 		}
 	};
 	@XmlElement(name = "BizErr", required = true)
@@ -209,7 +232,7 @@ public class ReservationReport1 {
 	 * definition} = "Reason the requested business information is not given."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReservationReport1, ErrorHandling2> mmBusinessError = new MMMessageAssociationEnd<ReservationReport1, ErrorHandling2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationReport1.mmObject();
 			isDerived = false;
@@ -220,7 +243,17 @@ public class ReservationReport1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ErrorHandling2.mmObject();
+			type_lazy = () -> ErrorHandling2.mmObject();
+		}
+
+		@Override
+		public ErrorHandling2 getValue(ReservationReport1 obj) {
+			return obj.getBusinessError();
+		}
+
+		@Override
+		public void setValue(ReservationReport1 obj, ErrorHandling2 value) {
+			obj.setBusinessError(value);
 		}
 	};
 	/**
@@ -292,7 +325,7 @@ public class ReservationReport1 {
 		return reservationIdentification;
 	}
 
-	public ReservationReport1 setReservationIdentification(com.tools20022.repository.msg.ReservationIdentificationDetails1 reservationIdentification) {
+	public ReservationReport1 setReservationIdentification(ReservationIdentificationDetails1 reservationIdentification) {
 		this.reservationIdentification = Objects.requireNonNull(reservationIdentification);
 		return this;
 	}
@@ -301,7 +334,7 @@ public class ReservationReport1 {
 		return reservation;
 	}
 
-	public ReservationReport1 setReservation(com.tools20022.repository.msg.ReservationDetails1 reservation) {
+	public ReservationReport1 setReservation(ReservationDetails1 reservation) {
 		this.reservation = Objects.requireNonNull(reservation);
 		return this;
 	}
@@ -310,7 +343,7 @@ public class ReservationReport1 {
 		return businessError;
 	}
 
-	public ReservationReport1 setBusinessError(com.tools20022.repository.msg.ErrorHandling2 businessError) {
+	public ReservationReport1 setBusinessError(ErrorHandling2 businessError) {
 		this.businessError = Objects.requireNonNull(businessError);
 		return this;
 	}

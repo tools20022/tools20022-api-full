@@ -145,7 +145,7 @@ public class AcceptorRejection1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRejectReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcceptorRejection1, RejectReason1Code> mmRejectReason = new MMMessageAttribute<AcceptorRejection1, RejectReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentStatus.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorRejection1.mmObject();
@@ -158,6 +158,16 @@ public class AcceptorRejection1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RejectReason1Code.mmObject();
+		}
+
+		@Override
+		public RejectReason1Code getValue(AcceptorRejection1 obj) {
+			return obj.getRejectReason();
+		}
+
+		@Override
+		public void setValue(AcceptorRejection1 obj, RejectReason1Code value) {
+			obj.setRejectReason(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -198,7 +208,7 @@ public class AcceptorRejection1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcceptorRejection1, Optional<Max500Text>> mmAdditionalInformation = new MMMessageAttribute<AcceptorRejection1, Optional<Max500Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorRejection1.mmObject();
 			isDerived = false;
@@ -210,6 +220,16 @@ public class AcceptorRejection1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max500Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max500Text> getValue(AcceptorRejection1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(AcceptorRejection1 obj, Optional<Max500Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MsgInErr")
@@ -251,7 +271,7 @@ public class AcceptorRejection1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageInError = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcceptorRejection1, Optional<Max5000Binary>> mmMessageInError = new MMMessageAttribute<AcceptorRejection1, Optional<Max5000Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorRejection1.mmObject();
 			isDerived = false;
@@ -263,6 +283,16 @@ public class AcceptorRejection1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max5000Binary.mmObject();
+		}
+
+		@Override
+		public Optional<Max5000Binary> getValue(AcceptorRejection1 obj) {
+			return obj.getMessageInError();
+		}
+
+		@Override
+		public void setValue(AcceptorRejection1 obj, Optional<Max5000Binary> value) {
+			obj.setMessageInError(value.orElse(null));
 		}
 	};
 

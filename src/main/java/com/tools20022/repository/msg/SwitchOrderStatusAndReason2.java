@@ -25,6 +25,10 @@ import com.tools20022.repository.choice.OrderStatus4Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ExpectedExecutionDetails2;
+import com.tools20022.repository.msg.FundOrderData6;
+import com.tools20022.repository.msg.PartyIdentification113;
+import com.tools20022.repository.msg.SwitchLegReferences2;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -144,7 +148,7 @@ public class SwitchOrderStatusAndReason2 {
 	 * SwitchOrderStatusAndReason1.mmMasterReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SwitchOrderStatusAndReason2, Optional<Max35Text>> mmMasterReference = new MMMessageAttribute<SwitchOrderStatusAndReason2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrderStatusAndReason2.mmObject();
@@ -157,6 +161,16 @@ public class SwitchOrderStatusAndReason2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SwitchOrderStatusAndReason2 obj) {
+			return obj.getMasterReference();
+		}
+
+		@Override
+		public void setValue(SwitchOrderStatusAndReason2 obj, Optional<Max35Text> value) {
+			obj.setMasterReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrdrRef", required = true)
@@ -200,7 +214,7 @@ public class SwitchOrderStatusAndReason2 {
 	 * SwitchOrderStatusAndReason1.mmOrderReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SwitchOrderStatusAndReason2, Max35Text> mmOrderReference = new MMMessageAttribute<SwitchOrderStatusAndReason2, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrderStatusAndReason2.mmObject();
@@ -213,6 +227,16 @@ public class SwitchOrderStatusAndReason2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(SwitchOrderStatusAndReason2 obj) {
+			return obj.getOrderReference();
+		}
+
+		@Override
+		public void setValue(SwitchOrderStatusAndReason2 obj, Max35Text value) {
+			obj.setOrderReference(value);
 		}
 	};
 	@XmlElement(name = "ClntRef")
@@ -256,7 +280,7 @@ public class SwitchOrderStatusAndReason2 {
 	 * SwitchOrderStatusAndReason1.mmClientReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SwitchOrderStatusAndReason2, Optional<Max35Text>> mmClientReference = new MMMessageAttribute<SwitchOrderStatusAndReason2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmClientReference;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrderStatusAndReason2.mmObject();
@@ -269,6 +293,16 @@ public class SwitchOrderStatusAndReason2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SwitchOrderStatusAndReason2 obj) {
+			return obj.getClientReference();
+		}
+
+		@Override
+		public void setValue(SwitchOrderStatusAndReason2 obj, Optional<Max35Text> value) {
+			obj.setClientReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DealRef")
@@ -312,7 +346,7 @@ public class SwitchOrderStatusAndReason2 {
 	 * SwitchOrderStatusAndReason1.mmDealReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDealReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SwitchOrderStatusAndReason2, Optional<Max35Text>> mmDealReference = new MMMessageAttribute<SwitchOrderStatusAndReason2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmDealIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrderStatusAndReason2.mmObject();
@@ -325,6 +359,16 @@ public class SwitchOrderStatusAndReason2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SwitchOrderStatusAndReason2 obj) {
+			return obj.getDealReference();
+		}
+
+		@Override
+		public void setValue(SwitchOrderStatusAndReason2 obj, Optional<Max35Text> value) {
+			obj.setDealReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CxlRef")
@@ -363,7 +407,7 @@ public class SwitchOrderStatusAndReason2 {
 	 * SwitchOrderStatusAndReason1.mmCancellationReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancellationReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SwitchOrderStatusAndReason2, Optional<Max35Text>> mmCancellationReference = new MMMessageAttribute<SwitchOrderStatusAndReason2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrderStatusAndReason2.mmObject();
 			isDerived = false;
@@ -375,6 +419,16 @@ public class SwitchOrderStatusAndReason2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SwitchOrderStatusAndReason2 obj) {
+			return obj.getCancellationReference();
+		}
+
+		@Override
+		public void setValue(SwitchOrderStatusAndReason2 obj, Optional<Max35Text> value) {
+			obj.setCancellationReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrdrSts", required = true)
@@ -410,7 +464,7 @@ public class SwitchOrderStatusAndReason2 {
 	 * definition} = "Status of the switch order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOrderStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchOrderStatusAndReason2, OrderStatus4Choice> mmOrderStatus = new MMMessageAssociationEnd<SwitchOrderStatusAndReason2, OrderStatus4Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmOrderStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrderStatusAndReason2.mmObject();
@@ -424,9 +478,19 @@ public class SwitchOrderStatusAndReason2 {
 			isComposite = true;
 			type_lazy = () -> OrderStatus4Choice.mmObject();
 		}
+
+		@Override
+		public OrderStatus4Choice getValue(SwitchOrderStatusAndReason2 obj) {
+			return obj.getOrderStatus();
+		}
+
+		@Override
+		public void setValue(SwitchOrderStatusAndReason2 obj, OrderStatus4Choice value) {
+			obj.setOrderStatus(value);
+		}
 	};
 	@XmlElement(name = "LegInf")
-	protected List<com.tools20022.repository.msg.SwitchLegReferences2> legInformation;
+	protected List<SwitchLegReferences2> legInformation;
 	/**
 	 * 
 	 <p>
@@ -459,7 +523,7 @@ public class SwitchOrderStatusAndReason2 {
 	 * SwitchOrderStatusAndReason1.mmLegInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLegInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchOrderStatusAndReason2, List<SwitchLegReferences2>> mmLegInformation = new MMMessageAssociationEnd<SwitchOrderStatusAndReason2, List<SwitchLegReferences2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrderStatusAndReason2.mmObject();
 			isDerived = false;
@@ -470,7 +534,17 @@ public class SwitchOrderStatusAndReason2 {
 			previousVersion_lazy = () -> SwitchOrderStatusAndReason1.mmLegInformation;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SwitchLegReferences2.mmObject();
+			type_lazy = () -> SwitchLegReferences2.mmObject();
+		}
+
+		@Override
+		public List<SwitchLegReferences2> getValue(SwitchOrderStatusAndReason2 obj) {
+			return obj.getLegInformation();
+		}
+
+		@Override
+		public void setValue(SwitchOrderStatusAndReason2 obj, List<SwitchLegReferences2> value) {
+			obj.setLegInformation(value);
 		}
 	};
 	@XmlElement(name = "StsInitr")
@@ -511,7 +585,7 @@ public class SwitchOrderStatusAndReason2 {
 	 * SwitchOrderStatusAndReason1.mmStatusInitiator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusInitiator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchOrderStatusAndReason2, Optional<PartyIdentification113>> mmStatusInitiator = new MMMessageAssociationEnd<SwitchOrderStatusAndReason2, Optional<PartyIdentification113>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrderStatusAndReason2.mmObject();
@@ -524,7 +598,17 @@ public class SwitchOrderStatusAndReason2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification113.mmObject();
+			type_lazy = () -> PartyIdentification113.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification113> getValue(SwitchOrderStatusAndReason2 obj) {
+			return obj.getStatusInitiator();
+		}
+
+		@Override
+		public void setValue(SwitchOrderStatusAndReason2 obj, Optional<PartyIdentification113> value) {
+			obj.setStatusInitiator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrdrData")
@@ -564,7 +648,7 @@ public class SwitchOrderStatusAndReason2 {
 	 * SwitchOrderStatusAndReason1.mmOrderData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOrderData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchOrderStatusAndReason2, Optional<FundOrderData6>> mmOrderData = new MMMessageAssociationEnd<SwitchOrderStatusAndReason2, Optional<FundOrderData6>>() {
 		{
 			businessComponentTrace_lazy = () -> SwitchOrder.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrderStatusAndReason2.mmObject();
@@ -577,7 +661,17 @@ public class SwitchOrderStatusAndReason2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FundOrderData6.mmObject();
+			type_lazy = () -> FundOrderData6.mmObject();
+		}
+
+		@Override
+		public Optional<FundOrderData6> getValue(SwitchOrderStatusAndReason2 obj) {
+			return obj.getOrderData();
+		}
+
+		@Override
+		public void setValue(SwitchOrderStatusAndReason2 obj, Optional<FundOrderData6> value) {
+			obj.setOrderData(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NewDtls")
@@ -619,7 +713,7 @@ public class SwitchOrderStatusAndReason2 {
 	 * SwitchOrderStatusAndReason1.mmNewDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNewDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchOrderStatusAndReason2, Optional<ExpectedExecutionDetails2>> mmNewDetails = new MMMessageAssociationEnd<SwitchOrderStatusAndReason2, Optional<ExpectedExecutionDetails2>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmInvestmentFundOrderExecution;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrderStatusAndReason2.mmObject();
@@ -632,7 +726,17 @@ public class SwitchOrderStatusAndReason2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ExpectedExecutionDetails2.mmObject();
+			type_lazy = () -> ExpectedExecutionDetails2.mmObject();
+		}
+
+		@Override
+		public Optional<ExpectedExecutionDetails2> getValue(SwitchOrderStatusAndReason2 obj) {
+			return obj.getNewDetails();
+		}
+
+		@Override
+		public void setValue(SwitchOrderStatusAndReason2 obj, Optional<ExpectedExecutionDetails2> value) {
+			obj.setNewDetails(value.orElse(null));
 		}
 	};
 
@@ -713,7 +817,7 @@ public class SwitchOrderStatusAndReason2 {
 		return legInformation == null ? legInformation = new ArrayList<>() : legInformation;
 	}
 
-	public SwitchOrderStatusAndReason2 setLegInformation(List<com.tools20022.repository.msg.SwitchLegReferences2> legInformation) {
+	public SwitchOrderStatusAndReason2 setLegInformation(List<SwitchLegReferences2> legInformation) {
 		this.legInformation = Objects.requireNonNull(legInformation);
 		return this;
 	}
@@ -722,7 +826,7 @@ public class SwitchOrderStatusAndReason2 {
 		return statusInitiator == null ? Optional.empty() : Optional.of(statusInitiator);
 	}
 
-	public SwitchOrderStatusAndReason2 setStatusInitiator(com.tools20022.repository.msg.PartyIdentification113 statusInitiator) {
+	public SwitchOrderStatusAndReason2 setStatusInitiator(PartyIdentification113 statusInitiator) {
 		this.statusInitiator = statusInitiator;
 		return this;
 	}
@@ -731,7 +835,7 @@ public class SwitchOrderStatusAndReason2 {
 		return orderData == null ? Optional.empty() : Optional.of(orderData);
 	}
 
-	public SwitchOrderStatusAndReason2 setOrderData(com.tools20022.repository.msg.FundOrderData6 orderData) {
+	public SwitchOrderStatusAndReason2 setOrderData(FundOrderData6 orderData) {
 		this.orderData = orderData;
 		return this;
 	}
@@ -740,7 +844,7 @@ public class SwitchOrderStatusAndReason2 {
 		return newDetails == null ? Optional.empty() : Optional.of(newDetails);
 	}
 
-	public SwitchOrderStatusAndReason2 setNewDetails(com.tools20022.repository.msg.ExpectedExecutionDetails2 newDetails) {
+	public SwitchOrderStatusAndReason2 setNewDetails(ExpectedExecutionDetails2 newDetails) {
 		this.newDetails = newDetails;
 		return this;
 	}

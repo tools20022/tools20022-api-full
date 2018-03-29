@@ -130,7 +130,7 @@ public class CorporateActionRate3 {
 	 * definition} = "Annual rate of a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterest = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionRate3, Optional<RateAndAmountFormat3Choice>> mmInterest = new MMMessageAttribute<CorporateActionRate3, Optional<RateAndAmountFormat3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CashProceedsDefinition.mmInterest;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate3.mmObject();
@@ -143,6 +143,16 @@ public class CorporateActionRate3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RateAndAmountFormat3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateAndAmountFormat3Choice> getValue(CorporateActionRate3 obj) {
+			return obj.getInterest();
+		}
+
+		@Override
+		public void setValue(CorporateActionRate3 obj, Optional<RateAndAmountFormat3Choice> value) {
+			obj.setInterest(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PctgSght")
@@ -185,7 +195,7 @@ public class CorporateActionRate3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPercentageSought = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionRate3, Optional<RateFormat5Choice>> mmPercentageSought = new MMMessageAttribute<CorporateActionRate3, Optional<RateFormat5Choice>>() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmPercentageSought;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate3.mmObject();
@@ -198,6 +208,16 @@ public class CorporateActionRate3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RateFormat5Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateFormat5Choice> getValue(CorporateActionRate3 obj) {
+			return obj.getPercentageSought();
+		}
+
+		@Override
+		public void setValue(CorporateActionRate3 obj, Optional<RateFormat5Choice> value) {
+			obj.setPercentageSought(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RltdIndx")
@@ -240,7 +260,7 @@ public class CorporateActionRate3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRelatedIndex = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionRate3, Optional<RateFormat2Choice>> mmRelatedIndex = new MMMessageAttribute<CorporateActionRate3, Optional<RateFormat2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmRelatedIndex;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate3.mmObject();
@@ -253,6 +273,16 @@ public class CorporateActionRate3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RateFormat2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateFormat2Choice> getValue(CorporateActionRate3 obj) {
+			return obj.getRelatedIndex();
+		}
+
+		@Override
+		public void setValue(CorporateActionRate3 obj, Optional<RateFormat2Choice> value) {
+			obj.setRelatedIndex(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sprd")
@@ -293,7 +323,7 @@ public class CorporateActionRate3 {
 	 * definition} = "Margin allowed over or under a given rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSpread = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionRate3, Optional<RateFormat2Choice>> mmSpread = new MMMessageAttribute<CorporateActionRate3, Optional<RateFormat2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmSpread;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate3.mmObject();
@@ -306,6 +336,16 @@ public class CorporateActionRate3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RateFormat2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateFormat2Choice> getValue(CorporateActionRate3 obj) {
+			return obj.getSpread();
+		}
+
+		@Override
+		public void setValue(CorporateActionRate3 obj, Optional<RateFormat2Choice> value) {
+			obj.setSpread(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BidIntrvl")
@@ -346,7 +386,7 @@ public class CorporateActionRate3 {
 	 * definition} = "Acceptable price increment used for submitting a bid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBidInterval = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionRate3, Optional<RateAndAmountFormat3Choice>> mmBidInterval = new MMMessageAttribute<CorporateActionRate3, Optional<RateAndAmountFormat3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmBidInterval;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate3.mmObject();
@@ -359,6 +399,16 @@ public class CorporateActionRate3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RateAndAmountFormat3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateAndAmountFormat3Choice> getValue(CorporateActionRate3 obj) {
+			return obj.getBidInterval();
+		}
+
+		@Override
+		public void setValue(CorporateActionRate3 obj, Optional<RateAndAmountFormat3Choice> value) {
+			obj.setBidInterval(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsFctr")
@@ -401,7 +451,7 @@ public class CorporateActionRate3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreviousFactor = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionRate3, Optional<RateFormat3Choice>> mmPreviousFactor = new MMMessageAttribute<CorporateActionRate3, Optional<RateFormat3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmFactor;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate3.mmObject();
@@ -414,6 +464,16 @@ public class CorporateActionRate3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RateFormat3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateFormat3Choice> getValue(CorporateActionRate3 obj) {
+			return obj.getPreviousFactor();
+		}
+
+		@Override
+		public void setValue(CorporateActionRate3 obj, Optional<RateFormat3Choice> value) {
+			obj.setPreviousFactor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NxtFctr")
@@ -456,7 +516,7 @@ public class CorporateActionRate3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNextFactor = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionRate3, Optional<RateFormat3Choice>> mmNextFactor = new MMMessageAttribute<CorporateActionRate3, Optional<RateFormat3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmFactor;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate3.mmObject();
@@ -469,6 +529,16 @@ public class CorporateActionRate3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RateFormat3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateFormat3Choice> getValue(CorporateActionRate3 obj) {
+			return obj.getNextFactor();
+		}
+
+		@Override
+		public void setValue(CorporateActionRate3 obj, Optional<RateFormat3Choice> value) {
+			obj.setNextFactor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RinvstmtDscntRateToMkt")
@@ -511,7 +581,7 @@ public class CorporateActionRate3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReinvestmentDiscountRateToMarket = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionRate3, Optional<RateFormat2Choice>> mmReinvestmentDiscountRateToMarket = new MMMessageAttribute<CorporateActionRate3, Optional<RateFormat2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmReinvestmentDiscountToMarket;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate3.mmObject();
@@ -524,6 +594,16 @@ public class CorporateActionRate3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RateFormat2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateFormat2Choice> getValue(CorporateActionRate3 obj) {
+			return obj.getReinvestmentDiscountRateToMarket();
+		}
+
+		@Override
+		public void setValue(CorporateActionRate3 obj, Optional<RateFormat2Choice> value) {
+			obj.setReinvestmentDiscountRateToMarket(value.orElse(null));
 		}
 	};
 

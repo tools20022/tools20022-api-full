@@ -21,6 +21,8 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ParticipantAccount1;
+import com.tools20022.repository.msg.ParticipantInformation1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -97,7 +99,7 @@ public class ParticipantProfile1 {
 	 * definition} = "Participant information from participant profile."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParticipantInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ParticipantProfile1, ParticipantInformation1> mmParticipantInformation = new MMMessageAssociationEnd<ParticipantProfile1, ParticipantInformation1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantProfile1.mmObject();
 			isDerived = false;
@@ -108,11 +110,21 @@ public class ParticipantProfile1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ParticipantInformation1.mmObject();
+			type_lazy = () -> ParticipantInformation1.mmObject();
+		}
+
+		@Override
+		public ParticipantInformation1 getValue(ParticipantProfile1 obj) {
+			return obj.getParticipantInformation();
+		}
+
+		@Override
+		public void setValue(ParticipantProfile1 obj, ParticipantInformation1 value) {
+			obj.setParticipantInformation(value);
 		}
 	};
 	@XmlElement(name = "PtcptAcctInf")
-	protected List<com.tools20022.repository.msg.ParticipantAccount1> participantAccountInformation;
+	protected List<ParticipantAccount1> participantAccountInformation;
 	/**
 	 * 
 	 <p>
@@ -139,7 +151,7 @@ public class ParticipantProfile1 {
 	 * definition} = "Account information from participant."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParticipantAccountInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ParticipantProfile1, List<ParticipantAccount1>> mmParticipantAccountInformation = new MMMessageAssociationEnd<ParticipantProfile1, List<ParticipantAccount1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantProfile1.mmObject();
 			isDerived = false;
@@ -149,7 +161,17 @@ public class ParticipantProfile1 {
 			definition = "Account information from participant.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ParticipantAccount1.mmObject();
+			type_lazy = () -> ParticipantAccount1.mmObject();
+		}
+
+		@Override
+		public List<ParticipantAccount1> getValue(ParticipantProfile1 obj) {
+			return obj.getParticipantAccountInformation();
+		}
+
+		@Override
+		public void setValue(ParticipantProfile1 obj, List<ParticipantAccount1> value) {
+			obj.setParticipantAccountInformation(value);
 		}
 	};
 
@@ -170,7 +192,7 @@ public class ParticipantProfile1 {
 		return participantInformation;
 	}
 
-	public ParticipantProfile1 setParticipantInformation(com.tools20022.repository.msg.ParticipantInformation1 participantInformation) {
+	public ParticipantProfile1 setParticipantInformation(ParticipantInformation1 participantInformation) {
 		this.participantInformation = Objects.requireNonNull(participantInformation);
 		return this;
 	}
@@ -179,7 +201,7 @@ public class ParticipantProfile1 {
 		return participantAccountInformation == null ? participantAccountInformation = new ArrayList<>() : participantAccountInformation;
 	}
 
-	public ParticipantProfile1 setParticipantAccountInformation(List<com.tools20022.repository.msg.ParticipantAccount1> participantAccountInformation) {
+	public ParticipantProfile1 setParticipantAccountInformation(List<ParticipantAccount1> participantAccountInformation) {
 		this.participantAccountInformation = Objects.requireNonNull(participantAccountInformation);
 		return this;
 	}

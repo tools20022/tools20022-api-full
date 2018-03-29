@@ -135,7 +135,7 @@ public class CollateralProposal3Choice {
 	 * CollateralProposal2Choice.mmCollateralProposalDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCollateralProposalDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralProposal3Choice, CollateralProposal4> mmCollateralProposalDetails = new MMMessageAssociationEnd<CollateralProposal3Choice, CollateralProposal4>() {
 		{
 			businessElementTrace_lazy = () -> CollateralProposal.mmProposedCollateralMovement;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralProposal3Choice.mmObject();
@@ -150,6 +150,16 @@ public class CollateralProposal3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CollateralProposal4.mmObject();
+		}
+
+		@Override
+		public CollateralProposal4 getValue(CollateralProposal3Choice obj) {
+			return obj.getCollateralProposalDetails();
+		}
+
+		@Override
+		public void setValue(CollateralProposal3Choice obj, CollateralProposal4 value) {
+			obj.setCollateralProposalDetails(value);
 		}
 	};
 	@XmlElement(name = "SgrtdIndpdntAmt", required = true)
@@ -200,7 +210,7 @@ public class CollateralProposal3Choice {
 	 * CollateralProposal2Choice.mmSegregatedIndependentAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSegregatedIndependentAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralProposal3Choice, CollateralMovement5> mmSegregatedIndependentAmount = new MMMessageAssociationEnd<CollateralProposal3Choice, CollateralMovement5>() {
 		{
 			businessElementTrace_lazy = () -> CollateralMovement.mmSegregatedIndependentAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralProposal3Choice.mmObject();
@@ -215,6 +225,16 @@ public class CollateralProposal3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CollateralMovement5.mmObject();
+		}
+
+		@Override
+		public CollateralMovement5 getValue(CollateralProposal3Choice obj) {
+			return obj.getSegregatedIndependentAmount();
+		}
+
+		@Override
+		public void setValue(CollateralProposal3Choice obj, CollateralMovement5 value) {
+			obj.setSegregatedIndependentAmount(value);
 		}
 	};
 

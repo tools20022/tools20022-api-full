@@ -32,6 +32,7 @@ import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.entity.CorporateActionEventRegistration;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrumentDescription3;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -149,7 +150,7 @@ public class CorporateActionInformation2 {
 	 * definition} = "Identification of the issuer's agent or the issuer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAgentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInformation2, PartyIdentification2Choice> mmAgentIdentification = new MMMessageAttribute<CorporateActionInformation2, PartyIdentification2Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInformation2.mmObject();
@@ -161,6 +162,16 @@ public class CorporateActionInformation2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification2Choice getValue(CorporateActionInformation2 obj) {
+			return obj.getAgentIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionInformation2 obj, PartyIdentification2Choice value) {
+			obj.setAgentIdentification(value);
 		}
 	};
 	@XmlElement(name = "IssrCorpActnId", required = true)
@@ -198,7 +209,7 @@ public class CorporateActionInformation2 {
 	 * "Reference given to the event by the CA event issuer (agent)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuerCorporateActionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInformation2, Max35Text> mmIssuerCorporateActionIdentification = new MMMessageAttribute<CorporateActionInformation2, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmCorporateActionEventIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInformation2.mmObject();
@@ -210,6 +221,16 @@ public class CorporateActionInformation2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CorporateActionInformation2 obj) {
+			return obj.getIssuerCorporateActionIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionInformation2 obj, Max35Text value) {
+			obj.setIssuerCorporateActionIdentification(value);
 		}
 	};
 	@XmlElement(name = "CorpActnPrcgId")
@@ -248,7 +269,7 @@ public class CorporateActionInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCorporateActionProcessingIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInformation2, Optional<Max35Text>> mmCorporateActionProcessingIdentification = new MMMessageAttribute<CorporateActionInformation2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmCorporateActionEventIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInformation2.mmObject();
@@ -260,6 +281,16 @@ public class CorporateActionInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CorporateActionInformation2 obj) {
+			return obj.getCorporateActionProcessingIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionInformation2 obj, Optional<Max35Text> value) {
+			obj.setCorporateActionProcessingIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EvtTp", required = true)
@@ -297,7 +328,7 @@ public class CorporateActionInformation2 {
 	 * definition} = "Speficies the type of corporate event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInformation2, CorporateActionEventType2FormatChoice> mmEventType = new MMMessageAttribute<CorporateActionInformation2, CorporateActionEventType2FormatChoice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInformation2.mmObject();
@@ -309,6 +340,16 @@ public class CorporateActionInformation2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionEventType2FormatChoice.mmObject();
+		}
+
+		@Override
+		public CorporateActionEventType2FormatChoice getValue(CorporateActionInformation2 obj) {
+			return obj.getEventType();
+		}
+
+		@Override
+		public void setValue(CorporateActionInformation2 obj, CorporateActionEventType2FormatChoice value) {
+			obj.setEventType(value);
 		}
 	};
 	@XmlElement(name = "EvtPrcgTp")
@@ -346,7 +387,7 @@ public class CorporateActionInformation2 {
 	 * definition} = "Type of processing involved by a Corporate Action."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEventProcessingType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInformation2, Optional<CorporateActionEventProcessingType1FormatChoice>> mmEventProcessingType = new MMMessageAttribute<CorporateActionInformation2, Optional<CorporateActionEventProcessingType1FormatChoice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmEventProcessingType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInformation2.mmObject();
@@ -358,6 +399,16 @@ public class CorporateActionInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CorporateActionEventProcessingType1FormatChoice.mmObject();
+		}
+
+		@Override
+		public Optional<CorporateActionEventProcessingType1FormatChoice> getValue(CorporateActionInformation2 obj) {
+			return obj.getEventProcessingType();
+		}
+
+		@Override
+		public void setValue(CorporateActionInformation2 obj, Optional<CorporateActionEventProcessingType1FormatChoice> value) {
+			obj.setEventProcessingType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MndtryVlntryEvtTp", required = true)
@@ -397,7 +448,7 @@ public class CorporateActionInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMandatoryVoluntaryEventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInformation2, CorporateActionMandatoryVoluntary1FormatChoice> mmMandatoryVoluntaryEventType = new MMMessageAttribute<CorporateActionInformation2, CorporateActionMandatoryVoluntary1FormatChoice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmMandatoryVoluntaryEventType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInformation2.mmObject();
@@ -409,6 +460,16 @@ public class CorporateActionInformation2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionMandatoryVoluntary1FormatChoice.mmObject();
+		}
+
+		@Override
+		public CorporateActionMandatoryVoluntary1FormatChoice getValue(CorporateActionInformation2 obj) {
+			return obj.getMandatoryVoluntaryEventType();
+		}
+
+		@Override
+		public void setValue(CorporateActionInformation2 obj, CorporateActionMandatoryVoluntary1FormatChoice value) {
+			obj.setMandatoryVoluntaryEventType(value);
 		}
 	};
 	@XmlElement(name = "UndrlygScty", required = true)
@@ -448,7 +509,7 @@ public class CorporateActionInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnderlyingSecurity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInformation2, FinancialInstrumentDescription3> mmUnderlyingSecurity = new MMMessageAttribute<CorporateActionInformation2, FinancialInstrumentDescription3>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmUnderlyingSecurity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInformation2.mmObject();
@@ -459,11 +520,21 @@ public class CorporateActionInformation2 {
 			definition = "Identification of the underlying financial instrument, ie, the financial instrument affected by the corporate action event.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentDescription3.mmObject();
+			complexType_lazy = () -> FinancialInstrumentDescription3.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentDescription3 getValue(CorporateActionInformation2 obj) {
+			return obj.getUnderlyingSecurity();
+		}
+
+		@Override
+		public void setValue(CorporateActionInformation2 obj, FinancialInstrumentDescription3 value) {
+			obj.setUnderlyingSecurity(value);
 		}
 	};
 	@XmlElement(name = "OthrUndrlygScty")
-	protected List<com.tools20022.repository.msg.FinancialInstrumentDescription3> otherUnderlyingSecurity;
+	protected List<FinancialInstrumentDescription3> otherUnderlyingSecurity;
 	/**
 	 * 
 	 <p>
@@ -499,7 +570,7 @@ public class CorporateActionInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherUnderlyingSecurity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInformation2, List<FinancialInstrumentDescription3>> mmOtherUnderlyingSecurity = new MMMessageAttribute<CorporateActionInformation2, List<FinancialInstrumentDescription3>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmUnderlyingSecurity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInformation2.mmObject();
@@ -509,7 +580,17 @@ public class CorporateActionInformation2 {
 			name = "OtherUnderlyingSecurity";
 			definition = "Identification of the secondary underlying financial instrument, ie, the non-principal financial instrument affected by the corporate action event.";
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentDescription3.mmObject();
+			complexType_lazy = () -> FinancialInstrumentDescription3.mmObject();
+		}
+
+		@Override
+		public List<FinancialInstrumentDescription3> getValue(CorporateActionInformation2 obj) {
+			return obj.getOtherUnderlyingSecurity();
+		}
+
+		@Override
+		public void setValue(CorporateActionInformation2 obj, List<FinancialInstrumentDescription3> value) {
+			obj.setOtherUnderlyingSecurity(value);
 		}
 	};
 
@@ -590,7 +671,7 @@ public class CorporateActionInformation2 {
 		return underlyingSecurity;
 	}
 
-	public CorporateActionInformation2 setUnderlyingSecurity(com.tools20022.repository.msg.FinancialInstrumentDescription3 underlyingSecurity) {
+	public CorporateActionInformation2 setUnderlyingSecurity(FinancialInstrumentDescription3 underlyingSecurity) {
 		this.underlyingSecurity = Objects.requireNonNull(underlyingSecurity);
 		return this;
 	}
@@ -599,7 +680,7 @@ public class CorporateActionInformation2 {
 		return otherUnderlyingSecurity == null ? otherUnderlyingSecurity = new ArrayList<>() : otherUnderlyingSecurity;
 	}
 
-	public CorporateActionInformation2 setOtherUnderlyingSecurity(List<com.tools20022.repository.msg.FinancialInstrumentDescription3> otherUnderlyingSecurity) {
+	public CorporateActionInformation2 setOtherUnderlyingSecurity(List<FinancialInstrumentDescription3> otherUnderlyingSecurity) {
 		this.otherUnderlyingSecurity = Objects.requireNonNull(otherUnderlyingSecurity);
 		return this;
 	}

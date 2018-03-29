@@ -30,6 +30,7 @@ import com.tools20022.repository.entity.CorporateActionEntitlement;
 import com.tools20022.repository.entity.CorporateActionOption;
 import com.tools20022.repository.entity.DateTimePeriod;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CorporateActionEventDeadlines2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -128,7 +129,7 @@ public class InstructedCorporateActionOption9 {
 	 * "Number identifying the available corporate action options."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOptionNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstructedCorporateActionOption9, Optional<Exact3NumericText>> mmOptionNumber = new MMMessageAttribute<InstructedCorporateActionOption9, Optional<Exact3NumericText>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstructedCorporateActionOption9.mmObject();
@@ -141,6 +142,16 @@ public class InstructedCorporateActionOption9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Exact3NumericText> getValue(InstructedCorporateActionOption9 obj) {
+			return obj.getOptionNumber();
+		}
+
+		@Override
+		public void setValue(InstructedCorporateActionOption9 obj, Optional<Exact3NumericText> value) {
+			obj.setOptionNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OptnTp", required = true)
@@ -182,7 +193,7 @@ public class InstructedCorporateActionOption9 {
 	 * "Specifies the corporate action options available to the account owner."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOptionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstructedCorporateActionOption9, CorporateActionOption23Choice> mmOptionType = new MMMessageAttribute<InstructedCorporateActionOption9, CorporateActionOption23Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstructedCorporateActionOption9.mmObject();
@@ -195,6 +206,16 @@ public class InstructedCorporateActionOption9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionOption23Choice.mmObject();
+		}
+
+		@Override
+		public CorporateActionOption23Choice getValue(InstructedCorporateActionOption9 obj) {
+			return obj.getOptionType();
+		}
+
+		@Override
+		public void setValue(InstructedCorporateActionOption9 obj, CorporateActionOption23Choice value) {
+			obj.setOptionType(value);
 		}
 	};
 	@XmlElement(name = "InstdBal", required = true)
@@ -235,7 +256,7 @@ public class InstructedCorporateActionOption9 {
 	 * definition} = "Balance of instructed position."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructedBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstructedCorporateActionOption9, BalanceFormat7Choice> mmInstructedBalance = new MMMessageAttribute<InstructedCorporateActionOption9, BalanceFormat7Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmInstructedBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstructedCorporateActionOption9.mmObject();
@@ -248,6 +269,16 @@ public class InstructedCorporateActionOption9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> BalanceFormat7Choice.mmObject();
+		}
+
+		@Override
+		public BalanceFormat7Choice getValue(InstructedCorporateActionOption9 obj) {
+			return obj.getInstructedBalance();
+		}
+
+		@Override
+		public void setValue(InstructedCorporateActionOption9 obj, BalanceFormat7Choice value) {
+			obj.setInstructedBalance(value);
 		}
 	};
 	@XmlElement(name = "DfltActn")
@@ -283,7 +314,7 @@ public class InstructedCorporateActionOption9 {
 	 * "Indicates the default action related to a corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDefaultAction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InstructedCorporateActionOption9, Optional<DefaultProcessingOrStandingInstruction1Choice>> mmDefaultAction = new MMMessageAssociationEnd<InstructedCorporateActionOption9, Optional<DefaultProcessingOrStandingInstruction1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstructedCorporateActionOption9.mmObject();
 			isDerived = false;
@@ -296,6 +327,16 @@ public class InstructedCorporateActionOption9 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DefaultProcessingOrStandingInstruction1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DefaultProcessingOrStandingInstruction1Choice> getValue(InstructedCorporateActionOption9 obj) {
+			return obj.getDefaultAction();
+		}
+
+		@Override
+		public void setValue(InstructedCorporateActionOption9 obj, Optional<DefaultProcessingOrStandingInstruction1Choice> value) {
+			obj.setDefaultAction(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EvtDdlns", required = true)
@@ -334,7 +375,7 @@ public class InstructedCorporateActionOption9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEventDeadlines = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InstructedCorporateActionOption9, CorporateActionEventDeadlines2> mmEventDeadlines = new MMMessageAssociationEnd<InstructedCorporateActionOption9, CorporateActionEventDeadlines2>() {
 		{
 			businessComponentTrace_lazy = () -> DateTimePeriod.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstructedCorporateActionOption9.mmObject();
@@ -346,7 +387,17 @@ public class InstructedCorporateActionOption9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CorporateActionEventDeadlines2.mmObject();
+			type_lazy = () -> CorporateActionEventDeadlines2.mmObject();
+		}
+
+		@Override
+		public CorporateActionEventDeadlines2 getValue(InstructedCorporateActionOption9 obj) {
+			return obj.getEventDeadlines();
+		}
+
+		@Override
+		public void setValue(InstructedCorporateActionOption9 obj, CorporateActionEventDeadlines2 value) {
+			obj.setEventDeadlines(value);
 		}
 	};
 
@@ -406,7 +457,7 @@ public class InstructedCorporateActionOption9 {
 		return eventDeadlines;
 	}
 
-	public InstructedCorporateActionOption9 setEventDeadlines(com.tools20022.repository.msg.CorporateActionEventDeadlines2 eventDeadlines) {
+	public InstructedCorporateActionOption9 setEventDeadlines(CorporateActionEventDeadlines2 eventDeadlines) {
 		this.eventDeadlines = Objects.requireNonNull(eventDeadlines);
 		return this;
 	}

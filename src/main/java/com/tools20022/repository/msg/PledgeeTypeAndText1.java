@@ -110,7 +110,7 @@ public class PledgeeTypeAndText1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PledgeeTypeAndText1, Optional<Max35Text>> mmIdentification = new MMMessageAttribute<PledgeeTypeAndText1, Optional<Max35Text>>() {
 		{
 			businessComponentTrace_lazy = () -> Pledgee.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PledgeeTypeAndText1.mmObject();
@@ -122,6 +122,16 @@ public class PledgeeTypeAndText1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PledgeeTypeAndText1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(PledgeeTypeAndText1 obj, Optional<Max35Text> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PldgeeTp", required = true)
@@ -161,7 +171,7 @@ public class PledgeeTypeAndText1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPledgeeType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PledgeeTypeAndText1, PledgeeType1Code> mmPledgeeType = new MMMessageAttribute<PledgeeTypeAndText1, PledgeeType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Pledgee.mmPledgeeType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PledgeeTypeAndText1.mmObject();
@@ -173,6 +183,16 @@ public class PledgeeTypeAndText1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PledgeeType1Code.mmObject();
+		}
+
+		@Override
+		public PledgeeType1Code getValue(PledgeeTypeAndText1 obj) {
+			return obj.getPledgeeType();
+		}
+
+		@Override
+		public void setValue(PledgeeTypeAndText1 obj, PledgeeType1Code value) {
+			obj.setPledgeeType(value);
 		}
 	};
 

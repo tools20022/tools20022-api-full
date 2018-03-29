@@ -153,7 +153,7 @@ public class PendingCancellationStatusReason5 {
 	 * PendingCancellationStatusReason3.mmReasonCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReasonCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PendingCancellationStatusReason5, PendingCancellationReason3Choice> mmReasonCode = new MMMessageAssociationEnd<PendingCancellationStatusReason5, PendingCancellationReason3Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PendingCancellationStatusReason5.mmObject();
@@ -169,6 +169,16 @@ public class PendingCancellationStatusReason5 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PendingCancellationReason3Choice.mmObject();
+		}
+
+		@Override
+		public PendingCancellationReason3Choice getValue(PendingCancellationStatusReason5 obj) {
+			return obj.getReasonCode();
+		}
+
+		@Override
+		public void setValue(PendingCancellationStatusReason5 obj, PendingCancellationReason3Choice value) {
+			obj.setReasonCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -222,7 +232,7 @@ public class PendingCancellationStatusReason5 {
 	 * PendingCancellationStatusReason3.mmAdditionalReasonInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingCancellationStatusReason5, Optional<Max210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<PendingCancellationStatusReason5, Optional<Max210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PendingCancellationStatusReason5.mmObject();
@@ -237,6 +247,16 @@ public class PendingCancellationStatusReason5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max210Text> getValue(PendingCancellationStatusReason5 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(PendingCancellationStatusReason5 obj, Optional<Max210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

@@ -111,7 +111,7 @@ public class RejectionReason13FormatChoice {
 	 * "Standard code to specify the reason of a rejection of a movement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionReason13FormatChoice, RejectionReason13Code> mmCode = new MMMessageAttribute<RejectionReason13FormatChoice, RejectionReason13Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectionReason13FormatChoice.mmObject();
@@ -123,6 +123,16 @@ public class RejectionReason13FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RejectionReason13Code.mmObject();
+		}
+
+		@Override
+		public RejectionReason13Code getValue(RejectionReason13FormatChoice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RejectionReason13FormatChoice obj, RejectionReason13Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -161,7 +171,7 @@ public class RejectionReason13FormatChoice {
 	 * "Proprietary code to express the reason of a rejection of a movement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionReason13FormatChoice, GenericIdentification13> mmProprietary = new MMMessageAttribute<RejectionReason13FormatChoice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectionReason13FormatChoice.mmObject();
@@ -173,6 +183,16 @@ public class RejectionReason13FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(RejectionReason13FormatChoice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RejectionReason13FormatChoice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

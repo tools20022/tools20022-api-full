@@ -55,11 +55,15 @@ public class ConstraintTransShipmentRule {
 	 */
 	public static final MMConstraint<Baseline2> forBaseline2 = new MMConstraint<Baseline2>() {
 		{
-			validator = ConstraintTransShipmentRule::checkBaseline2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransShipmentRule";
 			definition = "If DataSetRequired/RequiredTransportDataSet is TRUE, then Goods/TransShipment is mandatory. If DataSetRequired/RequiredTransportDataSet is FALSE, then Goods/TransShipment is optional.";
 			owner_lazy = () -> Baseline2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Baseline2 obj) throws Exception {
+			checkBaseline2(obj);
 		}
 	};
 	/**
@@ -92,12 +96,16 @@ public class ConstraintTransShipmentRule {
 	 */
 	public static final MMConstraint<Baseline3> forBaseline3 = new MMConstraint<Baseline3>() {
 		{
-			validator = ConstraintTransShipmentRule::checkBaseline3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransShipmentRule";
 			definition = "If TransportDataSetRequired is present, then Goods/TransShipment is mandatory. If TransportDataSetRequired is absent, then Goods/TransShipment is optional.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTransShipmentRule.forBaseline4);
 			owner_lazy = () -> Baseline3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Baseline3 obj) throws Exception {
+			checkBaseline3(obj);
 		}
 	};
 	/**
@@ -135,13 +143,17 @@ public class ConstraintTransShipmentRule {
 	 */
 	public static final MMConstraint<Baseline4> forBaseline4 = new MMConstraint<Baseline4>() {
 		{
-			validator = ConstraintTransShipmentRule::checkBaseline4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransShipmentRule";
 			definition = "If TransportDataSetRequired is present, then Goods/TransShipment is mandatory. If TransportDataSetRequired is absent, then Goods/TransShipment is optional.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTransShipmentRule.forBaseline5);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTransShipmentRule.forBaseline3;
 			owner_lazy = () -> Baseline4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Baseline4 obj) throws Exception {
+			checkBaseline4(obj);
 		}
 	};
 	/**
@@ -171,12 +183,16 @@ public class ConstraintTransShipmentRule {
 	 */
 	public static final MMConstraint<Baseline5> forBaseline5 = new MMConstraint<Baseline5>() {
 		{
-			validator = ConstraintTransShipmentRule::checkBaseline5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransShipmentRule";
 			definition = "If TransportDataSetRequired is present, then Goods/TransShipment is mandatory. If TransportDataSetRequired is absent, then Goods/TransShipment is optional.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTransShipmentRule.forBaseline4;
 			owner_lazy = () -> Baseline5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Baseline5 obj) throws Exception {
+			checkBaseline5(obj);
 		}
 	};
 

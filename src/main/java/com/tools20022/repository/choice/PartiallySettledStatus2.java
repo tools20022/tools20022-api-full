@@ -24,8 +24,11 @@ import com.tools20022.repository.codeset.PartiallySettledStatusReason1Code;
 import com.tools20022.repository.entity.SecuritiesOrderStatus;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification13;
+import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Date;
+import java.util.function.Supplier;
 import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -59,8 +62,9 @@ import javax.xml.bind.annotation.XmlType;
  * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRemovalDate
+ * removalDate} = March 3, 2019</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "PartiallySettledStatus2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -107,7 +111,7 @@ public class PartiallySettledStatus2 {
 	 * definition} = "Reason for the partially settled status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartiallySettledStatus2, PartiallySettledStatusReason1Code> mmReason = new MMMessageAttribute<PartiallySettledStatus2, PartiallySettledStatusReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmPartiallySettledStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartiallySettledStatus2.mmObject();
@@ -119,6 +123,16 @@ public class PartiallySettledStatus2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PartiallySettledStatusReason1Code.mmObject();
+		}
+
+		@Override
+		public PartiallySettledStatusReason1Code getValue(PartiallySettledStatus2 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(PartiallySettledStatus2 obj, PartiallySettledStatusReason1Code value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -156,7 +170,7 @@ public class PartiallySettledStatus2 {
 	 * definition} = "Reason for the partially settled status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartiallySettledStatus2, GenericIdentification13> mmProprietary = new MMMessageAttribute<PartiallySettledStatus2, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmPartiallySettledStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartiallySettledStatus2.mmObject();
@@ -169,6 +183,16 @@ public class PartiallySettledStatus2 {
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
 		}
+
+		@Override
+		public GenericIdentification13 getValue(PartiallySettledStatus2 obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(PartiallySettledStatus2 obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
+		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
@@ -177,7 +201,14 @@ public class PartiallySettledStatus2 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartiallySettledStatus2.mmReason, com.tools20022.repository.choice.PartiallySettledStatus2.mmProprietary);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
+				removalDate = ((Supplier<Date>) (() -> {
+					try {
+						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("March 3, 2019");
+					} catch (Exception e) {
+						throw new RuntimeException(e);
+					}
+				})).get();
 				name = "PartiallySettledStatus2";
 				definition = "Partially settled status reason.";
 			}

@@ -133,7 +133,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReceivedEventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RelatedCustodianMessageDetailsSD1, Max4AlphaNumericText> mmReceivedEventType = new MMMessageAttribute<RelatedCustodianMessageDetailsSD1, Max4AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.mmObject();
 			isDerived = false;
@@ -145,6 +145,16 @@ public class RelatedCustodianMessageDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max4AlphaNumericText getValue(RelatedCustodianMessageDetailsSD1 obj) {
+			return obj.getReceivedEventType();
+		}
+
+		@Override
+		public void setValue(RelatedCustodianMessageDetailsSD1 obj, Max4AlphaNumericText value) {
+			obj.setReceivedEventType(value);
 		}
 	};
 	@XmlElement(name = "RcvdMndtryVlntryEvtTp", required = true)
@@ -182,7 +192,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReceivedMandatoryVoluntaryEventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RelatedCustodianMessageDetailsSD1, Max4AlphaNumericText> mmReceivedMandatoryVoluntaryEventType = new MMMessageAttribute<RelatedCustodianMessageDetailsSD1, Max4AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.mmObject();
 			isDerived = false;
@@ -194,6 +204,16 @@ public class RelatedCustodianMessageDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max4AlphaNumericText getValue(RelatedCustodianMessageDetailsSD1 obj) {
+			return obj.getReceivedMandatoryVoluntaryEventType();
+		}
+
+		@Override
+		public void setValue(RelatedCustodianMessageDetailsSD1 obj, Max4AlphaNumericText value) {
+			obj.setReceivedMandatoryVoluntaryEventType(value);
 		}
 	};
 	@XmlElement(name = "RcvdCorpActnEvtId", required = true)
@@ -231,7 +251,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReceivedCorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RelatedCustodianMessageDetailsSD1, RestrictedFINXMax16Text> mmReceivedCorporateActionEventIdentification = new MMMessageAttribute<RelatedCustodianMessageDetailsSD1, RestrictedFINXMax16Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.mmObject();
 			isDerived = false;
@@ -243,6 +263,16 @@ public class RelatedCustodianMessageDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(RelatedCustodianMessageDetailsSD1 obj) {
+			return obj.getReceivedCorporateActionEventIdentification();
+		}
+
+		@Override
+		public void setValue(RelatedCustodianMessageDetailsSD1 obj, RestrictedFINXMax16Text value) {
+			obj.setReceivedCorporateActionEventIdentification(value);
 		}
 	};
 	@XmlElement(name = "RcvdDt", required = true)
@@ -279,7 +309,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReceivedDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RelatedCustodianMessageDetailsSD1, ISODate> mmReceivedDate = new MMMessageAttribute<RelatedCustodianMessageDetailsSD1, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.mmObject();
 			isDerived = false;
@@ -291,6 +321,16 @@ public class RelatedCustodianMessageDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(RelatedCustodianMessageDetailsSD1 obj) {
+			return obj.getReceivedDate();
+		}
+
+		@Override
+		public void setValue(RelatedCustodianMessageDetailsSD1 obj, ISODate value) {
+			obj.setReceivedDate(value);
 		}
 	};
 	@XmlElement(name = "RcvdTm")
@@ -327,7 +367,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReceivedTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RelatedCustodianMessageDetailsSD1, Optional<ISOTime>> mmReceivedTime = new MMMessageAttribute<RelatedCustodianMessageDetailsSD1, Optional<ISOTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.mmObject();
 			isDerived = false;
@@ -339,6 +379,16 @@ public class RelatedCustodianMessageDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISOTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISOTime> getValue(RelatedCustodianMessageDetailsSD1 obj) {
+			return obj.getReceivedTime();
+		}
+
+		@Override
+		public void setValue(RelatedCustodianMessageDetailsSD1 obj, Optional<ISOTime> value) {
+			obj.setReceivedTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InbndISOMT", required = true)
@@ -376,7 +426,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInboundISOMessageType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RelatedCustodianMessageDetailsSD1, Exact3NumericText> mmInboundISOMessageType = new MMMessageAttribute<RelatedCustodianMessageDetailsSD1, Exact3NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.mmObject();
 			isDerived = false;
@@ -388,6 +438,16 @@ public class RelatedCustodianMessageDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
+		}
+
+		@Override
+		public Exact3NumericText getValue(RelatedCustodianMessageDetailsSD1 obj) {
+			return obj.getInboundISOMessageType();
+		}
+
+		@Override
+		public void setValue(RelatedCustodianMessageDetailsSD1 obj, Exact3NumericText value) {
+			obj.setInboundISOMessageType(value);
 		}
 	};
 	@XmlElement(name = "InbndISOMsgRcvrBIC", required = true)
@@ -425,7 +485,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInboundISOMessageReceiverBIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RelatedCustodianMessageDetailsSD1, AnyBICIdentifier> mmInboundISOMessageReceiverBIC = new MMMessageAttribute<RelatedCustodianMessageDetailsSD1, AnyBICIdentifier>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.mmObject();
 			isDerived = false;
@@ -437,6 +497,16 @@ public class RelatedCustodianMessageDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public AnyBICIdentifier getValue(RelatedCustodianMessageDetailsSD1 obj) {
+			return obj.getInboundISOMessageReceiverBIC();
+		}
+
+		@Override
+		public void setValue(RelatedCustodianMessageDetailsSD1 obj, AnyBICIdentifier value) {
+			obj.setInboundISOMessageReceiverBIC(value);
 		}
 	};
 	@XmlElement(name = "RcvdRltdRef", required = true)
@@ -474,7 +544,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReceivedRelatedReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RelatedCustodianMessageDetailsSD1, RestrictedFINXMax16Text> mmReceivedRelatedReference = new MMMessageAttribute<RelatedCustodianMessageDetailsSD1, RestrictedFINXMax16Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.mmObject();
 			isDerived = false;
@@ -486,6 +556,16 @@ public class RelatedCustodianMessageDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(RelatedCustodianMessageDetailsSD1 obj) {
+			return obj.getReceivedRelatedReference();
+		}
+
+		@Override
+		public void setValue(RelatedCustodianMessageDetailsSD1 obj, RestrictedFINXMax16Text value) {
+			obj.setReceivedRelatedReference(value);
 		}
 	};
 	@XmlElement(name = "RcvdSndrMsgRef", required = true)
@@ -523,7 +603,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReceivedSenderMessageReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RelatedCustodianMessageDetailsSD1, RestrictedFINXMax16Text> mmReceivedSenderMessageReference = new MMMessageAttribute<RelatedCustodianMessageDetailsSD1, RestrictedFINXMax16Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.mmObject();
 			isDerived = false;
@@ -535,6 +615,16 @@ public class RelatedCustodianMessageDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(RelatedCustodianMessageDetailsSD1 obj) {
+			return obj.getReceivedSenderMessageReference();
+		}
+
+		@Override
+		public void setValue(RelatedCustodianMessageDetailsSD1 obj, RestrictedFINXMax16Text value) {
+			obj.setReceivedSenderMessageReference(value);
 		}
 	};
 	@XmlElement(name = "InbndISOMsgSndrBIC", required = true)
@@ -572,7 +662,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInboundISOMessageSenderBIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RelatedCustodianMessageDetailsSD1, AnyBICIdentifier> mmInboundISOMessageSenderBIC = new MMMessageAttribute<RelatedCustodianMessageDetailsSD1, AnyBICIdentifier>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.mmObject();
 			isDerived = false;
@@ -584,6 +674,16 @@ public class RelatedCustodianMessageDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public AnyBICIdentifier getValue(RelatedCustodianMessageDetailsSD1 obj) {
+			return obj.getInboundISOMessageSenderBIC();
+		}
+
+		@Override
+		public void setValue(RelatedCustodianMessageDetailsSD1 obj, AnyBICIdentifier value) {
+			obj.setInboundISOMessageSenderBIC(value);
 		}
 	};
 

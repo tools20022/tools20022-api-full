@@ -55,11 +55,15 @@ public class ConstraintDeemedRate2Rule {
 	 */
 	public static final MMConstraint<RateDetails31> forRateDetails31 = new MMConstraint<RateDetails31>() {
 		{
-			validator = ConstraintDeemedRate2Rule::checkRateDetails31;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeemedRate2Rule";
 			definition = "Only a single occurrence of either DeemedRate/Amount or DeemedRate/Rate or DeemedRate/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 564 NVR C7).";
 			owner_lazy = () -> RateDetails31.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateDetails31 obj) throws Exception {
+			checkRateDetails31(obj);
 		}
 	};
 	/**
@@ -84,11 +88,15 @@ public class ConstraintDeemedRate2Rule {
 	 */
 	public static final MMConstraint<RateDetails32> forRateDetails32 = new MMConstraint<RateDetails32>() {
 		{
-			validator = ConstraintDeemedRate2Rule::checkRateDetails32;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeemedRate2Rule";
 			definition = "Only a single occurrence of either DeemedRate/Amount or DeemedRate/Rate may be present, only one of those elements may be present. \r\n(MT 566 NVR C3).";
 			owner_lazy = () -> RateDetails32.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateDetails32 obj) throws Exception {
+			checkRateDetails32(obj);
 		}
 	};
 	/**
@@ -113,11 +121,15 @@ public class ConstraintDeemedRate2Rule {
 	 */
 	public static final MMConstraint<RateDetails33> forRateDetails33 = new MMConstraint<RateDetails33>() {
 		{
-			validator = ConstraintDeemedRate2Rule::checkRateDetails33;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeemedRate2Rule";
 			definition = "Only a single occurrence of either DeemedRate/Amount or DeemedRate/Rate may be present, only one of those elements may be present. \r\n(MT 566 NVR C3).";
 			owner_lazy = () -> RateDetails33.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateDetails33 obj) throws Exception {
+			checkRateDetails33(obj);
 		}
 	};
 	/**
@@ -142,11 +154,15 @@ public class ConstraintDeemedRate2Rule {
 	 */
 	public static final MMConstraint<RateDetails34> forRateDetails34 = new MMConstraint<RateDetails34>() {
 		{
-			validator = ConstraintDeemedRate2Rule::checkRateDetails34;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeemedRate2Rule";
 			definition = "Only a single occurrence of either DeemedRate/Amount or DeemedRate/Rate or DeemedRate/NotSpecifiedRate may be present, only one of these elements may be present. \r\n(MT 564 NVR C7).";
 			owner_lazy = () -> RateDetails34.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateDetails34 obj) throws Exception {
+			checkRateDetails34(obj);
 		}
 	};
 

@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.SafekeepingPlace;
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -152,7 +153,7 @@ public class FinancialInstrumentDetails20 {
 	 * FinancialInstrumentDetails17.mmFinancialInstrumentIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentDetails20, SecurityIdentification19> mmFinancialInstrumentIdentification = new MMMessageAssociationEnd<FinancialInstrumentDetails20, SecurityIdentification19>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentDetails20.mmObject();
@@ -166,7 +167,17 @@ public class FinancialInstrumentDetails20 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification19.mmObject();
+			type_lazy = () -> SecurityIdentification19.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification19 getValue(FinancialInstrumentDetails20 obj) {
+			return obj.getFinancialInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentDetails20 obj, SecurityIdentification19 value) {
+			obj.setFinancialInstrumentIdentification(value);
 		}
 	};
 	@XmlElement(name = "PricDtls")
@@ -215,7 +226,7 @@ public class FinancialInstrumentDetails20 {
 	 * FinancialInstrumentDetails17.mmPriceDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPriceDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentDetails20, Optional<PriceInformation13>> mmPriceDetails = new MMMessageAssociationEnd<FinancialInstrumentDetails20, Optional<PriceInformation13>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmPricing;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentDetails20.mmObject();
@@ -229,7 +240,17 @@ public class FinancialInstrumentDetails20 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PriceInformation13.mmObject();
+			type_lazy = () -> PriceInformation13.mmObject();
+		}
+
+		@Override
+		public Optional<PriceInformation13> getValue(FinancialInstrumentDetails20 obj) {
+			return obj.getPriceDetails();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentDetails20 obj, Optional<PriceInformation13> value) {
+			obj.setPriceDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SfkpgPlc")
@@ -280,7 +301,7 @@ public class FinancialInstrumentDetails20 {
 	 * FinancialInstrumentDetails17.mmSafekeepingPlace}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSafekeepingPlace = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentDetails20, Optional<SafeKeepingPlace1>> mmSafekeepingPlace = new MMMessageAssociationEnd<FinancialInstrumentDetails20, Optional<SafeKeepingPlace1>>() {
 		{
 			businessComponentTrace_lazy = () -> SafekeepingPlace.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentDetails20.mmObject();
@@ -294,7 +315,17 @@ public class FinancialInstrumentDetails20 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SafeKeepingPlace1.mmObject();
+			type_lazy = () -> SafeKeepingPlace1.mmObject();
+		}
+
+		@Override
+		public Optional<SafeKeepingPlace1> getValue(FinancialInstrumentDetails20 obj) {
+			return obj.getSafekeepingPlace();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentDetails20 obj, Optional<SafeKeepingPlace1> value) {
+			obj.setSafekeepingPlace(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OpngBal")
@@ -345,7 +376,7 @@ public class FinancialInstrumentDetails20 {
 	 * FinancialInstrumentDetails17.mmOpeningBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOpeningBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentDetails20, Optional<OpeningBalance3>> mmOpeningBalance = new MMMessageAssociationEnd<FinancialInstrumentDetails20, Optional<OpeningBalance3>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmAggregateQuantityBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentDetails20.mmObject();
@@ -359,7 +390,17 @@ public class FinancialInstrumentDetails20 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OpeningBalance3.mmObject();
+			type_lazy = () -> OpeningBalance3.mmObject();
+		}
+
+		@Override
+		public Optional<OpeningBalance3> getValue(FinancialInstrumentDetails20 obj) {
+			return obj.getOpeningBalance();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentDetails20 obj, Optional<OpeningBalance3> value) {
+			obj.setOpeningBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClsgBal")
@@ -410,7 +451,7 @@ public class FinancialInstrumentDetails20 {
 	 * FinancialInstrumentDetails17.mmClosingBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmClosingBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentDetails20, Optional<ClosingBalance3>> mmClosingBalance = new MMMessageAssociationEnd<FinancialInstrumentDetails20, Optional<ClosingBalance3>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmAggregateQuantityBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentDetails20.mmObject();
@@ -424,11 +465,21 @@ public class FinancialInstrumentDetails20 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ClosingBalance3.mmObject();
+			type_lazy = () -> ClosingBalance3.mmObject();
+		}
+
+		@Override
+		public Optional<ClosingBalance3> getValue(FinancialInstrumentDetails20 obj) {
+			return obj.getClosingBalance();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentDetails20 obj, Optional<ClosingBalance3> value) {
+			obj.setClosingBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tx", required = true)
-	protected List<com.tools20022.repository.msg.Transaction46> transaction;
+	protected List<Transaction46> transaction;
 	/**
 	 * 
 	 <p>
@@ -473,7 +524,7 @@ public class FinancialInstrumentDetails20 {
 	 * FinancialInstrumentDetails17.mmTransaction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentDetails20, List<Transaction46>> mmTransaction = new MMMessageAssociationEnd<FinancialInstrumentDetails20, List<Transaction46>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmTrade;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentDetails20.mmObject();
@@ -486,7 +537,17 @@ public class FinancialInstrumentDetails20 {
 			previousVersion_lazy = () -> FinancialInstrumentDetails17.mmTransaction;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Transaction46.mmObject();
+			type_lazy = () -> Transaction46.mmObject();
+		}
+
+		@Override
+		public List<Transaction46> getValue(FinancialInstrumentDetails20 obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentDetails20 obj, List<Transaction46> value) {
+			obj.setTransaction(value);
 		}
 	};
 
@@ -513,7 +574,7 @@ public class FinancialInstrumentDetails20 {
 		return financialInstrumentIdentification;
 	}
 
-	public FinancialInstrumentDetails20 setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification19 financialInstrumentIdentification) {
+	public FinancialInstrumentDetails20 setFinancialInstrumentIdentification(SecurityIdentification19 financialInstrumentIdentification) {
 		this.financialInstrumentIdentification = Objects.requireNonNull(financialInstrumentIdentification);
 		return this;
 	}
@@ -522,7 +583,7 @@ public class FinancialInstrumentDetails20 {
 		return priceDetails == null ? Optional.empty() : Optional.of(priceDetails);
 	}
 
-	public FinancialInstrumentDetails20 setPriceDetails(com.tools20022.repository.msg.PriceInformation13 priceDetails) {
+	public FinancialInstrumentDetails20 setPriceDetails(PriceInformation13 priceDetails) {
 		this.priceDetails = priceDetails;
 		return this;
 	}
@@ -531,7 +592,7 @@ public class FinancialInstrumentDetails20 {
 		return safekeepingPlace == null ? Optional.empty() : Optional.of(safekeepingPlace);
 	}
 
-	public FinancialInstrumentDetails20 setSafekeepingPlace(com.tools20022.repository.msg.SafeKeepingPlace1 safekeepingPlace) {
+	public FinancialInstrumentDetails20 setSafekeepingPlace(SafeKeepingPlace1 safekeepingPlace) {
 		this.safekeepingPlace = safekeepingPlace;
 		return this;
 	}
@@ -540,7 +601,7 @@ public class FinancialInstrumentDetails20 {
 		return openingBalance == null ? Optional.empty() : Optional.of(openingBalance);
 	}
 
-	public FinancialInstrumentDetails20 setOpeningBalance(com.tools20022.repository.msg.OpeningBalance3 openingBalance) {
+	public FinancialInstrumentDetails20 setOpeningBalance(OpeningBalance3 openingBalance) {
 		this.openingBalance = openingBalance;
 		return this;
 	}
@@ -549,7 +610,7 @@ public class FinancialInstrumentDetails20 {
 		return closingBalance == null ? Optional.empty() : Optional.of(closingBalance);
 	}
 
-	public FinancialInstrumentDetails20 setClosingBalance(com.tools20022.repository.msg.ClosingBalance3 closingBalance) {
+	public FinancialInstrumentDetails20 setClosingBalance(ClosingBalance3 closingBalance) {
 		this.closingBalance = closingBalance;
 		return this;
 	}
@@ -558,7 +619,7 @@ public class FinancialInstrumentDetails20 {
 		return transaction == null ? transaction = new ArrayList<>() : transaction;
 	}
 
-	public FinancialInstrumentDetails20 setTransaction(List<com.tools20022.repository.msg.Transaction46> transaction) {
+	public FinancialInstrumentDetails20 setTransaction(List<Transaction46> transaction) {
 		this.transaction = Objects.requireNonNull(transaction);
 		return this;
 	}

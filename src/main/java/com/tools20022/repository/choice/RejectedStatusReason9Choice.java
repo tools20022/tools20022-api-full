@@ -112,7 +112,7 @@ public class RejectedStatusReason9Choice {
 	 * definition} = "Reason for the rejected status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectedStatusReason9Choice, RejectedStatusReason9Code> mmReason = new MMMessageAttribute<RejectedStatusReason9Choice, RejectedStatusReason9Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectedStatusReason9Choice.mmObject();
@@ -124,6 +124,16 @@ public class RejectedStatusReason9Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RejectedStatusReason9Code.mmObject();
+		}
+
+		@Override
+		public RejectedStatusReason9Code getValue(RejectedStatusReason9Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(RejectedStatusReason9Choice obj, RejectedStatusReason9Code value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "XtndedRsn", required = true)
@@ -156,7 +166,7 @@ public class RejectedStatusReason9Choice {
 	 * definition} = "Reason for the rejected status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectedStatusReason9Choice, Extended350Code> mmExtendedReason = new MMMessageAttribute<RejectedStatusReason9Choice, Extended350Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectedStatusReason9Choice.mmObject();
 			isDerived = false;
@@ -167,6 +177,16 @@ public class RejectedStatusReason9Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Extended350Code getValue(RejectedStatusReason9Choice obj) {
+			return obj.getExtendedReason();
+		}
+
+		@Override
+		public void setValue(RejectedStatusReason9Choice obj, Extended350Code value) {
+			obj.setExtendedReason(value);
 		}
 	};
 	@XmlElement(name = "DataSrcSchme", required = true)
@@ -203,7 +223,7 @@ public class RejectedStatusReason9Choice {
 	 * "Proprietary identification of the reason for the rejected status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RejectedStatusReason9Choice, GenericIdentification1> mmDataSourceScheme = new MMMessageAssociationEnd<RejectedStatusReason9Choice, GenericIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectedStatusReason9Choice.mmObject();
@@ -216,6 +236,16 @@ public class RejectedStatusReason9Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(RejectedStatusReason9Choice obj) {
+			return obj.getDataSourceScheme();
+		}
+
+		@Override
+		public void setValue(RejectedStatusReason9Choice obj, GenericIdentification1 value) {
+			obj.setDataSourceScheme(value);
 		}
 	};
 

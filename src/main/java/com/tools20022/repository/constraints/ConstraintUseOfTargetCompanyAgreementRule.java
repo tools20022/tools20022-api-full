@@ -51,11 +51,15 @@ public class ConstraintUseOfTargetCompanyAgreementRule {
 	 */
 	public static final MMConstraint<CorporateAction6SD1> forCorporateAction6SD1 = new MMConstraint<CorporateAction6SD1>() {
 		{
-			validator = ConstraintUseOfTargetCompanyAgreementRule::checkCorporateAction6SD1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UseOfTargetCompanyAgreementRule";
 			definition = "TargetCompanyAgreement can only be used when the corporate action event type code is TEND.";
 			owner_lazy = () -> CorporateAction6SD1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateAction6SD1 obj) throws Exception {
+			checkCorporateAction6SD1(obj);
 		}
 	};
 

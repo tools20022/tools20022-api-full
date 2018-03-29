@@ -123,7 +123,7 @@ public class NonDisclosedBid2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBidByCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NonDisclosedBid2, Optional<CountryCode>> mmBidByCurrency = new MMMessageAttribute<NonDisclosedBid2, Optional<CountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> NonDisclosedListTrading.mmBidByCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NonDisclosedBid2.mmObject();
@@ -136,6 +136,16 @@ public class NonDisclosedBid2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(NonDisclosedBid2 obj) {
+			return obj.getBidByCurrency();
+		}
+
+		@Override
+		public void setValue(NonDisclosedBid2 obj, Optional<CountryCode> value) {
+			obj.setBidByCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BidBySctr")
@@ -177,7 +187,7 @@ public class NonDisclosedBid2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBidBySector = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NonDisclosedBid2, Optional<Max128Text>> mmBidBySector = new MMMessageAttribute<NonDisclosedBid2, Optional<Max128Text>>() {
 		{
 			businessElementTrace_lazy = () -> NonDisclosedListTrading.mmBidBySector;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NonDisclosedBid2.mmObject();
@@ -190,6 +200,16 @@ public class NonDisclosedBid2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max128Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max128Text> getValue(NonDisclosedBid2 obj) {
+			return obj.getBidBySector();
+		}
+
+		@Override
+		public void setValue(NonDisclosedBid2 obj, Optional<Max128Text> value) {
+			obj.setBidBySector(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BidByIndx")
@@ -228,7 +248,7 @@ public class NonDisclosedBid2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBidByIndex = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NonDisclosedBid2, Optional<Max128Text>> mmBidByIndex = new MMMessageAttribute<NonDisclosedBid2, Optional<Max128Text>>() {
 		{
 			businessElementTrace_lazy = () -> NonDisclosedListTrading.mmBidByIndex;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NonDisclosedBid2.mmObject();
@@ -240,6 +260,16 @@ public class NonDisclosedBid2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max128Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max128Text> getValue(NonDisclosedBid2 obj) {
+			return obj.getBidByIndex();
+		}
+
+		@Override
+		public void setValue(NonDisclosedBid2 obj, Optional<Max128Text> value) {
+			obj.setBidByIndex(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FairVal")
@@ -282,7 +312,7 @@ public class NonDisclosedBid2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFairValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NonDisclosedBid2, Optional<ActiveCurrencyAndAmount>> mmFairValue = new MMMessageAttribute<NonDisclosedBid2, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> ExchangeForPhysicalTrade.mmFairValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NonDisclosedBid2.mmObject();
@@ -295,6 +325,16 @@ public class NonDisclosedBid2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(NonDisclosedBid2 obj) {
+			return obj.getFairValue();
+		}
+
+		@Override
+		public void setValue(NonDisclosedBid2 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setFairValue(value.orElse(null));
 		}
 	};
 

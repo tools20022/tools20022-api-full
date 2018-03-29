@@ -108,7 +108,7 @@ public class RateType24Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateType24Choice, GrossDividendRateType3Code> mmCode = new MMMessageAttribute<RateType24Choice, GrossDividendRateType3Code>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmRateType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateType24Choice.mmObject();
@@ -120,6 +120,16 @@ public class RateType24Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> GrossDividendRateType3Code.mmObject();
+		}
+
+		@Override
+		public GrossDividendRateType3Code getValue(RateType24Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RateType24Choice obj, GrossDividendRateType3Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -157,7 +167,7 @@ public class RateType24Choice {
 	 * "Proprietary identification of the type of gross dividend rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RateType24Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<RateType24Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmRateType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateType24Choice.mmObject();
@@ -170,6 +180,16 @@ public class RateType24Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(RateType24Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RateType24Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

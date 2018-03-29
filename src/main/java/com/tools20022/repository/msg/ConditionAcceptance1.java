@@ -102,7 +102,7 @@ public class ConditionAcceptance1 {
 	 * definition} = "Identification of the condition number."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmConditionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConditionAcceptance1, Max1NumericText> mmConditionIdentification = new MMMessageAttribute<ConditionAcceptance1, Max1NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConditionAcceptance1.mmObject();
 			isDerived = false;
@@ -114,6 +114,16 @@ public class ConditionAcceptance1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max1NumericText.mmObject();
+		}
+
+		@Override
+		public Max1NumericText getValue(ConditionAcceptance1 obj) {
+			return obj.getConditionIdentification();
+		}
+
+		@Override
+		public void setValue(ConditionAcceptance1 obj, Max1NumericText value) {
+			obj.setConditionIdentification(value);
 		}
 	};
 	@XmlElement(name = "AccptncFlg", required = true)
@@ -149,7 +159,7 @@ public class ConditionAcceptance1 {
 	 * definition} = "Indicates whether the condition is accepted or not."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAcceptanceFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConditionAcceptance1, YesNoIndicator> mmAcceptanceFlag = new MMMessageAttribute<ConditionAcceptance1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConditionAcceptance1.mmObject();
 			isDerived = false;
@@ -161,6 +171,16 @@ public class ConditionAcceptance1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(ConditionAcceptance1 obj) {
+			return obj.getAcceptanceFlag();
+		}
+
+		@Override
+		public void setValue(ConditionAcceptance1 obj, YesNoIndicator value) {
+			obj.setAcceptanceFlag(value);
 		}
 	};
 

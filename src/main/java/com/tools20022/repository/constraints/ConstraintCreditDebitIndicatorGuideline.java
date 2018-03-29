@@ -51,11 +51,15 @@ public class ConstraintCreditDebitIndicatorGuideline {
 	 */
 	public static final MMConstraint<Transaction3> forTransaction3 = new MMConstraint<Transaction3>() {
 		{
-			validator = ConstraintCreditDebitIndicatorGuideline::checkTransaction3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicatorGuideline";
 			definition = "The CreditDebitIndicator may be omitted for optimisation reason if the CreditDebitIndicator is used in the search criteria of the related query.";
 			owner_lazy = () -> Transaction3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction3 obj) throws Exception {
+			checkTransaction3(obj);
 		}
 	};
 	/**
@@ -80,11 +84,15 @@ public class ConstraintCreditDebitIndicatorGuideline {
 	 */
 	public static final MMConstraint<Transaction4> forTransaction4 = new MMConstraint<Transaction4>() {
 		{
-			validator = ConstraintCreditDebitIndicatorGuideline::checkTransaction4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicatorGuideline";
 			definition = "The CreditDebitIndicator may be omitted for optimisation reason if the CreditDebitIndicator is used in the search criteria of the related query.";
 			owner_lazy = () -> Transaction4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction4 obj) throws Exception {
+			checkTransaction4(obj);
 		}
 	};
 	/**
@@ -109,11 +117,15 @@ public class ConstraintCreditDebitIndicatorGuideline {
 	 */
 	public static final MMConstraint<Transaction5> forTransaction5 = new MMConstraint<Transaction5>() {
 		{
-			validator = ConstraintCreditDebitIndicatorGuideline::checkTransaction5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicatorGuideline";
 			definition = "The CreditDebitIndicator may be omitted for optimisation reason if the CreditDebitIndicator is used in the search criteria of the related query.";
 			owner_lazy = () -> Transaction5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction5 obj) throws Exception {
+			checkTransaction5(obj);
 		}
 	};
 	/**
@@ -146,12 +158,16 @@ public class ConstraintCreditDebitIndicatorGuideline {
 	 */
 	public static final MMConstraint<Transaction24> forTransaction24 = new MMConstraint<Transaction24>() {
 		{
-			validator = ConstraintCreditDebitIndicatorGuideline::checkTransaction24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicatorGuideline";
 			definition = "The CreditDebitIndicator may be omitted for optimisation reason if the CreditDebitIndicator is used in the search criteria of the related query.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCreditDebitIndicatorGuideline.forTransaction33);
 			owner_lazy = () -> Transaction24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction24 obj) throws Exception {
+			checkTransaction24(obj);
 		}
 	};
 	/**
@@ -177,11 +193,15 @@ public class ConstraintCreditDebitIndicatorGuideline {
 	 */
 	public static final MMConstraint<TotalsPerBankTransactionCode2> forTotalsPerBankTransactionCode2 = new MMConstraint<TotalsPerBankTransactionCode2>() {
 		{
-			validator = ConstraintCreditDebitIndicatorGuideline::checkTotalsPerBankTransactionCode2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicatorGuideline";
 			definition = "If TotalNetEntryAmount is present, then CreditDebitIndicator should be present.";
 			owner_lazy = () -> TotalsPerBankTransactionCode2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TotalsPerBankTransactionCode2 obj) throws Exception {
+			checkTotalsPerBankTransactionCode2(obj);
 		}
 	};
 	/**
@@ -207,11 +227,15 @@ public class ConstraintCreditDebitIndicatorGuideline {
 	 */
 	public static final MMConstraint<NumberAndSumOfTransactions3> forNumberAndSumOfTransactions3 = new MMConstraint<NumberAndSumOfTransactions3>() {
 		{
-			validator = ConstraintCreditDebitIndicatorGuideline::checkNumberAndSumOfTransactions3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicatorGuideline";
 			definition = "CreditDebitIndicator should be present when TotalNetEntryAmount is present.";
 			owner_lazy = () -> NumberAndSumOfTransactions3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(NumberAndSumOfTransactions3 obj) throws Exception {
+			checkNumberAndSumOfTransactions3(obj);
 		}
 	};
 	/**
@@ -249,13 +273,17 @@ public class ConstraintCreditDebitIndicatorGuideline {
 	 */
 	public static final MMConstraint<Transaction33> forTransaction33 = new MMConstraint<Transaction33>() {
 		{
-			validator = ConstraintCreditDebitIndicatorGuideline::checkTransaction33;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicatorGuideline";
 			definition = "The CreditDebitIndicator may be omitted for optimisation reason if the CreditDebitIndicator is used in the search criteria of the related query.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCreditDebitIndicatorGuideline.forTransaction59);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCreditDebitIndicatorGuideline.forTransaction24;
 			owner_lazy = () -> Transaction33.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction33 obj) throws Exception {
+			checkTransaction33(obj);
 		}
 	};
 	/**
@@ -285,12 +313,16 @@ public class ConstraintCreditDebitIndicatorGuideline {
 	 */
 	public static final MMConstraint<Transaction59> forTransaction59 = new MMConstraint<Transaction59>() {
 		{
-			validator = ConstraintCreditDebitIndicatorGuideline::checkTransaction59;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicatorGuideline";
 			definition = "The CreditDebitIndicator may be omitted for optimisation reason if the CreditDebitIndicator is used in the search criteria of the related query.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCreditDebitIndicatorGuideline.forTransaction33;
 			owner_lazy = () -> Transaction59.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction59 obj) throws Exception {
+			checkTransaction59(obj);
 		}
 	};
 

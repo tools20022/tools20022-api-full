@@ -111,7 +111,7 @@ public class TreasuryProfile1 {
 	 * definition} = "Execution date of treasury bond trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TreasuryProfile1, ISODate> mmDate = new MMMessageAttribute<TreasuryProfile1, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TreasuryProfile1.mmObject();
@@ -123,6 +123,16 @@ public class TreasuryProfile1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(TreasuryProfile1 obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(TreasuryProfile1 obj, ISODate value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "TradrTp", required = true)
@@ -160,7 +170,7 @@ public class TreasuryProfile1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTraderType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TreasuryProfile1, PartyRole5Choice> mmTraderType = new MMMessageAssociationEnd<TreasuryProfile1, PartyRole5Choice>() {
 		{
 			businessComponentTrace_lazy = () -> TreasuryTradingParty.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TreasuryProfile1.mmObject();
@@ -173,6 +183,16 @@ public class TreasuryProfile1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyRole5Choice.mmObject();
+		}
+
+		@Override
+		public PartyRole5Choice getValue(TreasuryProfile1 obj) {
+			return obj.getTraderType();
+		}
+
+		@Override
+		public void setValue(TreasuryProfile1 obj, PartyRole5Choice value) {
+			obj.setTraderType(value);
 		}
 	};
 	@XmlElement(name = "Rate", required = true)
@@ -209,7 +229,7 @@ public class TreasuryProfile1 {
 	 * definition} = "Tax rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TreasuryProfile1, PercentageRate> mmRate = new MMMessageAttribute<TreasuryProfile1, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TreasuryProfile1.mmObject();
@@ -221,6 +241,16 @@ public class TreasuryProfile1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(TreasuryProfile1 obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(TreasuryProfile1 obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 

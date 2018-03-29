@@ -55,11 +55,15 @@ public class ConstraintIncotermsRule {
 	 */
 	public static final MMConstraint<LineItem5> forLineItem5 = new MMConstraint<LineItem5>() {
 		{
-			validator = ConstraintIncotermsRule::checkLineItem5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncotermsRule";
 			definition = "If Incoterms is present, then Incoterms is not allowed within each occurrence of LineItemDetails. If Incoterms is not present, then Incoterms is allowed within each occurrence of LineItemDetails.";
 			owner_lazy = () -> LineItem5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(LineItem5 obj) throws Exception {
+			checkLineItem5(obj);
 		}
 	};
 	/**
@@ -92,12 +96,16 @@ public class ConstraintIncotermsRule {
 	 */
 	public static final MMConstraint<LineItem7> forLineItem7 = new MMConstraint<LineItem7>() {
 		{
-			validator = ConstraintIncotermsRule::checkLineItem7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncotermsRule";
 			definition = "If Incoterms is present, then Incoterms is not allowed within each occurrence of LineItemDetails. If Incoterms is not present, then Incoterms is allowed within each occurrence of LineItemDetails.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintIncotermsRule.forLineItem11);
 			owner_lazy = () -> LineItem7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(LineItem7 obj) throws Exception {
+			checkLineItem7(obj);
 		}
 	};
 	/**
@@ -135,13 +143,17 @@ public class ConstraintIncotermsRule {
 	 */
 	public static final MMConstraint<LineItem11> forLineItem11 = new MMConstraint<LineItem11>() {
 		{
-			validator = ConstraintIncotermsRule::checkLineItem11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncotermsRule";
 			definition = "If Incoterms is present, then Incoterms is not allowed within each occurrence of LineItemDetails. If Incoterms is not present, then Incoterms is allowed within each occurrence of LineItemDetails.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintIncotermsRule.forLineItem13);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIncotermsRule.forLineItem7;
 			owner_lazy = () -> LineItem11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(LineItem11 obj) throws Exception {
+			checkLineItem11(obj);
 		}
 	};
 	/**
@@ -171,12 +183,16 @@ public class ConstraintIncotermsRule {
 	 */
 	public static final MMConstraint<LineItem13> forLineItem13 = new MMConstraint<LineItem13>() {
 		{
-			validator = ConstraintIncotermsRule::checkLineItem13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncotermsRule";
 			definition = "If Incoterms is present, then Incoterms is not allowed within each occurrence of LineItemDetails. If Incoterms is not present, then Incoterms is allowed within each occurrence of LineItemDetails.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIncotermsRule.forLineItem11;
 			owner_lazy = () -> LineItem13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(LineItem13 obj) throws Exception {
+			checkLineItem13(obj);
 		}
 	};
 

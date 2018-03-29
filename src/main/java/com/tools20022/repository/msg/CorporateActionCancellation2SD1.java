@@ -106,7 +106,7 @@ public class CorporateActionCancellation2SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionCancellation2SD1, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<CorporateActionCancellation2SD1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionCancellation2SD1.mmObject();
 			isDerived = false;
@@ -117,6 +117,16 @@ public class CorporateActionCancellation2SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionCancellation2SD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionCancellation2SD1 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LclLangCxlRsn", required = true)
@@ -153,7 +163,7 @@ public class CorporateActionCancellation2SD1 {
 	 * definition} = "Cancellation reason information in the local language."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLocalLanguageCancellationReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionCancellation2SD1, Max450Text> mmLocalLanguageCancellationReason = new MMMessageAttribute<CorporateActionCancellation2SD1, Max450Text>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatusReason.mmCorporateActionCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionCancellation2SD1.mmObject();
@@ -165,6 +175,16 @@ public class CorporateActionCancellation2SD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max450Text.mmObject();
+		}
+
+		@Override
+		public Max450Text getValue(CorporateActionCancellation2SD1 obj) {
+			return obj.getLocalLanguageCancellationReason();
+		}
+
+		@Override
+		public void setValue(CorporateActionCancellation2SD1 obj, Max450Text value) {
+			obj.setLocalLanguageCancellationReason(value);
 		}
 	};
 

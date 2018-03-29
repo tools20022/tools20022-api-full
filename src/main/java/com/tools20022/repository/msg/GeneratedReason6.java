@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V06;
 import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V07;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V08;
 import com.tools20022.repository.choice.GeneratedReasons6Choice;
 import com.tools20022.repository.datatype.RestrictedFINXMax210Text;
 import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
@@ -68,6 +69,10 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V07#mmGeneratedReason
  * SecuritiesSettlementTransactionGenerationNotification002V07.mmGeneratedReason
+ * }</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V08#mmGeneratedReason
+ * SecuritiesSettlementTransactionGenerationNotification002V08.mmGeneratedReason
  * }</li>
  * </ul>
  * </li>
@@ -125,7 +130,7 @@ public class GeneratedReason6 {
 	 * definition} = "Specifies the reason why the transaction was generated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GeneratedReason6, GeneratedReasons6Choice> mmCode = new MMMessageAssociationEnd<GeneratedReason6, GeneratedReasons6Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmGeneratedReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeneratedReason6.mmObject();
@@ -138,6 +143,16 @@ public class GeneratedReason6 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GeneratedReasons6Choice.mmObject();
+		}
+
+		@Override
+		public GeneratedReasons6Choice getValue(GeneratedReason6 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(GeneratedReason6 obj, GeneratedReasons6Choice value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -177,7 +192,7 @@ public class GeneratedReason6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GeneratedReason6, Optional<RestrictedFINXMax210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<GeneratedReason6, Optional<RestrictedFINXMax210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeneratedReason6.mmObject();
@@ -190,13 +205,24 @@ public class GeneratedReason6 {
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax210Text.mmObject();
 		}
+
+		@Override
+		public Optional<RestrictedFINXMax210Text> getValue(GeneratedReason6 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(GeneratedReason6 obj, Optional<RestrictedFINXMax210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneratedReason6.mmCode, com.tools20022.repository.msg.GeneratedReason6.mmAdditionalReasonInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionGenerationNotification002V06.mmGeneratedReason, SecuritiesSettlementTransactionGenerationNotification002V07.mmGeneratedReason);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionGenerationNotification002V06.mmGeneratedReason, SecuritiesSettlementTransactionGenerationNotification002V07.mmGeneratedReason,
+						SecuritiesSettlementTransactionGenerationNotification002V08.mmGeneratedReason);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.entity.CorporateActionEventRegistration;
 import com.tools20022.repository.entity.CorporateActionServicing;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.NotificationIdentification3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -149,7 +150,7 @@ public class EventInformation9 {
 	 * EventInformation7.mmCorporateActionEventIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EventInformation9, Max35Text> mmCorporateActionEventIdentification = new MMMessageAttribute<EventInformation9, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmCorporateActionEventIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EventInformation9.mmObject();
@@ -164,6 +165,16 @@ public class EventInformation9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(EventInformation9 obj) {
+			return obj.getCorporateActionEventIdentification();
+		}
+
+		@Override
+		public void setValue(EventInformation9 obj, Max35Text value) {
+			obj.setCorporateActionEventIdentification(value);
 		}
 	};
 	@XmlElement(name = "OffclCorpActnEvtId")
@@ -218,7 +229,7 @@ public class EventInformation9 {
 	 * EventInformation7.mmOfficialCorporateActionEventIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOfficialCorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EventInformation9, Optional<Max35Text>> mmOfficialCorporateActionEventIdentification = new MMMessageAttribute<EventInformation9, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmOfficialCorporateActionEventIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EventInformation9.mmObject();
@@ -233,6 +244,16 @@ public class EventInformation9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(EventInformation9 obj) {
+			return obj.getOfficialCorporateActionEventIdentification();
+		}
+
+		@Override
+		public void setValue(EventInformation9 obj, Optional<Max35Text> value) {
+			obj.setOfficialCorporateActionEventIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EvtTp", required = true)
@@ -286,7 +307,7 @@ public class EventInformation9 {
 	 * EventInformation7.mmEventType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EventInformation9, CorporateActionEventType52Choice> mmEventType = new MMMessageAttribute<EventInformation9, CorporateActionEventType52Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EventInformation9.mmObject();
@@ -301,6 +322,16 @@ public class EventInformation9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionEventType52Choice.mmObject();
+		}
+
+		@Override
+		public CorporateActionEventType52Choice getValue(EventInformation9 obj) {
+			return obj.getEventType();
+		}
+
+		@Override
+		public void setValue(EventInformation9 obj, CorporateActionEventType52Choice value) {
+			obj.setEventType(value);
 		}
 	};
 	@XmlElement(name = "MndtryVlntryEvtTp", required = true)
@@ -356,7 +387,7 @@ public class EventInformation9 {
 	 * EventInformation7.mmMandatoryVoluntaryEventType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMandatoryVoluntaryEventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EventInformation9, CorporateActionMandatoryVoluntary3Choice> mmMandatoryVoluntaryEventType = new MMMessageAttribute<EventInformation9, CorporateActionMandatoryVoluntary3Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmMandatoryVoluntaryEventType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EventInformation9.mmObject();
@@ -371,6 +402,16 @@ public class EventInformation9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionMandatoryVoluntary3Choice.mmObject();
+		}
+
+		@Override
+		public CorporateActionMandatoryVoluntary3Choice getValue(EventInformation9 obj) {
+			return obj.getMandatoryVoluntaryEventType();
+		}
+
+		@Override
+		public void setValue(EventInformation9 obj, CorporateActionMandatoryVoluntary3Choice value) {
+			obj.setMandatoryVoluntaryEventType(value);
 		}
 	};
 	@XmlElement(name = "LastNtfctnId")
@@ -425,7 +466,7 @@ public class EventInformation9 {
 	 * EventInformation7.mmLastNotificationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLastNotificationIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EventInformation9, Optional<NotificationIdentification3>> mmLastNotificationIdentification = new MMMessageAssociationEnd<EventInformation9, Optional<NotificationIdentification3>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionServicing.mmCorporateActionEventNotification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EventInformation9.mmObject();
@@ -440,7 +481,17 @@ public class EventInformation9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NotificationIdentification3.mmObject();
+			type_lazy = () -> NotificationIdentification3.mmObject();
+		}
+
+		@Override
+		public Optional<NotificationIdentification3> getValue(EventInformation9 obj) {
+			return obj.getLastNotificationIdentification();
+		}
+
+		@Override
+		public void setValue(EventInformation9 obj, Optional<NotificationIdentification3> value) {
+			obj.setLastNotificationIdentification(value.orElse(null));
 		}
 	};
 
@@ -502,7 +553,7 @@ public class EventInformation9 {
 		return lastNotificationIdentification == null ? Optional.empty() : Optional.of(lastNotificationIdentification);
 	}
 
-	public EventInformation9 setLastNotificationIdentification(com.tools20022.repository.msg.NotificationIdentification3 lastNotificationIdentification) {
+	public EventInformation9 setLastNotificationIdentification(NotificationIdentification3 lastNotificationIdentification) {
 		this.lastNotificationIdentification = lastNotificationIdentification;
 		return this;
 	}

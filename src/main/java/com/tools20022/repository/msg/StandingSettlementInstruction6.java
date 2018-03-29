@@ -26,6 +26,7 @@ import com.tools20022.repository.choice.PartyIdentification59Choice;
 import com.tools20022.repository.choice.SettlementStandingInstructionDatabase2Choice;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SettlementParties17;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -137,7 +138,7 @@ public class StandingSettlementInstruction6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementStandingInstructionDatabase = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StandingSettlementInstruction6, SettlementStandingInstructionDatabase2Choice> mmSettlementStandingInstructionDatabase = new MMMessageAssociationEnd<StandingSettlementInstruction6, SettlementStandingInstructionDatabase2Choice>() {
 		{
 			businessComponentTrace_lazy = () -> StandingSettlementInstruction.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingSettlementInstruction6.mmObject();
@@ -151,6 +152,16 @@ public class StandingSettlementInstruction6 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SettlementStandingInstructionDatabase2Choice.mmObject();
+		}
+
+		@Override
+		public SettlementStandingInstructionDatabase2Choice getValue(StandingSettlementInstruction6 obj) {
+			return obj.getSettlementStandingInstructionDatabase();
+		}
+
+		@Override
+		public void setValue(StandingSettlementInstruction6 obj, SettlementStandingInstructionDatabase2Choice value) {
+			obj.setSettlementStandingInstructionDatabase(value);
 		}
 	};
 	@XmlElement(name = "CtrPty", required = true)
@@ -191,7 +202,7 @@ public class StandingSettlementInstruction6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCounterparty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StandingSettlementInstruction6, Counterparty6Choice> mmCounterparty = new MMMessageAssociationEnd<StandingSettlementInstruction6, Counterparty6Choice>() {
 		{
 			businessComponentTrace_lazy = () -> TradePartyRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingSettlementInstruction6.mmObject();
@@ -205,6 +216,16 @@ public class StandingSettlementInstruction6 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Counterparty6Choice.mmObject();
+		}
+
+		@Override
+		public Counterparty6Choice getValue(StandingSettlementInstruction6 obj) {
+			return obj.getCounterparty();
+		}
+
+		@Override
+		public void setValue(StandingSettlementInstruction6 obj, Counterparty6Choice value) {
+			obj.setCounterparty(value);
 		}
 	};
 	@XmlElement(name = "Vndr")
@@ -246,7 +267,7 @@ public class StandingSettlementInstruction6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmVendor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StandingSettlementInstruction6, Optional<PartyIdentification59Choice>> mmVendor = new MMMessageAssociationEnd<StandingSettlementInstruction6, Optional<PartyIdentification59Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingSettlementInstruction6.mmObject();
@@ -260,6 +281,16 @@ public class StandingSettlementInstruction6 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification59Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification59Choice> getValue(StandingSettlementInstruction6 obj) {
+			return obj.getVendor();
+		}
+
+		@Override
+		public void setValue(StandingSettlementInstruction6 obj, Optional<PartyIdentification59Choice> value) {
+			obj.setVendor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OthrDlvrgSttlmPties")
@@ -300,7 +331,7 @@ public class StandingSettlementInstruction6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherDeliveringSettlementParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StandingSettlementInstruction6, Optional<SettlementParties17>> mmOtherDeliveringSettlementParties = new MMMessageAssociationEnd<StandingSettlementInstruction6, Optional<SettlementParties17>>() {
 		{
 			businessComponentTrace_lazy = () -> DeliveringSettlementParty.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingSettlementInstruction6.mmObject();
@@ -313,7 +344,17 @@ public class StandingSettlementInstruction6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SettlementParties17.mmObject();
+			type_lazy = () -> SettlementParties17.mmObject();
+		}
+
+		@Override
+		public Optional<SettlementParties17> getValue(StandingSettlementInstruction6 obj) {
+			return obj.getOtherDeliveringSettlementParties();
+		}
+
+		@Override
+		public void setValue(StandingSettlementInstruction6 obj, Optional<SettlementParties17> value) {
+			obj.setOtherDeliveringSettlementParties(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OthrRcvgSttlmPties")
@@ -354,7 +395,7 @@ public class StandingSettlementInstruction6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherReceivingSettlementParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StandingSettlementInstruction6, Optional<SettlementParties17>> mmOtherReceivingSettlementParties = new MMMessageAssociationEnd<StandingSettlementInstruction6, Optional<SettlementParties17>>() {
 		{
 			businessComponentTrace_lazy = () -> ReceivingSettlementParty.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingSettlementInstruction6.mmObject();
@@ -367,7 +408,17 @@ public class StandingSettlementInstruction6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SettlementParties17.mmObject();
+			type_lazy = () -> SettlementParties17.mmObject();
+		}
+
+		@Override
+		public Optional<SettlementParties17> getValue(StandingSettlementInstruction6 obj) {
+			return obj.getOtherReceivingSettlementParties();
+		}
+
+		@Override
+		public void setValue(StandingSettlementInstruction6 obj, Optional<SettlementParties17> value) {
+			obj.setOtherReceivingSettlementParties(value.orElse(null));
 		}
 	};
 
@@ -426,7 +477,7 @@ public class StandingSettlementInstruction6 {
 		return otherDeliveringSettlementParties == null ? Optional.empty() : Optional.of(otherDeliveringSettlementParties);
 	}
 
-	public StandingSettlementInstruction6 setOtherDeliveringSettlementParties(com.tools20022.repository.msg.SettlementParties17 otherDeliveringSettlementParties) {
+	public StandingSettlementInstruction6 setOtherDeliveringSettlementParties(SettlementParties17 otherDeliveringSettlementParties) {
 		this.otherDeliveringSettlementParties = otherDeliveringSettlementParties;
 		return this;
 	}
@@ -435,7 +486,7 @@ public class StandingSettlementInstruction6 {
 		return otherReceivingSettlementParties == null ? Optional.empty() : Optional.of(otherReceivingSettlementParties);
 	}
 
-	public StandingSettlementInstruction6 setOtherReceivingSettlementParties(com.tools20022.repository.msg.SettlementParties17 otherReceivingSettlementParties) {
+	public StandingSettlementInstruction6 setOtherReceivingSettlementParties(SettlementParties17 otherReceivingSettlementParties) {
 		this.otherReceivingSettlementParties = otherReceivingSettlementParties;
 		return this;
 	}

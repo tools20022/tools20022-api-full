@@ -23,6 +23,9 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.AssetClassification;
 import com.tools20022.repository.entity.Derivative;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DerivativeCommodity2;
+import com.tools20022.repository.msg.DerivativeForeignExchange3;
+import com.tools20022.repository.msg.DerivativeInterest3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -115,7 +118,7 @@ public class AssetClass2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCommodity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClass2, Optional<DerivativeCommodity2>> mmCommodity = new MMMessageAssociationEnd<AssetClass2, Optional<DerivativeCommodity2>>() {
 		{
 			businessComponentTrace_lazy = () -> Derivative.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AssetClass2.mmObject();
@@ -127,7 +130,17 @@ public class AssetClass2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DerivativeCommodity2.mmObject();
+			type_lazy = () -> DerivativeCommodity2.mmObject();
+		}
+
+		@Override
+		public Optional<DerivativeCommodity2> getValue(AssetClass2 obj) {
+			return obj.getCommodity();
+		}
+
+		@Override
+		public void setValue(AssetClass2 obj, Optional<DerivativeCommodity2> value) {
+			obj.setCommodity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Intrst")
@@ -163,7 +176,7 @@ public class AssetClass2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInterest = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClass2, Optional<DerivativeInterest3>> mmInterest = new MMMessageAssociationEnd<AssetClass2, Optional<DerivativeInterest3>>() {
 		{
 			businessComponentTrace_lazy = () -> Derivative.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AssetClass2.mmObject();
@@ -175,7 +188,17 @@ public class AssetClass2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DerivativeInterest3.mmObject();
+			type_lazy = () -> DerivativeInterest3.mmObject();
+		}
+
+		@Override
+		public Optional<DerivativeInterest3> getValue(AssetClass2 obj) {
+			return obj.getInterest();
+		}
+
+		@Override
+		public void setValue(AssetClass2 obj, Optional<DerivativeInterest3> value) {
+			obj.setInterest(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FX")
@@ -212,7 +235,7 @@ public class AssetClass2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmForeignExchange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClass2, Optional<DerivativeForeignExchange3>> mmForeignExchange = new MMMessageAssociationEnd<AssetClass2, Optional<DerivativeForeignExchange3>>() {
 		{
 			businessComponentTrace_lazy = () -> Derivative.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AssetClass2.mmObject();
@@ -224,7 +247,17 @@ public class AssetClass2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DerivativeForeignExchange3.mmObject();
+			type_lazy = () -> DerivativeForeignExchange3.mmObject();
+		}
+
+		@Override
+		public Optional<DerivativeForeignExchange3> getValue(AssetClass2 obj) {
+			return obj.getForeignExchange();
+		}
+
+		@Override
+		public void setValue(AssetClass2 obj, Optional<DerivativeForeignExchange3> value) {
+			obj.setForeignExchange(value.orElse(null));
 		}
 	};
 
@@ -247,7 +280,7 @@ public class AssetClass2 {
 		return commodity == null ? Optional.empty() : Optional.of(commodity);
 	}
 
-	public AssetClass2 setCommodity(com.tools20022.repository.msg.DerivativeCommodity2 commodity) {
+	public AssetClass2 setCommodity(DerivativeCommodity2 commodity) {
 		this.commodity = commodity;
 		return this;
 	}
@@ -256,7 +289,7 @@ public class AssetClass2 {
 		return interest == null ? Optional.empty() : Optional.of(interest);
 	}
 
-	public AssetClass2 setInterest(com.tools20022.repository.msg.DerivativeInterest3 interest) {
+	public AssetClass2 setInterest(DerivativeInterest3 interest) {
 		this.interest = interest;
 		return this;
 	}
@@ -265,7 +298,7 @@ public class AssetClass2 {
 		return foreignExchange == null ? Optional.empty() : Optional.of(foreignExchange);
 	}
 
-	public AssetClass2 setForeignExchange(com.tools20022.repository.msg.DerivativeForeignExchange3 foreignExchange) {
+	public AssetClass2 setForeignExchange(DerivativeForeignExchange3 foreignExchange) {
 		this.foreignExchange = foreignExchange;
 		return this;
 	}

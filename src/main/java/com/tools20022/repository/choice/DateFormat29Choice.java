@@ -21,6 +21,7 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.codeset.DateType1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
@@ -102,7 +103,7 @@ public class DateFormat29Choice {
 	 * definition} = "Date expressed as a calendar date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateOrDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateFormat29Choice, DateAndDateTimeChoice> mmDateOrDateTime = new MMMessageAttribute<DateFormat29Choice, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat29Choice.mmObject();
 			isDerived = false;
@@ -113,7 +114,17 @@ public class DateFormat29Choice {
 			definition = "Date expressed as a calendar date.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
+			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(DateFormat29Choice obj) {
+			return obj.getDateOrDateTime();
+		}
+
+		@Override
+		public void setValue(DateFormat29Choice obj, DateAndDateTimeChoice value) {
+			obj.setDateOrDateTime(value);
 		}
 	};
 	@XmlElement(name = "DtCd", required = true)
@@ -149,7 +160,7 @@ public class DateFormat29Choice {
 	 * definition} = "Specifies the type of date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateFormat29Choice, DateType1Code> mmDateCode = new MMMessageAttribute<DateFormat29Choice, DateType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat29Choice.mmObject();
 			isDerived = false;
@@ -161,6 +172,16 @@ public class DateFormat29Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DateType1Code.mmObject();
+		}
+
+		@Override
+		public DateType1Code getValue(DateFormat29Choice obj) {
+			return obj.getDateCode();
+		}
+
+		@Override
+		public void setValue(DateFormat29Choice obj, DateType1Code value) {
+			obj.setDateCode(value);
 		}
 	};
 
@@ -181,7 +202,7 @@ public class DateFormat29Choice {
 		return dateOrDateTime;
 	}
 
-	public DateFormat29Choice setDateOrDateTime(com.tools20022.repository.choice.DateAndDateTimeChoice dateOrDateTime) {
+	public DateFormat29Choice setDateOrDateTime(DateAndDateTimeChoice dateOrDateTime) {
 		this.dateOrDateTime = Objects.requireNonNull(dateOrDateTime);
 		return this;
 	}

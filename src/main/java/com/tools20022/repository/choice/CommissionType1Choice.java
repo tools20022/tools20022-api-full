@@ -110,7 +110,7 @@ public class CommissionType1Choice {
 	 * definition} = "Commission type is identified using a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommissionType1Choice, CommissionValueType1Code> mmCode = new MMMessageAttribute<CommissionType1Choice, CommissionValueType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommissionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CommissionType1Choice.mmObject();
@@ -122,6 +122,16 @@ public class CommissionType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CommissionValueType1Code.mmObject();
+		}
+
+		@Override
+		public CommissionValueType1Code getValue(CommissionType1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CommissionType1Choice obj, CommissionValueType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -158,7 +168,7 @@ public class CommissionType1Choice {
 	 * definition} = "Commission type is defined using a data source scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CommissionType1Choice, GenericIdentification13> mmProprietary = new MMMessageAssociationEnd<CommissionType1Choice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommissionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CommissionType1Choice.mmObject();
@@ -171,6 +181,16 @@ public class CommissionType1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(CommissionType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CommissionType1Choice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

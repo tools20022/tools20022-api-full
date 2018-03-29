@@ -174,7 +174,7 @@ public class TransactionTypeAndAdditionalParameters11 {
 	 * mmAccountOwnerTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwnerTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTypeAndAdditionalParameters11, Max35Text> mmAccountOwnerTransactionIdentification = new MMMessageAttribute<TransactionTypeAndAdditionalParameters11, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountOwnerTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters11.mmObject();
@@ -189,6 +189,16 @@ public class TransactionTypeAndAdditionalParameters11 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(TransactionTypeAndAdditionalParameters11 obj) {
+			return obj.getAccountOwnerTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(TransactionTypeAndAdditionalParameters11 obj, Max35Text value) {
+			obj.setAccountOwnerTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctSvcrTxId")
@@ -245,7 +255,7 @@ public class TransactionTypeAndAdditionalParameters11 {
 	 * mmAccountServicerTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicerTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTypeAndAdditionalParameters11, Optional<Max35Text>> mmAccountServicerTransactionIdentification = new MMMessageAttribute<TransactionTypeAndAdditionalParameters11, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountServicerTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters11.mmObject();
@@ -260,6 +270,16 @@ public class TransactionTypeAndAdditionalParameters11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransactionTypeAndAdditionalParameters11 obj) {
+			return obj.getAccountServicerTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(TransactionTypeAndAdditionalParameters11 obj, Optional<Max35Text> value) {
+			obj.setAccountServicerTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctiesFincgTxTp", required = true)
@@ -318,7 +338,7 @@ public class TransactionTypeAndAdditionalParameters11 {
 	 * mmSecuritiesFinancingTransactionType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesFinancingTransactionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTypeAndAdditionalParameters11, SecuritiesFinancingTransactionType1Code> mmSecuritiesFinancingTransactionType = new MMMessageAttribute<TransactionTypeAndAdditionalParameters11, SecuritiesFinancingTransactionType1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTransactionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters11.mmObject();
@@ -333,6 +353,16 @@ public class TransactionTypeAndAdditionalParameters11 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesFinancingTransactionType1Code.mmObject();
+		}
+
+		@Override
+		public SecuritiesFinancingTransactionType1Code getValue(TransactionTypeAndAdditionalParameters11 obj) {
+			return obj.getSecuritiesFinancingTransactionType();
+		}
+
+		@Override
+		public void setValue(TransactionTypeAndAdditionalParameters11 obj, SecuritiesFinancingTransactionType1Code value) {
+			obj.setSecuritiesFinancingTransactionType(value);
 		}
 	};
 	@XmlElement(name = "Pmt", required = true)
@@ -388,7 +418,7 @@ public class TransactionTypeAndAdditionalParameters11 {
 	 * TransactionTypeAndAdditionalParameters7.mmPayment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPayment = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTypeAndAdditionalParameters11, DeliveryReceiptType2Code> mmPayment = new MMMessageAttribute<TransactionTypeAndAdditionalParameters11, DeliveryReceiptType2Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters11.mmObject();
@@ -403,6 +433,16 @@ public class TransactionTypeAndAdditionalParameters11 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DeliveryReceiptType2Code.mmObject();
+		}
+
+		@Override
+		public DeliveryReceiptType2Code getValue(TransactionTypeAndAdditionalParameters11 obj) {
+			return obj.getPayment();
+		}
+
+		@Override
+		public void setValue(TransactionTypeAndAdditionalParameters11 obj, DeliveryReceiptType2Code value) {
+			obj.setPayment(value);
 		}
 	};
 	@XmlElement(name = "ModTp")
@@ -451,7 +491,7 @@ public class TransactionTypeAndAdditionalParameters11 {
 	 * TransactionTypeAndAdditionalParameters7.mmModificationType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmModificationType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionTypeAndAdditionalParameters11, Optional<RepurchaseType15Choice>> mmModificationType = new MMMessageAssociationEnd<TransactionTypeAndAdditionalParameters11, Optional<RepurchaseType15Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters11.mmObject();
 			isDerived = false;
@@ -466,6 +506,16 @@ public class TransactionTypeAndAdditionalParameters11 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> RepurchaseType15Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RepurchaseType15Choice> getValue(TransactionTypeAndAdditionalParameters11 obj) {
+			return obj.getModificationType();
+		}
+
+		@Override
+		public void setValue(TransactionTypeAndAdditionalParameters11 obj, Optional<RepurchaseType15Choice> value) {
+			obj.setModificationType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CmonId")
@@ -520,7 +570,7 @@ public class TransactionTypeAndAdditionalParameters11 {
 	 * TransactionTypeAndAdditionalParameters7.mmCommonIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommonIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTypeAndAdditionalParameters11, Optional<Max35Text>> mmCommonIdentification = new MMMessageAttribute<TransactionTypeAndAdditionalParameters11, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCommonIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters11.mmObject();
@@ -535,6 +585,16 @@ public class TransactionTypeAndAdditionalParameters11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransactionTypeAndAdditionalParameters11 obj) {
+			return obj.getCommonIdentification();
+		}
+
+		@Override
+		public void setValue(TransactionTypeAndAdditionalParameters11 obj, Optional<Max35Text> value) {
+			obj.setCommonIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PoolId")
@@ -587,7 +647,7 @@ public class TransactionTypeAndAdditionalParameters11 {
 	 * TransactionTypeAndAdditionalParameters7.mmPoolIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPoolIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTypeAndAdditionalParameters11, Optional<Max35Text>> mmPoolIdentification = new MMMessageAttribute<TransactionTypeAndAdditionalParameters11, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmPoolIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters11.mmObject();
@@ -602,6 +662,16 @@ public class TransactionTypeAndAdditionalParameters11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransactionTypeAndAdditionalParameters11 obj) {
+			return obj.getPoolIdentification();
+		}
+
+		@Override
+		public void setValue(TransactionTypeAndAdditionalParameters11 obj, Optional<Max35Text> value) {
+			obj.setPoolIdentification(value.orElse(null));
 		}
 	};
 

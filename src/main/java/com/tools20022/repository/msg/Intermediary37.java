@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.AccountPartyRole;
 import com.tools20022.repository.entity.IntermediaryRole;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Account21;
+import com.tools20022.repository.msg.PartyIdentification111;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -125,7 +127,7 @@ public class Intermediary37 {
 	 * definition} = "Unique and unambiguous identifier of the intermediary."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Intermediary37, PartyIdentification111> mmIdentification = new MMMessageAssociationEnd<Intermediary37, PartyIdentification111>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary37.mmObject();
@@ -137,7 +139,17 @@ public class Intermediary37 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification111.mmObject();
+			type_lazy = () -> PartyIdentification111.mmObject();
+		}
+
+		@Override
+		public PartyIdentification111 getValue(Intermediary37 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Intermediary37 obj, PartyIdentification111 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Role")
@@ -173,7 +185,7 @@ public class Intermediary37 {
 	 * "Function performed by the intermediary (investment funds)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRole = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Intermediary37, Optional<Role7Choice>> mmRole = new MMMessageAssociationEnd<Intermediary37, Optional<Role7Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> IntermediaryRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary37.mmObject();
@@ -186,6 +198,16 @@ public class Intermediary37 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Role7Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Role7Choice> getValue(Intermediary37 obj) {
+			return obj.getRole();
+		}
+
+		@Override
+		public void setValue(Intermediary37 obj, Optional<Role7Choice> value) {
+			obj.setRole(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Acct")
@@ -224,7 +246,7 @@ public class Intermediary37 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Intermediary37, Optional<Account21>> mmAccount = new MMMessageAssociationEnd<Intermediary37, Optional<Account21>>() {
 		{
 			businessElementTrace_lazy = () -> AccountPartyRole.mmAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary37.mmObject();
@@ -237,7 +259,17 @@ public class Intermediary37 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Account21.mmObject();
+			type_lazy = () -> Account21.mmObject();
+		}
+
+		@Override
+		public Optional<Account21> getValue(Intermediary37 obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(Intermediary37 obj, Optional<Account21> value) {
+			obj.setAccount(value.orElse(null));
 		}
 	};
 
@@ -260,7 +292,7 @@ public class Intermediary37 {
 		return identification;
 	}
 
-	public Intermediary37 setIdentification(com.tools20022.repository.msg.PartyIdentification111 identification) {
+	public Intermediary37 setIdentification(PartyIdentification111 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}
@@ -278,7 +310,7 @@ public class Intermediary37 {
 		return account == null ? Optional.empty() : Optional.of(account);
 	}
 
-	public Intermediary37 setAccount(com.tools20022.repository.msg.Account21 account) {
+	public Intermediary37 setAccount(Account21 account) {
 		this.account = account;
 		return this;
 	}

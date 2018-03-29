@@ -23,6 +23,8 @@ import com.tools20022.repository.entity.CashEntry;
 import com.tools20022.repository.entity.ChequeIssue;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccount4;
+import com.tools20022.repository.msg.Cheque4;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -118,7 +120,7 @@ public class PaymentInstrument6 {
 	 * definition} = "Currency associated with the payment instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstrument6, CurrencyCode> mmSettlementCurrency = new MMMessageAttribute<PaymentInstrument6, CurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmCurrencyOfTransfer;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstrument6.mmObject();
@@ -131,9 +133,19 @@ public class PaymentInstrument6 {
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
+
+		@Override
+		public CurrencyCode getValue(PaymentInstrument6 obj) {
+			return obj.getSettlementCurrency();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument6 obj, CurrencyCode value) {
+			obj.setSettlementCurrency(value);
+		}
 	};
 	@XmlElement(name = "CshAcct", required = true)
-	protected List<com.tools20022.repository.msg.CashAccount4> cashAccount;
+	protected List<CashAccount4> cashAccount;
 	/**
 	 * 
 	 <p>
@@ -167,7 +179,7 @@ public class PaymentInstrument6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstrument6, List<CashAccount4>> mmCashAccount = new MMMessageAssociationEnd<PaymentInstrument6, List<CashAccount4>>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstrument6.mmObject();
@@ -179,7 +191,17 @@ public class PaymentInstrument6 {
 			maxOccurs = 3;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount4.mmObject();
+			type_lazy = () -> CashAccount4.mmObject();
+		}
+
+		@Override
+		public List<CashAccount4> getValue(PaymentInstrument6 obj) {
+			return obj.getCashAccount();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument6 obj, List<CashAccount4> value) {
+			obj.setCashAccount(value);
 		}
 	};
 	@XmlElement(name = "Chq", required = true)
@@ -213,7 +235,7 @@ public class PaymentInstrument6 {
 	 * definition} = "Settlement instructions for a payment by cheque."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCheque = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstrument6, Cheque4> mmCheque = new MMMessageAssociationEnd<PaymentInstrument6, Cheque4>() {
 		{
 			businessComponentTrace_lazy = () -> ChequeIssue.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstrument6.mmObject();
@@ -225,7 +247,17 @@ public class PaymentInstrument6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Cheque4.mmObject();
+			type_lazy = () -> Cheque4.mmObject();
+		}
+
+		@Override
+		public Cheque4 getValue(PaymentInstrument6 obj) {
+			return obj.getCheque();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument6 obj, Cheque4 value) {
+			obj.setCheque(value);
 		}
 	};
 	/**
@@ -308,7 +340,7 @@ public class PaymentInstrument6 {
 		return cashAccount == null ? cashAccount = new ArrayList<>() : cashAccount;
 	}
 
-	public PaymentInstrument6 setCashAccount(List<com.tools20022.repository.msg.CashAccount4> cashAccount) {
+	public PaymentInstrument6 setCashAccount(List<CashAccount4> cashAccount) {
 		this.cashAccount = Objects.requireNonNull(cashAccount);
 		return this;
 	}
@@ -317,7 +349,7 @@ public class PaymentInstrument6 {
 		return cheque;
 	}
 
-	public PaymentInstrument6 setCheque(com.tools20022.repository.msg.Cheque4 cheque) {
+	public PaymentInstrument6 setCheque(Cheque4 cheque) {
 		this.cheque = Objects.requireNonNull(cheque);
 		return this;
 	}

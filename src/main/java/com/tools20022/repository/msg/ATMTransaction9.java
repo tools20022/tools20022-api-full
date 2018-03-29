@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max10000Binary;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.OnLinePIN5;
+import com.tools20022.repository.msg.TransactionIdentifier1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -112,7 +114,7 @@ public class ATMTransaction9 {
 	 * ATMTransaction6.mmTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMTransaction9, TransactionIdentifier1> mmTransactionIdentification = new MMMessageAssociationEnd<ATMTransaction9, TransactionIdentifier1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction9.mmObject();
 			isDerived = false;
@@ -124,7 +126,17 @@ public class ATMTransaction9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransactionIdentifier1.mmObject();
+			type_lazy = () -> TransactionIdentifier1.mmObject();
+		}
+
+		@Override
+		public TransactionIdentifier1 getValue(ATMTransaction9 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(ATMTransaction9 obj, TransactionIdentifier1 value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "RcncltnId")
@@ -158,7 +170,7 @@ public class ATMTransaction9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReconciliationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransaction9, Optional<Max35Text>> mmReconciliationIdentification = new MMMessageAttribute<ATMTransaction9, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction9.mmObject();
 			isDerived = false;
@@ -169,6 +181,16 @@ public class ATMTransaction9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMTransaction9 obj) {
+			return obj.getReconciliationIdentification();
+		}
+
+		@Override
+		public void setValue(ATMTransaction9 obj, Optional<Max35Text> value) {
+			obj.setReconciliationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CrdhldrNewPIN")
@@ -200,7 +222,7 @@ public class ATMTransaction9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCardholderNewPIN = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMTransaction9, Optional<OnLinePIN5>> mmCardholderNewPIN = new MMMessageAssociationEnd<ATMTransaction9, Optional<OnLinePIN5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction9.mmObject();
 			isDerived = false;
@@ -211,7 +233,17 @@ public class ATMTransaction9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OnLinePIN5.mmObject();
+			type_lazy = () -> OnLinePIN5.mmObject();
+		}
+
+		@Override
+		public Optional<OnLinePIN5> getValue(ATMTransaction9 obj) {
+			return obj.getCardholderNewPIN();
+		}
+
+		@Override
+		public void setValue(ATMTransaction9 obj, Optional<OnLinePIN5> value) {
+			obj.setCardholderNewPIN(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ICCRltdData")
@@ -251,7 +283,7 @@ public class ATMTransaction9 {
 	 * ATMTransaction6.mmICCRelatedData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmICCRelatedData = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransaction9, Optional<Max10000Binary>> mmICCRelatedData = new MMMessageAttribute<ATMTransaction9, Optional<Max10000Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction9.mmObject();
 			isDerived = false;
@@ -263,6 +295,16 @@ public class ATMTransaction9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10000Binary.mmObject();
+		}
+
+		@Override
+		public Optional<Max10000Binary> getValue(ATMTransaction9 obj) {
+			return obj.getICCRelatedData();
+		}
+
+		@Override
+		public void setValue(ATMTransaction9 obj, Optional<Max10000Binary> value) {
+			obj.setICCRelatedData(value.orElse(null));
 		}
 	};
 
@@ -285,7 +327,7 @@ public class ATMTransaction9 {
 		return transactionIdentification;
 	}
 
-	public ATMTransaction9 setTransactionIdentification(com.tools20022.repository.msg.TransactionIdentifier1 transactionIdentification) {
+	public ATMTransaction9 setTransactionIdentification(TransactionIdentifier1 transactionIdentification) {
 		this.transactionIdentification = Objects.requireNonNull(transactionIdentification);
 		return this;
 	}
@@ -303,7 +345,7 @@ public class ATMTransaction9 {
 		return cardholderNewPIN == null ? Optional.empty() : Optional.of(cardholderNewPIN);
 	}
 
-	public ATMTransaction9 setCardholderNewPIN(com.tools20022.repository.msg.OnLinePIN5 cardholderNewPIN) {
+	public ATMTransaction9 setCardholderNewPIN(OnLinePIN5 cardholderNewPIN) {
 		this.cardholderNewPIN = cardholderNewPIN;
 		return this;
 	}

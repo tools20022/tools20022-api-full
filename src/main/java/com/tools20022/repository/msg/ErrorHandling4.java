@@ -106,7 +106,7 @@ public class ErrorHandling4 {
 	 * ErrorHandling3.mmError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ErrorHandling4, ErrorHandling2Choice> mmError = new MMMessageAssociationEnd<ErrorHandling4, ErrorHandling2Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ErrorHandling4.mmObject();
 			isDerived = false;
@@ -119,6 +119,16 @@ public class ErrorHandling4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling2Choice.mmObject();
+		}
+
+		@Override
+		public ErrorHandling2Choice getValue(ErrorHandling4 obj) {
+			return obj.getError();
+		}
+
+		@Override
+		public void setValue(ErrorHandling4 obj, ErrorHandling2Choice value) {
+			obj.setError(value);
 		}
 	};
 	@XmlElement(name = "Desc")
@@ -154,7 +164,7 @@ public class ErrorHandling4 {
 	 * ErrorHandling3.mmDescription}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ErrorHandling4, Optional<Max140Text>> mmDescription = new MMMessageAttribute<ErrorHandling4, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ErrorHandling4.mmObject();
 			isDerived = false;
@@ -166,6 +176,16 @@ public class ErrorHandling4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(ErrorHandling4 obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(ErrorHandling4 obj, Optional<Max140Text> value) {
+			obj.setDescription(value.orElse(null));
 		}
 	};
 

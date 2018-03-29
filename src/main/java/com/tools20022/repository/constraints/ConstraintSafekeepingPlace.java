@@ -52,11 +52,15 @@ public class ConstraintSafekeepingPlace {
 	 */
 	public static final MMConstraint<CorporateActionOption8> forCorporateActionOption8 = new MMConstraint<CorporateActionOption8>() {
 		{
-			validator = ConstraintSafekeepingPlace::checkCorporateActionOption8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlace";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> CorporateActionOption8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption8 obj) throws Exception {
+			checkCorporateActionOption8(obj);
 		}
 	};
 

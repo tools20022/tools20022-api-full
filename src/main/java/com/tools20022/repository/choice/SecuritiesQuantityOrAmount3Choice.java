@@ -99,7 +99,7 @@ public class SecuritiesQuantityOrAmount3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesQuantityOrAmount3Choice, SecuritiesOption52> mmSecuritiesQuantity = new MMMessageAssociationEnd<SecuritiesQuantityOrAmount3Choice, SecuritiesOption52>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesQuantityOrAmount3Choice.mmObject();
 			isDerived = false;
@@ -111,6 +111,16 @@ public class SecuritiesQuantityOrAmount3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecuritiesOption52.mmObject();
+		}
+
+		@Override
+		public SecuritiesOption52 getValue(SecuritiesQuantityOrAmount3Choice obj) {
+			return obj.getSecuritiesQuantity();
+		}
+
+		@Override
+		public void setValue(SecuritiesQuantityOrAmount3Choice obj, SecuritiesOption52 value) {
+			obj.setSecuritiesQuantity(value);
 		}
 	};
 	@XmlElement(name = "InstdAmt", required = true)
@@ -143,7 +153,7 @@ public class SecuritiesQuantityOrAmount3Choice {
 	 * definition} = "Cash amount to be instructed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesQuantityOrAmount3Choice, ActiveCurrencyAndAmount> mmInstructedAmount = new MMMessageAttribute<SecuritiesQuantityOrAmount3Choice, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesQuantityOrAmount3Choice.mmObject();
 			isDerived = false;
@@ -154,6 +164,16 @@ public class SecuritiesQuantityOrAmount3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(SecuritiesQuantityOrAmount3Choice obj) {
+			return obj.getInstructedAmount();
+		}
+
+		@Override
+		public void setValue(SecuritiesQuantityOrAmount3Choice obj, ActiveCurrencyAndAmount value) {
+			obj.setInstructedAmount(value);
 		}
 	};
 

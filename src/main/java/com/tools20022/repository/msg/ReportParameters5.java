@@ -128,7 +128,7 @@ public class ReportParameters5 {
 	 * ReportParameters2.mmReportIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportParameters5, Max35Text> mmReportIdentification = new MMMessageAttribute<ReportParameters5, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportParameters5.mmObject();
 			isDerived = false;
@@ -140,6 +140,16 @@ public class ReportParameters5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ReportParameters5 obj) {
+			return obj.getReportIdentification();
+		}
+
+		@Override
+		public void setValue(ReportParameters5 obj, Max35Text value) {
+			obj.setReportIdentification(value);
 		}
 	};
 	@XmlElement(name = "RptDtAndTm", required = true)
@@ -177,7 +187,7 @@ public class ReportParameters5 {
 	 * ReportParameters2.mmReportDateAndTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportDateAndTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportParameters5, DateAndDateTimeChoice> mmReportDateAndTime = new MMMessageAttribute<ReportParameters5, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportParameters5.mmObject();
 			isDerived = false;
@@ -189,6 +199,16 @@ public class ReportParameters5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(ReportParameters5 obj) {
+			return obj.getReportDateAndTime();
+		}
+
+		@Override
+		public void setValue(ReportParameters5 obj, DateAndDateTimeChoice value) {
+			obj.setReportDateAndTime(value);
 		}
 	};
 	@XmlElement(name = "Frqcy", required = true)
@@ -226,7 +246,7 @@ public class ReportParameters5 {
 	 * ReportParameters2.mmFrequency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportParameters5, EventFrequency6Code> mmFrequency = new MMMessageAttribute<ReportParameters5, EventFrequency6Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportParameters5.mmObject();
 			isDerived = false;
@@ -238,6 +258,16 @@ public class ReportParameters5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EventFrequency6Code.mmObject();
+		}
+
+		@Override
+		public EventFrequency6Code getValue(ReportParameters5 obj) {
+			return obj.getFrequency();
+		}
+
+		@Override
+		public void setValue(ReportParameters5 obj, EventFrequency6Code value) {
+			obj.setFrequency(value);
 		}
 	};
 	@XmlElement(name = "RptCcy", required = true)
@@ -276,7 +306,7 @@ public class ReportParameters5 {
 	 * ReportParameters2.mmReportCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportParameters5, ActiveCurrencyCode> mmReportCurrency = new MMMessageAttribute<ReportParameters5, ActiveCurrencyCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportParameters5.mmObject();
 			isDerived = false;
@@ -288,6 +318,16 @@ public class ReportParameters5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyCode getValue(ReportParameters5 obj) {
+			return obj.getReportCurrency();
+		}
+
+		@Override
+		public void setValue(ReportParameters5 obj, ActiveCurrencyCode value) {
+			obj.setReportCurrency(value);
 		}
 	};
 	@XmlElement(name = "ClctnDt")
@@ -325,7 +365,7 @@ public class ReportParameters5 {
 	 * ReportParameters2.mmCalculationDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCalculationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportParameters5, Optional<ISODateTime>> mmCalculationDate = new MMMessageAttribute<ReportParameters5, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportParameters5.mmObject();
 			isDerived = false;
@@ -337,6 +377,16 @@ public class ReportParameters5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(ReportParameters5 obj) {
+			return obj.getCalculationDate();
+		}
+
+		@Override
+		public void setValue(ReportParameters5 obj, Optional<ISODateTime> value) {
+			obj.setCalculationDate(value.orElse(null));
 		}
 	};
 

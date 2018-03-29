@@ -121,7 +121,7 @@ public class TradeTransactionCondition8Choice {
 	 * SettlementTransactionCondition30Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeTransactionCondition8Choice, TradeTransactionCondition5Code> mmCode = new MMMessageAttribute<TradeTransactionCondition8Choice, TradeTransactionCondition5Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementTransactionCondition;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradeTransactionCondition8Choice.mmObject();
@@ -135,6 +135,16 @@ public class TradeTransactionCondition8Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TradeTransactionCondition5Code.mmObject();
+		}
+
+		@Override
+		public TradeTransactionCondition5Code getValue(TradeTransactionCondition8Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(TradeTransactionCondition8Choice obj, TradeTransactionCondition5Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -179,7 +189,7 @@ public class TradeTransactionCondition8Choice {
 	 * SettlementTransactionCondition30Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeTransactionCondition8Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<TradeTransactionCondition8Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementTransactionCondition;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradeTransactionCondition8Choice.mmObject();
@@ -194,6 +204,16 @@ public class TradeTransactionCondition8Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(TradeTransactionCondition8Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(TradeTransactionCondition8Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

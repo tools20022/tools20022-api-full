@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.AdditionalReference3;
 import com.tools20022.repository.msg.EstimatedFundCashForecast2;
 import com.tools20022.repository.msg.Extension1;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -141,7 +140,7 @@ public class FundDetailedEstimatedCashForecastReportV02 {
 	 * definition} = "Collective reference identifying a set of messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FundDetailedEstimatedCashForecastReportV02, Optional<AdditionalReference3>> mmPoolReference = new MMMessageBuildingBlock<FundDetailedEstimatedCashForecastReportV02, Optional<AdditionalReference3>>() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -152,12 +151,14 @@ public class FundDetailedEstimatedCashForecastReportV02 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FundDetailedEstimatedCashForecastReportV02.class.getMethod("getPoolReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference3> getValue(FundDetailedEstimatedCashForecastReportV02 obj) {
+			return obj.getPoolReference();
+		}
+
+		@Override
+		public void setValue(FundDetailedEstimatedCashForecastReportV02 obj, Optional<AdditionalReference3> value) {
+			obj.setPoolReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsRef")
@@ -185,7 +186,7 @@ public class FundDetailedEstimatedCashForecastReportV02 {
 	 * definition} = "Reference to a linked message that was previously sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FundDetailedEstimatedCashForecastReportV02, List<AdditionalReference3>> mmPreviousReference = new MMMessageBuildingBlock<FundDetailedEstimatedCashForecastReportV02, List<AdditionalReference3>>() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -195,12 +196,14 @@ public class FundDetailedEstimatedCashForecastReportV02 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FundDetailedEstimatedCashForecastReportV02.class.getMethod("getPreviousReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<AdditionalReference3> getValue(FundDetailedEstimatedCashForecastReportV02 obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(FundDetailedEstimatedCashForecastReportV02 obj, List<AdditionalReference3> value) {
+			obj.setPreviousReference(value);
 		}
 	};
 	@XmlElement(name = "RltdRef")
@@ -229,7 +232,7 @@ public class FundDetailedEstimatedCashForecastReportV02 {
 	 * "Reference to a linked message that was previously received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FundDetailedEstimatedCashForecastReportV02, List<AdditionalReference3>> mmRelatedReference = new MMMessageBuildingBlock<FundDetailedEstimatedCashForecastReportV02, List<AdditionalReference3>>() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -239,12 +242,14 @@ public class FundDetailedEstimatedCashForecastReportV02 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FundDetailedEstimatedCashForecastReportV02.class.getMethod("getRelatedReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<AdditionalReference3> getValue(FundDetailedEstimatedCashForecastReportV02 obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(FundDetailedEstimatedCashForecastReportV02 obj, List<AdditionalReference3> value) {
+			obj.setRelatedReference(value);
 		}
 	};
 	@XmlElement(name = "EstmtdFndCshFcstDtls", required = true)
@@ -274,7 +279,7 @@ public class FundDetailedEstimatedCashForecastReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmEstimatedFundCashForecastDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FundDetailedEstimatedCashForecastReportV02, List<EstimatedFundCashForecast2>> mmEstimatedFundCashForecastDetails = new MMMessageBuildingBlock<FundDetailedEstimatedCashForecastReportV02, List<EstimatedFundCashForecast2>>() {
 		{
 			xmlTag = "EstmtdFndCshFcstDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -284,12 +289,14 @@ public class FundDetailedEstimatedCashForecastReportV02 {
 			complexType_lazy = () -> EstimatedFundCashForecast2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FundDetailedEstimatedCashForecastReportV02.class.getMethod("getEstimatedFundCashForecastDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<EstimatedFundCashForecast2> getValue(FundDetailedEstimatedCashForecastReportV02 obj) {
+			return obj.getEstimatedFundCashForecastDetails();
+		}
+
+		@Override
+		public void setValue(FundDetailedEstimatedCashForecastReportV02 obj, List<EstimatedFundCashForecast2> value) {
+			obj.setEstimatedFundCashForecastDetails(value);
 		}
 	};
 	@XmlElement(name = "Xtnsn")
@@ -318,7 +325,7 @@ public class FundDetailedEstimatedCashForecastReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FundDetailedEstimatedCashForecastReportV02, List<Extension1>> mmExtension = new MMMessageBuildingBlock<FundDetailedEstimatedCashForecastReportV02, List<Extension1>>() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -328,12 +335,14 @@ public class FundDetailedEstimatedCashForecastReportV02 {
 			complexType_lazy = () -> Extension1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FundDetailedEstimatedCashForecastReportV02.class.getMethod("getExtension", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Extension1> getValue(FundDetailedEstimatedCashForecastReportV02 obj) {
+			return obj.getExtension();
+		}
+
+		@Override
+		public void setValue(FundDetailedEstimatedCashForecastReportV02 obj, List<Extension1> value) {
+			obj.setExtension(value);
 		}
 	};
 

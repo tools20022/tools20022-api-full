@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.entity.Balance;
 import com.tools20022.repository.entity.CashAvailability;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashBalanceAvailabilityDate1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -129,7 +130,7 @@ public class CashBalanceAvailability2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashBalanceAvailability2, CashBalanceAvailabilityDate1> mmDate = new MMMessageAssociationEnd<CashBalanceAvailability2, CashBalanceAvailabilityDate1>() {
 		{
 			businessElementTrace_lazy = () -> CashAvailability.mmDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalanceAvailability2.mmObject();
@@ -142,7 +143,17 @@ public class CashBalanceAvailability2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashBalanceAvailabilityDate1.mmObject();
+			type_lazy = () -> CashBalanceAvailabilityDate1.mmObject();
+		}
+
+		@Override
+		public CashBalanceAvailabilityDate1 getValue(CashBalanceAvailability2 obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(CashBalanceAvailability2 obj, CashBalanceAvailabilityDate1 value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -187,7 +198,7 @@ public class CashBalanceAvailability2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashBalanceAvailability2, ActiveOrHistoricCurrencyAndAmount> mmAmount = new MMMessageAttribute<CashBalanceAvailability2, ActiveOrHistoricCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> CashAvailability.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalanceAvailability2.mmObject();
@@ -200,6 +211,16 @@ public class CashBalanceAvailability2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAndAmount getValue(CashBalanceAvailability2 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(CashBalanceAvailability2 obj, ActiveOrHistoricCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "CdtDbtInd", required = true)
@@ -247,7 +268,7 @@ public class CashBalanceAvailability2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashBalanceAvailability2, CreditDebitCode> mmCreditDebitIndicator = new MMMessageAttribute<CashBalanceAvailability2, CreditDebitCode>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalanceAvailability2.mmObject();
@@ -260,6 +281,16 @@ public class CashBalanceAvailability2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public CreditDebitCode getValue(CashBalanceAvailability2 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(CashBalanceAvailability2 obj, CreditDebitCode value) {
+			obj.setCreditDebitIndicator(value);
 		}
 	};
 
@@ -283,7 +314,7 @@ public class CashBalanceAvailability2 {
 		return date;
 	}
 
-	public CashBalanceAvailability2 setDate(com.tools20022.repository.msg.CashBalanceAvailabilityDate1 date) {
+	public CashBalanceAvailability2 setDate(CashBalanceAvailabilityDate1 date) {
 		this.date = Objects.requireNonNull(date);
 		return this;
 	}

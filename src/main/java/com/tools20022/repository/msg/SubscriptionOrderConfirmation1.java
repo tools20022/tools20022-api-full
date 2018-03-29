@@ -26,6 +26,9 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.SubscriptionExecution;
 import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Extension1;
+import com.tools20022.repository.msg.Intermediary9;
+import com.tools20022.repository.msg.SubscriptionMultipleExecution3;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -135,7 +138,7 @@ public class SubscriptionOrderConfirmation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmendmentIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubscriptionOrderConfirmation1, YesNoIndicator> mmAmendmentIndicator = new MMMessageAttribute<SubscriptionOrderConfirmation1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionOrderConfirmation1.mmObject();
 			isDerived = false;
@@ -146,6 +149,16 @@ public class SubscriptionOrderConfirmation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(SubscriptionOrderConfirmation1 obj) {
+			return obj.getAmendmentIndicator();
+		}
+
+		@Override
+		public void setValue(SubscriptionOrderConfirmation1 obj, YesNoIndicator value) {
+			obj.setAmendmentIndicator(value);
 		}
 	};
 	@XmlElement(name = "MltplExctnDtls", required = true)
@@ -183,7 +196,7 @@ public class SubscriptionOrderConfirmation1 {
 	 * "General information related to the execution of investment fund order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMultipleExecutionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SubscriptionOrderConfirmation1, SubscriptionMultipleExecution3> mmMultipleExecutionDetails = new MMMessageAssociationEnd<SubscriptionOrderConfirmation1, SubscriptionMultipleExecution3>() {
 		{
 			businessComponentTrace_lazy = () -> SubscriptionExecution.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionOrderConfirmation1.mmObject();
@@ -195,11 +208,21 @@ public class SubscriptionOrderConfirmation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SubscriptionMultipleExecution3.mmObject();
+			type_lazy = () -> SubscriptionMultipleExecution3.mmObject();
+		}
+
+		@Override
+		public SubscriptionMultipleExecution3 getValue(SubscriptionOrderConfirmation1 obj) {
+			return obj.getMultipleExecutionDetails();
+		}
+
+		@Override
+		public void setValue(SubscriptionOrderConfirmation1 obj, SubscriptionMultipleExecution3 value) {
+			obj.setMultipleExecutionDetails(value);
 		}
 	};
 	@XmlElement(name = "RltdPtyDtls")
-	protected List<com.tools20022.repository.msg.Intermediary9> relatedPartyDetails;
+	protected List<Intermediary9> relatedPartyDetails;
 	/**
 	 * 
 	 <p>
@@ -231,7 +254,7 @@ public class SubscriptionOrderConfirmation1 {
 	 * definition} = "Information about parties related to the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRelatedPartyDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SubscriptionOrderConfirmation1, List<Intermediary9>> mmRelatedPartyDetails = new MMMessageAssociationEnd<SubscriptionOrderConfirmation1, List<Intermediary9>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradePartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionOrderConfirmation1.mmObject();
@@ -243,11 +266,21 @@ public class SubscriptionOrderConfirmation1 {
 			maxOccurs = 10;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Intermediary9.mmObject();
+			type_lazy = () -> Intermediary9.mmObject();
+		}
+
+		@Override
+		public List<Intermediary9> getValue(SubscriptionOrderConfirmation1 obj) {
+			return obj.getRelatedPartyDetails();
+		}
+
+		@Override
+		public void setValue(SubscriptionOrderConfirmation1 obj, List<Intermediary9> value) {
+			obj.setRelatedPartyDetails(value);
 		}
 	};
 	@XmlElement(name = "Xtnsn")
-	protected List<com.tools20022.repository.msg.Extension1> extension;
+	protected List<Extension1> extension;
 	/**
 	 * 
 	 <p>
@@ -275,7 +308,7 @@ public class SubscriptionOrderConfirmation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SubscriptionOrderConfirmation1, List<Extension1>> mmExtension = new MMMessageAssociationEnd<SubscriptionOrderConfirmation1, List<Extension1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionOrderConfirmation1.mmObject();
 			isDerived = false;
@@ -285,7 +318,17 @@ public class SubscriptionOrderConfirmation1 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Extension1.mmObject();
+			type_lazy = () -> Extension1.mmObject();
+		}
+
+		@Override
+		public List<Extension1> getValue(SubscriptionOrderConfirmation1 obj) {
+			return obj.getExtension();
+		}
+
+		@Override
+		public void setValue(SubscriptionOrderConfirmation1 obj, List<Extension1> value) {
+			obj.setExtension(value);
 		}
 	};
 
@@ -320,7 +363,7 @@ public class SubscriptionOrderConfirmation1 {
 		return multipleExecutionDetails;
 	}
 
-	public SubscriptionOrderConfirmation1 setMultipleExecutionDetails(com.tools20022.repository.msg.SubscriptionMultipleExecution3 multipleExecutionDetails) {
+	public SubscriptionOrderConfirmation1 setMultipleExecutionDetails(SubscriptionMultipleExecution3 multipleExecutionDetails) {
 		this.multipleExecutionDetails = Objects.requireNonNull(multipleExecutionDetails);
 		return this;
 	}
@@ -329,7 +372,7 @@ public class SubscriptionOrderConfirmation1 {
 		return relatedPartyDetails == null ? relatedPartyDetails = new ArrayList<>() : relatedPartyDetails;
 	}
 
-	public SubscriptionOrderConfirmation1 setRelatedPartyDetails(List<com.tools20022.repository.msg.Intermediary9> relatedPartyDetails) {
+	public SubscriptionOrderConfirmation1 setRelatedPartyDetails(List<Intermediary9> relatedPartyDetails) {
 		this.relatedPartyDetails = Objects.requireNonNull(relatedPartyDetails);
 		return this;
 	}
@@ -338,7 +381,7 @@ public class SubscriptionOrderConfirmation1 {
 		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public SubscriptionOrderConfirmation1 setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+	public SubscriptionOrderConfirmation1 setExtension(List<Extension1> extension) {
 		this.extension = Objects.requireNonNull(extension);
 		return this;
 	}

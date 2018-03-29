@@ -123,7 +123,7 @@ public class RateAndAmountFormat41Choice {
 	 * RateAndAmountFormat20Choice.mmRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateAndAmountFormat41Choice, PercentageRate> mmRate = new MMMessageAttribute<RateAndAmountFormat41Choice, PercentageRate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat41Choice.mmObject();
 			isDerived = false;
@@ -136,6 +136,16 @@ public class RateAndAmountFormat41Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(RateAndAmountFormat41Choice obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(RateAndAmountFormat41Choice obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "NotSpcfdRate", required = true)
@@ -176,7 +186,7 @@ public class RateAndAmountFormat41Choice {
 	 * RateAndAmountFormat20Choice.mmNotSpecifiedRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateAndAmountFormat41Choice, RateValueType7Code> mmNotSpecifiedRate = new MMMessageAttribute<RateAndAmountFormat41Choice, RateValueType7Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat41Choice.mmObject();
 			isDerived = false;
@@ -189,6 +199,16 @@ public class RateAndAmountFormat41Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RateValueType7Code.mmObject();
+		}
+
+		@Override
+		public RateValueType7Code getValue(RateAndAmountFormat41Choice obj) {
+			return obj.getNotSpecifiedRate();
+		}
+
+		@Override
+		public void setValue(RateAndAmountFormat41Choice obj, RateValueType7Code value) {
+			obj.setNotSpecifiedRate(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -229,7 +249,7 @@ public class RateAndAmountFormat41Choice {
 	 * RateAndAmountFormat20Choice.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateAndAmountFormat41Choice, ActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<RateAndAmountFormat41Choice, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat41Choice.mmObject();
 			isDerived = false;
@@ -242,6 +262,16 @@ public class RateAndAmountFormat41Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(RateAndAmountFormat41Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(RateAndAmountFormat41Choice obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "RateTpAndRate", required = true)
@@ -278,7 +308,7 @@ public class RateAndAmountFormat41Choice {
 	 * RateAndAmountFormat20Choice.mmRateTypeAndRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateTypeAndRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RateAndAmountFormat41Choice, RateTypeAndPercentageRate8> mmRateTypeAndRate = new MMMessageAssociationEnd<RateAndAmountFormat41Choice, RateTypeAndPercentageRate8>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat41Choice.mmObject();
 			isDerived = false;
@@ -291,6 +321,16 @@ public class RateAndAmountFormat41Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RateTypeAndPercentageRate8.mmObject();
+		}
+
+		@Override
+		public RateTypeAndPercentageRate8 getValue(RateAndAmountFormat41Choice obj) {
+			return obj.getRateTypeAndRate();
+		}
+
+		@Override
+		public void setValue(RateAndAmountFormat41Choice obj, RateTypeAndPercentageRate8 value) {
+			obj.setRateTypeAndRate(value);
 		}
 	};
 

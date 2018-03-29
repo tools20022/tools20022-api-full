@@ -95,7 +95,7 @@ public class FiscalYear1Choice {
 	 * definition} = "Start date of the fiscal year."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FiscalYear1Choice, ISODate> mmStartDate = new MMMessageAttribute<FiscalYear1Choice, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.FiscalYear1Choice.mmObject();
 			isDerived = false;
@@ -106,6 +106,16 @@ public class FiscalYear1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(FiscalYear1Choice obj) {
+			return obj.getStartDate();
+		}
+
+		@Override
+		public void setValue(FiscalYear1Choice obj, ISODate value) {
+			obj.setStartDate(value);
 		}
 	};
 	@XmlElement(name = "EndDt", required = true)
@@ -137,7 +147,7 @@ public class FiscalYear1Choice {
 	 * definition} = "End date of the fiscal year."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEndDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FiscalYear1Choice, ISODate> mmEndDate = new MMMessageAttribute<FiscalYear1Choice, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.FiscalYear1Choice.mmObject();
 			isDerived = false;
@@ -148,6 +158,16 @@ public class FiscalYear1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(FiscalYear1Choice obj) {
+			return obj.getEndDate();
+		}
+
+		@Override
+		public void setValue(FiscalYear1Choice obj, ISODate value) {
+			obj.setEndDate(value);
 		}
 	};
 

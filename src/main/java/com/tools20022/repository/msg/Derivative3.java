@@ -22,7 +22,11 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.AssetClassification;
 import com.tools20022.repository.entity.Derivative;
+import com.tools20022.repository.entity.Option;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DerivativeClassification1;
+import com.tools20022.repository.msg.DerivativeUnderlyingLeg1;
+import com.tools20022.repository.msg.Option14;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -107,7 +111,7 @@ public class Derivative3 {
 	 * definition} = "Hierarchy of classification of a derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDerivativeClassification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Derivative3, DerivativeClassification1> mmDerivativeClassification = new MMMessageAssociationEnd<Derivative3, DerivativeClassification1>() {
 		{
 			businessComponentTrace_lazy = () -> AssetClassification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Derivative3.mmObject();
@@ -119,11 +123,21 @@ public class Derivative3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DerivativeClassification1.mmObject();
+			type_lazy = () -> DerivativeClassification1.mmObject();
+		}
+
+		@Override
+		public DerivativeClassification1 getValue(Derivative3 obj) {
+			return obj.getDerivativeClassification();
+		}
+
+		@Override
+		public void setValue(Derivative3 obj, DerivativeClassification1 value) {
+			obj.setDerivativeClassification(value);
 		}
 	};
 	@XmlElement(name = "DerivUndrlygLeg", required = true)
-	protected List<com.tools20022.repository.msg.DerivativeUnderlyingLeg1> derivativeUnderlyingLeg;
+	protected List<DerivativeUnderlyingLeg1> derivativeUnderlyingLeg;
 	/**
 	 * 
 	 <p>
@@ -155,7 +169,7 @@ public class Derivative3 {
 	 * definition} = "\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDerivativeUnderlyingLeg = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Derivative3, List<DerivativeUnderlyingLeg1>> mmDerivativeUnderlyingLeg = new MMMessageAssociationEnd<Derivative3, List<DerivativeUnderlyingLeg1>>() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmUnderlyingAsset;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Derivative3.mmObject();
@@ -167,7 +181,17 @@ public class Derivative3 {
 			maxOccurs = 2;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DerivativeUnderlyingLeg1.mmObject();
+			type_lazy = () -> DerivativeUnderlyingLeg1.mmObject();
+		}
+
+		@Override
+		public List<DerivativeUnderlyingLeg1> getValue(Derivative3 obj) {
+			return obj.getDerivativeUnderlyingLeg();
+		}
+
+		@Override
+		public void setValue(Derivative3 obj, List<DerivativeUnderlyingLeg1> value) {
+			obj.setDerivativeUnderlyingLeg(value);
 		}
 	};
 	@XmlElement(name = "OptnAttrbts")
@@ -179,6 +203,10 @@ public class Derivative3 {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.msg.Option14 Option14}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessComponentTrace
+	 * businessComponentTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Option Option}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -196,8 +224,9 @@ public class Derivative3 {
 	 * definition} = "Option specific attributes.\r\n\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOptionAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Derivative3, Optional<Option14>> mmOptionAttributes = new MMMessageAssociationEnd<Derivative3, Optional<Option14>>() {
 		{
+			businessComponentTrace_lazy = () -> Option.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Derivative3.mmObject();
 			isDerived = false;
 			xmlTag = "OptnAttrbts";
@@ -207,7 +236,17 @@ public class Derivative3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Option14.mmObject();
+			type_lazy = () -> Option14.mmObject();
+		}
+
+		@Override
+		public Optional<Option14> getValue(Derivative3 obj) {
+			return obj.getOptionAttributes();
+		}
+
+		@Override
+		public void setValue(Derivative3 obj, Optional<Option14> value) {
+			obj.setOptionAttributes(value.orElse(null));
 		}
 	};
 
@@ -230,7 +269,7 @@ public class Derivative3 {
 		return derivativeClassification;
 	}
 
-	public Derivative3 setDerivativeClassification(com.tools20022.repository.msg.DerivativeClassification1 derivativeClassification) {
+	public Derivative3 setDerivativeClassification(DerivativeClassification1 derivativeClassification) {
 		this.derivativeClassification = Objects.requireNonNull(derivativeClassification);
 		return this;
 	}
@@ -239,7 +278,7 @@ public class Derivative3 {
 		return derivativeUnderlyingLeg == null ? derivativeUnderlyingLeg = new ArrayList<>() : derivativeUnderlyingLeg;
 	}
 
-	public Derivative3 setDerivativeUnderlyingLeg(List<com.tools20022.repository.msg.DerivativeUnderlyingLeg1> derivativeUnderlyingLeg) {
+	public Derivative3 setDerivativeUnderlyingLeg(List<DerivativeUnderlyingLeg1> derivativeUnderlyingLeg) {
 		this.derivativeUnderlyingLeg = Objects.requireNonNull(derivativeUnderlyingLeg);
 		return this;
 	}
@@ -248,7 +287,7 @@ public class Derivative3 {
 		return optionAttributes == null ? Optional.empty() : Optional.of(optionAttributes);
 	}
 
-	public Derivative3 setOptionAttributes(com.tools20022.repository.msg.Option14 optionAttributes) {
+	public Derivative3 setOptionAttributes(Option14 optionAttributes) {
 		this.optionAttributes = optionAttributes;
 		return this;
 	}

@@ -148,7 +148,7 @@ public class Statement21 {
 	 * definition} = "Sequential number of the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement21, Optional<Number3Choice>> mmReportNumber = new MMMessageAttribute<Statement21, Optional<Number3Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement21.mmObject();
 			isDerived = false;
@@ -160,6 +160,16 @@ public class Statement21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Number3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Number3Choice> getValue(Statement21 obj) {
+			return obj.getReportNumber();
+		}
+
+		@Override
+		public void setValue(Statement21 obj, Optional<Number3Choice> value) {
+			obj.setReportNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "QryRef")
@@ -195,7 +205,7 @@ public class Statement21 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement21, Optional<Max35Text>> mmQueryReference = new MMMessageAttribute<Statement21, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement21.mmObject();
 			isDerived = false;
@@ -207,6 +217,16 @@ public class Statement21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Statement21 obj) {
+			return obj.getQueryReference();
+		}
+
+		@Override
+		public void setValue(Statement21 obj, Optional<Max35Text> value) {
+			obj.setQueryReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StmtId")
@@ -237,7 +257,7 @@ public class Statement21 {
 	 * definition} = "Reference common to all pages of a statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement21, Optional<Max35Text>> mmStatementIdentification = new MMMessageAttribute<Statement21, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement21.mmObject();
 			isDerived = false;
@@ -248,6 +268,16 @@ public class Statement21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Statement21 obj) {
+			return obj.getStatementIdentification();
+		}
+
+		@Override
+		public void setValue(Statement21 obj, Optional<Max35Text> value) {
+			obj.setStatementIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StmtDtTm", required = true)
@@ -282,7 +312,7 @@ public class Statement21 {
 	 * definition} = "Date and time of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement21, DateAndDateTimeChoice> mmStatementDateTime = new MMMessageAttribute<Statement21, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement21.mmObject();
 			isDerived = false;
@@ -294,6 +324,16 @@ public class Statement21 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(Statement21 obj) {
+			return obj.getStatementDateTime();
+		}
+
+		@Override
+		public void setValue(Statement21 obj, DateAndDateTimeChoice value) {
+			obj.setStatementDateTime(value);
 		}
 	};
 	@XmlElement(name = "Frqcy", required = true)
@@ -328,7 +368,7 @@ public class Statement21 {
 	 * definition} = "Frequency of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement21, Frequency4Choice> mmFrequency = new MMMessageAttribute<Statement21, Frequency4Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement21.mmObject();
 			isDerived = false;
@@ -340,6 +380,16 @@ public class Statement21 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Frequency4Choice.mmObject();
+		}
+
+		@Override
+		public Frequency4Choice getValue(Statement21 obj) {
+			return obj.getFrequency();
+		}
+
+		@Override
+		public void setValue(Statement21 obj, Frequency4Choice value) {
+			obj.setFrequency(value);
 		}
 	};
 	@XmlElement(name = "UpdTp", required = true)
@@ -373,7 +423,7 @@ public class Statement21 {
 	 * "Indicates whether the statement is complete or contains changes only."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUpdateType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Statement21, UpdateType2Choice> mmUpdateType = new MMMessageAssociationEnd<Statement21, UpdateType2Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement21.mmObject();
 			isDerived = false;
@@ -386,6 +436,16 @@ public class Statement21 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> UpdateType2Choice.mmObject();
+		}
+
+		@Override
+		public UpdateType2Choice getValue(Statement21 obj) {
+			return obj.getUpdateType();
+		}
+
+		@Override
+		public void setValue(Statement21 obj, UpdateType2Choice value) {
+			obj.setUpdateType(value);
 		}
 	};
 	@XmlElement(name = "StmtBsis", required = true)
@@ -420,7 +480,7 @@ public class Statement21 {
 	 * definition} = "Type of balance on which the statement is prepared."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement21, StatementBasis3Choice> mmStatementBasis = new MMMessageAttribute<Statement21, StatementBasis3Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement21.mmObject();
 			isDerived = false;
@@ -432,6 +492,16 @@ public class Statement21 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> StatementBasis3Choice.mmObject();
+		}
+
+		@Override
+		public StatementBasis3Choice getValue(Statement21 obj) {
+			return obj.getStatementBasis();
+		}
+
+		@Override
+		public void setValue(Statement21 obj, StatementBasis3Choice value) {
+			obj.setStatementBasis(value);
 		}
 	};
 	@XmlElement(name = "ActvtyInd", required = true)
@@ -468,7 +538,7 @@ public class Statement21 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActivityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement21, YesNoIndicator> mmActivityIndicator = new MMMessageAttribute<Statement21, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement21.mmObject();
 			isDerived = false;
@@ -480,6 +550,16 @@ public class Statement21 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(Statement21 obj) {
+			return obj.getActivityIndicator();
+		}
+
+		@Override
+		public void setValue(Statement21 obj, YesNoIndicator value) {
+			obj.setActivityIndicator(value);
 		}
 	};
 	@XmlElement(name = "SubAcctInd", required = true)
@@ -516,7 +596,7 @@ public class Statement21 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubAccountIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement21, YesNoIndicator> mmSubAccountIndicator = new MMMessageAttribute<Statement21, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement21.mmObject();
 			isDerived = false;
@@ -528,6 +608,16 @@ public class Statement21 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(Statement21 obj) {
+			return obj.getSubAccountIndicator();
+		}
+
+		@Override
+		public void setValue(Statement21 obj, YesNoIndicator value) {
+			obj.setSubAccountIndicator(value);
 		}
 	};
 

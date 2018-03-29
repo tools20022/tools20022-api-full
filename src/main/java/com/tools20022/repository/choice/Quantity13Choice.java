@@ -126,7 +126,7 @@ public class Quantity13Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalUnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Quantity13Choice, FinancialInstrumentQuantity1> mmTotalUnitsNumber = new MMMessageAttribute<Quantity13Choice, FinancialInstrumentQuantity1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferredQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity13Choice.mmObject();
@@ -139,6 +139,16 @@ public class Quantity13Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity1 getValue(Quantity13Choice obj) {
+			return obj.getTotalUnitsNumber();
+		}
+
+		@Override
+		public void setValue(Quantity13Choice obj, FinancialInstrumentQuantity1 value) {
+			obj.setTotalUnitsNumber(value);
 		}
 	};
 	@XmlElement(name = "PrtflTrfOutRate", required = true)
@@ -184,7 +194,7 @@ public class Quantity13Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPortfolioTransferOutRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Quantity13Choice, PercentageRate> mmPortfolioTransferOutRate = new MMMessageAttribute<Quantity13Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity13Choice.mmObject();
@@ -197,6 +207,16 @@ public class Quantity13Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(Quantity13Choice obj) {
+			return obj.getPortfolioTransferOutRate();
+		}
+
+		@Override
+		public void setValue(Quantity13Choice obj, PercentageRate value) {
+			obj.setPortfolioTransferOutRate(value);
 		}
 	};
 

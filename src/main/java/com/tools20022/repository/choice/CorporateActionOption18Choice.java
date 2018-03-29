@@ -125,7 +125,7 @@ public class CorporateActionOption18Choice {
 	 * CorporateActionOption10Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOption18Choice, CorporateActionOption7Code> mmCode = new MMMessageAttribute<CorporateActionOption18Choice, CorporateActionOption7Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionOption18Choice.mmObject();
@@ -139,6 +139,16 @@ public class CorporateActionOption18Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionOption7Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionOption7Code getValue(CorporateActionOption18Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption18Choice obj, CorporateActionOption7Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -184,7 +194,7 @@ public class CorporateActionOption18Choice {
 	 * CorporateActionOption10Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionOption18Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<CorporateActionOption18Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionOption18Choice.mmObject();
@@ -199,6 +209,16 @@ public class CorporateActionOption18Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(CorporateActionOption18Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption18Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -25,6 +25,8 @@ import com.tools20022.repository.choice.PartyIdentification70Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountIdentificationAndName5;
+import com.tools20022.repository.msg.BranchData;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -146,7 +148,7 @@ public class DirectDebitMandate5 {
 	 * DirectDebitMandate4.mmDebtorAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDebtorAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DirectDebitMandate5, AccountIdentificationAndName5> mmDebtorAccount = new MMMessageAttribute<DirectDebitMandate5, AccountIdentificationAndName5>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectDebitMandate5.mmObject();
@@ -158,7 +160,17 @@ public class DirectDebitMandate5 {
 			previousVersion_lazy = () -> DirectDebitMandate4.mmDebtorAccount;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentificationAndName5.mmObject();
+			complexType_lazy = () -> AccountIdentificationAndName5.mmObject();
+		}
+
+		@Override
+		public AccountIdentificationAndName5 getValue(DirectDebitMandate5 obj) {
+			return obj.getDebtorAccount();
+		}
+
+		@Override
+		public void setValue(DirectDebitMandate5 obj, AccountIdentificationAndName5 value) {
+			obj.setDebtorAccount(value);
 		}
 	};
 	@XmlElement(name = "Dbtr")
@@ -203,7 +215,7 @@ public class DirectDebitMandate5 {
 	 * DirectDebitMandate4.mmDebtor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDebtor = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DirectDebitMandate5, Optional<PartyIdentification70Choice>> mmDebtor = new MMMessageAttribute<DirectDebitMandate5, Optional<PartyIdentification70Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectDebitMandate5.mmObject();
@@ -216,6 +228,16 @@ public class DirectDebitMandate5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification70Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification70Choice> getValue(DirectDebitMandate5 obj) {
+			return obj.getDebtor();
+		}
+
+		@Override
+		public void setValue(DirectDebitMandate5 obj, Optional<PartyIdentification70Choice> value) {
+			obj.setDebtor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DbtrTaxIdNb")
@@ -257,7 +279,7 @@ public class DirectDebitMandate5 {
 	 * DirectDebitMandate4.mmDebtorTaxIdentificationNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDebtorTaxIdentificationNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DirectDebitMandate5, Optional<Max35Text>> mmDebtorTaxIdentificationNumber = new MMMessageAttribute<DirectDebitMandate5, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmTaxIdentificationNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectDebitMandate5.mmObject();
@@ -270,6 +292,16 @@ public class DirectDebitMandate5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(DirectDebitMandate5 obj) {
+			return obj.getDebtorTaxIdentificationNumber();
+		}
+
+		@Override
+		public void setValue(DirectDebitMandate5 obj, Optional<Max35Text> value) {
+			obj.setDebtorTaxIdentificationNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DbtrNtlRegnNb")
@@ -312,7 +344,7 @@ public class DirectDebitMandate5 {
 	 * DirectDebitMandate4.mmDebtorNationalRegistrationNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDebtorNationalRegistrationNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DirectDebitMandate5, Optional<Max35Text>> mmDebtorNationalRegistrationNumber = new MMMessageAttribute<DirectDebitMandate5, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmNationalRegistrationNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectDebitMandate5.mmObject();
@@ -325,6 +357,16 @@ public class DirectDebitMandate5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(DirectDebitMandate5 obj) {
+			return obj.getDebtorNationalRegistrationNumber();
+		}
+
+		@Override
+		public void setValue(DirectDebitMandate5 obj, Optional<Max35Text> value) {
+			obj.setDebtorNationalRegistrationNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Cdtr")
@@ -369,7 +411,7 @@ public class DirectDebitMandate5 {
 	 * DirectDebitMandate4.mmCreditor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditor = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DirectDebitMandate5, Optional<PartyIdentification70Choice>> mmCreditor = new MMMessageAttribute<DirectDebitMandate5, Optional<PartyIdentification70Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectDebitMandate5.mmObject();
@@ -382,6 +424,16 @@ public class DirectDebitMandate5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification70Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification70Choice> getValue(DirectDebitMandate5 obj) {
+			return obj.getCreditor();
+		}
+
+		@Override
+		public void setValue(DirectDebitMandate5 obj, Optional<PartyIdentification70Choice> value) {
+			obj.setCreditor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DbtrAgt", required = true)
@@ -426,7 +478,7 @@ public class DirectDebitMandate5 {
 	 * DirectDebitMandate4.mmDebtorAgent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDebtorAgent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DirectDebitMandate5, FinancialInstitutionIdentification7Choice> mmDebtorAgent = new MMMessageAttribute<DirectDebitMandate5, FinancialInstitutionIdentification7Choice>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectDebitMandate5.mmObject();
@@ -439,6 +491,16 @@ public class DirectDebitMandate5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstitutionIdentification7Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstitutionIdentification7Choice getValue(DirectDebitMandate5 obj) {
+			return obj.getDebtorAgent();
+		}
+
+		@Override
+		public void setValue(DirectDebitMandate5 obj, FinancialInstitutionIdentification7Choice value) {
+			obj.setDebtorAgent(value);
 		}
 	};
 	@XmlElement(name = "DbtrAgtBrnch")
@@ -482,7 +544,7 @@ public class DirectDebitMandate5 {
 	 * DirectDebitMandate4.mmDebtorAgentBranch}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDebtorAgentBranch = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DirectDebitMandate5, Optional<BranchData>> mmDebtorAgentBranch = new MMMessageAttribute<DirectDebitMandate5, Optional<BranchData>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmBranch;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectDebitMandate5.mmObject();
@@ -494,7 +556,17 @@ public class DirectDebitMandate5 {
 			previousVersion_lazy = () -> DirectDebitMandate4.mmDebtorAgentBranch;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.BranchData.mmObject();
+			complexType_lazy = () -> BranchData.mmObject();
+		}
+
+		@Override
+		public Optional<BranchData> getValue(DirectDebitMandate5 obj) {
+			return obj.getDebtorAgentBranch();
+		}
+
+		@Override
+		public void setValue(DirectDebitMandate5 obj, Optional<BranchData> value) {
+			obj.setDebtorAgentBranch(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtrAgt")
@@ -539,7 +611,7 @@ public class DirectDebitMandate5 {
 	 * DirectDebitMandate4.mmCreditorAgent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditorAgent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DirectDebitMandate5, Optional<FinancialInstitutionIdentification7Choice>> mmCreditorAgent = new MMMessageAttribute<DirectDebitMandate5, Optional<FinancialInstitutionIdentification7Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectDebitMandate5.mmObject();
@@ -552,6 +624,16 @@ public class DirectDebitMandate5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstitutionIdentification7Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstitutionIdentification7Choice> getValue(DirectDebitMandate5 obj) {
+			return obj.getCreditorAgent();
+		}
+
+		@Override
+		public void setValue(DirectDebitMandate5 obj, Optional<FinancialInstitutionIdentification7Choice> value) {
+			obj.setCreditorAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtrAgtBrnch")
@@ -595,7 +677,7 @@ public class DirectDebitMandate5 {
 	 * DirectDebitMandate4.mmCreditorAgentBranch}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditorAgentBranch = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DirectDebitMandate5, Optional<BranchData>> mmCreditorAgentBranch = new MMMessageAttribute<DirectDebitMandate5, Optional<BranchData>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectDebitMandate5.mmObject();
@@ -607,7 +689,17 @@ public class DirectDebitMandate5 {
 			previousVersion_lazy = () -> DirectDebitMandate4.mmCreditorAgentBranch;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.BranchData.mmObject();
+			complexType_lazy = () -> BranchData.mmObject();
+		}
+
+		@Override
+		public Optional<BranchData> getValue(DirectDebitMandate5 obj) {
+			return obj.getCreditorAgentBranch();
+		}
+
+		@Override
+		public void setValue(DirectDebitMandate5 obj, Optional<BranchData> value) {
+			obj.setCreditorAgentBranch(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RegnId")
@@ -651,7 +743,7 @@ public class DirectDebitMandate5 {
 	 * DirectDebitMandate4.mmRegistrationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegistrationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DirectDebitMandate5, Optional<Max35Text>> mmRegistrationIdentification = new MMMessageAttribute<DirectDebitMandate5, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> DirectDebit.mmRegistrationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectDebitMandate5.mmObject();
@@ -664,6 +756,16 @@ public class DirectDebitMandate5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(DirectDebitMandate5 obj) {
+			return obj.getRegistrationIdentification();
+		}
+
+		@Override
+		public void setValue(DirectDebitMandate5 obj, Optional<Max35Text> value) {
+			obj.setRegistrationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MndtId")
@@ -707,7 +809,7 @@ public class DirectDebitMandate5 {
 	 * DirectDebitMandate4.mmMandateIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMandateIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DirectDebitMandate5, Optional<Max35Text>> mmMandateIdentification = new MMMessageAttribute<DirectDebitMandate5, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectDebitMandate5.mmObject();
@@ -720,6 +822,16 @@ public class DirectDebitMandate5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(DirectDebitMandate5 obj) {
+			return obj.getMandateIdentification();
+		}
+
+		@Override
+		public void setValue(DirectDebitMandate5 obj, Optional<Max35Text> value) {
+			obj.setMandateIdentification(value.orElse(null));
 		}
 	};
 
@@ -746,7 +858,7 @@ public class DirectDebitMandate5 {
 		return debtorAccount;
 	}
 
-	public DirectDebitMandate5 setDebtorAccount(com.tools20022.repository.msg.AccountIdentificationAndName5 debtorAccount) {
+	public DirectDebitMandate5 setDebtorAccount(AccountIdentificationAndName5 debtorAccount) {
 		this.debtorAccount = Objects.requireNonNull(debtorAccount);
 		return this;
 	}
@@ -800,7 +912,7 @@ public class DirectDebitMandate5 {
 		return debtorAgentBranch == null ? Optional.empty() : Optional.of(debtorAgentBranch);
 	}
 
-	public DirectDebitMandate5 setDebtorAgentBranch(com.tools20022.repository.msg.BranchData debtorAgentBranch) {
+	public DirectDebitMandate5 setDebtorAgentBranch(BranchData debtorAgentBranch) {
 		this.debtorAgentBranch = debtorAgentBranch;
 		return this;
 	}
@@ -818,7 +930,7 @@ public class DirectDebitMandate5 {
 		return creditorAgentBranch == null ? Optional.empty() : Optional.of(creditorAgentBranch);
 	}
 
-	public DirectDebitMandate5 setCreditorAgentBranch(com.tools20022.repository.msg.BranchData creditorAgentBranch) {
+	public DirectDebitMandate5 setCreditorAgentBranch(BranchData creditorAgentBranch) {
 		this.creditorAgentBranch = creditorAgentBranch;
 		return this;
 	}

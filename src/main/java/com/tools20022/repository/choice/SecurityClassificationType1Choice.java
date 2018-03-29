@@ -113,7 +113,7 @@ public class SecurityClassificationType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCFI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityClassificationType1Choice, CFIIdentifier> mmCFI = new MMMessageAttribute<SecurityClassificationType1Choice, CFIIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityClassificationType1Choice.mmObject();
@@ -125,6 +125,16 @@ public class SecurityClassificationType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CFIIdentifier.mmObject();
+		}
+
+		@Override
+		public CFIIdentifier getValue(SecurityClassificationType1Choice obj) {
+			return obj.getCFI();
+		}
+
+		@Override
+		public void setValue(SecurityClassificationType1Choice obj, CFIIdentifier value) {
+			obj.setCFI(value);
 		}
 	};
 	@XmlElement(name = "AltrnClssfctn", required = true)
@@ -161,7 +171,7 @@ public class SecurityClassificationType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAlternateClassification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityClassificationType1Choice, GenericIdentification3> mmAlternateClassification = new MMMessageAssociationEnd<SecurityClassificationType1Choice, GenericIdentification3>() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityClassificationType1Choice.mmObject();
@@ -174,6 +184,16 @@ public class SecurityClassificationType1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification3.mmObject();
+		}
+
+		@Override
+		public GenericIdentification3 getValue(SecurityClassificationType1Choice obj) {
+			return obj.getAlternateClassification();
+		}
+
+		@Override
+		public void setValue(SecurityClassificationType1Choice obj, GenericIdentification3 value) {
+			obj.setAlternateClassification(value);
 		}
 	};
 

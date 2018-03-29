@@ -49,11 +49,15 @@ public class ConstraintR4 {
 	 */
 	public static final MMConstraint<TaxReportPurpose> forTaxReportPurpose = new MMConstraint<TaxReportPurpose>() {
 		{
-			validator = ConstraintR4::checkGroupHeader69;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "R4";
 			definition = "Value according to external codelist.";
 			owner_lazy = () -> GroupHeader69.mmTaxReportPurpose;
+		}
+
+		@Override
+		public void executeValidator(TaxReportPurpose obj) throws Exception {
+			checkGroupHeader69(obj);
 		}
 	};
 

@@ -27,6 +27,10 @@ import com.tools20022.repository.codeset.TerminalManagementAdditionalProcess1Cod
 import com.tools20022.repository.entity.TerminalManagementAction;
 import com.tools20022.repository.entity.TerminalManagementSystem;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DataSetIdentification2;
+import com.tools20022.repository.msg.ErrorAction1;
+import com.tools20022.repository.msg.NetworkParameters1;
+import com.tools20022.repository.msg.ProcessTiming1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -128,7 +132,7 @@ public class TMSAction1 {
 	 * "Types of action to be performed by a point of interaction (POI)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSAction1, TerminalManagementAction1Code> mmType = new MMMessageAttribute<TMSAction1, TerminalManagementAction1Code>() {
 		{
 			businessElementTrace_lazy = () -> TerminalManagementAction.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction1.mmObject();
@@ -140,6 +144,16 @@ public class TMSAction1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementAction1Code.mmObject();
+		}
+
+		@Override
+		public TerminalManagementAction1Code getValue(TMSAction1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(TMSAction1 obj, TerminalManagementAction1Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Adr")
@@ -175,7 +189,7 @@ public class TMSAction1 {
 	 * "Communication parameters of the terminal management system to contact."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TMSAction1, Optional<NetworkParameters1>> mmAddress = new MMMessageAssociationEnd<TMSAction1, Optional<NetworkParameters1>>() {
 		{
 			businessElementTrace_lazy = () -> TerminalManagementSystem.mmNetworkAccess;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction1.mmObject();
@@ -187,7 +201,17 @@ public class TMSAction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NetworkParameters1.mmObject();
+			type_lazy = () -> NetworkParameters1.mmObject();
+		}
+
+		@Override
+		public Optional<NetworkParameters1> getValue(TMSAction1 obj) {
+			return obj.getAddress();
+		}
+
+		@Override
+		public void setValue(TMSAction1 obj, Optional<NetworkParameters1> value) {
+			obj.setAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DataSetId")
@@ -217,7 +241,7 @@ public class TMSAction1 {
 	 * definition} = "Data set on which the action has to be performed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSetIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TMSAction1, Optional<DataSetIdentification2>> mmDataSetIdentification = new MMMessageAssociationEnd<TMSAction1, Optional<DataSetIdentification2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction1.mmObject();
 			isDerived = false;
@@ -228,7 +252,17 @@ public class TMSAction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DataSetIdentification2.mmObject();
+			type_lazy = () -> DataSetIdentification2.mmObject();
+		}
+
+		@Override
+		public Optional<DataSetIdentification2> getValue(TMSAction1 obj) {
+			return obj.getDataSetIdentification();
+		}
+
+		@Override
+		public void setValue(TMSAction1 obj, Optional<DataSetIdentification2> value) {
+			obj.setDataSetIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Trggr", required = true)
@@ -267,7 +301,7 @@ public class TMSAction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTrigger = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSAction1, TerminalManagementActionTrigger1Code> mmTrigger = new MMMessageAttribute<TMSAction1, TerminalManagementActionTrigger1Code>() {
 		{
 			businessElementTrace_lazy = () -> TerminalManagementAction.mmTrigger;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction1.mmObject();
@@ -279,6 +313,16 @@ public class TMSAction1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementActionTrigger1Code.mmObject();
+		}
+
+		@Override
+		public TerminalManagementActionTrigger1Code getValue(TMSAction1 obj) {
+			return obj.getTrigger();
+		}
+
+		@Override
+		public void setValue(TMSAction1 obj, TerminalManagementActionTrigger1Code value) {
+			obj.setTrigger(value);
 		}
 	};
 	@XmlElement(name = "AddtlPrc")
@@ -317,7 +361,7 @@ public class TMSAction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalProcess = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSAction1, Optional<TerminalManagementAdditionalProcess1Code>> mmAdditionalProcess = new MMMessageAttribute<TMSAction1, Optional<TerminalManagementAdditionalProcess1Code>>() {
 		{
 			businessElementTrace_lazy = () -> TerminalManagementAction.mmAdditionalProcess;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction1.mmObject();
@@ -329,6 +373,16 @@ public class TMSAction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TerminalManagementAdditionalProcess1Code.mmObject();
+		}
+
+		@Override
+		public Optional<TerminalManagementAdditionalProcess1Code> getValue(TMSAction1 obj) {
+			return obj.getAdditionalProcess();
+		}
+
+		@Override
+		public void setValue(TMSAction1 obj, Optional<TerminalManagementAdditionalProcess1Code> value) {
+			obj.setAdditionalProcess(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TmCond")
@@ -358,7 +412,7 @@ public class TMSAction1 {
 	 * definition} = "Date and time the action has to be performed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTimeCondition = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TMSAction1, Optional<ProcessTiming1>> mmTimeCondition = new MMMessageAssociationEnd<TMSAction1, Optional<ProcessTiming1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction1.mmObject();
 			isDerived = false;
@@ -369,11 +423,21 @@ public class TMSAction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ProcessTiming1.mmObject();
+			type_lazy = () -> ProcessTiming1.mmObject();
+		}
+
+		@Override
+		public Optional<ProcessTiming1> getValue(TMSAction1 obj) {
+			return obj.getTimeCondition();
+		}
+
+		@Override
+		public void setValue(TMSAction1 obj, Optional<ProcessTiming1> value) {
+			obj.setTimeCondition(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ErrActn")
-	protected List<com.tools20022.repository.msg.ErrorAction1> errorAction;
+	protected List<ErrorAction1> errorAction;
 	/**
 	 * 
 	 <p>
@@ -405,7 +469,7 @@ public class TMSAction1 {
 	 * "Action to perform in case of error on the related action in progress."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmErrorAction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TMSAction1, List<ErrorAction1>> mmErrorAction = new MMMessageAssociationEnd<TMSAction1, List<ErrorAction1>>() {
 		{
 			businessComponentTrace_lazy = () -> TerminalManagementAction.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSAction1.mmObject();
@@ -416,7 +480,17 @@ public class TMSAction1 {
 			definition = "Action to perform in case of error on the related action in progress.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ErrorAction1.mmObject();
+			type_lazy = () -> ErrorAction1.mmObject();
+		}
+
+		@Override
+		public List<ErrorAction1> getValue(TMSAction1 obj) {
+			return obj.getErrorAction();
+		}
+
+		@Override
+		public void setValue(TMSAction1 obj, List<ErrorAction1> value) {
+			obj.setErrorAction(value);
 		}
 	};
 
@@ -450,7 +524,7 @@ public class TMSAction1 {
 		return address == null ? Optional.empty() : Optional.of(address);
 	}
 
-	public TMSAction1 setAddress(com.tools20022.repository.msg.NetworkParameters1 address) {
+	public TMSAction1 setAddress(NetworkParameters1 address) {
 		this.address = address;
 		return this;
 	}
@@ -459,7 +533,7 @@ public class TMSAction1 {
 		return dataSetIdentification == null ? Optional.empty() : Optional.of(dataSetIdentification);
 	}
 
-	public TMSAction1 setDataSetIdentification(com.tools20022.repository.msg.DataSetIdentification2 dataSetIdentification) {
+	public TMSAction1 setDataSetIdentification(DataSetIdentification2 dataSetIdentification) {
 		this.dataSetIdentification = dataSetIdentification;
 		return this;
 	}
@@ -486,7 +560,7 @@ public class TMSAction1 {
 		return timeCondition == null ? Optional.empty() : Optional.of(timeCondition);
 	}
 
-	public TMSAction1 setTimeCondition(com.tools20022.repository.msg.ProcessTiming1 timeCondition) {
+	public TMSAction1 setTimeCondition(ProcessTiming1 timeCondition) {
 		this.timeCondition = timeCondition;
 		return this;
 	}
@@ -495,7 +569,7 @@ public class TMSAction1 {
 		return errorAction == null ? errorAction = new ArrayList<>() : errorAction;
 	}
 
-	public TMSAction1 setErrorAction(List<com.tools20022.repository.msg.ErrorAction1> errorAction) {
+	public TMSAction1 setErrorAction(List<ErrorAction1> errorAction) {
 		this.errorAction = Objects.requireNonNull(errorAction);
 		return this;
 	}

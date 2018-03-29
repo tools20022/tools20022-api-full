@@ -135,7 +135,7 @@ public class CorporateActionDate21SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDate21SD1, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<CorporateActionDate21SD1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate21SD1.mmObject();
 			isDerived = false;
@@ -146,6 +146,16 @@ public class CorporateActionDate21SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionDate21SD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate21SD1 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "WebSvcNtfctnDt")
@@ -180,7 +190,7 @@ public class CorporateActionDate21SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmWebServiceNotificationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>> mmWebServiceNotificationDate = new MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate21SD1.mmObject();
 			isDerived = false;
@@ -191,6 +201,16 @@ public class CorporateActionDate21SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat22Choice> getValue(CorporateActionDate21SD1 obj) {
+			return obj.getWebServiceNotificationDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate21SD1 obj, Optional<DateFormat22Choice> value) {
+			obj.setWebServiceNotificationDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsWebSvcNtfctnDt")
@@ -225,7 +245,7 @@ public class CorporateActionDate21SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreviousWebServiceNotificationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>> mmPreviousWebServiceNotificationDate = new MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate21SD1.mmObject();
 			isDerived = false;
@@ -236,6 +256,16 @@ public class CorporateActionDate21SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat22Choice> getValue(CorporateActionDate21SD1 obj) {
+			return obj.getPreviousWebServiceNotificationDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate21SD1 obj, Optional<DateFormat22Choice> value) {
+			obj.setPreviousWebServiceNotificationDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ActlRcrdDt")
@@ -270,7 +300,7 @@ public class CorporateActionDate21SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActualRecordDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>> mmActualRecordDate = new MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate21SD1.mmObject();
 			isDerived = false;
@@ -281,6 +311,16 @@ public class CorporateActionDate21SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat22Choice> getValue(CorporateActionDate21SD1 obj) {
+			return obj.getActualRecordDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate21SD1 obj, Optional<DateFormat22Choice> value) {
+			obj.setActualRecordDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BrdMtgDt")
@@ -313,7 +353,7 @@ public class CorporateActionDate21SD1 {
 	 * definition} = "Date of the board meeting.\r\n取締役会決議日."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBoardMeetingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>> mmBoardMeetingDate = new MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate21SD1.mmObject();
 			isDerived = false;
@@ -324,6 +364,16 @@ public class CorporateActionDate21SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat22Choice> getValue(CorporateActionDate21SD1 obj) {
+			return obj.getBoardMeetingDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate21SD1 obj, Optional<DateFormat22Choice> value) {
+			obj.setBoardMeetingDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CorpRegnDt")
@@ -357,7 +407,7 @@ public class CorporateActionDate21SD1 {
 	 * "Date on which the new company will be registered.\r\n新設会社登記日."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCorporateRegistrationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>> mmCorporateRegistrationDate = new MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate21SD1.mmObject();
 			isDerived = false;
@@ -368,6 +418,16 @@ public class CorporateActionDate21SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat22Choice> getValue(CorporateActionDate21SD1 obj) {
+			return obj.getCorporateRegistrationDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate21SD1 obj, Optional<DateFormat22Choice> value) {
+			obj.setCorporateRegistrationDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EarlstPlandDtOfIssePric")
@@ -402,7 +462,7 @@ public class CorporateActionDate21SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEarliestPlannedDateOfIssuePrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>> mmEarliestPlannedDateOfIssuePrice = new MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate21SD1.mmObject();
 			isDerived = false;
@@ -413,6 +473,16 @@ public class CorporateActionDate21SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat22Choice> getValue(CorporateActionDate21SD1 obj) {
+			return obj.getEarliestPlannedDateOfIssuePrice();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate21SD1 obj, Optional<DateFormat22Choice> value) {
+			obj.setEarliestPlannedDateOfIssuePrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LatstPlandDtOfIssePric")
@@ -447,7 +517,7 @@ public class CorporateActionDate21SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLatestPlannedDateOfIssuePrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>> mmLatestPlannedDateOfIssuePrice = new MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate21SD1.mmObject();
 			isDerived = false;
@@ -458,6 +528,16 @@ public class CorporateActionDate21SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat22Choice> getValue(CorporateActionDate21SD1 obj) {
+			return obj.getLatestPlannedDateOfIssuePrice();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate21SD1 obj, Optional<DateFormat22Choice> value) {
+			obj.setLatestPlannedDateOfIssuePrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DtOfIssePric")
@@ -490,7 +570,7 @@ public class CorporateActionDate21SD1 {
 	 * definition} = "Date on which the issue price will be set.\r\n発行価格決定日."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateOfIssuePrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>> mmDateOfIssuePrice = new MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate21SD1.mmObject();
 			isDerived = false;
@@ -501,6 +581,16 @@ public class CorporateActionDate21SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat22Choice> getValue(CorporateActionDate21SD1 obj) {
+			return obj.getDateOfIssuePrice();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate21SD1 obj, Optional<DateFormat22Choice> value) {
+			obj.setDateOfIssuePrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EarlstPlandSbcptCostPmtDt")
@@ -535,7 +625,7 @@ public class CorporateActionDate21SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEarliestPlannedSubscriptionCostPaymentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>> mmEarliestPlannedSubscriptionCostPaymentDate = new MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate21SD1.mmObject();
 			isDerived = false;
@@ -546,6 +636,16 @@ public class CorporateActionDate21SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat22Choice> getValue(CorporateActionDate21SD1 obj) {
+			return obj.getEarliestPlannedSubscriptionCostPaymentDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate21SD1 obj, Optional<DateFormat22Choice> value) {
+			obj.setEarliestPlannedSubscriptionCostPaymentDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LatstPlandSbcptCostPmtDt")
@@ -580,7 +680,7 @@ public class CorporateActionDate21SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLatestPlannedSubscriptionCostPaymentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>> mmLatestPlannedSubscriptionCostPaymentDate = new MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate21SD1.mmObject();
 			isDerived = false;
@@ -591,6 +691,16 @@ public class CorporateActionDate21SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat22Choice> getValue(CorporateActionDate21SD1 obj) {
+			return obj.getLatestPlannedSubscriptionCostPaymentDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate21SD1 obj, Optional<DateFormat22Choice> value) {
+			obj.setLatestPlannedSubscriptionCostPaymentDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SbsqntListgDt")
@@ -624,7 +734,7 @@ public class CorporateActionDate21SD1 {
 	 * "Listing date of the new shares announced by Stock Exchange.\r\n変更上場日."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubsequentListingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>> mmSubsequentListingDate = new MMMessageAttribute<CorporateActionDate21SD1, Optional<DateFormat22Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate21SD1.mmObject();
 			isDerived = false;
@@ -635,6 +745,16 @@ public class CorporateActionDate21SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat22Choice> getValue(CorporateActionDate21SD1 obj) {
+			return obj.getSubsequentListingDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate21SD1 obj, Optional<DateFormat22Choice> value) {
+			obj.setSubsequentListingDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NewShrUnitQtyFctvDt")
@@ -666,7 +786,7 @@ public class CorporateActionDate21SD1 {
 	 * "Date at which the new share unit quantity becomes effective."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNewShareUnitQuantityEffectiveDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionDate21SD1, Optional<DateFormat22Choice>> mmNewShareUnitQuantityEffectiveDate = new MMMessageAssociationEnd<CorporateActionDate21SD1, Optional<DateFormat22Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate21SD1.mmObject();
 			isDerived = false;
@@ -678,6 +798,16 @@ public class CorporateActionDate21SD1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat22Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat22Choice> getValue(CorporateActionDate21SD1 obj) {
+			return obj.getNewShareUnitQuantityEffectiveDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate21SD1 obj, Optional<DateFormat22Choice> value) {
+			obj.setNewShareUnitQuantityEffectiveDate(value.orElse(null));
 		}
 	};
 

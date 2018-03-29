@@ -144,7 +144,7 @@ public class HoldBackInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<HoldBackInformation2, GateHoldBack1Code> mmType = new MMMessageAttribute<HoldBackInformation2, GateHoldBack1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.HoldBackInformation2.mmObject();
 			isDerived = false;
@@ -156,6 +156,16 @@ public class HoldBackInformation2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> GateHoldBack1Code.mmObject();
+		}
+
+		@Override
+		public GateHoldBack1Code getValue(HoldBackInformation2 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(HoldBackInformation2 obj, GateHoldBack1Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Amt")
@@ -207,7 +217,7 @@ public class HoldBackInformation2 {
 	 * HoldBackInformation1.mmHoldBackAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<HoldBackInformation2, Optional<ActiveCurrencyAndAmount>> mmAmount = new MMMessageAttribute<HoldBackInformation2, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmHoldBackAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.HoldBackInformation2.mmObject();
@@ -221,6 +231,16 @@ public class HoldBackInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(HoldBackInformation2 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(HoldBackInformation2 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XpctdRlsDt")
@@ -272,7 +292,7 @@ public class HoldBackInformation2 {
 	 * HoldBackInformation1.mmHoldBackReleaseDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpectedReleaseDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<HoldBackInformation2, Optional<ISODate>> mmExpectedReleaseDate = new MMMessageAttribute<HoldBackInformation2, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmHoldBackReleaseDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.HoldBackInformation2.mmObject();
@@ -286,6 +306,16 @@ public class HoldBackInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(HoldBackInformation2 obj) {
+			return obj.getExpectedReleaseDate();
+		}
+
+		@Override
+		public void setValue(HoldBackInformation2 obj, Optional<ISODate> value) {
+			obj.setExpectedReleaseDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FinInstrmId")
@@ -330,7 +360,7 @@ public class HoldBackInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<HoldBackInformation2, Optional<SecurityIdentification25Choice>> mmFinancialInstrumentIdentification = new MMMessageAssociationEnd<HoldBackInformation2, Optional<SecurityIdentification25Choice>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentFundClass;
 			componentContext_lazy = () -> com.tools20022.repository.msg.HoldBackInformation2.mmObject();
@@ -344,6 +374,16 @@ public class HoldBackInformation2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SecurityIdentification25Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SecurityIdentification25Choice> getValue(HoldBackInformation2 obj) {
+			return obj.getFinancialInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(HoldBackInformation2 obj, Optional<SecurityIdentification25Choice> value) {
+			obj.setFinancialInstrumentIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FinInstrmNm")
@@ -391,7 +431,7 @@ public class HoldBackInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinancialInstrumentName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<HoldBackInformation2, Optional<Max350Text>> mmFinancialInstrumentName = new MMMessageAttribute<HoldBackInformation2, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> LocalName.mmFullName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.HoldBackInformation2.mmObject();
@@ -405,6 +445,16 @@ public class HoldBackInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(HoldBackInformation2 obj) {
+			return obj.getFinancialInstrumentName();
+		}
+
+		@Override
+		public void setValue(HoldBackInformation2 obj, Optional<Max350Text> value) {
+			obj.setFinancialInstrumentName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RedCmpltn")
@@ -447,7 +497,7 @@ public class HoldBackInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRedemptionCompletion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<HoldBackInformation2, Optional<RedemptionCompletion1Code>> mmRedemptionCompletion = new MMMessageAttribute<HoldBackInformation2, Optional<RedemptionCompletion1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.HoldBackInformation2.mmObject();
 			isDerived = false;
@@ -459,6 +509,16 @@ public class HoldBackInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RedemptionCompletion1Code.mmObject();
+		}
+
+		@Override
+		public Optional<RedemptionCompletion1Code> getValue(HoldBackInformation2 obj) {
+			return obj.getRedemptionCompletion();
+		}
+
+		@Override
+		public void setValue(HoldBackInformation2 obj, Optional<RedemptionCompletion1Code> value) {
+			obj.setRedemptionCompletion(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FnlConf")
@@ -493,7 +553,7 @@ public class HoldBackInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinalConfirmation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<HoldBackInformation2, Optional<YesNoIndicator>> mmFinalConfirmation = new MMMessageAttribute<HoldBackInformation2, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.HoldBackInformation2.mmObject();
 			isDerived = false;
@@ -504,6 +564,16 @@ public class HoldBackInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(HoldBackInformation2 obj) {
+			return obj.getFinalConfirmation();
+		}
+
+		@Override
+		public void setValue(HoldBackInformation2 obj, Optional<YesNoIndicator> value) {
+			obj.setFinalConfirmation(value.orElse(null));
 		}
 	};
 

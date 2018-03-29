@@ -26,7 +26,6 @@ import com.tools20022.repository.datatype.Max6Text;
 import com.tools20022.repository.entity.Transport;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -159,7 +158,7 @@ public class TransportByAir extends Transport {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmAirportName = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<TransportByAir, Max6Text> mmAirportName = new MMBusinessAttribute<TransportByAir, Max6Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AirportName1Choice.mmAirportCode, AirportName1Choice.mmOtherAirportDescription);
 			isDerived = false;
@@ -172,12 +171,14 @@ public class TransportByAir extends Transport {
 			simpleType_lazy = () -> Max6Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransportByAir.class.getMethod("getAirportName", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max6Text getValue(TransportByAir obj) {
+			return obj.getAirportName();
+		}
+
+		@Override
+		public void setValue(TransportByAir obj, Max6Text value) {
+			obj.setAirportName(value);
 		}
 	};
 	protected Max35Text flightNumber;
@@ -214,7 +215,7 @@ public class TransportByAir extends Transport {
 	 * definition} = "Identifies the flight and the carrier."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmFlightNumber = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<TransportByAir, Max35Text> mmFlightNumber = new MMBusinessAttribute<TransportByAir, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TransportByAir4.mmFlightNumber);
 			isDerived = false;
@@ -227,12 +228,14 @@ public class TransportByAir extends Transport {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransportByAir.class.getMethod("getFlightNumber", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(TransportByAir obj) {
+			return obj.getFlightNumber();
+		}
+
+		@Override
+		public void setValue(TransportByAir obj, Max35Text value) {
+			obj.setFlightNumber(value);
 		}
 	};
 

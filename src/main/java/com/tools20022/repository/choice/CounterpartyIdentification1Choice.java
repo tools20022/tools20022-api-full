@@ -139,7 +139,7 @@ public class CounterpartyIdentification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CounterpartyIdentification1Choice, LEIIdentifier> mmLEI = new MMMessageAttribute<CounterpartyIdentification1Choice, LEIIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CounterpartyIdentification1Choice.mmObject();
@@ -152,6 +152,16 @@ public class CounterpartyIdentification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public LEIIdentifier getValue(CounterpartyIdentification1Choice obj) {
+			return obj.getLEI();
+		}
+
+		@Override
+		public void setValue(CounterpartyIdentification1Choice obj, LEIIdentifier value) {
+			obj.setLEI(value);
 		}
 	};
 	@XmlElement(name = "Othr", required = true)
@@ -197,7 +207,7 @@ public class CounterpartyIdentification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOther = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CounterpartyIdentification1Choice, SectorAndLocation1> mmOther = new MMMessageAssociationEnd<CounterpartyIdentification1Choice, SectorAndLocation1>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CounterpartyIdentification1Choice.mmObject();
@@ -211,6 +221,16 @@ public class CounterpartyIdentification1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SectorAndLocation1.mmObject();
+		}
+
+		@Override
+		public SectorAndLocation1 getValue(CounterpartyIdentification1Choice obj) {
+			return obj.getOther();
+		}
+
+		@Override
+		public void setValue(CounterpartyIdentification1Choice obj, SectorAndLocation1 value) {
+			obj.setOther(value);
 		}
 	};
 

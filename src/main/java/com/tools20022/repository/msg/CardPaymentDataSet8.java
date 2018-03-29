@@ -23,6 +23,9 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max9NumericText;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CardPaymentEnvironment21;
+import com.tools20022.repository.msg.CardPaymentTransactionAdviceResponse5;
+import com.tools20022.repository.msg.ResponseType1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -128,7 +131,7 @@ public class CardPaymentDataSet8 {
 	 * CardPaymentDataSet6.mmTransactionSequenceCounter}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionSequenceCounter = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentDataSet8, Max9NumericText> mmTransactionSequenceCounter = new MMMessageAttribute<CardPaymentDataSet8, Max9NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSet8.mmObject();
 			isDerived = false;
@@ -141,6 +144,16 @@ public class CardPaymentDataSet8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max9NumericText.mmObject();
+		}
+
+		@Override
+		public Max9NumericText getValue(CardPaymentDataSet8 obj) {
+			return obj.getTransactionSequenceCounter();
+		}
+
+		@Override
+		public void setValue(CardPaymentDataSet8 obj, Max9NumericText value) {
+			obj.setTransactionSequenceCounter(value);
 		}
 	};
 	@XmlElement(name = "TxRspn", required = true)
@@ -184,7 +197,7 @@ public class CardPaymentDataSet8 {
 	 * CardPaymentDataSet6.mmTransactionResponse}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionResponse = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentDataSet8, ResponseType1> mmTransactionResponse = new MMMessageAssociationEnd<CardPaymentDataSet8, ResponseType1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSet8.mmObject();
 			isDerived = false;
@@ -197,7 +210,17 @@ public class CardPaymentDataSet8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ResponseType1.mmObject();
+			type_lazy = () -> ResponseType1.mmObject();
+		}
+
+		@Override
+		public ResponseType1 getValue(CardPaymentDataSet8 obj) {
+			return obj.getTransactionResponse();
+		}
+
+		@Override
+		public void setValue(CardPaymentDataSet8 obj, ResponseType1 value) {
+			obj.setTransactionResponse(value);
 		}
 	};
 	@XmlElement(name = "Envt", required = true)
@@ -242,7 +265,7 @@ public class CardPaymentDataSet8 {
 	 * CardPaymentDataSet6.mmEnvironment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentDataSet8, CardPaymentEnvironment21> mmEnvironment = new MMMessageAssociationEnd<CardPaymentDataSet8, CardPaymentEnvironment21>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSet8.mmObject();
 			isDerived = false;
@@ -255,7 +278,17 @@ public class CardPaymentDataSet8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment21.mmObject();
+			type_lazy = () -> CardPaymentEnvironment21.mmObject();
+		}
+
+		@Override
+		public CardPaymentEnvironment21 getValue(CardPaymentDataSet8 obj) {
+			return obj.getEnvironment();
+		}
+
+		@Override
+		public void setValue(CardPaymentDataSet8 obj, CardPaymentEnvironment21 value) {
+			obj.setEnvironment(value);
 		}
 	};
 	@XmlElement(name = "Tx", required = true)
@@ -300,7 +333,7 @@ public class CardPaymentDataSet8 {
 	 * CardPaymentDataSet6.mmTransaction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentDataSet8, CardPaymentTransactionAdviceResponse5> mmTransaction = new MMMessageAssociationEnd<CardPaymentDataSet8, CardPaymentTransactionAdviceResponse5>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSet8.mmObject();
 			isDerived = false;
@@ -313,7 +346,17 @@ public class CardPaymentDataSet8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionAdviceResponse5.mmObject();
+			type_lazy = () -> CardPaymentTransactionAdviceResponse5.mmObject();
+		}
+
+		@Override
+		public CardPaymentTransactionAdviceResponse5 getValue(CardPaymentDataSet8 obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(CardPaymentDataSet8 obj, CardPaymentTransactionAdviceResponse5 value) {
+			obj.setTransaction(value);
 		}
 	};
 
@@ -346,7 +389,7 @@ public class CardPaymentDataSet8 {
 		return transactionResponse;
 	}
 
-	public CardPaymentDataSet8 setTransactionResponse(com.tools20022.repository.msg.ResponseType1 transactionResponse) {
+	public CardPaymentDataSet8 setTransactionResponse(ResponseType1 transactionResponse) {
 		this.transactionResponse = Objects.requireNonNull(transactionResponse);
 		return this;
 	}
@@ -355,7 +398,7 @@ public class CardPaymentDataSet8 {
 		return environment;
 	}
 
-	public CardPaymentDataSet8 setEnvironment(com.tools20022.repository.msg.CardPaymentEnvironment21 environment) {
+	public CardPaymentDataSet8 setEnvironment(CardPaymentEnvironment21 environment) {
 		this.environment = Objects.requireNonNull(environment);
 		return this;
 	}
@@ -364,7 +407,7 @@ public class CardPaymentDataSet8 {
 		return transaction;
 	}
 
-	public CardPaymentDataSet8 setTransaction(com.tools20022.repository.msg.CardPaymentTransactionAdviceResponse5 transaction) {
+	public CardPaymentDataSet8 setTransaction(CardPaymentTransactionAdviceResponse5 transaction) {
 		this.transaction = Objects.requireNonNull(transaction);
 		return this;
 	}
